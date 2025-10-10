@@ -21,7 +21,6 @@ interface Testimonial {
 ;
 const DynamicContentShowcase: React.FC = () => {const [currentIndex, setCurrentIndex] = useState(0);
 const [isPlaying, setIsPlaying] = useState(true);
-;
 const features: Feature[] = [
     {
       icon: Brain,
@@ -64,7 +63,6 @@ const features: Feature[] = [
       ]
     }
   ];
-;
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -75,7 +73,6 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-;
 const testimonials: Testimonial[] = [
     {
       name: 'Sarah Johnson',
@@ -109,21 +106,16 @@ const testimonials: Testimonial[] = [
 
   useEffect(() => {
     if (!isPlaying) return;
-    ;
 const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length)}, 4000);
     
     return () => clearInterval(timer)}, [isPlaying, testimonials.length]);
-;
 const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-;
 const prevTestimonial = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-;
 const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
-;
 const currentTestimonial = testimonials[currentIndex];
 
   return (
@@ -181,10 +173,10 @@ const currentTestimonial = testimonials[currentIndex];
                         <div className="text-lg font-bold text-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
                       </div>
-                    ));
+                    );
                   </div>);
               </div>
-            ));
+            );
           </div>
         </div>
       </section>
@@ -205,7 +197,7 @@ const currentTestimonial = testimonials[currentIndex];
                 <div className="flex justify-center mb-6">
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  ));
+                  );
                 </div>
                 
                 <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -259,7 +251,7 @@ const currentTestimonial = testimonials[currentIndex];
                     index === currentIndex ? 'bg-white' : 'bg-white/30'
                   }`}
                 />
-              ));
+              );
             </div>
           </div>
         </div>
@@ -282,7 +274,7 @@ const currentTestimonial = testimonials[currentIndex];
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span>{benefit}</span>
                 </div>
-              ));
+              );
             </div>
           </div>
         </div>
@@ -291,8 +283,6 @@ const currentTestimonial = testimonials[currentIndex];
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-=======
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -308,7 +298,6 @@ const currentTestimonial = testimonials[currentIndex];
               <ArrowRight className="w-5 h-5" />
               Schedule Demo
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Experience the Future?

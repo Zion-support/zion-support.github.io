@@ -1,18 +1,12 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const PagePage: React.FC = () => {const features = [
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -127,15 +121,8 @@ const PagePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ));
-=======
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -157,9 +144,6 @@ const PagePage: React.FC = () => {
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
-            ));
-=======
               <div className="relative">
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
                   <div className="text-center">
@@ -184,7 +168,6 @@ const PagePage: React.FC = () => {
                 </div>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -214,11 +197,6 @@ const PagePage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-    </div>)
-=======
         </section>
 
         <Footer />
@@ -227,5 +205,4 @@ const PagePage: React.FC = () => {
   );
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default PagePage;

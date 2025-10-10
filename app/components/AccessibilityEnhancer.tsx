@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -37,12 +34,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       return () => document.removeEventListener('keydown', handleKeyDown);
     // Focus management
     if ($1) { const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      ;
 const trapFocus = (container: HTMLElement) => {;
 const focusableContent = container.querySelectorAll(focusableElements);
 const firstFocusableElement = focusableContent[0] as HTMLElement;
 const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
-;
 const handleTabKey = (e: KeyboardEvent) => {
           if (e.key !== 'Tab') return;
 
@@ -63,7 +58,7 @@ const handleTabKey = (e: KeyboardEvent) => {
         return () => container.removeEventListener('keydown', handleTabKey);
       // Apply focus trap to modals and dropdowns;
 const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
+      modals.forEach(modal => trapFocus(modal as HTMLElement);
     // Screen reader support
     if (enableScreenReaderSupport && typeof window !== 'undefined') {
       // Add live region for dynamic content updates;
@@ -98,7 +93,6 @@ const originalReplaceState = history.replaceState;
 
     // High contrast mode support
     if ($1) { const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
-      ;
 const updateHighContrast = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.documentElement.classList.add('high-contrast')} else {

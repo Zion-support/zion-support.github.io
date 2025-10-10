@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-;
 const CookiesPage: React.FC = () => {
   return (
     <>
@@ -49,11 +48,7 @@ const CookiesPage: React.FC = () => {
         <Footer />
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default CookiesPage;

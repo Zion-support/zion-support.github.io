@@ -36,7 +36,6 @@ const focusableElements = element.querySelectorAll(
   );
 const firstFocusable = focusableElements[0] as HTMLElement;
 const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
-;
 const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
@@ -77,8 +76,7 @@ export function makeKeyboardAccessible(
 const { role = 'button', tabindex = 0 } = options;
   
   element.setAttribute('role', role);
-  element.setAttribute('tabindex', tabindex.toString());
-  ;
+  element.setAttribute('tabindex', tabindex.toString();
 const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -103,7 +101,6 @@ const [r, g, b] = rgb.map(c => {
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)});
     return 0.2126 * r + 0.7152 * g + 0.0722 * b};
-;
 const lum1 = getLuminance(color1);
 const lum2 = getLuminance(color2);
 const brightest = Math.max(lum1, lum2);
@@ -191,7 +188,6 @@ const tooltip = document.createElement('div');
   tooltip.style.display = 'none';
   
   document.body.appendChild(tooltip);
-  ;
 const showTooltip = () => {
     tooltip.style.display = 'block';
 const triggerRect = trigger.getBoundingClientRect();
@@ -214,7 +210,6 @@ const triggerRect = trigger.getBoundingClientRect();
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
         break}
   };
-  ;
 const hideTooltip = () => {
     tooltip.style.display = 'none'};
   
@@ -250,9 +245,4 @@ const focusableElements = container.querySelectorAll(
     );
 const firstFocusable = focusableElements[0] as HTMLElement;
     firstFocusable?.focus();
-<<<<<<< HEAD
-}
-=======
   }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

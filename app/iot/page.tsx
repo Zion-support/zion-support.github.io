@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
-;
 const IoTPage: React.FC = () => {const iotServices = [
     {
       title: 'IoT Device Management Platform',
@@ -133,14 +132,9 @@ const IoTPage: React.FC = () => {const iotServices = [
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],
       marketPrice: '$8,000-35,000/month',
       category: 'Analytics',
-<<<<<<< HEAD
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'];);
-=======
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
-;
 const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
@@ -259,7 +253,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
-                          ));
+                          );
                         </ul>
                       </div>
 
@@ -270,7 +264,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded"></span>
                               {tech}
                             </span>
-                          ));
+                          );
                         </div>
                       </div>
 
@@ -282,7 +276,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
-                          ));
+                          );
                         </ul>
                       </div>
 
@@ -290,11 +284,11 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                         Get IoT Quote
                       </button>
                     </div>
-                  ));
+                  );
               </div>
             </div>
           </section>
-        ));
+        );
 
         {/* IoT Capabilities Showcase */}
         <section className="py-16 bg-white"></section>
@@ -372,11 +366,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default IoTPage;

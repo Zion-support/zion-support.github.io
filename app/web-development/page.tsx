@@ -48,7 +48,6 @@ const $1: React.FC = () => {const webServices = [,
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'}
   ];
-;
 const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -57,7 +56,6 @@ const technologies = [
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
   ];
-;
 const process = [
     {
       step: '01',
@@ -188,7 +186,7 @@ const process = [
                         <li></li>
                           <CheckCircl></CheckCircl>{feature}</CheckCircle>
                         </CheckCircle>
-                      ));
+                      );
                     </ul>
                   </div>
 
@@ -198,7 +196,7 @@ const process = [
                           <li></li>
                             <ArrowRigh></ArrowRigh>{benefit}</ArrowRight>
                           </ArrowRight>
-                        ));
+                        );
                       </ul>
                     </div>
                   );
@@ -213,7 +211,7 @@ const process = [
                   >
                     Get Started;
                   </a>,
-                </div>));
+                </div>);
             </div>
           </section>
 
@@ -238,7 +236,7 @@ const process = [
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
-              ));
+              );
             </div>
           </section>
 
@@ -265,7 +263,7 @@ const process = [
                   <div>
                     <spa></spa>{step.step}</span><h></h>{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </div>
-              ));
+              );
             </div>
           </section>
 
@@ -302,11 +300,7 @@ const process = [
 
         <Footer />
       </div>,
-<<<<<<< HEAD
-    </>);)
-=======
     </>)]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default WebDevelopmentPage;

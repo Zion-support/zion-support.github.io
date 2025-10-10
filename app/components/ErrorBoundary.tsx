@@ -128,14 +128,16 @@ const errorData = {
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.error.stack}
                       </pre>
-                    </div>);
+                    </div>
+                  )}
                   {this.state.errorInfo && (
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1">
                         {this.state.errorInfo.componentStack}
                       </pre>
-                    </div>);
+                    </div>
+                  )}
                 </div>
               </details>);
             <div className="flex flex-col sm:flex-row gap-4">

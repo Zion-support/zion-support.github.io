@@ -20,7 +20,6 @@ const {
     root = null,
     rootMargin = '0%',
     freezeOnceVisible = false} = options;
-;
 const [isIntersecting, setIsIntersecting] = useState(false);
 const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
 const ref = useRef<HTMLElement>(null);
@@ -28,7 +27,6 @@ const ref = useRef<HTMLElement>(null);
   useEffect(() => {;
 const element = ref.current;
     if (!element) return;
-;
 const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
@@ -36,13 +34,8 @@ const observer = new IntersectionObserver(
 
         if (entry.isIntersecting && freezeOnceVisible) {
           observer.disconnect();
-<<<<<<< HEAD
-      },
-      {
-=======
         },
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         threshold,
         root,
         rootMargin}

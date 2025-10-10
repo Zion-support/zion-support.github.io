@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-;
 const TeamPage: React.FC = () => {
   return (
     <>
@@ -38,12 +37,8 @@ const TeamPage: React.FC = () => {
         <Footer />
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default TeamPage;
 }

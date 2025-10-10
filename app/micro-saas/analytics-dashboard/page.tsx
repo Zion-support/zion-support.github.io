@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
-;
 const AIAnalyticsDashboardPage: React.FC = () => {const features = [
     {
       icon: BarChart,
@@ -31,14 +30,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
     {
       icon: Target,
       title: 'Goal Tracking',
-<<<<<<< HEAD
-      description: 'Monitor KPIs and business objectives with automated alerts.';);
-=======
       description: 'Monitor KPIs and business objectives with automated alerts.']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
-;
 const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
@@ -47,7 +41,6 @@ const benefits = [
     'Multi-platform data integration',
     'Mobile-responsive design'
   ];
-;
 const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
@@ -112,7 +105,7 @@ const metrics = [
                   <h3 className="text-xl font-semibold text-white mb-3"></h>{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -135,7 +128,7 @@ const metrics = [
                   <div className="text-3xl font-bold text-white mb-2"></di>{metric.value}</div>
                   <div className="text-gray-300"></di>{metric.label}</div>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -156,7 +149,7 @@ const metrics = [
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300 text-lg"></spa>{benefit}</span>
                   </div>
-                ));
+                );
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4"></h>Success Stories</h3>
@@ -204,11 +197,7 @@ const metrics = [
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default AIAnalyticsDashboardPage;

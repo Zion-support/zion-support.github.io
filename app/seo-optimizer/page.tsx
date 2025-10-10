@@ -1,15 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const PagePage: React.FC = () => {
 return (;
 const features = [
@@ -50,18 +45,6 @@ const features = [
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
-<<<<<<< HEAD
-;
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-=======
 
   const benefits = [
     'Transform your business with AI technology',
@@ -70,7 +53,6 @@ const benefits = [
     'Optimize business processes and workflows',
     'Reduce costs through intelligent automation',
     'Gain competitive advantage with advanced technology'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
@@ -81,14 +63,6 @@ const benefits = [
         <meta name="keywords" content="page" />
       </Helmet>
 
-<<<<<<< HEAD
-                <h3 className="text-xl font-semibold text-white mb-3">
-);
-}{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ));
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -119,7 +93,6 @@ const benefits = [
                 </a>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -172,9 +145,6 @@ const benefits = [
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
-            ));
-=======
               <div className="relative">
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
                   <div className="text-center">
@@ -199,7 +169,6 @@ const benefits = [
                 </div>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -229,11 +198,6 @@ const benefits = [
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-    </div>)
-=======
         </section>
 
         <Footer />
@@ -242,5 +206,4 @@ const benefits = [
   );
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default PagePage;

@@ -52,8 +52,6 @@ const faqs: FAQ[] = [
       category: 'technical'
     },
     {
-<<<<<<< HEAD
-=======
       question: 'What happens if I need to scale up?',
       answer: 'Our solutions are designed to scale with your business. We can easily upgrade your plan or add additional features as your needs grow.',
       category: 'general'
@@ -61,7 +59,6 @@ const faqs: FAQ[] = [
   ];
 
   const categories = ['all', 'general', 'technical', 'billing', 'implementation'];
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       question: 'Do you provide custom development?',
       answer: 'Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.',
       category: 'development'
@@ -113,19 +110,12 @@ const categories = ['all', 'general', 'technical', 'billing', 'implementation'];
 const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
 const filteredFAQs = faqs.filter(faq => {;
 const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
+                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase();
 const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-<<<<<<< HEAD
-  const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-  };
-
-=======
   const supportChannels = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone Support',
@@ -155,33 +145,16 @@ const matchesCategory = selectedCategory === 'all' || faq.category === selectedC
       availability: 'Always Available'
     }
   ];
-<<<<<<< HEAD
-;
-const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
-;
-const filteredFAQs = faqs.filter(faq => {;
-const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory});
-;
-const toggleFAQ = (index: number) => {
-    setExpandedFAQ(expandedFAQ === index ? null : index);
-=======
   const toggleFAQ = (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <React.Fragment>
       <Helmet>
-<<<<<<< HEAD
-=======
         <title>Support - Zion Tech Group</title>
         <meta name="description" content="Get help and support for your AI and IT solutions. Find answers to common questions, contact our support team, and access comprehensive documentation." />
         <meta name="keywords" content="support, help, FAQ, technical support, customer service, documentation" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <title>Support - Zion Tech Group | 24/7 Technical Support</title>
         <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
         <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk" />
@@ -189,8 +162,6 @@ const toggleFAQ = (index: number) => {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
-=======
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -212,7 +183,6 @@ const toggleFAQ = (index: number) => {
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -298,7 +268,7 @@ const toggleFAQ = (index: number) => {
                   <p className="text-blue-600 font-medium mb-2">{channel.contact}</p>
                   <p className="text-sm text-gray-500">{channel.availability}</p>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -325,11 +295,6 @@ const toggleFAQ = (index: number) => {
                 >
                   {category === 'all' ? 'All Topics' : category.charAt(0).toUpperCase() + category.slice(1);
                 </button>
-<<<<<<< HEAD
-                    </div>);
-                </div>
-              ));
-=======
             <div className="space-y-4">
               {filteredFAQs.map((faq, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
@@ -349,7 +314,6 @@ const toggleFAQ = (index: number) => {
                   )}
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
 
             {/* FAQ List */}
@@ -376,10 +340,10 @@ const toggleFAQ = (index: number) => {
                         <p className="text-gray-600">{faq.answer}</p>
                       </div>);
                   </div>
-                ));
+                );
                     </div>);
                 </div>
-              ));
+              );
             </div>
 
             {filteredFAQs.length === 0 && (
@@ -422,8 +386,6 @@ const toggleFAQ = (index: number) => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* CTA Section */}
         <section className="py-16 bg-blue-900 text-white">
           <div className="container mx-auto px-4 text-center">
@@ -438,7 +400,6 @@ const toggleFAQ = (index: number) => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
                 Schedule a Call
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         {/* Contact CTA */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">

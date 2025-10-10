@@ -1,6 +1,5 @@
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
-;
 const EnhancedServicesShowcase: React.FC = () => {const services = [
     {
       title: 'AI Solutions',
@@ -32,12 +31,8 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-<<<<<<< HEAD
-      stats: '95% Efficiency';);
-=======
       stats: '95% Efficiency']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
@@ -70,7 +65,7 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     {feature}
                   </li>
-                ));
+                );
               </ul>
               
               <a
@@ -80,7 +75,7 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>
-          ));
+          );
         </div>
 
         <div className="text-center mt-12"></div>
@@ -93,12 +88,8 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
           </a>
         </div>
     </section>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default EnhancedServicesShowcase;
 }

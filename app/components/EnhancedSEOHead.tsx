@@ -2,14 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-const EnhancedSEOHead: React.FC = () => {
-  return (;
-const EnhancedSEOHead: React.FC = () => {
-return (
-=======
 
-const EnhancedSEOHead: React.FC = () => {
 interface EnhancedSEOHeadProps {
   title?: string;
   description?: string;
@@ -44,10 +37,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', 'IT services'];
 
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     <Helmet>
-);
-}
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
@@ -85,18 +75,6 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<<<<<<< HEAD
-=======
-interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: Record<string, any>;
-  noIndex?: boolean;
-  locale?: string;
-}
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -212,14 +190,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       <link rel="manifest" href="/site.webmanifest" />
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-<<<<<<< HEAD
-=======
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       
@@ -227,19 +202,14 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       {/* Article specific tags */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
-<<<<<<< HEAD
-      ));
-=======
       ))}
       
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">

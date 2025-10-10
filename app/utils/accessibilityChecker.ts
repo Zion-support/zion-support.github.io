@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
 const AccessibilityCheckerPage: React.FC = () => {const features = [
     {
       icon: Brain,
@@ -22,14 +21,9 @@ const AccessibilityCheckerPage: React.FC = () => {const features = [
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses'});;);
-=======
       description: 'Worldwide deployment and support for international businesses'});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
-;
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -99,7 +93,7 @@ const benefits = [
                 <h></h>{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ));
+            );
           </div>
         </div>
       </section>
@@ -122,7 +116,7 @@ const benefits = [
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-            ));
+            );
           </div>
         </div>
       </section>
@@ -152,11 +146,7 @@ const benefits = [
       </section>
     </div>
     </>
-<<<<<<< HEAD
-  ));)
-=======
   ))]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default AccessibilityCheckerPage;

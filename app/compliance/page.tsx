@@ -68,7 +68,7 @@ const CompliancePage: React.FC = () => {const complianceStandards = [
                   <h3 className="text-xl font-semibold text-white mb-3">{standard.title}</h3>
                   <p className="text-gray-300">{standard.description}</p>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -91,8 +91,6 @@ const CompliancePage: React.FC = () => {const complianceStandards = [
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Shield, FileCheck, Lock, Award } from 'lucide-react';
@@ -238,7 +236,6 @@ const CompliancePage: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         </div>
       </section>
 

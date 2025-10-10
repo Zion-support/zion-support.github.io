@@ -1,5 +1,4 @@
 import React from 'react';
-;
 const SitemapPage: React.FC = () => {const pages = [
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
     { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
@@ -58,7 +57,7 @@ const SitemapPage: React.FC = () => {const pages = [
                   {page.path}
                 </p>
               </div>
-            ));
+            );
           </div>
         </div>
 
@@ -86,11 +85,7 @@ const SitemapPage: React.FC = () => {const pages = [
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default SitemapPage;

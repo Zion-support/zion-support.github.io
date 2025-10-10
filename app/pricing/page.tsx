@@ -4,7 +4,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
-;
 const PricingPage: React.FC = () => {const plans = [
     {
       name: 'Starter',
@@ -66,10 +65,7 @@ const PricingPage: React.FC = () => {const plans = [
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -113,7 +109,7 @@ const PricingPage: React.FC = () => {const plans = [
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
-                  ));
+                  );
                 </ul>
 
                 <button
@@ -127,7 +123,7 @@ const PricingPage: React.FC = () => {const plans = [
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </button>
               </div>
-            ));
+            );
           </div>
 
           <div className="text-center mt-16">

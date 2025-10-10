@@ -19,7 +19,6 @@ return (;
 const [selectedType, setSelectedType] = useState<string>
 );
 }('');
-;
 const consultationTypes: ConsultationType[] = [
     {
       id: 'strategy',
@@ -124,15 +123,6 @@ const contactInfo = [
       description: 'Visit our headquarters'
     }
   ];
-<<<<<<< HEAD
-;
-const handleBooking = (typeId: string) => {
-    setSelectedType(typeId);
-    // In a real app, this would open a booking modal or redirect to a booking page
-    console.log(`Booking consultation: ${typeId}`);
-  };
-
-=======
 import { CheckCircle, Clock, Users, Award, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
@@ -217,7 +207,7 @@ const ConsultationPage: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -226,19 +216,15 @@ const ConsultationPage: React.FC = () => {
     console.log('Form submitted:', formData);
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <>
       <Helmet>
         <title>Consultation Services - Zion Tech Group</title>
         <meta name="description" content="Get expert consultation on IT strategy, AI implementation, cybersecurity, and cloud migration. Professional guidance to accelerate your digital transformation." />
         <meta name="keywords" content="IT consultation, AI consulting, cybersecurity audit, cloud migration, technology strategy, digital transformation" />
-<<<<<<< HEAD
-=======
         <title>Consultation - Zion Tech Group | Expert Technology Consulting</title>
         <meta name="description" content="Get expert technology consulting from Zion Tech Group. AI strategy, cloud migration, digital transformation, and cybersecurity consulting services." />
         <meta name="keywords" content="technology consulting, AI strategy, cloud migration, digital transformation, cybersecurity consulting" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -260,8 +246,6 @@ const ConsultationPage: React.FC = () => {
                   View Services
                 </button>
               </div>
-<<<<<<< HEAD
-=======
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -277,7 +261,6 @@ const ConsultationPage: React.FC = () => {
               <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
                 View Our Experts
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
@@ -299,23 +282,6 @@ const ConsultationPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                   <p className="text-gray-600">{benefit.description}</p>
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
-              Get personalized guidance from our experienced team of IT experts. Transform your business with strategic technology solutions.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="flex items-center justify-center gap-4 text-white">
-                <Calendar className="w-8 h-8 text-purple-400" />
-                <div className="text-left">
-                  <div className="text-2xl font-bold">Flexible Scheduling</div>
-                  <div className="text-gray-400">Book at your convenience</div>
-=======
         {/* Statistics */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -327,7 +293,6 @@ const ConsultationPage: React.FC = () => {
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                 </div>
               </div>
               <div className="flex items-center justify-center gap-4 text-white">
@@ -343,7 +308,7 @@ const ConsultationPage: React.FC = () => {
                   <div className="text-2xl font-bold">Proven Results</div>
                   <div className="text-gray-400">98% client satisfaction</div>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -376,7 +341,7 @@ const ConsultationPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         <span>{feature}</span>
                       </div>
-                    ));
+                    );
                   </div>
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -391,26 +356,6 @@ const ConsultationPage: React.FC = () => {
                     Select This Service
                   </button>
                 </div>
-<<<<<<< HEAD
-              ));
-                  Schedule Consultation
-                </button>
-              </form>
-                  {type.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    </div>);
-                  <div className="text-center mb-6">
-                    <h3 className="text-xl font-bold text-white mb-3">{type.name}</h3>
-                    <p className="text-gray-300 text-sm mb-4">{type.description}</p>
-                    <div className="flex items-center justify-center gap-2 text-purple-400 text-sm mb-4">
-                      <Clock className="w-4 h-4" />
-                      <span>{type.duration}</span>
-                    </div>
-                    <div className="text-3xl font-bold text-white">{type.price}</div>
-=======
               ))}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -431,7 +376,6 @@ const ConsultationPage: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-cyan-400 font-semibold">{type.price}</span>
                     <span className="text-gray-400 text-sm">{type.duration}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                   </div>
 
                   <ul className="space-y-3 mb-8">
@@ -440,7 +384,7 @@ const ConsultationPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
-                    ));
+                    );
                   </ul>
 
                   <button
@@ -454,7 +398,7 @@ const ConsultationPage: React.FC = () => {
                     Book Consultation
                   </button>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -483,12 +427,9 @@ const ConsultationPage: React.FC = () => {
                       <span key={skillIndex} className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs">
                         {skill}
                       </span>
-                    ));
+                    );
                   </div>
                 </div>
-<<<<<<< HEAD
-              ));
-=======
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -562,7 +503,6 @@ const ConsultationPage: React.FC = () => {
                   Schedule Consultation
                 </button>
               </form>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
@@ -586,7 +526,7 @@ const ConsultationPage: React.FC = () => {
                   <p className="text-blue-600 font-medium mb-2">{contact.details}</p>
                   <p className="text-gray-600">{contact.description}</p>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -608,8 +548,6 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Get in Touch</h2>
@@ -637,7 +575,6 @@ const ConsultationPage: React.FC = () => {
               </div>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         </section>
       </div>
     </>
@@ -664,7 +601,7 @@ const ConsultationPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service}</h3>
                 <p className="text-gray-300">Expert guidance and strategic planning for your technology initiatives.</p>
               </div>
-            ));
+            );
           </div>
         </div>
       </section>

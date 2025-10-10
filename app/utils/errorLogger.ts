@@ -7,12 +7,8 @@ export enum ErrorSeverity {}
   LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
-<<<<<<< HEAD
-  CRITICAL = 'critical'});;)
-=======
   CRITICAL = 'critical'});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface ErrorLogEntry {
   timestamp: string,
   severity: ErrorSeverity,
@@ -26,12 +22,8 @@ export interface ErrorLogEntry {}
   context?: Record<string></string>
   userAgent?: string;
   url?: string;
-<<<<<<< HEAD
-  stackTrace?: string;});;);
-=======
   stackTrace?: string;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 class ErrorLogger {}
   private logs: ErrorLogEntry[] = []
   private maxLogs = 1000;
@@ -58,16 +50,6 @@ const entry: ErrorLogEntry = {,
       context,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
       url: typeof window !== 'undefined' ? window.location.href : undefined;
-<<<<<<< HEAD
-      stackTrace: error?.stack});;);
-    // Add to internal log;
-    this.logs.push(entry)
-    if (this.logs.length > this.maxLogs) {}
-      this.logs.shift();});;);
-    // Console logging in development;
-    if (process.env['NODE_ENV'] === 'development') {
-      this.logToConsole(entry);});;);
-=======
       stackTrace: error?.stack});]
     }
     // Add to internal log;
@@ -79,27 +61,10 @@ const entry: ErrorLogEntry = {,
     if (process.env['NODE_ENV'] === 'development') {
       this.logToConsole(entry);});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
     // Console logging in development
     if (process.env['NODE_ENV'] === 'development') {}
-<<<<<<< HEAD
-      this.logToConsole(entry);});;);
-    // Send to external logging service in production
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {}
-      this.sendToExternalService(entry);}
-export enum ErrorSeverity {/* TODO: Fix JSX expression */});;)
-export interface ErrorLogEntry {/* TODO: Fix JSX expression */});;);
-class ErrorLogger {/* TODO: Fix JSX expression */});;);
-    // Add to internal log;
-    this.logs.push(entry);
-    if (this.logs.length > this.maxLogs) {/* TODO: Fix JSX expression */});;);
-    // Console logging in development;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});;);
-    // Send to external logging service in production;
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */});;);
-=======
       this.logToConsole(entry);});]
     }
     // Send to external logging service in production
@@ -121,7 +86,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */});]
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Log to console with appropriate styling;
@@ -133,18 +97,6 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
       [ErrorSeverity.LOW]: 'color: #4ade80',
       [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
       [ErrorSeverity.HIGH]: 'color: #fb923 c',
-<<<<<<< HEAD
-      [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'});;);
-    }] ${entry.message}`, styles[entry.severity])
-    if (entry.error) {});;);
-    if (entry.context) {});;);
-    if (entry.stackTrace) {}
-  private logToConsole(entr)
-  y: ErrorLogEntry): void {/* TODO: Fix JSX expression */});;);
-    if (entry.error) {/* TODO: Fix JSX expression */});;);
-    if (entry.context) {/* TODO: Fix JSX expression */});;);
-    if (entry.stackTrace) {/* TODO: Fix JSX expression */});;);
-=======
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'});]
     }
     }] ${entry.message}`, styles[entry.severity])
@@ -162,7 +114,6 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
     }
     if (entry.stackTrace) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 });
 }
   /**
@@ -175,12 +126,8 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
       // In production, you would send to a service like Sentry, LogRocket, etc.
 
       if (!endpoint) {}
-<<<<<<< HEAD
-        return;});;);
-=======
         return;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       await fetch(endpoint, {
         method: 'POST'),
   headers: {)
@@ -203,29 +150,14 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
             ? {}
                 message: entry.error.message,
                 name: entry.error.name,
-<<<<<<< HEAD
-                stack: entry.error.stack});;);
-=======
                 stack: entry.error.stack});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             : undefined});
 });]
     });]
     } catch (error) {}
       // Silently fail to avoid infinite loop}
   private async sendToExternalService(entr)
-<<<<<<< HEAD
-  y: ErrorLogEntry): Promise<void></void> {/* TODO: Fix JSX expression */});;);
-      await fetch(endpoint, {/* TODO: Fix JSX expression */});;)
-},
-        bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */});;);
-            : undefined});;)
-});;)
-});;)
-} catch (error) {/* TODO: Fix JSX expression */});;);
-=======
   y: ErrorLogEntry): Promise<void></void> {/* TODO: Fix JSX expression */});]
     }
       await fetch(endpoint, {/* TODO: Fix JSX expression */});]
@@ -238,7 +170,6 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
     });]
     } catch (error) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Get recent logs;
@@ -247,12 +178,8 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
   getRecentLogs(count: number = 10): ErrorLogEntry[] {}
     return this.logs.slice(-count);
   getRecentLogs(coun)
-<<<<<<< HEAD
-  t: number = 10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});;);
-=======
   t: number = 10): ErrorLogEntry[] {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get logs by severity;
    */
@@ -260,33 +187,21 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
     return this.logs.filter(log => log.severity === severity);
   getLogsBySeverity(severit)
-<<<<<<< HEAD
-  y: ErrorSeverity): ErrorLogEntry[] {/* TODO: Fix JSX expression */});;);
-=======
   y: ErrorSeverity): ErrorLogEntry[] {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Clear all logs;
    */
   clearLogs(): void {}
     this.logs = [];}
-<<<<<<< HEAD
-  clearLogs(): void {/* TODO: Fix JSX expression */});;);
-=======
   clearLogs(): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Export logs as JSON;
    */
   exportLogs(): string {}
-<<<<<<< HEAD
-    return JSON.stringify(this.logs, null, 2);});;);
-=======
     return JSON.stringify(this.logs, null, 2);});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 // Singleton instance;
 const errorLogger = new ErrorLogger()
@@ -300,12 +215,8 @@ export const logWarning = (message: string, context?: Record<string></string>) =
 export const logInfo = (message: string, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
 export default errorLogger;
-<<<<<<< HEAD
-  exportLogs(): string {/* TODO: Fix JSX expression */});;);
-=======
   exportLogs(): string {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 // Singleton instance;
 const errorLogger = new ErrorLogger();

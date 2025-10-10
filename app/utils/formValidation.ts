@@ -5,27 +5,12 @@
  */
 export interface ValidationRule<T></T> {
   validate: (value: T) => boolean;
-<<<<<<< HEAD
-  message: string;});;)
-=======
   message: string;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface ValidationResult {
   valid: boolean,
 export interface ValidationRule<T></T> {}
   validate: (value: T) => boolean,
-<<<<<<< HEAD
-  message: string;});;)
-export interface ValidationResult {}
-  valid: boolean,
-  errors: string[];});;)
-export interface FieldValidation {}
-  [fieldName: string]: ValidationRule[];}
-export interface ValidationRule<T></T> {/* TODO: Fix JSX expression */});;)
-export interface ValidationResult {/* TODO: Fix JSX expression */});;)
-export interface FieldValidation {/* TODO: Fix JSX expression */});;);
-=======
   message: string;});]
     }
 export interface ValidationResult {}
@@ -40,7 +25,6 @@ export interface ValidationResult {/* TODO: Fix JSX expression */});]
     }
 export interface FieldValidation {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Common validation rules;
  */
@@ -104,15 +88,9 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
       return phoneRegex.test(value.replace(/\s/g, ''))
   phoneU,
   S: (message = 'Please enter a valid US phone number'): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-      return phoneRegex.test(value.replace(/\s/g, ''));)
-},
-=======
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''))]
     },
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     message});
 });,
   /**
@@ -126,16 +104,6 @@ const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
     validate: (value: string) => {}
       try {}
         new URL(value)
-<<<<<<< HEAD
-        return true;});;)
-} catch {}
-        return false;});;);
-    },
-    message;
-  ur,
-  l: (message = 'Please enter a valid URL'): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});;)
-} catch {/* TODO: Fix JSX expression */});;);
-=======
         return true;});]
     } catch {}
         return false;});]
@@ -146,7 +114,6 @@ const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
   l: (message = 'Please enter a valid URL'): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});]
     } catch {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     },
     message});]
     });,
@@ -251,12 +218,8 @@ const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
   e: (allowedType),
   s: string[], message?: string): ValidationRule<File></File> => ({/* TODO: Fix JSX expression */});`
   of: ${allowedTypes.join(', ');`});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Validate a single field with multiple rules;
  */
@@ -264,12 +227,8 @@ export function validateField<T></T>(value: T, rules: ValidationRule<T></T>[]): 
 const errors: string[] = [],
   for (const rule of rules) {,
     if (!rule.validate(value)) {,
-<<<<<<< HEAD
-      errors.push(rule.message);});;);
-=======
       errors.push(rule.message);});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   return {
     valid: errors.length === 0
@@ -277,16 +236,6 @@ export function validateField<T></T>(value: T, rules: ValidationRule<T></T>[]): 
   const errors: string[] = []
   for (const rule of rules) {}
     if (!rule.validate(value)) {}
-<<<<<<< HEAD
-      errors.push(rule.message);});;);
-  }
-  return {}
-    valid: errors.length === 0,
-    errors});;)
-export function validateField<T></T>(valu,
-  e: T, rule)
-  s: ValidationRule<T></T>[]): ValidationResult {/* TODO: Fix JSX expression */});;);
-=======
       errors.push(rule.message);});]
     }
   }
@@ -298,7 +247,6 @@ export function validateField<T></T>(valu,
   e: T, rule)
   s: ValidationRule<T></T>[]): ValidationResult {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   return {/* TODO: Fix JSX expression */});]
     }});
@@ -321,12 +269,8 @@ export function validateForm<T></T>>(formDat,
   a: Record<keyof></keyof>)
 ): Record<keyof></keyof> {/* TODO: Fix JSX expression */}
   const results = {} as Record<keyof></keyof>;
-<<<<<<< HEAD
-  for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */});;);
-=======
   for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return results});
 }
 /**
@@ -338,12 +282,8 @@ export function isFormValid<T></T>>(
   return Object.values(validationResults).every(result => result.valid);}
 export function isFormValid<T></T>>(validationResult,
   s: Record<keyof></keyof>)
-<<<<<<< HEAD
-): boolean {/* TODO: Fix JSX expression */});;);
-=======
 ): boolean {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Get all form errors;
  */
@@ -359,12 +299,8 @@ export function getFormErrors<T></T>>(validationResult,
   s: Record<keyof></keyof>)
 ): Record<keyof></keyof> {/* TODO: Fix JSX expression */}
   const errors = {} as Record<keyof></keyof>;
-<<<<<<< HEAD
-  for (const fieldName in validationResults) {/* TODO: Fix JSX expression */});;);
-=======
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   return errors});
 }
@@ -381,12 +317,8 @@ export function sanitizeInput(input: string): string {}
     .replace(/[<React.Fragment>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
 export function sanitizeInput(inpu)
-<<<<<<< HEAD
-  t: string): string {/* TODO: Fix JSX expression */});;);
-=======
   t: string): string {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Debounce function for form validation;
  */
@@ -405,12 +337,6 @@ const later = useCallback((...args) => {,
   return function executedFunction(...args: Parameters<T></T>) {}
     const later = useCallback((...args) => {}
       timeout = null
-<<<<<<< HEAD
-      func(...args);});;);
-    if (timeout) {}
-      clearTimeout(timeout);});;);
-    timeout = setTimeout(later, wait););
-=======
       func(...args);});]
     }
     if (timeout) {}
@@ -418,7 +344,6 @@ const later = useCallback((...args) => {,
     }
     timeout = setTimeout(later, wait)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 export function debounce<T extends (...arg)
   s: Parameters<T></T>) => ReturnType<T></T>>(fun,
@@ -426,19 +351,12 @@ export function debounce<T extends (...arg)
   wai,
   t: number}
 ): (...arg)
-<<<<<<< HEAD
-  s: Parameters<T></T>) => void {/* TODO: Fix JSX expression */});;);
-    if (timeout) {/* TODO: Fix JSX expression */});;);
-    timeout = setTimeout(later, wait);)
-}});
-=======
   s: Parameters<T></T>) => void {/* TODO: Fix JSX expression */});]
     };
     if (timeout) {/* TODO: Fix JSX expression */});]
     }
     timeout = setTimeout(later, wait)]
     }});
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 "`
 }

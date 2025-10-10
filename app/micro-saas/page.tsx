@@ -3,10 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { Zap, CheckCircle, ArrowRight, Star, Users, Shield, Cloud, BarChart3, Target, Rocket } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 
 interface MicroSaasProduct {
@@ -70,8 +67,6 @@ const MicroSaasPage: React.FC = () => {const microSaasProducts: MicroSaasProduct
     },
     {
       id: '3',
-<<<<<<< HEAD
-=======
       icon: <Target className="w-8 h-8 text-purple-600" />,
       title: 'Lead Scoring',
       description: 'AI-powered lead qualification and scoring system',
@@ -118,7 +113,6 @@ const MicroSaasPage: React.FC = () => {const microSaasProducts: MicroSaasProduct
       ],
       price: '$59/month',
       users: 'Up to 25 users',
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       icon: '🔒',
       title: 'Security Monitoring Suite',
       description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses',
@@ -165,23 +159,14 @@ const MicroSaasPage: React.FC = () => {const microSaasProducts: MicroSaasProduct
       price: '$34/month',
       users: 'Up to 12 users',
       popular: false,
-<<<<<<< HEAD
-=======
       category: 'Performance'
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       category: 'Support'
     }
   ];
 
   const categories = ['all', ...Array.from(new Set(microSaasProducts.map(product => product.category)))];
 
-<<<<<<< HEAD
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
-
-  const stats = [
-=======
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: <Zap className="w-8 h-8 text-blue-600" />,
       title: 'Quick Setup',
@@ -201,12 +186,9 @@ const MicroSaasPage: React.FC = () => {const microSaasProducts: MicroSaasProduct
       icon: <BarChart3 className="w-8 h-8 text-blue-600" />,
       title: 'Advanced Analytics',
       description: 'Get insights into your business with comprehensive analytics and reporting'
-<<<<<<< HEAD
-=======
   const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
 
   const stats = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: Users,
       value: '10,000+',
@@ -237,12 +219,9 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
   return (
     <React.Fragment>
       <Helmet>
-<<<<<<< HEAD
-=======
         <title>Micro SaaS Solutions - Zion Tech Group</title>
         <meta name="description" content="Discover our collection of micro SaaS solutions designed to solve specific business problems. Affordable, easy-to-use tools for modern businesses." />
         <meta name="keywords" content="micro saas, saas solutions, business tools, productivity software, automation tools" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
         <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more." />
         <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software" />
@@ -250,8 +229,6 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
-=======
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -269,7 +246,6 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -294,8 +270,6 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Features Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -314,7 +288,6 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         {/* Category Filter */}
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
@@ -331,14 +304,12 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                   {category}
                 </button>
               ))}
-              ));
-              ));
+              );
+              );
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Featured Products */}
         {popularProducts.length > 0 && (
           <section className="py-16 bg-gray-50">
@@ -361,7 +332,6 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                             Featured
                           </span>
                         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         {/* Products Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -395,7 +365,7 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                             <span>{feature}</span>
                           </li>
-                        ));
+                        );
                       </ul>
                       <div className="flex items-center justify-between mb-4">
                         <div>
@@ -431,7 +401,7 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
-                    ));
+                    );
                   </ul>
 
                   <div className="flex flex-col gap-3">
@@ -443,7 +413,7 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                     </button>
                   </div>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -465,15 +435,11 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
-                ));
+                );
               </div>
             </div>
-<<<<<<< HEAD
-          </section>);
-=======
           </section>
         )}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
@@ -503,7 +469,7 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
-                    ));
+                    );
                     {product.features.length > 3 && (
                       <li className="text-sm text-gray-500">
                         +{product.features.length - 3} more features
@@ -520,7 +486,7 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>

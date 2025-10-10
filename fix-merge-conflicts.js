@@ -186,7 +186,6 @@ return false}
 // Function to find all TypeScript/JavaScript files with merge conflicts;
 function findFilesWithConflicts(dir) {;
 const files = [];
-  ;
 function searchDirectory(currentDir) {;
 const items = fs.readdirSync(currentDir);
     

@@ -73,12 +73,8 @@ const imageStyle: React.CSSProperties = {}
       width: '100%',
       height: '100%',
       objectFit: 'cover'});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   if (hasError) {</ImageProps>
     return (</ImageProps>
   if (hasError) {}
@@ -98,12 +94,8 @@ const handleError = useCallback(() => {/* TODO: Fix JSX expression */});
 }, [onError]);
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
@@ -116,12 +108,8 @@ const handleError = useCallback(() => {/* TODO: Fix JSX expression */});
       ></div>
         <span><span className="sr-only"></spa>Screen reader: </span>Failed to load image</span>
       </div>
-<<<<<<< HEAD
-    ););
-=======
     )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return(<img;
   return (<img>
       src={src}
@@ -143,19 +131,12 @@ export default Image</img>
       onError={handleError});
       {...props});
     />)
-<<<<<<< HEAD
-  );)
-export default Image;
-    />)
-  );)
-=======
   )]
     }
 export default Image;
     />)
   )]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default Image;
 "`
 }

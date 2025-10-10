@@ -4,28 +4,14 @@ import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-;
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-<<<<<<< HEAD
-    message: '';)
-});
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value;)
-}););)
-}, []);
-const handleSubmit = useCallback(async (e: React.FormEvent) => {
-=======
     message: '']
-    });;
+    });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -38,13 +24,12 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
     }, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     e.preventDefault();
     setIsSubmitting(true);
     
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000);
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -52,14 +37,6 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
         company: '',
         phone: '',
         service: '',
-<<<<<<< HEAD
-        message: '';)
-});;)
-} catch (error) {
-      setSubmitStatus('error');)
-} finally {
-      setIsSubmitting(false););
-=======
         message: '']
     });]
     } catch (error) {
@@ -67,7 +44,6 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
     } finally {
       setIsSubmitting(false)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }, []);
 
   return (
@@ -299,12 +275,8 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
 
       <Footer />
     </div>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContactPage;
 }

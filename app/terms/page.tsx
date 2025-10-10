@@ -3,7 +3,6 @@ import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
 export default function TermsPage() {;
 const lastUpdated = 'January 1, 2024';
-  ;
 const sections = [
     {
       title: 'Acceptance of Terms',
@@ -43,12 +42,8 @@ const sections = [
     {
       title: 'Governing Law',
       icon: Scale,
-<<<<<<< HEAD
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';);
-=======
       content: 'These terms shall be governed by and construed in accordance with the laws of the United States.']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
@@ -88,7 +83,7 @@ const sections = [
                     </div>
                   </div>
                 </div>
-              ));
+              );
             </div>
 
             <div>
@@ -125,9 +120,5 @@ const sections = [
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ););
-=======
   )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

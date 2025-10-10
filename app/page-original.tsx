@@ -11,25 +11,20 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 // Dynamically import heavy components for better performance;
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner');
+const ContentCarousel = lazy(() => import('./components/ContentCarousel');
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase');
+const ContentStatistics = lazy(() => import('./components/ContentStatistics');
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup');
 // Preload critical components;
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-<<<<<<< HEAD
-      import('./components/ContentCarousel');)
-}, 100););
-=======
       import('./components/ContentCarousel')]
     }, 100)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 };
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -38,7 +33,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div>
     <div>
   </div>
-));
+);
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = memo(() => {;
 const [isLoaded, setIsLoaded] = useState(false);
@@ -50,17 +45,6 @@ const [isVisible, setIsVisible] = useState(false);
 const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
-<<<<<<< HEAD
-    return () => clearTimeout(timer);)
-}, []);
-  // Analytics tracking for phone clicks - optimized;
-const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number';)
-});;);
-=======
     return () => clearTimeout(timer)]
     }, []);
   // Analytics tracking for phone clicks - optimized
@@ -71,7 +55,6 @@ const handlePhoneClick = useCallback(() => {
         event_label: 'main_phone_number']
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }, []);
   return (
     <React.Fragment>
@@ -111,12 +94,8 @@ const handlePhoneClick = useCallback(() => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-<<<<<<< HEAD
-            addressCountry: 'US';);
-=======
             addressCountry: 'US']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         }}
       />
       <PerformanceOptimizer
@@ -1489,7 +1468,7 @@ const handlePhoneClick = useCallback(() => {
     </div>
     </>
   )]
-    });;
+    });
 
 HomePage.displayName = 'HomePage'
 export default HomePage;

@@ -8,12 +8,8 @@ import React, { ReactElement, useCallback } from 'react';
 export interface PerformanceMetrics {
   renderTime: number,
     memoryUsage: number,
-<<<<<<< HEAD
-  timestamp: string;});;)
-=======
   timestamp: string;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface CoverageMetrics {
   statements: number,
     branches: number,
@@ -21,24 +17,15 @@ export interface CoverageMetrics {
     lines: number;}
   renderTime: number,
   memoryUsage: number,
-<<<<<<< HEAD
-  timestamp: string;});;)
-=======
   timestamp: string;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface CoverageMetrics {
   statements: number,
   branches: number,
   functions: number,
-<<<<<<< HEAD
-  lines: number;});;);
-// Test configuration interface
-=======
   lines: number;});]
     }
 // Test configuration interface;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface TestConfig {
   enableMocking: boolean,
     enableCoverage: boolean,
@@ -48,22 +35,14 @@ export interface TestConfig {
 export interface PerformanceMetrics {}
   renderTime: number,
   memoryUsage: number,
-<<<<<<< HEAD
-  timestamp: string;});;)
-=======
   timestamp: string;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface CoverageMetrics {}
   statements: number,
   branches: number,
   functions: number,
-<<<<<<< HEAD
-  lines: number;});;);
-=======
   lines: number;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 // Test configuration interface
 export interface TestConfig {}
   enableMocking: boolean,
@@ -97,12 +76,8 @@ export interface TestConfig {}
   coverage?: boolean;
   outputDir?: string;
   includePattern?: string[],
-<<<<<<< HEAD
-  excludePattern?: string[];});;);
-=======
   excludePattern?: string[];});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 // Default test configuration
 export const defaultTestConfig: TestConfig = {,
     enableMocking: true,
@@ -114,12 +89,8 @@ export const defaultTestConfig: TestConfig = {}
   enableVisualRegression: false,
   coverageThreshold: 80,
   performanceThreshold: 100,
-<<<<<<< HEAD
-  accessibilityThreshold: 90});;);
-=======
   accessibilityThreshold: 90});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface TestResult {
   name: string,
     status: 'passed' | 'failed' | 'skipped' | 'pending'
@@ -129,12 +100,8 @@ interface TestResult {}
   duration: number
   error?: Error
   assertions: AssertionResult[]
-<<<<<<< HEAD
-  coverage?: CoverageResult;});;);
-=======
   coverage?: CoverageResult;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface AssertionResult {
   name: string,
     status: 'passed' | 'failed'
@@ -143,23 +110,15 @@ interface AssertionResult {}
   status: 'passed' | 'failed'
   expected?: unknown
   actual?: unknown
-<<<<<<< HEAD
-  message?: string;});;);
-=======
   message?: string;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface CoverageResult {
   statements: number,
     branches: number,
   functions: number,
     lines: number,
-<<<<<<< HEAD
-  uncovered: string[];});;);
-=======
   uncovered: string[];});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface TestSuite {
   name: string,
     tests: Test[],
@@ -178,46 +137,30 @@ export const defaultTestConfig: TestConfig = {,
   enableVisualRegression: false,
   coverageThreshold: 80,
   performanceThreshold: 100,
-<<<<<<< HEAD
-  accessibilityThreshold: 90});;);
-=======
   accessibilityThreshold: 90});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface TestResult {
   name: string,
   status: 'passed' | 'failed' | 'skipped' | 'pending',
   duration: number,
   error?: Error;
   assertions: AssertionResult[],
-<<<<<<< HEAD
-  coverage?: CoverageResult;});;);
-=======
   coverage?: CoverageResult;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface AssertionResult {
   name: string,
   status: 'passed' | 'failed',
   expected?: unknown;
   actual?: unknown;
-<<<<<<< HEAD
-  message?: string;});;);
-=======
   message?: string;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface CoverageResult {
   statements: number,
   branches: number,;
 functions: number,
   lines: number,
-<<<<<<< HEAD
-  uncovered: string[];});;);
-=======
   uncovered: string[];});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface TestSuite {
   name: string,
 interface CoverageResult {}
@@ -225,35 +168,23 @@ interface CoverageResult {}
   branches: number,
   functions: number,
   lines: number,
-<<<<<<< HEAD
-  uncovered: string[];});;);
-=======
   uncovered: string[];});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface TestSuite {}
   name: string,
   tests: Test[],
   beforeAll: (() => void | Promise<void></void>)[],
   afterAll: (() => void | Promise<void></void>)[],
   beforeEach: (() => void | Promise<void></void>)[],
-<<<<<<< HEAD
-  afterEach: (() => void | Promise<void></void>)[];});;);
-=======
   afterEach: (() => void | Promise<void></void>)[];});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface Test {
   name: string,
   fn: () => void | Promise<void></void>,
   timeout?: number;
   skip?: boolean;
-<<<<<<< HEAD
-  only?: boolean;});;)
-=======
   only?: boolean;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export class TestRunner {
   private static instance: TestRunner,
   private config: TestConfig,
@@ -266,12 +197,8 @@ interface Test {}
   fn: () => void | Promise<void></void>
   timeout?: number
   skip?: boolean
-<<<<<<< HEAD
-  only?: boolean;});;)
-=======
   only?: boolean;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export class TestRunner {}
   private static instance: TestRunner
   private config: TestConfig
@@ -321,19 +248,12 @@ export class TestRunner {}
     }</TestConfig>});
 }</TestConfig>
   static getInstance(config?: Partial<TestConfig></TestConfig>): TestRunner {
-<<<<<<< HEAD
-    if (!TestRunner.instance) {});;);
-  static getInstance(config?: Partial<TestConfig></TestConfig>): TestRunner {}
-    if (!TestRunner.instance) {}
-      TestRunner.instance = new TestRunner(config);});;);
-=======
     if (!TestRunner.instance) {});]
     }
   static getInstance(config?: Partial<TestConfig></TestConfig>): TestRunner {}
     if (!TestRunner.instance) {}
       TestRunner.instance = new TestRunner(config);});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return TestRunner.instance});
 }
   // Custom render function with providers
@@ -361,25 +281,6 @@ export class TestRunner {}
         <BrowserRouter></BrowserRouter>}
           {children}
         </BrowserRouter>
-<<<<<<< HEAD
-      ););
-    return render(ui, { wrapper: AllTheProviders, ...options });
-// Test result types
-export interface PerformanceMetrics {/* TODO: Fix JSX expression */});;)
-export interface CoverageMetrics {/* TODO: Fix JSX expression */});;);
-// Test configuration interface
-export interface TestConfig {/* TODO: Fix JSX expression */});;);
-// Default test configuration
-export const,
-  defaultTestConfig: TestConfig = {/* TODO: Fix JSX expression */});;);
-interface TestResult {/* TODO: Fix JSX expression */});;);
-interface AssertionResult {/* TODO: Fix JSX expression */});;);
-interface CoverageResult {/* TODO: Fix JSX expression */});;);
-interface TestSuite {/* TODO: Fix JSX expression */});;);
-interface Test {/* TODO: Fix JSX expression */});;)
-export class TestRunner {/* TODO: Fix JSX expression */});;)
-}> = [];
-=======
       )]
     }
     return render(ui, { wrapper: AllTheProviders, ...options });
@@ -407,24 +308,16 @@ interface Test {/* TODO: Fix JSX expression */});]
     }
 export class TestRunner {/* TODO: Fix JSX expression */});]
     }> = [];
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   private,
   isRunning: boolean = false;
   private,
   startTime: number = 0;
   constructor(confi)
-<<<<<<< HEAD
-  g: Partial<TestConfig></TestConfig> = {}); {/* TODO: Fix JSX expression */});;)
-}});
-}
-  static getInstance(config?: Partial<TestConfig></TestConfig>): TestRunner {/* TODO: Fix JSX expression */});;);
-=======
   g: Partial<TestConfig></TestConfig> = {}); {/* TODO: Fix JSX expression */});]
     }});
 }
   static getInstance(config?: Partial<TestConfig></TestConfig>): TestRunner {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return TestRunner.instance});
 }
   // Custom render function with providers;
@@ -436,17 +329,11 @@ export class TestRunner {/* TODO: Fix JSX expression */});]
   n: React.ReactNode }); => {/* TODO: Fix JSX expression */}
           {children}
         </BrowserRouter>
-<<<<<<< HEAD
-      ););
-    return render(ui, {/* TODO: Fix JSX expression */});
-  r: AllTheProviders, ...options });;);
-=======
       )]
     };
     return render(ui, {/* TODO: Fix JSX expression */});
   r: AllTheProviders, ...options });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Create a new test suite;
    */
@@ -461,14 +348,9 @@ const suite: TestSuite = {
       beforeAll: [],
       afterAll: [],
       beforeEach: [],
-<<<<<<< HEAD
-      afterEach: []});;);
-const previousSuite = this.currentSuite;
-=======
       afterEach: []});]
     }
     const previousSuite = this.currentSuite;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.currentSuite = suite;
     this.suites.push(suite)
     try {}
@@ -477,14 +359,6 @@ const previousSuite = this.currentSuite;
       this.currentSuite = previousSuite;}
   public describe(nam,
   e: string, f)
-<<<<<<< HEAD
-  n: () => void): void {/* TODO: Fix JSX expression */});;);
-const previousSuite = this.currentSuite;
-    this.currentSuite = suite;
-    this.suites.push(suite);
-    try {/* TODO: Fix JSX expression */});;)
-} finally {/* TODO: Fix JSX expression */});;);
-=======
   n: () => void): void {/* TODO: Fix JSX expression */});]
     };
     const previousSuite = this.currentSuite;
@@ -493,7 +367,6 @@ const previousSuite = this.currentSuite;
     try {/* TODO: Fix JSX expression */});]
     } finally {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Create a test case;
@@ -506,14 +379,6 @@ const previousSuite = this.currentSuite;
     timeout?: number
   ): void {}
     if (!this.currentSuite) {}
-<<<<<<< HEAD
-      throw new Error('Test must be inside a describe block');});;);
-    this.currentSuite.tests.push({);
-      name,
-      fn)
-    timeout: timeout || this.config.timeout});;)
-});;);
-=======
       throw new Error('Test must be inside a describe block');});]
     }
     this.currentSuite.tests.push({);
@@ -522,7 +387,6 @@ const previousSuite = this.currentSuite;
     timeout: timeout || this.config.timeout});]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Performance test
   async runPerformanceTest(
     component: ReactElement)</void>,
@@ -532,14 +396,6 @@ const previousSuite = this.currentSuite;
     timeout?: number;
   ): void {,
     if (!this.currentSuite) {,
-<<<<<<< HEAD
-      throw new Error('Test must be inside a describe block');});;);
-    this.currentSuite.tests.push({)
-      name)
-      fn)
-      timeout: timeout || this.config.timeout});;)
-});;);
-=======
       throw new Error('Test must be inside a describe block');});]
     }
     this.currentSuite.tests.push({)
@@ -548,7 +404,6 @@ const previousSuite = this.currentSuite;
       timeout: timeout || this.config.timeout});]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Performance test;
   async runPerformanceTest(component: ReactElement),
     testName: string): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
@@ -564,25 +419,16 @@ const renderTime = performance.now() - startTime;
       if ('memory' in performance) {}
         const memory = (performance as { memory?: {// usedJSHeapSize: number} });.memory;
         if (memory) {}
-<<<<<<< HEAD
-          memoryUsage = memory.usedJSHeapSize;});;);
-=======
           memoryUsage = memory.usedJSHeapSize;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       }
       unmount();
 const metrics = {}
       renderTime,
       memoryUsage,
-<<<<<<< HEAD
-      timestamp: new Date().toISOString();););
-const passed = renderTime < this.config.performanceThreshold
-=======
       timestamp: new Date().toISOString();)]
     }
     const passed = renderTime < this.config.performanceThreshold
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.testResults.push({});
       name: `Performance: ${testName}`,
       status: passed ? 'passed' : 'failed',
@@ -601,17 +447,11 @@ const passed = renderTime < this.config.performanceThreshold;
     f)
   n: () => void | Promise<void></void>,
     timeout?: number;
-<<<<<<< HEAD
-  ): void {/* TODO: Fix JSX expression */});;);
-    this.currentSuite.tests.push({/* TODO: Fix JSX expression */});;)
-});;);
-=======
   ): void {/* TODO: Fix JSX expression */});]
     }
     this.currentSuite.tests.push({/* TODO: Fix JSX expression */});]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Performance test;
   async runPerformanceTest(componen,
   t: ReactElement,
@@ -626,14 +466,6 @@ const renderTime = performance.now() - startTime;
 
       if ($1) { const memory = (performance as { memory?: { usedJSHeapSize: number } });.memory;
         if (memory) {
-<<<<<<< HEAD
-          memoryUsage = memory.usedJSHeapSize;);
-});
-}
-      unmount();
-const metrics = {/* TODO: Fix JSX expression */});;);
-const passed = renderTime < this.config.performanceThreshold;
-=======
           memoryUsage = memory.usedJSHeapSize]
     }
 });
@@ -642,7 +474,6 @@ const passed = renderTime < this.config.performanceThreshold;
     const metrics = {/* TODO: Fix JSX expression */});]
     };
     const passed = renderTime < this.config.performanceThreshold;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.testResults.push({/* TODO: Fix JSX expression */}
   e: ${testName}`,
       statu,
@@ -651,7 +482,7 @@ const passed = renderTime < this.config.performanceThreshold;
   n: renderTime,
       erro,`
   r: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`)]
-    });;
+    });
     return { passed, metrics }});
 }
   /**
@@ -659,18 +490,6 @@ const passed = renderTime < this.config.performanceThreshold;
    */
   public itSkip(name: string, fn: () => void | Promise<void></void>): void {,
     if (!this.currentSuite) {,
-<<<<<<< HEAD
-      throw new Error('Test must be inside a describe block');});;);
-    this.currentSuite.tests.push({
-  public itSkip(name: string, fn: () => void | Promise<void></void>): void {}
-    if (!this.currentSuite) {}
-      throw new Error('Test must be inside a describe block');});;);
-    this.currentSuite.tests.push({);
-      name,
-      fn)
-    skip: true});;)
-});;);
-=======
       throw new Error('Test must be inside a describe block');});]
     }
     this.currentSuite.tests.push({
@@ -684,7 +503,6 @@ const passed = renderTime < this.config.performanceThreshold;
     skip: true});]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Create a focused test (only run this test)</void>
    */</void>
@@ -694,14 +512,6 @@ const passed = renderTime < this.config.performanceThreshold;
    */
   public itOnly(name: string, fn: () => void | Promise<void></void>): void {}
     if (!this.currentSuite) {}
-<<<<<<< HEAD
-      throw new Error('Test must be inside a describe block');});;);
-    this.currentSuite.tests.push({);
-      name,
-      fn)
-    only: true});;)
-});;);
-=======
       throw new Error('Test must be inside a describe block');});]
     }
     this.currentSuite.tests.push({);
@@ -710,7 +520,6 @@ const passed = renderTime < this.config.performanceThreshold;
     only: true});]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Setup before all tests in suite</void>
    */</void>
@@ -723,28 +532,18 @@ const passed = renderTime < this.config.performanceThreshold;
     });
   public itSkip(nam,
   e: string, f)
-<<<<<<< HEAD
-  n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});;);
-    this.currentSuite.tests.push({/* TODO: Fix JSX expression */});;)
-});;);
-=======
   n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});]
     }
     this.currentSuite.tests.push({/* TODO: Fix JSX expression */});]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Create a focused test (only run this test)
    */
   public itOnly(name: string, fn: () => void | Promise<void></void>): void {,
     if (!this.currentSuite) {,
-<<<<<<< HEAD
-      throw new Error('Test must be inside a describe block');});;);
-=======
       throw new Error('Test must be inside a describe block');});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.currentSuite.tests.push({)
       name)
       fn)
@@ -752,17 +551,11 @@ const passed = renderTime < this.config.performanceThreshold;
     });
   public itOnly(nam,
   e: string, f)
-<<<<<<< HEAD
-  n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});;);
-    this.currentSuite.tests.push({/* TODO: Fix JSX expression */});;)
-});;);
-=======
   n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});]
     }
     this.currentSuite.tests.push({/* TODO: Fix JSX expression */});]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Setup before all tests in suite;
    */
@@ -772,15 +565,10 @@ const passed = renderTime < this.config.performanceThreshold;
     if (!this.currentSuite) {}
       throw new Error('beforeAll must be inside a describe block');
   public beforeAll(f)
-<<<<<<< HEAD
-  n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});;);
-    this.currentSuite.beforeAll.push(fn););
-=======
   n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});]
     }
     this.currentSuite.beforeAll.push(fn)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Setup after all tests in suite</void>
    */</void>
@@ -798,15 +586,10 @@ const passed = renderTime < this.config.performanceThreshold;
    * Setup after all tests in suite;
    */
   public afterAll(f)
-<<<<<<< HEAD
-  n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});;);
-    this.currentSuite.afterAll.push(fn););
-=======
   n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});]
     }
     this.currentSuite.afterAll.push(fn)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Setup before each test</void>
    */</void>
@@ -824,15 +607,10 @@ const passed = renderTime < this.config.performanceThreshold;
    * Setup before each test;
    */
   public beforeEach(f)
-<<<<<<< HEAD
-  n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});;);
-    this.currentSuite.beforeEach.push(fn););
-=======
   n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});]
     }
     this.currentSuite.beforeEach.push(fn)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Setup after each test</void>
    */</void>
@@ -850,15 +628,10 @@ const passed = renderTime < this.config.performanceThreshold;
    * Setup after each test;
    */
   public afterEach(f)
-<<<<<<< HEAD
-  n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});;);
-    this.currentSuite.afterEach.push(fn););
-=======
   n: () => void | Promise<void></void>): void {/* TODO: Fix JSX expression */});]
     }
     this.currentSuite.afterEach.push(fn)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Run all tests</void>
    */</void>
@@ -869,12 +642,8 @@ const passed = renderTime < this.config.performanceThreshold;
     if (this.isRunning) {
   public async run(): Promise<TestResult></TestResult> {}
     if (this.isRunning) {}
-<<<<<<< HEAD
-      throw new Error('Test runner is already running');});;);
-=======
       throw new Error('Test runner is already running');});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.isRunning = true;
     this.startTime = Date.now()
     this.results = []
@@ -884,34 +653,22 @@ const passed = renderTime < this.config.performanceThreshold;
         await this.runSuite(suite);
    * Run all tests;
    */
-<<<<<<< HEAD
-  public async run(): Promise<TestResult></TestResult> {/* TODO: Fix JSX expression */});;);
-=======
   public async run(): Promise<TestResult></TestResult> {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.isRunning = true;
     this.startTime = Date.now();
     this.results = [];
     try {/* TODO: Fix JSX expression */}
       if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-<<<<<<< HEAD
-      for (const suite of this.suites) {/* TODO: Fix JSX expression */});;);
-=======
       for (const suite of this.suites) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       this.generateReport()
       return this.results});
 } finally {
       return this.results});
 } finally {}
-<<<<<<< HEAD
-      this.isRunning = false;});;);
-=======
       this.isRunning = false;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Run a test suite</TestResult>
@@ -923,24 +680,16 @@ const passed = renderTime < this.config.performanceThreshold;
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     // Run beforeAll hooks;
     for (const hook of suite.beforeAll) {
-<<<<<<< HEAD
-      await this.runHook(hook, 'beforeAll');});;);
-=======
       await this.runHook(hook, 'beforeAll');});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Run tests;
     for (const test of suite.tests) {
       if (test.skip) {
         this.results.push({`}
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {}
-<<<<<<< HEAD
-      await this.runHook(hook, 'beforeAll');});;);
-=======
       await this.runHook(hook, 'beforeAll');});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Run tests
     for (const test of suite.tests) {}
       if (test.skip) {}
@@ -953,14 +702,9 @@ const passed = renderTime < this.config.performanceThreshold;
           name: `${suite.name} - ${test.name}`)
           status: 'skipped'),
           duration: 0),
-<<<<<<< HEAD
-          assertions: []});;)
-} finally {/* TODO: Fix JSX expression */});;);
-=======
           assertions: []});]
     } finally {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Run a test suite;
@@ -969,12 +713,8 @@ const passed = renderTime < this.config.performanceThreshold;
   e: TestSuite): Promise<void></void> {/* TODO: Fix JSX expression */}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     // Run beforeAll hooks;
-<<<<<<< HEAD
-    for (const hook of suite.beforeAll) {/* TODO: Fix JSX expression */});;);
-=======
     for (const hook of suite.beforeAll) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Run tests;
     for (const test of suite.tests) {/* TODO: Fix JSX expression */}`
   e: `${suite.name} - ${test.name}`,
@@ -984,25 +724,17 @@ const passed = renderTime < this.config.performanceThreshold;
   n: 0,
           assertion,
   s: []});
-});;
+});
         continue});
 }
-<<<<<<< HEAD
-      await this.runTest(suite, test););
-=======
       await this.runTest(suite, test)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Run afterAll hooks;
     for (const hook of suite.afterAll) {
     // Run afterAll hooks
     for (const hook of suite.afterAll) {}
-<<<<<<< HEAD
-      await this.runHook(hook, 'afterAll');});;);
-=======
       await this.runHook(hook, 'afterAll');});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Run a single test</void>
@@ -1021,23 +753,12 @@ const assertions: AssertionResult[] = []
     try {}
       // Run beforeEach hooks
       for (const hook of suite.beforeEach) {}
-<<<<<<< HEAD
-        await this.runHook(hook, 'beforeEach');});;);
-=======
         await this.runHook(hook, 'beforeEach');});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       // Run the test;
       await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000)
       // Run afterEach hooks;
       for (const hook of suite.afterEach) {
-<<<<<<< HEAD
-        await this.runHook(hook, 'afterEach');});;);
-      this.results.push({
-      // Run afterEach hooks
-      for (const hook of suite.afterEach) {}
-        await this.runHook(hook, 'afterEach');});;);
-=======
         await this.runHook(hook, 'afterEach');});]
     }
       this.results.push({
@@ -1045,7 +766,6 @@ const assertions: AssertionResult[] = []
       for (const hook of suite.afterEach) {}
         await this.runHook(hook, 'afterEach');});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       this.results.push({);
         name: testName,
         status: 'passed'),
@@ -1057,12 +777,8 @@ const assertions: AssertionResult[] = []
         assertions});]
     });
       if (this.config.verbose) {`}
-<<<<<<< HEAD
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } });;);
-=======
         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     } catch (error) {
       this.results.push({} catch (error) {}
       this.results.push({);
@@ -1081,12 +797,8 @@ const assertions: AssertionResult[] = []
       if (this.config.bail) {}
         throw error}
     // Run afterAll hooks;
-<<<<<<< HEAD
-    for (const hook of suite.afterAll) {/* TODO: Fix JSX expression */});;);
-=======
     for (const hook of suite.afterAll) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Run a single test;
@@ -1098,22 +810,6 @@ const testName = `${suite.name} - ${test.name}`;
 const startTime = Date.now();
     const,
   assertions: AssertionResult[] = [];
-<<<<<<< HEAD
-    try {/* TODO: Fix JSX expression */});;);
-      // Run the test;
-      await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000);
-      // Run afterEach hooks;
-      for (const hook of suite.afterEach) {/* TODO: Fix JSX expression */});;);
-      this.results.push({/* TODO: Fix JSX expression */});;)
-});;
-      if (this.config.verbose) {/* TODO: Fix JSX expression */}`
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } });;);
-    } catch (error) {/* TODO: Fix JSX expression */});;)
-});;`
-      - startTime}ms)`);
-      if (this.config.bail) {/* TODO: Fix JSX expression */});;);
-    });;);
-=======
     try {/* TODO: Fix JSX expression */});]
     }
       // Run the test;
@@ -1122,18 +818,17 @@ const startTime = Date.now();
       for (const hook of suite.afterEach) {/* TODO: Fix JSX expression */});]
     }
       this.results.push({/* TODO: Fix JSX expression */});]
-    });;
+    });
       if (this.config.verbose) {/* TODO: Fix JSX expression */}`
         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } });]
     }
     } catch (error) {/* TODO: Fix JSX expression */});]
-    });;`
+    });`
       - startTime}ms)`);
       if (this.config.bail) {/* TODO: Fix JSX expression */});]
     }
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Run a hook
    */</void>
@@ -1154,16 +849,10 @@ const startTime = Date.now();
     hookName: string
   ): Promise<void></void> {}
     try {}
-<<<<<<< HEAD
-      await hook();});;)
-} catch (error) {}
-      throw error;});;);
-=======
       await hook();});]
     } catch (error) {}
       throw error;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Run function with timeout
@@ -1205,14 +894,9 @@ return (
   k: () => void | Promise<void></void>,
     hookNam,
   e: string,
-<<<<<<< HEAD
-  ): Promise<void></void> {/* TODO: Fix JSX expression */});;)
-} catch (error) {/* TODO: Fix JSX expression */});;);
-=======
   ): Promise<void></void> {/* TODO: Fix JSX expression */});]
     } catch (error) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Run function with timeout;
@@ -1225,20 +909,12 @@ return (
         reject(new Error(`Test timed out after ${timeout}ms`))]
     }, timeout);
       Promise.resolve(fn())
-<<<<<<< HEAD
-        .then(() => {/* TODO: Fix JSX expression */});;)
-});
-        .catch(error => {/* TODO: Fix JSX expression */});;)
-});;)
-});;);
-=======
         .then(() => {/* TODO: Fix JSX expression */});]
     });
         .catch(error => {/* TODO: Fix JSX expression */});]
     });]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Generate test report;
    */
@@ -1264,16 +940,10 @@ const skipped = this.results.filter(r => r.status === 'skipped').length}
       this.generateHtmlReport();});]
     } else if (this.config.reporter === 'junit') {}
       this.generateJunitReport();}
-<<<<<<< HEAD
-    if (this.config.reporter === 'json') {/* TODO: Fix JSX expression */});;)
-} else if (this.config.reporter === 'html') {/* TODO: Fix JSX expression */});;)
-} else if (this.config.reporter === 'junit') {/* TODO: Fix JSX expression */});;);
-=======
     if (this.config.reporter === 'json') {/* TODO: Fix JSX expression */});]
     } else if (this.config.reporter === 'html') {/* TODO: Fix JSX expression */});]
     } else if (this.config.reporter === 'junit') {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Generate JSON report;
@@ -1304,12 +974,8 @@ const report = {
   s: this.results});
 };
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-<<<<<<< HEAD
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { ); } });;);
-=======
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { ); } });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Generate HTML report;
    */
@@ -1374,12 +1040,8 @@ const html =</void>
 </body>
 </html>`
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-<<<<<<< HEAD
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} });;);
-=======
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Accessibility test
   async runAccessibilityTest(
     component: ReactElement)
@@ -1401,12 +1063,8 @@ const violations: string[] = []
 const images = container.querySelectorAll('img')
     images.forEach((img, index) => {}
       if (!img.getAttribute('alt')) {`}
-<<<<<<< HEAD
-        violations.push(`Image ${index} missing alt text`););
-=======
         violations.push(`Image ${index} missing alt text`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     });
     // Check for missing labels on form inputs;
 const inputs = container.querySelectorAll('input, select, textarea')
@@ -1415,12 +1073,8 @@ const inputs = container.querySelectorAll('input, select, textarea')
 const ariaLabel = input.getAttribute('aria-label');
 const ariaLabelledBy = input.getAttribute('aria-labelledby')
       if (!id && !ariaLabel && !ariaLabelledBy) {`}
-<<<<<<< HEAD
-        violations.push(`Input ${index} missing label`););
-=======
         violations.push(`Input ${index} missing label`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     });
     // Check for proper heading hierarchy;
 const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
@@ -1430,12 +1084,8 @@ let previousLevel = 0
     headings.forEach((heading, index) => {}
       const level = parseInt(heading.tagName.charAt(1))
       if (<<<leve></leve>previousLevel</level> + 1) {`}
-<<<<<<< HEAD
-        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level});`););
-=======
         violations.push(`Heading ${index} skips level (h${previousLevel} to h${level});`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       previousLevel = level});
 });
     // Check for proper button text;
@@ -1444,12 +1094,8 @@ const buttons = container.querySelectorAll('button')
       const text = button.textContent?.trim();
 const ariaLabel = button.getAttribute('aria-label')
       if (!text && !ariaLabel) {`}
-<<<<<<< HEAD
-        violations.push(`Button ${index} missing accessible text`););
-=======
         violations.push(`Button ${index} missing accessible text`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     });
 const passed = violations.length === 0
     this.testResults.push({`});
@@ -1458,12 +1104,8 @@ const passed = violations.length === 0
       duration: 0),
   error: passed ? undefined : `Found ${violations.length} accessibility violations});
 });
-<<<<<<< HEAD
-    return { passed, violations });;);
-=======
     return { passed, violations });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Component test
   async runComponentTest()
     component: ReactElement,
@@ -1476,12 +1118,8 @@ const passed = violations.length === 0;
       duration: 0),
       error: passed ? undefined : `Found ${violations.length} accessibility violations});
 });
-<<<<<<< HEAD
-    return { passed, violations });;);
-=======
     return { passed, violations });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Component test;
   async runComponentTest(component: ReactElement),
     testName: string),
@@ -1567,12 +1205,8 @@ const result = this.customRender(component)
 </body>`
 </html>`;
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-<<<<<<< HEAD
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} });;);
-=======
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Accessibility test;
   async runAccessibilityTest(componen,
   t: ReactElement,
@@ -1587,48 +1221,30 @@ const result = this.customRender(component)
     // Check for missing alt text on images;
 const images = container.querySelectorAll('img');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-        violations.push(`Image ${index} missing alt text`););
-=======
         violations.push(`Image ${index} missing alt text`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    });;
+    });
     // Check for missing labels on form inputs;
 const inputs = container.querySelectorAll('input, select, textarea');
     inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-        violations.push(`Input ${index} missing label`););
-=======
         violations.push(`Input ${index} missing label`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-    });;
+    });
     // Check for proper heading hierarchy;
 const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
     headings.forEach((heading, index) => {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level});`););
-=======
         violations.push(`Heading ${index} skips level (h${previousLevel} to h${level});`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       previousLevel = level});
-});;
+});
     // Check for proper button text;
 const buttons = container.querySelectorAll('button');
     buttons.forEach((button, index) => {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-        violations.push(`Button ${index} missing accessible text`););
-    });
-const passed = violations.length === 0;
-=======
         violations.push(`Button ${index} missing accessible text`)]
     }
-    });;
+    });
     const passed = violations.length === 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.testResults.push({/* TODO: Fix JSX expression */}`
   y: ${testName}`,
       statu,
@@ -1637,7 +1253,7 @@ const passed = violations.length === 0;
   n: 0,
       erro,`
   r: passed ? undefined : `Found ${violations.length} accessibility violations`)]
-    });;
+    });
     return { passed, violations }});
 }
   // Component test;
@@ -1655,7 +1271,7 @@ const passed = violations.length === 0;
   s: 'passed',
         duratio,
   n: 0,});
-});;
+});
       return {/* TODO: Fix JSX expression */}
   d: true }});
 } catch (error) {/* TODO: Fix JSX expression */}`
@@ -1666,7 +1282,7 @@ const passed = violations.length === 0;
   n: 0,
         erro,
   r: errorMessage,});
-});;
+});
       return {/* TODO: Fix JSX expression */}
   r: errorMessage }});
 }
@@ -1704,12 +1320,8 @@ const passed = violations.length === 0;
     </testsuite>
 </testsuites>`
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-<<<<<<< HEAD
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} });;);
-=======
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Integration test
   async runIntegrationTest()
     component: ReactElement,
@@ -1751,12 +1363,8 @@ const result = this.customRender(component)
         duration: 0),
         error: errorMessage,});
 });
-<<<<<<< HEAD
-      return { passed: false, error: errorMessage });;);
-=======
       return { passed: false, error: errorMessage });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Visual regression test
   async runVisualRegressionTest(
@@ -1785,12 +1393,8 @@ const result = this.customRender(component)
       status: 'passed'),
       duration: 0,});
 });
-<<<<<<< HEAD
-    return { passed: true });;);
-=======
     return { passed: true });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Coverage test;
   // Coverage test;
   async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
@@ -1807,26 +1411,17 @@ const coverage: CoverageMetrics = {}
       statements: 85,
       branches: 80,
       functions: 90,
-<<<<<<< HEAD
-      lines: 85});;);
-const passed = coverage.statements >= this.config.coverageThreshold
-=======
       lines: 85});]
     }
     const passed = coverage.statements >= this.config.coverageThreshold
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.testResults.push({);
       name: 'Coverage',
       status: passed ? 'passed' : 'failed',
       duration: 0,`});
     error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%});
 });
-<<<<<<< HEAD
-    return { passed, coverage });;);
-=======
     return { passed, coverage });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Run all tests
   async runAllTests(
     tests: Array<{,
@@ -1842,26 +1437,17 @@ const coverage: CoverageMetrics = {,
   statements: 85,
       branches: 80,
       functions: 90,
-<<<<<<< HEAD
-      lines: 85});;);
-const passed = coverage.statements >= this.config.coverageThreshold;
-=======
       lines: 85});]
     }
     const passed = coverage.statements >= this.config.coverageThreshold;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.testResults.push({)
       name: 'Coverage'),
       status: passed ? 'passed' : 'failed'),
       duration: 0,`}
       error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%});
 });
-<<<<<<< HEAD
-    return { passed, coverage });;);
-=======
     return { passed, coverage });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Run all tests;
   async runAllTests(tests: Array<{),
   name: string}
@@ -1937,12 +1523,8 @@ let result;
     </testsuite>`
 </testsuites>`;
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-<<<<<<< HEAD
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} });;);
-=======
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Integration test;
   async runIntegrationTest(componen,
   t: ReactElement,
@@ -1958,7 +1540,7 @@ let result;
   s: 'passed',
         duratio,
   n: 0,});
-});;
+});
       return {/* TODO: Fix JSX expression */}
   d: true }});
 } catch (error) {/* TODO: Fix JSX expression */}`
@@ -1969,7 +1551,7 @@ let result;
   n: 0,
         erro,
   r: errorMessage,});
-});;
+});
       return {/* TODO: Fix JSX expression */}
   r: errorMessage }});
 }
@@ -1988,24 +1570,19 @@ let result;
   s: 'passed',
       duratio,
   n: 0});]
-    });;
+    });
     return {/* TODO: Fix JSX expression */}
   d: true }});
 }
   // Coverage test;
   // Coverage test;
   async runCoverageTest(): Promise<{/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-  e: CoverageMetrics }> {/* TODO: Fix JSX expression */});;);
-const passed = coverage.statements >= this.config.coverageThreshold;
-=======
   e: CoverageMetrics }> {/* TODO: Fix JSX expression */});]
     };
     const passed = coverage.statements >= this.config.coverageThreshold;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.testResults.push({/* TODO: Fix JSX expression */}`
   r: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`)]
-    });;
+    });
     return { passed, coverage }});
 }
   // Run all tests;
@@ -2022,14 +1599,6 @@ const passed = coverage.statements >= this.config.coverageThreshold;
     const,
   results: unknown[] = [];
       results.push({/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-  e: test.type });;);
-const passed = results.every(result => result.passed)
-    return { passed, results });;);
-  // Get test results;
-  getTestResults() {
-    return [...this.testResults];});;);
-=======
   e: test.type });]
     }
     const passed = results.every(result => result.passed)
@@ -2039,7 +1608,6 @@ const passed = results.every(result => result.passed)
   getTestResults() {
     return [...this.testResults];});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Get test statistics;
   getTestStatistics() {;
 const total = this.testResults.length;
@@ -2049,12 +1617,8 @@ const skipped = this.testResults.filter(result => result.status === 'skipped').l
     return {
   // Get test results
   getTestResults() {}
-<<<<<<< HEAD
-    return [...this.testResults];});;);
-=======
     return [...this.testResults];});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Get test statistics
   getTestStatistics() {}
     const total = this.testResults.length;
@@ -2066,13 +1630,6 @@ const skipped = this.testResults.filter(result => result.status === 'skipped').l
       passed,
       failed,
       skipped,
-<<<<<<< HEAD
-      passRate: total > 0 ? (passed / total) * 100 : 0});;);
-  }
-  // Clear test results;
-  clearTestResults() {
-    this.testResults = [];});;);
-=======
       passRate: total > 0 ? (passed / total) * 100 : 0});]
     }
   }
@@ -2080,7 +1637,6 @@ const skipped = this.testResults.filter(result => result.status === 'skipped').l
   clearTestResults() {
     this.testResults = [];});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Generate test report;
   generateTestReport() {;
 const statistics = this.getTestStatistics();
@@ -2089,12 +1645,8 @@ const results = this.getTestResults()
       summary: statistics,
   // Clear test results
   clearTestResults() {}
-<<<<<<< HEAD
-    this.testResults = [];});;);
-=======
     this.testResults = [];});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Generate test report
   generateTestReport() {}
     const statistics = this.getTestStatistics();
@@ -2103,14 +1655,6 @@ const results = this.getTestResults()
       summary: statistics,
       results,
       timestamp: new Date().toISOString(),
-<<<<<<< HEAD
-      config: this.config});;);
-  });;);
-// React hook for testing
-export const useTestRunner = useCallback((...args) => {;
-const testRunner = TestRunner.getInstance();
-const runTest = useCallback(async (
-=======
       config: this.config});]
     }
   });]
@@ -2119,7 +1663,6 @@ const runTest = useCallback(async (
 export const useTestRunner = useCallback((...args) => {
   const testRunner = TestRunner.getInstance()
   const runTest = useCallback(async (
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 // React hook for testing
 export const useTestRunner = useCallback((...args) => {}
   const testRunner = TestRunner.getInstance();
@@ -2153,28 +1696,18 @@ const runTest = useCallback(async ()
       case 'visual':
         return testRunner.runVisualRegressionTest(component, testName)
       default:}
-<<<<<<< HEAD
-        return { passed: false, error: 'Unknown test type' });;);
-=======
         return { passed: false, error: 'Unknown test type' });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }, [testRunner])
   return {}
     runTest,
     getTestResults: () => testRunner.getTestResults(),
     getTestStatistics: () => testRunner.getTestStatistics(),
     clearTestResults: () => testRunner.clearTestResults(),
-<<<<<<< HEAD
-    generateTestReport: () => testRunner.generateTestReport();););
-}
-// Test utilities
-=======
     generateTestReport: () => testRunner.generateTestReport();)]
     }
 }
 // Test utilities;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const testUtils = {
   // Create mock data</void>
   createMockData: (type: string, count: number = 10) => {}</void>
@@ -2199,12 +1732,8 @@ export const testUtils = {}
         name: `Mock ${type} ${i + 1}`)
         description: `This is a mock ${type} item`)
         createdAt: new Date().toISOString(),
-<<<<<<< HEAD
-        updatedAt: new Date().toISOString();););
-=======
         updatedAt: new Date().toISOString();)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return mockData});
 },
   // Wait for element to appear;
@@ -2216,14 +1745,6 @@ export const testUtils = {}
       const element = document.querySelector(selector)
       if (element) {}
         resolve(element)
-<<<<<<< HEAD
-        return;});;);
-const observer = new MutationObserver(() => {}
-        const element = document.querySelector(selector)
-        if (element) {}
-          observer.disconnect()
-          resolve(element);});;);
-=======
         return;});]
     }
       const observer = new MutationObserver(() => {}
@@ -2232,7 +1753,6 @@ const observer = new MutationObserver(() => {}
           observer.disconnect()
           resolve(element);});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       });
       observer.observe(document.body, {
         childList: true),
@@ -2270,33 +1790,21 @@ const observer = new MutationObserver(() => {}
       case 'change':
         if (element instanceof HTMLInputElement) {}
           element.value = 'test value';}
-<<<<<<< HEAD
-          element.dispatchEvent(new Event('change', { bubbles: true });););
-=======
           element.dispatchEvent(new Event('change', { bubbles: true });)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         break;
       default:
         throw new Error(`Unknown action: ${action}`)
   // Get test results;
-<<<<<<< HEAD
-  getTestResults() {/* TODO: Fix JSX expression */});;);
-=======
   getTestResults() {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Get test statistics;
   getTestStatistics() {/* TODO: Fix JSX expression */});]
     }});
 }
   // Clear test results;
-<<<<<<< HEAD
-  clearTestResults() {/* TODO: Fix JSX expression */});;);
-=======
   clearTestResults() {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Generate test report;
   generateTestReport() {/* TODO: Fix JSX expression */});]
     }});
@@ -2320,31 +1828,21 @@ export const testUtils = {/* TODO: Fix JSX expression */}
         createdA,
   t: new Date().toISOString(),
         updatedA,
-<<<<<<< HEAD
-  t: new Date().toISOString();)
-});;);
-=======
   t: new Date().toISOString()]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return mockData});
 },
   // Wait for element to appear,
   waitForElement: (selecto,
   r: string, timeou)
-<<<<<<< HEAD
-  t: number = 5000) => {/* TODO: Fix JSX expression */});;);
-const observer = new MutationObserver(() => {/* TODO: Fix JSX expression */});;);
-=======
   t: number = 5000) => {/* TODO: Fix JSX expression */});]
     }
       const observer = new MutationObserver(() => {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
-      });;
+      });
       observer.observe(document.body, {/* TODO: Fix JSX expression */});]
-    });;
+    });
       setTimeout(() => {/* TODO: Fix JSX expression */}`
         reject(new Error(`Element ${selector} not found within ${timeout}ms`))]
     }, timeout)]
@@ -2354,25 +1852,16 @@ const observer = new MutationObserver(() => {/* TODO: Fix JSX expression */});;)
   simulateUserInteraction: async (elemen,
   t: HTMLElement, actio)
   n: string) => {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-  s: true });););
-=======
   s: true });)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         break;
       defaul,
   t:`
         throw new Error(`Unknown)`
-<<<<<<< HEAD
-  action: ${action}`););
-  });;)
-=======
   action: ${action}`)]
     }
   });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default TestRunner;
 /**
  * Assertion utilities;
@@ -2385,12 +1874,8 @@ export class Assert {}
     if (!value) {`}
       throw new Error(message || `Expected ${value} to be truthy`)
 export class Assert {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to be truthy`););
-=======
       throw new Error(message || `Expected ${value} to be truthy`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is falsy;
@@ -2400,12 +1885,8 @@ export class Assert {/* TODO: Fix JSX expression */}`
       throw new Error(message || `Expected ${value} to be falsy`)
   public static assertFalse(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to be falsy`););
-=======
       throw new Error(message || `Expected ${value} to be falsy`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that two values are equal;
@@ -2428,12 +1909,8 @@ export class Assert {/* TODO: Fix JSX expression */}`
   d: unknown,
     message?: string}
   ): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${actual} to equal ${expected}`););
-=======
       throw new Error(message || `Expected ${actual} to equal ${expected}`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that two values are not equal;
@@ -2456,12 +1933,8 @@ export class Assert {/* TODO: Fix JSX expression */}`
   d: unknown,
     message?: string}
   ): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${actual} to not equal ${expected}`););
-=======
       throw new Error(message || `Expected ${actual} to not equal ${expected}`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is null;
@@ -2471,12 +1944,8 @@ export class Assert {/* TODO: Fix JSX expression */}`
       throw new Error(message || `Expected ${value} to be null`)
   public static assertNull(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to be null`););
-=======
       throw new Error(message || `Expected ${value} to be null`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is not null;
@@ -2486,12 +1955,8 @@ export class Assert {/* TODO: Fix JSX expression */}`
       throw new Error(message || `Expected ${value} to not be null`)
   public static assertNotNull(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to not be null`););
-=======
       throw new Error(message || `Expected ${value} to not be null`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is undefined;
@@ -2501,12 +1966,8 @@ export class Assert {/* TODO: Fix JSX expression */}`
       throw new Error(message || `Expected ${value} to be undefined`)
   public static assertUndefined(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to be undefined`););
-=======
       throw new Error(message || `Expected ${value} to be undefined`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is not undefined;
@@ -2516,12 +1977,8 @@ export class Assert {/* TODO: Fix JSX expression */}`
       throw new Error(message || `Expected ${value} to not be undefined`)
   public static assertNotUndefined(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to not be undefined`););
-=======
       throw new Error(message || `Expected ${value} to not be undefined`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value throws an error;
@@ -2538,26 +1995,16 @@ export class Assert {/* TODO: Fix JSX expression */}`
   ): void {,
     try {,
       fn(),
-<<<<<<< HEAD
-      throw new Error('Expected function to throw an error');});;)
-} catch (error) {
-      if ($1) { const errorMessage = (error as Error).message;
-=======
       throw new Error('Expected function to throw an error');});]
     } catch (error) {
       if (expectedError) {
         const errorMessage = (error as Error).message;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         if (typeof expectedError === 'string') {
           if (!errorMessage.includes(expectedError)) {
             throw new Error(`});
               `Expected error message to contain "${expectedError}", but got "${errorMessage}")
-<<<<<<< HEAD
-            ););
-=======
             )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         } else {
           if (!expectedError.test(errorMessage)) {
             throw new Error(`});
@@ -2569,12 +2016,8 @@ export class Assert {/* TODO: Fix JSX expression */}`
           if (!errorMessage.includes(expectedError)) {}
             throw new Error(`});
               `Expected error message to contain "${expectedError}", but got "${errorMessage}"
-<<<<<<< HEAD
-            ););
-=======
             )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         } else {}
           if (!expectedError.test(errorMessage)) {}
             throw new Error(`});
@@ -2586,14 +2029,6 @@ export class Assert {/* TODO: Fix JSX expression */}`
   ): void {/* TODO: Fix JSX expression */});]
     } catch (error) {/* TODO: Fix JSX expression */}"`
               `Expected error message to contain "${expectedError}", but got "${errorMessage}"`
-<<<<<<< HEAD
-            ););
-        } else {/* TODO: Fix JSX expression */}"`
-              `Expected error message to match ${expectedError}, but got "${errorMessage}"`
-            ););
-        });;);
-    });;);
-=======
             )]
     }
         } else {/* TODO: Fix JSX expression */}"`
@@ -2604,7 +2039,6 @@ export class Assert {/* TODO: Fix JSX expression */}`
     }
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Assert that a value does not throw an error;
    */
@@ -2623,12 +2057,8 @@ export class Assert {/* TODO: Fix JSX expression */}`
   n: () => void): void {/* TODO: Fix JSX expression */});]
     } catch (error) {/* TODO: Fix JSX expression */}`
   threw: ${(error as Error).message}`
-<<<<<<< HEAD
-      ););
-=======
       )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is an instance of a class;
@@ -2665,12 +2095,8 @@ constructor: new (...args: unknown[]) => unknown,
     message?: string;
   ): void {/* TODO: Fix JSX expression */}`
         message || `Expected ${value} to be an instance of ${constructor.name}`
-<<<<<<< HEAD
-      ););
-=======
       )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is an array;
@@ -2680,12 +2106,8 @@ constructor: new (...args: unknown[]) => unknown,
       throw new Error(message || `Expected ${value} to be an array`)
   public static assertArray(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to be an array`););
-=======
       throw new Error(message || `Expected ${value} to be an array`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is a string;
@@ -2695,12 +2117,8 @@ constructor: new (...args: unknown[]) => unknown,
       throw new Error(message || `Expected ${value} to be a string`)
   public static assertString(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to be a string`););
-=======
       throw new Error(message || `Expected ${value} to be a string`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is a number;
@@ -2710,12 +2128,8 @@ constructor: new (...args: unknown[]) => unknown,
       throw new Error(message || `Expected ${value} to be a number`)
   public static assertNumber(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to be a number`););
-=======
       throw new Error(message || `Expected ${value} to be a number`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is a boolean;
@@ -2725,12 +2139,8 @@ constructor: new (...args: unknown[]) => unknown,
       throw new Error(message || `Expected ${value} to be a boolean`)
   public static assertBoolean(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to be a boolean`););
-=======
       throw new Error(message || `Expected ${value} to be a boolean`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is an object;
@@ -2740,12 +2150,8 @@ constructor: new (...args: unknown[]) => unknown,
       throw new Error(message || `Expected ${value} to be an object`)
   public static assertObject(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to be an object`););
-=======
       throw new Error(message || `Expected ${value} to be an object`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Assert that a value is a function;
@@ -2755,15 +2161,10 @@ constructor: new (...args: unknown[]) => unknown,
       throw new Error(message || `Expected ${value} to be a function`)
   public static assertFunction(valu)
   e: unknown, message?: string): void {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      throw new Error(message || `Expected ${value} to be a function`););
-  });;);
-=======
       throw new Error(message || `Expected ${value} to be a function`)]
     }
   });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Mock utilities;
  */
@@ -2790,23 +2191,15 @@ const mockFn = useCallback((...args) => {,
 const mockFn = useCallback((...args) => {}
       calls.push(args)
       if (implementation) {}
-<<<<<<< HEAD
-        return implementation(...args);});;);
-=======
         return implementation(...args);});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       return undefined});
 }
     (mockFn as MockFunction).mock = {}
       calls,
       results: [],
-<<<<<<< HEAD
-      instances: []});;);
-=======
       instances: []});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return mockFn as MockFunction});
 }
   /**
@@ -2826,14 +2219,6 @@ const mockFn = useCallback((...args) => {}
     return new Proxy({} as T, {);
       get(target, prop) {}
         if (prop in overrides) {}
-<<<<<<< HEAD
-          return overrides[prop as keyof T];});;);
-        return Mock.fn()
-class Mock {/* TODO: Fix JSX expression */});;);
-      return undefined});
-};
-    (mockFn as MockFunction).mock = {/* TODO: Fix JSX expression */});;);
-=======
           return overrides[prop as keyof T];});]
     }
         return Mock.fn()
@@ -2843,7 +2228,6 @@ class Mock {/* TODO: Fix JSX expression */});]
 };
     (mockFn as MockFunction).mock = {/* TODO: Fix JSX expression */});]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return mockFn as MockFunction});
 }
   /**
@@ -2852,19 +2236,12 @@ class Mock {/* TODO: Fix JSX expression */});]
   public static object<T></T>>(override,
   s: Partial<T></T> = {});
   ): T {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-    return new Proxy({} as T, {/* TODO: Fix JSX expression */});;)
-});
-        return Mock.fn(););
-    });;);
-=======
     return new Proxy({} as T, {/* TODO: Fix JSX expression */});]
     });
         return Mock.fn()]
     }
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Create a mock class</T>
    */</T>
@@ -2908,12 +2285,8 @@ const mockFn = Mock.fn(),
 const mockFn = Mock.fn()
     (object as Record<string></string>)[method as string] = mockFn;}
     (mockFn as MockFunction & { mockRestore: () => void });.mockRestore = () => {}
-<<<<<<< HEAD
-      (object as Record<string></string>)[method as string] = original;});;);
-=======
       (object as Record<string></string>)[method as string] = original;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
    * Create a mock class;
    */
   public static class<T></T> unknown>(constructo,
@@ -2921,7 +2294,7 @@ const mockFn = Mock.fn()
     override,
   s: Partial<InstanceType></InstanceType>> = {});
   ): MockFunction {/* TODO: Fix JSX expression */});]
-    });;
+    });
     return mockFn});
 }
   /**
@@ -2932,12 +2305,8 @@ const mockFn = Mock.fn()
     metho,
   d: K}
   ): MockFunction {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-  e: () => void });.mockRestore = () => {/* TODO: Fix JSX expression */});;);
-=======
   e: () => void });.mockRestore = () => {/* TODO: Fix JSX expression */});]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return mockFn as MockFunction});
 }
   /**
@@ -2945,33 +2314,21 @@ const mockFn = Mock.fn()
    */
   public static clearAllMocks(): void {}
     this.mocks.clear();}
-<<<<<<< HEAD
-  public static clearAllMocks(): void {/* TODO: Fix JSX expression */});;);
-=======
   public static clearAllMocks(): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Reset all mocks;
    */
   public static resetAllMocks(): void {}
     this.mocks.clear();}
-<<<<<<< HEAD
-  public static resetAllMocks(): void {/* TODO: Fix JSX expression */});;);
-=======
   public static resetAllMocks(): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Restore all mocks;
    */
   public static restoreAllMocks(): void {}
-<<<<<<< HEAD
-    this.mocks.clear();});;);
-=======
     this.mocks.clear();});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 interface MockFunction {
   (...args: unknown[]): unknown,
@@ -2986,16 +2343,10 @@ interface MockFunction {}
   mock: {,
     calls: unknown[][],
     results: unknown[],
-<<<<<<< HEAD
-    instances: unknown[];});;);
-}
-// Export test runner and utilities
-=======
     instances: unknown[];});]
     }
 }
 // Export test runner and utilities;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const testRunner = new TestRunner()
 export { Mock }
 export type {}
@@ -3005,17 +2356,6 @@ export type {}
   AssertionResult,
   CoverageResult}</string>});
 }</string>
-<<<<<<< HEAD
-  public static restoreAllMocks(): void {/* TODO: Fix JSX expression */});;);
-}
-interface MockFunction {/* TODO: Fix JSX expression */});;)
-}});
-}
-// Export test runner and utilities
-export const testRunner = new TestRunner()
-export { Mock }
-export type {/* TODO: Fix JSX expression */});;);
-=======
   public static restoreAllMocks(): void {/* TODO: Fix JSX expression */});]
     }
 }
@@ -3027,6 +2367,5 @@ export const testRunner = new TestRunner();
 export { Mock };
 export type {/* TODO: Fix JSX expression */});]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 "`
 }

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-'use client'
-=======
 'use client';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface AccessibilityOptions {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -28,11 +24,8 @@ export class AccessibilityEnhancer {
       enableReducedMotion: true,
       ...options
     };
-<<<<<<< HEAD
-=======
 const AccessibilityEnhancerPage: React.FC = () => {
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -451,8 +444,7 @@ const announcement = document.createElement('div');
   public trapFocus(container: HTMLElement): void {
     if (!this.options.enableFocusManagement) return;
 const focusableElements = this.getFocusableElements().filter(el => 
-      container.contains(el)
-    );
+      container.contains(el);
 
     if (focusableElements.length === 0) return;
 const firstElement = focusableElements[0];
@@ -477,45 +469,3 @@ const lastElement = focusableElements[focusableElements.length - 1];
 }
 
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
-    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[]}
-  /**
-   * Announce to screen reader
-   */
-  private announceToScreenReader(message: string, priority: 'polite' | 'assertive' = 'polite'): void {;
-const liveRegion = document.getElementById(
-      priority === 'assertive' ? 'assertive-live-region' : 'live-region'
-    );
-    if (liveRegion) {
-      liveRegion.textContent = message;
-      // Clear after announcement
-      setTimeout(() => {
-        liveRegion.textContent = ''}, 1000);
-  }
-  /**
-   * Get accessibility metrics
-   */
-  getMetrics(): AccessibilityMetrics {
-    return { ...this.metrics }}
-  /**
-   * Get accessibility report
-   */
-  getReport(): string {;
-const metrics = this.getMetrics();
-    return `
-Accessibility Report:
-- Color Contrast Score: ${metrics.colorContrastScore}/100
-- Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100
-- Screen Reader Score: ${metrics.screenReaderScore}/100
-- ARIA Implementation Score: ${metrics.ariaImplementationScore}/100
-- Overall Score: ${metrics.overallScore}/100
-
-Recommendations:
-- Focus on improving color contrast for better accessibility
-- Ensure all interactive elements are keyboard accessible
-- Implement proper ARIA labels and roles
-- Test with screen readers regularly
-`}
-}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

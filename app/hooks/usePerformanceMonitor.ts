@@ -1,11 +1,7 @@
 'use client';
 
-<<<<<<< HEAD
-import { useEffect } from 'react'
-=======
 import { useEffect } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const usePerformanceMonitor = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -64,10 +60,6 @@ const memoryUsage = {
       window.removeEventListener('load', handleLoad);
     };
   }, []);
-<<<<<<< HEAD
-};
-      window.removeEventListener('load', handleLoad)}}, []);
-=======
 import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
 
@@ -218,4 +210,3 @@ export const usePerformanceMonitor = () => {
     measureUserInteraction
   };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

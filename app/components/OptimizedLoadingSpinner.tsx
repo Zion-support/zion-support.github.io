@@ -9,13 +9,9 @@ interface OptimizedLoadingSpinnerProps {
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-<<<<<<< HEAD
-  fullScreen?: boolean;);
-=======
   fullScreen?: boolean]
     }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',;
@@ -23,15 +19,9 @@ variant = 'spinner',
     text = 'Loading...',
     className = '',
     color = 'blue',
-<<<<<<< HEAD
-    fullScreen = false,;)
-}); => {;
-const sizeClasses = useMemo(
-=======
     fullScreen = false,]
     }); => {
     const sizeClasses = useMemo(
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
@@ -41,7 +31,6 @@ const sizeClasses = useMemo(
     });,
       []
     );
-;
 const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
@@ -52,7 +41,6 @@ const textSizeClasses = useMemo(
     });,
       []
     );
-;
 const colorClasses = useMemo(
       () => ({
         blue: 'border-blue-600 bg-blue-600',
@@ -63,7 +51,6 @@ const colorClasses = useMemo(
     });,
       []
     );
-;
 const renderSpinner = useMemo(() => {
 return (
 switch (variant) {
@@ -76,7 +63,7 @@ switch (variant) {
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
                 />
-              ));</div>
+              );</div>
           );
 
         case 'pulse':
@@ -108,7 +95,7 @@ switch (variant) {
                     animationDelay: `${i * 0.1}s`,]
     }}
                 />
-              ));</div>
+              );</div>
           );
 
         case 'spinner':
@@ -119,19 +106,12 @@ switch (variant) {
               role='status'
               aria-label='Loading'
             />
-<<<<<<< HEAD
-          ););
-    }, [size, variant, color, sizeClasses, colorClasses]);
-const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
-}, [fullScreen, className]);
-=======
           )]
     }
     }, [size, variant, color, sizeClasses, colorClasses]);
 
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`]
     }, [fullScreen, className]);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
     return (</div>
       <div>
@@ -143,12 +123,8 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
             </p>
           );
         </div>
-<<<<<<< HEAD
-    ););
-=======
     )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 );
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'

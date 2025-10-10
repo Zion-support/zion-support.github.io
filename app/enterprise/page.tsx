@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
-;
 const EnterprisePage: React.FC = () => {const features = [
     {
       icon: Shield,
@@ -40,14 +39,9 @@ const EnterprisePage: React.FC = () => {const features = [
       icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-<<<<<<< HEAD
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];);
-=======
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
-;
 const solutions = [
     {
       title: 'Enterprise Resource Planning',
@@ -71,14 +65,9 @@ const solutions = [
       title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
-<<<<<<< HEAD
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'];);
-=======
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
-;
 const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -89,7 +78,6 @@ const benefits = [
     'Integrate with existing systems',
     'Provide 24/7 support and monitoring'
   ];
-;
 const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
@@ -145,7 +133,7 @@ const stats = [
                 <div className="text-3xl font-bold text-white mb-2"></di>{stat.number}</div>
                 <div className="text-gray-300 text-sm"></di>{stat.label}</div>
               </div>
-            ));
+            );
           </div>
         </div>
       </section>
@@ -173,10 +161,10 @@ const stats = [
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
-                  ));
+                  );
                 </ul>
               </div>
-            ));
+            );
           </div>
         </div>
       </section>
@@ -190,10 +178,10 @@ const stats = [
           </div>
           
                     </li>
-                  ));
+                  );
                 </ul>
               </div>
-            ));
+            );
           </div>
         </div>
       </section>
@@ -230,11 +218,7 @@ const stats = [
 
       <Footer />
     </div>
-<<<<<<< HEAD
-  );)
-=======
   )]
     };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default EnterprisePage;

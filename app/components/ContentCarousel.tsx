@@ -13,7 +13,6 @@ interface Slide {
     label: string}[]}
 ;
 const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] = useState(0);
-;
 const slides: Slide[] = [
     {
       icon: Brain,
@@ -60,16 +59,13 @@ const slides: Slide[] = [
       ]
     }
   ];
-;
 const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-;
 const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   useEffect(() => {;
 const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer)}, []);
-;
 const currentSlideData = slides[currentSlide];
 
   return (
@@ -111,7 +107,7 @@ const currentSlideData = slides[currentSlide];
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
                       </div>
-                    ));
+                    );
                   </div>
                 </div>
 
@@ -123,7 +119,7 @@ const currentSlideData = slides[currentSlide];
                         <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                         <div className="text-sm text-gray-400">{stat.label}</div>
                       </div>
-                    ));
+                    );
                   </div>);
                 <div className="flex flex-col sm:flex-row gap-4 pt-6">
                   <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
@@ -148,12 +144,6 @@ const currentSlideData = slides[currentSlide];
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-              ))}
-              ));
-            </div>
-
-=======
             </div>
           </div>
 
@@ -185,7 +175,6 @@ const currentSlideData = slides[currentSlide];
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}

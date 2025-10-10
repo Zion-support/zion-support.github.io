@@ -3,7 +3,6 @@ import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
 export default function PrivacyPage() {;
 const lastUpdated = 'January 1, 2024';
-  ;
 const dataTypes = [
     {
       category: 'Personal Information',
@@ -21,14 +20,9 @@ const dataTypes = [
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
-<<<<<<< HEAD
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];);
-=======
       examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
-;
 const purposes = [
     {
       title: 'Service Provision',
@@ -48,14 +42,9 @@ const purposes = [
     {
       title: 'Security',
       icon: Shield,
-<<<<<<< HEAD
-      description: 'To protect against fraud and abuse';);
-=======
       description: 'To protect against fraud and abuse']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
-;
 const rights = [
     {
       title: 'Access',
@@ -75,12 +64,8 @@ const rights = [
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-<<<<<<< HEAD
-      icon: Database;);
-=======
       icon: Database]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
@@ -128,10 +113,10 @@ const rights = [
                     <ul className="text-sm text-gray-600 space-y-1"></ul>
                       {type.examples.map((example, idx) => (
                         <li key={idx}></l>• {example}</li>
-                      ));
+                      );
                     </ul>
                   </div>
-                ));
+                );
               </div>
             </section>
 
@@ -149,7 +134,7 @@ const rights = [
                       <p className="text-gray-700">{purpose.description}</p>
                     </div>
                   </div>
-                ));
+                );
               </div>
             </section>
 
@@ -187,7 +172,7 @@ const rights = [
                     </div>
                     <p className="text-gray-700">{right.description}</p>
                   </div>
-                ));
+                );
               </div>
             </section>
 
@@ -235,9 +220,5 @@ const rights = [
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ););
-=======
   )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

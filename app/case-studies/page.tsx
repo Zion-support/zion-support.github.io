@@ -3,10 +3,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { ArrowRight, ExternalLink, Calendar, User, Building, Award, TrendingUp, Shield, Zap } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
 
 interface CaseStudy {
@@ -29,14 +26,11 @@ const CaseStudiesPage: React.FC = () => {const [selectedIndustry, setSelectedInd
 const caseStudies: CaseStudy[] = [
     {
       id: '1',
-<<<<<<< HEAD
-=======
       title: 'AI-Powered Healthcare Analytics Platform',
       client: 'MedTech Solutions',
       industry: 'Healthcare',
       challenge: 'MedTech Solutions needed to analyze large volumes of patient data to identify patterns and improve treatment outcomes, but their existing systems were unable to process the data efficiently.',
       solution: 'We developed a comprehensive AI-powered analytics platform that processes patient data in real-time, uses machine learning algorithms to identify patterns, and provides actionable insights to healthcare providers.',
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
       industry: 'Technology',
@@ -48,8 +42,6 @@ const caseStudies: CaseStudy[] = [
         '25% increase in patient satisfaction',
         '30% cost savings in operational expenses'
       ],
-<<<<<<< HEAD
-=======
       duration: '6 months',
       team: '8 specialists',
       technologies: ['Python', 'TensorFlow', 'AWS', 'React', 'PostgreSQL'],
@@ -64,7 +56,6 @@ const caseStudies: CaseStudy[] = [
       industry: 'Finance',
       challenge: 'A major financial institution needed to modernize their cybersecurity infrastructure to protect against sophisticated cyber threats while maintaining compliance with strict regulatory requirements.',
       solution: 'We implemented a comprehensive cybersecurity framework including advanced threat detection, zero-trust architecture, and automated incident response systems.',
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       image: '/images/case-studies/ai-customer-service.jpg',
       duration: '3 months',
       team: '8 specialists'
@@ -82,8 +73,6 @@ const caseStudies: CaseStudy[] = [
         '100% compliance with regulatory requirements',
         '40% reduction in security operation costs'
       ],
-<<<<<<< HEAD
-=======
       duration: '8 months',
       team: '12 specialists',
       technologies: ['SIEM', 'SOAR', 'Zero Trust', 'AWS Security', 'Python'],
@@ -94,7 +83,6 @@ const caseStudies: CaseStudy[] = [
     {
       id: '3',
       title: 'Cloud Migration for E-commerce Platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       image: '/images/case-studies/cloud-migration.jpg',
       duration: '6 months',
       team: '12 specialists'
@@ -124,8 +112,6 @@ const caseStudies: CaseStudy[] = [
       challenge: 'RetailMax needed to migrate their legacy e-commerce platform to the cloud to improve scalability and performance during peak shopping seasons.',
       solution: 'We designed and executed a comprehensive cloud migration strategy using microservices architecture, containerization, and auto-scaling capabilities.',
       results: [
-<<<<<<< HEAD
-=======
         '300% improvement in peak traffic handling',
         '50% reduction in infrastructure costs',
         '99.9% uptime during peak seasons',
@@ -207,7 +193,6 @@ const caseStudies: CaseStudy[] = [
   );
 
   const featuredCaseStudies = caseStudies.filter(study => study.featured);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         '40% reduction in stockouts',
         '25% decrease in excess inventory',
         '15% increase in revenue',
@@ -274,8 +259,6 @@ const stats = [
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-<<<<<<< HEAD
-=======
         <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -285,7 +268,6 @@ const stats = [
               <p className="text-xl md:text-2xl mb-8 text-blue-100">
                 Discover how we've helped organizations transform their operations and achieve remarkable results through innovative technology solutions.
               </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -306,19 +288,10 @@ const stats = [
                   <div className="text-gray-400">{stat.label}</div>
                 </div>
               ))}
-<<<<<<< HEAD
-              ));
-              ));
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-                ))}
-                ));
-=======
         {/* Featured Case Studies */}
         {featuredCaseStudies.length > 0 && (
           <section className="py-16 bg-white">
@@ -360,7 +333,6 @@ const stats = [
                     </div>
                   </div>
                 ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -405,7 +377,7 @@ const stats = [
                             <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                             {result}
                           </li>
-                        ));
+                        );
                       </ul>
                     </div>
 
@@ -424,7 +396,7 @@ const stats = [
                     </div>
                   </div>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -472,7 +444,7 @@ const stats = [
                 >
                   {industry === 'all' ? 'All Industries' : industry}
                 </button>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -532,7 +504,7 @@ const stats = [
                             <span key={tech} className="bg-gray-100 text-gray-600 text-sm px-2 py-1 rounded-full">
                               {tech}
                             </span>
-                          ));
+                          );
                           {study.technologies.length > 3 && (
                             <span className="bg-gray-100 text-gray-600 text-sm px-2 py-1 rounded-full">
                               +{study.technologies.length - 3} more
@@ -546,7 +518,7 @@ const stats = [
                     </div>
                   </div>
                 </div>
-              ));
+              );
             </div>
 
             {filteredCaseStudies.length === 0 && (

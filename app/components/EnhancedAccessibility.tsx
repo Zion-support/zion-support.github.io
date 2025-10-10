@@ -10,15 +10,9 @@ interface AccessibilitySettings {
   screenReader: boolean;
   focusVisible: boolean;
 }
-<<<<<<< HEAD
-;
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
-const [settings, setSettings] = useState<AccessibilitySettings>({
-=======
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -31,7 +25,7 @@ const [isOpen, setIsOpen] = useState(false);
     // Load saved settings from localStorage;
 const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
+      setSettings(JSON.parse(savedSettings);
     }
 
     // Apply initial settings
@@ -79,7 +73,7 @@ const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {;
 const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applyAccessibilitySettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings);
   };
 
   return (
@@ -261,8 +255,6 @@ const newSettings = { ...settings, [key]: value };
       `}</style>
     </>
   );
-<<<<<<< HEAD
-=======
 interface EnhancedAccessibilityProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -282,7 +274,6 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     // Skip to main content functionality
     if (typeof window !== 'undefined') {
       const skipLink = document.createElement('a');
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
@@ -431,50 +422,12 @@ const lastFocusableElement = focusableContent[focusableContent.length - 1] as HT
 
       // Apply focus trapping to modals and dropdowns;
 const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
+      modals.forEach(modal => trapFocus(modal as HTMLElement);
     }
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement, enableReducedMotion]);
 
   return null;
-<<<<<<< HEAD
-}
-export default EnhancedAccessibility;
-    // Enhance focus management;
-const enhanceFocusManagement = () => {
-      // Add focus indicators;
-const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important}
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0}
-        .sr-only.focus:not-sr-only {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal}
-      `;
-      document.head.appendChild(style);
-    // Initialize accessibility enhancements
-    addLandmarks();
-    addSkipLinks();
-    enhanceFocusManagement();
-=======
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
     // Cleanup function
     return () => {;

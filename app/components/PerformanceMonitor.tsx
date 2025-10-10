@@ -30,7 +30,7 @@ const fcpObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
 const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
-          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime });
         }
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
@@ -39,7 +39,7 @@ const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
 const lcpObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime });
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -47,7 +47,7 @@ const lastEntry = entries[entries.length - 1];
 const fidObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime });
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -59,7 +59,7 @@ const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
-            setMetrics(prev => ({ ...prev, cls: clsValue }));
+            setMetrics(prev => ({ ...prev, cls: clsValue });
           }
         });
       });
@@ -68,7 +68,7 @@ const entries = list.getEntries();
       // Time to First Byte (TTFB);
 const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart });
       }
 
       // Cleanup observers after 10 seconds
@@ -80,13 +80,8 @@ const navigationEntry = performance.getEntriesByType('navigation')[0] as Perform
       }, 10000);
     };
 
-<<<<<<< HEAD
-    // Show performance panel after 3 seconds;
-const timer = setTimeout(() => setIsVisible(true), 3000);
-=======
     // Show performance panel after 3 seconds
     const timer = setTimeout(() => setIsVisible(true), 3000);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return () => clearTimeout(timer);
   }, []);
 
@@ -97,7 +92,6 @@ const getScoreColor = (value: number, thresholds: { good: number; poor: number }
 if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400'};
-;
 const getScoreText = (value: number, thresholds: { good: number; poor: number }) =>
 );
 } {
@@ -161,7 +155,7 @@ const monitorCoreWebVitals = () => {
 const entries = list.getEntries();
 const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
-          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime });
           trackEvent('performance_metric', {
             metric: 'FCP',
             value: Math.round(fcpEntry.startTime),
@@ -175,7 +169,7 @@ const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
 const lcpObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime });
         trackEvent('performance_metric', {
           metric: 'LCP',
           value: Math.round(lastEntry.startTime),
@@ -188,7 +182,7 @@ const lastEntry = entries[entries.length - 1];
 const fidObserver = new PerformanceObserver((list) => {;
 const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime });
           trackEvent('performance_metric', {
             metric: 'FID',
             value: Math.round(entry.processingStart - entry.startTime),
@@ -205,7 +199,7 @@ const entries = list.getEntries();
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
-            setMetrics(prev => ({ ...prev, cls: clsValue }));
+            setMetrics(prev => ({ ...prev, cls: clsValue });
             trackEvent('performance_metric', {
               metric: 'CLS',
               value: Math.round(clsValue * 1000) / 1000,
@@ -222,7 +216,7 @@ const monitorPerformanceMetrics = () => {
     window.addEventListener('load', () => {;
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if ($1) { const ttfb = navigation.responseStart - navigation.requestStart;
-        setMetrics(prev => ({ ...prev, ttfb }));
+        setMetrics(prev => ({ ...prev, ttfb });
         trackEvent('performance_metric', {
           metric: 'TTFB',
           value: Math.round(ttfb),
@@ -236,7 +230,7 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
 const entries = list.getEntries();
 const fmpEntry = entries.find(entry => entry.name === 'first-meaningful-paint');
         if (fmpEntry) {
-          setMetrics(prev => ({ ...prev, fmp: fmpEntry.startTime }));
+          setMetrics(prev => ({ ...prev, fmp: fmpEntry.startTime });
           trackEvent('performance_metric', {
             metric: 'FMP',
             value: Math.round(fmpEntry.startTime),
@@ -305,13 +299,10 @@ const getScoreText = (value: number | null, thresholds: { good: number; needsImp
           ×
         </button>
       </div>
-<<<<<<< HEAD
-=======
     // Resource timing analysis
     const analyzeResources = () => {
       const resources = performance.getEntriesByType('resource');
       const slowResources = resources.filter((resource: any) => resource.duration > 1000);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       
       if (slowResources.length > 0) {
         // console.warn removed for production
@@ -319,7 +310,7 @@ const getScoreText = (value: number | null, thresholds: { good: number; needsImp
           name: r.name,
           duration: r.duration,
           size: r.transferSize
-        })));
+        }));
       }
     };
 
@@ -376,9 +367,6 @@ const logMetrics = () => {
             <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
               {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
             </span>
-<<<<<<< HEAD
-          </div>);
-=======
           </div>
         )}
 
@@ -456,7 +444,6 @@ const logMetrics = () => {
         >
           Refresh Metrics
         </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       </div>
     </div>
   );

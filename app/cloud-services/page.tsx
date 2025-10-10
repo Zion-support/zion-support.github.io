@@ -60,8 +60,6 @@ const benefits = [
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your business with our comprehensive cloud services and AI-powered solutions.
               </p>
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Services | Zion Tech Group</title>
@@ -94,7 +92,6 @@ const benefits = [
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
@@ -111,7 +108,7 @@ const benefits = [
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -126,7 +123,7 @@ const benefits = [
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -156,8 +153,6 @@ const benefits = [
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -228,7 +223,6 @@ const benefits = [
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
       <Footer />
     </div>

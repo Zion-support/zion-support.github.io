@@ -19,11 +19,8 @@ interface BlogPost {
   tags: string[];
   featured: boolean;
   image: string;
-<<<<<<< HEAD
-=======
   image: string;
   featured: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 ;
 const BlogPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
@@ -35,16 +32,6 @@ const blogPosts: BlogPost[] = [
   featured: boolean}
 ;
 const BlogPage: React.FC = () => {
-<<<<<<< HEAD
-return (;
-const [searchTerm, setSearchTerm] = useState('');
-const [selectedCategory, setSelectedCategory] = useState('all');
-const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>
-);
-}([]);
-;
-const blogPosts: BlogPost[] = [
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -52,7 +39,6 @@ const blogPosts: BlogPost[] = [
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
   const blogPosts: BlogPost[] = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
@@ -137,15 +123,11 @@ const filteredPosts = useMemo(() => {
     return blogPosts.filter(post => {;
 const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+                           post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase());
 const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
   }, [searchTerm, selectedCategory, blogPosts]);
-<<<<<<< HEAD
-const featuredPosts = blogPosts.filter(post => post.featured);
-const recentPosts = blogPosts.slice(0, 3);
-=======
 
   const featuredPosts = blogPosts.filter(post => post.featured);
   const recentPosts = blogPosts.slice(0, 3);
@@ -202,21 +184,15 @@ const recentPosts = blogPosts.slice(0, 3);
       filtered = filtered.filter(post =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+        post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     }
 
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(post => post.category === selectedCategory);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
-<<<<<<< HEAD
-    setFilteredPosts(filtered)}, [searchTerm, selectedCategory]);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
   return (
     <React.Fragment>
@@ -224,11 +200,8 @@ const recentPosts = blogPosts.slice(0, 3);
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="technology blog, AI insights, cybersecurity, cloud computing, digital transformation" />
-<<<<<<< HEAD
-=======
         <meta name="description" content="Latest insights on AI, blockchain, cloud computing, and IT solutions from Zion Tech Group experts." />
         <meta name="keywords" content="tech blog, AI insights, blockchain news, cloud computing, IT solutions" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -293,16 +266,7 @@ const recentPosts = blogPosts.slice(0, 3);
                 >
                   {category}
                 </button>
-<<<<<<< HEAD
-              ));
-                  value={searchQuery}
-                  onChange={(e) => handleSearch(e.target.value);
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-=======
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
@@ -349,7 +313,7 @@ const recentPosts = blogPosts.slice(0, 3);
                       </div>
                     </div>
                   </article>
-                ));
+                );
               </div>
             </div>
           </section>);
@@ -374,7 +338,7 @@ const recentPosts = blogPosts.slice(0, 3);
                       >
                         {category === 'all' ? 'All Categories' : category}
                       </button>
-                    ));
+                    );
                   </div>
                 </div>
 
@@ -398,7 +362,7 @@ const recentPosts = blogPosts.slice(0, 3);
                           </div>
                         </div>
                       </div>
-                    ));
+                    );
                   </div>
                 </div>
               </aside>
@@ -453,7 +417,7 @@ const recentPosts = blogPosts.slice(0, 3);
                                   <Tag className="w-3 h-3 mr-1" />
                                   {tag}
                                 </span>
-                              ));
+                              );
                             </div>
                             <button className="text-blue-600 hover:text-blue-800 font-medium flex items-center">
                               Read More
@@ -463,7 +427,7 @@ const recentPosts = blogPosts.slice(0, 3);
                         </div>
                       </div>
                     </article>
-                  ));
+                  );
                 </div>
 
                 {filteredPosts.length === 0 && (
@@ -509,7 +473,7 @@ const recentPosts = blogPosts.slice(0, 3);
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </article>
-              ));
+              );
             </div>
           </div>
         </section>
@@ -554,7 +518,7 @@ const recentPosts = blogPosts.slice(0, 3);
                     </button>
                   </div>
                 </article>
-              ));
+              );
             </div>
             
             {filteredPosts.length === 0 && searchTerm && (

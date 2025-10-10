@@ -14,19 +14,6 @@ interface SEOOptimizerProps {
   twitterCard?: string}
 ;
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-<<<<<<< HEAD
-  title,
-  description,
-  keywords,
-  canonicalUrl,
-  structuredData,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
-}) => {;
-const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
-=======
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -85,7 +72,6 @@ const fullDescription = description || 'Leading provider of AI-powered enterpris
       document.head.appendChild(script);
     }
   }, [title, structuredData]);
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
   return (
     <Helmet>
