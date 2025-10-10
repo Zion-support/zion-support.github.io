@@ -16,12 +16,10 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Content Generation', href: '/ai-content-generation' },
         { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
         { name: 'AI Fintech Platform', href: '/ai-fintech' },
-        { name: 'AI Computer Vision', href: '/ai-computer-vision' },
-        { name: 'AI Machine Learning', href: '/ai-ml-platform' },
-        { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' }
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Quantum Security Suite', href: '/ai-quantum-security-suite' }
       ]
     },
     {
@@ -33,19 +31,21 @@ const Footer: React.FC = memo(() => {
         { name: 'IT Infrastructure Design', href: '/it-infrastructure' },
         { name: '24/7 IT Support', href: '/it-support' },
         { name: 'Custom Development', href: '/custom-development' },
-        { name: 'DevOps & CI/CD', href: '/devops-cicd' },
-        { name: 'Database Management', href: '/database-management' },
-        { name: 'Network Design', href: '/network-design' },
-        { name: 'AI Infrastructure Monitoring', href: '/ai-infrastructure-monitoring' },
-        { name: 'Blockchain Integration', href: '/blockchain-integration-services' },
+        { name: 'AI IT Operations (AIOps)', href: '/ai-ops' },
+        { name: 'Healthcare IT Solutions', href: '/healthcare-it' },
+        { name: 'Financial Services IT', href: '/financial-it' },
+        { name: 'Edge Computing Solutions', href: '/edge-computing' },
+        { name: 'Blockchain Integration', href: '/blockchain-integration' },
         { name: 'AI API Management', href: '/ai-api-management' },
-        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' }
+        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
+        { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform' }
       ]
     },
     {
       title: 'Micro SAAS',
       icon: Code,
       services: [
+        { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar-pro' },
         { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
         { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
@@ -58,6 +58,7 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
         { name: 'AI Content Writer', href: '/ai-content-writer' },
         { name: 'AI Video Generator', href: '/ai-video-generator' },
+<<<<<<< HEAD
         { name: 'AI CRM Assistant', href: '/ai-crm-assistant' }
 =======
         { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant' },
@@ -71,6 +72,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber' },
         { name: 'AI Website Builder Pro', href: '/ai-website-builder' }
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
+=======
+        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' },
+        { name: 'AI Neural Interface Pro', href: '/ai-neural-interface-pro' },
+        { name: 'AI Personal Finance Manager', href: '/ai-personal-finance-manager' }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
       ]
     },
     {
@@ -78,15 +84,17 @@ const Footer: React.FC = memo(() => {
       icon: Zap,
       services: [
         { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
-        { name: 'Autonomous Systems', href: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', href: '/blockchain-web3' },
-        { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
-        { name: 'AR/VR Solutions', href: '/ar-vr-solutions' },
-        { name: 'Smart Cities', href: '/smart-cities' },
+        { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI Energy Management', href: '/ai-energy' },
+        { name: 'AI Music Composition', href: '/ai-music-composition' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
         { name: 'Innovation Labs', href: '/innovation-labs' },
-        { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
+        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
+        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' }
       ]
     }
   ];
@@ -97,7 +105,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Pricing', href: '/pricing' }
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Investors', href: '/investors' }
   ];
 
   const supportLinks = [
@@ -106,7 +116,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Documentation', href: '/docs' },
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Status Page', href: '/status' },
-    { name: 'System Health', href: '/health' }
+    { name: 'System Health', href: '/health' },
+    { name: 'Knowledge Base', href: '/knowledge-base' },
+    { name: 'Community Forum', href: '/community' }
   ];
 
   const legalLinks = [
@@ -115,7 +127,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR Compliance', href: '/gdpr' },
     { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Data Processing Agreement', href: '/dpa' },
+    { name: 'Service Level Agreement', href: '/sla' }
   ];
 
   return (
@@ -132,9 +146,9 @@ const Footer: React.FC = memo(() => {
       <div className="absolute bottom-10 right-1/3 w-1 h-1 bg-blue-400 rounded-full quantum-particle" style={{ animationDelay: '3s' }}></div>
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6 group">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 rotate-slow">
                 <Zap className="w-5 h-5 text-white" />
@@ -144,8 +158,9 @@ const Footer: React.FC = memo(() => {
             
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, 
-              autonomous systems, and digital transformation services. Transforming businesses 
-              with cutting-edge technology and innovative solutions.
+              autonomous systems, and digital transformation services. We help businesses 
+              achieve unprecedented levels of efficiency, innovation, and growth through 
+              cutting-edge technology and intelligent automation.
             </p>
 
             {/* Contact Info */}
@@ -220,8 +235,8 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-1">
-            <div className="space-y-8">
+          <div className="md:col-span-2 lg:col-span-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
               {/* Company */}
               <div>
                 <h4 className="text-white font-semibold mb-4">Company</h4>

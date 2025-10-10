@@ -1,42 +1,22 @@
 'use client';
 
-import React, { Suspense } from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-import Footer from './components/Footer';
-<<<<<<< HEAD
-import SEOHead from './components/SEOHead';
-import ErrorBoundary from './components/ErrorBoundary';
-import Loading from './components/Loading';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import ServiceCardSkeleton from './components/ServiceCardSkeleton';
-import LazyImage from './components/LazyImage';
-import AnimatedCounter from './components/AnimatedCounter';
+import React from 'react';
 import { 
-  Brain, 
-  Zap, 
-  Target, 
   BarChart, 
-  Shield, 
+  Target, 
   Users, 
+  Zap, 
+  Brain, 
   Globe, 
-  Lock, 
+  Rocket, 
+  Shield, 
   Settings, 
-  FileText,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Award,
-  Rocket,
-  Code,
-  Cloud,
-  Smartphone,
-  TrendingUp,
-  Award as Trophy,
-  Users as People,
-  CheckCircle2
+  Clock, 
+  Building, 
+  Star, 
+  CheckCircle, 
+  ArrowRight 
 } from 'lucide-react';
-=======
 
 // Service data
 const microSAASServices = [
@@ -46,7 +26,8 @@ const microSAASServices = [
     price: "$99/mo",
     features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
     category: "Productivity",
-    popular: true
+    popular: true,
+    icon: BarChart
   },
   {
     name: "AI Analytics Dashboard",
@@ -54,7 +35,8 @@ const microSAASServices = [
     price: "$149/mo",
     features: ["Real-time Analytics", "Predictive Insights", "Custom Reports", "Data Visualization"],
     category: "Analytics",
-    popular: true
+    popular: true,
+    icon: Target
   },
   {
     name: "AI Customer Support Bot",
@@ -62,7 +44,8 @@ const microSAASServices = [
     price: "$199/mo",
     features: ["24/7 Support", "Multi-language", "Sentiment Analysis", "Escalation Management"],
     category: "Support",
-    popular: false
+    popular: false,
+    icon: Users
   },
   {
     name: "AI Content Generator",
@@ -70,7 +53,8 @@ const microSAASServices = [
     price: "$79/mo",
     features: ["Content Creation", "SEO Optimization", "Multi-format", "Brand Voice"],
     category: "Content",
-    popular: true
+    popular: true,
+    icon: Zap
   }
 ];
 
@@ -81,7 +65,8 @@ const aiServices = [
     price: "$4,500/mo",
     features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization", "Patent Research"],
     category: "Healthcare AI",
-    enterprise: true
+    enterprise: true,
+    icon: Brain
   },
   {
     name: "AI Climate Solutions Pro",
@@ -89,7 +74,8 @@ const aiServices = [
     price: "$3,200/mo",
     features: ["Carbon Analysis", "Weather Prediction", "Sustainability Planning", "Emission Tracking"],
     category: "Environmental AI",
-    enterprise: false
+    enterprise: false,
+    icon: Globe
   },
   {
     name: "AI Space Technology Pro",
@@ -97,7 +83,8 @@ const aiServices = [
     price: "$5,500/mo",
     features: ["Satellite Operations", "Mission Planning", "Data Analysis", "Orbital Mechanics"],
     category: "Space Technology",
-    enterprise: true
+    enterprise: true,
+    icon: Rocket
   },
   {
     name: "AI Financial Crime Detection Pro",
@@ -105,7 +92,8 @@ const aiServices = [
     price: "$2,800/mo",
     features: ["Fraud Detection", "Risk Assessment", "Compliance Monitoring", "Transaction Analysis"],
     category: "Financial AI",
-    enterprise: false
+    enterprise: false,
+    icon: Shield
   }
 ];
 
@@ -115,188 +103,116 @@ const itServices = [
     description: "Seamless cloud migration with zero downtime and comprehensive security",
     price: "$2,500/mo",
     features: ["Zero Downtime", "Security Audit", "Performance Optimization", "24/7 Support"],
-    category: "Cloud Services"
+    category: "Cloud Services",
+    icon: Globe
   },
   {
     name: "Cybersecurity Suite",
     description: "Comprehensive security solutions to protect your digital assets and data",
     price: "$1,800/mo",
     features: ["Threat Detection", "Vulnerability Scanning", "Incident Response", "Compliance"],
-    category: "Security"
+    category: "Security",
+    icon: Shield
   },
   {
     name: "IT Infrastructure Design",
     description: "Scalable infrastructure architecture designed for your business needs",
     price: "$3,000/mo",
     features: ["Architecture Design", "Scalability Planning", "Performance Tuning", "Monitoring"],
-    category: "Infrastructure"
+    category: "Infrastructure",
+    icon: Settings
   },
   {
     name: "24/7 IT Support",
     description: "Round-the-clock technical support and monitoring for your systems",
     price: "$1,200/mo",
     features: ["24/7 Support", "Remote Monitoring", "Quick Response", "Proactive Maintenance"],
-    category: "Support"
+    category: "Support",
+    icon: Clock
   }
 ];
 
-// Loading skeleton component
-const ServiceCardSkeleton = () => (
-  <div className="cyber-card p-6 animate-pulse">
-    <div className="h-8 bg-gray-700 rounded mb-4"></div>
-    <div className="h-4 bg-gray-700 rounded mb-2"></div>
-    <div className="h-4 bg-gray-700 rounded mb-4"></div>
-    <div className="h-6 bg-gray-700 rounded"></div>
-  </div>
-);
->>>>>>> cursor/analyze-improve-and-deploy-application-fc88
+const testimonials = [
+  {
+    name: "Sarah Chen",
+    role: "CTO, TechCorp",
+    company: "Fortune 500 Technology Company",
+    content: "Zion Tech Group's AI solutions increased our operational efficiency by 85% and reduced costs by $2.3M annually. Their quantum computing integration was revolutionary.",
+    rating: 5,
+    avatar: "SC"
+  },
+  {
+    name: "Dr. Michael Rodriguez",
+    role: "Research Director",
+    company: "Global Pharmaceuticals Inc.",
+    content: "The AI Drug Discovery Pro platform accelerated our research timeline by 60%. We discovered 3 new potential compounds in just 6 months instead of the usual 2 years.",
+    rating: 5,
+    avatar: "MR"
+  },
+  {
+    name: "Jennifer Walsh",
+    role: "VP of Operations",
+    company: "GreenTech Solutions",
+    content: "Their climate solutions helped us reduce our carbon footprint by 40% while improving operational efficiency. The ROI was evident within the first quarter.",
+    rating: 5,
+    avatar: "JW"
+  }
+];
+
+const stats = [
+  { number: "500+", label: "Enterprise Clients", icon: Building },
+  { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
+  { number: "24/7", label: "Expert Support", icon: Clock },
+  { number: "50+", label: "Countries Served", icon: Globe }
+];
 
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative overflow-hidden pt-20 pb-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 animate-pulse"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-              Transform Your Business with
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
-                {' '}AI Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto animate-fade-in-up">
-              Leading provider of AI-powered enterprise solutions, quantum computing, 
-              autonomous systems, and digital transformation services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 transform hover:scale-105">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="py-16 bg-white/5 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI solutions are powering innovation across industries worldwide
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-4">
-                <Trophy className="w-8 h-8 text-yellow-400 mr-2" />
-                <AnimatedCounter 
-                  end={500} 
-                  suffix="+" 
-                  className="text-4xl font-bold text-white"
-                />
-              </div>
-              <p className="text-gray-300">Projects Completed</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-4">
-                <People className="w-8 h-8 text-cyan-400 mr-2" />
-                <AnimatedCounter 
-                  end={250} 
-                  suffix="+" 
-                  className="text-4xl font-bold text-white"
-                />
-              </div>
-              <p className="text-gray-300">Happy Clients</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-4">
-                <TrendingUp className="w-8 h-8 text-green-400 mr-2" />
-                <AnimatedCounter 
-                  end={99} 
-                  suffix="%" 
-                  className="text-4xl font-bold text-white"
-                />
-              </div>
-              <p className="text-gray-300">Success Rate</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-4">
-                <Clock className="w-8 h-8 text-purple-400 mr-2" />
-                <AnimatedCounter 
-                  end={24} 
-                  suffix="/7" 
-                  className="text-4xl font-bold text-white"
-                />
-              </div>
-              <p className="text-gray-300">Support Available</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our AI Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed to accelerate your business growth
-            </p>
-          </div>
-=======
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <section className="relative py-20 overflow-hidden" aria-labelledby="hero-heading">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" aria-hidden="true"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             AI-Powered Enterprise Solutions
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
           </p>
->>>>>>> cursor/analyze-improve-and-deploy-application-fc88
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+            <button 
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+              aria-label="Get started with Zion Tech Group AI solutions"
+            >
               Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+            <button 
+              className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+              aria-label="Watch a demo of our AI solutions"
+            >
               Watch Demo
             </button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8" role="region" aria-label="Key performance metrics">
+            <div className="text-center" role="group" aria-label="Average ROI">
+              <div className="text-4xl font-bold text-cyan-400 mb-2" aria-label="300 percent">300%</div>
               <div className="text-gray-400">Average ROI</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
+            <div className="text-center" role="group" aria-label="Cost Reduction">
+              <div className="text-4xl font-bold text-purple-400 mb-2" aria-label="70 percent">70%</div>
               <div className="text-gray-400">Cost Reduction</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">90%</div>
+            <div className="text-center" role="group" aria-label="Efficiency Gains">
+              <div className="text-4xl font-bold text-pink-400 mb-2" aria-label="90 percent">90%</div>
               <div className="text-gray-400">Efficiency Gains</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+            <div className="text-center" role="group" aria-label="Uptime Guarantee">
+              <div className="text-4xl font-bold text-green-400 mb-2" aria-label="99.9 percent">99.9%</div>
               <div className="text-gray-400">Uptime Guarantee</div>
             </div>
           </div>
@@ -304,10 +220,10 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Micro SAAS Section */}
-      <section className="py-16 bg-white/5">
+      <section className="py-16 bg-white/5" aria-labelledby="micro-saas-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
               Micro SAAS Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -315,147 +231,55 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Micro SAAS solutions">
             {microSAASServices.map((service, index) => (
-              <div
+              <article
                 key={index}
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative"
+                role="listitem"
+                aria-labelledby={`service-${index}-title`}
               >
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
+                      <Star className="w-3 h-3 mr-1" aria-hidden="true" />
                       Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-4">
-                  <div className="text-4xl mb-4">🤖</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 id={`service-${index}-title`} className="text-xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                   
-                  <div className="space-y-2 mb-6">
+                  <ul className="space-y-2 mb-6" role="list" aria-label={`Features of ${service.name}`}>
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" aria-hidden="true" />
                         {feature}
-                      </div>
+                      </li>
                     ))}
-                  </div>
-<<<<<<< HEAD
-                </div>
-
-                <h3 className="text-2xl font-bold text-white mb-4">
-                  {service.name}
-                </h3>
-
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-2xl font-bold text-white">
-                    {service.price}
-                  </div>
-                  <div className="text-sm text-gray-400">
-                    {service.category}
-=======
+                  </ul>
                   
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2" aria-label={`Price: ${service.price}`}>{service.price}</div>
+                    <button 
+                      className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded"
+                      aria-label={`Learn more about ${service.name}`}
+                    >
                       Learn More →
                     </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-fc88
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Testimonials Section */}
-      <section className="py-16 bg-white/5 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it - hear from the businesses we've transformed
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6 italic">
-                "Zion Tech Group's AI solutions revolutionized our data processing. We've seen a 300% increase in efficiency and our team can now focus on strategic initiatives."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                  JS
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">John Smith</h4>
-                  <p className="text-gray-400 text-sm">CEO, TechCorp</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6 italic">
-                "The AI automation platform has been a game-changer. We've reduced manual work by 80% and our accuracy has improved dramatically."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                  MJ
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">Maria Johnson</h4>
-                  <p className="text-gray-400 text-sm">CTO, InnovateLab</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6 italic">
-                "Outstanding support and cutting-edge technology. Their quantum computing solutions helped us solve complex optimization problems we thought were impossible."
-              </p>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                  DW
-                </div>
-                <div>
-                  <h4 className="text-white font-semibold">David Wilson</h4>
-                  <p className="text-gray-400 text-sm">Research Director, QuantumTech</p>
-                </div>
-              </div>
-            </div>
-=======
       {/* AI Services Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -485,7 +309,9 @@ const HomePage: React.FC = () => {
                 )}
                 
                 <div className="text-center">
-                  <div className="text-5xl mb-6">🧠</div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   
@@ -507,18 +333,10 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-fc88
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/90 to-blue-600/90"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
       {/* IT Services Section */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -535,7 +353,9 @@ const HomePage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-center">
-                  <div className="text-4xl mb-4">⚙️</div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
                   <h3 className="text-lg font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                   
@@ -561,27 +381,76 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Testimonials Section */}
+      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Client Success Stories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Hear from our satisfied clients who have transformed their businesses with our AI solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-current" />
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-6 italic">
+                  "{testimonial.content}"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                    <p className="text-gray-500 text-xs">{testimonial.company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative mb-4">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-400 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA Section */}
       <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/analyze-improve-and-deploy-application-fc88
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Contact us today for a free consultation and discover how our AI and IT solutions can revolutionize your operations.
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              Start Your Free Trial
-              <ArrowRight className="w-5 h-5 ml-2 inline" />
-            </button>
-            <button className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105">
-              Schedule Demo
-            </button>
-          </div>
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
@@ -591,7 +460,6 @@ const HomePage: React.FC = () => {
                 +1 (302) 464-0950
               </a>
             </div>
-            
             <div className="text-center">
               <div className="text-2xl mb-2">✉️</div>
               <h3 className="text-lg font-bold text-white mb-2">Email</h3>
@@ -599,30 +467,26 @@ const HomePage: React.FC = () => {
                 kleber@ziontechgroup.com
               </a>
             </div>
-            
             <div className="text-center">
               <div className="text-2xl mb-2">📍</div>
               <h3 className="text-lg font-bold text-white mb-2">Location</h3>
               <p className="text-cyan-400 font-medium">
-                Middletown, DE
+                Middletown, DE 19709
               </p>
             </div>
           </div>
           
-          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-            Get Free Consultation
-          </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-fc88
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              Schedule Consultation
+            </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              View Case Studies
+            </button>
+          </div>
         </div>
       </section>
-
-      <Footer />
-      <PerformanceMonitor />
     </div>
-<<<<<<< HEAD
-    </ErrorBoundary>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-fc88
   );
 };
 

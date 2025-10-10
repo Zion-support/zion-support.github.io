@@ -29,14 +29,7 @@ import {
   Palette
 } from 'lucide-react';
 
-const MicroSAASPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  const microSAASServices = [
+const microSAASServices = [
     // Productivity & Project Management
     { 
       name: 'AI Project Manager Pro', 
@@ -336,9 +329,9 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.6,
       users: '1,700+',
-<<<<<<< HEAD
       trial: '21-day free trial'
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     { 
       name: 'AI Quantum Financial Oracle', 
@@ -367,6 +360,9 @@ const MicroSAASPage: React.FC = () => {
     },
     { 
 <<<<<<< HEAD
+=======
+    { 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
       name: 'AI 3D Generation Studio', 
       href: '/ai-3d-generation', 
       icon: FileText, 
@@ -376,6 +372,7 @@ const MicroSAASPage: React.FC = () => {
       features: ['3D Model Generation', 'Animation Creation', 'Virtual Environments', 'Texture Generation', 'Rigging Automation', 'Rendering Optimization'],
       popular: true,
       rating: 4.7,
+<<<<<<< HEAD
 =======
       name: 'AI Neural Memory Assistant', 
       href: '/ai-neural-memory-assistant', 
@@ -387,11 +384,16 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.8,
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
       users: '1,200+',
       trial: '14-day free trial'
     },
     { 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
       name: 'AI Mobile App Builder Pro', 
       href: '/ai-mobile-app-builder', 
       icon: Smartphone, 
@@ -515,11 +517,11 @@ const MicroSAASPage: React.FC = () => {
       link: 'https://ziontechgroup.com/ai-password-generator',
       capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
+>>>>>>> cursor/analyze-improve-and-deploy-application-58b3
     },
     { 
       name: 'AI Logo Designer Pro', 
       href: '/ai-logo-designer', 
-<<<<<<< HEAD
       icon: FileText, 
       category: 'Design', 
       price: '$89/mo',
@@ -1040,6 +1042,7 @@ const MicroSAASPage: React.FC = () => {
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Space Tech', 'Climate Tech', 'Science', 'Computing', 'Transportation', 'Optimization', 'Education'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
+<<<<<<< HEAD
 =======
       name: 'AI Holographic Workspace', 
       href: '/ai-holographic-workspace', 
@@ -1135,6 +1138,9 @@ const MicroSAASPage: React.FC = () => {
 
   const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Quantum AI', 'Cognitive AI', 'Immersive Tech', 'Autonomous AI', 'Blockchain AI', 'Energy AI', 'Space Tech', 'Environmental AI', 'Pharma AI'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-58b3
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 
   if (!isLoaded) {
     return (
@@ -1172,9 +1178,28 @@ const MicroSAASPage: React.FC = () => {
         </div>
       </div>
 
+      {/* Category Filter */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-wrap justify-center gap-2">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => handleCategoryChange(category)}
+              className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                selectedCategory === category
+                  ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
+                  : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-cyan-400'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {microSAASServices.map((service) => (
             <div
               key={service.name}
@@ -1182,38 +1207,42 @@ const MicroSAASPage: React.FC = () => {
                 service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
               }`}
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-blue-600 text-white">
-                  <service.icon className="h-8 w-8" />
-                </div>
-                <div className="flex items-center space-x-2">
-                  {service.popular && (
-                    <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
-                      Popular
-                    </span>
-                  )}
-                  <div className="flex items-center text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="ml-1 text-sm font-medium">{service.rating}</span>
+              {/* Animated Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <service.icon className="h-8 w-8" />
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    {service.popular && (
+                      <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full flex items-center font-bold shadow-lg">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    )}
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">
                 {service.name}
               </h3>
 
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 {service.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                <ul className="space-y-2">
+              <div className="mb-4 sm:mb-6">
+                <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-2 sm:mb-3">Key Features:</h4>
+                <ul className="space-y-1 sm:space-y-2">
                   {service.features.slice(0, 6).map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={index} className="flex items-center text-xs sm:text-sm text-gray-300">
+                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -1221,11 +1250,11 @@ const MicroSAASPage: React.FC = () => {
               </div>
 
               {service.capabilities && (
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Proven Results:</h4>
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-2 sm:mb-3">Proven Results:</h4>
                   <ul className="space-y-1">
                     {service.capabilities.map((capability, index) => (
-                      <li key={index} className="flex items-center text-cyan-300 text-sm">
+                      <li key={index} className="flex items-center text-cyan-300 text-xs sm:text-sm">
                         <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
                         {capability}
                       </li>
@@ -1234,18 +1263,18 @@ const MicroSAASPage: React.FC = () => {
                 </div>
               )}
 
-              <div className="flex items-center justify-between mb-6">
-                <div className="text-2xl font-bold text-white">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
                   {service.price}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-xs sm:text-sm text-gray-400">
                   {service.category}
                 </div>
               </div>
 
-              <div className="flex items-center justify-between mb-6 text-sm">
+              <div className="flex items-center justify-between mb-4 sm:mb-6 text-xs sm:text-sm">
                 <div className="flex items-center text-gray-400">
-                  <Users className="w-4 h-4 mr-1" />
+                  <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                   {service.users}
                 </div>
                 <div className="text-cyan-400 font-medium">
@@ -1260,23 +1289,60 @@ const MicroSAASPage: React.FC = () => {
                 rel="noopener noreferrer"
               >
                 Get Started
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
               </a>
             </div>
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center space-x-2 mt-12">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="px-4 py-2 rounded-lg bg-slate-800 text-gray-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            >
+              Previous
+            </button>
+            
+            <div className="flex space-x-2">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => handlePageChange(page)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    currentPage === page
+                      ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-cyan-400'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+            
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 rounded-lg bg-slate-800 text-gray-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-lg sm:text-xl text-purple-100 mb-6 sm:mb-8">
             Join 50,000+ businesses already using our AI-powered micro SaaS solutions. Start your free trial today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 sm:mb-8">
             <a
               href="https://ziontechgroup.com/contact"
               className="neon-button-enhanced py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300"
@@ -1290,7 +1356,7 @@ const MicroSAASPage: React.FC = () => {
               Call: +1 (302) 464-0950
             </a>
           </div>
-          <div className="text-purple-100 text-sm">
+          <div className="text-purple-100 text-xs sm:text-sm">
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>

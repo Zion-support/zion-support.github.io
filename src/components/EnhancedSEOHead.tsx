@@ -8,25 +8,23 @@ interface SEOHeadProps {
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: object;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - AI-Powered Enterprise Solutions",
-  description = "Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains with our advanced AI solutions.",
-  keywords = "AI solutions, artificial intelligence, enterprise AI, machine learning, quantum computing, digital transformation, IT services, automation, business intelligence",
-  image = "https://ziontechgroup.com/og-image.jpg",
+  description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
+  keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
+  image = "https://ziontechgroup.com/og-image.png",
   url = "https://ziontechgroup.com",
-  type = "website",
-  structuredData
+  type = "website"
 }) => {
-  const defaultStructuredData = {
+  const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
-    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.",
+    "description": description,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -61,8 +59,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     ]
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -71,83 +67,73 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="format-detection" content="telephone=no,address=no,email=no" />
+      <meta name="color-scheme" content="dark light" />
       
-      {/* Open Graph Meta Tags */}
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={image} />
+      <meta property="twitter:creator" content="@ziontechgroup" />
+      <meta property="twitter:site" content="@ziontechgroup" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
       
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
       
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      {/* Fonts */}
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="apple-touch-icon" href="/logo192.png" />
+      <link rel="manifest" href="/manifest.json" />
+      
+      {/* Theme Color */}
+      <meta name="theme-color" content="#0f172a" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
+        {JSON.stringify(structuredData)}
       </script>
       
-      {/* Additional Performance Hints */}
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />
-      <meta name="format-detection" content="telephone=no" />
+      {/* Additional SEO Scripts */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com/",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://ziontechgroup.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        })}
+      </script>
       
-      {/* Performance Optimizations */}
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="msapplication-tooltip" content="AI-Powered Enterprise Solutions" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="rating" content="general" />
-      <meta name="distribution" content="global" />
-      <meta name="target" content="all" />
-      <meta name="HandheldFriendly" content="true" />
-      <meta name="MobileOptimized" content="width" />
+      {/* Performance Hints */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
     </Helmet>
   );
 };
 
-export default SEOHead;
+export default EnhancedSEOHead;

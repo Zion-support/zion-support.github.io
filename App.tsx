@@ -5,14 +5,11 @@ import { HelmetProvider } from 'react-helmet-async';
 import './src/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import HomePage from './app/page';
 import { PageLoader } from './src/components/EnhancedLoadingStates';
 import EnhancedErrorBoundary from './src/components/EnhancedErrorBoundary';
 import SEOHead from './src/components/EnhancedSEOHead';
 import SkipLink from './src/components/SkipLink';
-import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
-import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
-import ContentShowcase from './src/components/ContentShowcase';
-import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
 import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
@@ -25,7 +22,7 @@ const structuredData = {
   "name": "Zion Tech Group",
   "url": "https://ziontechgroup.com",
   "logo": "https://ziontechgroup.com/logo.png",
-  "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.",
+  "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with our advanced AI capabilities, micro SAAS tools, and comprehensive IT solutions. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "364 E Main St STE 1008",
@@ -56,7 +53,19 @@ const structuredData = {
     "IT Services",
     "Cybersecurity",
     "Cloud Computing",
-    "Automation"
+    "Automation",
+    "Micro SAAS Solutions",
+    "Autonomous Systems",
+    "Blockchain Technology",
+    "IoT Solutions",
+    "Edge Computing",
+    "5G Implementation",
+    "AR/VR Development",
+    "Smart City Solutions",
+    "Digital Twin Development",
+    "Enterprise Integration",
+    "Business Intelligence",
+    "Robotic Process Automation"
   ]
 };
 
@@ -82,18 +91,31 @@ const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
 const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
 const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
+<<<<<<< HEAD
 =======
 const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
 const AIDocumentScannerPage = React.lazy(() => import('./app/ai-document-scanner/page'));
 const AIMeetingTranscriberPage = React.lazy(() => import('./app/ai-meeting-transcriber/page'));
 const AIWebsiteBuilderPage = React.lazy(() => import('./app/ai-website-builder/page'));
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
+=======
+
+// New service pages
+const AISentimentAnalyzerProPage = React.lazy(() => import('./app/ai-sentiment-analyzer-pro/page'));
+const AIWorkflowAutomationProPage = React.lazy(() => import('./app/ai-workflow-automation-pro/page'));
+const AICybersecurityProPage = React.lazy(() => import('./app/ai-cybersecurity-pro/page'));
+const AICloudOptimizationProPage = React.lazy(() => import('./app/ai-cloud-optimization-pro/page'));
+const AISmartCalendarProPage = React.lazy(() => import('./app/ai-smart-calendar-pro/page'));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -117,14 +139,7 @@ const App: React.FC = memo(() => {
                   <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
-                      <Route path="/" element={
-                        <div className="w-full">
-                          <UnifiedContentPromotion />
-                          <InteractiveAIROICalculator />
-                          <ContentShowcase />
-                          <InteractiveContentShowcase2026 />
-                        </div>
-                      } />
+                      <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
@@ -146,18 +161,24 @@ const App: React.FC = memo(() => {
                       <Route path="/consultation" element={<ConsultationPage />} />
                       <Route path="/services" element={<ServicesPage />} />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
                       <Route path="/ai-ops" element={<AIOpsPage />} />
                       <Route path="/healthcare-it" element={<HealthcareITPage />} />
                       <Route path="/financial-it" element={<FinancialITPage />} />
                       <Route path="/edge-computing" element={<EdgeComputingPage />} />
                       <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                       <Route path="/iot-platform" element={<IoTPlatformPage />} />
+<<<<<<< HEAD
 =======
                       <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
                       <Route path="/ai-document-scanner" element={<AIDocumentScannerPage />} />
                       <Route path="/ai-meeting-transcriber" element={<AIMeetingTranscriberPage />} />
                       <Route path="/ai-website-builder" element={<AIWebsiteBuilderPage />} />
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
                     </Routes>
                   </Suspense>
                   </main>

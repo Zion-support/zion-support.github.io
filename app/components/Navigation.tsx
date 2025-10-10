@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import MobileNavigation from './MobileNavigation';
 import { 
   ChevronDown, 
   Phone, 
@@ -132,21 +133,27 @@ const Navigation: React.FC = () => {
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
         { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true },
+<<<<<<< HEAD
         { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial analysis', icon: '⚛️', popular: true },
         { name: 'AI 3D Generation Studio', path: '/ai-3d-generation', description: 'AI-powered 3D model generation', icon: '🎨', popular: true },
         { name: 'AI Mobile App Builder', path: '/ai-mobile-app-builder', description: 'AI-powered mobile app development', icon: '📱', popular: true },
         { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true },
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
         { name: 'AI Smart Calendar', path: '/ai-smart-calendar', description: 'Intelligent scheduling and time management', icon: '📅', popular: true },
         { name: 'AI Content Writer', path: '/ai-content-writer', description: 'Advanced content generation', icon: '✍️', popular: true },
         { name: 'AI Video Generator', path: '/ai-video-generator', description: 'AI-powered video creation', icon: '🎥', popular: true },
         { name: 'AI CRM Assistant', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management', icon: '👥', popular: true }
+<<<<<<< HEAD
 =======
         { name: 'AI Voice Assistant Pro', path: '/ai-voice-assistant', description: 'Advanced voice AI with NLP', icon: '🎤', popular: true },
         { name: 'AI Document Scanner Pro', path: '/ai-document-scanner', description: 'Intelligent document processing', icon: '📄', popular: true },
         { name: 'AI Meeting Transcriber Pro', path: '/ai-meeting-transcriber', description: 'Real-time meeting transcription', icon: '📝', popular: true },
         { name: 'AI Website Builder Pro', path: '/ai-website-builder', description: 'AI-powered website creation', icon: '🌐', popular: true }
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
       ]
     },
     {
@@ -156,6 +163,9 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-purple-50',
       services: [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
         { name: 'AI Workflow Automation Platform', path: '/ai-workflow-automation', description: 'End-to-end business process automation', icon: '⚡', popular: true },
         { name: 'AI Customer Support Suite', path: '/ai-customer-support', description: 'Advanced 24/7 customer support', icon: '🤖', popular: true },
         { name: 'AI Data Analytics Platform', path: '/ai-data-analytics', description: 'Advanced analytics with ML predictions', icon: '📊', popular: true },
@@ -164,6 +174,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Fintech Platform', path: '/ai-fintech', description: 'Financial AI and fraud detection', icon: '💳', popular: true },
         { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: true },
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: true },
+<<<<<<< HEAD
         { name: 'AI Quantum Computing Platform', path: '/ai-quantum-computing', description: 'Revolutionary quantum solutions', icon: '⚛️', popular: true },
         { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Advanced AI with persistent memory', icon: '🧠', popular: true },
         { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
@@ -185,6 +196,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Analytics Platform', path: '/ai-data-analytics', description: 'ML-powered analytics', icon: '📊', popular: true }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
+=======
+        { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
+        { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Advanced pharmaceutical AI', icon: '💊', popular: true },
+        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'Environmental AI solutions', icon: '🌱', popular: true },
+        { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration AI', icon: '🚀', popular: true }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
       ]
     },
     {
@@ -193,13 +210,11 @@ const Navigation: React.FC = () => {
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       services: [
-        { name: 'AI-Powered Infrastructure Management', path: '/ai-infrastructure', description: 'Intelligent infrastructure optimization', icon: '🤖', popular: true },
-        { name: 'Quantum-Safe Security Implementation', path: '/quantum-security', description: 'Future-proof security solutions', icon: '🔐', popular: true },
-        { name: 'Edge Computing Infrastructure', path: '/edge-computing', description: 'Distributed computing for IoT', icon: '📡', popular: true },
         { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
         { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
         { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
         { name: '24/7 IT Support & Monitoring', path: '/it-support', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
         { name: 'AI IT Operations (AIOps)', path: '/ai-ops', description: 'AI-powered IT operations', icon: '🤖', popular: true },
@@ -209,6 +224,9 @@ const Navigation: React.FC = () => {
         { name: '5G Network Implementation', path: '/5g-implementation', description: 'High-speed 5G networks', icon: '📶', popular: false },
         { name: 'IoT Platform Development', path: '/iot-platform', description: 'Comprehensive IoT solutions', icon: '🌐', popular: true },
 <<<<<<< HEAD
+=======
+        { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
         { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: true },
         { name: 'Database Management & Optimization', path: '/database-management', description: 'Performance tuning & security', icon: '🗄️', popular: true },
         { name: 'Network Design & Implementation', path: '/network-design', description: 'Secure network infrastructure', icon: '🌐', popular: true },
@@ -216,12 +234,15 @@ const Navigation: React.FC = () => {
         { name: 'Blockchain Integration Services', path: '/blockchain-integration-services', description: 'Web3 and blockchain solutions', icon: '⛓️', popular: true },
         { name: 'AI API Management', path: '/ai-api-management', description: 'Intelligent API management', icon: '🔗', popular: true },
         { name: 'Smart Contract Security Audit', path: '/smart-contract-security-audit', description: 'Blockchain security auditing', icon: '🔒', popular: true }
+<<<<<<< HEAD
 =======
         { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: false }
 =======
         { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
       ]
     },
     {
@@ -232,14 +253,10 @@ const Navigation: React.FC = () => {
       hoverColor: 'hover:bg-pink-500/20',
       services: [
 <<<<<<< HEAD
-        { name: 'Quantum Computing Solutions', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
 <<<<<<< HEAD
-        { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', description: 'AI-powered autonomous systems', icon: '🤖', popular: true },
-        { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', description: 'AI-powered blockchain technology', icon: '⛓️', popular: true },
-        { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
-        { name: 'AI Energy Management', path: '/ai-energy', description: 'Smart energy optimization', icon: '⚡', popular: true },
-        { name: 'AI Music Composition', path: '/ai-music-composition', description: 'AI-powered music creation', icon: '🎵', popular: true },
 =======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+        { name: 'Quantum Computing Solutions', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', icon: '🤖', popular: true },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️', popular: true },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', icon: '📡', popular: true },
@@ -252,6 +269,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Supply Chain Optimization Pro', path: '/ai-supply-chain-optimization-pro', description: 'Intelligent supply chain', icon: '📦', popular: true },
         { name: 'AI Energy Grid Management Pro', path: '/ai-energy-grid-management-pro', description: 'Smart energy solutions', icon: '⚡', popular: true },
         { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro', description: 'Smart farming solutions', icon: '🌾', popular: true }
+<<<<<<< HEAD
 =======
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: false }
 =======
@@ -265,6 +283,8 @@ const Navigation: React.FC = () => {
         { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', icon: '🥽', popular: false }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
       ]
     }
   ];
@@ -274,11 +294,16 @@ const Navigation: React.FC = () => {
   };
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
     <>
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <MobileNavigation isOpen={isOpen} onClose={() => setIsOpen(false)} />
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-glow-cyan' : 'bg-transparent'
       }`}>
+<<<<<<< HEAD
 =======
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 <<<<<<< HEAD
@@ -288,6 +313,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
     }`}>
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -297,16 +324,22 @@ const Navigation: React.FC = () => {
             onClick={closeAllMenus}
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 rotate-slow">
               <Zap className="w-5 h-5 text-white" />
             </div>
             <span className="text-white cyber-text font-bold">
+<<<<<<< HEAD
 =======
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 neon-glow">
               <Zap className="w-5 h-5 text-white" />
             </div>
             <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold cyber-text">
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
               Zion Tech Group
             </span>
           </Link>
@@ -316,10 +349,14 @@ const Navigation: React.FC = () => {
             <Link
               to="/"
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow-cyan"
 =======
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-text"
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+=======
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow-cyan"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
               onClick={closeAllMenus}
             >
               Home
@@ -423,10 +460,14 @@ const Navigation: React.FC = () => {
             <Link
               to="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
 =======
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center cyber-button neon-glow"
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
+=======
+              className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
               onClick={closeAllMenus}
             >
               Get Started
@@ -562,3 +603,4 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
+>>>>>>> cursor/analyze-improve-and-deploy-application-58b3

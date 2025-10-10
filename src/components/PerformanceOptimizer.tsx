@@ -1,17 +1,16 @@
-import React, { useEffect, memo } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/og-image.jpg'
+        '/logo.png',
+        '/og-image.png'
       ];
 
       criticalImages.forEach(src => {
@@ -27,99 +26,31 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
-        // Add loading="lazy" to non-critical images
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
-        }
-        
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
+        if (!img.loading) {
+          img.loading = 'lazy';
         }
       });
     };
 
-    // Enable service worker for caching
-    const enableServiceWorker = () => {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            if (process.env.NODE_ENV === 'development') {
-              console.log('Service Worker registered:', registration);
-            }
-          })
-          .catch(error => {
-            if (process.env.NODE_ENV === 'development') {
-              console.log('Service Worker registration failed:', error);
-            }
-          });
-      }
+    // Defer non-critical scripts
+    const deferNonCriticalScripts = () => {
+      const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach(script => {
+        script.setAttribute('defer', '');
+      });
     };
 
-    // Optimize scroll performance
-    const optimizeScroll = () => {
-      let ticking = false;
-      
-      const updateScroll = () => {
-        // Throttle scroll events
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            ticking = false;
-          });
-          ticking = true;
-        }
-      };
-
-      window.addEventListener('scroll', updateScroll, { passive: true });
-      
-      return () => {
-        window.removeEventListener('scroll', updateScroll);
-      };
-    };
-
-    // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-    enableServiceWorker();
-    const cleanupScroll = optimizeScroll();
+    deferNonCriticalScripts();
 
-    // Cleanup on unmount
+    // Cleanup
     return () => {
-      cleanupScroll();
+      // Cleanup if needed
     };
-  }, []);
-
-  // Add performance monitoring
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          const logMetric = (metric: any) => {
-            if (process.env.NODE_ENV === 'development') {
-              console.log(metric);
-            }
-            // Send to analytics in production
-            if (process.env.NODE_ENV === 'production') {
-              // Send to analytics service
-            }
-          };
-          
-          getCLS(logMetric);
-          getFID(logMetric);
-          getFCP(logMetric);
-          getLCP(logMetric);
-          getTTFB(logMetric);
-        });
-      }
-    };
-
-    monitorWebVitals();
   }, []);
 
   return <>{children}</>;
-});
-
-PerformanceOptimizer.displayName = 'PerformanceOptimizer';
+};
 
 export default PerformanceOptimizer;

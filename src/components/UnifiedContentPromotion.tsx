@@ -85,70 +85,64 @@ export default function UnifiedContentPromotion({
 
   const featuredServices = [
     {
-      title: "AI Quantum Financial Oracle",
-      description: "Revolutionary quantum-powered financial predictions with 99.7% accuracy",
-      price: "$8,500/mo",
-      features: ["Quantum Risk Analysis", "Market Prediction", "Portfolio Optimization", "Real-time Trading Signals"],
+      title: "AI Drug Discovery Pro",
+      description: "Accelerate pharmaceutical research with AI-powered molecular analysis and clinical trial optimization",
+      price: "$4,500/mo",
+      features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization", "Side Effect Prediction"],
       icon: Brain,
-      category: "Quantum Finance",
-      link: "/ai-quantum-financial-oracle",
-      popular: true,
-      trial: "30-day free trial"
+      category: "Healthcare AI",
+      link: "/ai-drug-discovery-pro",
+      benefits: "10x faster drug discovery, 95% accuracy in predictions, reduced clinical trial costs"
     },
     {
-      title: "AI Neural Memory Assistant",
-      description: "Advanced AI memory system for enhanced cognitive performance and learning",
-      price: "$299/mo",
-      features: ["Memory Enhancement", "Learning Acceleration", "Cognitive Training", "Knowledge Management"],
-      icon: Brain,
-      category: "Cognitive AI",
-      link: "/ai-neural-memory-assistant",
-      popular: true,
-      trial: "14-day free trial"
+      title: "AI Climate Solutions Pro",
+      description: "Combat climate change with intelligent environmental monitoring, carbon tracking, and sustainability optimization",
+      price: "$3,200/mo",
+      features: ["Carbon Footprint Analysis", "Weather Prediction", "Sustainability Planning", "Green Energy Management"],
+      icon: Globe,
+      category: "Environmental AI",
+      link: "/ai-climate-solutions-pro",
+      benefits: "50% carbon footprint reduction, real-time environmental monitoring, sustainability optimization"
     },
     {
-      title: "AI Holographic Workspace",
-      description: "Next-generation 3D workspace with holographic interfaces and spatial computing",
-      price: "$1,200/mo",
-      features: ["3D Workspace", "Holographic UI", "Spatial Computing", "Collaborative Environment"],
+      title: "AI Space Technology Pro",
+      description: "Revolutionary space exploration and satellite management with AI-powered mission planning and orbital mechanics",
+      price: "$5,500/mo",
+      features: ["Satellite Operations", "Space Mission Planning", "Astronomical Data Analysis", "Space Weather Prediction"],
       icon: Rocket,
-      category: "Immersive Tech",
-      link: "/ai-holographic-workspace",
-      popular: true,
-      trial: "7-day free trial"
+      category: "Space Technology",
+      link: "/ai-space-technology-pro",
+      benefits: "Advanced space mission planning, real-time satellite monitoring, orbital optimization algorithms"
     },
     {
-      title: "AI Autonomous Systems Pro",
-      description: "Self-managing systems with advanced AI decision-making and autonomous operations",
-      price: "$4,200/mo",
-      features: ["Autonomous Operations", "Self-Healing Systems", "Predictive Maintenance", "Intelligent Monitoring"],
-      icon: Settings,
-      category: "Autonomous AI",
-      link: "/ai-autonomous-systems",
-      popular: true,
-      trial: "21-day free trial"
-    },
-    {
-      title: "AI Blockchain Solutions Pro",
-      description: "Advanced blockchain integration with AI-powered smart contracts and DeFi protocols",
-      price: "$3,800/mo",
-      features: ["Smart Contracts", "DeFi Integration", "NFT Marketplace", "Cross-chain Operations"],
+      title: "AI Financial Crime Detection Pro",
+      description: "Advanced financial security with real-time fraud detection, money laundering prevention, and regulatory compliance",
+      price: "$2,800/mo",
+      features: ["Real-time Fraud Detection", "Money Laundering Prevention", "Transaction Analysis", "Compliance Monitoring"],
       icon: Shield,
-      category: "Blockchain AI",
-      link: "/ai-blockchain-solutions",
-      popular: false,
-      trial: "14-day free trial"
+      category: "Financial Security",
+      link: "/ai-financial-crime-detection-pro",
+      benefits: "99.7% fraud detection accuracy, real-time transaction monitoring, automated compliance reporting"
     },
     {
-      title: "AI Energy Grid Management",
-      description: "Intelligent energy distribution and optimization for smart cities and utilities",
-      price: "$6,500/mo",
-      features: ["Grid Optimization", "Demand Forecasting", "Renewable Integration", "Load Balancing"],
+      title: "AI Supply Chain Optimization Pro",
+      description: "Intelligent supply chain management with demand forecasting, logistics optimization, and risk mitigation",
+      price: "$3,200/mo",
+      features: ["Demand Forecasting", "Inventory Optimization", "Logistics Automation", "Risk Assessment"],
+      icon: Truck,
+      category: "Supply Chain AI",
+      link: "/ai-supply-chain-optimization-pro",
+      benefits: "30% cost reduction, 25% inventory optimization, real-time supply chain visibility"
+    },
+    {
+      title: "AI Energy Grid Management Pro",
+      description: "Smart energy grid optimization with renewable energy integration, demand response, and carbon footprint tracking",
+      price: "$4,200/mo",
+      features: ["Grid Optimization", "Renewable Energy Integration", "Demand Response", "Carbon Tracking"],
       icon: Zap,
       category: "Energy AI",
-      link: "/ai-energy-grid-management",
-      popular: false,
-      trial: "30-day free trial"
+      link: "/ai-energy-grid-management-pro",
+      benefits: "40% energy efficiency improvement, real-time grid optimization, renewable energy integration"
     }
   ];
 
@@ -241,7 +235,7 @@ export default function UnifiedContentPromotion({
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-glow-cyan">{stat.number}</div>
               <div className="text-gray-400 font-medium">{stat.label}</div>
             </div>
           ))}
@@ -250,7 +244,7 @@ export default function UnifiedContentPromotion({
         {/* Featured Services */}
         <div className="mb-20" role="region" aria-label="Featured AI Solutions">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 cyber-text neon-pulse">
               Featured AI Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -274,12 +268,20 @@ export default function UnifiedContentPromotion({
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">
-                      {service.category}
-                    </span>
+                    <div className="flex items-center space-x-2">
+                      {service.popular && (
+                        <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
+                          <Star className="w-3 h-3 mr-1" />
+                          Popular
+                        </span>
+                      )}
+                      <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">
+                        {service.category}
+                      </span>
+                    </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors neon-glow-cyan">
                     {service.title}
                   </h3>
                   
@@ -296,12 +298,13 @@ export default function UnifiedContentPromotion({
                     ))}
                   </div>
                   
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-white">{service.price}</div>
-                      <div className="text-xs text-cyan-400 font-medium">{service.trial}</div>
-                    </div>
-                    
+                  <div className="mb-4">
+                    <div className="text-sm text-cyan-400 font-semibold mb-2">Key Benefits:</div>
+                    <div className="text-xs text-gray-400 leading-relaxed">{service.benefits}</div>
+                  </div>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="text-2xl font-bold text-white neon-glow-purple">{service.price}</div>
                     <Link
                       to={service.link}
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
@@ -309,6 +312,9 @@ export default function UnifiedContentPromotion({
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
+                    <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all">
+                      Get Started
+                    </button>
                   </div>
                 </div>
               </div>

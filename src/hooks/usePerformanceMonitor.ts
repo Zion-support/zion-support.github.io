@@ -1,78 +1,92 @@
 import { useEffect } from 'react';
 
+interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
+}
+
 export const usePerformanceMonitor = () => {
   useEffect(() => {
-    // Monitor Core Web Vitals
-    const monitorWebVitals = async () => {
-      try {
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
-        const logMetric = (metric: any, type: string) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log(`${type}:`, metric);
-          }
-          // Send to analytics service in production
-          if (process.env.NODE_ENV === 'production') {
-            // Send to analytics service
-          }
-        };
-        
-        getCLS((metric) => logMetric(metric, 'CLS'));
-        getFID((metric) => logMetric(metric, 'FID'));
-        getFCP((metric) => logMetric(metric, 'FCP'));
-        getLCP((metric) => logMetric(metric, 'LCP'));
-        getTTFB((metric) => logMetric(metric, 'TTFB'));
-      } catch (error) {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('Web Vitals not available:', error);
-        }
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
+
+    const reportWebVitals = (metric: any) => {
+      // Send to analytics service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
+        });
       }
     };
 
-    // Monitor resource loading
-    const monitorResourceLoading = () => {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            if (process.env.NODE_ENV === 'development') {
-              console.log('Navigation timing:', {
-                domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-                loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-                totalTime: navEntry.loadEventEnd - navEntry.fetchStart
-              });
-            }
+    // Monitor Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'paint') {
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry.name === 'first-contentful-paint') {
+            reportWebVitals({
+              name: 'FCP',
+              value: paintEntry.startTime,
+              id: 'fcp',
+            });
           }
         }
-      });
-
-      observer.observe({ entryTypes: ['navigation', 'resource'] });
-
-      return () => observer.disconnect();
-    };
-
-    // Monitor memory usage
-    const monitorMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        if (process.env.NODE_ENV === 'development') {
-          console.log('Memory usage:', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
+        
+        if (entry.entryType === 'largest-contentful-paint') {
+          reportWebVitals({
+            name: 'LCP',
+            value: entry.startTime,
+            id: 'lcp',
           });
         }
+        
+        if (entry.entryType === 'first-input') {
+          reportWebVitals({
+            name: 'FID',
+            value: (entry as any).processingStart - entry.startTime,
+            id: 'fid',
+          });
+        }
+        
+        if (entry.entryType === 'layout-shift') {
+          if (!(entry as any).hadRecentInput) {
+            reportWebVitals({
+              name: 'CLS',
+              value: (entry as any).value,
+              id: 'cls',
+            });
+          }
+        }
       }
-    };
+    });
 
-    // Initialize monitoring
-    monitorWebVitals();
-    const cleanupResource = monitorResourceLoading();
-    monitorMemoryUsage();
+    try {
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (e) {
+      // PerformanceObserver not supported
+    }
 
-    // Cleanup on unmount
+    // Monitor page load time
+    window.addEventListener('load', () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        reportWebVitals({
+          name: 'TTFB',
+          value: navigation.responseStart - navigation.requestStart,
+          id: 'ttfb',
+        });
+      }
+    });
+
     return () => {
-      cleanupResource();
+      observer.disconnect();
     };
   }, []);
 };

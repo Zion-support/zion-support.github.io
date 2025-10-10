@@ -86,7 +86,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks - more granular splitting
+          // Vendor chunks - optimized splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
@@ -103,23 +103,29 @@ export default defineConfig({
             if (id.includes('recharts')) {
               return 'vendor-charts';
             }
-            if (id.includes('web-vitals')) {
-              return 'vendor-analytics';
-            }
-            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+            if (id.includes('web-vitals') || id.includes('clsx') || id.includes('tailwind-merge')) {
               return 'vendor-utils';
             }
             return 'vendor';
           }
           
+          // Page chunks - group by main sections
+          if (id.includes('/app/page.tsx')) {
+            return 'home';
+          }
+          if (id.includes('/app/ai-services/')) {
+            return 'ai-services';
+          }
+          if (id.includes('/app/micro-saas/')) {
+            return 'micro-saas';
+          }
+          if (id.includes('/app/')) {
+            return 'pages';
+          }
+          
           // Component chunks
           if (id.includes('/src/components/')) {
             return 'components';
-          }
-          
-          // Page chunks
-          if (id.includes('/app/')) {
-            return 'pages';
           }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
