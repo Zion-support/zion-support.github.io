@@ -1,41 +1,41 @@
 exports.handler = async function (event, context) {try {
 //     // console.log('features-capabilities-benefits-advertiser function triggered')}
-    // Features, capabilities, and benefits advertising simulation
+    // Features, capabilities, and benefits advertising simulation;
     const result = {
-      statusCode: 200,
-      headers: {
+      statusCode: 200;
+      headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
       },
-      body: JSON.stringify({message: Features, capabilities, and benefits advertiser executed successfully,
-        timestamp: new Date().toISOString(),
-        function: 'features-capabilities-benefits-advertiser',
-        source: event.source || 'unknown',
+      body: JSON.stringify({message: Features, capabilities, and benefits advertiser executed successfully)
+        timestamp: new Date().toISOString()
+        function: 'features-capabilities-benefits-advertiser'
+        source: event.source || 'unknown'
         advertising: {
-          status: 'active',
-          features: 0,
-          capabilities: 0,
-          benefits: 0,
+          status: 'active'
+          features: 0;
+          capabilities: 0;
+          benefits: 0;
           lastAdvert: new Date().toISOString()}
         },
       }),
     };
     return result;
-//   } catch (error) {// console.error('Error in features-capabilities-benefits-advertiser: ') error
+//   } catch (error) {// console.error('Error in features-capabilities-benefits-advertiser: ') error;
       }
     return {
-      statusCode: 500,
-      headers: {
+      statusCode: 500;
+      headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
       },
-      body: JSON.stringify({error: 'Internal server error',
-        message: error.message,
+      body: JSON.stringify({error: 'Internal server error'),
+        message: error.message),
         function: 'features-capabilities-benefits-advertiser'}
       });
     };
   }
 };
-        timestamp: new Date().toISOString(),' function: 'features-capabilities-benefits-advertiser',' source: event.source || 'unknown', advertising: {' status: 'active', features: 0, capabilities: 0, benefits: 0,
-        lastAdvert: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in features-capabilities-benefits-advertiser: ') error
+        timestamp: new Date().toISOString(),' function: 'features-capabilities-benefits-advertiser',' source: event.source || 'unknown', advertising: {' status: 'active', features: 0, capabilities: 0, benefits: 0;
+        lastAdvert: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in features-capabilities-benefits-advertiser: ') error;
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'features-capabilities-benefits-advertiser' }) }; } };'

@@ -1,50 +1,50 @@
 'use client'
-// Performance optimization utilities
-// Debounce utility for performance
+// Performance optimization utilities;
+// Debounce utility for performance;
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
+  func: T;
+  wait: number;
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout)
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {,
+    clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait);}
   }
 }
-// Throttle utility for performance
+// Throttle utility for performance;
 export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
+  func: T;
+  limit: number;
 ): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean
+  let inThrottle: boolean;
   return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args)
-      inThrottle = true
+    if (!inThrottle) {,
+      func(...args),
+      inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);}
     }
   }
 }
-// Intersection Observer hook for lazy loading
+// Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void,
+  callback: (entries: IntersectionObserverEntry[]) => void;
   options: IntersectionObserverInit = {}
 ) => {
   const observer = useMemo(
     () =>
       typeof window !== 'undefined'
-        ? new IntersectionObserver(callback, {
-            threshold: 0.1,
-            rootMargin: '50px',
+        ? new IntersectionObserver(callback, {)
+            threshold: 0.1),
+            rootMargin: '50px'),
             ...options}
           })
         : null,
     [callback, options]
   )
   const observe = useCallback(
-    (element: Element | null) => {
-      if (observer && element) {
-        observer.observe(element)
+    (element: Element | null) => {,
+      if (observer && element) {,
+        observer.observe(element),
         return () => observer.unobserve(element);}
       }
       return () => {}
@@ -61,13 +61,12 @@ export const useIntersectionObserver = (
   }, [disconnect])
   return { observe, disconnect }
 }
-// Image lazy loading hook
+// Image lazy loading hook;
 export const useLazyImage = useCallback((...args) => {
   const [imageSrc, setImageSrc] = useState(placeholder || '')
   const [isLoaded, setIsLoaded] = useState(false)
   const [isError, setIsError] = useState(false);}
-  const { observe } = useIntersectionObserver(
-    useCallback(
+  const { observe } = useIntersectionObserver(useCallback()
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
@@ -79,7 +78,7 @@ export const useLazyImage = useCallback((...args) => {
             img.onerror = () => {
               setIsError(true);}
             }
-            img.src = src
+            img.src = src;
           }
         })
       },
@@ -88,35 +87,35 @@ export const useLazyImage = useCallback((...args) => {
   )
   return { imageSrc, isLoaded, isError, observe }
 }
-// Performance monitoring hook
+// Performance monitoring hook;
 export const usePerformanceMonitoring = useCallback((...args) => {
   const [metrics, setMetrics] = useState<{
-    fcp?: number
-    lcp?: number
-    fid?: number
-    cls?: number
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
     ttfb?: number;}
   }>({})
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     const updateMetrics = useCallback((...args) => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
-      setMetrics({
-        fcp,
-        lcp,
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
+      setMetrics({)
+        fcp)
+        lcp)
         ttfb: navigation?.responseStart - navigation?.requestStart}
       })
     }
-    // Monitor performance after page load
+    // Monitor performance after page load;
     if (document.readyState === 'complete') {
       updateMetrics();}
     } else {
       window.addEventListener('load', updateMetrics);}
     }
-    // Monitor Core Web Vitals
+    // Monitor Core Web Vitals;
     if ('web-vitals' in window) {}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
         getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
@@ -130,23 +129,23 @@ export const usePerformanceMonitoring = useCallback((...args) => {
       window.removeEventListener('load', updateMetrics);}
     }
   }, [])
-  return metrics
+  return metrics;
 }
-// Memory usage monitoring
+// Memory usage monitoring;
 export const useMemoryMonitoring = useCallback((...args) => {
   const [memoryInfo, setMemoryInfo] = useState<{
-    usedJSHeapSize?: number
-    totalJSHeapSize?: number
+    usedJSHeapSize?: number;
+    totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;}
   }>({})
   useEffect(() => {
-    if (typeof window === 'undefined' || !('memory' in performance)) return
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = useCallback((...args) => {
-      const memory = (performance as any).memory
+      const memory = (performance as any).memory;
       if (memory) {
-        setMemoryInfo({
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
+        setMemoryInfo({)
+          usedJSHeapSize: memory.usedJSHeapSize),
+          totalJSHeapSize: memory.totalJSHeapSize),
           jsHeapSizeLimit: memory.jsHeapSizeLimit}
         })
       }
@@ -155,48 +154,48 @@ export const useMemoryMonitoring = useCallback((...args) => {
     const interval = setInterval(updateMemoryInfo, 5000)
     return () => clearInterval(interval)
   }, [])
-  return memoryInfo
+  return memoryInfo;
 }
-// Resource preloading utility
+// Resource preloading utility;
 export const preloadResource = useCallback((...args) => {
-  if (typeof window === 'undefined') return
+  if (typeof window === 'undefined') return;
   const link = document.createElement('link')
   link.rel = 'preload'
-  link.href = href
-  link.as = as
+  link.href = href;
+  link.as = as;
   document.head.appendChild(link);}
 }
-// Critical resource preloading
+// Critical resource preloading;
 export const preloadCriticalResources = useCallback((...args) => {
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
+  if (typeof window === 'undefined') return;
+  // Preload critical fonts;
   preloadResource('/fonts/inter-var.woff2', 'font')
   preloadResource('/fonts/inter-var.woff', 'font')
-  // Preload critical images
+  // Preload critical images;
   preloadResource('/images/hero-bg.webp', 'image')
   preloadResource('/images/logo.svg', 'image')
-  // Preload critical CSS
+  // Preload critical CSS;
   preloadResource('/styles/critical.css', 'style');}
 }
-// Bundle size monitoring
+// Bundle size monitoring;
 export const useBundleSizeMonitoring = useCallback((...args) => {
   const [bundleSize, setBundleSize] = useState<{
-    totalSize?: number
-    jsSize?: number
-    cssSize?: number
+    totalSize?: number;
+    jsSize?: number;
+    cssSize?: number;
     imageSize?: number;}
   }>({})
   useEffect(() => {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     const calculateBundleSize = useCallback((...args) => {
       const resources = performance.getEntriesByType('resource')
-      let totalSize = 0
-      let jsSize = 0
-      let cssSize = 0
-      let imageSize = 0
+      let totalSize = 0;
+      let jsSize = 0;
+      let cssSize = 0;
+      let imageSize = 0;
       resources.forEach((resource) => {
-        const size = (resource as PerformanceResourceTiming).transferSize || 0
-        totalSize += size
+        const size = (resource as PerformanceResourceTiming).transferSize || 0;
+        totalSize += size;
         if (resource.name.includes('.js')) {
           jsSize += size;}
         } else if (resource.name.includes('.css')) {
@@ -205,14 +204,14 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
           imageSize += size;}
         }
       })
-      setBundleSize({
-        totalSize,
-        jsSize,
-        cssSize,
+      setBundleSize({)
+        totalSize)
+        jsSize)
+        cssSize)
         imageSize}
       })
     }
-    // Calculate after page load
+    // Calculate after page load;
     if (document.readyState === 'complete') {
       calculateBundleSize();}
     } else {
@@ -222,7 +221,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
       window.removeEventListener('load', calculateBundleSize);}
     }
   }, [])
-  return bundleSize
+  return bundleSize;
 }
 export default {
   debounce,

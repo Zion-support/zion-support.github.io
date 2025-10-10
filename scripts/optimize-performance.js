@@ -1,32 +1,31 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to optimize React components for better performance
+// Function to optimize React components for better performance;
 function optimizeComponent(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Add React.memo to functional components that don't have it
+    // Add React.memo to functional components that don't have it;
     if (content.includes('const ') && content.includes(': React.FC') && !content.includes('React.memo')) {
-      // This is a basic optimization - in practice, you'd want more sophisticated detection
+      // This is a basic optimization - in practice, you'd want more sophisticated detection;
       // console.log(`📝 Component ${filePath} could benefit from React.memo optimization`);
     }
     
-    // Add useCallback to event handlers
+    // Add useCallback to event handlers;
     if (content.includes('onClick') && !content.includes('useCallback')) {
       // console.log(`📝 Component ${filePath} could benefit from useCallback for event handlers`);
     }
     
-    // Check for missing key props in lists
+    // Check for missing key props in lists;
     if (content.includes('.map(') && !content.includes('key=')) {
       // console.log(`⚠️  Component ${filePath} has .map() without key props`);
     }
     
-    // Check for inline object/function definitions in JSX
-    if (content.includes('style={{') || content.includes('onClick={()')) {
+    // Check for inline object/function definitions in JSX;
+    if (content.includes('style={{') || content.includes('onClick={()')) {}
       // console.log(`📝 Component ${filePath} has inline styles/functions that could be optimized`);
     }
     
@@ -37,10 +36,10 @@ function optimizeComponent(filePath) {
   }
 }
 
-// Function to add performance optimizations
+// Function to add performance optimizations;
 async function addPerformanceOptimizations() {
-  const componentFiles = await glob('app/components/**/*.{ts,tsx}', {
-    ignore: ['**/node_modules/**', '**/dist/**', '**/build/**']
+  const componentFiles = await glob('app/components/**/*.{ts,tsx}', {)
+    ignore: ['**/node_modules/**', '**/dist/**', '**/build/**'])
   });
   
   // console.log('🚀 Analyzing components for performance optimizations...\n');
@@ -55,12 +54,12 @@ async function addPerformanceOptimizations() {
     }
   }
   
-  // console.log(`\n📊 Performance Analysis Summary:`);
+  // console.log(`\n📊 Performance Analysis Summary: `);
   // console.log(`   Total components analyzed: ${totalFiles}`);
   // console.log(`   Components with optimization opportunities: ${optimizedFiles}`);
 }
 
-// Function to create a performance monitoring component
+// Function to create a performance monitoring component;
 function createPerformanceMonitor() {
   const performanceMonitorContent = `import React, { useEffect, useState } from 'react';
 
@@ -79,7 +78,7 @@ export default PerformanceMonitor;
   // console.log('✅ Created PerformanceMonitor component');
 }
 
-// Function to optimize images
+// Function to optimize images;
 function createImageOptimization() {
   const imageOptimizationContent = `import React from 'react';
 
@@ -92,25 +91,24 @@ interface OptimizedImageProps {
   priority?: boolean;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
+const OptimizedImage: React.FC<OptimizedImageProps> = ({,
+  src;
   alt,
   width,
   height,
   className = '',
-  priority = false
+  priority = false;
 }) => {
-  return (
-    <img
+  return(<img;
       src={src}
       alt={alt}
       width={width}
-      height={height}
-      className={\`\${className}\`}
-      loading={priority ? 'eager' : 'lazy'}
-      decoding="async"
-      style={{
-        width: width ? \`\${width}px\` : 'auto',
+      height={height})
+      className={\`\${className}\`})
+      loading={priority ? 'eager' : 'lazy'})
+      decoding="async")
+      style={{})
+        width: width ? \`\${width}px\` : 'auto')
         height: height ? \`\${height}px\` : 'auto'
       }}
     />
@@ -124,7 +122,7 @@ export default OptimizedImage;
   // console.log('✅ Created OptimizedImage component');
 }
 
-// Main function
+// Main function;
 async function main() {
   // console.log('🚀 Starting performance optimization...\n');
   

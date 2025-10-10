@@ -4,40 +4,40 @@ import { BarChart, Target, Zap, TrendingUp, Users, Shield, Globe, CreditCard, Pa
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIEcommerceOptimizerPage: React.FC = () => {
-  const features = [
-    {
-      icon: BarChart,
+const AIEcommerceOptimizerPage: React.FC = () => {,
+  const features = [,
+    {,
+      icon: BarChart;
       title: 'AI-Powered Analytics',
       description: 'Advanced machine learning algorithms analyze customer behavior, purchase patterns, and market trends to optimize your e-commerce strategy.',
       benefits: ['Real-time insights', 'Predictive analytics', 'Customer segmentation', 'Performance tracking']
     },
     {
-      icon: Target,
+      icon: Target;
       title: 'Smart Product Recommendations',
       description: 'Intelligent recommendation engine that increases conversion rates by suggesting relevant products to customers.',
       benefits: ['Personalized suggestions', 'Cross-selling optimization', 'Upselling strategies', 'Customer retention']
     },
     {
-      icon: Zap,
+      icon: Zap;
       title: 'Automated Pricing Optimization',
       description: 'Dynamic pricing strategies that adjust product prices based on demand, competition, and market conditions.',
       benefits: ['Competitive pricing', 'Profit maximization', 'Demand forecasting', 'Price elasticity analysis']
     },
     {
-      icon: Users,
+      icon: Users;
       title: 'Customer Journey Optimization',
       description: 'AI-driven customer journey mapping and optimization to improve user experience and increase conversions.',
       benefits: ['Journey mapping', 'Funnel optimization', 'A/B testing', 'Conversion tracking']
     },
     {
-      icon: Shield,
+      icon: Shield;
       title: 'Fraud Detection & Prevention',
       description: 'Advanced fraud detection system that protects your business from fraudulent transactions and chargebacks.',
       benefits: ['Real-time monitoring', 'Risk assessment', 'Chargeback prevention', 'Security alerts']
     },
     {
-      icon: Globe,
+      icon: Globe;
       title: 'Multi-Channel Optimization',
       description: 'Seamless optimization across all sales channels including web, mobile, social media, and marketplaces.',
       benefits: ['Omnichannel strategy', 'Channel performance', 'Unified analytics', 'Cross-platform optimization']
@@ -48,37 +48,37 @@ const AIEcommerceOptimizerPage: React.FC = () => {
     {
       title: 'Product Catalog Management',
       description: 'AI-powered product categorization, tagging, and optimization for better searchability and discoverability.',
-      icon: Package,
+      icon: Package;
       metrics: ['40% faster product setup', '60% better search ranking', '35% increased visibility']
     },
     {
       title: 'Inventory Optimization',
       description: 'Smart inventory management with demand forecasting and automated reorder points.',
-      icon: Database,
+      icon: Database;
       metrics: ['50% reduction in stockouts', '30% lower inventory costs', '25% improved turnover']
     },
     {
       title: 'Search & Filter Enhancement',
       description: 'Intelligent search algorithms and dynamic filtering to help customers find products quickly.',
-      icon: Search,
+      icon: Search;
       metrics: ['45% faster product discovery', '55% improved search accuracy', '40% higher engagement']
     },
     {
       title: 'Checkout Process Optimization',
       description: 'Streamlined checkout experience with AI-powered form completion and payment optimization.',
-      icon: CreditCard,
+      icon: CreditCard;
       metrics: ['35% reduction in cart abandonment', '50% faster checkout', '25% higher completion rate']
     },
     {
       title: 'Mobile Experience Enhancement',
       description: 'Mobile-first optimization with responsive design and touch-friendly interfaces.',
-      icon: Mobile,
+      icon: Mobile;
       metrics: ['60% better mobile performance', '45% increased mobile conversions', '30% faster load times']
     },
     {
       title: 'Customer Support Automation',
       description: 'AI-powered chatbots and automated support systems for 24/7 customer assistance.',
-      icon: Bot,
+      icon: Bot;
       metrics: ['80% faster response times', '70% customer satisfaction', '50% reduced support costs']
     }
   ];
@@ -88,7 +88,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {
       name: 'Starter',
       price: '$99/month',
       description: 'Perfect for small e-commerce businesses',
-      features: [
+      features: [,
         'Up to 1,000 products',
         'Basic analytics dashboard',
         'Standard recommendations',
@@ -96,13 +96,13 @@ const AIEcommerceOptimizerPage: React.FC = () => {
         'Mobile optimization',
         'Basic fraud detection'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
       price: '$299/month',
       description: 'Ideal for growing online stores',
-      features: [
+      features: [,
         'Up to 10,000 products',
         'Advanced analytics & insights',
         'AI-powered recommendations',
@@ -112,13 +112,13 @@ const AIEcommerceOptimizerPage: React.FC = () => {
         'A/B testing tools',
         'Custom integrations'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
       price: 'Custom',
       description: 'For large-scale e-commerce operations',
-      features: [
+      features: [,
         'Unlimited products',
         'Custom AI models',
         'Dedicated account manager',
@@ -129,7 +129,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {
         'API access',
         'On-premise deployment'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -139,102 +139,154 @@ const AIEcommerceOptimizerPage: React.FC = () => {
       company: 'TechGear Store',
       role: 'E-commerce Director',
       content: 'AI E-commerce Optimizer increased our conversion rate by 45% and reduced cart abandonment by 35%. The AI recommendations are incredibly accurate.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Michael Chen',
       company: 'Fashion Forward',
       role: 'CEO',
       content: 'The pricing optimization feature alone paid for itself in the first month. We saw a 30% increase in profit margins.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Emily Rodriguez',
       company: 'Home & Garden Plus',
       role: 'Marketing Manager',
       content: 'The customer journey optimization helped us understand our customers better and increased our average order value by 25%.',
-      rating: 5
+      rating: 5;
     }
   ];
 
+<<<<<<< HEAD
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation >{/* Hero Section */}</Navigation>
+      </Navigation><section className="pt-24 pb-16 px-4">
+<<<<<<< HEAD
+=======
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+=======
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <Brain className="w-4 h-4" />
               <span>AI-Powered E-commerce Optimization</span>
+<<<<<<< HEAD
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment,
+              AI E-commerce</h1> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment,</p>
+              and maximize revenue with intelligent automation and analytics.</p>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a href="/contact" className="cyber-button px-8 py-4 text-lg">Get Started Today</a>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">View Demo</a>
+=======
+            </div>)
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,)
+              AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer</span>,)
+            </h1>,)
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">),
+              Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment)
               and maximize revenue with intelligent automation and analytics.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-                Get Started Today
+                Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
-                View Demo
+                View Demo;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
-            </div>
-          </div>
-
+            </div>,
+          </div>,
+,
           {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+<<<<<<< HEAD
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-16">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
-              <div className="text-gray-300">Conversion Increase</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">45%<div className="text-gray-300">Conversion Increase</div>
+=======
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"></div>
+            <div className="text-center"></div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div><div className="text-gray-300">Conversion Increase</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">35%</div>
-              <div className="text-gray-300">Cart Abandonment Reduction</div>
+            <div className="text-center"></div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">35%</div><div className="text-gray-300">Cart Abandonment Reduction</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">30%</div>
-              <div className="text-gray-300">Revenue Growth</div>
+            <div className="text-center"></div>
+              <div className="text-3xl font-bold text-green-400 mb-2">30%</div><div className="text-gray-300">Revenue Growth</div>
             </div>
+<<<<<<< HEAD
             <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">50%</div>
-              <div className="text-gray-300">Faster Checkout</div>
+<<<<<<< HEAD
+              <div className="text-3xl font-bold text-yellow-400 mb-2">50%<div className="text-gray-300">Faster Checkout</div>
+=======
+            <div className="text-center"></div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">50%</div><div className="text-gray-300">Faster Checkout</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </div>
           </div>
         </div>
       </section>
 
+=======
+              <div className="text-3xl font-bold text-yellow-400 mb-2">50%</div>
+              <div className="text-gray-300">Faster Checkout</div>
+            </div>,
+          </div>,
+        </div>,
+      </section>,
+,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
       {/* Features Section */}
       <section className="py-16 px-4">
+<<<<<<< HEAD
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
+<<<<<<< HEAD
+            <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Features for E-commerce Success<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered platform provides comprehensive optimization tools to maximize your online store's performance.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors">
+                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">
+=======
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Features for E-commerce Success</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered platform provides comprehensive optimization tools to maximize your online store's performance.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors"></div>
+                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                  <feature.icon className="w-6 h-6 text-cyan-400" />
+=======
             <h2 className="text-4xl font-bold text-white mb-6">
-              Powerful AI Features for E-commerce Success
+              Powerful AI Features for E-commerce Success;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI-powered platform provides comprehensive optimization tools to maximize your online store's performance.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors">
-                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-cyan-400" />
-                </div>
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover: border-cyan-400/40 transition-colors">,
+                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">,
+                  <feature.icon className="w-6 h-6 text-cyan-400" />,
+                </div>,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
+                <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
                     <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{benefit}</CheckCircle>
+                    </CheckCircle>
                   ))}
                 </ul>
               </div>
@@ -245,30 +297,42 @@ const AIEcommerceOptimizerPage: React.FC = () => {
 
       {/* Optimization Areas */}
       <section className="py-16 px-4 bg-slate-800/30">
+<<<<<<< HEAD
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
+<<<<<<< HEAD
+            <h2 className="text-4xl font-bold text-white mb-6">Comprehensive E-commerce Optimization<p className="text-xl text-gray-300 max-w-3xl mx-auto">Every aspect of your online store optimized with AI for maximum performance and customer satisfaction.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{optimizationAreas.map((area, index) => (</div>
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors">
+                <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">
+=======
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Comprehensive E-commerce Optimization</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Every aspect of your online store optimized with AI for maximum performance and customer satisfaction.</p><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{optimizationAreas.map((area, index) => (</div>
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors"></div>
+                <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                  <area.icon className="w-6 h-6 text-purple-400" />
+=======
             <h2 className="text-4xl font-bold text-white mb-6">
-              Comprehensive E-commerce Optimization
+              Comprehensive E-commerce Optimization;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Every aspect of your online store optimized with AI for maximum performance and customer satisfaction.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {optimizationAreas.map((area, index) => (
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors">
-                <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">
-                  <area.icon className="w-6 h-6 text-purple-400" />
-                </div>
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover: border-purple-400/40 transition-colors">,
+                <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">,
+                  <area.icon className="w-6 h-6 text-purple-400" />,
+                </div>,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <h3 className="text-xl font-semibold text-white mb-3">{area.title}</h3>
-                <p className="text-gray-300 mb-4">{area.description}</p>
-                <div className="space-y-2">
-                  {area.metrics.map((metric, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-green-400">
-                      <TrendingUp className="w-4 h-4 mr-2" />
-                      {metric}
-                    </div>
+                <p className="text-gray-300 mb-4">{area.description}</p><div className="space-y-2">{area.metrics.map((metric, idx) => (</div>
+                    <div key={idx} className="flex items-center text-sm text-green-400"></div>
+                      <TrendingUp className="w-4 h-4 mr-2" >{metric}</TrendingUp>
+                    </TrendingUp>
                   ))}
                 </div>
               </div>
@@ -279,49 +343,65 @@ const AIEcommerceOptimizerPage: React.FC = () => {
 
       {/* Pricing Section */}
       <section className="py-16 px-4">
+<<<<<<< HEAD
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
+<<<<<<< HEAD
+            <h2 className="text-4xl font-bold text-white mb-6">Choose Your Optimization Plan<p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to scale with your business growth.<div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
+=======
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">Choose Your Optimization Plan</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to scale with your business growth.</p><div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                plan.popular
+                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
+                  : 'border-gray-600/50'
+              }`}>{plan.popular && (</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+=======
             <h2 className="text-4xl font-bold text-white mb-6">
-              Choose Your Optimization Plan
+              Choose Your Optimization Plan;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Flexible pricing plans designed to scale with your business growth.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">,
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-                plan.popular
-                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
-                  : 'border-gray-600/50'
+                plan.popular;
+                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'}
+                  : 'border-gray-600/50'}
               }`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
+                      Most Popular;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
-                  <p className="text-gray-300">{plan.description}</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
+                <div className="text-center mb-6"></div>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div><p className="text-gray-300">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, idx) => (</ul>
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
-                    </li>
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" >{feature}</CheckCircle>
+                    </CheckCircle>
                   ))}
-                </ul>
                 <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-colors ${
+<<<<<<< HEAD
                   plan.popular
                     ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
+                }`}>Get Started</a>
+=======
+                  plan.popular;
+                    ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300',}
+                    : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'}
                 }`}>
-                  Get Started
+                  Get Started;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </a>
               </div>
             ))}
@@ -331,29 +411,36 @@ const AIEcommerceOptimizerPage: React.FC = () => {
 
       {/* Testimonials */}
       <section className="py-16 px-4 bg-slate-800/30">
+<<<<<<< HEAD
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
+<<<<<<< HEAD
+            <h2 className="text-4xl font-bold text-white mb-6">What Our Customers Say<p className="text-xl text-gray-300 max-w-3xl mx-auto">Join thousands of successful e-commerce businesses using AI optimization.<div className="grid md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+=======
             <h2 className="text-4xl font-bold text-white mb-6">
-              What Our Customers Say
+              What Our Customers Say;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Join thousands of successful e-commerce businesses using AI optimization.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">,
             {testimonials.map((testimonial, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-gray-600/50 rounded-lg p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                  <div className="font-semibold text-white">{testimonial.name}<div className="text-cyan-400 text-sm">{testimonial.role}<div className="text-gray-400 text-sm">{testimonial.company}</div>
+=======
+        <div className="container mx-auto max-w-6xl"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-6">What Our Customers Say</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Join thousands of successful e-commerce businesses using AI optimization.</p><div className="grid md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-gray-600/50 rounded-lg p-6"></div>
+                <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div></div>
+                  <div className="font-semibold text-white">{testimonial.name}</div><div className="text-cyan-400 text-sm">{testimonial.role}</div><div className="text-gray-400 text-sm">{testimonial.company}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
               </div>
             ))}
@@ -363,27 +450,34 @@ const AIEcommerceOptimizerPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Optimize Your E-commerce Store?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Start your AI-powered optimization journey today and see immediate results.
+        <div className="container mx-auto max-w-4xl text-center"></section>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your E-commerce Store?</h2><p className="text-xl text-gray-300 mb-8">Start your AI-powered optimization journey today and see immediate results.</p>
           </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+            <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Free Trial</a>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">Schedule Demo</a>
+=======
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-              Start Free Trial
+              Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
-              Schedule Demo
+              Schedule Demo;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>
         </div>
       </section>
 
-      <Footer />
-    </div>
+      <Footer />,
+    </div>,
   );
 };
 

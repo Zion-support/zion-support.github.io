@@ -31,32 +31,39 @@ import {
   TrendingUp,
   CheckCircle,
   Menu,
-  X
+  X;
 } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean;,
+    onClose: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation();
+const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
+  const location = useLocation();</SidebarProps>
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
+<<<<<<< HEAD
   const toggleSection = (section: string) => {
-    setExpandedSections(prev =>
-      prev.includes(section)
+    setExpandedSections(prev =>)
+    prev.includes(section)
         ? prev.filter(s => s !== section)
+=======
+  const toggleSection = (section: string) => {,
+    setExpandedSections(prev =>,)
+      prev.includes(section),
+        ? prev.filter(s => s !== section),
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
         : [...prev, section]
     );
   };
 
   const serviceCategories = [
     {
-      title: 'AI Services',
-      icon: Brain,
+      title: 'AI Services'
+      icon: Brain;
       color: 'text-purple-400',
-      services: [
+      services: [,
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
         { name: 'AI Customer Support', path: '/ai-customer-support' },
         { name: 'AI Data Analytics', path: '/ai-data-analytics' },
@@ -69,10 +76,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
-      title: 'IT Services',
-      icon: Cloud,
+      title: 'IT Services'
+      icon: Cloud;
       color: 'text-blue-400',
-      services: [
+      services: [,
         { name: 'Cloud Migration', path: '/cloud-migration' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
         { name: 'IT Infrastructure', path: '/it-infrastructure' },
@@ -84,10 +91,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
-      title: 'Micro SAAS',
-      icon: Code,
+      title: 'Micro SAAS'
+      icon: Code;
       color: 'text-cyan-400',
-      services: [
+      services: [,
         { name: 'AI Project Manager', path: '/ai-project-manager' },
         { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
@@ -99,10 +106,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
-      title: 'Emerging Tech',
-      icon: Sparkles,
+      title: 'Emerging Tech'
+      icon: Sparkles;
       color: 'text-pink-400',
-      services: [
+      services: [,
         { name: 'Quantum Computing', path: '/ai-quantum-computing' },
         { name: 'Autonomous Systems', path: '/autonomous-systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3' },
@@ -153,50 +160,74 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   if (!isOpen) return null;
-
-  return (
+<<<<<<< HEAD
+</string>
+  return (</string>
     <>
-      {/* Backdrop */}
-      <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-        onClick={onClose}
-      />
+=======
 
+  return(<>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
+      {/* Backdrop */}
+      <div;
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden",
+        onClick={onClose}
+<<<<<<< HEAD
+      >{/* Sidebar */}</div>
+      </div><div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg:hidden"></div>
+        <div className="flex flex-col h-full">{/* Header */}</div>
+<<<<<<< HEAD
+=======
+      />
       {/* Sidebar */}
-      <div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg:hidden">
-        <div className="flex flex-col h-full">
+      <div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg: hidden">,
+        <div className="flex flex-col h-full">,
           {/* Header */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
           <div className="flex items-center justify-between p-6 border-b border-gray-700">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+=======
+          <div className="flex items-center justify-between p-6 border-b border-gray-700"></div>
+            <div className="flex items-center space-x-2"></div>
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Zap className="w-5 h-5 text-white" />
-              </div>
               <span className="text-white font-bold text-lg">Zion Tech Group</span>
             </div>
-            <button
+            <button;
               onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 hover: text-white transition-colors"
             >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-
+              <X className="w-6 h-6" />,)
+            </button>,)
+          </div>,)
+),
           {/* Navigation Content */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-6">
-            {/* Main Navigation */}
+          <div className="flex-1 overflow-y-auto p-6 space-y-6">{/* Main Navigation */}</div>
+<<<<<<< HEAD
             <div>
+<<<<<<< HEAD
+              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Main Navigation<nav className="space-y-1">{mainLinks.map((link, index) => (</nav>
+=======
+            <div></div>
+              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Main Navigation</h3><nav className="space-y-1">{mainLinks.map((link, index) => (</nav>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                  <Link
+=======
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
-                Main Navigation
+                Main Navigation;
               </h3>
               <nav className="space-y-1">
                 {mainLinks.map((link, index) => (
-                  <Link
+                  <Link;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     key={index}
                     to={link.path}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-                      location.pathname === link.path
-                        ? 'bg-cyan-500/20 text-cyan-400'
-                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                      location.pathname === link.path;
+                        ? 'bg-cyan-500/20 text-cyan-400'}
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'}
                     }`}
                     onClick={onClose}
                   >
@@ -208,42 +239,66 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Services */}
+<<<<<<< HEAD
             <div>
+<<<<<<< HEAD
+              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Our Services<div className="space-y-2">{serviceCategories.map((category, categoryIndex) => (</div>
+                  <div key={categoryIndex}>
+=======
+            <div></div>
+              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Our Services</h3><div className="space-y-2">{serviceCategories.map((category, categoryIndex) => (</div>
+                  <div key={categoryIndex}></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                    <button
+                      onClick={() =>toggleSection(category.title)}
+                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:bg-gray-700/50 hover:text-white rounded-lg transition-colors"</button>
+                    ></button>
+<<<<<<< HEAD
+                      <div className="flex items-center space-x-3">
+=======
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
-                Our Services
+                Our Services;
               </h3>
               <div className="space-y-2">
                 {serviceCategories.map((category, categoryIndex) => (
                   <div key={categoryIndex}>
-                    <button
+                    <button;
                       onClick={() => toggleSection(category.title)}
-                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:bg-gray-700/50 hover:text-white rounded-lg transition-colors"
-                    >
-                      <div className="flex items-center space-x-3">
+                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: bg-gray-700/50 hover:text-white rounded-lg transition-colors",
+                    >,
+                      <div className="flex items-center space-x-3">,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                      <div className="flex items-center space-x-3"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <category.icon className={`w-5 h-5 ${category.color}`} />
                         <span>{category.title}</span>
                       </div>
                       {expandedSections.includes(category.title) ? (
-                        <ChevronDown className="w-4 h-4" />
-                      ) : (
-                        <ChevronRight className="w-4 h-4" />
-                      )}
-                    </button>
+                        <ChevronDown className="w-4 h-4" >) : (<ChevronRight className="w-4 h-4" >)}</ChevronRight>
+                    </ChevronRight>
 
                     {expandedSections.includes(category.title) && (
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      <div className="ml-8 space-y-1 mt-2">{category.services.map((service, serviceIndex) => (<Link
+=======
                       <div className="ml-8 space-y-1 mt-2">
                         {category.services.map((service, serviceIndex) => (
-                          <Link
+                          <Link;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+                      <div className="ml-8 space-y-1 mt-2">{category.services.map((service, serviceIndex) => (</div><Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                             key={serviceIndex}
                             to={service.path}
                             className={`block px-3 py-2 text-sm rounded-lg transition-colors ${
-                              location.pathname === service.path
-                                ? 'bg-cyan-500/20 text-cyan-400'
-                                : 'text-gray-400 hover:bg-gray-700/50 hover:text-white'
+                              location.pathname === service.path;
+                                ? 'bg-cyan-500/20 text-cyan-400'}
+                                : 'text-gray-400 hover:bg-gray-700/50 hover:text-white'}
                             }`}
                             onClick={onClose}
-                          >
-                            {service.name}
+                          >{service.name}</Link>
                           </Link>
                         ))}
                       </div>
@@ -254,19 +309,29 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Support */}
+<<<<<<< HEAD
             <div>
+<<<<<<< HEAD
+              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Support<nav className="space-y-1">{supportLinks.map((link, index) => (</nav>
+=======
+            <div></div>
+              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Support</h3><nav className="space-y-1">{supportLinks.map((link, index) => (</nav>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                  <Link
+=======
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
-                Support
+                Support;
               </h3>
               <nav className="space-y-1">
                 {supportLinks.map((link, index) => (
-                  <Link
+                  <Link;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     key={index}
                     to={link.path}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-                      location.pathname === link.path
-                        ? 'bg-cyan-500/20 text-cyan-400'
-                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                      location.pathname === link.path;
+                        ? 'bg-cyan-500/20 text-cyan-400'}
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'}
                     }`}
                     onClick={onClose}
                   >
@@ -278,19 +343,29 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Legal */}
+<<<<<<< HEAD
             <div>
+<<<<<<< HEAD
+              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Legal<nav className="space-y-1">{legalLinks.map((link, index) => (</nav>
+=======
+            <div></div>
+              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Legal</h3><nav className="space-y-1">{legalLinks.map((link, index) => (</nav>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                  <Link
+=======
               <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">
-                Legal
+                Legal;
               </h3>
               <nav className="space-y-1">
                 {legalLinks.map((link, index) => (
-                  <Link
+                  <Link;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     key={index}
                     to={link.path}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
-                      location.pathname === link.path
-                        ? 'bg-cyan-500/20 text-cyan-400'
-                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                      location.pathname === link.path;
+                        ? 'bg-cyan-500/20 text-cyan-400'}
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'}
                     }`}
                     onClick={onClose}
                   >
@@ -303,40 +378,48 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Footer */}
-          <div className="p-6 border-t border-gray-700">
-            <div className="space-y-4">
-              {/* Contact Info */}
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2 text-gray-400 text-sm">
+          <div className="p-6 border-t border-gray-700"></div>
+            <div className="space-y-4">{/* Contact Info */}</div>
+              <div className="space-y-2"></div>
+                <div className="flex items-center space-x-2 text-gray-400 text-sm"></div>
                   <Phone className="w-4 h-4" />
                   <span>+1 (302) 464-0950</span>
                 </div>
-                <div className="flex items-center space-x-2 text-gray-400 text-sm">
+                <div className="flex items-center space-x-2 text-gray-400 text-sm"></div>
                   <Mail className="w-4 h-4" />
                   <span>kleber@ziontechgroup.com</span>
                 </div>
               </div>
 
               {/* Social Links */}
+<<<<<<< HEAD
               <div className="flex space-x-4">
+                <a href="https: //linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
+=======
+              <div className="flex space-x-4"></div>
                 <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  <Github className="w-5 h-5" />
-                </a>
-              </div>
-
+                <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">,
+                  <Github className="w-5 h-5" />,
+                </a>,
+              </div>,
+,
               {/* CTA Button */}
-              <Link
+              <Link;
                 to="/contact"
-                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
+                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover: from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-center",
                 onClick={onClose}
+<<<<<<< HEAD
+              >Get Started Today</Link>
+=======
               >
-                Get Started Today
+                Get Started Today;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </Link>
             </div>
           </div>

@@ -1,34 +1,33 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 
 console.log('🔧 Fixing function names with hyphens...');
 
-// Function to fix function names
+// Function to fix function names;
 function fixFunctionNames(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix function names with hyphens
+    // Fix function names with hyphens;
     const fileName = path.basename(filePath, path.extname(filePath));
     const validFunctionName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_');
     
-    // Replace invalid function names
+    // Replace invalid function names;
     const lines = content.split('\n');
     const newLines = [];
     
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
       
-      // Fix function declarations with hyphens
+      // Fix function declarations with hyphens;
       if (line.includes('function ') && line.includes('(')) {
         line = line.replace(/function\s+[^(]+/, `function ${validFunctionName}`);
         modified = true;
       }
       
-      // Fix export default function declarations
+      // Fix export default function declarations;
       if (line.includes('export default function ') && line.includes('(')) {
         line = line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`);
         modified = true;
@@ -52,7 +51,7 @@ function fixFunctionNames(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   const files = [];
   
@@ -65,7 +64,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
-          // Skip node_modules and other common directories
+          // Skip node_modules and other common directories;
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
             traverse(fullPath);
           }
@@ -77,7 +76,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
         }
       }
     } catch (error) {
-      // Skip directories we can't read
+      // Skip directories we can't read;
     }
   }
   
@@ -85,7 +84,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return files;
 }
 
-// Main execution
+// Main execution;
 const srcDir = path.join(process.cwd(), 'src');
 const files = findFiles(srcDir);
 
@@ -105,7 +104,7 @@ for (const file of files) {
   }
 }
 
-console.log(`\n📊 Summary:`);
+console.log(`\n📊 Summary: `);
 console.log(`✅ Files fixed: ${fixedCount}`);
 console.log(`❌ Errors: ${errorCount}`);
 console.log(`📁 Total files processed: ${files.length}`);

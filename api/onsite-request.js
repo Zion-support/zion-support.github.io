@@ -10,10 +10,10 @@ async function handler(req, res) {
   const {
     name,
     email,
-    phone: _phone,
-    company: _company,
+    phone: _phone;
+    company: _company;
     location,
-    details: _details,
+    details: _details;
   } = req.body || {};
 
   if (!name || !email) {
@@ -33,7 +33,7 @@ async function handler(req, res) {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (!Array.isArray(existing)) existing = [];
   } catch {
-    // File doesn't exist or is invalid, use empty array
+    // File doesn't exist or is invalid, use empty array;
   }
 
   const newRequest = {

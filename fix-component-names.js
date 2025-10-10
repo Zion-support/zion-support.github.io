@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Get all files with errors
+// Get all files with errors;
 const getAllFilesWithErrors = () => {
   const srcDir = path.join(__dirname, 'src');
   const files = [];
@@ -28,7 +28,7 @@ const getAllFilesWithErrors = () => {
   return files;
 };
 
-// Fix component names in files
+// Fix component names in files;
 const fixComponentNames = () => {
   const files = getAllFilesWithErrors();
   let fixedCount = 0;
@@ -38,10 +38,10 @@ const fixComponentNames = () => {
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
       
-      // Fix component names with spaces
-      const componentNameMatch = content.match(/const\s+([A-Za-z\s]+)Page:\s*React\.FC/);
-      if (componentNameMatch) {
-        const oldName = componentNameMatch[1];
+      // Fix component names with spaces;
+      const componentNameMatch = content.match(/const\s+([A-Za-z\s]+)Page: \s*React\.FC/);
+      if (componentNameMatch) {,
+        const oldName = componentNameMatch[1];,
         const newName = oldName.replace(/\s+/g, '').replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
         
         if (oldName !== newName) {
@@ -51,7 +51,7 @@ const fixComponentNames = () => {
         }
       }
       
-      // Fix title in JSX
+      // Fix title in JSX;
       const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/);
       if (titleMatch) {
         const oldTitle = titleMatch[1];

@@ -1,15 +1,28 @@
 
 interface LinkProps {
-  href: string
-  children: React.ReactNode
+<<<<<<< HEAD
+  href: string,
+    children: React.ReactNode
   className?: string
   target?: string
   rel?: string
   onClick?: () => void
   'aria-label'?: string;}
 }
-export const Link: React.FC<LinkProps> = ({
+export const Link: React.FC<LinkProps>= ({
   href,
+=======
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  target?: string;
+  rel?: string;
+  onClick?: () => void;
+  'aria-label'?: string;}
+}
+export const Link: React.FC<LinkProps> = ({,
+  href;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
   children,
   className,
   target,
@@ -22,24 +35,35 @@ export const Link: React.FC<LinkProps> = ({
     if (onClick) {
       onClick();}
     }
-    // Handle internal navigation
+    // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {
       e.preventDefault()
       window.location.href = href;}
     }
+<<<<<<< HEAD
+  }</LinkProps>
+  return (<a
+=======
   }
-  return (
-    <a
+  return(<a;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
       href={href}
       className={className}
       target={target}
       rel={rel}
       onClick={handleClick}
+<<<<<<< HEAD
       aria-label={ariaLabel}
       {...props}
-    >
-      {children}
+    >{children}</a>
     </a>
+=======
+      aria-label={ariaLabel})
+      {...props})
+    >)
+      {children})
+    </a>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
   )
 }
-export default Link
+export default Link;

@@ -21,14 +21,14 @@ const AIVoiceCloningPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 text-purple-800 text-sm font-medium mb-6">
+          <div className="max-w-7xl mx-auto"></section>
+            <div className="text-center"></div>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 text-purple-800 text-sm font-medium mb-6"></div>
                 <Mic className="w-4 h-4 mr-2" />
                 AI Voice Technology
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Voice Cloning
+                AI Voice Cloning</h1>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                   Professional Voice Synthesis
                 </span>
@@ -37,7 +37,7 @@ const AIVoiceCloningPage: React.FC = () => {
                 Create realistic voice clones with our advanced AI technology. Perfect for content creators, 
                 businesses, and developers who need high-quality voice synthesis.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a 
                   href="#pricing" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
@@ -59,8 +59,8 @@ const AIVoiceCloningPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></section>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Powerful Voice Cloning Features
               </h2>
@@ -69,9 +69,9 @@ const AIVoiceCloningPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100"></div>
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Mic className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">High-Quality Voice Synthesis</h3>
@@ -90,8 +90,8 @@ const AIVoiceCloningPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100"></div>
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Settings className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Easy Voice Training</h3>
@@ -110,8 +110,8 @@ const AIVoiceCloningPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100"></div>
+                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Globe className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Multi-Language Support</h3>
@@ -130,8 +130,8 @@ const AIVoiceCloningPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border border-orange-100">
-                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border border-orange-100"></div>
+                <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Privacy & Security</h3>
@@ -150,8 +150,8 @@ const AIVoiceCloningPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-8 rounded-xl border border-pink-100">
-                <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-8 rounded-xl border border-pink-100"></div>
+                <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Processing</h3>
@@ -170,8 +170,8 @@ const AIVoiceCloningPage: React.FC = () => {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-indigo-100">
-                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
+              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-indigo-100"></div>
+                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6"></div>
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h3>
@@ -195,8 +195,8 @@ const AIVoiceCloningPage: React.FC = () => {
 
         {/* Pricing Section */}
         <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+          <div className="max-w-7xl mx-auto"></section>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Simple, Transparent Pricing
               </h2>
@@ -205,11 +205,11 @@ const AIVoiceCloningPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-xl border border-gray-200">
-                <div className="text-center">
+            <div className="grid md:grid-cols-3 gap-8"></div>
+              <div className="bg-white p-8 rounded-xl border border-gray-200"></div>
+                <div className="text-center"></div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <span className="text-4xl font-bold text-gray-900">$199</span>
                     <span className="text-gray-600">/month</span>
                   </div>
@@ -241,15 +241,15 @@ const AIVoiceCloningPage: React.FC = () => {
                 </a>
               </div>
 
-              <div className="bg-white p-8 rounded-xl border-2 border-purple-500 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <div className="bg-white p-8 rounded-xl border-2 border-purple-500 relative"></div>
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                   <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
                 </div>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <span className="text-4xl font-bold text-gray-900">$399</span>
                     <span className="text-gray-600">/month</span>
                   </div>
@@ -285,10 +285,10 @@ const AIVoiceCloningPage: React.FC = () => {
                 </a>
               </div>
 
-              <div className="bg-white p-8 rounded-xl border border-gray-200">
-                <div className="text-center">
+              <div className="bg-white p-8 rounded-xl border border-gray-200"></div>
+                <div className="text-center"></div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <span className="text-4xl font-bold text-gray-900">$999</span>
                     <span className="text-gray-600">/month</span>
                   </div>
@@ -329,14 +329,14 @@ const AIVoiceCloningPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-pink-600">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Create Amazing Voice Content?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Join thousands of creators and businesses using our AI voice cloning technology
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a 
                 href="mailto:kleber@ziontechgroup.com?subject=AI Voice Cloning Inquiry"
                 className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
@@ -357,17 +357,17 @@ const AIVoiceCloningPage: React.FC = () => {
 
         {/* Contact Info */}
         <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="grid md:grid-cols-3 gap-8 text-white">
-              <div className="flex items-center justify-center">
+          <div className="max-w-4xl mx-auto text-center"></section>
+            <div className="grid md:grid-cols-3 gap-8 text-white"></div>
+              <div className="flex items-center justify-center"></div>
                 <Phone className="w-5 h-5 mr-2" />
                 <span>+1 302 464 0950</span>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center"></div>
                 <Mail className="w-5 h-5 mr-2" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center"></div>
                 <MapPin className="w-5 h-5 mr-2" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>

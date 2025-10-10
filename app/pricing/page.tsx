@@ -9,12 +9,12 @@ export default function PricingPage() {
     {
       name: 'Starter',
       price: { monthly: 2999, yearly: 29999 },
-      description: 'Perfect for small businesses getting started with AI',
-      icon: Zap,
-      color: 'text-blue-400',
+      description: 'Perfect for small businesses getting started with AI'
+      icon: Zap;
+      color: 'text-blue-400'
       bgColor: 'bg-blue-500/10',
-      popular: false,
-      features: [
+      popular: false;
+      features: [,
         'AI Content Generation (10,000 words/month)',
         'Basic Analytics Dashboard',
         'Email Support',
@@ -23,7 +23,7 @@ export default function PricingPage() {
         'Basic Integrations',
         'Monthly Reports'
       ],
-      limitations: [
+      limitations: [,
         'Limited AI models',
         'No custom training',
         'Basic support only'
@@ -32,12 +32,12 @@ export default function PricingPage() {
     {
       name: 'Professional',
       price: { monthly: 7999, yearly: 79999 },
-      description: 'Ideal for growing businesses with advanced AI needs',
-      icon: Brain,
-      color: 'text-purple-400',
+      description: 'Ideal for growing businesses with advanced AI needs'
+      icon: Brain;
+      color: 'text-purple-400'
       bgColor: 'bg-purple-500/10',
-      popular: true,
-      features: [
+      popular: true;
+      features: [,
         'AI Content Generation (50,000 words/month)',
         'Advanced Analytics Dashboard',
         'Priority Support',
@@ -49,20 +49,20 @@ export default function PricingPage() {
         'API Access',
         'Training & Onboarding'
       ],
-      limitations: [
+      limitations: [,
         'Limited custom development',
-        'Standard SLA'
-      ]
+        'Standard SLA',
+      ],
     },
     {
       name: 'Enterprise',
       price: { monthly: 19999, yearly: 199999 },
-      description: 'Complete AI solution for large organizations',
-      icon: Cloud,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
-      popular: false,
-      features: [
+      description: 'Complete AI solution for large organizations'
+      icon: Cloud;
+      color: 'text-cyan-400'
+      bgColor: 'bg-cyan-500/10'
+      popular: false;
+      features: [,
         'Unlimited AI Content Generation',
         'Custom Analytics Dashboard',
         '24/7 Dedicated Support',
@@ -77,7 +77,7 @@ export default function PricingPage() {
         'SLA Guarantee',
         'White-label Options'
       ],
-      limitations: []
+      limitations: [],
     }
   ];
 
@@ -86,25 +86,25 @@ export default function PricingPage() {
       name: 'AI Automation Suite',
       description: 'Advanced workflow automation and process optimization',
       price: { monthly: 2000, yearly: 20000 },
-      icon: Zap
+      icon: Zap;
     },
     {
       name: 'AI Analytics Pro',
       description: 'Advanced analytics and business intelligence',
       price: { monthly: 1500, yearly: 15000 },
-      icon: BarChart
+      icon: BarChart;
     },
     {
       name: 'AI Security Suite',
       description: 'Enhanced security and compliance features',
       price: { monthly: 1000, yearly: 10000 },
-      icon: Shield
+      icon: Shield;
     },
     {
       name: 'Custom Development',
       description: 'Bespoke AI solutions and integrations',
       price: { monthly: 5000, yearly: 50000 },
-      icon: Code
+      icon: Code;
     }
   ];
 
@@ -115,7 +115,7 @@ export default function PricingPage() {
     },
     {
       question: 'What happens if I exceed my usage limits?',
-      answer: 'We\'ll notify you when you\'re approaching your limits. You can either upgrade your plan or purchase additional capacity as needed.'
+      answer: 'We\'ll notify you when you\'re approaching your limits. You can either upgrade your plan or purchase additional capacity as needed.',
     },
     {
       question: 'Do you offer custom pricing for large organizations?',
@@ -142,64 +142,95 @@ export default function PricingPage() {
     return { savings, percentage };
   };
 
+<<<<<<< HEAD
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></section><div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Pricing Plans</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Choose the perfect plan for your business. All plans include our core AI services</p>
+              with flexible options to scale as you grow.</p>
+=======
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Pricing Plans
+              Pricing Plans;
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Choose the perfect plan for your business. All plans include our core AI services
+              Choose the perfect plan for your business. All plans include our core AI services;
               with flexible options to scale as you grow.
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
                 <CheckCircle className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">14-Day Free Trial</span>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
                 <Shield className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">No Setup Fees</span>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
                 <ArrowRight className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Cancel Anytime</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+              </div>)
+            </div>)
+          </div>)
+        </div>)
+      </section>),
+),
       {/* Billing Toggle */}
       <section className="py-8">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="flex justify-center">
             <div className="bg-slate-800/50 rounded-lg p-1 flex">
+<<<<<<< HEAD
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="flex justify-center"></div>
+            <div className="bg-slate-800/50 rounded-lg p-1 flex"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button
+                onClick={() =>setBillingCycle('monthly')}
+=======
+              <button;
                 onClick={() => setBillingCycle('monthly')}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 className={`px-6 py-2 rounded-md font-medium transition-all ${
                   billingCycle === 'monthly'
-                    ? 'bg-cyan-500 text-white'
-                    : 'text-gray-400 hover:text-white'
+                    ? 'bg-cyan-500 text-white'}
+                    : 'text-gray-400 hover:text-white'}
                 }`}
+<<<<<<< HEAD
+              ></button>
+                Monthly<button
+                onClick={() =>setBillingCycle('yearly')}
+=======
               >
-                Monthly
+                Monthly;
               </button>
-              <button
+              <button;
                 onClick={() => setBillingCycle('yearly')}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 className={`px-6 py-2 rounded-md font-medium transition-all ${
                   billingCycle === 'yearly'
-                    ? 'bg-cyan-500 text-white'
-                    : 'text-gray-400 hover:text-white'
+                    ? 'bg-cyan-500 text-white'}
+                    : 'text-gray-400 hover:text-white'}
                 }`}
+<<<<<<< HEAD
+              ></button>
+                Yearly<span className="ml-2 text-xs bg-green-500 text-white px-2 py-1 rounded">Save 17%</span>
+=======
               >
-                Yearly
+                Yearly;
                 <span className="ml-2 text-xs bg-green-500 text-white px-2 py-1 rounded">
                   Save 17%
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </span>
               </button>
             </div>
@@ -209,71 +240,91 @@ export default function PricingPage() {
 
       {/* Pricing Plans */}
       <section className="py-20">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
+        <div className="container mx-auto px-4"></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">{plans.map((plan, index) => {
+              const savings = calculateSavings(plan.price.monthly, plan.price.yearly);</div>
+              return (<div
+=======
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-7xl mx-auto">,
             {plans.map((plan, index) => {
               const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
-              return (
-                <div
+              return(<div;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   key={index}
-                  className={`relative bg-slate-800/50 rounded-lg p-8 ${
-                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
+                  className={`relative bg-slate-800/50 rounded-lg p-8 ${}
+                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}
                   } hover:bg-slate-700/50 transition-all duration-300`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-                        Most Popular
+<<<<<<< HEAD
+                >{plan.popular && (</div>
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
                       </div>
                     </div>
+=======
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">)
+                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">)
+                        Most Popular;)
+                      </div>)
+                    </div>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   )}
 
-                  <div className="text-center mb-8">
-                    <div className={`w-16 h-16 ${plan.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                      <plan.icon className={`w-8 h-8 ${plan.color}`} />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="mb-4">
-                      <span className="text-4xl font-bold text-white">
-                        ${plan.price[billingCycle as keyof typeof plan.price].toLocaleString()}
-                      </span>
-                      <span className="text-gray-400 ml-2">
-                        /{billingCycle === 'monthly' ? 'month' : 'year'}
+                  <div className="text-center mb-8"></div>
+                    <div className={`w-16 h-16 ${plan.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}></div>
+                      <plan.icon className={`w-8 h-8 ${plan.color}`} /></p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-300 mb-4">{plan.description}</p>
+                    <div className="mb-4"></div>
+                      <span className="text-4xl font-bold text-white">${plan.price[billingCycle as keyof typeof plan.price].toLocaleString()}</span><span className="text-gray-400 ml-2">/{billingCycle === 'monthly' ? 'month' : 'year'}</span>
                       </span>
                     </div>
                     {billingCycle === 'yearly' && (
-                      <div className="text-green-400 text-sm font-medium">
-                        Save ${savings.savings.toLocaleString()} ({savings.percentage}% off)
+                      <div className="text-green-400 text-sm font-medium">Save ${savings.savings.toLocaleString()} ({savings.percentage}% off)</div>
                       </div>
                     )}
                   </div>
 
+<<<<<<< HEAD
                   <div className="space-y-4 mb-8">
+                    <h4 className="text-lg font-semibold text-white mb-3">What's included: </h4>,
+=======
+                  <div className="space-y-4 mb-8"></div>
                     <h4 className="text-lg font-semibold text-white mb-3">What's included:</h4>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     {plan.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start space-x-3">
+                      <div key={featureIndex} className="flex items-start space-x-3"></div>
                         <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{feature}</span>
                       </div>
                     ))}
                     {plan.limitations.map((limitation, limitationIndex) => (
-                      <div key={limitationIndex} className="flex items-start space-x-3">
+                      <div key={limitationIndex} className="flex items-start space-x-3"></div>
                         <X className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-400 text-sm">{limitation}</span>
                       </div>
                     ))}
+<<<<<<< HEAD
+                  <button
+                    onClick={() =>setSelectedPlan(plan.name.toLowerCase())}
+=======
                   </div>
 
-                  <button
+                  <button;
                     onClick={() => setSelectedPlan(plan.name.toLowerCase())}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     className={`w-full py-3 px-6 rounded-lg font-bold transition-all ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                      plan.popular;
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700',}
+                        : 'bg-slate-700 text-white hover:bg-slate-600'}
                     }`}
-                  >
-                    {selectedPlan === plan.name.toLowerCase() ? 'Selected' : 'Choose Plan'}
+                  ></button>
+                    {selectedPlan === plan.name.toLowerCase() ? 'Selected' : 'Choose Plan'}</button>
                   </button>
                 </div>
               );
@@ -284,21 +335,39 @@ export default function PricingPage() {
 
       {/* Add-ons */}
       <section className="py-20 bg-slate-800/50">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Add-on Services
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Enhance your plan with additional services and features
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {addOns.map((addon, index) => (
+<<<<<<< HEAD
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Add-on Services<p className="text-lg text-gray-300 max-w-3xl mx-auto">Enhance your plan with additional services and features<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{addOns.map((addon, index) => (</div>
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Add-on Services</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Enhance your plan with additional services and features</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{addOns.map((addon, index) => (</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"></div>
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <addon.icon className="w-6 h-6 text-white" />
-                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{addon.name}</h3>
+                <p className="text-gray-300 text-sm mb-4">{addon.description}</p><div className="text-2xl font-bold text-white mb-4">${addon.price[billingCycle as keyof typeof addon.price].toLocaleString()}</div><span className="text-gray-400 text-sm ml-1">/{billingCycle === 'monthly' ? 'month' : 'year'}</span><button className="w-full bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors">Add to Plan</button>
+                </button>
+              </div>
+=======
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Add-on Services;
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Enhance your plan with additional services and features;
+            </p>,
+          </div>,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
+            {addOns.map((addon, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover: bg-slate-700/50 transition-all duration-300">,
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
+                  <addon.icon className="w-6 h-6 text-white" />,
+                </div>,
                 <h3 className="text-xl font-bold text-white mb-2">{addon.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{addon.description}</p>
                 <div className="text-2xl font-bold text-white mb-4">
@@ -307,10 +376,11 @@ export default function PricingPage() {
                     /{billingCycle === 'monthly' ? 'month' : 'year'}
                   </span>
                 </div>
-                <button className="w-full bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors">
-                  Add to Plan
-                </button>
-              </div>
+                <button className="w-full bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover: bg-slate-600 transition-colors">
+                  Add to Plan;
+                </button>,
+              </div>,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             ))}
           </div>
         </div>
@@ -318,21 +388,39 @@ export default function PricingPage() {
 
       {/* FAQ */}
       <section className="py-20">
+<<<<<<< HEAD
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Common questions about our pricing and plans
+<<<<<<< HEAD
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our pricing and plans</p>
+=======
+        <div className="container mx-auto px-4"></section>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our pricing and plans</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </p>
           </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="space-y-6">{faqs.map((faq, index) => (</div>
+<<<<<<< HEAD
+=======
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Frequently Asked Questions;
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Common questions about our pricing and plans;
+            </p>
+          </div>,
+          <div className="max-w-4xl mx-auto">,
+            <div className="space-y-6">,
               {faqs.map((faq, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300">{faq.answer}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}<p className="text-gray-300">{faq.answer}</p>
+=======
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
+                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3><p className="text-gray-300">{faq.answer}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </div>
               ))}
             </div>
@@ -342,31 +430,54 @@ export default function PricingPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+<<<<<<< HEAD
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Get Started?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Start your 14-day free trial today. No credit card required, cancel anytime.</p>
+=======
+          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">,
+            Ready to Get Started?,
+          </h2>,
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">,
             Start your 14-day free trial today. No credit card required, cancel anytime.
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <a;
+=======
+        <div className="container mx-auto px-4 text-center"></section>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Start your 14-day free trial today. No credit card required, cancel anytime.</p>
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-              <MessageSquare className="w-5 h-5 mr-2" />
-              Start Free Trial
-            </a>
+<<<<<<< HEAD
+              <MessageSquare className="w-5 h-5 mr-2" >Start Free Trial</MessageSquare>
+            </MessageSquare>
             <a
               href="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule Demo
+              <Calendar className="w-5 h-5 mr-2" >Schedule Demo</Calendar>
+            </Calendar>
+=======
+              <MessageSquare className="w-5 h-5 mr-2" />
+              Start Free Trial;
             </a>
+            <a;
+              href="/consultation"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+            >
+              <Calendar className="w-5 h-5 mr-2" />
+              Schedule Demo;
+            </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </div>
         </div>
-      </section>
-    </div>
+      </section>,
+    </div>,
   );
 }

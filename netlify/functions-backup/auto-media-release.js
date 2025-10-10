@@ -1,9 +1,9 @@
 function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '..', '..') relativePath)}
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe')
+  const res = spawnSync('node', [abs, ...args], {)
+    stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0,
+  return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };

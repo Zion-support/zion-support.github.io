@@ -1,21 +1,20 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 /**
- * Comprehensive PR Merge - Handles all remaining branches and PRs
+ * Comprehensive PR Merge - Handles all remaining branches and PRs;
  */ import { execSync } from 'child_process';
 import fs from 'fs';
 
-// //Step 1: Ensure we're on main and up to date
-// try {
+// //Step 1: Ensure we're on main and up to date;
+// try {,
   execSync('git checkout main', { stdio: 'inherit' });
   execSync('git pull origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   process.exit(1);
 }
 
-//Step 2: Get all branches that might need merging
-// //Get recent branches (last 7 days)
-const recentBranches = execSync(
+//Step 2: Get all branches that might need merging;
+// //Get recent branches (last 7 days),
+const recentBranches = execSync(,)
   'git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdate:short) %(refname:short)"',
   { encoding: 'utf8' }
 )
@@ -25,20 +24,19 @@ const recentBranches = execSync(
   .filter(line => !line.includes('backup'))
   .filter(line => !line.includes('aggressive'))
   .filter(line => !line.includes('automation'))
-  .map(line => {
-    return {
-      date: parts[0],
+  .map(line => {)
+    return {)
+      date: parts[0]),
       branch: parts[1].replace('origin/', ''),
     };
   })
-  .filter(item => {
+  .filter(item => {)
 //     const branchDate = new Date(item.date);
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
     return branchDate >= sevenDaysAgo;
   })
   .map(item => item.branch)
-  .filter(
-    branch =>
+  .filter(branch =>)
       branch.includes('cursor') ||
       branch.includes('fix') ||
       branch.includes('merge') ||
@@ -49,42 +47,38 @@ const recentBranches = execSync(
       branch.includes('codex')
   );
 
-// //Step 3: Enhanced merge function with conflict resolution
-function mergeBranch(branchName) {
-//   try {
-    //Check if branch exists
+// //Step 3: Enhanced merge function with conflict resolution;
+function mergeBranch(branchName) {,
+//   try {,
+    //Check if branch exists;
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
 
-    //Check if already merged
-    const isMerged = execSync(
-      `git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,
+    //Check if already merged;
+    const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`)
       { encoding: 'utf8' }
     ).trim();
     if (isMerged !== 'not_merged') {
 //       return { success: true, method: 'already_merged' };
     }
 
-    //Try to merge
+    //Try to merge;
     try {
-      execSync(
-        `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,
+      execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)
         { stdio: 'inherit' }
       );
 //       return { success: true, method: 'direct' };
     } catch (mergeError) {
-//       //Try different conflict resolution strategies
+//       //Try different conflict resolution strategies;
       try {
-        //Strategy 1: Use theirs
-        execSync(
-          `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,
+        //Strategy 1: Use theirs;
+        execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)
           { stdio: 'inherit' }
         );
 //         return { success: true, method: 'theirs' };
       } catch (theirsError) {
         try {
-          //Strategy 2: Use ours
-          execSync(
-            `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,
+          //Strategy 2: Use ours;
+          execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`)
             { stdio: 'inherit' }
           );
 //           return { success: true, method: 'ours' };
@@ -98,26 +92,26 @@ function mergeBranch(branchName) {
   }
 }
 
-//Step 4: Process branches in batches
+//Step 4: Process branches in batches;
 const results = {
-  successful: [],
-  failed: [],
+  successful: []
+  failed: []
   summary: {
-    total: 0,
-    successful: 0,
-    failed: 0,
+    total: 0;
+    successful: 0;
+    failed: 0;
     methods: {
-      direct: 0,
-      theirs: 0,
-      ours: 0,
-      already_merged: 0,
-      not_found: 0,
-      failed: 0,
+      direct: 0;
+      theirs: 0;
+      ours: 0;
+      already_merged: 0;
+      not_found: 0;
+      failed: 0;
     },
   },
 };
 
-// //Process in batches of 20 to avoid overwhelming the system
+// //Process in batches of 20 to avoid overwhelming the system;
 // const batchSize = 20;
 // const totalBatches = Math.ceil(recentBranches.length / batchSize);
 
@@ -133,25 +127,25 @@ for (let batch = 0; batch < totalBatches; batch++) {
     results.summary.total++;
 
     if (result.success) {
-      results.successful.push({
-        branch: branch,
-        success: true,
-        method: result.method,
+      results.successful.push({)
+        branch: branch;),
+        success: true),
+        method: result.method),
       });
       results.summary.successful++;
       results.summary.methods[result.method]++;
     } else {
-      results.failed.push({
-        branch: branch,
-        success: false,
-        method: result.method,
+      results.failed.push({)
+        branch: branch;),
+        success: false),
+        method: result.method),
       });
       results.summary.failed++;
       results.summary.methods[result.method]++;
     }
   }
 
-  //Push changes after each batch
+  //Push changes after each batch;
   if (batch % 3 === 0 || batch === totalBatches - 1) {
     try {
       execSync('git push origin main', { stdio: 'inherit' });
@@ -160,22 +154,21 @@ for (let batch = 0; batch < totalBatches; batch++) {
   }
 }
 
-//Step 5: Generate final report
-// const report = {
-  ...results,
+//Step 5: Generate final report;
+// const report = {,
+  ...results;
   timestamp: new Date().toISOString(),
 };
 
-fs.writeFileSync(
-  'comprehensive-pr-merge-report.json',
+fs.writeFileSync('comprehensive-pr-merge-report.json')
   JSON.stringify(report, null, 2)
 );
 
-//Step 6: Final push
-// try {
+//Step 6: Final push;
+// try {,
   execSync('git push origin main', { stdio: 'inherit' });
 //   } catch (error) {
 //   }
 
-// Step 7: Summary
-// // // // // // // // // // // // // // 
+// Step 7: Summary;
+// // // // // // // // // // // // // // ,

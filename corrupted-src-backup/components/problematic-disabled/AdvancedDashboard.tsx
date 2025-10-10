@@ -9,11 +9,11 @@ interface DashboardData {
     sessions: number;
     bounceRate: number;
   };
-  performance: {
+  performance: {,
     loadTime: number;
     responseTime: number;
   };
-  security: {
+  security: {,
     threatsBlocked: number;
     vulnerabilities: number;
   };

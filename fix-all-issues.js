@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -8,13 +7,13 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix a specific file
+// Function to fix a specific file;
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Remove duplicate function declarations
+    // Remove duplicate function declarations;
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
       return `const ${name}: React.FC = () => {`;
     });
@@ -23,7 +22,7 @@ function fixFile(filePath) {
       return `const ${name} = () => {`;
     });
     
-    // Fix missing closing braces
+    // Fix missing closing braces;
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {
       const lines = body.split('\n');
       let openBraces = 0;
@@ -41,7 +40,7 @@ function fixFile(filePath) {
       return match;
     });
     
-    // Fix missing semicolons
+    // Fix missing semicolons;
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
       if (!match.endsWith(';')) {
         return match + ';';
@@ -49,7 +48,7 @@ function fixFile(filePath) {
       return match;
     });
     
-    // Fix missing closing braces for JSX
+    // Fix missing closing braces for JSX;
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
       if (tag.includes('<div') && !match.includes('</div>')) {
         return match + '</div>';
@@ -57,7 +56,7 @@ function fixFile(filePath) {
       return match;
     });
     
-    // Only write if content changed
+    // Only write if content changed;
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
@@ -71,7 +70,7 @@ function fixFile(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findFiles(dir) {
   const files = [];
   
@@ -94,7 +93,7 @@ function findFiles(dir) {
         }
       }
     } catch (error) {
-      // Skip directories that can't be read
+      // Skip directories that can't be read;
     }
   }
   
@@ -102,7 +101,7 @@ function findFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('🔧 Fixing all remaining issues...');
 const srcDir = path.join(__dirname, 'src');
 const files = findFiles(srcDir);
@@ -118,7 +117,7 @@ for (const file of files) {
 
 console.log(`✅ Fixed issues in ${fixedCount} files`);
 
-// Run build to check if issues are resolved
+// Run build to check if issues are resolved;
 console.log('\n🔍 Running build to check results...');
 try {
   execSync('pnpm run build', { stdio: 'pipe' });

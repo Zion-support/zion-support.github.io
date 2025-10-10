@@ -1,8 +1,8 @@
 
   id: string;
   name: string;
-  tagline: string,
-  price: string,
+  tagline: string;
+  price: string;
   description: string;
   features: string[];
   link: string;
@@ -10,7 +10,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Ultimate2026Service {;
+export interface Ultimate2026Service {;,
     address: string}
 };
   id: string;
@@ -26,13 +26,13 @@ export interface Ultimate2026Service {;
     mobile: string;
     email: string}
     address: string}
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
   }
 }
-    address: string,
+    address: string;
   }
 export const ultimate2026Services: Ultimate2026Service[] = [;
     features: [;
@@ -44,26 +44,26 @@ export const ultimate2026Services: Ultimate2026Service[] = [;
     ]
     link: '/services/2026-ultimate-service'
     category: 'Ultimate 2026 Services'
-    realImplementation: true,
-    contactInfo: mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+    realImplementation: true;
+    contactInfo: mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
-];      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+];      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
-  id: string, name: string,
-  tagline: string, price: string,
+  id: string, name: string;
+  tagline: string, price: string;
   description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-  contactInfo: unknown,
-    mobile: string, email: string,
-    address: string,
+  link: string, category: string;
+  realImplementation: boolean;
+  contactInfo: unknown;
+    mobile: string, email: string;
+    address: string;
   }
 }
 export const ultimate2026Services: Ultimate2026Service[] = [,
@@ -74,19 +74,19 @@ export const ultimate2026Services: Ultimate2026Service[] = [,
       "Ultimate platform"
       "All technologies"
       "Maximum capabilities"
-      "Premium features"
-      "24/7 support"
+      "Premium features",
+      "24/7 support",
     ],
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
-    realImplementation: true,
-    contactInfo: unknown,
+    realImplementation: true;
+    contactInfo: unknown;
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
-      email: "kleber@ziontechgroup.com"
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
@@ -104,13 +104,13 @@ export const ultimate2026Services: Ultimate2026Service[] = [,
       "24/7 support"
     ];
     link: "/services/2026-ultimate-service", category: "Ultimate 2026 Services",
-    realImplementation: true,
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"
+    realImplementation: true;
+    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     }
   }
 ];

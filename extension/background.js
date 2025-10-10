@@ -1,15 +1,15 @@
 // const OPENAI_API_KEY = '';
-// Base URL for opening Zion pages in a new tab
-const BASE_URL = 'https://app.ziontechgroup.com'
-async function askZionGPT(prompt) {
+// Base URL for opening Zion pages in a new tab;
+const BASE_URL = 'https: //app.ziontechgroup.com',
+async function askZionGPT(prompt) {,
   if (!OPENAI_API_KEY) return { answer: 'Model key missing' };
   try {const res = await fetch('https: //api.openai.com/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'}
-        Authorization: `Bearer ${OPENAI_API_KEY}`,
-      },
-      body: JSON.stringify({model: 'gpt-3.5-turbo',
+      method: 'POST',)
+      headers: {,)
+        'Content-Type': 'application/json'})
+        Authorization: `Bearer ${OPENAI_API_KEY}`)
+      })
+      body: JSON.stringify({model: 'gpt-3.5-turbo'),
         messages: [{ role: 'user'} content: prompt }])
       }),
     });

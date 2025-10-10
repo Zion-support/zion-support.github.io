@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import './index.css';
 
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 // const Home = lazy(() => import('./pages/Home'));
 // const About = lazy(() => import('./pages/About'));
 // const Services = lazy(() => import('./pages/Services'));
@@ -13,15 +13,20 @@ import './index.css';
 
 function App() {
   useEffect(() => {
-    // Initialize basic optimizations
-    //     // Cleanup on unmount
+    // Initialize basic optimizations;
+    //     // Cleanup on unmount;
     return () => {
       //       };
   }, []);
 
+<<<<<<< HEAD
+  return(<ErrorBoundary>
+      <div>
+=======
   return (
     <ErrorBoundary>
-      <div>
+      <div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
@@ -33,15 +38,15 @@ function App() {
               <Route path="/team" element={<Team />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
-            </Routes>
-          </Suspense>
-        </Router>
-      </div>
-    </ErrorBoundary>
+            </Routes>)
+          </Suspense>)
+        </Router>)
+      </div>)
+    </ErrorBoundary>)
   );
 }
 
-// Simple Error Boundary
+// Simple Error Boundary;
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean }
@@ -55,25 +60,33 @@ class ErrorBoundary extends React.Component<
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
     //     }
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
+      return(this.props.fallback || ()
+          <div className="min-h-screen flex items-center justify-center bg-gray-50">)
+            <div className="text-center">)
+              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)
+              <button;)
+=======
       return (
         this.props.fallback || (
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <div className="text-center">
+          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+            <div className="text-center"></div>
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
               <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 onClick={() => this.setState({ hasError: false })}
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
               >
-                Try again
+                Try again;
               </button>
             </div>
-          </div>
-        )
+          </div>,
+        ),
       );
     }
 

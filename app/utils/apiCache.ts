@@ -1,6 +1,6 @@
 /**
- * API Cache Utility
- * Provides intelligent caching for API requests
+ * API Cache Utility;
+ * Provides intelligent caching for API requests;
  */
 
 interface CacheEntry {
@@ -12,9 +12,8 @@ interface CacheEntry {
 class APICache {
   private cache: Map<string, CacheEntry> = new Map();
   private maxSize: number = 100;
-  private defaultTTL: number = 5 * 60 * 1000; // 5 minutes
-
-  constructor(maxSize: number = 100, defaultTTL: number = 5 * 60 * 1000) {
+  private defaultTTL: number = 5 * 60 * 1000; // 5 minutes;
+  constructor(maxSize: number = 100, defaultTTL: number = 5 * 60 * 1000) {,
     this.maxSize = maxSize;
     this.defaultTTL = defaultTTL;
   }
@@ -22,12 +21,12 @@ class APICache {
   set(key: string, data: any, ttl?: number): void {
     const now = Date.now();
     const entry: CacheEntry = {
-      data,
-      timestamp: now,
-      ttl: ttl || this.defaultTTL
+      data;
+      timestamp: now;
+      ttl: ttl || this.defaultTTL;
     };
 
-    // Remove oldest entries if cache is full
+    // Remove oldest entries if cache is full;
     if (this.cache.size >= this.maxSize) {
       const oldestKey = this.cache.keys().next().value;
       this.cache.delete(oldestKey);
@@ -41,7 +40,7 @@ class APICache {
     if (!entry) return null;
 
     const now = Date.now();
-    if (now - entry.timestamp > entry.ttl) {
+    if (now - entry.timestamp > entry.ttl) {,
       this.cache.delete(key);
       return null;
     }
@@ -54,7 +53,7 @@ class APICache {
     if (!entry) return false;
 
     const now = Date.now();
-    if (now - entry.timestamp > entry.ttl) {
+    if (now - entry.timestamp > entry.ttl) {,
       this.cache.delete(key);
       return false;
     }
@@ -62,7 +61,7 @@ class APICache {
     return true;
   }
 
-  delete(key: string): boolean {
+  delete(key: string): boolean {,
     return this.cache.delete(key);
   }
 
@@ -78,17 +77,17 @@ class APICache {
     return Array.from(this.cache.keys());
   }
 
-  // Generate cache key from request parameters
+  // Generate cache key from request parameters;
   generateKey(url: string, params?: Record<string, any>): string {
     const paramString = params ? JSON.stringify(params) : '';
     return `${url}:${paramString}`;
   }
 
-  // Clean expired entries
+  // Clean expired entries;
   cleanExpired(): void {
     const now = Date.now();
     const expiredKeys: string[] = [];
-
+,
     for (const [key, entry] of this.cache.entries()) {
       if (now - entry.timestamp > entry.ttl) {
         expiredKeys.push(key);
@@ -99,7 +98,7 @@ class APICache {
   }
 }
 
-// Create singleton instance
+// Create singleton instance;
 export const apiCache = new APICache();
 
 export default APICache;

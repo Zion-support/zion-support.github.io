@@ -1,35 +1,35 @@
 /**
- * Security Enhancer
- * Comprehensive security utilities and monitoring
+ * Security Enhancer;
+ * Comprehensive security utilities and monitoring;
  */
 
 class SecurityEnhancer {
   constructor() {
     this.securityConfig = {
-      cspEnabled: true,
-      xssProtection: true,
-      csrfProtection: true,
-      contentSecurityPolicy: {
+      cspEnabled: true;
+      xssProtection: true;
+      csrfProtection: true;
+      contentSecurityPolicy: {,
         'default-src': ["'self'"],
-        'script-src': [
+        'script-src': [,
           "'self'",
           "'unsafe-inline'",
-          'https://www.googletagmanager.com',
+          'https: //www.googletagmanager.com',
         ],
         'style-src': [
           "'self'",
           "'unsafe-inline'",
-          'https://fonts.googleapis.com',
+          'https: //fonts.googleapis.com',
         ],
-        'img-src': ["'self'", 'data:', 'https:'],
-        'font-src': ["'self'", 'https://fonts.gstatic.com'],
-        'connect-src': ["'self'", 'https://api.ziontechgroup.com'],
+        'img-src': ["'self'", 'data:', 'https: '],
+        'font-src': ["'self'", 'https: //fonts.gstatic.com'],
+        'connect-src': ["'self'", 'https: //api.ziontechgroup.com'],
         'frame-src': ["'none'"],
         'object-src': ["'none'"],
         'base-uri': ["'self'"],
         'form-action': ["'self'"],
       },
-      trustedDomains: [
+      trustedDomains: [,
         'ziontechgroup.com',
         'api.ziontechgroup.com',
         'cdn.ziontechgroup.com',
@@ -63,7 +63,7 @@ class SecurityEnhancer {
   }
 
   setMetaCSP(cspHeader) {
-    // Set CSP via meta tag
+    // Set CSP via meta tag;
     const _meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = cspHeader;
@@ -72,7 +72,7 @@ class SecurityEnhancer {
 
   setupXSSProtection() {
     if (this.securityConfig.xssProtection) {
-      // Add XSS protection header
+      // Add XSS protection header;
       const _meta = document.createElement('meta');
       meta.httpEquiv = 'X-XSS-Protection';
       meta.content = '1; mode=block';
@@ -82,14 +82,14 @@ class SecurityEnhancer {
 
   setupCSRFProtection() {
     if (this.securityConfig.csrfProtection) {
-      // Generate CSRF token
+      // Generate CSRF token;
 //       const token = this.generateCSRFToken();
       this.setCSRFToken(token);
 
-      // Add token to all forms
+      // Add token to all forms;
       this.addCSRFTokenToForms();
 
-      // Add token to AJAX requests
+      // Add token to AJAX requests;
       this.addCSRFTokenToAJAX();
     }
   }
@@ -97,16 +97,15 @@ class SecurityEnhancer {
   generateCSRFToken() {
 //     const array = new Uint8Array(32);
     crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(
-      ''
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
     );
   }
 
   setCSRFToken(token) {
-    // Store token in sessionStorage
+    // Store token in sessionStorage;
     sessionStorage.setItem('csrf_token', token);
 
-    // Add token to meta tag
+    // Add token to meta tag;
     const _meta = document.createElement('meta');
     meta.name = 'csrf-token';
     meta.content = token;
@@ -115,7 +114,7 @@ class SecurityEnhancer {
 
   addCSRFTokenToForms() {
     const _forms = document.querySelectorAll('form');
-    forms.forEach(form => {
+    forms.forEach(form => {)
 //       const token = sessionStorage.getItem('csrf_token');
       if (token && !form.querySelector('input[name="csrf_token"]')) {
         const _input = document.createElement('input');
@@ -128,7 +127,7 @@ class SecurityEnhancer {
   }
 
   addCSRFTokenToAJAX() {
-    // Override fetch to include CSRF token
+    // Override fetch to include CSRF token;
     const _originalFetch = window.fetch;
     window.fetch = (url, options = {}) => {
 //       const token = sessionStorage.getItem('csrf_token');
@@ -141,7 +140,7 @@ class SecurityEnhancer {
       return originalFetch(url, options);
     };
 
-    // Override XMLHttpRequest to include CSRF token
+    // Override XMLHttpRequest to include CSRF token;
     const _originalXHROpen = XMLHttpRequest.prototype.open;
     XMLHttpRequest.prototype.open = function (method, url, ...args) {
       this.addEventListener('loadstart', () => {
@@ -155,7 +154,7 @@ class SecurityEnhancer {
   }
 
   setupInputValidation() {
-    // Validate all user inputs
+    // Validate all user inputs;
     this.setupFormValidation();
     this.setupURLValidation();
     this.setupFileUploadValidation();
@@ -163,8 +162,8 @@ class SecurityEnhancer {
 
   setupFormValidation() {
     const _forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      form.addEventListener('submit', event => {
+    forms.forEach(form => {)
+      form.addEventListener('submit', event => {)
         if (!this.validateForm(form)) {
           event.preventDefault();
         }
@@ -176,7 +175,7 @@ class SecurityEnhancer {
     const _inputs = form.querySelectorAll('input, textarea, select');
     let _isValid = true;
 
-    inputs.forEach(input => {
+    inputs.forEach(input => {)
       if (!this.validateInput(input)) {
         isValid = false;
         this.showInputError(input, 'Invalid input');
@@ -206,8 +205,7 @@ class SecurityEnhancer {
         return this.validatePhone(value);
       case 'password':
         return this.validatePassword(value);
-      default:
-        return this.validateText(value);
+      default: return this.validateText(value);
     }
   }
 
@@ -219,8 +217,7 @@ class SecurityEnhancer {
   validateURL(url) {
     try {
       const _urlObj = new URL(url);
-      return this.securityConfig.trustedDomains.some(
-        domain =>
+      return this.securityConfig.trustedDomains.some(domain =>)
           urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain)
       );
     } catch {
@@ -234,17 +231,17 @@ class SecurityEnhancer {
   }
 
   validatePassword(password) {
-    // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
+    // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character;
     const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     return passwordRegex.test(password);
   }
 
   validateText(text) {
-    // Check for XSS patterns
+    // Check for XSS patterns;
     const xssPatterns = [
       /<script/i,
-      /javascript:/i,
+      /javascript: /i;
       /on\w+\s*=/i,
       /<iframe/i,
       /<object/i,
@@ -255,8 +252,8 @@ class SecurityEnhancer {
   }
 
   setupURLValidation() {
-    // Validate URLs before navigation
-    document.addEventListener('click', event => {
+    // Validate URLs before navigation;
+    document.addEventListener('click', event => {)
       const _link = event.target.closest('a');
       if (link && link.href) {
         if (!this.validateURL(link.href)) {
@@ -269,9 +266,9 @@ class SecurityEnhancer {
 
   setupFileUploadValidation() {
     const _fileInputs = document.querySelectorAll('input[type="file"]');
-    fileInputs.forEach(input => {
-      input.addEventListener('change', event => {
-//         const files = event.target.files;
+    fileInputs.forEach(input => {)
+      input.addEventListener('change', event => {)
+//         const files = event.target.files;)
         for (const file of files) {
           if (!this.validateFile(file)) {
             event.preventDefault();
@@ -293,34 +290,32 @@ class SecurityEnhancer {
       'text/plain',
     ];
 
-    const maxSize = 10 * 1024 * 1024; // 10MB
-
+    const maxSize = 10 * 1024 * 1024; // 10MB;
     return allowedTypes.includes(file.type) && file.size <= maxSize;
   }
 
   setupOutputEncoding() {
-    // Encode output to prevent XSS
+    // Encode output to prevent XSS;
     this.setupTextEncoding();
     this.setupHTMLEncoding();
   }
 
   setupTextEncoding() {
-    // Override innerHTML and textContent to encode by default
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(
-      Element.prototype,
+    // Override innerHTML and textContent to encode by default;
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype)
       'innerHTML'
     );
-    Object.defineProperty(Element.prototype, 'innerHTML', {
-      set: function (value) {
+    Object.defineProperty(Element.prototype, 'innerHTML', {)
+      set: function (value) {,
 //         const encoded = this.encodeHTML(value);
         originalInnerHTML.set.call(this, encoded);
       },
-      get: originalInnerHTML.get,
+      get: originalInnerHTML.get;
     });
   }
 
   setupHTMLEncoding() {
-    // Add encoding methods to String prototype
+    // Add encoding methods to String prototype;
     String.prototype.encodeHTML = function () {
       return this.replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
@@ -331,7 +326,7 @@ class SecurityEnhancer {
   }
 
   setupSecureHeaders() {
-    // Add security headers via meta tags
+    // Add security headers via meta tags;
     const headers = {
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
@@ -348,7 +343,7 @@ class SecurityEnhancer {
   }
 
   setupSecurityMonitoring() {
-    // Monitor for security events
+    // Monitor for security events;
     this.monitorConsoleErrors();
     this.monitorNetworkRequests();
     this.monitorDOMChanges();
@@ -357,7 +352,7 @@ class SecurityEnhancer {
   monitorConsoleErrors() {
 //     const originalConsoleError = console.error;
 //     console.error = (...args) => {
-      // Check for security-related errors
+      // Check for security-related errors;
 //       const message = args.join(' ');
       if (this.isSecurityError(message)) {
         this.reportSecurityEvent('console_error', { message });
@@ -369,7 +364,7 @@ class SecurityEnhancer {
   monitorNetworkRequests() {
     const _originalFetch = window.fetch;
     window.fetch = (url, options = {}) => {
-      // Log suspicious requests
+      // Log suspicious requests;
       if (this.isSuspiciousRequest(url)) {
         this.reportSecurityEvent('suspicious_request', { url, options });
       }
@@ -378,10 +373,10 @@ class SecurityEnhancer {
   }
 
   monitorDOMChanges() {
-    const observer = new MutationObserver(mutations => {
-      mutations.forEach(mutation => {
+    const observer = new MutationObserver(mutations => {)
+      mutations.forEach(mutation => {)
         if (mutation.type === 'childList') {
-          mutation.addedNodes.forEach(node => {
+          mutation.addedNodes.forEach(node => {)
             if (node.nodeType === Node.ELEMENT_NODE) {
               this.checkForMaliciousContent(node);
             }
@@ -390,9 +385,9 @@ class SecurityEnhancer {
       });
     });
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
+    observer.observe(document.body, {)
+      childList: true),
+      subtree: true),
     });
   }
 
@@ -412,10 +407,10 @@ class SecurityEnhancer {
     const suspiciousPatterns = [
       /eval/i,
       /script/i,
-      /javascript:/i,
-      /data:text\/html/i,
+      /javascript: /i;
+      /data: text\/html/i;
     ];
-
+,
     return suspiciousPatterns.some(pattern => pattern.test(url));
   }
 
@@ -424,9 +419,9 @@ class SecurityEnhancer {
 
 //     const content = node.innerHTML || node.textContent || '';
     if (maliciousPatterns.some(pattern => pattern.test(content))) {
-      this.reportSecurityEvent('malicious_content', {
-        content,
-        node: node.tagName,
+      this.reportSecurityEvent('malicious_content', {)
+        content)
+        node: node.tagName),
       });
       node.remove();
     }
@@ -437,19 +432,19 @@ class SecurityEnhancer {
       type,
       data,
       timestamp: new Date().toISOString(),
-      url: window.location.href,
-      userAgent: navigator.userAgent,
+      url: window.location.href;
+      userAgent: navigator.userAgent;
     };
 
-    // Send to security monitoring service
-    fetch('/api/security-events', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    // Send to security monitoring service;
+    fetch('/api/security-events', {)
+      method: 'POST'),
+      headers: {,
+        'Content-Type': 'application/json'),
         'X-CSRF-Token': sessionStorage.getItem('csrf_token'),
       },
       body: JSON.stringify(event),
-    }).catch(error => {
+    }).catch(error => {)
 //       });
   }
 
@@ -489,7 +484,7 @@ class SecurityEnhancer {
         border-radius: 4px;
         z-index: 9999;
         max-width: 300px;
-      ">
+      ">,
         <strong>Security Warning:</strong> ${message}
         <button onclick="this.parentElement.parentElement.remove()" style="
           background: none;
@@ -502,14 +497,14 @@ class SecurityEnhancer {
     `;
     document.body.appendChild(warning);
 
-    setTimeout(() => {
-      if (warning.parentElement) {
+    setTimeout(() => {,
+      if (warning.parentElement) {,
         warning.remove();
       }
     }, 5000);
   }
 
-  // Public methods
+  // Public methods;
   getSecurityConfig() {
     return this.securityConfig;
   }
@@ -533,8 +528,7 @@ class SecurityEnhancer {
         return this.sanitizeURL(input);
       case 'email':
         return this.sanitizeEmail(input);
-      default:
-        return this.sanitizeText(input);
+      default: return this.sanitizeText(input);
     }
   }
 
@@ -562,11 +556,11 @@ class SecurityEnhancer {
   }
 }
 
-// Initialize security enhancer
+// Initialize security enhancer;
 // const securityEnhancer = new SecurityEnhancer();
 
-// Export for use in other modules
+// Export for use in other modules;
 export default securityEnhancer;
 
-// Global security instance
+// Global security instance;
 window.securityEnhancer = securityEnhancer;

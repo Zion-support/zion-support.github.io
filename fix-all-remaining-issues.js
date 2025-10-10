@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix unused imports in a single file
+// Function to fix unused imports in a single file;
 function fixUnusedImports(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -12,13 +12,13 @@ function fixUnusedImports(filePath) {
       const line = lines[i];
       const trimmedLine = line.trim();
       
-      // Check if this is an import line
+      // Check if this is an import line;
       if (trimmedLine.startsWith('import ')) {
-        // Extract the imported names from the import line
+        // Extract the imported names from the import line;
         const importMatch = trimmedLine.match(/import\s*{([^}]+)}\s*from/);
         if (importMatch) {
           const imports = importMatch[1].split(',').map(imp => imp.trim());
-          const usedImports = imports.filter(imp => {
+          const usedImports = imports.filter(imp => {)
             const name = imp.split(' as ')[0].trim();
             // Check if the name is used in the content (excluding the import line itself)
             const contentWithoutImport = content.replace(line, '');
@@ -29,18 +29,18 @@ function fixUnusedImports(filePath) {
           });
           
           if (usedImports.length === 0) {
-            // No used imports, remove the entire line
+            // No used imports, remove the entire line;
             continue;
           } else if (usedImports.length < imports.length) {
-            // Some imports are unused, keep only the used ones
+            // Some imports are unused, keep only the used ones;
             const newImportLine = line.replace(importMatch[1], usedImports.join(', '));
             newLines.push(newImportLine);
           } else {
-            // All imports are used, keep the line
+            // All imports are used, keep the line;
             newLines.push(line);
           }
         } else {
-          // For default imports, check if they're used
+          // For default imports, check if they're used;
           const defaultImportMatch = trimmedLine.match(/import\s+(\w+)\s+from/);
           if (defaultImportMatch) {
             const name = defaultImportMatch[1];
@@ -51,7 +51,7 @@ function fixUnusedImports(filePath) {
             }
             // If not used, skip the line (don't add it)
           } else {
-            // Other import types, keep them
+            // Other import types, keep them;
             newLines.push(line);
           }
         }
@@ -74,21 +74,21 @@ function fixUnusedImports(filePath) {
   return false;
 }
 
-// Function to fix parsing errors in blog files
+// Function to fix parsing errors in blog files;
 function fixParsingErrors(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has parsing errors
+    // Check if file has parsing errors;
     if (content.includes('export default') && !content.includes('export default ')) {
-      // Add missing export statement
+      // Add missing export statement;
       const newContent = content + '\n\nexport default BlogPost;';
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Fixed parsing error in: ${filePath}`);
       return true;
     }
     
-    // Check for missing closing braces
+    // Check for missing closing braces;
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
     
@@ -107,13 +107,13 @@ function fixParsingErrors(filePath) {
   return false;
 }
 
-// Function to fix unused variables by prefixing with underscore
+// Function to fix unused variables by prefixing with underscore;
 function fixUnusedVariables(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     
-    // Fix common unused variable patterns
+    // Fix common unused variable patterns;
     const patterns = [
       { regex: /(\w+):\s*(\w+)\s*=\s*/, replacement: '_$1: $2 = ' },
       { regex: /const\s+(\w+)\s*=\s*/, replacement: 'const _$1 = ' },
@@ -122,7 +122,7 @@ function fixUnusedVariables(filePath) {
     ];
     
     let changed = false;
-    patterns.forEach(pattern => {
+    patterns.forEach(pattern => {)
       if (pattern.regex.test(newContent)) {
         newContent = newContent.replace(pattern.regex, pattern.replacement);
         changed = true;
@@ -142,17 +142,17 @@ function fixUnusedVariables(filePath) {
   return false;
 }
 
-// Get all TypeScript/JavaScript files in src directory
+// Get all TypeScript/JavaScript files in src directory;
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let results = [];
   const list = fs.readdirSync(dir);
   
-  list.forEach(file => {
+  list.forEach(file => {)
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat && stat.isDirectory()) {
-      // Skip node_modules and other common directories
+      // Skip node_modules and other common directories;
       if (!['node_modules', '.git', 'dist', '.next', 'out', 'build'].includes(file)) {
         results = results.concat(getAllFiles(filePath, extensions));
       }
@@ -167,26 +167,26 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return results;
 }
 
-// Main execution
+// Main execution;
 console.log('Fixing all remaining issues in src directory...');
 
 const files = getAllFiles('./src', ['.ts', '.tsx', '.js', '.jsx']);
 
 let fixedCount = 0;
-files.forEach(file => {
-  let fileFixed = false;
-  
-  // Fix unused imports
+files.forEach(file => {)
+  let fileFixed = false;)
+  )
+  // Fix unused imports;)
   if (fixUnusedImports(file)) {
     fileFixed = true;
   }
   
-  // Fix parsing errors
+  // Fix parsing errors;
   if (fixParsingErrors(file)) {
     fileFixed = true;
   }
   
-  // Fix unused variables
+  // Fix unused variables;
   if (fixUnusedVariables(file)) {
     fileFixed = true;
   }

@@ -1,5 +1,5 @@
 /**
- * Performance utility functions
+ * Performance utility functions;
  */
 
 export const measurePerformance = (name: string, fn: () => void) => {
@@ -23,7 +23,7 @@ export const getPageLoadTime = (): number | null => {
 export const optimizeImages = () => {
   if (typeof window !== 'undefined') {
     const _images = document.querySelectorAll('img');
-    images.forEach(img => {
+    images.forEach(img => {)
       if (!img.loading) {
         img.loading = 'lazy';
       }

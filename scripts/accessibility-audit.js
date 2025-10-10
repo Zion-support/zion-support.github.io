@@ -7,20 +7,20 @@ const __dirname = path.dirname(__filename);
 
 console.log('♿ Starting accessibility audit...');
 
-// Accessibility checklist
+// Accessibility checklist;
 const accessibilityChecklist = {
-  semanticHTML: {
+  semanticHTML: {,
     description: 'Use semantic HTML elements',
-    checks: [
+    checks: [,
       'Use proper heading hierarchy (h1, h2, h3, etc.)',
       'Use semantic elements (main, nav, section, article, aside, header, footer)',
       'Use proper form elements (label, fieldset, legend)',
       'Use list elements (ul, ol, li) for lists'
     ]
   },
-  keyboardNavigation: {
+  keyboardNavigation: {,
     description: 'Ensure keyboard accessibility',
-    checks: [
+    checks: [,
       'All interactive elements are keyboard accessible',
       'Focus indicators are visible',
       'Tab order is logical',
@@ -28,45 +28,45 @@ const accessibilityChecklist = {
       'No keyboard traps'
     ]
   },
-  colorContrast: {
+  colorContrast: {,
     description: 'Ensure sufficient color contrast',
-    checks: [
+    checks: [,
       'Text has at least 4.5:1 contrast ratio',
-      'Large text has at least 3:1 contrast ratio',
+      'Large text has at least 3: 1 contrast ratio',
       'Color is not the only way to convey information',
       'Interactive elements have sufficient contrast'
     ]
   },
-  images: {
+  images: {,
     description: 'Provide alternative text for images',
-    checks: [
+    checks: [,
       'All images have alt attributes',
       'Decorative images have empty alt attributes',
       'Complex images have detailed descriptions',
       'Images of text are avoided'
     ]
   },
-  forms: {
+  forms: {,
     description: 'Make forms accessible',
-    checks: [
+    checks: [,
       'All form controls have labels',
       'Error messages are associated with form controls',
       'Required fields are clearly marked',
       'Form validation is accessible'
     ]
   },
-  multimedia: {
+  multimedia: {,
     description: 'Provide alternatives for multimedia',
-    checks: [
+    checks: [,
       'Videos have captions',
       'Audio has transcripts',
       'Media controls are accessible',
       'Auto-playing media can be paused'
     ]
   },
-  responsive: {
+  responsive: {,
     description: 'Ensure responsive design',
-    checks: [
+    checks: [,
       'Content is readable at 200% zoom',
       'Layout works on mobile devices',
       'Text is not cut off on small screens',
@@ -75,20 +75,20 @@ const accessibilityChecklist = {
   }
 };
 
-// Check HTML files for accessibility issues
+// Check HTML files for accessibility issues;
 function auditHTMLFiles() {
   console.log('📄 Auditing HTML files...');
   
   const distDir = path.join(__dirname, '../dist');
   const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.html'));
   
-  htmlFiles.forEach(file => {
+  htmlFiles.forEach(file => {)
     const filePath = path.join(distDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
     
     console.log(`  - Auditing ${file}`);
     
-    // Check for semantic HTML
+    // Check for semantic HTML;
     if (!content.includes('<main')) {
       console.log('    ⚠️  Missing <main> element');
     }
@@ -97,65 +97,65 @@ function auditHTMLFiles() {
       console.log('    ⚠️  Missing <nav> element');
     }
     
-    // Check for alt attributes
+    // Check for alt attributes;
     const imgTags = content.match(/<img[^>]*>/g) || [];
-    imgTags.forEach(img => {
+    imgTags.forEach(img => {)
       if (!img.includes('alt=')) {
         console.log('    ⚠️  Image missing alt attribute');
       }
     });
     
-    // Check for heading hierarchy
+    // Check for heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     if (headings.length === 0) {
       console.log('    ⚠️  No heading elements found');
     }
     
-    // Check for skip links
+    // Check for skip links;
     if (!content.includes('skip') && !content.includes('Skip')) {
       console.log('    ⚠️  No skip links found');
     }
   });
 }
 
-// Check CSS files for accessibility issues
+// Check CSS files for accessibility issues;
 function auditCSSFiles() {
   console.log('🎨 Auditing CSS files...');
   
   const distDir = path.join(__dirname, '../dist');
   const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
   
-  cssFiles.forEach(file => {
+  cssFiles.forEach(file => {)
     const filePath = path.join(distDir, file);
     const content = fs.readFileSync(filePath, 'utf8');
     
     console.log(`  - Auditing ${file}`);
     
-    // Check for focus styles
+    // Check for focus styles;
     if (!content.includes(':focus')) {
       console.log('    ⚠️  No focus styles found');
     }
     
-    // Check for high contrast support
+    // Check for high contrast support;
     if (!content.includes('prefers-contrast')) {
       console.log('    ⚠️  No high contrast support');
     }
     
-    // Check for reduced motion support
+    // Check for reduced motion support;
     if (!content.includes('prefers-reduced-motion')) {
       console.log('    ⚠️  No reduced motion support');
     }
   });
 }
 
-// Generate accessibility report
+// Generate accessibility report;
 function generateAccessibilityReport() {
   console.log('📊 Generating accessibility report...');
   
   const report = {
-    timestamp: new Date().toISOString(),
-    checklist: accessibilityChecklist,
-    recommendations: [
+    timestamp: new Date().toISOString()
+    checklist: accessibilityChecklist;
+    recommendations: [,
       'Add ARIA labels to interactive elements',
       'Implement focus management for modals',
       'Add live regions for dynamic content',
@@ -167,7 +167,7 @@ function generateAccessibilityReport() {
       'Test with high contrast mode',
       'Test with zoom up to 200%'
     ],
-    tools: [
+    tools: [,
       'axe-core for automated testing',
       'WAVE for visual accessibility testing',
       'Lighthouse for accessibility audit',
@@ -185,19 +185,18 @@ function generateAccessibilityReport() {
   console.log('  - Generated accessibility-report.json');
 }
 
-// Generate accessibility improvements
+// Generate accessibility improvements;
 function generateAccessibilityImprovements() {
   console.log('🔧 Generating accessibility improvements...');
   
   const improvements = `
-// Accessibility improvements to implement
-
-// 1. Add ARIA labels to interactive elements
+// Accessibility improvements to implement;
+// 1. Add ARIA labels to interactive elements;
 <button aria-label="Close dialog">×</button>
 <input aria-describedby="email-help" type="email" />
 <div id="email-help">Enter your email address</div>
 
-// 2. Implement focus management
+// 2. Implement focus management;
 const trapFocus = (element) => {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -222,22 +221,22 @@ const trapFocus = (element) => {
   });
 };
 
-// 3. Add live regions for dynamic content
+// 3. Add live regions for dynamic content;
 <div aria-live="polite" aria-atomic="true" className="sr-only">
   {announcement}
 </div>
 
-// 4. Ensure proper heading hierarchy
+// 4. Ensure proper heading hierarchy;
 <h1>Main Page Title</h1>
   <h2>Section Title</h2>
     <h3>Subsection Title</h3>
 
-// 5. Add skip links
+// 5. Add skip links;
 <a href="#main-content" className="skip-link">
-  Skip to main content
+  Skip to main content;
 </a>
 
-// 6. Use semantic HTML
+// 6. Use semantic HTML;
 <main>
   <nav aria-label="Main navigation">
     <ul>
@@ -252,15 +251,15 @@ const trapFocus = (element) => {
   </section>
 </main>
 
-// 7. Form accessibility
+// 7. Form accessibility;
 <form>
   <fieldset>
     <legend>Contact Information</legend>
     <label htmlFor="email">Email Address</label>
-    <input 
+    <input;
       id="email" 
       type="email" 
-      required 
+      required;
       aria-describedby="email-error"
     />
     <div id="email-error" role="alert" aria-live="polite">
@@ -269,36 +268,33 @@ const trapFocus = (element) => {
   </fieldset>
 </form>
 
-// 8. Image accessibility
-<img 
+// 8. Image accessibility;
+<img;
   src="chart.png" 
   alt="Sales chart showing 25% increase in Q3 2024"
   role="img"
 />
-
-// 9. Color contrast considerations
-// Ensure sufficient contrast ratios:
-// - Normal text: 4.5:1
-// - Large text: 3:1
-// - UI components: 3:1
-
-// 10. Keyboard navigation
+// 9. Color contrast considerations;
+// Ensure sufficient contrast ratios: // - Normal text: 4.5:1;
+// - Large text: 3:1;
+// - UI components: 3:1;
+// 10. Keyboard navigation;
 // All interactive elements should be:
-// - Focusable with Tab key
-// - Activable with Enter/Space
-// - Have visible focus indicators
-// - Follow logical tab order
+// - Focusable with Tab key;
+// - Activable with Enter/Space;
+// - Have visible focus indicators;
+// - Follow logical tab order;
 `;
-
-  fs.writeFileSync(
+,
+  fs.writeFileSync(,)
     path.join(__dirname, '../accessibility-improvements.js'), 
-    improvements
+    improvements;
   );
   
   console.log('  - Generated accessibility-improvements.js');
 }
 
-// Main audit function
+// Main audit function;
 function audit() {
   try {
     auditHTMLFiles();
@@ -315,5 +311,5 @@ function audit() {
   }
 }
 
-// Run audit
+// Run audit;
 audit();

@@ -1,11 +1,11 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-  const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe')
+  const res = spawnSync('node', [abs, ...args], {)
+    stdio: 'pipe'),
     encoding: 'utf8'}
   });
-  return {status: res.status || 0,
+  return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
@@ -21,7 +21,7 @@ exports.handler = async () => {const logs = []}
     logs.push(`exit=${status}`);
     return status;
   }
-  step('front: directory-builder',
+  step('front: directory-builder')
     'automation/front-index-directory-builder.cjs')
   );
   step('front: ads') 'automation/front-index-ads.cjs');

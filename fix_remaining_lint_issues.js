@@ -1,15 +1,13 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 
-// Function to fix remaining lint issues in a file
+// Function to fix remaining lint issues in a file;
 function fixRemainingLintIssues(filePath) {
   try {
-
-    // Skip if not a source file
+    // Skip if not a source file;
     if (
       !filePath.endsWith('.tsx') &&
       !filePath.endsWith('.ts') &&
@@ -19,10 +17,9 @@ function fixRemainingLintIssues(filePath) {
       return false;
     }
 
-    // Fix 1: Add underscore prefix to unused parameters
+    // Fix 1: Add underscore prefix to unused parameters;
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^,)]+\)\s*=>/g, (match, param1, param2) => {
-      if (
-        param1 === 'error' ||
+      if(param1 === 'error' ||
         param1 === 'errorInfo' ||
         param1 === 'event' ||
         param1 === 'metric' ||
@@ -68,22 +65,21 @@ function fixRemainingLintIssues(filePath) {
         param1 === 'location' ||
         param1 === 'blob' ||
         param1 === 'nav' ||
-        param1 === 'dir' ||
-        param1 === 'file' ||
-        param1 === 'timestamp' ||
-        param1 === 'apiKey' ||
-        param1 === 'PROD_DOMAIN'
+        param1 === 'dir' ||)
+        param1 === 'file' ||)
+        param1 === 'timestamp' ||)
+        param1 === 'apiKey' ||)
+        param1 === 'PROD_DOMAIN')
       ) {
         return match.replace(param1, `_${param1}`);
       }
       return match;
     });
 
-    // Fix 2: Comment out unused variable declarations
-
+    // Fix 2: Comment out unused variable declarations;
     for (let i = 0; i < lines.length; i++) {
 
-      // Comment out unused variable declarations
+      // Comment out unused variable declarations;
       if (
         line.match(/^\s*(const|let|var)\s+(\w+)\s*=\s*[^;]+;\s*$/) &&
         !line.includes('export') &&
@@ -91,9 +87,8 @@ function fixRemainingLintIssues(filePath) {
         !line.includes('console.') &&
         !line.includes('//')
       ) {
-        if (
-          varName &&
-          [
+        if(varName &&,
+          [,
             'Page',
             'AIAutonomousBusinessSystems2026',
             'AICostOptimizationBreakthrough2026',
@@ -243,12 +238,12 @@ function fixRemainingLintIssues(filePath) {
             'defaultStructuredData',
             'location',
             'blob',
-            'nav',
-            'dir',
-            'file',
-            'timestamp',
-            'apiKey',
-            'PROD_DOMAIN',
+            'nav',)
+            'dir',)
+            'file',)
+            'timestamp')
+            'apiKey')
+            'PROD_DOMAIN')
           ].includes(varName)
         ) {
           if (
@@ -264,15 +259,15 @@ function fixRemainingLintIssues(filePath) {
         }
       }
 
-      // Fix 3: Add underscore prefix to unused function parameters
+      // Fix 3: Add underscore prefix to unused function parameters;
       if (line.includes('function') && line.includes('(') && line.includes(')')) {
         if (paramMatch) {
-          const fixedParams = params.map(p => {
-            if (
-              p &&
+          const fixedParams = params.map(p => {)
+            if ()
+              p &&)
               !p.startsWith('_') &&
-              !p.includes('=') &&
-              [
+              !p.includes('=') &&,
+              [,
                 'error',
                 'errorInfo',
                 'event',
@@ -329,9 +324,8 @@ function fixRemainingLintIssues(filePath) {
             return p;
           });
           if (fixedParams.join(', ') !== params.join(', ')) {
-            fixedLines.push(
-              line.replace(
-                paramMatch[0],
+            fixedLines.push(line.replace()
+                paramMatch[0])
                 `function ${line.match(/function\s+(\w+)/)?.[1]}(${fixedParams.join(', ')})`
               )
             );
@@ -346,7 +340,7 @@ function fixRemainingLintIssues(filePath) {
 
     content = fixedLines.join('\n');
 
-    // Fix 4: Remove unused imports
+    // Fix 4: Remove unused imports;
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {
       content = content.replace(/,\s*useContext/g, '');
       content = content.replace(/useContext,\s*/g, '');
@@ -356,8 +350,8 @@ function fixRemainingLintIssues(filePath) {
       modified = true;
     }
 
-    // Fix 5: Remove unused lazy imports
-    if (content.includes('lazy') && !content.includes('lazy(')) {
+    // Fix 5: Remove unused lazy imports;
+    if (content.includes('lazy') && !content.includes('lazy(')) {,
       content = content.replace(/,\s*lazy/g, '');
       content = content.replace(/lazy,\s*/g, '');
       if (content.includes('import { lazy }')) {
@@ -366,7 +360,7 @@ function fixRemainingLintIssues(filePath) {
       modified = true;
     }
 
-    // Fix 6: Add proper TypeScript types instead of any
+    // Fix 6: Add proper TypeScript types instead of any;
     content = content.replace(/:\s*any\b/g, ': unknown');
     if (content.includes(': unknown')) {
       modified = true;
@@ -384,16 +378,14 @@ function fixRemainingLintIssues(filePath) {
   }
 }
 
-// Function to recursively fix remaining lint issues
+// Function to recursively fix remaining lint issues;
 function fixAllRemainingLintIssues(_dir) {
   try {
-
     for (const file of files) {
 
       try {
-
         if (stat.isDirectory()) {
-          // Skip certain directories
+          // Skip certain directories;
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {
             continue;
           }
@@ -421,5 +413,4 @@ function fixAllRemainingLintIssues(_dir) {
   }
 }
 
-// Main execution
-
+// Main execution;

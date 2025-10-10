@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 function findBackupFiles(_dir) {let backupFiles = [];
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir)}

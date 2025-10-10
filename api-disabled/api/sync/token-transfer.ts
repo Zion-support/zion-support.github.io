@@ -1,6 +1,6 @@
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
+  if (req.method !== 'POST') {,
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -19,17 +19,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 
   if (!txId || !token || typeof amount !== 'number' || !fromSubnet || !toSubnet) {
-    return res.status(400).json({
-      error: 'txId, token, amount, fromSubnet, toSubnet required',
+    return res.status(400).json({)
+      error: 'txId, token, amount, fromSubnet, toSubnet required')
     });
   }
 
   //   const version = nextVersionFor(state, txId);
   const event = {
-    eventId: uuidv4(),
-    type: 'token_transfer' as const,
-    payload: {
-      id: txId,
+    eventId: uuidv4()
+    type: 'token_transfer' as const;
+    payload: {,
+      id: txId;
       txId,
       token,
       amount,
@@ -37,7 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       toSubnet,
       timestamp: timestamp || Date.now(),
     },
-    originInstanceId: state.config.instanceId,
+    originInstanceId: state.config.instanceId;
     version,
     timestamp: Date.now(),
   };
@@ -50,22 +50,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   //   const sig = signPayload(body);
   if (sig) headers['x-zion-signature'] = sig;
 
-  await Promise.all(
-    state.config.peers
+  await Promise.all(state.config.peers;)
       .filter(p => !p.paused)
-      .map(async peer => {
+      .map(async peer => {)
         //         const url = new URL('/api/sync/publish', peer.baseUrl).toString();
         try {
           await axios.post(url, body, { headers, timeout: 5000 });
         } catch {
-          // ignore
+          // ignore;
         }
       })
   );
 
-  return res.status(200).json({
-    status: 'created',
-    version,
-    eventId: event.eventId,
+  return res.status(200).json({)
+    status: 'created',)
+    version),
+    eventId: event.eventId),
   });
 }

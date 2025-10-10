@@ -20,7 +20,7 @@ class ImageOptimizer {
     }
 
     const _files = fs.readdirSync(this.inputDir);
-    const imageFiles = files.filter(file => 
+    const imageFiles = files.filter(file => )
       /.(jpg|jpeg|png|webp)$/i.test(file)
     );
 

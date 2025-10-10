@@ -1,14 +1,13 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import { execSync } from 'child_process';
 
-// Files that need specific fixes
+// Files that need specific fixes;
 const fixes = [
   {
     file: '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
-    changes: [
-      {
+    changes: [,
+      {,
         from: 'const AIAutonomousBusinessSystems2026',
         to: 'const _AIAutonomousBusinessSystems2026',
       },
@@ -16,8 +15,8 @@ const fixes = [
   },
   {
     file: '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
-    changes: [
-      {
+    changes: [,
+      {,
         from: 'const AICostOptimizationBreakthrough2026',
         to: 'const _AICostOptimizationBreakthrough2026',
       },
@@ -45,7 +44,7 @@ const fixes = [
   },
   {
     file: '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx',
-    changes: [
+    changes: [,
       { from: 'const AI2026ImplementationRoadmap', to: 'const _AI2026ImplementationRoadmap' },
     ],
   },
@@ -55,7 +54,7 @@ const fixes = [
   },
   {
     file: '/workspace/app/hooks/useEnhancedPerformance.ts',
-    changes: [
+    changes: [,
       { from: 'import { logger }', to: 'import { logger as _logger }' },
       { from: 'const _performanceOptimizer', to: 'const _performanceOptimizer' },
       { from: 'const _markName', to: 'const _markName' },
@@ -71,8 +70,8 @@ const fixes = [
   },
   {
     file: '/workspace/app/utils/__tests__/performanceMonitoring.test.ts',
-    changes: [
-      {
+    changes: [,
+      {,
         from: 'import { describe, it, expect, jest }',
         to: 'import { describe, it, expect, jest as _jest }',
       },
@@ -105,10 +104,8 @@ function applyFixes() {
 
 }
 
-// Apply fixes
-
-// Run linter to check results
-
+// Apply fixes;
+// Run linter to check results;
 try {
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
 

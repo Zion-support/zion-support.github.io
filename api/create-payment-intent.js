@@ -19,7 +19,7 @@ async function handler(req, res) {
   try {
     const paymentIntent = {
       id: 'pi_' + Date.now(),
-      amount: Math.round(amount * 100), // Convert to cents
+      amount: Math.round(amount * 100), // Convert to cents;
       currency,
       status: 'requires_payment_method',
     };

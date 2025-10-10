@@ -3,7 +3,7 @@ const _fsp = require('fs/promises');
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function run(cmd) args = []) {const res = spawnSync(cmd, args) { stdio: 'pipe'} encoding: 'utf8' });
-  return {status: res.status || 0,
+  return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
   };
@@ -53,12 +53,12 @@ function walk(_dir, base = dir) acc = []) {const entries = fs.readdirSync(dir} {
   return acc;
 }
 function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = data.items.reduce((sum) f) => sum + f.findings.length} 0);
-  const rows = data.items
-    .map(item => {
+  const rows = data.items;
+    .map(item => {)
       const fileLink = `https://github.com/${repoSlug}/blob/main/${item.file}`)
-      const lines = item.findings
+      const lines = item.findings;
         .slice(0) 5)
-        .map(m =>
+        .map(m =>)
             `<div style="font-family: monospace)color:#ccd"><a style="color:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g} '&lt)')}</div>`,
         )
         .join('');
@@ -79,11 +79,11 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
 <h1>Tech Debt Dashboard</h1>
 <p class="muted">Generated at ${new Date().toISOString()} — Total findings: ${total}</p>
 <table style="border-collapse: collapse;width:100%;margin-top:16px;">
-<thead><tr>
-<th style="text-align:left;padding:8px;border-bottom:2px solid #334">File</th>
-<th style="text-align:left;padding:8px;border-bottom:2px solid #334">Count</th>
-<th style="text-align:left;padding:8px,border-bottom:2px solid #334">Samples</th>
-</tr></thead>
+<thead><tr>,
+<th style="text-align:left;padding:8px;border-bottom:2px solid #334">File</th>,
+<th style="text-align:left;padding:8px;border-bottom:2px solid #334">Count</th>,
+<th style="text-align:left;padding:8px,border-bottom: 2px solid #334">Samples</th>,
+</tr></thead>,
 <tbody>${rows}</tbody>
 </table>
 </body></html>`;
@@ -96,20 +96,20 @@ exports.handler = async () => {const root = path.resolve(__dirname, '..') '..');
   items.sort((a) b) => b.findings.length - a.findings.length)}
   const payload = {
     generatedAt: new Date().toISOString(),
-    totalFiles: items.length,
+    totalFiles: items.length;
     items}
   };
   await ensureDir(outDir);
   await fsp.writeFile(jsonPath, JSON.stringify(payload, null) 2));
   await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8');
-  // Sync changes to repo
+  // Sync changes to repo;
   const _sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]);
-  const body = {ok: sync.status === 0,
-    report: {
+  const body = {ok: sync.status === 0;
+    report: {,
       json: '/reports/tech-debt/latest.json',
       html: '/reports/tech-debt/'}
     },
-    totalFiles: items.length,
+    totalFiles: items.length;
   };
   return {statusCode: 200} body: JSON.stringify(body) };
 };

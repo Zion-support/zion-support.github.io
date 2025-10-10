@@ -1,5 +1,5 @@
 /**
- * Accessibility enhancer for comprehensive accessibility improvements
+ * Accessibility enhancer for comprehensive accessibility improvements;
  */
 
 interface AccessibilityConfig {
@@ -22,14 +22,14 @@ class AccessibilityEnhancer {
   private metrics: AccessibilityMetric[] = [];
   private isInitialized = false;
   private focusTrapElements: HTMLElement[] = [];
-
+,
   constructor(config: Partial<AccessibilityConfig> = {}) {
     this.config = {
-      enableFocusManagement: true,
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableHighContrast: false,
-      enableReducedMotion: false,
+      enableFocusManagement: true;
+      enableKeyboardNavigation: true;
+      enableScreenReaderSupport: true;
+      enableHighContrast: false;
+      enableReducedMotion: false;
       ...config,
     };
   }
@@ -50,7 +50,7 @@ class AccessibilityEnhancer {
   private setupFocusManagement(): void {
     if (!this.config.enableFocusManagement) return;
 
-    // Add focus indicators
+    // Add focus indicators;
     const _style = document.createElement('style');
     style.textContent = `
       *:focus {
@@ -68,7 +68,7 @@ class AccessibilityEnhancer {
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
-    document.addEventListener('keydown', event => {
+    document.addEventListener('keydown', event => {)
       if (event.key === 'Tab') {
         this.handleTabNavigation(event);
       }
@@ -78,7 +78,7 @@ class AccessibilityEnhancer {
   private setupScreenReaderSupport(): void {
     if (!this.config.enableScreenReaderSupport) return;
 
-    // Add skip links
+    // Add skip links;
     const _skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
@@ -93,7 +93,7 @@ class AccessibilityEnhancer {
       text-decoration: none;
       z-index: 1000;
     `;
-
+,
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px';
     });
@@ -110,8 +110,8 @@ class AccessibilityEnhancer {
 
     const _style = document.createElement('style');
     style.textContent = `
-      @media (prefers-contrast: high) {
-        * {
+      @media (prefers-contrast: high) {,
+        * {,
           background-color: #000 !important;
           color: #fff !important;
         }
@@ -141,26 +141,26 @@ class AccessibilityEnhancer {
     const _currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
 
     if (event.shiftKey) {
-      // Shift + Tab: move backwards
-      if (currentIndex === 0) {
+      // Shift + Tab: move backwards;
+      if (currentIndex === 0) {,
         event.preventDefault();
-        focusableElements[focusableElements.length - 1]?.focus();
+        focusableElements[focusableElements.length - 1]?.focus();,
       }
     } else {
-      // Tab: move forwards
-      if (currentIndex === focusableElements.length - 1) {
+      // Tab: move forwards;
+      if (currentIndex === focusableElements.length - 1) {,
         event.preventDefault();
-        focusableElements[0]?.focus();
+        focusableElements[0]?.focus();,
       }
     }
   }
 
   private getFocusableElements(): HTMLElement[] {
     const selectors = [
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
+      'button: not([disabled])',
+      'input: not([disabled])',
+      'select: not([disabled])',
+      'textarea: not([disabled])',
       'a[href]',
       '[tabindex]:not([tabindex="-1"])',
     ].join(', ');
@@ -171,21 +171,21 @@ class AccessibilityEnhancer {
   private measureAccessibilityMetrics(): void {
     this.metrics = [
       {
-        name: 'Focusable Elements',
-        value: this.getFocusableElements().length,
-        threshold: 10,
+        name: 'Focusable Elements'
+        value: this.getFocusableElements().length;
+        threshold: 10;
         status: 'pass',
       },
       {
-        name: 'Images with Alt Text',
-        value: this.getImagesWithAltText().length,
-        threshold: 0,
+        name: 'Images with Alt Text'
+        value: this.getImagesWithAltText().length;
+        threshold: 0;
         status: 'pass',
       },
       {
         name: 'Headings Structure',
         value: this.getHeadingStructureScore(),
-        threshold: 80,
+        threshold: 80;
         status: 'pass',
       },
     ];
@@ -201,10 +201,10 @@ class AccessibilityEnhancer {
     let _score = 100;
     let _previousLevel = 0;
 
-    headings.forEach(heading => {
+    headings.forEach(heading => {)
       //       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
-        score -= 20; // Penalty for skipped heading levels
+        score -= 20; // Penalty for skipped heading levels;
       }
       previousLevel = level;
     });

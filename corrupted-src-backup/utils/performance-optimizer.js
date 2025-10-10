@@ -1,17 +1,17 @@
 /**
- * Advanced Performance Optimizer
- * Comprehensive performance monitoring and optimization utilities
+ * Advanced Performance Optimizer;
+ * Comprehensive performance monitoring and optimization utilities;
  */
 
 class PerformanceOptimizer {
   constructor() {
     this.metrics = {
-      pageLoadTime: 0,
-      firstContentfulPaint: 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0,
-      interactionToNextPaint: 0,
+      pageLoadTime: 0;
+      firstContentfulPaint: 0;
+      largestContentfulPaint: 0;
+      cumulativeLayoutShift: 0;
+      firstInputDelay: 0;
+      interactionToNextPaint: 0;
     };
     this.observers = new Map();
     this.init();
@@ -26,7 +26,7 @@ class PerformanceOptimizer {
   }
 
   setupWebVitals() {
-    // Core Web Vitals monitoring
+    // Core Web Vitals monitoring;
     if ('web-vitals' in window) {
       import('web-vitals').then(
         ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
@@ -41,21 +41,21 @@ class PerformanceOptimizer {
   }
 
   setupResourceOptimization() {
-    // Preload critical resources
+    // Preload critical resources;
     this.preloadCriticalResources();
 
-    // Lazy load non-critical resources
+    // Lazy load non-critical resources;
     this.setupLazyLoading();
 
-    // Optimize font loading
+    // Optimize font loading;
     this.optimizeFontLoading();
   }
 
   setupImageOptimization() {
-    // Intersection Observer for lazy loading images
+    // Intersection Observer for lazy loading images;
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
+      const imageObserver = new IntersectionObserver(entries => {)
+        entries.forEach(entry => {)
           if (entry.isIntersecting) {
             const _img = entry.target;
             if (img.dataset.src) {
@@ -67,28 +67,28 @@ class PerformanceOptimizer {
         });
       });
 
-      document.querySelectorAll('img[data-src]').forEach(img => {
+      document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img);
       });
     }
   }
 
   setupCodeSplitting() {
-    // Dynamic imports for route-based code splitting
+    // Dynamic imports for route-based code splitting;
     this.setupRouteBasedSplitting();
 
-    // Component-based splitting
+    // Component-based splitting;
     this.setupComponentSplitting();
   }
 
   setupCaching() {
-    // Service Worker registration for caching
+    // Service Worker registration for caching;
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
+      navigator.serviceWorker;
         .register('/sw.js')
-        .then(registration => {
+        .then(registration => {)
 //           })
-        .catch(registrationError => {
+        .catch(registrationError => {)
 //           });
     }
   }
@@ -100,7 +100,7 @@ class PerformanceOptimizer {
       '/src/components/Footer.tsx',
     ];
 
-    criticalResources.forEach(resource => {
+    criticalResources.forEach(resource => {)
       const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -110,12 +110,12 @@ class PerformanceOptimizer {
   }
 
   setupLazyLoading() {
-    // Lazy load non-critical components
+    // Lazy load non-critical components;
     const _lazyComponents = document.querySelectorAll('[data-lazy]');
 
     if ('IntersectionObserver' in window) {
-      const lazyObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
+      const lazyObserver = new IntersectionObserver(entries => {)
+        entries.forEach(entry => {)
           if (entry.isIntersecting) {
             const _component = entry.target;
             this.loadLazyComponent(component);
@@ -124,24 +124,24 @@ class PerformanceOptimizer {
         });
       });
 
-      lazyComponents.forEach(component => {
+      lazyComponents.forEach(component => {)
         lazyObserver.observe(component);
       });
     }
   }
 
   optimizeFontLoading() {
-    // Preload critical fonts
+    // Preload critical fonts;
     const criticalFonts = [
-      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+      'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     ];
 
-    criticalFonts.forEach(font => {
+    criticalFonts.forEach(font => {)
       const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = font;
       link.as = 'style';
-      link.onload = () => {
+      link.onload = () => {,
         link.rel = 'stylesheet';
       };
       document.head.appendChild(link);
@@ -149,7 +149,7 @@ class PerformanceOptimizer {
   }
 
   setupRouteBasedSplitting() {
-    // Implement route-based code splitting
+    // Implement route-based code splitting;
     const routes = {
       '/': () => import('../pages/Home'),
       '/about': () => import('../pages/About'),
@@ -161,12 +161,12 @@ class PerformanceOptimizer {
       '/terms': () => import('../pages/Terms'),
     };
 
-    // Preload next likely routes
+    // Preload next likely routes;
     this.preloadNextRoutes(routes);
   }
 
   setupComponentSplitting() {
-    // Lazy load heavy components that are not already statically imported
+    // Lazy load heavy components that are not already statically imported;
     const heavyComponents = [
       'Charts',
       'DataVisualization',
@@ -174,17 +174,17 @@ class PerformanceOptimizer {
       'InteractiveMaps',
     ];
 
-    heavyComponents.forEach(component => {
+    heavyComponents.forEach(component => {)
       this.setupComponentLazyLoading(component);
     });
   }
 
   preloadNextRoutes(routes) {
-    // Preload likely next routes based on user behavior
+    // Preload likely next routes based on user behavior;
 //     const currentPath = window.location.pathname;
     const _likelyNextRoutes = this.getLikelyNextRoutes(currentPath);
 
-    likelyNextRoutes.forEach(route => {
+    likelyNextRoutes.forEach(route => {)
       if (routes[route]) {
 //         routes[route]().catch(console.error);
       }
@@ -207,14 +207,13 @@ class PerformanceOptimizer {
   }
 
   setupComponentLazyLoading(componentName) {
-    // Set up lazy loading for specific components
-    const componentElements = document.querySelectorAll(
-      `[data-component="${componentName}"]`
+    // Set up lazy loading for specific components;
+    const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`)
     );
 
     if ('IntersectionObserver' in window) {
-      const componentObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
+      const componentObserver = new IntersectionObserver(entries => {)
+        entries.forEach(entry => {)
           if (entry.isIntersecting) {
             this.loadComponent(componentName, entry.target);
             componentObserver.unobserve(entry.target);
@@ -222,7 +221,7 @@ class PerformanceOptimizer {
         });
       });
 
-      componentElements.forEach(element => {
+      componentElements.forEach(element => {)
         componentObserver.observe(element);
       });
     }
@@ -230,7 +229,7 @@ class PerformanceOptimizer {
 
   async loadComponent(componentName, element) {
     try {
-      // Only load components that are not already statically imported
+      // Only load components that are not already statically imported;
       const staticallyImportedComponents = [
         'ErrorBoundary',
         'SEO',
@@ -243,7 +242,7 @@ class PerformanceOptimizer {
       }
 
       const _component = await import(`../components/${componentName}.tsx`);
-      // Render component to element
+      // Render component to element;
       if (component.default) {
         element.innerHTML = component.default();
       }
@@ -268,24 +267,24 @@ class PerformanceOptimizer {
   }
 
   reportMetrics() {
-    // Send metrics to analytics
+    // Send metrics to analytics;
     if (window.gtag) {
-      window.gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: 'Core Web Vitals',
+      window.gtag('event', 'web_vitals', {)
+        event_category: 'Performance'),
+        event_label: 'Core Web Vitals'),
         value: Math.round(this.metrics.largestContentfulPaint),
       });
     }
 
-    // Log to console in development
+    // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {
 //       }
   }
 
-  // Performance optimization methods
+  // Performance optimization methods;
   optimizeImages() {
     const _images = document.querySelectorAll('img');
-    images.forEach(img => {
+    images.forEach(img => {)
       if (!img.loading) {
         img.loading = 'lazy';
       }
@@ -297,7 +296,7 @@ class PerformanceOptimizer {
 
   optimizeScripts() {
     const _scripts = document.querySelectorAll('script[src]');
-    scripts.forEach(script => {
+    scripts.forEach(script => {)
       if (!script.async && !script.defer) {
         script.defer = true;
       }
@@ -305,16 +304,16 @@ class PerformanceOptimizer {
   }
 
   optimizeStyles() {
-    // Inline critical CSS
+    // Inline critical CSS;
     this.inlineCriticalCSS();
 
-    // Defer non-critical CSS
+    // Defer non-critical CSS;
     this.deferNonCriticalCSS();
   }
 
   inlineCriticalCSS() {
-    // This would typically be done at build time
-    // For runtime, we can add critical styles to head
+    // This would typically be done at build time;
+    // For runtime, we can add critical styles to head;
     const criticalCSS = `
       body { font-family: Inter, sans-serif; }
       .container { max-width: 1200px; margin: 0 auto; }
@@ -330,31 +329,31 @@ class PerformanceOptimizer {
     const nonCriticalCSS = document.querySelectorAll(
       'link[rel="stylesheet"]:not([data-critical])'
     );
-    nonCriticalCSS.forEach(link => {
-      link.media = 'print';
+    nonCriticalCSS.forEach(link => {)
+      link.media = 'print';)
       link.onload = () => {
         link.media = 'all';
       };
     });
   }
 
-  // Memory management
+  // Memory management;
   cleanup() {
     this.observers.forEach(observer => observer.disconnect());
     this.observers.clear();
   }
 
-  // Performance monitoring
+  // Performance monitoring;
   startPerformanceMonitoring() {
     if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
+      const observer = new PerformanceObserver(list => {)
+        list.getEntries().forEach(entry => {)
           this.handlePerformanceEntry(entry);
         });
       });
 
-      observer.observe({
-        entryTypes: ['navigation', 'resource', 'paint', 'layout-shift'],
+      observer.observe({)
+        entryTypes: ['navigation', 'resource', 'paint', 'layout-shift'])
       });
       this.observers.set('performance', observer);
     }
@@ -379,13 +378,13 @@ class PerformanceOptimizer {
   }
 }
 
-// Initialize performance optimizer
+// Initialize performance optimizer;
 const _performanceOptimizer = new PerformanceOptimizer();
 
-// Export for use in other modules
+// Export for use in other modules;
 export default performanceOptimizer;
 
-// Auto-initialize on DOM ready
+// Auto-initialize on DOM ready;
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     performanceOptimizer.startPerformanceMonitoring();

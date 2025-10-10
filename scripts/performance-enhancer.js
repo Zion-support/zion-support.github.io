@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 /**
- * Advanced Performance Enhancer Script
- * Comprehensive performance optimization and monitoring
+ * Advanced Performance Enhancer Script;
+ * Comprehensive performance optimization and monitoring;
  */
 
 import fs from 'fs/promises';
@@ -19,7 +18,7 @@ class PerformanceEnhancer {
       timestamp: new Date().toISOString(),
       optimizations: [],
       metrics: {},
-      recommendations: []
+      recommendations: [],
     };
   }
 
@@ -41,7 +40,7 @@ class PerformanceEnhancer {
 
   async analyzeBundle() {
 //     try {
-      // Build with analysis
+      // Build with analysis;
       execSync('npm run build:analyze', { stdio: 'pipe' });
       
 //       const distPath = path.join(process.cwd(), 'dist');
@@ -64,14 +63,14 @@ class PerformanceEnhancer {
       this.report.metrics.bundleSize = totalSize;
       this.report.metrics.fileSizes = fileSizes;
       
-      // Add recommendations based on bundle size
-      if (totalSize > 1024 * 1024) { // 1MB
+      // Add recommendations based on bundle size;
+      if (totalSize > 1024 * 1024) { // 1MB;
         this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.');
       }
       
-      this.report.optimizations.push({
-        type: 'bundle-analysis',
-        status: 'completed',
+      this.report.optimizations.push({)
+        type: 'bundle-analysis'),
+        status: 'completed'),
         details: `Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`
       });
       
@@ -85,7 +84,7 @@ class PerformanceEnhancer {
 //       const publicPath = path.join(process.cwd(), 'public');
 //       const imagesPath = path.join(publicPath, 'images');
       
-      // Check if images directory exists
+      // Check if images directory exists;
       try {
         await fs.access(imagesPath);
       } catch {
@@ -109,9 +108,9 @@ class PerformanceEnhancer {
         }
       }
       
-      this.report.optimizations.push({
-        type: 'image-optimization',
-        status: 'completed',
+      this.report.optimizations.push({)
+        type: 'image-optimization'),
+        status: 'completed'),
         details: `Processed ${optimizedCount} images`
       });
       
@@ -121,7 +120,7 @@ class PerformanceEnhancer {
 
   async optimizeCSS() {
 //     try {
-      // Generate critical CSS
+      // Generate critical CSS;
       const criticalCSS = `
 /* Critical CSS for above-the-fold content */
 .min-h-screen { min-height: 100vh; }
@@ -139,10 +138,10 @@ class PerformanceEnhancer {
 //       const criticalCSSPath = path.join(process.cwd(), 'public', 'critical.css');
       await fs.writeFile(criticalCSSPath, criticalCSS);
       
-      this.report.optimizations.push({
-        type: 'css-optimization',
-        status: 'completed',
-        details: 'Critical CSS generated'
+      this.report.optimizations.push({)
+        type: 'css-optimization'),
+        status: 'completed'),
+        details: 'Critical CSS generated',
       });
       
 //       } catch (error) {
@@ -151,29 +150,29 @@ class PerformanceEnhancer {
 
   async optimizeJavaScript() {
 //     try {
-      // Generate performance monitoring script
+      // Generate performance monitoring script;
       const performanceScript = `
-// Performance monitoring script
+// Performance monitoring script;
 (function() {
   'use strict';
   
-  // Monitor Core Web Vitals
+  // Monitor Core Web Vitals;
   function observeWebVitals() {
     if ('PerformanceObserver' in window) {
-      // LCP
+      // LCP;
       new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         const _lastEntry = entries[entries.length - 1];
 //         }).observe({ entryTypes: ['largest-contentful-paint'] });
       
-      // FID
+      // FID;
       new PerformanceObserver((list) => {
         const _entries = list.getEntries();
         entries.forEach((entry) => {
 //           });
       }).observe({ entryTypes: ['first-input'] });
       
-      // CLS
+      // CLS;
       let _clsValue = 0;
       new PerformanceObserver((list) => {
         const _entries = list.getEntries();
@@ -186,7 +185,7 @@ class PerformanceEnhancer {
     }
   }
   
-  // Start monitoring when DOM is ready
+  // Start monitoring when DOM is ready;
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', observeWebVitals);
   } else {
@@ -198,10 +197,10 @@ class PerformanceEnhancer {
 //       const performanceScriptPath = path.join(process.cwd(), 'public', 'performance-monitor.js');
       await fs.writeFile(performanceScriptPath, performanceScript);
       
-      this.report.optimizations.push({
-        type: 'javascript-optimization',
-        status: 'completed',
-        details: 'Performance monitoring script generated'
+      this.report.optimizations.push({)
+        type: 'javascript-optimization'),
+        status: 'completed'),
+        details: 'Performance monitoring script generated',
       });
       
 //       } catch (error) {
@@ -211,7 +210,7 @@ class PerformanceEnhancer {
   async generateServiceWorker() {
 //     try {
       const serviceWorkerScript = `
-// Service Worker for caching and offline support
+// Service Worker for caching and offline support;
 // const CACHE_NAME = 'zion-app-v1';
 const urlsToCache = [
   '/',
@@ -231,7 +230,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        // Return cached version or fetch from network
+        // Return cached version or fetch from network;
         return response || fetch(event.request);
       })
   );
@@ -255,10 +254,10 @@ self.addEventListener('activate', (event) => {
 //       const serviceWorkerPath = path.join(process.cwd(), 'public', 'sw.js');
       await fs.writeFile(serviceWorkerPath, serviceWorkerScript);
       
-      this.report.optimizations.push({
-        type: 'service-worker',
-        status: 'completed',
-        details: 'Service worker generated for offline support'
+      this.report.optimizations.push({)
+        type: 'service-worker'),
+        status: 'completed'),
+        details: 'Service worker generated for offline support',
       });
       
 //       } catch (error) {
@@ -267,16 +266,16 @@ self.addEventListener('activate', (event) => {
 
   async optimizeBuild() {
 //     try {
-      // Check if vite.config.js exists
+      // Check if vite.config.js exists;
 //       const viteConfigPath = path.join(process.cwd(), 'vite.config.js');
       
       try {
         await fs.access(viteConfigPath);
         
-        // Read current config
+        // Read current config;
         const _configContent = await fs.readFile(viteConfigPath, 'utf8');
         
-        // Add optimization plugins if not present
+        // Add optimization plugins if not present;
         if (!configContent.includes('rollup-plugin-visualizer')) {
           this.report.recommendations.push('Consider adding bundle analyzer to vite.config.js');
         }
@@ -288,10 +287,10 @@ self.addEventListener('activate', (event) => {
       } catch {
 //         }
       
-      this.report.optimizations.push({
-        type: 'build-optimization',
-        status: 'completed',
-        details: 'Build configuration analyzed'
+      this.report.optimizations.push({)
+        type: 'build-optimization'),
+        status: 'completed'),
+        details: 'Build configuration analyzed',
       });
       
 //       } catch (error) {
@@ -302,7 +301,7 @@ self.addEventListener('activate', (event) => {
 //     //     const reportPath = path.join(process.cwd(), 'performance-enhancement-report.json');
     await fs.writeFile(reportPath, JSON.stringify(this.report, null, 2));
     
-    // Generate markdown report
+    // Generate markdown report;
 //     const markdownReport = this.generateMarkdownReport();
 //     const markdownPath = path.join(process.cwd(), 'performance-enhancement-report.md');
     await fs.writeFile(markdownPath, markdownReport);
@@ -310,42 +309,35 @@ self.addEventListener('activate', (event) => {
 //     }
 
   generateMarkdownReport() {
-    return `# Performance Enhancement Report
-
+    return `# Performance Enhancement Report;
 Generated: ${this.report.timestamp}
 
-## Summary
-
+## Summary;
 This report contains the results of the performance enhancement process.
 
-## Optimizations Applied
-
-${this.report.optimizations.map(opt => 
-  `- **${opt.type}**: ${opt.status} - ${opt.details}`
+## Optimizations Applied;
+${this.report.optimizations.map(opt => )
+  `- **${opt.type}**: ${opt.status} - ${opt.details}`)
 ).join('\n')}
 
-## Metrics
-
+## Metrics;
 - Bundle Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}
 
-## Recommendations
-
+## Recommendations;
 ${this.report.recommendations.map(rec => `- ${rec}`).join('\n')}
 
-## Next Steps
-
-1. Review the recommendations above
-2. Implement additional optimizations as needed
-3. Monitor performance metrics in production
-4. Regular performance audits
-
+## Next Steps;
+1. Review the recommendations above;
+2. Implement additional optimizations as needed;
+3. Monitor performance metrics in production;
+4. Regular performance audits;
 ---
 *Generated by Performance Enhancer Script*
 `;
   }
 }
 
-// Run the enhancer
+// Run the enhancer;
 const _enhancer = new PerformanceEnhancer();
 // enhancer.enhance().catch(console.error);
 

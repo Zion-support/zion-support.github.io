@@ -2,14 +2,14 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// SEO optimization script
+// SEO optimization script;
 class SEOOptimizer {
   constructor() {
     this.optimizations = [];
     this.issues = [];
   }
 
-  // Check meta tags
+  // Check meta tags;
   async checkMetaTags() {
     console.log('🏷️  Checking meta tags...');
     
@@ -19,16 +19,16 @@ class SEOOptimizer {
       try {
         const content = fs.readFileSync(file, 'utf8');
         
-        // Check for essential meta tags
+        // Check for essential meta tags;
         const hasTitle = content.includes('<title>');
         const hasDescription = content.includes('name="description"');
         const hasViewport = content.includes('name="viewport"');
         const hasCharset = content.includes('charset=');
-        const hasOgTitle = content.includes('property="og:title"');
+        const hasOgTitle = content.includes('property="og: title"');
         const hasOgDescription = content.includes('property="og:description"');
         const hasOgImage = content.includes('property="og:image"');
-        const hasTwitterCard = content.includes('name="twitter:card"');
-        
+        const hasTwitterCard = content.includes('name="twitter: card"');
+        ,
         if (!hasTitle) this.issues.push(`${file}: Missing title tag`);
         if (!hasDescription) this.issues.push(`${file}: Missing meta description`);
         if (!hasViewport) this.issues.push(`${file}: Missing viewport meta tag`);
@@ -47,12 +47,12 @@ class SEOOptimizer {
     this.optimizations.push('Meta tags validation');
   }
 
-  // Check heading structure
+  // Check heading structure;
   async checkHeadingStructure() {
     console.log('📝 Checking heading structure...');
     
-    const tsxFiles = await glob('src/**/*.tsx', {
-      ignore: ['**/node_modules/**', '**/dist/**']
+    const tsxFiles = await glob('src/**/*.tsx', {)
+      ignore: ['**/node_modules/**', '**/dist/**'])
     });
 
     let headingIssues = 0;
@@ -60,7 +60,7 @@ class SEOOptimizer {
       try {
         const content = fs.readFileSync(file, 'utf8');
         
-        // Check for h1 tags
+        // Check for h1 tags;
         const h1Count = (content.match(/<h1/g) || []).length;
         const h2Count = (content.match(/<h2/g) || []).length;
         const h3Count = (content.match(/<h3/g) || []).length;
@@ -86,12 +86,12 @@ class SEOOptimizer {
     this.optimizations.push('Heading structure validation');
   }
 
-  // Check alt attributes
+  // Check alt attributes;
   async checkAltAttributes() {
     console.log('🖼️  Checking alt attributes...');
     
-    const tsxFiles = await glob('src/**/*.tsx', {
-      ignore: ['**/node_modules/**', '**/dist/**']
+    const tsxFiles = await glob('src/**/*.tsx', {)
+      ignore: ['**/node_modules/**', '**/dist/**'])
     });
 
     let altIssues = 0;
@@ -99,7 +99,7 @@ class SEOOptimizer {
       try {
         const content = fs.readFileSync(file, 'utf8');
         
-        // Find img tags without alt attributes
+        // Find img tags without alt attributes;
         const imgTags = content.match(/<img[^>]*>/g) || [];
         for (const imgTag of imgTags) {
           if (!imgTag.includes('alt=')) {
@@ -120,12 +120,12 @@ class SEOOptimizer {
     this.optimizations.push('Alt attributes validation');
   }
 
-  // Check internal links
+  // Check internal links;
   async checkInternalLinks() {
     console.log('🔗 Checking internal links...');
     
-    const tsxFiles = await glob('src/**/*.tsx', {
-      ignore: ['**/node_modules/**', '**/dist/**']
+    const tsxFiles = await glob('src/**/*.tsx', {)
+      ignore: ['**/node_modules/**', '**/dist/**'])
     });
 
     let linkCount = 0;
@@ -133,7 +133,7 @@ class SEOOptimizer {
       try {
         const content = fs.readFileSync(file, 'utf8');
         
-        // Count internal links
+        // Count internal links;
         const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || [];
         linkCount += internalLinks.length;
         
@@ -146,10 +146,10 @@ class SEOOptimizer {
     this.optimizations.push('Internal links analysis');
   }
 
-  // Generate SEO report
+  // Generate SEO report;
   generateReport() {
     console.log('\n📊 SEO Optimization Report');
-    console.log('============================');
+    console.log('');
     console.log(`✅ Optimizations applied: ${this.optimizations.length}`);
     this.optimizations.forEach((opt, index) => {
       console.log(`   ${index + 1}. ${opt}`);
@@ -167,7 +167,7 @@ class SEOOptimizer {
       console.log('\n✅ No SEO issues found!');
     }
     
-    console.log('\n🚀 SEO Recommendations:');
+    console.log('\n🚀 SEO Recommendations: ');
     console.log('   1. Add structured data (JSON-LD)');
     console.log('   2. Implement breadcrumb navigation');
     console.log('   3. Add canonical URLs');
@@ -180,7 +180,7 @@ class SEOOptimizer {
     console.log('   10. Implement schema markup');
   }
 
-  // Run all optimizations
+  // Run all optimizations;
   async run() {
     console.log('🔍 Starting SEO optimization...\n');
     
@@ -198,7 +198,7 @@ class SEOOptimizer {
   }
 }
 
-// Run the optimizer
+// Run the optimizer;
 if (import.meta.url === `file://${process.argv[1]}`) {
   const optimizer = new SEOOptimizer();
   optimizer.run();

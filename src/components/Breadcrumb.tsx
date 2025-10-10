@@ -11,9 +11,9 @@ interface BreadcrumbItem {
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   
-  const generateBreadcrumbs = (): BreadcrumbItem[] => {
+  const generateBreadcrumbs = (): BreadcrumbItem[] => {,
     const pathSegments = location.pathname.split('/').filter(Boolean);
-    const breadcrumbs: BreadcrumbItem[] = [
+    const breadcrumbs: BreadcrumbItem[] = [,
       { name: 'Home', href: '/' }
     ];
 
@@ -22,16 +22,16 @@ const Breadcrumb: React.FC = () => {
       currentPath += `/${segment}`;
       const isLast = index === pathSegments.length - 1;
       
-      // Convert segment to readable name
-      const name = segment
+      // Convert segment to readable name;
+      const name = segment;
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
 
-      breadcrumbs.push({
-        name,
-        href: currentPath,
-        current: isLast
+      breadcrumbs.push({)
+        name)
+        href: currentPath),
+        current: isLast;
       });
     });
 
@@ -40,13 +40,13 @@ const Breadcrumb: React.FC = () => {
 
   const breadcrumbs = generateBreadcrumbs();
 
-  // Don't show breadcrumb on home page
+  // Don't show breadcrumb on home page;
   if (location.pathname === '/') {
     return null;
   }
 
   const structuredData = {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": breadcrumbs.map((item, index) => ({
       "@type": "ListItem",
@@ -56,11 +56,18 @@ const Breadcrumb: React.FC = () => {
     }))
   };
 
+<<<<<<< HEAD
+  return(<>)
+      <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,)
+          <ol className="flex items-center space-x-2 text-sm">),
+=======
   return (
     <>
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <ol className="flex items-center space-x-2 text-sm">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             {breadcrumbs.map((item, index) => (
               <li key={item.href} className="flex items-center">
                 {index > 0 && (
@@ -72,10 +79,10 @@ const Breadcrumb: React.FC = () => {
                     {item.name}
                   </span>
                 ) : (
-                  <Link
+                  <Link;
                     to={item.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center"
-                  >
+                    className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 flex items-center",
+                  >,
                     {index === 0 && <Home className="w-4 h-4 mr-1" />}
                     {item.name}
                   </Link>
@@ -87,7 +94,7 @@ const Breadcrumb: React.FC = () => {
       </nav>
       
       {/* Structured Data */}
-      <script
+      <script;
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />

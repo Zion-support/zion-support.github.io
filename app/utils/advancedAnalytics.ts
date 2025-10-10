@@ -1,60 +1,60 @@
 'use client'
 
 interface UserEvent {
-  id: string
-  type: string
-  name: string
-  value?: number
-  timestamp: string
-  sessionId: string
-  userId?: string
-  url: string
+  id: string;
+  type: string;
+  name: string;
+  value?: number;
+  timestamp: string;
+  sessionId: string;
+  userId?: string;
+  url: string;
   metadata?: Record<string, unknown>
 }
 
 interface UserSession {
-  id: string
-  startTime: string
-  endTime?: string
-  duration?: number
-  pageViews: number
+  id: string;
+  startTime: string;
+  endTime?: string;
+  duration?: number;
+  pageViews: number;
   events: UserEvent[]
-  referrer?: string
-  userAgent: string
+  referrer?: string;
+  userAgent: string;
   device: 'desktop' | 'mobile' | 'tablet'
-  browser: string
-  os: string
-  country?: string
-  city?: string
+  browser: string;
+  os: string;
+  country?: string;,
+  city?: string;
 }
 
 interface AnalyticsConfig {
-  enableTracking: boolean
-  enableHeatmaps: boolean
-  enableSessionRecording: boolean
-  enableA_BTesting: boolean
-  enableConversionTracking: boolean
-  enablePerformanceTracking: boolean
-  enableErrorTracking: boolean
-  enableUserJourneyTracking: boolean
+  enableTracking: boolean;
+  enableHeatmaps: boolean;
+  enableSessionRecording: boolean;
+  enableA_BTesting: boolean;
+  enableConversionTracking: boolean;
+  enablePerformanceTracking: boolean;
+  enableErrorTracking: boolean;
+  enableUserJourneyTracking: boolean;
 }
 
 class AdvancedAnalytics {
-  private static instance: AdvancedAnalytics
-  private config: AnalyticsConfig
-  private currentSession: UserSession
+  private static instance: AdvancedAnalytics;
+  private config: AnalyticsConfig;
+  private currentSession: UserSession;
   private eventQueue: UserEvent[] = []
 
   constructor() {
     this.config = {
-      enableTracking: true,
-      enableHeatmaps: true,
-      enableSessionRecording: false,
-      enableA_BTesting: true,
-      enableConversionTracking: true,
-      enablePerformanceTracking: true,
-      enableErrorTracking: true,
-      enableUserJourneyTracking: true
+      enableTracking: true;
+      enableHeatmaps: true;
+      enableSessionRecording: false;
+      enableA_BTesting: true;
+      enableConversionTracking: true;
+      enablePerformanceTracking: true;
+      enableErrorTracking: true;
+      enableUserJourneyTracking: true;
     }
     this.currentSession = this.createNewSession()
     this.initializeTracking()
@@ -64,75 +64,74 @@ class AdvancedAnalytics {
     if (!AdvancedAnalytics.instance) {
       AdvancedAnalytics.instance = new AdvancedAnalytics()
     }
-    return AdvancedAnalytics.instance
+    return AdvancedAnalytics.instance;
   }
 
   /**
-   * Initialize comprehensive analytics tracking
+   * Initialize comprehensive analytics tracking;
    */
   private initializeTracking(): void {
-    if (typeof window === 'undefined' || !this.config.enableTracking) return
-
-    // Track page views
+    if (typeof window === 'undefined' || !this.config.enableTracking) return;
+    // Track page views;
     this.trackPageView()
 
-    // Track clicks
+    // Track clicks;
     this.trackClicks()
 
-    // Track scrolls
+    // Track scrolls;
     this.trackScrolls()
 
-    // Track form submissions
+    // Track form submissions;
     this.trackFormSubmissions()
 
-    // Track downloads
+    // Track downloads;
     this.trackDownloads()
 
-    // Track performance
+    // Track performance;
     if (this.config.enablePerformanceTracking) {
       this.trackPerformance()
     }
 
-    // Track user journey
+    // Track user journey;
     if (this.config.enableUserJourneyTracking) {
       this.trackUserJourney()
     }
 
-    // Setup network monitoring
+    // Setup network monitoring;
     this.setupNetworkMonitoring()
   }
 
   /**
-   * Create new user session
+   * Create new user session;
    */
   private createNewSession(): UserSession {
     return {
-      id: this.generateSessionId(),
-      startTime: new Date().toISOString(),
-      pageViews: 0,
-      events: [],
-      userAgent: navigator.userAgent,
-      device: this.detectDevice(),
+      id: this.generateSessionId()
+      startTime: new Date().toISOString()
+      pageViews: 0;
+      events: []
+      userAgent: navigator.userAgent;
+      device: this.detectDevice()
       browser: this.detectBrowser(),
       os: this.detectOS(),
-      referrer: document.referrer
+      referrer: document.referrer;
     }
   }
 
   /**
-   * Track page views
+   * Track page views;
    */
   trackPageView(url?: string, title?: string): void {
     const event: UserEvent = {
-      id: this.generateEventId(),
-      type: 'page_view',
-      name: 'Page View',
-      timestamp: new Date().toISOString(),
-      sessionId: this.currentSession.id,
-      url: url || window.location.href,
-      metadata: {
-        title: title || document.title,
-        referrer: document.referrer
+      id: this.generateEventId()
+      type: 'page_view'
+      name: 'Page View'
+      timestamp: new Date().toISOString()
+      sessionId: this.currentSession.id;
+      url: url || window.location.href;
+      metadata: {,
+        title: title || document.title;
+        referrer: document.referrer;
       }
     }
 
@@ -141,130 +140,127 @@ class AdvancedAnalytics {
   }
 
   /**
-   * Track custom events
+   * Track custom events;
    */
   trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {
-    const event: UserEvent = {
+    const event: UserEvent = {,
       id: this.generateEventId(),
       type: 'custom_event',
       name,
       value,
-      timestamp: new Date().toISOString(),
-      sessionId: this.currentSession.id,
-      url: window.location.href,
-      metadata
+      timestamp: new Date().toISOString()
+      sessionId: this.currentSession.id;
+      url: window.location.href;
+      metadata;
     }
 
     this.addEvent(event)
   }
 
   /**
-   * Track clicks
+   * Track clicks;
    */
   private trackClicks(): void {
     document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement
+      const target = event.target as HTMLElement;
       const element = target.closest('a, button, [role="button"]')
 
       if (element) {
-        this.trackEvent('click', undefined, {
+        this.trackEvent('click', undefined, {)
           element: element.tagName.toLowerCase(),
           text: element.textContent?.trim(),
-          href: (element as HTMLAnchorElement).href,
-          className: element.className
+          href: (element as HTMLAnchorElement).href;
+          className: element.className;
         })
       }
     })
   }
 
   /**
-   * Track scrolls
+   * Track scrolls;
    */
   private trackScrolls(): void {
-    let scrollTimeout: NodeJS.Timeout
-
+    let scrollTimeout: NodeJS.Timeout;
     window.addEventListener('scroll', () => {
       clearTimeout(scrollTimeout)
       scrollTimeout = setTimeout(() => {
         const scrollPercent = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
         )
 
-        this.trackEvent('scroll', scrollPercent, {
-          scrollY: window.scrollY,
-          scrollPercent
+        this.trackEvent('scroll', scrollPercent, {)
+          scrollY: window.scrollY),
+          scrollPercent;
         })
       }, 150)
     })
   }
 
   /**
-   * Track form submissions
+   * Track form submissions;
    */
   private trackFormSubmissions(): void {
     document.addEventListener('submit', (event) => {
-      const form = event.target as HTMLFormElement
-      this.trackEvent('form_submit', undefined, {
-        formId: form.id,
-        formAction: form.action,
-        formMethod: form.method,
-        fieldCount: form.elements.length
+      const form = event.target as HTMLFormElement;
+      this.trackEvent('form_submit', undefined, {)
+        formId: form.id;)
+        formAction: form.action),
+        formMethod: form.method),
+        fieldCount: form.elements.length;
       })
     })
   }
 
   /**
-   * Track downloads
+   * Track downloads;
    */
   private trackDownloads(): void {
     document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement
-      const link = target.closest('a[href]') as HTMLAnchorElement
-
+      const target = event.target as HTMLElement;
+      const link = target.closest('a[href]') as HTMLAnchorElement;
       if (link && this.isDownloadLink(link.href)) {
-        this.trackEvent('download', undefined, {
+        this.trackEvent('download', undefined, {)
           fileName: link.href.split('/').pop(),
           fileType: link.href.split('.').pop(),
-          href: link.href
+          href: link.href;
         })
       }
     })
   }
 
   /**
-   * Track performance metrics
+   * Track performance metrics;
    */
   private trackPerformance(): void {
-    if (typeof window.performance === 'undefined') return
-
+    if (typeof window.performance === 'undefined') return;
     window.addEventListener('load', () => {
       setTimeout(() => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint')
 
-        this.trackEvent('performance', undefined, {
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
+        this.trackEvent('performance', undefined, {)
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart),
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
+          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime;
+          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
         })
       }, 0)
     })
   }
 
   /**
-   * Track user journey
+   * Track user journey;
    */
   private trackUserJourney(): void {
-    // Track page visibility changes
+    // Track page visibility changes;
     document.addEventListener('visibilitychange', () => {
-      this.trackEvent('visibility_change', undefined, {
-        hidden: document.hidden,
-        visibilityState: document.visibilityState
+      this.trackEvent('visibility_change', undefined, {)
+        hidden: document.hidden),
+        visibilityState: document.visibilityState;
       })
     })
 
-    // Track focus changes
+    // Track focus changes;
     window.addEventListener('focus', () => {
       this.trackEvent('window_focus')
     })
@@ -275,32 +271,32 @@ class AdvancedAnalytics {
   }
 
   /**
-   * Setup network monitoring
+   * Setup network monitoring;
    */
   private setupNetworkMonitoring(): void {
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection
-      this.trackEvent('connection_info', undefined, {
-        effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
-        rtt: connection.rtt
+      const connection = (navigator as any).connection;
+      this.trackEvent('connection_info', undefined, {)
+        effectiveType: connection.effectiveType),
+        downlink: connection.downlink),
+        rtt: connection.rtt;
       })
     }
   }
 
   /**
-   * Add event to queue and session
+   * Add event to queue and session;
    */
   private addEvent(event: UserEvent): void {
-    this.eventQueue.push(event)
-    this.currentSession.events.push(event)
-
-    // Send to analytics service (implement based on your needs)
-    this.sendToAnalytics(event)
+    this.eventQueue.push(event),
+    this.currentSession.events.push(event),
+,
+    // Send to analytics service (implement based on your needs),
+    this.sendToAnalytics(event),
   }
 
   /**
-   * Send event to analytics service
+   * Send event to analytics service;
    */
-  private sendToAnalytics(event: UserEvent): void {
-    // Implement your analytics service integration here
+  private sendToAnalytics(event: UserEvent): void {,
+    // Implement your analytics service integration here;

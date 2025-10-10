@@ -10,7 +10,7 @@ export default function AIContentWriterPage() {
   const features = [
     {
       category: 'Content Generation',
-      items: [
+      items: [,
         'GPT-4 powered content creation',
         'Blog posts and articles',
         'Social media content',
@@ -23,7 +23,7 @@ export default function AIContentWriterPage() {
     },
     {
       category: 'SEO & Optimization',
-      items: [
+      items: [,
         'Keyword research and integration',
         'SEO score optimization',
         'Meta descriptions and titles',
@@ -36,7 +36,7 @@ export default function AIContentWriterPage() {
     },
     {
       category: 'Brand & Customization',
-      items: [
+      items: [,
         'Brand voice training',
         'Tone and style customization',
         'Industry-specific templates',
@@ -49,7 +49,7 @@ export default function AIContentWriterPage() {
     },
     {
       category: 'Analytics & Insights',
-      items: [
+      items: [,
         'Content performance tracking',
         'Engagement metrics analysis',
         'ROI measurement',
@@ -64,11 +64,11 @@ export default function AIContentWriterPage() {
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: 49,
+      name: 'Starter'
+      price: 49;
       period: 'month',
       description: 'Perfect for small businesses and freelancers',
-      features: [
+      features: [,
         '10,000 words per month',
         'Basic SEO optimization',
         '5 brand voice profiles',
@@ -76,14 +76,14 @@ export default function AIContentWriterPage() {
         'Email support',
         'Basic analytics'
       ],
-      popular: false
+      popular: false;
     },
     {
-      name: 'Professional',
-      price: 99,
+      name: 'Professional'
+      price: 99;
       period: 'month',
       description: 'Ideal for growing businesses and marketing teams',
-      features: [
+      features: [,
         '50,000 words per month',
         'Advanced SEO optimization',
         'Unlimited brand voice profiles',
@@ -93,14 +93,14 @@ export default function AIContentWriterPage() {
         'Team collaboration (5 users)',
         'API access'
       ],
-      popular: true
+      popular: true;
     },
     {
-      name: 'Enterprise',
-      price: 199,
-      period: 'month',
+      name: 'Enterprise'
+      price: 199;
+      period: 'month'
       description: 'For large organizations with high content needs',
-      features: [
+      features: [,
         'Unlimited words',
         'Full SEO suite',
         'Custom integrations',
@@ -110,7 +110,7 @@ export default function AIContentWriterPage() {
         'Unlimited team members',
         'SLA guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -120,72 +120,108 @@ export default function AIContentWriterPage() {
       company: 'TechStart Inc.',
       role: 'Marketing Director',
       content: 'AI Content Writer Pro has revolutionized our content strategy. We\'ve increased our blog traffic by 300% and reduced content creation time by 70%.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Michael Chen',
       company: 'Digital Marketing Agency',
       role: 'Content Manager',
       content: 'The SEO optimization features are incredible. Our content now ranks higher and drives more qualified leads than ever before.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Emily Rodriguez',
       company: 'E-commerce Store',
       role: 'Founder',
       content: 'As a solo entrepreneur, this tool has been a game-changer. I can now produce professional-quality content at scale without a team.',
-      rating: 5
+      rating: 5;
     }
   ];
 
+<<<<<<< HEAD
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+=======
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
+<<<<<<< HEAD
 
+      <main className="relative z-10 pt-20">{/* Hero Section */}</main>
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-6xl mx-auto"></section>
+            <div className="text-6xl mb-6">✍️</div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">AI Content Writer Pro</h1><p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">Advanced AI-powered content creation platform</p><p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">Transform your content strategy with our cutting-edge AI technology. Generate high-quality,</p>
+              SEO-optimized content at scale while maintaining your unique brand voice.</p>
+=======
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-6xl mx-auto">
             <div className="text-6xl mb-6">✍️</div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">
-              AI Content Writer Pro
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-              Advanced AI-powered content creation platform
-            </p>
-            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Transform your content strategy with our cutting-edge AI technology. Generate high-quality,
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text cyber-text">
+              AI Content Writer Pro;
+            </h1>)
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">)
+              Advanced AI-powered content creation platform;)
+            </p>)
+            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">)
+              Transform your content strategy with our cutting-edge AI technology. Generate high-quality)
               SEO-optimized content at scale while maintaining your unique brand voice.
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
 
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a;
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
               <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="#pricing"
                 className="bg-cyan-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300"
-              >
-                Start Free Trial
-              </a>
-              <a
+<<<<<<< HEAD
+              >Start Free Trial<a
                 href="#demo"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Watch Demo
+              >Watch Demo</a>
               </a>
             </div>
 
+=======
+              >
+                Start Free Trial;
+              </a>
+              <a;
+                href="#demo"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Watch Demo;
+              </a>,
+            </div>,
+,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             {/* Key Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 sm: grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="cyber-card hologram-card p-6">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
-                <div className="text-gray-300">Average Traffic Increase</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">300%<div className="text-gray-300">Average Traffic Increase</div>
+=======
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
+              <div className="cyber-card hologram-card p-6"></div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div><div className="text-gray-300">Average Traffic Increase</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
-              <div className="cyber-card hologram-card p-6">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-                <div className="text-gray-300">Time Saved</div>
+              <div className="cyber-card hologram-card p-6"></div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div><div className="text-gray-300">Time Saved</div>
               </div>
+<<<<<<< HEAD
               <div className="cyber-card hologram-card p-6">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">50K+</div>
-                <div className="text-gray-300">Happy Customers</div>
+<<<<<<< HEAD
+                <div className="text-3xl font-bold text-cyan-400 mb-2">50K+<div className="text-gray-300">Happy Customers</div>
+=======
+              <div className="cyber-card hologram-card p-6"></div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">50K+</div><div className="text-gray-300">Happy Customers</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             </div>
           </div>
@@ -193,19 +229,37 @@ export default function AIContentWriterPage() {
 
         {/* Navigation Tabs */}
         <section className="py-8 px-4 bg-slate-800/30">
+<<<<<<< HEAD
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4">{['overview', 'features', 'pricing', 'testimonials', 'faq'].map((tab) => (<button
+=======
+                <div className="text-3xl font-bold text-cyan-400 mb-2">50K+</div>
+                <div className="text-gray-300">Happy Customers</div>
+              </div>,
+            </div>,
+          </div>,
+        </section>,
+,
+        {/* Navigation Tabs */}
+        <section className="py-8 px-4 bg-slate-800/30">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {['overview', 'features', 'pricing', 'testimonials', 'faq'].map((tab) => (
-                <button
+                <button;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+          <div className="max-w-6xl mx-auto"></section>
+            <div className="flex flex-wrap justify-center gap-4">{['overview', 'features', 'pricing', 'testimonials', 'faq'].map((tab) => (</div><button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   key={tab}
-                  onClick={() => setActiveTab(tab)}
+                  onClick={() =>setActiveTab(tab)}
                   className={`px-6 py-3 rounded-lg transition-all duration-300 capitalize ${
-                    activeTab === tab
-                      ? 'bg-cyan-400 text-slate-900 font-semibold'
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'
+                    activeTab === tab;
+                      ? 'bg-cyan-400 text-slate-900 font-semibold'}
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'}
                   }`}
-                >
-                  {tab}
+                ></button>
+                  {tab}</button>
                 </button>
               ))}
             </div>
@@ -214,66 +268,88 @@ export default function AIContentWriterPage() {
 
         {/* Content Sections */}
         <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            {activeTab === 'overview' && (
+<<<<<<< HEAD
+          <div className="max-w-6xl mx-auto">{activeTab === 'overview' && (</div>
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+<<<<<<< HEAD
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Why Choose AI Content Writer Pro?<p className="text-lg text-gray-300 max-w-3xl mx-auto">Our platform combines the power of GPT-4 with advanced SEO optimization and brand customization</p>
+=======
+          <div className="max-w-6xl mx-auto">{activeTab === 'overview' && (</section>
+              <div className="space-y-16"></div>
+                <div className="text-center"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Why Choose AI Content Writer Pro?</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Our platform combines the power of GPT-4 with advanced SEO optimization and brand customization</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                    to deliver content that not only engages your audience but also drives results.</p>
+=======
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
                     Why Choose AI Content Writer Pro?
                   </h2>
                   <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                    Our platform combines the power of GPT-4 with advanced SEO optimization and brand customization
+                    Our platform combines the power of GPT-4 with advanced SEO optimization and brand customization;
                     to deliver content that not only engages your audience but also drives results.
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <div className="cyber-card hologram-card p-6">
-                    <div className="text-4xl mb-4">🤖</div>
-                    <h3 className="text-xl font-bold text-white mb-4">AI-Powered Generation</h3>
-                    <p className="text-gray-300">
-                      Leverage the latest GPT-4 technology to create high-quality content that matches your brand voice and style.
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                  <div className="cyber-card hologram-card p-6"></div>
+                    <div className="text-4xl mb-4">🤖</div><h3 className="text-xl font-bold text-white mb-4">AI-Powered Generation</h3><p className="text-gray-300">Leverage the latest GPT-4 technology to create high-quality content that matches your brand voice and style.</p>
                     </p>
                   </div>
-                  <div className="cyber-card hologram-card p-6">
-                    <div className="text-4xl mb-4">📈</div>
-                    <h3 className="text-xl font-bold text-white mb-4">SEO Optimization</h3>
-                    <p className="text-gray-300">
-                      Built-in SEO tools ensure your content ranks higher in search results and drives organic traffic.
+                  <div className="cyber-card hologram-card p-6"></div>
+                    <div className="text-4xl mb-4">📈</div><h3 className="text-xl font-bold text-white mb-4">SEO Optimization</h3><p className="text-gray-300">Built-in SEO tools ensure your content ranks higher in search results and drives organic traffic.</p>
                     </p>
                   </div>
-                  <div className="cyber-card hologram-card p-6">
-                    <div className="text-4xl mb-4">⚡</div>
-                    <h3 className="text-xl font-bold text-white mb-4">Scale Efficiently</h3>
-                    <p className="text-gray-300">
-                      Produce 10x more content in the same time while maintaining quality and consistency across all channels.
+                  <div className="cyber-card hologram-card p-6"></div>
+                    <div className="text-4xl mb-4">⚡</div><h3 className="text-xl font-bold text-white mb-4">Scale Efficiently</h3><p className="text-gray-300">Produce 10x more content in the same time while maintaining quality and consistency across all channels.</p>
                     </p>
-                  </div>
-                </div>
-              </div>
+                  </div>,
+                </div>,
+              </div>,
             )}
 
             {activeTab === 'features' && (
+<<<<<<< HEAD
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                    Comprehensive Feature Set
-                  </h2>
-                  <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Comprehensive Feature Set<p className="text-lg text-gray-300 max-w-3xl mx-auto">Everything you need to create, optimize, and manage content at scale.</p>
+=======
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
+                    Comprehensive Feature Set;
+                  </h2>,
+                  <p className="text-lg text-gray-300 max-w-3xl mx-auto">,
                     Everything you need to create, optimize, and manage content at scale.
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+              <div className="space-y-16"></div>
+                <div className="text-center"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Comprehensive Feature Set</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Everything you need to create, optimize, and manage content at scale.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   </p>
                 </div>
 
                 {features.map((category, index) => (
+<<<<<<< HEAD
                   <div key={index} className="cyber-card hologram-card p-8">
+<<<<<<< HEAD
+                    <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">{category.category}<div className="grid grid-cols-1 md:grid-cols-2 gap-4">{category.items.map((item, itemIndex) => (</div>
+=======
                     <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
                       {category.category}
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
                       {category.items.map((item, itemIndex) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                         <div key={itemIndex} className="flex items-center space-x-3">
-                          <span className="text-cyan-400 text-xl">✓</span>
-                          <span className="text-gray-300">{item}</span>
+                          <span className="text-cyan-400 text-xl">✓<span className="text-gray-300">{item}</span>
+=======
+                  <div key={index} className="cyber-card hologram-card p-8"></div>
+                    <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">{category.category}</h3><div className="grid grid-cols-1 md:grid-cols-2 gap-4">{category.items.map((item, itemIndex) => (</div>
+                        <div key={itemIndex} className="flex items-center space-x-3"></div>
+                          <span className="text-cyan-400 text-xl">✓</span><span className="text-gray-300">{item}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         </div>
                       ))}
                     </div>
@@ -283,98 +359,137 @@ export default function AIContentWriterPage() {
             )}
 
             {activeTab === 'pricing' && (
+<<<<<<< HEAD
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                    Simple, Transparent Pricing
+<<<<<<< HEAD
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Simple, Transparent Pricing<p className="text-lg text-gray-300 max-w-3xl mx-auto">Choose the plan that fits your content needs. All plans include a 14-day free trial.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div
+=======
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">,
+                    Simple, Transparent Pricing;
                   </h2>
                   <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                     Choose the plan that fits your content needs. All plans include a 14-day free trial.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
                   {pricingPlans.map((plan, index) => (
-                    <div
+                    <div;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+              <div className="space-y-16"></div>
+                <div className="text-center"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Simple, Transparent Pricing</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Choose the plan that fits your content needs. All plans include a 14-day free trial.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</div><div
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       key={index}
-                      className={`cyber-card hologram-card p-8 ${
-                        plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
+                      className={`cyber-card hologram-card p-8 ${}
+                        plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''}
                       }`}
-                    >
-                      {plan.popular && (
+                    >{plan.popular && (</div>
+<<<<<<< HEAD
                         <div className="text-center mb-6">
+<<<<<<< HEAD
+=======
+                        <div className="text-center mb-6"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                          <span className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+=======
                           <span className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">
-                            Most Popular
+                            Most Popular;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                           </span>
                         </div>
                       )}
 
-                      <div className="text-center mb-8">
-                        <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                        <p className="text-gray-300 mb-4">{plan.description}</p>
-                        <div className="text-4xl font-bold text-cyan-400 mb-2">
-                          ${plan.price}
-                          <span className="text-lg text-gray-400">/{plan.period}</span>
-                        </div>
-                      </div>
-
-                      <ul className="space-y-4 mb-8">
-                        {plan.features.map((feature, featureIndex) => (
+                      <div className="text-center mb-8"></div>
+                        <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-300 mb-4">{plan.description}</p>
+                        <div className="text-4xl font-bold text-cyan-400 mb-2">${plan.price}</div><span className="text-lg text-gray-400">/{plan.period}</span><ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                           <li key={featureIndex} className="flex items-center space-x-3">
-                            <span className="text-cyan-400">✓</span>
-                            <span className="text-gray-300">{feature}</span>
+                            <span className="text-cyan-400">✓</span><span className="text-gray-300">{feature}</span>
                           </li>
                         ))}
-                      </ul>
-
+<<<<<<< HEAD
                       <a
                         href={`/contact?service=ai-content-writer&plan=${plan.name.toLowerCase()}`}
                         className="w-full bg-cyan-400 text-slate-900 py-3 px-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300 text-center block"
-                      >
-                        Start Free Trial
+                      >Start Free Trial</a>
                       </a>
                     </div>
+=======
+                      </ul>
+
+                      <a;
+                        href={`/contact?service=ai-content-writer&plan=${plan.name.toLowerCase()}`}
+                        className="w-full bg-cyan-400 text-slate-900 py-3 px-4 rounded-lg font-semibold hover: bg-cyan-300 transition-all duration-300 text-center block"
+                      >
+                        Start Free Trial;
+                      </a>,
+                    </div>,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   ))}
                 </div>
 
+<<<<<<< HEAD
                 <div className="text-center">
-                  <p className="text-gray-300 mb-4">
-                    Need a custom plan? We offer enterprise solutions tailored to your specific needs.
-                  </p>
-                  <a
+<<<<<<< HEAD
+                  <p className="text-gray-300 mb-4">Need a custom plan? We offer enterprise solutions tailored to your specific needs.<a
+=======
+                <div className="text-center"></div>
+                  <p className="text-gray-300 mb-4">Need a custom plan? We offer enterprise solutions tailored to your specific needs.</p><a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     href="/contact?service=ai-content-writer&plan=enterprise"
                     className="text-cyan-400 hover:text-cyan-300 font-semibold"
-                  >
-                    Contact Sales →
+                  >Contact Sales →</a>
                   </a>
                 </div>
               </div>
+=======
+                  <p className="text-gray-300 mb-4">
+                    Need a custom plan? We offer enterprise solutions tailored to your specific needs.
+                  </p>
+                  <a;
+                    href="/contact?service=ai-content-writer&plan=enterprise"
+                    className="text-cyan-400 hover: text-cyan-300 font-semibold"
+                  >,
+                    Contact Sales →,
+                  </a>,
+                </div>,
+              </div>,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             )}
 
             {activeTab === 'testimonials' && (
+<<<<<<< HEAD
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                    What Our Customers Say
+<<<<<<< HEAD
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">What Our Customers Say<p className="text-lg text-gray-300 max-w-3xl mx-auto">Join thousands of satisfied customers who have transformed their content strategy.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+=======
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
+                    What Our Customers Say;
                   </h2>
                   <p className="text-lg text-gray-300 max-w-3xl mx-auto">
                     Join thousands of satisfied customers who have transformed their content strategy.
                   </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                </div>,
+,
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
                   {testimonials.map((testimonial, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     <div key={index} className="cyber-card hologram-card p-6">
-                      <div className="flex mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <span key={i} className="text-yellow-400 text-xl">★</span>
+                      <div className="flex mb-4">{[...Array(testimonial.rating)].map((_, i) => (<span key={i} className="text-yellow-400 text-xl">★</span>
+=======
+              <div className="space-y-16"></div>
+                <div className="text-center"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">What Our Customers Say</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Join thousands of satisfied customers who have transformed their content strategy.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
+                    <div key={index} className="cyber-card hologram-card p-6"></div>
+                      <div className="flex mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><span key={i} className="text-yellow-400 text-xl">★</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         ))}
-                      </div>
                       <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                      <div>
-                        <div className="font-semibold text-white">{testimonial.name}</div>
-                        <div className="text-sm text-gray-400">{testimonial.role}</div>
-                        <div className="text-sm text-cyan-400">{testimonial.company}</div>
+                      <div></div>
+                        <div className="font-semibold text-white">{testimonial.name}</div><div className="text-sm text-gray-400">{testimonial.role}</div><div className="text-sm text-cyan-400">{testimonial.company}</div>
                       </div>
                     </div>
                   ))}
@@ -383,16 +498,27 @@ export default function AIContentWriterPage() {
             )}
 
             {activeTab === 'faq' && (
+<<<<<<< HEAD
               <div className="space-y-16">
                 <div className="text-center">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                    Frequently Asked Questions
+<<<<<<< HEAD
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Frequently Asked Questions<div className="space-y-6">{[
+=======
+              <div className="space-y-16"></div>
+                <div className="text-center"></div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Frequently Asked Questions</h2><div className="space-y-6">{[
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                    {
+=======
+                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
+                    Frequently Asked Questions;
                   </h2>
                 </div>
 
                 <div className="space-y-6">
-                  {[
-                    {
+                  {[,
+                    {,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       question: "How does the AI content generation work?",
                       answer: "Our platform uses GPT-4 technology combined with advanced prompts and your brand guidelines to generate high-quality content. You simply provide a topic, tone, and any specific requirements, and our AI creates content that matches your brand voice."
                     },
@@ -415,11 +541,10 @@ export default function AIContentWriterPage() {
                     {
                       question: "Can I collaborate with my team?",
                       answer: "Yes! The Professional and Enterprise plans include team collaboration features, approval workflows, and shared brand guidelines. You can assign roles and permissions to team members."
-                    }
-                  ].map((faq, index) => (
-                    <div key={index} className="cyber-card hologram-card p-6">
-                      <h3 className="text-xl font-bold text-white mb-4">{faq.question}</h3>
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    }</div>
+                  ].map((faq, index) => (</div>
+                    <div key={index} className="cyber-card hologram-card p-6"></div>
+                      <h3 className="text-xl font-bold text-white mb-4">{faq.question}</h3><p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </div>
                   ))}
                 </div>
@@ -430,25 +555,44 @@ export default function AIContentWriterPage() {
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">
+<<<<<<< HEAD
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+<<<<<<< HEAD
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Strategy?<p className="text-lg text-gray-300 mb-8">Start your free trial today and experience the power of AI-driven content creation.</p>
+=======
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Content Strategy?
             </h2>
             <p className="text-lg text-gray-300 mb-8">
               Start your free trial today and experience the power of AI-driven content creation.
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a;
+=======
+          <div className="max-w-4xl mx-auto text-center"></section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Content Strategy?</h2><p className="text-lg text-gray-300 mb-8">Start your free trial today and experience the power of AI-driven content creation.</p>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="tel:+13024640950"
                 className="bg-cyan-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-300 transition-all duration-300"
+<<<<<<< HEAD
+              >Call: (302) 464-0950<a
+                href="/contact?service=ai-content-writer"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >Get Started Now</a>
+=======
               >
-                Call: (302) 464-0950
+                Call: (302) 464-0950;
               </a>
-              <a
+              <a;
                 href="/contact?service=ai-content-writer"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Get Started Now
+                Get Started Now;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
               </a>
             </div>
           </div>
@@ -456,7 +600,7 @@ export default function AIContentWriterPage() {
       </main>
 
       <Footer />
-      <ScrollToTop />
-    </div>
+      <ScrollToTop />,
+    </div>,
   );
 }

@@ -1,4 +1,4 @@
-// Performance optimization utilities
+// Performance optimization utilities;
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();
@@ -10,11 +10,11 @@ export class PerformanceOptimizer {
     return PerformanceOptimizer.instance;
   }
 
-  // Lazy load images with intersection observer
+  // Lazy load images with intersection observer;
   lazyLoadImages(): void {
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
+      const imageObserver = new IntersectionObserver(entries => {)
+        entries.forEach(entry => {)
           if (entry.isIntersecting) {
             const _img = entry.target as HTMLImageElement;
             if (img.dataset['src']) {
@@ -26,17 +26,17 @@ export class PerformanceOptimizer {
         });
       });
 
-      document.querySelectorAll('img[data-src]').forEach(img => {
+      document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img);
       });
     }
   }
 
-  // Preload critical resources
+  // Preload critical resources;
   preloadCriticalResources(): void {
     const _criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg'];
 
-    criticalResources.forEach(resource => {
+    criticalResources.forEach(resource => {)
       const _link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -48,12 +48,12 @@ export class PerformanceOptimizer {
     });
   }
 
-  // Optimize scroll performance
+  // Optimize scroll performance;
   optimizeScroll(): void {
     let _ticking = false;
 
     const updateScrollPosition = () => {
-      // Throttled scroll handling
+      // Throttled scroll handling;
       ticking = false;
     };
 
@@ -67,13 +67,13 @@ export class PerformanceOptimizer {
     window.addEventListener('scroll', requestTick, { passive: true });
   }
 
-  // Measure performance metrics
+  // Measure performance metrics;
   measurePerformance(name: string, fn: () => void): void {
     //     const start = performance.now();
     fn();
     //     const end = performance.now();
     const _duration = end - start;
-
+,
     this.metrics.set(name, duration);
 
     if (process.env['NODE_ENV'] === 'development') {
@@ -81,12 +81,12 @@ export class PerformanceOptimizer {
     }
   }
 
-  // Get performance metrics
+  // Get performance metrics;
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
   }
 
-  // Add critical resource hints method
+  // Add critical resource hints method;
   addCriticalResourceHints(): void {
     if (typeof document === 'undefined') return;
 
@@ -101,7 +101,7 @@ export class PerformanceOptimizer {
       },
     ];
 
-    hints.forEach(hint => {
+    hints.forEach(hint => {)
       const _link = document.createElement('link');
       link.rel = hint.rel;
       link.href = hint.href;
@@ -112,13 +112,13 @@ export class PerformanceOptimizer {
     });
   }
 
-  // Add Web Vitals reporting method
-  reportWebVitals(metrics: unknown): void {
-    if (process.env['NODE_ENV'] === 'development') {
+  // Add Web Vitals reporting method;
+  reportWebVitals(metrics: unknown): void {,
+    if (process.env['NODE_ENV'] === 'development') {,
       //       }
   }
 
-  // Add page load measurement method
+  // Add page load measurement method;
   measurePageLoad(): unknown {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
@@ -126,12 +126,12 @@ export class PerformanceOptimizer {
 
     const _timing = window.performance.timing;
     return {
-      loadTime: timing.loadEventEnd - timing.navigationStart,
-      interactiveTime: timing.domInteractive - timing.navigationStart,
+      loadTime: timing.loadEventEnd - timing.navigationStart;
+      interactiveTime: timing.domInteractive - timing.navigationStart;
     };
   }
 
-  // Initialize all optimizations
+  // Initialize all optimizations;
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
     this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
@@ -139,5 +139,5 @@ export class PerformanceOptimizer {
   }
 }
 
-// Export singleton instance
+// Export singleton instance;
 export const performanceOptimizer = PerformanceOptimizer.getInstance();

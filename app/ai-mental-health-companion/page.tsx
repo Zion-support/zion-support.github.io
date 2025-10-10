@@ -668,7 +668,7 @@ import {
   Femto as FemtoIcon,
   Atto as AttoIcon,
   Zepto as ZeptoIcon,
-  Yocto as YoctoIcon
+  Yocto as YoctoIcon;
 } from 'lucide-react';
 
 interface MentalHealthCompanionProps {
@@ -698,62 +698,62 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     {
       title: "24/7 AI Companion",
       description: "Always available mental health support powered by advanced AI",
-      icon: Heart,
-      price: "Included"
+      icon: Heart;
+      price: "Included",
     },
     {
       title: "Mood Tracking",
       description: "Track your daily mood and emotional patterns over time",
-      icon: BarChart3,
-      price: "Included"
+      icon: BarChart3;
+      price: "Included",
     },
     {
       title: "Crisis Support",
       description: "Immediate support and resources during mental health crises",
-      icon: Shield,
-      price: "Included"
+      icon: Shield;
+      price: "Included",
     },
     {
       title: "Therapy Sessions",
       description: "AI-powered therapy sessions with evidence-based techniques",
-      icon: MessageCircle,
-      price: "Included"
+      icon: MessageCircle;
+      price: "Included",
     },
     {
       title: "Progress Monitoring",
       description: "Track your mental health journey and celebrate milestones",
-      icon: Target,
-      price: "Included"
+      icon: Target;
+      price: "Included",
     },
     {
       title: "Professional Referrals",
       description: "Connect with licensed mental health professionals when needed",
-      icon: Users,
-      price: "Pro Feature"
+      icon: Users;
+      price: "Pro Feature",
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Basic",
+      name: "Basic"
       price: "$19",
       period: "/month",
       description: "Essential mental health support for individuals",
-      features: [
+      features: [,
         "AI companion chat",
         "Mood tracking",
         "Basic therapy sessions",
         "Crisis support",
         "Email support"
       ],
-      popular: false
+      popular: false;
     },
     {
-      name: "Professional",
+      name: "Professional"
       price: "$49",
       period: "/month",
       description: "Comprehensive mental health support with advanced features",
-      features: [
+      features: [,
         "Advanced AI companion",
         "Detailed mood analytics",
         "Full therapy sessions",
@@ -762,14 +762,14 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
         "Professional referrals",
         "Priority support"
       ],
-      popular: true
+      popular: true;
     },
     {
-      name: "Family",
+      name: "Family"
       price: "$99",
       period: "/month",
       description: "Mental health support for the whole family",
-      features: [
+      features: [,
         "Up to 5 family members",
         "Family mood tracking",
         "Group therapy sessions",
@@ -779,17 +779,17 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
         "24/7 support",
         "Custom family plans"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
   const handleMoodSelection = (moodId: string) => {
     setCurrentMood(moodId);
     const newMoodEntry = {
-      id: Date.now(),
-      mood: moodId,
+      id: Date.now()
+      mood: moodId;
       timestamp: new Date(),
-      note: ''
+      note: '',
     };
     setMoodHistory(prev => [...prev, newMoodEntry]);
   };
@@ -800,21 +800,21 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     const userMessage = {
       id: Date.now(),
       type: 'user',
-      content: userInput,
-      timestamp: new Date()
+      content: userInput;
+      timestamp: new Date(),
     };
 
     setChatMessages(prev => [...prev, userMessage]);
     setUserInput('');
     setIsTyping(true);
 
-    // Simulate AI response
+    // Simulate AI response;
     setTimeout(() => {
       const aiResponse = {
-        id: Date.now() + 1,
+        id: Date.now() + 1;
         type: 'ai',
         content: "I understand how you're feeling. It's important to acknowledge your emotions. Would you like to talk about what's on your mind?",
-        timestamp: new Date()
+        timestamp: new Date(),
       };
       setChatMessages(prev => [...prev, aiResponse]);
       setIsTyping(false);
@@ -826,45 +826,61 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       id: Date.now(),
       type: 'system',
       content: "Crisis support activated. Please know that you're not alone. If you're having thoughts of self-harm, please contact the National Suicide Prevention Lifeline at 988 or text HOME to 741741.",
-      timestamp: new Date()
+      timestamp: new Date(),
     };
     setChatMessages(prev => [...prev, crisisMessage]);
   };
 
+<<<<<<< HEAD
+  return(<div className={`min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 ${className}`}>
+=======
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 ${className}`}>
+    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 ${className}`}></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helmet>
         <title>AI Mental Health Companion Pro - 24/7 Mental Health Support | Zion Tech Group</title>
         <meta name="description" content="AI-powered mental health companion with mood tracking, therapy sessions, and crisis support. Get 24/7 mental health support with our advanced AI technology." />
-        <meta name="keywords" content="mental health, AI therapy, mood tracking, mental health support, crisis support, therapy sessions, emotional wellness" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-mental-health-companion" />
-      </Helmet>
-
+        <meta name="keywords" content="mental health, AI therapy, mood tracking, mental health support, crisis support, therapy sessions, emotional wellness" />)
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-mental-health-companion" />,)
+      </Helmet>,)
+),
       {/* Hero Section */}
+<<<<<<< HEAD
       <div className="relative py-20 overflow-hidden">
+<<<<<<< HEAD
+=======
+      <div className="relative py-20 overflow-hidden"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+=======
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http: //www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-pink-500/10 border border-pink-400/20 rounded-full px-6 py-3 mb-8">
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="text-center mb-16"></div>
+            <div className="inline-flex items-center bg-pink-500/10 border border-pink-400/20 rounded-full px-6 py-3 mb-8"></div>
               <Heart className="w-5 h-5 text-pink-400 mr-2" />
               <span className="text-pink-300 font-medium">AI Mental Health Companion Pro</span>
             </div>
 
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">
-              24/7 Mental Health Support
+              24/7 Mental Health Support;
             </h1>
 
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Your AI-Powered Mental Health Companion
-            </p>
-
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Your AI-Powered Mental Health Companion;
+            </p>,
+,
+            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">,
               Get compassionate, professional mental health support anytime, anywhere.
               Track your mood, engage in therapy sessions, and access crisis support with our advanced AI technology.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+<<<<<<< HEAD
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/25">
                 <span className="relative z-10">Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -873,37 +889,60 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
 
               <button className="group inline-flex items-center px-8 py-4 border-2 border-pink-400 text-pink-400 font-semibold rounded-xl hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo
-              </button>
-            </div>
-
+                Watch Demo;
+              </button>,
+            </div>,
+,
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
+=======
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"></div>
+              <div className="text-center"></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>
                 <div className="text-gray-400">Support Available</div>
               </div>
-              <div className="text-center">
+              <div className="text-center"></div>
                 <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
                 <div className="text-gray-400">User Satisfaction</div>
               </div>
-              <div className="text-center">
+              <div className="text-center"></div>
                 <div className="text-3xl font-bold text-cyan-400 mb-2">10K+</div>
                 <div className="text-gray-400">Lives Improved</div>
               </div>
-              <div className="text-center">
+              <div className="text-center"></div>
                 <div className="text-3xl font-bold text-yellow-400 mb-2">HIPAA</div>
                 <div className="text-gray-400">Compliant</div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+            </div>,
+          </div>,
+        </div>,
+      </div>,
+,
       {/* Mental Health Companion Interface */}
+<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Your Mental Health Companion;
+            </h2>,
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">,
+              Track your mood, chat with your AI companion, and access professional support;
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">,
+              {/* Mood Tracking Section */}
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+=======
+      <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Your Mental Health Companion
             </h2>
@@ -912,25 +951,31 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto"></div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Mood Tracking Section */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+              {/* Mood Tracking Section */}</div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <Heart className="w-8 h-8 text-pink-400 mr-3" />
                   How are you feeling today?
                 </h3>
 
-                <div className="space-y-6">
+                <div className="space-y-6"></div>
                   <div className="grid grid-cols-2 gap-4">
+<<<<<<< HEAD
                     {moods.map((mood) => (
+                      <button;
+=======
+                    {moods.map((mood) => (</div>
                       <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         key={mood.id}
                         onClick={() => handleMoodSelection(mood.id)}
                         className={`p-4 rounded-lg border-2 transition-all duration-300 ${
-                          currentMood === mood.id
-                            ? 'border-pink-400 bg-pink-400/10'
-                            : 'border-white/20 hover:border-pink-400/50'
+                          currentMood === mood.id;
+                            ? 'border-pink-400 bg-pink-400/10'}
+                            : 'border-white/20 hover:border-pink-400/50'}
                         }`}
                       >
                         <mood.icon className={`w-8 h-8 mx-auto mb-2 ${mood.color}`} />
@@ -939,11 +984,11 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                     ))}
                   </div>
 
-                  <div className="bg-white/5 rounded-lg p-4">
+                  <div className="bg-white/5 rounded-lg p-4"></div>
                     <h4 className="text-white font-semibold mb-2">Mood History</h4>
                     <div className="space-y-2">
-                      {moodHistory.slice(-5).map((entry) => (
-                        <div key={entry.id} className="flex items-center justify-between text-sm">
+                      {moodHistory.slice(-5).map((entry) => (</div>
+                        <div key={entry.id} className="flex items-center justify-between text-sm"></div>
                           <span className="text-gray-300">
                             {entry.timestamp.toLocaleDateString()}
                           </span>
@@ -958,35 +1003,40 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
               </div>
 
               {/* Chat Interface */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center"></h3>
                   <MessageCircle className="w-8 h-8 text-pink-400 mr-3" />
-                  Chat with Your AI Companion
+                  Chat with Your AI Companion;
                 </h3>
 
                 <div className="space-y-4">
-                  {/* Chat Messages */}
+                  {/* Chat Messages */}</div>
                   <div className="h-64 overflow-y-auto space-y-4 mb-4">
-                    {chatMessages.length === 0 ? (
-                      <div className="text-center py-8">
+                    {chatMessages.length === 0 ? (</div>
+                      <div className="text-center py-8"></div>
                         <MessageCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                         <p className="text-gray-400">Start a conversation with your AI companion</p>
                       </div>
                     ) : (
                       chatMessages.map((message) => (
-                        <div
+                        <div;
                           key={message.id}
                           className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
+<<<<<<< HEAD
                         >
+                          <div;
+=======
+                        ></div>
                           <div
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                             className={`max-w-xs px-4 py-2 rounded-lg ${
                               message.type === 'user'
                                 ? 'bg-pink-500 text-white'
                                 : message.type === 'system'
-                                ? 'bg-red-500 text-white'
-                                : 'bg-white/10 text-gray-300'
+                                ? 'bg-red-500 text-white'}
+                                : 'bg-white/10 text-gray-300'}
                             }`}
-                          >
+                          ></div>
                             <p className="text-sm">{message.content}</p>
                             <p className="text-xs opacity-70 mt-1">
                               {message.timestamp.toLocaleTimeString()}
@@ -996,9 +1046,9 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                       ))
                     )}
                     {isTyping && (
-                      <div className="flex justify-start">
-                        <div className="bg-white/10 text-gray-300 px-4 py-2 rounded-lg">
-                          <div className="flex space-x-1">
+                      <div className="flex justify-start"></div>
+                        <div className="bg-white/10 text-gray-300 px-4 py-2 rounded-lg"></div>
+                          <div className="flex space-x-1"></div>
                             <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                             <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
                             <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
@@ -1009,59 +1059,83 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                   </div>
 
                   {/* Message Input */}
+<<<<<<< HEAD
                   <div className="flex space-x-2">
+                    <input;
+=======
+                  <div className="flex space-x-2"></div>
                     <input
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       type="text"
                       value={userInput}
                       onChange={(e) => setUserInput(e.target.value)}
                       onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                       placeholder="Type your message..."
-                      className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-400/20"
-                    />
-                    <button
+                      className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-400/20",
+                    />,
+                    <button;
                       onClick={handleSendMessage}
                       disabled={!userInput.trim()}
-                      className="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="bg-pink-500 hover: bg-pink-600 text-white px-4 py-2 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Send
-                    </button>
-                  </div>
-
+                      Send;
+                    </button>,
+                  </div>,
+,
                   {/* Crisis Support Button */}
-                  <button
+                  <button;
                     onClick={handleCrisisSupport}
-                    className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
+                    className="w-full bg-red-500 hover: bg-red-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
                   >
-                    Crisis Support
+                    Crisis Support;
                   </button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
+        </div>,
+      </div>,
+,
       {/* Features Section */}
+<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Mental Health Features;
+=======
+      <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Mental Health Features
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive mental health support powered by advanced AI technology
+              Comprehensive mental health support powered by advanced AI technology;
             </p>
+<<<<<<< HEAD
+          </div>,
+,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">,
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover: bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105">,
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
+                  <feature.icon className="w-6 h-6 text-white" />,
+                </div>,
+=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+            {features.map((feature, index) => (</div>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-400 mb-4">{feature.description}</p>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between"></div>
                   <span className="text-pink-400 font-semibold">{feature.price}</span>
                   <CheckCircle className="w-5 h-5 text-green-400" />
                 </div>
@@ -1072,32 +1146,47 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       </div>
 
       {/* Pricing Section */}
+<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Mental Health Plans;
+=======
+      <div className="py-20 bg-gradient-to-br from-slate-800 via-pink-900 to-slate-800"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Mental Health Plans
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the mental health support plan that's right for you
+              Choose the mental health support plan that's right for you;
             </p>
+<<<<<<< HEAD
+          </div>,
+,
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
+            {pricingPlans.map((plan, index) => (
+=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-pink-400/50 ring-2 ring-pink-400/30' : 'border-white/10'}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                {plan.popular && (</div>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-gradient-to-r from-pink-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
 
-                <div className="text-center mb-8">
+                <div className="text-center mb-8"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center"></div>
                     <span className="text-5xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
@@ -1113,9 +1202,9 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                 </ul>
 
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 transform hover:scale-105'
-                    : 'bg-white/10 text-white hover:bg-white/20'
+                  plan.popular;
+                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover: from-pink-600 hover:to-purple-700 transform hover:scale-105',}
+                    : 'bg-white/10 text-white hover:bg-white/20'}
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
                 </button>
@@ -1126,72 +1215,87 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       </div>
 
       {/* Contact Section */}
+<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Start Your Mental Health Journey;
+=======
+      <div className="py-20 bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Start Your Mental Health Journey
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Contact our mental health team to learn more about our AI companion
+              Contact our mental health team to learn more about our AI companion;
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
+                <div className="space-y-4"></div>
+                  <div className="flex items-center"></div>
                     <Phone className="w-5 h-5 text-pink-400 mr-3" />
                     <a href="tel:+13024640950" className="text-gray-300 hover:text-pink-400 transition-colors">
-                      +1 (302) 464-0950
+                      +1 (302) 464-0950;
                     </a>
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center"></div>
                     <Mail className="w-5 h-5 text-pink-400 mr-3" />
                     <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-pink-400 transition-colors">
-                      kleber@ziontechgroup.com
+                      kleber@ziontechgroup.com;
                     </a>
                   </div>
+<<<<<<< HEAD
                   <div className="flex items-start">
+                    <MapPin className="w-5 h-5 text-pink-400 mr-3 mt-1" />,
+                    <div className="text-gray-300">,
+                      <div>364 E Main St STE 1008</div>,
+=======
+                  <div className="flex items-start"></div>
                     <MapPin className="w-5 h-5 text-pink-400 mr-3 mt-1" />
-                    <div className="text-gray-300">
+                    <div className="text-gray-300"></div>
                       <div>364 E Main St STE 1008</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                       <div>Middletown, DE 19709</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6">Get Started</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
+                <div className="space-y-4"></div>
+                  <div className="flex items-center"></div>
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <span className="text-gray-300">Free 14-day trial</span>
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center"></div>
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <span className="text-gray-300">HIPAA compliant</span>
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center"></div>
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <span className="text-gray-300">24/7 support</span>
                   </div>
-                  <div className="flex items-center">
+                  <div className="flex items-center"></div>
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <span className="text-gray-300">Crisis support</span>
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
+                <button className="w-full mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                  Start Free Trial;
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div>,
+    </div>,
   );
 }

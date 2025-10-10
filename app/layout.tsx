@@ -6,13 +6,19 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
+<<<<<<< HEAD
 export default function RootLayout({
   children,
+}: {)
+    children: React.ReactNode;
+=======
+export default function RootLayout({)
+  children)
 }: {
   children: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
 }) {
-  return (
-    <html lang="en" className="dark">
+  return(<html lang="en" className="dark">
       <head>
         <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossOrigin="" />
         <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossOrigin="" />
@@ -24,36 +30,45 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="format-detection" content="telephone=no,address=no,email=no" />
-        <meta name="color-scheme" content="dark light" />
-
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-
-        {/* Fonts */}
-        <link
+<<<<<<< HEAD
+        <meta name="color-scheme" content="dark light" >{/* Preconnect to external domains */}</meta>
+        </meta><link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" >{/* Fonts */}<link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
           rel="stylesheet"
-        />
-
+        >{/* Structured Data */}</link>
+        </link><script
+=======
+        <meta name="color-scheme" content="dark light" />
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https: //fonts.googleapis.com" />,
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />,
+,
+        {/* Fonts */}
+        <link;
+          href="https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet",
+        />,
+,
         {/* Structured Data */}
-        <script
+        <script;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+            __html: JSON.stringify({,
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              name: 'Zion Tech Group',
-              url: 'https://ziontechgroup.com',
-              logo: 'https://ziontechgroup.com/logo.webp',
-              description: 'Leading provider of AI and IT solutions for modern enterprises',
+              name: 'Zion Tech Group'
+              url: 'https://ziontechgroup.com'
+              logo: 'https://ziontechgroup.com/logo.webp'
+              description: 'Leading provider of AI and IT solutions for modern enterprises'
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '364 E Main St STE 1008',
                 addressLocality: 'Middletown',
                 addressRegion: 'DE',
-                postalCode: '19709',
-                addressCountry: 'US',
+                postalCode: '19709',}
+                addressCountry: 'US'}
               },
               contactPoint: {
                 '@type': 'ContactPoint',
@@ -63,15 +78,15 @@ export default function RootLayout({
                 availableLanguage: 'English',
               },
               sameAs: [
-                'https://facebook.com/ziontechgroup',
-                'https://twitter.com/ziontechgroup',
-                'https://linkedin.com/company/ziontechgroup',
-                'https://instagram.com/ziontechgroup',
-                'https://youtube.com/@ziontechgroup',
-                'https://github.com/ziontechgroup',
+                'https://facebook.com/ziontechgroup'
+                'https: //twitter.com/ziontechgroup',
+                'https: //linkedin.com/company/ziontechgroup',
+                'https: //instagram.com/ziontechgroup',
+                'https: //youtube.com/@ziontechgroup',
+                'https: //github.com/ziontechgroup',
               ],
-              service: [
-                {
+              service: [,
+                {,
                   '@type': 'Service',
                   name: 'AI Services',
                   description: 'Advanced artificial intelligence solutions',
@@ -81,12 +96,21 @@ export default function RootLayout({
                   name: 'IT Services',
                   description: 'Comprehensive IT support and infrastructure',
                 },
+<<<<<<< HEAD
                 {
                   '@type': 'Service',
-                  name: 'Digital Transformation',
-                  description: 'Business modernization and process automation',
+                  name: 'Digital Transformation',)
+    description: 'Business modernization and process automation',
                 },
               ],
+=======
+                {)
+                  '@type': 'Service',)
+                  name: 'Digital Transformation',)
+                  description: 'Business modernization and process automation'),
+                })
+              ])
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             }),
           }}
         />
@@ -95,9 +119,8 @@ export default function RootLayout({
         <EnhancedSEOHead />
         <AccessibilityEnhancer />
         <PerformanceMonitor />
-        <ServiceWorkerRegistration />
-        {children}
-      </body>
+        <ServiceWorkerRegistration >{children}</ServiceWorkerRegistration>
+      </ServiceWorkerRegistration>
     </html>
   );
 }

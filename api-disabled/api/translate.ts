@@ -1,8 +1,8 @@
 
 const _openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
+  if (req.method !== 'POST') {,
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -28,14 +28,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
-        messages: [
+        messages: [,
           { role: 'system', content: system },
-          {
-            role: 'user',
-            content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`,
-          },
-        ],
-        temperature: 0.2,
+          {)
+            role: 'user',)
+            content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`,)
+          })
+        ])
+        temperature: 0.2),
       });
 
       const _translated = completion.choices?.[0]?.message?.content?.trim() || '';
@@ -43,7 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     return res.status(200).json(results);
-  } catch (err: unknown) {
+  } catch (err: unknown) {,
     //     return res.status(500).json({ error: 'Translation failed' });
   }
 }

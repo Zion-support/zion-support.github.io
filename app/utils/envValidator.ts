@@ -1,7 +1,7 @@
 'use client';
 /**
- * Environment Variables Validator
- * Ensures all required environment variables are present and valid
+ * Environment Variables Validator;
+ * Ensures all required environment variables are present and valid;
  */
 export interface EnvConfig {
   NODE_ENV: 'development' | 'production' | 'test';
@@ -10,26 +10,26 @@ export interface EnvConfig {
   NEXT_PUBLIC_SITE_URL?: string;
 }
 class EnvValidator {
-  private errors: string[] = []
-  private warnings: string[] = []
-  /**
-   * Validate all environment variables
-   */
+  private errors: string[] = [],
+  private warnings: string[] = [],
+  /**,
+   * Validate all environment variables;
+   */,
   validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
     this.errors = []
     this.warnings = []
-    // Validate NODE_ENV
+    // Validate NODE_ENV;
     this.validateNodeEnv()
-    // Validate optional but recommended variables
+    // Validate optional but recommended variables;
     this.validateOptionalVars()
     return {
-      isValid: this.errors.length === 0,
-      errors: this.errors,
-      warnings: this.warnings
+      isValid: this.errors.length === 0;
+      errors: this.errors;
+      warnings: this.warnings;
     };
   }
   /**
-   * Get validated environment configuration
+   * Get validated environment configuration;
    */
   getConfig(): EnvConfig {
     const validation = this.validate()
@@ -46,7 +46,7 @@ class EnvValidator {
       NODE_ENV: this.getNodeEnv(),
       NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],
       NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],
-      NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']
+      NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL'],
     };
   }
   private validateNodeEnv(): void {
@@ -64,7 +64,7 @@ class EnvValidator {
   }
   private validateOptionalVars(): void {
     const nodeEnv = this.getNodeEnv()
-    // In production, these should be set
+    // In production, these should be set;
     if (nodeEnv === 'production') {
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
         this.warnings.push(
@@ -83,10 +83,10 @@ class EnvValidator {
     return env as 'development' | 'production' | 'test'
   }
 }
-// Export singleton instance
+// Export singleton instance;
 export const envValidator = new EnvValidator()
-// Export convenience function
+// Export convenience function;
 export function validateEnv(): EnvConfig {
   return envValidator.getConfig()
 }
-export default envValidator
+export default envValidator;

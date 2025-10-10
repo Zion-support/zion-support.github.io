@@ -3,8 +3,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
+  src: string;,
+    alt: string;
   width?: number;
   height?: number;
   className?: string;
@@ -16,8 +16,13 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+<<<<<<< HEAD
+const OptimizedImage: React.FC<OptimizedImageProps>= ({
   src,
+=======
+const OptimizedImage: React.FC<OptimizedImageProps> = ({,
+  src;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
   alt,
   width,
   height,
@@ -27,11 +32,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 75,
   sizes = '100vw',
   onLoad,
-  onError
+  onError;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(priority);</OptimizedImageProps>
+  const [hasError, setHasError] = useState(false);</OptimizedImageProps>
   const imgRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
@@ -45,8 +50,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px'
+        threshold: 0.1;
+        rootMargin: '50px',
       }
     );
 
@@ -70,7 +75,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const generatePlaceholder = () => {
     if (placeholder) return placeholder;
     
-    // Generate a simple gradient placeholder
+    // Generate a simple gradient placeholder;
     const canvas = document.createElement('canvas');
     canvas.width = width || 400;
     canvas.height = height || 300;
@@ -87,46 +92,71 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return canvas.toDataURL();
   };
 
-  if (hasError) {
-    return (
+<<<<<<< HEAD
+  if (hasError) {</HTMLImageElement>
+    return (</HTMLImageElement>
       <div
+=======
+  if (hasError) {
+    return(<div;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
         ref={imgRef}
         className={`bg-slate-700 flex items-center justify-center ${className}`}
         style={{ width, height }}
-      >
-        <div className="text-gray-400 text-center">
-          <div className="w-8 h-8 mx-auto mb-2">
+      ></div>
+        <div className="text-gray-400 text-center"></div>
+          <div className="w-8 h-8 mx-auto mb-2"></div>
             <svg viewBox="0 0 24 24" fill="currentColor">
+<<<<<<< HEAD
               <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-            </svg>
-          </div>
-          <p className="text-xs">Failed to load</p>
+<<<<<<< HEAD
+=======
+              <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
+            <p className="text-xs">Failed to load</p>
         </div>
       </div>
+=======
+            </svg>
+          </div>
+          <p className="text-xs">Failed to load</p>)
+        </div>)
+      </div>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
     );
   }
 
-  return (
-    <div
+  return(<div;
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
+<<<<<<< HEAD
+    >{/* Placeholder */}</div>
+      {!isLoaded && (<div
+          className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 animate-pulse"
+          style={{
+=======
     >
       {/* Placeholder */}
       {!isLoaded && (
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 animate-pulse"
-          style={{
+        <div;)
+          className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 animate-pulse")
+          style={{})
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
             backgroundImage: `url(${generatePlaceholder()})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundPosition: 'center',
           }}
-        />
-      )}
+        >)}
 
+<<<<<<< HEAD
+      {/* Actual Image */}</div>
+      {isInView && (<img
+=======
       {/* Actual Image */}
       {isInView && (
-        <img
+        <img;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c796
           src={src}
           alt={alt}
           width={width}
@@ -134,25 +164,22 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           sizes={sizes}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
-          className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+          className={`transition-opacity duration-300 ${}
+            isLoaded ? 'opacity-100' : 'opacity-0'}
           }`}
           onLoad={handleLoad}
           onError={handleError}
           style={{
             width: '100%',
-            height: '100%',
-            objectFit: 'cover'
+            height: '100%',}
+            objectFit: 'cover'}
           }}
-        />
-      )}
+        >)}
 
-      {/* Loading indicator */}
-      {!isLoaded && isInView && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-6 h-6 border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin" />
-        </div>
-      )}
+      {/* Loading indicator */}</img>
+      {!isLoaded && isInView && (</img>
+        </img><div className="absolute inset-0 flex items-center justify-center"></div>
+          <div className="w-6 h-6 border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin" >)}</div>
     </div>
   );
 };

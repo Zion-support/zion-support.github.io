@@ -1,4 +1,4 @@
-:src/components/PerformanceMonitor.tsx
+:src/components/PerformanceMonitor.tsx;
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMonitorProps {
@@ -7,17 +7,17 @@ interface PerformanceMonitorProps {
   enableLongTaskMonitoring?: boolean;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  children, 
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ ,
+  children;
   enableReporting = true,
-  enableLongTaskMonitoring = true 
+  enableLongTaskMonitoring = true;
 }) => {
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [, setLongTasks] = useState<PerformanceEntry[]>([]);
 
   useEffect(() => {
-    // Initialize performance monitoring
-    // Add critical resource hints manually
+    // Initialize performance monitoring;
+    // Add critical resource hints manually;
     if (typeof document !== 'undefined') {
       const hints = [
         { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
@@ -26,7 +26,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
       ];
       
-      hints.forEach(hint => {
+      hints.forEach(hint => {)
         const _link = document.createElement('link');
         link.rel = hint.rel;
         link.href = hint.href;
@@ -37,7 +37,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       });
     }
     
-    // Measure page load performance
+    // Measure page load performance;
 //     const pageLoadMetrics = performanceOptimizer.measurePageLoad();
     if (pageLoadMetrics) {
       setMetrics(pageLoadMetrics);
@@ -46,9 +46,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     }
 
-    // Monitor long tasks if enabled
+    // Monitor long tasks if enabled;
     if (enableLongTaskMonitoring) {
-      const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {
+      const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
         setLongTasks(prev => [...prev, ...entries]);
 //         });
       
@@ -60,7 +60,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, [enableReporting, enableLongTaskMonitoring]);
 
-  // Monitor Web Vitals using Performance Observer
+  // Monitor Web Vitals using Performance Observer;
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
 
@@ -103,9 +103,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
   }, [enableReporting]);
 
-  // Development mode: Log performance metrics
-  useEffect(() => {
-    if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {
+  // Development mode: Log performance metrics;
+  useEffect(() => {,
+    if (process.env['NODE_ENV'] === 'development' && Object.keys(metrics).length > 0) {,
 //       }
   }, [metrics]);
 
@@ -119,16 +119,16 @@ interface PerformanceMonitorProps {
   onBudgetViolation?: (violations: string[]) => void;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enabled = true,
-  budget = {
-    maxBundleSize: 500, // 500KB
-    maxImageSize: 100, // 100KB
-    maxFirstLoad: 3000, // 3 seconds
-    maxInteractive: 2000 // 2 seconds
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
+  enabled = true;
+  budget = {,
+    maxBundleSize: 500, // 500KB;
+    maxImageSize: 100, // 100KB;
+    maxFirstLoad: 3000, // 3 seconds;
+    maxInteractive: 2000 // 2 seconds;
   },
   onMetricsUpdate,
-  onBudgetViolation
+  onBudgetViolation;
 }) => {
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
@@ -140,7 +140,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       onMetricsUpdate?.(newMetrics);
       
-      // Check performance budget
+      // Check performance budget;
       const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget);
       setBudgetStatus(budgetCheck);
       
@@ -153,20 +153,20 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if (!enabled) return;
 
-    // Initial metrics
+    // Initial metrics;
     updateMetrics();
 
-    // Monitor long tasks
+    // Monitor long tasks;
     const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
 //       });
 
-    // Monitor Web Vitals
-    const reportVitals = (newMetrics: WebVitalsMetrics) => {
+    // Monitor Web Vitals;
+    const reportVitals = (newMetrics: WebVitalsMetrics) => {,
       setMetrics(prev => ({ ...prev, ...newMetrics }));
       performanceOptimizer.reportWebVitals(newMetrics);
     };
 
-    // Set up performance monitoring
+    // Set up performance monitoring;
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
@@ -198,47 +198,76 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   if (!enabled) return null;
 
+<<<<<<< HEAD
+  return(<div className="performance-monitor">)
+      {/* Toggle button */})
+      <button;)
+=======
   return (
     <div className="performance-monitor">
-      {/* Toggle button */}
+      {/* Toggle button */}</div>
       <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
         onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
-        aria-label="Toggle performance monitor"
-      >
-        📊
-      </button>
-
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors"
+        aria-label="Toggle performance monitor",
+      >,
+        📊,
+      </button>,
+,
       {/* Performance panel */}
       {isVisible && (
-        <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">
-          <div className="flex justify-between items-center mb-3">
+<<<<<<< HEAD
+        <div className="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">,
+          <div className="flex justify-between items-center mb-3">,
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>,
+            <button;
+=======
+        <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto"></div>
+          <div className="flex justify-between items-center mb-3"></div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>
             <button
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               onClick={() => setIsVisible(false)}
-              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
               aria-label="Close performance monitor"
-            >
-              ✕
-            </button>
-          </div>
-
+            >,
+              ✕,
+            </button>,
+          </div>,
+,
           {/* Metrics */}
+<<<<<<< HEAD
           <div className="space-y-2 mb-4">
             <div className="text-sm">
+              <span className="font-medium text-gray-700 dark: text-gray-300">FCP:</span>,
+=======
+          <div className="space-y-2 mb-4"></div>
+            <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">FCP:</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}>
                 {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : 'N/A'}
               </span>
             </div>
+<<<<<<< HEAD
             <div className="text-sm">
+              <span className="font-medium text-gray-700 dark: text-gray-300">LCP:</span>,
+=======
+            <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">LCP:</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}>
                 {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : 'N/A'}
               </span>
             </div>
+<<<<<<< HEAD
             <div className="text-sm">
+              <span className="font-medium text-gray-700 dark: text-gray-300">TTFB:</span>,
+=======
+            <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">TTFB:</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}>
                 {metrics.TTFB ? `${Math.round(metrics.TTFB)}ms` : 'N/A'}
               </span>
@@ -246,16 +275,27 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
 
           {/* Budget Status */}
+<<<<<<< HEAD
           <div className="border-t pt-3">
             <div className="flex items-center gap-2 mb-2">
+              <span className="text-sm font-medium text-gray-700 dark: text-gray-300">Budget Status:</span>,
+=======
+          <div className="border-t pt-3"></div>
+            <div className="flex items-center gap-2 mb-2"></div>
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Budget Status:</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}>
                 {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}
               </span>
             </div>
             {budgetStatus.violations.length > 0 && (
-              <div className="text-xs text-red-600 dark:text-red-400">
+<<<<<<< HEAD
+              <div className="text-xs text-red-600 dark: text-red-400">,
                 {budgetStatus.violations.map((violation, index) => (
+=======
+              <div className="text-xs text-red-600 dark:text-red-400">
+                {budgetStatus.violations.map((violation, index) => (</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <div key={index}>• {violation}</div>
                 ))}
               </div>
@@ -263,16 +303,29 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
 
           {/* Connection Quality */}
+<<<<<<< HEAD
           <div className="border-t pt-3 mt-3">
             <div className="text-sm">
+              <span className="font-medium text-gray-700 dark: text-gray-300">Connection:</span>,
+              <span className="ml-2 text-blue-600">,
+                {performanceOptimizer.getConnectionQuality().toUpperCase()}
+              </span>
+            </div>
+            <div className="text-sm">
+              <span className="font-medium text-gray-700 dark: text-gray-300">WebP Support:</span>,
+              <span className="ml-2 text-blue-600">,
+=======
+          <div className="border-t pt-3 mt-3"></div>
+            <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">Connection:</span>
               <span className="ml-2 text-blue-600">
                 {performanceOptimizer.getConnectionQuality().toUpperCase()}
               </span>
             </div>
-            <div className="text-sm">
+            <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">WebP Support:</span>
               <span className="ml-2 text-blue-600">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 {performanceOptimizer.shouldUseWebP() ? 'YES' : 'NO'}
               </span>
             </div>
