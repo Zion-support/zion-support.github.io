@@ -4,10 +4,7 @@ import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-<<<<<<< HEAD
 import StructuredData from './components/StructuredData';
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 // Dynamically import heavy components for better performance
