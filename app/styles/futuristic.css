@@ -114,11 +114,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   z-index: -1;
   background: 
     linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
 }
 
 /* Cyber Grid Background */

@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
 
@@ -212,3 +213,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 };
 
 export default EnhancedAccessibility;
+=======
+import React from 'react';
+
+const EnhancedAccessibility: React.FC<any> = () => null;
+export default EnhancedAccessibility;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

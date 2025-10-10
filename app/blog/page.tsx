@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -241,8 +242,29 @@ const BlogPage: React.FC = () => {
           )}
         </div>
       </section>
+=======
+import React from 'react';
+
+const BlogPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16 pt-24">
+        <div className="text-center">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+            Blog
+          </h1>
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
+          </p>
+        </div>
+      </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default BlogPage;
+=======
+export default BlogPage;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

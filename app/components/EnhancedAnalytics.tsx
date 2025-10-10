@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -97,3 +98,9 @@ export const useAnalytics = () => {
 };
 
 export default AnalyticsProvider;
+=======
+import React from 'react';
+
+const AnalyticsProvider: React.FC<any> = ({ children }) => <>{children}</>;
+export { AnalyticsProvider };
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

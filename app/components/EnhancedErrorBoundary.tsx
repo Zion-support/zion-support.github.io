@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
@@ -137,3 +138,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
 
 export default EnhancedErrorBoundary;
+=======
+import React from 'react';
+
+const EnhancedErrorBoundary: React.FC<any> = ({ children }) => <>{children}</>;
+export default EnhancedErrorBoundary;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

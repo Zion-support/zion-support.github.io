@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
@@ -208,3 +209,9 @@ const ContentCarousel: React.FC = () => {
 };
 
 export default ContentCarousel;
+=======
+import React from 'react';
+
+const ContentCarousel: React.FC = () => null;
+export default ContentCarousel;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

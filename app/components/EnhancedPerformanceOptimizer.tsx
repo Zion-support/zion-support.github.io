@@ -1,20 +1,33 @@
 'use client';
+<<<<<<< HEAD
 import React, { useEffect, useCallback, ReactNode } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
 
 interface PerformanceOptimizerProps {
   children: ReactNode;
+=======
+import React from 'react';
+
+interface PerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
 }
 
+<<<<<<< HEAD
 const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
+=======
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true
 }) => {
+<<<<<<< HEAD
   const { trackEvent } = useAnalytics();
 
   // Performance monitoring
@@ -199,3 +212,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 };
 
 export default EnhancedPerformanceOptimizer;
+=======
+  return null;
+};
+
+export default PerformanceOptimizer;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 const ServiceWorker: React.FC = () => {
@@ -24,3 +25,9 @@ const ServiceWorker: React.FC = () => {
 };
 
 export default ServiceWorker;
+=======
+import React from 'react';
+
+const ServiceWorker: React.FC = () => null;
+export default ServiceWorker;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

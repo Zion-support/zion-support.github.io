@@ -11,8 +11,17 @@ const Footer: React.FC = () => {
     { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
     { name: 'Natural Language Processing', url: '/ai-services', description: 'NLP and chatbots' },
     { name: 'Computer Vision', url: '/ai-services', description: 'Image and video analysis' },
+<<<<<<< HEAD
     { name: 'AI Analytics', url: '/ai-services', description: 'Data-driven insights' },
     { name: 'AI Automation', url: '/ai-services', description: 'Process automation' }
+=======
+    { name: 'AI Automation', url: '/ai-services', description: 'Process automation' },
+    { name: 'AI Data Analytics', url: '/ai-services', description: 'Intelligent analytics' },
+    { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI solutions' }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
   ];
 
   const itServices = [
@@ -21,6 +30,7 @@ const Footer: React.FC = () => {
     { name: 'API Development', url: '/it-services', description: 'Custom API solutions' },
     { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
     { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' },
+<<<<<<< HEAD
     { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support' }
   ];
 
@@ -31,6 +41,32 @@ const Footer: React.FC = () => {
     { name: 'Content Management', url: '/micro-saas', description: 'Content organization' },
     { name: 'Team Collaboration', url: '/micro-saas', description: 'Team productivity tools' },
     { name: 'Financial Tracking', url: '/micro-saas', description: 'Financial management' }
+=======
+    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Expert IT guidance' },
+    { name: 'Database Services', url: '/database-services', description: 'Database management' }
+  ];
+
+  const microSaasServices = [
+    { name: 'AI Content Writer', url: '/ai-content-writer', description: 'Automated content creation' },
+    { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
+    { name: 'AI Expense Tracker', url: '/ai-expense-tracker', description: 'Financial tracking' },
+    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
+    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Prospect identification' },
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Project coordination' },
+    { name: 'AI CRM Assistant', url: '/ai-crm-assistant', description: 'Customer relationship management' },
+    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Inventory optimization' }
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'Partners', url: '/partners' },
+    { name: 'Support', url: '/support' }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
   ];
 
   const resourcesLinks = [
@@ -58,6 +94,7 @@ const Footer: React.FC = () => {
               Leading provider of AI and IT solutions for modern businesses. 
               We help companies transform their operations with cutting-edge technology.
             </p>
+<<<<<<< HEAD
             <div className="space-y-2">
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2" />
@@ -71,6 +108,25 @@ const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 mr-2 mt-0.5" />
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
+=======
+            <div className="space-y-3">
+              <div className="flex items-center text-sm text-gray-300">
+                <Phone className="w-4 h-4 mr-2 text-cyan-400" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464 0950</a>
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <Mail className="w-4 h-4 mr-2 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="flex items-start text-sm text-gray-300">
+                <MapPin className="w-4 h-4 mr-2 text-cyan-400 mt-0.5" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <Clock className="w-4 h-4 mr-2 text-cyan-400" />
+                <span>Mon-Fri: 9AM-6PM EST</span>
+              </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
             </div>
           </div>
 
@@ -109,17 +165,19 @@ const Footer: React.FC = () => {
                   </Link>
                 </li>
               ))}
+<<<<<<< HEAD
+=======
             </ul>
           </div>
 
-          {/* Micro SaaS */}
+          {/* Micro SAAS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-green-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Code className="w-5 h-5 mr-2" />
-              Micro SaaS
+              Micro SAAS
             </h3>
             <ul className="space-y-2">
-              {microSaasServices.slice(0, 6).map((service, index) => (
+              {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.url}
@@ -132,6 +190,100 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Additional Links Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 pt-8 border-t border-gray-700">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.url} 
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
+            </ul>
+          </div>
+
+          {/* Micro SaaS */}
+          <div>
+<<<<<<< HEAD
+            <h3 className="text-lg font-semibold mb-4 text-green-400 flex items-center">
+              <Code className="w-5 h-5 mr-2" />
+              Micro SaaS
+            </h3>
+=======
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
+            <ul className="space-y-2">
+              {microSaasServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+<<<<<<< HEAD
+                    to={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    {service.name}
+=======
+                    to={link.url} 
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                  >
+                    {link.name}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
+                  </Link>
+                </li>
+              ))}
+            </ul>
+<<<<<<< HEAD
+=======
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/consultation" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Free Consultation
+                </Link>
+              </li>
+              <li>
+                <Link to="/demo" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Request Demo
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Contact Sales
+                </Link>
+              </li>
+              <li>
+                <Link to="/support" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                  Technical Support
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                LinkedIn
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                Twitter
+              </a>
+              <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                GitHub
+              </a>
+            </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
+          </div>
+        </div>
+
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -139,7 +291,11 @@ const Footer: React.FC = () => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
+<<<<<<< HEAD
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+=======
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
                 Privacy Policy
               </Link>
               <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
@@ -147,9 +303,12 @@ const Footer: React.FC = () => {
               </Link>
               <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
+<<<<<<< HEAD
               </Link>
               <Link to="/contact" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Contact
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
               </Link>
             </div>
           </div>
@@ -159,4 +318,9 @@ const Footer: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
+=======
+Footer.displayName = 'Footer';
+export default Footer;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp, Building2, Zap, ArrowRight } from 'lucide-react';
@@ -269,8 +270,28 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+
+const PartnersPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16 pt-24">
+        <div className="text-center">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+            Partners
+          </h1>
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
+          </p>
+        </div>
+      </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default PartnersPage;
+=======
+export default PartnersPage;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

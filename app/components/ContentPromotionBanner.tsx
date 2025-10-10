@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Star, Users, TrendingUp, Shield } from 'lucide-react';
 
@@ -109,3 +110,8 @@ const ContentPromotionBanner: React.FC = () => {
 };
 
 export default ContentPromotionBanner;
+=======
+
+const ContentPromotionBanner: React.FC = () => null;
+export default ContentPromotionBanner;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

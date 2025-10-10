@@ -1,29 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Play, ArrowRight, CheckCircle } from 'lucide-react';
+
 const DemoPage: React.FC = () => {
-  const demos = [
-    {
-      title: 'AI Analytics Dashboard',
-      description: 'See how our AI analytics can transform your business intelligence',
-      duration: '5 min',
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
-    },
-    {
-      title: 'AI Customer Support Bot',
-      description: 'Experience our intelligent customer support automation',
-      duration: '3 min',
-      features: ['Natural language processing', 'Multi-channel support', 'Sentiment analysis']
-    },
-    {
-      title: 'AI Content Generation',
-      description: 'Watch our AI create high-quality content in seconds',
-      duration: '4 min',
-      features: ['Blog posts', 'Social media content', 'Product descriptions']
-    }
-  ];
   return (
+<<<<<<< HEAD
     <React.Fragment>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
@@ -85,9 +65,25 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16 pt-24">
+        <div className="text-center">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+            Demo
+          </h1>
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
+          </p>
+        </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 
+<<<<<<< HEAD
 export default DemoPage;
+=======
+export default DemoPage;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f

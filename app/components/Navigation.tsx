@@ -1,7 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server } from 'lucide-react';
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package } from 'lucide-react';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +58,13 @@ const Navigation: React.FC = () => {
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'Advanced threat protection' },
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
+<<<<<<< HEAD
     { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' }
+=======
+    { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, description: 'Automated content creation' },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: '24/7 customer service' }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
   ];
 
   const itServices = [
@@ -62,6 +72,7 @@ const Navigation: React.FC = () => {
     { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
     { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
+<<<<<<< HEAD
     { name: 'Network Solutions', href: '/ai-network-solutions', icon: Globe, description: 'Advanced networking' },
     { name: 'Mobile Development', href: '/ai-mobile-development', icon: Smartphone, description: 'Mobile app solutions' },
     { name: 'System Integration', href: '/ai-system-integration', icon: Settings, description: 'Seamless integration' },
@@ -79,6 +90,35 @@ const Navigation: React.FC = () => {
     { name: 'Financial Tracking', href: '/micro-saas-finance', icon: DollarSign, description: 'Financial management' },
     { name: 'Inventory Management', href: '/micro-saas-inventory', icon: Box, description: 'Stock and asset tracking' },
     { name: 'Performance Monitoring', href: '/micro-saas-monitoring', icon: Monitor, description: 'System performance tracking' }
+=======
+    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
+    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
+    { name: 'Infrastructure Monitoring', href: '/ai-infrastructure-monitoring', icon: Monitor, description: 'System monitoring' },
+    { name: 'Edge Computing', href: '/ai-edge-computing', icon: Cpu, description: 'Edge AI solutions' },
+    { name: 'Content Delivery', href: '/ai-content-delivery-network', icon: Globe, description: 'Global CDN services' }
+  ];
+
+  const microSaasServices = [
+    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, description: 'Automated content creation' },
+    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Smart email management' },
+    { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: TrendingUp, description: 'Financial tracking' },
+    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Automated invoicing' },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Prospect identification' },
+    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Calendar, description: 'Project coordination' },
+    { name: 'AI CRM Assistant', href: '/ai-crm-assistant', icon: Users, description: 'Customer relationship management' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Package, description: 'Inventory optimization' }
+  ];
+
+  const emergingTech = [
+    { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
+    { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' },
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Next-gen computing' },
+    { name: 'Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock, description: 'Blockchain integration' }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
   ];
 
   return (
@@ -248,6 +288,41 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
+<<<<<<< HEAD
+=======
+            {/* Emerging Technologies Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleServices}
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                <Zap className="w-4 h-4" />
+                <span>Emerging Tech</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                  <div className="grid grid-cols-1 gap-2">
+                    {emergingTech.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
+                        onClick={closeAllMenus}
+                      >
+                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
+                        <div>
+                          <div className="text-white font-medium">{service.name}</div>
+                          <div className="text-xs text-gray-400">{service.description}</div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
@@ -306,6 +381,70 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
+<<<<<<< HEAD
+=======
+              {/* Mobile IT Services */}
+              <div>
+                <button
+                  onClick={toggleItServices}
+                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                  <span className="flex items-center space-x-2">
+                    <Cloud className="w-4 h-4" />
+                    <span>IT Services</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {itServicesOpen && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Micro SAAS */}
+              <div>
+                <button
+                  onClick={toggleMicroSaas}
+                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                  <span className="flex items-center space-x-2">
+                    <Cpu className="w-4 h-4" />
+                    <span>Micro SAAS</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {microSaasOpen && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {microSaasServices.slice(0, 8).map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                    <Link
+                      to="/micro-saas"
+                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                      onClick={closeAllMenus}
+                    >
+                      View All Micro SAAS →
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7d7f
               <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
