@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
@@ -16,8 +15,8 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
 // Preload critical components
-const preloadComponents = () => {
-  if (typeof window !== 'undefined') {
+const preloadComponents = () => {}
+  if (typeof window !== 'undefined') {}
     // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner')
@@ -25,16 +24,6 @@ const preloadComponents = () => {
     }, 100)
   }
 }
-=======
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -50,19 +39,11 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
 ))
-<<<<<<< HEAD
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
-const HomePage: React.FC = () => {
+const HomePage: React.FC = () => {}
   const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
-=======
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  useEffect(() => {
+  useEffect(() => {}
     preloadComponents()
     setIsLoaded(true)
     // Trigger visibility animation
@@ -70,19 +51,18 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer)
   }, [])
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+  const handlePhoneClick = useCallback(() => {}
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
       gtag('event', 'phone_click', {
         event_category: 'engagement',
-<<<<<<< HEAD
         event_label: 'main_phone_number'
       })
     }
   }, [])
   // Real AI Services with actual capabilities and pricing
   const aiServices = [
-    {
+    {}
       icon: Brain,
       title: 'AI-Powered Chatbots',
       description: 'Advanced conversational AI with natural language processing and sentiment analysis',
@@ -93,7 +73,7 @@ const HomePage: React.FC = () => {
       category: 'Customer Service',
       popular: true
     },
-    {
+    {}
       icon: FileText,
       title: 'AI Content Generation',
       description: 'Automated content creation using advanced language models for blogs, social media, and marketing',
@@ -104,7 +84,7 @@ const HomePage: React.FC = () => {
       category: 'Content',
       popular: true
     },
-    {
+    {}
       icon: BarChart3,
       title: 'AI Data Analytics',
       description: 'Advanced analytics and business intelligence powered by machine learning algorithms',
@@ -115,7 +95,7 @@ const HomePage: React.FC = () => {
       category: 'Analytics',
       popular: false
     },
-    {
+    {}
       icon: Eye,
       title: 'AI Computer Vision',
       description: 'Image and video analysis solutions for quality control, security, and automation',
@@ -126,7 +106,7 @@ const HomePage: React.FC = () => {
       category: 'Computer Vision',
       popular: false
     },
-    {
+    {}
       icon: Mic,
       title: 'AI Voice Processing',
       description: 'Speech recognition, synthesis, and voice analytics for customer interactions',
@@ -137,7 +117,7 @@ const HomePage: React.FC = () => {
       category: 'Voice AI',
       popular: false
     },
-    {
+    {}
       icon: Workflow,
       title: 'AI Workflow Automation',
       description: 'Intelligent process automation that learns and optimizes business workflows',
@@ -148,7 +128,7 @@ const HomePage: React.FC = () => {
       category: 'Automation',
       popular: true
     },
-    {
+    {}
       icon: Heart,
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis assistance, drug discovery, and patient care optimization',
@@ -159,7 +139,7 @@ const HomePage: React.FC = () => {
       category: 'Healthcare',
       popular: false
     },
-    {
+    {}
       icon: DollarSign,
       title: 'AI Financial Services',
 description: 'Advanced AI for fraud detection, algorithmic trading, and financial risk management Intelligent financial analysis, fraud detection, and investment optimization',
@@ -169,7 +149,7 @@ description: 'Advanced AI for fraud detection, algorithmic trading, and financia
       benefits: ['Reduced fraud losses', 'Better trading performance', 'Risk mitigation', 'Compliance automation', 'Better risk management', 'Optimized investments'],
       popular: true
     },
-    {
+    {}
       icon: Globe,
 description: 'AI-powered solutions for product recommendations, pricing, and customer experience Intelligent supply chain management with predictive analytics and demand forecasting',
       price: '$449/month',
@@ -178,7 +158,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       benefits: ['Increased sales', 'Better customer experience', 'Optimized pricing', 'Reduced inventory costs', 'Reduced inventory costs', 'Improved delivery times', 'Better demand planning', 'Risk mitigation'],
       popular: false
     },
-    {
+    {}
       icon: Shield,
       title: 'AI Cybersecurity',
       description: 'Advanced AI-powered security solutions for threat detection and prevention',
@@ -189,7 +169,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Cybersecurity',
       popular: true
     },
-    {
+    {}
       icon: Cpu,
       title: 'AI Edge Computing',
       description: 'Distributed AI processing for real-time decision making at the edge',
@@ -200,7 +180,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Edge Computing',
       popular: false
     },
-    {
+    {}
       icon: Heart,
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis assistance, drug discovery, and patient care optimization',
@@ -211,7 +191,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Healthcare',
       popular: false
     },
-    {
+    {}
       icon: DollarSign,
       title: 'AI Financial Services',
       description: 'Intelligent financial analysis, fraud detection, and investment optimization',
@@ -222,7 +202,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Financial Services',
       popular: true
     },
-    {
+    {}
       icon: Globe,
       title: 'AI E-commerce Solutions',
       description: 'Intelligent supply chain management with predictive analytics and demand forecasting',
@@ -233,7 +213,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'E-commerce',
       popular: false
     },
-    {
+    {}
       icon: Users,
       title: 'AI HR Solutions',
       description: 'Intelligent human resources management with AI-powered recruitment and analytics',
@@ -244,7 +224,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Human Resources',
       popular: true
     },
-    {
+    {}
       icon: FileText,
       title: 'AI Document Processing',
       description: 'Intelligent document analysis, extraction, and processing with OCR and NLP',
@@ -255,7 +235,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Document Processing',
       popular: true
     },
-    {
+    {}
       icon: BarChart3,
       title: 'AI Predictive Analytics',
       description: 'Advanced predictive modeling and forecasting for business intelligence',
@@ -266,7 +246,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Predictive Analytics',
       popular: true
     },
-    {
+    {}
       icon: Mic,
       title: 'AI Voice Solutions',
       description: 'Advanced speech recognition, synthesis, and voice analytics for customer interactions',
@@ -277,7 +257,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Voice AI',
       popular: false
     },
-    {
+    {}
       icon: Eye,
       title: 'AI Computer Vision',
       description: 'Image and video analysis solutions for quality control, security, and automation',
@@ -288,7 +268,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Computer Vision',
       popular: false
     },
-    {
+    {}
       icon: Brain,
       title: 'AI Quantum Computing Solutions',
       description: 'Quantum-enhanced AI algorithms for complex optimization and machine learning problems',
@@ -299,7 +279,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Quantum AI',
       popular: false
     },
-    {
+    {}
       icon: Cpu,
       title: 'AI Autonomous Systems',
       description: 'Self-operating AI systems for robotics, vehicles, and industrial automation',
@@ -310,7 +290,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Autonomous Systems',
       popular: false
     },
-    {
+    {}
       icon: Link,
       title: 'AI Blockchain Solutions',
       description: 'Decentralized AI applications with blockchain integration for secure, transparent operations',
@@ -321,7 +301,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Blockchain AI',
       popular: false
     },
-    {
+    {}
       icon: Server,
       title: 'AI Edge Computing',
       description: 'Distributed AI processing for real-time decision making at the edge of networks',
@@ -332,7 +312,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Edge Computing',
       popular: false
     },
-    {
+    {}
       icon: Monitor,
       title: 'AI Holographic Workspace',
       description: 'Immersive 3D workspace with AI-powered collaboration and visualization tools',
@@ -343,7 +323,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Immersive Tech',
       popular: false
     },
-    {
+    {}
       icon: Box,
       title: 'AI 3D Generation',
       description: 'AI-powered 3D content creation and modeling for games, architecture, and manufacturing',
@@ -354,7 +334,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: '3D Technology',
       popular: false
     },
-    {
+    {}
       icon: Zap,
       title: 'AI 5G Implementation',
       description: '5G network optimization and AI-powered connectivity solutions for ultra-fast communication',
@@ -365,7 +345,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: '5G Technology',
       popular: false
     },
-    {
+    {}
       icon: Heart,
       title: 'AI Drug Discovery Pro',
       description: 'Advanced AI platform for pharmaceutical research, drug discovery, and clinical trial optimization',
@@ -376,7 +356,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Pharmaceutical AI',
       popular: false
     },
-    {
+    {}
       icon: Globe,
       title: 'AI Climate Solutions Pro',
       description: 'AI-powered climate modeling, carbon tracking, and environmental impact optimization',
@@ -387,7 +367,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Climate Tech',
       popular: false
     },
-    {
+    {}
       icon: DollarSign,
       title: 'AI Financial Crime Detection Pro',
       description: 'Advanced AI system for detecting money laundering, fraud, and financial crimes in real-time',
@@ -398,7 +378,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Financial Security',
       popular: false
     },
-    {
+    {}
       icon: BarChart3,
       title: 'AI Agricultural Intelligence Pro',
       description: 'Smart farming solutions with AI-powered crop monitoring, yield optimization, and precision agriculture',
@@ -409,7 +389,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'AgTech',
       popular: false
     },
-    {
+    {}
       icon: Zap,
       title: 'AI Energy Grid Management Pro',
       description: 'Intelligent energy grid optimization with AI-powered demand forecasting and renewable integration',
@@ -420,11 +400,11 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Energy Tech',
       popular: false
     }
-  ]
+  ];
 
   // Real IT Services with actual capabilities and pricing
   const itServices = [
-    {
+    {}
       icon: Cloud,
       title: 'Cloud Infrastructure & Migration',
       description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services',
@@ -435,7 +415,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Cloud',
       popular: true
     },
-    {
+    {}
       icon: Shield,
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security services including threat detection, compliance, and incident response',
@@ -446,7 +426,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Security',
       popular: true
     },
-    {
+    {}
       icon: Settings,
       title: 'DevOps & CI/CD',
       description: 'Modern development operations with automated deployment, monitoring, and infrastructure as code',
@@ -457,7 +437,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'DevOps',
       popular: false
     },
-    {
+    {}
       icon: Database,
       title: 'Database Management',
       description: 'Expert database design, optimization, and management for all major database systems',
@@ -468,7 +448,7 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       category: 'Database',
       popular: false
     },
-    {
+    {}
 description: 'Modern web applications with responsive design, SEO optimization, and performance tuning Native and cross-platform mobile applications for iOS and Android with modern frameworks',
       price: '$3,500/project',
       marketPrice: '$5000-25000/project',
@@ -477,7 +457,7 @@ description: 'Modern web applications with responsive design, SEO optimization, 
       category: 'Mobile Development',
       popular: true
     },
-    {
+    {}
 description: 'Custom API development, third-party integrations, and microservices architecture Modern web applications and e-commerce platforms with advanced features and optimization',
       price: '$1,500/month',
       marketPrice: '$2500-8000/month',
@@ -486,7 +466,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'API Development',
       popular: false
     },
-    {
+    {}
       icon: Monitor,
       title: 'IT Support & Helpdesk',
       description: '24/7 technical support and helpdesk services for all IT-related issues',
@@ -497,7 +477,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Support',
       popular: true
     },
-    {
+    {}
       icon: Database,
       title: 'Data Analytics & BI',
       description: 'Business intelligence and data analytics solutions for informed decision making',
@@ -508,7 +488,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Analytics',
       popular: false
     },
-    {
+    {}
       icon: Smartphone,
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android',
@@ -519,7 +499,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Mobile Development',
       popular: true
     },
-    {
+    {}
       icon: Code,
       title: 'Custom Software Development',
       description: 'Tailored software solutions built to meet specific business requirements',
@@ -530,7 +510,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Software Development',
       popular: true
     },
-    {
+    {}
       icon: Wifi,
       title: 'Network Infrastructure',
       description: 'Complete network design, implementation, and management solutions',
@@ -541,7 +521,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Networking',
       popular: false
     },
-    {
+    {}
       icon: Package,
       title: 'IT Asset Management',
       description: 'Comprehensive IT asset lifecycle management and optimization',
@@ -552,7 +532,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Asset Management',
       popular: false
     },
-    {
+    {}
       icon: Lock,
       title: 'IT Security Services',
       description: 'Comprehensive cybersecurity services including assessment, implementation, and monitoring',
@@ -563,7 +543,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Security',
       popular: true
     },
-    {
+    {}
       icon: Calendar,
       title: 'IT Project Management',
       description: 'Professional IT project management and implementation services',
@@ -574,7 +554,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Project Management',
       popular: false
     },
-    {
+    {}
       icon: Brain,
       title: 'AI Integration Services',
       description: 'Complete AI model integration and deployment services for existing business systems',
@@ -585,7 +565,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'AI Integration',
       popular: true
     },
-    {
+    {}
       icon: Link,
       title: 'Blockchain Development',
       description: 'Custom blockchain solutions including smart contracts, DeFi protocols, and NFT platforms',
@@ -596,7 +576,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Blockchain',
       popular: false
     },
-    {
+    {}
       icon: Wifi,
       title: 'IoT Development',
       description: 'Internet of Things solutions for connected devices, sensors, and smart systems',
@@ -607,7 +587,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'IoT',
       popular: false
     },
-    {
+    {}
       icon: ShoppingCart,
       title: 'E-commerce Development',
       description: 'Complete e-commerce platforms with advanced features and optimization',
@@ -618,7 +598,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'E-commerce',
       popular: true
     },
-    {
+    {}
       icon: Code,
       title: 'Advanced API Development',
       description: 'Enterprise-grade API development with microservices architecture and advanced security',
@@ -629,7 +609,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'API Development',
       popular: false
     },
-    {
+    {}
       icon: Database,
       title: 'Data Engineering',
       description: 'Advanced data pipeline development and big data processing solutions',
@@ -640,7 +620,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Data Engineering',
       popular: false
     },
-    {
+    {}
       icon: Shield,
       title: 'Advanced Cybersecurity',
       description: 'Next-generation security solutions including threat hunting, incident response, and compliance',
@@ -651,7 +631,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Cybersecurity',
       popular: true
     },
-    {
+    {}
       icon: Cloud,
       title: 'Cloud Migration Advanced',
       description: 'Zero-downtime cloud migration with advanced optimization and cost management',
@@ -662,7 +642,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Cloud Migration',
       popular: true
     },
-    {
+    {}
       icon: Settings,
       title: 'Advanced DevOps & SRE',
       description: 'Site reliability engineering with advanced monitoring, automation, and incident management',
@@ -673,7 +653,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'DevOps',
       popular: false
     },
-    {
+    {}
       icon: Cpu,
       title: 'MLOps & AI Operations',
       description: 'Machine learning operations with model deployment, monitoring, and lifecycle management',
@@ -684,7 +664,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'MLOps',
       popular: false
     },
-    {
+    {}
       icon: Link,
       title: 'Enterprise Integration',
       description: 'Complex system integration with legacy systems, APIs, and third-party services',
@@ -695,7 +675,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Integration',
       popular: false
     },
-    {
+    {}
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Application and infrastructure performance optimization with advanced monitoring and tuning',
@@ -706,7 +686,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Performance',
       popular: true
     },
-    {
+    {}
       icon: Shield,
       title: 'Disaster Recovery Advanced',
       description: 'Comprehensive business continuity planning with advanced backup and recovery solutions',
@@ -717,7 +697,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Disaster Recovery',
       popular: false
     },
-    {
+    {}
       icon: CheckCircle,
       title: 'Compliance Automation',
       description: 'Automated compliance management for GDPR, HIPAA, SOC2, and other regulatory requirements',
@@ -728,7 +708,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Compliance',
       popular: false
     },
-    {
+    {}
       icon: TrendingUp,
       title: 'Cloud Cost Optimization',
       description: 'Advanced cloud cost management with automated optimization and cost reduction strategies',
@@ -739,7 +719,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Cost Optimization',
       popular: true
     },
-    {
+    {}
       icon: Shield,
       title: 'Security Automation',
       description: 'Automated security operations with AI-powered threat detection and response',
@@ -750,7 +730,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Security Automation',
       popular: false
     },
-    {
+    {}
       icon: BarChart3,
       title: 'Data Visualization & BI',
       description: 'Advanced business intelligence solutions with interactive dashboards and real-time analytics',
@@ -761,7 +741,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Business Intelligence',
       popular: true
     },
-    {
+    {}
       icon: Settings,
       title: 'Workflow Automation',
       description: 'Business process automation with intelligent workflows and integration capabilities',
@@ -772,7 +752,7 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Automation',
       popular: true
     },
-    {
+    {}
       icon: Shield,
       title: 'Cloud-Native Security',
       description: 'Specialized security solutions for cloud-native applications and containerized environments',
@@ -783,11 +763,11 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Cloud Security',
       popular: false
     }
-  ]
+  ];
 
   // Real Micro SaaS Services with actual capabilities and pricing
   const microSaasServices = [
-    {
+    {}
       icon: BarChart3,
       title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights',
@@ -799,7 +779,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 25 users'
     },
-    {
+    {}
       icon: Brain,
       title: 'Zion AI Code Assistant',
       description: 'AI-powered code generation, review, and optimization for developers and teams',
@@ -811,7 +791,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 15 users'
     },
-    {
+    {}
       icon: Eye,
       title: 'Zion AI Video Analyzer',
       description: 'Advanced video content analysis and optimization using computer vision AI',
@@ -823,7 +803,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: Globe,
       title: 'Zion AI SEO Optimizer',
       description: 'Comprehensive SEO analysis and optimization powered by advanced AI algorithms',
@@ -835,7 +815,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 10 websites'
     },
-    {
+    {}
       icon: Heart,
       title: 'Zion AI Health Monitor',
       description: 'Personal health tracking and wellness insights powered by AI and machine learning',
@@ -847,7 +827,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 5 family members'
     },
-    {
+    {}
       icon: DollarSign,
       title: 'Zion AI Trading Assistant',
       description: 'AI-powered trading analysis and portfolio management for cryptocurrency and stocks',
@@ -859,7 +839,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 3 portfolios'
     },
-    {
+    {}
       icon: Users,
       title: 'Zion AI HR Assistant',
       description: 'Intelligent human resources management with AI-powered recruitment and analytics',
@@ -871,7 +851,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 50 employees'
     },
-    {
+    {}
       icon: Shield,
       title: 'Zion AI Security Scanner',
       description: 'Advanced cybersecurity scanning and threat detection for websites and applications',
@@ -883,7 +863,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 10 websites'
     },
-    {
+    {}
       icon: FileText,
       title: 'Zion AI Legal Assistant',
       description: 'AI-powered legal document analysis and contract management platform',
@@ -895,7 +875,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: Target,
       title: 'Zion AI Marketing Optimizer',
       description: 'Comprehensive marketing automation and optimization powered by AI',
@@ -907,7 +887,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 30 campaigns'
     },
-    {
+    {}
       icon: Database,
       title: 'Zion AI Data Cleaner',
       description: 'Intelligent data cleaning and validation platform for businesses',
@@ -919,7 +899,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 25 users'
     },
-    {
+    {}
       icon: Calendar,
       title: 'Zion AI Meeting Scheduler',
       description: 'Intelligent meeting scheduling and calendar management with AI optimization',
@@ -931,7 +911,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 15 users'
     },
-    {
+    {}
       icon: Mic,
       title: 'Zion AI Voice Translator',
       description: 'Real-time voice translation and transcription service for global communication',
@@ -943,7 +923,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: Package,
       title: 'Zion AI Inventory Optimizer',
       description: 'Smart inventory management with AI-powered demand forecasting and optimization',
@@ -955,7 +935,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 30 locations'
     },
-    {
+    {}
       icon: Settings,
       title: 'Zion AI Workflow Builder',
       description: 'Visual workflow automation platform with AI-powered process optimization',
@@ -967,7 +947,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 20 workflows'
     },
-    {
+    {}
       icon: Monitor,
       title: 'Zion AI Website Monitor',
       description: 'Comprehensive website monitoring and performance optimization with AI insights',
@@ -979,7 +959,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 5 websites'
     },
-    {
+    {}
       icon: CheckSquare,
       title: 'Zion AI Quality Assurance',
       description: 'Automated testing and quality assurance platform for software development',
@@ -991,7 +971,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 25 projects'
     },
-    {
+    {}
       icon: Globe,
       title: 'Zion AI Social Media Manager',
       description: 'AI-powered social media management and content optimization platform',
@@ -1003,7 +983,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 10 accounts'
     },
-    {
+    {}
       icon: Heart,
       title: 'Zion AI Customer Insights',
       description: 'Advanced customer behavior analysis and personalization platform',
@@ -1015,7 +995,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 50,000 customers'
     },
-    {
+    {}
       icon: Zap,
       title: 'Zion AI Energy Optimizer',
       description: 'Smart energy management and optimization for homes and businesses',
@@ -1027,7 +1007,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 10 locations'
     },
-    {
+    {}
       icon: FileText,
       title: 'Zion AI Document Processor',
       description: 'Intelligent document processing and data extraction platform',
@@ -1039,7 +1019,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 1000 documents/month'
     },
-    {
+    {}
       icon: MessageSquare,
       title: 'Zion AI Video Editor Pro',
       description: 'AI-powered video editing platform with automated cutting, effects, and content optimization',
@@ -1051,7 +1031,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 10 users'
     },
-    {
+    {}
       icon: Globe,
       title: 'Zion AI Translator Pro',
       description: 'Advanced AI translation platform with context-aware language processing and real-time collaboration',
@@ -1063,7 +1043,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 15 users'
     },
-    {
+    {}
       icon: Code,
       title: 'Zion AI Code Reviewer',
       description: 'Intelligent code review platform with automated bug detection, security analysis, and performance optimization',
@@ -1075,7 +1055,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: Users,
       title: 'Zion Customer Insights Pro',
       description: 'AI-powered customer analytics platform with sentiment analysis, behavior prediction, and personalized insights',
@@ -1087,7 +1067,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 30 users'
     },
-    {
+    {}
       icon: Mail,
       title: 'Zion AI Email Assistant',
       description: 'Smart email management platform with AI-powered composition, scheduling, and response optimization',
@@ -1099,7 +1079,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 10 users'
     },
-    {
+    {}
       icon: Calendar,
       title: 'Zion AI Meeting Assistant',
       description: 'Intelligent meeting management with automated scheduling, transcription, and action item tracking',
@@ -1111,7 +1091,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 15 users'
     },
-    {
+    {}
       icon: Target,
       title: 'Zion AI SEO Optimizer',
       description: 'Advanced SEO platform with AI-powered content optimization, keyword research, and ranking analysis',
@@ -1123,7 +1103,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: Database,
       title: 'Zion AI Data Cleaner',
       description: 'Intelligent data cleaning and validation platform with automated error detection and correction',
@@ -1135,7 +1115,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 25 users'
     },
-    {
+    {}
       icon: FileText,
       title: 'Zion AI Contract Analyzer',
       description: 'Intelligent contract analysis platform with automated review, risk assessment, and compliance checking',
@@ -1147,7 +1127,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 10 users'
     },
-    {
+    {}
       icon: CheckSquare,
       title: 'Zion AI Survey Builder',
       description: 'Intelligent survey creation platform with AI-powered question generation and response analysis',
@@ -1159,7 +1139,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 15 users'
     },
-    {
+    {}
       icon: DollarSign,
       title: 'Zion AI Accounting Assistant',
       description: 'Intelligent accounting platform with automated bookkeeping, expense tracking, and financial reporting',
@@ -1171,7 +1151,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: Users,
       title: 'Zion AI Recruitment Pro',
       description: 'Advanced recruitment platform with AI-powered candidate screening, matching, and interview scheduling',
@@ -1183,7 +1163,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 25 users'
     },
-    {
+    {}
       icon: Shield,
       title: 'Zion AI Content Moderation',
       description: 'Automated content moderation platform with AI-powered detection of inappropriate content and spam',
@@ -1195,7 +1175,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 30 users'
     },
-    {
+    {}
       icon: Settings,
       title: 'Zion AI Predictive Maintenance',
       description: 'IoT-based predictive maintenance platform with AI-powered equipment monitoring and failure prediction',
@@ -1207,7 +1187,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 50 users'
     },
-    {
+    {}
       icon: Zap,
       title: 'Zion AI Energy Manager',
       description: 'Smart energy management platform with AI-powered optimization and cost reduction strategies',
@@ -1219,7 +1199,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: Package,
       title: 'Zion AI Supply Chain Optimizer',
       description: 'Intelligent supply chain management with AI-powered demand forecasting and logistics optimization',
@@ -1231,7 +1211,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 40 users'
     },
-    {
+    {}
       icon: Shield,
       title: 'Zion AI Fraud Detector',
       description: 'Advanced fraud detection platform with AI-powered risk assessment and real-time monitoring',
@@ -1243,7 +1223,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 30 users'
     },
-    {
+    {}
       icon: MessageSquare,
       title: 'Zion AI Customer Service Pro',
       description: 'Advanced customer service platform with AI-powered ticket routing, sentiment analysis, and automation',
@@ -1255,7 +1235,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 35 users'
     },
-    {
+    {}
       icon: Target,
       title: 'Zion AI Marketing Automation',
       description: 'Intelligent marketing automation platform with AI-powered campaign optimization and personalization',
@@ -1267,7 +1247,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 25 users'
     },
-    {
+    {}
       icon: FileText,
       title: 'Zion AI Document AI',
       description: 'Intelligent document processing platform with AI-powered extraction, analysis, and workflow automation',
@@ -1279,7 +1259,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: MessageSquare,
       title: 'Zion Chat AI',
       description: 'Next-generation AI customer support platform with advanced NLP and sentiment analysis',
@@ -1291,7 +1271,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 50 users'
     },
-    {
+    {}
       icon: Shield,
       title: 'Zion Security Shield',
       description: 'Enterprise-grade cybersecurity monitoring with AI threat detection and automated response',
@@ -1303,7 +1283,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 100 users'
     },
-    {
+    {}
       icon: Cloud,
       title: 'Zion Cloud Vault',
       description: 'Intelligent cloud backup and disaster recovery with AI-powered optimization',
@@ -1315,7 +1295,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 30 users'
     },
-    {
+    {}
       icon: FileText,
       title: 'Zion Content Studio',
       description: 'AI-powered content creation and management platform with multi-channel publishing',
@@ -1327,7 +1307,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: Users,
       title: 'Zion CRM Intelligence',
       description: 'AI-enhanced customer relationship management with predictive analytics and automation',
@@ -1339,7 +1319,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 25 users'
     },
-    {
+    {}
       icon: Database,
       title: 'Zion Data Sync',
       description: 'AI-powered data integration and synchronization platform for seamless data flow',
@@ -1351,7 +1331,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: Target,
       title: 'Zion Lead Magnet',
       description: 'Intelligent lead generation and qualification platform with AI-powered prospecting',
@@ -1363,7 +1343,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: Calendar,
       title: 'Zion Project Master',
       description: 'AI-powered project management with intelligent task allocation and progress tracking',
@@ -1375,7 +1355,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 15 users'
     },
-    {
+    {}
       icon: Mail,
       title: 'Zion Email Automation',
       description: 'Advanced email marketing automation with AI-powered personalization and segmentation',
@@ -1387,7 +1367,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 25 users'
     },
-    {
+    {}
       icon: Package,
       title: 'Zion Inventory Smart',
       description: 'AI-powered inventory management with demand forecasting and automated reordering',
@@ -1399,7 +1379,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 20 users'
     },
-    {
+    {}
       icon: DollarSign,
       title: 'Zion Invoice Genius',
       description: 'AI-powered invoice generation and management with automated billing and payment tracking',
@@ -1411,7 +1391,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 10 users'
     },
-    {
+    {}
       icon: Settings,
       title: 'Zion Workflow Automation',
       description: 'AI-powered business process automation with intelligent decision making',
@@ -1423,7 +1403,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 25 users'
     },
-    {
+    {}
       icon: Monitor,
       title: 'Zion Performance Monitor',
       description: 'AI-powered application performance monitoring with predictive analytics and alerting',
@@ -1435,7 +1415,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 30 users'
     },
-    {
+    {}
       icon: CheckSquare,
       title: 'Zion Compliance Manager',
       description: 'AI-powered compliance management with automated monitoring and reporting',
@@ -1447,7 +1427,7 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: false,
       users: 'Up to 50 users'
     },
-    {
+    {}
       icon: Globe,
       title: 'Zion Social Scheduler',
       description: 'AI-powered social media management with content optimization and scheduling',
@@ -1459,21 +1439,15 @@ description: 'Custom API development, third-party integrations, and microservice
       popular: true,
       users: 'Up to 5 users'
     }
-  ]
+  ];
 
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' }
-  ]
+  ];
 
-=======
-        event_label: 'header_phone'
-      });
-    }
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -1481,7 +1455,7 @@ description: 'Custom API development, third-party integrations, and microservice
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
         canonicalUrl="https://ziontechgroup.com"
-        structuredData={{
+        structuredData={{}
           '@context': 'https://schema.org',
           '@type': 'TechCompany',
           name: 'Zion Tech Group',
@@ -1499,14 +1473,14 @@ description: 'Custom API development, third-party integrations, and microservice
             'Automation',
             'Business Intelligence'
           ],
-          contactPoint: {
+          contactPoint: {}
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
             availableLanguage: 'en'
           },
-          address: {
+          address: {}
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
@@ -1528,16 +1502,12 @@ description: 'Custom API development, third-party integrations, and microservice
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced" />
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
-<<<<<<< HEAD
         <a
           href="#main-content"
-=======
-        <a href="#main-content"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
           Skip to main content
         </a>
@@ -1545,36 +1515,23 @@ description: 'Custom API development, third-party integrations, and microservice
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
           <ContentPromotionBanner />
         </Suspense>
-<<<<<<< HEAD
         
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main">
+        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main" />
           {/* Hero Section */}
           <section
 className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
-=======
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
-          {/* Hero Section */}
-          <section className={`text-center mb-16 transition-all duration-1000 ${
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               isLoaded && isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
             }`}
-<<<<<<< HEAD
             aria-labelledby="hero-heading"
           >
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto" />
               <h1 
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced glow"
                 data-text="Zion Tech Group"
               >
-=======
-            aria-labelledby="hero-heading">
-            <div className="max-w-6xl mx-auto">
-              <h1 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 Zion Tech Group
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow glow" role="doc-subtitle">
@@ -1585,7 +1542,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
                 startups, and enterprises worldwide with proven results and 24/7 expert support.
               </p>
-<<<<<<< HEAD
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
                 <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -1610,7 +1566,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 </div>
               </div>
               {/* CTA Buttons */}
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center" />
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
@@ -1643,12 +1599,12 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* Stats Section */}
-          <section className="mb-16" aria-labelledby="stats-heading">
+          <section className="mb-16" aria-labelledby="stats-heading" />
             <h2 id="stats-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
               Our Impact
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center cyber-card-enhanced p-6">
                   <div className="flex justify-center mb-4">
                     {stat.icon}
@@ -1661,7 +1617,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* AI Services Section */}
-          <section className="mb-16" aria-labelledby="ai-services-heading">
+          <section className="mb-16" aria-labelledby="ai-services-heading" />
             <h2 id="ai-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
               AI Services
             </h2>
@@ -1669,7 +1625,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
               Comprehensive AI solutions designed to transform your business operations
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-              {aiServices.map((service, index) => (
+              {aiServices.map((service, index) => (}
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -1690,7 +1646,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                     </div>
 
                     <ul className="space-y-2 mb-6">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -1698,7 +1654,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                       ))}
                     </ul>
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between" />
                       <a 
                         href="/contact"
                         className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -1720,7 +1676,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* IT Services Section */}
-          <section className="mb-16" aria-labelledby="it-services-heading">
+          <section className="mb-16" aria-labelledby="it-services-heading" />
             <h2 id="it-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
               IT Services
             </h2>
@@ -1728,7 +1684,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
               Complete IT solutions to modernize your infrastructure and drive business growth
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-              {itServices.map((service, index) => (
+              {itServices.map((service, index) => (}
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -1749,7 +1705,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                     </div>
 
                     <ul className="space-y-2 mb-6">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -1757,7 +1713,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                       ))}
                     </ul>
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between" />
                       <a 
                         href="/contact"
                         className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
@@ -1779,7 +1735,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* Micro SaaS Section */}
-          <section className="mb-16" aria-labelledby="micro-saas-heading">
+          <section className="mb-16" aria-labelledby="micro-saas-heading" />
             <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">
               Micro SaaS Solutions
             </h2>
@@ -1787,7 +1743,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
               Ready-to-use business tools that solve specific problems with AI and automation
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-              {microSaasServices.map((service, index) => (
+              {microSaasServices.map((service, index) => (}
                 <div key={index} className="cyber-card-enhanced holographic-card-enhanced group hover:scale-105 transition-all duration-300 quantum-pulse-enhanced">
                   <div className="p-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -1812,7 +1768,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                     </div>
 
                     <ul className="space-y-2 mb-6">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -1820,7 +1776,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                       ))}
                     </ul>
 
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between" />
                       <a 
                         href="/contact"
                         className="flex items-center text-green-400 hover:text-green-300 transition-colors"
@@ -1842,13 +1798,13 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* CTA Section */}
-          <section className="mb-16" aria-labelledby="cta-heading">
-          <div className="cyber-card-enhanced hologram-card-enhanced p-8 text-center">
+          <section className="mb-16" aria-labelledby="cta-heading" />
+          <div className="cyber-card-enhanced hologram-card-enhanced p-8 text-center" />
               <h2 id="cta-heading" className="text-2xl font-bold text-white mb-6 neon-text-enhanced">Get Free Consultation</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 Ready to transform your business? Contact our experts for a free consultation and discover how our AI and IT solutions can drive your success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" />
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
@@ -1864,23 +1820,11 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 </a>
                 <a 
                   href="/contact"
-=======
-              {/* CTA Buttons */}
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <a href="tel:+13024640950"
-                    onClick={handlePhoneClick}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  aria-label="Call us at (302) 464-0950">
-                  Call (302) 464-0950
-                </a>
-                <a href="#contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                   Get Free Consultation
                 </a>
               </div>
             </div>
-<<<<<<< HEAD
           </section>
         </main>
         
@@ -1891,62 +1835,3 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
 }
 
 export default HomePage
-=======
-          </section>
-          {/* Services Section */};
-          <section className="mb-16" aria-labelledby="services-heading">
-            <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-              Our Services
-            </h2>
-            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Comprehensive AI and IT solutions designed to transform your business operations
-            </p>
-            {/* Services Grid */};
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">AI Services</h3>
-                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
-                  </p>
-                </article>
-              </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚡</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">IT Solutions</h3>
-                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Complete IT infrastructure, cloud migration, cybersecurity, and digital transformation services.
-                  </p>
-                </article>
-              </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔒</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Cybersecurity</h3>
-                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Enterprise-grade security solutions to protect your data and infrastructure from threats.
-                  </p>
-                </article>
-              </Suspense>
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🌐</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4 text-center">Cloud Services</h3>
-                  <p className="text-gray-600 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                    Scalable cloud infrastructure and migration services for modern business needs.
-                  </p>
-                </article>
-              </Suspense>
-            </div>
-          </section>
-        </main>
-        {/* Footer */}
-        <Footer />
-      </div>
-    </>
-  );
-};
-export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

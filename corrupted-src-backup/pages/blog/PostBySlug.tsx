@@ -1,14 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
-=======
-export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const { slug } = useParams();
   // Mock data - in a real app, this would come from an API or CMS;
   const latestArticles = [
 ];
-    {
+    {}
       slug: 'ai-autonomous-workflows-2026',
       title: 'AI Autonomous Workflows 2026',
       description:,
@@ -21,14 +17,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */};
     }];
-<<<<<<< HEAD
   const blogPosts = [
-=======
-;
-const blogPosts = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       slug: 'enterprise-ai-transformation-roadmap-2026',
       title: 'Enterprise AI Transformation Roadmap 2026',
       description:,
@@ -37,7 +27,7 @@ const blogPosts = [
       date: '2026-01-10',
       readTime: '12 min read',
       author: 'Zion Tech Group Team'},
-    {
+    {}
       slug: 'quantum-computing-business-applications-2026'
       title: 'Quantum Computing Business Applications 2026'
       description: 'Revolutionary quantum solutions delivering 2000x speed improvements and breakthrough capabilities',
@@ -45,7 +35,7 @@ const blogPosts = [
       date: '2026-01-08',
       readTime: '10 min read',
       author: 'Zion Tech Group Team'},
-    {
+    {}
       slug: 'ai-cybersecurity-autonomous-defense-2026',
       title: 'AI Cybersecurity Autonomous Defense 2026',
       description:,
@@ -60,14 +50,8 @@ const blogPosts = [
     },
     {/* TODO: Fix JSX expression */};
     }];
-<<<<<<< HEAD
   const featuredPosts = [
-=======
-;
-const featuredPosts = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       slug: 'autonomous-enterprise-operations-2026',
       title: 'Autonomous Enterprise Operations 2026',
       description:,
@@ -76,7 +60,7 @@ const featuredPosts = [
       date: '2026-01-12',
       readTime: '11 min read',
       author: 'Zion Tech Group Team'},
-    {
+    {}
       slug: 'ai-powered-business-intelligence-2026',
       title: 'AI-Powered Business Intelligence 2026',
       description:,
@@ -85,7 +69,7 @@ const featuredPosts = [
       date: '2026-01-07',
       readTime: '7 min read',
       author: 'Zion Tech Group Team'},
-    {
+    {}
       slug: 'quantum-neural-networks-breakthrough-2026'
       title: 'Quantum Neural Networks Breakthrough 2026'
       description: 'Revolutionary quantum-enhanced AI delivering unprecedented computational power',
@@ -102,7 +86,7 @@ const featuredPosts = [
   // Find the current post;
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
   );
-  if (!currentPost) {
+  if (!currentPost) {}
     return(<div className="min-h-screen bg-gray-50">
     return (
       <div className="min-h-screen bg-gray-50"></div>
@@ -115,20 +99,12 @@ const featuredPosts = [
           <a ;
             href="/blog"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
-<<<<<<< HEAD
             Back to Blog,)
           </a>)
         </div>)
       </div>)
     )
   }
-=======
-            Back to Blog;)
-          </a>)
-        </div>)
-      </div>)
-    )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return(<div className="min-h-screen bg-gray-50">
   return (
     <div className="min-h-screen bg-gray-50"></div>
@@ -144,13 +120,8 @@ const featuredPosts = [
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}</p>
             <div className="flex items-center text-sm text-gray-500"></div>
               <span>{currentPost.author}</span>
-<<<<<<< HEAD
   if (!currentPost) {/* TODO: Fix JSX expression */}
   }
-=======
-  if (!currentPost) {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (<div className="min-h-screen bg-gray-50"></div>
       <Header /></Header>
       {/* Article Header */}"
@@ -173,11 +144,7 @@ const featuredPosts = [
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       {/* Article Content */}
-=======
-      {/* Article Content */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div className="container mx-auto px-4 py-12"></div>
         <div className="max-w-4xl mx-auto"></div>
           <div className="bg-white rounded-lg shadow-lg p-8"></div>
@@ -227,17 +194,13 @@ const featuredPosts = [
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       {/* Related Posts */}
-=======
-      {/* Related Posts */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <div className="bg-white py-16">
+      <div className="bg-white py-16" />
         <div className="container mx-auto px-4">)
           <div className="max-w-6xl mx-auto">)
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>)
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">),
-              {featuredPosts.slice(0, 3).map((post, index) => (
+              {featuredPosts.slice(0, 3).map((post, index) => (}
                 <div;
                   key={index};
                   className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow",
@@ -247,16 +210,10 @@ const featuredPosts = [
           <div className="max-w-6xl mx-auto"></div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {featuredPosts.slice(0, 3).map((post, index) => (</div>
+              {featuredPosts.slice(0, 3).map((post, index) => (</div>}
                 <div
-<<<<<<< HEAD
                   key={index}
                   className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"></div>
-=======
-                  key={index};
-                  className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
-                ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>
                   <p className="text-gray-600 mb-4">{post.description}</p>
@@ -306,10 +263,6 @@ const featuredPosts = [
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "`

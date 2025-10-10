@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-export const revolutionary2027MicroSaasServices = [{name: 'Revolutionary 2027 Micro-SaaS Platform'
-=======
-export const revolutionary2027MicroSaasServices = [
-{name: 'Revolutionary 2027 Micro-SaaS Platform',
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export const revolutionary2027MicroSaasServices = [{name: 'Revolutionary 2027 Micro-SaaS Platform'}
     path: '/services/revolutionary-2027-micro-saas-platform',
     description: 'Next-generation 2027 micro-SaaS development and deployment',
     icon: 'Rocket',
@@ -85,15 +79,8 @@ export const revolutionary2027MicroSaasStats = {}
   averageRatin,
   g: 4.9,
   activeUser,
-<<<<<<< HEAD
   s: 2500}
 export const revolutionary2027MicroSaasServices = [ nam,
-=======
-  s: 2500};
-export const revolutionary2027MicroSaasServices = [
- nam,
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: 'Revolutionary 2027 Micro-SaaS Platform',' pat,
   h: '/services/revolutionary-2027-micro-saas-platform',' descriptio,
   n: 'Next-generation 2027 micro-SaaS development and deployment',' ico,

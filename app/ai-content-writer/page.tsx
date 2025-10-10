@@ -1,20 +1,14 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, PenTool, Zap, Users, BarChart3 } from 'lucide-react'
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const AIContentWriterPage: React.FC = () => {
 const features = [
 ];
 };
     {
-<<<<<<< HEAD
       title: 'AI-Powered Writing',
       description: 'Generate high-quality content using advanced AI algorithms that understand context, tone, and audience.',
       benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization']
@@ -37,7 +31,7 @@ const features = [
     'Multi-language support',
     'Content analytics',
     'Team collaboration'
-  ]
+  ];
 
   const stats = [
     { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
@@ -46,7 +40,7 @@ const features = [
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '300%', label: 'Engagement Boost' }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" />
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered content writing tool by Zion Tech Group. Generate high-quality, SEO-optimized content at scale." />
@@ -54,10 +48,10 @@ const features = [
       </Helmet>
       <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-20 px-4 overflow-hidden" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="relative max-w-7xl mx-auto text-center" />
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI Content Writer
 
@@ -78,10 +72,10 @@ const features = [
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4" />
           <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
@@ -95,7 +89,7 @@ const features = [
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4" />
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -107,13 +101,13 @@ const features = [
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+          <div className="grid md:grid-cols-3 gap-8" />
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8" />
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => (}
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{benefit}</span>
@@ -126,7 +120,7 @@ const features = [
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4" />
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Writer?</h2>
@@ -137,7 +131,7 @@ const features = [
 
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
@@ -149,9 +143,9 @@ const features = [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+      <section className="py-20 px-4" />
+          <div className="max-w-4xl mx-auto text-center" />
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" />
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Create Amazing Content?
             </h2>
@@ -176,69 +170,3 @@ const features = [
 }
 
 export default AIContentWriterPage
-=======
-      title: 'AI Writing Assistant',
-      description: 'Generate high-quality content using advanced AI algorithms',
-      benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
-    };
-  ];
-const benefits = [
-];
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-        {/* Features Section */};
-        <section className="py-20 px-4">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        {/* Hero Section */};
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Page
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced page solution powered by artificial intelligence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a href="#features"
-                  className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Features Section */};
-        <section id="features" className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive platform provides everything you need to succeed.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                    <feature .icon className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
-                          {benefit};
-                        </li>
-                      ));
-                    </ul>);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

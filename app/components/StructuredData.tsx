@@ -5,27 +5,27 @@ interface StructuredDataProps {
   data?: Record<string, unknown>
 }
 
-const StructuredData: React.FC<StructuredDataProps> = ({ 
+const StructuredData: React.FC<StructuredDataProps> = ({ }
   type = 'Organization', 
   data 
 }) => {
-  const getDefaultData = () => {
-    switch (type) {
+  const getDefaultData = () => {}
+    switch (type) {}
       case 'Organization':
-        return {
+        return {}
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.png",
-          "contactPoint": {
+          "contactPoint": {}
             "@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"
           },
-          "address": {
+          "address": {}
             "@type": "PostalAddress",
             "streetAddress": "364 E Main St STE 1008",
             "addressLocality": "Middletown",
@@ -53,7 +53,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
         }
       
       case 'WebSite':
-        return {
+        return {}
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Zion Tech Group",
@@ -71,7 +71,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
         }
       
       case 'WebPage':
-        return {
+        return {}
           "@context": "https://schema.org",
           "@type": "WebPage",
           "name": "Zion Tech Group - Advanced AI and IT Solutions",
@@ -86,10 +86,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "@type": "Organization",
             "name": "Zion Tech Group"
           },
-          "breadcrumb": {
+          "breadcrumb": {}
             "@type": "BreadcrumbList",
             "itemListElement": [
-              {
+              {}
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
@@ -100,7 +100,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
         }
       
       case 'Service':
-        return {
+        return {}
           "@context": "https://schema.org",
           "@type": "Service",
           "name": "AI and IT Solutions",
@@ -127,7 +127,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
         }
       
       case 'LocalBusiness':
-        return {
+        return {}
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Zion Tech Group",
@@ -135,7 +135,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           "url": "https://ziontechgroup.com",
           "telephone": "+1-302-464-0950",
           "email": "kleber@ziontechgroup.com",
-          "address": {
+          "address": {}
             "@type": "PostalAddress",
             "streetAddress": "364 E Main St STE 1008",
             "addressLocality": "Middletown",
@@ -150,7 +150,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
           },
           "openingHours": "Mo-Fr 09:00-17:00",
           "priceRange": "$$",
-          "serviceArea": {
+          "serviceArea": {}
             "@type": "GeoCircle",
             "geoMidpoint": {
               "@type": "GeoCoordinates",

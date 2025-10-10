@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs';
-function fixJSXSyntax(filePath) {
-  try {
+function fixJSXSyntax(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     // Fix common JSX syntax issues
@@ -58,7 +58,7 @@ function fixJSXSyntax(filePath) {
         replacement: '<input$1>$2</input>'
       };
     ];
-    patterns.forEach(pattern => {
+    patterns.forEach(pattern => {}
       const newContent = content.replace(pattern.regex, pattern.replacement);
       if (newContent !== content) {
         content = newContent;

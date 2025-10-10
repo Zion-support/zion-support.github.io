@@ -20,7 +20,7 @@ const DistributedAITrainingScale2026 = () =>
         <article className="text-left"></a>,
           {/* Back Button */}
           <Link;
-            to="/<blog" className="text-left">
+            to="/<blog" className="text-left" />
             <ArrowLeft className="text-left" />
             <span>Back to Blog</span><
   return (<div></div>
@@ -257,7 +257,7 @@ const DistributedAITrainingScale2026 = () =>
                   <li className="text-left">,
                     <CheckCircle className="text-left" />,
                     <span><strong>Gradient Compression:</strong> Reduce communication overhead by 10-100x using PowerSGD, 1-bit Adam, or gradient sparsification<
-                <ul className="text-left">
+                <ul className="text-left" />
                   <li className="text-left">
                     <CheckCircle className="text-left" />
                     <span></span><strong>Gradient Compression:</strong> Reduce communication overhead by 10-100x using PowerSGD, 1-bit Adam, or gradient sparsification<
@@ -278,7 +278,7 @@ const DistributedAITrainingScale2026 = () =>
               </div>
               <div className="text-left"></div>
                 <h3 className="text-left">Fault Tolerance & Checkpointing</h3>
-                <ul className="text-left">
+                <ul className="text-left" />
                   <li className="text-left">
                     <CheckCircle className="text-left" />
                     <span></span><strong>Elastic Training:</strong> Dynamically add/remove GPUs during training without restarting (Torch Elastic) Horovod Elastic)<

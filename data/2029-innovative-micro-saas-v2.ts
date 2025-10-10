@@ -13,16 +13,10 @@
   growthRate: string;
   realImplementation: boolean;
   contactInfo: unknown;
-<<<<<<< HEAD
     mobile: string
     email: string
     address: string,
   }
-=======
-    mobile: string;
-    email: string;
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   category: string;
   technology: string[]
   benefits: string[]
@@ -1105,13 +1099,8 @@ export const,
   o: {/* TODO: Fix JSX expression */};
   l: string};
     addres,
-<<<<<<< HEAD
   s: string}
   }
-=======
-  s: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   categor,
   y: string,
   technolog,
@@ -1119,15 +1108,8 @@ export const,
   benefit,
   s: string[],
   useCase,
-<<<<<<< HEAD
   s: string[]}
-export interface InnovativeMicroSaasService2029V2 {
-=======
-  s: string[]};
-export interface InnovativeMicroSaasService2029V2 {
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export interface InnovativeMicroSaasService2029V2 {}
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [,
     id: "ai-powered-customer-success-platform",
     name: "AI-Powered Customer Success Platform",
@@ -1144,7 +1126,6 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Customer journey mapping",
       "ROI tracking and reporting"
     link: "https://ziontechgroup && ziontechgroup.com/services/ai-customer-success-platform", marketPosition: "Leading AI-driven customer success solution",
-<<<<<<< HEAD
     targetAudience: "SaaS companies, enterprise businesses, customer success teams"
     roi: "400% average return on investment",
     competitors: ["Gainsight", "Totango"; "ClientSuccess"]}
@@ -1152,15 +1133,6 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     realImplementation: true
     contactInfo: unknown,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com"}
-=======
-    targetAudience: 'SaaS companies, enterprise businesses, customer success teams',
-    roi: '400% average return on investment',
-    competitors: ["Gainsight", "Totango"; "ClientSuccess"]};
-    marketSize: "$3 && 3.2B", growthRate: "35% annually",
-    realImplementation: true;
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       address: "364 E Main St STE 1008 Middletown DE 19709",
 export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression */}"
   s: ["Gainsight", "Totango"; "ClientSuccess"]};
@@ -2026,12 +1998,8 @@ export interface InnovativeMicroSaasService2029V2 {/* TODO: Fix JSX expression *
       "Employee retention strategies","
       "Performance management","
       "Workforce planning"
-<<<<<<< HEAD
     ];
   }
-=======
-    ]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
 ];"
       "Talent acquisition optimization","
@@ -2353,7 +2321,6 @@ i,
   e: "$2,499/month",
   descriptio,"
   n: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies." i,
-<<<<<<< HEAD
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -2369,23 +2336,6 @@ i,
   e: string, realImplementatio,
   n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
-=======
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
-  e: string; descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; marketPositio,
-  n: string; targetAudienc,
-  e: string; ro,
-  i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: string} addres,
   s: string} } categor,
   y: string, technolog,

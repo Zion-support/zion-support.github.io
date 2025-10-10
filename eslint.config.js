@@ -6,7 +6,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   // Global ignores
-  {
+  {}
     ignores: [
       'admin-api-disabled/**',
       'ai-customer-support-disabled/**',
@@ -51,11 +51,11 @@ export default [
     ]
   },
   // Base JavaScript configuration
-  {
+  {}
     files: ['**/*.{js,jsx}'],
-    languageOptions: {
+    languageOptions: {}
       globals: { ...globals.browser, ...globals.node },
-      parserOptions: {
+      parserOptions: {}
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
@@ -66,21 +66,16 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       'no-unused-vars': 'warn',
-<<<<<<< HEAD
       'no-console': 'off'
     }
-=======
-      'no-console': 'warn'
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   },
   // TypeScript configuration
-  {
+  {}
     files: ['**/*.{ts,tsx}'],
-    languageOptions: {
+    languageOptions: {}
       globals: { ...globals.browser, ...globals.node },
       parser: tsParser,
-      parserOptions: {
+      parserOptions: {}
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
@@ -93,7 +88,7 @@ export default [
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
-    rules: {
+    rules: {}
       ...tseslint.configs.recommended.rules,
 ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [

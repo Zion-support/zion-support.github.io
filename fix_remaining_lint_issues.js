@@ -2,13 +2,10 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to fix remaining lint issues in a file;
-function fixRemainingLintIssues(filePath) {
-    try {
+function fixRemainingLintIssues(filePath) {}
+    try {}
     // Skip if not a source file;
     if (
       !filePath.endsWith('.tsx') &&
@@ -16,16 +13,11 @@ function fixRemainingLintIssues(filePath) {
       !filePath.endsWith('.js') &&
       !filePath.endsWith('.jsx')
     ) {
-<<<<<<< HEAD
       return false
   }
 
     // Fix 1: Add underscore prefix to unused parameters,
-=======
-      return false};
-    // Fix 1: Add underscore prefix to unused parameters;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {
+    content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {}
       if(param1 === 'error' ||
         param1 === 'errorInfo' ||
         param1 === 'event' ||
@@ -77,7 +69,6 @@ function fixRemainingLintIssues(filePath) {
         param1 === 'timestamp' ||)
         param1 === 'apiKey' ||)
         param1 === 'PROD_DOMAIN')
-<<<<<<< HEAD
       ) {
 function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }
@@ -91,29 +82,16 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     });
 
     // Fix 2: Comment out unused variable declarations
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {}
 
       // Comment out unused variable declarations
-=======
-      ) {;
-function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */};
-    };
-    // Fix,
-  1: Add underscore prefix to unused parameters;
-    content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {/* TODO: Fix JSX expression */};
-        return match.replace(param1, `_${param1}`)};
-      return match});
-    // Fix 2: Comment out unused variable declarations;
-    for (let i = 0; i < lines.length; i++) {
-      // Comment out unused variable declarations;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       if (
         line.match(/^\s*(const|let|var)\s+(\w+)\s*=\s*[^;]+,\s*$/) &&
         !line.includes('export') &&
         !line.includes('return') &&
         !line.includes('console.') &&
         !line.includes('//')
-      ) {
+      ) {}
         if(varName &&,
           [,
             'Page',
@@ -272,18 +250,17 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */};
             'apiKey')
             'PROD_DOMAIN')
           ].includes(varName)
-        ) {
+        ) {}
           if (
             !content.includes(varName + '.') &&
             !content.includes(varName + '(') &&
             !content.includes(varName + '[') &&
             !content.includes('<' + varName)
-          ) {
+          ) {}
             fixedLines.push('// ' + line);
             modified = true;
             continue;
     // Fix,
-<<<<<<< HEAD
   2: Comment out unused variable declarations
     for (let i = 0; i < lines.length, i++) {/* TODO: Fix JSX expression */}
           }
@@ -291,17 +268,9 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */};
       }
 
       // Fix 3: Add underscore prefix to unused function parameters,
-=======
-  2: Comment out unused variable declarations;
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};
-          };
-        };
-      };
-      // Fix 3: Add underscore prefix to unused function parameters;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      if (line.includes('function') && line.includes('(') && line.includes(')')) {
-        if (paramMatch) {
-          const fixedParams = params.map(p => {)
+      if (line.includes('function') && line.includes('(') && line.includes(')')) {}
+        if (paramMatch) {}
+          const fixedParams = params.map(p => {)}
             if ()
               p &&)
               !p.startsWith('_') &&
@@ -356,20 +325,15 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */};
                 'timestamp',
                 'apiKey',
                 'PROD_DOMAIN'].includes(p)
-            ) {
+            ) {}
       // Fix,
   3: Add underscore prefix to unused function parameters,
       if (line.includes('function') && line.includes('(') && line.includes(')')) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
               return `_${p}`;
             }
             return p;
           });
-=======
-              return `_${p}`};
-            return p});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          if (fixedParams.join(', ') !== params.join(', ')) {
+          if (fixedParams.join(', ') !== params.join(', ')) {}
             fixedLines.push(line.replace()
                 paramMatch[0])
           if (fixedParams.join(', ') !== params.join(', ')) {/* TODO: Fix JSX expression */}`
@@ -377,7 +341,6 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */};
               )
             );
             modified = true;
-<<<<<<< HEAD
             continue;
           }
         }
@@ -389,20 +352,11 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */};
     content = fixedLines.join('\n');
 
     // Fix 4: Remove unused imports,
-=======
-            continue};
-        };
-      };
-      fixedLines.push(line)};
-    content = fixedLines.join('\n');
-    // Fix 4: Remove unused imports;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {
       content = content.replace(/,\s*useContext/g, '');
       content = content.replace(/useContext,\s*/g, '');
       if (content.includes('import { useContext }')) {
     // Fix,
-<<<<<<< HEAD
   4: Remove unused imports,
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { useContext }')) {/* TODO: Fix JSX expression */}
@@ -412,20 +366,11 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */};
     }
 
     // Fix 5: Remove unused lazy imports,
-=======
-  4: Remove unused imports;
-    if (content.includes('import { useContext }') && !content.includes('useContext(')) {/* TODO: Fix JSX expression */};
-      if (content.includes('import { useContext }')) {/* TODO: Fix JSX expression */};
-        content = content.replace(/import { useContext } from 'react';\n?/g, '')};
-      modified = true};
-    // Fix 5: Remove unused lazy imports;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    if (content.includes('lazy') && !content.includes('lazy(')) {,
+    if (content.includes('lazy') && !content.includes('lazy(')) {,}
       content = content.replace(/,\s*lazy/g, '');
       content = content.replace(/lazy,\s*/g, '');
       if (content.includes('import { lazy }')) {
     // Fix,
-<<<<<<< HEAD
   5: Remove unused lazy imports,
     if (content.includes('lazy') && !content.includes('lazy(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */}
@@ -435,18 +380,9 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */};
     }
 
     // Fix 6: Add proper TypeScript types instead of any,
-=======
-  5: Remove unused lazy imports;
-    if (content.includes('lazy') && !content.includes('lazy(')) {/* TODO: Fix JSX expression */};
-      if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */};
-        content = content.replace(/import { lazy } from 'react';\n?/g, '')};
-      modified = true};
-    // Fix 6: Add proper TypeScript types instead of any;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Fix,
   6: Add proper TypeScript types instead of any,
     content = content.replace(/:\s*any\b/g, ': unknown');
-<<<<<<< HEAD
     if (content.includes(': unknown')) {/* TODO: Fix JSX expression */}
     }
 
@@ -458,39 +394,23 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (content.includes(': unknown')) {/* TODO: Fix JSX expression */};
-    };
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Function to recursively fix remaining lint issues;
-function fixAllRemainingLintIssues(_dir) {
-  try {
-    for (const file of files) {
-      try {
-        if (stat.isDirectory()) {
+function fixAllRemainingLintIssues(_dir) {}
+  try {}
+    for (const file of files) {}
+      try {}
+        if (stat.isDirectory()) {}
           // Skip certain directories;
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {
             continue;
-<<<<<<< HEAD
 function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
           }
           fixedCount += fixAllRemainingLintIssues(filePath);
         } else if ()
-=======
-function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */};
-          };
-          fixedCount += fixAllRemainingLintIssues(filePath)} else if ()
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           file.endsWith('.tsx') ||
           file.endsWith('.ts') ||
           file.endsWith('.js') ||
           file.endsWith('.jsx')
-<<<<<<< HEAD
         ) {/* TODO: Fix JSX expression */}
           }
         }
@@ -503,16 +423,5 @@ function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-        ) {/* TODO: Fix JSX expression */};
-          };
-        };
-      } catch (error) {/* TODO: Fix JSX expression */};
-      };
-    };
-    return fixedCount} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Main execution;
 // Main execution;`

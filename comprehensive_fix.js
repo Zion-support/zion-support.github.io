@@ -1,7 +1,7 @@
 import fs from 'fs';
 // // 1. Fix test imports;
 // // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
-if (fs.existsSync(appMinimalTestPath)) {
+if (fs.existsSync(appMinimalTestPath)) {}
   // Fix jest imports;
   content = content.replace(/import \{ describe, it, expect \} from 'jest';/)
 if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */};
@@ -16,7 +16,7 @@ if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */};
   'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
   'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
   'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx'];
-blogPages.forEach(pagePath => {)
+blogPages.forEach(pagePath => {)}
   if (fs.existsSync(pagePath)) {
     // Remove publishedTime from metadata;
     content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, '');
@@ -30,8 +30,8 @@ blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */};
 ];
   'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
   'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx'];
-openGraphPages.forEach(pagePath => {)
-  if (fs.existsSync(pagePath)) {
+openGraphPages.forEach(pagePath => {)}
+  if (fs.existsSync(pagePath)) {}
     // Fix authors format to match Author type;
     content = content.replace(/authors: \['Zion Tech Group'\]/g),
       "authors: [{ name: 'Zion Tech Group' }]"
@@ -43,7 +43,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */};
 });
 // 4. Fix Calculator import;
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
-if (fs.existsSync(calculatorPagePath)) {
+if (fs.existsSync(calculatorPagePath)) {}
   // Replace Calculator with CalculatorIcon;
 if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */};
   content = content.replace(/import \{ Calculator \}/, 'import { CalculatorIcon }');
@@ -57,11 +57,10 @@ if (fs.existsSync(seoOptimizerPath)) {
   content = content.replace(/interface AdvancedSEOOptimizerProps \{[^}]*\}/)
     `interface AdvancedSEOOptimizerProps {
 }
-  config?: {
+  config?: {}
     title: string;
     description: string;
     keywords: string[];
-<<<<<<< HEAD
     canonicalUrl: string
     ogImage: string
     structuredData?: unknown,,
@@ -69,15 +68,6 @@ if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
   }
-=======
-    canonicalUrl: string;
-    ogImage: string;
-    structuredData?: unknown;,
-if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */};
-    /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
-    `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;
@@ -108,7 +98,7 @@ ${content}`;
   //     };
 // 7. Fix SystemMonitor;
 // // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
-if (fs.existsSync(systemMonitorPath)) {
+if (fs.existsSync(systemMonitorPath)) {}
   // Add proper React imports;
   content = content.replace(/import React from 'react';/)
 if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}`
@@ -130,9 +120,8 @@ if (fs.existsSync(performancePath)) {
   // Remove conflicting declarations;
   content = content.replace(/declare global \{[^}]*\}/g, '');
   // Add proper declaration at the top;
-  content = `declare global {
+  content = `declare global {}
   interface Window {
-<<<<<<< HEAD
     gtag: (...args: unknown[]) => void,
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '');
@@ -140,8 +129,6 @@ if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   // Add proper declaration at the top;`
   content = `declare global {/* TODO: Fix JSX expression */}
   }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 }
     gtag: (...args: unknown[]) => void;
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */};

@@ -1,4 +1,4 @@
-export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d {
+export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d {}
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30">";
       {/* Animated, backgroun, d */};
       <div , className="absolute, inse, t-0, opacit, y-20">
@@ -15,7 +15,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
         <div, className="te, x, t-center, m, b-10"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-4, 0, 0/30, m, b-4"></div>
             <Sparkles , className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-            <span , className="te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">
+            <span , className="te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r" />
               Just, Publishe, d: Octobe, r, 2, 20, 2, 5;
             </sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";</Sparkles>
@@ -493,11 +493,6 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
         </d, i, v>
       </d, i, v>
     </d, i, v>
-<<<<<<< HEAD
   );
 }
 "
-=======
-  )};
-;"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

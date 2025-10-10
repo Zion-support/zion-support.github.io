@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
-=======
-export const realMicroSaasServices2024 = [
-{name: 'Real Micro-SaaS Platform 2024',
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'}
     path: '/services/real-micro-saas-platform-2024',
     description: 'Comprehensive micro-SaaS development and management platform',
     icon: 'Rocket',
@@ -86,15 +80,8 @@ export const realMicroSaasStats2024 = {}
   averageRatin,
   g: 4.7,
   activeUser,
-<<<<<<< HEAD
   s: 1200}
 export const realMicroSaasServices2024 = [ nam,
-=======
-  s: 1200};
-export const realMicroSaasServices2024 = [
- nam,
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: 'Real Micro-SaaS Platform 2024',' pat,
   h: '/services/real-micro-saas-platform-2024',' descriptio,
   n: 'Comprehensive micro-SaaS development and management platform',' ico,

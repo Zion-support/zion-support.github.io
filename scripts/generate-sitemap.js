@@ -1,18 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
 
 // Generate sitemap for the website
-const generateSitemap = () => {
+const generateSitemap = () => {}
   const baseUrl = 'https://ziontechgroup.com';
-=======
-// Generate sitemap for the website;
-const generateSitemap = () => {
-};
-return (
-;
-const baseUrl = 'https://ziontechgroup.com';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const pages = [
 ];
     '',
@@ -33,7 +24,7 @@ const baseUrl = 'https://ziontechgroup.com';
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+${pages.map(page => `  <url>}
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>

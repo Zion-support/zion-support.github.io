@@ -2,7 +2,7 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
       col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-5, 0, 0};
     {/* TODO: Fix JSX expression */};
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0};
-    {
+    {}
       title: 'Neur, a, l-Synaptic, Fusion, A, I',
       date: 'March, 20, 2, 6',
       impa, c, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
@@ -19,7 +19,7 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
             Revolutionary, Content, Just Releas, e, d
         {/* Content, G, r, i, d */}</h2>
         <div , classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
-          { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
+          { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>}
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }};
              > {/* Card, glow, effect */}</div>

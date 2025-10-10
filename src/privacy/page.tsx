@@ -1,52 +1,36 @@
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-<<<<<<< HEAD
-export default function PrivacyPage() {
+export default function PrivacyPage() {}
   const lastUpdated = 'January 1, 2024';
   const dataTypes = [
-    {
-=======
-export default function PrivacyPage() {;
-const lastUpdated = 'January 1, 2024';
-;
-const dataTypes = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    {}
       category: 'Personal Information',
       icon: User,
       description: 'Name, email address, phone number, company information',
       examples: ['Contact forms', 'Newsletter signups', 'Account creation']
     },
-        {
+        {}
       category: 'Usage Data',
       icon: Eye,
       description: 'Website interactions, pages visited, time spent',
       examples: ['Analytics data', 'User behavior', 'Performance metrics']
     },
-        {
+        {}
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, device information',
       examples: ['Log files', 'Error reports', 'System diagnostics']
     },
-        {
+        {}
       category: 'Communication Data',
       icon: Mail,
       description: 'Messages, emails, support tickets',
       examples: ['Contact forms', 'Support requests', 'Email correspondence']
     };
   ];
-<<<<<<< HEAD
   const rights = [
     {
-=======
-;
-const rights = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Right to Access',
       description: 'Request a copy of your personal data',
       icon: Eye
@@ -77,13 +61,7 @@ const rights = [
       icon: Lock
     };
   ];
-<<<<<<< HEAD
   const securityMeasures = [
-=======
-;
-const securityMeasures = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'SSL/TLS encryption for data transmission',
     'Regular security audits and penetration testing',
     'Access controls and authentication systems',
@@ -93,17 +71,12 @@ const securityMeasures = [
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       {/* Hero Section */}
-      <section className="relative py-20 lg: py-32 overflow-hidden">
-=======
-      {/* Hero Section */};
-      <section className="relative py-20 lg:py-32 overflow-hidden">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      <section className="relative py-20 lg: py-32 overflow-hidden" />
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+        <div className="container mx-auto px-4 relative z-10" />
+          <div className="max-w-4xl mx-auto text-center" />
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse" />
               Privacy Policy,
   </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
@@ -126,12 +99,8 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Last Updated */}
-=======
-      {/* Last Updated */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-8">
+      <section className="py-8" />
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
@@ -145,16 +114,12 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Introduction */}
-=======
-      {/* Introduction */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+      <section className="py-20" />
+        <div className="container mx-auto px-4" />
+          <div className="max-w-4xl mx-auto" />
             <h2 className="text-3xl font-bold text-white mb-6">Introduction</h2>
-            <div className="prose prose-lg prose-invert max-w-none">
+            <div className="prose prose-lg prose-invert max-w-none" />
               <p className="text-gray-300 mb-6">
                 Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
@@ -168,27 +133,23 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Information We Collect */}
-=======
-      {/* Information We Collect */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50" />
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Information We Collect</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {dataTypes.map((type, index) => (
+              {dataTypes.map((type, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center space-x-3 mb-4">
                     <type .icon className="w-8 h-8 text-cyan-400" />
                     <h3 className="text-xl font-bold text-white">{type.category}</h3>
                   </div>
                   <p className="text-gray-300 mb-4">{type.description}</p>
-                  <div className="space-y-2">
+                  <div className="space-y-2" />
                     <h4 className="text-sm font-semibold text-cyan-400">Examples:</h4>
                     <ul className="space-y-1">
-                      {type.examples.map((example, exampleIndex) => (
+                      {type.examples.map((example, exampleIndex) => (}
                         <li key={exampleIndex} className="text-sm text-gray-400 flex items-center">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {example};
@@ -202,12 +163,8 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* How We Use Your Information */}
-=======
-      {/* How We Use Your Information */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20">
+      <section className="py-20" />
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8">How We Use Your Information</h2>
@@ -246,20 +203,16 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Data Security */}
-=======
-      {/* Data Security */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+      <section className="py-20 bg-slate-800/50" />
+        <div className="container mx-auto px-4" />
+          <div className="max-w-4xl mx-auto" />
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Data Security</h2>
             <p className="text-gray-300 mb-8 text-center">
               We implement appropriate technical and organizational measures to protect your personal information.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {securityMeasures.map((measure, index) => (
+              {securityMeasures.map((measure, index) => (}
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{measure}</span>
@@ -269,17 +222,13 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Your Rights */}
-=======
-      {/* Your Rights */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20">
+      <section className="py-20" />
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Your Rights</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {rights.map((right, index) => (
+              {rights.map((right, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
                   <right .icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{right.title}</h3>
@@ -290,13 +239,9 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact Information */}
-=======
-      {/* Contact Information */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20" />
+        <div className="container mx-auto px-4" />
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Questions About Your Privacy?</h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -316,14 +261,9 @@ const securityMeasures = [
                 <span className="text-white">Middletown, DE</span>
               </div>
             </div>
-<<<<<<< HEAD
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
-=======
-            <a href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
   </
@@ -331,11 +271,7 @@ const securityMeasures = [
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   ),
 }
   </a>
   </h1>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

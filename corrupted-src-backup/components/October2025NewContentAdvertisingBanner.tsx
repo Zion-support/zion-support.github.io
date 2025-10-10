@@ -1,4 +1,4 @@
-export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d {
+export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d {}
   return(<section, className="relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">";)
       {/* Animated, Background, Elements */})
       <div, className="absolute, inse, t-0">)
@@ -26,7 +26,7 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
           <div, className="mb-8, animat, e-boun, c, e"></div>
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-yell, o, w-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, borde, r-2, borde, r-yell, o, w-5, 0, 0/50, shado, w-lg, shado, w-yell, o, w-5, 0, 0/30"></div>
               <Zap , className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-              <span , className="te, x, t-yell, o, w-300, fon, t-black, tex, t-lg, uppercase, tracking-wid, e, r">
+              <span , className="te, x, t-yell, o, w-300, fon, t-black, tex, t-lg, uppercase, tracking-wid, e, r" />
                 🔥 JUST, RELEASE, D • OCTOBER, 202, 5 🔥
               </sp, a, n>
               <Sparkles , className="w-6 h-6, tex, t-yell, o, w-400, animat, e-sp, i, n  />
@@ -248,11 +248,6 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-<<<<<<< HEAD
   );
 }
 "
-=======
-  )};
-;"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

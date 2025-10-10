@@ -1,17 +1,12 @@
 import React from 'react';
-const UltimateContentAdvertisingBanne, r: React.FC = () => {,
+const UltimateContentAdvertisingBanne, r: React.FC = () => {,}
   const advertisingFeature, s = [
-    {
+    {}
       ic, o, n: "🚀",
       title: "Revolutionary, AI, Technologie, s",",
       description: "Me, t, a-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations",
-<<<<<<< HEAD
       highlig, h, t: "1000x, Performan, c, e"
 const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      highlig, h, t: "1000x, Performan, c, e";
-const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */};
     },
@@ -115,11 +110,11 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
         </div>)
         {/* Features, G, r, i, d */})
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">)
-          { advertisingFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (
+          { advertisingFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (}
         </div>
         {/* Features, G, r, i, d */};
         <div , classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">
-          { advertisingFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (</div>
+          { advertisingFeatur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (</div>}
         {/* Features, G, r, i, d */}"
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-20"></div>
           {/* TODO: Fix JSX expression */};
@@ -152,7 +147,7 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
         </div>
         {/* Success, Stat, s */};
         <div , classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20">
-          { successSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>
+          { successSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>}
         {/* Success, Stat, s */}"
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20"></div>
           {/* TODO: Fix JSX expression */};
@@ -185,7 +180,7 @@ const UltimateContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX exp
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-8"></div>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="te, x, t-6xl, m, b-4">💼</div>
-                <p , className="te, x, t-gr, a, y-300, m, b-4, itali, c">
+                <p , className="te, x, t-gr, a, y-300, m, b-4, itali, c" />
                   "Zion, Tech, Group's, AI, solutions reduced, our, operational costs, b, y $50M, annuall, y. 
         {/* Testimonial, Sectio, n */}"
         <div, classNam, e = "mb-20"></div>"

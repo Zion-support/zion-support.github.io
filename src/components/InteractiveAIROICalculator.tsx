@@ -11,13 +11,13 @@ const,
   const calculateROI = () => {
     return Math.max(0, roi)
   }return (
-    <section className='bg-white py-16 rounded-2xl shadow-lg'>
-      <div className='container mx-auto px-4'>
-        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
+    <section className='bg-white py-16 rounded-2xl shadow-lg' />
+      <div className='container mx-auto px-4' />
+        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8' />
           AI ROI Calculator</span>
-        <div className='max-w-4xl mx-auto'>
-          <div className='grid md:grid-cols-2 gap-8'>
-            <div className='space-y-6'>
+        <div className='max-w-4xl mx-auto' />
+          <div className='grid md:grid-cols-2 gap-8' />
+            <div className='space-y-6' />
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Current Annual Cost ($)
@@ -61,12 +61,8 @@ Expected Efficiency Gain (%)
                   Expected return on investment over {timeframe} months</p>
     </section>
   );
-<<<<<<< HEAD
 export default InteractiveAIROICalculator</div>
   </div>
   </div>
   </h2>
   </div>
-=======
-export default InteractiveAIROICalculator;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

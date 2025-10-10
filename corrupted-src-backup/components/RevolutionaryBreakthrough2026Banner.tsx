@@ -42,16 +42,16 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}</d, i, v>)
                 <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>)
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>)
-          { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+          { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (}
               ></div>
                 <div, classNam, e='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}</d, i, v>
                 <div, classNam, e = 'te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'></div>
         <div , classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>
-          { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
+          { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>}
             <div , ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }};
                   <div, classNam, e = 'flex, fle, x-col, ga, p-2'>
-                    {  conte, n, t.trendi, n, g  && (</div>
+                    {  conte, n, t.trendi, n, g  && (</div>}
                       <div, classNam, e='flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg'></div>
                         <TrendingUp , classNam, e='w-3 h-3' />
                 <h3 , classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>

@@ -28,11 +28,11 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */};
         Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.)
       </p>)
       <div, className="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">)
-        { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (
+        { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (}
         Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.
       </p>
       <div , className="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">
-        { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (</div>
+        { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (</div>}
           <Link, ke, y = { in, d, e, x  }, to={ ar, e, a.li, n, k } classNa, m, e = { `bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r }, round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-xl, gro, u, p`};
           ></Link>
             <div, classNam, e = "mb-4">{ar, e, a.ic, o, n}</div>
@@ -74,7 +74,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */};
           <span, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">Global, Success, Metrics</sp, a, n>
         </div>
         <div , className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">
-          { successMetri, c, s.m, a, p((it, e, m, ind, e, x) = > (</div>
+          { successMetri, c, s.m, a, p((it, e, m, ind, e, x) = > (</div>}
             <div, ke, y = {ind, e, x }></div>
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c}</div>
       </div>"
@@ -141,15 +141,9 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */};
         </div>
       </div>
       <div, className="te, x, t-cent, e, r"></div>
-<<<<<<< HEAD
         <Link, t, o="/conta, c, t" 
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg">
           <Sparkles, className="w-5 h-5" />
-=======
-        <Link , t, o="/conta, c, t" 
-          className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg">
-          <Sparkles , className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           Start, Your, AI Transformation, Journe, y;
           <Link , className="w-5 h-5" />
         </Li, n, k>

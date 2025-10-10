@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Analytics from './components/Analytics';
-export default function RootLayout({
+export default function RootLayout({}
   children}: {
     children: React.ReactNode
   }) {
-  const structuredData = {
+  const structuredData = {}
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -27,7 +27,7 @@ export default function RootLayout({
       'Automation',
       'Business Intelligence'
     ],
-    contactPoint: {
+    contactPoint: {}
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'Customer Service',
@@ -36,7 +36,7 @@ export default function RootLayout({
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-    address: {
+    address: {}
     '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
@@ -44,8 +44,8 @@ export default function RootLayout({
       postalCode: '19709',
       addressCountry: 'US',
     offers: [
-      {
-  const address = {
+      {}
+  const address = {}
     '@type': 'PostalAddress',
     streetAddress: '364 E Main St STE 1008',
     addressLocality: 'Middletown',
@@ -69,18 +69,18 @@ $4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
         price: '2500',
-    serviceArea: {
+    serviceArea: {}
       '@type': 'GeoCircle',
-      geoMidpoint: {
+      geoMidpoint: {}
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
         longitude:       ,
 geoRadiusgeoRadius: '1000000'
-    hasOfferCatalog: {
+    hasOfferCatalog: {}
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
       itemListElement: [
-          itemOffered: {
+          itemOffered: {}
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description:             ,

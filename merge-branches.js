@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import { execSync } from 'child_process';
 // Function to merge a branch into main
-function mergeBranch(branchName) {
-  try {
+function mergeBranch(branchName) {}
+  try {}
     console.log(`Merging ${branchName} into main...`);
     // Merge the branch
     execSync(`git merge ${branchName} --no-edit`, { stdio: 'pipe' });
@@ -14,7 +14,7 @@ function mergeBranch(branchName) {
   };
 };
 // Main function
-async function main() {
+async function main() {}
   console.log('Starting branch merge process...');
   // List of branches to merge
   const branches = [
@@ -33,8 +33,8 @@ async function main() {
   ];
   let mergedCount = 0;
   let failedCount = 0;
-  for (const branch of branches) {
-    try {
+  for (const branch of branches) {}
+    try {}
       if (mergeBranch(branch)) {
         mergedCount++;
       } else {
@@ -49,7 +49,7 @@ async function main() {
   console.log(`Successfully merged: ${mergedCount} branches`);
   console.log(`Failed to merge: ${failedCount} branches`);
   // Push changes to main
-  try {
+  try {}
     execSync(`git push origin main`, { stdio: 'pipe' });
     console.log(`✓ Pushed changes to main`);
   } catch (error) {

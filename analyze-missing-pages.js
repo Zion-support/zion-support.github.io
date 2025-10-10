@@ -31,13 +31,13 @@ const allLinks = [...new Set([...footerLinks, ...navLinks])];
 const appDir = '/workspace/app';
 const existingPages = [];
 
-function scanDirectory(dir) {
+function scanDirectory(dir) {}
   const items = fs.readdirSync(dir);
-  for (const item of items) {
+  for (const item of items) {}
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory()) {
+    if (stat.isDirectory()) {}
       scanDirectory(fullPath);
     } else if (item === 'page.tsx') {
       // Extract the route from the path
@@ -70,7 +70,7 @@ console.log('\n=== EXISTING PAGES ===');
 existingPages.sort().forEach(page => console.log(`✓ ${page}`));
 
 // Write missing pages to a file
-fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
+fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({}
   totalLinks: allLinks.length,
   existingPages: existingPages.length,
   missingPages: missingPages.length,

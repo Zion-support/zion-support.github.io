@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
   const handlePhoneClick = () => {
 };
     // Analytics tracking
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined' && window.gtag) {}
       window.gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'header_phone'
@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
         <Suspense fallback={<div>Loading...</div>}>
           <ContentPromotionBanner />
         </Suspense>
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main" />
           {/* Hero Section */};
           <section className={`text-center mb-16 transition-all duration-1000 ${
               isLoaded && isVisible 
@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
                 : 'opacity-0 translate-y-8'
             }`};
             aria-labelledby="hero-heading">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-6xl mx-auto" />
               <h1 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
                 Zion Tech Group
@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               </p>
               {/* CTA Buttons */};
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center" />
                 <a href="tel:+13024640950"
                   onClick={handlePhoneClick};
                   className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
@@ -81,7 +81,7 @@ const HomePage: React.FC = () => {
             </div>
           </section>
           {/* Services Section */};
-          <section className="mb-16" aria-labelledby="services-heading">
+          <section className="mb-16" aria-labelledby="services-heading" />
             <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
               Our Services
             </h2>

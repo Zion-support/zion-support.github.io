@@ -3,7 +3,7 @@
 export const january2026NewContent = {
 };
   featuredArticles: [
-    {
+    {}
       id: 'ai-2026-january-autonomous-enterprise-mesh'
       title: '🚀 Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence'
       description: 'Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention'
@@ -15,7 +15,7 @@ export const january2026NewContent = {
       tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],
       readTime: '12 min',
       excerpt: 'Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration.'},
-    {
+    {}
       id: 'ai-2026-january-quantum-edge-computing'
       title: '⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution'
       description: 'Breakthrough quantum-edge convergence delivering 200-250x speed improvements with ultra-low latency processing'
@@ -27,7 +27,7 @@ export const january2026NewContent = {
       tags: ['quantum', 'edge', 'computing', 'latency', '2026'],
       readTime: '15 min',
       excerpt: "Explore the convergence of quantum computing and edge processing that's enabling unprecedented speed and efficiency in real-time applications."},
-    {
+    {}
       id: 'ai-2026-january-synthetic-consciousness',
       title: '🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness',
       description:,
@@ -42,7 +42,7 @@ export const january2026NewContent = {
       excerpt:,
         'Witness the emergence of truly conscious AI systems that demonstrate self-awareness, emotional understanding, and creative problem-solving capabilities.'}],
   featuredServices: [
-    {
+    {}
       id: 'ai-2026-autonomous-enterprise-solutions'
       title: 'Autonomous Enterprise Solutions 2026'
       description: 'Self-organizing AI systems for complete business automation with 99.7% efficiency'
@@ -56,7 +56,7 @@ export const january2026NewContent = {
         'Intelligent orchestration',
         'Zero human intervention',
         '99.7% efficiency']},
-    {
+    {}
       id: 'ai-2026-quantum-edge-platform'
       title: 'Quantum Edge Computing Platform 2026'
       description: 'Sub-millisecond processing with quantum-edge convergence for real-time applications'
@@ -71,7 +71,7 @@ export const january2026NewContent = {
         'Quantum processing',
         'Edge optimization']}],
   caseStudies: [
-    {
+    {}
       id: 'fortune-100-autonomous-transformation'
       title: 'Fortune 100 Autonomous Business Transformation'
       description: 'Complete enterprise automation achieving 95% operational efficiency with $2.8B value creation'
@@ -99,12 +99,7 @@ export const january2026NewContent = {/* TODO: Fix JSX expression */};
     }],
   caseStudie,
   s: [
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
     }]}
 
-=======
-    {/* TODO: Fix JSX expression */};
-    }]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default january2026 NewContent;

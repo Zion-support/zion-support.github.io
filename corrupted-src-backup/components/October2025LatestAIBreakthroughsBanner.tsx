@@ -1,4 +1,4 @@
-export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {
+export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {}
   return(<div , className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-ro, s, e-900, borde, r-y, borde, r-whi, t, e/10">
       <div , className="container, m, x-auto, p, x-4, p, y-12">
         <div , className="te, x, t-center, m, b-8">
@@ -233,11 +233,5 @@ export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d
       </d, i, v>)
     </d, i, v>)
   );
-<<<<<<< HEAD
 export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
 }
-=======
-export, default, function October2025LatestAIBreakthroughsBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

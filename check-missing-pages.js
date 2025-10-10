@@ -22,12 +22,12 @@ const allLinks = [...new Set([...footerLinks, ...navLinks])];
 const appDir = '/workspace/app';
 const existingPages = [];
 
-function scanDirectory(dir) {
+function scanDirectory(dir) {}
   const items = fs.readdirSync(dir);
-  for (const item of items) {
+  for (const item of items) {}
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
+    if (stat.isDirectory()) {}
       scanDirectory(fullPath);
     } else if (item === 'page.tsx') {
       // Extract the route from the path;
@@ -51,7 +51,6 @@ const missingPages = [];
 const existingPagesSet = new Set(existingPages);
 for (const link of allLinks) {
   if (!existingPagesSet.has(link)) {
-<<<<<<< HEAD
     missingPages.push(link);
   }
 }
@@ -66,28 +65,13 @@ missingPages.forEach(page => console.log(`- ${page}`));
 console.log('\n=== EXISTING PAGES ===');
 existingPages.sort().forEach(page => console.log(`✓ ${page}`));
 
-=======
-    missingPages.push(link)};
-};
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-missingPages.forEach(page => // console.log removed for production
-);
-// console.log removed for production
-existingPages.sort().forEach(page => // console.log removed for production
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Write missing pages to a file;
-fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
+fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({}
   totalLinks: allLinks.length;)
   existingPages: existingPages.length;)
   missingPages: missingPages.length;)
   missingPagesList: missingPages),
   allLinks: allLinks),
-<<<<<<< HEAD
   existingPagesList: existingPages;
 }, null, 2));
 
@@ -100,20 +84,6 @@ const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})
 console.log('Missing)
   pages:');
 missingPages.forEach(page => console.log(`- ${page}`));
-=======
-  existingPagesList: existingPages}, null, 2));
-// console.log removed for production
-// console.log removed for production
-// Find missing pages;
-const missingPages = routes.filter(route => {/* TODO: Fix JSX expression */})
-});
-// console.log removed for production
-pages:');
-missingPages.forEach(page => // console.log removed for production
-);
-`
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `
 console.log(`\nTotal missing)`
   pages: ${missingPages.length}`);`

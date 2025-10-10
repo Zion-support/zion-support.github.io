@@ -7,21 +7,11 @@
   link: string;
   category: string;
   realImplementation: boolean;
-<<<<<<< HEAD
   contactInfo: unknown
     mobile: string
     email: string,
 export interface NewOperationalService2025 {,
     address: string}
-=======
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-export interface NewOperationalService2025 {
-;,
-}
-    address: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -45,17 +35,10 @@ export interface NewOperationalService2025 {
     mobil,
   e: string,
     emai,
-<<<<<<< HEAD
   l: string,
 export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   s: string}
 }
-=======
-  l: string;
-export interface NewOperationalService2025 {/* TODO: Fix JSX expression */};
-  s: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   i,
   d: string,
   nam,
@@ -87,7 +70,6 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */};
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
   link: string, category: string
   realImplementation: boolean
   contactInfo: unknown,
@@ -95,14 +77,6 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */};
     address: string,
   }
 }
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const newOperationalServices2025: NewOperationalService2025[] = [,
     id: "smart-operations-center", name: "Smart Operations Center",
     tagline: "AI-powered operations management", price: "$119/month"
@@ -114,15 +88,9 @@ export const newOperationalServices2025: NewOperationalService2025[] = [,
       "Automated workflows",
       "Performance insights"],
     link: "/services/smart-operations-center", category: "New Operational Services 2025",
-<<<<<<< HEAD
     realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
-=======
-    realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"};
@@ -287,7 +255,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: mobil,
-<<<<<<< HEAD
   e: string, emai,
   l: string, export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   s: string } i,
@@ -301,21 +268,6 @@ i,
   y: string, realImplementatio,
   n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
-=======
-  e: string; emai,
-  l: string; export interface NewOperationalService2025 {/* TODO: Fix JSX expression */};
-  s: string }; i,
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
-  e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,

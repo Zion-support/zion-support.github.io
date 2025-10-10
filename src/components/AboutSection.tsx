@@ -1,25 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-export default function AboutSection() {
+export default function AboutSection() {}
   const stats = [
-=======
-export default function AboutSection() {;
-const stats = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Success Rate' }
   ];
-<<<<<<< HEAD
   const values = [
-=======
-;
-const values = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions.',
       icon: (
@@ -28,7 +16,7 @@ const values = [
         </svg>
       )
     },
-    {
+    {}
       title: 'Client Success',
       description: 'Your success is our mission. We build long-term partnerships based on trust and results.',
       icon: (
@@ -37,7 +25,7 @@ const values = [
         </svg>
       )
     },
-    {
+    {}
       title: 'Quality Excellence',
       description: 'We deliver exceptional quality in every project, ensuring robust and scalable solutions.',
       icon: (
@@ -48,8 +36,8 @@ const values = [
     }
   ];
   return (
-    <section id="about" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 relative" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -61,11 +49,11 @@ const values = [
           </p>
         </div>
         {/* Main Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20" />
           {/* Left Content */}
-          <div className="space-y-8">
-            <div className="cyber-card-advanced p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">
+          <div className="space-y-8" />
+            <div className="cyber-card-advanced p-8" />
+              <h3 className="text-2xl font-bold text-white mb-6" />
                 Our Mission</span>
               <p className="text-gray-300 text-lg leading-relaxed mb-6">
                 To empower businesses with cutting-edge AI and IT solutions that drive 
@@ -78,11 +66,11 @@ const values = [
                 needs but also scale with your future ambitions.
               </p>
             </div>
-            <div className="cyber-card-advanced p-8">
+            <div className="cyber-card-advanced p-8" />
               <h3 className="text-2xl font-bold text-white mb-6">
                 Why Choose Us?
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-4" />
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -113,7 +101,7 @@ const values = [
           {/* Right Content - Stats */}
           <div className="space-y-8">
             <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => (}
                 <div key={index} className="cyber-card-advanced p-6 text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 neon-pulse mb-2">
                     {stat.number}
@@ -125,10 +113,10 @@ const values = [
               ))}
             </div>
             <div className="cyber-card-advanced p-8">
-              <h3 className="text-xl font-bold text-white mb-4">
+              <h3 className="text-xl font-bold text-white mb-4" />
                 Our Expertise</span>
               <div className="space-y-3">
-                {['Artificial Intelligence', 'Machine Learning', 'Cloud Computing', 'Web Development', 'Mobile Apps', 'Data Analytics'].map((skill, index) => (
+                {['Artificial Intelligence', 'Machine Learning', 'Cloud Computing', 'Web Development', 'Mobile Apps', 'Data Analytics'].map((skill, index) => (}
                   <div key={index} className="flex items-center justify-between">
                     <span className="text-gray-300">{skill}</span>
                     <div className="w-24 bg-gray-700 rounded-full h-2">
@@ -142,10 +130,10 @@ const values = [
         </div>
         {/* Values Section */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
+          <h3 className="text-3xl font-bold text-white text-center mb-12" />
             Our Core Values</span>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
+            {values.map((value, index) => (}
               <div key={index} className="cyber-card-advanced p-8 text-center group hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-6 text-black group-hover:scale-110 transition-transform duration-300">
                   {value.icon}
@@ -161,8 +149,8 @@ const values = [
           </div>
         </div>
         {/* Team Section */}
-        <div className="cyber-card-advanced p-8">
-          <h3 className="text-2xl font-bold text-white text-center mb-8">
+        <div className="cyber-card-advanced p-8" />
+          <h3 className="text-2xl font-bold text-white text-center mb-8" />
             Meet Our Team</span>
           <p className="text-gray-300 text-center text-lg max-w-3xl mx-auto mb-8">
             Our diverse team of experts brings together decades of experience in AI, 

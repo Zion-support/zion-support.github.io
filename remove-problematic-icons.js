@@ -1,10 +1,10 @@
 #!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
-async function removeProblematicIcons() {
+async function removeProblematicIcons() {}
   //Find all TypeScript/JavaScript files in src/components;
-  //   for (const filePath of files) {
-    try {
+  //   for (const filePath of files) {}
+    try {}
       //Remove all problematic icon usage patterns;
       //Remove <span className="...">IconName</span>
       //       const spanRegex = /<span className="[^"]+">\w+<\/span>/g;

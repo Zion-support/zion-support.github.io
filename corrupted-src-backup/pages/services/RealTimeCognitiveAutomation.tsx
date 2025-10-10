@@ -30,11 +30,7 @@
                 Starting, a, t $, 7,9, 9, 9/mon, t, h;
               </sp, a, n>
             </div>
-<<<<<<< HEAD
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-=======
-            <h1 , classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               Re, a, l-Time, Cognitive, Automation Platfo, r, m;
               Re, a, l-Time, Cognitive, Automation Platfo, r, m</h1>
               <span , className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2'>
@@ -130,7 +126,7 @@
                           {solution.savin, g, s} annual, saving, s;
                           {solution.savin, g, s} annual, saving, s</div>
                     <ul , classNam, e='spa, c, e-y-2'>
-                      { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
+                      { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (}
                         <li , ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle , classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                 ].m, a, p((solution, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
@@ -154,7 +150,6 @@
                       'Custom, AI, models',
                       'Dedicated, tea, m',
                       '99.97% S, L, A']}].m, a, p((p, k, g, ind, e, x) => (
-<<<<<<< HEAD
                   <div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
                   >
                     {
@@ -163,13 +158,6 @@
                         MOST, POPULA, R
   })
                 ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
-=======
-                  <div , ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`};>
-                    {  p, k, g.popul, a, r  && (</div>
-                      <div , className='bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
-                        MOST, POPULA, R})
-                ].m, a, p((p, k, g, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   ></div>
                     {/* TODO: Fix JSX expression */})
                       </di, v > )  };
@@ -178,12 +166,12 @@
                     </h3>
                     <div , className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'>
                       {p, k, g.pri, c, e}</div>
-                      <span , className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                      <span , className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t' />
                         /mon, t, h;
                       </sp, a, n>
                     </div>
                     <ul, className='spa, c, e-y-3'></ul>
-                      { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (
+                      { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (}
                         <li , ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle , classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                     <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'></div>

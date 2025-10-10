@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOOptimizerProps {
-<<<<<<< HEAD
+interface SEOOptimizerProps {}
   title: string;
   description: string
   keywords?: string[]
@@ -10,7 +9,7 @@ interface SEOOptimizerProps {
   structuredData?: object
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({}
   title,
   description,
   keywords = [],
@@ -48,16 +47,3 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }
 
 export default SEOOptimizer
-=======
-  title: string
-}
-  description: string;
-  keywords: string[];
-  canonicalUrl?: string;
-  structuredData?: any;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string};
-;
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

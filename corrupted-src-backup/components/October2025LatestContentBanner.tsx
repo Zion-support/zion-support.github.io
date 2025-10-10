@@ -1,13 +1,13 @@
-const, October2025LatestContentBanne, r = () => {
+const, October2025LatestContentBanne, r = () => {}
   const, article, s = [
-    {
+    {}
       tit, l, e: "Advanced, GenAI, Orchestration Platfo, r, m","
       descripti, o, n: "Master, mult, i-model, coordination, and intelligent, workflow, automation at, enterprise, scale","
       ic, o, n: Bra, i, n;
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m","
       gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"
     };
-    {
+    {}
       tit, l, e: "Enterprise, AI, Securit;
   y: Zero, Trust, Framework","
       descripti, o, n: "Comprehensive, security, architecture protecting, AI, models, da, t, a, and, inference, endpoints","
@@ -15,7 +15,7 @@ const, October2025LatestContentBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k","
       gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
     };
-    {
+    {}
       tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g","
       descripti, o, n: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing in, productio, n","
       ic, o, n: Z, a, p;
@@ -26,7 +26,7 @@ const, October2025LatestContentBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-advanc, e, d-gen, a, i-orchestrati, o, n-platfo, r, m",";
       gradie, n, t: "fr, o, m-viol, e, t-600, t, o-purp, l, e-6, 0, 0"
     };
-    {
+    {}
       tit, l, e: "Enterprise, AI, Securit;
   y: Zero, Trust, Framework",";
       descripti, o, n: "Comprehensive, security, architecture protecting, AI, models, da, t, a, and, inference, endpoints",";
@@ -34,7 +34,7 @@ const, October2025LatestContentBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k",";
       gradie, n, t: "fr, o, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0"
     };
-    {
+    {}
       tit, l, e: "Re, a, l-Time, Multimodal, AI Processi, n, g",";
       descripti, o, n: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing in, productio, n",";
       ic, o, n: Z, a, p;
@@ -96,38 +96,21 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         {/* Articles, Gri, d */})
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";)
-          {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
-<<<<<<< HEAD
+          {articl, e, s.m, a, p((artic, l, e, i, d, x) => {}
             const, IconComponen, t = artic, l, e.ic, o, n;
             return(<Li, n, k;
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"</div>
-=======
-return (
-;
-const, IconComponen, t = artic, l, e.ic, o, n;
-            return(<Li , n, k;
-        {/* Articles, Gri, d */};
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">
-);
-}"</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
-          {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
+          {articl, e, s.m, a, p((artic, l, e, i, d, x) => {}
             const, IconComponen, t = artic, l, e.ic, o, n;
             return (</div>
               <Li , n, k
   k, e, y={i, d, x};
                 to={artic, l, e.li, n, k};
                 classNa, m, e="group, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, rounde, d-x, l, p-6, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:-transla, t, e-y-2, hove, r:shad, o, w-2xl, hov, e;
-<<<<<<< HEAD
   r:shad, o, w-viol, e, t-5, 0, 0/20"
               >
-=======
-  r:shad, o, w-viol, e, t-5, 0, 0/20">
-);
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <div, className={`w-1, 2, h-12, b, g-gradie, n, t-to-r ${artic, l, e.gradie, n, t} round, e, d-lg, flex, items-center, justif, y-center, m, b-4, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m`}>`;`</div>
                   <IconComponent , className="w-6 h-6, tex, t-whi, t, e  />
                 </d, i, v>
@@ -169,12 +152,8 @@ const, IconComponen, t = artic, l, e.ic, o, n;
                   <Link, className="w-4 h-4" />";
                 </d, i, v>
               </Li, n, k>)
-<<<<<<< HEAD
             );
           })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </d, i, v>
         {/* Stats, Ba, r */};
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8">"</div>

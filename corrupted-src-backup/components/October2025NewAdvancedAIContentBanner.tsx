@@ -1,4 +1,4 @@
-export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d {
+export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d {}
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n">";
 export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */};
       {/* Animated, background, elements */};
@@ -476,11 +476,6 @@ export, default, function October2025NewAdvancedAIContentBann, e, r(): vo, i, d 
         </moti, o, n.d, i, v>
       </d, i, v>
     </d, i, v>
-<<<<<<< HEAD
   );
 }
 "
-=======
-  )};
-;"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

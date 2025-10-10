@@ -17,14 +17,8 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-<<<<<<< HEAD
 
 const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
-=======
-;
-const ${title.replace(/[^a-zA-Z0-9]/g, '')}Page = () => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer ;
         title="${title} - Zion Tech Group"
@@ -93,7 +87,7 @@ return (
         </div>
       </section>
       {/* CTA Section */};
-      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10" />
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">,
             Ready to Get Started?,
@@ -112,23 +106,18 @@ return (
         </div>
       </section>
       <Footer />,
-<<<<<<< HEAD
     </div>);
 }
 
-=======
-    </div>)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default ${title.replace(/[^a-zA-Z0-9]/g, '')}Page;
 `;
 // Function to create a page;
-const createPage = (route, title, description, category) => {
+const createPage = (route, title, description, category) => {}
   const pageContent = createPageTemplate(route, title, description, category);
   const pagePath = path.join('/workspace/src', route, 'page.tsx');
   // Create directory if it doesn't exist;
   const dir = path.dirname(pagePath);
   if (!fs.existsSync(dir)) {
-<<<<<<< HEAD
     fs.mkdirSync(dir, { recursive: true });
   }
   
@@ -137,13 +126,6 @@ const createPage = (route, title, description, category) => {
   console.log(`Created page: ${route}`);
 }
 
-=======
-    fs.mkdirSync(dir, { recursive: true })};
-  // Write the page file;
-  fs.writeFileSync(pagePath, pageContent);
-  // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Page configurations;
 const pageConfigs = {
 };
@@ -290,7 +272,6 @@ const pageConfigs = {
   '/tech-transfer': { title: 'Technology Transfer', description: 'Technology transfer and commercialization services', category: 'Transfer' },
   '/space-technology': { title: 'Space Technology', description: 'Space technology solutions and satellite systems', category: 'Space' },
   '/climate-tech': { title: 'Climate Technology', description: 'Climate technology solutions and sustainability', category: 'Climate' },
-<<<<<<< HEAD
   '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' }
 }
 
@@ -300,43 +281,23 @@ const batchSize = 10;
 
 console.log(`Creating ${missingPages.length} missing pages...`);
 
-=======
-  '/biotech-it': { title: 'Biotech IT', description: 'Biotechnology IT solutions and systems', category: 'Biotech' };
-};
-// Create pages in batches;
-let createdCount = 0;
-const batchSize = 10;
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-for (const route of missingPages) {
-  if (pageConfigs[route]) {
+for (const route of missingPages) {}
+  if (pageConfigs[route]) {}
     const config = pageConfigs[route];
     createPage(route, config.title, config.description, config.category);
     createdCount++;
-    if (createdCount % batchSize === 0) {
-<<<<<<< HEAD
+    if(6) => {
       console.log(`Created ${createdCount} pages...`);
     }
-=======
-      // console.log removed for production
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   } else {
     // Create a generic page for routes without specific configs;
     const title = route.split('/').pop().replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
     const description = `Advanced ${title.toLowerCase()} solutions powered by AI and cutting-edge technology`;
     const category = 'Technology';
     createPage(route, title, description, category);
-<<<<<<< HEAD
     createdCount++;
   }
 }
 
 console.log(`\n✅ Successfully created ${createdCount} missing pages!`);
 console.log('All navigation links should now work properly.');
-=======
-    createdCount++};
-};
-// console.log removed for production
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

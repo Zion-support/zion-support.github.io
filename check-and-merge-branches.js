@@ -2,8 +2,8 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 // Function to check if a branch can be merged without conflicts
-function canMergeWithoutConflicts(branchName) {
-  try {
+function canMergeWithoutConflicts(branchName) {}
+  try {}
     // Check if branch exists
     execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { stdio: 'ignore' });
     // Try to merge without actually merging
@@ -14,19 +14,19 @@ function canMergeWithoutConflicts(branchName) {
   };
 };
 // Function to merge a branch into main
-function mergeBranch(branchName) {
-  try {
+function mergeBranch(branchName) {}
+  try {}
     console.log(`Attempting to merge ${branchName}...`);
     // Checkout the branch
     execSync(`git checkout ${branchName}`, { stdio: 'pipe' });
     // Merge main into the branch first to resolve conflicts
-    try {
+    try {}
       execSync(`git merge origin/main --no-edit`, { stdio: 'pipe' });
       console.log(`✓ Successfully merged main into ${branchName}`);
     } catch (mergeError) {
       console.log(`⚠ Merge conflicts in ${branchName}, resolving...`);
       // Try to resolve conflicts automatically
-      try {
+      try {}
         execSync(`git add .`, { stdio: 'pipe' });
         execSync(`git commit -m "Resolve merge conflicts with main"`, { stdio: 'pipe' });
         console.log(`✓ Resolved conflicts in ${branchName}`);
@@ -47,7 +47,7 @@ function mergeBranch(branchName) {
   };
 };
 // Main function
-async function main() {
+async function main() {}
   console.log('Checking for branches to merge...');
   // Get list of recent branches
   const branches = [
@@ -66,9 +66,9 @@ async function main() {
   ];
   let mergedCount = 0;
   let failedCount = 0;
-  for (const branch of branches) {
-    try {
-      if (canMergeWithoutConflicts(branch)) {
+  for (const branch of branches) {}
+    try {}
+      if (canMergeWithoutConflicts(branch)) {}
         console.log(`✓ ${branch} can be merged without conflicts`);
         if (mergeBranch(branch)) {
           mergedCount++;
@@ -92,7 +92,7 @@ async function main() {
   console.log(`Successfully merged: ${mergedCount} branches`);
   console.log(`Failed to merge: ${failedCount} branches`);
   // Push changes to main
-  try {
+  try {}
     execSync(`git push origin main`, { stdio: 'pipe' });
     console.log(`✓ Pushed changes to main`);
   } catch (error) {

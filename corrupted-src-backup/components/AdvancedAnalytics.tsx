@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 interface AdvancedAnalyticsProps {/* TODO: Fix JSX expression */}
 }
-=======
-interface AdvancedAnalyticsProps {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
+const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,}
   enableConversionTracking = true;
   enablePerformanceTracking = true,
   enableErrorTracking = true}) => {
-  const [analytics] = useState({
+  const [analytics] = useState({}
     pageViews: 0;
     uniqueVisitors: 0;
     bounceRate: 0;
@@ -20,7 +14,7 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
     topPages: []
     trafficSources: []
     deviceBreakdown: []
-    performanceMetrics: {
+    performanceMetrics: {}
       loadTime: 0;)
       firstContentfulPaint: 0;)
       largestContentfulPaint: 0;)
@@ -29,21 +23,14 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
     conversions: 0,
     performance: 0),
     errors: 0)});
-  useEffect(() => {
+  useEffect(() => {}
     // Initialize analytics tracking;
     if (enableConversionTracking) {
       // Track conversion events;
-<<<<<<< HEAD
       //       }
     if (enablePerformanceTracking) {
       // Track performance metrics;
       //       }
-=======
-      //       };
-    if (enablePerformanceTracking) {
-      // Track performance metrics;
-      //       };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (enableErrorTracking) {
       // Track errors;
       //       };
@@ -81,21 +68,12 @@ const,
   e: 0,
     error,
   s: 0});
-<<<<<<< HEAD
   useEffect(() => {/* TODO: Fix JSX expression */}
       //       }
     if (enablePerformanceTracking) {/* TODO: Fix JSX expression */}
       //       }
     if (enableErrorTracking) {/* TODO: Fix JSX expression */}
       //       }
-=======
-  useEffect(() => {/* TODO: Fix JSX expression */};
-      //       };
-    if (enablePerformanceTracking) {/* TODO: Fix JSX expression */};
-      //       };
-    if (enableErrorTracking) {/* TODO: Fix JSX expression */};
-      //       };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
   return (<div className="advanced-analytics"></div>
       <h2>Advanced Analytics Dashboard</h2>"
@@ -118,12 +96,8 @@ const,
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default AdvancedAnalytics;
 "
   </AdvancedAnalyticsProps>

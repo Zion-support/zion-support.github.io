@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import https from 'https';
 import { execSync } from 'child_process';
 
 // GitHub API configuration;
-function makeGitHubRequest(endpoint) {
-  return new Promise((resolve, reject) => {
-    const options = {
-=======
-  return new Promise((resolve, reject) => {;
-const options = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+function makeGitHubRequest(endpoint) {}
+  return new Promise((resolve, reject) => {}
+    const options = {}
       hostname: 'api.github.com'
       port: 443
       path: endpoint,
@@ -51,15 +45,15 @@ async function getPRDetails(prNumber) {/* TODO: Fix JSX expression */}
   }
 }
 
-function runGitCommand(command) {
-  try {
+function runGitCommand(command) {}
+  try {}
     const result = execSync(command, { )
       cwd: '/workspace'),
       encoding: 'utf8'),
       stdio: 'pipe'});
     return { success: true, output: result }
   } catch (error) {
-    return {
+    return {}
       success: false
       error: error.message,
       output: error.stdout ? error.stdout.toString() : '',
@@ -73,8 +67,8 @@ function runGitCommand(command) {/* TODO: Fix JSX expression */}
   }
 }
 
-async function mergePRWithGit(pr) {
-    try {
+async function mergePRWithGit(pr) {}
+    try {}
     // Get detailed PR info;
     if (!prDetails) {
 
@@ -90,20 +84,20 @@ async function mergePRWithGit(pr) {
   }
 
     // Try to merge the branch;
-    if (mergeResult.success) {
+    if (mergeResult.success) {}
     return true
   } else {
     // If merge failed due to conflicts, try to resolve them;
       // Check if there are merge conflicts;
-      if (statusResult.success && statusResult.output.includes('UU')) {
+      if (statusResult.success && statusResult.output.includes('UU')) {}
 
         // Use our conflict resolution script;
-        if (conflictResult.success) {
+        if (conflictResult.success) {}
           // Add resolved files;
           runGitCommand(`git add .`);
           
           // Commit the merge;
-          if (commitResult.success) {
+          if (commitResult.success) {}
 
             return true
   } else {
@@ -140,8 +134,8 @@ async function mergePRWithGit(pr) {/* TODO: Fix JSX expression */}
   }
 }
 
-async function mergeAllPRsWithGit() {
-  try {
+async function mergeAllPRsWithGit() {}
+  try {}
     if (prs.length === 0) {
 
       return;
@@ -158,8 +152,8 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
     }
 
     // Process PRs one by one;
-    for (const pr of mainPRs) {
-    if (success) {
+    for (const pr of mainPRs) {}
+    if (success) {}
         successCount++
   } else {
         failCount++;
@@ -176,7 +170,7 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
 }
 
 // Run the merge process;
-mergeAllPRsWithGit().then(() => {
+mergeAllPRsWithGit().then(() => {}
     process.exit(0)
   }).catch(error => {
     )

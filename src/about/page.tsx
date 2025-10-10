@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
-const AboutPage: React.FC = () => {
+const AboutPage: React.FC = () => {}
   const team = [
     {
       name: 'Kleber Santos',
@@ -46,38 +46,38 @@ const AboutPage: React.FC = () => {
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.'}];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+      <div className="container mx-auto px-4 py-16" />
+        <div className="text-center mb-16" />
           <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
           </p>
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
-export default function AboutPage() {
+export default function AboutPage() {}
   const teamMembers = [
-    {
+    {}
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber-santos.jpg',
       bio: 'Visionary leader with 15+ years in AI and enterprise solutions',
       expertise: ['AI Strategy', 'Enterprise Architecture', 'Digital Transformation']
     },
-    {
+    {}
       name: 'Dr. Sarah Chen',
       role: 'Chief Technology Officer',
       image: '/images/team/sarah-chen.jpg',
       bio: 'AI research pioneer with expertise in machine learning and quantum computing',
       expertise: ['Machine Learning', 'Quantum Computing', 'Research & Development']
     },
-    {
+    {}
       name: 'Michael Rodriguez',
       role: 'Head of Engineering',
       image: '/images/team/michael-rodriguez.jpg',
       bio: 'Full-stack architect specializing in scalable AI systems',
       expertise: ['System Architecture', 'Cloud Infrastructure', 'DevOps']
     },
-    {
+    {}
       name: 'Dr. Emily Watson',
       role: 'Head of AI Research',
       image: '/images/team/emily-watson.jpg',
@@ -151,9 +151,9 @@ export default function AboutPage() {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
+      <section className="relative py-20 px-4" />
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             About <span className="text-cyan-400">Zion Tech Group</span>
@@ -162,9 +162,9 @@ export default function AboutPage() {
             We are pioneers in AI and IT solutions, transforming businesses through innovative technology and expert guidance.
           </p>
         </div>
-        <div className='prose prose-lg max-w-none'>
-          <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-            <h2 className='text-2xl font-bold text-gray-900 mb-4'>
+        <div className='prose prose-lg max-w-none' />
+          <div className='bg-white rounded-lg shadow-lg p-8 mb-8' />
+            <h2 className='text-2xl font-bold text-gray-900 mb-4' />
               Our Mission;
   </
             <p className='text-gray-600 mb-4'>
@@ -202,10 +202,10 @@ export default function AboutPage() {
           </div>
         </div>
         {/* Stats Section */}
-        <section className="py-16 bg-white rounded-xl mb-16">
+        <section className="py-16 bg-white rounded-xl mb-16" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
@@ -219,11 +219,11 @@ export default function AboutPage() {
           </div>
         </section>
         {/* Mission Section */}
-        <section className="py-20 bg-gray-50 rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <section className="py-20 bg-gray-50 rounded-xl mb-16" />
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" />
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6" />
                   Our Mission,
   </
                 <p className="text-lg text-gray-600 mb-6">
@@ -252,18 +252,18 @@ export default function AboutPage() {
           </div>
         </section>
         {/* Values Section */}
-        <section className="py-20 bg-white rounded-xl mb-16">
+        <section className="py-20 bg-white rounded-xl mb-16" />
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
                 Our Values
   </
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600" />
                 The principles that guide everything we do,
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
+              {values.map((value, index) => (}
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-white" />
@@ -280,25 +280,25 @@ export default function AboutPage() {
           </div>
         </section>
         {/* Team Section */}
-        <section className="py-20 bg-gray-50 rounded-xl mb-16">
+        <section className="py-20 bg-gray-50 rounded-xl mb-16" />
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
                 Meet Our Team
   </
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600" />
                 The experts behind our innovative solutions,
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
+              {team.map((member, index) => (}
                 <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                     <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
                       <Users className="w-16 h-16 text-gray-600" />
                     </div>
                   </div>
-                  <div className="p-6">
+                  <div className="p-6" />
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {member.name}
                     </h3>
@@ -315,15 +315,15 @@ export default function AboutPage() {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl" />
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Let's discuss how we can help transform your business with our AI-powered solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" />
               <Link
                 to="/contact"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
@@ -339,10 +339,10 @@ export default function AboutPage() {
         </section>
       </div>
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                   {stat.number}
@@ -350,11 +350,11 @@ export default function AboutPage() {
                 <div className="text-gray-600 font-medium">
                   {stat.label}
                 </div>
-      <section className="relative py-20 lg: py-32 overflow-hidden">
+      <section className="relative py-20 lg: py-32 overflow-hidden" />
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+        <div className="container mx-auto px-4 relative z-10" />
+          <div className="max-w-4xl mx-auto text-center" />
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse" />
               About Zion Tech Group,
   </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
@@ -379,11 +379,11 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Mission & Vision */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
+      <section className="py-20" />
+        <div className="container mx-auto px-4" />
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center" />
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" />
                 Our Mission,
   </
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -406,7 +406,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6" />
                 Our Vision,
   </
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -436,18 +436,18 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Values */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50" />
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4" />
               Our Values
   </
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto" />
               The principles that guide everything we do and shape our culture,
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map((value, index) => (}
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <value.icon className="w-8 h-8 text-white" />
@@ -460,18 +460,18 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Team */}
-      <section className="py-20">
+      <section className="py-20" />
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4" />
               Meet Our Team,
   </
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto" />
               World-class experts in AI, quantum computing, and enterprise technology;
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map((member, index) => (}
               <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300">
                 <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl font-bold text-white">
@@ -494,18 +494,18 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Achievements */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/50" />
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4" />
               Our Achievements
   </
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto" />
               Numbers that speak to our impact and success,
   </
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievement, index) => (}
               <div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <achievement.icon className="w-10 h-10 text-white" />
@@ -522,20 +522,20 @@ export default function AboutPage() {
         </div>
       </section>
       {/* Timeline */}
-      <section className="py-20">
+      <section className="py-20" />
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4" />
               Our Journey
   </
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto" />
               Key milestones in our company's growth and innovation,
   </
           </div>
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>
-              {timeline.map((item, index) => (
+              {timeline.map((item, index) => (}
                 <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className="bg-slate-800/50 p-6 rounded-lg">
@@ -553,15 +553,15 @@ export default function AboutPage() {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700" />
+        <div className="container mx-auto px-4 text-center" />
           <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Join hundreds of enterprises that have already transformed their operations with our AI solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
             <a
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center">

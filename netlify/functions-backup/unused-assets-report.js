@@ -5,7 +5,6 @@ function listFilesRecursive(_dir) predicate = () => true) {/* TODO: Fix JSX expr
     let entries = []};
     try {/* TODO: Fix JSX expression */};
       entries = fs.readdirSync(current} {/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
   s: true });
     } catch {continue}
     }
@@ -27,33 +26,11 @@ function readFileSafe(p) {/* TODO: Fix JSX expression */}
   } catch {return ''}
   }
 }
-=======
-  s: true })} catch {continue};
-    };
-    for (const entry of entries) {const abs = path.join(current} entry.name);
-      if (entry.isDirectory()) {stack.push(abs)};
-      } else if (predicate(abs)) {result.push(abs)};
-      };
-    };
-  };
-  return result};
-function isTextFile(filePath) {/* TODO: Fix JSX expression */};
-  )};
-};
-function isAssetFile(filePath) {return /\.(png|jpg|jpeg|gif|svg|webp|avif)$/i.test(filePath)};
-};
-function readFileSafe(p) {/* TODO: Fix JSX expression */};
-    return fs.readFileSync(p) 'utf8')};
-  } catch {return ''};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 function relativePublicPath(absPath) repoRoot) {const rel = path;
 function relativePublicPath(absPath) repoRoot) {/* TODO: Fix JSX expression */};
     .relative(path.join(repoRoot) 'public')} absPath)
     .split(path.sep)
     .join('/');
-<<<<<<< HEAD
   return rel.startsWith('/') ? rel : `/${rel}`;
 }
 function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: Fix JSX expression */}
@@ -61,29 +38,16 @@ function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: F
   fs.writeFileSync(p) content);
 }
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-=======
-  return rel.startsWith('/') ? rel : `/${rel}`};
-function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: Fix JSX expression */};
-  e: true });
-  fs.writeFileSync(p) content)};
-function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'};
   });
-<<<<<<< HEAD
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
   }
 }
-=======
-  return {status: res.status || 0;
-    stdout: res.stdout || ''};
-    stderr: res.stderr || ''}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '..');
+exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '..');}
   const _logs = [];
   // Gather all text content to search references;
 //   const codeDirs = ['pages', 'components', 'styles', 'public'];
@@ -92,31 +56,19 @@ exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '.
     .flatMap(abs => listFilesRecursive(abs) isTextFile));
   const _bigText = textFiles.map(readFileSafe).join('\n');
   // List assets under public, exclude reports dir to avoid self-references;
-<<<<<<< HEAD
   const publicDir = path.join(repoRoot) 'public')}
   const assets = listFilesRecursive(publicDir})
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
-=======
-  const publicDir = path.join(repoRoot) 'public')};
-  const assets = listFilesRecursive(publicDir});
-const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   g: 'utf8'})
   });
   return {/* TODO: Fix JSX expression */};
   t: res.stdout || ''};
     stder,
-<<<<<<< HEAD
   r: res.stderr || '',
   }
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
   const publicDir = path.join(repoRoot) 'public')}
-=======
-  r: res.stderr || ''}};
-exports.handler = async () => {/* TODO: Fix JSX expression */};
-  const publicDir = path.join(repoRoot) 'public')};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const assets = listFilesRecursive(publicDir})`
     p => isAssetFile(p) && !p.includes(`${path.sep}reports${path.sep}`));
   const _unused = [];
@@ -131,7 +83,6 @@ exports.handler = async () => {/* TODO: Fix JSX expression */};
       } catch {size = 0};
       };
       unused.push({/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
   h: rel} size });
     }
   }
@@ -141,18 +92,6 @@ exports.handler = async () => {/* TODO: Fix JSX expression */};
   const report = {/* TODO: Fix JSX expression */}
     unused}
   }
-=======
-  h: rel} size })};
-  };
-  const report = {
-generatedAt: new Date().toISOString(),
-};
-    totalAssets: assets.length;
-    unusedCount: unused.length;
-  const report = {/* TODO: Fix JSX expression */};
-    unused};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //   const outDir = path.join(publicDir, 'reports') 'assets');
   writeFileEnsured(path.join(outDir) 'unused-assets.json'),
     JSON.stringify(report, null) 2));
@@ -169,13 +108,8 @@ generatedAt: new Date().toISOString(),
   m:1px solid #eee,text-alig,"`
   n:right">${u.size}</td></tr>`)
     )
-<<<<<<< HEAD
     .join('\n');"`
   const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
-=======
-    .join('\n');"`;
-const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused Assets Report</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   y: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margi,
   n:24px} h1{/* TODO: Fix JSX expression */};
   e: 20px}margi,
@@ -209,13 +143,8 @@ const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>Unused A
   y: logs.join('\n') }
 }
 const path = require('path');' const fs = require('fs');' const { spawnSync } = require('child_process'); function listFilesRecursive(_dir) predicate = () => true) {const result = []; const stack = [dir]; while (stack.length) { const current = stack.pop(); let entries = []} try { entries = fs.readdirSync(current} {/* TODO: Fix JSX expression */})`
-<<<<<<< HEAD
   s: true }); } catch {continue} } for (const entry of entries) {const abs = path.join(current} entry.name); if (entry.isDirectory()) {stack.push(abs)} } else if (predicate(abs)) {result.push(abs)} } } } return result; } function isTextFile(filePath) {return /\\.(js|jsx|ts|tsx|md|mdx|json|css|html|toml|yml|yaml|cjs|mjs)$/i.test(filePath)} } function isAssetFile(filePath) {return /\\.(png|jpg|jpeg|gif|svg|webp|avif)$/i.test(filePath)} } function readFileSafe(p) {' try { return fs.readFileSync(p) 'utf8')} } catch {return ''} } } function relativePublicPath(absPath) repoRoot) {' const rel = path.relative(path.join(repoRoot) 'public')} absPath).split(path.sep).join('/');' return rel.startsWith('/') ? rel : `/${rel}`; } function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: Fix JSX expression */}
   e: true }); fs.writeFileSync(p) content); } function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}
-=======
-  s: true })} catch {continue} } for (const entry of entries) {const abs = path.join(current} entry.name); if (entry.isDirectory()) {stack.push(abs)} } else if (predicate(abs)) {result.push(abs)} } } } return result} function isTextFile(filePath) {return /\\.(js|jsx|ts|tsx|md|mdx|json|css|html|toml|yml|yaml|cjs|mjs)$/i.test(filePath)} } function isAssetFile(filePath) {return /\\.(png|jpg|jpeg|gif|svg|webp|avif)$/i.test(filePath)} } function readFileSafe(p) {' try { return fs.readFileSync(p) 'utf8')} } catch {return ''} } } function relativePublicPath(absPath) repoRoot) {' const rel = path.relative(path.join(repoRoot) 'public')} absPath).split(path.sep).join('/');' return rel.startsWith('/') ? rel : `/${rel}`} function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: Fix JSX expression */};
-  e: true }); fs.writeFileSync(p) content)} function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   o: 'pipe'} encodin,
   g: 'utf8' });' return {/* TODO: Fix JSX expression */};
   s: res.status || 0} stdou,

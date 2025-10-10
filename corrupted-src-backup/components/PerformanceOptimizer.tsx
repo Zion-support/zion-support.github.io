@@ -1,24 +1,20 @@
 import, Reac, t, { useEffe, c, t, useSta, t, e } fr, o, m "rea, c, t";
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "w, e, b-vita, l, s";
-interface, PerformanceMetric, s {
+interface, PerformanceMetric, s {}
     c, l, s: numb, e, r | nu, l, l;
 f, i, d: numb, e, r | nu, l, l;
 f, c, p: numb, e, r | nu, l, l;
 l, c, p: numb, e, r | nu, l, l;
 tt, f, b: numb, e, r | nu, l, l;
 sc, o, r;
-<<<<<<< HEAD
   e: numb, e, r
   }
-=======
-  e: numb, e, r};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
+const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({}
     isVisib, l, e;
   onClo, s, e
   }) => {
-  con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useSta, t, e({
+  con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useSta, t, e({}
     imageOptimizati, o, n: tr, u, e;
     codeSplitti, n, g: tr, u, e;
     lazyLoadi, n, g: tr, u, e;
@@ -32,7 +28,6 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/
   });
   con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<string[]>([])
   );
-<<<<<<< HEAD
   const, runOptimization, s = useCallba, c, k(as, y, n, c () => {/* TODO: Fix JSX expression */}
       }, if (optimizatio, n, s.codeSplitti, n, g) {/* TODO: Fix JSX expression */}
      }
@@ -42,17 +37,6 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/
     if() {/* TODO: Fix JSX expression */}
       }, setCurrentOptimizatio, n, s(optimizationsLi, s, t);
   }, [optimizatio, n, s]);
-=======
-;
-const, runOptimization, s = useCallba, c, k(as, y, n, c () => {/* TODO: Fix JSX expression */};
-      }, if (optimizatio, n, s.codeSplitti, n, g) {/* TODO: Fix JSX expression */};
-     };
-    if() {/* TODO: Fix JSX expression */};
-      }, if (optimizatio, n, s.cachi, n, g) {/* TODO: Fix JSX expression */};
-     };
-    if() {/* TODO: Fix JSX expression */};
-      }, setCurrentOptimizatio, n, s(optimizationsLi, s, t)}, [optimizatio, n, s]);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       k, e, y: 'c, d, n' as, con, s, t,
       lab, e, l: 'CDN, Integrati, o, n',
       descriptio,

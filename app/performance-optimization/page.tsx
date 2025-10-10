@@ -11,15 +11,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     {
     icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses'  }
   }]
-=======
-      description: 'Worldwide deployment and support for international businesses'
-    };
-  ];
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const benefits = [
 ];
     'Advanced AI technology integration',
@@ -30,13 +23,8 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
   ]
 return (
-=======
-  ];
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </div>
         </div>
       </section>
@@ -51,10 +39,5 @@ return (
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 }
 export default PagePage
-=======
-};
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

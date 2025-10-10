@@ -1,6 +1,6 @@
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
+const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {}
   const, storie, s = [
-    {
+    {}
       comp, a, n;
   y: "TechCorp, Internationa, l"
       indust, r, y: "Technolo, g, y"
@@ -13,7 +13,7 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       ]
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
     };
-    {
+    {}
       compa, n, y: "Global, Manufacturing, Inc"
       indust, r, y: "Manufacturi, n, g"
       ic, o, n: <Target, className="w-8 h-8" /></Target>resu</Target>, l, t: "85% Downtime, Reductio, n"
@@ -25,7 +25,7 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       ]
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     };
-    {
+    {}
       company: "FinanceFirst Bank"
       industry: "Financial Services"
       icon: <Users className="w-8 h-8" />,
@@ -39,7 +39,7 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       color: "from-purple-500 to-pink-500",
         </div>,
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
-          {stories.map((story, index) => (
+          {stories.map((story, index) => (}
             <div;
 key={index};
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
@@ -48,21 +48,14 @@ key={index};
       color: "from-purple-500 to-pink-500"
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
-          {stories.map((story, index) => (</div>
+          {stories.map((story, index) => (</div>}
             <div
-<<<<<<< HEAD
 key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"></div>
-=======
-key={index};
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
-            ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
                 <div className="flex items-center gap-3 mb-4">
                   {story.icon}</div>
                   <div></div>
-<<<<<<< HEAD
                     <h3 className="font-bold text-xl">{story.company}</h3>
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
@@ -70,15 +63,6 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
     }
     {/* TODO: Fix JSX expression */}
 key={index}
-=======
-                    <h3 className="font-bold text-xl">{story.company}</h3>;
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-key={index};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="bg-white rounded-2xl shadow-xl overflow-hidden,"
   hover:scale-105 transition-all duration-300"
             >
@@ -95,7 +79,7 @@ key={index};
               <div className="p-6"></div>
                 <p className="text-gray-600 mb-6">{story.description}</p>
                 <div className="space-y-2 mb-6">
-                  {story.metrics.map((metric, idx) => (</div>
+                  {story.metrics.map((metric, idx) => (</div>}
                     <div key={idx} className="flex items-center gap-2"></div>
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       <span className="text-sm text-gray-700">{metric}</span>

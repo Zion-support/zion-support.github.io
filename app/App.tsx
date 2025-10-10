@@ -6,7 +6,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
-<<<<<<< HEAD
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -110,80 +109,27 @@ const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 const DigitalTransformationPage = lazy(() => import('./digital-transformation/page'));
 const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
+
 // Loading component
-const AppLoadingSpinner = () => (
-  <LoadingSpinner />
-)
-const App: React.FC = () => {
-    return (
-=======
-// Lazy load pages for better performance;
-const HomePage = lazy(() => import('./page'))
-const AboutPage = lazy(() => import('./about/page'))
-const ContactPage = lazy(() => import('./contact/page'))
-const ServicesPage = lazy(() => import('./services/page'))
-const PricingPage = lazy(() => import('./pricing/page'))
-const CaseStudiesPage = lazy(() => import('./case-studies/page'))
-const BlogPage = lazy(() => import('./blog/page'))
-const TeamPage = lazy(() => import('./team/page'))
-const CareersPage = lazy(() => import('./careers/page'))
-const PrivacyPage = lazy(() => import('./privacy/page'))
-const TermsPage = lazy(() => import('./terms/page'))
-const CookiesPage = lazy(() => import('./cookies/page'))
-// AI Services;
-const AiServicesPage = lazy(() => import('./ai-services/page'))
-const AiMarketingPage = lazy(() => import('./ai-marketing/page'))
-const AiAutomationPage = lazy(() => import('./ai-automation/page'))
-const AiHealthcarePage = lazy(() => import('./ai-healthcare/page'))
-const AiFintechPage = lazy(() => import('./ai-fintech/page'))
-const AiContentGenerationPage = lazy(() => import('./ai-content-generation/page'))
-const AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'))
-const AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page'))
-const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'))
-const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'))
-const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'))
-const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'))
-// IT Services;
-const ItServicesPage = lazy(() => import('./it-services/page'))
-const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'))
-const ItSupportPage = lazy(() => import('./it-support/page'))
-const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'))
-const CybersecurityPage = lazy(() => import('./cybersecurity/page'))
-// Emerging Technologies;
-const BlockchainPage = lazy(() => import('./blockchain/page'))
-const QuantumComputingPage = lazy(() => import('./quantum-computing/page'))
-const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'))
-const ARVRSolutionsPage = lazy(() => import('./ar-vr-solutions/page'))
-const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'))
-// Micro SaaS;
-const MicroSaasPage = lazy(() => import('./micro-saas/page'))
-// Support Pages;
-const DocsPage = lazy(() => import('./docs/page'))
-const ApiDocsPage = lazy(() => import('./api-docs/page'))
-const SupportPage = lazy(() => import('./support/page'))
-const StatusPage = lazy(() => import('./status/page'))
-const ConsultationPage = lazy(() => import('./consultation/page'))
-// Loading component;
 const AppLoadingSpinner = () => (
   <LoadingSpinner size="xl" 
     text="Loading Zion Tech Group..." 
     fullScreen 
   />
 );
-const App: React.FC = () => {
-};
+
+const App: React.FC = () => {}
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
-          <div className="App">
+          <div className="App" />
             <PerformanceMonitor>
               <AccessibilityEnhancer />
             </PerformanceMonitor>
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
-                {/* Main Pages */};
+                {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
@@ -196,11 +142,7 @@ const App: React.FC = () => {
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/cookies" element={<CookiesPage />} />
-<<<<<<< HEAD
                 {/* AI Services */}
-=======
-                {/* AI Services */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <Route path="/ai-services" element={<AiServicesPage />} />
                 <Route path="/ai-marketing" element={<AiMarketingPage />} />
                 <Route path="/ai-automation" element={<AiAutomationPage />} />
@@ -213,7 +155,6 @@ const App: React.FC = () => {
                 <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
                 <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                 <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
-<<<<<<< HEAD
                 {/* Additional AI Services */}
                 <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
                 <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
@@ -230,15 +171,11 @@ const App: React.FC = () => {
                 <Route path="/ai-voice-solutions" element={<AiVoiceSolutionsPage />} />
                 <Route path="/ai-hr-solutions" element={<AiHrSolutionsPage />} />
                 {/* IT Services */}
-=======
-                {/* IT Services */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <Route path="/it-services" element={<ItServicesPage />} />
                 <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
                 <Route path="/it-support" element={<ItSupportPage />} />
                 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
-<<<<<<< HEAD
                 {/* Additional IT Services */}
                 <Route path="/api" element={<ApiDevelopmentPage />} />
                 <Route path="/database-management" element={<DatabaseManagementPage />} />
@@ -255,15 +192,11 @@ const App: React.FC = () => {
                 <Route path="/data-analytics-bi" element={<DataAnalyticsBiPage />} />
                 <Route path="/custom-software" element={<CustomSoftwarePage2 />} />
                 {/* Emerging Technologies */}
-=======
-                {/* Emerging Technologies */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                 <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
                 <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
                 <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-<<<<<<< HEAD
                 {/* Additional Emerging Technologies */}
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                 <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
@@ -274,11 +207,6 @@ const App: React.FC = () => {
                 {/* Micro SaaS */}
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
                 {/* Support Pages */}
-=======
-                {/* Micro SaaS */};
-                <Route path="/micro-saas" element={<MicroSaasPage />} />
-                {/* Support Pages */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
@@ -301,12 +229,7 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-<<<<<<< HEAD
-  )
-}
-export default App
-=======
   );
 };
+
 export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

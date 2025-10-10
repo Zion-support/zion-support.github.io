@@ -1,7 +1,7 @@
 import React from 'react';
-const NewBlogContentShowcase202, 6: React.FC = () => { ,
+const NewBlogContentShowcase202, 6: React.FC = () => { ,}
   const blogPost, s = [
-    {
+    {}
       id: 1,
       title: 'The, Complete, Guide to, AI, Revolution 20, 2, 6: From, Concept, to Implementat, i, o, n',
       slug: 'comple, t, e-gui, d, e-ai-revoluti, o, n-2, 0, 2, 6',
@@ -16,13 +16,8 @@ const NewBlogContentShowcase202, 6: React.FC = () => { ,
       featured: t, r, u, e,
       ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,</Brain>gradie</Brain>, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
       bad, g, e: 'FEATU, R, E, D',
-<<<<<<< HEAD
       tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']
 const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e'];
-const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
      },
     {/* TODO: Fix JSX expression */};
      },
@@ -57,7 +52,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
         <div, className="te, x, t-center, m, b-16"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in"></div>
             <Sparkles , className="w-5 h-5, tex, t-bl, u, e-400, animat, e-pul, s, e" />
-            <span , className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
+            <span , className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e" />
               📚 NEW, BLOG, CONTENT • January, 202, 6;
             </sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Sparkles>
@@ -65,7 +60,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
           <h2 , className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
             New, Blog, Content Showcase, 202, 6;
           </h2>
-          <p , className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
+          <p , className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8" />
   ]; return ("
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}"
@@ -93,12 +88,12 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
           </p>)
           {/* Blog, Stat, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
-            { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (
+            { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (}
               <div , ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
           </p>
           {/* Blog, Stat, s */};
           <div , classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
-            { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>
+            { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>}
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div , className="te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r">
           {/* Blog, Stat, s */}"
@@ -120,7 +115,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
         </div>
         {/* Featured, Blog, Posts */};
         <div , classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
-          { blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (</div>
+          { blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (</div>}
             <div, ke, y = { po, s, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }};
              > {/* Card, glow, effect */}</div>
@@ -179,7 +174,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                 {/* Ta, g, s */};
                 <div, className="mb-6"></div>
                   <div , className="flex, fle, x-wrap, ga, p-1">
-                    { po, s, t.tags.m, a, p((ta, g, i, d, x) = > (</div>
+                    { po, s, t.tags.m, a, p((ta, g, i, d, x) = > (</div>}
                       <span , ke, y = { id, x  }, classNa, m, e = "px-2, p, y-1, rounded, bg-whi, t, e/10, tex, t-gr, a, y-300, tex, t-xs">
                 {/* Ta, g, s */}"
                 <div, className="mb-6"></div>"
@@ -246,7 +241,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>
               <Star , className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-              <span , className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
+              <span , className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e" />
                 PREMIUM, CONTEN, T;
               </sp, a, n>
             </div>

@@ -1,4 +1,4 @@
-export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
+export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {}
   return(<div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-9, 5, 0">";
   return (
     <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-9, 5, 0">";</div>
@@ -293,7 +293,7 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">"</section>
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">🚀 Performance, Excellenc, e</h3>
-                <ul , className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
+                <ul , className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0" />
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Key, Benefits, for Enterpris, e, s</h2>";
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";</section>
@@ -448,11 +448,11 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
             <h2, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6">Gettingte, d</h2>
             <p , className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
               Ready, to, transform your, enterprise, with quantum, edge, AI? Our, experts, are ready, to, help y, o, u: </p>,
-            <div , className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20">
+            <div , className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20" />
               Ready, to, transform your, enterprise, with quantum, edge, AI? Our, experts, are ready, to, help y, o, u: </p>
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20"></section>
-              <ul , className="spa, c, e-y-3, tex, t-gr, a, y-300, m, b-6">
-                <li , className="flex, item, s-start, ga, p-3">
+              <ul , className="spa, c, e-y-3, tex, t-gr, a, y-300, m, b-6" />
+                <li , className="flex, item, s-start, ga, p-3" />
                   <span, className="te, x, t-cy, a, n-400, tex, t-xl">✓</sp, a, n>
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Gettingte, d</h2>";
@@ -557,7 +557,7 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
           </secti, o, n>
         </d, i, v>
         {/* Foot, e, r */};
-        <footer , className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/10">
+        <footer , className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/10" />
           <div, className="flex, fle, x-wrap, ga, p-4, item, s-center, justif, y-betwe, e, n"></div>
             <div, className="flex, ga, p-4"></div>
               <a, titl, e="Internal, lin, k" hr, e, f="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-400, hove, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">← Back, to, Blog</a>"
@@ -600,11 +600,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
         </foot, e, r>
       </artic, l, e>
     </d, i, v>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "

@@ -1,17 +1,17 @@
 #!/usr/bin
 import fs from 'fs';
 import path from 'path';
-function fixJSXErrors(filePath) {
-  try {
+function fixJSXErrors(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     /
     const jsxElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'Helmet', 'Fragment'];
-    jsxElements.forEach(element => {
+    jsxElements.forEach(element => {}
       /)
       const openTags = (content.match(new RegExp(`<${element}[^>]*>`, 'g')) || []).length;
       const closeTags = (content.match(new RegExp(`<
-      if (openTags > closeTags) {
+      if (openTags > closeTags) {}
         const missing = openTags - closeTags;
         /
         if (element === 'Fragment') {
@@ -23,7 +23,7 @@ function fixJSXErrors(filePath) {
       };
     });
     /
-    content = content.replace(/<>\s*$
+    content = content.replace(/<React.Fragment>\s*$
     content = content.replace(/^\s*<\/>\s*$
     /
     content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$
@@ -39,7 +39,7 @@ function fixJSXErrors(filePath) {
     /
     content = content.replace(/(\w+):\s*([^,}]+)\s*(\w+):
     /
-    content = content.replace(/\s*\(\s*\)\s*=>\s*\{
+    content = content.replace(/\s*\(\s*\)\s*=>\s*\{}
     content = content.replace(/\s*\(\s*([^)]+)\s*\)\s*=>\s*\{
     /
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)[^>]*>\s*$
@@ -66,17 +66,17 @@ function fixJSXErrors(filePath) {
     return false;
   };
 };
-function findFilesWithJSXErrors(dir) {
+function findFilesWithJSXErrors(dir) {}
   const files = [];
-  function searchDir(currentDir) {
+  function searchDir(currentDir) {}
     const items = fs.readdirSync(currentDir);
-    for (const item of items) {
+    for (const item of items) {}
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {
         searchDir(fullPath);
       } else if (stat.isFile() && /\.(tsx?|jsx?)$
-        try {
+        try {}
           const content = fs.readFileSync(fullPath, 'utf8');
           /
           if (content.includes('Expected corresponding closing tag') || 

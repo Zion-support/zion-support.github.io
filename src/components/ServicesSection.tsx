@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-export default function ServicesSection() {
+export default function ServicesSection() {}
   const services = [
-=======
-import React from 'react';
-export default function ServicesSection() {;
-const services = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       title: 'AI & Machine Learning',
       description: 'Custom AI solutions including predictive analytics, natural language processing, and computer vision.',
       icon: (
@@ -17,7 +10,7 @@ const services = [
       ),
       features: ['Predictive Analytics', 'NLP Solutions', 'Computer Vision', 'Deep Learning']
     },
-    {
+    {}
       title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure, migration services, and cloud-native application development.',
       icon: (
@@ -27,7 +20,7 @@ const services = [
       ),
       features: ['AWS/Azure/GCP', 'Migration Services', 'DevOps', 'Containerization']
     },
-    {
+    {}
       title: 'Web Development',
       description: 'Modern, responsive web applications using cutting-edge technologies and frameworks.',
       icon: (
@@ -37,7 +30,7 @@ const services = [
       ),
       features: ['React/Next.js', 'Node.js', 'TypeScript', 'Progressive Web Apps']
     },
-    {
+    {}
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics and visualization.',
       icon: (
@@ -47,7 +40,7 @@ const services = [
       ),
       features: ['Business Intelligence', 'Data Visualization', 'ETL Processes', 'Real-time Analytics']
     },
-    {
+    {}
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
       icon: (
@@ -57,7 +50,7 @@ const services = [
       ),
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response']
     },
-    {
+    {}
       title: 'Mobile Development',
       description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
       icon: (
@@ -69,8 +62,8 @@ const services = [
     };
   ];
   return (
-    <section id="services" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-20 relative" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -83,13 +76,9 @@ const services = [
         </div>
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-<<<<<<< HEAD
+          {services.map((service, index) => (}
             <div
               key={index}
-=======
-            <div key={index}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300">
               {/* Icon */}
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover:scale-110 transition-transform duration-300">
@@ -104,7 +93,7 @@ const services = [
               </p>
               {/* Features */}
               <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
+                {service.features.map((feature, featureIndex) => (}
                   <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                     <svg className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -115,12 +104,8 @@ const services = [
               </ul>
               {/* Learn More Button */}
               <div className="mt-6">
-<<<<<<< HEAD
                 <a
                   href="#contact"
-=======
-                <a href="#contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
                   Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,16 +117,15 @@ const services = [
           ))};
         </div>
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="cyber-card-advanced p-8 max-w-4xl mx-auto">
+        <div className="text-center mt-16" />
+          <div className="cyber-card-advanced p-8 max-w-4xl mx-auto" />
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
             <p className="text-gray-300 mb-8 text-lg">
               Let's discuss how our AI and IT solutions can drive your success.
             </p>
-<<<<<<< HEAD
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" />
               <a
                 href="#contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
@@ -149,14 +133,6 @@ const services = [
   </
               <a
                 href="tel:+1234567890"
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Get Free Consultation
-              </a>
-              <a href="tel:+1234567890"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
                 Call Now
   </
@@ -165,11 +141,7 @@ const services = [
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   ),
 }
   </a>
   </a>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

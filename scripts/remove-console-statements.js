@@ -52,19 +52,18 @@ let totalFiles = 0;
 let processedFiles = 0;
 let removedStatements = 0;
 
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileRemovedCount = 0;
     // Remove console statements;
-    consolePatterns.forEach(pattern => {)
+    consolePatterns.forEach(pattern => {)}
       const matches = newContent.match(pattern);
-      if (matches) {
+      if (matches) {}
         fileRemovedCount += matches.length;
         newContent = newContent.replace(pattern, '');
 // Function to remove console statements from a file;
-<<<<<<< HEAD
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
   from: ${filePath}`);
     }
@@ -82,19 +81,6 @@ async function main() {/* TODO: Fix JSX expression */}
   // console.log('🧹 Removing console statements from production code...\n');
   
   // Get all TypeScript and JavaScript files in the app directory;
-=======
-function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */};
-  from: ${filePath}`)};
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
-    // // console.error removed for production
-return false};
-};
-// Main function;
-async function main() {/* TODO: Fix JSX expression */};
-};
-  // // console.log removed for production
-// Get all TypeScript and JavaScript files in the app directory;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const patterns = [
 ];
     'app/**/*.{ts,tsx,js,jsx}',
@@ -114,7 +100,6 @@ async function main() {/* TODO: Fix JSX expression */};
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
     if (fileRemovedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
-<<<<<<< HEAD
       console.log(`✅ ${filePath}: Removed ${fileRemovedCount} console statements`);
       removedStatements += fileRemovedCount;
     }
@@ -125,24 +110,15 @@ async function main() {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-      // console.log removed for production
-removedStatements += fileRemovedCount};
-    processedFiles++} catch (error) {
-    // console.error removed for production
-};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-async function main() {
+async function main() {}
   console.log('🚀 Starting console statement removal...\n');
 
   // Get all files to process;
   const allFiles = [];
-  for (const pattern of filePatterns) {
+  for (const pattern of filePatterns) {}
     const files = await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
-<<<<<<< HEAD
     allFiles.push(...files);
   }
 
@@ -167,23 +143,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 
 export { processFile, consolePatterns }
   }
-=======
-    allFiles.push(...files)};
-  // Remove duplicates;
-  const uniqueFiles = [...new Set(allFiles)];
-  totalFiles = uniqueFiles.length;
-  // console.log removed for production
-// Process each file;
-  uniqueFiles.forEach(processFile);
-  // console.log removed for production
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
-};
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main()};
-export { processFile, consolePatterns }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   `
   // console.log(`\n📊 Summar)`
   y: `),`
@@ -199,9 +158,5 @@ export { processFile, consolePatterns }};
 };
 // Run the script;
 main().catch(console.error);
-<<<<<<< HEAD
 
 export { removeConsoleStatements }`
-=======
-export { removeConsoleStatements };`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

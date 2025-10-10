@@ -107,25 +107,25 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 
 const ${pageName}Page: React.FC = () => {
   const features = [
-    {
+    {}
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
+    {}
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
+    {}
       icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
+    {}
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
@@ -143,11 +143,11 @@ const ${pageName}Page: React.FC = () => {
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50" />
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8" />
+          <div className="max-w-7xl mx-auto" />
+            <div className="text-center" />
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
                 ${title}
               </h1>
@@ -167,7 +167,7 @@ const ${pageName}Page: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8" />
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -179,7 +179,7 @@ const ${pageName}Page: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
@@ -187,7 +187,7 @@ const ${pageName}Page: React.FC = () => {
                   </div>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
@@ -201,8 +201,8 @@ const ${pageName}Page: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600" />
+          <div className="max-w-4xl mx-auto text-center" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -224,7 +224,7 @@ const ${pageName}Page: React.FC = () => {
 export default ${pageName}Page;`;
 
 // Page configurations
-const pageConfigs = {
+const pageConfigs = {}
   'careers': { name: 'Careers', title: 'Careers', description: 'Join our team and help shape the future of AI and IT solutions.' },
   'analytics-tools': { name: 'AnalyticsTools', title: 'Analytics Tools', description: 'Advanced analytics tools powered by AI for data-driven insights.' },
   'api-docs': { name: 'ApiDocs', title: 'API Documentation', description: 'Comprehensive API documentation for developers.' },
@@ -321,13 +321,13 @@ const pageConfigs = {
 // Process all critical files
 console.log('🔧 Fixing critical JSX errors...\n');
 
-criticalFiles.forEach(filePath => {
-  try {
+criticalFiles.forEach(filePath => {}
+  try {}
     const pathParts = filePath.split('/');
     const fileName = pathParts[pathParts.length - 1].replace('.tsx', '');
     const config = pageConfigs[fileName];
     
-    if (config) {
+    if (config) {}
       const content = createBasicPageTemplate(config.name, config.title, config.description);
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Fixed ${filePath}`);

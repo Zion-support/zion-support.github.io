@@ -7,10 +7,10 @@ export const metadata = {
   description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
   keywords:,
     'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence'};
-export default function EnterprisePage() {
+export default function EnterprisePage() {}
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */};
-      <header className="relative overflow-hidden">
+      <header className="relative overflow-hidden" />
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div;
@@ -136,13 +136,13 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */};
       </section>,
 ,
       {/* Solutions Section */};
-      <section className="py-20">
+      <section className="py-20" />
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Enterprise AI Solutions;
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */};
               <h3 className="text-2xl font-bold text-white mb-4">
                 Autonomous Operations;
               </h3>
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6" />
 "
           <div className="grid,
   md:grid-cols-2,"

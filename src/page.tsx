@@ -1,6 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { 
+import { }
   Phone, 
   Mail, 
   MapPin, 
@@ -113,20 +113,15 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
-<<<<<<< HEAD
 // Dynamically import heavy components for better performance
-=======
-// Dynamically import heavy components for better performance;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-<<<<<<< HEAD
 // Preload critical components
-const preloadComponents = () => {
-    if (typeof window !== 'undefined') {
+const preloadComponents = () => {}
+    if (typeof window !== 'undefined') {}
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel')
@@ -134,72 +129,37 @@ const preloadComponents = () => {
   }
 }
 // Loading skeleton component
-=======
-// Preload critical components;
-const preloadComponents = () => {
-};
-  if (typeof window !== 'undefined') {
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel')}, 100)};
-};
-// Loading skeleton component;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-<<<<<<< HEAD
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
-const HomePage: React.FC = () => {
+const HomePage: React.FC = () => {}
     const [isLoaded, setIsLoaded] = useState(false);
-=======
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-;
-const HomePage: React.FC = () => {
-};
-const [isLoaded, setIsLoaded] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
+  useEffect(() => {}
     setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
     // Initialize performance optimizations
     initializePerformanceOptimizations();
-<<<<<<< HEAD
     return () => clearTimeout(timer)
   }, []);
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-=======
-    return () => clearTimeout(timer)}, []);
-  // Analytics tracking for phone clicks - optimized;
-const handlePhoneClick = useCallback(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+  const handlePhoneClick = useCallback(() => {}
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-<<<<<<< HEAD
       });
     }
   }, []);
   // Enhanced Micro SAAS Services with real functionality and pricing
   const microSAASServices = [
-    {
-=======
-      })};
-  }, []);
-  // Enhanced Micro SAAS Services with real functionality and pricing;
-const microSAASServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    {}
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
       icon: '📊',
@@ -212,7 +172,7 @@ const microSAASServices = [
       marketPrice: '$299',
       savings: '33%'
     },
-        {
+        {}
       title: 'AI Social Media Manager',
       description: 'Automate your social media with AI-powered content creation and smart scheduling',
       icon: '📱',
@@ -225,7 +185,7 @@ const microSAASServices = [
       marketPrice: '$249',
       savings: '40%'
     },
-        {
+        {}
       title: 'AI Analytics Dashboard',
       description: 'Transform your data into actionable insights with AI-powered analytics',
       icon: '📈',
@@ -238,7 +198,7 @@ const microSAASServices = [
       marketPrice: '$499',
       savings: '40%'
     },
-        {
+        {}
       title: 'AI Email Marketing Suite',
       description: 'Transform your email marketing with AI-powered content generation and automation',
       icon: '📧',
@@ -251,7 +211,7 @@ const microSAASServices = [
       marketPrice: '$349',
       savings: '43%'
     },
-        {
+        {}
       title: 'AI Customer Support Bot',
       description: 'Provide 24/7 intelligent customer support with AI-powered chatbot',
       icon: '🤖',
@@ -264,7 +224,7 @@ const microSAASServices = [
       marketPrice: '$399',
       savings: '38%'
     },
-        {
+        {}
       title: 'AI Code Review Assistant',
       description: 'Advanced automated code analysis with AI-powered bug detection and optimization',
       icon: '🔍',
@@ -277,7 +237,7 @@ const microSAASServices = [
       marketPrice: '$299',
       savings: '40%'
     },
-        {
+        {}
       title: 'AI Content Generator',
       description: 'Create high-quality content for blogs, social media, and marketing with AI',
       icon: '✍️',
@@ -290,7 +250,7 @@ const microSAASServices = [
       marketPrice: '$199',
       savings: '35%'
     },
-        {
+        {}
       title: 'AI Lead Generation System',
       description: 'Automated lead generation and qualification with AI-powered targeting',
       icon: '🎯',
@@ -303,7 +263,7 @@ const microSAASServices = [
       marketPrice: '$599',
       savings: '42%'
     },
-        {
+        {}
       title: 'AI Video Generator',
       description: 'Create professional videos with AI-powered editing and generation',
       icon: '🎬',
@@ -316,7 +276,7 @@ const microSAASServices = [
       marketPrice: '$699',
       savings: '43%'
     },
-        {
+        {}
       title: 'AI Voice Cloning Studio',
       description: 'Create realistic voice clones for content creation and personalization',
       icon: '🎤',
@@ -329,7 +289,7 @@ const microSAASServices = [
       marketPrice: '$499',
       savings: '40%'
     },
-        {
+        {}
       title: 'AI Fashion Design Assistant',
       description: 'Design clothing and accessories with AI-powered fashion intelligence',
       icon: '👗',
@@ -342,7 +302,7 @@ const microSAASServices = [
       marketPrice: '$349',
       savings: '43%'
     },
-        {
+        {}
       title: 'AI Music Composer',
       description: 'Create original music and soundtracks with AI composition tools',
       icon: '🎵',
@@ -355,7 +315,7 @@ const microSAASServices = [
       marketPrice: '$249',
       savings: '40%'
     },
-        {
+        {}
       title: 'AI Fitness Coach',
       description: 'Personalized fitness training with AI-powered workout optimization',
       icon: '💪',
@@ -368,7 +328,7 @@ const microSAASServices = [
       marketPrice: '$199',
       savings: '50%'
     },
-        {
+        {}
       title: 'AI Workflow Automation',
       description: 'Automate complex business processes with intelligent workflow management',
       icon: '⚙️',
@@ -381,7 +341,7 @@ const microSAASServices = [
       marketPrice: '$399',
       savings: '38%'
     },
-        {
+        {}
       title: 'AI Data Visualization',
       description: 'Transform complex data into stunning visual insights with AI',
       icon: '📊',
@@ -394,7 +354,7 @@ const microSAASServices = [
       marketPrice: '$299',
       savings: '40%'
     },
-        {
+        {}
       title: 'AI Sales Automation',
       description: 'Boost sales performance with AI-powered automation and insights',
       icon: '💰',
@@ -408,16 +368,9 @@ const microSAASServices = [
       savings: '40%'
     };
   ];
-<<<<<<< HEAD
   // Enhanced AI Services with real capabilities and market pricing
   const aiServices = [
-    {
-=======
-  // Enhanced AI Services with real capabilities and market pricing;
-const aiServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    {}
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making with 99.9% accuracy',
       icon: Brain,
@@ -429,7 +382,7 @@ const aiServices = [
       savings: '44%',
       contact: 'kleber@ziontechgroup.com'
     },
-        {
+        {}
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis and language understanding with 95%+ accuracy',
       icon: MessageSquare,
@@ -441,7 +394,7 @@ const aiServices = [
       savings: '44%',
       contact: 'kleber@ziontechgroup.com'
     },
-        {
+        {}
       title: 'Computer Vision',
       description: 'Image and video analysis solutions for object detection and recognition with 99%+ accuracy',
       icon: Eye,
@@ -453,7 +406,7 @@ const aiServices = [
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
     },
-        {
+        {}
       title: 'AI Automation',
       description: 'Intelligent process automation with decision-making capabilities and 90%+ efficiency gains',
       icon: Zap,
@@ -465,7 +418,7 @@ const aiServices = [
       savings: '46%',
       contact: 'kleber@ziontechgroup.com'
     },
-        {
+        {}
       title: 'Quantum AI Computing',
       description: 'Next-generation quantum algorithms for complex problem solving with exponential speedup',
       icon: Atom,
@@ -477,7 +430,7 @@ const aiServices = [
       savings: '41%',
       contact: 'kleber@ziontechgroup.com'
     },
-        {
+        {}
       title: 'AI Cybersecurity',
       description: 'AI-powered threat detection and prevention systems with 99.9% threat detection rate',
       icon: Shield,
@@ -489,7 +442,7 @@ const aiServices = [
       savings: '38%',
       contact: 'kleber@ziontechgroup.com'
     },
-        {
+        {}
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis, treatment planning, and patient care with FDA compliance',
       icon: Stethoscope,
@@ -501,7 +454,7 @@ const aiServices = [
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
     },
-        {
+        {}
       title: 'AI Financial Services',
       description: 'FinTech AI solutions for trading, risk management, and fraud detection',
       icon: CreditCard,
@@ -514,16 +467,9 @@ const aiServices = [
       contact: 'kleber@ziontechgroup.com'
     };
   ];
-<<<<<<< HEAD
   // Enhanced IT Services with comprehensive capabilities
   const itServices = [
-    {
-=======
-  // Enhanced IT Services with comprehensive capabilities;
-const itServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    {}
       title: 'Cloud Migration & Management',
       description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
       icon: Cloud,
@@ -535,7 +481,7 @@ const itServices = [
       savings: '46%',
       contact: '+1 302 464 0950'
     },
-        {
+        {}
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security services including threat detection, incident response, and compliance',
       icon: Shield,
@@ -547,7 +493,7 @@ const itServices = [
       savings: '42%',
       contact: '+1 302 464 0950'
     },
-        {
+        {}
       title: 'IT Infrastructure Management',
       description: 'Complete IT infrastructure setup, maintenance, and optimization services',
       icon: Server,
@@ -559,7 +505,7 @@ const itServices = [
       savings: '44%',
       contact: '+1 302 464 0950'
     },
-        {
+        {}
       title: 'DevOps & CI/CD',
       description: 'Modern DevOps practices with automated deployment and continuous integration',
       icon: Settings,
@@ -571,7 +517,7 @@ const itServices = [
       savings: '43%',
       contact: '+1 302 464 0950'
     },
-        {
+        {}
       title: 'Database Services',
       description: 'Database design, optimization, and management for all major database systems',
       icon: Database,
@@ -583,7 +529,7 @@ const itServices = [
       savings: '45%',
       contact: '+1 302 464 0950'
     },
-        {
+        {}
       title: 'Network Infrastructure',
       description: 'Complete network design, implementation, and management services',
       icon: Network,
@@ -595,7 +541,7 @@ const itServices = [
       savings: '44%',
       contact: '+1 302 464 0950'
     },
-        {
+        {}
       title: 'IT Consulting',
       description: 'Strategic IT consulting for digital transformation and technology optimization',
       icon: Briefcase,
@@ -607,7 +553,7 @@ const itServices = [
       savings: '43%',
       contact: '+1 302 464 0950'
     },
-        {
+        {}
       title: 'IT Support & Maintenance',
       description: '24/7 IT support and maintenance services for all your technology needs',
       icon: Wrench,
@@ -620,16 +566,9 @@ const itServices = [
       contact: '+1 302 464 0950'
     };
   ];
-<<<<<<< HEAD
   // Specialized Services
   const specializedServices = [
-    {
-=======
-  // Specialized Services;
-const specializedServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    {}
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable business insights with advanced AI analytics',
       icon: BarChart,
@@ -641,7 +580,7 @@ const specializedServices = [
       savings: '40%',
       contact: 'kleber@ziontechgroup.com'
     },
-        {
+        {}
       title: 'Blockchain & Web3 Solutions',
       description: 'Complete blockchain development and Web3 integration services',
       icon: Layers,
@@ -653,7 +592,7 @@ const specializedServices = [
       savings: '40%',
       contact: 'kleber@ziontechgroup.com'
     },
-        {
+        {}
       title: 'IoT & Edge Computing',
       description: 'Internet of Things solutions with edge computing for real-time processing',
       icon: Cpu,
@@ -665,7 +604,7 @@ const specializedServices = [
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
     },
-        {
+        {}
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile app development with AI integration',
       icon: Smartphone,
@@ -677,7 +616,7 @@ const specializedServices = [
       savings: '44%',
       contact: '+1 302 464 0950'
     },
-        {
+        {}
       title: 'E-commerce Solutions',
       description: 'Complete e-commerce platform development with AI-powered features',
       icon: ShoppingCart,
@@ -689,7 +628,7 @@ const specializedServices = [
       savings: '43%',
       contact: '+1 302 464 0950'
     },
-        {
+        {}
       title: 'API Development & Integration',
       description: 'Custom API development and third-party integration services',
       icon: Code,
@@ -703,10 +642,9 @@ const specializedServices = [
     };
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       {/* Performance Optimizer */};
       <PerformanceOptimizer />
-<<<<<<< HEAD
       {/* SEO Optimizer */}
       <SEOOptimizer />
       {/* Accessibility Enhancer */}
@@ -718,53 +656,36 @@ const specializedServices = [
       {/* Navigation */}
       <Navigation />
       {/* Hero Section with Futuristic Design */}
-=======
-      {/* SEO Optimizer */};
-      <SEOOptimizer />
-      {/* Accessibility Enhancer */};
-      <AccessibilityEnhancer />
-      {/* Analytics */};
-      <Analytics />
-      {/* Security Enhancer */};
-      <SecurityEnhancer />
-      {/* Navigation */};
-      <Navigation />
-      {/* Hero Section with Futuristic Design */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" />
         {/* Animated Background */};
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-<<<<<<< HEAD
         {/* Neon Grid Overlay */}
-=======
-        {/* Neon Grid Overlay */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <div className="absolute inset-0" style={{
+        <div className="absolute inset-0" style={{}
           backgroundImage: `
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
           `,
           backgroundSize: '50px 50px'
         }}></div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-6xl md: text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+        <div className="relative z-10 container mx-auto px-4 text-center" />
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+            <h1 className="text-6xl md: text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse" />
               ZION TECH GROUP
   </
-            <p className="text-2xl md:text-3xl text-white mb-8 font-light">
+            <p className="text-2xl md:text-3xl text-white mb-8 font-light" />
               AI-Powered Enterprise Solutions & Digital Transformation,
   </
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
                 <Phone className="w-6 h-6 mr-2" />
-                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover: text-cyan-300 transition-colors">
+                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover: text-cyan-300 transition-colors" />
                   +1 302 464 0950
   </
               </div>
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors" />
                   kleber@ziontechgroup.com,
   </
               </div>
@@ -793,15 +714,11 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Micro SAAS Services Section */}
-=======
-      {/* Micro SAAS Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" />
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent" />
               Micro SAAS Services;
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -810,19 +727,15 @@ const specializedServices = [
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {microSAASServices.map((service, index) => (
+            {microSAASServices.map((service, index) => (}
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover: border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
-                {service.popular && (
+                {service.popular && (}
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                       🔥 POPULAR,
   </
                   </div>
-<<<<<<< HEAD
                 )}
-=======
-                )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 <div className="text-center mb-4">
                   <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
                     {service.icon};
@@ -846,10 +759,10 @@ const specializedServices = [
                     </span>
                   </div>
                 </div>
-                <div className="mb-6">
+                <div className="mb-6" />
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature};
@@ -868,12 +781,8 @@ const specializedServices = [
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={service.link}
-=======
-                  <a href={service.link};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -884,15 +793,11 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* AI Services Section */}
-=======
-      {/* AI Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900" />
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" />
               AI Services & Solutions;
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -901,7 +806,7 @@ const specializedServices = [
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
+            {aiServices.map((service, index) => (}
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -926,10 +831,10 @@ const specializedServices = [
                     </span>
                   </div>
                 </div>
-                <div className="mb-6">
+                <div className="mb-6" />
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature};
@@ -948,12 +853,8 @@ const specializedServices = [
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={`mailto:${service.contact}?subject=Interest in ${service.title}`}
-=======
-                  <a href={`mailto:${service.contact}?subject=Interest in ${service.title}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                     Contact Us
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -964,15 +865,11 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* IT Services Section */}
-=======
-      {/* IT Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" />
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent" />
               IT Services & Solutions;
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -981,7 +878,7 @@ const specializedServices = [
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => (
+            {itServices.map((service, index) => (}
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -1006,10 +903,10 @@ const specializedServices = [
                     </span>
                   </div>
                 </div>
-                <div className="mb-6">
+                <div className="mb-6" />
                   <h4 className="text-sm font-semibold text-green-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature};
@@ -1028,12 +925,8 @@ const specializedServices = [
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={`tel:${service.contact}`}
-=======
-                  <a href={`tel:${service.contact}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:from-green-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                     Call Now
                     <Phone className="w-4 h-4 ml-2" />
@@ -1044,15 +937,11 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Specialized Services Section */}
-=======
-      {/* Specialized Services Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900" />
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent" />
               Specialized Solutions;
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1061,7 +950,7 @@ const specializedServices = [
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {specializedServices.map((service, index) => (
+            {specializedServices.map((service, index) => (}
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-orange-400/20 hover:border-orange-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20">
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -1086,10 +975,10 @@ const specializedServices = [
                     </span>
                   </div>
                 </div>
-                <div className="mb-6">
+                <div className="mb-6" />
                   <h4 className="text-sm font-semibold text-orange-400 mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature};
@@ -1108,16 +997,10 @@ const specializedServices = [
                   </ul>
                 </div>
                 <div className="text-center">
-<<<<<<< HEAD
                   <a 
                     href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject=Interest in ${service.title}`}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
                     {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}
-=======
-                  <a href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject=Interest in ${service.title}`};
-                    className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                    {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
@@ -1126,12 +1009,8 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact Section */}
-=======
-      {/* Contact Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" />
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -1146,7 +1025,7 @@ const specializedServices = [
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover: text-cyan-300 text-lg font-semibold">
+              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover: text-cyan-300 text-lg font-semibold" />
                 +1 302 464 0950
   </
             </div>
@@ -1154,7 +1033,7 @@ const specializedServices = [
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
+              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold" />
                 kleber@ziontechgroup.com
   </
             </div>
@@ -1162,7 +1041,7 @@ const specializedServices = [
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
-              <p className="text-pink-400 text-sm">
+              <p className="text-pink-400 text-sm" />
                 364 E Main St STE 1008<br />
                 Middletown DE 19709,
   </
@@ -1170,7 +1049,6 @@ const specializedServices = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Footer */}
       <Footer />
     </div>
@@ -1189,10 +1067,3 @@ export default HomePage;
   </p>
   </h1>
   </div>
-=======
-      {/* Footer */};
-      <Footer />
-    </div>
-  )};
-export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

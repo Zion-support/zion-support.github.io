@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 /**;
  * Validation Utilities;
  * Provides common validation functions for forms and data;
@@ -25,7 +24,7 @@ const URL_REGEX = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
 /**;
  * Validate email address;
  */;
-export function isValidEmail(email: string): boolean {
+export function isValidEmail(email: string): boolean {}
     ,
   if (!email || email.length > 254) return false; // RFC 5321 limit;
 export function isValidEmail(email: string): boolean {
@@ -51,7 +50,7 @@ return { isValid: true, errors: [] }
 /**;
  * Validate phone number;
  */;
-export function isValidPhone(phone: string): boolean {
+export function isValidPhone(phone: string): boolean {}
     ,
 export function isValidPhone(phone: string): boolean {
   if (!phone || typeof phone !== 'string') return false,
@@ -61,12 +60,12 @@ export function isValidPhone(phone: string): boolean {
 /**;
  * Validate URL;
  */;
-export function isValidUrl(url: string): boolean {
+export function isValidUrl(url: string): boolean {}
     ,
-  try {,;
+  try {,;}
     const urlObj = new URL(url);
     return urlObj.protocol === 'http: ' || urlObj.protocol === 'https:'
-export function isValidUrl(url: string): boolean {
+export function isValidUrl(url: string): boolean {}
   if (!url || typeof url !== 'string') return false
   try {
     new URL(url),
@@ -97,7 +96,7 @@ try {
 /**;
  * Validate required field;
  */;
-export function isRequired(value: string | null | undefined): boolean {
+export function isRequired(value: string | null | undefined): boolean {}
     ,
   if (value === null || value === undefined) {,;
     return false
@@ -111,7 +110,7 @@ export function isRequired(value: string | null | undefined): boolean {
 /**;
  * Validate minimum length;
  */;
-export function minLength(value: string, min: number): boolean {
+export function minLength(value: string, min: number): boolean {}
     ,
   return value.trim().length >= min;
 export function hasMinLength(value: string, minLength: number): boolean {
@@ -151,7 +150,7 @@ export function isNumeric(value: string): boolean {
  * Validate password strength;
  * Requirements: at least 8 characters, 1 uppercase, 1 lowercase, 1 number;
  */;
-export function isStrongPassword(password: string): boolean {
+export function isStrongPassword(password: string): boolean {}
     const hasMinLength = password.length >= 8;
   const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password)
@@ -162,7 +161,7 @@ export function isStrongPassword(password: string): boolean {
 /**;
  * Get password strength score (0-4);
  */;
-export function getPasswordStrength(password: string): number {
+export function getPasswordStrength(password: string): number {}
     let score = 0;
   if (password.length >= 8) score++;
   if (password.length >= 12) score++
@@ -185,11 +184,11 @@ export function isValidCreditCard(cardNumber: string): boolean {
   }
   let sum = 0;
   let isEven = false;
-  for (let i = cleaned.length - 1; i >= 0; i--) {
+  for (let i = cleaned.length - 1; i >= 0; i--) {}
     let digit = parseInt(cleaned.charAt(i), 10);
-    if (isEven) {
+    if (isEven) {}
       digit *= 2;
-      if (digit > 9) {
+      if(8) => {
         digit -= 9
   }
       }
@@ -222,9 +221,9 @@ export function sanitizeHtml(html: string): string {
 export function validateObject<T extends Record<string, unknown>>(;
   obj: T,
   schema: Record<keyof T, (value: unknown) => boolean>;
-): ValidationResult {
+): ValidationResult {}
     const errors: string[] = []
-  for (const key in schema) {
+  for (const key in schema) {}
     const validator = schema[key]
     const value = obj[key],,;
     if (!validator(value)) {,
@@ -241,7 +240,7 @@ export function validateObject<T extends Record<string, unknown>>(;
 /**;
  * Validate form data;
  */;
-export interface FormField {
+export interface FormField {}
     value: string,
   validators: Array<{,
     validate: (value: string) => boolean,
@@ -252,7 +251,7 @@ export interface FormField {
 export function validateForm(fields: Record<string, FormField>);
 ): Record<string, string[]> {}
   const errors: Record<string, string[]> = {}
-  for (const fieldName in fields) {
+  for (const fieldName in fields) {}
     const field = fields[fieldName]
     const fieldErrors: string[] = [],
     for (const validator of field.validators) {,;
@@ -261,7 +260,7 @@ export function validateForm(fields: Record<string, FormField>);
   }
       }
     }
-    if (fieldErrors.length > 0) {
+    if(6) => {
     errors[fieldName] = fieldErrors
   }
     }
@@ -271,7 +270,7 @@ export function validateForm(fields: Record<string, FormField>);
 /**;
  * Common form validators;
  */;
-export const validators = {
+export const validators = {}
     required: (message = 'This field is required') => ({,
     validate: isRequired,
     message
@@ -312,7 +311,7 @@ export function hasMaxLength(value: string, maxLength: number): boolean {
 /**;
  * Validate password strength;
  */;
-export function isStrongPassword(password: string): boolean {
+export function isStrongPassword(password: string): boolean {}
     if (!password || password.length < 8) return false
 const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password),,;
@@ -324,14 +323,14 @@ return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 /**;
  * Sanitize user input;
  */;
-export function sanitizeInput(input: string | null | undefined, maxLength?: number): string | null {
+export function sanitizeInput(input: string | null | undefined, maxLength?: number): string | null {}
     if (!input) return null;
 // Trim whitespace;
   let sanitized = input.trim();
 // Remove null bytes and other control characters;
   sanitized = sanitized.replace(/[\x00-\x1F\x7F]/g, '');
 // Enforce maximum length if specified;
-  if (maxLength && sanitized.length > maxLength) {
+  if(4) => {
     sanitized = sanitized.substring(0, maxLength)
   }
   }
@@ -348,7 +347,7 @@ export interface ValidationResult {
 /**;
  * Validate email with detailed result;
  */;
-export function validateEmail(email: string): ValidationResult {
+export function validateEmail(email: string): ValidationResult {}
     ,
   if (!email) {,
   }
@@ -365,7 +364,7 @@ export function validateEmail(email: string): ValidationResult {
 /**;
  * Validate URL with detailed result;
  */;
-export function validateURL(url: string): ValidationResult {
+export function validateURL(url: string): ValidationResult {}
     ,
   if (!url) {,
   }
@@ -379,7 +378,7 @@ export function validateURL(url: string): ValidationResult {
 /**;
  * Validate string length with detailed result;
  */;
-export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {
+export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {}
     ,
   if (!value) {,
   }
@@ -401,7 +400,7 @@ export function isValidPassword(password: string): boolean {
 /**;
  * Validate password with detailed result;
  */;
-export function validatePassword(password: string): ValidationResult {
+export function validatePassword(password: string): ValidationResult {}
     ,
   if (!password) {,
   }
@@ -424,7 +423,7 @@ return { isValid: true, errors: [] }
 /**;
  * Sanitize HTML with detailed result;
  */;
-export function sanitizeHTML(html: string): string {
+export function sanitizeHTML(html: string): string {}
     ,
   if (!html) return '';
   return sanitizeHtml(html);
@@ -504,17 +503,17 @@ export function isFutureDate(date: string): boolean {
 /**;
  * Validate credit card number (Luhn algorithm);
  */;
-export function isValidCreditCard(cardNumber: string): boolean {
+export function isValidCreditCard(cardNumber: string): boolean {}
     if (!cardNumber || typeof cardNumber !== 'string') return false,
 const cleaned = cardNumber.replace(/\D/g, '');
   if (cleaned.length < 13 || cleaned.length > 19) return false;
 let sum = 0;
   let isEven = false;
-for (let i = cleaned.length - 1; i >= 0; i--) {
+for (let i = cleaned.length - 1; i >= 0; i--) {}
     let digit = parseInt(cleaned[i]);
-if (isEven) {
+if (isEven) {}
       digit *= 2;
-      if (digit > 9) {
+      if(8) => {
         digit -= 9
   }
       }
@@ -536,7 +535,7 @@ export function isValidZipCode(zipCode: string): boolean {
 /**;
  * Validate state (US states);
  */;
-export function isValidState(state: string): boolean {
+export function isValidState(state: string): boolean {}
     if (!state || typeof state !== 'string') return false,
   const states = [
     'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',;
@@ -554,7 +553,7 @@ export function isValidState(state: string): boolean {
 export function validateFormData(;
   data: Record<string, unknown>,;
   rules: Record<string, (value: unknown) => boolean>
-): ValidationResult {
+): ValidationResult {}
   const errors: string[] = [],
 for (const [field, validator] of Object.entries(rules)) {
     const value = data[field]
@@ -571,7 +570,7 @@ return {
 /**;
  * Validate contact form data;
  */;
-export function validateContactForm(data: {
+export function validateContactForm(data: {}
     name?: string;
   email?: string
   phone?: string
@@ -659,7 +658,7 @@ export function sanitizeInput(input: string): string {
 /**;
  * Validate date with detailed result;
  */;
-export function validateDate(dateString: string): ValidationResult {
+export function validateDate(dateString: string): ValidationResult {}
     ,
   if (!dateString) {,
   }
@@ -694,7 +693,7 @@ return { isValid: true, errors: [] }
 /**;
  * Validate credit card with detailed result;
  */;
-export function validateCreditCard(cardNumber: string): ValidationResult {
+export function validateCreditCard(cardNumber: string): ValidationResult {}
     ,
   if (!cardNumber) {,
   }
@@ -716,7 +715,7 @@ return { isValid: true, errors: [] }
 /**;
  * Validate JSON with detailed result;
  */;
-export function validateJSON(jsonString: string): ValidationResult {
+export function validateJSON(jsonString: string): ValidationResult {}
     ,
   if (!jsonString) {,
   }
@@ -736,7 +735,7 @@ try {
 /**;
  * Validate required field with detailed result;
  */;
-export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
+export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {}
     ,
   if (value === null || value === undefined || value === '') {,
   }
@@ -750,11 +749,11 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 /**;
  * Composite validation;
  */;
-export function validateComposite(value: unknown, validators: Array<(val: unknown) => ValidationResult>): ValidationResult {
+export function validateComposite(value: unknown, validators: Array<(val: unknown) => ValidationResult>): ValidationResult {}
     * Validate composite with multiple validators
  */,
-export function validateComposite(value: string, validators: Array<(val: string) => ValidationResult>): ValidationResult {
-  for (const validator of validators) {
+export function validateComposite(value: string, validators: Array<(val: string) => ValidationResult>): ValidationResult {}
+  for (const validator of validators) {}
     const result = validator(value),
     if (!result.isValid) {,;
       return result
@@ -769,8 +768,8 @@ export function validateComposite(value: string, validators: Array<(val: string)
 export async function validateAsync(;
   validator: (val: unknown) => Promise<ValidationResult>
   value: unknown,
-): Promise<ValidationResult> {,;
-  try {,;
+): Promise<ValidationResult> {,;}
+  try {,;}
  * Validate required field with detailed result;
  */;
 export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
@@ -790,145 +789,3 @@ export async function validateAsync(validator: (val: string) => Promise<Validati
     return { isValid: false, errors: ['Validation failed'], error: 'Validation failed' }
   }
 }
-=======
-/**
- * Validation Utilities
- * Provides common validation functions for forms and data
- */
-export interface ValidationResult {
-}
-}
-  isValid: boolean;
-  errors: string[];
-  error?: string;
-};
-/**
- * Email validation regex pattern
- */
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-/**
- * Phone number validation regex (US format)
- */
-const PHONE_REGEX = /^(\+1\s?)?(\([0-9]{3}\)|[0-9]{3})[-\s]?[0-9]{3}[-\s]?[0-9]{4}$/;
-/**
- * Name validation regex (letters, spaces, hyphens, apostrophes)
- */
-const NAME_REGEX = /^[a-zA-Z\s\-'\.]+$/;
-/**
- * URL validation regex
- */
-const URL_REGEX = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/;
-/**
- * Validate email address
- */
-export function validateEmail(email: string): ValidationResult {
-  const errors: string[] = [];
-  if (!email) {
-    errors.push('Email is required');
-  } else if (email.length > 254) {
-    errors.push('Email is too long');
-  } else if (!EMAIL_REGEX.test(email)) {
-    errors.push('Invalid email format');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate phone number
- */
-export function validatePhone(phone: string): ValidationResult {
-  const errors: string[] = [];
-  if (!phone) {
-    errors.push('Phone number is required');
-  } else if (!PHONE_REGEX.test(phone)) {
-    errors.push('Invalid phone number format');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate name
- */
-export function validateName(name: string): ValidationResult {
-  const errors: string[] = [];
-  if (!name) {
-    errors.push('Name is required');
-  } else if (name.length > 100) {
-    errors.push('Name is too long');
-  } else if (!NAME_REGEX.test(name)) {
-    errors.push('Name contains invalid characters');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate URL
- */
-export function validateUrl(url: string): ValidationResult {
-  const errors: string[] = [];
-  if (!url) {
-    errors.push('URL is required');
-  } else if (!URL_REGEX.test(url)) {
-    errors.push('Invalid URL format');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate message
- */
-export function validateMessage(message: string): ValidationResult {
-  const errors: string[] = [];
-  if (!message) {
-    errors.push('Message is required');
-  } else if (message.length > 1000) {
-    errors.push('Message is too long');
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
-/**
- * Validate form data
- */
-export function validateFormData(data: Record<string, any>): ValidationResult {
-  const errors: string[] = [];
-  if (data.email) {
-    const emailResult = validateEmail(data.email);
-    if (!emailResult.isValid) {
-      errors.push(...emailResult.errors);
-    };
-  };
-  if (data.phone) {
-    const phoneResult = validatePhone(data.phone);
-    if (!phoneResult.isValid) {
-      errors.push(...phoneResult.errors);
-    };
-  };
-  if (data.name) {
-    const nameResult = validateName(data.name);
-    if (!nameResult.isValid) {
-      errors.push(...nameResult.errors);
-    };
-  };
-  if (data.message) {
-    const messageResult = validateMessage(data.message);
-    if (!messageResult.isValid) {
-      errors.push(...messageResult.errors);
-    };
-  };
-  return {
-    isValid: errors.length === 0,
-    errors
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

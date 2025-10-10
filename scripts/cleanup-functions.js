@@ -128,14 +128,13 @@ const functionsToRemove = [
 
 const _functionsDir = path.join(process.cwd(), 'netlify', 'functions');
 
-function shouldRemoveFunction(filename) {
+function shouldRemoveFunction(filename) {}
   // Keep essential functions;
   if (essentialFunctions.includes(filename)) {
     return false;
 function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */};
   };
   // Remove functions that match any of the patterns;
-<<<<<<< HEAD
   return functionsToRemove.some(pattern => filename.includes(pattern));
 }
 
@@ -148,27 +147,13 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   let _removedCount = 0;
   let _keptCount = 0;
 
-  files.forEach(file => {
+  files.forEach(file => {}
     )
-=======
-  return functionsToRemove.some(pattern => filename.includes(pattern))};
-;
-function cleanupFunctions() {/* TODO: Fix JSX expression */};
-};
-  if (!fs.existsSync(functionsDir)) {/* TODO: Fix JSX expression */};
-  };
-;
-const _files = fs.readdirSync(functionsDir);
-  let _removedCount = 0;
-  let _keptCount = 0;
-  files.forEach(file => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    if (file.endsWith('.js') || file.endsWith('.ts')) {
-      if (shouldRemoveFunction(file)) {
+    if (file.endsWith('.js') || file.endsWith('.ts')) {}
+      if (shouldRemoveFunction(file)) {}
         const _filePath = path.join(functionsDir, file);
         try {
           fs.unlinkSync(filePath);
-<<<<<<< HEAD
 
           removedCount++
   } catch (error) {}
@@ -184,17 +169,5 @@ const _files = fs.readdirSync(functionsDir);
 
 }
 
-=======
-          removedCount++} catch (error) {};
-      } else {
-        keptCount++;
-  files.forEach(file => {/* TODO: Fix JSX expression */})
-        } catch (error) {/* TODO: Fix JSX expression */};
-        };
-      } else {/* TODO: Fix JSX expression */};
-      };
-    };
-  })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Run the cleanup;
 cleanupFunctions();

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react'
-const EcommerceAnalyticsProPage: React.FC = () => {
+const EcommerceAnalyticsProPage: React.FC = () => {}
   const features = [
     {
       icon: BarChart,
@@ -42,11 +42,11 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
         <meta name="keywords" content="e-commerce analytics, sales tracking, inventory optimization, revenue analytics, customer insights, e-commerce intelligence" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <section className="py-20 px-4" />
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6" />
                 E-commerce Analytics Pro,
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -54,7 +54,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">

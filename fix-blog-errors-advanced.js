@@ -32,7 +32,7 @@ const fixes = [
     pattern: /return \(\s*<div></div>\{\/\* content \*\/\}\s*return \(/g,
     replacement: 'return ('})
   //Fix malformed object syntax in metadata;)
-  {)
+  {)}
     pattern: /export const metadata: Metadata = \{\/\* content \*\/\}/g)
     replacement: 'export const metadata: Metadata = {')})
   //Fix missing closing braces in metadata;
@@ -44,7 +44,7 @@ const fixes = [
     pattern: /<div></div>\{\/\* content \*\/\}/g,
     replacement: '<div></div>{/* content */}'},
   //Fix unclosed JSX tags;
-  {
+  {}
     pattern: /<article[^>]*>\s*\{\/\* content \*\/\}/g,
     replacement: '<article>{/* content */}</article>',
   {/* TODO: Fix JSX expression */};
@@ -127,9 +127,9 @@ const fixes = [
   })
 ];
 
-function fixFile(filePath) {
-  try {
-    fixes.forEach(fix => {)
+function fixFile(filePath) {}
+  try {}
+    fixes.forEach(fix => {)}
       //       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
@@ -159,7 +159,6 @@ function fixFile(filePath) {
   n: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g,
     replacemen,
   t: 'return (\n    <div>{/* content */}'}];
-<<<<<<< HEAD
 )
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
@@ -175,35 +174,17 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
 async function main() {/* TODO: Fix JSX expression */}
 }
-=======
-);
-function fixFile(filePath) {/* TODO: Fix JSX expression */};
-      };
-    });
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-async function main() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //   const blogDir = path.join(process.cwd(), 'app', 'blog');
   if (!fs.existsSync(blogDir)) {/* TODO: Fix JSX expression */};
   };
   //Find all .tsx and .jsx files in blog directory;
   //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}');
   //   let fixedCount = 0;
-  files.forEach(file => {)
+  files.forEach(file => {)}
     if (fixFile(file)) {
-<<<<<<< HEAD
       fixedCount++;
     }
   files.forEach(file => {/* TODO: Fix JSX expression */}
-=======
-      fixedCount++};
-  files.forEach(file => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     })
   });
   //   };

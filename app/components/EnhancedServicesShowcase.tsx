@@ -1,18 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react'
-const EnhancedServicesShowcase: React.FC = () => {
+const EnhancedServicesShowcase: React.FC = () => {}
     const services = [
-=======
-import React from 'react';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
-;
-const EnhancedServicesShowcase: React.FC = () => {
-const services = [
-];
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Brain,
@@ -20,7 +10,7 @@ const services = [
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       stats: '300% ROI'
   },
-    {
+    {}
     title: 'IT Infrastructure',
       description: 'Build and maintain robust technology foundations',
       icon: Cloud,
@@ -28,7 +18,7 @@ const services = [
       features: ['Cloud Migration', 'Server Management', 'Network Security', 'Data Backup'],
       stats: '99.9% Uptime'
   },
-    {
+    {}
     title: 'Cybersecurity',
       description: 'Protect your business with enterprise-grade security',
       icon: Shield,
@@ -36,7 +26,7 @@ const services = [
       features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'],
       stats: 'Zero Breaches'
   },
-    {
+    {}
     title: 'Automation',
       description: 'Streamline processes with intelligent automation',
       icon: Zap,
@@ -45,13 +35,8 @@ const services = [
       stats: '95% Efficiency'
   }
     }
-<<<<<<< HEAD
   ]
 return (
-=======
-];;
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     <section className="py-16"></section>
       <div className="container mx-auto px-4"></div>
         <div className="text-center mb-16"></div>
@@ -66,7 +51,6 @@ return (
   }
             <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300"></div>
               <div className="flex items-center mb-4"></div>
-<<<<<<< HEAD
                 <service>
                 <div />
                   <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -80,33 +64,13 @@ return (
                   <li>
                     <CheckCircle>
 
-=======
-                <service .icon className={`w-12 h-12 ${service.color} mr-4`} />
-                <div>
-                  <h3 className="text-xl font-bold text-white"></h>{service.title}</h3>
-                  <div className="text-sm text-cyan-400 font-semibold"></di>{service.stats}</div>
-              </div>
-              <p className="text-gray-300 mb-4">{service.description}</p>
-              <ul className="space-y-2 mb-6"></ul>
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     {feature}
                   </li>
                 ))}
 
               </ul>
-<<<<<<< HEAD
               <a>
                 Learn More <ArrowRight>
-=======
-              <a
-                href="/services"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
-              ></a>
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </a>
             </div>
           ))}
@@ -118,13 +82,6 @@ return (
           </a>
         </div>
     </section>
-<<<<<<< HEAD
   )
 }
 export default EnhancedServicesShowcase
-=======
-)]
-    };
-export default EnhancedServicesShowcase;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

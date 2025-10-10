@@ -53,17 +53,9 @@ const,
   n: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
       benefit,
   s: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
-<<<<<<< HEAD
     }
   ];
   const migrationSteps = [
-=======
-    };
-  ];
-;
-const migrationSteps = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       titl,
   e: 'Assessment & Planning',
       descriptio,
@@ -111,14 +103,8 @@ const migrationSteps = [
       ico,
   n: TrendingUp,
       duratio,
-<<<<<<< HEAD
   n: 'Ongoing'
   const pricingPlans = [
-=======
-  n: 'Ongoing';
-const pricingPlans = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       nam,
   e: 'Small Business',
       pric,
@@ -168,14 +154,8 @@ const pricingPlans = [
         'Full monitoring suite',
         'Multi-cloud architecture',
         'Dedicated account manager',
-<<<<<<< HEAD
         'Custom integrations'
   const benefits = [
-=======
-        'Custom integrations';
-const benefits = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       titl,
   e: 'Cost Reduction',
       descriptio,
@@ -287,15 +267,9 @@ const benefits = [
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                     {/* TODO: Fix JSX expression */}"
                       <li key={idx} className="flex items-center text-gray-300"></li>
-<<<<<<< HEAD
                         {benefit}
                       </li>)
                     ))}
-=======
-                        {benefit};
-                      </li>)
-                    ))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   </ul>"
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
                     <li key={idx} className="flex items-center text-sm text-gray-400"></li>"
@@ -324,11 +298,7 @@ const benefits = [
                 <p className="text-gray-300 mb-6">{step.description}</p>
                   {/* TODO: Fix JSX expression */}"
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
-<<<<<<< HEAD
                       {feature}
-=======
-                      {feature};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {/* Migration Process Section */}"
       <section className="py-16 px-4 bg-slate-800/50"></section>"
             <h2 className="text-4xl font-bold text-white mb-4">Our Migration Process</h2>"
@@ -393,11 +363,7 @@ const benefits = [
       {/* Pricing Section */}"
             <h2 className="text-4xl font-bold text-white mb-4">Transparent Migration Pricing</h2>"
             <p className="text-xl text-gray-300">Choose the migration package that fits your needs</p>
-<<<<<<< HEAD
             {/* TODO: Fix JSX expression */}
-=======
-            {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}></div>
                 {/* TODO: Fix JSX expression */};
                 )}"
@@ -425,15 +391,9 @@ const benefits = [
         <h1 className="text-4xl font-bold text-white mb-4">Cloud Migration</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>"
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
-<<<<<<< HEAD
   hover: bg-cyan-600 transition-colors"></a>
           Contact Us
   ),
 }
-=======
-  hover:bg-cyan-600 transition-colors"></a>
-          Contact Us;
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default CloudMigrationPage;
 "`

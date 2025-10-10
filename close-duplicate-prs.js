@@ -1,29 +1,20 @@
 #!/usr/bin/env node;
 //Function to close duplicate PRs;
-async function closeDuplicatePRs() {
-  try {
+async function closeDuplicatePRs() {}
+  try {}
 //     //Get all open PRs;
     const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100')
-<<<<<<< HEAD
     )
 //     const duplicatePRs = prs.filter(pr =>)
         pr.title === 'Fix errors and merge to main' &&)
         (pr.draft || pr.mergeable === false || pr.mergeable_state === 'dirty')
     )
 //     let closedCount = 0,
-=======
-    );
-//     const duplicatePRs = prs.filter(pr =>)
-        pr.title === 'Fix errors and merge to main' &&)
-        (pr.draft || pr.mergeable === false || pr.mergeable_state === 'dirty')
-    );
-//     let closedCount = 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ,
-    for (const pr of duplicatePRs) {,
-      try {,
+    for (const pr of duplicatePRs) {,}
+      try {,}
 //         const closeResponse = await fetch(`https://api.github.com/repos/Zion-Holdings/zion.app/pulls/${pr.number}`,
-          {
+          {}
             method: 'PATCH',
             headers: {)
               Accept: 'application/vnd.github.v3+json')
@@ -46,7 +37,6 @@ async function closeDuplicatePRs() {/* TODO: Fix JSX expression */};
         } else {/* TODO: Fix JSX expression */};
         };
         // Add a small delay to avoid rate limiting;
-<<<<<<< HEAD
         await new Promise(resolve => setTimeout(resolve, 100));
       } catch (error) {/* TODO: Fix JSX expression */}
       }
@@ -56,13 +46,5 @@ async function closeDuplicatePRs() {/* TODO: Fix JSX expression */};
 //     }
 }
 
-=======
-        await new Promise(resolve => setTimeout(resolve, 100))} catch (error) {/* TODO: Fix JSX expression */};
-      };
-    };
-//     //     //     } catch (error) {/* TODO: Fix JSX expression */};
-//     };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // closeDuplicatePRs().catch(console.error);
 `

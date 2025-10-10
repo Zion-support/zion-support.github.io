@@ -14,7 +14,6 @@ impor,
   n: Handshake }, {/* TODO: Fix JSX expression */}
   e:,' Careers} ' '/request-quote', ico,
   n: Quote, colo,
-<<<<<<< HEAD
   r:}' from-cyan-500 to-blue-600' },' ' {/* TODO: Fix JSX expression */}
   r:} from-green-500 to-emerald-600;' ' }, {/* TODO: Fix JSX expression */}
   r:}' from-yellow-500 to-orange-600' },' ' {/* TODO: Fix JSX expression */}
@@ -26,28 +25,6 @@ impor,
   n: Linkedin, colo,
   r:}' text-blue-500' },' ' {/* TODO: Fix JSX expression */}
   r: '} text-blue-400; ' 'text-gray-400' },' ' ]' const renderNavSection = (titl)
-=======
-  r:}' from-cyan-500 to-blue-600' },' ' {/* TODO: Fix JSX expression *
-  ,
-    r:} from-green-500 to-emerald-600;' ' }, {/* TODO: Fix JSX expression *
-  ,
-    r:}' from-yellow-500 to-orange-600' },' ' {/* TODO: Fix JSX expression *
-  ,
-    r: 'from-purple-500 to-pink-600}' ' } ]; const contactInfo = [
- ' ' {/* TODO: Fix JSX expression *
-];
-  ,
-    t:, kleber@ziontechgroup.com}' ', hre,
-  f: 'mailt} o:kleber@ziontechgroup.com }, {/* TODO: Fix JSX expression *
-  ,
-    t:, Middletown, DE 19709} http,
-  s: //www.linkedin.com/company/zion-tech-group
-  ,
-    n: Linkedin, colo,
-  r:}' text-blue-500' },' ' {/* TODO: Fix JSX expression *
-  ,
-    r: '} text-blue-400; ' 'text-gray-400' },' ' ]' const renderNavSection = (titl)
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[]) sectionKe,
   y: string) => ('' <div key={sectionKey} className='mb-6> <button' onClick={() => toggleSection(sectionKey)}' className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300,
   hover: text-white transition-colors duration-200 font-medium'' >' <span className='text-sm font-semibold uppercase tracking-wide'>{title}<' {expandedSections.includes(sectionKey) ? (' <ChevronDown className='w-4 h-4' /> ) : (' <ChevronRight className='w-4 h-4' /> )} </button>' {expandedSections.includes(sectionKey) && ('' <div className='mt-2 space-y-1> {items.map((item) => (' <Link} key={item.name} href={item.href} onClick={onClose} className={/* TODO: Fix JSX expression */})
@@ -56,7 +33,4 @@ impor,
   x: items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`) isActive(item.href)} ' {renderNavSection('Resources,' ') navigation.resources} 'resources'' ')}, {/* Comp Section */}, {renderNavSection(' ' 'Comp') navigation.company}' 'company')}' ' </div>'{/* Footer */}' <div className='p-4 border-t border-zion-blue-light> {/* Contact Info */} <div className='mb-4 space-y-2> {contactInfo.map((contact} index) => (' <a) key={index} href={contact.href}' target={contact.href.startsWith('' 'http') ?}' '_blank': '_self} ' rel={contact.href.startsWith('http)' ') ? 'noopener noreferrer}' ': '} className='flex items-center gap-2 text-xs text-zion-slate-light,
   hover:text-zion-cyan transition-colors duration-200'' >' <contact.icon className='w-3 h-3' /> <span className='truncate'>{contact.text}<' </a>' ))} </div> {/* Social Links */}' <div className='flex items-center gap-3 mb-4> {socialLinks.map((social) => (' <a key={social.name} href={social.href}' target='_blank'' rel='noopener noreferrer'' className={/* TODO: Fix JSX expression */})`
   hover: bg-white/10 rounded-lg transition-all duration-200 ${social.color}`} aria-label={social.name}` >`' <social.icon className='w-4 h-4' /> </a>' ))} </div> {/* Copyright */}' <div className='text-xs text-zion-slate-light text-center> © {new Date().getFullYear()} Zion Tech Group" </div> </div> </div> </React.Fragment>)} '"`
-<<<<<<< HEAD
   </any>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

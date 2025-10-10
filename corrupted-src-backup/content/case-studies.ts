@@ -1,30 +1,18 @@
-export type CaseStudy = {
-<<<<<<< HEAD
+export type CaseStudy = {}
     id: string;
-=======
-};
-  id: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   title: string;
   company: string;
   industry: string;
   challenge: string;
   solution: string;
-<<<<<<< HEAD
   results: string[]
   technologies: string[]
   duration: string,
   imageUrl?: string
   }
 
-=======
-  results: string[];
-  technologies: string[];
-  duration: string;
-  imageUrl?: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const caseStudies: CaseStudy[] = [
-  {
+  {}
     id: 'global-energy-digital-twin-850 m',
     title: 'Global Energy Corporation: $850 M Digital Twin Transformation Success',
     company: 'Global Energy Corporation (Fortune 100)',
@@ -49,7 +37,7 @@ export const caseStudies: CaseStudy[] = [
       'Kubernetes'],
     duration: '18 months',
     imageUrl: '/images/case-studies/energy-digital-twin.jpg'},
-  {
+  {}
     id: 'fintech-ai-platform',
     title: 'AI-Powered Financial Analytics Platform',
     company: 'FinTech Solutions Inc.',
@@ -66,7 +54,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL', 'Docker'],
     duration: '12 weeks',
     imageUrl: '/images/case-studies/fintech-platform.jpg'},
-  {
+  {}
     id: 'healthcare-chatbot',
     title: 'Healthcare AI Chatbot System',
     company: 'MedCare Hospital Network',
@@ -83,7 +71,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['OpenAI GPT-4', 'Node.js', 'React', 'MongoDB', 'AWS Lambda'],
     duration: '8 weeks',
     imageUrl: '/images/case-studies/healthcare-chatbot.jpg'},
-  {
+  {}
     id: 'ecommerce-optimization'
     title: 'E-commerce AI Optimization Suite',
     company: 'RetailMax Online',
@@ -99,7 +87,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['Machine Learning', 'Python', 'Vue.js', 'Redis', 'Kubernetes'],
     duration: '10 weeks',
     imageUrl: '/images/case-studies/ecommerce-ai.jpg'},
-  {
+  {}
     id: 'manufacturing-iot',
     title: 'Smart Manufacturing IoT Platform',
     company: 'Precision Manufacturing Co.',
@@ -116,7 +104,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['IoT Sensors', 'Edge Computing', 'Python', 'React', 'Azure IoT Hub'],
     duration: '16 weeks',
     imageUrl: '/images/case-studies/manufacturing-iot.jpg'},
-  {
+  {}
     id: 'saas-analytics',
     title: 'SaaS Analytics Dashboard',
     company: 'CloudTech Solutions',
@@ -133,7 +121,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['Apache Kafka', 'ClickHouse', 'React', 'D3.js', 'AWS'],
     duration: '14 weeks',
     imageUrl: '/images/case-studies/saas-analytics.jpg'},
-  {
+  {}
     id: 'cybersecurity-automation',
     title: 'Automated Cybersecurity Platform',
     company: 'SecureCorp Financial',
@@ -150,7 +138,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['SIEM', 'Machine Learning', 'Python', 'Elasticsearch', 'Kubernetes'],
     duration: '20 weeks',
     imageUrl: '/images/case-studies/cybersecurity.jpg'},
-  {
+  {}
     id: 'telco-edge-observability'
     title: 'Telco Edge Observability Overhaul',
     company: 'GlobalTel Communications',
@@ -166,7 +154,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['OpenTelemetry', 'ClickHouse', 'Edge Workers', 'TypeScript', 'Kubernetes'],
     duration: '18 weeks',
     imageUrl: '/images/case-studies/telco-edge.jpg'},
-  {
+  {}
     id: 'enterprise-rag-rollout'
     title: 'Enterprise RAG Rollout at Fortune 500',
     company: 'Global Consumer Goods Co.',
@@ -182,14 +170,9 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['RAG', 'Vector DB', 'TypeScript', 'OpenAI', 'ClickHouse'],
     duration: '10 weeks',
     imageUrl: '/images/case-studies/enterprise-rag.jpg',
-<<<<<<< HEAD
 export type CaseStudy = {/* TODO: Fix JSX expression */}
 }
 
-=======
-export type CaseStudy = {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   caseStudies: CaseStudy[] = [
   {/* TODO: Fix JSX expression */};

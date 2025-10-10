@@ -1,7 +1,7 @@
 import fs from 'fs';
 // // 1. Fix test imports properly;
 // // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
-if (fs.existsSync(appMinimalTestPath)) {
+if (fs.existsSync(appMinimalTestPath)) {}
   // Fix jest imports - use the correct import;
   content = content.replace(/import \{ describe, it, expect \} from '@jest\/globals';/)
 if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */};
@@ -16,7 +16,7 @@ if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */};
   'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
   'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
   'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx'];
-blogPages.forEach(pagePath => {)
+blogPages.forEach(pagePath => {)}
   if (fs.existsSync(pagePath)) {
     // Remove publishedTime from metadata completely;
     content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, '');
@@ -30,8 +30,8 @@ blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */};
 ];
   'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
   'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx'];
-openGraphPages.forEach(pagePath => {)
-  if (fs.existsSync(pagePath)) {
+openGraphPages.forEach(pagePath => {)}
+  if (fs.existsSync(pagePath)) {}
     // Fix authors format to use string array;
     content = content.replace(/authors: \[\{ name: 'Zion Tech Group' \}\]/g)
       "authors: ['Zion Tech Group']",
@@ -46,7 +46,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */};
 });
 // 4. Fix Calculator import - use a different icon;
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
-if (fs.existsSync(calculatorPagePath)) {
+if (fs.existsSync(calculatorPagePath)) {}
   // Replace Calculator with CalculatorIcon;
 if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */};
   content = content.replace(/import \{ CalculatorIcon \}/, 'import { Calculator }');
@@ -55,7 +55,7 @@ if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */};
   //     };
 // 5. Fix AnalyticsTracker dataLayer type conflict;
 // // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
-if (fs.existsSync(analyticsTrackerPath)) {
+if (fs.existsSync(analyticsTrackerPath)) {}
   // Fix dataLayer type to match existing declarations;
   content = content.replace(/dataLayer: unknown\[\],/, 'dataLayer: unknown[];'),
 ,
@@ -64,7 +64,7 @@ if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */};
   //     };
 // 6. Fix SystemMonitor - remove performanceEnhancer calls;
 // // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
-if (fs.existsSync(systemMonitorPath)) {
+if (fs.existsSync(systemMonitorPath)) {}
   // Replace performanceEnhancer calls with direct implementations;
   content = content.replace(
     /const metrics = getMetrics\(\);/g,
@@ -77,7 +77,7 @@ if (fs.existsSync(systemMonitorPath)) {
   content = content.replace(/startMonitoring\(\);/g, '// startMonitoring(); // Placeholder');
   content = content.replace(/stopMonitoring\(\);/g, '// stopMonitoring(); // Placeholder');
   // Fix the exportData variable declaration issue;
-  content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {'),
+  content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {'),}
 ,
   fs.writeFileSync(systemMonitorPath, content);
 if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */};

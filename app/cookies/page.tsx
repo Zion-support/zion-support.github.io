@@ -1,12 +1,11 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react'
-const CookiesPage: React.FC = () => {
+const CookiesPage: React.FC = () => {}
   const lastUpdated = 'January 1, 2024'
   const cookieTypes = [
-    {
+    {}
       type: 'Essential Cookies',
       icon: Shield,
       description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
@@ -18,7 +17,7 @@ const CookiesPage: React.FC = () => {
       ],
       required: true
     },
-    {
+    {}
       type: 'Analytics Cookies',
       icon: Database,
       description: 'These cookies help us understand how visitors interact with our website.',
@@ -30,7 +29,7 @@ const CookiesPage: React.FC = () => {
       ],
       required: false
     },
-    {
+    {}
       type: 'Functional Cookies',
       icon: Settings,
       description: 'These cookies enable enhanced functionality and personalization.',
@@ -42,7 +41,7 @@ const CookiesPage: React.FC = () => {
       ],
       required: false
     },
-    {
+    {}
       type: 'Marketing Cookies',
       icon: Eye,
       description: 'These cookies are used to deliver relevant advertisements and marketing content.',
@@ -54,7 +53,7 @@ const CookiesPage: React.FC = () => {
       ],
       required: false
     }
-  ]
+  ];
 
   const purposes = [
     {
@@ -77,7 +76,7 @@ const CookiesPage: React.FC = () => {
       description: 'Deliver relevant content and advertisements',
       icon: Eye
     }
-  ]
+  ];
 
   return (
     <>
@@ -111,18 +110,18 @@ const CookiesPage: React.FC = () => {
           </div>
 
           {/* What Are Cookies */}
-          <div className="cyber-card-enhanced p-8 mb-12">
+          <div className="cyber-card-enhanced p-8 mb-12" />
             <h2 className="text-2xl font-bold text-white mb-6">What Are Cookies?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8" />
               <div>
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Cookies are small text files that are stored on your device when you visit our website. 
                   They help us provide you with a better experience by remembering your preferences and 
                   understanding how you use our site.
                 </p>
-                <div className="bg-slate-800 rounded-lg p-6">
+                <div className="bg-slate-800 rounded-lg p-6" />
                   <h3 className="text-lg font-semibold text-white mb-3">Key Points</h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2" />
                     <li className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       Cookies are safe and cannot harm your device
@@ -145,7 +144,7 @@ const CookiesPage: React.FC = () => {
               <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">Cookie Categories</h3>
                 <div className="space-y-4">
-                  {purposes.map((purpose, index) => (
+                  {purposes.map((purpose, index) => (}
                     <div key={index} className="flex items-center space-x-3">
                       <purpose.icon className="w-6 h-6 text-cyan-400" />
                       <div>
@@ -163,14 +162,14 @@ const CookiesPage: React.FC = () => {
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Types of Cookies We Use</h2>
             <div className="space-y-6">
-              {cookieTypes.map((cookie, index) => (
+              {cookieTypes.map((cookie, index) => (}
                 <div key={index} className="bg-slate-800 rounded-lg p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <cookie.icon className="w-8 h-8 text-cyan-400" />
                       <h3 className="text-xl font-semibold text-white">{cookie.type}</h3>
                     </div>
-                    {cookie.required ? (
+                    {cookie.required ? (}
                       <span className="px-3 py-1 bg-red-600 text-white text-xs font-semibold rounded">
                         Required
                       </span>
@@ -184,7 +183,7 @@ const CookiesPage: React.FC = () => {
                   <div>
                     <h4 className="text-white font-medium mb-2">Examples:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {cookie.examples.map((example, exampleIndex) => (
+                      {cookie.examples.map((example, exampleIndex) => (}
                         <li key={exampleIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {example}
@@ -198,15 +197,15 @@ const CookiesPage: React.FC = () => {
           </div>
 
           {/* Cookie Management */}
-          <div className="cyber-card-enhanced p-8 mb-12">
+          <div className="cyber-card-enhanced p-8 mb-12" />
             <h2 className="text-2xl font-bold text-white mb-6">Managing Your Cookie Preferences</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8" />
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4">Browser Settings</h3>
                 <p className="text-gray-300 mb-4">
                   You can control cookies through your browser settings. Most browsers allow you to:
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-2" />
                   <li className="flex items-center text-gray-300 text-sm">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Block all cookies
@@ -230,7 +229,7 @@ const CookiesPage: React.FC = () => {
                 <p className="text-gray-300 mb-4">
                   When you first visit our website, you'll see a cookie consent banner where you can:
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-2" />
                   <li className="flex items-center text-gray-300 text-sm">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Accept all cookies
@@ -253,9 +252,9 @@ const CookiesPage: React.FC = () => {
           </div>
 
           {/* Third-Party Cookies */}
-          <div className="cyber-card-enhanced p-8 mb-12">
+          <div className="cyber-card-enhanced p-8 mb-12" />
             <h2 className="text-2xl font-bold text-white mb-6">Third-Party Cookies</h2>
-            <div className="space-y-6">
+            <div className="space-y-6" />
               <p className="text-gray-300">
                 We may use third-party services that set their own cookies. These services help us provide 
                 better functionality and analytics. Here are the main third-party cookies we use:
@@ -286,15 +285,15 @@ const CookiesPage: React.FC = () => {
           </div>
 
           {/* Impact of Disabling Cookies */}
-          <div className="cyber-card-enhanced p-8 mb-12">
+          <div className="cyber-card-enhanced p-8 mb-12" />
             <h2 className="text-2xl font-bold text-white mb-6">Impact of Disabling Cookies</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8" />
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                   <AlertTriangle className="w-6 h-6 text-yellow-400 mr-2" />
                   What Happens If You Disable Cookies
                 </h3>
-                <ul className="space-y-2">
+                <ul className="space-y-2" />
                   <li className="flex items-center text-gray-300 text-sm">
                     <CheckCircle className="w-4 h-4 text-yellow-400 mr-2" />
                     Some website features may not work properly
@@ -322,7 +321,7 @@ const CookiesPage: React.FC = () => {
                   Essential cookies are necessary for the website to function and cannot be disabled. 
                   These include:
                 </p>
-                <ul className="space-y-2">
+                <ul className="space-y-2" />
                   <li className="flex items-center text-gray-300 text-sm">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Security and authentication
@@ -381,48 +380,3 @@ const CookiesPage: React.FC = () => {
 }
 
 export default CookiesPage
-=======
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-const CookiesPage: React.FC = () => {
-};
-  return (<div>
-        <title>Cookie Policy - Zion Tech Group<
-        <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." 
-      <
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"><
-          <div className="container mx-auto px-4 py-16"><
-            <div className="max-w-4xl mx-auto"><
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Cookie Policy<
-              <
-              <div className="prose prose-lg max-w-none"><
-                <p className="text-xl text-gray-600 mb-8">)
-                  Last update,
-    d: {new Date().toLocaleDateString()};
-                <
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies<
-                <p className="text-gray-700 mb-6">
-                  Cookies are small text files that are placed on your computer or mobile device when you visit our website.
-                <
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Use Cookies<
-                <p className="text-gray-700 mb-6">
-                  We use cookies to improve your experience on our website, analyze site traffic, and personalize content.
-                <
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Managing Cookies<
-                <p className="text-gray-700 mb-6">
-                  You can control and
-                <
-              <
-            <
-          <
-        <
-        <Footer 
-      <
-    <
-  );
-};
-export default CookiesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

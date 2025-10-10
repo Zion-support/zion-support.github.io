@@ -32,16 +32,11 @@ const navigationLinks = [
   '/robotics', '/enterprise', '/analytics-tools', '/business-apps', '/expense-tracker',
   '/task-manager-pro', '/smart-analytics'
 ];
-<<<<<<< HEAD
 
 // Convert to page names (remove leading slash)
-=======
-// Convert to page names (remove leading slash);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const navigationPages = navigationLinks.map(link => link.substring(1));
 // Find missing pages;
 const missingPages = navigationPages.filter(page => !existingPages.includes(page));
-<<<<<<< HEAD
 
 console.log('Missing pages: ');
 missingPages.forEach(page => console.log(`- ${page}`));
@@ -50,13 +45,5 @@ console.log(`\nTotal missing pages: ${missingPages.length}`);
 console.log(`Total existing pages: ${existingPages.length}`);
 console.log(`Total navigation links: ${navigationPages.length}`);
 
-=======
-// console.log removed for production
-missingPages.forEach(page => // console.log removed for production
-);
-// console.log removed for production
-// console.log removed for production
-// console.log removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Write missing pages to file;
 fs.writeFileSync('missing_pages.txt', missingPages.join('\n'));

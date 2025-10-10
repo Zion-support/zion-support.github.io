@@ -23,12 +23,12 @@ definedRoutes.forEach(route => console.log(route));
 const appDir = '/workspace/app';
 const pageFiles = [];
 
-function findPageFiles(dir) {
+function findPageFiles(dir) {}
   const items = fs.readdirSync(dir);
-  for (const item of items) {
+  for (const item of items) {}
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
+    if (stat.isDirectory()) {}
       findPageFiles(fullPath);
     } else if (item === 'page.tsx') {
       // Convert file path to route path

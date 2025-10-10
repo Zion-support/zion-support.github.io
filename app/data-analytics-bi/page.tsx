@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
-const DataAnalyticsBiPage: React.FC = () => {
+const DataAnalyticsBiPage: React.FC = () => {}
   return (
     <>
       <Helmet>
@@ -9,7 +9,7 @@ const DataAnalyticsBiPage: React.FC = () => {
         <meta name="keywords" content="data analytics, business intelligence, data visualization, reporting, insights, data-driven decisions" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
@@ -21,8 +21,8 @@ const DataAnalyticsBiPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" />
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20" />
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Visualization</h3>
               <p className="text-gray-300 mb-4">
                 Interactive dashboards and visualizations to make complex data easily understandable.
@@ -35,7 +35,7 @@ const DataAnalyticsBiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20" />
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Predictive Analytics</h3>
               <p className="text-gray-300 mb-4">
                 Machine learning models to predict future trends and behaviors.
@@ -48,7 +48,7 @@ const DataAnalyticsBiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20" />
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Warehousing</h3>
               <p className="text-gray-300 mb-4">
                 Centralized data storage and management for efficient analytics.
@@ -61,7 +61,7 @@ const DataAnalyticsBiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20" />
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Reporting Solutions</h3>
               <p className="text-gray-300 mb-4">
                 Automated reporting and self-service analytics for all stakeholders.
@@ -74,7 +74,7 @@ const DataAnalyticsBiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20" />
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Performance Metrics</h3>
               <p className="text-gray-300 mb-4">
                 KPI tracking and performance monitoring across all business functions.
@@ -87,7 +87,7 @@ const DataAnalyticsBiPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20" />
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Governance</h3>
               <p className="text-gray-300 mb-4">
                 Comprehensive data governance and compliance management.

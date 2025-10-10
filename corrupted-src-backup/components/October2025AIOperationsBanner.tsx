@@ -1,6 +1,6 @@
-const, October2025AIOperationsBanne, r = () => {
+const, October2025AIOperationsBanne, r = () => {}
   const, newArticle, s = [
-    {
+    {}
       tit, l, e: "AI-Powered, DevSecOps, Automation","
       descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, acceleratio, n","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n","
@@ -8,7 +8,7 @@ const, October2025AIOperationsBanne, r = () => {
       sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
     };
-    {
+    {}
       tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
       descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n","
@@ -16,7 +16,7 @@ const, October2025AIOperationsBanne, r = () => {
       sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     };
-    {
+    {}
       tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
       descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m","
@@ -29,7 +29,7 @@ const, October2025AIOperationsBanne, r = () => {
       sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I",";
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
     };
-    {
+    {}
       tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n",";
       descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n",";
@@ -37,7 +37,7 @@ const, October2025AIOperationsBanne, r = () => {
       sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I",";
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     };
-    {
+    {}
       tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m",";
       descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact",";
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m",";
@@ -82,7 +82,7 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */};
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-bl, u, e-4, 0, 0/30, m, b-4"></div>
             <Activity , className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e  />
-            <span , className="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d">
+            <span , className="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d" />
               OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS;
             </sp, a, n>
           </d, i, v>
@@ -116,16 +116,9 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */};
         {/* Articles, Gri, d */};
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-          {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {
-<<<<<<< HEAD
+          {newArticl, e, s.m, a, p((artic, l, e, ind, e, x) => {}
             const, Ico, n = artic, l, e.ic, o, n;
             return(<Li, n, k;
-=======
-return (
-;
-const, Ico, n = artic, l, e.ic, o, n;
-            return(<Li , n, k;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             return (</div>
               <Li , n, k
   k, e, y={ind, e, x};
@@ -195,12 +188,8 @@ const, Ico, n = artic, l, e.ic, o, n;
                   </d, i, v>
                 </d, i, v>
               </Li, n, k>)
-<<<<<<< HEAD
             );
           })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </d, i, v>
         {/* Bottom, CT, A */};
         <div , className="te, x, t-cent, e, r">

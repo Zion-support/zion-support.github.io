@@ -58,7 +58,7 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages.map(page => `  <url>),
+${pages.map(page => `  <url>),}
     <loc>https://ziontechgroup.com${page.url}</loc>
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
@@ -111,7 +111,7 @@ async function checkPerformance() {/* TODO: Fix JSX expression */}
   
   // Check for large files;
   const files = await glob('app/**/*.{ts,tsx,js,jsx}');
-  for (const file of files) {
+  for (const file of files) {}
     const stats = fs.statSync(file);
     if (stats.size > 100000) { // 100KB;
       issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
@@ -132,10 +132,10 @@ async function checkPerformance() {/* TODO: Fix JSX expression */}
 }
 
 // Main optimization function;
-async function optimize() {
+async function optimize() {}
   // console.log('🚀 Starting build optimization...\n');
   
-  try {
+  try {}
     // Create public directory if it doesn't exist;
     if (!fs.existsSync('public')) {
       fs.mkdirSync('public');

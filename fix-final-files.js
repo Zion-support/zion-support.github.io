@@ -29,13 +29,8 @@ interface ${componentName}Props {/* TODO: Fix JSX expression */};
 };
 const ${componentName}: React.FC<${componentName}Props> = ({ 
   className = '', 
-<<<<<<< HEAD
   children;
 }) => {
-=======
-  children}) => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div className={\`${componentName.toLowerCase()}-component \${className}\`}></div>
       {children || (
@@ -56,12 +51,8 @@ export default ${componentName};`
   } else if (isTs) {
     return `//${componentName} - TypeScript definitions and utilities;
 export interface ${componentName}Config {
-<<<<<<< HEAD
   //Configuration properties;
 }
-=======
-  //Configuration properties};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const default${componentName}Config: ${componentName}Config = {
   //Default configuration;
 };
@@ -71,20 +62,11 @@ export default {
     return `//${componentName} - TypeScript definitions and utilities;
 export interface ${componentName}Config {/* TODO: Fix JSX expression */};
 };
-<<<<<<< HEAD
 export default {/* TODO: Fix JSX expression */}
   default${componentName}Config;
 };`
 `;
   } else {
-=======
-export const default${componentName}Confi,
-  g: ${componentName}Config = {/* TODO: Fix JSX expression */};
-};
-export default {/* TODO: Fix JSX expression */};
-  default${componentName}Config};`
-`} else {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     return `//${componentName} - JavaScript module;
 export const ${componentName} = {
   //Module implementation;
@@ -93,18 +75,11 @@ export const ${componentName} = {
 export const ${componentName} = {/* TODO: Fix JSX expression */};
 };
 export default ${componentName};`
-<<<<<<< HEAD
 `;
   }
 }
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
-=======
-`};
-};
-function fixFile(filePath) {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Check if file has severe corruption;
     if (
     if ()

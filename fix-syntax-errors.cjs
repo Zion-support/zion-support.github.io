@@ -2,130 +2,118 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Function to fix common syntax errors in TypeScript/JSX files
-function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix semicolons after property names in object literals
-  // Pattern: property: value,; -> property: value,
-  fixed = fixed.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix semicolons after property names in object literals (with quotes)
-  // Pattern: "property": value,; -> "property": value,
-  fixed = fixed.replace(/(["']\w+["']):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix malformed JSX closing tags
-  // Pattern: <tag></tag> -> <tag />
-  fixed = fixed.replace(/<(\w+)><\/\1>/g, '<$1 />');
-  
-  // Fix malformed JSX with semicolons
-  // Pattern: <tag>; -> <tag>
-  fixed = fixed.replace(/<(\w+)>;/g, '<$1>');
-  
-  // Fix malformed JSX closing with semicolons
-  // Pattern: </tag>; -> </tag>
-  fixed = fixed.replace(/<\/(\w+)>;/g, '</$1>');
-  
-  // Fix array method syntax errors
-  // Pattern: .map((item, index) => (; -> .map((item, index) => (
-  fixed = fixed.replace(/\.map\(\([^)]+\)\s*=>\s*\(;/g, (match) => match.replace('(;', '('));
-  
-  // Fix array method syntax errors with closing
-  // Pattern: }); -> })
-  fixed = fixed.replace(/}\);/g, '})');
-  
-  // Fix malformed return statements
-  // Pattern: return (; -> return (
-  fixed = fixed.replace(/return\s*\(;/g, 'return (');
-  
-  // Fix malformed function declarations
-  // Pattern: function() {; -> function() {
-  fixed = fixed.replace(/function\s*\([^)]*\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed arrow functions
-  // Pattern: () => {; -> () => {
-  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed JSX fragments
-  // Pattern: <></> -> <>
-  fixed = fixed.replace(/<><\/>/g, '<>');
-  
-  // Fix malformed JSX with extra semicolons
-  // Pattern: <Component>; -> <Component>
-  fixed = fixed.replace(/<(\w+)>;/g, '<$1>');
-  
-  // Fix malformed JSX closing with extra semicolons
-  // Pattern: </Component>; -> </Component>
-  fixed = fixed.replace(/<\/(\w+)>;/g, '</$1>');
-  
-  // Fix malformed object property assignments
-  // Pattern: property: value,; -> property: value,
-  fixed = fixed.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix malformed array syntax
-  // Pattern: [item,; -> [item,
-  fixed = fixed.replace(/\[([^,\]]+),;/g, '[$1,');
-  
-  // Fix malformed array closing
-  // Pattern: ]; -> ]
-  fixed = fixed.replace(/\];/g, ']');
-  
-  // Fix malformed object closing
-  // Pattern: }; -> }
-  fixed = fixed.replace(/\};/g, '}');
-  
-  // Fix malformed function calls
-  // Pattern: function(; -> function(
-  fixed = fixed.replace(/function\s*\(;/g, 'function(');
-  
-  // Fix malformed method calls
-  // Pattern: .method(; -> .method(
-  fixed = fixed.replace(/\.(\w+)\(;/g, '.$1(');
-  
-  // Fix malformed conditional statements
-  // Pattern: if (condition) {; -> if (condition) {
-  fixed = fixed.replace(/if\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed for loops
-  // Pattern: for (init; condition; increment) {; -> for (init; condition; increment) {
-  fixed = fixed.replace(/for\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed while loops
-  // Pattern: while (condition) {; -> while (condition) {
-  fixed = fixed.replace(/while\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed switch statements
-  // Pattern: switch (expression) {; -> switch (expression) {
-  fixed = fixed.replace(/switch\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed try-catch blocks
-  // Pattern: try {; -> try {
-  fixed = fixed.replace(/try\s*\{;/g, 'try {');
-  
-  // Fix malformed catch blocks
-  // Pattern: catch (error) {; -> catch (error) {
-  fixed = fixed.replace(/catch\s*\([^)]*\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed finally blocks
-  // Pattern: finally {; -> finally {
-  fixed = fixed.replace(/finally\s*\{;/g, 'finally {');
-  
-  return fixed;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    // Fix common syntax issues after merge conflict resolution
+    const lines = content.split('\n');
+    const fixedLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i];
+      
+      // Fix missing semicolons after array declarations
+      if (line.trim().endsWith(']') && !line.trim().endsWith('];')) {
+        if (i + 1 < lines.length && lines[i + 1].trim() === '') {
+          line = line.replace(/\s*$/, ';');
+          modified = true;
+        }
+      }
+      
+      // Fix JSX syntax issues
+      if (line.includes('<>') && !line.includes('</>')) {
+        // Try to find matching closing tag
+        let depth = 0;
+        let j = i;
+        while (j < lines.length) {
+          if (lines[j].includes('<>')) depth++;
+          if (lines[j].includes('</>')) depth--;
+          if (depth === 0) break;
+          j++;
+        }
+        if (j >= lines.length) {
+          // Add closing tag
+          line = line.replace('<>', '<React.Fragment>');
+          modified = true;
+        }
+      }
+      
+      // Fix unclosed JSX tags
+      if (line.includes('<') && !line.includes('</') && !line.includes('/>')) {
+        const tagMatch = line.match(/<(\w+)([^>]*)>/);
+        if (tagMatch) {
+          const tagName = tagMatch[1];
+          // Check if it's a self-closing tag
+          if (!['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName.toLowerCase())) {
+            // Look for closing tag in the next few lines
+            let foundClosing = false;
+            for (let k = i + 1; k < Math.min(i + 10, lines.length); k++) {
+              if (lines[k].includes(`</${tagName}>`)) {
+                foundClosing = true;
+                break;
+              }
+            }
+            if (!foundClosing) {
+              // This might be a self-closing tag that needs to be fixed
+              if (line.includes('className=') || line.includes('id=') || line.includes('onClick=')) {
+                line = line.replace(/>$/, ' />');
+                modified = true;
+              }
+            }
+          }
+        }
+      }
+      
+      // Fix missing commas in arrays
+      if (line.trim().endsWith(']') && i > 0) {
+        const prevLine = lines[i - 1].trim();
+        if (prevLine && !prevLine.endsWith(',') && !prevLine.endsWith('[') && !prevLine.endsWith('{')) {
+          // Check if this is part of an array
+          let j = i - 1;
+          while (j >= 0 && lines[j].trim() !== '') {
+            if (lines[j].trim().endsWith('[')) break;
+            j--;
+          }
+          if (j >= 0 && lines[j].trim().endsWith('[')) {
+            // This is part of an array, add comma to previous line
+            lines[i - 1] = lines[i - 1].replace(/\s*$/, ',');
+            modified = true;
+          }
+        }
+      }
+      
+      // Fix broken JSX expressions
+      if (line.includes('{') && !line.includes('}')) {
+        // Look for matching closing brace
+        let braceCount = 0;
+        let j = i;
+        while (j < lines.length && j < i + 5) {
+          for (const char of lines[j]) {
+            if (char === '{') braceCount++;
+            if (char === '}') braceCount--;
+          }
+          if (braceCount === 0) break;
+          j++;
+        }
+        if (braceCount !== 0) {
+          // Add closing brace
+          line = line + '}';
+          modified = true;
+        }
+      }
+      
+      fixedLines.push(line);
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, fixedLines.join('\n'));
+      console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -133,34 +121,50 @@ function processFile(filePath) {
   }
 }
 
-// Main function
-function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
+function findFilesWithErrors(dir) {
+  const files = [];
   
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    totalFiles += files.length;
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
     
-    files.forEach(file => {
-      if (processFile(file)) {
-        fixedFiles++;
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        if (item !== 'node_modules' && item !== '.git' && !item.startsWith('.')) {
+          walkDir(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (['.ts', '.tsx', '.js', '.jsx'].includes(ext)) {
+          files.push(fullPath);
+        }
       }
-    });
-  });
+    }
+  }
   
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
+  walkDir(dir);
+  return files;
+}
+
+function main() {
+  console.log('Starting syntax error fixes...');
+  
+  const files = findFilesWithErrors('.');
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    if (fixSyntaxErrors(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`Fixed syntax errors in ${fixedCount} files`);
 }
 
 if (require.main === module) {
   main();
 }
 
-module.exports = { fixSyntaxErrors, processFile };
+module.exports = { fixSyntaxErrors, findFilesWithErrors };

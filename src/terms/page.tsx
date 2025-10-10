@@ -1,19 +1,10 @@
 'use client';
 import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-<<<<<<< HEAD
-export default function TermsPage() {
+export default function TermsPage() {}
   const lastUpdated = 'January 1, 2024';
   const sections = [
     {
-=======
-export default function TermsPage() {;
-const lastUpdated = 'January 1, 2024';
-;
-const sections = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Acceptance of Terms',
       icon: CheckCircle,
       content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
@@ -44,13 +35,7 @@ const sections = [
       content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
     };
   ];
-<<<<<<< HEAD
   const prohibitedUses = [
-=======
-;
-const prohibitedUses = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Violating any applicable laws or regulations',
     'Transmitting malicious code or harmful content',
     'Attempting to gain unauthorized access to our systems',
@@ -60,33 +45,26 @@ const prohibitedUses = [
     'Collecting user information without consent',
     'Engaging in any form of harassment or abuse'
   ];
-<<<<<<< HEAD
   const serviceLevels = [
-    {
-=======
-;
-const serviceLevels = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    {}
       service: 'AI Services',
       uptime: '99.9%',
       support: '24/7',
       response: '1 hour'
     },
-        {
+        {}
       service: 'IT Infrastructure',
       uptime: '99.95%',
       support: '24/7',
       response: '30 minutes'
     },
-        {
+        {}
       service: 'Cloud Services',
       uptime: '99.9%',
       support: '24/7',
       response: '1 hour'
     },
-        {
+        {}
       service: 'Support Services',
       uptime: 'N/A',
       support: 'Business Hours',
@@ -95,17 +73,12 @@ const serviceLevels = [
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       {/* Hero Section */}
-      <section className="relative py-20 lg: py-32 overflow-hidden">
-=======
-      {/* Hero Section */};
-      <section className="relative py-20 lg:py-32 overflow-hidden">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      <section className="relative py-20 lg: py-32 overflow-hidden" />
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+        <div className="container mx-auto px-4 relative z-10" />
+          <div className="max-w-4xl mx-auto text-center" />
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse" />
               Terms of Service,
   </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
@@ -128,12 +101,8 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Last Updated */}
-=======
-      {/* Last Updated */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-8">
+      <section className="py-8" />
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
@@ -147,17 +116,13 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Key Terms */}
-=======
-      {/* Key Terms */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20">
+      <section className="py-20" />
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Terms</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {sections.map((section, index) => (
+              {sections.map((section, index) => (}
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center space-x-3 mb-4">
                     <section .icon className="w-8 h-8 text-cyan-400" />
@@ -170,20 +135,16 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Prohibited Uses */}
-=======
-      {/* Prohibited Uses */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+      <section className="py-20 bg-slate-800/50" />
+        <div className="container mx-auto px-4" />
+          <div className="max-w-4xl mx-auto" />
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Prohibited Uses</h2>
             <p className="text-gray-300 mb-8 text-center">
               You may not use our services for any unlawful purpose or to solicit others to perform unlawful acts.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {prohibitedUses.map((use, index) => (
+              {prohibitedUses.map((use, index) => (}
                 <div key={index} className="flex items-start space-x-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{use}</span>
@@ -193,17 +154,13 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Service Level Agreements */}
-=======
-      {/* Service Level Agreements */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+      <section className="py-20" />
+        <div className="container mx-auto px-4" />
+          <div className="max-w-6xl mx-auto" />
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Level Agreements</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full bg-slate-800/50 rounded-lg overflow-hidden">
+            <div className="overflow-x-auto" />
+              <table className="w-full bg-slate-800/50 rounded-lg overflow-hidden" />
                 <thead>
                   <tr className="bg-slate-700/50">
                     <th className="px-6 py-4 text-left text-white font-semibold">Service</th>
@@ -213,7 +170,7 @@ const serviceLevels = [
                   </tr>
                 </thead>
                 <tbody>
-                  {serviceLevels.map((level, index) => (
+                  {serviceLevels.map((level, index) => (}
                     <tr key={index} className="border-t border-gray-700">
                       <td className="px-6 py-4 text-white font-medium">{level.service}</td>
                       <td className="px-6 py-4 text-cyan-400">{level.uptime}</td>
@@ -227,13 +184,9 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Payment Terms */}
-=======
-      {/* Payment Terms */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-slate-800/50" />
+        <div className="container mx-auto px-4" />
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Payment Terms</h2>
             <div className="space-y-6">
@@ -261,13 +214,9 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Termination */}
-=======
-      {/* Termination */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20" />
+        <div className="container mx-auto px-4" />
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Termination</h2>
             <div className="space-y-6">
@@ -296,14 +245,10 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Governing Law */}
-=======
-      {/* Governing Law */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 bg-slate-800/50" />
+        <div className="container mx-auto px-4" />
+          <div className="max-w-4xl mx-auto text-center" />
             <h2 className="text-3xl font-bold text-white mb-6">Governing Law</h2>
             <p className="text-xl text-gray-300 mb-8">
               These terms are governed by the laws of the State of Delaware, United States. 
@@ -326,13 +271,9 @@ const serviceLevels = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Contact Information */}
-=======
-      {/* Contact Information */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20" />
+        <div className="container mx-auto px-4" />
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Questions About These Terms?</h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -352,14 +293,9 @@ const serviceLevels = [
                 <span className="text-white">Middletown, DE</span>
               </div>
             </div>
-<<<<<<< HEAD
             <a
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
-=======
-            <a href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
   </
@@ -367,11 +303,7 @@ const serviceLevels = [
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   ),
 }
   </a>
   </h1>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 'use client'
 import React, { createContext, useContext, useEffect, ReactNode } from 'react'
-=======
-'use client';
-import React, { createContext, useContext, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 interface AnalyticsContextType {
     trackEvent: (eventName: string, parameters?: Record<string, any>) => void
   trackPageView: (pageName: string, pagePath: string) => void
   }
-<<<<<<< HEAD
 ;
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
-export const useAnalytics = () => {
+export const useAnalytics = () => {}
     const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
@@ -24,42 +18,24 @@ interface AnalyticsProviderProps {
     children: ReactNode
   }
 
-=======
-  return context;
-};
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  useEffect(() => {
+  useEffect(() => {}
     // Initialize Google Analytics if available
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
       const gtag = (window as { gtag: (command: string, targetId: string, config?: any) => void }).gtag
-=======
-      const gtag = (window as { gtag: (command: string, targetId: string, config?: any) => void }).gtag;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       // Configure Google Analytics
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href,
       })
-<<<<<<< HEAD
     }
   }, [])
   const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
     if (typeof window === 'undefined') return
-=======
-    };
-  }, []);
-  const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
-    if (typeof window === 'undefined') return;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Google Analytics
-    if ('gtag' in window) {
+    if ('gtag' in window) {}
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag
-      gtag('event', eventName, {
+      gtag('event', eventName, {}
         event_category: parameters.category || 'engagement',
         event_label: parameters.label,
         value: parameters.value,
@@ -68,23 +44,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     };
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
     console.log('Analytics Event:', eventName, parameters)
   }
   }
 
-  const trackPageView = (pageName: string, pagePath: string) => {
+  const trackPageView = (pageName: string, pagePath: string) => {}
     if (typeof window === 'undefined') return,
 
-=======
-      console.log('Analytics Event:', eventName, parameters);
-    }
-  };
-  const trackPageView = (pageName: string, pagePath: string) => {
-    if (typeof window === 'undefined') return;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Google Analytics
-    if ('gtag' in window) {
+    if ('gtag' in window) {}
       const gtag = (window as { gtag: (command: string, targetId: string, config: any) => void }).gtag
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
@@ -93,24 +61,15 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     };
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
     console.log('Page View:', pageName, pagePath)
   }
   }
 
-=======
-      console.log('Page View:', pageName, pagePath);
-    }
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
   }
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <AnalyticsContext .Provider value={value}>
       {children}

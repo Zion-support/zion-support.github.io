@@ -21,12 +21,11 @@ const filesWithErrors = [
   'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'
 ];
 
-function fixParsingError(filePath) {
-  try {
+function fixParsingError(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     // Check if file ends with ); but is missing the closing brace;
-<<<<<<< HEAD
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {
 function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
     if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */}
@@ -42,24 +41,10 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {;
-function fixParsingError(filePath) {/* TODO: Fix JSX expression */};
-    if (content.trim().endsWith(');') && !content.trim().endsWith('};')) {/* TODO: Fix JSX expression */};
-      content = content.trim() + '\n};';
-      modified = true};
-    if (modified) {/* TODO: Fix JSX expression */};
-  d: ${path.relative(__dirname, filePath)}`)};
-  } catch (error) {/* TODO: Fix JSX expression */}`
-    // console.error removed for production
-};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Process all files;
-filesWithErrors.forEach(file => {)
+filesWithErrors.forEach(file => {)}
   const fullPath = path.join(__dirname, file);
   if (fs.existsSync(fullPath)) {
-<<<<<<< HEAD
     fixParsingError(fullPath);
   }
 filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
@@ -67,11 +52,3 @@ filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
 });
 
 console.log('Fixed remaining parsing errors!');`
-=======
-    fixParsingError(fullPath)};
-filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */};
-  })
-});
-// console.log removed for production
-`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

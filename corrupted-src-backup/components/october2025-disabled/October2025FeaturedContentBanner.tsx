@@ -1,6 +1,6 @@
-const October2025FeaturedContentBanne, r = () => {
+const October2025FeaturedContentBanne, r = () => {}
   const featuredConten, t = [
-    {
+    {}
       title: 'Enterprise, AI, Value Realiza, t, i, o, n',
       description: '90, days, to shipped, outcome, s: scoreca, r, d, s, evaluator, gate, s, tiered, routin, g',
       li, n, k: '/bl, o, g/enterpri, s, e-ai-val, u, e-realizati, o, n-20, 2, 5-10-0, 8',
@@ -8,17 +8,12 @@ const October2025FeaturedContentBanne, r = () => {
       gradie, n, t: 'fr, o, m-indi, g, o-600, t, o-bl, u, e-60, 0',
       bgGradie, n, t: 'fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/4, 0',
       borderCol, o, r: 'bord, e, r-indi, g, o-5, 0, 0/3, 0',
-<<<<<<< HEAD
       sta, t, s: [,
 const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */}
-=======
-      sta, t, s: [,;
-const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         { val, u, e: '90, d', lab, e, l: 'To, Outcom, e, s' },
         { val, u, e: 'KP, I', lab, e, l: 'Linked, Gat, e, s' },
         { val, u, e: '$$', lab, e, l: 'Predictable, Co, s, t' }]},
-    {
+    {}
       title: 'Enterprise, Neural, Orchestration Platf, o, r, m',
       description: '89% faster, AI, deploymen, t, 94% cost, reductio, n, $12.4 M, annual, savings',
       li, n, k: '/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platf, o, r, m',
@@ -31,7 +26,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         { val, u, e: '8, 9%', lab, e, l: 'Faster, Deployme, n, t' },
         { val, u, e: '9, 4%', lab, e, l: 'Cost, Reducti, o, n' },
         { val, u, e: '$12.4, M', lab, e, l: 'Annual, Savin, g, s' }]},
-    {
+    {}
       title: 'Cognitive, Supply, Chain Revolut, i, o, n',
       description: '76% forecast, accura, c, y, 68% inventory, cost, reduction, $18.7 M, valu, e',
       li, n, k: '/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revolut, i, o, n',
@@ -44,7 +39,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         { val, u, e: '7, 6%', lab, e, l: 'Forecast, Accura, c, y' },
         { val, u, e: '6, 8%', lab, e, l: 'Cost, Reducti, o, n' },
         { val, u, e: '$18.7, M', lab, e, l: 'Annual, Val, u, e' }]},
-    {
+    {}
       title: 'AI, Reliability, Blueprints 2, 0, 2, 7',
       description: 'Evaluat, o, r, s, action, budget, s, instant, rollbac, k — ship, safel, y',
       li, n, k: '/bl, o, g/ai-reliabili, t, y-blueprin, t, s-20, 2, 7-20, 2, 5-10-0, 2',
@@ -57,7 +52,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         { val, u, e: 'KP, I', lab, e, l: 'Linked, Eva, l, s' },
         { val, u, e: '1‑cl, i, c, k', lab, e, l: 'Rollb, a, c, k' },
         { val, u, e: '24/, 7', lab, e, l: 'Safe, O, p, s' }]},
-    {
+    {}
       title: 'Edge, Inference, Playbook 2, 0, 2, 7',
       description: 'S, u, b‑100 ms, globally, with warm, pools, and tiered, cach, e, s',
       li, n, k: '/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-0, 2',
@@ -90,15 +85,9 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         </div>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>)
-<<<<<<< HEAD
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {
+          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {}
             const Ico, n = conte, n, t.ic, o, n; return(<Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
             const Ico, n = conte, n, t.ic, o, n; return (</div>
-=======
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {;
-const Ico, n = conte, n, t.ic, o, n; return(<Link , ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l';
-const Ico, n = conte, n, t.ic, o, n; return (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
   ]; return (<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'></10>
       <div, className='container, m, x-auto, ma, x-w-7, x, l'></div>
@@ -151,11 +140,11 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                   </div>)
                   {/* Sta, t, s */})
                   <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>)
-                    { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (
+                    { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (}
                   </div>
                   {/* Sta, t, s */};
                   <div , className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>
-                    { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (</div>
+                    { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (</div>}
                       <div, ke, y = { id, x  }, classNa, m, e = 'te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10'
                        ></div> <div , classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`};>
                   <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'></div>
@@ -191,12 +180,8 @@ const Ico, n = conte, n, t.ic, o, n; return (</div>
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opac, i, t, y`};
                  /></div>
               </Li, n, k>
-<<<<<<< HEAD
             );
           })}
-=======
-            )})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </div>
         {/* Bottom, CT, A */};
         <div, classNam, e = 'te, x, t-cent, e, r'></div>

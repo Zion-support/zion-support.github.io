@@ -102,9 +102,9 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
         {/* Content, Gri, d */};
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
-          {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (
+          {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (}
             <Li, n, k;
-          {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (</div>
+          {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (</div>}
             <Li, n, k
   k, e, y={ind, e, x};
               to={it, e, m.li, n, k};
@@ -222,11 +222,6 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-<<<<<<< HEAD
   );
 }
 "`
-=======
-  )};
-;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,4 +1,4 @@
-export default function About() {
+export default function About() {}
   return(<React.Fragment>
       <Head>
         <title>About Us - Zion Tech Group</title>
@@ -132,7 +132,7 @@ export default function About() {
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Integrity</h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600" />
 export default function About() {/* TODO: Fix JSX expression */}
 }
   return (<React.Fragment>

@@ -1,22 +1,10 @@
-const, October2025UltimateBreakthroughBanne, r = () => {
-<<<<<<< HEAD
+const, October2025UltimateBreakthroughBanne, r = () => {}
   return(<div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">)
       {/* Animated, Backgroun, d */})
       <div, className="absolute, inse, t-0, opacit, y-20">)
   return (
     <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">
       {/* Animated, Backgroun, d */}</div>
-=======
-return (
-  return(<div , className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">
-);
-})
-      {/* Animated, Backgroun, d */};)
-      <div, className="absolute, inse, t-0, opacit, y-20">)
-  return (
-    <div , className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">
-      {/* Animated, Backgroun, d */};</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(45d, e, g,transparent_, 2, 5%,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,.05)_, 5, 0%,transparent_, 7, 5%,transparent_1, 0, 0%)] bg-[leng, t, h: 250px_250, p, x] anima, t, e-shimm, e, r"></d, i, v>"
       </d, i, v>
@@ -28,15 +16,9 @@ return (
         {/* Header, Badg, e */}</div>
         <div, className="flex, justif, y-center, m, b-6"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-4, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-4, 0, 0/50, rounde, d-fu, l, l"></div>
-<<<<<<< HEAD
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
 const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Backgroun, d */}
-=======
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />;
-const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */};
-      {/* Animated, Backgroun, d */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(45d, e, g,transparent_, 2, 5%,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,.05)_, 5, 0%,transparent_, 7, 5%,transparent_1, 0, 0%)] bg-[leng, t, h: 250px_250, p, x] anima, t, e-shimm, e, r"></d, i, v>"
       </d, i, v>

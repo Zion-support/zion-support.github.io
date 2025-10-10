@@ -2,17 +2,17 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react'
-const CommunityPage: React.FC = () => {
+const CommunityPage: React.FC = () => {}
   const [activeTab, setActiveTab] = useState('overview')
   const communityStats = [
     { icon: Users, value: '5,000+', label: 'Active Members' },
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
     { icon: Calendar, value: '12', label: 'Events Monthly' },
     { icon: Star, value: '4.9', label: 'Average Rating' }
-  ]
+  ];
 
   const events = [
-    {
+    {}
       title: 'AI Development Workshop',
       date: '2024-02-15',
       time: '2:00 PM EST',
@@ -20,7 +20,7 @@ const CommunityPage: React.FC = () => {
       attendees: 150,
       description: 'Learn advanced AI development techniques and best practices'
     },
-    {
+    {}
       title: 'Cloud Infrastructure Meetup',
       date: '2024-02-20',
       time: '6:00 PM EST',
@@ -28,7 +28,7 @@ const CommunityPage: React.FC = () => {
       attendees: 75,
       description: 'Discuss cloud architecture and deployment strategies'
     },
-    {
+    {}
       title: 'SaaS Business Growth Panel',
       date: '2024-02-25',
       time: '3:00 PM EST',
@@ -36,34 +36,34 @@ const CommunityPage: React.FC = () => {
       attendees: 200,
       description: 'Expert panel on scaling SaaS businesses'
     }
-  ]
+  ];
 
   const forums = [
-    {
+    {}
       name: 'AI Services',
       description: 'Discuss AI development, machine learning, and automation',
       posts: 1250,
       members: 1800
     },
-    {
+    {}
       name: 'IT Services',
       description: 'Cloud infrastructure, DevOps, and system administration',
       posts: 980,
       members: 1200
     },
-    {
+    {}
       name: 'Micro SaaS',
       description: 'Building and scaling micro SaaS applications',
       posts: 750,
       members: 900
     },
-    {
+    {}
       name: 'General Discussion',
       description: 'General tech discussions and community updates',
       posts: 2100,
       members: 3000
     }
-  ]
+  ];
 
   const benefits = [
     {
@@ -86,7 +86,7 @@ const CommunityPage: React.FC = () => {
       title: 'Recognition',
       description: 'Showcase your projects and get community recognition'
     }
-  ]
+  ];
 
   return (
     <>
@@ -113,7 +113,7 @@ const CommunityPage: React.FC = () => {
               Join our vibrant community of developers, entrepreneurs, and tech enthusiasts. 
               Connect, learn, and grow together.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4" />
               <a
                 href="#join"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
@@ -137,7 +137,7 @@ const CommunityPage: React.FC = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            {communityStats.map((stat, index) => (
+            {communityStats.map((stat, index) => (}
               <div key={index} className="cyber-card-enhanced p-6 text-center">
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
                 <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
@@ -147,9 +147,9 @@ const CommunityPage: React.FC = () => {
           </div>
 
           {/* Tabs */}
-          <div className="mb-8">
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
+          <div className="mb-8" />
+            <div className="flex flex-wrap justify-center gap-4" />
+              {[}
                 { id: 'overview', name: 'Overview' },
                 { id: 'events', name: 'Events' },
                 { id: 'forums', name: 'Forums' },
@@ -171,9 +171,9 @@ const CommunityPage: React.FC = () => {
           </div>
 
           {/* Overview Tab */}
-          {activeTab === 'overview' && (
-            <div className="space-y-12">
-              <div className="cyber-card-enhanced p-8">
+          {activeTab === 'overview' && (}
+            <div className="space-y-12" />
+              <div className="cyber-card-enhanced p-8" />
                 <h2 className="text-2xl font-bold text-white mb-6">Welcome to Our Community</h2>
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   Our community is a place where developers, entrepreneurs, and tech enthusiasts come together 
@@ -181,10 +181,10 @@ const CommunityPage: React.FC = () => {
                   just starting out or you're a seasoned professional, you'll find value in our diverse and 
                   welcoming community.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6" />
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-3">What You'll Find</h3>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2" />
                       <li className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                         Technical discussions and problem-solving
@@ -205,7 +205,7 @@ const CommunityPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-3">Community Guidelines</h3>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2" />
                       <li className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                         Be respectful and inclusive
@@ -230,18 +230,18 @@ const CommunityPage: React.FC = () => {
           )}
 
           {/* Events Tab */}
-          {activeTab === 'events' && (
-            <div className="space-y-8">
-              <div className="cyber-card-enhanced p-8">
+          {activeTab === 'events' && (}
+            <div className="space-y-8" />
+              <div className="cyber-card-enhanced p-8" />
                 <h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2>
-                <div className="space-y-6">
-                  {events.map((event, index) => (
-                    <div key={index} className="bg-slate-800 rounded-lg p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex-1">
+                <div className="space-y-6" />
+                  {events.map((event, index) => (}
+                    <div key={index} className="bg-slate-800 rounded-lg p-6" />
+                      <div className="flex items-start justify-between mb-4" />
+                        <div className="flex-1" />
                           <h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
                           <p className="text-gray-300 mb-3">{event.description}</p>
-                          <div className="flex items-center space-x-6 text-sm text-gray-400">
+                          <div className="flex items-center space-x-6 text-sm text-gray-400" />
                             <span className="flex items-center">
                               <Calendar className="w-4 h-4 mr-1" />
                               {event.date}
@@ -277,16 +277,16 @@ const CommunityPage: React.FC = () => {
           )}
 
           {/* Forums Tab */}
-          {activeTab === 'forums' && (
-            <div className="space-y-8">
-              <div className="cyber-card-enhanced p-8">
+          {activeTab === 'forums' && (}
+            <div className="space-y-8" />
+              <div className="cyber-card-enhanced p-8" />
                 <h2 className="text-2xl font-bold text-white mb-6">Community Forums</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {forums.map((forum, index) => (
-                    <div key={index} className="bg-slate-800 rounded-lg p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6" />
+                  {forums.map((forum, index) => (}
+                    <div key={index} className="bg-slate-800 rounded-lg p-6" />
                       <h3 className="text-lg font-semibold text-white mb-2">{forum.name}</h3>
                       <p className="text-gray-300 mb-4">{forum.description}</p>
-                      <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center justify-between mb-4" />
                         <div className="flex items-center space-x-4 text-sm text-gray-400">
                           <span className="flex items-center">
                             <MessageCircle className="w-4 h-4 mr-1" />
@@ -313,12 +313,12 @@ const CommunityPage: React.FC = () => {
           )}
 
           {/* Benefits Tab */}
-          {activeTab === 'benefits' && (
+          {activeTab === 'benefits' && (}
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Community Benefits</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {benefits.map((benefit, index) => (
+                  {benefits.map((benefit, index) => (}
                     <div key={index} className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -337,13 +337,13 @@ const CommunityPage: React.FC = () => {
           )}
 
           {/* Join Community CTA */}
-          <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
+          <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center" />
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of developers and entrepreneurs who are already part of our vibrant community. 
               Start connecting, learning, and growing today.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4" />
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"

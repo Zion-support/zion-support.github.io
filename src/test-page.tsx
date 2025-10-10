@@ -3,13 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const testPagetsx: React.FC = () => {
-<<<<<<< HEAD
+const testPagetsx: React.FC = () => {}
   const _features = [],
-=======
-};
-const _features = [];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     {icon: Users,
     title: 'Advanced Features',
@@ -25,11 +20,7 @@ const _features = [];
     title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
-<<<<<<< HEAD
     }
-=======
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ]
   return (<div className="min-h-screen bg-gray-900 text-white"></div>
       <Helmet></Helmet>
@@ -54,28 +45,19 @@ const _features = [];
               </a>"
               <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-500,"
-<<<<<<< HEAD
   hover: text-white transition-colors"></a>
                 View Demo,
-=======
-  hover:text-white transition-colors"></a>
-                View Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </a>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */}
-=======
-        {/* Features Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
+        <section className="py-16 px-4" />
+          <div className="max-w-6xl mx-auto" />
             <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />
               {_features.map((feature, index) => (};
-                <div key={index} className="bg-gray-800 rounded-xl p-6 text-center">
+                <div key={index} className="bg-gray-800 rounded-xl p-6 text-center" />
                   <feature .icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -83,11 +65,7 @@ const _features = [];
                     {feature.benefits.map((benefit, idx) => (};
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-<<<<<<< HEAD
                         {benefit}
-=======
-                        {benefit};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       </li>)
                     ))};
                   </ul>
@@ -102,13 +80,8 @@ const _features = [];
             <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>"
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>"
             <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-<<<<<<< HEAD
   hover: bg-cyan-600 transition-colors"></a>
               Contact Us
-=======
-  hover:bg-cyan-600 transition-colors"></a>
-              Contact Us;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </a>
           </div>
         </section>

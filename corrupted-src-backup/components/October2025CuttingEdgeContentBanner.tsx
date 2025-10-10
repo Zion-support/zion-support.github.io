@@ -69,12 +69,12 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         {/* Featured, Articles, Grid */})
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
-          {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
+          {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (}
             <Li, n, k;
         {/* Featured, Articles, Grid */};
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-          {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (</div>
+          {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (</div>}
             <Li, n, k
   k, e, y={ind, e, x};
               to={artic, l, e.li, n, k};
@@ -138,9 +138,9 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                 </p>
                 {/* Metri, c, s */}"
                 <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";
-                  {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (
+                  {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (}
                     <sp, a, n;
-                  {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (</div>
+                  {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (</div>}
                     <sp, a, n
   k, e, y={i, d, x};
                   {/* TODO: Fix JSX expression */};
@@ -232,7 +232,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           </p>
         </d, i, v>
       </d, i, v>
-<<<<<<< HEAD
       <sty, l, e>{/* TODO: Fix JSX expression */}
           0%, 1, 0, 0% {
     transfo, r, m: transla, t, e(0, 0) sca, l, e(1)
@@ -250,17 +249,6 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
         .animati, o, n-del, a, y-20, 0, 0 {
     animati, o, n-del, a, y: 2 s
   }
-=======
-      <sty, l, e>{/* TODO: Fix JSX expression */};
-          0%, 1, 0, 0% { transfo, r, m: transla, t, e(0, 0) sca, l, e(1)};
-          33% { transfo, r, m: transla, t, e(30, p, x, -50, p, x) sca, l, e(1.1)};
-          66% { transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9)};
-        };
-        .anima, t, e-bl, o, b {
-          animati, o, n: blob, 7s, infinite};
-        .animati, o, n-del, a, y-20, 0, 0 {
-          animati, o, n-del, a, y: 2 s};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         .animati, o, n-del, a, y-40, 0, 0 {
           animati, o, n-del, a, y: 4s,
           animati, o, n: blob, 7s, infinite;

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Smartphone, Target, Zap, Settings, CheckCircle, Star, Code,  Smartphone,  Target,  Settings } from 'lucide-react';
-const AIMobileBuilderPage: React.FC = () => {
+const AIMobileBuilderPage: React.FC = () => {}
     const features = [],
   return (
     {// TODO: Add content
@@ -37,10 +37,10 @@ const AIMobileBuilderPage: React.FC = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <main className="container mx-auto px-4 py-16 pt-24" />
+        <section className="text-center mb-16" />
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Mobile Builder
           </h1>"

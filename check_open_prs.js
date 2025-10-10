@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import https from 'https';
 
 // GitHub API configuration;
-function makeGitHubRequest(endpoint) {
-  return new Promise((resolve, reject) => {
-    const options = {
-=======
-  return new Promise((resolve, reject) => {;
-const options = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+function makeGitHubRequest(endpoint) {}
+  return new Promise((resolve, reject) => {}
+    const options = {}
       hostname: 'api.github.com'
       port: 443
       path: endpoint,
@@ -38,18 +32,18 @@ function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
   });
 }
 
-async function checkOpenPRs() {
-    try {
+async function checkOpenPRs() {}
+    try {}
     // Get open pull requests;
     if (prs.length === 0) {
 
       return []
   }
 
-    for (const pr of prs) {
+    for (const pr of prs) {}
 
       // Check if PR has merge conflicts;
-      prDetails.push({
+      prDetails.push({}
         number: pr.number
         title: pr.title;)
         head: pr.head.ref;)
@@ -75,7 +69,7 @@ async function checkOpenPRs() {/* TODO: Fix JSX expression */}
 }
 
 // Run the check;
-checkOpenPRs().then(prs => {
+checkOpenPRs().then(prs => {}
     )
 )
   process.exit(0)

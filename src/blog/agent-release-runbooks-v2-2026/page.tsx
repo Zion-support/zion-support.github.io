@@ -2,25 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AgentReleaseRunbooksV22026Page: React.FC = () => {
-<<<<<<< HEAD
-=======
-};
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+const AgentReleaseRunbooksV22026Page: React.FC = () => {}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
+      <main className="container mx-auto px-4 py-16 pt-24" />
+        <section className="text-center mb-16" />
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" />
             Page,
   </
-=======
-            Page
-          </h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 <p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
             canaries, approvals and one‑click rollback.
           </p>
@@ -89,15 +79,7 @@ return (
           </div>
         </div>
       </section>)
-<<<<<<< HEAD
     </main>)
 }
 export default AgentReleaseRunbooksV22026Page;
   </h1>
-=======
-    </main>
-);
-})
-};
-export default AgentReleaseRunbooksV22026Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -1,9 +1,8 @@
 'use client'
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom'
-import { 
+import { }
   Cloud, 
   Shield, 
   Settings, 
@@ -27,10 +26,10 @@ import {
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
-const ItServicesPage: React.FC = () => {
+const ItServicesPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
-    {
+    {}
       id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure & Migration',
       description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services',
@@ -54,7 +53,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Cloud
     },
-    {
+    {}
       id: 'cybersecurity',
       name: 'Cybersecurity Solutions',
       description: 'Comprehensive security services including threat detection, compliance, and incident response',
@@ -78,7 +77,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Shield
     },
-    {
+    {}
       id: 'devops',
       name: 'DevOps & CI/CD',
       description: 'Modern development operations with automated deployment, monitoring, and infrastructure as code',
@@ -102,7 +101,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Settings
     },
-    {
+    {}
       id: 'database-management',
       name: 'Database Management',
       description: 'Expert database design, optimization, and management for all major database systems',
@@ -126,7 +125,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Database
     },
-    {
+    {}
       id: 'mobile-development',
       name: 'Mobile Development',
       description: 'Native and cross-platform mobile applications for iOS and Android',
@@ -150,7 +149,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Smartphone
     },
-    {
+    {}
       id: 'web-development',
       name: 'Web Development',
       description: 'Modern, responsive web applications built with cutting-edge technologies',
@@ -174,7 +173,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Globe
     },
-    {
+    {}
       id: 'network-infrastructure',
       name: 'Network Infrastructure',
       description: 'Complete network design, implementation, and management for enterprise environments',
@@ -198,7 +197,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Wifi
     },
-    {
+    {}
       id: 'data-center-services',
       name: 'Data Center Services',
       description: 'Comprehensive data center management including colocation, cloud, and hybrid solutions',
@@ -222,7 +221,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Server
     },
-    {
+    {}
       id: 'it-consulting',
       name: 'IT Consulting',
       description: 'Strategic IT consulting and digital transformation services for enterprise organizations',
@@ -246,7 +245,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Users
     },
-    {
+    {}
       id: 'managed-services',
       name: 'Managed IT Services',
       description: 'Comprehensive managed IT services including monitoring, maintenance, and support',
@@ -270,7 +269,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Settings
     },
-    {
+    {}
       id: 'api-development',
       name: 'API Development & Integration',
       description: 'Custom API development and integration services for seamless system connectivity',
@@ -294,7 +293,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Code
     },
-    {
+    {}
       id: 'ecommerce-solutions',
       name: 'E-commerce Solutions',
       description: 'Complete e-commerce platform development and optimization services',
@@ -318,7 +317,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: ShoppingCart
     },
-    {
+    {}
       id: 'enterprise-software',
       name: 'Enterprise Software Development',
       description: 'Custom enterprise software solutions tailored to specific business requirements',
@@ -342,7 +341,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Monitor
     },
-    {
+    {}
       id: 'it-support',
       name: 'IT Support & Help Desk',
       description: 'Comprehensive IT support services including help desk, troubleshooting, and maintenance',
@@ -366,7 +365,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Headphones
     },
-    {
+    {}
       id: 'cloud-security',
       name: 'Cloud Security Services',
       description: 'Specialized cloud security services including compliance, monitoring, and threat protection',
@@ -390,7 +389,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Shield
     },
-    {
+    {}
       id: 'data-analytics',
       name: 'Data Analytics & BI',
       description: 'Advanced data analytics and business intelligence solutions for data-driven decisions',
@@ -414,7 +413,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: BarChart
     },
-    {
+    {}
       id: 'disaster-recovery',
       name: 'Disaster Recovery & Business Continuity',
       description: 'Comprehensive disaster recovery and business continuity planning and implementation',
@@ -438,7 +437,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Shield
     },
-    {
+    {}
       id: 'it-audit',
       name: 'IT Audit & Compliance',
       description: 'Comprehensive IT audit and compliance services for regulatory requirements',
@@ -462,7 +461,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: CheckCircle
     },
-    {
+    {}
       id: 'cloud-native-development',
       name: 'Cloud-Native Development',
       description: 'Modern cloud-native application development with microservices and containerization',
@@ -488,7 +487,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Cloud
     },
-    {
+    {}
       id: 'ai-integration-services',
       name: 'AI Integration Services',
       description: 'AI model integration and deployment services for existing business systems',
@@ -514,7 +513,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Brain
     },
-    {
+    {}
       id: 'blockchain-development',
       name: 'Blockchain Development',
       description: 'Blockchain application development and smart contract implementation',
@@ -540,7 +539,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Link
     },
-    {
+    {}
       id: 'iot-development',
       name: 'IoT Development & Integration',
       description: 'Internet of Things solution development and device integration services',
@@ -566,7 +565,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Wifi
     },
-    {
+    {}
       id: 'mobile-app-development',
       name: 'Mobile App Development',
       description: 'Native and cross-platform mobile application development for iOS and Android',
@@ -592,7 +591,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Smartphone
     },
-    {
+    {}
       id: 'e-commerce-development',
       name: 'E-commerce Development',
       description: 'Complete e-commerce platform development with payment integration and inventory management',
@@ -618,7 +617,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: ShoppingCart
     },
-    {
+    {}
       id: 'api-development-advanced',
       name: 'Advanced API Development',
       description: 'Enterprise-grade API development with microservices architecture and advanced security',
@@ -644,7 +643,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Code
     },
-    {
+    {}
       id: 'data-engineering',
       name: 'Data Engineering Services',
       description: 'Data pipeline development and data infrastructure setup for analytics and AI',
@@ -670,7 +669,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Database
     },
-    {
+    {}
       id: 'cybersecurity-advanced',
       name: 'Advanced Cybersecurity',
       description: 'Comprehensive cybersecurity services including threat hunting and incident response',
@@ -696,7 +695,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Shield
     },
-    {
+    {}
       id: 'cloud-migration-advanced',
       name: 'Advanced Cloud Migration',
       description: 'Complex cloud migration services with zero-downtime and data integrity assurance',
@@ -722,7 +721,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Cloud
     },
-    {
+    {}
       id: 'devops-advanced',
       name: 'Advanced DevOps & SRE',
       description: 'Site Reliability Engineering and advanced DevOps practices for high-availability systems',
@@ -748,7 +747,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Settings
     },
-    {
+    {}
       id: 'machine-learning-ops',
       name: 'MLOps & AI Operations',
       description: 'Machine Learning Operations and AI model deployment and monitoring services',
@@ -774,7 +773,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Cpu
     },
-    {
+    {}
       id: 'enterprise-integration',
       name: 'Enterprise Integration',
       description: 'Complex enterprise system integration with legacy and modern systems',
@@ -800,7 +799,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Link
     },
-    {
+    {}
       id: 'performance-optimization',
       name: 'Performance Optimization',
       description: 'Application and infrastructure performance optimization for better user experience',
@@ -826,7 +825,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Zap
     },
-    {
+    {}
       id: 'disaster-recovery-advanced',
       name: 'Advanced Disaster Recovery',
       description: 'Comprehensive disaster recovery and business continuity solutions',
@@ -852,7 +851,7 @@ const ItServicesPage: React.FC = () => {
       popular: false,
       icon: Shield
     },
-    {
+    {}
       id: 'compliance-automation',
       name: 'Compliance Automation',
       description: 'Automated compliance monitoring and reporting for various regulatory frameworks',
@@ -878,7 +877,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: CheckCircle
     },
-    {
+    {}
       id: 'cloud-cost-optimization',
       name: 'Cloud Cost Optimization',
       description: 'Cloud cost analysis and optimization services to reduce infrastructure spending',
@@ -904,7 +903,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: TrendingUp
     },
-    {
+    {}
       id: 'security-automation',
       name: 'Security Automation',
       description: 'Automated security monitoring, incident response, and threat detection',
@@ -930,7 +929,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Shield
     },
-    {
+    {}
       id: 'data-visualization',
       name: 'Data Visualization & BI',
       description: 'Advanced data visualization and business intelligence dashboard development',
@@ -956,7 +955,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: BarChart
     },
-    {
+    {}
       id: 'workflow-automation',
       name: 'Workflow Automation',
       description: 'Business process automation and workflow optimization services',
@@ -982,7 +981,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Settings
     },
-    {
+    {}
       id: 'cloud-native-security',
       name: 'Cloud-Native Security',
       description: 'Specialized security services for cloud-native applications and infrastructure',
@@ -1008,7 +1007,7 @@ const ItServicesPage: React.FC = () => {
       popular: true,
       icon: Shield
     }
-  ]
+  ];
 
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
@@ -1044,50 +1043,23 @@ const ItServicesPage: React.FC = () => {
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
     { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
-  ]
+  ];
 
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   )
   return (
     <>
-=======
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
-;
-const ItServicesPage: React.FC = () => {
-const itServices = [
-];
-};
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
-    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
-    { name: 'Security Monitoring', href: '/security-monitoring', icon: Shield, description: '24/7 Security' },
-    { name: 'Penetration Testing', href: '/penetration-testing', icon: Shield, description: 'Security Testing' },
-    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Infrastructure Setup' },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Globe, description: 'IT Strategy' },
-    { name: 'Data Analytics', href: '/data-analytics', icon: Database, description: 'Business Intelligence' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
-    { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' };
-  ];
-  return (
-    <React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and web development." />
       </Helmet>
-<<<<<<< HEAD
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16" />
+        <div className="container mx-auto px-4 py-16" />
+          <div className="max-w-6xl mx-auto" />
             {/* Header */}
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1100,9 +1072,9 @@ const itServices = [
             </div>
 
             {/* Category Filter */}
-            <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-4">
-                {categories.map((category) => (
+            <div className="mb-12" />
+              <div className="flex flex-wrap justify-center gap-4" />
+                {categories.map((category) => (}
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
@@ -1120,7 +1092,7 @@ const itServices = [
 
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {filteredServices.map((service) => (
+              {filteredServices.map((service) => (}
                 <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
@@ -1129,40 +1101,12 @@ const itServices = [
                       </div>
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
                     </div>
-                    {service.popular && (
+                    {service.popular && (}
                       <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
                         <Star className="w-4 h-4 mr-1" />
                         Popular
                       </span>
                     )}
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              IT <span className="text-cyan-400">Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth.
-            </p>
-          </div>
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <Link key={index};
-                  to={service.href};
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
-                  <service .icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" />
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {service.name};
-                  </h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                    <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   </div>
                   
                   <p className="text-gray-300 mb-4">{service.description}</p>
@@ -1175,10 +1119,10 @@ const itServices = [
                     <span className="text-gray-400 text-sm">{service.category}</span>
                   </div>
 
-                  <div className="mb-6">
+                  <div className="mb-6" />
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
-                      {service.features.slice(0, 3).map((feature, index) => (
+                      {service.features.slice(0, 3).map((feature, index) => (}
                         <li key={index} className="flex items-start space-x-2">
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
@@ -1187,7 +1131,7 @@ const itServices = [
                     </ul>
                   </div>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between" />
                     <Link
                       to="/contact"
                       className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
@@ -1207,8 +1151,8 @@ const itServices = [
             </div>
 
             {/* CTA Section */}
-            <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
+            <div className="text-center" />
+              <div className="bg-slate-800/50 rounded-lg p-8" />
                 <h2 className="text-2xl font-bold text-white mb-4">
                   Ready to Modernize Your IT Infrastructure?
                 </h2>
@@ -1216,7 +1160,7 @@ const itServices = [
                   Let our IT experts help you choose the right solutions for your business needs. 
                   Get a free consultation and see how we can transform your technology infrastructure.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center" />
                   <Link
                     to="/contact"
                     className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
@@ -1233,7 +1177,6 @@ const itServices = [
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </main>
       
@@ -1243,11 +1186,3 @@ const itServices = [
 }
 
 export default ItServicesPage
-=======
-        </section>
-      </div>
-    </React.Fragment>)
-  );
-};
-export default ItServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

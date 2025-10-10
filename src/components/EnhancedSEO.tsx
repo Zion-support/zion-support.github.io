@@ -1,13 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 interface SEOProps {
     // TODO: Add content
   }
 }
-=======
-interface SEOProps {// TODO: Add content}
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   title?: string;
   description?: string;
   keywords?: string[];
@@ -24,7 +19,6 @@ interface SEOProps {// TODO: Add content}
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
-<<<<<<< HEAD
   tags?: string[];
 }
 const EnhancedSEO: React.FC,
@@ -32,15 +26,7 @@ const EnhancedSEO: React.FC,
     // TODO: Add content
   }
 }
-=======
-  tags?: string[]};
-;
-const EnhancedSEO: React.FC;
-          <SEOProps> = ({// TODO: Add content}
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const EnhancedSEO: React.FC<SEOProps> = ({
+const EnhancedSEO: React.FC<SEOProps> = ({}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
@@ -62,13 +48,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   }
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
-<<<<<<< HEAD
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
-=======
-    // Update meta description;
-let metaDescription = document.querySelector('meta[name="description"]');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     if (!metaDescription) {/* TODO: Fix JSX expression */}
     };
     metaDescription.setAttribute('content', description);
@@ -113,13 +94,8 @@ let metaDescription = document.querySelector('meta[name="description"]');
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
           <link rel="dns-prefetch" href="// www.googletagmanager.com" /></link>
           </Helmet>
-<<<<<<< HEAD
   );
 }
 export default EnhancedSEO;"`
   </SEOProps>
   </SEOProps>
-=======
-  )};
-export default EnhancedSEO;"`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

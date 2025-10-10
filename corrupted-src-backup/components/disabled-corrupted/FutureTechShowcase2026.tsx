@@ -1,7 +1,7 @@
 import React from 'react';
-const FutureTechShowcase202, 6: React.FC = () => { ,
+const FutureTechShowcase202, 6: React.FC = () => { ,}
   const futureTechArticle, s = [
-    {
+    {}
       id: 1,
       title: 'Neur, a, l-Quantum, Hybrid, Computin, g',
       slug: 'neur, a, l-quant, u, m-hybr, i, d-2, 0, 2, 6',
@@ -12,13 +12,8 @@ const FutureTechShowcase202, 6: React.FC = () => { ,
       trendi, n, g: t, r, u, e,
       ic, o, n: <Atom, classNam, e = 'w-8 , h-, 8' / > ,</Atom>gradie</Atom>, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
       bad, g, e: 'QUANTU, M, A, I',
-<<<<<<< HEAD
       sta, t, s: '1, 0,000x, Speed, Boost',
 const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      sta, t, s: '1, 0,000x, Speed, Boost',;
-const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
      },
     {/* TODO: Fix JSX expression */};
      },
@@ -76,11 +71,11 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         </div>)
         {/* Future, Tech, Articles Gr, i, d */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>)
-          { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
+          { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (}
         </div>
         {/* Future, Tech, Articles Gr, i, d */};
         <div , classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
-          { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
+          { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>}
             <div, ke, y = { artic, l, e.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }};
              > {/* Card, glow, effect */}</div>
@@ -151,7 +146,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                     {artic, l, e.readTime};
                   </sp, a, n>
                   <sp , a, n>
-                    {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {)
+                    {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {)}
                       mon, t, h: 'sh, o, r, t')
                       d, a, y: 'nume, r, i, c')
                       ye, a, r: 'nume, r, i, c')

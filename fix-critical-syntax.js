@@ -2,8 +2,8 @@
 import fs from 'fs';
 import path from 'path';
 // Function to fix critical syntax errors
-function fixCriticalSyntax(filePath) {
-  try {
+function fixCriticalSyntax(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     // Fix duplicate return statements
@@ -22,14 +22,14 @@ function fixCriticalSyntax(filePath) {
     content = content.replace(/([^;}])\n\s*function\s+/g, '$1;\nfunction ');
     // Fix JSX syntax issues
     content = content.replace(/return\s*\(\s*\n\s*if\s*\(/g, 'if (');
-    content = content.replace(/if\s*\([^)]*\)\s*\{\s*;\s*/g, 'if ($1) { ');
+    content = content.replace(/if\s*\([^)]*\)\s*\{\s*;\s*/g, 'if ($1) { ');}
     // Fix React component syntax
-    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*;\s*/g, 'const $1: React.FC = () => {');
+    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\s*;\s*/g, 'const $1: React.FC = () => {');}
     // Fix arrow function syntax
-    content = content.replace(/=\s*\(\s*\)\s*=>\s*\{\s*;\s*/g, '= () => {');
+    content = content.replace(/=\s*\(\s*\)\s*=>\s*\{\s*;\s*/g, '= () => {');}
     // Fix useEffect and other hooks
-    content = content.replace(/useEffect\s*\(\s*\(\s*\)\s*=>\s*\{/g, 'useEffect(() => {');
-    content = content.replace(/useCallback\s*\(\s*\(\s*\)\s*=>\s*\{/g, 'useCallback(() => {');
+    content = content.replace(/useEffect\s*\(\s*\(\s*\)\s*=>\s*\{/g, 'useEffect(() => {');}
+    content = content.replace(/useCallback\s*\(\s*\(\s*\)\s*=>\s*\{/g, 'useCallback(() => {');}
     // Fix JSX closing tags
     content = content.replace(/<\/(\w+)>\s*\)\s*\}\s*;\s*$/gm, '</$1>');
     // Fix console.log statements
@@ -50,11 +50,11 @@ function fixCriticalSyntax(filePath) {
   };
 };
 // Function to find all TypeScript/JavaScript files in app directory
-function findAppFiles(dir) {
+function findAppFiles(dir) {}
   const files = [];
-  function searchDirectory(currentDir) {
+  function searchDirectory(currentDir) {}
     const items = fs.readdirSync(currentDir);
-    for (const item of items) {
+    for (const item of items) {}
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
@@ -73,7 +73,7 @@ const appDir = path.join(process.cwd(), 'app');
 const appFiles = findAppFiles(appDir);
 console.log(`Found ${appFiles.length} app files to check`);
 let fixedCount = 0;
-for (const file of appFiles) {
+for (const file of appFiles) {}
   if (fixCriticalSyntax(file)) {
     fixedCount++;
     console.log(`Fixed syntax in: ${file}`);

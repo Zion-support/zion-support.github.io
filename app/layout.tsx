@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const LayoutPage: React.FC = () => {
+const LayoutPage: React.FC = () => {}
 const features = [
     {
       icon: Brain,
@@ -79,7 +79,7 @@ return (
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -103,7 +103,7 @@ return (
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
                 <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>

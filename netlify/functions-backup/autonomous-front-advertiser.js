@@ -1,22 +1,13 @@
-<<<<<<< HEAD
 exports.handler = async function (event, context) {const githubToken = process.env.GITHUB_TOKEN || ''}
   const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
   const githubBranch = process.env.GIT_BRANCH || 'main'
   const path = 'data/homepage-promos.json'
   function json(res)
-=======
-exports.handler = async function (event, context) {const githubToken = process.env.GITHUB_TOKEN || ''};
-  const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
-const githubBranch = process.env.GIT_BRANCH || 'main';
-const path = 'data/homepage-promos.json';
-function json(res)
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        status = 200) {
-    return {
+        status = 200) {}
+    return {}
       statusCode: status,
         headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(res, null)
-<<<<<<< HEAD
         2);
     }
   }
@@ -25,17 +16,7 @@ function json(res)
       500;
     );
   }
-  const promos = {updatedAt: new Date().toISOString(),
-=======
-        2)}};
-  if (!githubToken) {return json({ ok: false),
-        error: 'Missing GITHUB_TOKEN env var for GitHub commit' })
-      500;
-    )};
-  const promos = {
-updatedAt: new Date().toISOString(),
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  const promos = {updatedAt: new Date().toISOString(),}
     items: [,
       {,
         title: 'Invent New Automations',
@@ -46,7 +27,6 @@ updatedAt: new Date().toISOString(),
   s: { 'Content-Type': 'application/json' },
       bod,
   y: JSON.stringify(res, null)
-<<<<<<< HEAD
         2);
     }
   }
@@ -57,30 +37,15 @@ updatedAt: new Date().toISOString(),
   }
   const promos = {/* TODO: Fix JSX expression */}
   f: '/.netlify/functions/cloud-automation-inventor'}
-=======
-        2)}};
-  if (!githubToken) {/* TODO: Fix JSX expression */};
-  r: 'Missing GITHUB_TOKEN env var for GitHub commit' })
-      500;
-    )};
-  const promos = {/* TODO: Fix JSX expression */};
-  f: '/.netlify/functions/cloud-automation-inventor'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       },
       {/* TODO: Fix JSX expression */};
   f: '/.netlify/functions/autonomous-front-advertiser'};
       },
-<<<<<<< HEAD
       {/* TODO: Fix JSX expression */}
   f: '/.netlify/functions/hyper-sync-committer'}
       }]}
-=======
-      {/* TODO: Fix JSX expression */};
-  f: '/.netlify/functions/hyper-sync-committer'};
-      }]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  async function getCurrentSha(headers) {
-    try {
+  async function getCurrentSha(headers) {}
+    try {}
       const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
@@ -90,20 +55,12 @@ updatedAt: new Date().toISOString(),
       }?ref=${/* TODO: Fix JSX expression */};
       }`,
         { headers });
-<<<<<<< HEAD
       if (res.ok) {/* TODO: Fix JSX expression */}
         return json.sha}
       }
     } catch (e) {}
     return undefined;
   }
-=======
-      if (res.ok) {/* TODO: Fix JSX expression */};
-        return json.sha};
-      };
-    } catch (e) {};
-    return undefined};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   async function commitJson(obj) {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
@@ -136,7 +93,6 @@ updatedAt: new Date().toISOString(),
     );
 //     const ok = res.ok;
     let _text = '';
-<<<<<<< HEAD
     try {text = await res.text()}
     } catch {}
     return {/* TODO: Fix JSX expression */}
@@ -145,33 +101,19 @@ updatedAt: new Date().toISOString(),
   try {
     const result = await commitJson(promos
   })
-    return json({
+    return json({}
     )
-=======
-    try {text = await res.text()};
-    } catch {};
-    return {/* TODO: Fix JSX expression */};
-  y: text }};
-  try {const result = await commitJson(promos})
-    return json({)
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       ok: result.ok;)
       status: result.status;)
       file: path,)
       promos),
         response: result.body.slice(0),
-<<<<<<< HEAD
         250)
   });
   } catch (err) {return json({ ok: false),
         error: String(err,)} 500);
   }
 }
-=======
-        250)})} catch (err) {return json({ ok: false),
-        error: String(err;)}; 500)};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main'' const path = 'data/homepage-promos.json' function json(res)
         status = 200) {' return { statusCode: status,
         headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(res),
@@ -189,7 +131,6 @@ exports.handler = async function(event, context) {const githubToken = process.en
     ok: result.ok, status: result.status, file: path,)
         promos),
         response: result.body.slice(0),
-<<<<<<< HEAD
         250
   }); } catch (err) {return json({ ok: false),
         error: String(err,)} 500); } }'
@@ -201,64 +142,32 @@ exports.handler = async function(event, context) {const githubToken = process.en
       } 500);
   }
 }
-=======
-        250})} catch (err) {return json({ ok: false),
-        error: String(err;)}; 500)} };'
-  try {/* TODO: Fix JSX expression */};
-      };
-    return json({/* TODO: Fix JSX expression */})
-    })} catch (err) {/* TODO: Fix JSX expression */};
-      }; 500)};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main'' const path = 'data/homepage-promos.json' function json(res)
         status = 200) {/* TODO: Fix JSX expression */};
   s: { 'Content-Type': 'application/json' }, bod,
   y: JSON.stringify(res,
         null; 2;)
-<<<<<<< HEAD
       } } if (!githubToken) {/* TODO: Fix JSX expression */}
   r: 'Missing GITHUB_TOKEN env var for GitHub commit' }) 500); } const promos = {/* TODO: Fix JSX expression */}
-=======
-      }} if (!githubToken) {/* TODO: Fix JSX expression */};
-  r: 'Missing GITHUB_TOKEN env var for GitHub commit' }) 500)} const promos = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   c: 'Generates novel cloud automations on a cadence'} hre,
   f: '/.netlify/functions/cloud-automation-inventor' },' {/* TODO: Fix JSX expression */};
   c: 'Refreshes the front page promos continuously'} hre,
   f: '/.netlify/functions/autonomous-front-advertiser' },' {/* TODO: Fix JSX expression */};
   c: 'Commits a stamp to keep the pipeline flowing'} hre,
-<<<<<<< HEAD
   f: '/.netlify/functions/hyper-sync-committer' } ] } async function getCurrentSha(headers) {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */}
       }); if (res.ok) {const json = await res.json(); return json.sha} } } catch (e) {} return undefined; } async function commitJson(obj) {/* TODO: Fix JSX expression */}`
   n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-autonomous-front-advertiser' } const sha = await getCurrentSha(headers); const body = {/* TODO: Fix JSX expression */}`
-=======
-  f: '/.netlify/functions/hyper-sync-committer' } ] }; async function getCurrentSha(headers) {/* TODO: Fix JSX expression */};
-  s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */};
-      }?ref=${/* TODO: Fix JSX expression */}`
-      }`, {/* TODO: Fix JSX expression */};
-      }); if (res.ok) {const json = await res.json(); return json.sha} } } catch (e) {} return undefined} async function commitJson(obj) {/* TODO: Fix JSX expression */}`
-  n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-autonomous-front-advertiser' }; const sha = await getCurrentSha(headers); const body = {/* TODO: Fix JSX expression */}`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: `chore(homepage): refresh promos (${new Date().toISOString()})`,' conten,
   t: Buffer.from(JSON.stringify(obj, null)
         2)).toString('base64'), branc,`
   h: githubBranch, sha }' const res = await fetch(`http,
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
       }); const ok = res.ok;' let text = ''; try {text = await res.text()} } catch {} return {/* TODO: Fix JSX expression */}
   y: text } } try {/* TODO: Fix JSX expression */}
       } return json({/* TODO: Fix JSX expression */})
       }); } catch (err) {/* TODO: Fix JSX expression */}
       } 500); } }'`
-=======
-      }); const ok = res.ok;' let text = ''; try {text = await res.text()} } catch {} return {/* TODO: Fix JSX expression */};
-  y: text }} try {/* TODO: Fix JSX expression */};
-      } return json({/* TODO: Fix JSX expression */})
-      })} catch (err) {/* TODO: Fix JSX expression */};
-      }; 500)} };'`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -3,25 +3,19 @@ import fs from 'fs';
 import { glob } from 'glob';
 //Find all TypeScript/JSX files in src/components;
 // let fixedFiles = 0;
-for (const filePath of files) {
-  try {
+for (const filePath of files) {}
+  try {}
     //Fix orphaned /> tags (standalone /> on their own lines)
     content = content.replace(/^\s*\/>\s*$/gm, '');
     //Fix unterminated regular expression literals in object properties;
-    //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+    //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {}
       if (value.startsWith('/') && !value.endsWith('/')) {
-<<<<<<< HEAD
 for (const filePath of files) {/* TODO: Fix JSX expression */}
         return `${prop}: '${value.substring(1)}'`;
       }
       return match;
     });
 
-=======
-for (const filePath of files) {/* TODO: Fix JSX expression */};
-        return `${prop}: '${value.substring(1)}'`};
-      return match});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     //Fix malformed <br> tags;
     content = content.replace(/<br\s*>\s*<\/br>/g, '<br />');
     content = content.replace(/<br\s*>\s*$/gm, '<br />');

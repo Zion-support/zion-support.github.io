@@ -1,6 +1,6 @@
-const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
+const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {}
   const, latestArticle, s = [
-    {
+    {}
       i;
   d: 1,
       tit, l, e: 'AI, 20, 2;
@@ -14,7 +14,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
       ic, o, n: '🤖','
       featur, e, d: tr, u, e;
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0};
-    {
+    {}
       id: 2,
       tit, l, e: 'AI, 20, 2;
   6: Quantum, Neural, Optimization - Revolutionary, AI, Performance Breakthrou, g, h','
@@ -28,7 +28,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {
       ic, o, n: '⚛️','
       featur, e, d: tr, u, e;
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0};
-    {
+    {}
       id: 3,
       tit, l, e: 'AI, 20, 2;
   6: Me, t, a-Cognitive, Reasonin, g - The, Next, Frontier of, Artificial, Intelligence','
@@ -61,7 +61,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       featur, e, d: tr, u, e;
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0'
     };
-    {
+    {}
       id: 2,
       tit, l, e: 'AI, 20, 2;
   6: Quantum, Neural, Optimization - Revolutionary, AI, Performance Breakthrou, g, h',';
@@ -76,7 +76,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       featur, e, d: tr, u, e;
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0'
     };
-    {
+    {}
       id: 3,
       tit, l, e: 'AI, 20, 2;
   6: Me, t, a-Cognitive, Reasonin, g - The, Next, Frontier of, Artificial, Intelligence',';
@@ -226,12 +226,12 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
         {/* Featured, Articles, Grid */})
         <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">")
         <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";)
-          {latestArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
+          {latestArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (}
             <d, i, v;
         {/* Featured, Articles, Grid */};
         <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">"</div>
         <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
-          {latestArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (</div>
+          {latestArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (</div>}
             <d, i, v
   k, e, y={artic, l, e.id};
               classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
@@ -271,7 +271,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                     {artic, l, e.ic, o, n};
                   </d, i, v>"
                   <div, className="flex, fle, x-col, ga, p-2">";
-                    {artic, l, e.trendi, n, g && (</div>
+                    {artic, l, e.trendi, n, g && (</div>}
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg"></div>
                         <TrendingUp , className="w-3 h-3  />
                       <div, className="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">";</div>

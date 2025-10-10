@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-export default function App({ Component, pageProps }: AppProps) {
+export default function App(27) => {}
   return(<React.Fragment>
       <Head>
         <meta charSet="utf-8" />

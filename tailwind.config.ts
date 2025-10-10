@@ -1,14 +1,14 @@
 import type { Config } from 'tailwindcss';
 
-const config: Config = {,
+const config: Config = {,}
   content: [,
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}'],
-  theme: {
-    extend: {
-      colors: {
-        primary: {
+  theme: {}
+    extend: {}
+      colors: {}
+        primary: {}
           cyan: '#00ffff'
           purple: '#8b5cf6'
           pink: '#ec4899'
@@ -17,12 +17,12 @@ const config: Config = {,
           orange: '#f59e0b',
           red: '#ef4444',
           yellow: '#eab308'},
-        dark: {,
+        dark: {,}
           bg: '#0a0a0a',
           darker: '#050505',
           card: '#1 a1 a1 a',
           border: '#2 a2 a2 a'}},
-      fontFamily: {,
+      fontFamily: {,}
         orbitron: ['Orbitron', 'monospace'],
         rajdhani: ['Rajdhani', 'sans-serif'],
         exo: ['Exo 2', 'sans-serif'],
@@ -39,19 +39,15 @@ const config: Config = {,
       animation: {,
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.3s ease-out'},
-      keyframes: {,
+      keyframes: {,}
         fadeIn: {,
           '0%': { opacity: '0' },
           '100%': { opacity: '1' }},
-        slideUp: {,
+        slideUp: {,}
           '0%': { transform: 'translateY(20px)', opacity: '0' },
-        slideUp: {
+        slideUp: {}
           '0%': { transform: 'translateY(10px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' }}}}},
-<<<<<<< HEAD
   plugins: []}
 
-=======
-  plugins: []};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default config;

@@ -18,49 +18,31 @@ const filesToFix = [
   '/workspace/app/page-minimal.tsx',
   '/workspace/app/page-optimized.tsx',
   '/workspace/app/utils/__tests__/performanceMonitoring.test.ts'];
-<<<<<<< HEAD
 
 function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
   }
 
 
-=======
-;
-function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Fix unused variables by prefixing with underscore;
   const unusedVarPatterns = [
 ];
     // Unused imports;
     {
       pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
-      fix: (match, imports) => {
-<<<<<<< HEAD
+      fix: (match, imports) => {}
         const unusedImports = importList.filter(imp => {)
           return !content.includes(varName) || content.split(varName).length <= 2;
         });
 
-        if (unusedImports.length > 0) {
+        if (unusedImports.length > 0) {}
           const fixedImports = importList;
-=======
-return (
-;
-const unusedImports = importList.filter(imp => {)
-          return !content.includes(varName) || content.split(varName).length <= 2});
-        if (unusedImports.length >
-);
-} 0) {;
-const fixedImports = importList;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            .map(imp => {)
+            .map(imp => {)}
               if (unusedImports.includes(imp)) {
     {/* TODO: Fix JSX expression */};
   n: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,
       fi,
   x: (match, imports) => {/* TODO: Fix JSX expression */};
         });
-<<<<<<< HEAD
 
         if (unusedImports.length > 0) {/* TODO: Fix JSX expression */}
                 return imp.replace(varName, `_${varName}`);
@@ -72,43 +54,25 @@ const fixedImports = importList;
         }
         return match;
       }},
-=======
-        if (unusedImports.length > 0) {/* TODO: Fix JSX expression */};
-                return imp.replace(varName, `_${varName}`)};
-              return imp})
-            .join(', ');
-          return match.replace(imports, fixedImports)};
-        return match}},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Unused variable declarations;
-    {
+    {}
       pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g;
-      fix: (match, varName) => {
-<<<<<<< HEAD
+      fix: (match, varName) => {}
         if (varName.startsWith('_')) return match;
-        if (matches && matches.length <= 1) {
+        if(10) => {
     {/* TODO: Fix JSX expression */}`
           return match.replace(varName, `_${varName}`);
         }
         return match;
       }},
-=======
-return (
-        if (varName.startsWith('_')) return match;
-        if (matches && matches.length <= 1) {
-    {/* TODO: Fix JSX expression */}`
-          return match.replace(varName, `_${varName}`)};
-        return match}},
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Unused function parameters;
-    {
+    {}
       pattern: /function\s+[^(]*\(([^)]+)\)/g;
-      fix: (match, params) => {
+      fix: (match, params) => {}
         const fixedParams = paramList;
-          .map(param => {)
+          .map(param => {)}
             if (!paramName.startsWith('_') && !paramName.includes('=')) {
     {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
               return param.replace(paramName, `_${paramName}`);
             }
             return param;
@@ -117,15 +81,9 @@ return (
         return match.replace(params, fixedParams);
       }}];
 
-=======
-              return param.replace(paramName, `_${paramName}`)};
-            return param})
-          .join(', ');
-        return match.replace(params, fixedParams)}}];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   // Apply fixes;
-  for (const { pattern, fix } of unusedVarPatterns) {
-    if (newContent !== content) {
+  for(5) => {}
+    if(6) => {
       content = newContent;
       modified = true;
   for (const { pattern, fix } of unusedVarPatterns) {/* TODO: Fix JSX expression */};
@@ -137,19 +95,12 @@ return (
 // Fix all files;
 filesToFix.forEach(fixUnusedVariables);
 // Run linter to check results;
-try {
-<<<<<<< HEAD
+try {}
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
-} catch (error) {
+} catch(7) => {
 
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 } catch (error) {/* TODO: Fix JSX expression */}
 }
-=======
-  execSync('pnpm run lint:comprehensive', { stdio: 'inherit' })} catch (error) {
-try {/* TODO: Fix JSX expression */};
-  o: 'inherit' })} catch (error) {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "`

@@ -54,7 +54,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
               },
               {/* TODO: Fix JSX expression */};
               },
-              {)
+              {)}
                 val, u, e: '50, 0%')
                 lab, e, l: 'Enhancem, e, n, t')
                 ic, o, n: '📈'),
@@ -84,7 +84,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
         </div>
         {/* Innovation, Card, s */};
         <div , classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
-          { innovatio, n, s.m, a, p((innova, t, i, o, n, ind, e, x) = > (</div>
+          { innovatio, n, s.m, a, p((innova, t, i, o, n, ind, e, x) = > (</div>}
             <div, ke, y = { in, d, e, x  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }};
              > {/* Card, glow, effect */}</div>
@@ -148,8 +148,8 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
             </p>
           </div>
           <div , className='grid, m, d:gr, i, d-co, l, s-3, ga, p-8'>
-            { [
-              {
+            { [}
+              {}
                 company: 'NeuroTech, Glo, b, a, l',
                 achieveme, n, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
                 reven, u, e: '$2.1B, Revenue, Growt, h',

@@ -1,6 +1,6 @@
 export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */};
     };
-    {
+    {}
       tit, l, e: "Nor, t, h‑Engineering, Metric;
   s: Fewer, KPI, s, Better, Outcome, s"
       catego, r, y: "Leadersh, i, p"
@@ -32,13 +32,13 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
         </d, i, v>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
-            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
+            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (}
             <div , ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
               <div , classNam, e="flex, item, s-center, justif, y-between, m, b-3">
         </d, i, v>
         {/* Featured, Content, Car, d, s */};
         <div , classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">
-            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (</div>
+            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (</div>}
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></div>
               <div, classNam, e="flex, item, s-center, justif, y-between, m, b-3"></div>
                 <span , classNam, e="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">

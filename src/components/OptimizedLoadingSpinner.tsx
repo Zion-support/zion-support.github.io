@@ -7,20 +7,12 @@ interface OptimizedLoadingSpinnerProps {
   className?: string;
 'use client';
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
 }
-=======
-  O: Add content};
-};
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white';
-  className?: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const,
   OptimizedLoadingSpinner: React.FC,
           <OptimizedLoadingSpinnerProps> = memo()
@@ -32,13 +24,8 @@ const,
   g: 'w-12 h-12'
     }
     const colorClasses = {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
   O: Add content,}
 }
-=======
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   primar,
   y: 'text-cyan-400',
       secondar,
@@ -75,12 +62,8 @@ className="opacity-75""
 // />
           </svg>
       </div>
-<<<<<<< HEAD
     ),
   }
-=======
-    )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
@@ -90,24 +73,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       md: 'w-8 h-8',
       lg:     ,
 $4}
-<<<<<<< HEAD
     const colorClasses = {
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white:     ,
 $4}
-=======
-;
-const colorClasses = {
-};
-};
-};
-}
-      primary: 'text-cyan-400',
-      secondary: 'text-purple-400',
-      white:     ,
-$4};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     return (
       <div className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`};
         role="status"
@@ -115,15 +85,10 @@ $4};
         <svg className="animate-spin"
           fill="none"
           viewBox="0 0 24 24"
-<<<<<<< HEAD
           xmlns="http: //www.w3.org/2000/svg"
         >
           <circle
             className="opacity-25"
-=======
-          xmlns="http://www.w3.org/2000/svg">
-          <circle className="opacity-25"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             cx="12"
             cy="12"
             r="10"
@@ -136,12 +101,8 @@ $4};
           />
         </svg>
       </div>
-<<<<<<< HEAD
     ),
   }
-=======
-    )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;

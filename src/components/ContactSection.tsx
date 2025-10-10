@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-export default function ContactSection() {
-  const [formData, setFormData] = useState({
-=======
-export default function ContactSection() {;
-const [formData, setFormData] = useState({
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export default function ContactSection() {}
+  const [formData, setFormData] = useState({}
     name: '',
     email: '',
     company: '',
     service: '',
     message: ''
   });
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -21,18 +16,10 @@ const [formData, setFormData] = useState({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Handle form submission here
-<<<<<<< HEAD
     console.log('Form submitted:', formData)
   }
   const contactInfo = [
-=======
-    // console.log removed for production
-}
-;
-const contactInfo = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth=    {2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -42,7 +29,7 @@ const contactInfo = [
       details: 'info@ziontechgroup.com',
       link: 'mailto:info@ziontechgroup.com'
     },
-    {
+    {}
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -52,7 +39,7 @@ const contactInfo = [
       details: '+1 (555) 123-4567',
       link: 'tel:+15551234567'
     },
-    {
+    {}
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -64,15 +51,8 @@ const contactInfo = [
       link: '#'
     };
   ];
-<<<<<<< HEAD
   const services = [
     'AI & Machine Learning',
-=======
-;
-const services = [
-];
-'AI & Machine Learning',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Cloud Solutions',
     'Web Development',
     'Mobile Development',
@@ -82,8 +62,8 @@ const services = [
     'Other'
   ];
   return (
-    <section id="contact" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-20 relative" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" />
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -94,11 +74,11 @@ const services = [
             Let's discuss your project and create something amazing together.
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16" />
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="cyber-card-advanced p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">
+          <div className="space-y-8" />
+            <div className="cyber-card-advanced p-8" />
+              <h3 className="text-2xl font-bold text-white mb-6" />
                 Let's Start a Conversation</span>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
                 Whether you have a specific project in mind or just want to explore 
@@ -107,7 +87,7 @@ const services = [
               </p>
               {/* Contact Info Cards */}
               <div className="space-y-6">
-                {contactInfo.map((info, index) => (
+                {contactInfo.map((info, index) => (}
                   <a key={index}
                     href={info.link}
                     className="flex items-center p-4 cyber-card hover:scale-105 transition-all duration-300 group">
@@ -125,11 +105,11 @@ const services = [
               </div>
             </div>
             {/* Why Choose Us */}
-            <div className="cyber-card-advanced p-8">
+            <div className="cyber-card-advanced p-8" />
               <h3 className="text-xl font-bold text-white mb-6">
                 Why Work With Us?
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-4" />
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -158,11 +138,11 @@ const services = [
             </div>
           </div>
           {/* Contact Form */}
-          <div className="cyber-card-advanced p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">
+          <div className="cyber-card-advanced p-8" />
+            <h3 className="text-2xl font-bold text-white mb-6" />
               Send Us a Message</span>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-6" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6" />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name *
@@ -193,16 +173,10 @@ const services = [
                 </div>
               </div>
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-<<<<<<< HEAD
+                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2" />
                   Company Name</span>
                 <input
                   type="text"
-=======
-                  Company Name
-                </label>
-                <input type="text"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   id="company"
                   name="company"
                   value={formData.company}
@@ -212,16 +186,10 @@ const services = [
                 />
               </div>
               <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-<<<<<<< HEAD
+                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2" />
                   Service Interested In</span>
                 <select
                   id="service"
-=======
-                  Service Interested In
-                </label>
-                <select id="service"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
@@ -248,23 +216,15 @@ const services = [
                   placeholder="Tell us about your project..."
                 />
               </div>
-<<<<<<< HEAD
               <button
                 type="submit"
                 className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 Send Message</span>
-=======
-              <button type="submit"
-                className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Send Message
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </form>
           </div>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   ),
 }
   </button>
@@ -274,6 +234,3 @@ const services = [
   </h3>
   </h3>
   </HTMLInputElement>
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

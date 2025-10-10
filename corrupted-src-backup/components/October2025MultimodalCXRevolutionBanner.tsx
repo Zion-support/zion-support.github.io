@@ -1,22 +1,10 @@
-const, October2025MultimodalCXRevolutionBanne, r = () => {
-<<<<<<< HEAD
+const, October2025MultimodalCXRevolutionBanne, r = () => {}
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, opacit, y-10">
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n">
       {/* Animated, background, effects */}</div>
-=======
-return (
-  return(<div , className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n">
-);
-};
-      {/* Animated, background, effects */};
-      <div , className="absolute, inse, t-0, opacit, y-10">
-  return (
-    <div , className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/20, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, overflo, w-hidd, e, n">
-      {/* Animated, background, effects */};</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
@@ -43,15 +31,9 @@ return (
   g:px-8, p, y-12">";
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-10">";</div>
-<<<<<<< HEAD
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e">";</div>
 const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, effects */}
-=======
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e">";</div>;
-const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expression */};
-      {/* Animated, background, effects */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>"
@@ -300,8 +282,8 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expre
                 <AlertCircle , className="w-5 h-5"  />
                 Befo, r, e: Customer, Experience, Crisis;
               </d, i, v>
-              <ul , className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
-                <li , className="flex, item, s-start, ga, p-2">
+              <ul , className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0" />
+                <li , className="flex, item, s-start, ga, p-2" />
                   <span, className="te, x, t-r, e, d-400, m, t-1">✗</sp, a, n>
         <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">";</div>
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";</div>

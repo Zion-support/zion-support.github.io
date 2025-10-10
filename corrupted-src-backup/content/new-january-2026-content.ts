@@ -1,10 +1,5 @@
-export interface January2026Content {
-<<<<<<< HEAD
+export interface January2026Content {}
     id: string;
-=======
-}
-  id: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   title: string;
   description: string;
   content: string;
@@ -17,18 +12,13 @@ export interface January2026Content {
   image?: string
   valueProposition: string,
   pricing: {,
-<<<<<<< HEAD
     starting: string,
     enterprise: string
   }
 }
 
-=======
-    starting: string;
-    enterprise: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const newJanuary2026 Content: January2026 Content[] = [
-  {
+  {}
     id: 'ai-2026-hyperconscious-computing',
     title: 'AI 2026: Hyperconscious Computing Revolution',
     description: 'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness and creative autonomy.',
@@ -49,10 +39,10 @@ The next evolution of AI is here - systems that not only think but feel, create,
     readTime: '25 min read'
     image: '/images/ai-2026-hyperconscious-computing.jpg'
     valueProposition: '$1.2T enterprise value creation'
-    pricing: {,
+    pricing: {,}
       starting: 'Contact for pricing',
       enterprise: 'Custom solutions available'}},
-  {
+  {}
     id: 'quantum-ai-synthesis-2026'
     title: 'Quantum AI Synthesis 2026: The Convergence Revolution'
     description: 'Groundbreaking fusion of quantum computing and AI creating unprecedented computational capabilities.'
@@ -76,15 +66,10 @@ The convergence of quantum computing and artificial intelligence opens new front
     pricing: {,
       starting: 'Contact for pricing',
       enterprise: 'Custom solutions available',
-<<<<<<< HEAD
 export interface January2026Content {/* TODO: Fix JSX expression */}
   }
 }
 
-=======
-export interface January2026Content {/* TODO: Fix JSX expression */};
-  }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   newJanuary2026Content: January2026Content[] = [
   {/* TODO: Fix JSX expression */};

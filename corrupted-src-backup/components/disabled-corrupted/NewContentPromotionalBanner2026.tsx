@@ -23,7 +23,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
         <div, className="te, x, t-center, m, b-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, m, b-6"></div>
             <Globe , className="w-6 h-6, tex, t-viol, e, t-400, animat, e-pul, s, e" />
-            <span , className="te, x, t-viol, e, t-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">
+            <span , className="te, x, t-viol, e, t-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e" />
               🌍 NEW, 2026, CONTENT REVOLUTI, O, N;
             </sp, a, n>
             <Globe, className="w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Globe>
@@ -31,7 +31,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
           <h2 , className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
             Revolutionary, Content, Just Releas, e, d;
           </h2>
-          <p , className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
+          <p , className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8" />
   ]; return (<div, classNam, e = "py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
@@ -58,11 +58,11 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
         </div>)
         {/* Content, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">)
-          { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+          { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (}
         </div>
         {/* Content, G, r, i, d */};
         <div , classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
-          { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
+          { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>}
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }};
              > {/* Card, glow, effect */}</div>
@@ -140,7 +140,7 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
             </p>
           </div>
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8"></div>
-            { [
+            { [}
               { val, u, e: '2., 5, M+', lab, e, l: 'Global, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-viol, e, t-40, 0'  },
               {  val, u, e: '$15, B+', lab, e, l: 'Value, Creat, e, d', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
               {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },

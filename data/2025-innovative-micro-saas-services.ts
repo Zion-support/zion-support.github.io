@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   id: string;
   name: string;
   tagline: string;
@@ -1442,8 +1438,7 @@ export const,
       reviews: 45,
     }
   ];    features: [,
-<<<<<<< HEAD
-export interface InnovativeMicroSaasService2025 {id: string, name: string,
+export interface InnovativeMicroSaasService2025 {id: string, name: string,}
   tagline: string, price: string,
   period: string, description: string,
   features: string[], popular: boolean,
@@ -1466,32 +1461,6 @@ export interface InnovativeMicroSaasService2025 {id: string, name: string,
   rating: number
   reviews: number,
 }
-=======
-export interface InnovativeMicroSaasService2025 {
-id: string, name: string;
-}
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: ServiceVariant;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string};
-    },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [,
   // AI Content Factory;
     id: 'ai-content-factory', name: 'AI Content Factory Platform',
@@ -1609,13 +1578,8 @@ export const,
       contactInfo: mobile: '+1 302 464 0950'
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
         website: 'https://ziontechgroup.com'}
       realImplementation: true,
-=======
-        website: 'https://ziontechgroup.com'};
-      realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       implementationDetails:,
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.'
       launchDate: '2025-03-05'
@@ -1678,12 +1642,7 @@ export const,
     rating: 4.8;
     reviews: 45;
 ]
-export interface InnovativeMicroSaasService2025 {
-<<<<<<< HEAD
-=======
-;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export interface InnovativeMicroSaasService2025 {}
   id: string;
   name: string;
   tagline: string;
@@ -1711,19 +1670,11 @@ export interface InnovativeMicroSaasService2025 {
   growthRate: string
   variant: ServiceVariant,
   contactInfo: {,
-<<<<<<< HEAD
     mobile: string
     email: string,
     address: string}
     website: string}
   }
-=======
-    mobile: string;
-    email: string;
-    address: string};
-    website: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -1916,13 +1867,8 @@ export interface InnovativeMicroSaasService2025 {
 export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -1934,16 +1880,11 @@ export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
-=======
-  s: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [;
   // AI Content Factory;
-  {
+  {}
     id: 'ai-content-factory'
     name: 'AI Content Factory Platform'
     tagline: 'Revolutionary AI-powered content creation and management',
@@ -1969,7 +1910,6 @@ export const,
     integrations: ['WordPressShopifyHubSpotMailchimpSocial media platformsAnalytics tools'];
     useCases: ['Content marketingSEO optimizationSocial media managementE-commerce contentBrand storytellingContent strategy'];
     roi: 'Businesses report 300%+ ROI through improved content performance and engagement.';
-<<<<<<< HEAD
     competitors: ['Basic content generation toolsTraditional CMS platforms']
     marketSize: '$50 B+ market'
     growthRate: '250%+ annual growth',
@@ -1980,18 +1920,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic content generation toolsTraditional CMS platforms'];
-    marketSize: '$50 B+ market';
-    growthRate: '250%+ annual growth';
-    variant: 'saas-content'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI content platform with strategy optimization, multi-channel management, and comprehensive performance analytics.';
     launchDate: '2025-01-01';
     customers: 150
@@ -1999,7 +1927,7 @@ export const,
     reviews: 89,
   }
   // CRM Intelligence Platform;
-  {
+  {}
     id: 'crm-intelligence-platform'
     name: 'CRM Intelligence & Automation Platform'
     tagline: 'Intelligent CRM with AI-powered insights and automation',
@@ -2025,7 +1953,6 @@ export const,
     integrations: ['SalesforceHubSpotPipedriveZohoEmail platformsPayment systems'];
     useCases: ['Lead managementSales automationCustomer analyticsRevenue optimizationPipeline managementCustomer service'];
     roi: 'Sales teams report 400%+ ROI through improved lead quality and conversion rates.';
-<<<<<<< HEAD
     competitors: ['Basic CRM platformsTraditional sales tools']
     marketSize: '$80 B+ market'
     growthRate: '300%+ annual growth',
@@ -2036,18 +1963,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic CRM platformsTraditional sales tools'];
-    marketSize: '$80 B+ market';
-    growthRate: '300%+ annual growth';
-    variant: 'saas-crm'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI-powered CRM platform with intelligent automation, predictive analytics, and comprehensive customer insights.';
     launchDate: '2025-01-15';
     customers: 200
@@ -2055,7 +1970,7 @@ export const,
     reviews: 125,
   }
   // Decision Engine Platform;
-  {
+  {}
     id: 'decision-engine-platform'
     name: 'AI Decision Engine Platform'
     tagline: 'Intelligent decision-making with AI-powered analytics and insights',
@@ -2081,7 +1996,6 @@ export const,
     integrations: ['Data warehousesBusiness intelligence toolsERP systemsCRM platformsAnalytics platforms'];
     useCases: ['Business intelligenceRisk managementPerformance optimizationStrategic planningOperational efficiencyFinancial analysis'];
     roi: 'Enterprises report 500%+ ROI through improved decision-making and operational efficiency.';
-<<<<<<< HEAD
     competitors: ['Basic analytics toolsTraditional BI platforms']
     marketSize: '$100 B+ market'
     growthRate: '350%+ annual growth',
@@ -2092,18 +2006,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic analytics toolsTraditional BI platforms'];
-    marketSize: '$100 B+ market';
-    growthRate: '350%+ annual growth';
-    variant: 'saas-intelligence'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI decision engine platform with automated decision-making, predictive modeling, and comprehensive business intelligence.';
     launchDate: '2025-01-20';
     customers: 120
@@ -2111,7 +2013,7 @@ export const,
     reviews: 78,
   }
   // E-commerce Optimization Platform;
-  {
+  {}
     id: 'ecommerce-optimization-platform'
     name: 'E-commerce AI Optimization Platform'
     tagline: 'AI-powered e-commerce optimization and revenue maximization',
@@ -2137,7 +2039,6 @@ export const,
     integrations: ['ShopifyWooCommerceMagentoBigCommercePayment gatewaysAnalytics tools'];
     useCases: ['Product recommendationsPricing optimizationInventory managementCustomer experienceConversion optimizationRevenue growth'];
     roi: 'E-commerce businesses report 350%+ ROI through improved conversion rates and revenue optimization.';
-<<<<<<< HEAD
     competitors: ['Basic e-commerce toolsTraditional analytics platforms']
     marketSize: '$60 B+ market'
     growthRate: '280%+ annual growth',
@@ -2148,18 +2049,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic e-commerce toolsTraditional analytics platforms'];
-    marketSize: '$60 B+ market';
-    growthRate: '280%+ annual growth';
-    variant: 'saas-ecommerce'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI e-commerce optimization platform with intelligent recommendations, dynamic pricing, and comprehensive performance analytics.';
     launchDate: '2025-02-01';
     customers: 180
@@ -2167,7 +2056,7 @@ export const,
     reviews: 95,
   }
   // HR Automation Platform;
-  {
+  {}
     id: 'hr-automation-platform'
     name: 'AI-Powered HR Automation Platform'
     tagline: 'Intelligent HR automation with AI-driven insights and optimization',
@@ -2193,7 +2082,6 @@ export const,
     integrations: ['ATS platformsHRIS systemsPayroll systemsCommunication toolsAnalytics platforms'];
     useCases: ['Recruitment automationEmployee managementPerformance trackingHR analyticsCompliance managementTalent optimization'];
     roi: 'HR departments report 300%+ ROI through improved efficiency and better talent management.';
-<<<<<<< HEAD
     competitors: ['Basic HR platformsTraditional recruitment tools']
     marketSize: '$40 B+ market'
     growthRate: '250%+ annual growth',
@@ -2204,18 +2092,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic HR platformsTraditional recruitment tools'];
-    marketSize: '$40 B+ market';
-    growthRate: '250%+ annual growth';
-    variant: 'saas-hr'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI-powered HR platform with recruitment automation, performance tracking, and comprehensive HR analytics.';
     launchDate: '2025-02-15';
     customers: 95
@@ -2223,7 +2099,7 @@ export const,
     reviews: 58,
   }
   // Financial Analytics Platform;
-  {
+  {}
     id: 'financial-analytics-platform'
     name: 'AI Financial Analytics & Intelligence Platform'
     tagline: 'Intelligent financial analysis with AI-powered insights and automation',
@@ -2249,7 +2125,6 @@ export const,
     integrations: ['Accounting softwareERP systemsBanking platformsTrading systemsAnalytics platforms'];
     useCases: ['Financial analysisRisk managementInvestment decisionsCompliance monitoringPerformance trackingStrategic planning'];
     roi: 'Financial institutions report 450%+ ROI through improved analysis and risk management.';
-<<<<<<< HEAD
     competitors: ['Basic financial toolsTraditional analytics platforms']
     marketSize: '$90 B+ market'
     growthRate: '320%+ annual growth',
@@ -2260,18 +2135,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic financial toolsTraditional analytics platforms'];
-    marketSize: '$90 B+ market';
-    growthRate: '320%+ annual growth';
-    variant: 'saas-financial'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI financial analytics platform with intelligent analysis, predictive modeling, and comprehensive financial insights.';
     launchDate: '2025-02-10';
     customers: 85
@@ -2279,7 +2142,7 @@ export const,
     reviews: 52,
   }
   // Supply Chain Intelligence Platform;
-  {
+  {}
     id: 'supply-chain-intelligence'
     name: 'AI Supply Chain Intelligence Platform'
     tagline: 'Intelligent supply chain optimization with AI-powered insights and automation',
@@ -2305,7 +2168,6 @@ export const,
     integrations: ['ERP systemsWMS platformsTMS systemsIoT devicesAnalytics platformsCommunication tools'];
     useCases: ['Demand forecastingInventory managementLogistics optimizationRisk managementPerformance monitoringCost optimization'];
     roi: 'Manufacturing companies report 400%+ ROI through improved supply chain efficiency and cost reduction.';
-<<<<<<< HEAD
     competitors: ['Basic supply chain toolsTraditional inventory management']
     marketSize: '$70 B+ market'
     growthRate: '300%+ annual growth',
@@ -2316,18 +2178,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic supply chain toolsTraditional inventory management'];
-    marketSize: '$70 B+ market';
-    growthRate: '300%+ annual growth';
-    variant: 'saas-supply-chain'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI supply chain platform with intelligent optimization, demand forecasting, and comprehensive supply chain analytics.';
     launchDate: '2025-03-01';
     customers: 65
@@ -2335,7 +2185,7 @@ export const,
     reviews: 38,
   }
   // Marketing Automation Platform;
-  {
+  {}
     id: 'marketing-automation-platform'
     name: 'AI Marketing Automation Platform'
     tagline: 'Intelligent marketing automation with AI-powered optimization and insights',
@@ -2361,7 +2211,6 @@ export const,
     integrations: ['Email platformsSocial media toolsCRM systemsAnalytics platformsAdvertising platforms'];
     useCases: ['Campaign automationCustomer segmentationPersonalizationPerformance optimizationLead generationROI optimization'];
     roi: 'Marketing teams report 350%+ ROI through improved campaign performance and automation.';
-<<<<<<< HEAD
     competitors: ['Basic marketing toolsTraditional automation platforms']
     marketSize: '$55 B+ market'
     growthRate: '280%+ annual growth',
@@ -2372,18 +2221,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic marketing toolsTraditional automation platforms'];
-    marketSize: '$55 B+ market';
-    growthRate: '280%+ annual growth';
-    variant: 'saas-marketing'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI marketing automation platform with intelligent optimization, automated workflows, and comprehensive performance analytics.';
     launchDate: '2025-02-20';
     customers: 140
@@ -2391,7 +2228,7 @@ export const,
     reviews: 82,
   }
   // Project Management Intelligence Platform;
-  {
+  {}
     id: 'project-management-intelligence'
     name: 'AI Project Management Intelligence Platform'
     tagline: 'Intelligent project management with AI-powered optimization and insights',
@@ -2417,7 +2254,6 @@ export const,
     integrations: ['Project management toolsTime tracking systemsCommunication platformsAnalytics toolsERP systems'];
     useCases: ['Project planningResource allocationRisk managementPerformance trackingTeam collaborationBudget optimization'];
     roi: 'Project teams report 350%+ ROI through improved project success rates and efficiency.';
-<<<<<<< HEAD
     competitors: ['Basic project management toolsTraditional planning platforms']
     marketSize: '$45 B+ market'
     growthRate: '250%+ annual growth',
@@ -2426,16 +2262,6 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
-    competitors: ['Basic project management toolsTraditional planning platforms'];
-    marketSize: '$45 B+ market';
-    growthRate: '250%+ annual growth';
-    variant: 'saas-project'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       website: 'https://ziontechgroup.com',
   {/* TODO: Fix JSX expression */};
   t: 'saas-content'};
@@ -2678,31 +2504,18 @@ export const,
     ratin,
   g: 4.8,
     review,
-<<<<<<< HEAD
   s: 45,
 ]}
 ];
 }
-=======
-  s: 45;
-]};
-];
-;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 ];
 };
 ];
 export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */};
   s: string};
     websit,
-<<<<<<< HEAD
   e: string}
   }
-=======
-  e: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -2720,16 +2533,11 @@ export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-<<<<<<< HEAD
   s: number}
-=======
-  s: number};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [;
   // AI Content Factory;
-  {
+  {}
     id: 'ai-content-factory'
     name: 'AI Content Factory Platform'
     tagline: 'Revolutionary AI-powered content creation and management',
@@ -2755,7 +2563,6 @@ export const,
     integrations: ['WordPressShopifyHubSpotMailchimpSocial media platformsAnalytics tools'];
     useCases: ['Content marketingSEO optimizationSocial media managementE-commerce contentBrand storytellingContent strategy'];
     roi: 'Businesses report 300%+ ROI through improved content performance and engagement.';
-<<<<<<< HEAD
     competitors: ['Basic content generation toolsTraditional CMS platforms']
     marketSize: '$50 B+ market'
     growthRate: '250%+ annual growth',
@@ -2766,18 +2573,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic content generation toolsTraditional CMS platforms'];
-    marketSize: '$50 B+ market';
-    growthRate: '250%+ annual growth';
-    variant: 'saas-content'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI content platform with strategy optimization, multi-channel management, and comprehensive performance analytics.';
     launchDate: '2025-01-01';
     customers: 150
@@ -2785,7 +2580,7 @@ export const,
     reviews: 89,
   }
   // CRM Intelligence Platform;
-  {
+  {}
     id: 'crm-intelligence-platform'
     name: 'CRM Intelligence & Automation Platform'
     tagline: 'Intelligent CRM with AI-powered insights and automation',
@@ -2811,7 +2606,6 @@ export const,
     integrations: ['SalesforceHubSpotPipedriveZohoEmail platformsPayment systems'];
     useCases: ['Lead managementSales automationCustomer analyticsRevenue optimizationPipeline managementCustomer service'];
     roi: 'Sales teams report 400%+ ROI through improved lead quality and conversion rates.';
-<<<<<<< HEAD
     competitors: ['Basic CRM platformsTraditional sales tools']
     marketSize: '$80 B+ market'
     growthRate: '300%+ annual growth',
@@ -2822,18 +2616,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic CRM platformsTraditional sales tools'];
-    marketSize: '$80 B+ market';
-    growthRate: '300%+ annual growth';
-    variant: 'saas-crm'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI-powered CRM platform with intelligent automation, predictive analytics, and comprehensive customer insights.';
     launchDate: '2025-01-15';
     customers: 200
@@ -2841,7 +2623,7 @@ export const,
     reviews: 125,
   }
   // Decision Engine Platform;
-  {
+  {}
     id: 'decision-engine-platform'
     name: 'AI Decision Engine Platform'
     tagline: 'Intelligent decision-making with AI-powered analytics and insights',
@@ -2867,7 +2649,6 @@ export const,
     integrations: ['Data warehousesBusiness intelligence toolsERP systemsCRM platformsAnalytics platforms'];
     useCases: ['Business intelligenceRisk managementPerformance optimizationStrategic planningOperational efficiencyFinancial analysis'];
     roi: 'Enterprises report 500%+ ROI through improved decision-making and operational efficiency.';
-<<<<<<< HEAD
     competitors: ['Basic analytics toolsTraditional BI platforms']
     marketSize: '$100 B+ market'
     growthRate: '350%+ annual growth',
@@ -2878,18 +2659,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic analytics toolsTraditional BI platforms'];
-    marketSize: '$100 B+ market';
-    growthRate: '350%+ annual growth';
-    variant: 'saas-intelligence'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI decision engine platform with automated decision-making, predictive modeling, and comprehensive business intelligence.';
     launchDate: '2025-01-20';
     customers: 120
@@ -2897,7 +2666,7 @@ export const,
     reviews: 78,
   }
   // E-commerce Optimization Platform;
-  {
+  {}
     id: 'ecommerce-optimization-platform'
     name: 'E-commerce AI Optimization Platform'
     tagline: 'AI-powered e-commerce optimization and revenue maximization',
@@ -2923,7 +2692,6 @@ export const,
     integrations: ['ShopifyWooCommerceMagentoBigCommercePayment gatewaysAnalytics tools'];
     useCases: ['Product recommendationsPricing optimizationInventory managementCustomer experienceConversion optimizationRevenue growth'];
     roi: 'E-commerce businesses report 350%+ ROI through improved conversion rates and revenue optimization.';
-<<<<<<< HEAD
     competitors: ['Basic e-commerce toolsTraditional analytics platforms']
     marketSize: '$60 B+ market'
     growthRate: '280%+ annual growth',
@@ -2934,18 +2702,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic e-commerce toolsTraditional analytics platforms'];
-    marketSize: '$60 B+ market';
-    growthRate: '280%+ annual growth';
-    variant: 'saas-ecommerce'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI e-commerce optimization platform with intelligent recommendations, dynamic pricing, and comprehensive performance analytics.';
     launchDate: '2025-02-01';
     customers: 180
@@ -2953,7 +2709,7 @@ export const,
     reviews: 95,
   }
   // HR Automation Platform;
-  {
+  {}
     id: 'hr-automation-platform'
     name: 'AI-Powered HR Automation Platform'
     tagline: 'Intelligent HR automation with AI-driven insights and optimization',
@@ -2979,7 +2735,6 @@ export const,
     integrations: ['ATS platformsHRIS systemsPayroll systemsCommunication toolsAnalytics platforms'];
     useCases: ['Recruitment automationEmployee managementPerformance trackingHR analyticsCompliance managementTalent optimization'];
     roi: 'HR departments report 300%+ ROI through improved efficiency and better talent management.';
-<<<<<<< HEAD
     competitors: ['Basic HR platformsTraditional recruitment tools']
     marketSize: '$40 B+ market'
     growthRate: '250%+ annual growth',
@@ -2990,18 +2745,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic HR platformsTraditional recruitment tools'];
-    marketSize: '$40 B+ market';
-    growthRate: '250%+ annual growth';
-    variant: 'saas-hr'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI-powered HR platform with recruitment automation, performance tracking, and comprehensive HR analytics.';
     launchDate: '2025-02-15';
     customers: 95
@@ -3009,7 +2752,7 @@ export const,
     reviews: 58,
   }
   // Financial Analytics Platform;
-  {
+  {}
     id: 'financial-analytics-platform'
     name: 'AI Financial Analytics & Intelligence Platform'
     tagline: 'Intelligent financial analysis with AI-powered insights and automation',
@@ -3035,7 +2778,6 @@ export const,
     integrations: ['Accounting softwareERP systemsBanking platformsTrading systemsAnalytics platforms'];
     useCases: ['Financial analysisRisk managementInvestment decisionsCompliance monitoringPerformance trackingStrategic planning'];
     roi: 'Financial institutions report 450%+ ROI through improved analysis and risk management.';
-<<<<<<< HEAD
     competitors: ['Basic financial toolsTraditional analytics platforms']
     marketSize: '$90 B+ market'
     growthRate: '320%+ annual growth',
@@ -3046,18 +2788,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic financial toolsTraditional analytics platforms'];
-    marketSize: '$90 B+ market';
-    growthRate: '320%+ annual growth';
-    variant: 'saas-financial'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI financial analytics platform with intelligent analysis, predictive modeling, and comprehensive financial insights.';
     launchDate: '2025-02-10';
     customers: 85
@@ -3065,7 +2795,7 @@ export const,
     reviews: 52,
   }
   // Supply Chain Intelligence Platform;
-  {
+  {}
     id: 'supply-chain-intelligence'
     name: 'AI Supply Chain Intelligence Platform'
     tagline: 'Intelligent supply chain optimization with AI-powered insights and automation',
@@ -3091,7 +2821,6 @@ export const,
     integrations: ['ERP systemsWMS platformsTMS systemsIoT devicesAnalytics platformsCommunication tools'];
     useCases: ['Demand forecastingInventory managementLogistics optimizationRisk managementPerformance monitoringCost optimization'];
     roi: 'Manufacturing companies report 400%+ ROI through improved supply chain efficiency and cost reduction.';
-<<<<<<< HEAD
     competitors: ['Basic supply chain toolsTraditional inventory management']
     marketSize: '$70 B+ market'
     growthRate: '300%+ annual growth',
@@ -3102,18 +2831,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic supply chain toolsTraditional inventory management'];
-    marketSize: '$70 B+ market';
-    growthRate: '300%+ annual growth';
-    variant: 'saas-supply-chain'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI supply chain platform with intelligent optimization, demand forecasting, and comprehensive supply chain analytics.';
     launchDate: '2025-03-01';
     customers: 65
@@ -3121,7 +2838,7 @@ export const,
     reviews: 38,
   }
   // Marketing Automation Platform;
-  {
+  {}
     id: 'marketing-automation-platform'
     name: 'AI Marketing Automation Platform'
     tagline: 'Intelligent marketing automation with AI-powered optimization and insights',
@@ -3147,7 +2864,6 @@ export const,
     integrations: ['Email platformsSocial media toolsCRM systemsAnalytics platformsAdvertising platforms'];
     useCases: ['Campaign automationCustomer segmentationPersonalizationPerformance optimizationLead generationROI optimization'];
     roi: 'Marketing teams report 350%+ ROI through improved campaign performance and automation.';
-<<<<<<< HEAD
     competitors: ['Basic marketing toolsTraditional automation platforms']
     marketSize: '$55 B+ market'
     growthRate: '280%+ annual growth',
@@ -3158,18 +2874,6 @@ export const,
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
-=======
-    competitors: ['Basic marketing toolsTraditional automation platforms'];
-    marketSize: '$55 B+ market';
-    growthRate: '280%+ annual growth';
-    variant: 'saas-marketing'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     implementationDetails: 'Advanced AI marketing automation platform with intelligent optimization, automated workflows, and comprehensive performance analytics.';
     launchDate: '2025-02-20';
     customers: 140
@@ -3177,7 +2881,7 @@ export const,
     reviews: 82,
   }
   // Project Management Intelligence Platform;
-  {
+  {}
     id: 'project-management-intelligence'
     name: 'AI Project Management Intelligence Platform'
     tagline: 'Intelligent project management with AI-powered optimization and insights',
@@ -3203,7 +2907,6 @@ export const,
     integrations: ['Project management toolsTime tracking systemsCommunication platformsAnalytics toolsERP systems'];
     useCases: ['Project planningResource allocationRisk managementPerformance trackingTeam collaborationBudget optimization'];
     roi: 'Project teams report 350%+ ROI through improved project success rates and efficiency.';
-<<<<<<< HEAD
     competitors: ['Basic project management toolsTraditional planning platforms']
     marketSize: '$45 B+ market'
     growthRate: '250%+ annual growth',
@@ -3221,25 +2924,6 @@ export const,
     reviews: 45,
   {/* TODO: Fix JSX expression */}
   t: 'saas-content'}
-=======
-    competitors: ['Basic project management toolsTraditional planning platforms'];
-    marketSize: '$45 B+ market';
-    growthRate: '250%+ annual growth';
-    variant: 'saas-project'};
-    contactInfo: {};
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'};
-    realImplementation: true;
-    implementationDetails: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.';
-    launchDate: '2025-03-05';
-    customers: 75;
-    rating: 4.8;
-    reviews: 45;
-  {/* TODO: Fix JSX expression */};
-  t: 'saas-content'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     contactInf,
   o: {};
       mobil,
@@ -4029,7 +3713,6 @@ i,
   e: '2025 - 03 - 05', customer,
   s: 75, ratin,
   g: 4.8, review,
-<<<<<<< HEAD
   s: 45, ], ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   s: string} websit,
   e: string} } realImplementatio,
@@ -4040,161 +3723,92 @@ i,
   g: number, review,
   s: number} export const,
   innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [; // AI Content Factory, {/* TODO: Fix JSX expression */}
-=======
-  s: 45; ], ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [; // AI Content Factory; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI content platform with strategy optimization, multi-channel management, and comprehensive performance analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-01', customer,
   s: 150, ratin,
   g: 4.9, review,
   s: 89} // CRM Intelligence Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-01'; customer,
-  s: 150; ratin,
-  g: 4.9; review,
-  s: 89}; // CRM Intelligence Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI-powered CRM platform with intelligent automation, predictive analytics, and comprehensive customer insights.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-15', customer,
   s: 200, ratin,
   g: 4.9, review,
   s: 125} // Decision Engine Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-15'; customer,
-  s: 200; ratin,
-  g: 4.9; review,
-  s: 125}; // Decision Engine Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI decision engine platform with automated decision-making, predictive modeling, and comprehensive business intelligence.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-20', customer,
   s: 120, ratin,
   g: 4.9, review,
   s: 78} // E-commerce Optimization Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-20'; customer,
-  s: 120; ratin,
-  g: 4.9; review,
-  s: 78}; // E-commerce Optimization Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI e-commerce optimization platform with intelligent recommendations, dynamic pricing, and comprehensive performance analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-02-01', customer,
   s: 180, ratin,
   g: 4.8, review,
   s: 95} // HR Automation Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-02-01'; customer,
-  s: 180; ratin,
-  g: 4.8; review,
-  s: 95}; // HR Automation Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI-powered HR platform with recruitment automation, performance tracking, and comprehensive HR analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-02-15', customer,
   s: 95, ratin,
   g: 4.8, review,
   s: 58} // Financial Analytics Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-02-15'; customer,
-  s: 95; ratin,
-  g: 4.8; review,
-  s: 58}; // Financial Analytics Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI financial analytics platform with intelligent analysis, predictive modeling, and comprehensive financial insights.';' launchDat,
-<<<<<<< HEAD
   e: '2025-02-10', customer,
   s: 85, ratin,
   g: 4.9, review,
   s: 52} // Supply Chain Intelligence Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-02-10'; customer,
-  s: 85; ratin,
-  g: 4.9; review,
-  s: 52}; // Supply Chain Intelligence Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI supply chain platform with intelligent optimization, demand forecasting, and comprehensive supply chain analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-03-01', customer,
   s: 65, ratin,
   g: 4.8, review,
   s: 38} // Marketing Automation Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-03-01'; customer,
-  s: 65; ratin,
-  g: 4.8; review,
-  s: 38}; // Marketing Automation Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI marketing automation platform with intelligent optimization, automated workflows, and comprehensive performance analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-02-20', customer,
   s: 140, ratin,
   g: 4.9, review,
   s: 82} // Project Management Intelligence Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-02-20'; customer,
-  s: 140; ratin,
-  g: 4.9; review,
-  s: 82}; // Project Management Intelligence Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-03-05', customer,
   s: 75, ratin,
   g: 4.8, review,
@@ -4208,171 +3822,93 @@ i,
   g: number, review,
   s: number} export const,
   innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [; // AI Content Factory, {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-03-05'; customer,
-  s: 75; ratin,
-  g: 4.8; review,
-  s: 45; ]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */};
-  s: string} websit,
-  e: string} }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [; // AI Content Factory; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI content platform with strategy optimization, multi-channel management, and comprehensive performance analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-01', customer,
   s: 150, ratin,
   g: 4.9, review,
   s: 89} // CRM Intelligence Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-01'; customer,
-  s: 150; ratin,
-  g: 4.9; review,
-  s: 89}; // CRM Intelligence Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI-powered CRM platform with intelligent automation, predictive analytics, and comprehensive customer insights.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-15', customer,
   s: 200, ratin,
   g: 4.9, review,
   s: 125} // Decision Engine Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-15'; customer,
-  s: 200; ratin,
-  g: 4.9; review,
-  s: 125}; // Decision Engine Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI decision engine platform with automated decision-making, predictive modeling, and comprehensive business intelligence.';' launchDat,
-<<<<<<< HEAD
   e: '2025-01-20', customer,
   s: 120, ratin,
   g: 4.9, review,
   s: 78} // E-commerce Optimization Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-01-20'; customer,
-  s: 120; ratin,
-  g: 4.9; review,
-  s: 78}; // E-commerce Optimization Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI e-commerce optimization platform with intelligent recommendations, dynamic pricing, and comprehensive performance analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-02-01', customer,
   s: 180, ratin,
   g: 4.8, review,
   s: 95} // HR Automation Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-02-01'; customer,
-  s: 180; ratin,
-  g: 4.8; review,
-  s: 95}; // HR Automation Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI-powered HR platform with recruitment automation, performance tracking, and comprehensive HR analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-02-15', customer,
   s: 95, ratin,
   g: 4.8, review,
   s: 58} // Financial Analytics Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-02-15'; customer,
-  s: 95; ratin,
-  g: 4.8; review,
-  s: 58}; // Financial Analytics Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI financial analytics platform with intelligent analysis, predictive modeling, and comprehensive financial insights.';' launchDat,
-<<<<<<< HEAD
   e: '2025-02-10', customer,
   s: 85, ratin,
   g: 4.9, review,
   s: 52} // Supply Chain Intelligence Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-02-10'; customer,
-  s: 85; ratin,
-  g: 4.9; review,
-  s: 52}; // Supply Chain Intelligence Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI supply chain platform with intelligent optimization, demand forecasting, and comprehensive supply chain analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-03-01', customer,
   s: 65, ratin,
   g: 4.8, review,
   s: 38} // Marketing Automation Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-03-01'; customer,
-  s: 65; ratin,
-  g: 4.8; review,
-  s: 38}; // Marketing Automation Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI marketing automation platform with intelligent optimization, automated workflows, and comprehensive performance analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-02-20', customer,
   s: 140, ratin,
   g: 4.9, review,
   s: 82} // Project Management Intelligence Platform; {/* TODO: Fix JSX expression */}
-=======
-  e: '2025-02-20'; customer,
-  s: 140; ratin,
-  g: 4.9; review,
-  s: 82}; // Project Management Intelligence Platform; {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } realImplementatio,
   n: true,' implementationDetail,
   s: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.';' launchDat,
-<<<<<<< HEAD
   e: '2025-03-05', customer,
   s: 75, ratin,
   g: 4.8, review,
   s: 45} ]; '
-=======
-  e: '2025-03-05'; customer,
-  s: 75; ratin,
-  g: 4.8; review,
-  s: 45} ]; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

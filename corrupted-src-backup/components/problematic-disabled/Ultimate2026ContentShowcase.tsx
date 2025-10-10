@@ -1,7 +1,7 @@
 import React from 'react';
-const Ultimate2026ContentShowcas, e: React.FC = () => {,
+const Ultimate2026ContentShowcas, e: React.FC = () => {,}
   const showcaseConten, t = [
-    {
+    {}
       id: 1,
       title: "Enterprise, AI, Transformation Playbook, 20, 2, 6",
       description: "Complete, guide, to achieving, 9, 5% automation, with, Fortune 500, case, studies a, n, d $10, 0, M+ savings, strategi, e, s",",
@@ -12,15 +12,9 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {,
       trendi, n, g: t, r, u, e,",
       ic, o, n: "📊",
       impa, c, t: "$10, 0, M+ Savi, n, g, s",
-<<<<<<< HEAD
       featured: t, r, u, e,",
 const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
       sta, t, s: { savin, g, s: "$1, 0, 0, M+", automati, o, n: "9, 5%", r, o, i: "30, 0%" }
-=======
-      featured: t, r, u, e,",;
-const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */};
-      sta, t, s: { savin, g, s: "$1, 0, 0, M+", automati, o, n: "9, 5%", r, o, i: "30, 0%" };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
       sta, t, s: { securi, t, y: "99.9, 9%", complian, c, e: "10, 0%", threa, t, s: ", 0" };
@@ -150,11 +144,11 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
         </div>)
         {/* Showcase, G, r, i, d */})
         <div, classNam, e = "grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, x, l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">)
-          { showcaseConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+          { showcaseConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (}
         </div>
         {/* Showcase, G, r, i, d */};
         <div , classNam, e = "grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, x, l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">
-          { showcaseConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
+          { showcaseConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>}
         {/* Showcase, G, r, i, d */}"
         <div, classNam, e = "grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, x, l:gr, i, d-co, l, s-3, ga, p-8, m, b-20"></div>
           {/* TODO: Fix JSX expression */};
@@ -165,7 +159,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
               classNa, m, e = "group, relativ, e"
             ></moti>
               {/* Featured, badg, e */};
-              {  conte, n, t.featured  && (
+              {  conte, n, t.featured  && (}
                 <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 z-20"></div>
                   <div, className="flex, item, s-center, ga, p-1, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, tex, t-sm, fon, t-bold, shado, w-xl"></div>
                     <Star , className="w-4 h-4, fil, l-curre, n, t" />
@@ -224,7 +218,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
                 </p>
                 {/* Stats, Gri, d */};
                 <div , className="grid, gri, d-co, l, s-3, ga, p-4, m, b-8">
-                  { Obje, c, t.entri, e, s(conte, n, t.st, a, t, s).m, a, p(([k, e, y, val, u, e], i, d, x) = > (</div>
+                  { Obje, c, t.entri, e, s(conte, n, t.st, a, t, s).m, a, p(([k, e, y, val, u, e], i, d, x) = > (</div>}
                     <div, ke, y = { id, x  }, classNa, m, e = "te, x, t-cente, r, p-3, b, g-whi, t, e/5, rounde, d-xl, border, border-whi, t, e/10"></div>
                       <div, className="te, x, t-lg, fon, t-bold, tex, t-bl, u, e-400, m, b-1">{val, u, e}</div>
                 {/* Stats, Gri, d */}"

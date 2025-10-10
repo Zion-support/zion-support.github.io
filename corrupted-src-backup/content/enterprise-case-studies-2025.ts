@@ -9,35 +9,23 @@ export interface EnterpriseCaseStudy {
   challenge: string;
   solution: string;
   results: string;
-  metrics: {
+  metrics: {}
     costSavings: string;
-<<<<<<< HEAD
     efficiencyGain: string
     roi: string
     timeline: string,
 export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
   }
-=======
-    efficiencyGain: string;
-    roi: string;
-    timeline: string;
-export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   feature,
   d: boolean,
   publishedA,
   t: string,
   tag,
-<<<<<<< HEAD
   s: string[],
 }
 
-=======
-  s: string[]};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
-  {
+  {}
     id: 'fortune-500-ai-automation'
     slug: 'fortune-500-ai-automation-case-study'
     title: 'Fortune 500 AI Automation: 85% Cost Reduction'
@@ -54,7 +42,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     featured: true,
     publishedAt: '2025-10-01',
     tags: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
-  {
+  {}
     id: 'financial-services-ai-analytics'
     slug: 'financial-services-ai-analytics-case-study'
     title: 'Financial Services AI Analytics: 99.9% Accuracy'

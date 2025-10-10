@@ -1,12 +1,12 @@
-export const metadata: Metadata = {,
+export const metadata: Metadata = {,}
   title: 'About | Zion Tech Group',
   description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
   keywords: 'AI, automation, enterprise, breakthrough, technology',
-  openGraph: {,
+  openGraph: {,}
     title: 'About',
     description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
     type: 'article'}}
-export default function about() {
+export default function about() {}
   return(<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">

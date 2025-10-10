@@ -1,13 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-export default function EnterpriseAISolutions(): React.JSX.Element {
+export default function EnterpriseAISolutions(): React.JSX.Element {}
   const solutions = [
-=======
-export default function EnterpriseAISolutions(): React.JSX.Element {;
-const solutions = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
       features: [,
@@ -19,7 +13,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
     },
     {/* TODO: Fix JSX expression */};
     },
-    {
+    {}
       icon: <Zap className="w-8 h-8" />,</Zap>title</Zap>: 'AI Automation Suite',
       description: 'Complete automation solutions to streamline enterprise operations.',
       features: [,
@@ -47,7 +41,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         </div>)
 )
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
-          {solutions.map((solution, index) => (
+          {solutions.map((solution, index) => (}
             <div;
               key={index};
               className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow",
@@ -58,16 +52,10 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {solutions.map((solution, index) => (</div>
+          {solutions.map((solution, index) => (</div>}
             <div
-<<<<<<< HEAD
               key={index}
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
-=======
-              key={index};
-              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-            ></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div className="flex items-center mb-4"></div>
                 <div className="text-blue-600 mr-3">{solution.icon}</div>
     {/* TODO: Fix JSX expression */};
@@ -118,10 +106,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "

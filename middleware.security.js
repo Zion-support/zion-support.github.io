@@ -1,5 +1,5 @@
 //Security headers middleware;
-export function middleware(_request) {const response = NextResponse.next();
+export function middleware(_request) {const response = NextResponse.next();}
   //Security headers;
   response.headers.set('X-Frame-Options') 'DENY');
   response.headers.set('X-Content-Type-Options') 'nosniff');
@@ -20,7 +20,6 @@ export function middleware(_request) {/* TODO: Fix JSX expression */};
       "connect-src 'self' http,"
   s://api.vercel.com)"};
   );
-<<<<<<< HEAD
   return response;
 }
 export const config = {/* TODO: Fix JSX expression */}
@@ -29,13 +28,4 @@ export const config = {/* TODO: Fix JSX expression */}
 //Security headers middleware export function middleware(_request) {/* TODO: Fix JSX expression */}"
   s://api.vercel.com}" )} return response} export const config = {/* TODO: Fix JSX expression */}
   r: [' '/((?!api|_next/static|_next/image|favicon.ico).*)' ] } '
-=======
-  return response};
-export const config = {/* TODO: Fix JSX expression */};
-  r: ['/((?!api|_next/static|_next/image|favicon.ico).*)']};
-};
-//Security headers middleware export function middleware(_request) {/* TODO: Fix JSX expression */}"
-  s://api.vercel.com}" )} return response} export const config = {/* TODO: Fix JSX expression */};
-  r: [' '/((?!api|_next/static|_next/image|favicon.ico).*)' ] }; '
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 "

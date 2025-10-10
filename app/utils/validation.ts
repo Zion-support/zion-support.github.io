@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**;
  * Comprehensive validation utilities for forms and data;
  * Provides all validation functions expected by tests;
@@ -13,7 +12,7 @@ export interface ValidationResult {/* TODO: Fix JSX expression */}
 /**;
  * Email validation with length check;
  */;
-export function validateEmail(email: string): ValidationResult {
+export function validateEmail(email: string): ValidationResult {}
     ,
   if (!email || email.length > 254) {,
   }
@@ -34,13 +33,13 @@ return {
 /**;
  * URL validation;
  */;
-export function validateURL(url: string): ValidationResult {
+export function validateURL(url: string): ValidationResult {}
     ,
   if (!url || url.trim() === '') {,
   }
     return { isValid: false, error: 'URL is required' }
   }
-try {
+try {}
     const urlObj = new URL(url);
     const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
     return {,;
@@ -64,15 +63,15 @@ export function validateLength(value: string;);
   min: number)
   max: number)
   fieldName: string = 'Field',
-): ValidationResult {
-    if (value.length < min) {,;
+): ValidationResult {}
+    if (value.length < min) {,;}
     return {,;
       isValid: false,
   }
       error: `${fieldName} must be at least ${min} characters long`;
     }
   }
-if (value.<<<length>max</length></length>) {
+if (value.<<<length>max</length></length>) {}
     return {
       isValid: false,
   }
@@ -102,7 +101,7 @@ return {/* TODO: Fix JSX expression */}
 /**;
  * Password validation;
  */;
-export function validatePassword(password: string): ValidationResult {
+export function validatePassword(password: string): ValidationResult {}
     ,
   if (!password || password.length < 8) {,
   }
@@ -152,7 +151,7 @@ return {/* TODO: Fix JSX expression */}
 /**;
  * Required field validation;
  */;
-export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
+export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {}
     ,
   if (value === null || value === undefined) {,
   }
@@ -182,7 +181,7 @@ return {/* TODO: Fix JSX expression */}
 /**;
  * Date validation;
  */;
-export function validateDate(dateString: string): ValidationResult {
+export function validateDate(dateString: string): ValidationResult {}
     ,
   if (!dateString || dateString.trim() === '') {,
   }
@@ -221,7 +220,7 @@ return {/* TODO: Fix JSX expression */}
 /**;
  * Credit card validation using Luhn algorithm;
  */;
-export function validateCreditCard(cardNumber: string): ValidationResult {
+export function validateCreditCard(cardNumber: string): ValidationResult {}
     ,
   if (!cardNumber || cardNumber.trim() === '') {,
   }
@@ -242,9 +241,9 @@ if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
   }
 let sum = 0;
   let isEven = false;
-for (let i = cleaned.length - 1; i >= 0; i--) {
+for (let i = cleaned.length - 1; i >= 0; i--) {}
     let digit = parseInt(cleaned[i], 10);
-    if (isEven) {
+    if (isEven) {}
       digit *= 2;
       if (digit > 9) {
         digit -= 9
@@ -266,7 +265,7 @@ const isValid = sum % 10 === 0;
 /**;
  * JSON validation;
  */;
-export function validateJSON(jsonString: string): ValidationResult {
+export function validateJSON(jsonString: string): ValidationResult {}
     ,
   if (!jsonString || jsonString.trim() === '') {,
   }
@@ -291,7 +290,7 @@ try {/* TODO: Fix JSX expression */}
 /**;
  * HTML sanitization;
  */;
-export function sanitizeHTML(html: string): string {
+export function sanitizeHTML(html: string): string {}
     if (!html) return '',
 ,;
   return html;
@@ -310,10 +309,10 @@ export function sanitizeHTML(htm)
  */;
 export function validateComposite(value: unknown)
   validators: Array<(val: unknown) => ValidationResult>
-): ValidationResult {
-    for (const validator of validators) {
+): ValidationResult {}
+    for (const validator of validators) {}
     const result = validator(value),
-    if (!result.isValid) {,;
+    if (!result.isValid) {,;}
       return result;
 export function validateComposite(valu,;
   e: unknown,
@@ -333,13 +332,13 @@ export function validateComposite(valu,;
 export async function validateAsync(;
   validator: (val: unknown) => Promise<ValidationResult>
   value: unknown,
-): Promise<ValidationResult> {
+): Promise<ValidationResult> {}
     ,;
   try {,;
     return await validator(value)
   }
   } catch (error) {
-    return {
+    return {}
       isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
 export async function validateAsync(validato,;
@@ -354,7 +353,7 @@ export async function validateAsync(validato,;
   }
 }
 // Re-export existing functions for compatibility;
-export {
+export {}
     isValidEmail,;
   isValidPhone,;
   isValidUrl,;
@@ -365,118 +364,3 @@ export {
 } from './validators';
 export {/* TODO: Fix JSX expression */}
 } from './validators';"`;
-=======
-/**
- * Comprehensive validation utilities for forms and data
- * Provides all validation functions expected by tests
- */
-export interface ValidationResult {
-}
-}
-  isValid: boolean;
-  error?: string;
-  errors?: string[];
-};
-/**
- * Email validation with length check
- */
-export function validateEmail(email: string): ValidationResult {
-  if (!email || email.length > 254) {
-    return { isValid: false, error: 'Email is too long' };
-  };
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    return { isValid: false, error: 'Invalid email format' };
-  };
-  return { isValid: true };
-};
-/**
- * Phone number validation
- */
-export function validatePhone(phone: string): ValidationResult {
-  if (!phone) {
-    return { isValid: false, error: 'Phone number is required' };
-  };
-  const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-  if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''))) {
-    return { isValid: false, error: 'Invalid phone number format' };
-  };
-  return { isValid: true };
-};
-/**
- * Name validation
- */
-export function validateName(name: string): ValidationResult {
-  if (!name || name.trim().length === 0) {
-    return { isValid: false, error: 'Name is required' };
-  };
-  if (name.length > 100) {
-    return { isValid: false, error: 'Name is too long' };
-  };
-  const nameRegex = /^[a-zA-Z\s\-'\.]+$/;
-  if (!nameRegex.test(name)) {
-    return { isValid: false, error: 'Name contains invalid characters' };
-  };
-  return { isValid: true };
-};
-/**
- * Message validation
- */
-export function validateMessage(message: string): ValidationResult {
-  if (!message || message.trim().length === 0) {
-    return { isValid: false, error: 'Message is required' };
-  };
-  if (message.length > 1000) {
-    return { isValid: false, error: 'Message is too long' };
-  };
-  return { isValid: true };
-};
-/**
- * URL validation
- */
-export function validateUrl(url: string): ValidationResult {
-  if (!url) {
-    return { isValid: false, error: 'URL is required' };
-  };
-  try {
-    new URL(url);
-    return { isValid: true };
-  } catch {
-    return { isValid: false, error: 'Invalid URL format' };
-  };
-};
-/**
- * Validate form data
- */
-export function validateFormData(data: Record<string, any>): ValidationResult {
-  const errors: string[] = [];
-  if (data.email) {
-    const emailResult = validateEmail(data.email);
-    if (!emailResult.isValid) {
-      errors.push(emailResult.error || 'Invalid email');
-    };
-  };
-  if (data.phone) {
-    const phoneResult = validatePhone(data.phone);
-    if (!phoneResult.isValid) {
-      errors.push(phoneResult.error || 'Invalid phone');
-    };
-  };
-  if (data.name) {
-    const nameResult = validateName(data.name);
-    if (!nameResult.isValid) {
-      errors.push(nameResult.error || 'Invalid name');
-    };
-  };
-  if (data.message) {
-    const messageResult = validateMessage(data.message);
-    if (!messageResult.isValid) {
-      errors.push(messageResult.error || 'Invalid message');
-    };
-  };
-  return {
-    isValid: errors.length === 0,
-    errors: errors.length > 0 ? errors : undefined
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

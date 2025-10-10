@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
 //Function to fix corrupted text by removing erroneous commas;
-function fixCorruptedText(text) {
+function fixCorruptedText(text) {}
   //Pattern to match commas that are incorrectly placed in the middle of words;
   //This looks for commas that are followed by a space and then a lowercase letter;
   //or commas that are in the middle of identifiers;
@@ -115,41 +115,29 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */};
   fixed = fixed.replace(/;+/g, ';');
   fixed = fixed.replace(/,\s*,/g, ',');
   fixed = fixed.replace(/;\s*;/g, ';');
-<<<<<<< HEAD
   return fixed;
 }
-=======
-  return fixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Function to process a file;
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     //     const content = fs.readFileSync(filePath, 'utf8');
     //     const fixedContent = fixCorruptedText(content);
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       //       return true;
-<<<<<<< HEAD
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
     return false;
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
-=======
-function processFile(filePath) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Function to recursively find and process files;
-function processDirectory(dirPath) {
-  try {
+function processDirectory(dirPath) {}
+  try {}
     //     const items = fs.readdirSync(dirPath);
-    for (const item of items) {
+    for (const item of items) {}
       //       const fullPath = path.join(dirPath, item);
-      if (stat.isDirectory()) {
+      if (stat.isDirectory()) {}
         //Skip node_modules and other common directories;
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
           processedCount += processDirectory(fullPath);
@@ -160,7 +148,6 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
         item.endsWith('.tsx') ||
         item.endsWith('.js') ||
         item.endsWith('.jsx')
-<<<<<<< HEAD
       ) {/* TODO: Fix JSX expression */}
         }
       }
@@ -169,15 +156,6 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
     //     }
   return processedCount;
 }
-=======
-      ) {/* TODO: Fix JSX expression */};
-        };
-      };
-    };
-  } catch (error) {/* TODO: Fix JSX expression */};
-    //     };
-  return processedCount};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Main execution;
 // // const processedCount = processDirectory('./src');
 // 

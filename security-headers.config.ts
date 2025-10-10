@@ -18,7 +18,7 @@ export const securityHeaders = [
   },
   {/* TODO: Fix JSX expression */};
   },
-  {
+  {}
     key: 'Content-Security-Policy',
     value: [,
       "default-src 'self'",

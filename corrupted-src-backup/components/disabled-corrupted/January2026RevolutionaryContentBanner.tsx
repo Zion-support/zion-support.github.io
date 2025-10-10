@@ -1,7 +1,7 @@
 import React from 'react';
-const January2026RevolutionaryContentBanne, r: React.FC = () => {,
+const January2026RevolutionaryContentBanne, r: React.FC = () => {,}
   const revolutionaryConten, t = [
-    {
+    {}
       title: 'Ne, x, t-Generation, Enterprise, Automation: The, 2026, AI Revolu, t, i, o, n',
       description: '98% Automation, Ra, t, e, 1000 x, Processing, Speed, $2.5 B, Cost, Savings',
       slug: 'ai-20, 2, 6-ne, x, t-generati, o, n-enterpri, s, e-automat, i, o, n',
@@ -10,13 +10,8 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {,
       highlig, h, t: 'BREAKTHRO, U, G, H',
       impa, c, t: '98% Automat, i, o, n',
       ty, p, e: 'b, l, o, g',
-<<<<<<< HEAD
       readTime: '15, m, i, n',
 const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-=======
-      readTime: '15, m, i, n',;
-const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */};
     },
@@ -40,11 +35,11 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         <div, className='te, x, t-center, m, b-16'></div>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8'></div>
             <Sparkles , className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' />
-            <span , className='te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
+            <span , className='te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e' />
               January, 202, 6 • Revolutionary, Content, Launch;
             </sp, a, n>
           </div>
-          <h2 , className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+          <h2 , className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t' />
             Revolutionary, AI, Breakthroughs: The, Future, is He, r, e;
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'></div>
         {/* Head, e, r */};
@@ -66,11 +61,11 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
         </div>)
         {/* Content, Gri, d */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>)
-          { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+          { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (}
         </div>
         {/* Content, Gri, d */};
         <div , classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
-          { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
+          { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>}
             <div , ke, y = { in, d, e, x  }, classNa, m, e = 'group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>
               {/* Content, Hea, d, e, r */}</div>
               <div, classNam, e = 'flex, item, s-start, justif, y-between, m, b-4'></div>

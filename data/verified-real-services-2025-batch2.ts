@@ -8,7 +8,6 @@ id: string;
   features: string[];
   link: string;
   category: string;
-<<<<<<< HEAD
   real_implementation: boolean
   contact_info: unknown
     mobile: string,
@@ -20,49 +19,23 @@ id: string;
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     address: string,
   }
-=======
-  real_implementation: boolean;
-  contact_info: unknown;
-    mobile: string;
-    email: string};
-    address: string};
-  };
-    address: string};
-export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
-    address: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     id: 'ai - quality - assurance',
     name: 'AI Quality Assurance Platform',
     tagline: 'Automated testing and quality control',
     price: '$79 / month',
-<<<<<<< HEAD
     description: unknown,
 export interface VerifiedRealService2025Batch2 {/* TODO: Fix JSX expression */}
   l: string}
     addres,
   s: string}
   }
-=======
-    description: unknown;
-export interface VerifiedRealService2025Batch2 {/* TODO: Fix JSX expression */};
-  l: string};
-    addres,
-  s: string};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     addres,
   s: string};
 export const,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
     addres,
-<<<<<<< HEAD
   s: string}
-=======
-  s: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
     i,
@@ -116,7 +89,6 @@ export const,
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
-<<<<<<< HEAD
   link: string, category: string
   realImplementation: boolean
   contactInfo: unknown,
@@ -124,14 +96,6 @@ export const,
     address: string,
   }
 }
-=======
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] = [,
     id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control", price: "$79/month"

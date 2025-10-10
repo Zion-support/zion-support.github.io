@@ -1,36 +1,23 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
-async function handler(req, res) {
-  if (req.method !== 'POST') {
+async function handler(req, res) {}
+  if (req.method !== 'POST') {}
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-<<<<<<< HEAD
     return;
   }
 
   const { amount, currency = 'usd' } = req.body || {};
 
-=======
-    return};
-;
-const { amount, currency = 'usd' } = req.body || {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  if (!amount) {
+  if (!amount) {}
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Amount is required' }));
-<<<<<<< HEAD
     return;
   }
 
-  try {
-    const paymentIntent = {
-=======
-    return};
-  try {;
-const paymentIntent = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  try {}
+    const paymentIntent = {}
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: Math.round(amount * 100), // Convert to cents
       currency,
@@ -46,13 +33,8 @@ const paymentIntent = {
     }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
 }
 
-=======
-    res.end(JSON.stringify({ error: 'Failed to create payment intent' }))};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default withErrorLogging(handler);

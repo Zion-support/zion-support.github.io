@@ -3,18 +3,9 @@ import { Link } from 'react-router-dom';
 import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-const TeamPage: React.FC = () => {
+const TeamPage: React.FC = () => {}
   const teamMembers = [
-    {
-=======
-;
-const TeamPage: React.FC = () => {
-};
-const teamMembers = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    {}
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
@@ -23,7 +14,7 @@ const teamMembers = [
       email: 'kleber@ziontechgroup.com',
       expertise: ['AI Strategy', 'Leadership', 'Innovation']
     },
-        {
+        {}
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer',
       bio: 'PhD in Machine Learning, leading our AI research and development initiatives',
@@ -32,7 +23,7 @@ const teamMembers = [
       email: 'sarah@ziontechgroup.com',
       expertise: ['Machine Learning', 'Deep Learning', 'Research']
     },
-        {
+        {}
       name: 'Dr. Emily Watson',
       role: 'Head of Data Science',
       bio: 'Data science expert specializing in predictive analytics and business intelligence',
@@ -41,7 +32,7 @@ const teamMembers = [
       email: 'emily@ziontechgroup.com',
       expertise: ['Data Science', 'Analytics', 'Statistics']
     },
-        {
+        {}
       name: 'Lisa Thompson',
       role: 'Head of Client Success',
       bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',
@@ -50,7 +41,7 @@ const teamMembers = [
       email: 'lisa@ziontechgroup.com',
       expertise: ['Client Relations', 'Project Management', 'Customer Success']
     },
-        {
+        {}
       name: 'Michael Rodriguez',
       role: 'Lead Software Engineer',
       bio: 'Full-stack developer with expertise in scalable cloud architectures and microservices',
@@ -59,7 +50,7 @@ const teamMembers = [
       email: 'michael@ziontechgroup.com',
       expertise: ['Software Engineering', 'Cloud Architecture', 'DevOps']
     },
-        {
+        {}
       name: 'Dr. James Park',
       role: 'Head of Cybersecurity',
       bio: 'Cybersecurity expert with 12+ years protecting enterprise systems and data',
@@ -69,7 +60,6 @@ const teamMembers = [
       expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']
     };
   ];
-<<<<<<< HEAD
   const stats = [
     { icon: Users, label: 'Team Members', value: '50+' },
     { icon: Award, label: 'Awards Won', value: '25+' },
@@ -78,20 +68,6 @@ const teamMembers = [
   ];
   const values = [
     {
-=======
-;
-const stats = [
-[
-        { icon: Users, label: 'Team Members', value: '50+' },
-        { icon: Award, label: 'Awards Won', value: '25+' },
-        { icon: Brain, label: 'Years Experience', value: '15+' },
-        { icon: Shield, label: 'Client Satisfaction', value: '99%' };
-  ];
-;
-const values = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
       icon: Brain
@@ -113,13 +89,9 @@ const values = [
     };
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <Navigation />
-<<<<<<< HEAD
       {/* Hero Section */}
-=======
-      {/* Hero Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -130,15 +102,11 @@ const values = [
           </p>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Stats Section */}
-=======
-      {/* Stats Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-white" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat .icon className="w-8 h-8 text-white" />
@@ -150,30 +118,26 @@ const values = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Team Members */}
-=======
-      {/* Team Members */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" />
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Our Leadership Team
   </
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600" />
               Experienced professionals leading the future of AI and IT solutions,
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
+            {teamMembers.map((member, index) => (}
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="h-64 bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
                   <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
                     <Users className="w-16 h-16 text-gray-600" />
                   </div>
                 </div>
-                <div className="p-6">
+                <div className="p-6" />
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-cyan-600 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 mb-4">{member.bio}</p>
@@ -187,19 +151,15 @@ const values = [
                       ))};
                     </div>
                   </div>
-                  <div className="flex space-x-3">
+                  <div className="flex space-x-3" />
                     <a href={member.linkedin};
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-cyan-600 transition-colors">
                       <Linkedin className="w-5 h-5" />
                     </a>
-<<<<<<< HEAD
                     <a
                       href={`mailto:${member.email}`}
-=======
-                    <a href={`mailto:${member.email}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       className="text-gray-400 hover:text-cyan-600 transition-colors">
                       <Mail className="w-5 h-5" />
                     </a>
@@ -210,23 +170,19 @@ const values = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Values Section */}
-=======
-      {/* Values Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white" />
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" />
               Our Values
   </
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600" />
               The principles that guide our team and our work,
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
+            {values.map((value, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <value .icon className="w-8 h-8 text-white" />
@@ -238,21 +194,16 @@ const values = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section */}
-=======
-      {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600" />
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center" />
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" />
             Join Our Team;
   </
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
             We're always looking for talented individuals who share our passion for innovation and excellence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
             <Link
               to="/careers"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
@@ -260,13 +211,6 @@ const values = [
   </
             <Link
               to="/contact"
-=======
-            <Link to="/careers"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              View Open Positions
-            </Link>
-            <Link to="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Get in Touch
   </
@@ -275,7 +219,6 @@ const values = [
       </section>
       <Footer />
     </div>
-<<<<<<< HEAD
   ),
 }
 export default TeamPage;
@@ -286,7 +229,3 @@ export default TeamPage;
   </h2>
   </p>
   </h2>
-=======
-  )};
-export default TeamPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

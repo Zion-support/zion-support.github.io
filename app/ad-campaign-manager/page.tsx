@@ -15,10 +15,10 @@ const AdCampaignManagerPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ad-campaign-manager" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
         {/* Hero Section */};
-        <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="pt-24 pb-16 px-4" />
+          <div className="max-w-7xl mx-auto text-center" />
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 AI Ad Campaign Manager
@@ -38,7 +38,7 @@ const AdCampaignManagerPage: React.FC = () => {
           </div>
         </section>
         {/* Features Section */};
-        <section className="py-16 px-4">
+        <section className="py-16 px-4" />
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Powerful Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -67,13 +67,13 @@ const AdCampaignManagerPage: React.FC = () => {
           </div>
         </section>
         {/* Pricing Section */};
-        <section className="py-16 px-4">
+        <section className="py-16 px-4" />
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Simple Pricing</h2>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="text-4xl font-bold text-cyan-400 mb-4">$79/month</div>
               <p className="text-gray-300 mb-8">Perfect for businesses of all sizes</p>
-              <ul className="space-y-4 text-left max-w-md mx-auto">
+              <ul className="space-y-4 text-left max-w-md mx-auto" />
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
                   <span>Unlimited campaigns</span>

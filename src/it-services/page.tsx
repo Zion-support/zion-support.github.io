@@ -3,18 +3,10 @@ import React from 'react';
 import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-const ITServicesPage: React.FC = () => {
+const ITServicesPage: React.FC = () => {}
   const itServices = [
-=======
-;
-const ITServicesPage: React.FC = () => {
-};
-const itServices = [
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Infrastructure & Cloud Services
-    {
+    {}
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
       icon: HardDrive,
@@ -26,7 +18,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'Cloud Infrastructure & Migration',
       description: 'Complete cloud migration and infrastructure setup with AWS, Azure, and Google Cloud platforms.',
       icon: Cloud,
@@ -39,7 +31,7 @@ const itServices = [
       color: 'text-blue-400'
     },
     // Cybersecurity Services
-    {
+    {}
       title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with AI-powered threat detection, prevention, and response capabilities.',
       icon: Shield,
@@ -51,7 +43,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'Identity & Access Management',
       description: 'Secure identity management with multi-factor authentication, single sign-on, and privileged access management.',
       icon: Lock,
@@ -63,7 +55,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'Security Compliance & Audit',
       description: 'Comprehensive security compliance services for SOC 2, ISO 27001, HIPAA, and other regulatory requirements.',
       icon: FileText,
@@ -75,7 +67,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'Security Operations Center (SOC)',
       description: '24/7 security monitoring and incident response with dedicated security analysts and advanced threat hunting.',
       icon: Activity,
@@ -88,7 +80,7 @@ const itServices = [
       color: 'text-cyan-400'
     },
     // Database & Data Management
-    {
+    {}
       title: 'Database Administration & Optimization',
       description: 'Expert database management with performance tuning, backup strategies, and high availability solutions.',
       icon: Database,
@@ -100,7 +92,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'Data Backup & Disaster Recovery',
       description: 'Comprehensive backup and disaster recovery solutions with automated testing and rapid recovery capabilities.',
       icon: HardDrive,
@@ -112,7 +104,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'Data Migration Services',
       description: 'Seamless data migration with zero downtime, data validation, and comprehensive testing for all platforms.',
       icon: ArrowRight,
@@ -125,7 +117,7 @@ const itServices = [
       color: 'text-cyan-400'
     },
     // DevOps & Development
-    {
+    {}
       title: 'DevOps & CI/CD Implementation',
       description: 'Complete DevOps transformation with automated pipelines, infrastructure as code, and continuous monitoring.',
       icon: Code,
@@ -137,7 +129,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'Microservices Architecture',
       description: 'Modern microservices architecture design and implementation with containerization and service mesh.',
       icon: Cog,
@@ -149,7 +141,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'API Development & Management',
       description: 'Comprehensive API development with design, implementation, security, and lifecycle management.',
       icon: Globe,
@@ -162,7 +154,7 @@ const itServices = [
       color: 'text-cyan-400'
     },
     // IT Support & Management
-    {
+    {}
       title: 'Managed IT Services',
       description: 'Comprehensive IT management including help desk, system administration, and proactive maintenance.',
       icon: Users,
@@ -174,7 +166,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'IT Strategy & Consulting',
       description: 'Strategic IT planning and consulting to align technology with business objectives and drive digital transformation.',
       icon: Target,
@@ -186,7 +178,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'IT Asset Management',
       description: 'Complete IT asset lifecycle management with tracking, optimization, and compliance reporting.',
       icon: Settings,
@@ -199,7 +191,7 @@ const itServices = [
       color: 'text-cyan-400'
     },
     // Specialized Services
-    {
+    {}
       title: 'Microsoft 365 Migration & Management',
       description: 'Complete Microsoft 365 migration with security configuration, user training, and ongoing management.',
       icon: Mail,
@@ -211,7 +203,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'VoIP & Unified Communications',
       description: 'Modern communication solutions with VoIP, video conferencing, and unified communications platforms.',
       icon: Phone,
@@ -223,7 +215,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'IT Training & Certification',
       description: 'Comprehensive IT training programs for staff development and certification preparation.',
       icon: Award,
@@ -235,7 +227,7 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       color: 'text-cyan-400'
     },
-    {
+    {}
       title: 'IT Project Management',
       description: 'Expert IT project management with planning, execution, and delivery of complex technology initiatives.',
       icon: Rocket,
@@ -247,7 +239,6 @@ const itServices = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     };
   ];
-<<<<<<< HEAD
   const categories = [
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
@@ -261,27 +252,10 @@ const itServices = [
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-=======
-;
-const categories = [
-[
-        { name: 'All', count: itServices.length },
-        { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
-        { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
-        { name: 'Data', count: itServices.filter(s => s.category === 'Data').length },
-        { name: 'Development', count: itServices.filter(s => s.category === 'Development').length },
-        { name: 'Support', count: itServices.filter(s => s.category === 'Support').length },
-        { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length },
-        { name: 'Management', count: itServices.filter(s => s.category === 'Management').length },
-        { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
-        { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
-        { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
-        { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   const services = [
 [
-        {
+        {}
       icon: Cloud,
       title: 'Cloud Migration & Management',
       description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
@@ -289,7 +263,7 @@ const categories = [
       price: 'Starting at $1,299/month',
       color: 'text-blue-400'
     },
-        {
+        {}
       icon: Shield,
       title: 'Cybersecurity Suite',
       description: 'Comprehensive security solutions with threat detection and automated response.',
@@ -297,7 +271,7 @@ const categories = [
       price: 'Starting at $799/month',
       color: 'text-red-400'
     },
-        {
+        {}
       icon: Settings,
       title: 'DevOps & CI/CD',
       description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
@@ -305,7 +279,7 @@ const categories = [
       price: 'Starting at $599/month',
       color: 'text-green-400'
     },
-        {
+        {}
       icon: Database,
       title: 'Database Management',
       description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
@@ -313,7 +287,7 @@ const categories = [
       price: 'Starting at $399/month',
       color: 'text-teal-400'
     },
-        {
+        {}
       icon: Globe,
       title: 'Network Solutions',
       description: 'Enterprise networking with high-speed connectivity and advanced security features.',
@@ -321,7 +295,7 @@ const categories = [
       price: 'Starting at $699/month',
       color: 'text-purple-400'
     },
-        {
+        {}
       icon: Smartphone,
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications with modern UI/UX design.',
@@ -330,60 +304,46 @@ const categories = [
       color: 'text-orange-400'
     };
   ];
-<<<<<<< HEAD
   const additionalServices = [
-    {
-=======
-;
-const additionalServices = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    {}
       icon: Users,
       title: 'IT Consulting',
       description: 'Strategic IT planning and technology roadmap development.',
       price: '$200/hour'
     },
-        {
+        {}
       icon: Server,
       title: 'Server Management',
       description: '24/7 server monitoring, maintenance, and optimization.',
       price: 'Starting at $299/month'
     },
-        {
+        {}
       icon: HardDrive,
       title: 'Data Backup & Recovery',
       description: 'Automated backup solutions and disaster recovery planning.',
       price: 'Starting at $199/month'
     },
-        {
+        {}
       icon: Monitor,
       title: 'System Integration',
       description: 'API development and system integration services.',
       price: 'Starting at $1,500/project'
     },
-        {
+        {}
       icon: Printer,
       title: 'Hardware Support',
       description: 'Computer, printer, and network equipment support.',
       price: 'Starting at $99/month'
     },
-        {
+        {}
       icon: Router,
       title: 'Network Security',
       description: 'Firewall configuration and network security implementation.',
       price: 'Starting at $399/month'
     };
   ];
-<<<<<<< HEAD
   const benefits = [
     {
-=======
-;
-const benefits = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       icon: Star,
       title: 'Proven Expertise',
       description: '10+ years of experience with 100+ successful projects'
@@ -405,11 +365,11 @@ const benefits = [
     };
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main className="container mx-auto px-4 py-16 pt-24" />
         {/* Hero Section */};
-        <section className="text-center mb-16">
+        <section className="text-center mb-16" />
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               IT Services & Infrastructure</span>
@@ -419,7 +379,6 @@ const benefits = [
             From cloud migration to cybersecurity, we keep your technology running smoothly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
@@ -431,33 +390,20 @@ const benefits = [
           </div>
         </section>
         {/* Main Services Grid */}
-=======
-            <a href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
-              Get Free IT Assessment
-            </a>
-            <a href="tel:+13024640950"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-              (302) 464-0950
-            </a>
-          </div>
-        </section>
-        {/* Main Services Grid */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="mb-16">
+        <section className="mb-16" />
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => (
+            {itServices.map((service, index) => (}
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
                   {React.createElement(service.icon as React.ComponentType<any>, { className: "w-8 h-8" })};
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                <div className="mb-4">
+                <div className="mb-4" />
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
-                    {service.features.slice(0, 4).map((feature, idx) => (
+                    {service.features.slice(0, 4).map((feature, idx) => (}
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {feature};
@@ -465,10 +411,10 @@ const benefits = [
                     ))};
                   </ul>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4" />
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
                   <ul className="text-sm text-gray-400 space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, idx) => (
+                    {service.benefits.slice(0, 3).map((benefit, idx) => (}
                       <li key={idx} className="flex items-center">
                         <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
                         {benefit};
@@ -491,7 +437,7 @@ const benefits = [
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature};
@@ -509,15 +455,11 @@ const benefits = [
             ))};
           </div>
         </section>
-<<<<<<< HEAD
         {/* Additional Services */}
-=======
-        {/* Additional Services */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="mb-16">
+        <section className="mb-16" />
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {additionalServices.map((service, index) => (
+            {additionalServices.map((service, index) => (}
               <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
                 <div className="flex items-center mb-3">
                   {React.createElement(service.icon as React.ComponentType<any>, { className: "w-6 h-6 text-cyan-400 mr-3" })};
@@ -529,87 +471,68 @@ const benefits = [
             ))};
           </div>
         </section>
-<<<<<<< HEAD
         {/* Support Tiers */}
-=======
-        {/* Support Tiers */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="mb-16">
+        <section className="mb-16" />
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Basic Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center text-sm text-gray-300">
+              <ul className="space-y-2 mb-6" />
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Business hours support</span>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Remote assistance</span>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Basic monitoring</span>
               </ul>
-<<<<<<< HEAD
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
                 Get Started</span>
-=======
-              <a href="/contact"
-                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Get Started
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
               <h3 className="text-xl font-bold text-white mb-4">Professional Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$499/month</div>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center text-sm text-gray-300">
+              <ul className="space-y-2 mb-6" />
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   24/7 support</span>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   On-site visits</span>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Advanced monitoring</span>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Priority response</span>
               </ul>
-<<<<<<< HEAD
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
                 Get Started</span>
-=======
-              <a href="/contact"
-                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Get Started
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center text-sm text-gray-300">
+              <ul className="space-y-2 mb-6" />
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Dedicated team</span>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Custom SLAs</span>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Proactive monitoring</span>
-                <li className="flex items-center text-sm text-gray-300">
+                <li className="flex items-center text-sm text-gray-300" />
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   Strategic consulting</span>
               </ul>
-<<<<<<< HEAD
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
@@ -618,23 +541,12 @@ const benefits = [
           </div>
         </section>
         {/* CTA Section */}
-=======
-              <a href="/contact"
-                className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
-                Contact Sales
-              </a>
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
+        <section className="text-center" />
+          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8" />
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your IT Infrastructure?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
@@ -644,24 +556,12 @@ const benefits = [
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 (302) 464-0950</span>
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
-                Get Free IT Assessment
-              </a>
-              <a href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                (302) 464-0950
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </div>
           </div>
           </section>
         </main>
         <Footer />
       </div>
-<<<<<<< HEAD
   ),
 }
 export default ITServicesPage</a>
@@ -685,7 +585,3 @@ export default ITServicesPage</a>
   </a>
   </a>
   </span>
-=======
-  )};
-export default ITServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

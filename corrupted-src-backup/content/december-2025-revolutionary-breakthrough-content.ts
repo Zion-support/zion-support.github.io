@@ -16,9 +16,8 @@ export interface RevolutionaryBreakthroughContent {
   newBadge?: boolean;
   trending?: boolean;
   valueProposition: string;
-  metrics: {
+  metrics: {}
     performance: string;
-<<<<<<< HEAD
     savings: string
     accuracy: string
     roi: string,
@@ -29,18 +28,8 @@ export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression *
   superintelligenceLevel?: string;
 }
 
-=======
-    savings: string;
-    accuracy: string;
-    roi: string;
-export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression */};
-  };
-  consciousnessLevel?: string;
-  transcendenceLevel?: string;
-  superintelligenceLevel?: string};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
-  {
+  {}
     id: 'quantum-ai-transcendence-revolution-2025',
     slug: 'ai-2025-december-quantum-ai-transcendence-revolution',
     title: 'AI December 2025: Quantum AI Transcendence Revolution',
@@ -57,7 +46,7 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     newBadge: true
     trending: true,
     valueProposition: '$1.2B+ annual value creation'
-    metrics: {
+    metrics: {}
       performance: 'Infinite processing power',
       savings: '$1.2 B+ annual savings',
       accuracy: '99.99% consciousness accuracy',
@@ -72,7 +61,7 @@ export const,
   l: 'Ultimate',
     superintelligenceLeve,
   l: 'Infinite'},
-  {
+  {}
     id: 'artificial-superintelligence-breakthrough-2025'
     slug: 'ai-2025-december-artificial-superintelligence-breakthrough'
     title: 'Artificial Superintelligence Breakthrough 2025'
@@ -88,7 +77,7 @@ export const,
     newBadge: true
     trending: true,
     valueProposition: '$2.5B+ annual value creation'
-    metrics: {
+    metrics: {}
       performance: 'Exponential learning',
       savings: '$2.5 B+ annual savings',
       accuracy: '99.99% superintelligence accuracy',

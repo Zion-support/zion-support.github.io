@@ -1,14 +1,6 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-<<<<<<< HEAD
-const October2025LatestPremiumContentBanne, r = () => { 
+const October2025LatestPremiumContentBanne, r = () => { }
   return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n"  > {/* Animated, background, effec, t, s */ })
-=======
-const October2025LatestPremiumContentBanne, r = () => {
-return (
-  return(<div , classNam, e = "bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6, l, g:px-8, shado, w-2xl, relative, overflow-hidd, e, n">
-);
-} {/* Animated, background, effec, t, s */ })
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-transparent, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" />)
       <div , className="absolute, inse, t-0, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-20" />
       <div , classNam, e = "m, a, x-w-7xl, m, x-auto, relative, z-10">
@@ -23,7 +15,7 @@ return (
         <div, className="flex, fle, x-col, l, g: fl, e, x-row, item, s-start, l, g:ite, m, s-center, justif, y-between, ga, p-6"></div>
           <div, className="fl, e, x-1"></div>
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
-              <span , className="inli, n, e-flex, item, s-center, p, x-4, p, y-1.5, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, shado, w-lg, animat, e-pul, s, e">
+              <span , className="inli, n, e-flex, item, s-center, p, x-4, p, y-1.5, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, shado, w-lg, animat, e-pul, s, e" />
                 🔥 JUST, PUBLISHE, D - OCTO, B, E, R , 1, 20, 2, 5;
               </sp, a, n>
               <span , classNam, e = "inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibold, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, border, border-purp, l, e-4, 0, 0/30">
@@ -57,11 +49,7 @@ return (
             </div>
             {/* Featured, Article, s */};
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4"></div>
-<<<<<<< HEAD
               <Link, t, o="/bl, o, g/ai-20, 2, 5-autonomo, u, s-da, t, a-governan, c, e-revoluti, o, n"
-=======
-              <Link , t, o="/bl, o, g/ai-20, 2, 5-autonomo, u, s-da, t, a-governan, c, e-revoluti, o, n"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 className="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/30, t, o-indi, g, o-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r:bord, e, r-purp, l, e-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>
                   <Shield , className="w-6 h-6, tex, t-purp, l, e-300, fle, x-shri, n, k-0, m, t-1" />
@@ -135,11 +123,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                   </div>
                 </div>
               </Li, n, k>"
-<<<<<<< HEAD
               <Link, t, o="/bl, o, g/ai-20, 2, 5-neur, a, l-fra, u, d-detecti, o, n-revoluti, o, n""
-=======
-              <Link , t, o="/bl, o, g/ai-20, 2, 5-neur, a, l-fra, u, d-detecti, o, n-revoluti, o, n""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 className="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-6, 0, 0/30, t, o-oran, g, e-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-r, e, d-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-r, e, d-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>
                   <Brain , className="w-6 h-6, tex, t-r, e, d-300, fle, x-shri, n, k-0, m, t-1" />
@@ -169,11 +153,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
                   </div>
                 </div>
               </Li, n, k>"
-<<<<<<< HEAD
               <Link, t, o="/bl, o, g/ai-20, 2, 5-cogniti, v, e-workfl, o, w-orchestrati, o, n-maste, r, y""
-=======
-              <Link , t, o="/bl, o, g/ai-20, 2, 5-cogniti, v, e-workfl, o, w-orchestrati, o, n-maste, r, y""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 className="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/30, t, o-cy, a, n-6, 0, 0/30, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-l, g, p-4, hove, r: bord, e, r-bl, u, e-400, hove, r:shad, o, w-xl, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">
                 <div, className="flex, item, s-start, ga, p-3, m, b-2"></div>
                   <Workflow , className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1" />
@@ -249,11 +229,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
               <span, className="mr-2">Explore, All, 3 Breakthroug, h, s</sp, a, n>"
               <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" /></Link>
             </Li, n, k>"
-<<<<<<< HEAD
             <Link, t, o="/conta, c, t""
-=======
-            <Link , t, o="/conta, c, t""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-semibold, rounde, d-lg, borde, r-2, borde, r-whi, t, e/30, hove, r:bg-whi, t, e/20, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-300, whitespac, e-nowr, a, p">
             ></Link>
               Schedule, Enterprise, Demo;

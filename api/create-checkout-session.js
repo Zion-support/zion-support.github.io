@@ -2,8 +2,8 @@ import { withErrorLogging } from './withErrorLogging.cjs';
 
 const PROD_DOMAIN = 'https://ziontechgroup.com';
 
-async function handler(req, res) {
-  if (req.method !== 'POST') {
+async function handler(req, res) {}
+  if (req.method !== 'POST') {}
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
@@ -12,16 +12,16 @@ async function handler(req, res) {
 
   const { productId, userId } = req.body || {};
 
-  if (!productId) {
+  if (!productId) {}
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Product ID is required' }));
     return;
   }
 
-  try {
+  try {}
     // Basic checkout session creation logic
-    const sessionData = {
+    const sessionData = {}
       productId,
       userId: userId || null,
       timestamp: new Date().toISOString(),
@@ -35,7 +35,7 @@ async function handler(req, res) {
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
+    res.end(JSON.stringify({}
       success: true,
       sessionId: `session_${Date.now()}`,
       checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,

@@ -1,4 +1,4 @@
-export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
+export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {}
   return(<section, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/30, p, y-12">";
       <div, className="container, m, x-auto, p, x-6">";
   return (
@@ -301,11 +301,6 @@ export, default, function October2025EdgeAIQuantumCryptoBann, e, r(): vo, i, d {
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-<<<<<<< HEAD
   );
 }
 "
-=======
-  )};
-;"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

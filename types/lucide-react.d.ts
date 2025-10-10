@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   }
 
   export type LucideIcon = ComponentType<LucideProps>
 
-=======
-declare module 'lucide-react' {/* TODO: Fix JSX expression */};
-  };
-  export type LucideIcon = ComponentType<LucideProps>;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   export const,
   Calendar: LucideIcon,
   export const,
@@ -80,29 +74,16 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */};
   export const,
   Linkedin: LucideIcon,
   export const,
-<<<<<<< HEAD
   Twitter: LucideIcon
   // Communication icons,
-=======
-  Twitter: LucideIcon;
-  // Communication icons;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   export const,
   Mail: LucideIcon,
   export const,
-<<<<<<< HEAD
   Phone: LucideIcon
   // Location icons,
   export const,
   MapPin: LucideIcon
   // UI icons,
-=======
-  Phone: LucideIcon;
-  // Location icons;
-  export const,
-  MapPin: LucideIcon;
-  // UI icons;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   export const,
   Menu: LucideIcon,
   export const,
@@ -144,11 +125,6 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */};
   export const,
   Database: LucideIcon,
   export const,
-<<<<<<< HEAD
   Cloud: LucideIcon
   // Add more icons as needed,
 }
-=======
-  Cloud: LucideIcon;
-  // Add more icons as needed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

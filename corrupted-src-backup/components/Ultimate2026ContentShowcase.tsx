@@ -1,6 +1,6 @@
-const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
+const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {}
   const, showcaseConten, t = [
-    {
+    {}
       i;
   d: 1,
       tit, l, e: "Enterprise, AI, Transformation Playbook, 202, 6","
@@ -23,13 +23,9 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "$10, 0, M+ Savin, g, s",";
       featur, e, d: tr, u, e;
       sta, t, s: { savi, n, g;
-<<<<<<< HEAD
   s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }";
     }
-=======
-  s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       id: 2,
       tit, l, e: "AI, Securit, y & Compliance, Masterclas, s","
       descripti, o, n: "Milita, r, y-grade, security, protocols, GDPR, complianc, e, and, zer, o-trust, architecture, for enterprise, AI, systems","
@@ -51,13 +47,9 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "99.99% Securi, t, y",";
       featur, e, d: tr, u, e;
       sta, t, s: { secur, i, t;
-<<<<<<< HEAD
   y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }";
     }
-=======
-  y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       id: 3,
       tit, l, e: "Quant, u, m-Neural, Computing, Implementation","
       descripti, o, n: "St, e, p-by-step, guide, to implementing, quantu, m-neural, networks, with 1000 x, performance, improvements","
@@ -79,13 +71,9 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "1000x, Performanc, e",";
       featur, e, d: tr, u, e;
       sta, t, s: { performa, n, c;
-<<<<<<< HEAD
   e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }";
     }
-=======
-  e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       id: 4,
       tit, l, e: "Autonomous, Operations, Framework","
       descripti, o, n: "Build, sel, f-healing, systems, with 98% automation, rates, and predictive, maintenance, capabilities","
@@ -107,13 +95,9 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "98% Automati, o, n",";
       featur, e, d: fal, s, e;
       sta, t, s: { automat, i, o;
-<<<<<<< HEAD
   n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }";
     }
-=======
-  n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       id: 5,
       tit, l, e: "Edge, AI, Deployment at, Enterprise, Scale","
       descripti, o, n: "Distributed, AI, processing across, 1, 0,0, 0, 0+ nodes, with, real-time, decision, making and, local, autonomy","
@@ -135,13 +119,9 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "10,0, 0, 0+ Nod, e, s",";
       featur, e, d: fal, s, e;
       sta, t, s: { no, d, e;
-<<<<<<< HEAD
   s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }";
     }
-=======
-  s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    {}
       id: 6,
       tit, l, e: "Me, t, a-Cognitive, AI, Development Gui, d, e","
       descripti, o, n: "Create, AI, systems that, think, about thinking, with, advanced reasoning, and, self-improvement, capabilitie, s","
@@ -163,12 +143,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       impa, c, t: "Me, t, a-Thinki, n, g",";
       featur, e, d: fal, s, e;
       sta, t, s: { reason, i, n;
-<<<<<<< HEAD
   g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }";
     }
-=======
-  g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   return(<div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */};
@@ -183,7 +159,6 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">";</div>
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
-<<<<<<< HEAD
 const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }";
     }
@@ -202,20 +177,6 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     {/* TODO: Fix JSX expression */}"
   g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }";
     }
-=======
-const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-  s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }"};
-    {/* TODO: Fix JSX expression */}"
-  y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }"};
-    {/* TODO: Fix JSX expression */}"
-  e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }"};
-    {/* TODO: Fix JSX expression */}"
-  n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }"};
-    {/* TODO: Fix JSX expression */}"
-  s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }"};
-    {/* TODO: Fix JSX expression */}"
-  g: "Advanc, e, d", learni, n, g: "Se, l, f-Improvi, n, g", accura, c, y: "98%" }"};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   return ("
     <div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">";
@@ -377,13 +338,13 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">")
         <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x;)
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">";)
-          {showcaseConte, n, t.m, a, p((conte, n, t, ind, e, x) => (
+          {showcaseConte, n, t.m, a, p((conte, n, t, ind, e, x) => (}
             <moti, o, n.d, i, v;
         <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">"</div>
         <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x
   l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">";
-          {showcaseConte, n, t.m, a, p((conte, n, t, ind, e, x) => (</div>
+          {showcaseConte, n, t.m, a, p((conte, n, t, ind, e, x) => (</div>}
             <moti, o, n.d, i, v
         {/* Showcase, Gri, d */}"
         <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2 x,"
@@ -399,7 +360,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
               classNa, m, e="group, relativ, e"
             ></moti>
               {/* Featured, badg, e */};
-              {conte, n, t.featur, e, d && (
+              {conte, n, t.featur, e, d && (}
                 <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 z-20"></div>
                   <div, className="flex, item, s-center, ga, p-1, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-black, tex, t-sm, fon, t-bold, shado, w-xl"></div>
                     <Star , className="w-4 h-4, fil, l-curre, n, t  />
@@ -440,7 +401,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                     {conte, n, t.ic, o, n};
                   </d, i, v>"
                   <div, className="flex, fle, x-col, ga, p-3">";
-                    {conte, n, t.trendi, n, g && (</div>
+                    {conte, n, t.trendi, n, g && (</div>}
                       <div, className="flex, item, s-center, ga, p-1, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-pi, n, k-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg"></div>
                         <TrendingUp , className="w-3 h-3  />
                       <div, className="flex, item, s-center, ga, p-1, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-pi, n, k-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">";</div>
@@ -476,7 +437,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                 </p>
                 {/* Stats, Gri, d */}"
                 <div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-8">";
-                  {Obje, c, t.entri, e, s(conte, n, t.sta, t, s).m, a, p(([k, e, y, val, u, e], i, d, x) => (</div>
+                  {Obje, c, t.entri, e, s(conte, n, t.sta, t, s).m, a, p(([k, e, y, val, u, e], i, d, x) => (</div>}
                     <div, ke, y={i, d, x} classNa, m, e="te, x, t-cente, r, p-3, b, g-whi, t, e/5, rounde, d-xl, border, border-whi, t, e/10">";</div>
                       <div, className="te, x, t-lg, fon, t-bold, tex, t-bl, u, e-400, m, b-1">{val, u, e}</d, i, v>";
                   {/* TODO: Fix JSX expression */}"

@@ -1,4 +1,4 @@
-export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
+export, default, function October2025ProductionAIBann, e, r(): vo, i, d {}
   return(<section, className="py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n">";
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-20">";
@@ -478,11 +478,6 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
         </d, i, v>
       </d, i, v>
     </secti, o, n>
-<<<<<<< HEAD
   );
 }
 "
-=======
-  )};
-;"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

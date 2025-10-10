@@ -1,7 +1,7 @@
 export interface NewArticle {/* TODO: Fix JSX expression */};
 };
 export const newArticles2025: NewArticle[] = [
-  {
+  {}
     id: 'ai-automation-2025'
     title: 'AI Automation Trends 2025: The Future of Work'
     excerpt: "Explore the latest trends in AI automation and how they're reshaping the workplace."
@@ -11,7 +11,7 @@ export const newArticles2025: NewArticle[] = [
     link: '/blog/ai-automation-2025',
     readTime: '8 min read',
     tags: ['AI', 'Automation', 'Future of Work', '2025']},
-  {
+  {}
     id: 'quantum-computing-breakthrough'
     title: 'Quantum Computing Breakthrough: What It Means for AI'
     excerpt: 'Understanding the latest quantum computing advances and their impact on AI development.'

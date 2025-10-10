@@ -3,32 +3,20 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react';
 import { services, serviceCategories, contactInfo } from '../data/services';
 interface ServiceCardProps {
-<<<<<<< HEAD
     service: typeof services[0],
   index: number
   }
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
     const [isHovered, setIsHovered] = useState(false);
-  const formatPrice = (pricing: typeof service.pricing) => {
-=======
-  service: typeof services[0]
-}
-  index: number};
-;
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {;
-const [isHovered, setIsHovered] = useState(false);
-;
-const formatPrice = (pricing: typeof service.pricing) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  const formatPrice = (pricing: typeof service.pricing) => {}
     if (pricing.custom) {
       return 'Custom Pricing'
   }
     return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`;
   }
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {}
+    switch (category) {}
       case 'ai': return Brain;
-<<<<<<< HEAD
       case 'micro-saas': return Zap
       case 'it': return Cloud
       case 'emerging-tech': return Rocket,
@@ -36,15 +24,6 @@ const formatPrice = (pricing: typeof service.pricing) => {
   }
   }
   const CategoryIcon = getCategoryIcon(service.category);
-=======
-      case 'micro-saas': return Zap;
-      case 'it': return Cloud;
-      case 'emerging-tech': return Rocket;
-      default: return Target}
-  };
-;
-const CategoryIcon = getCategoryIcon(service.category);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div
       className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
@@ -52,7 +31,7 @@ const CategoryIcon = getCategoryIcon(service.category);
       }`};
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={{
+      style={{}
         animationDelay: `${index * 100}ms`,
         background: isHovered 
           ? 'linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.15))'
@@ -75,15 +54,15 @@ const CategoryIcon = getCategoryIcon(service.category);
             </h3>
           </div>
         </div>
-        <div className="flex space-x-2">
-          {service.popular && (
-            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
+        <div className="flex space-x-2" />
+          {service.popular && (}
+            <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center" />
               <Star className="w-3 h-3 mr-1" />
               Popular;
   </
           )}
-          {service.new && (
-            <span className="bg-gradient-to-r from-green-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
+          {service.new && (}
+            <span className="bg-gradient-to-r from-green-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center" />
               <Sparkles className="w-3 h-3 mr-1" />
               New;
   </
@@ -95,34 +74,28 @@ const CategoryIcon = getCategoryIcon(service.category);
         {service.description}
       </p>
       {/* Key Features */}
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center">
+      <div className="mb-4" />
+        <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center" />
           <CheckCircle className="w-4 h-4 mr-2" />
           Key Features;
   </
-        <ul className="space-y-1">
-          {service.features.slice(0, 3).map((feature, idx) => (
+        <ul className="space-y-1" />
+          {service.features.slice(0, 3).map((feature, idx) => (}
             <li key={idx} className="text-xs text-gray-300 flex items-center">
               <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
               {feature}
             </li>
           ))};
           {service.features.length > 3 && (
-            <li className="text-xs text-cyan-400">
-<<<<<<< HEAD
+            <li className="text-xs text-cyan-400" />
               +{service.features.length - 3} more features;
   </
           )}
-=======
-              +{service.features.length - 3} more features
-            </li>
-          )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         </ul>
       </div>
       {/* Benefits */}
       <div className="mb-4">
-        <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
+        <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center" />
           <TrendingUp className="w-4 h-4 mr-2" />
           Key Benefits;
   </
@@ -154,20 +127,14 @@ const CategoryIcon = getCategoryIcon(service.category);
         </div>
       </div>
       {/* Contact Actions */}
-      <div className="space-y-2">
-<<<<<<< HEAD
+      <div className="space-y-2" />
         <a
           href={`tel:${contactInfo.phone}`}
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
-=======
-        <a href={`tel:${contactInfo.phone}`};
-          className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
           Call Now,
   </
-        <div className="grid grid-cols-2 gap-2">
-<<<<<<< HEAD
+        <div className="grid grid-cols-2 gap-2" />
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
@@ -179,17 +146,6 @@ const CategoryIcon = getCategoryIcon(service.category);
             target="_blank"
             rel="noopener noreferrer"
             className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
-=======
-          <a href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`};
-            className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
-            <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-            Email
-          </a>
-          <a href={service.contact.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
             Demo,
   </
@@ -209,19 +165,10 @@ const CategoryIcon = getCategoryIcon(service.category);
     </div>
   );
 }
-const EnhancedServicesShowcase: React.FC = () => {
-<<<<<<< HEAD
+const EnhancedServicesShowcase: React.FC = () => {}
     const [selectedCategory, setSelectedCategory] = useState<string>('all');
-=======
-}
-return (
-;
-const [selectedCategory, setSelectedCategory] = useState<string>
-);
-}('all');
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const [filteredServices, setFilteredServices] = useState(services);
-  useEffect(() => {
+  useEffect(() => {}
     if (selectedCategory === 'all') {
       setFilteredServices(services)
   } else {
@@ -231,21 +178,16 @@ const [selectedCategory, setSelectedCategory] = useState<string>
   const popularServices = services.filter(service => service.popular);
   const newServices = services.filter(service => service.new);
   return (
-    <section className="py-16 px-4">
-      <div className="container mx-auto">
+    <section className="py-16 px-4" />
+      <div className="container mx-auto" />
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 neon-text">
+        <div className="text-center mb-12" />
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 neon-text" />
             Our Services,
   </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" />
             Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations;
   </
-=======
-            Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           {/* Contact Info Banner */}
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -274,7 +216,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>
           </div>
         </div>
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-12" />
           <button
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
@@ -282,16 +224,10 @@ const [selectedCategory, setSelectedCategory] = useState<string>
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                 : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
             }`}
-<<<<<<< HEAD
           >
             All Services;
   </
-=======
-                >
-            All Services
-          </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          {serviceCategories.map((category) => (
+          {serviceCategories.map((category) => (}
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
@@ -313,13 +249,13 @@ const [selectedCategory, setSelectedCategory] = useState<string>
           ))};
         </div>
         {/* Popular Services Section */}
-        {selectedCategory === 'all' && (
+        {selectedCategory === 'all' && (}
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text" />
               Most Popular Services;
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {popularServices.map((service, index) => (
+              {popularServices.map((service, index) => (}
                 <div key={service.id} className="cyber-card p-4 hover:scale-105 transition-all duration-300">
                   <div className="text-3xl mb-3 text-center">{service.icon}</div>
                   <h4 className="text-lg font-semibold text-white mb-2 text-center">{service.name}</h4>
@@ -328,12 +264,8 @@ const [selectedCategory, setSelectedCategory] = useState<string>
                     <div className="text-lg font-bold text-cyan-400 mb-2">
                       ${service.pricing.starting.toLocaleString()}/{service.pricing.period === 'month' ? 'mo' : 'yr'}
                     </div>
-<<<<<<< HEAD
                     <a
                       href={`tel:${contactInfo.phone}`}
-=======
-                    <a href={`tel:${contactInfo.phone}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
                       Call Now →
                     </a>
@@ -342,26 +274,18 @@ const [selectedCategory, setSelectedCategory] = useState<string>
               ))};
             </div>
           </div>
-<<<<<<< HEAD
         )}
-=======
-        )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 cyber-card">
+        <div className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 cyber-card" />
           <h3 className="text-2xl font-bold text-white mb-4 neon-text">
             Ready to Transform Your Business?
           </h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             Get a free consultation and discover how our AI and IT solutions can drive your business forward.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
             <a
               href={`tel:${contactInfo.phone}`}
-=======
-            <a href={`tel:${contactInfo.phone}`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="cyber-button inline-flex items-center justify-center px-8 py-3">
               <Phone className="w-5 h-5 mr-2" />
               Call {contactInfo.phone}
@@ -376,7 +300,6 @@ const [selectedCategory, setSelectedCategory] = useState<string>
         </div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 }
 export default EnhancedServicesShowcase;
@@ -395,7 +318,3 @@ export default EnhancedServicesShowcase;
   </span>
   </span>
   </ServiceCardProps>
-=======
-  )};
-export default EnhancedServicesShowcase;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

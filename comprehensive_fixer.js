@@ -16,7 +16,7 @@ const fixes = [
     pattern: /{'>'}/g,
     replacement: '{">"}'},
   //Fix JSX expressions with operators;
-  {
+  {}
     pattern: /{([^}]*)\s*>\s*([^}]*)}/g,
     replacement: '{ $1 > $2 }'},
   //Fix object property syntax;
@@ -52,11 +52,11 @@ const fixes = [
     pattern: /(\w+)\s*=>\s*{([^}]+)}\s*(\w+)/g,
     replacement: '$1 => { $2 }, $3'},
   //Fix conditional rendering;
-  {
+  {}
     pattern: /{([^}]*)\s*&&\s*([^}]*)}/g,
     replacement: '{ $1 && $2 }'},
   //Fix ternary operators;
-  {
+  {}
     pattern: /{([^}]*)\s*\?\s*([^}]*)\s*:\s*([^}]*)}/g,
     replacement: '{ $1 ? $2 : $3 }'},
   //Fix object method syntax;
@@ -277,9 +277,9 @@ const fixes = [
     replacemen,
   t: 'const $1 = useMemo(() => { $2 }, [$3]); $4'}];
 
-function fixFile(filePath) {
-  try {
-    fixes.forEach(fix => {)
+function fixFile(filePath) {}
+  try {}
+    fixes.forEach(fix => {)}
       //       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
@@ -287,7 +287,6 @@ function fixFile(filePath) {
 function fixFile(filePath) {/* TODO: Fix JSX expression */};
       };
     });
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
@@ -296,29 +295,16 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //Main function;
-async function main() {
+async function main() {}
     //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
-  files.forEach(file => {)
+  files.forEach(file => {)}
     if (fixFile(file)) {
-<<<<<<< HEAD
       fixedCount++
   }
 async function main() {/* TODO: Fix JSX expression */}
 }
-=======
-      fixedCount++};
-async function main() {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   //Find all TypeScript/TSX files;
   //   let fixedCount = 0;
   files.forEach(file => {/* TODO: Fix JSX expression */};

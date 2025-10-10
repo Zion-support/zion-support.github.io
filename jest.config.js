@@ -1,8 +1,8 @@
-export default {
+export default {}
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  moduleNameMapper: {
+  moduleNameMapper: {}
     '^@/(.*)$': '<rootDir>/app/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
     '^@/pages/(.*)$': '<rootDir>/app/$1',
@@ -13,15 +13,15 @@ export default {
     '^@/data/(.*)$': '<rootDir>/data/$1',
     '^@/content/(.*)$': '<rootDir>/content/$1'
   },
-  transform: {
+  transform: {}
 
-    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
+    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {}
       presets: [
         ['@babel/preset-env', { targets: { node: 'current' } }],
         ['@babel/preset-react', { runtime: 'automatic' }],
         '@babel/preset-typescript'
       ]
-    }]
+    }];
 
   },
   testMatch: [

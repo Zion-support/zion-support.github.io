@@ -3,19 +3,19 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 // Function to fix common merge conflicts
-function fixMergeConflicts(filePath) {
-  try {
+function fixMergeConflicts(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     // Fix common patterns
     const patterns = [
 ];
       // Fix function closing patterns
-      {
+      {}
         regex: /<<<<<<< HEAD\s*\n\);\)\s*\n=======\s*\n\s*\);\s*\};\s*\n        replacement: '  );\n};'
       },
       // Fix simple merge conflicts with just one choice
-      {
+      {}
         regex: /<<<<<<< HEAD\s*\n([^=]+)\s*\n=======\s*\n([^>]+)\s*\n        replacement: (match, head, branch) => {
           // Choose the longer/more complete version
           return head.trim().length > branch.trim().length ? head.trim() : branch.trim();
@@ -32,7 +32,7 @@ function fixMergeConflicts(filePath) {
         };
       };
     ];
-    patterns.forEach(pattern => {
+    patterns.forEach(pattern => {}
       const newContent = content.replace(pattern.regex, pattern.replacement);
       if (newContent !== content) {
         content = newContent;
@@ -51,17 +51,17 @@ function fixMergeConflicts(filePath) {
   };
 };
 // Function to find all files with merge conflicts
-function findFilesWithMergeConflicts(dir) {
+function findFilesWithMergeConflicts(dir) {}
   const files = [];
-  function scanDirectory(currentDir) {
+  function scanDirectory(currentDir) {}
     const items = fs.readdirSync(currentDir);
-    for (const item of items) {
+    for (const item of items) {}
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
         scanDirectory(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        try {
+        try {}
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
             files.push(fullPath);

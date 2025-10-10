@@ -4,26 +4,19 @@
 // <button aria-label="Close dialog">×</button>
 // <input aria-describedby="email-help" type="email" />
 // <div id="email-help">Enter your email address</div>
-<<<<<<< HEAD
 
 // 2. Implement focus management
-const trapFocus = (element) => {
+const trapFocus = (element) => {}
   const focusableElements = element.querySelectorAll(
-=======
-// 2. Implement focus management;
-const trapFocus = (element) => {;
-const focusableElements = element.querySelectorAll(
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
   const firstElement = focusableElements[0];
   const lastElement = focusableElements[focusableElements.length - 1];
-  element.addEventListener('keydown', (e) => {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
+  element.addEventListener('keydown', (e) => {}
+    if (e.key === 'Tab') {}
+      if (e.shiftKey) {}
         if (document.activeElement === firstElement) {
           lastElement.focus();
-<<<<<<< HEAD
           e.preventDefault();
         }
       } else {
@@ -36,16 +29,6 @@ const focusableElements = element.querySelectorAll(
   });
 };
 
-=======
-          e.preventDefault()};
-      } else {
-        if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault()};
-      };
-    };
-  })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // 3. Add live regions for dynamic content
 // Example JSX:
 // <div aria-live="polite" aria-atomic="true" className="sr-only">

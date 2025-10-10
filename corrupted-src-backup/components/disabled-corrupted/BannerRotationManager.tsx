@@ -17,21 +17,12 @@ const bannerComponents = {
   ),
   'cognitive-orchestration': lazy(
     () => import('./CognitiveOrchestrationMegaBanner')
-<<<<<<< HEAD
   ),
 const bannerComponents = {/* TODO: Fix JSX expression */}
 }
 type BannerKey = keyof typeof bannerComponents;
 interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
 }
-=======
-  ),;
-const bannerComponents = {/* TODO: Fix JSX expression */};
-};
-type BannerKey = keyof typeof bannerComponents;
-interface BannerRotationManagerProps {/* TODO: Fix JSX expression */};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 /**
  * BannerRotationManager - Manages the rotation and display of promotional banners;
  *
@@ -40,34 +31,22 @@ interface BannerRotationManagerProps {/* TODO: Fix JSX expression */};
  * - Limits the number of visible banners
  * - Provides fallback loading states,
  */,
-export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
+export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,}
   banners = [],
   maxBanners = 3,
   rotationInterval = 10000,
   className = ''}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);</BannerKey>
-<<<<<<< HEAD
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
 //     const selected = banners.slice(0, maxBanners);
     setVisibleBanners(selected)
   }, [banners, maxBanners]);
   // Rotate banners at specified interval;
-  useEffect(() => {
-=======
-);
-};
-  // Select banners to display (limit to maxBanners)
-  useEffect(() => {
-//     const selected = banners.slice(0, maxBanners);
-    setVisibleBanners(selected)}, [banners, maxBanners]);
-  // Rotate banners at specified interval;
-  useEffect(() => {
-return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  useEffect(() => {}
     if (visibleBanners.length <= 1) return;
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {}
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
  * Feature,
   s: * - Lazy loads banner components for better performance;
@@ -76,29 +55,16 @@ return (
  * - Provides fallback loading states,
  */
 export const,
-<<<<<<< HEAD
   BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-=======
-  BannerRotationManager: React.FC<BannerRotationManagerProps>
-);
-} = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   }, [banners, maxBanners]);
   // Rotate banners at specified interval;
   useEffect(() => {/* TODO: Fix JSX expression */};
     }, rotationInterval);
-<<<<<<< HEAD
     return () => clearInterval(interval);
   }, [visibleBanners.length, rotationInterval]);
   if (visibleBanners.length === 0) {/* TODO: Fix JSX expression */}
   }
-=======
-    return () => clearInterval(interval)}, [visibleBanners.length, rotationInterval]);
-  if (visibleBanners.length === 0) {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 //   const currentBanner = visibleBanners[currentIndex];
 //   const BannerComponent = bannerComponents[currentBanner];
   return(<div className={`banner-rotation-manager ${className}`}></div>
@@ -113,9 +79,9 @@ export const,
       </Suspense>)
 )
       {/* Banner indicators */})
-      {visibleBanners.length > 1 && ()
+      {visibleBanners.length > 1 && ()}
         <div className='flex justify-center mt-4 space-x-2'></div>)
-          {visibleBanners.map((_, index) => (
+          {visibleBanners.map((_, index) => (}
             <button;
               key={index};
               onClick={() => setCurrentIndex(index)};
@@ -131,13 +97,8 @@ export const,
       >
         <BannerComponent /></BannerComponent>
       </Suspense>
-<<<<<<< HEAD
       {/* Banner indicators */}
       {/* TODO: Fix JSX expression */}
-=======
-      {/* Banner indicators */};
-      {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               key={index})
               onClick={() => setCurrentIndex(index)};
               className={/* TODO: Fix JSX expression */}`
@@ -148,12 +109,8 @@ export const,
         </button></div>
       )};
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default BannerRotationManager;
 `
   </BannerRotationManagerProps>

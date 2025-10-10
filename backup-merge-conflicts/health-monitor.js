@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 // }; if (this && this.monitorProcesses) {; await this && this.checkProcessHealth()}; if (this && this.monitorSystem) {; await this && this.checkSystemStatus()}; } catch (error) {/* TODO: Fix JSX expression */}
-=======
-// }; if (this && this.monitorProcesses) {; await this && this.checkProcessHealth()}; if (this && this.monitorSystem) {; await this && this.checkSystemStatus()}} catch (error) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   error: ${error && error.message}`)}}; async checkResourceUsage() {; try {; // Check memory usage; const totalMem = os && os.totalmem(); const freeMem = os && os.freemem(); const usedMem = totalMem - freeMem; const memUsagePercent = (usedMem / totalMem) * 100} this && this.log(`Memory)`
   usage: ${memUsagePercent && memUsagePercent.toFixed(2)}% (${(usedMem / 1024 / 1024 / 1024).toFixed(2)}GB used / ${(totalMem / 1024 / 1024 / 1024).toFixed(2)}GB total)`); if (memUsagePercent > this && this.alertThreshold) {/* TODO: Fix JSX expression */}`
   T: Memory usage ${memUsagePercent && memUsagePercent.toFixed(2)}% exceeds threshold ${this && this.alertThreshold}%`)}; // Check CPU usage; const cpus = os && os.cpus(); this && this.log(`CPU)`
@@ -69,13 +65,8 @@
   g: 'utf8' }); const processes = JSON.parse (pm2List); report.processes = processes.map (proc = > ({/* TODO: Fix JSX expression */};
   y: proc.monit?.memory || 0} cp)
   u: proc.monit?.cpu || 0}))} catch (error) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
   info: ${error.message}`)}' ; // Save report; const report_file = path.join (process.cwd (), 'logs / pm2 / health - report.json'); fs.writeFileSync (report_file, JSON.stringify (report, null) 2)); this.log (`Health report saved to ${report_file}`); } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error.message}`)}}' ; async start () {this.log ('Health monitor service started'); // Run health checks immediately; await this.checkSystemHealth (); await this.checkApplicationHealth (); await this.generateHealthReport (); // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth ()} await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}} ; async generateHealthReport() {/* TODO: Fix JSX expression */}
-=======
-  info: ${error.message}`)}' ; // Save report; const report_file = path.join (process.cwd (), 'logs / pm2 / health - report.json'); fs.writeFileSync (report_file, JSON.stringify (report, null) 2)); this.log (`Health report saved to ${report_file}`)} catch (error) {/* TODO: Fix JSX expression */}`
-  error: ${error.message}`)}}' ; async start () {this.log ('Health monitor service started'); // Run health checks immediately; await this.checkSystemHealth (); await this.checkApplicationHealth (); await this.generateHealthReport (); // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth ()} await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}} ; async generateHealthReport() {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   l: os.totalmem()} fre,
   e: os.freemem()} use,
   d: os.totalmem() - os.freemem()}; cpu,
@@ -110,13 +101,8 @@
   error: ${error.message}`); }; }; async checkApplicationHealth() {; try {; // Check if the application is responding;' const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8')); const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next; if (isNextJS) {; // Try to check if Next.js dev server is running; try {}' execSync('curl -f,
   http: //localhos,
   t:3000 > /dev/null 2>&1'} {/* TODO: Fix JSX expression */})
-<<<<<<< HEAD
   g: 'utf8' });' this.log('Application is responding on port 3000'); } catch (error) {;' this.log('Application is not responding on port 3000')} }; }; } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error.message}`); }; }; async generateHealthReport() {/* TODO: Fix JSX expression */}
-=======
-  g: 'utf8' });' this.log('Application is responding on port 3000')} catch (error) {;' this.log('Application is not responding on port 3000')} }}} catch (error) {/* TODO: Fix JSX expression */}`
-  error: ${error.message}`)}}; async generateHealthReport() {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: os.freemem()} use,
   d: os.totalmem() - os.freemem()}}; cpu,
   s: os.cpus().length}; processe,

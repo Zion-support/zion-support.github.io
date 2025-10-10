@@ -4,13 +4,13 @@ export const metadata = {
   title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
   description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains. Proven methods for Fortune 500 companies to maximize AI ROI.',
   keywords: 'AI cost optimization 2026, reduce AI costs 90%, AI spending optimization, enterprise AI cost reduction, AI ROI maximization, Fortune 500 AI savings',
-  openGraph: {
+  openGraph: {}
     title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
     description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026',
     images: [
-      {
+      {}
         url: 'https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg',
         width: 1200,
         height: 630,
@@ -21,15 +21,9 @@ $4};
     ]
   },
   twitte,
-<<<<<<< HEAD
   r: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  r: {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   car,
   d: 'summary_large_image',
     titl,
@@ -42,29 +36,17 @@ $4};
   s://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
   },
   robot,
-<<<<<<< HEAD
   s: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  s: {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   inde,
   x: true,
     follo,
   w: true,
     googleBo,
-<<<<<<< HEAD
   t: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  t: {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   inde,
   x: true,
       follo,
@@ -76,7 +58,6 @@ $4};
   },
   alternates: {
     canonical:   ,
-<<<<<<< HEAD
 $4}
 }
 
@@ -85,11 +66,3 @@ $4}
   O: Add content,}
 }
 
-=======
-$4};
-};
-  alternate,
-  s: {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

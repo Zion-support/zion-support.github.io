@@ -1,6 +1,6 @@
-const, September30NewContentMegaBanne, r = () => {
+const, September30NewContentMegaBanne, r = () => {}
   const, newArticle, s = [
-    {
+    {}
       tit, l, e: "AI, Neural, Coding Breakthrou, g, h","
       descripti, o, n: "Programming, at, the speed, of, thought with, 9, 9.7% accura, c, y","
       ic, o, n: Bra, i, n;
@@ -8,7 +8,7 @@ const, September30NewContentMegaBanne, r = () => {
       catego, r, y: "Neural, A, I","
       impa, c, t: "95% faster, developmen, t"
     };
-    {
+    {}
       tit, l, e: "AI, Holographic, Computing","
       descripti, o, n: "Immersive, 3D, data visualization, with, zero laten, c, y","
       ic, o, n: Laye, r, s;
@@ -16,7 +16,7 @@ const, September30NewContentMegaBanne, r = () => {
       catego, r, y: "Spatial, A, I","
       impa, c, t: "10 x, faster, insights"
     };
-    {
+    {}
       tit, l, e: "AI, Quantum, Consciousness","
       descripti, o, n: "1M, times, faster reasoning, with, emergent creativi, t, y","
       ic, o, n: At, o, m;
@@ -24,7 +24,7 @@ const, September30NewContentMegaBanne, r = () => {
       catego, r, y: "Quantum, A, I","
       impa, c, t: "1 M× performan, c, e"
     };
-    {
+    {}
       tit, l, e: "AI, Molecular, Manufacturing","
       descripti, o, n: "Atom, i, c-precision, production, with zero, wast, e","
       ic, o, n: Z, a, p;
@@ -32,7 +32,7 @@ const, September30NewContentMegaBanne, r = () => {
       catego, r, y: "NanoTe, c, h","
       impa, c, t: "1, 0, 0% recyclab, l, e"
     };
-    {
+    {}
       tit, l, e: "AI, Personalized, Education","
       descripti, o, n: "10x, better, learning outcomes, for, every stude, n, t","
       ic, o, n: GraduationC, a, p;
@@ -45,7 +45,7 @@ const, September30NewContentMegaBanne, r = () => {
       catego, r, y: "Neural, A, I",";
       impa, c, t: "95% faster, developmen, t"
     };
-    {
+    {}
       tit, l, e: "AI, Holographic, Computing",";
       descripti, o, n: "Immersive, 3D, data visualization, with, zero laten, c, y",";
       ic, o, n: Laye, r, s;
@@ -53,7 +53,7 @@ const, September30NewContentMegaBanne, r = () => {
       catego, r, y: "Spatial, A, I",";
       impa, c, t: "10 x, faster, insights"
     };
-    {
+    {}
       tit, l, e: "AI, Quantum, Consciousness",";
       descripti, o, n: "1M, times, faster reasoning, with, emergent creativi, t, y",";
       ic, o, n: At, o, m;
@@ -61,7 +61,7 @@ const, September30NewContentMegaBanne, r = () => {
       catego, r, y: "Quantum, A, I",";
       impa, c, t: "1 M× performan, c, e"
     };
-    {
+    {}
       tit, l, e: "AI, Molecular, Manufacturing",";
       descripti, o, n: "Atom, i, c-precision, production, with zero, wast, e",";
       ic, o, n: Z, a, p;
@@ -69,7 +69,7 @@ const, September30NewContentMegaBanne, r = () => {
       catego, r, y: "NanoTe, c, h",";
       impa, c, t: "1, 0, 0% recyclab, l, e"
     };
-    {
+    {}
       tit, l, e: "AI, Personalized, Education",";
       descripti, o, n: "10x, better, learning outcomes, for, every stude, n, t",";
       ic, o, n: GraduationC, a, p;
@@ -97,29 +97,17 @@ const, September30NewContentMegaBanne, r = () => {
         </div>)
         {/* Articles Grid */})
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">),
-          {newArticles.map((article, index) => (
-<<<<<<< HEAD
+          {newArticles.map((article, index) => (}
             <Link;
-          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent" />
             🚀 5 Revolutionary AI Breakthroughs,
   </
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {newArticles.map((article, index) => (</div>
+          {newArticles.map((article, index) => (</div>}
             <Link
               key={index}
               to={article.link}
-=======
-            <Link ;
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
-            🚀 5 Revolutionary AI Breakthroughs
-        </div>
-        {/* Articles Grid */};
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {newArticles.map((article, index) => (</div>
-            <Link key={index};
-              to={article.link};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover: bg-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
               <div className="flex items-start gap-4">,
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">,
@@ -182,7 +170,6 @@ const, September30NewContentMegaBanne, r = () => {
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
           <Link,
             <div></div>
-<<<<<<< HEAD
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>
 const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
     }
@@ -202,27 +189,6 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-              <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>;
-const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   return (<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8,"
   md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden"></div>
@@ -299,16 +265,10 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* CTA Buttons */}
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
           <Link
             to="/blog"
-=======
-        {/* CTA Buttons */};
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-          <Link to="/blog"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
             <Sparkles className="w-5 h-5" />
             Get Started Today,
@@ -328,7 +288,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
           <span className="bg-green-500/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium border border-green-400/30">
             🔬 Molecular Manufacturing;
           </span>
-          <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30">
+          <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30" />
         {/* CTA Buttons */}"
         <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center items-center"></div>

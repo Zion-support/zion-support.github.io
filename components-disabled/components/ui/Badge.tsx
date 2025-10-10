@@ -35,15 +35,9 @@ classNam,
   e:)}' 'border-transparent bg-destructive text-destructive-foreground,
   hover: bg-destructive/80',outlin,
   e: 'text-foreground'}' })defaultVariant,
-<<<<<<< HEAD
   s: {/* TODO: Fix JSX expression */}
   t: 'default'}} } )export interface BadgeProps; extends React.HTMLAttributes<HTMLDivElement />,VariantProps<typeof badgeVariants /> {}function Badge() {return (<div className = {cn (badge_variants ({ variant }); class_name)} {...props} />; } export {Badge} badgeVariants } interface BadgeProps {/* TODO: Fix JSX expression */}
   n: React.ReactNode}' variant?: 'default' | 'secondary' | 'destructive' | 'outline' className?: string}} } } export default function Badge({children} ' variant = 'default') }' className = '' } }: BadgeProps) {/* TODO: Fix JSX expression */}
-=======
-  s: {/* TODO: Fix JSX expression */};
-  t: 'default'}} } )export interface BadgeProps; extends React.HTMLAttributes<HTMLDivElement />,VariantProps<typeof badgeVariants /> {}function Badge() {return (<div className = {cn (badge_variants ({ variant }); class_name)} {...props} />} export {Badge} badgeVariants } interface BadgeProps {/* TODO: Fix JSX expression */};
-  n: React.ReactNode}' variant?: 'default' | 'secondary' | 'destructive' | 'outline' className?: string}} } } export default function Badge({children} ' variant = 'default') }' className = '' } }: BadgeProps) {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   e: 'bg-red-100 text-red-800'}' outlin,"
   e: 'border border-gray-300 text-gray-700'} } }; const classes = `${baseClasses} ${variantClasses[variant]} ${className}`; } return ( <span className={classes} /> {children} < ); } export {Badge} badgeVariants } const badge_variants = cva (\\"inline - flex items - center rounded - full border px - 2.5 py - 0.5 text - xs font - semibold transition - colors,
   focus: outline - none,

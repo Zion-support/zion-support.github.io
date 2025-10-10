@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download } from 'lucide-react'
-const TutorialsPage: React.FC = () => {
+const TutorialsPage: React.FC = () => {}
   const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
     { id: 'all', name: 'All Tutorials', icon: BookOpen },
@@ -11,10 +11,10 @@ const TutorialsPage: React.FC = () => {
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
     { id: 'security', name: 'Security', icon: Shield },
     { id: 'integration', name: 'Integration', icon: Code }
-  ]
+  ];
 
   const tutorials = [
-    {
+    {}
       id: 1,
       title: 'Getting Started with AI Chat API',
       description: 'Learn how to integrate our AI chat API into your application with step-by-step examples.',
@@ -25,7 +25,7 @@ const TutorialsPage: React.FC = () => {
       students: 1250,
       thumbnail: '/api/placeholder/400/250',
       tags: ['API', 'AI', 'Chat', 'Integration'],
-      content: {
+      content: {}
         overview: 'This tutorial covers the basics of integrating our AI chat API into your application.',
         prerequisites: ['Basic programming knowledge', 'API key', 'HTTP client'],
         steps: [
@@ -37,7 +37,7 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     },
-    {
+    {}
       id: 2,
       title: 'Building a Secure Cloud Infrastructure',
       description: 'Complete guide to setting up secure cloud infrastructure using our IT services.',
@@ -48,7 +48,7 @@ const TutorialsPage: React.FC = () => {
       students: 890,
       thumbnail: '/api/placeholder/400/250',
       tags: ['Cloud', 'Security', 'Infrastructure', 'DevOps'],
-      content: {
+      content: {}
         overview: 'Learn how to build and secure cloud infrastructure using best practices.',
         prerequisites: ['AWS/Azure knowledge', 'Docker basics', 'Security concepts'],
         steps: [
@@ -60,7 +60,7 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     },
-    {
+    {}
       id: 3,
       title: 'Creating Your First Micro SaaS Application',
       description: 'Build a complete micro SaaS application from scratch using our platform.',
@@ -71,7 +71,7 @@ const TutorialsPage: React.FC = () => {
       students: 650,
       thumbnail: '/api/placeholder/400/250',
       tags: ['SaaS', 'Full-stack', 'Database', 'Authentication'],
-      content: {
+      content: {}
         overview: 'Complete tutorial on building a micro SaaS application with user management and billing.',
         prerequisites: ['React/Node.js knowledge', 'Database concepts', 'Payment integration'],
         steps: [
@@ -83,7 +83,7 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     },
-    {
+    {}
       id: 4,
       title: 'AI-Powered Data Analytics Dashboard',
       description: 'Build an intelligent analytics dashboard using our AI data analytics services.',
@@ -94,7 +94,7 @@ const TutorialsPage: React.FC = () => {
       students: 980,
       thumbnail: '/api/placeholder/400/250',
       tags: ['Analytics', 'Dashboard', 'AI', 'Visualization'],
-      content: {
+      content: {}
         overview: 'Create a powerful analytics dashboard with AI-powered insights and visualizations.',
         prerequisites: ['JavaScript/React', 'Chart.js knowledge', 'API integration'],
         steps: [
@@ -106,7 +106,7 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     },
-    {
+    {}
       id: 5,
       title: 'Cybersecurity Best Practices',
       description: 'Learn essential cybersecurity practices to protect your applications and data.',
@@ -117,7 +117,7 @@ const TutorialsPage: React.FC = () => {
       students: 2100,
       thumbnail: '/api/placeholder/400/250',
       tags: ['Security', 'Best Practices', 'Compliance', 'Protection'],
-      content: {
+      content: {}
         overview: 'Essential cybersecurity practices every developer should know.',
         prerequisites: ['Basic security concepts', 'Application development experience'],
         steps: [
@@ -129,7 +129,7 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     },
-    {
+    {}
       id: 6,
       title: 'API Integration Patterns',
       description: 'Master different patterns for integrating with external APIs and services.',
@@ -140,7 +140,7 @@ const TutorialsPage: React.FC = () => {
       students: 750,
       thumbnail: '/api/placeholder/400/250',
       tags: ['API', 'Integration', 'Patterns', 'Architecture'],
-      content: {
+      content: {}
         overview: 'Learn various patterns and best practices for API integration.',
         prerequisites: ['API knowledge', 'Design patterns', 'Error handling'],
         steps: [
@@ -152,7 +152,7 @@ const TutorialsPage: React.FC = () => {
         ]
       }
     }
-  ]
+  ];
 
   const filteredTutorials = selectedCategory === 'all' 
     ? tutorials 
@@ -167,10 +167,10 @@ const TutorialsPage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/tutorials" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+        <div className="container mx-auto px-4 py-16 pt-24" />
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-16" />
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">
               Tutorials & Learning
             </h1>
@@ -178,7 +178,7 @@ const TutorialsPage: React.FC = () => {
               Master our AI, IT, and Micro SaaS services with step-by-step tutorials, 
               code examples, and best practices from our expert team.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4" />
               <a
                 href="#featured"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
@@ -225,17 +225,17 @@ const TutorialsPage: React.FC = () => {
           </div>
 
           {/* Featured Tutorials */}
-          <section id="featured" className="mb-16">
+          <section id="featured" className="mb-16" />
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Tutorials</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredTutorials.map((tutorial) => (
+              {featuredTutorials.map((tutorial) => (}
                 <div key={tutorial.id} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
                   <div className="relative">
                     <div className="w-full h-48 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-t-lg flex items-center justify-center">
                       <Play className="w-16 h-16 text-white opacity-80" />
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <span className={`px-2 py-1 rounded text-xs font-semibold ${
+                    <div className="absolute top-4 right-4" />
+                      <span className={`px-2 py-1 rounded text-xs font-semibold ${}
                         tutorial.difficulty === 'Beginner' 
                           ? 'bg-green-600 text-white' 
                           : tutorial.difficulty === 'Intermediate'
@@ -246,15 +246,15 @@ const TutorialsPage: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="p-6">
+                  <div className="p-6" />
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {tutorial.title}
                     </h3>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                       {tutorial.description}
                     </p>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <div className="flex items-center justify-between mb-4" />
+                      <div className="flex items-center space-x-4 text-sm text-gray-400" />
                         <span className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
                           {tutorial.duration}
@@ -290,10 +290,10 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Category Filter */}
-          <section className="mb-12">
+          <section className="mb-12" />
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
+            <div className="flex flex-wrap justify-center gap-4" />
+              {categories.map((category) => (}
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -311,17 +311,17 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* All Tutorials */}
-          <section id="all-tutorials" className="mb-16">
+          <section id="all-tutorials" className="mb-16" />
             <h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredTutorials.map((tutorial) => (
+              {filteredTutorials.map((tutorial) => (}
                 <div key={tutorial.id} className="cyber-card-enhanced group hover:scale-105 transition-all duration-300">
                   <div className="relative">
                     <div className="w-full h-48 bg-gradient-to-r from-purple-500 to-pink-600 rounded-t-lg flex items-center justify-center">
                       <BookOpen className="w-16 h-16 text-white opacity-80" />
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <span className={`px-2 py-1 rounded text-xs font-semibold ${
+                    <div className="absolute top-4 right-4" />
+                      <span className={`px-2 py-1 rounded text-xs font-semibold ${}
                         tutorial.difficulty === 'Beginner' 
                           ? 'bg-green-600 text-white' 
                           : tutorial.difficulty === 'Intermediate'
@@ -332,15 +332,15 @@ const TutorialsPage: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="p-6">
+                  <div className="p-6" />
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {tutorial.title}
                     </h3>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                       {tutorial.description}
                     </p>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <div className="flex items-center justify-between mb-4" />
+                      <div className="flex items-center space-x-4 text-sm text-gray-400" />
                         <span className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
                           {tutorial.duration}
@@ -376,7 +376,7 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Learning Paths */}
-          <section className="mb-16">
+          <section className="mb-16" />
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card-enhanced p-8">
@@ -387,7 +387,7 @@ const TutorialsPage: React.FC = () => {
                 <p className="text-gray-300 mb-6">
                   Master AI development from basics to advanced implementations.
                 </p>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6" />
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     AI Fundamentals
@@ -414,7 +414,7 @@ const TutorialsPage: React.FC = () => {
                 <p className="text-gray-300 mb-6">
                   Learn cloud architecture and infrastructure management.
                 </p>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6" />
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     Cloud Fundamentals
@@ -441,7 +441,7 @@ const TutorialsPage: React.FC = () => {
                 <p className="text-gray-300 mb-6">
                   Build and scale your own SaaS business from scratch.
                 </p>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6" />
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     SaaS Fundamentals
@@ -463,9 +463,9 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* Resources */}
-          <section className="mb-16">
+          <section className="mb-16" />
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" />
               <div className="cyber-card-enhanced p-6 text-center">
                 <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Code Examples</h3>
@@ -513,13 +513,13 @@ const TutorialsPage: React.FC = () => {
           </section>
 
           {/* CTA */}
-          <section className="mb-16">
-          <div className="cyber-card-enhanced p-8 text-center">
+          <section className="mb-16" />
+          <div className="cyber-card-enhanced p-8 text-center" />
               <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
               <p className="text-gray-300 mb-6">
                 Join thousands of developers who are already building amazing applications with our services.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4" />
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"

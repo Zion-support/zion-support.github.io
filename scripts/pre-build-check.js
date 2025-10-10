@@ -34,11 +34,11 @@ requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
 });
 
 // Check package.json for critical dependencies;
-try {
+try {}
   const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'));
   const _requiredDeps = ['next', 'react', 'react-dom'];
   
-  requiredDeps.forEach((dep) => {
+  requiredDeps.forEach((dep) => {}
     if (!packageJson.dependencies[dep]) {
       errors.push(`Missing required dependency: ${dep}`);
 try {/* TODO: Fix JSX expression */}`
@@ -50,7 +50,7 @@ try {/* TODO: Fix JSX expression */}`
 }
 
 // Check TypeScript configuration;
-try {
+try {}
     const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'));
   
   if (!tsConfig.compilerOptions) {

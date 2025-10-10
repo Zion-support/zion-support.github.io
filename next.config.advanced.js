@@ -13,15 +13,15 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  images: {
+  images: {}
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  async headers() {
+  async headers() {}
     return [
-      {
+      {}
         source: '/(.*)',
         headers: [
           {
@@ -38,12 +38,11 @@ const nextConfig = {
           },
         ],
       },
-      {
+      {}
         source: '/api/(.*)',
         headers: [
           {
             key: 'Cache-Control',
-<<<<<<< HEAD
             value: 'public, max-age=3600, s-maxage=3600',
           },
         ],
@@ -52,7 +51,4 @@ const nextConfig = {
   },
 };
 
-=======
-            value: 'public, max-age=3600, s-maxage=3600'}]}]}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 module.exports = nextConfig;

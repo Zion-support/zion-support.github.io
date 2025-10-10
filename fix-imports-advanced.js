@@ -1,22 +1,15 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-<<<<<<< HEAD
 
 
 function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */}
 }
 
-=======
-;
-function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */};
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     // Calculate relative paths based on file location;
-    if (isInBlog || isInGuides || isInPages) {
+    if (isInBlog || isInGuides || isInPages) {}
       utilsPath = '../../utils/';
       typesPath = '../../types/';
     } else if (isInComponents) {
@@ -75,7 +68,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */};
       };
     });
-<<<<<<< HEAD
 
     if (modified) {/* TODO: Fix JSX expression */}
     }
@@ -84,18 +76,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */};
   }
 }
 
-=======
-    if (modified) {/* TODO: Fix JSX expression */};
-    };
-    return false} catch (error) {/* TODO: Fix JSX expression */};
-  };
-};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-function processDirectory(dirPath) {
-  items.forEach(item => {)
+function processDirectory(dirPath) {}
+  items.forEach(item => {)}
 )
-    if (stat.isDirectory()) {
+    if (stat.isDirectory()) {}
       totalFixed += processDirectory(fullPath);
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
@@ -105,13 +89,9 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */};
       };
     };
   });
-<<<<<<< HEAD
 
   return totalFixed;
 }
 
-=======
-  return totalFixed};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 // Process the app directory;
 // Process the app directory;`

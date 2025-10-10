@@ -1,7 +1,7 @@
 import React from 'react';
 interface EnhancedSidebarProps {/* TODO: Fix JSX expression */}
 }
-const EnhancedSidebar = React.memo(function EnhancedSidebar({)
+const EnhancedSidebar = React.memo(function EnhancedSidebar({)}
   className = '')
 }: EnhancedSidebarProps) {
   return(<div className={`bg-blue-100 p-4 rounded-lg ${className}`}>)

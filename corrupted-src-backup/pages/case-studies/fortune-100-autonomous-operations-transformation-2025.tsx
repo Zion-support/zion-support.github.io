@@ -26,11 +26,7 @@
             Back, to, Case Studi, e, s;
               <span, className='te, x, t-bl, u, e-2, 0, 0'>12-month, transformatio, n</sp, a, n>
             </div>
-<<<<<<< HEAD
             <h1, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-=======
-            <h1 , className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               Fortune, 100, Enterprise:</h1>
               <span , className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, m, t-2'>
                 $650M, Value, Creation Through, Autonomous, Business Operatio, n, s;
@@ -99,8 +95,8 @@
                 <h3 , className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
                   Operational, Inefficiencie, s;
                 </h3>
-                <ul , className='spa, c, e-y-3, tex, t-r, e, d-1, 0, 0'>
-                  <li , className='flex, item, s-start, ga, p-2'>
+                <ul , className='spa, c, e-y-3, tex, t-r, e, d-1, 0, 0' />
+                  <li , className='flex, item, s-start, ga, p-2' />
                     <div, className='w-2 h-2, b, g-r, e, d-400, rounde, d-full, m, t-2' /></div>
                     <sp , a, n>
                       2.3M, manual, transactions per, month, across 15, countrie, s;
@@ -178,17 +174,12 @@
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
             {/* Operational, Excelle, n, c, e */}
-=======
-            {/* Operational, Excelle, n, c, e */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-8'></div>
               <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-bl, u, e-4, 0, 0/30'></div>
                 <h3 , className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
                   Spe, e, d & Sca, l, e;
                 </h3>
-<<<<<<< HEAD
                 <ul, classNam, e='spa, c, e-y-3'>
                   <li, classNam, e='flex, item, s-start, ga, p-3'>
                     <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
@@ -197,16 +188,6 @@
                   <li, classNam, e='flex, item, s-start, ga, p-3'>
                     <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
               <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30'>
-=======
-                <ul , classNam, e='spa, c, e-y-3'>
-                  <li , classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle , classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
-                  <li , classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle , classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
-                  <li , classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle , classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
-              <div , classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30'></div>
                 <h3 , classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
                   Quali, t, y & Accura, c, y;
@@ -220,21 +201,21 @@
                     <CheckCircle , classNam, e='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
                     <li , classNam, e = 'flex, item, s-center, ga, p-2'>
                       <div, classNam, e='w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l' /></div>
-                  <li , className='flex, item, s-start, ga, p-3'>
+                  <li , className='flex, item, s-start, ga, p-3' />
                     <CheckCircle , className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
-                  <li , className='flex, item, s-start, ga, p-3'>
+                  <li , className='flex, item, s-start, ga, p-3' />
                     <CheckCircle , className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
               </div>
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30'></div>
                 <h3 , className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
                   Quali, t, y & Accura, c, y;
                 </h3>
-                <ul , className='spa, c, e-y-3'>
-                  <li , className='flex, item, s-start, ga, p-3'>
+                <ul , className='spa, c, e-y-3' />
+                  <li , className='flex, item, s-start, ga, p-3' />
                     <CheckCircle , className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
-                  <li , className='flex, item, s-start, ga, p-3'>
+                  <li , className='flex, item, s-start, ga, p-3' />
                     <CheckCircle , className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
-                  <li , className='flex, item, s-start, ga, p-3'>
+                  <li , className='flex, item, s-start, ga, p-3' />
                     <CheckCircle , className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
                     <li , classNam, e = 'flex, item, s-center, ga, p-2'>
                       <div, className='w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l' /></div>
@@ -302,11 +283,7 @@
               </div>
             </div>
           </div>
-<<<<<<< HEAD
           {/* Related, Cont, e, n, t */}
-=======
-          {/* Related, Cont, e, n, t */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, t-16'></div>
             <h2 , className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'>
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'></h2>

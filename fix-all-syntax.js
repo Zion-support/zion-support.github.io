@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
-function fixAllSyntaxErrors(filePath) {
-  try {
+function fixAllSyntaxErrors(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     // Fix duplicate property patterns: property: 'value'
@@ -11,9 +11,9 @@ function fixAllSyntaxErrors(filePath) {
       return `${prop}: '${value}'`;
     });
     // Fix missing commas before properties
-    content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, p1, p2) => {
+    content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, p1, p2) => {}
       const lines = match.split('\n');
-      if (lines.length >= 2) {
+      if (lines.length >= 2) {}
         const firstLine = lines[0];
         const secondLine = lines[1];
         if (!firstLine.includes(',') && secondLine.trim().startsWith(p2 + ':')) {
@@ -48,11 +48,11 @@ function fixAllSyntaxErrors(filePath) {
     return false;
   };
 };
-function findFilesWithSyntaxErrors(dir) {
+function findFilesWithSyntaxErrors(dir) {}
   const files = [];
-  function traverse(currentDir) {
+  function traverse(currentDir) {}
     const items = fs.readdirSync(currentDir);
-    for (const item of items) {
+    for (const item of items) {}
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {

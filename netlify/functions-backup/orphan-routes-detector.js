@@ -2,7 +2,7 @@ const { execSync } = require('child_process');
 exports.config = {/* TODO: Fix JSX expression */}
   e: '11 */6 * * *'}
 }
-exports.handler = async function () {try {
+exports.handler = async function () {try {}
     execSync('node automation/orphan-routes-detector.cjs || true', {)
       stdio: inherit),
         shell: true}
@@ -35,7 +35,7 @@ const { execSync } = require('child_process'); exports.config = {' schedule: '11
       });' return {statusCode: 200,
         body: JSON.stringify({ok: true),
         task: 'orphan-routes-detector' }) } } catch (e) {return { statusCode: 200,
-        body: JSON.stringify({ok: false),
+        body: JSON.stringify({ok: false),}
         error: String(e,)}) } } }'
 const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JSX expression */}
   e: '11 */6 * * *'} } exports.handler = async function() {/* TODO: Fix JSX expression */}

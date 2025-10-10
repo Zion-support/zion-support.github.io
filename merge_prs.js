@@ -1,21 +1,15 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import https from 'https';
 
 // GitHub API configuration;
-function makeGitHubRequest(endpoint, method = 'GET', data = null) {
-  return new Promise((resolve, reject) => {
-    const options = {
-=======
-  return new Promise((resolve, reject) => {;
-const options = {
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+function makeGitHubRequest(endpoint, method = 'GET', data = null) {}
+  return new Promise((resolve, reject) => {}
+    const options = {}
       hostname: 'api.github.com'
       port: 443
       path: endpoint
       method: method,
-      headers: {,
+      headers: {,}
         'User-Agent': 'Zion-App-Automation',
         'Accept': 'application/vnd.github.v3+json',
         'Content-Type': 'application/json'
@@ -58,8 +52,8 @@ async function getPRDetails(prNumber) {/* TODO: Fix JSX expression */}
   }
 }
 
-async function mergePR(prNumber, title) {
-    try {
+async function mergePR(prNumber, title) {}
+    try {}
     // Get PR details first;
     if (!prDetails) {
 
@@ -90,7 +84,7 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
       mergeData;
     );
 
-    if (response.status === 200) {
+    if (response.status === 200) {}
     return true
   } else {
       return false;
@@ -113,8 +107,8 @@ async function mergePR(prNumber, title) {/* TODO: Fix JSX expression */}
   }
 }
 
-async function mergeAllPRs() {
-  try {
+async function mergeAllPRs() {}
+  try {}
     if (prs.length === 0) {
 
       return;
@@ -137,8 +131,8 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
     }
 
     // Merge PRs one by one;
-    for (const pr of mainPRs) {
-    if (success) {
+    for (const pr of mainPRs) {}
+    if (success) {}
         successCount++
   } else {
         failCount++;
@@ -155,7 +149,7 @@ async function mergeAllPRs() {/* TODO: Fix JSX expression */}
 }
 
 // Run the merge process;
-mergeAllPRs().then(() => {
+mergeAllPRs().then(() => {}
     process.exit(0)
   }).catch(error => {
     )

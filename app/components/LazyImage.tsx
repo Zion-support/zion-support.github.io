@@ -1,16 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 }
   ]
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'};
-  ];
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const benefits = [
 ];
 'Advanced AI technology integration',
@@ -21,7 +14,6 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
   ]
 {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
@@ -29,15 +21,6 @@ const benefits = [
           <div className="text-center"></div>
             <h1>
               <span>
-=======
-  ];
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 LazyImage
               </span>
               <br>
@@ -71,12 +54,8 @@ const benefits = [
               Experience the power of our lazyimage solutions for your business.,
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
                 <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>

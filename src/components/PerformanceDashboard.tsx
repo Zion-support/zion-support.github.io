@@ -1,8 +1,7 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react';
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
     loadTime: number;
   renderTime: number
   memoryUsage: number
@@ -13,7 +12,7 @@ interface PerformanceProps {
     onMetricsUpdate?: (metrics: PerformanceMetrics) => void
   }
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({}
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
@@ -32,7 +31,7 @@ fps
       return () => clearInterval(interval)
   }
   }, [isMonitoring, onMetricsUpdate]);
-  const checkPerformanceAlerts = useCallback((currentMetrics: PerformanceMetrics) => {
+  const checkPerformanceAlerts = useCallback((currentMetrics: PerformanceMetrics) => {}
     const newAlerts: string[] = [],
     if (currentMetrics.loadTime > 3000) {
       newAlerts.push('Load time is above 3 seconds')
@@ -49,7 +48,7 @@ fps
   const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
   }
-  const formatBytes = (bytes: number) => {
+  const formatBytes = (bytes: number) => {}
     if (bytes === 0) return '0 Bytes'
     const k = 1024,
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
@@ -62,9 +61,9 @@ fps
     return 'text-red-400'
   }
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10" />
+      <div className="flex items-center justify-between mb-6" />
+        <h3 className="text-xl font-semibold text-white flex items-center gap-2" />
           <Activity className="w-5 h-5" />
           Performance Dashboard;
   </
@@ -79,7 +78,7 @@ fps
           {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
         </button>
       </div>
-      {alerts.length > 0 && (
+      {alerts.length > 0 && (}
         <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
           <div className="flex items-center gap-2 mb-2">
             <AlertTriangle className="w-5 h-5 text-red-400" />
@@ -144,46 +143,3 @@ export default PerformanceDashboard;
   </div>
   </PerformanceMetrics>
   </PerformanceProps>
-=======
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;};
-};
-  loadTim,
-  e: number;,
-    renderTim,
-  e: number;,
-    memoryUsag,
-  e: number;,
-    fp,
-  s: number;
-};
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;};
-};
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
-  [key: string]: number;
-};
-const,
-  PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
-  });
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  p: entry.startTime }));
-        };
-      });
-    });
-    try {/* TODO: Fix JSX expression */}
-  s: ['paint'] });
-      return () => observer.disconnect();
-    } catch (error) {/* TODO: Fix JSX expression */}
-    };
-  }, []);
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    };
-  }, [metrics, onMetricsUpdate]);
-  return null;
-};
-export default PerformanceDashboard;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

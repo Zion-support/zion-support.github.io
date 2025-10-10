@@ -1,22 +1,11 @@
 impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
-<<<<<<< HEAD
-const October2025DocumentAutomationBanne, r = () => { 
+const October2025DocumentAutomationBanne, r = () => { }
   return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, elements */}
       <div, className='absolute, inse, t-0, opacit, y-10'>
         <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
-=======
-const October2025DocumentAutomationBanne, r = () => {
-return (
-  return(<div , classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n'>
-);
-} {' ' };
-      {/* Animated, background, elements */};
-      <div , className='absolute, inse, t-0, opacit, y-10'>
-        <div , className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' };
       {/* Animated, background, elements */}</div>
@@ -31,17 +20,10 @@ return (
           <div, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pul, s, e'></div>
             <FileText , className='w-4 h-4, m, r-2' />
             NEW, RELEAS, E - OCTOB, E, R , 1, 20, 2, 5;
-<<<<<<< HEAD
             <FileText, classNam, e = 'w-4 h-4, m, l-2' />
 const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
       {/* Animated, background, elements */}
-=======
-            <FileText, classNam, e = 'w-4 h-4, m, l-2' />;
-const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression */};
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' };
-      {/* Animated, background, elements */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className='absolute, inse, t-0, opacit, y-10'></div>
         <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' /></div>
         <div, className='absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e'
@@ -68,15 +50,9 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
             Discover, how, leading enterprises, achi, e, v, e{' '})
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>)
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d;
-<<<<<<< HEAD
             Transform, Operations, with AI-Powered, Document, Processing;
   </
           <p, className='te, x, t-lg, tex, t-indi, g, o-200, ma, x-w-4xl, m, x-au, t, o'>
-=======
-            Transform, Operations, with AI-Powered, Document, Processing
-          </p>
-          <p , className='te, x, t-lg, tex, t-indi, g, o-200, ma, x-w-4xl, m, x-au, t, o'>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             Discover, how, leading enterprises, achi, e, v, e{' '}</p>
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>,
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d
@@ -137,7 +113,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
               <h3 , className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
                 Intelligent, Document, Automation: Complete, Technical, Guide;
               </h3>
-              <p , className='te, x, t-indi, g, o-100, tex, t-sm, m, b-4'>
+              <p , className='te, x, t-indi, g, o-100, tex, t-sm, m, b-4' />
                 Master, A, I-powered, document, processing with, advanced, O, C, R, N, L, P)
           <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'></div>
             {/* Blog, P, o, s, t */};

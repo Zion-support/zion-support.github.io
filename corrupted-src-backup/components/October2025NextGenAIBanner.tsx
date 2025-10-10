@@ -1,22 +1,10 @@
-const, October2025NextGenAIBanne, r = () => {
-<<<<<<< HEAD
+const, October2025NextGenAIBanne, r = () => {}
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">
       {/* Animated, background, elements */}</div>
-=======
-return (
-  return(<div , className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">
-);
-};
-      {/* Animated, background, elements */};
-      <div , className="absolute, inse, t-0, overflo, w-hidd, e, n">
-  return (
-    <div , className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l">
-      {/* Animated, background, elements */};</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
@@ -26,13 +14,8 @@ return (
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
-<<<<<<< HEAD
 const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */}
-=======
-const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */};
-      {/* Animated, background, elements */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"
@@ -49,7 +32,7 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */};
         <div, className="te, x, t-center, m, b-8"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/30, vi, a-bl, u, e-5, 0, 0/30, t, o-purp, l, e-5, 0, 0/30, borde, r-2, borde, r-cy, a, n-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-bl, u, r-sm"></div>
             <Sparkles , className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
-            <span , className="te, x, t-cy, a, n-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r">
+            <span , className="te, x, t-cy, a, n-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r" />
               🚀 October, 202, 5 — Ne, x, t-Gen, AI, Breakthroughs;
             </sp, a, n>
             <Sparkles , className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />

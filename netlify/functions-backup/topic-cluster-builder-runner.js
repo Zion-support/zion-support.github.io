@@ -1,13 +1,13 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('topic-cluster-builder-runner function triggered')}
     // Topic cluster building simulation;
-    const result = {
+    const result = {}
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
       },
-      body: JSON.stringify({message: Topic cluster builder runner executed successfully)
+      body: JSON.stringify({message: Topic cluster builder runner executed successfully)}
         timestamp: new Date().toISOString()
         function: 'topic-cluster-builder-runner',
         source: event.source || 'unknown',
@@ -26,7 +26,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //   } catch (error) {
     // console.error('Error in topic-cluster-builder-runner: ') error
   }
-    return {
+    return {}
       statusCode: 500,
       headers: {,
         'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     }
   }
 }
-        timestamp: new Date().toISOString(),' function: 'topic-cluster-builder-runner',' source: event.source || 'unknown', building: {' status: 'active', clusters: 0,
+        timestamp: new Date().toISOString(),' function: 'topic-cluster-builder-runner',' source: event.source || 'unknown', building: {' status: 'active', clusters: 0,}
         lastBuilt: new Date().toISOString() } }) } return result; } catch (error) {
     ' // console.error('Error in topic-cluster-builder-runner: ') error
   } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'topic-cluster-builder-runner' }) } } }'

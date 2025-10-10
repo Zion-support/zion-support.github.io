@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs';
-function fixAllJSXIssues(filePath) {
-  try {
+function fixAllJSXIssues(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     // Fix all self-closing div tags that should contain content
@@ -70,7 +70,7 @@ function fixAllJSXIssues(filePath) {
         replacement: '</button>'
       };
     ];
-    patterns.forEach(pattern => {
+    patterns.forEach(pattern => {}
       const newContent = content.replace(pattern.regex, pattern.replacement);
       if (newContent !== content) {
         content = newContent;

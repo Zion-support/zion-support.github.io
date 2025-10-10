@@ -22,7 +22,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="te, x, t-center, m, b-16"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, border, border-emera, l, d-5, 0, 0/30, m, b-8"></div>
             <Sparkles , className="w-6 h-6, tex, t-emera, l, d-400, animat, e-pul, s, e" />
-            <span , className="te, x, t-emera, l, d-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">
+            <span , className="te, x, t-emera, l, d-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e" />
               🌟 FEBRUARY, 202, 6: REVOLUTIONARY, CONTENT, SHOWCASE;
             </sp, a, n>
             <Sparkles, className="w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Sparkles>
@@ -36,13 +36,13 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
           </p>
           {/* Achievement, St, a, t, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12">)
-            { [)
+            { [)}
               { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  })
               {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  })
               {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  })
           {/* Achievement, St, a, t, s */};
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4 xl, m, x-auto, m, b-12"></div>
-            { [
+            { [}
               { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n:</div> <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },
               {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },
               {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
@@ -98,7 +98,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
         </div>
         {/* Featured, Content, Cards */};
         <div , classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) =  > (</div>
+          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) =  > (</div>}
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20"
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }};
              > {/* Card, glow, effect */}</div>
@@ -114,7 +114,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
                 </div>
                 {/* Catego, r, y */};
                 <div, classNam, e = "mb-4"></div>
-                  <span , className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-emera, l, d-400, tex, t-xs, fon, t-semibold, border, border-emera, l, d-5, 0, 0/30">
+                  <span , className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-emera, l, d-400, tex, t-xs, fon, t-semibold, border, border-emera, l, d-5, 0, 0/30" />
         {/* Featured, Content, Cards */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
           {/* TODO: Fix JSX expression */}"
@@ -193,7 +193,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>
               <Star , className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-              <span , className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
+              <span , className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e" />
                 EXCLUSIVE, FEBRUARY, OFFER;
               </sp, a, n>
             </div>

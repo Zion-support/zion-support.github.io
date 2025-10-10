@@ -1,10 +1,10 @@
-module.exports = {
-    metaTags: {,
+module.exports = {}
+    metaTags: {,}
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
     robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1'
     canonical: true
     alternate: true,
-    ogTags: {
+    ogTags: {}
       type: 'website'
       locale: 'en_US'
       site_name: 'Zion Tech Group'
@@ -16,13 +16,13 @@ module.exports = {
       card: 'summary_large_image',
       creator: '@ZionTechGroup',
       site: '@ZionTechGroup'},
-    additional: {,
+    additional: {,}
       'theme-color': '#000000',
       'msapplication-TileColor': '#000000',
       'apple-mobile-web-app-capable': 'yes',
       'apple-mobile-web-app-status-bar-style': 'black-translucent'}},
-  structuredData: {
-    organization: {
+  structuredData: {}
+    organization: {}
       '@type': 'Organization'
       name: 'Zion Tech Group'
       url: 'https://zion.app'
@@ -36,11 +36,11 @@ module.exports = {
         'https://twitter.com/ZionTechGroup',
         'https: //linkedin.com/company/zion-tech-group',
         'https: //github.com/Zion-Holdings']},
-    website: {
+    website: {}
       '@type': 'WebSite',
       name: 'Zion Tech Group',
       url: 'https://zion.app',
-      potentialAction: {,
+      potentialAction: {,}
         '@type': 'SearchAction',
         target: 'https://zion.app/search?q={search_term_string}',
         'query-input': 'required name=search_term_string'}},
@@ -50,22 +50,15 @@ module.exports = {
     reviews: true
     events: true,
   },
-  sitemapOptimization: {
+  sitemapOptimization: {}
     dynamic: true;
-    priority: {
+    priority: {}
       home: 1;
       services: 0.9;
-<<<<<<< HEAD
       about: 0.8
       contact: 0.7
       blog: 0.6,
 module.exports = {/* TODO: Fix JSX expression */}
-=======
-      about: 0.8;
-      contact: 0.7;
-      blog: 0.6;
-module.exports = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     twitterCard,
   s: {/* TODO: Fix JSX expression */};
@@ -108,14 +101,14 @@ module.exports = {/* TODO: Fix JSX expression */};
     images: true
     videos: true,
   },
-  coreWebVitals: {,
+  coreWebVitals: {,}
     lcp: {,
       target: 2.5,
       optimization: 'image-optimization, critical-css, resource-hints'},
     fid: {,
       target: 100,
       optimization: 'code-splitting-loading, third-party-optimization'},
-    cls: {,
+    cls: {,}
       target: 0.1,
       optimization: 'image-dimensions, font-loading, dynamic-content',
     lastmo,

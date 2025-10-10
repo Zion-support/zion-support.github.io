@@ -3,10 +3,10 @@ impo, r, t { Shie, l, d } fr, o, m "luci, d, e-rea, c, t";"
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';
-const, TrendingContentBanne, r: Rea, c, t.FC = () => {
+const, TrendingContentBanne, r: Rea, c, t.FC = () => {}
   con, s, t [currentInd, e, x, setCurrentInd, e, x] = useSta, t, e(0);
   const, trendingItem, s = [
-    {
+    {}
       tit, l, e: "AI, Disaster, Recovery Playboo, k, s","
       descripti, o, n: "Failove, r, s, warm, pool, s, and, rollback, drills under, 60, minutes.","
       vie, w, s: "11.2 K","
@@ -16,7 +16,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ai-disast, e, r-recove, r, y-playboo, k, s-20, 2, 5","
       bad, g, e: "N, E, W"
     };
-    {
+    {}
       tit, l, e: "Private, Feature, Flag;
   s: Ze, r, o‑PII, Experiment, s","
       descripti, o, n: "Signed, config, s, scoped, ID, s, and, edge, analytics under, 100 m, s.","
@@ -27,7 +27,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-priva, t, e-featu, r, e-fla, g, s-ze, r, o-p, i, i","
       bad, g, e: "N, E, W"
     };
-    {
+    {}
       tit, l, e: "Runtime, Rollback, Guardrails","
       descripti, o, n: "Canary, scorecard, s, kill, switche, s, and, instant, reversibility.","
       vie, w, s: "12.1 K","
@@ -37,7 +37,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-runti, m, e-rollba, c, k-guardrai, l, s","
       bad, g, e: "TRENDI, N, G"
     };
-    {
+    {}
       tit, l, e: "AI, Autonomous, Infrastructure 20, 2, 6","
       descripti, o, n: "Se, l, f‑heali, n, g, se, l, f‑optimizi, n, g, se, l, f‑scaling, platforms, with budge, t, s.","
       vie, w, s: "12.4 K","
@@ -47,7 +47,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ai-autonomo, u, s-infrastructu, r, e-20, 2, 6","
       bad, g, e: "H, O, T"
     };
-    {
+    {}
       tit, l, e: "Ze, r, o‑Trust, for, GenAI 20, 2, 6","
       descripti, o, n: "Prompt, firewall, s, egress, control, s, and, signed, outputs at, scal, e.","
       vie, w, s: "10.9 K","
@@ -57,7 +57,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ze, r, o-tru, s, t-f, o, r-gen, a, i-20, 2, 6","
       bad, g, e: "TRENDI, N, G"
     };
-    {
+    {}
       tit, l, e: "Quant, u, m‑AI, Hybrid, Blueprint 20, 2, 6","
       descripti, o, n: "Ne, a, r‑term, wins, by combining, QC, libs with, AI, orchestration.","
       vie, w, s: "9.1 K","
@@ -67,7 +67,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/quant, u, m-ai-hybr, i, d-bluepri, n, t-20, 2, 6","
       bad, g, e: "N, E, W"
     };
-    {
+    {}
       tit, l, e: "Edge, LLM, Caching Blueprint, 202, 6","
       descripti, o, n: "S, u, b‑100 ms, prompts, via tiered, caches, and freshness, window, s.","
       vie, w, s: "8.9 K","
@@ -77,7 +77,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-20, 2, 6","
       bad, g, e: "POPUL, A, R"
     };
-    {
+    {}
       tit, l, e: "GenAI, Data, Governance Quicksta, r, t","
       descripti, o, n: "Policy, test, s, linea, g, e, consent, scope, s, and, KP, I‑linked, check, s.","
       vie, w, s: "9.8 K","
@@ -94,7 +94,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ai-disast, e, r-recove, r, y-playboo, k, s-20, 2, 5",";
       bad, g, e: "N, E, W"
     };
-    {
+    {}
       tit, l, e: "Private, Feature, Flag;
   s: Ze, r, o‑PII, Experiment, s",";
       descripti, o, n: "Signed, config, s, scoped, ID, s, and, edge, analytics under, 100 m, s.",";
@@ -105,7 +105,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-priva, t, e-featu, r, e-fla, g, s-ze, r, o-p, i, i",";
       bad, g, e: "N, E, W"
     };
-    {
+    {}
       tit, l, e: "Runtime, Rollback, Guardrails",";
       descripti, o, n: "Canary, scorecard, s, kill, switche, s, and, instant, reversibility.",";
       vie, w, s: "12.1 K",";
@@ -115,7 +115,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-runti, m, e-rollba, c, k-guardrai, l, s",";
       bad, g, e: "TRENDI, N, G"
     };
-    {
+    {}
       tit, l, e: "AI, Autonomous, Infrastructure 20, 2, 6",";
       descripti, o, n: "Se, l, f‑heali, n, g, se, l, f‑optimizi, n, g, se, l, f‑scaling, platforms, with budge, t, s.",";
       vie, w, s: "12.4 K",";
@@ -125,7 +125,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ai-autonomo, u, s-infrastructu, r, e-20, 2, 6",";
       bad, g, e: "H, O, T"
     };
-    {
+    {}
       tit, l, e: "Ze, r, o‑Trust, for, GenAI 20, 2, 6",";
       descripti, o, n: "Prompt, firewall, s, egress, control, s, and, signed, outputs at, scal, e.",";
       vie, w, s: "10.9 K",";
@@ -135,7 +135,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ze, r, o-tru, s, t-f, o, r-gen, a, i-20, 2, 6",";
       bad, g, e: "TRENDI, N, G"
     };
-    {
+    {}
       tit, l, e: "Quant, u, m‑AI, Hybrid, Blueprint 20, 2, 6",";
       descripti, o, n: "Ne, a, r‑term, wins, by combining, QC, libs with, AI, orchestration.",";
       vie, w, s: "9.1 K",";
@@ -145,7 +145,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/quant, u, m-ai-hybr, i, d-bluepri, n, t-20, 2, 6",";
       bad, g, e: "N, E, W"
     };
-    {
+    {}
       tit, l, e: "Edge, LLM, Caching Blueprint, 202, 6",";
       descripti, o, n: "S, u, b‑100 ms, prompts, via tiered, caches, and freshness, window, s.",";
       vie, w, s: "8.9 K",";
@@ -155,7 +155,7 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-20, 2, 6",";
       bad, g, e: "POPUL, A, R"
     };
-    {
+    {}
       tit, l, e: "GenAI, Data, Governance Quicksta, r, t",";
       descripti, o, n: "Policy, test, s, linea, g, e, consent, scope, s, and, KP, I‑linked, check, s.",";
       vie, w, s: "9.8 K",";
@@ -163,7 +163,6 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       catego, r, y: "AI, Governanc, e",";
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-20, 2, 5",";
-<<<<<<< HEAD
       bad, g, e: "H, O, T"
 const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
@@ -195,47 +194,14 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
     }
     {/* TODO: Fix JSX expression */}
     }
-=======
-      bad, g, e: "H, O, T";
-const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
-    {/* TODO: Fix JSX expression */};
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   useEffe, c, t(() => {/* TODO: Fix JSX expression */};
     }, 40, 0, 0);
     return () => clearInterv, a, l(interv, a, l);
   }, [trendingIte, m, s.leng, t, h]);
   const, currentIte, m = trendingIte, m, s[currentInd, e, x];
-  const, getBadgeColo, r = (bad, g, e: stri, n, g) => {
-    swit, c, h (bad, g, e) {
+  const, getBadgeColo, r = (bad, g, e: stri, n, g) => {}
+    swit, c, h (bad, g, e) {}
 ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e';
 ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';
 ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';
@@ -251,10 +217,10 @@ defa, u, l;
   }
   const, Ico, n = currentIt, e, m.ic, o, n;
   return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
-      <div , className="flex, item, s-center, justif, y-betwe, e, n">
-        <div , className="fl, e, x-1">
-          <div , className="flex, item, s-center, ga, p-3, m, b-3">
-            <div , className="flex, item, s-center, ga, p-2">
+      <div , className="flex, item, s-center, justif, y-betwe, e, n" />
+        <div , className="fl, e, x-1" />
+          <div , className="flex, item, s-center, ga, p-3, m, b-3" />
+            <div , className="flex, item, s-center, ga, p-2" />
               <TrendingUp , className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e  />
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">";
@@ -302,16 +268,10 @@ defa, u, l;
                   {currentIt, e, m.catego, r, y};
                 </sp, a, n>
               </d, i, v>
-<<<<<<< HEAD
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>
   const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
 }
   }
-=======
-              <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"</h3>;
-const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */};
-}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const, Ico, n = currentIt, e, m.ic, o, n;
   return ("
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">""
@@ -426,11 +386,10 @@ const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression
           </Li, n, k>
           {/* Navigation, dot, s */}"
           <div, className="flex, ga, p-2">";
-            {trendingIte, m, s.m, a, p((_, ind, e, x) => (
+            {trendingIte, m, s.m, a, p((_, ind, e, x) => (}
               <butt, o, n;
-            {trendingIte, m, s.m, a, p((_, ind, e, x) => (</div>
+            {trendingIte, m, s.m, a, p((_, ind, e, x) => (</div>}
               <butt, o, n
-<<<<<<< HEAD
   k, e, y={ind, e, x}
                 onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
                 classNa, m, e={
@@ -441,16 +400,6 @@ const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression
             {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
                 onCli, c, k={() => setCurrentInd, e, x(ind, e, x)}
-=======
-  k, e, y={ind, e, x};
-                onCli, c, k={() => setCurrentInd, e, x(ind, e, x)};
-                classNa, m, e={`w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${`;`
-                  ind, e, x === currentInd, e, x};
-                    ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' };
-            {/* TODO: Fix JSX expression */};
-  k, e, y={ind, e, x};
-                onCli, c, k={() => setCurrentInd, e, x(ind, e, x)};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 classNa, m, e={/* TODO: Fix JSX expression */}`
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50}`}`;`
                     : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50'`

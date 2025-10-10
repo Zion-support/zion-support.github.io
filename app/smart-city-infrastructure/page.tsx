@@ -1,38 +1,37 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
-const SmartCityInfrastructurePage: React.FC = () => {
+const SmartCityInfrastructurePage: React.FC = () => {}
 
 const features = [
-    {
+    {}
       icon: Brain,
       title: 'AI-Powered Solutions',
 
       description: 'Advanced AI technology to transform your city infrastructure and improve efficiency'
 
     },
-    {
+    {}
       icon: Zap,
       title: 'High Performance',
 
       description: 'Lightning-fast processing and real-time analytics for optimal city management'
 
     },
-    {
+    {}
       icon: Shield,
       title: 'Enterprise Security',
 
       description: 'Bank-level security with advanced encryption and compliance standards'
 
     },
-    {
+    {}
     icon: Globe,
       title: 'Global Reach',
-const PagePage: React.FC = () => {
+const PagePage: React.FC = () => {}
   const features = [
     {
       icon: Brain,
@@ -58,34 +57,34 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international smart city projects'
 
     }
-  ]
+  ];
 
   const smartCityServices = [
-    {
+    {}
       icon: Building,
       title: 'Smart Buildings',
       description: 'Intelligent building management systems with IoT integration',
       features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort']
     },
-    {
+    {}
       icon: Wifi,
       title: 'IoT Networks',
       description: 'Comprehensive IoT infrastructure for city-wide connectivity',
       features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing']
     },
-    {
+    {}
       icon: Cpu,
       title: 'Data Analytics',
       description: 'Advanced analytics platform for city data processing',
       features: ['Real-time insights', 'Predictive modeling', 'Traffic optimization', 'Resource management']
     },
-    {
+    {}
       icon: Database,
       title: 'Digital Infrastructure',
       description: 'Robust digital infrastructure for smart city operations',
       features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
     }
-  ]
+  ];
 
           </div>
         </div>
@@ -140,7 +139,7 @@ export default PagePage
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
 
   return (
     <>
@@ -150,11 +149,11 @@ export default PagePage
         <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8" />
+          <div className="max-w-7xl mx-auto" />
+            <div className="text-center" />
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   Smart City
@@ -180,7 +179,7 @@ export default PagePage
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8" />
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -191,7 +190,7 @@ export default PagePage
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
@@ -205,7 +204,7 @@ export default PagePage
         </section>
 
         {/* Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5" />
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -216,7 +215,7 @@ export default PagePage
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {smartCityServices.map((service, index) => (
+              {smartCityServices.map((service, index) => (}
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
@@ -228,7 +227,7 @@ export default PagePage
                     </div>
                   </div>
                   <div className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
+                    {service.features.map((feature, featureIndex) => (}
                       <div key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -242,7 +241,7 @@ export default PagePage
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8" />
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -253,7 +252,7 @@ export default PagePage
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
@@ -264,9 +263,9 @@ export default PagePage
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+        <section className="py-20 px-4 sm: px-6 lg:px-8" />
+          <div className="max-w-4xl mx-auto text-center" />
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" />
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Build Your Smart City?
               </h2>
@@ -292,11 +291,3 @@ export default PagePage
   )
 }
 export default SmartCityInfrastructurePage
-=======
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const PagePage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

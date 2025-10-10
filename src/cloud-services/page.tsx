@@ -3,36 +3,18 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
-<<<<<<< HEAD
     return (
     <div>Coming Soon</div>
   )
   }
-=======
-};
-return (
-  return (
-    <div>Coming Soon</div>
-);
-};
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const _services = [
 ];
   // TOD,
-<<<<<<< HEAD
   O: Add items
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-  O: Add items;
-];;
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Cloud,
       titl,
@@ -42,15 +24,9 @@ return (
       feature,
   s: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Shield,
       titl,
@@ -60,15 +36,9 @@ return (
       feature,
   s: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: Zap,
       titl,
@@ -78,15 +48,9 @@ return (
       feature,
   s: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
     },
-<<<<<<< HEAD
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-=======
-    {/* TODO: Fix JSX expression */};
-  O: Add content};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ico,
   n: BarChart,
       titl,
@@ -111,18 +75,17 @@ return (
   ];
   return (<div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <main className="container mx-auto px-4 py-16 pt-24" />
+        <section className="text-center mb-16" />
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
 // Cloud Services;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl text-cyan-400 mb-8 font-medium" />
             Coming Soon
   </
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" />
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
@@ -132,15 +95,6 @@ return (
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
 //               Learn More,
-=======
-            <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-//>
-//               Get Started Today;
-          </a>
-            <a href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-//>
-//               Learn More;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </a>
           </div>
         </section>
@@ -191,8 +145,7 @@ return (
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
 // Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           </p>
-<<<<<<< HEAD
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center" />
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
@@ -202,26 +155,12 @@ return (
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
 //               Get Free Consultation
-=======
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-//>
-//               Call (302) 464-0950;
-          </a>
-            <a href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-//>
-//               Get Free Consultation;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </a>
           </div>
         </section>
       </main>
       <Footer /></Footer>
     </div>
-<<<<<<< HEAD
   ),
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default CloudServicesPage;

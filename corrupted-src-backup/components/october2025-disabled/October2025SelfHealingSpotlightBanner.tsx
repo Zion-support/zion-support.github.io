@@ -1,4 +1,4 @@
-export default function October2025SelfHealingSpotlightBann, e, r() { 
+export default function October2025SelfHealingSpotlightBann, e, r() { }
   return(<div , classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'>
       <div , className='m, a, x-w-6xl, m, x-au, t, o'>
         <div , className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8'>
@@ -47,7 +47,7 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
           <div, className='fl, e, x-1'></div>
             <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/2, 0, p-8, rounde, d-2xl, borde, r-2, borde, r-purp, l, e-5, 0, 0/50'></div>
               <h4, className='te, x, t-2xl, fon, t-bold, m, b-4'>🎯 Key, Innovation, s</h4>
-              <ul , className='spa, c, e-y-3, tex, t-lg'>
+              <ul , className='spa, c, e-y-3, tex, t-lg' />
                 <li , className='flex, item, s-sta, r, t'>
                   <span, className='te, x, t-gre, e, n-400, m, r-3'>✓</sp, a, n>
                   <sp , a, n>

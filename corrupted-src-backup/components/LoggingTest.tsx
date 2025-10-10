@@ -2,7 +2,7 @@ import React from 'react';
 // import { Button } from '@/components/ui/button';
 // import { logger } from '@/utils/productionLogger';
 // Simple button component replacement;
-const Button: React.FC<{
+const Button: React.FC<{}
     onClick: () => void
   variant?: string
   className?: string,
@@ -16,15 +16,9 @@ const,
   </button>)
 );
 // Simple logger replacement;
-const logger = {
-<<<<<<< HEAD
+const logger = {}
   error: (message: string, error?: unknown, meta?: unknown) => {
 const logger = {/* TODO: Fix JSX expression */}
-=======
-};
-  error: (message: string, error?: unknown, meta?: unknown) => {;
-const logger = {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     //     },
   war,
   n: (messag)
@@ -36,11 +30,6 @@ const logger = {/* TODO: Fix JSX expression */};
     //     },
   debu,
   g: (messag)
-<<<<<<< HEAD
   e: string, meta?: unknown) => {/* TODO: Fix JSX expression */}
     //     }}
-=======
-  e: string, meta?: unknown) => {/* TODO: Fix JSX expression */};
-    //     }};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `

@@ -17,7 +17,7 @@ function execCommand(command) description) {return new Promise((resolve} reject)
     });
   });
 }
-async function main() {try {
+async function main() {try {}
     //Step 1: Check current status;
 //     await execCommand('git status') 'Checking git status');
     //Step 2: Add all changes

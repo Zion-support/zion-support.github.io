@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react'
-const AIApiManagerPage: React.FC = () => {
+const AIApiManagerPage: React.FC = () => {}
 
   const features = [
     {
@@ -14,44 +13,17 @@ const AIApiManagerPage: React.FC = () => {
       benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management']
     },
     {
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';
-;
-const PagePage: React.FC = () => {
-const features = [
-];
-};
-    {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Code, Cloud, Lock, Monitor } from 'lucide-react';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-const AiApiManagerPage: React.FC = () => {
-};
-  const features = [
-[
-        {
-      icon: Brain,
-      title: 'AI-Powered API Management',
-      description: 'Advanced AI algorithms that optimize API management and provide intelligent insights.',
-      benefits: ['Smart API optimization', 'Predictive scaling', 'Automated insights', 'Real-time monitoring']
-    },
-        {
-      icon: BarChart,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       title: 'Advanced Analytics',
       description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
       benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics']
     },
-<<<<<<< HEAD
-    {
+    {}
 
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
       benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
     }
-  ]
+  ];
 
   const benefits = [
     'Centralized API management',
@@ -60,17 +32,17 @@ const AiApiManagerPage: React.FC = () => {
     'Comprehensive analytics',
     'Easy integration',
     '24/7 support'
-  ]
+  ];
 
   const stats = [
     { icon: <Settings className="w-8 h-8 text-blue-500" />, value: '500+', label: 'APIs Managed' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' }
-  ]
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900" />
       <Helmet>
         <title>AI API Manager | Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI-powered API management platform by Zion Tech Group. Centralized control, analytics, and security for all your APIs." />
@@ -79,10 +51,10 @@ const AiApiManagerPage: React.FC = () => {
       </Helmet>
       <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-20 px-4 overflow-hidden" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
+        <div className="relative max-w-7xl mx-auto text-center" />
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI API Manager
 
@@ -94,7 +66,7 @@ const AiApiManagerPage: React.FC = () => {
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Get Started
             </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" />
               View Demo,
   </
           </div>
@@ -102,10 +74,10 @@ const AiApiManagerPage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4">
+      <section className="py-16 px-4" />
           <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
@@ -119,7 +91,7 @@ const AiApiManagerPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4" />
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -131,13 +103,13 @@ const AiApiManagerPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+          <div className="grid md:grid-cols-3 gap-8" />
+            {features.map((feature, index) => (}
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8" />
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => (}
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{benefit}</span>
@@ -150,7 +122,7 @@ const AiApiManagerPage: React.FC = () => {
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4" />
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Platform?</h2>
@@ -161,7 +133,7 @@ const AiApiManagerPage: React.FC = () => {
 
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
@@ -173,9 +145,9 @@ const AiApiManagerPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+      <section className="py-20 px-4" />
+          <div className="max-w-4xl mx-auto text-center" />
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" />
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Manage Your APIs?
             </h2>
@@ -199,225 +171,3 @@ const AiApiManagerPage: React.FC = () => {
   )
 }
 export default AIApiManagerPage
-=======
-        {
-      icon: Target,
-      title: 'Precision Management',
-      description: 'Target specific API endpoints and optimize them with precision and accuracy.',
-      benefits: ['Endpoint optimization', 'Performance tuning', 'Strategic planning', 'Success metrics']
-    },
-        {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your API infrastructure for business growth with data-driven strategies.',
-      benefits: ['Scalability planning', 'Performance analysis', 'Cost optimization', 'ROI tracking']
-import     { CheckCircle, ArrowRight } from 'lucide-react';
-const PagePage: React.FC = () => {
-};
-  const features = [
-[
-        {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    },
-        {
-      icon: Globe,
-      title: 'Global Distribution',
-      description: 'Distribute your APIs globally with intelligent routing and caching.',
-      benefits: ['Global CDN', 'Edge computing', 'Load balancing', 'Geographic optimization']
-    },
-        {
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    };
-  ];
-const benefits = [
-;
-];
-const benefits = [
-];
-    'Benefit 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'    'Benefit 1',
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <title>Ai Api Manager - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai api manager solution for modern businesses." />
-        <meta name="keywords" content="AI ai api manager, artificial intelligence, ai api manager, AI solutions, intelligent automation" />
-      </Helmet>
-    'Benefit 2',
-    'Benefit 3',
-    'Benefit 4',
-    'Benefit 5',
-    'Benefit 6'
-        {/* Features Section */};
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI-Powered API Manager
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your API management with our intelligent platform. Get real-time monitoring, 
-                optimization, and security for all your APIs in one place.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a href="#features"
-                  className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* Features Section */};
-        <section id="features" className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Powerful API Management Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive API management platform provides everything you need to build, deploy, and scale APIs.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
-                    <feature .icon className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
-                          {benefit};
-                        </li>
-                      ));
-                    </ul>);
-                </div>
-              ))};
-            </div>
-          </div>
-        </section>
-        {/* Use Cases Section */};
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Use Cases</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI API management platform can transform your development workflow.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-white/10 text-center">
-                  <div className="bg-purple-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <useCase .icon className="w-8 h-8 text-purple-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300 text-sm">{useCase.description}</p>
-                </div>
-              ));
-            </div>
-          </div>
-        </section>
-        {/* Benefits Section */};
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our API Manager?</h2>
-                <p className="text-lg text-gray-300 mb-8">
-                  Our AI-powered API management platform is designed to help you build, deploy, 
-                  and scale APIs efficiently while maintaining security and performance.
-                </p>
-                <ul className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1" />
-                      <span className="text-gray-300">{benefit}</span>
-                    </li>
-                  ))};
-                </ul>
-              </div>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                  <div className="text-center">
-                    <div className="bg-cyan-500/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
-                      <Code className="w-10 h-10 text-cyan-400" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">Developer-First Design</h3>
-                    <p className="text-gray-300 mb-6">
-                      Built by developers for developers, with intuitive tools and comprehensive documentation.
-                    </p>
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div className="text-3xl font-bold text-cyan-400">99.9%</div>
-                        <div className="text-gray-300 text-sm">Uptime</div>
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-purple-400">50ms</div>
-                        <div className="text-gray-300 text-sm">Response Time</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ));
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */};
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4 text-center">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 rounded-2xl p-12 backdrop-blur-sm border border-white/10">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your API Management?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Start building better APIs with our AI-powered management platform. 
-                Get started today and see the difference intelligent API management can make.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <span>Get Started Now</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a href="/pricing"
-                  className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <span>View Pricing</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <Footer />
-      </div>
-      <Footer />
-      </div>
-    </>
-        <Footer />
-      </div>
-    </div>
-  );
-};
-    </div>)
-export default PagePage;
-      </section>export default AiApiManagerPage;
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

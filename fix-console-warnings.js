@@ -16,8 +16,8 @@ const filesToFix = [
   './api/wallet.js'
 ];
 
-function fixConsoleWarnings(filePath) {
-  try {
+function fixConsoleWarnings(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Comment out console.log statements
@@ -41,7 +41,7 @@ function fixConsoleWarnings(filePath) {
 // Process all files
 console.log('🔧 Fixing console warnings...\n');
 
-filesToFix.forEach(filePath => {
+filesToFix.forEach(filePath => {}
   if (fs.existsSync(filePath)) {
     fixConsoleWarnings(filePath);
   } else {

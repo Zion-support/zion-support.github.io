@@ -15,7 +15,7 @@ const missingPages = analysisData.missingPagesList;
 // Check which routes are missing from App.tsx;
 const missingRoutes = [];
 
-for (const route of missingPages) {
+for (const route of missingPages) {}
   const routePattern = `path="${route}"`;
   if (!appContent.includes(routePattern)) {
     missingRoutes.push(route);
@@ -37,7 +37,7 @@ const generateRouteStatement = (route) => {
   return `            <Route path="${route}" element={<${componentName} />} />`;</Route>
 };
 
-if (missingRoutes.length > 0) {
+if (missingRoutes.length > 0) {}
   console.log('\n=== IMPORT STATEMENTS ===');
   missingRoutes.forEach(route => console.log(generateImportStatement(route)));
   

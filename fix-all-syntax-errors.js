@@ -1,7 +1,6 @@
 
 #!/usr/bin/env node
 import fs from 'fs';
-<<<<<<< HEAD
 import path from 'path';
 import { execSync } from 'child_process';
 
@@ -9,13 +8,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Get all files with errors;
-const getAllFilesWithErrors = () => {
+const getAllFilesWithErrors = () => {}
   const srcDir = path.join(__dirname, 'src');
   const files = [];
   
-  const scanDirectory = (dir) => {
+  const scanDirectory = (dir) => {}
     const items = fs.readdirSync(dir);
-    for (const item of items) {
+    for (const item of items) {}
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
@@ -32,12 +31,12 @@ const getAllFilesWithErrors = () => {
 };
 
 // Template for a simple coming soon page;
-const createComingSoonPage = (filePath) => {
+const createComingSoonPage = (filePath) => {}
   const relativePath = path.relative(path.join(__dirname, 'src'), filePath);
   const fileName = path.basename(filePath, '.tsx');
   
   // Skip if it's a component or special file;
-  if (fileName === 'page' || fileName === 'layout' || fileName === 'loading' || fileName === 'error') {
+  if (fileName === 'page' || fileName === 'layout' || fileName === 'loading' || fileName === 'error') {}
     const dirName = path.basename(path.dirname(filePath));
     const title = dirName.split('-').map(word => )
       word.charAt(0).toUpperCase() + word.slice(1)
@@ -74,10 +73,10 @@ export default ${title}Page;`;
 };
 
 // Check if file has syntax errors by trying to parse it;
-const hasSyntaxErrors = (filePath) => {
+const hasSyntaxErrors = (filePath) => {}
 // Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
+function fixSyntaxErrors(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
@@ -87,7 +86,7 @@ function fixSyntaxErrors(filePath) {
       /\/\/ TODO: Add parameters,\s*\)/,
       /\/\/ TODO: Add items,\s*]/,
       /{\s*\/\/ TODO: Add content\s*}/,
-      /{\s*\/\/ TODO: Add parameters,\s*\)/,
+      /{\s*\/\/ TODO: Add parameters,\s*\)/,}
       /{\s*\/\/ TODO: Add items,\s*]/,
       /^\s*}\s*$/m,
       /^\s*]\s*$/m,
@@ -98,25 +97,25 @@ function fixSyntaxErrors(filePath) {
     ];
     
     return errorPatterns.some(pattern => pattern.test(content));
-  } catch (error) {
+  } catch(9) => {
     return true;
   }
 };
 
 // Fix all files;
-const fixAllFiles = () => {
+const fixAllFiles = () => {}
   const files = getAllFilesWithErrors();
   let fixedCount = 0;
   
-  for (const filePath of files) {
-    if (hasSyntaxErrors(filePath)) {
+  for (const filePath of files) {}
+    if (hasSyntaxErrors(filePath)) {}
       const newContent = createComingSoonPage(filePath);
-      if (newContent) {
-        try {
+      if (newContent) {}
+        try {}
           fs.writeFileSync(filePath, newContent);
           console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
           fixedCount++;
-        } catch (error) {
+        } catch(15) => {
           console.error(`Error fixing ${filePath}:`, error.message);
         }
     // Fix common syntax patterns
@@ -128,13 +127,13 @@ const fixAllFiles = () => {
     $3:'
       },
       // Fix malformed metadata objects
-      {
+      {}
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: \'$2\',
   $3:'
       },
-      {
+      {}
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: "$2",
@@ -153,7 +152,7 @@ const fixAllFiles = () => {
     $3:'
       },
       // Fix missing semicolons in exports
-      {
+      {}
         pattern: /export\s+const\s+(\w+)\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
         replacement: 'export const $1 = {
   $2: \'$3\',
@@ -184,9 +183,9 @@ const fixAllFiles = () => {
       }
     ];
     
-    for (const fix of fixes) {
+    for (const fix of fixes) {}
       const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
+      if(8) => {
         content = newContent;
         modified = true;
       }
@@ -201,7 +200,7 @@ const fixAllFiles = () => {
     $3:'
       },
       // Fix malformed metadata
-      {
+      {}
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: \'$2\',
@@ -215,34 +214,34 @@ const fixAllFiles = () => {
       }
     ];
     
-    for (const fix of specificFixes) {
+    for (const fix of specificFixes) {}
       const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
+      if(8) => {
         content = newContent;
         modified = true;
       }
     }
     
-    if (modified) {
+    if(6) => {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {
+  } catch(9) => {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Function to find files with syntax errors
-function findFilesWithSyntaxErrors() {
-  try {
+function findFilesWithSyntaxErrors() {}
+  try {}
     const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
     return result.trim().split('
 ').filter(file => file.length > 0);
-  } catch (error) {
+  } catch(9) => {
     console.error('Error finding files with syntax errors:', error.message);
     return [];
   }
@@ -255,7 +254,7 @@ const filesWithErrors = findFilesWithSyntaxErrors();
 console.log(`Found ${filesWithErrors.length} files with syntax errors`);
 
 let fixedCount = 0;
-for (const file of filesWithErrors) {
+for(3) => {
   if (fixSyntaxErrors(file)) {
     fixedCount++;
   }
@@ -264,114 +263,16 @@ for (const file of filesWithErrors) {
 console.log(`Fixed syntax errors in ${fixedCount} files`);
 
 // Verify no more syntax errors exist
-try {
+try {}
   const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
   const count = parseInt(remainingErrors.trim());
-  if (count === 0) {
+  if(4) => {
     console.log('✅ All syntax errors resolved!');
   } else {
     console.log(`⚠️  ${count} syntax errors still remain`);
   }
-} catch (error) {
+} catch(7) => {
   console.log('✅ No syntax errors found');
 }
 
 
-=======
-import { glob } from 'glob';
-// Function to fix all remaining syntax errors
-function fixAllSyntaxErrors(content) {
-  let fixed = content;
-  // Fix common syntax errors
-  fixed = fixed
-    // Fix ;) -> };
-    .replace(/;\)/g, '}')
-    // Fix ,) -> };
-    .replace(/,\)/g, '}')
-    // Fix ,; -> ;
-    .replace(/,;/g, ';')
-    // Fix malformed TypeScript generics
-    .replace(/<([^>]+)><\/\1>/g, '<$1>')
-    // Fix malformed JSX closing tags
-    .replace(/<\/[^>]+><\/[^>]+>/g, (match) => {
-      const tags = match.match(/<\/([^>]+)>/g);
-      if (tags && tags.length > 1) {
-        return tags[tags.length - 1]; // Keep only the last closing tag
-      };
-      return match;
-    })
-    // Fix missing semicolons
-    .replace(/([^;}])\n\s*}/g, '$1;\n}')
-    // Fix missing closing parentheses
-    .replace(/([^)])\n\s*}/g, '$1)\n}')
-    // Fix missing commas in object literals
-    .replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2')
-    // Fix malformed function calls
-    .replace(/\)\}/g, ');')
-    .replace(/\}\)/g, '});')
-    // Fix missing closing braces
-    .replace(/([^}])\n\s*$/g, '$1\n}')
-    // Fix malformed JSX elements
-    .replace(/<(\w+)[^>]*><\/\1>/g, '<$1>')
-    // Fix missing closing tags for common elements
-    .replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/g, (match, tag, attrs) => {
-      // Only add closing tag if it's not a self-closing tag
-      if (!match.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tag)) {
-        return match + `</${tag}>`;
-      };
-      return match;
-    });
-  return fixed;
-};
-// Main function to process files
-async function processFiles() {
-  console.log('Starting comprehensive syntax error fixes...');
-  const patterns = [
-];
-    'app/**/*.tsx',
-    'app/**/*.ts'
-  ];
-  let processedCount = 0;
-  let errorCount = 0;
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: [
-        'node_modules/**',
-        'dist/**',
-        '*.disabled/**',
-        '*-disabled/**',
-        'backup*/**',
-        '**/*.backup',
-        '**/*.broken'
-      ]
-    });
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        // Check if file has syntax issues
-        if (content.includes(';)') || 
-            content.includes(',)') ||
-            content.includes(',;') ||
-            content.includes('Property assignment expected') ||
-            content.includes('Declaration or statement expected') ||
-            content.includes('Unexpected ")"') ||
-            content.includes('Expected ")"') ||
-            content.includes('</') && content.includes('></')) {
-          console.log(`Processing syntax errors in: ${file}`);
-          let fixed = fixAllSyntaxErrors(content);
-          fs.writeFileSync(file, fixed);
-          processedCount++;
-        };
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
-        errorCount++;
-      };
-    };
-  };
-  console.log(`\nComprehensive syntax fixes complete!`);
-  console.log(`Files processed: ${processedCount}`);
-  console.log(`Errors encountered: ${errorCount}`);
-};
-// Run the script
-processFiles().catch(console.error);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

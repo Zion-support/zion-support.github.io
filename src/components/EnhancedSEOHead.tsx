@@ -1,47 +1,28 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
-<<<<<<< HEAD
+interface SEOHeadProps {}
     title?: string;
-=======
-  title?: string
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
-<<<<<<< HEAD
   type?: string
   }
-=======
-  type?: string};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",}
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
   keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
   image = "https://ziontechgroup.com/og-image.png",
   url = "https://ziontechgroup.com",
   type = "website"
-<<<<<<< HEAD
 }) => {
-  const structuredData = {
-=======
-}) => {;
-const structuredData = {
-};
-};
-};
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  const structuredData = {}
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
     "description": description,
-    "address": {
+    "address": {}
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -49,7 +30,7 @@ const structuredData = {
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {
+    "contactPoint": {}
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
@@ -73,11 +54,7 @@ const structuredData = {
       "Cloud Computing",
       "Automation"
     ]
-<<<<<<< HEAD
   }
-=======
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
@@ -112,11 +89,7 @@ const structuredData = {
       <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
       {/* Fonts */}
-<<<<<<< HEAD
       <link href="https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700,800&display=swap" rel="stylesheet" /></link>
-=======
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       {/* Favicon */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" /></link>
       <link rel="apple-touch-icon" href="/logo192.png" /></link>
@@ -129,7 +102,7 @@ const structuredData = {
       </script>
       {/* Additional SEO Scripts */}
       <script type="application/ld+json"></scrip>
-        {JSON.stringify({
+        {JSON.stringify({}
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Zion Tech Group",
@@ -197,10 +170,6 @@ const structuredData = {
       <meta name="theme-color" content="#00 ffff" media="(prefers-color-scheme: light)" /></meta>
       <meta name="theme-color" content="#0 f172 a" media="(prefers-color-scheme: dark)" /></meta>
     </Helmet>
-<<<<<<< HEAD
   ),
 }
-=======
-  )};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export default EnhancedSEOHead;

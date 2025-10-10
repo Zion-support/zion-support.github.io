@@ -19,17 +19,11 @@ export type Zion2026AIMarketplaceService =
   support: string[];
   contactInfo: unknown;
     phone: string;
-<<<<<<< HEAD
     email: string
     website: string
     address: string,
   }
 }
-=======
-    email: string;
-    website: string;
-    address: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,
     id: 'ai-marketplace-001',
     name: 'Zion AI Service Marketplace Platform',
@@ -83,12 +77,8 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     websit,
   e: string,
     addres,
-<<<<<<< HEAD
   s: string}
 }
-=======
-  s: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     i,

@@ -2,22 +2,12 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
 import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, TrendingUp, PieChart, Activity} Package; Wifi } from 'lucide-react';
   // Micro SAAS Services data;
   const microSaasServices = [
-<<<<<<< HEAD
-    {id: 1
+    {id: 1}
       name: "TaskFlow Pro"
       category: "Productivity"
       pricing: "Freemium"
       description: "Simple yet powerful task management and project collaboration tool for small teams"
       price: 15,
-=======
-];
-    {id: 1;
-      name: 'TaskFlow Pro',
-      category: 'Productivity',
-      pricing: 'Freemium',
-      description: 'Simple yet powerful task management and project collaboration tool for small teams',
-      price: 15;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       pricingModel: "monthly",
       userLimit: "Up to 10 users",
       features: ["Task management", "Team collaboration", "Time tracking", "Progress reports"],
@@ -29,7 +19,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 16
+    {id: 16}
       name: "AI CodeGen Pro"
       category: "Development"
       pricing: "Freemium"
@@ -46,7 +36,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 17
+    {id: 17}
       name: "Quantum Analytics"
       category: "Analytics"
       pricing: "Freemium"
@@ -63,7 +53,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 18
+    {id: 18}
       name: "Blockchain Business Suite"
       category: "Blockchain"
       pricing: "Freemium"
@@ -80,7 +70,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 19
+    {id: 19}
       name: "IoT Enterprise Hub"
       category: "IoT"
       pricing: "Freemium"
@@ -97,7 +87,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 20
+    {id: 20}
       name: "AR/VR Studio Pro"
       category: "Immersive Tech"
       pricing: "Freemium"
@@ -114,7 +104,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 2
+    {id: 2}
       name: "InvoiceGenius"
       category: "Finance"
       pricing: "Freemium"
@@ -131,7 +121,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 3
+    {id: 3}
       name: "SocialSync Pro"
       category: "Marketing"
       pricing: "Freemium"
@@ -148,7 +138,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 4
+    {id: 4}
       name: "CustomerFlow CRM"
       category: "CRM"
       pricing: "Freemium"
@@ -165,7 +155,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 5
+    {id: 5}
       name: "DataViz Studio"
       category: "Analytics"
       pricing: "Freemium"
@@ -182,7 +172,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 6
+    {id: 6}
       name: "ScheduleMaster"
       category: "Scheduling"
       pricing: "Freemium"
@@ -199,7 +189,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 7
+    {id: 7}
       name: "ContentCraft AI"
       category: "Content"
       pricing: "Freemium"
@@ -216,7 +206,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 8
+    {id: 8}
       name: "SecureVault"
       category: "Security"
       pricing: "Freemium"
@@ -233,7 +223,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 9
+    {id: 9}
       name: "MediaHub Pro"
       category: "Media"
       pricing: "Freemium"
@@ -250,7 +240,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 10
+    {id: 10}
       name: "LearnFlow LMS"
       category: "Education"
       pricing: "Freemium"
@@ -267,7 +257,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 11
+    {id: 11}
       name: "EcoTrack Pro"
       category: "Sustainability"
       pricing: "Freemium"
@@ -284,7 +274,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 12
+    {id: 12}
       name: "LegalAssist AI"
       category: "Legal"
       pricing: "Freemium"
@@ -301,7 +291,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 13
+    {id: 13}
       name: "HealthTrack Plus"
       category: "Healthcare"
       pricing: "Freemium"
@@ -318,7 +308,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 14
+    {id: 14}
       name: "EventMaster Pro"
       category: "Events"
       pricing: "Freemium"
@@ -335,7 +325,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 15
+    {id: 15}
       name: "InventorySmart"
       category: "Inventory"
       pricing: "Freemium"
@@ -352,7 +342,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 21
+    {id: 21}
       name: "Cybersecurity Shield"
       category: "Security"
       pricing: "Freemium"
@@ -369,7 +359,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 22
+    {id: 22}
       name: "GreenTech Monitor"
       category: "Sustainability"
       pricing: "Freemium"
@@ -386,7 +376,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 23
+    {id: 23}
       name: "VoiceAI Assistant"
       category: "AI"
       pricing: "Freemium"
@@ -403,7 +393,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 24
+    {id: 24}
       name: "Quantum Finance Pro"
       category: "Finance"
       pricing: "Freemium"
@@ -420,7 +410,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
         email: "kleber@ziontechgroup.com"};
         website: "https://ziontechgroup.com"};
     },
-    {id: 25
+    {id: 25}
       name: "Edge Computing Hub"
       category: "Infrastructure"
       pricing: "Freemium"
@@ -439,354 +429,178 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
     {/* TODO: Fix JSX expression */};
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     },
     {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"};
         websit,"
-<<<<<<< HEAD
   e: "http,"
   s://ziontechgroup.com"
       }
     }
-=======
-  e: 'http,',
-  s:
-        s://ziontechgroup.com"
-      };
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ];
   const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
   const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
@@ -904,18 +718,18 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                 <option key={category} value={category} className="text-left"></option>
                   {category === 'all' ? '🌐 All Categories' : `📁 ${category}`}"
               className="text-left">
-              {pricingModels.map(pricing => ()
+              {pricingModels.map(pricing => ()}
                 <option key={pricing} value={pricing} className="text-left">)
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`})
         {/* Services Grid */})
         <div className="text-left">)
-          {filteredServices.map((service) => (
-              {pricingModels.map(pricing => (
+          {filteredServices.map((service) => (}
+              {pricingModels.map(pricing => (}
                 <option key={pricing} value={pricing} className="text-left"></option>
                   {pricing === 'all' ? '💰 All Pricing Models' : `💳 ${pricing}`};
         {/* Services Grid */};
         <div className="text-left">
-          {filteredServices.map((service) => (</div>
+          {filteredServices.map((service) => (</div>}
             <div key={service.id} className="text-left">
               {/* Service Header */}</div>
               <div className="text-left"></div>
@@ -1067,12 +881,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               <div className="text-left">
                 <a;
               <div className="text-left"></div>
-<<<<<<< HEAD
                 <a
-                  href="mailto: kleber@ziontechgroup.<com" className="text-left">
-=======
-                <a href="mailto: kleber@ziontechgroup.<com" className="text-left">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+                  href="mailto: kleber@ziontechgroup.<com" className="text-left" />
                   <Mail className="text-left" />
                   Get Started Today
                 </a>

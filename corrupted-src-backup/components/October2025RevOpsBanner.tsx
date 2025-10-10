@@ -1,5 +1,4 @@
-const, October2025RevOpsBanne, r = () => {
-<<<<<<< HEAD
+const, October2025RevOpsBanne, r = () => {}
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">
@@ -7,18 +6,6 @@ const, October2025RevOpsBanne, r = () => {
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
       {/* Animated, background, elements */}</div>
-=======
-return (
-  return(<div , className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
-);
-};
-      {/* Animated, background, elements */};
-      <div , className="absolute, inse, t-0, opacit, y-10">
-        <div , className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
-  return (
-    <div , className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
-      {/* Animated, background, elements */};</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>
         <div>
@@ -37,13 +24,8 @@ return (
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';)
       </d, i, v>)
-<<<<<<< HEAD
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),
       {/* Animated, background, elements */}</div>
-=======
-      <div , className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
-      {/* Animated, background, elements */};</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-10">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";</div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';
@@ -52,15 +34,9 @@ return (
   g:px-8, p, y-8">";
         {/* Breaking, News, Badge */}</div>
         <div, className="flex, justif, y-center, m, b-4">";</div>
-<<<<<<< HEAD
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e">";</div>
 const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */}
-=======
-          <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e">";</div>;
-const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */};
-      {/* Animated, background, elements */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>"
         <div>
@@ -372,7 +348,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */};
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-emera, l, d-1, 0, 0">"</div>
             <div, className="flex, item, s-sta, r, t"></div>
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1"></div>
-                <svg , className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
+                <svg , className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20" />
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  /></p>
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">";</div>
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r">";

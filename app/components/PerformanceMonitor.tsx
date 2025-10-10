@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
   lcp?: number;
   fid?: number;
   cls?: number
@@ -9,11 +9,11 @@ interface PerformanceMetrics {
   ttfb?: number
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = () => {}
   const [metrics, setMetrics] = useState<PerformanceMetrics>({})
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => {}
     if (typeof window === 'undefined') return
     // Only show in development or when performance monitoring is enabled
     const shouldMonitor = process.env.NODE_ENV === 'development' || 
@@ -24,7 +24,7 @@ const PerformanceMonitor: React.FC = () => {
     }
 
     // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
+    if ('web-vitals' in window) {}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
         getCLS((metric) => updateMetrics({ cls: metric.value }));
         getFID((metric) => updateMetrics({ fid: metric.value }));
@@ -35,9 +35,9 @@ const PerformanceMonitor: React.FC = () => {
     }
 
     // Monitor performance with Performance Observer
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
+    if ('PerformanceObserver' in window) {}
+      const observer = new PerformanceObserver((list) => {}
+        list.getEntries().forEach((entry) => {}
           if (entry.entryType === 'largest-contentful-paint') {
             updateMetrics({ lcp: entry.startTime })
           }
@@ -94,7 +94,7 @@ const PerformanceMonitor: React.FC = () => {
       </div>
       
       <div className="space-y-1">
-        {metrics.lcp && (
+        {metrics.lcp && (}
           <div className="flex justify-between">
             <span>LCP:</span>
             <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
@@ -103,7 +103,7 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
         
-        {metrics.fid && (
+        {metrics.fid && (}
           <div className="flex justify-between">
             <span>FID:</span>
             <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
@@ -112,7 +112,7 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
         
-        {metrics.cls && (
+        {metrics.cls && (}
           <div className="flex justify-between">
             <span>CLS:</span>
             <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
@@ -121,7 +121,7 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
         
-        {metrics.fcp && (
+        {metrics.fcp && (}
           <div className="flex justify-between">
             <span>FCP:</span>
             <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
@@ -130,7 +130,7 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
         
-        {metrics.ttfb && (
+        {metrics.ttfb && (}
           <div className="flex justify-between">
             <span>TTFB:</span>
             <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
