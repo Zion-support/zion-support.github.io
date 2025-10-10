@@ -336,8 +336,9 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.6,
       users: '1,700+',
-<<<<<<< HEAD
-      trial: '21-day free trial'
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-hr-assistant',
+      capabilities: ['50% faster hiring process', '80% reduction in HR admin time', 'Automated compliance tracking', 'Employee satisfaction insights']
     },
     { 
       name: 'AI Quantum Financial Oracle', 
@@ -376,8 +377,6 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.8,
       users: '2,300+',
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
       trial: '21-day free trial',
       link: 'https://ziontechgroup.com/ai-hr-assistant',
       capabilities: ['50% faster hiring process', '80% reduction in HR admin time', 'Automated compliance tracking', 'Employee satisfaction insights']
@@ -488,7 +487,6 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-password-generator',
       capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
-<<<<<<< HEAD
     },
     { 
       name: 'AI Logo Designer Pro', 
@@ -648,52 +646,9 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Creative', 'Computer Vision', 'Manufacturing', 'Insurance', 'Testing', 'Education', 'Health', 'Analytics', 'Industrial', 'Language', 'Design'];
-      icon: Palette, 
-      category: 'Design', 
-      price: '$79/mo',
-      description: 'AI-powered logo design with brand analysis, multiple variations, and professional quality output',
-      features: ['AI Logo Generation', 'Brand Analysis', 'Multiple Variations', 'High-res Export', 'Vector Format', 'Brand Guidelines', 'Color Palette', 'Font Suggestions'],
-      popular: true,
-      rating: 4.7,
-      users: '3,600+',
-      trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-logo-designer',
-      capabilities: ['Unlimited logo variations', 'Professional quality', 'Brand consistency', 'Multiple file formats']
-    },
-    { 
-      name: 'AI Invoice Designer Pro', 
-      href: '/ai-invoice-designer', 
-      icon: FileText, 
-      category: 'Business', 
-      price: '$59/mo',
-      description: 'Professional invoice design with AI-powered templates, automated calculations, and payment tracking',
-      features: ['AI Template Generation', 'Auto Calculations', 'Payment Tracking', 'Tax Integration', 'Client Portal', 'Recurring Invoices', 'Multi-currency', 'Analytics Dashboard'],
-      popular: true,
-      rating: 4.8,
-      users: '2,300+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-invoice-designer',
-      capabilities: ['Professional templates', 'Auto calculations', 'Payment tracking', 'Multi-currency support']
-    },
-    { 
-      name: 'AI Social Media Scheduler', 
-      href: '/ai-social-media-scheduler', 
-      icon: Smartphone, 
-      category: 'Social Media', 
-      price: '$89/mo',
-      description: 'Intelligent social media scheduling with optimal timing, content suggestions, and performance analytics',
-      features: ['Optimal Timing', 'Content Suggestions', 'Multi-platform Posting', 'Analytics Dashboard', 'Hashtag Research', 'Engagement Tracking', 'Auto Posting', 'Team Collaboration'],
-      popular: true,
-      rating: 4.7,
-      users: '4,100+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-social-media-scheduler',
-      capabilities: ['Optimal posting times', 'Content recommendations', 'Multi-platform management', 'Engagement analytics']
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8860
-    },
-
+  // All services combined
+  const allServices = [
+    ...microSAASServices,
     // Advanced AI-Powered Micro SAAS Services
     { 
       name: 'AI Quantum Analytics Pro', 
@@ -997,7 +952,7 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Space Tech', 'Climate Tech', 'Science', 'Computing', 'Transportation', 'Optimization', 'Education'];
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Creative', 'Computer Vision', 'Manufacturing', 'Insurance', 'Testing', 'Education', 'Health', 'Analytics', 'Industrial', 'Language', 'Design', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Email Tools', 'Social Media', 'Space Tech', 'Climate Tech', 'Science', 'Computing', 'Transportation', 'Optimization'];
 
   if (!isLoaded) {
     return (
@@ -1038,7 +993,7 @@ const MicroSAASPage: React.FC = () => {
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {microSAASServices.map((service) => (
+          {allServices.map((service) => (
             <div
               key={service.name}
               className={`futuristic-card-enhanced hover-lift p-8 ${
