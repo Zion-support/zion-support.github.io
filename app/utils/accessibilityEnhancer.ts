@@ -8,25 +8,25 @@ const AccessibilityEnhancerPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'})
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'});;)
 },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'})
+      description: 'Lightning-fast processing and real-time analytics for optimal results'});;)
 },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'})
+      description: 'Bank-level security with encryption and compliance standards'});;)
 },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'})
+      description: 'Worldwide deployment and support for international businesses'});;)
 }
     focusableElements[nextIndex]?.focus();
-    event.preventDefault()})
+    event.preventDefault(););)
 }
   /**
    * Handle escape key
@@ -36,14 +36,14 @@ const AccessibilityEnhancerPage: React.FC = () => {
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
-      closeButton?.click()})
-});
+      closeButton?.click(););)
+});;
     // Close any open menus
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
-      trigger?.click()})
-})})
+      trigger?.click(););)
+});;);)
 }
   /**
    * Handle arrow key navigation
@@ -53,11 +53,11 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (!currentElement) return;
     // Handle radio button groups
     if (currentElement instanceof HTMLInputElement && currentElement.type === 'radio') {
-      this.handleRadioGroupNavigation(event, currentElement)})
+      this.handleRadioGroupNavigation(event, currentElement););)
 }
     // Handle menu navigation
     if (currentElement.getAttribute('role') === 'menuitem') {
-      this.handleMenuNavigation(event, currentElement)})
+      this.handleMenuNavigation(event, currentElement););)
 }
   }
   /**
@@ -70,13 +70,13 @@ const AccessibilityEnhancerPage: React.FC = () => {
     const currentIndex = radioButtons.indexOf(currentElement);
     let nextIndex: number;
     if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : radioButtons.length - 1})
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : radioButtons.length - 1});;)
 } else {
-      nextIndex = currentIndex < radioButtons.length - 1 ? currentIndex + 1 : 0})
+      nextIndex = currentIndex < radioButtons.length - 1 ? currentIndex + 1 : 0});;)
 }
     radioButtons[nextIndex]?.focus();
     radioButtons[nextIndex]?.click();
-    event.preventDefault()})
+    event.preventDefault(););)
 }
   /**
    * Handle menu navigation
@@ -88,14 +88,14 @@ const AccessibilityEnhancerPage: React.FC = () => {
     const currentIndex = menuItems.indexOf(currentElement);
     let nextIndex: number;
     if (event.key === 'ArrowUp') {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1})
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1});;)
 } else if (event.key === 'ArrowDown') {
-      nextIndex = currentIndex < menuItems.length - 1 ? currentIndex + 1 : 0})
+      nextIndex = currentIndex < menuItems.length - 1 ? currentIndex + 1 : 0});;)
 } else {
-      return})
+      return});;)
 }
     menuItems[nextIndex]?.focus();
-    event.preventDefault()})
+    event.preventDefault(););)
 }
   /**
    * Setup screen reader support
@@ -109,7 +109,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // Add ARIA landmarks
     this.addAriaLandmarks();
     // Setup live regions for dynamic content
-    this.setupLiveRegions()})
+    this.setupLiveRegions(););)
 }
   /**
    * Add skip links
@@ -129,7 +129,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
         position: absolute;
         top: -40px;
         left: 6px;
-        z-index: 1000})
+        z-index: 1000});;)
 }
       .skip-link {
         position: absolute;
@@ -141,14 +141,14 @@ const AccessibilityEnhancerPage: React.FC = () => {
         text-decoration: none;
         border-radius: 4px;
         z-index: 1000;
-        transition: top 0.3s})
+        transition: top 0.3s});;)
 }
       .skip-link:focus {;
-  top: 6px})
+  top: 6px});;)
 }
     `;
     document.head.appendChild(style);
-    document.body.insertBefore(skipLinks, document.body.firstChild)})
+    document.body.insertBefore(skipLinks, document.body.firstChild););)
 }
   /**
    * Enhance form labels
@@ -161,19 +161,19 @@ const AccessibilityEnhancerPage: React.FC = () => {
       if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
         const placeholder = element.getAttribute('placeholder');
         if (placeholder) {
-          element.setAttribute('aria-label', placeholder)})
+          element.setAttribute('aria-label', placeholder););)
 }
       }
       // Add required attribute announcement
       if (element.hasAttribute('required')) {
-        element.setAttribute('aria-required', 'true')})
+        element.setAttribute('aria-required', 'true'););)
 }
       // Add error states
       if (element.classList.contains('error') || element.getAttribute('aria-invalid') === 'true') {
         element.setAttribute('aria-invalid', 'true');
-        this.announceToScreenReader('Error in form field')})
+        this.announceToScreenReader('Error in form field'););)
 }
-    })})
+    });;);)
 }
   /**
    * Add ARIA landmarks
@@ -182,17 +182,17 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // Main content
     const main = document.querySelector('main') || document.querySelector('[role="main"]');
     if (main) {
-      main.setAttribute('id', 'main-content')})
+      main.setAttribute('id', 'main-content'););)
 }
     // Navigation
     const nav = document.querySelector('nav') || document.querySelector('[role="navigation"]');
     if (nav) {
-      nav.setAttribute('id', 'navigation')})
+      nav.setAttribute('id', 'navigation'););)
 }
     // Footer
     const footer = document.querySelector('footer') || document.querySelector('[role="contentinfo"]');
     if (footer) {
-      footer.setAttribute('id', 'footer')})
+      footer.setAttribute('id', 'footer'););)
 }
   }
   /**
@@ -212,7 +212,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     assertiveRegion.setAttribute('aria-atomic', 'true');
     assertiveRegion.className = 'sr-only';
     assertiveRegion.id = 'assertive-live-region';
-    document.body.appendChild(assertiveRegion)})
+    document.body.appendChild(assertiveRegion););)
 }
   /**
    * Setup focus management
@@ -221,11 +221,11 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (!this.config.enableFocusManagement) return;
     // Track focus changes
     document.addEventListener('focusin', (event) => {
-      this.handleFocusIn(event)})
-});
+      this.handleFocusIn(event););)
+});;
     document.addEventListener('focusout', (event) => {
-      this.handleFocusOut(event)})
-})})
+      this.handleFocusOut(event););)
+});;);)
 }
   /**
    * Handle focus in
@@ -236,7 +236,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     element.classList.add('focus-visible');
     // Announce focus changes for important elements
     if (element.getAttribute('role') === 'button' || element.tagName === 'BUTTON') {
-      this.announceToScreenReader(`Focused on button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button'}`)})
+      this.announceToScreenReader(`Focused on button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button'}`););)
 }
   }
   /**
@@ -244,7 +244,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
    */
   private handleFocusOut(event: FocusEvent): void {
     const element = event.target as HTMLElement;
-    element.classList.remove('focus-visible')})
+    element.classList.remove('focus-visible'););)
 }
   /**
    * Setup high contrast mode
@@ -253,16 +253,16 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (!this.config.enableHighContrast) return;
     // Check for high contrast preference
     if (window.matchMedia('(prefers-contrast: high)').matches) {
-      document.body.classList.add('high-contrast')})
+      document.body.classList.add('high-contrast'););)
 }
     // Listen for changes
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
       if (e.matches) {
-        document.body.classList.add('high-contrast')})
+        document.body.classList.add('high-contrast'););)
 } else {
-        document.body.classList.remove('high-contrast')})
+        document.body.classList.remove('high-contrast'););)
 }
-    })})
+    });;);)
 }
   /**
    * Setup reduced motion
@@ -271,16 +271,16 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (!this.config.enableReducedMotion) return;
     // Check for reduced motion preference
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.body.classList.add('reduced-motion')})
+      document.body.classList.add('reduced-motion'););)
 }
     // Listen for changes
     window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
       if (e.matches) {
-        document.body.classList.add('reduced-motion')})
+        document.body.classList.add('reduced-motion'););)
 } else {
-        document.body.classList.remove('reduced-motion')})
+        document.body.classList.remove('reduced-motion'););)
 }
-    })})
+    });;);)
 }
   /**
    * Setup ARIA labels
@@ -291,17 +291,17 @@ const AccessibilityEnhancerPage: React.FC = () => {
     buttons.forEach((button) => {
       const element = button as HTMLElement;
       if (!element.textContent?.trim()) {
-        element.setAttribute('aria-label', 'Button')})
+        element.setAttribute('aria-label', 'Button'););)
 }
-    });
+    });;
     // Add ARIA labels to links without text
     const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
     links.forEach((link) => {
       const element = link as HTMLElement;
       if (!element.textContent?.trim()) {
-        element.setAttribute('aria-label', 'Link')})
+        element.setAttribute('aria-label', 'Link'););)
 }
-    })})
+    });;);)
 }
   /**
    * Setup color contrast checking
@@ -309,7 +309,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private setupColorContrast(): void {
     // This would typically use a color contrast library
     // For now, we'll just count potential issues
-    this.metrics.colorContrastIssues = 0})
+    this.metrics.colorContrastIssues = 0});;)
 }
   /**
    * Setup image alt text checking
@@ -319,9 +319,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.metrics.imagesWithoutAlt = 0;
     images.forEach((img) => {
       if (!img.alt) {
-        this.metrics.imagesWithoutAlt++})
+        this.metrics.imagesWithoutAlt++});;)
 }
-    })})
+    });;);)
 }
   /**
    * Setup heading structure checking
@@ -331,9 +331,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.metrics.headingsWithoutContent = 0;
     headings.forEach((heading) => {
       if (!heading.textContent?.trim()) {
-        this.metrics.headingsWithoutContent++})
+        this.metrics.headingsWithoutContent++});;)
 }
-    })})
+    });;);)
 }
   /**
    * Setup form accessibility
@@ -345,16 +345,16 @@ const AccessibilityEnhancerPage: React.FC = () => {
       const inputs = form.querySelectorAll('input, textarea, select');
       inputs.forEach((input) => {
         const element = input as HTMLElement;
-        const id = element.id || `input-${Math.random().toString(36).substr(2, 9)}`;
+        const id = element.id || `input-${Math.random().toString(36).substr(2, 9);`;
         element.id = id;
         if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
           const label = form.querySelector(`label[for="${id}"]`);
           if (label) {
-            element.setAttribute('aria-labelledby', id)})
+            element.setAttribute('aria-labelledby', id););)
 }
-        });)
-})})
-})})
+        });;)
+});;);)
+});;);)
 }
   /**
    * Setup navigation accessibility
@@ -364,13 +364,13 @@ const AccessibilityEnhancerPage: React.FC = () => {
     navs.forEach((nav) => {
       // Add navigation role if not present
       if (!nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation')})
+        nav.setAttribute('role', 'navigation'););)
 }
       // Add aria-label if not present
       if (!nav.getAttribute('aria-label')) {
-        nav.setAttribute('aria-label', 'Main navigation')})
+        nav.setAttribute('aria-label', 'Main navigation'););)
 }
-    })})
+    });;);)
 }
   /**
    * Setup content announcements
@@ -386,18 +386,18 @@ const AccessibilityEnhancerPage: React.FC = () => {
               const element = node as HTMLElement;
               // Announce new content
               if (element.getAttribute('aria-live') === 'polite') {
-                this.announceToScreenReader(element.textContent || '')})
+                this.announceToScreenReader(element.textContent || ''););)
 }
-            });)
-})})
+            });;)
+});;);)
 }
-      })})
-});
+      });;);)
+});;
     observer.observe(document.body, {
       childList: true,
-      subtree: true})
-});
-    this.observers.push(observer)})
+      subtree: true});;)
+});;
+    this.observers.push(observer););)
 }
   /**
    * Setup metrics collection
@@ -405,8 +405,8 @@ const AccessibilityEnhancerPage: React.FC = () => {
   private setupMetricsCollection(): void {
     // Collect metrics periodically
     setInterval(() => {
-      this.scanAccessibility()})
-}, 5000)})
+      this.scanAccessibility(););)
+}, 5000););)
 }
   /**
    * Scan accessibility issues
@@ -417,7 +417,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.metrics.linksWithoutText = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby]):empty').length;
     this.metrics.headingsWithoutContent = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length - 
       Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(h => h.textContent?.trim()).length;
-    this.calculateScores()})
+    this.calculateScores(););)
 }
   /**
    * Calculate accessibility scores
@@ -430,7 +430,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // Overall score
     this.metrics.overallScore = Math.round(
       (this.metrics.keyboardNavigationScore + this.metrics.screenReaderScore) / 2
-    )})
+    ););)
 }
   /**
    * Calculate keyboard navigation score
@@ -440,7 +440,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     const totalElements = document.querySelectorAll('*').length;
     if (totalElements === 0) return 0;
     const focusableRatio = focusableElements.length / totalElements;
-    return Math.min(100, Math.round(focusableRatio * 100))})
+    return Math.min(100, Math.round(focusableRatio * 100)););)
 }
   /**
    * Calculate screen reader score
@@ -453,7 +453,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     score -= this.metrics.linksWithoutText * 3;
     // Deduct for empty headings
     score -= this.metrics.headingsWithoutContent * 2;
-    return Math.max(0, score)})
+    return Math.max(0, score););)
 }
   /**
    * Get focusable elements
@@ -468,7 +468,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       '[tabindex]:not([tabindex="-1"])',
       '[contenteditable="true"]'
     ];
-    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[]})
+    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[]});;)
 }
   /**
    * Announce to screen reader
@@ -481,15 +481,15 @@ const AccessibilityEnhancerPage: React.FC = () => {
       liveRegion.textContent = message;
       // Clear after announcement
       setTimeout(() => {
-        liveRegion.textContent = ''})
-}, 1000)})
+        liveRegion.textContent = ''});;)
+}, 1000););)
 }
   }
   /**
    * Get accessibility metrics
    */
   getMetrics(): AccessibilityMetrics {
-    return { ...this.metrics }})
+    return { ...this.metrics }});;)
 }
   /**
    * Get accessibility report
@@ -509,6 +509,6 @@ Recommendations:
 - Ensure all interactive elements are keyboard accessible
 - Implement proper ARIA labels and roles
 - Test with screen readers regularly
-`})
+`});;)
 }
 }

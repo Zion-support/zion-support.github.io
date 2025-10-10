@@ -16,13 +16,13 @@ interface BlogPost {
   category: string;
   tags: string[];
   image: string;
-  featured: boolean;)
+  featured: boolean});
 }
 
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]></BlogPost>([]);
 
   const blogPosts: BlogPost[] = [
     {
@@ -36,7 +36,7 @@ const BlogPage: React.FC = () => {
       category: 'AI & Machine Learning',
       tags: ['AI', 'Enterprise', 'Innovation'],
       image: '/images/blog/ai-enterprise.jpg',
-      featured: true;)
+      featured: true});
 },
     {
       id: '2',
@@ -49,7 +49,7 @@ const BlogPage: React.FC = () => {
       category: 'Cloud Computing',
       tags: ['Cloud', 'Migration', 'Best Practices'],
       image: '/images/blog/cloud-migration.jpg',
-      featured: false;)
+      featured: false});
 },
     {
       id: '3',
@@ -62,7 +62,7 @@ const BlogPage: React.FC = () => {
       category: 'Cybersecurity',
       tags: ['Security', 'Trends', 'Protection'],
       image: '/images/blog/cybersecurity.jpg',
-      featured: true;)
+      featured: true});
 },
     {
       id: '4',
@@ -75,7 +75,7 @@ const BlogPage: React.FC = () => {
       category: 'Development',
       tags: ['Web Development', 'Scalability', 'Architecture'],
       image: '/images/blog/scalable-apps.jpg',
-      featured: false;)
+      featured: false});
 }
   ];
 
@@ -101,26 +101,26 @@ const BlogPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Blog - Zion Tech Group</title>
+      <Helmet></Helmet>
+        <title></titl>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights on AI, blockchain, cloud computing, and IT solutions from Zion Tech Group experts." />
         <meta name="keywords" content="tech blog, AI insights, blockchain news, cloud computing, IT solutions" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1>
+        <section className="relative py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto text-center"></div>
+            <h1></h1>
               Tech Insights & News
             </h1>
-            <p>
+            <p></p>
               Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
             </p>
             
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8"></div>
-              <div className="relative"></div>
+            <div></div>
+              <div></div>
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -135,28 +135,28 @@ const BlogPage: React.FC = () => {
         </section>
 
         {/* Blog Posts */}
-        <section className="py-16 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>
+        <section></section>
+          <div></div>
+            <h2></h2>
               Latest Articles
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div></div>
               {displayPosts.map((post) => (
-                <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"></articl></article>
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4"></div>
-                    <div className="flex items-center space-x-4"></div>
-                      <div className="flex items-center space-x-1"></div>
+                <article></article>
+                  <div></div>
+                    <div></div>
+                      <div></div>
                         <User className="w-4 h-4" />
-                        <span></spa>{post.author}</span>
+                        <spa></spa>{post.author}</span>
                       </div>
-                      <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"></button>
-                        <span></spa>Read More</span>
+                      <button></button>
+                        <spa></spa>Read More</span>
                         <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-64 flex items-center justify-center"></div>
-                    <div className="text-6xl"></di>📊</div>
+                  <div></div>
+                    <di></di>📊</div>
                   </div>
                 </div>
               </div>
@@ -165,41 +165,41 @@ const BlogPage: React.FC = () => {
         </section>
 
         {/* Blog Posts Grid */}
-        <section className="py-16 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center"></h>Latest Articles</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        <section></section>
+          <div></div>
+            <h></h>Latest Articles</h2>
+            <div></div>
               {blogPosts.filter(post => !post.featured).map((post) => (
-                <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group"></articl></article>
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-48 flex items-center justify-center mb-6"></div>
-                    <div className="text-4xl"></di>📝</div>
+                <article></article>
+                  <div></div>
+                    <di></di>📝</div>
                   </div>
-                  <div className="flex items-center space-x-2 mb-4"></div>
+                  <div></div>
                     <Tag className="w-4 h-4 text-cyan-400" />
-                    <span className="text-cyan-400 text-sm font-medium"></spa>{post.category}</span>
+                    <spa></spa>{post.category}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors"></h3>
+                  <h3></h3>
                     {post.title}
                   </h3>
-                  <p>
+                  <p></p>
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4"></div>
-                    <div className="flex items-center space-x-1"></div>
+                  <div></div>
+                    <div></div>
                       <User className="w-4 h-4" />
-                      <span></spa>{post.author}</span>
+                      <spa></spa>{post.author}</span>
                     </div>
-                    <div className="flex items-center space-x-1"></div>
+                    <div></div>
                       <Clock className="w-4 h-4" />
-                      <span></spa>{post.readTime}</span>
+                      <spa></spa>{post.readTime}</span>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between"></div>
-                    <span className="text-gray-400 text-sm"></span>
+                  <div></div>
+                    <span></span>
                       {new Date(post.date).toLocaleDateString();
                     </span>
-                    <button className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"></button>
-                      <span></spa>Read</span>
+                    <button></button>
+                      <spa></spa>Read</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
@@ -210,21 +210,21 @@ const BlogPage: React.FC = () => {
         </section>
 
         {/* Newsletter Signup */}
-        <section className="py-16 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-3xl font-bold text-white mb-6"></h2>
+        <section></section>
+          <div></div>
+            <h2></h2>
               Stay Updated
             </h2>
-            <p>
+            <p></p>
               Subscribe to our newsletter for the latest AI and IT insights delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"></div>
+            <div></div>
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
               />
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"></button>
+              <button></button>
                 Subscribe
               </button>
             </div>
@@ -233,7 +233,7 @@ const BlogPage: React.FC = () => {
             </div>
             
             {searchResults.length === 0 && searchQuery && (
-              <div className="text-center py-12"></div>
+              <div></div>
                 <p>No articles found matching your search criteria.</p>
               </div>
             );
@@ -241,8 +241,8 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-  )););)
+  ));});
 };
 
 export default BlogPage;
-
+}

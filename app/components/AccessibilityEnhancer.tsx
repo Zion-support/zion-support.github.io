@@ -5,14 +5,14 @@ interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
-  enableFocusManagement?: boolean})
+  enableFocusManagement?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
-  enableFocusManagement = true})
+  enableFocusManagement = true
 }) => {
   useEffect(() => {
     // Keyboard navigation enhancements
@@ -23,7 +23,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
           const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
           if (skipLink) {
             skipLink.focus();
-            event.preventDefault()})
+            event.preventDefault(););)
 }
         }
 
@@ -31,13 +31,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
         if (event.key === 'Escape') {
           const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
           openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false')})
-})})
+            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false'););)
+});;);)
 }
       };
 
       document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown)})
+      return () => document.removeEventListener('keydown', handleKeyDown););)
 }
 
     // Focus management
@@ -55,25 +55,25 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
           if (e.shiftKey) {
             if (document.activeElement === firstFocusableElement) {
               lastFocusableElement.focus();
-              e.preventDefault()})
+              e.preventDefault(););)
 }
           } else {
             if (document.activeElement === lastFocusableElement) {
               firstFocusableElement.focus();
-              e.preventDefault()})
+              e.preventDefault(););)
 }
-          });)
+          });;)
 };
 
         container.addEventListener('keydown', handleTabKey);
         firstFocusableElement?.focus();
 
-        return () => container.removeEventListener('keydown', handleTabKey)})
+        return () => container.removeEventListener('keydown', handleTabKey););)
 };
 
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement))})
+      modals.forEach(modal => trapFocus(modal as HTMLElement)););)
 }
 
     // Screen reader support
@@ -90,7 +90,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
       const announcePageChange = (message: string) => {
         const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
-          liveRegion.textContent = message})
+          liveRegion.textContent = message});;)
 }
       };
 
@@ -100,19 +100,19 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
 
       history.pushState = function(...args) {
         originalPushState.apply(history, args);
-        announcePageChange('Page changed')})
+        announcePageChange('Page changed'););)
 };
 
       history.replaceState = function(...args) {
         originalReplaceState.apply(history, args);
-        announcePageChange('Page updated')})
+        announcePageChange('Page updated'););)
 };
 
       return () => {
         document.body.removeChild(liveRegion);
         history.pushState = originalPushState;
-        history.replaceState = originalReplaceState})
-}})
+        history.replaceState = originalReplaceState});;)
+}});;)
 }
 
     // High contrast mode support
@@ -121,20 +121,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps></Accessibility
       
       const updateHighContrast = (e: MediaQueryListEvent) => {
         if (e.matches) {
-          document.documentElement.classList.add('high-contrast')})
+          document.documentElement.classList.add('high-contrast'););)
 } else {
-          document.documentElement.classList.remove('high-contrast')})
+          document.documentElement.classList.remove('high-contrast'););)
 }
       };
 
       prefersHighContrast.addEventListener('change', updateHighContrast);
       updateHighContrast(prefersHighContrast);
 
-      return () => prefersHighContrast.removeEventListener('change', updateHighContrast)})
+      return () => prefersHighContrast.removeEventListener('change', updateHighContrast););)
 }
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
 
-  return null})
+  return null});;)
 };
 
 export default AccessibilityEnhancer;

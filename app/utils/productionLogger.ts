@@ -9,7 +9,7 @@ interface LogEntry {}
   message: string,
   data?: unknown;
   timestamp: string,
-  context?: string;)
+  context?: string});
 }
 
 class ProductionLogger {}
@@ -25,7 +25,7 @@ class ProductionLogger {}
       message,
       data,
       timestamp: new Date().toISOString(),
-      context;)
+      context});
 };
 
     // Only log in development;
@@ -41,7 +41,7 @@ class ProductionLogger {}
         case 'warn':
           break;
         case 'error':
-          break;)
+          break});
 }
     }
 
@@ -65,11 +65,11 @@ class ProductionLogger {}
   private sendToMonitoring(entry: LogEntry): void {}
     // Send to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {}
-      (window as any).gtag('event', 'error_log', {)}
+      (window as any).gtag('event', 'error_log', {);
         error_message: entry.message,
         error_context: entry.context,
         error_timestamp: entry.timestamp,
-        event_category: 'Error';)
+        event_category: 'Error'});
 }
   }
 

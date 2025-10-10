@@ -15,7 +15,7 @@ interface CaseStudy {
   results: string[];
   image: string;
   duration: string;
-  team: string;)
+  team: string});
 }
 
 const CaseStudiesPage: React.FC = () => {
@@ -35,7 +35,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/ai-customer-service.jpg',
       duration: '3 months',
-      team: '8 specialists'})
+      team: '8 specialists'});;)
 },
     {
       id: '2',
@@ -52,7 +52,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/cloud-migration.jpg',
       duration: '6 months',
-      team: '12 specialists'})
+      team: '12 specialists'});;)
 },
     {
       id: '3',
@@ -69,7 +69,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/cybersecurity-healthcare.jpg',
       duration: '4 months',
-      team: '10 specialists'})
+      team: '10 specialists'});;)
 },
     {
       id: '4',
@@ -86,7 +86,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/ml-predictive-analytics.jpg',
       duration: '5 months',
-      team: '6 specialists'})
+      team: '6 specialists'});;)
 },
     {
       id: '5',
@@ -103,7 +103,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/digital-transformation.jpg',
       duration: '8 months',
-      team: '15 specialists'})
+      team: '15 specialists'});;)
 },
     {
       id: '6',
@@ -120,7 +120,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/blockchain-supply-chain.jpg',
       duration: '7 months',
-      team: '11 specialists'})
+      team: '11 specialists'});;)
 }
   ];
 
@@ -134,7 +134,7 @@ const CaseStudiesPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>Case Studies | Zion Tech Group | Success Stories & Client Results</title>
+        <titl></titl>Case Studies | Zion Tech Group | Success Stories & Client Results</title>
         <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions. Real results from real clients." />
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation, client results" />
         <meta property="og:title" content="Case Studies - Zion Tech Group" />
@@ -143,122 +143,113 @@ const CaseStudiesPage: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/case-studies" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></di></div>
+      <div></div>
         {/* Hero Section */}
-        <section className="py-20 px-4"></sectio></section>
-          <div className="max-w-7xl mx-auto text-center"></di></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"></spa>Stories</span>
+        <section></section>
+          <div></div>
+            <h1></h1>
+              Success <spa></spa>Stories</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12"></p>
+            <p></p>
               Discover how we've helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"></di></div>
+            <div></div>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center"></di></div>
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-4"></di></div>
+                <div></div>
+                  <div></div>
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2"></di>{stat.value}</div>
-                  <div className="text-gray-400"></di>{stat.label}</div>
+                  <di></di>{stat.value}</div>
+                  <di></di>{stat.label}</div>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
 
         {/* Case Studies Grid */}
-        <section className="py-16 px-4"></sectio></section>
-          <div className="max-w-7xl mx-auto"></di></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></di></div>
+        <section></section>
+          <div></div>
+            <div></div>
               {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group"></di></div>
-                  <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative"></di></div>
-                    <div className="absolute inset-0 bg-black/20"></di></div>
-                    <div className="absolute bottom-4 left-4 right-4"></di></div>
-                      <div className="flex items-center gap-2 text-white text-sm"></di></div>
-                        <span className="bg-purple-500 px-3 py-1 rounded-full"></spa>{study.industry}</span>
-                        <span className="bg-white/20 px-3 py-1 rounded-full"></spa>{study.duration}</span>
+                <div></div>
+                  <div></div>
+                    <div></div>
+                    <div></div>
+                      <div></div>
+                        <spa></spa>{study.industry}</span>
+                        <spa></spa>{study.duration}</span>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="p-8"></di></div>
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors"></h3>
+                  <div></div>
+                    <h3></h3>
                       {study.title}
                     </h3>
                     
-                    <div className="mb-6"></di></div>
-                      <h4 className="text-lg font-semibold text-purple-400 mb-2"></h>Client: {study.client}</h4>
+                    <div></div>
+                      <h></h>Client: {study.client}</h4>
                       <p className="text-gray-300 text-sm mb-4">{study.team}</p>
                     </div>
 
-                    <div className="mb-6"></di></div>
-                      <h4 className="text-lg font-semibold text-white mb-2"></h>Challenge</h4>
+                    <div></div>
+                      <h></h>Challenge</h4>
                       <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
                     </div>
 
-                    <div className="mb-6"></di></div>
-                      <h4 className="text-lg font-semibold text-white mb-2"></h>Solution</h4>
+                    <div></div>
+                      <h></h>Solution</h4>
                       <p className="text-gray-300 text-sm mb-4">{study.solution}</p>
                     </div>
 
-                    <div className="mb-6"></di></div>
-                      <h4 className="text-lg font-semibold text-white mb-3"></h>Results</h4>
-                      <ul className="space-y-2"></ul>
+                    <div></div>
+                      <h></h>Results</h4>
+                      <ul></ul>
                         {study.results.map((result, index) => (
-                          <li key={index} className="flex items-center text-gray-300 text-sm"></li>
+                          <li></li>
                             <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                             {result}
                           </li>
-                        ))}
+                        ));
                       </ul>
                     </div>
 
-                    <div className="flex items-center justify-between"></di></div>
-                      <Link
-                        to={`/case-studies/${study.id}`}
-                        className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-                      ></Link>
+                    <div></div>
+                      <Link></Link>
                         Read Full Case Study
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-                      <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"></button>
+                      <button></button>
                         <ExternalLink className="w-4 h-4" />
                         Share
                       </button>
                     </div>
                   </div>
                 </div>
-              ))}
+              ));
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4"></sectio></section>
-          <div className="max-w-4xl mx-auto text-center"></di></div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20"></di></div>
-              <h2 className="text-3xl font-bold text-white mb-6"></h2>
+        <section></section>
+          <div></div>
+            <div></div>
+              <h2></h2>
                 Ready to Write Your Success Story?
               </h2>
-              <p className="text-xl text-gray-300 mb-8"></p>
+              <p></p>
                 Let's discuss how we can help transform your business with our AI and IT solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></di></div>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                ></Link>
+              <div></div>
+                <Link></Link>
                   Start Your Project
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
-                ></Link>
+                <Link></Link>
                   Explore Our Services
                 </Link>
               </div>

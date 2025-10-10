@@ -7,7 +7,7 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: Record<string, unknown></string>})
+  structuredData?: Record<string></string>});;)
 }
 const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -15,8 +15,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData})
-}) => {
+  structuredData});;)
+}); => {
   useEffect(() => {
     // Update page title
     document.title = title;
@@ -36,32 +36,32 @@ const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
     updateCanonicalUrl(canonicalUrl);
     // Add structured data
     if (structuredData) {
-      addStructuredData(structuredData)})
+      addStructuredData(structuredData););)
 }
     // Add breadcrumb structured data
     addBreadcrumbStructuredData();
     // Add organization structured data
-    addOrganizationStructuredData()})
+    addOrganizationStructuredData(););)
 }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
-      document.head.appendChild(meta)})
+      document.head.appendChild(meta););)
 }
-    meta.setAttribute('content', content)})
+    meta.setAttribute('content', content););)
 };
   const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical)})
+      document.head.appendChild(canonical););)
 }
-    canonical.setAttribute('href', url)})
+    canonical.setAttribute('href', url););)
 };
-  const addStructuredData = (data: Record<string, unknown></string>) => {
+  const addStructuredData = (data: Record<string></string>) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -69,9 +69,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
     // Remove existing structured data
     const existing = document.getElementById('structured-data');
     if (existing) {
-      existing.remove()})
+      existing.remove(););)
 }
-    document.head.appendChild(script)})
+    document.head.appendChild(script););)
 };
   const addBreadcrumbStructuredData = () => {
     const breadcrumbData = {
@@ -82,9 +82,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
           '@type': 'ListItem',
           'position': 1,
           'name': 'Home',
-          'item': 'https://ziontechgroup.com'})
+          'item': 'https://ziontechgroup.com'});;)
 }
-      ]})
+      ]});;)
 };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -93,9 +93,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
     // Remove existing breadcrumb data
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {
-      existing.remove()})
+      existing.remove(););)
 }
-    document.head.appendChild(script)})
+    document.head.appendChild(script););)
 };
 
 import React from 'react';
@@ -109,7 +109,7 @@ interface SEOOptimizerProps {
   structuredData?: any;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: string})
+  twitterCard?: string});;)
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
@@ -120,17 +120,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
   structuredData,
   ogImage = '/images/og-image.jpg',
   ogType = 'website',
-  twitterCard = 'summary_large_image'})
-}) => {
+  twitterCard = 'summary_large_image'});;)
+}); => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
 
   return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
-      <title></titl>{fullTitle}</title>
+      <titl></titl>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="keywords" content={keywords.join(', '); />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -165,13 +165,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json"></script>
-          {JSON.stringify(structuredData)}
+        <script></script>
+          {JSON.stringify(structuredData);
         </script>
-      )}
+      );
       
       {/* Additional Structured Data for Organization */}
-      <script type="application/ld+json"></script>
+      <script></script>
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -188,23 +188,23 @@ const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
             "addressLocality": "Middletown",
             "addressRegion": "DE",
             "postalCode": "19709",
-            "addressCountry": "US"})
+            "addressCountry": "US"});;)
 },
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
             "contactType": "Customer Service",
             "areaServed": "US",
-            "availableLanguage": "en"})
+            "availableLanguage": "en"});;)
 },
           "sameAs": [
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
-          ]})
-})}
+          ]});;)
+});;
       </script>
     </Helmet>
-  )})
+  ););)
 };
 
 export default SEOOptimizer;
