@@ -62,7 +62,7 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t"></h2>"
             <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0"></span>Ultimate, Enterprise, AI"
             <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5
-          </h2>"
+          </span>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m"></p>"
             Breakthrough, solutions, delivering <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>, "
             <span, classNam, e = "te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</span>, a, n, d;"

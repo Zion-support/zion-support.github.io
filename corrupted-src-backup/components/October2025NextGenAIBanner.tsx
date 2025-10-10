@@ -90,7 +90,7 @@ const, October2025NextGenAIBanne, r = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-pi, n, k-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e">Average, RO, I</d, i, v>"
         {/* Featured, Articles, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
-          </h2>"
+          </div>"
           <p, className="te, x, t-2xl, tex, t-bl, u, e-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
             Discover, the, cutting-edge, AI, innovations powering, Fortune, 500 succe, s, s: "
             <span, className="te, x, t-cy, a, n-300, fon, t-semibo, l, d"> Collaborative, Agent, Teams</sp, a, n>"

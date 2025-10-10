@@ -141,7 +141,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-purp, l, e-3, 0, 0">"
               Read, Full, Guide
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
-              Read, Full, Guide;
+              Read, Full, Guide
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
             </d, i, v>"
             <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-ho, v, e,"
@@ -208,7 +208,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-r, e, d-3, 0, 0">"
               Read, Security, Guide
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
-              Read, Security, Guide;
+              Read, Security, Guide
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
             </d, i, v>"
             <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-ho, v, e,"
@@ -275,7 +275,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-cy, a, n-3, 0, 0">"
               Read, Implementation, Guide
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
-              Read, Implementation, Guide;
+              Read, Implementation, Guide
               <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
             </d, i, v>"
             <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-ho, v, e,"

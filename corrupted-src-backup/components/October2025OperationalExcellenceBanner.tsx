@@ -92,7 +92,7 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
             <div, className="te, x, t-bl, u, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e">Average, RO, I</d, i, v>"
         {/* Featured, Articles, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
-          </h2>"
+          </div>"
           <p, className="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
             Discover, breakthrough, AI innovations, delivering, unprecedented efficien, c, y: "
             <span, className="te, x, t-emera, l, d-300, fon, t-semibo, l, d"> Predictive, Maintenanc, e (99.6% Accura, c, y)</sp, a, n>"

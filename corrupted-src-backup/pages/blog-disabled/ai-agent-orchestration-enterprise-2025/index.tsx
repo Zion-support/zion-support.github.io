@@ -796,8 +796,7 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
 :src/pages/blog/ai-agent-orchestration-enterprise-2025/index.tsx
               <div></div>"
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-lg"></div>"
-                <h2 className="text-3xl font-bold text-white mb-4">
-  Ready to Deploy Enterprise AI Agents?
+                <h2 className="text-3xl font-bold text-white mb-4">Ready to Deploy Enterprise AI Agents?
                 </h2>"
                 <p className="text-xl text-white/90 mb-6">
   Our team has deployed agent orchestration systems for 50+ Fortune 500 companies.

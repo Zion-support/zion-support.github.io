@@ -136,7 +136,7 @@ export default function About() {/* TODO: Fix JSX expression */}
               <div className="mb-12"></div>"
                 <h2 className="text-3xl font-bold text-gray-800 mb-4"></h2>"
                   Our <span className="text-blue-600">Mission
-                </h2>"
+                </span>"
                 <p className="text-lg text-gray-600 mb-4">
                   To empower businesses with innovative technology solutions that drive growth,
                   efficiency, and digital transformation. We believe technology should be
@@ -171,7 +171,7 @@ export default function About() {/* TODO: Fix JSX expression */}
               <div className="text-center mb-12"></div>"
                 <h2 className="text-3xl font-bold text-gray-800 mb-4"></h2>"
                   Our <span className="text-blue-600">Values
-                </h2>"
+                </span>"
                 <p className="text-lg text-gray-600">
                   The principles that guide everything we do and shape our approach to technology
                   solutions.
@@ -265,7 +265,7 @@ export default function About() {/* TODO: Fix JSX expression */}
               <div className="text-center mb-12"></div>"
                 <h2 className="text-3xl font-bold text-gray-800 mb-4"></h2>"
                   Our <span className="text-blue-600">Team
-                </h2>"
+                </span>"
                 <p className="text-lg text-gray-600">
                   Meet the talented individuals who make Zion Tech Group a leader in technology
                   solutions.

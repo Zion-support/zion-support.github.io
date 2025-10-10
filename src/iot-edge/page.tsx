@@ -173,8 +173,7 @@ titl,
   lg:px-8"></div>"
             <div className="text-center mb-12"></div>"
               <h2 className="text-3xl,"
-  md:text-4xl font-bold text-gray-900 mb-4">
-// Why Choose Our IoT & Edge Services?
+  md:text-4xl font-bold text-gray-900 mb-4">// Why Choose Our IoT & Edge Services?
           </h2>"
               <p className="text-xl text-gray-600">
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;"

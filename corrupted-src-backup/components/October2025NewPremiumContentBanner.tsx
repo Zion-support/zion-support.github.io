@@ -43,7 +43,7 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix 
             Revolutionary, AI, Platforms;"
             <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-4, 0, 0">"
               Transform, Your, Enterprise Tod, a, y
-          </h2>"
+          </span>"
           <p, className="te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-3xl, m, x-au, t, o">"
             Three, breakthrough, platforms delivering, unprecedented, ROI, securi, t, y, and, competitive, advantage
         {/* Content, Cards, Grid */}"

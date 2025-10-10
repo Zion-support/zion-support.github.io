@@ -275,8 +275,7 @@ const PagePage: React.FC = () => {
                       <p className="text-gray-300 text-sm">{partner.description}
                   ))}
           {/* Partnership Benefits */}"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Why Partner With Us?
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">// Why Partner With Us?
           </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"

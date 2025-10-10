@@ -119,8 +119,7 @@ const CloudServicesPage: React.FC = () => {
             ))}
         {/* CTA Section */}"
         <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12"></section>"
-          <h2 className="text-3xl font-bold text-white mb-4">
-// Ready to Transform Your Infrastructure?
+          <h2 className="text-3xl font-bold text-white mb-4">// Ready to Transform Your Infrastructure?
           </h2>"
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
 // Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.

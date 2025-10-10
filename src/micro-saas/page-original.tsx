@@ -10504,8 +10504,7 @@ const categories = [
       {/* CTA Section */}"
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
         <div className="max-w-4xl mx-auto text-center"></div>"
-          <h2 className="text-3xl font-bold text-white mb-6">
-// Ready to Transform Your Business?
+          <h2 className="text-3xl font-bold text-white mb-6">// Ready to Transform Your Business?
           </h2>"
           <p className="text-xl text-purple-100 mb-8">
 // Get started with our micro SAAS solutions today and see the difference AI can make.

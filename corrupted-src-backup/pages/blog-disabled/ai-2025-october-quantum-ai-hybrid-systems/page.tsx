@@ -457,8 +457,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                       <span className="text-white">Machine,
   Learning: Quantum-enhanced neural networks
                 <div></div>"
-                  <h2 className="text-2xl font-bold text-white mb-4">
-  Ready to Harness Quantum-AI Power?
+                  <h2 className="text-2xl font-bold text-white mb-4">Ready to Harness Quantum-AI Power?
                   </h2>"
                   <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
   Join forward-thinking enterprises leveraging quantum-AI hybrid systems for competitive advantage. 

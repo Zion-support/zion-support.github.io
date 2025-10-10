@@ -91,7 +91,7 @@ const, October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression 
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";"
             🚀 <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
               3, Revolutionary, Enterprise Technologi, e, s 🚀
-          </h2>"
+          </span>"
           <p, className="te, x, t-x, l, m,"
   d: te, x, t-2xl, tex, t-cy, a, n-100, fon, t-medi, u, m">"
             ⚡ Quant, u, m-Safe, Cryptograph, y • Autonomous, Risk, Management • AI-Powered, Digital, Twins

@@ -129,7 +129,7 @@ const, October2025MultimodalCXRevolutionBanne, r = () => {/* TODO: Fix JSX expre
             <br   /></br>"
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">"
               $340M, Value, Created | 2, 8, 7% R, O, I | 94% Customer, Satisfactio, n
-          </h2>"
+          </span>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d"></p>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";"
             Revolutionary, platform, integrating <strong, className="te, x, t-whi, t, e">Visi, o, n + Voi, c, e + Te, x, t + Emotion, A, I</stro, n, g> to, deliver, exceptional personalized, experiences, at sca, l, e. Achieve, 8, 5% automati, o, n, 87% fir, s, t-contact, resolutio, n, and, transform, customer satisfacti, o, n. <strong, className="te, x, t-cy, a, n-4, 0, 0">Fortune, 100, proven</stro, n, g>with, 127M, customers global, l, y."

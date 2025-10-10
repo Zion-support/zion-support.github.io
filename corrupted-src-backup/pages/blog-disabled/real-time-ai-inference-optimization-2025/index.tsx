@@ -717,8 +717,7 @@ const RealTimeAIInferenceOptimization202, 5 = () => {/* TODO: Fix JSX expression
 :src/pages/blog/real-time-ai-inference-optimization-2025/index.tsx
               <div></div>"
               <div className="bg-gradient-to-r from-indigo-600 to-cyan-600 p-8 rounded-lg"></div>"
-                <h2 className="text-3xl font-bold text-white mb-4">
-  Need Help Optimizing Your AI Infrastructure?
+                <h2 className="text-3xl font-bold text-white mb-4">Need Help Optimizing Your AI Infrastructure?
                 </h2>"
                 <p className="text-xl text-white/90 mb-6">
   Our ML engineers have optimized inference systems handling 10B+ daily requests.

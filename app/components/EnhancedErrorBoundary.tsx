@@ -19,12 +19,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    // Update state so the next render will show the fallback UI
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log the error to an error reporting service
     console.error('Error caught by boundary:', error, errorInfo);
     
     this.setState({
@@ -32,7 +30,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // You can also log the error to an error reporting service here
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.toString(),
@@ -43,7 +40,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="max-w-md mx-auto text-center p-8">

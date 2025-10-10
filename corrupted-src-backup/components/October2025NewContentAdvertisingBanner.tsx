@@ -103,7 +103,7 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t">";"
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">"
               3, Revolutionary, AI Breakthroug, h, s
-          </h2>"
+          </span>"
           <p, className="te, x, t-3x, l, m,"
   d: te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8">""
           <p, className="te, x, t-3xl, m, d: te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8">"

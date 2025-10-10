@@ -505,8 +505,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                       <span className="text-white">Cost,
   Optimization: 70% reduction in AI infrastructure costs
                 <div></div>"
-                  <h2 className="text-2xl font-bold text-white mb-4">
-  Ready to Transform Your Enterprise with AI Automation?
+                  <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Enterprise with AI Automation?
                   </h2>"
                   <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
   Join 200+ companies that have achieved 400%+ efficiency gains with our proven AI automation framework. 

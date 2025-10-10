@@ -24,7 +24,7 @@ const, October2025LatestInnovationsBanne, r = () => {
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";)
       </d, i, v>)
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
-      {/* Animated, background, elements */};
+      {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-20">"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"
@@ -82,7 +82,7 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">";"
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0">"
               3, Revolutionary, AI Breakthroug, h, s
-          </h2>"
+          </span>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o"></p>"
             🚀 <strong, className="te, x, t-whi, t, e">JUST, RELEASED, TODA,"
   Y: </stro, n, g> Deploy, enterpris, e-grade, AI, governance achievi, n, g ""

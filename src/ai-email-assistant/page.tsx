@@ -25,8 +25,7 @@ import Footer from '../components/Footer'
 //               Get Free Demo
         {/* Features Section */}"
         <section className="mb-16"></section>"
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-// Key Features</h2>"
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">// Key Features</h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
@@ -73,8 +72,7 @@ import Footer from '../components/Footer'
 //                 private and protected at all times.
         {/* Pricing Section */}"
         <section className="mb-16"></section>"
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-// Pricing Plans</h2>"
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">// Pricing Plans</h2>"
           <div className="grid grid-cols-1,"
   md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
             <div className="cyber-card hologram-card p-8 text-center"></div>"
@@ -120,8 +118,7 @@ import Footer from '../components/Footer'
 // Contact Sales
         {/* Contact Section */}"
         <section className="text-center"></section>"
-          <h2 className="text-3xl font-bold text-white mb-8 neon-text">
-// Ready to Transform Your Email Workflow?
+          <h2 className="text-3xl font-bold text-white mb-8 neon-text">// Ready to Transform Your Email Workflow?
           </h2>"
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
 // Contact us today to schedule a free demo and see how our AI Email Assistant

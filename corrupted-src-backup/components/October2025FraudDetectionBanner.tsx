@@ -133,7 +133,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             <br   /></br>"
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, vi, a-purp, l, e-400, t, o-bl, u, e-4, 0, 0">"
               $847B, in, Assets Protect, e, d | 99.7% Accura, c, y | S, u, b-50ms, Detectio, n
-          </h2>"
+          </span>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d"></p>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";"
             Revolutionary, AI, platform combini, n, g <strong, className="te, x, t-whi, t, e">Graph, Neural, Networks, Behavioral, Biometric, s & Mul, t, i-Model, M, L</stro, n, g> to, achieve, 96% fraud, reductio, n, 43x, RO, I, and, nea, r-zero, false, positives. <strong, className="te, x, t-r, e, d-4, 0, 0">Fortune, 100, proven</stro, n, g>across, 127, countries."

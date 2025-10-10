@@ -72,7 +72,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
             <br   /></br>"
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">"
               $3.2B, Value, Created | 99.99% Upti, m, e | 87% Cost, Reductio, n | 42x, RO, I
-          </h2>"
+          </span>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d"></p>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";"
             Revolutionary, sel, f-healing, AI, agents achievi, n, g <strong, className="te, x, t-whi, t, e">$410M, annual, value</stro, n, g> for, Fortune, 500 enterpris, e, s. ";"

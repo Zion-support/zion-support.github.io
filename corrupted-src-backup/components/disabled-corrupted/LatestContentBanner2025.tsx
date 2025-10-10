@@ -119,8 +119,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
             Master, revolutionary, AI breakthro, u, g, h, s, explore, future, predictions, and, transform, your enterprise, with, proven framewor, k, s. 
             Batt, l, e-tested, strategies, from Fortune, 500, implementations delivering, unprecedented, results.
         </div>"
-        <h2, classNam, e = "te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
-          🚀 BREAKTHROU, G, H: Revolutionary, AI, Technologies 20, 2, 5!
+        <h2, classNam, e = "te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">🚀 BREAKTHROU, G, H: Revolutionary, AI, Technologies 20, 2, 5!
         </h2>"
         <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3, x, l"></p>"
           Experien, c, e <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0">3, REVOLUTIONARY, breakthrough technologies</sp, a, n> including, our, lates,")

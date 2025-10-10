@@ -44,7 +44,7 @@ const, October2025NewContentBanne, r = () => {/* TODO: Fix JSX expression */}
           <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-bl, u, e-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
             Latest, AI, Breakthroughs & Enterprise, Strategie, s
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">Discover, cuttin, g-edge, insights, on multimodal, AI, agents, ze, r, o-trust, security, architectures
-          </h2>"
+          </p>"
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">
             Discover, cuttin, g-edge, insights, on multimodal, AI, agents, ze, r, o-trust, security, architectures;"
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">"

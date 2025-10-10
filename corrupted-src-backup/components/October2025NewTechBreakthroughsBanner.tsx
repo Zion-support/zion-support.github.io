@@ -394,7 +394,7 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
             <div, className="flex, item, s-center, tex, t-gre, e, n-300, grou, p-hov, e, r: te, x, t-gre, e, n-200, fon, t-semibo, l, d">"
               Learn, Green, AI
               <ArrowRight, className="ml-2 w-5 h-5, grou, p-ho, v, e
-              Learn, Green, AI;
+              Learn, Green, AI
               <ArrowRight, className="ml-2 w-5 h-5, grou, p-ho, v, e
               Learn, Green, AI;"
               <ArrowRight, className="ml-2 w-5 h-5, grou, p-ho, v, e,"

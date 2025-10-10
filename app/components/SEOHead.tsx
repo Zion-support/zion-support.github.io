@@ -1,6 +1,5 @@
-'use client';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
   title?: string
   description?: string
@@ -48,11 +47,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "https://twitter.com/ziontechgroup",
       "https://github.com/zion-tech-group"
     ]
-  };
-
+  }
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>{title}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -76,9 +74,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
-    </Helmet>
-  );
-};
-
-export default SEOHead;
+  )
+}
+export default SEOHead

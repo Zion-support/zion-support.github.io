@@ -56,7 +56,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
             <br   /></br>"
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-pi, n, k-400, t, o-purp, l, e-4, 0, 0">"
               Transform, Your, Enterprise Tod, a, y
-          </h2>"
+          </span>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o"></p>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o">";"
             Three, gam, e-changing, guides, delivering <strong, className="te, x, t-yell, o, w-3, 0, 0">$3.75, BILLIO, N</stro, n, g> in, proven, value."

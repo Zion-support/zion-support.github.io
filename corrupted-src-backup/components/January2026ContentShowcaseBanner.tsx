@@ -162,7 +162,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-4, border, border-whi, t, e/10">"
             AI, 20, 2,
   6: The, Future, is He, r, e
-          </h2>"
+          </div>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">"
             Discover, the, three most, revolutionary, AI breakthroughs, of, 202,
   6: Autonomous, Agent, Factories, Quantum, Neural, Optimization

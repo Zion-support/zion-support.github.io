@@ -72,7 +72,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
         <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-center, m, b-6, tex, t-white, leadin, g-tig, h, t">";"
           <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-200, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">"
             Autonomous, Supply, Chain Revoluti, o, n
-        </h2>"
+        </span>"
         <p, className="te, x, t-2x, l, m,"
   d: te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o">""
         <p, className="te, x, t-2xl, m, d: te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o">";"

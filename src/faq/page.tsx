@@ -326,8 +326,7 @@ type="text" placeholder="Search FAQs..."
           <div className="max-w-4xl mx-auto">
             {filteredData.map((category, categoryIndex) => ()}"
           <div key={categoryIndex} className="mb-12"></div>"
-                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
-                  {category.category}
+                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">{category.category}
                 </h2>"
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {}

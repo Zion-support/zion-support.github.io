@@ -57,8 +57,7 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
               <span, className="inli, n, e-flex, item, s-center, p, x-4, p, y-1.5, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, shado, w-lg, animat, e-pul, s, e"></span>🔥 JUST, PUBLISHE, D - OCTO, B, E, R , 1, 20, 2, 5"
               <span, classNam, e = "inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibold, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, border, border-purp, l, e-4, 0, 0/30"></span>PREMIUM, CONTEN, T
             </div>"
-            <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-3, leadin, g-tig, h, t">
-              🚀 3, Revolutionary, AI Breakthroug, h, s — Transform, Your, Enterprise Tod, a, y!
+            <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-3, leadin, g-tig, h, t">🚀 3, Revolutionary, AI Breakthroug, h, s — Transform, Your, Enterprise Tod, a, y!
             </h2>"
             <p, className="te, x, t-lg, tex, t-purp, l, e-100, m, b-4, ma, x-w-4xl, leadin, g-relax, e, d">
               ⚡ <stro, n, g>BRAND, NEW, RELEASE,

@@ -736,8 +736,7 @@ $4}
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}
           {/* Benefits Section */}"
           <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Why Choose Our Solutions?
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">// Why Choose Our Solutions?
           </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -774,8 +773,7 @@ $4}
                 Email Us
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
-            <h2 className="text-2xl font-bold text-white mb-4">
-// Ready to Transform Your Business?
+            <h2 className="text-2xl font-bold text-white mb-4">// Ready to Transform Your Business?
           </h2>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
 // Get a free consultation and discover how our solutions can revolutionize your operations

@@ -65,7 +65,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <br /></br>"
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, tex, t-transparent, b, g-cl, i, p-te, x, t">"
               Systems, That, Transform Operatio, n, s
-          </h2>"
+          </span>"
           <p, className="te, x, t-2xl, tex, t-purp, l, e-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">"
             Master, contex, t-aware, agent, s, intelligent, cost, governance, and, multimodal, intelligence
   with, our, latest enterprise, implementation, guides. Achieve, 7, 9% cost, reductions, and 2, 6, x
