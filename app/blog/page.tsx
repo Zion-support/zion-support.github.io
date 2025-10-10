@@ -1,13 +1,8 @@
 'use client';
 
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+import { Link } from 'react-router-dom';
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 
 interface BlogPost {
@@ -20,25 +15,15 @@ interface BlogPost {
   readTime: string;
   category: string;
   tags: string[];
-<<<<<<< HEAD
   image: string;
   featured: boolean;
-=======
-  featured: boolean;
-  image: string;
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 }
 
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
-  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
-
-=======
 
   // Sample blog posts data
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
   const blogPosts: BlogPost[] = [
     {
       id: '1',
