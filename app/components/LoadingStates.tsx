@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-'use client'import React from 'react'
-import { Loader2  } from 'lucide-react'export const PageLoader: React.FC = () => {
-=======
 'use client';
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
 export const PageLoader: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -46,13 +41,8 @@ export const ContentSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded w-3/4"></div>
     </div>
-<<<<<<< HEAD
-  )}
-=======
   );
 };
-
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
 export const LoadingSpinner: React.FC = () => (
   <div className="flex items-center justify-center p-8">
     <div className="w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>

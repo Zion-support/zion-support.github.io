@@ -14,26 +14,36 @@ const Navigation: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false)
+        setIsOpen(false);
       }
-    }const handleScroll  = () => {
-      setIsScrolled(window.scrollY > 50)}
-    window.addEventListener('resize', handleResize)
-    window.addEventListener('scroll', handleScroll)return () => {
-      window.removeEventListener('resize', handleResize)
-      window.removeEventListener('scroll', handleScroll)}
-  }, [])
-  const toggleMenu = () => setIsOpen(!isOpen)
-  const toggleServices = () => setServicesOpen(!servicesOpen)
-  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen)
-  const toggleItServices = () => setItServicesOpen(!itServicesOpen)
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)const closeAllMenus  = () => {
-    setServicesOpen(false)
-    setAiServicesOpen(false)
-    setItServicesOpen(false)
-    setMicroSaasOpen(false)
-    setIsOpen(false)
-  }
+    };
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleServices = () => setServicesOpen(!servicesOpen);
+  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
+  const toggleItServices = () => setItServicesOpen(!itServicesOpen);
+  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
+  
+  const closeAllMenus = () => {
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+    setIsOpen(false);
+  };
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process automation' },
@@ -362,5 +372,7 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  )}
-export default Navigation
+  );
+};
+
+export default Navigation;
