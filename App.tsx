@@ -30,6 +30,17 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
+const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const DemoPage = React.lazy(() => import('./app/demo/page'));
+const SupportPage = React.lazy(() => import('./app/support/page'));
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -67,6 +78,17 @@ const App: React.FC = () => {
                             <Route path="/blog" element={<BlogPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />
                             <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/ai-services" element={<AiServicesPage />} />
+                            <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/tutorials" element={<TutorialsPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            <Route path="/sitemap" element={<SitemapPage />} />
                           </Routes>
                         </Suspense>
                       </main>
