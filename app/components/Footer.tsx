@@ -41,22 +41,18 @@ const Footer: React.FC = memo(() => {
     { name: 'Process Automation', url: '/process-automation', description: 'Workflow automation' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
+    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '25+ AI-powered tools' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Business intelligence' },
     { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Customer management' },
-    { name: 'Security Monitoring Suite', url: '/security-monitoring-suite', description: 'Cybersecurity' },
-    { name: 'Cloud Infrastructure Manager', url: '/cloud-infrastructure-manager', description: 'Cloud management' },
-    { name: 'Email Marketing Automation', url: '/email-marketing-automation', description: 'Email marketing' },
-    { name: 'Project Management Pro', url: '/project-management-pro', description: 'Project management' },
-    { name: 'E-commerce Analytics Pro', url: '/ecommerce-analytics-pro', description: 'E-commerce analytics' },
+    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice AI platform' },
+    { name: 'AI Predictive Maintenance', url: '/ai-predictive-maintenance', description: 'Equipment monitoring' },
+    { name: 'AI Email Marketing Pro', url: '/ai-email-marketing', description: 'Email automation' },
+    { name: 'AI Mobile App Builder', url: '/ai-mobile-app-builder', description: 'Mobile development' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
+    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' },
+    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
     { name: 'AI Recruitment Assistant', url: '/ai-recruitment-assistant', description: 'HR & recruitment' },
-    { name: 'Medical Records Manager', url: '/medical-records-manager', description: 'Healthcare' },
-    { name: 'AI Accounting Assistant', url: '/ai-accounting-assistant', description: 'Finance & accounting' },
-    { name: 'Property Management AI', url: '/property-management-ai', description: 'Real estate' },
-    { name: 'Legal Document Manager', url: '/legal-document-manager', description: 'Legal & compliance' },
-    { name: 'Online Learning Platform', url: '/online-learning-platform', description: 'Education' },
-    { name: 'Supply Chain Optimizer', url: '/supply-chain-optimizer', description: 'Manufacturing' },
-    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' }
+    { name: 'AI Accounting Assistant', url: '/ai-accounting-assistant', description: 'Finance & accounting' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },

@@ -3,6 +3,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { 
+  MapPin, 
+  Clock, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Heart, 
+  Award, 
+  Phone, 
+  Mail, 
+  ArrowRight,
+  Briefcase,
+  GraduationCap,
+  Zap
+} from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -12,6 +27,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
+      description: 'Lead development of cutting-edge AI solutions and machine learning models for enterprise clients.',
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in AI/ML preferred', 'Cloud platforms (AWS, Azure, GCP)']
     },
     {
       title: 'Cloud Architect',
@@ -20,9 +37,25 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
+      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications', 'Kubernetes, Docker']
     },
     {
+      title: 'Data Scientist',
+      department: 'Data Analytics',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Extract insights from complex datasets and build predictive models for business intelligence.',
+      requirements: ['Python, R, SQL', '3+ years data science', 'Statistics background', 'Machine learning expertise']
+    },
+    {
+      title: 'DevOps Engineer',
+      department: 'Infrastructure',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Automate deployment pipelines and manage cloud infrastructure for high-availability systems.',
+      requirements: ['Docker, Kubernetes', '4+ years DevOps', 'CI/CD pipelines', 'Infrastructure as Code']
     }
   ];
 
@@ -118,7 +151,7 @@ const CareersPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-white font-semibold mb-2">Key Requirements:</h4>
                     <ul className="space-y-1">
-                      {position.requirements.map((req, reqIndex) => (
+                      {position.requirements?.map((req, reqIndex) => (
                         <li key={reqIndex} className="text-gray-300 text-sm flex items-center">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {req}
@@ -127,10 +160,72 @@ const CareersPage: React.FC = () => {
                     </ul>
                   </div>
 
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group">
+                    Apply Now
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </button>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us?</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-cyan-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Benefits & Perks</h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    {benefit}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 text-center">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Ready to Join Our Team?
+              </h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Don't see a position that matches your skills? We're always looking for talented individuals to join our growing team.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="mailto:careers@ziontechgroup.com"
+                  className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>Send Your Resume</span>
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200 flex items-center justify-center space-x-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Call: (302) 464-0950</span>
+                </a>
+              </div>
             </div>
           </div>
         </section>
