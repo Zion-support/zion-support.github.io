@@ -1,8 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
 'use client';
 import { useCallback } from 'react';
 
@@ -127,6 +130,7 @@ export function announceToScreenReader(
   message: string,
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
+<<<<<<< HEAD
   if (typeof document === 'undefined') return;
   
   const announcement = document.createElement('div');
@@ -159,11 +163,28 @@ export function announceToScreenReader(
     }
   }, 1000);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
+=======
+  if (typeof window === 'undefined') return;
+
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live', priority);
+  announcement.setAttribute('aria-atomic', 'true');
+  announcement.className = 'sr-only';
+  announcement.textContent = message;
+
+  document.body.appendChild(announcement);
+
+  // Remove after announcement
+  setTimeout(() => {
+    document.body.removeChild(announcement);
+  }, 1000);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
 }
 
 /**
  * Focus management utilities
  */
+<<<<<<< HEAD
 <<<<<<< HEAD
 export function trapFocus(element: HTMLElement): () => void {
   const focusableElements = element.querySelectorAll<HTMLElement>(
@@ -188,6 +209,34 @@ export function trapFocus(element: HTMLElement): () => void {
         e.preventDefault();
         firstFocusable?.focus();
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a367
+=======
+export function focusElement(element: HTMLElement | null): void {
+  if (element) {
+    element.focus();
+  }
+}
+
+export function trapFocus(container: HTMLElement): () => void {
+  const focusableElements = container.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  ) as NodeListOf<HTMLElement>;
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  const handleTabKey = (e: KeyboardEvent) => {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          lastElement.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          firstElement.focus();
+          e.preventDefault();
+        }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
       }
     });
   }
@@ -199,6 +248,7 @@ export function trapFocus(element: HTMLElement): () => void {
     if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
       button.setAttribute('aria-label', 'Button');
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
     
     this.addKeyboardNavigation(button);
@@ -228,99 +278,98 @@ export function trapFocus(element: HTMLElement): () => void {
   return () => {
     element.removeEventListener('keydown', handleKeyDown);
   };
-}
+=======
+  };
 
-/**
- * Check if element is keyboard accessible
- */
-export function isKeyboardAccessible(element: HTMLElement): boolean {
-  const tabindex = element.getAttribute('tabindex')
-  const role = element.getAttribute('role')
-  const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes(
-    element.tagName.toLowerCase()
-  )
-  
-  return (
-    isInteractive ||
-    (tabindex !== null && tabindex !== '-1') ||
-    (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
-  )
-}
+  container.addEventListener('keydown', handleTabKey);
 
-/**
- * Add keyboard navigation support to custom interactive elements
- */
-export function makeKeyboardAccessible(
-  element: HTMLElement,
-  onClick: (e: Event) => void,
-  options: {
-    role?: string
-    tabindex?: number
-  } = {}
-): () => void {
-  const { role = 'button', tabindex = 0 } = options
-  
-  element.setAttribute('role', role)
-  element.setAttribute('tabindex', tabindex.toString())
-  
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault()
-      onClick(e)
-    }
-  }, [onClick])
-  
-  element.addEventListener('click', onClick)
-  element.addEventListener('keydown', handleKeyDown)
-  
+  // Return cleanup function
   return () => {
-    element.removeEventListener('click', onClick)
-    element.removeEventListener('keydown', handleKeyDown)
-  }
+    container.removeEventListener('keydown', handleTabKey);
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
 }
 
 /**
- * Check color contrast ratio (WCAG 2.1)
+ * Skip link functionality
+ */
+export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLElement {
+  const skipLink = document.createElement('a');
+  skipLink.href = `#${targetId}`;
+  skipLink.textContent = text;
+  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
+  
+  return skipLink;
+}
+
+/**
+ * ARIA attributes helpers
+ */
+export function getAriaLabel(element: HTMLElement): string | null {
+  return element.getAttribute('aria-label') || 
+         element.getAttribute('aria-labelledby') || 
+         element.textContent?.trim() || 
+         null;
+}
+
+export function setAriaExpanded(element: HTMLElement, expanded: boolean): void {
+  element.setAttribute('aria-expanded', expanded.toString());
+}
+
+export function setAriaSelected(element: HTMLElement, selected: boolean): void {
+  element.setAttribute('aria-selected', selected.toString());
+}
+
+export function setAriaPressed(element: HTMLElement, pressed: boolean): void {
+  element.setAttribute('aria-pressed', pressed.toString());
+}
+
+/**
+ * Color contrast utilities
  */
 export function getContrastRatio(color1: string, color2: string): number {
   const getLuminance = (color: string): number => {
-    // Simple RGB to luminance conversion
-    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
-    const [r, g, b] = rgb.map(val => {
-      const normalized = val / 255
-      return normalized <= 0.03928
-        ? normalized / 12.92
-        : Math.pow((normalized + 0.055) / 1.055, 2.4)
-    })
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b
-  }
+    const rgb = hexToRgb(color);
+    if (!rgb) return 0;
+    
+    const { r, g, b } = rgb;
+    const [rs, gs, bs] = [r, g, b].map(c => {
+      c = c / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+    
+    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+  };
+
+  const l1 = getLuminance(color1);
+  const l2 = getLuminance(color2);
+  const lighter = Math.max(l1, l2);
+  const darker = Math.min(l1, l2);
   
-  const lum1 = getLuminance(color1)
-  const lum2 = getLuminance(color2)
-  const brightest = Math.max(lum1, lum2)
-  const darkest = Math.min(lum1, lum2)
-  
-  return (brightest + 0.05) / (darkest + 0.05)
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
+function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16)
+  } : null;
 }
 
 /**
- * Check if contrast ratio meets WCAG standards
+ * Keyboard navigation helpers
  */
-export function meetsContrastRequirements(
-  color1: string,
-  color2: string,
-  level: 'AA' | 'AAA' = 'AA',
-  fontSize: 'normal' | 'large' = 'normal'
-): boolean {
-  const ratio = getContrastRatio(color1, color2)
-  
-  if (level === 'AAA') {
-    return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7
-  }
-  
-  return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5
+export function isKeyboardNavigation(event: KeyboardEvent): boolean {
+  return event.key === 'Tab' || 
+         event.key === 'Enter' || 
+         event.key === ' ' || 
+         event.key === 'Escape' ||
+         event.key.startsWith('Arrow');
 }
 
+<<<<<<< HEAD
 /**
  * Get accessible color suggestions based on contrast requirements
  */
@@ -411,6 +460,37 @@ export const a11yUtils = {
     }
     
     return tabIndex !== null;
+=======
+export function handleKeyboardNavigation(
+  event: KeyboardEvent,
+  onEnter?: () => void,
+  onEscape?: () => void,
+  onArrowUp?: () => void,
+  onArrowDown?: () => void,
+  onArrowLeft?: () => void,
+  onArrowRight?: () => void
+): void {
+  switch (event.key) {
+    case 'Enter':
+    case ' ':
+      onEnter?.();
+      break;
+    case 'Escape':
+      onEscape?.();
+      break;
+    case 'ArrowUp':
+      onArrowUp?.();
+      break;
+    case 'ArrowDown':
+      onArrowDown?.();
+      break;
+    case 'ArrowLeft':
+      onArrowLeft?.();
+      break;
+    case 'ArrowRight':
+      onArrowRight?.();
+      break;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
   }
 };
 
@@ -472,6 +552,7 @@ export const focusManagement = {
 };
 
 /**
+<<<<<<< HEAD
  * ARIA utilities
  */
 export const ariaUtils = {
@@ -656,3 +737,60 @@ export function useAccessibility() {
   };
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
+=======
+ * Screen reader detection
+ */
+export function isScreenReaderActive(): boolean {
+  if (typeof window === 'undefined') return false;
+  
+  // Check for common screen reader indicators
+  const hasAriaLive = document.querySelector('[aria-live]') !== null;
+  const hasScreenReaderClass = document.querySelector('.sr-only') !== null;
+  const hasAriaHidden = document.querySelector('[aria-hidden="true"]') !== null;
+  
+  return hasAriaLive || hasScreenReaderClass || hasAriaHidden;
+}
+
+/**
+ * React hook for accessibility
+ */
+export function useAccessibility() {
+  const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
+    announceToScreenReader(message, priority);
+  }, []);
+
+  const focusElement = useCallback((element: HTMLElement | null) => {
+    if (element) {
+      element.focus();
+    }
+  }, []);
+
+  const generateId = useCallback((prefix = 'a11y') => {
+    return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+  }, []);
+
+  return {
+    announce,
+    focusElement,
+    generateId,
+    isScreenReaderActive: isScreenReaderActive()
+  };
+}
+
+export default {
+  generateId,
+  announceToScreenReader,
+  focusElement,
+  trapFocus,
+  createSkipLink,
+  getAriaLabel,
+  setAriaExpanded,
+  setAriaSelected,
+  setAriaPressed,
+  getContrastRatio,
+  isKeyboardNavigation,
+  handleKeyboardNavigation,
+  isScreenReaderActive,
+  useAccessibility
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa

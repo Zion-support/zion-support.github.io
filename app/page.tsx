@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react';
@@ -27,6 +28,10 @@ import Footer from './components/Footer';
 =======
 import React, { Suspense, lazy } from 'react';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home } from 'lucide-react';
+=======
+import React, { useState, useEffect, useCallback, lazy, memo, Suspense } from 'react';
+import Navigation from './components/Navigation';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
 import Footer from './components/Footer';
 
 // Lazy load heavy components for better performance
@@ -278,6 +283,7 @@ const HomePage: React.FC = () => {
 
   const services = [
     {
+<<<<<<< HEAD
       title: 'AI Smart Calendar Pro',
       description: 'Revolutionary calendar management with AI-powered scheduling, conflict resolution, and intelligent meeting optimization. Used by Fortune 500 companies.',
       icon: '📅',
@@ -294,6 +300,8 @@ const HomePage: React.FC = () => {
       realFeatures: ['Google Calendar sync', 'Outlook integration', 'Zoom scheduling', 'Calendly automation', 'Time zone management', 'Recurring events', 'Conflict resolution', 'Mobile notifications']
     },
     {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
       title: 'AI Project Manager Pro',
       description: 'Revolutionary project management with quantum-inspired algorithms, real-time collaboration, and predictive analytics. Used by Fortune 500 companies.',
       icon: '📊',
@@ -309,6 +317,25 @@ const HomePage: React.FC = () => {
       freeTrial: '30 days',
       realFeatures: ['OpenAI GPT-4 integration', 'Microsoft Teams sync', 'Slack notifications', 'Jira integration', 'GitHub tracking', 'Calendar sync', 'Email automation', 'Mobile app']
     },
+<<<<<<< HEAD
+=======
+    {
+      title: 'AI Smart Calendar Pro',
+      description: 'Intelligent calendar management with AI-powered scheduling, conflict resolution, and productivity optimization.',
+      icon: '📅',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Pattern learning AI', 'Auto-optimization', 'Energy mapping', 'Focus time blocks', 'Meeting intelligence', 'Travel optimization', 'Work-life balance', 'Smart suggestions'],
+      benefits: ['35% more productive time', 'Better work-life balance', 'Reduced scheduling stress', 'Optimal energy usage'],
+      link: '/ai-smart-calendar',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '35,000+',
+      freeTrial: '21 days',
+      realFeatures: ['Google Calendar sync', 'Outlook integration', 'Zoom scheduling', 'Calendly automation', 'Time zone management', 'Recurring events', 'Conflict resolution', 'Mobile notifications']
+    },
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     {
       title: 'AI Document Intelligence Pro',
       description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',
@@ -348,6 +375,7 @@ const HomePage: React.FC = () => {
       features: ['Team analytics', 'Smart notifications', 'Project tracking', 'Communication tools', 'File sharing', 'Meeting insights', 'Workload balancing', 'Performance metrics'],
       benefits: ['30% better team coordination', 'Reduced miscommunication', 'Improved project visibility', 'Enhanced productivity'],
       link: '/ai-team-collaboration',
+<<<<<<< HEAD
       popular: false,
       category: 'Collaboration',
       rating: 4.6,
@@ -368,6 +396,28 @@ const HomePage: React.FC = () => {
       rating: 4.8,
       users: '30,000+',
       freeTrial: '21 days'
+=======
+      popular: true,
+      category: 'Productivity',
+      rating: 4.8,
+      users: '25,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Quantum Task Optimizer',
+      description: 'Revolutionary quantum-inspired task optimization that processes millions of task combinations to find the perfect workflow. Achieve 99.9% efficiency.',
+      icon: '⚛️',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Quantum algorithms', 'Multi-dimensional optimization', 'Real-time adaptation', 'Predictive scheduling', 'Energy efficiency', 'Parallel processing', 'Quantum encryption', 'Neural networks'],
+      benefits: ['99.9% efficiency', 'Quantum speed', 'Zero waste', 'Future-proof'],
+      link: '/ai-quantum-task-optimizer',
+      popular: true,
+      category: 'Productivity',
+      rating: 4.9,
+      users: '2,500+',
+      freeTrial: '30 days'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
     }
   ];
 
@@ -395,6 +445,7 @@ const HomePage: React.FC = () => {
           <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             AI-Powered Enterprise Solutions
           </h1>
+<<<<<<< HEAD
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
           </p>
@@ -412,6 +463,20 @@ const HomePage: React.FC = () => {
               aria-label="Watch a demo of our AI solutions"
             >
               Watch Demo
+=======
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+            AI-Powered Solutions for the Future
+          </p>
+          <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+            Transform your business with cutting-edge AI technology, quantum computing, and intelligent automation solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              Get Started
+            </button>
+            <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
+              Learn More
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
             </button>
           </div>
 
@@ -518,6 +583,7 @@ const HomePage: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-deac
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
               Micro SAAS Solutions
             </h2>
@@ -538,10 +604,30 @@ const HomePage: React.FC = () => {
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
                       <Star className="w-3 h-3 mr-1" aria-hidden="true" />
+=======
+            <h2 className="text-4xl font-bold text-white mb-4">Our AI Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI solutions designed to accelerate your business growth and operational efficiency.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 ${
+                  service.popular ? 'ring-2 ring-cyan-400/50' : ''
+                }`}
+              >
+                {service.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
                       Popular
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
                 
                 <div className="text-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" aria-hidden="true">
@@ -589,6 +675,43 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </article>
+=======
+
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+
+                <div className="space-y-3 mb-6">
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></span>
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center">
+                    <span className="text-yellow-400 mr-1">★</span>
+                    <span className="text-white font-semibold">{service.rating}</span>
+                    <span className="text-gray-400 ml-1">({service.users})</span>
+                  </div>
+                  <span className="text-cyan-400 font-medium">{service.category}</span>
+                </div>
+
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-3xl font-bold text-white">${service.price.split('/')[0]}</span>
+                    <span className="text-gray-400 line-through">${service.originalPrice.split('/')[0]}</span>
+                  </div>
+                  <span className="text-gray-400">per month</span>
+                </div>
+
+                <button className="w-full py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                  Start Free Trial
+                </button>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
             ))}
 =======
       <main className="relative">
@@ -646,6 +769,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* AI Services Section */}
@@ -1113,6 +1237,35 @@ const HomePage: React.FC = () => {
       <Footer />
     </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
+=======
+        {/* Contact Section */}
+        <section className="py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-8">Get In Touch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <div className="text-3xl mb-4">📞</div>
+                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
+                <p className="text-cyan-400">{contactInfo.phone}</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <div className="text-3xl mb-4">✉️</div>
+                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
+                <p className="text-cyan-400">{contactInfo.email}</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <div className="text-3xl mb-4">📍</div>
+                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
+                <p className="text-cyan-400">{contactInfo.address}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
   );
 };
 

@@ -511,7 +511,11 @@ const App: React.FC = memo(() => {
     </EnhancedErrorBoundary>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
+=======
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa

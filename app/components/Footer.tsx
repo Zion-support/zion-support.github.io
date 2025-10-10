@@ -228,6 +228,7 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
+<<<<<<< HEAD
       
       {/* Quantum Particles */}
       <div className="absolute top-10 left-10 w-2 h-2 bg-cyan-400 rounded-full quantum-particle" style={{ animationDelay: '0s' }}></div>
@@ -246,10 +247,13 @@ const Footer: React.FC = memo(() => {
       <div className="absolute bottom-1/4 right-1/4 w-48 h-48 quantum-ripple" style={{ animationDelay: '2s' }}></div>
       
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6 group">
@@ -262,6 +266,14 @@ const Footer: React.FC = memo(() => {
             <div className="flex items-center space-x-2 mb-6 group quantum-ripple">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 cyber-pulse">
               <Zap className="w-5 h-5 text-white" />
+=======
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-6 group">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+                <Zap className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Zion Tech Group</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
             </div>
             <span className="text-white font-bold text-xl cyber-text-ultra neon-text-advanced">Zion Tech Group</span>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064

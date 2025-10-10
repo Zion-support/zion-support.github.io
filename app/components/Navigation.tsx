@@ -747,6 +747,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
   const toggleServices = () => {
@@ -755,6 +756,8 @@ const Navigation: React.FC = () => {
 =======
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
   const toggleServices = () => {
     setServicesOpen(!servicesOpen);
   };
@@ -862,7 +865,10 @@ const Navigation: React.FC = () => {
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, price: '$1,500/mo' },
     { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 cyber-glow-advanced ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
@@ -896,9 +902,13 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 rotate-slow">
+=======
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
               <Zap className="w-5 h-5 text-white" />
             </div>
             <span className="text-white cyber-text font-bold">
@@ -912,6 +922,7 @@ const Navigation: React.FC = () => {
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
               Zion Tech Group
+<<<<<<< HEAD
 =======
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 cyber-pulse">
             <Zap className="w-5 h-5 text-white" />
@@ -919,6 +930,8 @@ const Navigation: React.FC = () => {
           <span className="text-white cyber-text-ultra font-bold neon-text-advanced">
             Zion Tech Group
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
             </span>
 =======
   return (
