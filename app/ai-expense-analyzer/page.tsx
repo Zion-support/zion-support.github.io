@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Share2, TrendingUp, Users, Zap, CheckCircle, Star, ArrowRight, Brain, Smartphone, Globe, Shield, BarChart, Calendar, MessageCircle } from 'lucide-react';
+import { DollarSign, TrendingUp, PieChart, AlertTriangle, CheckCircle, Star, ArrowRight, Brain, Smartphone, Globe, Shield, BarChart, Receipt, CreditCard } from 'lucide-react';
 
-const AISocialMediaManagerPage: React.FC = () => {
+const AIExpenseAnalyzerPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -13,83 +13,74 @@ const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI Content Generation',
-      description: 'Generate engaging posts, captions, and hashtags automatically using advanced AI algorithms.',
-      price: '$49/month'
-    },
-    {
-      icon: Calendar,
-      title: 'Smart Scheduling',
-      description: 'AI-powered optimal posting times based on your audience engagement patterns.',
+      title: 'AI Expense Categorization',
+      description: 'Automatically categorize expenses with 99.7% accuracy using advanced machine learning algorithms.',
       price: '$39/month'
     },
     {
       icon: TrendingUp,
-      title: 'Performance Analytics',
-      description: 'Comprehensive analytics with AI insights to optimize your social media strategy.',
-      price: '$59/month'
+      title: 'Smart Budgeting',
+      description: 'AI-powered budget recommendations based on spending patterns and financial goals.',
+      price: '$49/month'
     },
     {
-      icon: Users,
-      title: 'Audience Intelligence',
-      description: 'Deep audience analysis and engagement optimization using machine learning.',
-      price: '$69/month'
+      icon: AlertTriangle,
+      title: 'Fraud Detection',
+      description: 'Real-time fraud detection and suspicious activity alerts to protect your finances.',
+      price: '$29/month'
+    },
+    {
+      icon: PieChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive spending insights with predictive analytics and trend analysis.',
+      price: '$59/month'
     }
-  ];
-
-  const platforms = [
-    { name: 'Facebook', icon: '📘', users: '2.9B' },
-    { name: 'Instagram', icon: '📷', users: '1.4B' },
-    { name: 'Twitter', icon: '🐦', users: '450M' },
-    { name: 'LinkedIn', icon: '💼', users: '900M' },
-    { name: 'TikTok', icon: '🎵', users: '1B' },
-    { name: 'YouTube', icon: '📺', users: '2.7B' }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$49',
+      name: 'Personal',
+      price: '$19',
       period: '/month',
-      description: 'Perfect for small businesses and influencers',
+      description: 'Perfect for individuals and freelancers',
       features: [
-        'AI content generation',
-        '3 social platforms',
-        'Basic analytics',
-        'Auto-scheduling',
-        'Hashtag optimization',
+        'AI expense categorization',
+        'Basic budgeting tools',
+        'Receipt scanning',
+        'Monthly reports',
+        'Mobile app access',
         'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$149',
+      name: 'Business',
+      price: '$79',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Ideal for small to medium businesses',
       features: [
-        'Everything in Starter',
-        'All social platforms',
-        'Advanced analytics',
+        'Everything in Personal',
         'Team collaboration',
-        'Competitor analysis',
+        'Advanced analytics',
+        'Fraud detection',
+        'API integrations',
         'Priority support',
-        'Up to 5 team members'
+        'Up to 10 users'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$399',
+      price: '$199',
       period: '/month',
-      description: 'For large organizations and agencies',
+      description: 'For large organizations',
       features: [
-        'Everything in Professional',
+        'Everything in Business',
         'Custom AI training',
-        'White-label options',
-        'API access',
+        'Advanced reporting',
+        'Compliance tools',
         '24/7 phone support',
-        'Unlimited team members',
+        'Unlimited users',
         'SLA guarantee'
       ],
       popular: false
@@ -99,10 +90,10 @@ const AISocialMediaManagerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Social Media Manager - Automated Social Media Management | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered social media management that automates content creation, scheduling, and analytics. Grow your audience and engagement with intelligent social media AI." />
-        <meta name="keywords" content="AI social media manager, social media automation, content generation, social media analytics, social media scheduling" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-social-media-manager" />
+        <title>AI Expense Analyzer - Smart Financial Management | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered expense management that automatically categorizes, analyzes, and optimizes your spending. Get insights and save money with intelligent financial AI." />
+        <meta name="keywords" content="AI expense tracker, financial management, budget optimization, expense categorization, fraud detection" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-expense-analyzer" />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16 pt-24">
@@ -111,34 +102,33 @@ const AISocialMediaManagerPage: React.FC = () => {
           isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text glitch" data-text="AI Social Media Manager">
-              AI Social Media Manager
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text glitch" data-text="AI Expense Analyzer">
+              AI Expense Analyzer
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text">
-              Automated Social Media Revolution
+              Intelligent Financial Management Revolution
             </p>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              Transform your social media presence with AI-powered content creation, intelligent scheduling, 
-              and advanced analytics. Grow your audience, increase engagement, and save hours every day 
-              with our revolutionary social media management platform.
+              Transform your financial management with AI-powered expense analysis. Automatically categorize expenses, 
+              detect fraud, optimize budgets, and gain deep insights into your spending patterns with cutting-edge artificial intelligence.
             </p>
             
             {/* Key Benefits */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="cyber-card hologram-card p-6">
-                <div className="text-4xl mb-4">📈</div>
-                <h3 className="text-xl font-bold text-white mb-3">300% More Engagement</h3>
-                <p className="text-gray-300">Average increase in engagement with AI-optimized content</p>
-              </div>
-              <div className="cyber-card hologram-card p-6">
-                <div className="text-4xl mb-4">⏰</div>
-                <h3 className="text-xl font-bold text-white mb-3">10 Hours Saved Weekly</h3>
-                <p className="text-gray-300">Automate content creation and scheduling to focus on strategy</p>
+                <div className="text-4xl mb-4">💰</div>
+                <h3 className="text-xl font-bold text-white mb-3">Save 15-30%</h3>
+                <p className="text-gray-300">Average savings through AI-optimized spending recommendations</p>
               </div>
               <div className="cyber-card hologram-card p-6">
                 <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-xl font-bold text-white mb-3">Perfect Timing</h3>
-                <p className="text-gray-300">AI determines optimal posting times for maximum reach</p>
+                <h3 className="text-xl font-bold text-white mb-3">99.7% Accuracy</h3>
+                <p className="text-gray-300">AI-powered expense categorization with industry-leading precision</p>
+              </div>
+              <div className="cyber-card hologram-card p-6">
+                <div className="text-4xl mb-4">🔒</div>
+                <h3 className="text-xl font-bold text-white mb-3">Fraud Protection</h3>
+                <p className="text-gray-300">Real-time fraud detection and suspicious activity alerts</p>
               </div>
             </div>
 
@@ -163,7 +153,7 @@ const AISocialMediaManagerPage: React.FC = () => {
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Powerful AI Features
+            Advanced AI Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -177,22 +167,6 @@ const AISocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Platform Support */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            All Major Platforms Supported
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {platforms.map((platform, index) => (
-              <div key={index} className="cyber-card p-6 text-center">
-                <div className="text-4xl mb-4">{platform.icon}</div>
-                <h3 className="text-lg font-bold text-white mb-2">{platform.name}</h3>
-                <p className="text-cyan-400 text-sm">{platform.users} users</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* How It Works */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
@@ -201,24 +175,24 @@ const AISocialMediaManagerPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="cyber-card p-8 text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Brain className="w-8 h-8 text-slate-900" />
+                <Receipt className="w-8 h-8 text-slate-900" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">1. AI Content Creation</h3>
-              <p className="text-gray-300">Our AI analyzes your brand and audience to generate engaging posts, captions, and hashtags automatically.</p>
+              <h3 className="text-xl font-bold text-white mb-4">1. Upload Receipts</h3>
+              <p className="text-gray-300">Simply take photos of receipts or connect your bank accounts for automatic expense tracking.</p>
             </div>
             <div className="cyber-card p-8 text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Calendar className="w-8 h-8 text-slate-900" />
+                <Brain className="w-8 h-8 text-slate-900" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">2. Smart Scheduling</h3>
-              <p className="text-gray-300">AI determines the optimal posting times based on your audience's activity patterns and engagement history.</p>
+              <h3 className="text-xl font-bold text-white mb-4">2. AI Analysis</h3>
+              <p className="text-gray-300">Our AI automatically categorizes expenses, detects patterns, and identifies optimization opportunities.</p>
             </div>
             <div className="cyber-card p-8 text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6">
                 <BarChart className="w-8 h-8 text-slate-900" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">3. Performance Analytics</h3>
-              <p className="text-gray-300">Get detailed insights and AI recommendations to continuously optimize your social media strategy.</p>
+              <h3 className="text-xl font-bold text-white mb-4">3. Get Insights</h3>
+              <p className="text-gray-300">Receive detailed reports, budget recommendations, and actionable insights to optimize your spending.</p>
             </div>
           </div>
         </section>
@@ -269,37 +243,22 @@ const AISocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Success Stories */}
+        {/* Security Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Success Stories
+            Bank-Level Security
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              {
-                company: 'TechStart Inc.',
-                industry: 'Technology',
-                result: '500% increase in followers',
-                content: 'AI Social Media Manager helped us grow from 1K to 6K followers in just 3 months with consistent, engaging content.'
-              },
-              {
-                company: 'Fashion Forward',
-                industry: 'Fashion',
-                result: '300% more engagement',
-                content: 'Our engagement rate tripled after implementing AI-optimized posting times and content suggestions.'
-              },
-              {
-                company: 'Local Restaurant',
-                industry: 'Food & Beverage',
-                result: '200% more bookings',
-                content: 'AI-generated food content and optimal posting times increased our restaurant bookings significantly.'
-              }
-            ].map((story, index) => (
-              <div key={index} className="cyber-card p-6">
-                <div className="text-2xl font-bold text-cyan-400 mb-2">{story.result}</div>
-                <h3 className="text-lg font-bold text-white mb-2">{story.company}</h3>
-                <p className="text-gray-400 text-sm mb-4">{story.industry}</p>
-                <p className="text-gray-300 italic">"{story.content}"</p>
+              { icon: Shield, title: '256-bit SSL Encryption', description: 'Military-grade encryption for all data' },
+              { icon: Globe, title: 'SOC 2 Compliant', description: 'Industry-standard security compliance' },
+              { icon: CheckCircle, title: 'GDPR Compliant', description: 'Full data protection compliance' },
+              { icon: Lock, title: 'Regular Audits', description: 'Quarterly security assessments' }
+            ].map((security, index) => (
+              <div key={index} className="cyber-card p-6 text-center">
+                <security.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-lg font-bold text-white mb-2">{security.title}</h3>
+                <p className="text-gray-300 text-sm">{security.description}</p>
               </div>
             ))}
           </div>
@@ -313,21 +272,21 @@ const AISocialMediaManagerPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: 'Sarah Johnson',
-                role: 'Marketing Director, TechCorp',
-                content: 'AI Social Media Manager transformed our social media strategy. We went from spending 20 hours a week to just 2 hours, with much better results.',
+                name: 'David Kim',
+                role: 'CFO, StartupXYZ',
+                content: 'AI Expense Analyzer saved us $50K in the first quarter alone. The fraud detection caught suspicious transactions we would have missed.',
                 rating: 5
               },
               {
-                name: 'Mike Chen',
+                name: 'Lisa Martinez',
                 role: 'Small Business Owner',
-                content: 'The AI content generation is incredible. It understands my brand voice perfectly and creates posts that my audience loves.',
+                content: 'Finally, an expense tracker that actually understands my business. The AI categorization is incredibly accurate and saves me hours every week.',
                 rating: 5
               },
               {
-                name: 'Emily Rodriguez',
-                role: 'Social Media Manager, Agency',
-                content: 'This tool has revolutionized how we manage multiple client accounts. The analytics insights are game-changing.',
+                name: 'Robert Johnson',
+                role: 'Financial Advisor',
+                content: 'I recommend this to all my clients. The insights and recommendations are spot-on, and the security features give me peace of mind.',
                 rating: 5
               }
             ].map((testimonial, index) => (
@@ -350,11 +309,11 @@ const AISocialMediaManagerPage: React.FC = () => {
         {/* Contact Section */}
         <section className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 neon-text">
-            Ready to Transform Your Social Media?
+            Ready to Optimize Your Finances?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses and influencers who have revolutionized their social media 
-            presence with AI Social Media Manager. Start your free 14-day trial today.
+            Join thousands of individuals and businesses who have transformed their financial management 
+            with AI Expense Analyzer. Start your free 30-day trial today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -381,8 +340,7 @@ const AISocialMediaManagerPage: React.FC = () => {
         </section>
       </div>
     </div>
-    </div>
   );
 };
 
-export default AISocialMediaManagerPage;
+export default AIExpenseAnalyzerPage;
