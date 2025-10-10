@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Twitter, Linkedin, Github } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -22,10 +22,10 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
         { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
-        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
-        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
         { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
-        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' }
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Edge Computing', href: '/ai-edge-computing' },
+        { name: 'AI Cybersecurity Pro', href: '/ai-cybersecurity' }
       ]
     },
     {
@@ -44,10 +44,10 @@ const Footer: React.FC = memo(() => {
         { name: 'Blockchain Integration', href: '/blockchain-integration-services' },
         { name: 'AI API Management', href: '/ai-api-management' },
         { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
+        { name: 'Healthcare IT Solutions', href: '/healthcare-it' },
+        { name: 'Financial Services IT', href: '/financial-it' },
         { name: 'Edge Computing Solutions', href: '/edge-computing' },
-        { name: '5G Network Implementation', href: '/5g-implementation' },
-        { name: 'IoT Platform Development', href: '/iot-platform' },
-        { name: 'Quantum-Safe Security', href: '/quantum-security' }
+        { name: '5G Network Implementation', href: '/5g-implementation' }
       ]
     },
     {
@@ -66,10 +66,10 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Content Writer', href: '/ai-content-writer' },
         { name: 'AI Video Generator', href: '/ai-video-generator' },
         { name: 'AI CRM Assistant', href: '/ai-crm-assistant' },
-        { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant' },
-        { name: 'AI Document Scanner Pro', href: '/ai-document-scanner' },
-        { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber' },
-        { name: 'AI Website Builder Pro', href: '/ai-website-builder' }
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI 3D Generation Studio', href: '/ai-3d-generation' }
       ]
     },
     {
@@ -79,35 +79,15 @@ const Footer: React.FC = memo(() => {
         { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
         { name: 'Autonomous Systems', href: '/ai-autonomous-systems' },
         { name: 'Blockchain & Web3', href: '/ai-blockchain-solutions' },
-        { name: 'IoT & Edge Computing', href: '/edge-computing' },
-        { name: 'AR/VR Solutions', href: '/ai-holographic-workspace' },
-        { name: 'Smart Cities', href: '/smart-cities' },
+        { name: 'IoT & Edge Computing', href: '/ai-edge-computing' },
+        { name: 'AR/VR Solutions', href: '/ar-vr-platform' },
+        { name: 'Smart Cities', href: '/smart-city-infrastructure' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
         { name: 'Innovation Labs', href: '/innovation-labs' },
         { name: 'Business Intelligence', href: '/ai-business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' },
-        { name: 'Space Technology', href: '/ai-space-technology-pro' },
-        { name: 'Climate Solutions', href: '/ai-climate-solutions-pro' },
-        { name: 'Drug Discovery', href: '/ai-drug-discovery-pro' },
-        { name: 'Neural Interfaces', href: '/ai-neural-interface' },
-        { name: 'Quantum Security', href: '/quantum-security' },
-        { name: 'Immersive Learning', href: '/ai-immersive-learning' }
-      ]
-    },
-    {
-      title: 'Specialized Services',
-      icon: Settings,
-      services: [
-        { name: 'AI Operations', href: '/ai-ops' },
-        { name: 'Healthcare IT', href: '/healthcare-it' },
-        { name: 'Financial IT', href: '/financial-it' },
-        { name: 'Edge Computing', href: '/edge-computing' },
-        { name: '5G Implementation', href: '/5g-implementation' },
-        { name: 'IoT Platform', href: '/iot-platform' },
-        { name: 'Cloud Migration', href: '/cloud-migration' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'IT Infrastructure', href: '/it-infrastructure' },
-        { name: 'Custom Development', href: '/custom-development' }
+        { name: 'Robotics Solutions', href: '/robotics-integration' },
+        { name: 'Digital Twin Platform', href: '/digital-twin-platform' },
+        { name: 'AI Space Technology', href: '/ai-space-technology-pro' }
       ]
     }
   ];
@@ -121,9 +101,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Pricing', href: '/pricing' },
     { name: 'News', href: '/news' },
     { name: 'Partners', href: '/partners' },
-    { name: 'Investors', href: '/investors' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Consultation', href: '/consultation' }
+    { name: 'Investors', href: '/investors' }
   ];
 
   const supportLinks = [
@@ -151,12 +129,12 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden cyber-grid">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden cyber-grid-advanced">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
-
+      
       {/* Quantum Particles */}
       <div className="absolute top-10 left-10 w-2 h-2 bg-cyan-400 rounded-full quantum-particle" style={{ animationDelay: '0s' }}></div>
       <div className="absolute top-20 right-20 w-1 h-1 bg-purple-400 rounded-full quantum-particle" style={{ animationDelay: '1s' }}></div>
@@ -164,19 +142,19 @@ const Footer: React.FC = memo(() => {
       <div className="absolute bottom-10 right-1/3 w-1 h-1 bg-blue-400 rounded-full quantum-particle" style={{ animationDelay: '3s' }}></div>
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6 group">
 <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 neon-glow">
                 <Zap className="w-5 h-5 text-white" />
               </div>
               <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent cyber-text">Zion Tech Group</span>
             </div>
-
+            
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing,
-              autonomous systems, and digital transformation services. Transforming businesses
+              Leading provider of AI-powered enterprise solutions, quantum computing, 
+              autonomous systems, and digital transformation services. Transforming businesses 
               with cutting-edge technology and innovative solutions.
             </p>
 
@@ -225,9 +203,9 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h3 className="text-white font-semibold text-lg mb-6 neon-glow-cyan">Our Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <div className="flex items-center space-x-2 mb-4">
@@ -237,7 +215,7 @@ const Footer: React.FC = memo(() => {
                   <ul className="space-y-2">
                     {category.services.map((service, serviceIndex) => (
                       <li key={serviceIndex}>
-                        <Link
+                        <Link 
                           to={service.href}
                           className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                         >
@@ -252,7 +230,7 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <div className="space-y-8">
               {/* Company */}
               <div>
@@ -260,7 +238,7 @@ const Footer: React.FC = memo(() => {
                 <ul className="space-y-2">
                   {companyLinks.map((link, index) => (
                     <li key={index}>
-                      <Link
+                      <Link 
                         to={link.href}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
@@ -277,7 +255,7 @@ const Footer: React.FC = memo(() => {
                 <ul className="space-y-2">
                   {supportLinks.map((link, index) => (
                     <li key={index}>
-                      <Link
+                      <Link 
                         to={link.href}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
@@ -294,7 +272,7 @@ const Footer: React.FC = memo(() => {
                 <ul className="space-y-2">
                   {legalLinks.map((link, index) => (
                     <li key={index}>
-                      <Link
+                      <Link 
                         to={link.href}
                         className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                       >
@@ -315,7 +293,7 @@ const Footer: React.FC = memo(() => {
               Stay Updated with Our Latest Innovations
             </h3>
             <p className="text-gray-300 mb-6">
-              Get the latest news about AI breakthroughs, quantum computing advances,
+              Get the latest news about AI breakthroughs, quantum computing advances, 
               technology updates, and industry insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -340,7 +318,7 @@ const Footer: React.FC = memo(() => {
             <div className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
+            
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-green-400" />
@@ -360,6 +338,7 @@ const Footer: React.FC = memo(() => {
       </div>
     </footer>
   );
+});
 
 Footer.displayName = 'Footer';
 

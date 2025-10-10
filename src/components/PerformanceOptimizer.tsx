@@ -18,15 +18,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
               observer.unobserve(img);
             }
           }
-
+        });
       }, {
         rootMargin: '50px 0px',
         threshold: 0.01
+      });
 
       // Observe all lazy images
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
-
+      });
     }
   }, []);
 
@@ -44,7 +45,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         const link = document.createElement('link');
         Object.entries(resource).forEach(([key, value]) => {
           link.setAttribute(key, value as string);
-
+        });
         document.head.appendChild(link);
       }
 

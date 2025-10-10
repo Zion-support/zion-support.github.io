@@ -1,4 +1,3 @@
-
 import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -17,48 +16,6 @@ import EnhancedAccessibility from './src/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
 import PerformanceMonitor from './src/components/PerformanceMonitor';
-
-// Structured data for SEO
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Zion Tech Group",
-  "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/logo.png",
-  "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "364 E Main St STE 1008",
-    "addressLocality": "Middletown",
-    "addressRegion": "DE",
-    "postalCode": "19709",
-    "addressCountry": "US"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-302-464-0950",
-    "contactType": "customer service",
-    "email": "kleber@ziontechgroup.com"
-  },
-  "sameAs": [
-    "https://linkedin.com/company/zion-tech-group",
-    "https://twitter.com/ziontechgroup",
-    "https://github.com/zion-tech-group"
-  ],
-  "foundingDate": "2020",
-  "numberOfEmployees": "50-100",
-  "industry": "Information Technology",
-  "services": [
-    "AI Solutions",
-    "Machine Learning",
-    "Quantum Computing",
-    "Digital Transformation",
-    "IT Services",
-    "Cybersecurity",
-    "Cloud Computing",
-    "Automation"
-  ]
-};
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -112,7 +69,7 @@ const App: React.FC = memo(() => {
                   <main id="main-content" className="w-full">
                     <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
                     <Routes>
-<Route path="/" element={<HomePage />} />
+                      <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
@@ -153,4 +110,8 @@ const App: React.FC = memo(() => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+});
+
+App.displayName = 'App';
+
+export default App;

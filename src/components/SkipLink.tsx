@@ -9,7 +9,27 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
   return (
     <a
       href={to}
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-cyan-300"
+      className="skip-link"
+      style={{
+        position: 'absolute',
+        top: '-40px',
+        left: '6px',
+        background: '#000',
+        color: '#fff',
+        padding: '8px',
+        textDecoration: 'none',
+        zIndex: 1000,
+        transition: 'top 0.3s',
+        borderRadius: '4px',
+        fontSize: '14px',
+        fontWeight: 'bold'
+      }}
+      onFocus={(e) => {
+        e.currentTarget.style.top = '6px';
+      }}
+      onBlur={(e) => {
+        e.currentTarget.style.top = '-40px';
+      }}
     >
       {children}
     </a>

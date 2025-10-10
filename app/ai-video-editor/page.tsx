@@ -1,53 +1,53 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Mic, Volume2, Download, Play, Pause, Settings, Users, Zap, Shield, Globe } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Video, Play, Pause, Download, Settings, Users, Zap, Shield, Globe, Scissors, Film, Music, Palette } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIVoiceCloningPage: React.FC = () => {
+const AIVideoEditorPage: React.FC = () => {
   return (
     <ErrorBoundary>
       <SEOHead 
-        title="AI Voice Cloning Pro - Professional Voice Synthesis | Zion Tech Group"
-        description="Create realistic voice clones with our advanced AI voice cloning technology. Perfect for content creators, businesses, and developers. Starting at $199/month."
-        keywords="AI voice cloning, voice synthesis, text to speech, voice generation, AI voice technology, voice cloning software"
-        canonical="https://ziontechgroup.com/ai-voice-cloning"
+        title="AI Video Editor Pro - Automated Video Editing | Zion Tech Group"
+        description="Create professional videos with AI-powered editing tools. Automated cutting, effects, and optimization. Starting at $149/month."
+        keywords="AI video editor, automated video editing, video AI, video production, AI video tools, video automation"
+        canonical="https://ziontechgroup.com/ai-video-editor"
       />
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 text-purple-800 text-sm font-medium mb-6">
-                <Mic className="w-4 h-4 mr-2" />
-                AI Voice Technology
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6">
+                <Video className="w-4 h-4 mr-2" />
+                AI Video Technology
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Voice Cloning
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                  Professional Voice Synthesis
+                AI Video Editor
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                  Professional Video Production
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Create realistic voice clones with our advanced AI technology. Perfect for content creators, 
-                businesses, and developers who need high-quality voice synthesis.
+                Create professional videos with AI-powered editing tools. Automated cutting, effects, 
+                and optimization for content creators and businesses.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="#pricing" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
                 <a 
                   href="#demo" 
-                  className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+                  className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
                 >
                   <Play className="mr-2 w-5 h-5" />
                   Watch Demo
@@ -62,126 +62,126 @@ const AIVoiceCloningPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful Voice Cloning Features
+                Revolutionary AI Video Editing
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our AI voice cloning technology delivers professional-quality results with advanced features
+                Transform your video content with intelligent automation and professional editing tools
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
-                  <Mic className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl border border-blue-100">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                  <Scissors className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">High-Quality Voice Synthesis</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Auto-Cutting</h3>
                 <p className="text-gray-600 mb-4">
-                  Generate natural-sounding voices with 99% accuracy and professional quality audio output.
+                  AI automatically detects and cuts out dead air, filler words, and unwanted segments.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    48kHz audio quality
+                    Silence detection
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Multiple voice styles
+                    Filler word removal
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
-                  <Settings className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-xl border border-purple-100">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
+                  <Film className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Easy Voice Training</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Auto Scene Detection</h3>
                 <p className="text-gray-600 mb-4">
-                  Train custom voice models with just 10 minutes of audio samples using our advanced AI.
+                  Automatically detect scene changes and apply appropriate transitions and effects.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Quick training process
+                    Scene analysis
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Voice emotion control
+                    Smart transitions
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-100">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-6">
-                  <Globe className="w-6 h-6 text-white" />
+                  <Music className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Multi-Language Support</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Music & Sound</h3>
                 <p className="text-gray-600 mb-4">
-                  Support for 50+ languages and dialects with native pronunciation and accent accuracy.
+                  Automatically add background music, sound effects, and audio enhancement.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    50+ languages
+                    Royalty-free music
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Regional accents
+                    Audio enhancement
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl border border-orange-100">
                 <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-white" />
+                  <Palette className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Privacy & Security</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Color Grading AI</h3>
                 <p className="text-gray-600 mb-4">
-                  Enterprise-grade security with voice data encryption and secure processing.
+                  Automatic color correction and professional color grading for cinematic look.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    End-to-end encryption
+                    Auto color correction
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    GDPR compliant
+                    Style presets
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-xl border border-indigo-100">
+                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Smart Optimization</h3>
+                <p className="text-gray-600 mb-4">
+                  AI optimizes video for different platforms and automatically adjusts quality settings.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Platform optimization
+                  </li>
+                  <li className="flex items-center text-sm text-gray-600">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    Quality enhancement
                   </li>
                 </ul>
               </div>
 
               <div className="bg-gradient-to-br from-pink-50 to-rose-50 p-8 rounded-xl border border-pink-100">
                 <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Processing</h3>
-                <p className="text-gray-600 mb-4">
-                  Generate voice audio in real-time with our optimized AI models and cloud infrastructure.
-                </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    <1 second generation
-                  </li>
-                  <li className="flex items-center text-sm text-gray-600">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Batch processing
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border border-indigo-100">
-                <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Team Collaboration</h3>
                 <p className="text-gray-600 mb-4">
-                  Share voice models and collaborate with team members on voice projects.
+                  Collaborate with team members on video projects with real-time editing.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    Shared voice library
+                    Real-time editing
                   </li>
                   <li className="flex items-center text-sm text-gray-600">
                     <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
@@ -198,35 +198,35 @@ const AIVoiceCloningPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Simple, Transparent Pricing
+                Choose Your Video Editing Plan
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the perfect plan for your voice cloning needs
+                Professional video editing tools for every budget
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-xl border border-gray-200">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Creator</h3>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">$199</span>
+                    <span className="text-4xl font-bold text-gray-900">$149</span>
                     <span className="text-gray-600">/month</span>
                   </div>
-                  <p className="text-gray-600 mb-8">Perfect for individual creators and small projects</p>
+                  <p className="text-gray-600 mb-8">Perfect for content creators and influencers</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">10 voice models</span>
+                    <span className="text-gray-700">10 hours video processing</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">10,000 characters/month</span>
+                    <span className="text-gray-700">HD export quality</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">5 languages</span>
+                    <span className="text-gray-700">Basic AI features</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -234,39 +234,39 @@ const AIVoiceCloningPage: React.FC = () => {
                   </li>
                 </ul>
                 <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Voice Cloning Starter Plan"
+                  href="mailto:kleber@ziontechgroup.com?subject=AI Video Editor Creator Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
                 >
                   Get Started
                 </a>
               </div>
 
-              <div className="bg-white p-8 rounded-xl border-2 border-purple-500 relative">
+              <div className="bg-white p-8 rounded-xl border-2 border-blue-500 relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
                 </div>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">$399</span>
+                    <span className="text-4xl font-bold text-gray-900">$299</span>
                     <span className="text-gray-600">/month</span>
                   </div>
-                  <p className="text-gray-600 mb-8">Ideal for businesses and content creators</p>
+                  <p className="text-gray-600 mb-8">Ideal for businesses and agencies</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">50 voice models</span>
+                    <span className="text-gray-700">50 hours video processing</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">100,000 characters/month</span>
+                    <span className="text-gray-700">4K export quality</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">25 languages</span>
+                    <span className="text-gray-700">Advanced AI features</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -274,12 +274,12 @@ const AIVoiceCloningPage: React.FC = () => {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">API access</span>
+                    <span className="text-gray-700">Team collaboration</span>
                   </li>
                 </ul>
                 <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Voice Cloning Professional Plan"
-                  className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-purple-700 transition-colors"
+                  href="mailto:kleber@ziontechgroup.com?subject=AI Video Editor Professional Plan"
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
                 >
                   Get Started
                 </a>
@@ -289,23 +289,23 @@ const AIVoiceCloningPage: React.FC = () => {
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-gray-900">$999</span>
+                    <span className="text-4xl font-bold text-gray-900">$799</span>
                     <span className="text-gray-600">/month</span>
                   </div>
-                  <p className="text-gray-600 mb-8">For large organizations with custom needs</p>
+                  <p className="text-gray-600 mb-8">For large organizations and studios</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Unlimited voice models</span>
+                    <span className="text-gray-700">Unlimited processing</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">Unlimited characters</span>
+                    <span className="text-gray-700">8K export quality</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                    <span className="text-gray-700">All languages</span>
+                    <span className="text-gray-700">All AI features</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
@@ -317,7 +317,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   </li>
                 </ul>
                 <a 
-                  href="mailto:kleber@ziontechgroup.com?subject=AI Voice Cloning Enterprise Plan"
+                  href="mailto:kleber@ziontechgroup.com?subject=AI Video Editor Enterprise Plan"
                   className="w-full bg-gray-900 text-white py-3 px-6 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
                 >
                   Contact Sales
@@ -328,25 +328,25 @@ const AIVoiceCloningPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-pink-600">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-cyan-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Create Amazing Voice Content?
+              Ready to Create Amazing Videos?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Join thousands of creators and businesses using our AI voice cloning technology
+            <p className="text-xl text-blue-100 mb-8">
+              Join thousands of creators using our AI video editing technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="mailto:kleber@ziontechgroup.com?subject=AI Voice Cloning Inquiry"
-                className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                href="mailto:kleber@ziontechgroup.com?subject=AI Video Editor Inquiry"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a 
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
                 Call +1 302 464 0950
@@ -381,4 +381,4 @@ const AIVoiceCloningPage: React.FC = () => {
   );
 };
 
-export default AIVoiceCloningPage;
+export default AIVideoEditorPage;

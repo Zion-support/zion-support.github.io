@@ -52,6 +52,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           link.setAttribute('target', '_blank');
           link.setAttribute('rel', 'noopener noreferrer');
         }
+      });
 
       // Add ARIA labels to images
       const images = document.querySelectorAll('img:not([alt])');
