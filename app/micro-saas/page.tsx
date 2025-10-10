@@ -110,6 +110,448 @@ const MicroSaasPage: React.FC = () => {
       category: 'Storage',
       popular: false,
       users: 'Up to 30 users'
+    },
+    {
+      id: 'invoice-genius',
+      name: 'Zion Invoice Genius',
+      description: 'AI-powered invoice generation and management with automated billing and payment tracking',
+      price: '$49/month',
+      marketPrice: '$100-300/month',
+      features: [
+        'AI-powered invoice generation from contracts and emails',
+        'Automated recurring billing and subscription management',
+        'Multi-currency support with real-time exchange rates',
+        'Payment tracking and automated follow-ups',
+        'Tax calculation and compliance reporting',
+        'Client portal with payment history',
+        'Integration with accounting software (QuickBooks, Xero)',
+        'Mobile app for on-the-go invoicing'
+      ],
+      benefits: [
+        'Save 90% invoice creation time',
+        'Reduce payment delays',
+        'Automated follow-ups',
+        'Professional invoices'
+      ],
+      category: 'Finance',
+      popular: true,
+      users: 'Up to 10 users'
+    },
+    {
+      id: 'lead-magnet',
+      name: 'Zion Lead Magnet',
+      description: 'Advanced lead generation and qualification platform with AI-powered prospect scoring',
+      price: '$99/month',
+      marketPrice: '$200-600/month',
+      features: [
+        'AI-powered lead scoring and qualification',
+        'Multi-channel lead capture (web, social, email)',
+        'Automated lead nurturing campaigns',
+        'CRM integration and lead routing',
+        'Advanced analytics and conversion tracking',
+        'A/B testing for landing pages',
+        'Email sequence automation',
+        'Lead source attribution and ROI tracking'
+      ],
+      benefits: [
+        'Increase qualified leads by 300%',
+        'Automated lead nurturing',
+        'Better conversion rates',
+        'ROI optimization'
+      ],
+      category: 'Marketing',
+      popular: true,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'project-master',
+      name: 'Zion Project Master',
+      description: 'AI-powered project management with intelligent task allocation and progress tracking',
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      features: [
+        'AI-powered task prioritization and scheduling',
+        'Resource allocation optimization',
+        'Progress tracking with predictive analytics',
+        'Team collaboration tools and communication',
+        'Time tracking and productivity analytics',
+        'Risk assessment and mitigation alerts',
+        'Integration with popular tools (Slack, Teams, Jira)',
+        'Custom reporting and dashboards'
+      ],
+      benefits: [
+        'Improve project delivery by 40%',
+        'Better resource utilization',
+        'Predictive risk management',
+        'Enhanced team collaboration'
+      ],
+      category: 'Project Management',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      id: 'social-scheduler',
+      name: 'Zion Social Scheduler',
+      description: 'AI-powered social media management with content optimization and scheduling',
+      price: '$69/month',
+      marketPrice: '$120-350/month',
+      features: [
+        'AI-powered content creation and optimization',
+        'Multi-platform scheduling (Facebook, Instagram, Twitter, LinkedIn)',
+        'Optimal posting time recommendations',
+        'Hashtag research and optimization',
+        'Engagement analytics and performance tracking',
+        'Content calendar and planning tools',
+        'Social listening and trend analysis',
+        'Team collaboration and approval workflows'
+      ],
+      benefits: [
+        'Increase engagement by 250%',
+        'Save 80% content creation time',
+        'Optimal posting times',
+        'Comprehensive analytics'
+      ],
+      category: 'Social Media',
+      popular: true,
+      users: 'Up to 5 users'
+    },
+    {
+      id: 'email-automation',
+      name: 'Zion Email Automation',
+      description: 'Advanced email marketing automation with AI-powered personalization and segmentation',
+      price: '$89/month',
+      marketPrice: '$180-500/month',
+      features: [
+        'AI-powered email personalization',
+        'Advanced segmentation and targeting',
+        'Automated drip campaigns and sequences',
+        'A/B testing and optimization',
+        'Email template builder with drag-and-drop',
+        'Deliverability optimization and monitoring',
+        'Advanced analytics and reporting',
+        'Integration with CRM and e-commerce platforms'
+      ],
+      benefits: [
+        'Increase open rates by 60%',
+        'Automated personalization',
+        'Better deliverability',
+        'Comprehensive analytics'
+      ],
+      category: 'Email Marketing',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'inventory-smart',
+      name: 'Zion Inventory Smart',
+      description: 'AI-powered inventory management with demand forecasting and automated reordering',
+      price: '$129/month',
+      marketPrice: '$250-700/month',
+      features: [
+        'AI-powered demand forecasting',
+        'Automated reorder point calculations',
+        'Multi-location inventory tracking',
+        'Supplier management and ordering',
+        'Cost optimization and analysis',
+        'Integration with e-commerce platforms',
+        'Barcode scanning and mobile app',
+        'Advanced reporting and analytics'
+      ],
+      benefits: [
+        'Reduce inventory costs by 35%',
+        'Prevent stockouts and overstock',
+        'Automated reordering',
+        'Better supplier management'
+      ],
+      category: 'Inventory',
+      popular: false,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'hr-assistant',
+      name: 'Zion HR Assistant',
+      description: 'AI-powered human resources management with recruitment and employee analytics',
+      price: '$159/month',
+      marketPrice: '$300-800/month',
+      features: [
+        'AI-powered resume screening and candidate matching',
+        'Automated interview scheduling and reminders',
+        'Employee performance tracking and analytics',
+        'Time and attendance management',
+        'Benefits administration and enrollment',
+        'Employee self-service portal',
+        'Compliance tracking and reporting',
+        'Integration with payroll systems'
+      ],
+      benefits: [
+        'Reduce hiring time by 50%',
+        'Better candidate matching',
+        'Automated HR processes',
+        'Compliance assurance'
+      ],
+      category: 'Human Resources',
+      popular: false,
+      users: 'Up to 50 users'
+    },
+    {
+      id: 'crm-intelligence',
+      name: 'Zion CRM Intelligence',
+      description: 'AI-powered customer relationship management with predictive analytics and automation',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'AI-powered lead scoring and qualification',
+        'Predictive analytics for sales forecasting',
+        'Automated follow-up and nurturing',
+        'Customer journey mapping and analytics',
+        'Integration with email and phone systems',
+        'Advanced reporting and dashboards',
+        'Mobile app for sales teams',
+        'Custom field and workflow builder'
+      ],
+      benefits: [
+        'Increase sales by 45%',
+        'Better lead qualification',
+        'Automated follow-ups',
+        'Predictive insights'
+      ],
+      category: 'CRM',
+      popular: true,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'expense-tracker',
+      name: 'Zion Expense Tracker',
+      description: 'AI-powered expense management with receipt scanning and automated categorization',
+      price: '$39/month',
+      marketPrice: '$80-200/month',
+      features: [
+        'AI-powered receipt scanning and OCR',
+        'Automated expense categorization',
+        'Policy compliance checking',
+        'Approval workflows and notifications',
+        'Integration with accounting software',
+        'Mobile app with GPS tracking',
+        'Advanced reporting and analytics',
+        'Multi-currency support'
+      ],
+      benefits: [
+        'Save 90% expense entry time',
+        'Automated categorization',
+        'Policy compliance',
+        'Better expense control'
+      ],
+      category: 'Finance',
+      popular: true,
+      users: 'Up to 15 users'
+    },
+    {
+      id: 'content-scheduler',
+      name: 'Zion Content Scheduler',
+      description: 'AI-powered content planning and scheduling with SEO optimization and performance tracking',
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      features: [
+        'AI-powered content planning and ideation',
+        'SEO optimization and keyword research',
+        'Multi-platform content scheduling',
+        'Content performance analytics',
+        'Collaborative content creation tools',
+        'Content calendar and planning',
+        'Social media integration',
+        'Team workflow management'
+      ],
+      benefits: [
+        'Increase content engagement by 200%',
+        'Better SEO performance',
+        'Streamlined content creation',
+        'Comprehensive analytics'
+      ],
+      category: 'Content Management',
+      popular: true,
+      users: 'Up to 10 users'
+    },
+    {
+      id: 'customer-feedback',
+      name: 'Zion Customer Feedback',
+      description: 'AI-powered customer feedback collection and analysis with sentiment tracking',
+      price: '$59/month',
+      marketPrice: '$120-300/month',
+      features: [
+        'AI-powered sentiment analysis',
+        'Multi-channel feedback collection',
+        'Automated survey generation',
+        'Real-time feedback monitoring',
+        'Customer satisfaction scoring',
+        'Integration with support systems',
+        'Advanced analytics and reporting',
+        'Custom feedback forms and widgets'
+      ],
+      benefits: [
+        'Improve customer satisfaction by 40%',
+        'Real-time feedback insights',
+        'Automated analysis',
+        'Better customer understanding'
+      ],
+      category: 'Customer Experience',
+      popular: false,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'api-manager',
+      name: 'Zion API Manager',
+      description: 'AI-powered API management and monitoring with automated testing and optimization',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: [
+        'API performance monitoring and analytics',
+        'Automated API testing and validation',
+        'Rate limiting and throttling management',
+        'API documentation generation',
+        'Developer portal and key management',
+        'Integration with popular API gateways',
+        'Advanced security and authentication',
+        'Custom API analytics and reporting'
+      ],
+      benefits: [
+        'Improve API reliability by 95%',
+        'Automated testing',
+        'Better developer experience',
+        'Enhanced security'
+      ],
+      category: 'API Management',
+      popular: false,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'workflow-automation',
+      name: 'Zion Workflow Automation',
+      description: 'AI-powered business process automation with intelligent decision making',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Visual workflow builder with drag-and-drop',
+        'AI-powered process optimization',
+        'Integration with 500+ applications',
+        'Conditional logic and decision trees',
+        'Automated error handling and retries',
+        'Real-time monitoring and analytics',
+        'Custom triggers and actions',
+        'Team collaboration and approval workflows'
+      ],
+      benefits: [
+        'Reduce manual work by 85%',
+        'Process optimization',
+        'Error reduction',
+        'Scalable automation'
+      ],
+      category: 'Automation',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      id: 'data-backup',
+      name: 'Zion Data Backup',
+      description: 'AI-powered data backup and recovery with intelligent scheduling and optimization',
+      price: '$69/month',
+      marketPrice: '$140-350/month',
+      features: [
+        'AI-optimized backup scheduling',
+        'Incremental and differential backups',
+        'Cross-platform data synchronization',
+        'Automated recovery testing',
+        'Version control and file history',
+        'Encryption and security compliance',
+        'Cloud and local storage options',
+        'Advanced monitoring and alerts'
+      ],
+      benefits: [
+        '99.9% data protection',
+        'Automated optimization',
+        'Fast recovery times',
+        'Compliance ready'
+      ],
+      category: 'Data Management',
+      popular: false,
+      users: 'Up to 20 users'
+    },
+    {
+      id: 'performance-monitor',
+      name: 'Zion Performance Monitor',
+      description: 'AI-powered application performance monitoring with predictive analytics and alerting',
+      price: '$179/month',
+      marketPrice: '$350-1000/month',
+      features: [
+        'Real-time performance monitoring',
+        'AI-powered anomaly detection',
+        'Predictive performance analytics',
+        'Automated alerting and notifications',
+        'Custom dashboards and reporting',
+        'Integration with popular monitoring tools',
+        'User experience tracking',
+        'Performance optimization recommendations'
+      ],
+      benefits: [
+        'Reduce downtime by 70%',
+        'Proactive issue detection',
+        'Better user experience',
+        'Performance optimization'
+      ],
+      category: 'Monitoring',
+      popular: false,
+      users: 'Up to 30 users'
+    },
+    {
+      id: 'compliance-manager',
+      name: 'Zion Compliance Manager',
+      description: 'AI-powered compliance management with automated monitoring and reporting',
+      price: '$299/month',
+      marketPrice: '$600-1800/month',
+      features: [
+        'Multi-framework compliance support (GDPR, HIPAA, SOC2)',
+        'AI-powered risk assessment',
+        'Automated compliance monitoring',
+        'Policy management and updates',
+        'Audit trail and documentation',
+        'Employee training and certification',
+        'Integration with security tools',
+        'Custom compliance reporting'
+      ],
+      benefits: [
+        'Reduce compliance costs by 60%',
+        'Automated monitoring',
+        'Risk mitigation',
+        'Audit readiness'
+      ],
+      category: 'Compliance',
+      popular: false,
+      users: 'Up to 50 users'
+    },
+    {
+      id: 'team-collaboration',
+      name: 'Zion Team Collaboration',
+      description: 'AI-powered team collaboration platform with intelligent task management and communication',
+      price: '$99/month',
+      marketPrice: '$200-500/month',
+      features: [
+        'AI-powered task prioritization',
+        'Intelligent team matching and allocation',
+        'Real-time collaboration tools',
+        'Video conferencing with AI transcription',
+        'Document sharing and version control',
+        'Team performance analytics',
+        'Integration with popular tools',
+        'Mobile app for remote teams'
+      ],
+      benefits: [
+        'Improve team productivity by 50%',
+        'Better task allocation',
+        'Enhanced communication',
+        'Performance insights'
+      ],
+      category: 'Collaboration',
+      popular: true,
+      users: 'Up to 25 users'
     }
   ];
 
@@ -118,7 +560,23 @@ const MicroSaasPage: React.FC = () => {
     { id: 'Analytics', name: 'Analytics', count: products.filter(p => p.category === 'Analytics').length },
     { id: 'Communication', name: 'Communication', count: products.filter(p => p.category === 'Communication').length },
     { id: 'Security', name: 'Security', count: products.filter(p => p.category === 'Security').length },
-    { id: 'Storage', name: 'Storage', count: products.filter(p => p.category === 'Storage').length }
+    { id: 'Storage', name: 'Storage', count: products.filter(p => p.category === 'Storage').length },
+    { id: 'Finance', name: 'Finance', count: products.filter(p => p.category === 'Finance').length },
+    { id: 'Marketing', name: 'Marketing', count: products.filter(p => p.category === 'Marketing').length },
+    { id: 'Project Management', name: 'Project Management', count: products.filter(p => p.category === 'Project Management').length },
+    { id: 'Social Media', name: 'Social Media', count: products.filter(p => p.category === 'Social Media').length },
+    { id: 'Email Marketing', name: 'Email Marketing', count: products.filter(p => p.category === 'Email Marketing').length },
+    { id: 'Inventory', name: 'Inventory', count: products.filter(p => p.category === 'Inventory').length },
+    { id: 'Human Resources', name: 'Human Resources', count: products.filter(p => p.category === 'Human Resources').length },
+    { id: 'CRM', name: 'CRM', count: products.filter(p => p.category === 'CRM').length },
+    { id: 'Content Management', name: 'Content Management', count: products.filter(p => p.category === 'Content Management').length },
+    { id: 'Customer Experience', name: 'Customer Experience', count: products.filter(p => p.category === 'Customer Experience').length },
+    { id: 'API Management', name: 'API Management', count: products.filter(p => p.category === 'API Management').length },
+    { id: 'Automation', name: 'Automation', count: products.filter(p => p.category === 'Automation').length },
+    { id: 'Data Management', name: 'Data Management', count: products.filter(p => p.category === 'Data Management').length },
+    { id: 'Monitoring', name: 'Monitoring', count: products.filter(p => p.category === 'Monitoring').length },
+    { id: 'Compliance', name: 'Compliance', count: products.filter(p => p.category === 'Compliance').length },
+    { id: 'Collaboration', name: 'Collaboration', count: products.filter(p => p.category === 'Collaboration').length }
   ];
 
   return (
