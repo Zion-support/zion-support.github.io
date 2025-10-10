@@ -1,19 +1,41 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Users, MessageCircle, Heart, ArrowRight, Target, Globe } from 'lucide-react';
 
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+const CommunityPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Community | Zion Tech Group</title>
+        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, share knowledge, and collaborate on innovative projects." />
+        <meta name="keywords" content="tech community, developer community, Zion Tech Group, collaboration, networking" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Community
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join our vibrant community of developers, innovators, and technology enthusiasts.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Users className="mr-2 h-5 w-5" />
+                Join Community
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Target className="mr-2 h-5 w-5" />
+                Learn More
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
-
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 
-export default PagePage;
+export default CommunityPage;

@@ -1,122 +1,91 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
+import { TrendingUp, Users, Globe, Zap } from 'lucide-react';
+
+interface Statistic {
+  id: number;
+  value: string;
+  label: string;
+  icon: React.ComponentType<any>;
+  color: string;
+}
 
 const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    satisfaction: 0,
-    years: 0
-  });
+  const [isVisible, setIsVisible] = useState(false);
 
-  const targetCounters = {
-    clients: 500,
-    projects: 1000,
-    satisfaction: 99,
-    years: 10
-  };
-
-  const statistics = [
+  const statistics: Statistic[] = [
     {
-      icon: Users,
-      value: counters.clients,
-      label: 'Happy Clients',
-      suffix: '+',
-      color: 'text-cyan-400'
-    },
-    {
-      icon: Award,
-      value: counters.projects,
+      id: 1,
+      value: '500+',
       label: 'Projects Completed',
-      suffix: '+',
-      color: 'text-purple-400'
-    },
-    {
       icon: TrendingUp,
-      value: counters.satisfaction,
-      label: 'Client Satisfaction',
-      suffix: '%',
       color: 'text-green-400'
     },
     {
-      icon: Clock,
-      value: counters.years,
-      label: 'Years Experience',
-      suffix: '+',
+      id: 2,
+      value: '98%',
+      label: 'Client Satisfaction',
+      icon: Users,
+      color: 'text-blue-400'
+    },
+    {
+      id: 3,
+      value: '50+',
+      label: 'Countries Served',
+      icon: Globe,
+      color: 'text-purple-400'
+    },
+    {
+      id: 4,
+      value: '24/7',
+      label: 'Support Available',
+      icon: Zap,
       color: 'text-yellow-400'
     }
   ];
 
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
   useEffect(() => {
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
-
-    const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
-      let current = 0;
-
-      return setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timers[0]);
-        }
-        setCounters(prev => ({
-          ...prev,
-          [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
-
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-          </div>
+    <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Impact in Numbers
+          </h2>
+          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+            Delivering exceptional results for businesses worldwide with our innovative technology solutions.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {statistics.map((stat, index) => (
+            <div
+              key={stat.id}
+              className={`text-center transform transition-all duration-1000 ${
+                isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+              }`}
+              style={{ transitionDelay: `${index * 200}ms` }}
+            >
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 hover:bg-white/20 transition-all duration-300">
+                <div className={`w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4`}>
+                  <stat.icon className={`w-8 h-8 ${stat.color}`} />
+                </div>
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-purple-100 text-lg font-medium">
+                  {stat.label}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
