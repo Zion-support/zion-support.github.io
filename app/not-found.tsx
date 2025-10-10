@@ -1,8 +1,18 @@
 import Link from 'next/link';
 import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
 
+</>
+  );
+};
+
 export default function NotFound() {
   return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
         <div className="flex justify-center mb-6">

@@ -10,7 +10,13 @@ export function dynamic<T extends ComponentType<unknown>>(</T></<<<T>importFunc<
   options: DynamicOptions = {}
 ): ComponentType<unknown>{
   const LazyComponent = lazy(importFunc)</unknown>
-  return (props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>
+  return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>props: unknown) => (}<Suspense fallback={options.loading ? options.loading() : <div>Loading...</Suspense>}>
 ): ComponentType<unknown> {}
   const LazyComponent = lazy(importFunc)
   return (props: unknown) => (}
@@ -31,4 +37,8 @@ export function dynamic<T extends ComponentType<unknown>>(importFun)
     </Suspense>
   )
 }
+</>
+  );
+};
+
 export default dynamic;

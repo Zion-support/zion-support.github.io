@@ -282,4 +282,8 @@ import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRigh
   );
 };
 
+</>
+  );
+};
+
 export default FinancialITPage;

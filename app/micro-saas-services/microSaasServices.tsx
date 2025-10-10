@@ -150,4 +150,8 @@ const MicroSaasServicesPage: React.FC = () => {
   );
 };
 
+</>
+  );
+};
+
 export default MicroSaasServicesPage;

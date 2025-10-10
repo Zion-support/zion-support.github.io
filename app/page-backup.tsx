@@ -38,6 +38,12 @@ const PageBackupPage: React.FC = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page backup solutions. 
@@ -81,6 +87,10 @@ const PageBackupPage: React.FC = () => {
         </div>
       </section>
     </div>
+  );
+};
+
+</>
   );
 };
 

@@ -149,4 +149,8 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
   );
 };
 
+</>
+  );
+};
+
 export default ServiceWorkerRegistrationPage;

@@ -115,7 +115,25 @@ export default function APIDocsPage() {
       />
       <Navigation />
       
-            </div>
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            API Documentation
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Complete API documentation for Zion Tech Group's AI and IT solutions. 
+            Explore endpoints, authentication, and integration guides.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-all duration-300 flex items-center justify-center">
+              <Key className="mr-2 h-5 w-5" />
+              Get API Key
+            </button>
+            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <Code className="mr-2 h-5 w-5" />
+              View Examples
+            </button>
           </div>
         </div>
       </section>

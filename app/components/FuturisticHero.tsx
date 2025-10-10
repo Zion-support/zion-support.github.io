@@ -39,6 +39,12 @@ const FuturisticHeroPage: React.FC = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -71,6 +77,10 @@ const FuturisticHeroPage: React.FC = () => {
                 Email Us
               </button>
             </div>
+  );
+};
+
+</>
   );
 };
 

@@ -68,6 +68,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 
   if (isSubscribed) {
     return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
       <div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">

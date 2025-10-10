@@ -88,6 +88,12 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
  */
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
   return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
@@ -239,5 +245,9 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',
   };
 }
+
+</>
+  );
+};
 
 export default getErrorBoundaryConfig;

@@ -9,6 +9,12 @@ const Breadcrumb: React.FC = () => {
   const pathnames = location.pathname.split('/').filter((x) => x);
 
   return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
     <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-white/10 py-4">
       <div className="container mx-auto px-4">
         <ol className="flex items-center space-x-2 text-sm">
@@ -45,6 +51,7 @@ const Breadcrumb: React.FC = () => {
         </ol>
       </div>
     </nav>
+    </>
   );
 };
 

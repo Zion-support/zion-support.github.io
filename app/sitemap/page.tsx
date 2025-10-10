@@ -30,6 +30,12 @@ const SitemapPage: React.FC = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8"></div>
       <div className="max-w-7xl mx-auto"></div>
         <div className="text-center mb-12"></div>
@@ -88,6 +94,10 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+</>
   );
 };
 

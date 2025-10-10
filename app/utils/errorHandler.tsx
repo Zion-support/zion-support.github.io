@@ -656,6 +656,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Check if error should be retried
   private shouldRetry(error: AppError): boolean {}
     return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
       error.type === ErrorType.NETWORK &&
       error.retryCount! < this.config.maxRetries &&
       error.severity !== ErrorSeverity.CRITICAL
@@ -1021,6 +1027,10 @@ export const useErrorHandler = () => {}
     getErrorStatistics: () => errorHandler.getErrorStatistics(),
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()};
 };
+</>
+  );
+};
+
 export default ErrorHandler;</string>
 </string>
 // React hook for error handling;

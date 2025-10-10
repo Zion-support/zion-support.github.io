@@ -1,27 +1,12 @@
 'use client';
+import React, { useEffect, ReactNode } from 'react';
 
-import React, { useEffect } from 'react';
+interface EnhancedAccessibilityProps {
+  children: ReactNode;
+}
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
   useEffect(() => {
-    // Add ARIA landmarks
-    const addLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-
     // Add skip links
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
@@ -33,40 +18,19 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
     // Enhance focus management
     const enhanceFocusManagement = () => {
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        .sr-only.focus:not-sr-only {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `;
-      document.head.appendChild(style);
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      const focusableContent = document.querySelectorAll(focusableElements);
+      
+      focusableContent.forEach((element) => {
+        element.addEventListener('focus', () => {
+          element.classList.add('focus-visible');
+        });
+        element.addEventListener('blur', () => {
+          element.classList.remove('focus-visible');
+        });
+      });
     };
 
-    // Initialize accessibility enhancements
-    addLandmarks();
     addSkipLinks();
     enhanceFocusManagement();
 

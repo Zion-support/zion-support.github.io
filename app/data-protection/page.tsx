@@ -32,6 +32,9 @@ const PagePage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page
+            </h1>
             </div>
           </div>
         </div>
@@ -110,6 +113,10 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
+  );
+};
+
+</>
   );
 };
 

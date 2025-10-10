@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
@@ -94,6 +92,12 @@ const Footer: React.FC = memo(() => {
     emergency: '24/7 Emergency Support Available'
   };
   return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -275,7 +279,9 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
+    </>
   );
 });
 Footer.displayName = 'Footer';
+
 export default Footer;

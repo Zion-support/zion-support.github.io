@@ -17,6 +17,12 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform provides everything you need to build, deploy, and scale 
               Internet of Things solutions for any industry or use case.
@@ -96,6 +102,10 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
 
       <Footer />
 </div>
+  );
+};
+
+</>
   );
 };
 

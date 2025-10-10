@@ -53,6 +53,10 @@ const MicroSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
 
         {/* CTA Section */}
         <section className="py-20 px-4">

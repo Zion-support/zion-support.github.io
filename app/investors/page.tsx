@@ -21,7 +21,12 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
-      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          {/* Hero Section */}
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page
+            </h1>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
@@ -54,6 +59,10 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
+  );
+};
+
+</>
   );
 };
 

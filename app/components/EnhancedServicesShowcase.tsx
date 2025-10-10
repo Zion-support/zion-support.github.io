@@ -38,6 +38,12 @@ const EnhancedServicesShowcase: React.FC = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
@@ -90,6 +96,10 @@ const EnhancedServicesShowcase: React.FC = () => {
           </a>
         </div>
     </section>
+  );
+};
+
+</>
   );
 };
 

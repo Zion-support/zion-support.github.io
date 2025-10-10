@@ -53,6 +53,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -91,6 +92,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
+  );
+};
+
+</div>
+  );
+};
+
+</>
   );
 };
 

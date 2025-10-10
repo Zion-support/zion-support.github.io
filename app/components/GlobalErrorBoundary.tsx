@@ -97,4 +97,8 @@
   );
 };
 
+</>
+  );
+};
+
 export default GlobalErrorBoundaryPage;

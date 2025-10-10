@@ -57,6 +57,12 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     const renderSpinner = useMemo(() => {switch (variant) {
         case 'dots':
           return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2].map(i => (</div>
                 <div
@@ -137,5 +143,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
 );
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+
+</>
+  );
+};
 
 export default OptimizedLoadingSpinner;

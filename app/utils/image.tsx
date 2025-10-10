@@ -76,7 +76,13 @@ export const Image: React.FC<ImageProps> = ({,
     })
   }
   if (hasError) {</ImageProps>
-    return (</ImageProps>
+    return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet></ImageProps>
   if (hasError) {}
     return (
       <div}
@@ -125,6 +131,10 @@ export const,
       {...props}
     >)</img>
 }</img>
+</>
+  );
+};
+
 export default Image</img>
       loading={priority ? 'eager' : 'lazy'})
       onLoad={handleLoad})

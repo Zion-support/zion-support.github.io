@@ -13,7 +13,12 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
-      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          {/* Hero Section */}
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page
+            </h1>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -38,6 +43,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
     </div>
+  );
+};
+
+</>
   );
 };
 

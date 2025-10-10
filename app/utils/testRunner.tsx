@@ -261,7 +261,13 @@ export class TestRunner {}
     ui: ReactElement)</TestConfig>
     options?: Omit<RenderOptions, 'wrapper'>): RenderResult {}
     const AllTheProviders = useCallback((...args) => {</RenderOptions>
-      return (<BrowserRouter>}</BrowserRouter>
+      return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet><BrowserRouter>}</BrowserRouter>
           {children}</BrowserRouter>
         </BrowserRouter>
   // Custom render function with providers;
@@ -1864,6 +1870,10 @@ export const testUtils = {/* TODO: Fix JSX expression */}
     }
   }
 }
+</>
+  );
+};
+
 export default TestRunner;
 /**
  * Assertion utilities;

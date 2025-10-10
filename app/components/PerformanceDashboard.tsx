@@ -69,7 +69,13 @@ const PerformanceDashboard: React.FC = () => {
 
     updateMetrics();
 
-    // Update metrics every 5 secondsreturn () => clearInterval(interval);
+    // Update metrics every 5 secondsreturn (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>) => clearInterval(interval);
   }, []);
 
   if (!isVisible) {
@@ -127,6 +133,10 @@ const PerformanceDashboard: React.FC = () => {
             Last updated: {new Date().toLocaleTimeString()}</div>
         </div>
     </div>
+  );
+};
+
+</>
   );
 };
 
