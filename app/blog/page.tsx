@@ -1,14 +1,82 @@
 'use client';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const BlogPage: React.FC = () => {
+  const [loading, setLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1000);
     return () => clearTimeout(timer);
-  }, []);const filteredPosts = selectedCategory === 'all' 
+  }, []);
+
+  const posts = [
+    {
+      id: 1,
+      title: 'The Future of AI in Business',
+      excerpt: 'Exploring how artificial intelligence is transforming modern business operations and decision-making processes.',
+      category: 'AI',
+      date: '2024-01-15',
+      readTime: '5 min read',
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 2,
+      title: 'Quantum Computing: A Game Changer',
+      excerpt: 'Understanding the potential of quantum computing and its impact on various industries.',
+      category: 'Technology',
+      date: '2024-01-10',
+      readTime: '7 min read',
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 3,
+      title: 'Blockchain Beyond Cryptocurrency',
+      excerpt: 'Discovering practical applications of blockchain technology in supply chain, healthcare, and more.',
+      category: 'Blockchain',
+      date: '2024-01-05',
+      readTime: '6 min read',
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 4,
+      title: 'Cybersecurity Best Practices',
+      excerpt: 'Essential security measures every business should implement to protect their digital assets.',
+      category: 'Security',
+      date: '2024-01-01',
+      readTime: '4 min read',
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 5,
+      title: 'Cloud Migration Strategies',
+      excerpt: 'A comprehensive guide to successfully migrating your business to the cloud.',
+      category: 'Cloud',
+      date: '2023-12-28',
+      readTime: '8 min read',
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 6,
+      title: 'Data Analytics for Growth',
+      excerpt: 'How to leverage data analytics to drive business growth and make informed decisions.',
+      category: 'Analytics',
+      date: '2023-12-25',
+      readTime: '5 min read',
+      image: '/api/placeholder/400/250'
+    }
+  ];
+
+  const categories = ['all', 'AI', 'Technology', 'Blockchain', 'Security', 'Cloud', 'Analytics'];
+
+  const filteredPosts = selectedCategory === 'all' 
     ? posts 
-    : posts.filter(post => post.category === selectedCategory);if (loading) {
+    : posts.filter(post => post.category === selectedCategory);
+
+  if (loading) {
     return (
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
@@ -18,11 +86,13 @@ const BlogPage: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+              <div key={item} className="bg-white rounded-lg shadow-md overflow-hidden animate-pulse">
+                <div className="h-48 bg-gray-200"></div>
+                <div className="p-6">
+                  <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                  <div className="h-4 bg-gray-200 rounded w-2/3"></div>
+                </div>
               </div>
             ))}
           </div>
@@ -31,67 +101,105 @@ const BlogPage: React.FC = () => {
     );
   }
 
-=======
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></section><div className="container mx-auto px-4 relative z-10"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Blog & Insights</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Stay updated with the latest trends in AI, cloud computing, cybersecurity,</p>
-              and digital transformation. Expert insights from our team of specialists.</p>
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 lg: py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">)
-          <div className="max-w-4xl mx-auto text-center">)
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">)
-              Blog & Insights;)
-            </h1>),
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">),
-              Stay updated with the latest trends in AI, cloud computing, cybersecurity)
-              and digital transformation. Expert insights from our team of specialists.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4"></div>
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
-                <BookOpen className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">Expert Insights</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
-                <TrendingUp className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Latest Trends</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
-                <Star className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">Industry Leaders</span>
-              </div>
     <>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Read our latest insights on AI, technology, and business solutions. Stay updated with industry trends and best practices." />
+        <meta name="description" content="Stay updated with the latest insights on AI, technology, blockchain, and more from Zion Tech Group's expert team." />
+        <meta name="keywords" content="tech blog, AI insights, technology trends, blockchain, cybersecurity, cloud computing" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-gray-50">
         <Navigation />
         
         <main className="pt-20">
-          <div className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Our Blog
+          {/* Hero Section */}
+          <section className="bg-gradient-to-r from-slate-900 to-purple-900 text-white py-16">
+            <div className="container mx-auto px-4 text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Tech Insights & Updates
               </h1>
-              
-              <div className="prose prose-lg max-w-none">
-                <p className="text-xl text-gray-600 mb-8">
-                  Insights, trends, and best practices in AI and technology.
-                </p>
-                
-                <p className="text-gray-700 mb-6">
-                  Coming soon - stay tuned for our latest articles and insights!
-                </p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Stay ahead of the curve with our latest insights on AI, technology trends, and industry innovations.
+              </p>
+            </div>
+          </section>
+
+          {/* Category Filter */}
+          <section className="py-8 bg-white border-b">
+            <div className="container mx-auto px-4">
+              <div className="flex flex-wrap justify-center gap-4">
+                {categories.map(category => (
+                  <button
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+                      selectedCategory === category
+                        ? 'bg-cyan-600 text-white'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {category === 'all' ? 'All Posts' : category}
+                  </button>
+                ))}
               </div>
             </div>
-          </div>
+          </section>
+
+          {/* Blog Posts */}
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredPosts.map(post => (
+                  <article key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div className="h-48 bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center">
+                      <span className="text-white text-4xl">📝</span>
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-sm text-cyan-600 font-medium">{post.category}</span>
+                        <span className="text-sm text-gray-500">{post.readTime}</span>
+                      </div>
+                      <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                        {post.title}
+                      </h2>
+                      <p className="text-gray-600 mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-gray-500">{post.date}</span>
+                        <button className="text-cyan-600 hover:text-cyan-700 font-medium">
+                          Read More →
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Newsletter Signup */}
+          <section className="py-16 bg-gradient-to-r from-cyan-600 to-purple-600">
+            <div className="container mx-auto px-4 text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Stay Updated
+              </h2>
+              <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
+                Subscribe to our newsletter for the latest tech insights and industry updates.
+              </p>
+              <div className="max-w-md mx-auto flex gap-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-white"
+                />
+                <button className="bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </section>
         </main>
         
         <Footer />

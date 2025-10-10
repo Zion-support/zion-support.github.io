@@ -4,7 +4,7 @@ import { Play, Calendar, Phone, Mail, CheckCircle, ArrowRight, Star, Users, Cloc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const DemoPage: React.FC = () => {,
+const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-services');
 
   const demos = [
@@ -45,7 +45,7 @@ const DemoPage: React.FC = () => {,
       ],
       icon: '💻'},
     {
-      id: 'custom'
+      id: 'custom',
       title: 'Custom Demo',
       description: 'Get a personalized demo tailored to your specific business needs and requirements',
       duration: '60 minutes',
