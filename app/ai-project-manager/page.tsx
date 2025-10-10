@@ -1,7 +1,6 @@
 'use client'
-import React, { useState, useEffect } from 'react'
-// import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Phone } from 'lucide-react';
+import React, { useState, useEffect, lazy } from 'react'
+import { CheckCircle, Phone, Brain, Target, BarChart, Users } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'))
 const Footer = lazy(() => import('../components/Footer'))

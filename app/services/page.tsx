@@ -15,7 +15,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
       link: '/ai-project-manager',
       popular: true,
-      category: 'Productivity'}
+      category: 'Productivity'
     },
     {
       title: 'AI Social Media Manager',

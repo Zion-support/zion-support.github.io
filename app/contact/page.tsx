@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, lazy, useCallback } from 'react'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'))
@@ -11,17 +11,17 @@ const ContactPage: React.FC = React.memo((props) => {
     company: '',
     phone: '',
     service: '',
-    message: ''}
+    message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const handleInputChange = useCallback((...args) => {}
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
-      [name]: value}
+      [name]: value
     }))
-  }
+  }, [])
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
