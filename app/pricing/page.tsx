@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -64,6 +63,7 @@ const PricingPage: React.FC = () => {
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -136,6 +136,144 @@ const PricingPage: React.FC = () => {
         </section>
       </div>
     </>
+=======
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the perfect plan for your business needs. All plans include our core AI and IT solutions with transparent, no-hidden-fees pricing.
+            </p>
+          </div>
+
+          {/* Pricing Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {plans.map((plan, index) => (
+              <div
+                key={index}
+                className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  plan.popular
+                    ? 'border-blue-400/50 ring-2 ring-blue-400/20'
+                    : 'border-white/20 hover:border-white/40'
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                      <Star className="w-4 h-4" />
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-5xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                  </div>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white'
+                      : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+                  }`}
+                >
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional Features */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8">What's Included in Every Plan</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Fast Implementation</h3>
+                <p className="text-gray-300 text-sm">Quick setup and deployment</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Expert Support</h3>
+                <p className="text-gray-300 text-sm">Dedicated technical assistance</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <ArrowRight className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Scalable Growth</h3>
+                <p className="text-gray-300 text-sm">Solutions that grow with your business</p>
+              </div>
+            </div>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="mt-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+            <div className="max-w-3xl mx-auto space-y-6">
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-white mb-2">Can I change plans anytime?</h3>
+                <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-white mb-2">Do you offer custom solutions?</h3>
+                <p className="text-gray-300">Absolutely! Our Enterprise plan includes fully customized solutions tailored to your specific needs.</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-white mb-2">What payment methods do you accept?</h3>
+                <p className="text-gray-300">We accept all major credit cards, bank transfers, and can arrange custom billing for enterprise clients.</p>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-white mb-2">Is there a free trial available?</h3>
+                <p className="text-gray-300">Yes, we offer a 14-day free trial for all plans. No credit card required to get started.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                Join thousands of businesses already using our AI and IT solutions to transform their operations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2">
+                  Start Free Trial
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
   );
 };
 

@@ -321,10 +321,19 @@ const Navigation: React.FC = () => {
                 
                 {servicesOpen && (
                   <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+<<<<<<< HEAD
                     <div className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">AI Services</div>
                     <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
                       <Brain className="w-4 h-4 inline mr-2" />
                       AI Solutions
+=======
+                    <Link href="/services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      All Services
+                    </Link>
+                    <div className="border-t border-gray-700 my-1"></div>
+                    <Link href="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Services
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
                     </Link>
                     <Link to="/ai-marketing" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
                       <TrendingUp className="w-4 h-4 inline mr-2" />
@@ -364,6 +373,13 @@ const Navigation: React.FC = () => {
                       <Zap className="w-4 h-4 inline mr-2" />
                       Micro SaaS Solutions
                     </Link>
+                    <div className="border-t border-gray-700 my-1"></div>
+                    <Link href="/consultation" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Consultation
+                    </Link>
+                    <Link href="/demo" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Demo
+                    </Link>
                   </div>
                 )}
               </div>
@@ -372,6 +388,7 @@ const Navigation: React.FC = () => {
                 About
               </Link>
               
+<<<<<<< HEAD
               <Link to="/case-studies" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Case Studies
               </Link>
@@ -385,6 +402,40 @@ const Navigation: React.FC = () => {
               </Link>
               
               <Link to="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+=======
+              {/* Resources Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleAiServices}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  Resources
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                
+                {aiServicesOpen && (
+                  <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    <Link href="/blog" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Blog
+                    </Link>
+                    <Link href="/case-studies" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Case Studies
+                    </Link>
+                    <Link href="/faq" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      FAQ
+                    </Link>
+                    <Link href="/support" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Support
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <Link href="/pricing" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Pricing
+              </Link>
+              <Link href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
                 Contact
               </Link>
               
@@ -592,6 +643,7 @@ const Navigation: React.FC = () => {
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>
+<<<<<<< HEAD
               
               {/* Mobile AI Services */}
               <div>
@@ -707,6 +759,33 @@ const Navigation: React.FC = () => {
                 Tutorials
               </Link>
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+=======
+              <Link href="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                All Services
+              </Link>
+              <Link href="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                AI Services
+              </Link>
+              <Link href="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                IT Services
+              </Link>
+              <Link href="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Micro SaaS
+              </Link>
+              <Link href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                About
+              </Link>
+              <Link href="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Blog
+              </Link>
+              <Link href="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Case Studies
+              </Link>
+              <Link href="/pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Pricing
+              </Link>
+              <Link href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
                 Contact
               </Link>
 

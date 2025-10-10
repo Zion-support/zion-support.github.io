@@ -5,6 +5,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const CloudInfrastructurePage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
 icon: Shield,
       title: 'Secure Cloud Infrastructure',
       description: 'Enterprise-grade cloud infrastructure with advanced security and compliance'
@@ -23,13 +24,40 @@ icon: Shield,
       icon: Globe,
       title: 'Global Deployment',
       description: 'Worldwide cloud infrastructure deployment and support'
+=======
+      icon: Cloud,
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud platforms with minimal downtime'
+    },
+    {
+      icon: Server,
+      title: 'Infrastructure Setup',
+      description: 'Complete cloud infrastructure setup and configuration'
+    },
+    {
+      icon: Database,
+      title: 'Database Management',
+      description: 'Scalable database solutions and management services'
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security and compliance standards'
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     }
   ];
   const benefits = [
+<<<<<<< HEAD
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible cloud solutions',
+=======
+    'Scalable cloud infrastructure',
+    'Cost-effective solutions',
+    'High availability and reliability',
+    'Automated scaling and management',
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -40,6 +68,7 @@ icon: Shield,
       <Helmet>
         <title>Cloud Infrastructure | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<<<<<<< HEAD
 <meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
@@ -47,10 +76,22 @@ icon: Shield,
           <h1 className="text-5xl font-bold text-white mb-6">
             Cloud Infrastructure;
   </
+=======
+        <meta name="keywords" content="cloud infrastructure, cloud migration, cloud services, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Cloud Infrastructure
+          </h1>
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud infrastructure solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
+<<<<<<< HEAD
         </div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -60,6 +101,23 @@ icon: Shield,
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+=======
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Our cloud infrastructure solutions deliver unmatched performance, security, and scalability.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -102,10 +160,18 @@ icon: Shield,
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+=======
+
+      {/* CTA Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8">

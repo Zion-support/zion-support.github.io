@@ -3,6 +3,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
 
 import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react';
 
@@ -21,6 +25,7 @@ const AIApiManagerPage: React.FC = () => {
     },
     {
 
+<<<<<<< HEAD
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
       benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
@@ -42,6 +47,17 @@ const AIApiManagerPage: React.FC = () => {
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' },
     { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' }
   ];
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <Navigation />
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -178,3 +194,7 @@ const AIApiManagerPage: React.FC = () => {
 
 export default AIApiManagerPage;
 
+<<<<<<< HEAD
+=======
+export default AiApiManagerPage;
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73

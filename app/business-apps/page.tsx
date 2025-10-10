@@ -21,7 +21,11 @@ const BusinessAppsPage: React.FC = () => {
     },
     {
       icon: Brain,
+<<<<<<< HEAD
 title: 'AI-Powered Business Apps',
+=======
+      title: 'AI-Powered Business Apps',
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
       description: 'Advanced AI technology to transform your business applications and improve efficiency'
     },
     {
@@ -41,10 +45,17 @@ title: 'AI-Powered Business Apps',
     }
   ];
   const benefits = [
+<<<<<<< HEAD
 'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible business solutions',
+=======
+    'Custom mobile and web applications',
+    'Cross-platform compatibility',
+    'Modern UI/UX design',
+    'Cloud-based deployment',
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -54,7 +65,11 @@ title: 'AI-Powered Business Apps',
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Business Apps | Zion Tech Group</title>
+<<<<<<< HEAD
 <meta name="description" content="Professional Business Apps development by Zion Tech Group. Advanced AI and IT solutions for your business." />
+=======
+        <meta name="description" content="Professional Business Apps development by Zion Tech Group. Advanced AI and IT solutions for your business." />
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
         <meta name="keywords" content="business apps, mobile apps, web apps, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       {/* Hero Section */}
@@ -90,7 +105,12 @@ title: 'AI-Powered Business Apps',
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 {/* Benefits Section */}
+=======
+
+      {/* Benefits Section */}
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -127,8 +147,13 @@ title: 'AI-Powered Business Apps',
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
+<<<<<<< HEAD
               Email Us;
   </
+=======
+              Email Us
+            </button>
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
           </div>
         </div>
         <div className="text-center">

@@ -7,6 +7,7 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
+<<<<<<< HEAD
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
@@ -174,6 +175,52 @@ const Footer: React.FC = memo(() => {
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github },
     { name: 'YouTube', url: 'https://youtube.com/ziontechgroup', icon: Youtube },
     { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram }
+=======
+    { name: 'AI Services Overview', url: '/ai-services', description: 'Comprehensive AI solutions' },
+    { name: 'AI Analytics', url: '/ai-analytics', description: 'Advanced data insights' },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
+    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' }
+  ];
+
+  const itServices = [
+    { name: 'IT Services Overview', url: '/it-services', description: 'Comprehensive IT solutions' },
+    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud solutions' },
+    { name: 'Cybersecurity', url: '/ai-cybersecurity', description: 'Security solutions' },
+    { name: 'Data Analytics', url: '/ai-data-analytics', description: 'Data insights' },
+    { name: 'API Management', url: '/ai-api-management', description: 'API solutions' },
+    { name: 'Infrastructure Monitoring', url: '/ai-infrastructure-monitoring', description: 'System monitoring' }
+  ];
+
+  const microSaasServices = [
+    { name: 'Micro SaaS Overview', url: '/micro-saas', description: 'AI-powered business tools' },
+    { name: 'Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Business analytics' },
+    { name: 'Content Generator', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'Email Marketing', url: '/ai-email-marketing', description: 'Email automation' },
+    { name: 'CRM Assistant', url: '/ai-crm-assistant', description: 'Customer relationship management' },
+    { name: 'Project Management', url: '/ai-automation', description: 'Project management tools' }
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', url: '/about', description: 'Learn about our company' },
+    { name: 'Case Studies', url: '/case-studies', description: 'Success stories' },
+    { name: 'Careers', url: '/careers', description: 'Join our team' },
+    { name: 'Partners', url: '/partners', description: 'Our partnerships' },
+    { name: 'Blog', url: '/blog', description: 'Latest insights' },
+    { name: 'Contact', url: '/contact', description: 'Get in touch' }
+  ];
+
+  const supportLinks = [
+    { name: 'Support Center', url: '/support', description: 'Get help' },
+    { name: 'FAQ', url: '/faq', description: 'Frequently asked questions' },
+    { name: 'Documentation', url: '/docs', description: 'Technical docs' },
+    { name: 'Consultation', url: '/consultation', description: 'Expert guidance' },
+    { name: 'Demo', url: '/demo', description: 'Try our solutions' },
+    { name: 'Pricing', url: '/pricing', description: 'View pricing plans' }
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
   ];
 
   return (
@@ -216,6 +263,7 @@ const Footer: React.FC = memo(() => {
               delivering measurable results and exceptional value.
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div className="space-y-4">
               <div className="flex items-center text-sm text-gray-300 group">
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
@@ -245,10 +293,22 @@ const Footer: React.FC = memo(() => {
             
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
+=======
+            <div className="space-y-2">
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (302) 464-0950</span>
               </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <Mail className="w-4 h-4 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-sm text-gray-300">
+                <MapPin className="w-4 h-4 mr-2" />
+                <span>Middletown, DE 19709</span>
+              </div>
+<<<<<<< HEAD
               <div className="flex items-center text-sm text-gray-300">
                 <Mail className="w-4 h-4 mr-2" />
                 <span>info@ziontechgroup.com</span>
@@ -274,6 +334,8 @@ const Footer: React.FC = memo(() => {
                 </a>
               ))}
 >>>>>>> cursor/website-audit-and-update-with-deployment-3540
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
             </div>
           </div>
 
@@ -300,7 +362,7 @@ const Footer: React.FC = memo(() => {
               AI Services
             </h3>
             <ul className="space-y-2">
-              {aiServices.slice(0, 6).map((service, index) => (
+              {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.url} 
@@ -397,22 +459,50 @@ const Footer: React.FC = memo(() => {
                     <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
 =======
 
-          {/* Micro SaaS */}
+          {/* Company */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 flex items-center">
               <Zap className="w-5 h-5 mr-2 text-purple-400" />
               Micro SaaS
             </h3>
+=======
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
             <ul className="space-y-2">
-              {microSaasServices.map((service, index) => (
+              {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
+<<<<<<< HEAD
                     to={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
 >>>>>>> cursor/website-audit-and-update-with-deployment-3540
                     {service.name}
+=======
+                    href={link.url} 
+                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <ul className="space-y-2">
+              {supportLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    href={link.url} 
+                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                  >
+                    {link.name}
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
                   </Link>
                 </li>
               ))}
