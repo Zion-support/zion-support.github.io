@@ -1,12 +1,10 @@
 'use client';
 import React from 'react';
-'use client';
-
-<<<<<<< HEAD
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Phone, Mail, Clock } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const ConsultationPage: React.FC = () => {
   const consultationTypes = [
@@ -49,43 +47,6 @@ const ConsultationPage: React.FC = () => {
         'Ongoing monitoring setup'
       ]
     }
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Calendar, Clock, User, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
-
-const ConsultationPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Consultation form submitted:', formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const services = [
-    'AI Solutions',
-    'Cloud Services',
-    'Data Analytics',
-    'Cybersecurity',
-    'Web Development',
-    'Mobile Development',
-    'Other'
->>>>>>> origin/main
   ];
 
   return (
@@ -96,8 +57,8 @@ const ConsultationPage: React.FC = () => {
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
       </Helmet>
 
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -164,22 +125,12 @@ const ConsultationPage: React.FC = () => {
                   <Clock className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                   <h3 className="text-lg font-semibold text-white mb-2">Hours</h3>
                   <p className="text-gray-300">Mon-Fri: 9AM-6PM EST</p>
-=======
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Free Consultation
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Get expert advice on how AI and technology can transform your business. Schedule a free consultation with our specialists.
-              </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Consultation Form */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -279,25 +230,6 @@ const ConsultationPage: React.FC = () => {
                   >
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Consultation
-=======
-      {/* Consultation Form */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white mb-6">Schedule Your Consultation</h2>
-              
-              {isSubmitted ? (
-                <div className="text-center py-12">
-                  <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-2">Consultation Scheduled!</h3>
-
-                  <p className="text-gray-300 mb-6">
-                    Schedule your free consultation and let's discuss how we can help transform your business.
-                  </p>
-                  <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-                    Schedule Free Consultation
-                    <ArrowRight className="inline-block ml-2 w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
                   </button>
                 </form>
               </div>
@@ -355,27 +287,15 @@ const ConsultationPage: React.FC = () => {
                       info@ziontechgroup.com
                     </div>
                   </div>
->>>>>>> origin/main
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
       </div>
-    </>
-=======
-        </div>
-      </section>
-
       <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
+    </>
   );
 };
 
-<<<<<<< HEAD
 export default ConsultationPage;
-=======
-export default ConsultationPage;
->>>>>>> origin/main

@@ -24,36 +24,6 @@ const ApiCachePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
-interface CacheEntry {
-  data: any,
-  timestamp: number,
-  ttl: number,
-}
-
-class APICache {
-  private cache: Map<string, CacheEntry> = new Map();
-  private maxSize: number = 100;
-  private defaultTTL: number = 5 * 60 * 1000; // 5 minutes;
-  constructor(maxSize: number = 100, defaultTTL: number = 5 * 60 * 1000) {,
-    this.maxSize = maxSize;
-    this.defaultTTL = defaultTTL;
-  }
-
-  set(key: string, data: any, ttl?: number): void {
-    const now = Date.now();
-    const entry: CacheEntry = {
-      data;
-      timestamp: now,
-      ttl: ttl || this.defaultTTL;
-    };
-
-    // Remove oldest entries if cache is full;
-    if (this.cache.size >= this.maxSize) {
-      const oldestKey = this.cache.keys().next().value;
-      this.cache.delete(oldestKey);
->>>>>>> origin/main
     }
   ];
 

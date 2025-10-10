@@ -1,20 +1,10 @@
 // SEO utilities for the application
 
-<<<<<<< HEAD
 export interface SEOData {
   title: string,
   description: string,
   keywords: string[];
   canonicalUrl: string,
-=======
-export interface SEOConfig {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl?: string;
-  ogTitle?: string;
-  ogDescription?: string;
->>>>>>> origin/main
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
@@ -191,7 +181,6 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
   return cleanContent.substring(0, maxLength - 3) + '...';
 };
 
-<<<<<<< HEAD
 export const generateStructuredData = (data: {
   name: string,
   description: string,
@@ -328,48 +317,6 @@ export const generatePageSpeedInsights = (url: string): Promise<{
     accessibility: 90,
     bestPractices: 88,
     seo: 92
-=======
-export const generateKeywords = (content: string, maxKeywords: number = 10): string[] => {
-  const words = content
-    .toLowerCase()
-    .replace(/[^\w\s]/g, '')
-    .split(/\s+/)
-    .filter(word => word.length > 3);
-
-  const wordCount: { [key: string]: number } = {};
-  words.forEach(word => {
-    wordCount[word] = (wordCount[word] || 0) + 1;
-  });
-
-  return Object.entries(wordCount)
-    .sort(([, a], [, b]) => b - a)
-    .slice(0, maxKeywords)
-    .map(([word]) => word);
-};
-
-export const isValidUrl = (url: string): boolean => {
-  try {
-    new URL(url);
-    return true;
-  } catch {
-    return false;
-  }
-};
-
-export const getCanonicalUrl = (path: string, baseUrl: string = ''): string => {
-  if (isValidUrl(path)) {
-    return path;
-  }
-  
-  const base = baseUrl || (typeof window !== 'undefined' ? window.location.origin : '');
-  return `${base}${path.startsWith('/') ? path : `/${path}`}`;
-};
-
-export const createStructuredData = (data: any): string => {
-  return JSON.stringify({
-    '@context': 'https://schema.org',
-    ...data,
->>>>>>> origin/main
   });
 };
 

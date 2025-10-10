@@ -1,6 +1,5 @@
 // Next.js specific type definitions
 
-<<<<<<< HEAD
 const Next.dPage: React.FC = () => {
   const features = [
     {
@@ -24,79 +23,7 @@ const Next.dPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-<<<<<<< HEAD
-=======
-// Type definitions for Next.js compatibility in Vite
-export interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[];
-  creator?: string;
-  publisher?: string;
-  formatDetection?: {
-    email?: boolean;
-    address?: boolean;
-    telephone?: boolean;
-  };
-  metadataBase?: URL;
-  alternates?: {
-    canonical?: string;
-    languages?: Record<string, string>;
-  };
-  openGraph?: {
-    title?: string;
-    description?: string;
-    url?: string;
-    siteName?: string;
-    images?: Array<{
-      url: string,
-      width?: number;
-      height?: number;
-      alt?: string;
-    }>;
-    locale?: string;
-    type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[];
-    publishedTime?: string;
-  };
-  twitter?: {
-    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
-    images?: string[];
-  };
-  robots?: {
-    index?: boolean;
-    follow?: boolean;
-    googleBot?: {
-      index?: boolean;
-      follow?: boolean;
-      'max-video-preview'?: number;
-      'max-image-preview'?: 'none' | 'standard' | 'large';
-      'max-snippet'?: number;
-    };
-  };
-  verification?: {
-    google?: string;
-    yandex?: string;
-    yahoo?: string;
-    other?: Record<string, string>;
-  };
-}
-
-export interface MetadataRoute {
-  url: string,
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
->>>>>>> origin/main
-=======
 import { NextRequest, NextResponse } from 'next/server'
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
 
 // Extend Next.js types
 declare module 'next' {
@@ -109,7 +36,6 @@ declare module 'next' {
   }
 }
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -117,22 +43,11 @@ declare module 'next' {
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
-<<<<<<< HEAD
-=======
-export interface MetadataRouteSitemap extends MetadataRoute {
-  url: string,
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
->>>>>>> origin/main
-=======
 // Custom Next.js types
 export interface NextPageProps {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
 
 export interface NextLayoutProps {
   children: React.ReactNode;

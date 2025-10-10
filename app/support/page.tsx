@@ -53,11 +53,7 @@ const SupportPage: React.FC = () => {
     {
       icon: MessageCircle,
       title: 'Live Chat',
-<<<<<<< HEAD
       description: 'Chat with our support team in real-time',
-=======
-      description: 'Chat with our support team',
->>>>>>> origin/main
       contact: 'Available on website',
       availability: '24/7'
     }
@@ -130,13 +126,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Contact Support */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-=======
-        {/* Support Channels */}
-        <section className="py-16 px-4">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -204,7 +195,6 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -212,8 +202,3 @@ const SupportPage: React.FC = () => {
 };
 
 export default SupportPage;
-=======
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0

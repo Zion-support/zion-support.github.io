@@ -8,15 +8,9 @@ interface UseIntersectionObserverOptions {
 }
 
 interface UseIntersectionObserverReturn {
-<<<<<<< HEAD
   ref: React.RefObject<Element>;
   isIntersecting: boolean;
   entry?: IntersectionObserverEntry;
-=======
-  ref: React.RefObject<HTMLElement>;
-  isIntersecting: boolean;
-  entry: IntersectionObserverEntry | undefined;
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
 }
 
 export function useIntersectionObserver(
@@ -31,7 +25,6 @@ export function useIntersectionObserver(
 
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
-<<<<<<< HEAD
   const ref = useRef<Element>(null);
 
   useEffect(() => {
@@ -45,20 +38,6 @@ export function useIntersectionObserver(
         setEntry(entry);
 
         if (isElementIntersecting && freezeOnceVisible) {
-=======
-  const ref = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const element = ref.current;
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-        setEntry(entry);
-
-        if (entry.isIntersecting && freezeOnceVisible) {
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
           observer.disconnect();
         }
       },
@@ -69,11 +48,7 @@ export function useIntersectionObserver(
       }
     );
 
-<<<<<<< HEAD
     observer.observe(node);
-=======
-    observer.observe(element);
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
 
     return () => {
       observer.disconnect();
@@ -81,10 +56,6 @@ export function useIntersectionObserver(
   }, [threshold, root, rootMargin, freezeOnceVisible]);
 
   return { ref, isIntersecting, entry };
-<<<<<<< HEAD
 }
 
 export default useIntersectionObserver;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0

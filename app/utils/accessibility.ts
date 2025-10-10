@@ -1,6 +1,5 @@
 // Accessibility utilities for the application
 
-<<<<<<< HEAD
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
@@ -146,9 +145,6 @@ const AccessibilityPage: React.FC = () => {
       </section>
     </div>
   );
-=======
-=======
->>>>>>> origin/main
 export interface AccessibilityConfig {
   enableHighContrast: boolean;
   enableScreenReader: boolean;
