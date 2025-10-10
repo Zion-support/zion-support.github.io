@@ -21,31 +21,6 @@ const AIAnalyticsPage: React.FC = () => {
     },
     {
       icon: TrendingUp,
-<<<<<<< HEAD
-      title: 'Performance Tracking',
-      description: 'Track and analyze performance metrics across all your business operations.',
-      benefits: ['KPI monitoring', 'ROI analysis', 'Growth tracking', 'Benchmarking']
-    },
-    {
-      icon: Target,
-      title: 'Goal Setting',
-      description: 'Set and track business goals with AI-powered recommendations for optimization.',
-      benefits: ['Smart goal setting', 'Progress tracking', 'Achievement alerts', 'Performance insights']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Reports',
-      description: 'Generate comprehensive reports automatically with AI-driven insights and recommendations.',
-      benefits: ['Scheduled reports', 'Custom templates', 'Data visualization', 'Export options']
-    },
-    {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    }
-  ];
-=======
       title: 'Performance Optimization',
       description: 'Optimize your business performance with AI-driven recommendations and insights.',
       benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
@@ -61,6 +36,12 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Visual Analytics',
       description: 'Transform complex data into intuitive visualizations and interactive charts.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
+    },
+    {
+      icon: Shield,
+      title: 'Data Security',
+      description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
+      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
   ];
 
@@ -104,27 +85,11 @@ const AIAnalyticsPage: React.FC = () => {
       icon: '🛡️'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>AI Analytics - Zion Tech Group | Advanced Business Intelligence</title>
-        <meta name="description" content="Transform your business with AI-powered analytics and insights. Get real-time dashboards, predictive analytics, and intelligent recommendations." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              AI <span className="text-cyan-400">Analytics</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics and insights. Get real-time dashboards, predictive analytics, and intelligent recommendations.
-            </p>
-=======
-        <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
       </Helmet>
 
@@ -153,31 +118,9 @@ const AIAnalyticsPage: React.FC = () => {
                 View Demo
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
           </div>
+        </section>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
-                  </div>
-                </div>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -280,18 +223,12 @@ const AIAnalyticsPage: React.FC = () => {
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Contact Sales
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
               </div>
-            ))}
+            </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </div>
-=======
         </section>
       </div>
       <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-7ab3
     </>
   );
 };
