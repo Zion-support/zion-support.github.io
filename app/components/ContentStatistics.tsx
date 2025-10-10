@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
@@ -98,7 +96,6 @@ const ContentStatistics: React.FC = () => {
         current += increment;
         if (current >= target) {
           current = target;
-          clearInterval(timers[0]);
         }
         setCounters(prev => ({
           ...prev,
@@ -113,6 +110,68 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
+    <div className="bg-gradient-to-r from-slate-900 to-blue-900 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Impact in Numbers
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            See how we've helped businesses transform with our AI and IT solutions
+          </p>
+        </div>
+
+        {/* Statistics Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {statistics.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <stat.icon className={`w-10 h-10 ${stat.color}`} />
+              </div>
+              <div className="text-4xl font-bold text-white mb-2">
+                {stat.value}{stat.suffix}
+              </div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <feature.icon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Benefits Section */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us?</h3>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              We deliver exceptional results through innovative technology and expert support
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 mx-auto">
+              <span>Get Started Today</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>

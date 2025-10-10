@@ -3,11 +3,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Zap, CheckCircle, ArrowRight, Star, Users, Shield, BarChart } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
     {
-      icon: '📊',
+      icon: BarChart,
       title: 'AI Analytics Dashboard',
       description: 'Real-time business intelligence and predictive analytics for small to medium businesses',
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app'],
@@ -15,7 +16,7 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 50 users',
     },
     {
-      icon: '👥',
+      icon: Users,
       title: 'AI-Powered CRM',
       description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
       features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs'],
@@ -23,20 +24,12 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 100 users',
     },
     {
-      icon: '🔒',
+      icon: Shield,
       title: 'Security Monitoring Suite',
       description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses',
       features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring'],
       price: '$199/month',
       users: 'Up to 200 users',
-    },
-    {
-      icon: '☁️',
-      title: 'Cloud Infrastructure Manager',
-      description: 'Automated cloud resource management and cost optimization for multi-cloud environments',
-      features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support'],
-      price: '$299/month',
-      users: 'Unlimited users',
     }
   ];
 
@@ -49,10 +42,105 @@ const MicroSaasPage: React.FC = () => {
     'Easy integration'
   ];
 
-
   return (
     <>
       <Helmet>
+        <title>Micro SaaS Solutions | Zion Tech Group</title>
+        <meta name="description" content="Discover our micro SaaS solutions designed for small to medium businesses. AI-powered tools that scale with your growth." />
+        <meta name="keywords" content="micro SaaS, small business software, AI tools, business automation, scalable solutions" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Micro SaaS Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Powerful, affordable AI-powered tools designed for small to medium businesses. 
+              Scale your operations without the complexity.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View All Solutions
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Products Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our Micro SaaS Products
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose from our range of specialized tools designed for modern businesses
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {microSaasProducts.map((product, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                    <product.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{product.title}</h3>
+                  <p className="text-gray-300 mb-6">{product.description}</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    {product.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="border-t border-white/20 pt-6">
+                    <div className="flex justify-between items-center mb-4">
+                      <span className="text-3xl font-bold text-white">{product.price}</span>
+                      <span className="text-gray-400">{product.users}</span>
+                    </div>
+                    <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                      Start Free Trial
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Why Choose Micro SaaS?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Get enterprise-level functionality without enterprise-level complexity
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">
