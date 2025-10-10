@@ -442,8 +442,13 @@ const Navigation: React.FC = () => {
             <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Tutorials
             </Link>
+<<<<<<< HEAD
             <Link to="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Demo
+=======
+            <Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Careers
+>>>>>>> cursor/website-audit-and-update-with-deployment-d2f2
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
@@ -598,8 +603,13 @@ const Navigation: React.FC = () => {
               <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Tutorials
               </Link>
+<<<<<<< HEAD
               <Link to="/demo" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Demo
+=======
+              <Link to="/careers" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Careers
+>>>>>>> cursor/website-audit-and-update-with-deployment-d2f2
               </Link>
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
