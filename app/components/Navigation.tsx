@@ -2,11 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Sidebar from './Sidebar';
 import MobileNavigation from './MobileNavigation';
 =======
 import Search from './Search';
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-04b6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
 import { 
   ChevronDown, 
   Phone, 
@@ -846,6 +849,7 @@ const Navigation: React.FC = () => {
       ]
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1091,6 +1095,8 @@ const Navigation: React.FC = () => {
         { name: 'Robotics Solutions', path: '/robotics' }
       ]
     }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
   ];
 
   return (

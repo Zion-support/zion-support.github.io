@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,6 +141,13 @@ const AIServicesPage: React.FC = () => {
 <<<<<<< HEAD
   const services = [
     // Core AI Services
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, Globe, Smartphone, Database, BarChart3, Mail, Calendar, FileText, Image, Video, Music, Code, Palette, Search, Lock, Cloud, Wifi, Monitor, Headphones, Camera, Printer, HardDrive, Cpu, MemoryStick, Wrench, Settings, Bell, Heart, ThumbsUp, Share2, Download, Upload, Eye, Edit, Trash2, Plus, Minus, X, Check, AlertCircle, Info, HelpCircle, ExternalLink, Brain, Cpu as CpuIcon, Bot, Target, Layers, BarChart, PieChart, LineChart, Activity, Zap as ZapIcon, Sparkles, Atom, Cpu as CpuIcon2 } from 'lucide-react';
+
+  const aiServices = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
     {
       id: 1,
 <<<<<<< HEAD
@@ -197,6 +205,7 @@ const AIServicesPage: React.FC = () => {
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -332,6 +341,9 @@ const AIServicesPage: React.FC = () => {
 =======
   const aiServiceCategories = [
     {
+=======
+      ],
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
       category: 'AI Automation & Workflow',
       icon: Zap,
       color: 'text-yellow-400',
@@ -6110,6 +6122,7 @@ export default function AIServicesPage() {
                   </ul>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                 <div className="space-y-3">
                   <a
@@ -6125,6 +6138,19 @@ export default function AIServicesPage() {
                   >
                     Learn More
                   </a>
+=======
+                <div className="flex items-center space-x-2">
+                  {service.popular && (
+                    <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
+                      <Star className="w-3 h-3 mr-1" />
+                      Popular
+                    </span>
+                  )}
+                  <div className="flex items-center text-yellow-400">
+                    <Star className="w-4 h-4 fill-current" />
+                    <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                  </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
                 </div>
               </div>
 
@@ -6140,6 +6166,7 @@ export default function AIServicesPage() {
                       {capability}
                     </li>
                   ))}
+<<<<<<< HEAD
                 </ul>
               </div>
 
@@ -6194,6 +6221,10 @@ export default function AIServicesPage() {
                   <h3 className="text-2xl font-bold text-white">{category.category}</h3>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+=======
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 relative group">
                       {service.popular && (

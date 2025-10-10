@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'use client';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fd
 import React, { useEffect, useState } from 'react';
 import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
 
