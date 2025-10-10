@@ -1,67 +1,15 @@
-/* Futuristic Design System - Zion Tech Group */
+/* Futuristic Design System for Zion Tech Group */
 
-/* Neon Glow Effects */
-.neon-glow {
-  text-shadow: 
-    0 0 5px currentColor,
-    0 0 10px currentColor,
-    0 0 15px currentColor,
-    0 0 20px currentColor;
-  animation: neon-pulse 2s ease-in-out infinite alternate;
-}
-
-.neon-glow-cyan {
-  color: #00ffff;
-  text-shadow: 
-    0 0 5px #00ffff,
-    0 0 10px #00ffff,
-    0 0 15px #00ffff,
-    0 0 20px #00ffff;
-  animation: neon-pulse-cyan 2s ease-in-out infinite alternate;
-}
-
-.neon-glow-purple {
-  color: #8b5cf6;
-  text-shadow: 
-    0 0 5px #8b5cf6,
-    0 0 10px #8b5cf6,
-    0 0 15px #8b5cf6,
-    0 0 20px #8b5cf6;
-  animation: neon-pulse-purple 2s ease-in-out infinite alternate;
-}
-
-.neon-glow-pink {
-  color: #ec4899;
-  text-shadow: 
-    0 0 5px #ec4899,
-    0 0 10px #ec4899,
-    0 0 15px #ec4899,
-    0 0 20px #ec4899;
-  animation: neon-pulse-pink 2s ease-in-out infinite alternate;
-}
-
-/* Cyber Text Effect */
-.cyber-text {
-  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #00ffff);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: cyber-gradient 3s ease infinite;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-/* Neon Pulse Animations */
-@keyframes neon-pulse {
-  from {
+/* Cyber-themed animations and effects */
+@keyframes neon-glow {
+  0%, 100% {
     text-shadow: 
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
       0 0 20px currentColor;
   }
-  to {
+  50% {
     text-shadow: 
       0 0 2px currentColor,
       0 0 5px currentColor,
@@ -70,96 +18,186 @@
   }
 }
 
-@keyframes neon-pulse-cyan {
-  from {
-    text-shadow: 
-      0 0 5px #00ffff,
-      0 0 10px #00ffff,
-      0 0 15px #00ffff,
-      0 0 20px #00ffff;
-  }
-  to {
-    text-shadow: 
-      0 0 2px #00ffff,
-      0 0 5px #00ffff,
-      0 0 8px #00ffff,
-      0 0 12px #00ffff;
-  }
-}
-
-@keyframes neon-pulse-purple {
-  from {
-    text-shadow: 
-      0 0 5px #8b5cf6,
-      0 0 10px #8b5cf6,
-      0 0 15px #8b5cf6,
-      0 0 20px #8b5cf6;
-  }
-  to {
-    text-shadow: 
-      0 0 2px #8b5cf6,
-      0 0 5px #8b5cf6,
-      0 0 8px #8b5cf6,
-      0 0 12px #8b5cf6;
-  }
-}
-
-@keyframes neon-pulse-pink {
-  from {
-    text-shadow: 
-      0 0 5px #ec4899,
-      0 0 10px #ec4899,
-      0 0 15px #ec4899,
-      0 0 20px #ec4899;
-  }
-  to {
-    text-shadow: 
-      0 0 2px #ec4899,
-      0 0 5px #ec4899,
-      0 0 8px #ec4899,
-      0 0 12px #ec4899;
-  }
-}
-
-@keyframes cyber-gradient {
+@keyframes matrix-rain {
   0% {
-    background-position: 0% 50%;
+    transform: translateY(-100vh);
+    opacity: 0;
   }
-  50% {
-    background-position: 100% 50%;
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
   }
   100% {
-    background-position: 0% 50%;
+    transform: translateY(100vh);
+    opacity: 0;
   }
 }
 
-/* Holographic Effects */
-.holographic {
-  background: linear-gradient(45deg, 
-    rgba(0, 255, 255, 0.1),
-    rgba(139, 92, 246, 0.1),
-    rgba(236, 72, 153, 0.1),
-    rgba(0, 255, 255, 0.1)
-  );
-  background-size: 400% 400%;
-  animation: holographic-shift 4s ease infinite;
-  border: 1px solid rgba(0, 255, 255, 0.3);
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px rgba(0, 255, 255, 0.3),
+      0 0 10px rgba(0, 255, 255, 0.2),
+      0 0 15px rgba(0, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 10px rgba(0, 255, 255, 0.5),
+      0 0 20px rgba(0, 255, 255, 0.3),
+      0 0 30px rgba(0, 255, 255, 0.2);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cyber card styling */
+.cyber-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-@keyframes holographic-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.cyber-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Matrix Rain Effect */
+.cyber-card:hover::before {
+  opacity: 1;
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.2),
+    0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+/* Neon glow effects */
+.neon-glow-cyan {
+  animation: neon-glow 2s ease-in-out infinite alternate;
+  color: #00ffff;
+}
+
+.neon-glow-purple {
+  animation: neon-glow 2s ease-in-out infinite alternate;
+  color: #8b5cf6;
+}
+
+.neon-glow-pink {
+  animation: neon-glow 2s ease-in-out infinite alternate;
+  color: #ec4899;
+}
+
+/* Cyber text styling */
+.cyber-text {
+  font-family: 'Courier New', monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* Neon button styling */
+.neon-button {
+  background: linear-gradient(45deg, #00ffff, #8b5cf6);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.neon-button:hover::before {
+  left: 100%;
+}
+
+.neon-button:hover {
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.5),
+    0 0 40px rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Matrix background */
 .matrix-bg {
   position: relative;
   overflow: hidden;
@@ -172,316 +210,117 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    linear-gradient(90deg, transparent 98%, rgba(0, 255, 255, 0.03) 100%),
-    linear-gradient(0deg, transparent 98%, rgba(0, 255, 255, 0.03) 100%);
-  background-size: 50px 50px;
-  animation: matrix-move 20s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes matrix-move {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(50px);
-  }
-}
-
-/* Glitch Effect */
-.glitch {
-  position: relative;
-  animation: glitch 2s infinite;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.glitch::before {
-  animation: glitch-1 0.5s infinite;
-  color: #ff0000;
-  z-index: -1;
-}
-
-.glitch::after {
-  animation: glitch-2 0.5s infinite;
-  color: #00ff00;
-  z-index: -2;
-}
-
-@keyframes glitch {
-  0%, 100% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(2px, -2px);
-  }
-}
-
-@keyframes glitch-1 {
-  0%, 100% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(2px, -2px);
-  }
-  40% {
-    transform: translate(-2px, 2px);
-  }
-  60% {
-    transform: translate(-2px, -2px);
-  }
-  80% {
-    transform: translate(2px, 2px);
-  }
-}
-
-@keyframes glitch-2 {
-  0%, 100% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(-2px, -2px);
-  }
-}
-
-/* Floating Animation */
-.float {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-/* Rotate Animation */
-.rotate-slow {
-  animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Pulse Animation */
-.pulse-slow {
-  animation: pulse-slow 3s ease-in-out infinite;
-}
-
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
-/* Gradient Border */
-.gradient-border {
-  position: relative;
-  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899);
-  padding: 2px;
-  border-radius: 12px;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 2px;
-  background: #1a1a1a;
-  border-radius: 10px;
-  z-index: -1;
-}
-
-/* Cyber Grid Background */
-.cyber-grid {
   background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: grid-move 20s linear infinite;
+    linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: matrix-rain 20s linear infinite;
 }
 
-@keyframes grid-move {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 50px 50px;
-  }
+/* Floating animations */
+.float {
+  animation: float 3s ease-in-out infinite;
 }
 
-/* Neon Button */
-.neon-button {
-  background: transparent;
-  border: 2px solid #00ffff;
-  color: #00ffff;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+.rotate-slow {
+  animation: rotate-slow 20s linear infinite;
 }
 
-.neon-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
+/* Slide animations */
+.slide-in-left {
+  animation: slide-in-left 0.8s ease-out;
 }
 
-.neon-button:hover::before {
-  left: 100%;
+.slide-in-right {
+  animation: slide-in-right 0.8s ease-out;
 }
 
-.neon-button:hover {
-  background: #00ffff;
-  color: #000;
-  box-shadow: 
-    0 0 10px #00ffff,
-    0 0 20px #00ffff,
-    0 0 30px #00ffff;
-  transform: translateY(-2px);
+.fade-in-up {
+  animation: fade-in-up 0.8s ease-out;
 }
 
-/* Futuristic Card */
-.futuristic-card {
-  background: rgba(0, 0, 0, 0.8);
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  border-radius: 16px;
-  backdrop-filter: blur(20px);
-  position: relative;
-  overflow: hidden;
+/* Pulse glow effect */
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
 }
 
-.futuristic-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #00ffff, transparent);
-  animation: scan-line 2s linear infinite;
-}
-
-@keyframes scan-line {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-/* Responsive Design */
+/* Responsive design enhancements */
 @media (max-width: 768px) {
-  .neon-glow {
-    text-shadow: 
-      0 0 3px currentColor,
-      0 0 6px currentColor,
-      0 0 9px currentColor;
-  }
-  
-  .cyber-text {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-  }
-  
-  .futuristic-card {
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .holographic {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+  .cyber-card {
+    margin: 0 10px;
   }
   
   .neon-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.875rem;
+    padding: 10px 20px;
+    font-size: 14px;
   }
   
-  .matrix-bg::before {
-    background-size: 25px 25px;
-  }
-  
-  .cyber-grid {
-    background-size: 25px 25px;
+  .cyber-text {
+    font-size: 18px;
+    letter-spacing: 1px;
   }
 }
 
 @media (max-width: 480px) {
-  .cyber-text {
-    font-size: 1.25rem;
-    letter-spacing: 0.5px;
-  }
-  
-  .futuristic-card {
-    padding: 0.75rem;
-  }
-  
-  .holographic {
-    padding: 0.25rem 0.75rem;
-    font-size: 0.75rem;
+  .cyber-card {
+    padding: 16px;
   }
   
   .neon-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.75rem;
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .neon-glow-cyan,
+  .neon-glow-purple,
+  .neon-glow-pink,
+  .float,
+  .rotate-slow,
+  .pulse-glow {
+    animation: none;
   }
   
-  .grid {
-    gap: 0.75rem;
+  .cyber-card:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .cyber-card {
+    border: 2px solid #00ffff;
   }
   
-  .text-4xl {
-    font-size: 1.875rem;
+  .neon-button {
+    border: 2px solid #00ffff;
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  .cyber-card {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(20, 20, 20, 0.6) 100%);
+  }
+}
+
+/* Print styles */
+@media print {
+  .cyber-card,
+  .neon-button {
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+  }
+  
+  .neon-glow-cyan,
+  .neon-glow-purple,
+  .neon-glow-pink {
+    animation: none !important;
+    text-shadow: none !important;
   }
   
   .text-6xl {
@@ -919,6 +758,339 @@
   }
 }
 
+/* Advanced Holographic Effects */
+.holographic-advanced {
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 25%,
+    rgba(236, 72, 153, 0.1) 50%,
+    rgba(0, 255, 255, 0.1) 75%,
+    rgba(139, 92, 246, 0.1) 100%
+  );
+  background-size: 400% 400%;
+  animation: holographic-advanced-shift 8s ease infinite;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-advanced::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(0, 255, 255, 0.2) 60deg,
+    transparent 120deg,
+    rgba(139, 92, 246, 0.2) 180deg,
+    transparent 240deg,
+    rgba(236, 72, 153, 0.2) 300deg,
+    transparent 360deg
+  );
+  animation: holographic-advanced-rotate 15s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes holographic-advanced-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes holographic-advanced-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Cyber Grid Advanced */
+.cyber-grid-advanced {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(236, 72, 153, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(236, 72, 153, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px, 12px 12px, 12px 12px;
+  animation: grid-move-advanced 25s linear infinite;
+  position: relative;
+}
+
+.cyber-grid-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  animation: grid-pulse-advanced 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes grid-move-advanced {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 50px 50px, 50px 50px, 25px 25px, 25px 25px, 12px 12px, 12px 12px;
+  }
+}
+
+@keyframes grid-pulse-advanced {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Neon Button Ultra */
+.neon-button-ultra {
+  background: transparent;
+  border: 3px solid transparent;
+  background-image: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #00ffff);
+  background-size: 400% 400%;
+  background-clip: padding-box;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  animation: gradient-shift-ultra 4s ease infinite;
+}
+
+.neon-button-ultra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.neon-button-ultra:hover::before {
+  left: 100%;
+}
+
+.neon-button-ultra:hover {
+  box-shadow: 
+    0 0 30px rgba(0, 255, 255, 0.6),
+    0 0 60px rgba(139, 92, 246, 0.4),
+    0 0 90px rgba(236, 72, 153, 0.3);
+  transform: translateY(-4px) scale(1.05);
+}
+
+@keyframes gradient-shift-ultra {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Futuristic Card Ultra */
+.futuristic-card-ultra {
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid rgba(0, 255, 255, 0.4);
+  border-radius: 24px;
+  backdrop-filter: blur(30px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.futuristic-card-ultra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    #00ffff, 
+    #8b5cf6, 
+    #ec4899, 
+    #00ffff, 
+    transparent
+  );
+  background-size: 300% 100%;
+  animation: scan-line-ultra 4s linear infinite;
+}
+
+.futuristic-card-ultra::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  animation: card-glow-ultra 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.futuristic-card-ultra:hover {
+  border-color: rgba(0, 255, 255, 0.8);
+  box-shadow: 
+    0 0 40px rgba(0, 255, 255, 0.3),
+    0 0 80px rgba(139, 92, 246, 0.2),
+    0 0 120px rgba(236, 72, 153, 0.1);
+  transform: translateY(-8px) scale(1.02);
+}
+
+@keyframes scan-line-ultra {
+  0% {
+    background-position: -300% 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes card-glow-ultra {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/* Cyber Text Ultra */
+.cyber-text-ultra {
+  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #00ffff, #8b5cf6, #ec4899);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: cyber-gradient-ultra 6s ease infinite;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.6),
+    0 0 40px rgba(139, 92, 246, 0.4),
+    0 0 60px rgba(236, 72, 153, 0.3);
+}
+
+@keyframes cyber-gradient-ultra {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Quantum Field Ultra */
+.quantum-field-ultra {
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-field-ultra::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: 
+    conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgba(0, 255, 255, 0.1) 30deg,
+      transparent 60deg,
+      rgba(139, 92, 246, 0.1) 90deg,
+      transparent 120deg,
+      rgba(236, 72, 153, 0.1) 150deg,
+      transparent 180deg,
+      rgba(0, 255, 255, 0.1) 210deg,
+      transparent 240deg,
+      rgba(139, 92, 246, 0.1) 270deg,
+      transparent 300deg,
+      rgba(236, 72, 153, 0.1) 330deg,
+      transparent 360deg
+    );
+  animation: quantum-field-ultra-rotate 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes quantum-field-ultra-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
 /* Responsive Enhancements */
 @media (max-width: 768px) {
   .cyber-text-enhanced {
@@ -946,6 +1118,21 @@
   
   .quantum-field::before {
     animation-duration: 12s;
+  }
+  
+  .cyber-text-ultra {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .futuristic-card-ultra {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .neon-button-ultra {
+    padding: 12px 24px;
+    font-size: 0.875rem;
   }
 }
 

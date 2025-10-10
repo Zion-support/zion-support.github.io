@@ -119,8 +119,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Home', path: '/', icon: Home },
     { name: 'About', path: '/about', icon: Users },
     { name: 'Services', path: '/services', icon: Settings },
-    { name: 'Pricing', path: '/pricing', icon: BarChart },
     { name: 'Case Studies', path: '/case-studies', icon: FileText },
+    { name: 'Pricing', path: '/pricing', icon: BarChart },
     { name: 'Blog', path: '/blog', icon: MessageSquare },
     { name: 'Contact', path: '/contact', icon: Phone }
   ];
@@ -129,7 +129,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Support Center', path: '/support', icon: HelpCircle },
     { name: 'Documentation', path: '/docs', icon: FileText },
     { name: 'API Reference', path: '/api-docs', icon: Code },
-    { name: 'Status Page', path: '/status', icon: CheckCircle }
+    { name: 'Status Page', path: '/status', icon: CheckCircle },
+    { name: 'Demo Request', path: '/demo', icon: Star },
+    { name: 'Free Consultation', path: '/consultation', icon: MessageSquare }
   ];
 
   const legalLinks = [

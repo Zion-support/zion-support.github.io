@@ -1,125 +1,124 @@
-import React, { useEffect, memo } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/og-image.jpg'
+        '/logo.png',
+        '/og-image.png'
       ];
 
+      const criticalFonts = [
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
+      ];
+
+      // Preload critical images
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+      });
+
+      // Preload critical fonts
+      criticalFonts.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'style';
+        link.href = href;
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+      });
+
+      // Add DNS prefetch for external domains
+      const externalDomains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com',
+        'https://www.google-analytics.com',
+        'https://www.googletagmanager.com'
+      ];
+
+      externalDomains.forEach(domain => {
+        const link = document.createElement('link');
+        link.rel = 'dns-prefetch';
+        link.href = domain;
         document.head.appendChild(link);
       });
     };
 
-    // Optimize images
+    // Optimize images with better lazy loading
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
-        // Add loading="lazy" to non-critical images
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
+        if (!img.loading) {
+          img.loading = 'lazy';
         }
-        
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
+        // Add error handling
+        img.onerror = () => {
+          img.style.display = 'none';
+        };
+      });
+    };
+
+    // Defer non-critical scripts
+    const deferNonCriticalScripts = () => {
+      const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach(script => {
+        script.setAttribute('defer', '');
+      });
+    };
+
+    // Add resource hints for better performance
+    const addResourceHints = () => {
+      // Preconnect to external domains
+      const preconnectDomains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com'
+      ];
+
+      preconnectDomains.forEach(domain => {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = domain;
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+      });
+    };
+
+    // Optimize third-party scripts
+    const optimizeThirdPartyScripts = () => {
+      // Add loading="lazy" to iframes
+      const iframes = document.querySelectorAll('iframe');
+      iframes.forEach(iframe => {
+        if (!iframe.loading) {
+          iframe.loading = 'lazy';
         }
       });
     };
 
-    // Enable service worker for caching
-    const enableServiceWorker = () => {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            if (process.env.NODE_ENV === 'development') {
-              console.log('Service Worker registered:', registration);
-            }
-          })
-          .catch(error => {
-            if (process.env.NODE_ENV === 'development') {
-              console.log('Service Worker registration failed:', error);
-            }
-          });
-      }
-    };
-
-    // Optimize scroll performance
-    const optimizeScroll = () => {
-      let ticking = false;
-      
-      const updateScroll = () => {
-        // Throttle scroll events
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            ticking = false;
-          });
-          ticking = true;
-        }
-      };
-
-      window.addEventListener('scroll', updateScroll, { passive: true });
-      
-      return () => {
-        window.removeEventListener('scroll', updateScroll);
-      };
-    };
-
-    // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-    enableServiceWorker();
-    const cleanupScroll = optimizeScroll();
+    deferNonCriticalScripts();
+    addResourceHints();
+    optimizeThirdPartyScripts();
 
-    // Cleanup on unmount
+    // Cleanup
     return () => {
-      cleanupScroll();
+      // Cleanup if needed
     };
-  }, []);
-
-  // Add performance monitoring
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          const logMetric = (metric: any) => {
-            if (process.env.NODE_ENV === 'development') {
-              console.log(metric);
-            }
-            // Send to analytics in production
-            if (process.env.NODE_ENV === 'production') {
-              // Send to analytics service
-            }
-          };
-          
-          getCLS(logMetric);
-          getFID(logMetric);
-          getFCP(logMetric);
-          getLCP(logMetric);
-          getTTFB(logMetric);
-        });
-      }
-    };
-
-    monitorWebVitals();
   }, []);
 
   return <>{children}</>;
-});
-
-PerformanceOptimizer.displayName = 'PerformanceOptimizer';
+};
 
 export default PerformanceOptimizer;
