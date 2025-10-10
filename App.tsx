@@ -4,6 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import LoadingSpinner from './src/components/LoadingSpinner';
+import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
+import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
+import ContentShowcase from './src/components/ContentShowcase';
+import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -78,6 +83,29 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return this.props.children;
   }
 }
+
+// Structured data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-302-464-0950",
+    "contactType": "customer service",
+    "email": "kleber@ziontechgroup.com"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://ziontechgroup.com"
+  ]
+};
 
 const App: React.FC = memo(() => {
   return (
