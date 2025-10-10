@@ -41,6 +41,9 @@ const Navigation: React.FC = () => {
   
   const aiServices = [
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
+    { name: 'AI Quantum Optimization', href: '/ai-quantum-optimization', icon: Cpu, description: 'Quantum AI Solutions' },
+    { name: 'AI Cybersecurity Pro', href: '/ai-cybersecurity-pro', icon: Shield, description: 'Advanced AI Security' },
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro', icon: Target, description: 'AI Project Management' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
     { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support Systems' },
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence' },
