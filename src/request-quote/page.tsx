@@ -1,10 +1,10 @@
-'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+'use client'
+import React, { useState } from 'react'
 const RequestQuotePage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -17,9 +17,9 @@ const RequestQuotePage: React.FC = () => {
     budget: '',
     description: '',
     requirements:   ,
-$4});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+$4})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const _serviceTypes = [
     'AI Services',
     'IT Infrastructure',
@@ -30,13 +30,13 @@ $4});
     'Custom Development',
     'Consulting Services',
     'Other'
-  ];
+  ]
   const projectSizes = [
     'Small (1-10 employees)',
     'Medium (11-100 employees)',
     'Large (101-1000 employees)',
     'Enterprise (1000+ employees)'
-  ];
+  ]
   const timelines = [
     'ASAP',
     '1-3 months',
@@ -44,7 +44,7 @@ $4});
     '6-12 months',
     '12+ months',
     'Flexible'
-  ];
+  ]
   const budgetRanges = [
     'Under $10,000',
     '$10,000 - $50,000',
@@ -52,22 +52,22 @@ $4});
     '$100,000 - $500,000',
     '$500,000+',
     'To be discussed'
-  ];
+  ]
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+  }
   const benefits = [
     {
       icon: Calculator,
@@ -89,7 +89,7 @@ $4},
       title: 'Expert Consultation',
       description:     ,
 $4}
-  ];
+  ]
   const whyChooseUs = [
     {
       icon: Users,
@@ -111,7 +111,7 @@ $4},
       title: '99.9% Uptime',
       description:     ,
 $4}
-  ];
+  ]
   if (isSubmitted) {
     return (
       <React.Fragment>
@@ -150,22 +150,18 @@ $4}
                 <a
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Contact Us;
-  </
+                  <Phone>Contact Us</Phone>
                 <a
                   href="/"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
-                  <ArrowRight className="w-4 h-4 mr-2" />
-                  Back to Home;
-  </
+                  <ArrowRight>Back to Home</ArrowRight>
               </div>
             </div>
           </div>
         </div>
         <Footer />
       </React.Fragment>
-    );
+    )
   }
   return (
     <React.Fragment>
@@ -174,9 +170,7 @@ $4}
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Request a Quote;
-  </
+            <h1>Request a Quote</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Get a detailed, no-obligation quote for your AI and IT project. 
               Our experts will provide you with a comprehensive proposal within 24 hours.
@@ -221,9 +215,7 @@ $4}
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company Name;
-  </
+                      <label>Company Name</label>
                       <input
                         type="text"
                         name="company"
@@ -234,9 +226,7 @@ $4}
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number;
-  </
+                      <label>Phone Number</label>
                       <input
                         type="tel"
                         name="phone"
@@ -266,9 +256,7 @@ $4}
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Size;
-  </
+                      <label>Project Size</label>
                       <select
                         name="projectSize"
                         value={formData.projectSize}
@@ -281,9 +269,7 @@ $4}
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Timeline;
-  </
+                      <label>Timeline</label>
                       <select
                         name="timeline"
                         value={formData.timeline}
@@ -297,9 +283,7 @@ $4}
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range;
-  </
+                    <label>Budget Range</label>
                     <select
                       name="budget"
                       value={formData.budget}
@@ -326,9 +310,7 @@ $4}
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Specific Requirements;
-  </
+                    <label>Specific Requirements</label>
                     <textarea
                       name="requirements"
                       value={formData.requirements}
@@ -417,11 +399,11 @@ $4}
                   </a>
                 </div>
     <div>Coming Soon</div>
-  );
-};
+  )
+}
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   nam,
   e: '',
     emai,
@@ -442,13 +424,13 @@ $4}
   n: '',
     requirement,
   s: '')
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const _serviceTypes = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+];
 //     'AI Services',
 //     'IT Infrastructure',
 //     'Cybersecurity',
@@ -458,67 +440,67 @@ $4}
 //     'Custom Development',
 //     'Consulting Services',
 //     'Other'
-  ];
+  ]
   const projectSizes = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+];
 //     'Small (1-10 employees)',
 //     'Medium (11-100 employees)',
 //     'Large (101-1000 employees)',
 //     'Enterprise (1000+ employees)'
-  ];
+  ]
   const timelines = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+];
 //     'ASAP',
 //     '1-3 months',
 //     '3-6 months',
 //     '6-12 months',
 //     '12+ months',
 //     'Flexible'
-  ];
+  ]
   const budgetRanges = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+];
 //     'Under $10,000',
 //     '$10,000 - $50,000',
 //     '$50,000 - $100,000',
 //     '$100,000 - $500,000',
 //     '$500,000+',
 //     'To be discussed'
-  ];
+  ]
   const handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       ...prev,
       [name]: value;)
-    }));
-  };
+    }))
+  }
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+    e.preventDefault()
+    setIsSubmitting(true)
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+  }
   const benefits = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Calculator,
       titl,
@@ -528,7 +510,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Clock,
       titl,
@@ -538,7 +520,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: CheckCircle,
       titl,
@@ -548,7 +530,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Star,
       titl,
@@ -556,14 +538,14 @@ $4}
       descriptio,
   n: 'Free consultation with our technology experts'
     }
-  ];
+  ]
   const whyChooseUs = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Users,
       titl,
@@ -573,7 +555,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Award,
       titl,
@@ -583,7 +565,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Clock,
       titl,
@@ -593,7 +575,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Star,
       titl,
@@ -601,7 +583,7 @@ $4}
       descriptio,
   n: 'Reliable, high-performance solutions'
     }
-  ];
+  ]
   if (isSubmitted) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -619,7 +601,7 @@ $4}
 // Quote Request Submitted!
           </h1>"
               <p className="text-xl text-gray-300 mb-8"></p>
-                Thank you for your interest in our services. We've received your quote request;
+                Thank you for your interest in our services. We've received your quote request
 // and will get back to you within 24 hours with a detailed proposal.
           </p>"
               <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>"
@@ -645,14 +627,14 @@ $4}
 // >
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
-// Contact Us;
+// Contact Us
           </a>
                 <a
                   href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
-// Back to Home;
+// Back to Home
           </a>
               </div>
             </div>
@@ -663,7 +645,7 @@ $4}
     </React.Fragment>
         <Footer /></Footer>
       </React.Fragment>
-    );
+    )
   }
   return (<div>Coming Soon</div>)
   )
@@ -675,11 +657,8 @@ $4}
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Request a Quote;
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+// Request a Quote</h1>
+          <p>Coming Soon</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Quote Form */}
@@ -718,7 +697,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
   md:grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Company Name;
+// Company Name
           </label>
                       <input
 type="text" name="company"
@@ -729,7 +708,7 @@ type="text" name="company"
           </div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Phone Number;
+// Phone Number
           </label>
                       <input
 type="tel" name="phone"
@@ -761,7 +740,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
   md:grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Project Size;
+// Project Size
           </label>
                       <select
                         name="projectSize" value={formData.projectSize}
@@ -776,9 +755,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-// Timeline;
-  </
+                      <label>// Timeline</label>
                       <select
                         name="timeline" value={formData.timeline}
                         onChange={handleInputChange}
@@ -794,7 +771,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                   </div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Budget Range;
+// Budget Range
           </label>
                     <select
                       name="budget" value={formData.budget}
@@ -822,7 +799,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Specific Requirements;
+// Specific Requirements
           </label>
                     <textarea
                       name="requirements" value={formData.requirements}
@@ -893,9 +870,9 @@ type="submit" disabled={isSubmitting}
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default RequestQuotePage;
+  )
+}
+export default RequestQuotePage
   </textarea>
   </textarea>
   </HTMLInputElement>

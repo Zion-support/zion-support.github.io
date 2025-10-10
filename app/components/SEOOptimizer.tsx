@@ -1,13 +1,12 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOOptimizerProps {
-  title: string;
-  description: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  structuredData?: object;
+  title: string
+  description: string
+  keywords?: string[]
+  canonicalUrl?: string
+  structuredData?: object
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -17,8 +16,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   canonicalUrl,
   structuredData
 }) => {
-  const keywordsString = keywords.join(', ');
-
+  const keywordsString = keywords.join(', ')
   return (
     <Helmet>
       <title>{title}</title>
@@ -45,7 +43,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         </script>
       )}
     </Helmet>
-  );
-};
-
-export default SEOOptimizer;
+  )
+}
+export default SEOOptimizer

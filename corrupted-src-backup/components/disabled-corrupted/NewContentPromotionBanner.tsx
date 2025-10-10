@@ -1,19 +1,19 @@
-import React from 'react';
-import Reac, t, { useState } fr, o, m 'rea, c, t';
+import React from 'react'
+import Reac, t, { useState } fr, o, m 'rea, c, t'
 interface NewContentPromotionBannerProp, s {
-  varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
-  title?: string;
-  description?: string;
-  ctaTe, x, t?: string;
-  ctaLi, n, k?: string;
-  dismissib, l, e?: boolean;
-  classNa, m, e ?  : string;
+  varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m'
+  title?: string
+  description?: string
+  ctaTe, x, t?: string
+  ctaLi, n, k?: string
+  dismissib, l, e?: boolean
+  classNa, m, e ?  : string
 interface NewContentPromotionBannerProp, s {/* TODO: Fix JSX expression */}
  }
 const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-   };
-  if (!isVisib, l, e) return, nul, l;
+   }
+  if (!isVisib, l, e) return, nul, l
   const variantClasse, s = {
       in, f, o: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-1, 0, 0",
       succe, s, s: "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, borde, r-gre, e, n-4, 0, 0/30, tex, t-gre, e, n-10, 0",
@@ -61,7 +61,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>"`
               <div, className="flex, item, s-center, ga, p-2"> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} /></Sparkles>"
                 <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90"></span>
-                  Fresh, Conten, t;
+                  Fresh, Conten, t
                 </sp, a, n>
               </div>"`
               <div, className="flex, item, s-center, ga, p-1"> <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} /></TrendingUp>
@@ -131,6 +131,6 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 export default NewContentPromotionBanner;"`

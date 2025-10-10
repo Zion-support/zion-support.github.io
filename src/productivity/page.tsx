@@ -1,20 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, Star } from 'lucide-react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Star } from 'lucide-react'
 const ProductivityPage: React.FC = () => {
   return (
     <div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
-  </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
+          <h1>Page</h1>
+          <p>Coming Soon</p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
@@ -84,10 +80,9 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
             >Call (302) 464-0950</a>
       </main>
       <Footer /></Footer>
-</div>);
+</div>)
 }
-export default ProductivityPage;
-  </section>
+export default ProductivityPage</section>
   </p>
   </h1>
   </div>

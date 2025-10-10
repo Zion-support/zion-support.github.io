@@ -10,7 +10,7 @@ export const real2026 Q2 Additions = [
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
     price: '$2, 500',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Strong enterprise traction with compliance - led buyers',
     roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
@@ -113,7 +113,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.'
     feature,
-  s: [;
+  s: [
       'Differential privacy and k-anonymity options'
       'Data schema import and auto-profiling'
       'Class balancing; minority class boosters'
@@ -129,7 +129,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Mostly AI', 'Gretel', 'YData']
     price: '$1,200'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -155,7 +155,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Loop Returns', 'Returnly']
     price: '$399'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Ideal for mid-market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -248,7 +248,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk; with playbooks for mitigation and auto-rollbacks.'
     feature,
-  s: [;
+  s: [
       'Token and cost telemetry with budgets'
       'Hallucination detectors and blocklists'
       'Content safety checks and policy labels'
@@ -257,7 +257,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Quality scorecards and SLA alerts'
     ]
     useCase,
-  s: [;
+  s: [
       'GenAI product analytics'
       'Model regression monitoring'
       'Cost governance'
@@ -274,7 +274,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Humanloop', 'Arize', 'Langfuse']
     price: '$490'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
@@ -316,7 +316,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.'
     feature,
-  s: [;
+  s: [
       'Real-time anomaly detection'
       'Slack/Teams alerts and triage workflows'
       'Automated remediation playbooks'
@@ -331,7 +331,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['CloudZero', 'Kubecost']
     price: '$690'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Proven ROI for cloud-native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
@@ -379,7 +379,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   n:
       'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.'
     feature,
-  s: [;
+  s: [
       'Signer authentication and KYC add-ons'
       'Templates and merge fields'
       'Bulk send and reminders'
@@ -394,7 +394,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['DocuSign API', 'HelloSign API']
     price: '$149'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'SMB to mid-market developer teams',
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%',
@@ -441,7 +441,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.'
     feature,
-  s: [;
+  s: [
       'Multiple environments and components'
       'SLOs and error budget burn tracking'
       'Incident templates and RCAs'
@@ -456,7 +456,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Statuspage', 'Better Uptime']
     price: '$79'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Great value with SLO-first approach',
     roi: 'Improve uptime communications and reduce churn risk',
@@ -482,7 +482,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Whistic', 'Vanta', 'ZenGRC']
     price: '$890'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Sales-assisted and security-led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
@@ -591,7 +591,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Algolia Answers', 'Vectara']
     price: '$249'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'High adoption for self-serve docs',
     roi: 'Reduce tickets by 30% and improve time-to-answer',
@@ -670,7 +670,7 @@ export const real2026Q2Additions = [
     competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
     price: '$2, 500',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Strong enterprise traction with compliance - led buyers',
     roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
@@ -678,9 +678,9 @@ export const real2026Q2Additions = [
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
-    tagline: unknown;
+    tagline: unknown
       'Generate high - quality, private, and balanced datasets for ML training.',
-    description: unknown;
+    description: unknown
     competitor,
   s: ['Monitaur', 'CalypsoAI', 'Credo AI'],
     pric,
@@ -717,7 +717,7 @@ export const real2026Q2Additions = [
       'Class balancing, minority class boosters',
       'Bias and fairness testing with reports',
       'Evaluation dashboard with KS / JS metrics',
-      'SDKs for Python / JS and API access'];
+      'SDKs for Python / JS and API access']
     use_case,
   s: [,
       'MSPs and IT providers',
@@ -730,11 +730,11 @@ export const real2026Q2Additions = [
     pric,
   e: '$4',
     ro,
-  i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
+  i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops';
-  };
+  s://ziontechgroup.com/services/msp-remote-device-ops'
+  }
       'Training data augmentation',
       'Privacy - preserving analytics',
       'Test data generation'],
@@ -742,7 +742,7 @@ export const real2026Q2Additions = [
     competitors: ['Mostly AI', 'Gretel', 'YData'],
     price: '$1, 200',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -751,7 +751,7 @@ export const real2026Q2Additions = [
     name: 'Ecommerce Returns Orchestrator',
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
-    description: unknown;
+    description: unknown
     integration,
   s: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],
     competitor,
@@ -800,7 +800,7 @@ export const real2026Q2Additions = [
     competitors: ['Loop Returns', 'Returnly'],
     price: '$399'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Ideal for mid - market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -808,9 +808,9 @@ export const real2026Q2Additions = [
 export const real2026 Q2 Additions = [{id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
-    tagline: unknown;
+    tagline: unknown
       'Generate high - quality, private, and balanced datasets for ML training.',
-    description: unknown;
+    description: unknown
       'Produce privacy - preserving synthetic tabular and time - series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built - in quality metrics and drift checks.',
     features: [,
       'Differential privacy and k - anonymity options',
@@ -818,7 +818,7 @@ export const real2026 Q2 Additions = [{id: 'ai - synthetic - data - factory',
       'Class balancing, minority class boosters',
       'Bias and fairness testing with reports',
       'Evaluation dashboard with KS / JS metrics',
-      'SDKs for Python / JS and API access';
+      'SDKs for Python / JS and API access'
     integration,
   s: ['Shopify', 'BigCommerce', 'Magento', 'Stripe', 'Shippo'],
     competitor,
@@ -849,7 +849,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Mostly AI', 'Gretel', 'YData'],
     price: '$1, 200',
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast',
     market_position: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -859,7 +859,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     name: 'Ecommerce Returns Orchestrator',
     category: 'Developer Tools',
     tagline: 'Automate RMAs, labels, refunds, and disposition in one workflow.',
-    description: unknown;
+    description: unknown
     integration,
   s: ['S3', 'BigQuery', 'Snowflake', 'Databricks'],
     competitor,
@@ -909,7 +909,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Loop Returns', 'Returnly'],
     price: '$399'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Ideal for mid - market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -917,9 +917,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     id: 'ai - analytics - observability - kit',
     name: 'AI Analytics Observability Kit',
     category: 'Observability',
-    tagline: unknown;
+    tagline: unknown
       'Monitor LLM quality, costs, latency, and hallucinations with guardrails.',
-    description: unknown;
+    description: unknown
     integration,
   s: ['Shopify', 'BigCommerce', 'Magento', 'Stripe', 'Shippo'],
     competitor,
@@ -975,7 +975,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Humanloop', 'Arize', 'Langfuse'],
     price: '$490'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
@@ -1003,9 +1003,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     id: 'cloud - cost - anomaly - guard',
     name: 'Cloud Cost Anomaly Guard',
     category: 'Cloud & FinOps',
-    tagline: unknown;
+    tagline: unknown
       'Edge - detected anomalies, instant Slack alerts, and auto - remediation.',
-    description: unknown;
+    description: unknown
     i,
   d: 'cloud - cost - anomaly - guard',
     nam,
@@ -1034,7 +1034,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['CloudZero', 'Kubecost'],
     price: '$690'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Proven ROI for cloud - native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
@@ -1065,7 +1065,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     name: 'Secure PDF Signing API',
     category: 'Developer Tools',
     tagline: 'REST and SDKs for compliant e - signatures with audit trails.',
-    description: unknown;
+    description: unknown
     i,
   d: 'secure - pdf - signing - api',
     nam,
@@ -1093,7 +1093,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['DocuSign API', 'HelloSign API'],
     price: '$149'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'SMB to mid - market developer teams',
     roi: 'Accelerate time - to - sign by 50% and cut manual errors by 70%',
@@ -1101,9 +1101,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     id: 'status - slo - plus',
     name: 'Status Pages + SLO Pro',
     category: 'Quality & Monitoring',
-    tagline: unknown;
+    tagline: unknown
       'One - click status pages with SLOs, error budgets, and subscribers.',
-    description: unknown;
+    description: unknown
     integration,
   s: ['Zapier', 'Make && Make.com', 'Salesforce', 'HubSpot'],
     competitor,
@@ -1151,7 +1151,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Statuspage', 'Better Uptime'],
     price: '$79'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Great value with SLO - first approach',
     roi: 'Improve uptime communications and reduce churn risk',
@@ -1183,9 +1183,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     id: 'vendor - risk - automation - pro',
     name: 'Vendor Risk Automation Pro',
     category: 'Quality & Monitoring',
-    tagline: unknown;
+    tagline: unknown
       'Automate questionnaires, evidence collection, and continuous monitoring.',
-    description: unknown;
+    description: unknown
     i,
   d: 'vendor - risk - automation - pro',
     nam,
@@ -1214,7 +1214,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Whistic', 'Vanta', 'ZenGRC'],
     price: '$890'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Sales - assisted and security - led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
@@ -1245,7 +1245,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     name: 'AI Docs Search & Answers',
     category: 'Developer Tools',
     tagline: 'Embeddings + RAG search over docs with answer extraction.',
-    description: unknown;
+    description: unknown
     i,
   d: 'ai - docs - search - answers',
     nam,
@@ -1274,7 +1274,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Algolia Answers', 'Vectara'],
     price: '$249'
     period: '/month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'High adoption for self - serve docs',
     roi: 'Reduce tickets by 30% and improve time - to - answer',
@@ -1282,9 +1282,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     id: 'msp - remote - device - ops',
     name: 'MSP Remote Device Ops',
     category: 'Cloud & FinOps',
-    tagline: unknown;
+    tagline: unknown
       'Manage and secure fleets of endpoints with remote scripts and patches.',
-    description: unknown;
+    description: unknown
       'MSP - grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance - ready logs.',
     features: [,
     integration,
@@ -1345,9 +1345,9 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     taglin,
   e: 'Policy, risk, and model governance with automated evidence and audit trails.',
     descriptio,
-  n: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  n: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'
     feature,
-  s: [;
+  s: [
       'Differential privacy and k-anonymity options'
       'Data schema import and auto-profiling'
       'Class balancing; minority class boosters'
@@ -1363,7 +1363,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Mostly AI', 'Gretel', 'YData']
     price: '$1,200'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Growing demand driven by privacy regulations',
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
@@ -1389,7 +1389,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Loop Returns', 'Returnly']
     price: '$399'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Ideal for mid-market brands and marketplaces',
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
@@ -1482,7 +1482,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk; with playbooks for mitigation and auto-rollbacks.'
     feature,
-  s: [;
+  s: [
       'Token and cost telemetry with budgets'
       'Hallucination detectors and blocklists'
       'Content safety checks and policy labels'
@@ -1491,7 +1491,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Quality scorecards and SLA alerts'
     ]
     useCase,
-  s: [;
+  s: [
       'GenAI product analytics'
       'Model regression monitoring'
       'Cost governance'
@@ -1508,7 +1508,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Humanloop', 'Arize', 'Langfuse']
     price: '$490'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Hot category with fast adoption in AI apps',
     roi: 'Cut token spend by 25% and improve response quality by 12%',
@@ -1550,7 +1550,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.'
     feature,
-  s: [;
+  s: [
       'Real-time anomaly detection'
       'Slack/Teams alerts and triage workflows'
       'Automated remediation playbooks'
@@ -1565,7 +1565,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['CloudZero', 'Kubecost']
     price: '$690'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Proven ROI for cloud-native teams',
     roi: 'Reduce cloud waste by 30% within 60 days',
@@ -1613,7 +1613,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   n:
       'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.'
     feature,
-  s: [;
+  s: [
       'Signer authentication and KYC add-ons'
       'Templates and merge fields'
       'Bulk send and reminders'
@@ -1628,7 +1628,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['DocuSign API', 'HelloSign API']
     price: '$149'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'SMB to mid-market developer teams',
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%',
@@ -1675,7 +1675,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     descriptio,
   n: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.'
     feature,
-  s: [;
+  s: [
       'Multiple environments and components'
       'SLOs and error budget burn tracking'
       'Incident templates and RCAs'
@@ -1690,7 +1690,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Statuspage', 'Better Uptime']
     price: '$79'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Great value with SLO-first approach',
     roi: 'Improve uptime communications and reduce churn risk',
@@ -1716,7 +1716,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Whistic', 'Vanta', 'ZenGRC']
     price: '$890'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Sales-assisted and security-led adoption',
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure',
@@ -1825,7 +1825,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Algolia Answers', 'Vectara']
     price: '$249'
     period: '/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'High adoption for self-serve docs',
     roi: 'Reduce tickets by 30% and improve time-to-answer',
@@ -1851,7 +1851,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     competitors: ['Atera', 'NinjaOne']
     price: '$4'
     period: '/device/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
@@ -1938,11 +1938,11 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     pric,
   e: '$4',
     ro,
-  i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
+  i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops';
-  };
+  s://ziontechgroup.com/services/msp-remote-device-ops'
+  }
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     i,
   d: 'ai-governance-compliance-hub', nam,
@@ -1957,72 +1957,72 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   s: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
     period: '/device / month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Cost - effective RMM for partners and IT teams',
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops'}];      'Windows / macOS / Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals'
     period: '/device/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
-  };
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
+  }
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-    ];
-    use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
-    integrations: ['Azure ADOktaSlackServiceNow'];
+    ]
+    use_cases: ['MSPs and IT providers_internal IT for SMBsBYOD governance']
+    integrations: ['Azure ADOktaSlackServiceNow']
     competitors: ['AteraNinjaOne']
     price: '$4',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'}
-];
+]
     period: '/device / month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Cost - effective RMM for partners and IT teams'
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops'
 export const real2026Q2Additions = [
   {
-    id: 'ai-governance-compliance-hub';
-    name: 'AI Governance & Compliance Hub';
-    category: 'AI & Data';
-    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.';
-    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+    id: 'ai-governance-compliance-hub'
+    name: 'AI Governance & Compliance Hub'
+    category: 'AI & Data'
+    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.'
+    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
-    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'];
+    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog']
     competitors: ['MonitaurCalypsoAICredo AI']}
-    price: '$2}500';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Strong enterprise traction with compliance-led buyers';
-    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
-    link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'};
-  {;
-    id: 'ai-synthetic-data-factory';
-    name: 'AI Synthetic Data Factory';
-    category: 'AI & Data';
-    tagline: 'Generate high-quality, private, and balanced datasets for ML training.';
-    description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
-    features: [;
+    price: '$2}500'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Strong enterprise traction with compliance-led buyers'
+    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%'
+    link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'}
+  {
+    id: 'ai-synthetic-data-factory'
+    name: 'AI Synthetic Data Factory'
+    category: 'AI & Data'
+    tagline: 'Generate high-quality, private, and balanced datasets for ML training.'
+    description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.'
+    features: [
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
-    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
-    integrations: ['S3 BigQuerySnowflakeDatabricks'];
+    ]
+    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']
+    integrations: ['S3 BigQuerySnowflakeDatabricks']
     competitors: ['Mostly AIGretelYData']}
-    price: '$1}200';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Growing demand driven by privacy regulations';
-    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%';
+    price: '$1}200'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Growing demand driven by privacy regulations'
+    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory',
     perio,
   d: '/device / month',
@@ -2046,17 +2046,17 @@ export const real2026Q2Additions = [
     marketPositio,
   n: 'Cost-effective RMM for partners and IT teams',
     ro,
-  i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
+  i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     lin,
   k: 'http,
-  s://ziontechgroup.com/services/msp-remote-device-ops';
-  };
+  s://ziontechgroup.com/services/msp-remote-device-ops'
+  }
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
-    ];
+    ]
     use_case,
-  s: ['MSPs and IT providers_internal IT for SMBsBYOD governance'];
+  s: ['MSPs and IT providers_internal IT for SMBsBYOD governance']
     integration,
-  s: ['Azure ADOktaSlackServiceNow'];
+  s: ['Azure ADOktaSlackServiceNow']
     competitor,
   s: ['AteraNinjaOne'],
     pric,
@@ -2067,7 +2067,7 @@ export const real2026Q2Additions = [
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
     perio,
   d: '/device / month'
     trial_day,
@@ -2085,396 +2085,396 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Strong enterprise traction with compliance-led buyers';
+  n: 'Strong enterprise traction with compliance-led buyers'
     ro,
-  i: 'Reduce audit prep by 60% and non-compliance risk by 40%';
+  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-governance-compliance-hub'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: ['Mostly AIGretelYData']}
     pric,
-  e: '$1}200';
+  e: '$1}200'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Growing demand driven by privacy regulations';
+  n: 'Growing demand driven by privacy regulations'
     ro,
-  i: 'Cut data collection costs by 50% and improve model accuracy by 8%';
+  i: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-synthetic-data-factory'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.'}
     feature,
   s: [,
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse,
   notificationsAnalytics: reasons, preventable returns} CX scores'
-    ];
-    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
-    integrations: ['ShopifyBigCommerceMagentoStripeShippo'];
-    competitors: ['Loop ReturnsReturnly'];
-    price: '$399';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Ideal for mid-market brands and marketplaces';
-    roi: 'Reduce manual handling by 70% and increase exchanges by 20%';
+    ]
+    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
+    integrations: ['ShopifyBigCommerceMagentoStripeShippo']
+    competitors: ['Loop ReturnsReturnly']
+    price: '$399'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Ideal for mid-market brands and marketplaces'
+    roi: 'Reduce manual handling by 70% and increase exchanges by 20%'
     link: 'https://ziontechgroup.com/services/ecommerce-returns-orchestrator',
     useCase,
-  s: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
+  s: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
     integration,
-  s: ['ShopifyBigCommerceMagentoStripeShippo'];
+  s: ['ShopifyBigCommerceMagentoStripeShippo']
     competitor,
-  s: ['Loop ReturnsReturnly'];
+  s: ['Loop ReturnsReturnly']
     pric,
-  e: '$399';
+  e: '$399'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Ideal for mid-market brands and marketplaces';
+  n: 'Ideal for mid-market brands and marketplaces'
     ro,
-  i: 'Reduce manual handling by 70% and increase exchanges by 20%';
+  i: 'Reduce manual handling by 70% and increase exchanges by 20%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ecommerce-returns-orchestrator'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.'}
     feature,
   s: [}
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts'
-    ];
-    useCases: ['GenAI product analyticsModel regression monitoringCost governance'];
-    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
-    competitors: ['HumanloopArizeLangfuse'];
-    price: '$490';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Hot category with fast adoption in AI apps';
-    roi: 'Cut token spend by 25% and improve response quality by 12%';
+    ]
+    useCases: ['GenAI product analyticsModel regression monitoringCost governance']
+    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
+    competitors: ['HumanloopArizeLangfuse']
+    price: '$490'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Hot category with fast adoption in AI apps'
+    roi: 'Cut token spend by 25% and improve response quality by 12%'
     link: 'https://ziontechgroup.com/services/ai-analytics-observability-kit',
     useCase,
-  s: ['GenAI product analyticsModel regression monitoringCost governance'];
+  s: ['GenAI product analyticsModel regression monitoringCost governance']
     integration,
-  s: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
+  s: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
     competitor,
-  s: ['HumanloopArizeLangfuse'];
+  s: ['HumanloopArizeLangfuse']
     pric,
-  e: '$490';
+  e: '$490'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Hot category with fast adoption in AI apps';
+  n: 'Hot category with fast adoption in AI apps'
     ro,
-  i: 'Cut token spend by 25% and improve response quality by 12%';
+  i: 'Cut token spend by 25% and improve response quality by 12%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-analytics-observability-kit'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.'}
     feature,
   s: [}
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup'
-    ];
-    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
-    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty'];
-    competitors: ['CloudZeroKubecost'];
-    price: '$690';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Proven ROI for cloud-native teams';
-    roi: 'Reduce cloud waste by 30% within 60 days';
+    ]
+    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking']
+    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty']
+    competitors: ['CloudZeroKubecost']
+    price: '$690'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Proven ROI for cloud-native teams'
+    roi: 'Reduce cloud waste by 30% within 60 days'
     link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard',
     useCase,
-  s: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
+  s: ['FinOps guardrailsCost regression preventionUnit economics tracking']
     integration,
-  s: ['AWSGCPAzureKubernetesSlackPagerDuty'];
+  s: ['AWSGCPAzureKubernetesSlackPagerDuty']
     competitor,
-  s: ['CloudZeroKubecost'];
+  s: ['CloudZeroKubecost']
     pric,
-  e: '$690';
+  e: '$690'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Proven ROI for cloud-native teams';
+  n: 'Proven ROI for cloud-native teams'
     ro,
-  i: 'Reduce cloud waste by 30% within 60 days';
+  i: 'Reduce cloud waste by 30% within 60 days'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/cloud-cost-anomaly-guard'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.'}
     feature,
   s: [}
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation'
-    ];
-    useCases: ['Contract workflowsInternal approvalsCustomer onboarding'];
-    integrations: ['ZapierMake.comSalesforceHubSpot'];
-    competitors: ['DocuSign APIHelloSign API'];
-    price: '$149';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'SMB to mid-market developer teams';
-    roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
+    ]
+    useCases: ['Contract workflowsInternal approvalsCustomer onboarding']
+    integrations: ['ZapierMake.comSalesforceHubSpot']
+    competitors: ['DocuSign APIHelloSign API']
+    price: '$149'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'SMB to mid-market developer teams'
+    roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     link: 'https://ziontechgroup.com/services/secure-pdf-signing-api',
     useCase,
-  s: ['Contract workflowsInternal approvalsCustomer onboarding'];
+  s: ['Contract workflowsInternal approvalsCustomer onboarding']
     integration,
-  s: ['ZapierMake.comSalesforceHubSpot'];
+  s: ['ZapierMake.comSalesforceHubSpot']
     competitor,
-  s: ['DocuSign APIHelloSign API'];
+  s: ['DocuSign APIHelloSign API']
     pric,
-  e: '$149';
+  e: '$149'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'SMB to mid-market developer teams';
+  n: 'SMB to mid-market developer teams'
     ro,
-  i: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
+  i: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/secure-pdf-signing-api'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.'}
     feature,
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding'
-    ];
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
-    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
-    competitors: ['StatuspageBetter Uptime'];
-    price: '$79';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Great value with SLO-first approach';
-    roi: 'Improve uptime communications and reduce churn risk';
+    ]
+    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
+    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']
+    competitors: ['StatuspageBetter Uptime']
+    price: '$79'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Great value with SLO-first approach'
+    roi: 'Improve uptime communications and reduce churn risk'
     link: 'https://ziontechgroup.com/services/status-slo-plus',
     useCase,
-  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
+  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
     integration,
-  s: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
+  s: ['AWS CloudWatchDatadogNew RelicPagerDuty']
     competitor,
-  s: ['StatuspageBetter Uptime'];
+  s: ['StatuspageBetter Uptime']
     pric,
-  e: '$79';
+  e: '$79'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Great value with SLO-first approach';
+  n: 'Great value with SLO-first approach'
     ro,
-  i: 'Improve uptime communications and reduce churn risk';
+  i: 'Improve uptime communications and reduce churn risk'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/status-slo-plus'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.'}
     feature,
   s: [,
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks} and remediation playbooksBoard-ready risk reports'
-    ];
-    useCases: ['Third-party risk programsSales security reviewsProcurement diligence'];
-    integrations: ['SecurityScorecardBitSightOneTrustJira'];
-    competitors: ['WhisticVantaZenGRC'];
-    price: '$890';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Sales-assisted and security-led adoption';
-    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
+    ]
+    useCases: ['Third-party risk programsSales security reviewsProcurement diligence']
+    integrations: ['SecurityScorecardBitSightOneTrustJira']
+    competitors: ['WhisticVantaZenGRC']
+    price: '$890'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Sales-assisted and security-led adoption'
+    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     link: 'https://ziontechgroup.com/services/vendor-risk-automation-pro',
     useCase,
-  s: ['Third-party risk programsSales security reviewsProcurement diligence'];
+  s: ['Third-party risk programsSales security reviewsProcurement diligence']
     integration,
-  s: ['SecurityScorecardBitSightOneTrustJira'];
+  s: ['SecurityScorecardBitSightOneTrustJira']
     competitor,
-  s: ['WhisticVantaZenGRC'];
+  s: ['WhisticVantaZenGRC']
     pric,
-  e: '$890';
+  e: '$890'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Sales-assisted and security-led adoption';
+  n: 'Sales-assisted and security-led adoption'
     ro,
-  i: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
+  i: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/vendor-risk-automation-pro'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.'}
     feature,
   s: [,
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety,
   checksAnalytics: searches, deflections} gapsMulti-tenant and SSO support'
-    ];
-    useCases: ['Developer portalsInternal knowledge basesCustomer docs'];
-    integrations: ['GitHubConfluenceNotionZendesk'];
-    competitors: ['Algolia AnswersVectara'];
-    price: '$249';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'High adoption for self-serve docs';
-    roi: 'Reduce tickets by 30% and improve time-to-answer';
+    ]
+    useCases: ['Developer portalsInternal knowledge basesCustomer docs']
+    integrations: ['GitHubConfluenceNotionZendesk']
+    competitors: ['Algolia AnswersVectara']
+    price: '$249'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'High adoption for self-serve docs'
+    roi: 'Reduce tickets by 30% and improve time-to-answer'
     link: 'https://ziontechgroup.com/services/ai-docs-search-answers',
     useCase,
-  s: ['Developer portalsInternal knowledge basesCustomer docs'];
+  s: ['Developer portalsInternal knowledge basesCustomer docs']
     integration,
-  s: ['GitHubConfluenceNotionZendesk'];
+  s: ['GitHubConfluenceNotionZendesk']
     competitor,
-  s: ['Algolia AnswersVectara'];
+  s: ['Algolia AnswersVectara']
     pric,
-  e: '$249';
+  e: '$249'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'High adoption for self-serve docs';
+  n: 'High adoption for self-serve docs'
     ro,
-  i: 'Reduce tickets by 30% and improve time-to-answer';
+  i: 'Reduce tickets by 30% and improve time-to-answer'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-docs-search-answers'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.'}
     feature,
   s: [,
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering} and alertsTicketing and customer portals'
-    ];
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
-    integrations: ['Azure ADOktaSlackServiceNow'];
-    competitors: ['AteraNinjaOne'];
-    price: '$4';
-    period: '/device/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Cost-effective RMM for partners and IT teams';
+    ]
+    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
+    integrations: ['Azure ADOktaSlackServiceNow']
+    competitors: ['AteraNinjaOne']
+    price: '$4'
+    period: '/device/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Cost-effective RMM for partners and IT teams'
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
-];
-;
+]
+
     period: '/device/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
-];
+]
 export const real2026 Q2 Additions = [
-  {;
-    id: 'ai-governance-compliance-hub';
-    name: 'AI Governance & Compliance Hub';
-    category: 'AI & Data';
+  {
+    id: 'ai-governance-compliance-hub'
+    name: 'AI Governance & Compliance Hub'
+    category: 'AI & Data'
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
-    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'];
+    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog']
     competitors: ['MonitaurCalypsoAICredo AI']}
-    price: '$2}500';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Strong enterprise traction with compliance-led buyers';
-    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
-    link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'};
-  {;
-    id: 'ai-synthetic-data-factory';
-    name: 'AI Synthetic Data Factory';
-    category: 'AI & Data';
+    price: '$2}500'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Strong enterprise traction with compliance-led buyers'
+    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%'
+    link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'}
+  {
+    id: 'ai-synthetic-data-factory'
+    name: 'AI Synthetic Data Factory'
+    category: 'AI & Data'
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
-  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
-    features: [;
+  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.'
+    features: [
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
-    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
-    integrations: ['S3 BigQuerySnowflakeDatabricks'];
+    ]
+    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']
+    integrations: ['S3 BigQuerySnowflakeDatabricks']
     competitors: ['Mostly AIGretelYData']}
-    price: '$1}200';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Growing demand driven by privacy regulations';
-    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%';
+    price: '$1}200'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Growing demand driven by privacy regulations'
+    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory',
     useCase,
-  s: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
+  s: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
     integration,
-  s: ['Azure ADOktaSlackServiceNow'];
+  s: ['Azure ADOktaSlackServiceNow']
     competitor,
-  s: ['AteraNinjaOne'];
+  s: ['AteraNinjaOne']
     pric,
-  e: '$4';
+  e: '$4'
     perio,
-  d: '/device/month';
+  d: '/device/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Cost-effective RMM for partners and IT teams';
+  n: 'Cost-effective RMM for partners and IT teams'
     ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
-;
+]
+
     perio,
   d: '/device/month'
     trialDay,
@@ -2489,794 +2489,794 @@ export const real2026 Q2 Additions = [
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
 export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Strong enterprise traction with compliance-led buyers';
+  n: 'Strong enterprise traction with compliance-led buyers'
     ro,
-  i: 'Reduce audit prep by 60% and non-compliance risk by 40%';
+  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-governance-compliance-hub'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: ['Mostly AIGretelYData']}
     pric,
-  e: '$1}200';
+  e: '$1}200'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Growing demand driven by privacy regulations';
+  n: 'Growing demand driven by privacy regulations'
     ro,
-  i: 'Cut data collection costs by 50% and improve model accuracy by 8%';
+  i: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-synthetic-data-factory'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.'}
     feature,
   s: [,
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse,
   notificationsAnalytics: reasons, preventable returns} CX scores'
-    ];
-    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
-    integrations: ['ShopifyBigCommerceMagentoStripeShippo'];
-    competitors: ['Loop ReturnsReturnly'];
-    price: '$399';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Ideal for mid-market brands and marketplaces';
-    roi: 'Reduce manual handling by 70% and increase exchanges by 20%';
+    ]
+    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
+    integrations: ['ShopifyBigCommerceMagentoStripeShippo']
+    competitors: ['Loop ReturnsReturnly']
+    price: '$399'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Ideal for mid-market brands and marketplaces'
+    roi: 'Reduce manual handling by 70% and increase exchanges by 20%'
     link: 'https://ziontechgroup.com/services/ecommerce-returns-orchestrator',
     useCase,
-  s: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
+  s: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
     integration,
-  s: ['ShopifyBigCommerceMagentoStripeShippo'];
+  s: ['ShopifyBigCommerceMagentoStripeShippo']
     competitor,
-  s: ['Loop ReturnsReturnly'];
+  s: ['Loop ReturnsReturnly']
     pric,
-  e: '$399';
+  e: '$399'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Ideal for mid-market brands and marketplaces';
+  n: 'Ideal for mid-market brands and marketplaces'
     ro,
-  i: 'Reduce manual handling by 70% and increase exchanges by 20%';
+  i: 'Reduce manual handling by 70% and increase exchanges by 20%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ecommerce-returns-orchestrator'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.'}
     feature,
   s: [}
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts'
-    ];
-    useCases: ['GenAI product analyticsModel regression monitoringCost governance'];
-    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
-    competitors: ['HumanloopArizeLangfuse'];
-    price: '$490';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Hot category with fast adoption in AI apps';
-    roi: 'Cut token spend by 25% and improve response quality by 12%';
+    ]
+    useCases: ['GenAI product analyticsModel regression monitoringCost governance']
+    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
+    competitors: ['HumanloopArizeLangfuse']
+    price: '$490'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Hot category with fast adoption in AI apps'
+    roi: 'Cut token spend by 25% and improve response quality by 12%'
     link: 'https://ziontechgroup.com/services/ai-analytics-observability-kit',
     useCase,
-  s: ['GenAI product analyticsModel regression monitoringCost governance'];
+  s: ['GenAI product analyticsModel regression monitoringCost governance']
     integration,
-  s: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
+  s: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
     competitor,
-  s: ['HumanloopArizeLangfuse'];
+  s: ['HumanloopArizeLangfuse']
     pric,
-  e: '$490';
+  e: '$490'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Hot category with fast adoption in AI apps';
+  n: 'Hot category with fast adoption in AI apps'
     ro,
-  i: 'Cut token spend by 25% and improve response quality by 12%';
+  i: 'Cut token spend by 25% and improve response quality by 12%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-analytics-observability-kit'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.'}
     feature,
   s: [}
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup'
-    ];
-    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
-    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty'];
-    competitors: ['CloudZeroKubecost'];
-    price: '$690';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Proven ROI for cloud-native teams';
-    roi: 'Reduce cloud waste by 30% within 60 days';
+    ]
+    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking']
+    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty']
+    competitors: ['CloudZeroKubecost']
+    price: '$690'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Proven ROI for cloud-native teams'
+    roi: 'Reduce cloud waste by 30% within 60 days'
     link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard',
     useCase,
-  s: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
+  s: ['FinOps guardrailsCost regression preventionUnit economics tracking']
     integration,
-  s: ['AWSGCPAzureKubernetesSlackPagerDuty'];
+  s: ['AWSGCPAzureKubernetesSlackPagerDuty']
     competitor,
-  s: ['CloudZeroKubecost'];
+  s: ['CloudZeroKubecost']
     pric,
-  e: '$690';
+  e: '$690'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Proven ROI for cloud-native teams';
+  n: 'Proven ROI for cloud-native teams'
     ro,
-  i: 'Reduce cloud waste by 30% within 60 days';
+  i: 'Reduce cloud waste by 30% within 60 days'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/cloud-cost-anomaly-guard'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.'}
     feature,
   s: [}
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation'
-    ];
-    useCases: ['Contract workflowsInternal approvalsCustomer onboarding'];
-    integrations: ['ZapierMake.comSalesforceHubSpot'];
-    competitors: ['DocuSign APIHelloSign API'];
-    price: '$149';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'SMB to mid-market developer teams';
-    roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
+    ]
+    useCases: ['Contract workflowsInternal approvalsCustomer onboarding']
+    integrations: ['ZapierMake.comSalesforceHubSpot']
+    competitors: ['DocuSign APIHelloSign API']
+    price: '$149'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'SMB to mid-market developer teams'
+    roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     link: 'https://ziontechgroup.com/services/secure-pdf-signing-api',
     useCase,
-  s: ['Contract workflowsInternal approvalsCustomer onboarding'];
+  s: ['Contract workflowsInternal approvalsCustomer onboarding']
     integration,
-  s: ['ZapierMake.comSalesforceHubSpot'];
+  s: ['ZapierMake.comSalesforceHubSpot']
     competitor,
-  s: ['DocuSign APIHelloSign API'];
+  s: ['DocuSign APIHelloSign API']
     pric,
-  e: '$149';
+  e: '$149'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'SMB to mid-market developer teams';
+  n: 'SMB to mid-market developer teams'
     ro,
-  i: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
+  i: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/secure-pdf-signing-api'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.'}
     feature,
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding'
-    ];
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
-    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
-    competitors: ['StatuspageBetter Uptime'];
-    price: '$79';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Great value with SLO-first approach';
-    roi: 'Improve uptime communications and reduce churn risk';
+    ]
+    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
+    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']
+    competitors: ['StatuspageBetter Uptime']
+    price: '$79'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Great value with SLO-first approach'
+    roi: 'Improve uptime communications and reduce churn risk'
     link: 'https://ziontechgroup.com/services/status-slo-plus',
     useCase,
-  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
+  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
     integration,
-  s: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
+  s: ['AWS CloudWatchDatadogNew RelicPagerDuty']
     competitor,
-  s: ['StatuspageBetter Uptime'];
+  s: ['StatuspageBetter Uptime']
     pric,
-  e: '$79';
+  e: '$79'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Great value with SLO-first approach';
+  n: 'Great value with SLO-first approach'
     ro,
-  i: 'Improve uptime communications and reduce churn risk';
+  i: 'Improve uptime communications and reduce churn risk'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/status-slo-plus'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.'}
     feature,
   s: [,
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks} and remediation playbooksBoard-ready risk reports'
-    ];
-    useCases: ['Third-party risk programsSales security reviewsProcurement diligence'];
-    integrations: ['SecurityScorecardBitSightOneTrustJira'];
-    competitors: ['WhisticVantaZenGRC'];
-    price: '$890';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Sales-assisted and security-led adoption';
-    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
+    ]
+    useCases: ['Third-party risk programsSales security reviewsProcurement diligence']
+    integrations: ['SecurityScorecardBitSightOneTrustJira']
+    competitors: ['WhisticVantaZenGRC']
+    price: '$890'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Sales-assisted and security-led adoption'
+    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     link: 'https://ziontechgroup.com/services/vendor-risk-automation-pro',
     useCase,
-  s: ['Third-party risk programsSales security reviewsProcurement diligence'];
+  s: ['Third-party risk programsSales security reviewsProcurement diligence']
     integration,
-  s: ['SecurityScorecardBitSightOneTrustJira'];
+  s: ['SecurityScorecardBitSightOneTrustJira']
     competitor,
-  s: ['WhisticVantaZenGRC'];
+  s: ['WhisticVantaZenGRC']
     pric,
-  e: '$890';
+  e: '$890'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Sales-assisted and security-led adoption';
+  n: 'Sales-assisted and security-led adoption'
     ro,
-  i: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
+  i: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/vendor-risk-automation-pro'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.'}
     feature,
   s: [,
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety,
   checksAnalytics: searches, deflections} gapsMulti-tenant and SSO support'
-    ];
-    useCases: ['Developer portalsInternal knowledge basesCustomer docs'];
-    integrations: ['GitHubConfluenceNotionZendesk'];
-    competitors: ['Algolia AnswersVectara'];
-    price: '$249';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'High adoption for self-serve docs';
-    roi: 'Reduce tickets by 30% and improve time-to-answer';
+    ]
+    useCases: ['Developer portalsInternal knowledge basesCustomer docs']
+    integrations: ['GitHubConfluenceNotionZendesk']
+    competitors: ['Algolia AnswersVectara']
+    price: '$249'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'High adoption for self-serve docs'
+    roi: 'Reduce tickets by 30% and improve time-to-answer'
     link: 'https://ziontechgroup.com/services/ai-docs-search-answers',
     useCase,
-  s: ['Developer portalsInternal knowledge basesCustomer docs'];
+  s: ['Developer portalsInternal knowledge basesCustomer docs']
     integration,
-  s: ['GitHubConfluenceNotionZendesk'];
+  s: ['GitHubConfluenceNotionZendesk']
     competitor,
-  s: ['Algolia AnswersVectara'];
+  s: ['Algolia AnswersVectara']
     pric,
-  e: '$249';
+  e: '$249'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'High adoption for self-serve docs';
+  n: 'High adoption for self-serve docs'
     ro,
-  i: 'Reduce tickets by 30% and improve time-to-answer';
+  i: 'Reduce tickets by 30% and improve time-to-answer'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-docs-search-answers'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.'}
     feature,
   s: [,
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering} and alertsTicketing and customer portals'
-    ];
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
-    integrations: ['Azure ADOktaSlackServiceNow'];
-    competitors: ['AteraNinjaOne'];
-    price: '$4';
-    period: '/device/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Cost-effective RMM for partners and IT teams';
+    ]
+    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
+    integrations: ['Azure ADOktaSlackServiceNow']
+    competitors: ['AteraNinjaOne']
+    price: '$4'
+    period: '/device/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Cost-effective RMM for partners and IT teams'
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'}
-];
+]
 ;export const real2026 Q2 Additions = [
-  {;
-    id: 'ai-governance-compliance-hub';
-    name: 'AI Governance & Compliance Hub';
-    category: 'AI & Data';
+  {
+    id: 'ai-governance-compliance-hub'
+    name: 'AI Governance & Compliance Hub'
+    category: 'AI & Data'
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
-    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'];
+    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog']
     competitors: ['MonitaurCalypsoAICredo AI']}
-    price: '$2}500';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Strong enterprise traction with compliance-led buyers';
-    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
-    link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'};
-  {;
-    id: 'ai-synthetic-data-factory';
-    name: 'AI Synthetic Data Factory';
-    category: 'AI & Data';
+    price: '$2}500'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Strong enterprise traction with compliance-led buyers'
+    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%'
+    link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'}
+  {
+    id: 'ai-synthetic-data-factory'
+    name: 'AI Synthetic Data Factory'
+    category: 'AI & Data'
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
-  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
-    features: [;
+  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.'
+    features: [
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
-    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
-    integrations: ['S3 BigQuerySnowflakeDatabricks'];
+    ]
+    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']
+    integrations: ['S3 BigQuerySnowflakeDatabricks']
     competitors: ['Mostly AIGretelYData']}
-    price: '$1}200';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Growing demand driven by privacy regulations';
-    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%';
+    price: '$1}200'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Growing demand driven by privacy regulations'
+    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory',
     useCase,
-  s: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
+  s: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
     integration,
-  s: ['Azure ADOktaSlackServiceNow'];
+  s: ['Azure ADOktaSlackServiceNow']
     competitor,
-  s: ['AteraNinjaOne'];
+  s: ['AteraNinjaOne']
     pric,
-  e: '$4';
+  e: '$4'
     perio,
-  d: '/device/month';
+  d: '/device/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Cost-effective RMM for partners and IT teams';
+  n: 'Cost-effective RMM for partners and IT teams'
     ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
 ;export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Strong enterprise traction with compliance-led buyers';
+  n: 'Strong enterprise traction with compliance-led buyers'
     ro,
-  i: 'Reduce audit prep by 60% and non-compliance risk by 40%';
+  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-governance-compliance-hub'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: ['Mostly AIGretelYData']}
     pric,
-  e: '$1}200';
+  e: '$1}200'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Growing demand driven by privacy regulations';
+  n: 'Growing demand driven by privacy regulations'
     ro,
-  i: 'Cut data collection costs by 50% and improve model accuracy by 8%';
+  i: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-synthetic-data-factory'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.'}
     feature,
   s: [,
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse,
   notificationsAnalytics: reasons, preventable returns} CX scores'
-    ];
-    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
-    integrations: ['ShopifyBigCommerceMagentoStripeShippo'];
-    competitors: ['Loop ReturnsReturnly'];
-    price: '$399';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Ideal for mid-market brands and marketplaces';
-    roi: 'Reduce manual handling by 70% and increase exchanges by 20%';
+    ]
+    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
+    integrations: ['ShopifyBigCommerceMagentoStripeShippo']
+    competitors: ['Loop ReturnsReturnly']
+    price: '$399'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Ideal for mid-market brands and marketplaces'
+    roi: 'Reduce manual handling by 70% and increase exchanges by 20%'
     link: 'https://ziontechgroup.com/services/ecommerce-returns-orchestrator',
     useCase,
-  s: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
+  s: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
     integration,
-  s: ['ShopifyBigCommerceMagentoStripeShippo'];
+  s: ['ShopifyBigCommerceMagentoStripeShippo']
     competitor,
-  s: ['Loop ReturnsReturnly'];
+  s: ['Loop ReturnsReturnly']
     pric,
-  e: '$399';
+  e: '$399'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Ideal for mid-market brands and marketplaces';
+  n: 'Ideal for mid-market brands and marketplaces'
     ro,
-  i: 'Reduce manual handling by 70% and increase exchanges by 20%';
+  i: 'Reduce manual handling by 70% and increase exchanges by 20%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ecommerce-returns-orchestrator'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.'}
     feature,
   s: [}
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts'
-    ];
-    useCases: ['GenAI product analyticsModel regression monitoringCost governance'];
-    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
-    competitors: ['HumanloopArizeLangfuse'];
-    price: '$490';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Hot category with fast adoption in AI apps';
-    roi: 'Cut token spend by 25% and improve response quality by 12%';
+    ]
+    useCases: ['GenAI product analyticsModel regression monitoringCost governance']
+    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
+    competitors: ['HumanloopArizeLangfuse']
+    price: '$490'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Hot category with fast adoption in AI apps'
+    roi: 'Cut token spend by 25% and improve response quality by 12%'
     link: 'https://ziontechgroup.com/services/ai-analytics-observability-kit',
     useCase,
-  s: ['GenAI product analyticsModel regression monitoringCost governance'];
+  s: ['GenAI product analyticsModel regression monitoringCost governance']
     integration,
-  s: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
+  s: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
     competitor,
-  s: ['HumanloopArizeLangfuse'];
+  s: ['HumanloopArizeLangfuse']
     pric,
-  e: '$490';
+  e: '$490'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Hot category with fast adoption in AI apps';
+  n: 'Hot category with fast adoption in AI apps'
     ro,
-  i: 'Cut token spend by 25% and improve response quality by 12%';
+  i: 'Cut token spend by 25% and improve response quality by 12%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-analytics-observability-kit'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.'}
     feature,
   s: [}
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup'
-    ];
-    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
-    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty'];
-    competitors: ['CloudZeroKubecost'];
-    price: '$690';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Proven ROI for cloud-native teams';
-    roi: 'Reduce cloud waste by 30% within 60 days';
+    ]
+    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking']
+    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty']
+    competitors: ['CloudZeroKubecost']
+    price: '$690'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Proven ROI for cloud-native teams'
+    roi: 'Reduce cloud waste by 30% within 60 days'
     link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard',
     useCase,
-  s: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
+  s: ['FinOps guardrailsCost regression preventionUnit economics tracking']
     integration,
-  s: ['AWSGCPAzureKubernetesSlackPagerDuty'];
+  s: ['AWSGCPAzureKubernetesSlackPagerDuty']
     competitor,
-  s: ['CloudZeroKubecost'];
+  s: ['CloudZeroKubecost']
     pric,
-  e: '$690';
+  e: '$690'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Proven ROI for cloud-native teams';
+  n: 'Proven ROI for cloud-native teams'
     ro,
-  i: 'Reduce cloud waste by 30% within 60 days';
+  i: 'Reduce cloud waste by 30% within 60 days'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/cloud-cost-anomaly-guard'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.'}
     feature,
   s: [}
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation'
-    ];
-    useCases: ['Contract workflowsInternal approvalsCustomer onboarding'];
-    integrations: ['ZapierMake.comSalesforceHubSpot'];
-    competitors: ['DocuSign APIHelloSign API'];
-    price: '$149';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'SMB to mid-market developer teams';
-    roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
+    ]
+    useCases: ['Contract workflowsInternal approvalsCustomer onboarding']
+    integrations: ['ZapierMake.comSalesforceHubSpot']
+    competitors: ['DocuSign APIHelloSign API']
+    price: '$149'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'SMB to mid-market developer teams'
+    roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     link: 'https://ziontechgroup.com/services/secure-pdf-signing-api',
     useCase,
-  s: ['Contract workflowsInternal approvalsCustomer onboarding'];
+  s: ['Contract workflowsInternal approvalsCustomer onboarding']
     integration,
-  s: ['ZapierMake.comSalesforceHubSpot'];
+  s: ['ZapierMake.comSalesforceHubSpot']
     competitor,
-  s: ['DocuSign APIHelloSign API'];
+  s: ['DocuSign APIHelloSign API']
     pric,
-  e: '$149';
+  e: '$149'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'SMB to mid-market developer teams';
+  n: 'SMB to mid-market developer teams'
     ro,
-  i: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
+  i: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/secure-pdf-signing-api'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.'}
     feature,
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding'
-    ];
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
-    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
-    competitors: ['StatuspageBetter Uptime'];
-    price: '$79';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Great value with SLO-first approach';
-    roi: 'Improve uptime communications and reduce churn risk';
+    ]
+    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
+    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']
+    competitors: ['StatuspageBetter Uptime']
+    price: '$79'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Great value with SLO-first approach'
+    roi: 'Improve uptime communications and reduce churn risk'
     link: 'https://ziontechgroup.com/services/status-slo-plus',
     useCase,
-  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
+  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
     integration,
-  s: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
+  s: ['AWS CloudWatchDatadogNew RelicPagerDuty']
     competitor,
-  s: ['StatuspageBetter Uptime'];
+  s: ['StatuspageBetter Uptime']
     pric,
-  e: '$79';
+  e: '$79'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Great value with SLO-first approach';
+  n: 'Great value with SLO-first approach'
     ro,
-  i: 'Improve uptime communications and reduce churn risk';
+  i: 'Improve uptime communications and reduce churn risk'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/status-slo-plus'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.'}
     feature,
   s: [,
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks} and remediation playbooksBoard-ready risk reports'
-    ];
-    useCases: ['Third-party risk programsSales security reviewsProcurement diligence'];
-    integrations: ['SecurityScorecardBitSightOneTrustJira'];
-    competitors: ['WhisticVantaZenGRC'];
-    price: '$890';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Sales-assisted and security-led adoption';
-    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
+    ]
+    useCases: ['Third-party risk programsSales security reviewsProcurement diligence']
+    integrations: ['SecurityScorecardBitSightOneTrustJira']
+    competitors: ['WhisticVantaZenGRC']
+    price: '$890'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Sales-assisted and security-led adoption'
+    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     link: 'https://ziontechgroup.com/services/vendor-risk-automation-pro',
     useCase,
-  s: ['Third-party risk programsSales security reviewsProcurement diligence'];
+  s: ['Third-party risk programsSales security reviewsProcurement diligence']
     integration,
-  s: ['SecurityScorecardBitSightOneTrustJira'];
+  s: ['SecurityScorecardBitSightOneTrustJira']
     competitor,
-  s: ['WhisticVantaZenGRC'];
+  s: ['WhisticVantaZenGRC']
     pric,
-  e: '$890';
+  e: '$890'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Sales-assisted and security-led adoption';
+  n: 'Sales-assisted and security-led adoption'
     ro,
-  i: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
+  i: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/vendor-risk-automation-pro'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.'}
     feature,
   s: [,
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety,
   checksAnalytics: searches, deflections} gapsMulti-tenant and SSO support'
-    ];
-    useCases: ['Developer portalsInternal knowledge basesCustomer docs'];
-    integrations: ['GitHubConfluenceNotionZendesk'];
-    competitors: ['Algolia AnswersVectara'];
-    price: '$249';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'High adoption for self-serve docs';
-    roi: 'Reduce tickets by 30% and improve time-to-answer';
+    ]
+    useCases: ['Developer portalsInternal knowledge basesCustomer docs']
+    integrations: ['GitHubConfluenceNotionZendesk']
+    competitors: ['Algolia AnswersVectara']
+    price: '$249'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'High adoption for self-serve docs'
+    roi: 'Reduce tickets by 30% and improve time-to-answer'
     link: 'https://ziontechgroup.com/services/ai-docs-search-answers',
     useCase,
-  s: ['Developer portalsInternal knowledge basesCustomer docs'];
+  s: ['Developer portalsInternal knowledge basesCustomer docs']
     integration,
-  s: ['GitHubConfluenceNotionZendesk'];
+  s: ['GitHubConfluenceNotionZendesk']
     competitor,
-  s: ['Algolia AnswersVectara'];
+  s: ['Algolia AnswersVectara']
     pric,
-  e: '$249';
+  e: '$249'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'High adoption for self-serve docs';
+  n: 'High adoption for self-serve docs'
     ro,
-  i: 'Reduce tickets by 30% and improve time-to-answer';
+  i: 'Reduce tickets by 30% and improve time-to-answer'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-docs-search-answers'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.'}
     feature,
   s: [,
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering} and alertsTicketing and customer portals'
-    ];
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
-    integrations: ['Azure ADOktaSlackServiceNow'];
-    competitors: ['AteraNinjaOne'];
-    price: '$4';
-    period: '/device/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Cost-effective RMM for partners and IT teams';
+    ]
+    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
+    integrations: ['Azure ADOktaSlackServiceNow']
+    competitors: ['AteraNinjaOne']
+    price: '$4'
+    period: '/device/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Cost-effective RMM for partners and IT teams'
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
     useCase,
-  s: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
+  s: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
     integration,
-  s: ['Azure ADOktaSlackServiceNow'];
+  s: ['Azure ADOktaSlackServiceNow']
     competitor,
-  s: ['AteraNinjaOne'];
+  s: ['AteraNinjaOne']
     pric,
-  e: '$4';
+  e: '$4'
     perio,
-  d: '/device/month';
+  d: '/device/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Cost-effective RMM for partners and IT teams';
+  n: 'Cost-effective RMM for partners and IT teams'
     ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
   }
-];
+]
     period: '/device/month'
-    trialDays: 14;
+    trialDays: 14
     setupTime: 'Fast'
     marketPosition: 'Cost-effective RMM for partners and IT teams'
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
     period: '/device / month'
-    trial_days: 14;
+    trial_days: 14
     setup_time: 'Fast'
     market_position: 'Cost - effective RMM for partners and IT teams'
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops'
 export const real2026Q2Additions = [
   {
-    id: 'ai-governance-compliance-hub';
-    name: 'AI Governance & Compliance Hub';
-    category: 'AI & Data';
+    id: 'ai-governance-compliance-hub'
+    name: 'AI Governance & Compliance Hub'
+    category: 'AI & Data'
     tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',,
-  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.';
+  description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.'
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
-    ];
+    ]
     useCases: [,
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
-    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'];
+    integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog']
     competitors: ['MonitaurCalypsoAICredo AI']}
-    price: '$2}500';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Strong enterprise traction with compliance-led buyers';
-    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%';
-    link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'};
-  {;
-    id: 'ai-synthetic-data-factory';
-    name: 'AI Synthetic Data Factory';
-    category: 'AI & Data';
+    price: '$2}500'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Strong enterprise traction with compliance-led buyers'
+    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%'
+    link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'}
+  {
+    id: 'ai-synthetic-data-factory'
+    name: 'AI Synthetic Data Factory'
+    category: 'AI & Data'
     tagline: 'Generate high-quality, private, and balanced datasets for ML training.',,
-  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.';
-    features: [;
+  description: 'Produce privacy-preserving synthetic tabular and time-series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built-in quality metrics and drift checks.'
+    features: [
       'Differential privacy and k-anonymity optionsData schema import and auto-profilingClass balancing, minority class boostersBias and fairness testing with reportsEvaluation dashboard with KS/JS metricsSDKs for Python/JS and API access'
-    ];
-    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation'];
-    integrations: ['S3 BigQuerySnowflakeDatabricks'];
+    ]
+    useCases: ['Training data augmentationPrivacy-preserving analyticsTest data generation']
+    integrations: ['S3 BigQuerySnowflakeDatabricks']
     competitors: ['Mostly AIGretelYData']}
-    price: '$1}200';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Growing demand driven by privacy regulations';
-    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%';
+    price: '$1}200'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Growing demand driven by privacy regulations'
+    roi: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory',
     perio,
   d: '/device/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: 'Fast'
     marketPositio,
@@ -3303,346 +3303,346 @@ export const real2026Q2Additions = [
   {/* TODO: Fix JSX expression */}
   s: ['MonitaurCalypsoAICredo AI']}
     pric,
-  e: '$2}500';
+  e: '$2}500'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Strong enterprise traction with compliance-led buyers';
+  n: 'Strong enterprise traction with compliance-led buyers'
     ro,
-  i: 'Reduce audit prep by 60% and non-compliance risk by 40%';
+  i: 'Reduce audit prep by 60% and non-compliance risk by 40%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-governance-compliance-hub'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   s: ['Mostly AIGretelYData']}
     pric,
-  e: '$1}200';
+  e: '$1}200'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Growing demand driven by privacy regulations';
+  n: 'Growing demand driven by privacy regulations'
     ro,
-  i: 'Cut data collection costs by 50% and improve model accuracy by 8%';
+  i: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-synthetic-data-factory'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'A headless returns microservice with policy rules, label generation, refund logic, routing, and disposition tracking. Plug-and-play with major commerce platforms.'}
     feature,
   s: [,
       'Return portal widgets and hosted flowsPolicy rules engine with A/B testsCarrier label and pickup automationRefund/credit/store-credit workflowsDisposition tracking and warehouse,
   notificationsAnalytics: reasons, preventable returns} CX scores'
-    ];
-    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
-    integrations: ['ShopifyBigCommerceMagentoStripeShippo'];
-    competitors: ['Loop ReturnsReturnly'];
-    price: '$399';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Ideal for mid-market brands and marketplaces';
-    roi: 'Reduce manual handling by 70% and increase exchanges by 20%';
+    ]
+    useCases: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
+    integrations: ['ShopifyBigCommerceMagentoStripeShippo']
+    competitors: ['Loop ReturnsReturnly']
+    price: '$399'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Ideal for mid-market brands and marketplaces'
+    roi: 'Reduce manual handling by 70% and increase exchanges by 20%'
     link: 'https://ziontechgroup.com/services/ecommerce-returns-orchestrator',
     useCase,
-  s: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support'];
+  s: ['DTC brands returns automationMarketplace return SLAsReduce WISMO support']
     integration,
-  s: ['ShopifyBigCommerceMagentoStripeShippo'];
+  s: ['ShopifyBigCommerceMagentoStripeShippo']
     competitor,
-  s: ['Loop ReturnsReturnly'];
+  s: ['Loop ReturnsReturnly']
     pric,
-  e: '$399';
+  e: '$399'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Ideal for mid-market brands and marketplaces';
+  n: 'Ideal for mid-market brands and marketplaces'
     ro,
-  i: 'Reduce manual handling by 70% and increase exchanges by 20%';
+  i: 'Reduce manual handling by 70% and increase exchanges by 20%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ecommerce-returns-orchestrator'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk, with playbooks for mitigation and auto-rollbacks.'}
     feature,
   s: [}
       'Token and cost telemetry with budgetsHallucination detectors and blocklistsContent safety checks and policy labelsTrace viewer with spans and embeddingsRegression tests and golden promptsQuality scorecards and SLA alerts'
-    ];
-    useCases: ['GenAI product analyticsModel regression monitoringCost governance'];
-    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
-    competitors: ['HumanloopArizeLangfuse'];
-    price: '$490';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Hot category with fast adoption in AI apps';
-    roi: 'Cut token spend by 25% and improve response quality by 12%';
+    ]
+    useCases: ['GenAI product analyticsModel regression monitoringCost governance']
+    integrations: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
+    competitors: ['HumanloopArizeLangfuse']
+    price: '$490'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Hot category with fast adoption in AI apps'
+    roi: 'Cut token spend by 25% and improve response quality by 12%'
     link: 'https://ziontechgroup.com/services/ai-analytics-observability-kit',
     useCase,
-  s: ['GenAI product analyticsModel regression monitoringCost governance'];
+  s: ['GenAI product analyticsModel regression monitoringCost governance']
     integration,
-  s: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog'];
+  s: ['OpenAIAzure OpenAIVertex AILangChainVercelDatadog']
     competitor,
-  s: ['HumanloopArizeLangfuse'];
+  s: ['HumanloopArizeLangfuse']
     pric,
-  e: '$490';
+  e: '$490'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Hot category with fast adoption in AI apps';
+  n: 'Hot category with fast adoption in AI apps'
     ro,
-  i: 'Cut token spend by 25% and improve response quality by 12%';
+  i: 'Cut token spend by 25% and improve response quality by 12%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-analytics-observability-kit'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Continuous spend anomaly detection with unsupervised and seasonal baselines, unit economics, and playbooks to stop runaway costs before the bill.'}
     feature,
   s: [}
       'Real-time anomaly detectionSlack/Teams alerts and triage workflowsAutomated remediation playbooksKubernetes cost allocation and showbackTag hygiene and unused resource cleanup'
-    ];
-    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
-    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty'];
-    competitors: ['CloudZeroKubecost'];
-    price: '$690';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Proven ROI for cloud-native teams';
-    roi: 'Reduce cloud waste by 30% within 60 days';
+    ]
+    useCases: ['FinOps guardrailsCost regression preventionUnit economics tracking']
+    integrations: ['AWSGCPAzureKubernetesSlackPagerDuty']
+    competitors: ['CloudZeroKubecost']
+    price: '$690'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Proven ROI for cloud-native teams'
+    roi: 'Reduce cloud waste by 30% within 60 days'
     link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard',
     useCase,
-  s: ['FinOps guardrailsCost regression preventionUnit economics tracking'];
+  s: ['FinOps guardrailsCost regression preventionUnit economics tracking']
     integration,
-  s: ['AWSGCPAzureKubernetesSlackPagerDuty'];
+  s: ['AWSGCPAzureKubernetesSlackPagerDuty']
     competitor,
-  s: ['CloudZeroKubecost'];
+  s: ['CloudZeroKubecost']
     pric,
-  e: '$690';
+  e: '$690'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Proven ROI for cloud-native teams';
+  n: 'Proven ROI for cloud-native teams'
     ro,
-  i: 'Reduce cloud waste by 30% within 60 days';
+  i: 'Reduce cloud waste by 30% within 60 days'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/cloud-cost-anomaly-guard'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'A developer-first e-signature API with templates, bulk sends, webhooks, and long-term validation. SOC2-ready with EU data residency.'}
     feature,
   s: [}
       'Signer authentication and KYC add-onsTemplates and merge fieldsBulk send and remindersWebhooks and event callbacksLTV and certificate validation'
-    ];
-    useCases: ['Contract workflowsInternal approvalsCustomer onboarding'];
-    integrations: ['ZapierMake.comSalesforceHubSpot'];
-    competitors: ['DocuSign APIHelloSign API'];
-    price: '$149';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'SMB to mid-market developer teams';
-    roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
+    ]
+    useCases: ['Contract workflowsInternal approvalsCustomer onboarding']
+    integrations: ['ZapierMake.comSalesforceHubSpot']
+    competitors: ['DocuSign APIHelloSign API']
+    price: '$149'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'SMB to mid-market developer teams'
+    roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     link: 'https://ziontechgroup.com/services/secure-pdf-signing-api',
     useCase,
-  s: ['Contract workflowsInternal approvalsCustomer onboarding'];
+  s: ['Contract workflowsInternal approvalsCustomer onboarding']
     integration,
-  s: ['ZapierMake.comSalesforceHubSpot'];
+  s: ['ZapierMake.comSalesforceHubSpot']
     competitor,
-  s: ['DocuSign APIHelloSign API'];
+  s: ['DocuSign APIHelloSign API']
     pric,
-  e: '$149';
+  e: '$149'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'SMB to mid-market developer teams';
+  n: 'SMB to mid-market developer teams'
     ro,
-  i: 'Accelerate time-to-sign by 50% and cut manual errors by 70%';
+  i: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/secure-pdf-signing-api'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.'}
     feature,
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding'
-    ];
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
-    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
-    competitors: ['StatuspageBetter Uptime'];
-    price: '$79';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Great value with SLO-first approach';
-    roi: 'Improve uptime communications and reduce churn risk';
+    ]
+    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
+    integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']
+    competitors: ['StatuspageBetter Uptime']
+    price: '$79'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Great value with SLO-first approach'
+    roi: 'Improve uptime communications and reduce churn risk'
     link: 'https://ziontechgroup.com/services/status-slo-plus',
     useCase,
-  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'];
+  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']
     integration,
-  s: ['AWS CloudWatchDatadogNew RelicPagerDuty'];
+  s: ['AWS CloudWatchDatadogNew RelicPagerDuty']
     competitor,
-  s: ['StatuspageBetter Uptime'];
+  s: ['StatuspageBetter Uptime']
     pric,
-  e: '$79';
+  e: '$79'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Great value with SLO-first approach';
+  n: 'Great value with SLO-first approach'
     ro,
-  i: 'Improve uptime communications and reduce churn risk';
+  i: 'Improve uptime communications and reduce churn risk'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/status-slo-plus'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'End-to-end vendor risk workflows with templated questionnaires, auto evidence pulls, security ratings, and remediation tracking.'}
     feature,
   s: [,
       'Questionnaire templates and AI autofillEvidence collection from SOC2/SIG LiteContinuous internet scanning and ratingsFindings, tasks} and remediation playbooksBoard-ready risk reports'
-    ];
-    useCases: ['Third-party risk programsSales security reviewsProcurement diligence'];
-    integrations: ['SecurityScorecardBitSightOneTrustJira'];
-    competitors: ['WhisticVantaZenGRC'];
-    price: '$890';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Sales-assisted and security-led adoption';
-    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
+    ]
+    useCases: ['Third-party risk programsSales security reviewsProcurement diligence']
+    integrations: ['SecurityScorecardBitSightOneTrustJira']
+    competitors: ['WhisticVantaZenGRC']
+    price: '$890'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Sales-assisted and security-led adoption'
+    roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     link: 'https://ziontechgroup.com/services/vendor-risk-automation-pro',
     useCase,
-  s: ['Third-party risk programsSales security reviewsProcurement diligence'];
+  s: ['Third-party risk programsSales security reviewsProcurement diligence']
     integration,
-  s: ['SecurityScorecardBitSightOneTrustJira'];
+  s: ['SecurityScorecardBitSightOneTrustJira']
     competitor,
-  s: ['WhisticVantaZenGRC'];
+  s: ['WhisticVantaZenGRC']
     pric,
-  e: '$890';
+  e: '$890'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Sales-assisted and security-led adoption';
+  n: 'Sales-assisted and security-led adoption'
     ro,
-  i: 'Shorten sales cycles by 20% and reduce vendor risk exposure';
+  i: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/vendor-risk-automation-pro'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   n: 'Hosted semantic search for documentation, with chunking, citations, guardrails, and analytics. Drop-in widget and APIs.'}
     feature,
   s: [,
       'Doc ingestion from URLs, PDFs, and reposEmbeddings index with incremental updatesRAG with citations and safety,
   checksAnalytics: searches, deflections} gapsMulti-tenant and SSO support'
-    ];
-    useCases: ['Developer portalsInternal knowledge basesCustomer docs'];
-    integrations: ['GitHubConfluenceNotionZendesk'];
-    competitors: ['Algolia AnswersVectara'];
-    price: '$249';
-    period: '/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'High adoption for self-serve docs';
-    roi: 'Reduce tickets by 30% and improve time-to-answer';
+    ]
+    useCases: ['Developer portalsInternal knowledge basesCustomer docs']
+    integrations: ['GitHubConfluenceNotionZendesk']
+    competitors: ['Algolia AnswersVectara']
+    price: '$249'
+    period: '/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'High adoption for self-serve docs'
+    roi: 'Reduce tickets by 30% and improve time-to-answer'
     link: 'https://ziontechgroup.com/services/ai-docs-search-answers',
     useCase,
-  s: ['Developer portalsInternal knowledge basesCustomer docs'];
+  s: ['Developer portalsInternal knowledge basesCustomer docs']
     integration,
-  s: ['GitHubConfluenceNotionZendesk'];
+  s: ['GitHubConfluenceNotionZendesk']
     competitor,
-  s: ['Algolia AnswersVectara'];
+  s: ['Algolia AnswersVectara']
     pric,
-  e: '$249';
+  e: '$249'
     perio,
-  d: '/month';
+  d: '/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'High adoption for self-serve docs';
+  n: 'High adoption for self-serve docs'
     ro,
-  i: 'Reduce tickets by 30% and improve time-to-answer';
+  i: 'Reduce tickets by 30% and improve time-to-answer'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/ai-docs-search-answers'
-  };
+  }
   {/* TODO: Fix JSX expression */}
   fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.'}
     feature,
   s: [,
       'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering} and alertsTicketing and customer portals'
-    ];
-    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
-    integrations: ['Azure ADOktaSlackServiceNow'];
-    competitors: ['AteraNinjaOne'];
-    price: '$4';
-    period: '/device/month';
-    trialDays: 14;
-    setupTime: 'Fast';
-    marketPosition: 'Cost-effective RMM for partners and IT teams';
+    ]
+    useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
+    integrations: ['Azure ADOktaSlackServiceNow']
+    competitors: ['AteraNinjaOne']
+    price: '$4'
+    period: '/device/month'
+    trialDays: 14
+    setupTime: 'Fast'
+    marketPosition: 'Cost-effective RMM for partners and IT teams'
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
     useCase,
-  s: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
+  s: ['MSPs and IT providersInternal IT for SMBsBYOD governance']
     integration,
-  s: ['Azure ADOktaSlackServiceNow'];
+  s: ['Azure ADOktaSlackServiceNow']
     competitor,
-  s: ['AteraNinjaOne'];
+  s: ['AteraNinjaOne']
     pric,
-  e: '$4';
+  e: '$4'
     perio,
-  d: '/device/month';
+  d: '/device/month'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
-  e: 'Fast';
+  e: 'Fast'
     marketPositio,
-  n: 'Cost-effective RMM for partners and IT teams';
+  n: 'Cost-effective RMM for partners and IT teams'
     ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     lin,
   k: 'http,
   s://ziontechgroup.com/services/msp-remote-device-ops'
   }
-];
+]
 export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',' 'Azure OpenAI',' 'Vertex AI',' 'Datadog'],' competitor,
   s: ['Monitaur', 'CalypsoAI', 'Credo AI'],' pric,
   e: '$2, 500',' perio,

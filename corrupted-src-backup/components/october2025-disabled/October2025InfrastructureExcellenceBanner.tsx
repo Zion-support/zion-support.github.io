@@ -24,7 +24,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'></div>
             <TrendingUp, className='h-5 w-5, tex, t-bl, u, e-4, 0, 0' />
             <span, className='te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-4, 0, 0'>
-              NEW, OCTOBER, 2025 CONTE, N, T;
+              NEW, OCTOBER, 2025 CONTE, N, T
             </sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'>
@@ -39,15 +39,14 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'></div>
             <TrendingUp, className='h-5 w-5, tex, t-bl, u, e-4, 0, 0' /></TrendingUp>
             <span, className='te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-4, 0, 0'></span>
-              NEW, OCTOBER, 2025 CONTE, N, T;
+              NEW, OCTOBER, 2025 CONTE, N, T
             </sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'></h2>
-            Infrastructure, Excellenc, e;
-          </h2>
+            Infrastructure, Excellenc, e</h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>
             Master, productio, n-grade, architectures, for observabi, l, i, t, y, securi, t, y,
-            and, rea, l-time, data, processing. Batt, l, e-tested, patterns, from;
+            and, rea, l-time, data, processing. Batt, l, e-tested, patterns, from
             enterprises, processing, billions of, events, daily.
           </p>
         </div>
@@ -101,7 +100,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
                   </div>
                 </div>
               </Li, n, k>
-            );
+            )
           })}
         </div>
         {/* CTA, Sectio, n */}
@@ -141,7 +140,7 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
         </div>
       </div>
     </div>
-  );
-};
-export default October2025InfrastructureExcellenceBanner;
+  )
+}
+export default October2025InfrastructureExcellenceBanner
 "`

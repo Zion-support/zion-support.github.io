@@ -1,17 +1,17 @@
-'use client';
-import React, { useState } from 'react';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React, { useState } from 'react'
+import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
 export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [copiedCode, setCopiedCode] = useState<string>(null)
+  const [searchQuery, setSearchQuery] = useState('')
   const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
+    navigator.clipboard.writeText(code)
+    setCopiedCode(id)
+    setTimeout(() => setCopiedCode(null), 2000)
+  }
   const apiEndpoints = [
     {
       title: 'AI Services',
@@ -92,15 +92,15 @@ export default function APIDocsPage() {
         }
       ]
     }
-  ];
+  ]
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
-    endpoints: category.endpoints.filter(endpoint => 
+    endpoints: category.endpoints.filter(endpoint =</string>
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(category => category.endpoints.length > 0);
+  })).filter(category => category.endpoints.length > 0)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
@@ -112,22 +112,16 @@ export default function APIDocsPage() {
       {/* Hero Section */}
 <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            API Documentation;
-  </
+          <h1>API Documentation</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              <Code className="mr-2 h-5 w-5" />
-              Get Started;
-  </
+              <Code>Get Started</Code>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              <Download className="mr-2 h-5 w-5" />
-              Download SDK;
-  </
+              <Download>Download SDK</Download>
           </div>
         </div>
       </section>
@@ -199,9 +193,8 @@ export default function APIDocsPage() {
                           </span>
                           <code className="text-purple-400 font-mono">{endpoint.path}</code>
                         </div>
-                        <button
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
-                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                        <buttoncopyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
+                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"</button>
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
                             <React.Fragment>
                               <Check className="w-4 h-4" />
@@ -239,18 +232,14 @@ export default function APIDocsPage() {
             Start building with our APIs today and create amazing applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Get API Key;
-  </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View SDKs;
-  </
+            <buttonGet API Key</button>
+            <buttonView SDKs</button>
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
+  )
 }
   </button>
   </button>

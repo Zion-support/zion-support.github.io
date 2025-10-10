@@ -1,10 +1,8 @@
-import withBundleAnalyzer from '@next/bundle-analyzer';
-import crypto from 'crypto';
-
+import withBundleAnalyzer from '@next/bundle-analyzer'
+import crypto from 'crypto'
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
-});
-
+})
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -35,7 +33,7 @@ const nextConfig = {
         new webpack.DefinePlugin({
           'self': 'undefined',
         })
-      );
+      )
     }
 
     // Optimize bundle size
@@ -58,12 +56,12 @@ const nextConfig = {
               return (
                 module.size() > 160000 &&
                 /node_modules[/\\]/.test(module.identifier())
-              );
+              )
             },
             name(module) {
-              const _hash = crypto.createHash('sha1');
-              _hash.update(module.identifier());
-              return _hash.digest('hex').substring(0, 8);
+              const _hash = crypto.createHash('sha1')
+              _hash.update(module.identifier())
+              return _hash.digest('hex').substring(0, 8)
             },
             priority: 30,
             minChunks: 1,
@@ -83,7 +81,7 @@ const nextConfig = {
                   .update(chunks.reduce((acc, chunk) => acc + chunk.name, ''))
                   .digest('hex')
                   .substring(0, 8)
-              );
+              )
             },
             priority: 10,
             minChunks: 2,
@@ -94,12 +92,10 @@ const nextConfig = {
         minSize: 20000,
       },
       minimize: !dev,
-    };
-
+    }
     // Tree shaking
-    config.optimization.usedExports = true;
-
-    return config;
+    config.optimization.usedExports = true
+    return config
   },
 
   async headers() {
@@ -155,7 +151,7 @@ const nextConfig = {
           },
         ],
       },
-    ];
+    ]
   },
 
   async redirects() {
@@ -165,7 +161,7 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-    ];
+    ]
   },
 
   experimental: {
@@ -190,6 +186,5 @@ const nextConfig = {
       exclude: ['error', 'warn'],
     } : false,
   },
-};
-
-export default bundleAnalyzer(nextConfig);
+}
+export default bundleAnalyzer(nextConfig)

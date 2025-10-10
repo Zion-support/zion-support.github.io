@@ -1,25 +1,25 @@
-import React from 'react';
+import React from 'react'
 interface SEOProps {// TODO: Add content;}
 }
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterSite?: string;
-  structuredData?: unknown;
-  noindex?: boolean;
-  nofollow?: boolean;
-  lang?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  twitterSite?: string
+  structuredData?: unknown
+  noindex?: boolean
+  nofollow?: boolean
+  lang?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
 }
-const EnhancedSEO: React.FC;
+const EnhancedSEO: React.FC
           <SEOProps> = ({// TODO: Add content;}
 }
 const EnhancedSEO: React.FC<SEOProps> = ({
@@ -40,13 +40,13 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   modifiedTime,
 //   section,
   tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords
   return (
     // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
+    let metaDescription = document.querySelector('meta[name="description"]')
     if (!metaDescription) {/* TODO: Fix JSX expression */}
     }
-    metaDescription.setAttribute('content', description);
+    metaDescription.setAttribute('content', description)
           <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
@@ -88,8 +88,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
           <link rel="dns-prefetch" href="// www.googletagmanager.com" /></link>
           </Helmet>
-  );
-};
+  )
+}
 export default EnhancedSEO;"`
   </SEOProps>
   </SEOProps>

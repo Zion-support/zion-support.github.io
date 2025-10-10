@@ -1,26 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Phone } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { CheckCircle, Star, Phone } from 'lucide-react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 interface ServicePageProps {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: string;,
     descriptio,
   n: string;,
     ico,
-  n: React.ComponentType;
-          <{ className?: string }>;
+  n: React.ComponentType
+          <{ className?: string }>
   service,
   s: Array<{/* TODO: Fix JSX expression */}
   s: string[];}
     pric,
-  e: string;
-  }>;
+  e: string
+  }>
   benefit,
-  s: string[];
+  s: string[]
 }
 const,
   ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
@@ -31,24 +31,20 @@ const,
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Service Template;
-  </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post;
-  </
+          <h1>Service Template</h1>
+          <p>Blog Post</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 // >
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
-// Get Free Consultation;
+// Get Free Consultation
           </Link>
             <a
               href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               <Phone className="w-4 h-4 mr-2" />
-// (302) 464-0950;
+// (302) 464-0950
           </a>
           </div>
         </section>
@@ -73,7 +69,7 @@ const,
                   ))}
                 </ul>
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                  className="cyber-button w-full text-center inline-block" Get Started;
+                  className="cyber-button w-full text-center inline-block" Get Started
         {/* Benefits Section */}
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
             Why Choose Our {title}?
@@ -95,9 +91,8 @@ Ready to Transform Your Business?"
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default ServicePage;
-  </p>
+  )
+}
+export default ServicePage</p>
   </h1>
   </ServicePageProps>

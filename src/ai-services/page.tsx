@@ -1,11 +1,11 @@
-import React from 'react';
-import { Brain, Zap, Shield, BarChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Brain, Zap, Shield, BarChart } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIServicesPage: React.FC = () => {
   const services = [
     {
@@ -31,7 +31,7 @@ titletitle: 'AI Analytics & Insights',
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price:     ,
 $4}
-  ];
+  ]
   const benefits = [
     '300% Average ROI Increase',
     '95% Process Automation',
@@ -51,30 +51,26 @@ $4}
             Coming Soon - Advanced AI services solutions that will transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
-  </
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More;
-  </
+            <buttonContact Us</button>
+            <buttonLearn More</button>
       <Footer />
-  );
-};
-export default $1;
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+  )
+}
+export default $1
+'use client'
+import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
-} from 'lucide-react';
+} from 'lucide-react'
 export default function AIServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState('overview')
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)
+  }, [])
   const aiServices = [
     {
       id: 'ai-automation',
@@ -202,13 +198,13 @@ export default function AIServicesPage() {
       color: 'from-indigo-500 to-purple-600',
       popular: false
     }
-  ];
+  ]
   const stats = [
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
     { icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -236,15 +232,11 @@ export default function AIServicesPage() {
                 <a
                   href="tel:+13024640950"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
-                  <Phone className="w-5 h-5 mr-2" />
-                  (302) 464-0950;
-  </
+                  <Phone>(302) 464-0950</Phone>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
-                  <Mail className="w-5 h-5 mr-2" />
-                  Get Quote;
-  </
+                  <Mail>Get Quote</Mail>
               </div>
             </div>
           </div>
@@ -284,9 +276,7 @@ export default function AIServicesPage() {
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     {service.popular && (
-                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
-                        Most Popular;
-  </
+                      <div>Most Popular</div>
                     )}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
@@ -319,16 +309,8 @@ export default function AIServicesPage() {
                     </div>
                   </div>
                   <div className="mt-6 flex gap-3">
-                    <a
-                      href="tel:+13024640950"
-                      className="flex-1 cyber-button text-center py-3">
-                      Get Started;
-  </
-                    <a
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center">
-                      Learn More;
-  </
+                    <a>Get Started</a>
+                    <a>Learn More</a>
                   </div>
                 </div>
               ))}
@@ -348,21 +330,17 @@ export default function AIServicesPage() {
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950;
-  </
+                <Phone>Call (302) 464-0950</Phone>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
-                <Mail className="w-5 h-5 mr-2" />
-                Email Us;
-  </
+                <Mail>Email Us</Mail>
             </div>
           </div>
         </section>
       </div>
     </React.Fragment>
-  );
+  )
 }
   </a>
   </a>

@@ -1,33 +1,33 @@
 
-export interface InnovativeITService {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
+export interface InnovativeITService {id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  variant: string
+  contact_info: unknown
+    mobile: string
+    email: string
     address: string}
     website: string}
   }
@@ -36,7 +36,7 @@ export interface InnovativeITService {id: string;
     tagline: 'Next - generation cybersecurity with zero trust architecture',
     price: '$599',
     period: '/month',
-    description: unknown;
+    description: unknown
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
@@ -67,19 +67,19 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Privileged access management',
       'Compliance reporting',
       'Real - time monitoring'],
-    popular: true;
+    popular: true
     icon: ''
     color: 'from - red - 500 to - pink - 600'
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / zero - trust - security - platform',
-    market_position: unknown;
+    market_position: unknown
       'Competitive with Palo Alto Networks ($50) 000+), CrowdStrike ($8.99 - 15.99), and Zscaler ($5 - 25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.',
-    target_audience: unknown;
+    target_audience: unknown
       'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',
-    trial_days: 30;
+    trial_days: 30
     setup_time: '2 hours'
     category: 'IT & Cybersecurity',
-    real_service: true;
+    real_service: true
     technology: [,
     popula,
   r: true,
@@ -147,25 +147,25 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_size: '$45B cybersecurity market'
     growth_rate: '110% annual growth'
     variant: 'cyberpunk'
-    contact_info: unknown;
+    contact_info: unknown
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
-    real_implementation: true;
-    implementation_details: unknown;
+    real_implementation: true
+    implementation_details: unknown
       'Enterprise - grade zero trust platform with advanced AI, real - time monitoring, and comprehensive security controls.',
     launch_date: '2024 - 01 - 01'
-    customers: 800;
-    rating: 4 && 4.9;
-    reviews: 400;
+    customers: 800
+    rating: 4 && 4.9
+    reviews: 400
   },
     id: 'edge - computing - platform'
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
     price: '$299',
     period: '/month',
-    description: unknown;
+    description: unknown
     market_siz,
   e: '$45B cybersecurity market',
     growth_rat,
@@ -221,19 +221,19 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Edge analytics',
       'IoT integration',
       '5 G optimization'],
-    popular: true;
+    popular: true
     icon: ''
     color: 'from - blue - 500 to - cyan - 600'
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / edge - computing - platform',
-    market_position: unknown;
+    market_position: unknown
       'Competitive with AWS Greengrass ($0.16 - 0.50), Azure IoT Edge ($0.40 - 0.50), and Google Cloud IoT Edge ($0.40 - 0.50). Our advantage: Better performance, lower costs, and comprehensive features.',
-    target_audience: unknown;
+    target_audience: unknown
       'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications',
-    trial_days: 14;
+    trial_days: 14
     setup_time: '1 hour'
     category: 'IT & Edge Computing',
-    real_service: true;
+    real_service: true
     technology: [,
     popula,
   r: true,
@@ -302,25 +302,25 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_size: '$15B edge computing market'
     growth_rate: '180% annual growth'
     variant: 'quantum'
-    contact_info: unknown;
+    contact_info: unknown
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
-    real_implementation: true;
-    implementation_details: unknown;
+    real_implementation: true
+    implementation_details: unknown
       'Complete edge computing platform with distributed nodes, real - time processing, and IoT integration capabilities.',
     launch_date: '2024 - 01 - 10'
-    customers: 1500;
-    rating: 4 && 4.8;
-    reviews: 750;
+    customers: 1500
+    rating: 4 && 4.8
+    reviews: 750
   },
     id: 'quantum - computing - as - a-service'
     name: 'Quantum Computing as a Service',
     tagline: 'Access to quantum computing power',
     price: '$999',
     period: '/month',
-    description: unknown;
+    description: unknown
     market_siz,
   e: '$15B edge computing market',
     growth_rat,
@@ -376,19 +376,19 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Developer tools',
       'Documentation and tutorials',
       'Expert support'],
-    popular: true;
+    popular: true
     icon: ''
     color: 'from - purple - 500 to - indigo - 600'
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / quantum - computing - as - a-service',
-    market_position: unknown;
+    market_position: unknown
       'Competitive with IBM Quantum ($0.10 - 1.60), AWS Braket ($0.30 - 1.00), and Google Quantum ($0.50 - 1.00). Our advantage: Better algorithms, lower costs, and comprehensive support.',
-    target_audience: unknown;
+    target_audience: unknown
       'Research institutions, Pharmaceutical companies, Financial services, Logistics companies, Technology companies, Universities',
-    trial_days: 7;
+    trial_days: 7
     setup_time: '30 minutes'
     category: 'IT & Quantum Computing',
-    real_service: true;
+    real_service: true
     technology: [,
     popula,
   r: true,
@@ -456,18 +456,18 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_size: '$8B quantum computing market'
     growth_rate: '250% annual growth'
     variant: 'quantum - advanced'
-    contact_info: unknown;
+    contact_info: unknown
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
-    real_implementation: true;
-    implementation_details: unknown;
+    real_implementation: true
+    implementation_details: unknown
       'Advanced quantum computing platform with multiple quantum processors, hybrid computing, and comprehensive development tools.',
     launch_date: '2024 - 01 - 05'
-    customers: 300;
-    rating: 4 && 4.9;
-    reviews: 150;
+    customers: 300
+    rating: 4 && 4.9
+    reviews: 150
   },
       'Multi-consensus algorithms',
     id: 'blockchain - enterprise - platform'
@@ -475,7 +475,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     tagline: 'Enterprise - grade blockchain solutions',
     price: '$399',
     period: '/month',
-    description: unknown;
+    description: unknown
     market_siz,
   e: '$8B quantum computing market',
     growth_rat,
@@ -532,19 +532,19 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Analytics dashboard',
       'Integration services',
       '24 / 7 support'],
-    popular: true;
+    popular: true
     icon: ''
     color: 'from - green - 500 to - emerald - 600'
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / blockchain - enterprise - platform',
-    market_position: unknown;
+    market_position: unknown
       'Competitive with Hyperledger Fabric ($free), Ethereum Enterprise ($variable), and Corda ($variable). Our advantage: Better enterprise features, support, and integration capabilities.',
-    target_audience: unknown;
+    target_audience: unknown
       'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Energy companies, Real estate',
-    trial_days: 21;
+    trial_days: 21
     setup_time: '4 hours'
     category: 'IT & Blockchain',
-    real_service: true;
+    real_service: true
     technology: [,
     popula,
   r: true,
@@ -614,18 +614,18 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_size: '$19B blockchain market'
     growth_rate: '160% annual growth'
     variant: 'quantum - blockchain'
-    contact_info: unknown;
+    contact_info: unknown
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
-    real_implementation: true;
-    implementation_details: unknown;
+    real_implementation: true
+    implementation_details: unknown
       'Enterprise blockchain platform with multiple consensus mechanisms, smart contract support, and comprehensive enterprise features.',
     launch_date: '2024 - 01 - 15'
-    customers: 600;
-    rating: 4 && 4.8;
-    reviews: 300;
+    customers: 600
+    rating: 4 && 4.8
+    reviews: 300
   },
       'CI/CD pipelines',
     id: 'devops - automation - platform'
@@ -633,7 +633,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     tagline: 'Complete DevOps automation and orchestration',
     price: '$199',
     period: '/month',
-    description: unknown;
+    description: unknown
     market_siz,
   e: '$19B blockchain market',
     growth_rat,
@@ -690,20 +690,20 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Environment management',
       'Team collaboration',
       'Analytics and reporting'],
-    popular: true;
+    popular: true
     icon: '',
       'CI/CD',
     color: 'from - orange - 500 to - yellow - 600',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / devops - automation - platform',
-    market_position: unknown;
+    market_position: unknown
       'Competitive with GitLab ($19 - 99), Jenkins ($free), and CircleCI ($15 - 300). Our advantage: Better automation, comprehensive features, and competitive pricing.',
-    target_audience: unknown;
+    target_audience: unknown
       'Development teams, DevOps engineers, IT operations, Software companiestups, Enterprises',
-    trial_days: 30;
+    trial_days: 30
     setup_time: '1 hour'
     category: 'IT & DevOps',
-    real_service: true;
+    real_service: true
     technology: [,
     popula,
   r: true,
@@ -774,49 +774,49 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     market_size: '$12B DevOps market'
     growth_rate: '130% annual growth'
     variant: 'cyberpunk'
-    contact_info: unknown;
+    contact_info: unknown
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
-    real_implementation: true;
-    implementation_details: unknown;
+    real_implementation: true
+    implementation_details: unknown
       'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.',
     launch_date: '2024 - 01 - 20'
-    customers: 2500;
-    rating: 4 && 4.7;
-    reviews: 1250;
+    customers: 2500
+    rating: 4 && 4.7
+    reviews: 1250
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-  id: string, name: string;
-  tagline: string, price: string;
-  period: string, description: string;
-  features: string[], popular: boolean;
-  icon: string, color: string;
-  textColor: string, link: string;
-  marketPosition: string, targetAudience: string;
-  trialDays: number, setupTime: string;
-  category: string, realService: boolean;
+  id: string, name: string
+  tagline: string, price: string
+  period: string, description: string
+  features: string[], popular: boolean
+  icon: string, color: string
+  textColor: string, link: string
+  marketPosition: string, targetAudience: string
+  trialDays: number, setupTime: string
+  category: string, realService: boolean
   technology: string[], integrations: string[],
-  useCases: string[], roi: string;
-  competitors: string[], marketSize: string;
-  growthRate: string, variant: string;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
-    website: string;
+  useCases: string[], roi: string
+  competitors: string[], marketSize: string
+  growthRate: string, variant: string
+  contactInfo: unknown
+    mobile: string, email: string
+    address: string
+    website: string
     },
-    realImplementation: boolean, implementationDetails: string;
-  launchDate: string, customers: number;
-  rating: number;
-  reviews: number;
+    realImplementation: boolean, implementationDetails: string
+  launchDate: string, customers: number
+  rating: number
+  reviews: number
 }
 export const innovativeITServices: InnovativeITService[] = [,
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Next-generation cybersecurity with zero trust architecture', price: '$599',
     period: '/month',
     description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',
-    features: [;
+    features: [
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management',
       'Compliance reportingReal-time monitoring'],
     popular: true, icon: '',
@@ -825,21 +825,21 @@ export const innovativeITServices: InnovativeITService[] = [,
     marketPosition: 'Competitive with Palo Alto Networks ($50)000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.',
     targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure',
     trialDays: 30, setupTime: '2 hours',
-    category: 'IT & Cybersecurity', realService: true;
+    category: 'IT & Cybersecurity', realService: true
     technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS'], integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk'],
     useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection'], roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.',
     competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'], marketSize: '$45 B cybersecurity market',
     growthRate: '110% annual growth', variant: 'cyberpunk',
-    contactInfo: unknown;
+    contactInfo: unknown
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
-    real_implementation: true;
+    real_implementation: true
     implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.'
     launch_date: '2024 - 01 - 20'
-    customers: 2500;
-    rating: 4.7;
-    reviews: 1250;
+    customers: 2500
+    rating: 4.7
+    reviews: 1250
     market_siz,
   e: '$12B DevOps market',
     growth_rat,
@@ -944,7 +944,7 @@ export const,
     descriptio,
   n: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.',
     feature,
-  s: [;
+  s: [
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management'
       'Compliance reportingReal-time monitoring'
     ],
@@ -1005,19 +1005,19 @@ export const,
   s: 1250}
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
   }
-];
-;
-;
+]
+
+
   }
-];
-;
-    realImplementation: true;
+]
+
+    realImplementation: true
     implementationDetails:,
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
     launchDate: '2024-01-01'
-    customers: 800;
-    rating: 4.9;
-    reviews: 400;
+    customers: 800
+    rating: 4.9
+    reviews: 400
   }
     id: 'edge-computing-platform'
     name: 'Edge Computing Platform',
@@ -1033,9 +1033,9 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launchDat,
   e: '2024-01-01'
     customer,
-  s: 800;
+  s: 800
     ratin,
-  g: 4.9;
+  g: 4.9
     review,
   s: 400}
     i,
@@ -1052,7 +1052,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   n:
       'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.'
     feature,
-  s: [;
+  s: [
       'Distributed edge nodes'
       'Real-time data processing'
       'Low-latency computing'
@@ -1064,7 +1064,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'IoT integration'
       '5 G optimization'
     ]
-    popular: true;
+    popular: true
     icon: ''
     color: 'from-blue-500 to-cyan-600'
     textColor: 'text-blue-400',
@@ -1072,13 +1072,13 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     marketPosition:,
       'Competitive with AWS Greengrass ($0.16-0.50), Azure IoT Edge ($0.40-0.50), and Google Cloud IoT Edge ($0.40-0.50). Our advantage: Better performance, lower costs, and comprehensive features.'
     targetAudience: 'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications'
-    trialDays: 14;
+    trialDays: 14
     setupTime: '1 hour'
     category: 'IT & Edge Computing'
-    realService: true;
-    technology: [;
+    realService: true
+    technology: [
     popula,
-  r: true;
+  r: true
     ico,
   n: '',
     colo,
@@ -1095,15 +1095,15 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     targetAudienc,
   e: 'IoT companies, Manufacturing, Healthcare, Transportation, Retail, Smart cities, Telecommunications'
     trialDay,
-  s: 14;
+  s: 14
     setupTim,
   e: '1 hour'
     categor,
   y: 'IT & Edge Computing'
     realServic,
-  e: true;
+  e: true
     technolog,
-  y: [;
+  y: [
       'Edge Computing'
       'IoT'
       '5 G'
@@ -1115,7 +1115,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'AWS'
     ]
     integration,
-  s: [;
+  s: [
       'AWS IoT'
       'Azure IoT'
       'Google Cloud IoT'
@@ -1126,7 +1126,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'REST API'
     ]
     useCase,
-  s: [;
+  s: [
       'IoT applications'
       'Real-time analytics'
       'Edge AI'
@@ -1137,7 +1137,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     ro,
   i: 'Average customer sees 300% ROI within 8 months through reduced latency and improved performance.'
     competitor,
-  s: [;
+  s: [
       'AWS Greengrass'
       'Azure IoT Edge'
       'Google Cloud IoT Edge'
@@ -1147,7 +1147,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     marketSize: '$15B edge computing market'
     growthRate: '180% annual growth',
     variant: 'quantum',
-    contactInfo: targetAudience: unknown;
+    contactInfo: targetAudience: unknown
     marketSiz,
   e: '$15B edge computing market'
     growthRat,
@@ -1159,17 +1159,17 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   e: unknown,
       'Research institutions, Pharmaceutical companies, Financial services, Logistics companies, Technology companies, Universities'
     trialDay,
-  s: 7;
+  s: 7
     setupTim,
   e: '30 minutes'
     categor,
   y: 'IT & Quantum Computing'
     realServic,
-  e: true;
+  e: true
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'Jupyter Notebooks'
       'Python'
       'MATLAB'
@@ -1180,7 +1180,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'SDK'
     ]
     useCase,
-  s: [;
+  s: [
       'Drug discovery'
       'Financial modeling'
       'Logistics optimization'
@@ -1191,7 +1191,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     ro,
   i: 'Average customer sees 500% ROI within 18 months through breakthrough discoveries and optimizations.'
     competitor,
-  s: [;
+  s: [
       'IBM Quantum'
       'AWS Braket'
       'Google Quantum'
@@ -1201,15 +1201,15 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     marketSize: '$8B quantum computing market'
     growthRate: '250% annual growth',
     variant: 'quantum-advanced',
-    contactInfo: marketPosition: unknown;
+    contactInfo: marketPosition: unknown
       'Competitive with Hyperledger Fabric ($free), Ethereum Enterprise ($variable), and Corda ($variable). Our advantage: Better enterprise features, support, and integration capabilities.'
     targetAudience: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Energy companies, Real estate'
-    trialDays: 21;
+    trialDays: 21
     setupTime: '4 hours'
     category: 'IT & Blockchain'
-    realService: true;
-    technology: [;
-    integrations: [;
+    realService: true
+    technology: [
+    integrations: [
     marketSiz,
   e: '$8B quantum computing market'
     growthRat,
@@ -1224,17 +1224,17 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     targetAudienc,
   e: 'Financial institutions, Supply chain companies, Healthcare organizations, Government agencies, Energy companies, Real estate'
     trialDay,
-  s: 21;
+  s: 21
     setupTim,
   e: '4 hours'
     categor,
   y: 'IT & Blockchain'
     realServic,
-  e: true;
+  e: true
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'Ethereum'
       'Hyperledger'
       'Corda'
@@ -1246,7 +1246,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Google Cloud'
     ]
     useCase,
-  s: [;
+  s: [
       'Supply chain tracking'
       'Digital identity'
       'Smart contracts'
@@ -1257,7 +1257,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     ro,
   i: 'Average customer sees 350% ROI within 12 months through improved efficiency and transparency.'
     competitor,
-  s: [;
+  s: [
       'Hyperledger Fabric'
       'Ethereum Enterprise'
       'Corda'
@@ -1267,15 +1267,15 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     marketSize: '$19B blockchain market'
     growthRate: '160% annual growth',
     variant: 'quantum-blockchain',
-    contactInfo: marketPosition: unknown;
+    contactInfo: marketPosition: unknown
       'Competitive with GitLab ($19-99), Jenkins ($free), and CircleCI ($15-300). Our advantage: Better automation, comprehensive features, and competitive pricing.'
     targetAudience: 'Development teams, DevOps engineers, IT operations, Software companiestups, Enterprises'
-    trialDays: 30;
+    trialDays: 30
     setupTime: '1 hour'
     category: 'IT & DevOps'
-    realService: true;
-    technology: [;
-    integrations: [;
+    realService: true
+    technology: [
+    integrations: [
     marketSiz,
   e: '$19B blockchain market'
     growthRat,
@@ -1290,17 +1290,17 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     targetAudienc,
   e: 'Development teams, DevOps engineers, IT operations, Software companiestups, Enterprises'
     trialDay,
-  s: 30;
+  s: 30
     setupTim,
   e: '1 hour'
     categor,
   y: 'IT & DevOps'
     realServic,
-  e: true;
+  e: true
     technolog,
-  y: [;
+  y: [
     integration,
-  s: [;
+  s: [
       'GitHub'
       'GitLab'
       'Bitbucket'
@@ -1312,7 +1312,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Jira'
     ]
     useCase,
-  s: [;
+  s: [
       'Software development'
       'Deployment automation'
       'Infrastructure management'
@@ -1339,23 +1339,23 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
-    realImplementation: true;
+    realImplementation: true
     implementationDetails:,
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
     launchDate: '2024-01-20'
-    customers: 2500;
-    rating: 4.7;
-    reviews: 1250;
+    customers: 2500
+    rating: 4.7
+    reviews: 1250
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
-    realImplementation: true;
+    realImplementation: true
     implementationDetails: 'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
     launchDate: '2024-01-20'
-    customers: 2500;
-    rating: 4.7;
-    reviews: 1250;
+    customers: 2500
+    rating: 4.7
+    reviews: 1250
     marketSiz,
   e: '$12B DevOps market'
     growthRat,
@@ -1381,9 +1381,9 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launchDat,
   e: '2024-01-20'
     customer,
-  s: 2500;
+  s: 2500
     ratin,
-  g: 4.7;
+  g: 4.7
     review,
   s: 1250}];      mobil,
   e: '+1 302 464 0950'
@@ -1402,92 +1402,92 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     launchDat,
   e: '2024-01-20'
     customer,
-  s: 2500;
+  s: 2500
     ratin,
-  g: 4.7;
+  g: 4.7
     review,
   s: 1250}
-];
+]
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
 }
-;
-export const innovativeITServices: InnovativeITService[] = [;
+
+export const innovativeITServices: InnovativeITService[] = [
   {
-    id: 'zero-trust-security-platform';
-    name: 'Zero Trust Security Platform';
-    tagline: 'Next-generation cybersecurity with zero trust architecture';
-    price: '$599';
+    id: 'zero-trust-security-platform'
+    name: 'Zero Trust Security Platform'
+    tagline: 'Next-generation cybersecurity with zero trust architecture'
+    price: '$599'
     period: '/month',,
-  description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.';
+  description: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.'
     features: [
-      'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management';
+      'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management'
       'Compliance reportingReal-time monitoring'
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-red-500 to-pink-600';
-    textColor: 'text-red-400';
-    link: 'https://ziontechgroup.com/zero-trust-security-platform';
-    marketPosition: 'Competitive with Palo Alto Networks ($50)000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.';
-    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure';
-    trialDays: 30;
-    setupTime: '2 hours';
-    category: 'IT & Cybersecurity';
-    realService: true;
-    technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS'];
-    integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk'];
-    useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection'];
-    roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.';
-    competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'];
-    marketSize: '$45 B cybersecurity market';
-    growthRate: '110% annual growth';
+    ]
+    popular: true
+    icon: ''
+    color: 'from-red-500 to-pink-600'
+    textColor: 'text-red-400'
+    link: 'https://ziontechgroup.com/zero-trust-security-platform'
+    marketPosition: 'Competitive with Palo Alto Networks ($50)000+), CrowdStrike ($8.99-15.99), and Zscaler ($5-25). Our advantage: Modern architecture, better pricing, and comprehensive coverage.'
+    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Critical infrastructure'
+    trialDays: 30
+    setupTime: '2 hours'
+    category: 'IT & Cybersecurity'
+    realService: true
+    technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS']
+    integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk']
+    useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection']
+    roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.'
+    competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk']
+    marketSize: '$45 B cybersecurity market'
+    growthRate: '110% annual growth'
     variant: 'cyberpunk'}
     contactInfo: {}
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'}
-    real_implementation: true;
+    real_implementation: true
     implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.'
     launch_date: '2024 - 01 - 20'
-    customers: 2500;
-    rating: 4.7;
-    reviews: 1250;
+    customers: 2500
+    rating: 4.7
+    reviews: 1250
   realImplementatio,
-  n: boolean;
+  n: boolean
   implementationDetail,
-  s: string;
+  s: string
   launchDat,
-  e: string;
+  e: string
   customer,
-  s: number;
+  s: number
   ratin,
-  g: number;
+  g: number
   review,
   s: number}
-;
+
 export const,
-  innovativeITServices: InnovativeITService[] = [;
+  innovativeITServices: InnovativeITService[] = [
   {/* TODO: Fix JSX expression */}
   t: 'cyberpunk'}
     contactInf,
   o: {}
       mobil,
-  e: '+1 302 464 0950';
+  e: '+1 302 464 0950'
       emai,
-  l: 'kleber@ziontechgroup.com';
+  l: 'kleber@ziontechgroup.com'
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709';
+  s: '364 E Main St STE 1008 Middletown DE 19709'
       websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -1504,9 +1504,9 @@ export const,
   g: 4.7,
     review,
   s: 1250}
-];
+]
   }
-;
+
 export interface InnovativeITService,
   id: string; nam,
   e: string; taglin,

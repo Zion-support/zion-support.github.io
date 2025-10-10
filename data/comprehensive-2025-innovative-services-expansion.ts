@@ -1,62 +1,62 @@
 
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: unknown;
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  variant: ServiceVariant
+  contact_info: unknown
+    mobile: string
+    email: string
+    address: string
+    website: string
   }
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  marketAdvantage: string;
+  real_implementation: boolean
+  implementation_details: string
+  launch_date: string
+  customers: number
+  rating: number
+  reviews: number
+  benefits: string[]
+  marketAdvantage: string
   capabilities: string[],
-  market_advantage: string;
+  market_advantage: string
 }
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'};
+  website: 'https://ziontechgroup && ziontechgroup.com'}
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
-  // AI & Machine Learning Services;
+  // AI & Machine Learning Services
     id: 'ai - content - generation - platform'
     name: 'AI Content Generation Platform'
     tagline: 'Create high - quality content at scale with AI'
     price: '$299'
     link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation'
     marketPosition: 'Leading AI content generation platform with enterprise features'
-export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
-  // AI & Machine Learning Services;
+export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
+  // AI & Machine Learning Services
   {
     id: 'ai-content-generation-platform'
     name: 'AI Content Generation Platform'
@@ -65,55 +65,55 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     link: 'https://ziontechgroup && ziontechgroup.com/ai-content-generation',
     marketPosition: 'Leading AI content generation platform with enterprise features',
     targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses'
-    trialDays: 14;
+    trialDays: 14
     setupTime: '1-2 days',
     category: 'AI & Machine Learning',
-    realService: true;
-    technology: ['OpenAI GPT-4, Claude, Python, React, Node && Node.js, PostgreSQL'];
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms'];
-    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
+    realService: true
+    technology: ['OpenAI GPT-4, Claude, Python, React, Node && Node.js, PostgreSQL']
+    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms']
+    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions']
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
-    competitors: ['Jasper, Copy && Copy.ai, Writesonic, ContentBot'];
+    competitors: ['Jasper, Copy && Copy.ai, Writesonic, ContentBot']
     marketSize: '$8 B+ content marketing market'
     growthRate: '180% YoY'
     variant: 'ai-futuristic'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Cloud-native SaaS platform with enterprise SSO and custom integrations',
     launchDate: '2024-08-01',
     period: '/month',
     description: 'Advanced AI - powered content generation platform that creates high - quality, SEO - optimized content for blogs, social media, marketing materials, and more.'
-    features: [;
+    features: [
       'AI - powered content writingSEO optimization tools_multi - language support_content templates library_plagiarism detection_brand voice customization_content scheduling_performance analytics'
       'Collaboration toolsAPI integration'
-    ];
-    popular: true;
+    ]
+    popular: true
     icon: ''
     color: 'from - blue - 600 to - indigo - 600'
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / ai - content - generation',
     market_position: 'Leading AI content generation platform with enterprise features',
     target_audience: 'Marketing teams, Content creators, Agencies, E - commerce businesses'
-    trial_days: 14;
+    trial_days: 14
     setup_time: '1 - 2 days',
     category: 'AI & Machine Learning',
-    real_service: true;
-    technology: ['OpenAI GPT - 4, Claude, Python, React, Node.js, PostgreSQL'];
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms'];
-    use_cases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
+    real_service: true
+    technology: ['OpenAI GPT - 4, Claude, Python, React, Node.js, PostgreSQL']
+    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms']
+    use_cases: ['Blog writing, Social media content, Marketing copy, Product descriptions']
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
-    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
+    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot']
     market_size: '$8 B+ content marketing market'
     growth_rate: '180% YoY'
     variant: 'ai - futuristic'
-    contact_info: contact;
-    real_implementation: true;
+    contact_info: contact
+    real_implementation: true
     implementation_details: 'Cloud - native SaaS platform with enterprise SSO and custom integrations'
     launch_date: '2024 - 08 - 01'
-    customers: 342;
-    rating: 4 && 4.8;
-    reviews: 267;
-    benefits: [;
+    customers: 342
+    rating: 4 && 4.8
+    reviews: 267
+    benefits: [
       '80% faster content creation40% increase in engagementSEO optimization built - in_multi - language support_brand voice consistency'
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security',
@@ -125,54 +125,54 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     capabilities: [,
       'AI content generationSEO optimization_multi - language support_brand customization_performance analytics']}
     market_advantage: 'Advanced AI models with enterprise - grade features and integrations'}
-;
-  // Cybersecurity Services;
+
+  // Cybersecurity Services
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Never trust, always verify security architecture'
     price: '$1, 299'
     period: '/month',
     description: 'Comprehensive zero - trust security platform that implements continuous verification and least - privilege access across all users, devices, and applications.'
-    features: [;
+    features: [
       'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security'
       'Data encryption_security analytics dashboard'
-    ];
-    popular: true;
+    ]
+    popular: true
     icon: ''
     color: 'from - red - 600 to - pink - 600'
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / zero - trust - security',
     market_position: 'Advanced zero - trust security platform for modern enterprises',
     target_audience: 'Enterprise security teams, Government agencies, Financial institutions'
-    trial_days: 30;
+    trial_days: 30
     setup_time: '2 - 3 weeks',
     category: 'Cybersecurity',
-    real_service: true;
-    technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js'];
-    realService: true;
-    technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js'];
-    integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'];
-    use_cases: ['Enterprise security, Government compliance, Financial security, Healthcare security'];
+    real_service: true
+    technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js']
+    realService: true
+    technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js']
+    integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace']
+    use_cases: ['Enterprise security, Government compliance, Financial security, Healthcare security']
     roi: 'Reduce security incidents by 90% and compliance costs by 60%',
-    competitors: ['Okta, Ping Identity, ForgeRock, CyberArk'];
+    competitors: ['Okta, Ping Identity, ForgeRock, CyberArk']
     market_size: '$25 B+ identity and access management market'
     growth_rate: '140% YoY'
     variant: 'cybersecurity - futuristic'
-    contact_info: contact;
-    real_implementation: true;
+    contact_info: contact
+    real_implementation: true
     implementation_details: 'Enterprise - grade zero - trust platform with custom integrations and 24 / 7 support'
     launch_date: '2024 - 07 - 01'
-    customers: 156;
-    rating: 4 && 4.9;
-    reviews: 134;
-    benefits: [;
+    customers: 156
+    rating: 4 && 4.9
+    reviews: 134
+    benefits: [
       '90% reduction in security incidents60% lower compliance costs_continuous verification_least - privilege access_real - time threat detection'
-    ];
+    ]
     capabilities: [,
       'Identity verification_device trust scoring_application control_network segmentation_continuous monitoring'],
     market_advantage: 'Comprehensive zero - trust platform with advanced threat detection'}
-;
-  // DevOps & Infrastructure Services;
+
+  // DevOps & Infrastructure Services
     id: 'ai - powered - devops - automation'
     name: 'AI - Powered DevOps Automation',
     tagline: 'Intelligent DevOps automation and optimization',
@@ -180,54 +180,54 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     link: 'https://ziontechgroup && ziontechgroup.com/ai-devops-automation',
     marketPosition: 'Leading AI-powered DevOps automation platform',
     targetAudience: 'DevOps teams, Software companies, IT departments, Cloud-native businesses'
-    trialDays: 21;
+    trialDays: 21
     setupTime: '1-2 weeks',
     category: 'DevOps & Infrastructure',
-    realService: true;
-    technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
-    useCases: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];
+    realService: true
+    technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI']
+    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack']
+    useCases: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization']
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
     period: '/month',
     description: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.'
-    features: [;
+    features: [
       'Intelligent CI / CD pipelines_automated testing and QAPredictive deployment optimization_performance monitoring and alerting_infrastructure as code automation_security scanning integration_cost optimization recommendations_team collaboration tools'
       'Compliance automation_analytics and reporting'
-    ];
-    popular: true;
+    ]
+    popular: true
     icon: ''
     color: 'from - green - 600 to - teal - 600'
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - devops - automation',
     market_position: 'Leading AI - powered DevOps automation platform',
     target_audience: 'DevOps teams, Software companies, IT departments, Cloud - native businesses'
-    trial_days: 21;
+    trial_days: 21
     setup_time: '1 - 2 weeks',
     category: 'DevOps & Infrastructure',
-    real_service: true;
-    technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
-    use_cases: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];
+    real_service: true
+    technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI']
+    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack']
+    use_cases: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization']
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
+    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps']
     market_size: '$18 B+ DevOps tools market'
     growth_rate: '160% YoY'
     variant: 'devops - futuristic'
-    contact_info: contact;
-    real_implementation: true;
+    contact_info: contact
+    real_implementation: true
     implementation_details: 'Cloud - native DevOps platform with enterprise integrations and AI - powered optimization'
     launch_date: '2024 - 06 - 01'
-    customers: 234;
-    rating: 4 && 4.7;
-    reviews: 189;
-    benefits: [;
+    customers: 234
+    rating: 4 && 4.7
+    reviews: 189
+    benefits: [
       '70% faster deployments50% team productivity increaseAI - powered optimization_automated testing_cost optimization'
-    ];
+    ]
     capabilities: [,
       'Intelligent CI / CDAutomated testing_predictive optimization_performance monitoring_infrastructure automation'],
     market_advantage: 'First AI - powered DevOps platform with predictive optimization'}
-;
-  // Edge Computing Services;
+
+  // Edge Computing Services
     id: 'iot - edge - intelligence - platform'
     name: 'IoT Edge Intelligence Platform',
     tagline: 'Intelligent IoT edge computing and analytics',
@@ -235,177 +235,177 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     link: 'https://ziontechgroup && ziontechgroup.com/iot-edge-intelligence',
     marketPosition: 'Advanced IoT edge computing platform for industrial applications',
     targetAudience: 'Manufacturing companies, Smart cities, Industrial IoT, Energy companies'
-    trialDays: 30;
+    trialDays: 30
     setupTime: '2-4 weeks',
     category: 'Edge Computing',
-    realService: true;
-    technology: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP'];
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
-    useCases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
+    realService: true
+    technology: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP']
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols']
+    useCases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation']
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%',
     period: '/month',
     description: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.'
-    features: [;
+    features: [
       'Edge data processing_real - time analytics_machine learning at the edge_device management and monitoring_data synchronization_security and encryption_scalable edge deployment_custom edge applications'
       'Performance optimization_integration APIs'
-    ];
-    popular: false;
+    ]
+    popular: false
     icon: ''
     color: 'from - purple - 600 to - blue - 600'
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / iot - edge - intelligence',
     market_position: 'Advanced IoT edge computing platform for industrial applications',
     target_audience: 'Manufacturing companies, Smart cities, Industrial IoT, Energy companies'
-    trial_days: 30;
+    trial_days: 30
     setup_time: '2 - 4 weeks',
     category: 'Edge Computing',
-    real_service: true;
-    technology: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP'];
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
-    use_cases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
+    real_service: true
+    technology: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP']
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols']
+    use_cases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation']
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
+    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry']
     market_size: '$12 B+ edge computing market'
     growth_rate: '220% YoY'
     variant: 'edge - futuristic'
-    contact_info: contact;
-    real_implementation: true;
+    contact_info: contact
+    real_implementation: true
     implementation_details: 'Industrial - grade edge computing platform with custom hardware support'
     launch_date: '2024 - 05 - 01'
-    customers: 89;
-    rating: 4 && 4.6;
-    reviews: 67;
-    benefits: [;
+    customers: 89
+    rating: 4 && 4.6
+    reviews: 67
+    benefits: [
       '80% latency reduction45% operational efficiency_real - time processing_local intelligence_cost optimization'
-    ];
+    ]
     capabilities: [,
       'Edge data processing_real - time analyticsML at the edge_device management_security features'],
     market_advantage: 'Advanced edge computing with AI - powered intelligence'}
-;
-  // Healthcare AI Services;
+
+  // Healthcare AI Services
     id: 'ai - medical - imaging - analysis',
     name: 'AI Medical Imaging Analysis',
     tagline: 'Advanced AI - powered medical image diagnosis',
     price: '$3, 999'
     period: '/month',
     description: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.'
-    features: [;
+    features: [
       'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics'
       'HIPAA compliance_integration with PACS systems'
-    ];
-    popular: true;
+    ]
+    popular: true
     icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-medical-imaging',
     marketPosition: 'Leading AI medical imaging platform with FDA clearance',
     targetAudience: 'Hospitals, Imaging centers, Radiologists, Research institutions'
-    trialDays: 30;
+    trialDays: 30
     setupTime: '4-6 weeks',
     category: 'Healthcare AI',
-    realService: true;
-    technology: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure'];
-    integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
-    useCases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
+    realService: true
+    technology: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure']
+    integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices']
+    useCases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies']
     roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
     color: 'from - emerald - 600 to - green - 600',
     text_color: 'text - emerald - 400',
     link: 'https://ziontechgroup.com / ai - medical - imaging',
     market_position: 'Leading AI medical imaging platform with FDA clearance',
     target_audience: 'Hospitals, Imaging centers, Radiologists, Research institutions'
-    trial_days: 30;
+    trial_days: 30
     setup_time: '4 - 6 weeks',
     category: 'Healthcare AI',
-    real_service: true;
-    technology: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure'];
-    integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
-    use_cases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
+    real_service: true
+    technology: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure']
+    integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices']
+    use_cases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies']
     roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
-    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
+    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
     market_size: '$28 B+ medical imaging market'
     growth_rate: '190% YoY'
     variant: 'healthcare - futuristic'
-    contact_info: contact;
-    real_implementation: true;
+    contact_info: contact
+    real_implementation: true
     implementation_details: 'FDA - cleared medical imaging platform with enterprise integrations'
     launch_date: '2024 - 04 - 01'
-    customers: 67;
-    rating: 4 && 4.9;
-    reviews: 52;
-    benefits: [;
+    customers: 67
+    rating: 4 && 4.9
+    reviews: 52
+    benefits: [
       '25% diagnostic accuracy improvement60% reading time reduction_early detection capabilities_treatment optimization_research support'
-    ];
+    ]
     capabilities: [,
       'Multi - modality analysisAI diagnosis_early detection_treatment recommendations_clinical decision support'],
     market_advantage: 'Advanced AI medical imaging with proven clinical outcomes'}
-;
-  // Financial Technology Services;
+
+  // Financial Technology Services
     id: 'ai - financial - risk - management',
     name: 'AI Financial Risk Management',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-financial-risk',
     marketPosition: 'Leading AI financial risk management platform',
     targetAudience: 'Banks, Investment firms, Insurance companies, Fintech startups'
-    trialDays: 21;
+    trialDays: 21
     setupTime: '3-4 weeks',
     category: 'Financial Technology',
     tagline: 'Intelligent financial risk assessment and mitigation',
     price: '$2, 499'
     period: '/month',
     description: 'Advanced AI - powered financial risk management platform that provides real - time risk assessment, fraud detection, and compliance monitoring for financial institutions.'
-    features: [;
+    features: [
       'Real - time risk assessmentAI - powered fraud detection_compliance monitoring_portfolio risk analysis_market risk modeling_credit risk evaluation_regulatory reporting_stress testing scenarios'
       'Risk analytics dashboardAPI integration'
-    ];
-    popular: true;
+    ]
+    popular: true
     icon: ''
     color: 'from - yellow - 600 to - orange - 600'
     text_color: 'text - yellow - 400',
     link: 'https://ziontechgroup.com / ai - financial - risk',
     market_position: 'Leading AI financial risk management platform',
     target_audience: 'Banks, Investment firms, Insurance companies, Fintech startups'
-    trial_days: 21;
+    trial_days: 21
     setup_time: '3 - 4 weeks',
     category: 'Financial Technology',
-    real_service: true;
-    technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js'];
-    realService: true;
-    technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js'];
-    integrations: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools'];
-    use_cases: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];
+    real_service: true
+    technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js']
+    realService: true
+    technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js']
+    integrations: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools']
+    use_cases: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management']
     roi: 'Reduce risk losses by 40% and compliance costs by 50%',
-    competitors: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global'];
+    competitors: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global']
     market_size: '$32 B+ risk management market'
     growth_rate: '170% YoY'
     variant: 'financial - futuristic'
-    contact_info: contact;
-    real_implementation: true;
+    contact_info: contact
+    real_implementation: true
     implementation_details: 'Enterprise - grade risk management platform with real - time data feeds'
     launch_date: '2024 - 03 - 01'
-    customers: 134;
-    rating: 4 && 4.8;
-    reviews: 98;
-    benefits: [;
+    customers: 134
+    rating: 4 && 4.8
+    reviews: 98
+    benefits: [
       '40% risk loss reduction50% compliance cost savings_real - time monitoringAI - powered detection_regulatory compliance'
-    ];
+    ]
     capabilities: [,
       'Real - time risk assessment_fraud detection_compliance monitoring_portfolio analysis_regulatory reporting'],
     market_advantage: 'Advanced AI risk management with real - time capabilities'}
-;
-  // Education Technology Services;
+
+  // Education Technology Services
     id: 'ai - personalized - learning - platform',
     name: 'AI Personalized Learning Platform',
     tagline: 'Adaptive learning powered by artificial intelligence',
     price: '$799',
     period: '/month',
     description: 'Intelligent learning platform that personalizes education content, tracks student progress, and provides adaptive learning paths using AI and machine learning.'
-    features: [;
+    features: [
       'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard'
       'Mobile learning support_integration with LMS systems'
-    ];
-    popular: false;
+    ]
+    popular: false
     icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-personalized-learning',
     marketPosition: 'Advanced AI-powered personalized learning platform',
     targetAudience: 'Schools, Universities, Corporate training, Online education platforms'
-    trialDays: 30;
+    trialDays: 30
     setupTime: '2-3 weeks'
     category: 'Education Technology'
     color: 'from - indigo - 600 to - purple - 600'
@@ -413,242 +413,242 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     link: 'https://ziontechgroup.com / ai - personalized - learning',
     market_position: 'Advanced AI - powered personalized learning platform',
     target_audience: 'Schools, Universities, Corporate training, Online education platforms'
-    trial_days: 30;
+    trial_days: 30
     setup_time: '2 - 3 weeks',
     category: 'Education Technology',
-    real_service: true;
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'];
-    realService: true;
-    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'];
-    integrations: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams'];
-    use_cases: ['K - 12 education, Higher education, Corporate training, Skills development'];
+    real_service: true
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis']
+    realService: true
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis']
+    integrations: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams']
+    use_cases: ['K - 12 education, Higher education, Corporate training, Skills development']
     roi: 'Improve learning outcomes by 35% and reduce dropout rates by 50%',
-    competitors: ['Coursera, Udemy, Khan Academy, Duolingo'];
+    competitors: ['Coursera, Udemy, Khan Academy, Duolingo']
     market_size: '$15 B+ edtech market'
     growth_rate: '200% YoY'
     variant: 'education - futuristic'
-    contact_info: contact;
-    real_implementation: true;
+    contact_info: contact
+    real_implementation: true
     implementation_details: 'Cloud - native learning platform with AI - powered personalization'
     launch_date: '2024 - 02 - 01'
-    customers: 156;
-    rating: 4 && 4.7;
-    reviews: 123;
-    benefits: [;
+    customers: 156
+    rating: 4 && 4.7
+    reviews: 123
+    benefits: [
       '35% learning outcome improvement50% dropout rate reduction_personalized learning_adaptive content_progress tracking'
-    ];
+    ]
     capabilities: [,
       'Personalized learning paths_adaptive content delivery_progress tracking_intelligent tutoring_learning analytics'],
     market_advantage: 'Advanced AI learning platform with proven educational outcomes'}
-;
-  // Supply Chain & Logistics Services;
+
+  // Supply Chain & Logistics Services
     id: 'ai - supply - chain - optimization',
     name: 'AI Supply Chain Optimization',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-supply-chain',
     marketPosition: 'Leading AI supply chain optimization platform',
     targetAudience: 'Manufacturing companies, Retail chains, Logistics providers, E-commerce businesses'
-    trialDays: 30;
+    trialDays: 30
     setupTime: '3-4 weeks',
     category: 'Supply Chain & Logistics',
     tagline: 'Intelligent supply chain management and optimization',
     price: '$1, 899'
     period: '/month',
     description: 'AI - powered supply chain platform that optimizes inventory, predicts demand, manages logistics, and provides real - time visibility across the entire supply chain.'
-    features: [;
+    features: [
       'Demand forecasting_inventory optimization_logistics route optimization_supplier management_real - time tracking_risk assessment_cost optimization_sustainability metrics'
       'Performance analytics_integration with ERP systems'
-    ];
-    popular: true;
+    ]
+    popular: true
     icon: ''
     color: 'from - teal - 600 to - cyan - 600'
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / ai - supply - chain',
     market_position: 'Leading AI supply chain optimization platform',
     target_audience: 'Manufacturing companies, Retail chains, Logistics providers, E - commerce businesses'
-    trial_days: 30;
+    trial_days: 30
     setup_time: '3 - 4 weeks',
     category: 'Supply Chain & Logistics',
-    real_service: true;
-    technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js'];
-    realService: true;
-    technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js'];
-    integrations: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers'];
-    use_cases: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];
+    real_service: true
+    technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js']
+    realService: true
+    technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js']
+    integrations: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers']
+    use_cases: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management']
     roi: 'Reduce inventory costs by 30% and improve delivery times by 40%',
-    competitors: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];
+    competitors: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates']
     market_size: '$22 B+ supply chain management market'
     growth_rate: '160% YoY'
     variant: 'logistics - futuristic'
-    contact_info: contact;
-    real_implementation: true;
+    contact_info: contact
+    real_implementation: true
     implementation_details: 'Enterprise supply chain platform with AI optimization and real - time tracking'
     launch_date: '2024 - 01 - 01'
-    customers: 189;
-    rating: 4 && 4.8;
-    reviews: 145;
-    benefits: [;
+    customers: 189
+    rating: 4 && 4.8
+    reviews: 145
+    benefits: [
       '30% inventory cost reduction40% delivery time improvement_demand forecasting_route optimization_real - time visibility'
-    ];
+    ]
     capabilities: [,
       'Demand forecasting_inventory optimization_logistics optimization_supplier management_risk assessment'],
     market_advantage: 'Advanced AI supply chain platform with comprehensive optimization'}
-;
-  // Energy & Sustainability Services;
+
+  // Energy & Sustainability Services
     id: 'ai - energy - optimization - platform',
     name: 'AI Energy Optimization Platform',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-energy-optimization',
     marketPosition: 'Advanced AI energy optimization platform for sustainability',
     targetAudience: 'Utility companies, Energy providers, Manufacturing companies, Smart cities'
-    trialDays: 30;
+    trialDays: 30
     setupTime: '4-6 weeks',
     category: 'Energy & Sustainability',
-    realService: true;
-    technology: ['Python, TensorFlow, IoT platforms, Energy management systems, React'];
-    integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
-    useCases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
+    realService: true
+    technology: ['Python, TensorFlow, IoT platforms, Energy management systems, React']
+    integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems']
+    useCases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting']
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
     tagline: 'Intelligent energy management and sustainability',
     price: '$1, 299'
     period: '/month',
     description: 'AI - powered energy optimization platform that manages renewable energy systems, optimizes consumption, and provides sustainability insights for businesses and utilities.'
-    features: [;
+    features: [
       'Renewable energy management_energy consumption optimization_grid integration and management_sustainability reporting_carbon footprint tracking_energy trading optimization_predictive maintenance_real - time monitoring'
       'Performance analytics_integration with smart meters'
-    ];
-    popular: false;
+    ]
+    popular: false
     icon: ''
     color: 'from - green - 600 to - emerald - 600'
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - energy - optimization',
     market_position: 'Advanced AI energy optimization platform for sustainability',
     target_audience: 'Utility companies, Energy providers, Manufacturing companies, Smart cities'
-    trial_days: 30;
+    trial_days: 30
     setup_time: '4 - 6 weeks',
     category: 'Energy & Sustainability',
-    real_service: true;
-    technology: ['Python, TensorFlow, IoT platforms, Energy management systems, React'];
-    integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
-    use_cases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
+    real_service: true
+    technology: ['Python, TensorFlow, IoT platforms, Energy management systems, React']
+    integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems']
+    use_cases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting']
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
-    competitors: ['Schneider Electric, Siemens, GE Digital, ABB'];
+    competitors: ['Schneider Electric, Siemens, GE Digital, ABB']
     market_size: '$18 B+ energy management market'
     growth_rate: '180% YoY'
     variant: 'energy - futuristic'
-    contact_info: contact;
-    real_implementation: true;
+    contact_info: contact
+    real_implementation: true
     implementation_details: 'Industrial energy management platform with AI optimization and IoT integration'
     launch_date: '2023 - 12 - 01'
-    customers: 78;
-    rating: 4 && 4.6;
-    reviews: 56;
-    benefits: [;
+    customers: 78
+    rating: 4 && 4.6
+    reviews: 56
+    benefits: [
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking'
     ]
-export interface ComprehensiveInnovativeService {;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
+export interface ComprehensiveInnovativeService {
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: ServiceVariant
   contactInfo: {,
-    mobile: string;
-    email: string;
+    mobile: string
+    email: string
     address: string}
     website: string}
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string;
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  benefits: string[]
+  capabilities: string[]
+  marketAdvantage: string
 }
-;
-// const contact = {;
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
+
+// const contact = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
   i,
-  d: string;
+  d: string
   nam,
-  e: string;
+  e: string
   taglin,
-  e: string;
+  e: string
   pric,
   e: string,
   perio,
   d: string,
   descriptio,
-  n: string;
+  n: string
   feature,
-  s: string[];
+  s: string[]
   popula,
-  r: boolean;
+  r: boolean
   ico,
-  n: string;
+  n: string
   colo,
-  r: string;
+  r: string
   text_colo,
-  r: string;
+  r: string
   lin,
-  k: string;
+  k: string
   market_positio,
-  n: string;
+  n: string
   target_audienc,
-  e: string;
+  e: string
   trial_day,
-  s: number;
+  s: number
   setup_tim,
-  e: string;
+  e: string
   categor,
-  y: string;
+  y: string
   real_servic,
-  e: boolean;
+  e: boolean
   technolog,
-  y: string[];
+  y: string[]
   integration,
-  s: string[];
+  s: string[]
   use_case,
-  s: string[];
+  s: string[]
   ro,
-  i: string;
+  i: string
   competitor,
-  s: string[];
+  s: string[]
   market_siz,
-  e: string;
+  e: string
   growth_rat,
-  e: string;
+  e: string
   varian,
-  t: ServiceVariant;
+  t: ServiceVariant
   contact_inf,
-  o: unknown;
+  o: unknown
     mobil,
-  e: string;
+  e: string
     emai,
   l: string,
     addres,
@@ -656,19 +656,19 @@ export interface ComprehensiveInnovativeService {;
     websit,
   e: string}
   real_implementatio,
-  n: boolean;
+  n: boolean
   implementation_detail,
-  s: string;
+  s: string
   launch_dat,
-  e: string;
+  e: string
   customer,
-  s: number;
+  s: number
   ratin,
-  g: number;
+  g: number
   review,
-  s: number;
+  s: number
   benefit,
-  s: string[];
+  s: string[]
   marketAdvantag,
   e: string,
   capabilitie,
@@ -685,7 +685,7 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
-};
+}
 export const,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [,
   // AI & Machine Learning Services,
@@ -702,8 +702,8 @@ export const,
     marketPositio,
   n: 'Leading AI content generation platform with enterprise features',
 export const,
-  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
-  // AI & Machine Learning Services;
+  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
+  // AI & Machine Learning Services
   {/* TODO: Fix JSX expression */}
   s: 30}
     setupTim,
@@ -717,8 +717,8 @@ export const,
     market_advantag,
   e: 'Advanced AI models with enterprise - grade features and integrations'
   }
-;
-  // Cybersecurity Services;
+
+  // Cybersecurity Services
     i,
   d: 'zero - trust - security - platform'
     nam,
@@ -732,12 +732,12 @@ export const,
     descriptio,
   n: 'Comprehensive zero - trust security platform that implements continuous verification and least - privilege access across all users, devices, and applications.'
     feature,
-  s: [;
+  s: [
       'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security'
       'Data encryption_security analytics dashboard'
-    ];
+    ]
     popula,
-  r: true;
+  r: true
     ico,
   n: '',
     colo,
@@ -760,19 +760,19 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js'];
+  y: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js']
     realServic,
   e: true,
     technolog,
-  y: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js'];
+  y: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js']
     integration,
-  s: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'];
+  s: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace']
     use_case,
-  s: ['Enterprise security, Government compliance, Financial security, Healthcare security'];
+  s: ['Enterprise security, Government compliance, Financial security, Healthcare security']
     ro,
   i: 'Reduce security incidents by 90% and compliance costs by 60%',
     competitor,
-  s: ['Okta, Ping Identity, ForgeRock, CyberArk'];
+  s: ['Okta, Ping Identity, ForgeRock, CyberArk']
     market_siz,
   e: '$25B+ identity and access management market'
     growth_rat,
@@ -780,23 +780,23 @@ export const,
     varian,
   t: 'cybersecurity - futuristic'
     contact_inf,
-  o: contact;
+  o: contact
     real_implementatio,
-  n: true;
+  n: true
     implementation_detail,
   s: 'Enterprise - grade zero - trust platform with custom integrations and 24 / 7 support'
     launch_dat,
   e: '2024 - 07 - 01'
     customer,
-  s: 156;
+  s: 156
     ratin,
-  g: 4 && 4.9;
+  g: 4 && 4.9
     review,
-  s: 134;
+  s: 134
     benefit,
-  s: [;
+  s: [
       '90% reduction in security incidents60% lower compliance costs_continuous verification_least - privilege access_real - time threat detection'
-    ];
+    ]
     capabilitie,
   s: [,
       'Identity verification_device trust scoring_application control_network segmentation_continuous monitoring'
@@ -804,8 +804,8 @@ export const,
     market_advantag,
   e: 'Comprehensive zero - trust platform with advanced threat detection'
   }
-;
-  // DevOps & Infrastructure Services;
+
+  // DevOps & Infrastructure Services
     i,
   d: 'ai - powered - devops - automation'
     nam,
@@ -822,7 +822,7 @@ export const,
     targetAudienc,
   e: 'DevOps teams, Software companies, IT departments, Cloud-native businesses'
     trialDay,
-  s: 21;
+  s: 21
     setupTim,
   e: '1-2 weeks'
     categor,
@@ -830,11 +830,11 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
+  y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI']
     integration,
-  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
+  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack']
     useCase,
-  s: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];
+  s: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization']
     ro,
   i: 'Reduce deployment time by 70% and increase team productivity by 50%'
     perio,
@@ -842,12 +842,12 @@ export const,
     descriptio,
   n: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.'
     feature,
-  s: [;
+  s: [
       'Intelligent CI / CD pipelines_automated testing and QAPredictive deployment optimization_performance monitoring and alerting_infrastructure as code automation_security scanning integration_cost optimization recommendations_team collaboration tools'
       'Compliance automation_analytics and reporting'
-    ];
+    ]
     popula,
-  r: true;
+  r: true
     ico,
   n: '',
     colo,
@@ -870,15 +870,15 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
+  y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI']
     integration,
-  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
+  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack']
     use_case,
-  s: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];
+  s: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization']
     ro,
   i: 'Reduce deployment time by 70% and increase team productivity by 50%',
     competitor,
-  s: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
+  s: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps']
     market_siz,
   e: '$18B+ DevOps tools market'
     growth_rat,
@@ -886,23 +886,23 @@ export const,
     varian,
   t: 'devops - futuristic'
     contact_inf,
-  o: contact;
+  o: contact
     real_implementatio,
-  n: true;
+  n: true
     implementation_detail,
   s: 'Cloud - native DevOps platform with enterprise integrations and AI - powered optimization'
     launch_dat,
   e: '2024 - 06 - 01'
     customer,
-  s: 234;
+  s: 234
     ratin,
-  g: 4 && 4.7;
+  g: 4 && 4.7
     review,
-  s: 189;
+  s: 189
     benefit,
-  s: [;
+  s: [
       '70% faster deployments50% team productivity increaseAI - powered optimization_automated testing_cost optimization'
-    ];
+    ]
     capabilitie,
   s: [,
       'Intelligent CI / CDAutomated testing_predictive optimization_performance monitoring_infrastructure automation'
@@ -910,8 +910,8 @@ export const,
     market_advantag,
   e: 'First AI - powered DevOps platform with predictive optimization'
   }
-;
-  // Edge Computing Services;
+
+  // Edge Computing Services
     i,
   d: 'iot - edge - intelligence - platform'
     nam,
@@ -928,7 +928,7 @@ export const,
     targetAudienc,
   e: 'Manufacturing companies, Smart cities, Industrial IoT, Energy companies'
     trialDay,
-  s: 30;
+  s: 30
     setupTim,
   e: '2-4 weeks'
     categor,
@@ -936,11 +936,11 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP'];
+  y: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP']
     integration,
-  s: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
+  s: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols']
     useCase,
-  s: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
+  s: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation']
     ro,
   i: 'Reduce latency by 80% and improve operational efficiency by 45%'
     perio,
@@ -948,12 +948,12 @@ export const,
     descriptio,
   n: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.'
     feature,
-  s: [;
+  s: [
       'Edge data processing_real - time analytics_machine learning at the edge_device management and monitoring_data synchronization_security and encryption_scalable edge deployment_custom edge applications'
       'Performance optimization_integration APIs'
-    ];
+    ]
     popula,
-  r: false;
+  r: false
     ico,
   n: '',
     colo,
@@ -976,15 +976,15 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP'];
+  y: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP']
     integration,
-  s: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
+  s: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols']
     use_case,
-  s: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
+  s: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation']
     ro,
   i: 'Reduce latency by 80% and improve operational efficiency by 45%',
     competitor,
-  s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
+  s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry']
     market_siz,
   e: '$12B+ edge computing market'
     growth_rat,
@@ -992,23 +992,23 @@ export const,
     varian,
   t: 'edge - futuristic'
     contact_inf,
-  o: contact;
+  o: contact
     real_implementatio,
-  n: true;
+  n: true
     implementation_detail,
   s: 'Industrial - grade edge computing platform with custom hardware support'
     launch_dat,
   e: '2024 - 05 - 01'
     customer,
-  s: 89;
+  s: 89
     ratin,
-  g: 4 && 4.6;
+  g: 4 && 4.6
     review,
-  s: 67;
+  s: 67
     benefit,
-  s: [;
+  s: [
       '80% latency reduction45% operational efficiency_real - time processing_local intelligence_cost optimization'
-    ];
+    ]
     capabilitie,
   s: [,
       'Edge data processing_real - time analyticsML at the edge_device management_security features'
@@ -1016,8 +1016,8 @@ export const,
     market_advantag,
   e: 'Advanced edge computing with AI - powered intelligence'
   }
-;
-  // Healthcare AI Services;
+
+  // Healthcare AI Services
     i,
   d: 'ai - medical - imaging - analysis'
     nam,
@@ -1031,12 +1031,12 @@ export const,
     descriptio,
   n: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.'
     feature,
-  s: [;
+  s: [
       'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics'
       'HIPAA compliance_integration with PACS systems'
-    ];
+    ]
     popula,
-  r: true;
+  r: true
     ico,
   n: '',
     lin,
@@ -1047,7 +1047,7 @@ export const,
     targetAudienc,
   e: 'Hospitals, Imaging centers, Radiologists, Research institutions'
     trialDay,
-  s: 30;
+  s: 30
     setupTim,
   e: '4-6 weeks'
     categor,
@@ -1055,11 +1055,11 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure'];
+  y: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure']
     integration,
-  s: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
+  s: ['PACS systems, EHR platforms, DICOM standards, Medical devices']
     useCase,
-  s: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
+  s: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies']
     ro,
   i: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%'
     colo,
@@ -1082,15 +1082,15 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure'];
+  y: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure']
     integration,
-  s: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
+  s: ['PACS systems, EHR platforms, DICOM standards, Medical devices']
     use_case,
-  s: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
+  s: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies']
     ro,
   i: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
     competitor,
-  s: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
+  s: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
     market_siz,
   e: '$28B+ medical imaging market'
     growth_rat,
@@ -1098,23 +1098,23 @@ export const,
     varian,
   t: 'healthcare - futuristic'
     contact_inf,
-  o: contact;
+  o: contact
     real_implementatio,
-  n: true;
+  n: true
     implementation_detail,
   s: 'FDA - cleared medical imaging platform with enterprise integrations'
     launch_dat,
   e: '2024 - 04 - 01'
     customer,
-  s: 67;
+  s: 67
     ratin,
-  g: 4 && 4.9;
+  g: 4 && 4.9
     review,
-  s: 52;
+  s: 52
     benefit,
-  s: [;
+  s: [
       '25% diagnostic accuracy improvement60% reading time reduction_early detection capabilities_treatment optimization_research support'
-    ];
+    ]
     capabilitie,
   s: [,
       'Multi - modality analysisAI diagnosis_early detection_treatment recommendations_clinical decision support'
@@ -1122,8 +1122,8 @@ export const,
     market_advantag,
   e: 'Advanced AI medical imaging with proven clinical outcomes'
   }
-;
-  // Financial Technology Services;
+
+  // Financial Technology Services
     i,
   d: 'ai - financial - risk - management'
     nam,
@@ -1150,12 +1150,12 @@ export const,
     descriptio,
   n: 'Advanced AI - powered financial risk management platform that provides real - time risk assessment, fraud detection, and compliance monitoring for financial institutions.'
     feature,
-  s: [;
+  s: [
       'Real - time risk assessmentAI - powered fraud detection_compliance monitoring_portfolio risk analysis_market risk modeling_credit risk evaluation_regulatory reporting_stress testing scenarios'
       'Risk analytics dashboardAPI integration'
-    ];
+    ]
     popula,
-  r: true;
+  r: true
     ico,
   n: '',
     colo,
@@ -1178,19 +1178,19 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js'];
+  y: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js']
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js'];
+  y: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js']
     integration,
-  s: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools'];
+  s: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools']
     use_case,
-  s: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];
+  s: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management']
     ro,
   i: 'Reduce risk losses by 40% and compliance costs by 50%',
     competitor,
-  s: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global'];
+  s: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global']
     market_siz,
   e: '$32B+ risk management market'
     growth_rat,
@@ -1198,23 +1198,23 @@ export const,
     varian,
   t: 'financial - futuristic'
     contact_inf,
-  o: contact;
+  o: contact
     real_implementatio,
-  n: true;
+  n: true
     implementation_detail,
   s: 'Enterprise - grade risk management platform with real - time data feeds'
     launch_dat,
   e: '2024 - 03 - 01'
     customer,
-  s: 134;
+  s: 134
     ratin,
-  g: 4 && 4.8;
+  g: 4 && 4.8
     review,
-  s: 98;
+  s: 98
     benefit,
-  s: [;
+  s: [
       '40% risk loss reduction50% compliance cost savings_real - time monitoringAI - powered detection_regulatory compliance'
-    ];
+    ]
     capabilitie,
   s: [,
       'Real - time risk assessment_fraud detection_compliance monitoring_portfolio analysis_regulatory reporting'
@@ -1222,8 +1222,8 @@ export const,
     market_advantag,
   e: 'Advanced AI risk management with real - time capabilities'
   }
-;
-  // Education Technology Services;
+
+  // Education Technology Services
     i,
   d: 'ai - personalized - learning - platform'
     nam,
@@ -1237,12 +1237,12 @@ export const,
     descriptio,
   n: 'Intelligent learning platform that personalizes education content, tracks student progress, and provides adaptive learning paths using AI and machine learning.'
     feature,
-  s: [;
+  s: [
       'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard'
       'Mobile learning support_integration with LMS systems'
-    ];
+    ]
     popula,
-  r: false;
+  r: false
     ico,
   n: '',
     lin,
@@ -1278,19 +1278,19 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'];
+  y: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis']
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'];
+  y: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis']
     integration,
-  s: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams'];
+  s: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams']
     use_case,
-  s: ['K - 12 education, Higher education, Corporate training, Skills development'];
+  s: ['K - 12 education, Higher education, Corporate training, Skills development']
     ro,
   i: 'Improve learning outcomes by 35% and reduce dropout rates by 50%',
     competitor,
-  s: ['Coursera, Udemy, Khan Academy, Duolingo'];
+  s: ['Coursera, Udemy, Khan Academy, Duolingo']
     market_siz,
   e: '$15B+ edtech market'
     growth_rat,
@@ -1298,23 +1298,23 @@ export const,
     varian,
   t: 'education - futuristic'
     contact_inf,
-  o: contact;
+  o: contact
     real_implementatio,
-  n: true;
+  n: true
     implementation_detail,
   s: 'Cloud - native learning platform with AI - powered personalization'
     launch_dat,
   e: '2024 - 02 - 01'
     customer,
-  s: 156;
+  s: 156
     ratin,
-  g: 4 && 4.7;
+  g: 4 && 4.7
     review,
-  s: 123;
+  s: 123
     benefit,
-  s: [;
+  s: [
       '35% learning outcome improvement50% dropout rate reduction_personalized learning_adaptive content_progress tracking'
-    ];
+    ]
     capabilitie,
   s: [,
       'Personalized learning paths_adaptive content delivery_progress tracking_intelligent tutoring_learning analytics'
@@ -1322,8 +1322,8 @@ export const,
     market_advantag,
   e: 'Advanced AI learning platform with proven educational outcomes'
   }
-;
-  // Supply Chain & Logistics Services;
+
+  // Supply Chain & Logistics Services
     i,
   d: 'ai - supply - chain - optimization'
     nam,
@@ -1350,12 +1350,12 @@ export const,
     descriptio,
   n: 'AI - powered supply chain platform that optimizes inventory, predicts demand, manages logistics, and provides real - time visibility across the entire supply chain.'
     feature,
-  s: [;
+  s: [
       'Demand forecasting_inventory optimization_logistics route optimization_supplier management_real - time tracking_risk assessment_cost optimization_sustainability metrics'
       'Performance analytics_integration with ERP systems'
-    ];
+    ]
     popula,
-  r: true;
+  r: true
     ico,
   n: '',
     colo,
@@ -1378,19 +1378,19 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js'];
+  y: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js']
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js'];
+  y: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js']
     integration,
-  s: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers'];
+  s: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers']
     use_case,
-  s: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];
+  s: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management']
     ro,
   i: 'Reduce inventory costs by 30% and improve delivery times by 40%',
     competitor,
-  s: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];
+  s: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates']
     market_siz,
   e: '$22B+ supply chain management market'
     growth_rat,
@@ -1398,23 +1398,23 @@ export const,
     varian,
   t: 'logistics - futuristic'
     contact_inf,
-  o: contact;
+  o: contact
     real_implementatio,
-  n: true;
+  n: true
     implementation_detail,
   s: 'Enterprise supply chain platform with AI optimization and real - time tracking'
     launch_dat,
   e: '2024 - 01 - 01'
     customer,
-  s: 189;
+  s: 189
     ratin,
-  g: 4 && 4.8;
+  g: 4 && 4.8
     review,
-  s: 145;
+  s: 145
     benefit,
-  s: [;
+  s: [
       '30% inventory cost reduction40% delivery time improvement_demand forecasting_route optimization_real - time visibility'
-    ];
+    ]
     capabilitie,
   s: [,
       'Demand forecasting_inventory optimization_logistics optimization_supplier management_risk assessment'
@@ -1422,8 +1422,8 @@ export const,
     market_advantag,
   e: 'Advanced AI supply chain platform with comprehensive optimization'
   }
-;
-  // Energy & Sustainability Services;
+
+  // Energy & Sustainability Services
     i,
   d: 'ai - energy - optimization - platform'
     nam,
@@ -1436,7 +1436,7 @@ export const,
     targetAudienc,
   e: 'Utility companies, Energy providers, Manufacturing companies, Smart cities'
     trialDay,
-  s: 30;
+  s: 30
     setupTim,
   e: '4-6 weeks'
     categor,
@@ -1444,11 +1444,11 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, IoT platforms, Energy management systems, React'];
+  y: ['Python, TensorFlow, IoT platforms, Energy management systems, React']
     integration,
-  s: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
+  s: ['Smart meters, Solar inverters, Battery systems, Grid management systems']
     useCase,
-  s: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
+  s: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting']
     ro,
   i: 'Reduce energy costs by 25% and improve sustainability metrics by 40%'
     taglin,
@@ -1460,12 +1460,12 @@ export const,
     descriptio,
   n: 'AI - powered energy optimization platform that manages renewable energy systems, optimizes consumption, and provides sustainability insights for businesses and utilities.'
     feature,
-  s: [;
+  s: [
       'Renewable energy management_energy consumption optimization_grid integration and management_sustainability reporting_carbon footprint tracking_energy trading optimization_predictive maintenance_real - time monitoring'
       'Performance analytics_integration with smart meters'
-    ];
+    ]
     popula,
-  r: false;
+  r: false
     ico,
   n: '',
     colo,
@@ -1488,15 +1488,15 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, IoT platforms, Energy management systems, React'];
+  y: ['Python, TensorFlow, IoT platforms, Energy management systems, React']
     integration,
-  s: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
+  s: ['Smart meters, Solar inverters, Battery systems, Grid management systems']
     use_case,
-  s: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
+  s: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting']
     ro,
   i: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
     competitor,
-  s: ['Schneider Electric, Siemens, GE Digital, ABB'];
+  s: ['Schneider Electric, Siemens, GE Digital, ABB']
     market_siz,
   e: '$18B+ energy management market'
     growth_rat,
@@ -1504,93 +1504,93 @@ export const,
     varian,
   t: 'energy - futuristic'
     contact_inf,
-  o: contact;
+  o: contact
     real_implementatio,
-  n: true;
+  n: true
     implementation_detail,
   s: 'Industrial energy management platform with AI optimization and IoT integration'
     launch_dat,
   e: '2023 - 12 - 01'
     customer,
-  s: 78;
+  s: 78
     ratin,
-  g: 4 && 4.6;
+  g: 4 && 4.6
     review,
-  s: 56;
+  s: 56
     benefit,
-  s: [;
+  s: [
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking'
     ],
 export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
+  }
   realImplementatio,
-  n: boolean;
+  n: boolean
   implementationDetail,
-  s: string;
+  s: string
   launchDat,
-  e: string;
+  e: string
   customer,
-  s: number;
+  s: number
   ratin,
-  g: number;
+  g: number
   review,
-  s: number;
+  s: number
   benefit,
-  s: string[];
+  s: string[]
   capabilitie,
-  s: string[];
+  s: string[]
   marketAdvantag,
   e: string}
-;
+
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
   s://ziontechgroup.com'
-};
+}
 export const,
-  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [;
-  // AI & Machine Learning Services;
+  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
+  // AI & Machine Learning Services
   {
-    id: 'ai-content-generation-platform';
-    name: 'AI Content Generation Platform';
-    tagline: 'Create high-quality content at scale with AI';
-    price: '$299';
-    period: '/month';
-    description: 'Advanced AI-powered content generation platform that creates high-quality, SEO-optimized content for blogs, social media, marketing materials, and more.';
+    id: 'ai-content-generation-platform'
+    name: 'AI Content Generation Platform'
+    tagline: 'Create high-quality content at scale with AI'
+    price: '$299'
+    period: '/month'
+    description: 'Advanced AI-powered content generation platform that creates high-quality, SEO-optimized content for blogs, social media, marketing materials, and more.'
     features: [
-      'AI-powered content writingSEO optimization toolsMulti-language supportContent templates libraryPlagiarism detectionBrand voice customizationContent schedulingPerformance analytics';
+      'AI-powered content writingSEO optimization toolsMulti-language supportContent templates libraryPlagiarism detectionBrand voice customizationContent schedulingPerformance analytics'
       'Collaboration toolsAPI integration'
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-blue-600 to-indigo-600';
-    textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/ai-content-generation';
-    marketPosition: 'Leading AI content generation platform with enterprise features';
-    targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses';
-    trialDays: 14;
-    setupTime: '1-2 days';
-    category: 'AI & Machine Learning';
-    realService: true;
-    technology: ['OpenAI GPT-4, Claude, Python, React, Node.js, PostgreSQL'];
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms'];
-    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
-    roi: 'Reduce content creation time by 80% and increase engagement by 40%';
-    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
-    marketSize: '$8 B+ content marketing market';
-    growthRate: '180% YoY';
-    variant: 'ai-futuristic';
-    contactInfo: contact;
-    realImplementation: true;
-    implementationDetails: 'Cloud-native SaaS platform with enterprise SSO and custom integrations';
-    launchDate: '2024-08-01';
-    customers: 342;
-    rating: 4.8;
-    reviews: 267;
+    ]
+    popular: true
+    icon: ''
+    color: 'from-blue-600 to-indigo-600'
+    textColor: 'text-blue-400'
+    link: 'https://ziontechgroup.com/ai-content-generation'
+    marketPosition: 'Leading AI content generation platform with enterprise features'
+    targetAudience: 'Marketing teams, Content creators, Agencies, E-commerce businesses'
+    trialDays: 14
+    setupTime: '1-2 days'
+    category: 'AI & Machine Learning'
+    realService: true
+    technology: ['OpenAI GPT-4, Claude, Python, React, Node.js, PostgreSQL']
+    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms']
+    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions']
+    roi: 'Reduce content creation time by 80% and increase engagement by 40%'
+    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot']
+    marketSize: '$8 B+ content marketing market'
+    growthRate: '180% YoY'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Cloud-native SaaS platform with enterprise SSO and custom integrations'
+    launchDate: '2024-08-01'
+    customers: 342
+    rating: 4.8
+    reviews: 267
     benefits: [,
       '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency']}
     capabilities: [,
@@ -1605,44 +1605,44 @@ export const,
     market_advantag,
   e: 'Advanced AI energy platform with comprehensive sustainability features'
   }
-];
-export default comprehensiveInnovativeServices;
-;
+]
+export default comprehensiveInnovativeServices
+
 export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string;
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+  benefits: string[]
+  capabilities: string[]
+  marketAdvantage: string
   realImplementatio,
-  n: boolean;
+  n: boolean
   implementationDetail,
-  s: string;
+  s: string
   launchDat,
-  e: string;
+  e: string
   customer,
-  s: number;
+  s: number
   ratin,
-  g: number;
+  g: number
   review,
-  s: number;
+  s: number
   benefit,
-  s: string[];
+  s: string[]
   capabilitie,
-  s: string[];
+  s: string[]
   marketAdvantag,
   e: string}
-;
-export default comprehensiveInnovativeServices;
-;
+
+export default comprehensiveInnovativeServices
+
 i,
   d: string; nam,
   e: string; taglin,

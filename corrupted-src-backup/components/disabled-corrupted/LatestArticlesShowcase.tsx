@@ -1,5 +1,5 @@
-import React from 'react';
-impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
+import React from 'react'
+impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5'
 const LatestArticlesShowcas, e: React.FC = () => { ,
   const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return(<section, classNam, e = 'py-20, b, g-whi, t, e'>
       <div, className='container, m, x-auto, p, x-6'>
@@ -10,11 +10,9 @@ const LatestArticlesShowcas, e: React.FC = () => {
       <div, className='container, m, x-auto, p, x-6'></section>
         <div, className='te, x, t-center, m, b-12'></div>
           <h2, className='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-            Latest, Article, s & Resear, c, h;
-          </h2>
+            Latest, Article, s & Resear, c, h</h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o'>
-            Explore, cuttin, g-edge, insights, on A, I, automati, o, n, and, emerging, technologies;
-          </p>
+            Explore, cuttin, g-edge, insights, on A, I, automati, o, n, and, emerging, technologies</p>
         </div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
           {latestArticl, e, s.m, a, p(artic, l, e = > (</div>
@@ -50,8 +48,7 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                     <Clock, className='w-4 h-4, m, r-1' />
                     {artic, l, e.readTime}
                   </div>
-                  <div, className='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
-                    Read, Mor, e;
+                  <div>Read, Mor, e</div>
                     Read, Mor, e</div>
                     <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                   </div>
@@ -66,7 +63,7 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                     {artic, l, e.readTime}
                   </div>
                   <div, className='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'></div>
-                    Read, Mor, e;
+                    Read, Mor, e
                     <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
                   </div>
                 </div>
@@ -86,15 +83,15 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
           <Link, t, o='/bl, o, g'
             className='inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg'
           >
-            View, All, Articles;
+            View, All, Articles
             <Link, className='w-6 h-6' />
           ></Link>
-            View, All, Articles;
+            View, All, Articles
             <Link, className='w-6 h-6' /></Link>
           </Li, n, k>
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
-export default LatestArticlesShowcase;
+  )
+}
+export default LatestArticlesShowcase

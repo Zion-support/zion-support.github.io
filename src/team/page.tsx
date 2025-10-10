@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const TeamPage: React.FC = () => {
   const teamMembers = [
     {
@@ -59,13 +59,13 @@ const TeamPage: React.FC = () => {
       email: 'james@ziontechgroup.com',
       expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']
     }
-  ];
+  ]
   const stats = [
     { icon: Users, label: 'Team Members', value: '50+' },
     { icon: Award, label: 'Awards Won', value: '25+' },
     { icon: Brain, label: 'Years Experience', value: '15+' },
     { icon: Shield, label: 'Client Satisfaction', value: '99%' }
-  ];
+  ]
   const values = [
     {
       title: 'Innovation',
@@ -87,7 +87,7 @@ const TeamPage: React.FC = () => {
       description: 'We prioritize the security and privacy of our clients\' data and systems.',
       icon: Shield
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -122,12 +122,8 @@ const TeamPage: React.FC = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Leadership Team;
-  </
-            <p className="text-xl text-gray-600">
-              Experienced professionals leading the future of AI and IT solutions;
-  </
+            <h2>Our Leadership Team</h2>
+            <p>Experienced professionals leading the future of AI and IT solutions</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
@@ -175,12 +171,8 @@ const TeamPage: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Values;
-  </
-            <p className="text-xl text-gray-600">
-              The principles that guide our team and our work;
-  </
+            <h2>Our Values</h2>
+            <p>The principles that guide our team and our work</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -198,31 +190,21 @@ const TeamPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Join Our Team;
-  </
+          <h2>Join Our Team</h2>
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
             We're always looking for talented individuals who share our passion for innovation and excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/careers"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              View Open Positions;
-  </
-            <Link
-              to="/contact"
-              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Get in Touch;
-  </
+            <Link>View Open Positions</Link>
+            <Link>Get in Touch</Link>
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
-};
-export default TeamPage;
+  )
+}
+export default TeamPage
   </Link>
   </Link>
   </h2>

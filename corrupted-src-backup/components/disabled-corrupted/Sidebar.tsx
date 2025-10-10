@@ -1,5 +1,5 @@
-import React from 'react';
-impo, r, t { Li, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import React from 'react'
+impo, r, t { Li, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
 const Sideba, r: React.FC = () => { ,
   const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [
     {
@@ -76,12 +76,12 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
             className='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'
           >
           ></Link>
-            Gette, d;
+            Gette, d
           </Li, n, k>
         </div>
       </div>
     </a, s, i, d, e>
-  );
-};
-export default Sidebar;
+  )
+}
+export default Sidebar
 `

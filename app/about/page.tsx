@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import {
   Users,
   Award,
@@ -23,8 +23,7 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-<<<<<<< HEAD
+} from 'lucide-react'
 const AboutPage: React.FC = () => {
   return (
     <React.Fragment>
@@ -34,80 +33,6 @@ const AboutPage: React.FC = () => {
         <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AboutPage: React.FC = () => {
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '99.9%', label: 'Client Satisfaction' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '50+', label: 'Expert Team Members' }
-  ];
-
-  const values = [
-    {
-      icon: Brain,
-      title: 'Innovation',
-      description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to deliver cutting-edge results.'
-    },
-    {
-      icon: Shield,
-      title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures and best practices.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners, ensuring solutions that truly meet their needs.'
-    },
-    {
-      icon: Target,
-      title: 'Excellence',
-      description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
-    }
-  ];
-
-  const team = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CEO & Founder',
-      image: '/team/sarah.jpg',
-      bio: '15+ years in AI and technology leadership'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CTO',
-      image: '/team/michael.jpg',
-      bio: 'Expert in machine learning and cloud architecture'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of AI Solutions',
-      image: '/team/emily.jpg',
-      bio: 'PhD in Computer Science, AI research specialist'
-    },
-    {
-      name: 'David Kim',
-      role: 'Lead Developer',
-      image: '/team/david.jpg',
-      bio: 'Full-stack developer with 10+ years experience'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Our mission, values, and expert team." />
-        <meta name="keywords" content="about, company, team, AI solutions, IT consulting, mission, values" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -124,23 +49,11 @@ const AboutPage: React.FC = () => {
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                About Zion Tech Group;
-  </
+              <h1>About Zion Tech Group</h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
               </p>
-=======
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </div>
           </div>
         </section>
@@ -163,7 +76,6 @@ const AboutPage: React.FC = () => {
                   you for future challenges.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-<<<<<<< HEAD
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
@@ -195,21 +107,6 @@ const AboutPage: React.FC = () => {
                       <div className="text-2xl font-bold">AI Dashboard</div>
                       <div className="text-sm text-gray-300">Real-time Analytics</div>
                     </div>
-=======
-                  <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                    Our Services
-                    <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                  </button>
-                  <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
-                    Contact Us
-                  </button>
-                </div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Target className="w-12 h-12 text-white" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">Our Vision</h3>
                   <p className="text-gray-300">
@@ -220,12 +117,7 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
 </section>
-=======
-        </section>
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         {/* Values Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -281,51 +173,20 @@ const AboutPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Ready to Work With Us?</h2>
             <p className="text-xl text-gray-100 mb-8">
               Let's discuss how we can help transform your business with AI and technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started;
-  </
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
-                Contact Us;
-  </
+              <buttonGet Started</button>
+              <buttonContact Us</button>
             </div>
           </div>
         </section>
       </div>
     </React.Fragment>
-);
-=======
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Work With Us?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our AI and IT solutions can help your business grow.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Started
-                </button>
-                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </div>
-  );
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-};
-export default AboutPage;
-  </button>
+)
+}
+export default AboutPage</button>
   </button>
   </h1>

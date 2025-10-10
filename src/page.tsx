@@ -1,5 +1,5 @@
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+'use client'
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
 import { 
   Phone, 
   Mail, 
@@ -104,30 +104,30 @@ import {
   Analytics, 
   Reporting, 
   Dashboard 
-} from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
+} from 'lucide-react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import Analytics from './components/Analytics'
+import SecurityEnhancer from './components/SecurityEnhancer'
+import { initializePerformanceOptimizations } from './utils/performanceOptimizations'
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
 // Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+      import('./components/ContentPromotionBanner')
+      import('./components/ContentCarousel')
+    }, 100)
   }
-};
+}
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -135,28 +135,28 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+))
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsLoaded(true);
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    preloadComponents();
+    setIsLoaded(true)
+    const timer = setTimeout(() => setIsVisible(true), 100)
+    preloadComponents()
     // Initialize performance optimizations
-    initializePerformanceOptimizations();
-    return () => clearTimeout(timer);
-  }, []);
+    initializePerformanceOptimizations()
+    return () => clearTimeout(timer)
+  }, [])
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      })
     }
-  }, []);
+  }, [])
   // Enhanced Micro SAAS Services with real functionality and pricing
   const microSAASServices = [
     {
@@ -367,7 +367,7 @@ const HomePage: React.FC = () => {
       marketPrice: '$499',
       savings: '40%'
     }
-  ];
+  ]
   // Enhanced AI Services with real capabilities and market pricing
   const aiServices = [
     {
@@ -466,7 +466,7 @@ const HomePage: React.FC = () => {
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
     }
-  ];
+  ]
   // Enhanced IT Services with comprehensive capabilities
   const itServices = [
     {
@@ -565,7 +565,7 @@ const HomePage: React.FC = () => {
       savings: '43%',
       contact: '+1 302 464 0950'
     }
-  ];
+  ]
   // Specialized Services
   const specializedServices = [
     {
@@ -640,7 +640,7 @@ const HomePage: React.FC = () => {
       savings: '46%',
       contact: '+1 302 464 0950'
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Performance Optimizer */}
@@ -670,24 +670,16 @@ const HomePage: React.FC = () => {
         }}></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-              ZION TECH GROUP;
-  </
-            <p className="text-2xl md:text-3xl text-white mb-8 font-light">
-              AI-Powered Enterprise Solutions & Digital Transformation;
-  </
+            <h1>ZION TECH GROUP</h1>
+            <p>AI-Powered Enterprise Solutions & Digital Transformation</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
                 <Phone className="w-6 h-6 mr-2" />
-                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
-                  +1 302 464 0950;
-  </
+                <a>+1 302 464 0950</a>
               </div>
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
-                  kleber@ziontechgroup.com;
-  </
+                <a>kleber@ziontechgroup.com</a>
               </div>
               <div className="flex items-center text-pink-400 text-lg">
                 <MapPin className="w-6 h-6 mr-2" />
@@ -718,9 +710,7 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Micro SAAS Services;
-  </
+            <h2>Micro SAAS Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Powerful, affordable AI-powered tools designed for modern businesses. 
               Start with our micro SAAS solutions and scale as you grow.
@@ -731,9 +721,7 @@ const HomePage: React.FC = () => {
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                      🔥 POPULAR;
-  </
+                    <div>🔥 POPULAR</div>
                   </div>
                 )}
                 <div className="text-center mb-4">
@@ -797,9 +785,7 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI Services & Solutions;
-  </
+            <h2>AI Services & Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Cutting-edge artificial intelligence solutions tailored for enterprise needs. 
               Transform your business with our advanced AI capabilities.
@@ -869,9 +855,7 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Services & Solutions;
-  </
+            <h2>IT Services & Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT services to support your digital transformation journey. 
               From infrastructure to cybersecurity, we've got you covered.
@@ -941,9 +925,7 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-              Specialized Solutions;
-  </
+            <h2>Specialized Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced specialized solutions for complex business challenges. 
               Cutting-edge technology meets practical business needs.
@@ -1025,26 +1007,20 @@ const HomePage: React.FC = () => {
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950;
-  </
+              <a>+1 302 464 0950</a>
             </div>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com;
-  </
+              <a>kleber@ziontechgroup.com</a>
             </div>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709;
-  </
+                364 E Main St STE 1008<br>Middletown DE 19709</br>
             </div>
           </div>
         </div>
@@ -1052,10 +1028,9 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-  );
-};
-export default HomePage;
-  </p>
+  )
+}
+export default HomePage</p>
   </a>
   </a>
   </h2>

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const CareersPage: React.FC = () => {
   const openPositions = [
     {
@@ -107,7 +107,7 @@ const CareersPage: React.FC = () => {
       ],
       benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
     }
-  ];
+  ]
   const benefits = [
     {
       icon: Heart,
@@ -129,7 +129,7 @@ const CareersPage: React.FC = () => {
       title: 'Recognition',
       description: 'Performance bonuses, stock options, and recognition programs'
     }
-  ];
+  ]
   const culture = [
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
@@ -137,7 +137,7 @@ const CareersPage: React.FC = () => {
     'Mentorship programs and career development support',
     'Regular team events and company retreats',
     'Open communication and transparent leadership'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -151,16 +151,8 @@ const CareersPage: React.FC = () => {
             Be part of the future of AI and IT solutions. We're looking for passionate individuals who want to make a real impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="#open-positions"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Open Positions;
-  </
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Us;
-  </
+            <Link>View Open Positions</Link>
+            <Link>Contact Us</Link>
           </div>
         </div>
       </section>
@@ -171,9 +163,7 @@ const CareersPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Work With Us?
             </h2>
-            <p className="text-xl text-gray-600">
-              We offer more than just a job - we offer a career and a community;
-  </
+            <p>We offer more than just a job - we offer a career and a community</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -193,9 +183,7 @@ const CareersPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Culture;
-  </
+              <h2>Our Culture</h2>
               <p className="text-lg text-gray-600 mb-8">
                 At Zion Tech Group, we believe that great technology comes from great people. 
                 We foster an environment where innovation thrives, collaboration is encouraged, 
@@ -238,12 +226,8 @@ const CareersPage: React.FC = () => {
       <section id="open-positions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Open Positions;
-  </
-            <p className="text-xl text-gray-600">
-              Find your next career opportunity with us;
-  </
+            <h2>Open Positions</h2>
+            <p>Find your next career opportunity with us</p>
           </div>
           <div className="space-y-8">
             {openPositions.map((position) => (
@@ -318,24 +302,16 @@ const CareersPage: React.FC = () => {
             We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Send Us Your Resume;
-  </
-            <Link
-              to="/team"
-              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Meet Our Team;
-  </
+            <Link>Send Us Your Resume</Link>
+            <Link>Meet Our Team</Link>
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
-};
-export default CareersPage;
+  )
+}
+export default CareersPage
   </Link>
   </Link>
   </p>

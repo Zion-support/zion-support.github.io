@@ -9,12 +9,8 @@ export default function HeroSection() {
         <div className="space-y-8">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            <span className="block holographic-text cyber-text-3d">
-              Zion Tech Group;
-  </
-            <span className="block text-white mt-4">
-              Advanced AI & IT Solutions;
-  </
+            <span>Zion Tech Group</span>
+            <span>Advanced AI & IT Solutions</span>
           </h1>
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -53,16 +49,8 @@ export default function HeroSection() {
           </div>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
-            <a
-              href="#services"
-              className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-              Explore Services;
-  </
-            <a
-              href="#contact"
-              className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
-              Get Started;
-  </
+            <a>Explore Services</a>
+            <a>Get Started</a>
           </div>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">
@@ -92,8 +80,8 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 export default HeroSection;"`
   </a>
   </a>

@@ -1,9 +1,9 @@
-import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
-'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react'
+'use client'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
@@ -44,7 +44,7 @@ const PartnersPage: React.FC = () => {
         { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
     }
-  ];
+  ]
   const benefits = [
       icon: Globe,
       title: 'Global Reach',
@@ -91,10 +91,10 @@ namename: 'Channel Partners',
         'Competitive margins'
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
-  const partnerTypes = [];
+  const partnerTypes = []
   return (
     {// TODO: Add content;}
-};
+}
   titl,
   e: 'Technology Partners',
       descriptio,
@@ -108,7 +108,7 @@ namename: 'Channel Partners',
       partner,
   s: [
   // TOD,
-  O: Add items];
+  O: Add items]
         {/* TODO: Fix JSX expression */}
   o: '' },
         {/* TODO: Fix JSX expression */}
@@ -144,7 +144,7 @@ namename: 'Channel Partners',
         {/* TODO: Fix JSX expression */}
   o: '👥' },
         {/* TODO: Fix JSX expression */}
-  o: '🎧' };
+  o: '🎧' }
   titl,
   e: 'Integration Partners',
       descriptio,
@@ -168,7 +168,7 @@ namename: 'Channel Partners',
         {/* TODO: Fix JSX expression */}
   o: '📋' }
     }
-  ];
+  ]
   const benefits = [
 icon: Globe,
       title: 'Global Reach',
@@ -181,9 +181,7 @@ const PagePage: React.FC = () => {
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Our Partners;
-  </
+            <h1>Our Partners</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We work with industry-leading technology partners to deliver comprehensive solutions 
               that drive innovation and business success.
@@ -244,9 +242,7 @@ const PagePage: React.FC = () => {
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                <Handshake className="w-5 h-5 mr-2" />
-                Become a Partner;
-  </
+                <Handshake>Become a Partner</Handshake>
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
@@ -261,10 +257,9 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Our Partners;
-          </h1>"
+// Our Partners</h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-// We work with industry-leading technology partners to deliver comprehensive solutions;
+// We work with industry-leading technology partners to deliver comprehensive solutions
 //               that drive innovation and business success.
           </p>
           </div>
@@ -331,19 +326,19 @@ const PagePage: React.FC = () => {
 // >
           "
           <Handshake className="w-5 h-5 mr-2" /></Handshake>
-// Become a Partner;
+// Become a Partner
           </a>
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us
       <Footer />
     </div>
-  );
-};
-export default PartnersPage;
+  )
+}
+export default PartnersPage
   </a>
   </div>
   </div>

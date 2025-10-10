@@ -1,14 +1,14 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
 const,
   InteractiveAIROICalculator: React.FC = () => {return (}
     <div>Coming Soon</div>)
-  );
-};
-  const [currentCost, setCurrentCost] = useState(100000);
-  const [efficiencyGain, setEfficiencyGain] = useState(70);
-  const [timeframe, setTimeframe] = useState(12);
-  const calculateROI = () => {return Math.max(0, roi);
+  )
+}
+  const [currentCost, setCurrentCost] = useState(100000)
+  const [efficiencyGain, setEfficiencyGain] = useState(70)
+  const [timeframe, setTimeframe] = useState(12)
+  const calculateROI = () => {return Math.max(0, roi)
   };return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
@@ -21,15 +21,12 @@ const,
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Current Annual Cost ($)
                 </label>
-                <input
-                  type='number'
-                  value={currentCost}
-                  onChange={e => setCurrentCost(Number(e.target.value))}
+                <input>setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg,
   focus:ring-2,
   focus:ring-blue-500,
   focus:border-transparent'
-// />
+// /</input>
           </div>
 Expected Efficiency Gain (%)
                   type='range'
@@ -59,7 +56,7 @@ Expected Efficiency Gain (%)
                 <p className='text-gray-600 text-sm'></p>
                   Expected return on investment over {timeframe} months</p>
     </section>
-  );
+  )
 export default InteractiveAIROICalculator</div>
   </div>
   </div>

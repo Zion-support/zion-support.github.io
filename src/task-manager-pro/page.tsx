@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import { Link } from 'react-router-dom';
+'use client'
+import React from 'react'
+import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react'
+import { Link } from 'react-router-dom'
 const TaskManagerProPage: React.FC = () => {
   const features = [
     {
@@ -31,7 +31,7 @@ iconicon: BarChart,
       description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
       benefit:     ,
 $4}
-  ];
+  ]
   const pricingPlans = [
       name: 'Individual',
       price: '$19',
@@ -100,12 +100,8 @@ $4}
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
             <CheckSquare className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Task Manager Pro;
-  </
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            AI-Powered Productivity Platform;
-  </
+          <h1>Task Manager Pro</h1>
+          <p>AI-Powered Productivity Platform</p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Supercharge your productivity with our AI-powered task management platform. 
             Get intelligent prioritization, automated workflows, and team collaboration 
@@ -114,14 +110,11 @@ $4}
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
-  </
+              <Phone>Call: (302) 464-0950</Phone>
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              Start Free Trial;
-  </
+              Start Free Trial>
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
@@ -139,9 +132,7 @@ $4}
             <div className="text-gray-300 text-sm">With smart tracking</div>
         {/* Features Section */}
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Task Management Features;
-  </
+          <h2>Powerful Task Management Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
@@ -187,8 +178,7 @@ $4}
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                  Get Started;
-  </
+                  Get Started</button>
         {/* Testimonials */}
             What Our Users Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -208,12 +198,12 @@ $4}
             Ready to Supercharge Your Productivity?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using Task Manager Pro to achieve more, 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 const TaskManagerProPage: React.FC = () => {
-  const features = [];
+  const features = []
   return (
     {// TODO: Add content;}
-};
+}
   ico,
   n: CheckSquare,
       titl,
@@ -227,8 +217,8 @@ const TaskManagerProPage: React.FC = () => {
       title: 'Team Collaboration',
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit: 'Improve team efficiency by 60%',
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const PagePage: React.FC = () => {
   return (
           <div>Coming Soon</div>
@@ -242,15 +232,13 @@ const PagePage: React.FC = () => {
           </div>"
           <h1 className="text-4xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
-// Task Manager Pro;
-          </h1>"
+// Task Manager Pro</h1>"
           <p className="text-xl,"
   md:text-2xl text-cyan-400 mb-8 font-medium"></p>
-// AI-Powered Productivity Platform;
-          </p>"
+// AI-Powered Productivity Platform</p>"
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Supercharge your productivity with our AI-powered task management platform.
-            Get intelligent prioritization, automated workflows, and team collaboration;
+            Get intelligent prioritization, automated workflows, and team collaboration
             tools that help you achieve more in less time.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
@@ -259,11 +247,11 @@ Supercharge your productivity with our AI-powered task management platform.
           "
           <Phone className="w-5 h-5 mr-2" />,
  Cal,
-  l: (302) 464-0950;
+  l: (302) 464-0950
             </a>
             <Link
               href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-Start Free Trial;
+Start Free Trial
             </Link>
         {/* Key Benefits */}"
         <div className="grid grid-cols-1,"
@@ -285,8 +273,7 @@ Start Free Trial;
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-12 text-center"></h2>
-// Powerful Task Management Features;
-          </h2>"
+// Powerful Task Management Features</h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
@@ -316,16 +303,16 @@ Works with Your Tools;"
             {pricingPlans.map((plan, index) => ()}
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content
 }
-//                 plan.popular;
+//                 plan.popular
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700,
   hover:border-cyan-500/50'`
               }`}></div>
                 {plan.popular && ()}"
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
-Most Popular;
+Most Popular
                 )}"
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                 <p className="text-gray-300 mb-6">{plan.description}</p>"
@@ -346,8 +333,7 @@ Most Popular;
                     : 'border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
   hover:text-white'
-                  Get Started;
-                </button></button>
+                  Get Started</button></button>
         {/* Testimonials */}
             What Our Users Say;"
           <div className="grid grid-cols-1,"
@@ -370,10 +356,9 @@ Most Popular;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of professionals using Task Manager Pro to achieve more,
             work smarter, and reach their goals faster.
-  );
-};
-export default TaskManagerProPage;
-  </div>
+  )
+}
+export default TaskManagerProPage</div>
   </div>
   </div>
   </div>

@@ -1,16 +1,16 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItems, setOpenItems] = useState<number>([])
   const toggleItem = (index: number) => {
-    setOpenItems(prev => 
+    setOpenItems(prev =</number>
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
-    );
-  };
+    )
+  }
   const faqs = [
     {
       question: "What AI services do you offer?",
@@ -44,7 +44,7 @@ const FAQPage: React.FC = () => {
       question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."
     }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
@@ -68,9 +68,8 @@ const FAQPage: React.FC = () => {
             <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
-                  <button
-                    onClick={() => toggleItem(index)}
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
+                  <buttontoggleItem(index)}
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors"</button>
                     <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
                     {openItems.includes(index) ? (
                       <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
@@ -90,6 +89,6 @@ const FAQPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default FAQPage;
+  )
+}
+export default FAQPage

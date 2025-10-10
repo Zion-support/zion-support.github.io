@@ -1,12 +1,12 @@
-'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+'use client'
+import React, { useState } from 'react'
 const SolutionsPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
+  const [activeTab, setActiveTab] = useState('ai')
   const _solutionCategories = [
     {
       id: 'ai',
@@ -40,7 +40,7 @@ $4},
       bgColor: 'bg-yellow-500/10',
       description:     ,
 $4}
-  ];
+  ]
   const solutions = {
     ai: [
       {
@@ -178,7 +178,7 @@ $4},
         color:       ,
 $4}
     ]
-  };
+  }
   const benefits = [
     {
       icon: Star,
@@ -200,7 +200,7 @@ $4},
       title: 'Expert Team',
       description:     ,
 $4}
-  ];
+  ]
   return (
     <React.Fragment>
       <Navigation />
@@ -208,9 +208,7 @@ $4}
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Our Solutions;
-  </
+            <h1>Our Solutions</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business operations 
               and drive innovation across every aspect of your organization.
@@ -220,15 +218,13 @@ $4}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {solutionCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveTab(category.id)}
+                <buttonsetActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
-                >
+                </button>
                   <category.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{category.name}</span>
                 </button>
@@ -237,16 +233,16 @@ $4}
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
-  );
-};
-  const [activeTab, setActiveTab] = useState('ai');
+  )
+}
+  const [activeTab, setActiveTab] = useState('ai')
   const _solutionCategories = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   i,
   d: 'ai',
       nam,
@@ -262,7 +258,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   i,
   d: 'it',
       nam,
@@ -278,7 +274,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   i,
   d: 'security',
       nam,
@@ -294,7 +290,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   i,
   d: 'automation',
       nam,
@@ -308,17 +304,17 @@ $4}
       descriptio,
   n: 'Streamline operations with intelligent automation'
     }
-  ];
+  ]
   const solutions = {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   a,
   i: [
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'AI-Powered Analytics',
         descriptio,
@@ -334,7 +330,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'AI Marketing Automation',
         descriptio,
@@ -350,7 +346,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'AI Customer Support',
         descriptio,
@@ -366,7 +362,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'AI Process Automation',
         descriptio,
@@ -387,7 +383,7 @@ $4}
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Cloud Migration',
         descriptio,
@@ -403,7 +399,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'IT Infrastructure Management',
         descriptio,
@@ -419,7 +415,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'DevOps & CI/CD',
         descriptio,
@@ -435,7 +431,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Database Management',
         descriptio,
@@ -456,7 +452,7 @@ $4}
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Cybersecurity Suite',
         descriptio,
@@ -472,7 +468,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'AI Security Monitoring',
         descriptio,
@@ -488,7 +484,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Compliance Management',
         descriptio,
@@ -504,7 +500,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Security Training',
         descriptio,
@@ -525,7 +521,7 @@ $4}
   O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Business Process Automation',
         descriptio,
@@ -541,7 +537,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'IT Automation',
         descriptio,
@@ -557,7 +553,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Marketing Automation',
         descriptio,
@@ -573,7 +569,7 @@ $4}
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   titl,
   e: 'Data Automation',
         descriptio,
@@ -588,14 +584,14 @@ $4}
   r: 'text-green-400'
       }
 //     ]
-  };
+  }
   const benefits = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+];
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Star,
       titl,
@@ -605,7 +601,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Shield,
       titl,
@@ -615,7 +611,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Globe,
       titl,
@@ -625,7 +621,7 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
   ico,
   n: Users,
       titl,
@@ -633,7 +629,7 @@ $4}
       descriptio,
   n: 'Certified professionals with years of industry experience'
     }
-  ];
+  ]
   return (<div>Coming Soon</div>)
   )
           <React.Fragment>
@@ -644,10 +640,9 @@ $4}
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Our Solutions;
-          </h1>"
+// Our Solutions</h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-// Comprehensive technology solutions designed to transform your business operations;
+// Comprehensive technology solutions designed to transform your business operations
 //               and drive innovation across every aspect of your organization.
           </p>
           </div>
@@ -660,7 +655,7 @@ $4}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content
 }
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
@@ -797,28 +792,22 @@ $4}
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                <Phone className="w-5 h-5 mr-2" />
-                Get Free Consultation;
-  </
+                <Phone>Get Free Consultation</Phone>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
-  </
+                <Phone>(302) 464-0950</Phone>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us;
-  </
+                <Mail>Email Us</Mail>
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
 // Ready to Transform Your Business?
           </h2>"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
-// Get a free consultation and discover how our solutions can revolutionize your operations;
+// Get a free consultation and discover how our solutions can revolutionize your operations
 //               and drive unprecedented growth.
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -827,21 +816,21 @@ $4}
 // >
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
-// Get Free Consultation;
+// Get Free Consultation
           </a>
               <a
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
           <Phone className="w-4 h-4 mr-2" /></Phone>
-// (302) 464-0950;
+// (302) 464-0950
           </a>
               <a
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
           <Mail className="w-4 h-4 mr-2" /></Mail>
-// Email Us;
+// Email Us
           </a>
             </div>
           </div>
@@ -850,9 +839,9 @@ $4}
       <Footer />
     </React.Fragment>
     </div>
-  );
-};
-export default SolutionsPage;
+  )
+}
+export default SolutionsPage
   </a>
   </a>
   </a>

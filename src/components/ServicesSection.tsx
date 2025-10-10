@@ -60,7 +60,7 @@ export default function ServicesSection() {
       ),
       features: ['iOS Development', 'Android Development', 'React Native', 'Flutter']
     }
-  ];
+  ]
   return (
     <section id="services" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -126,22 +126,14 @@ export default function ServicesSection() {
               Let's discuss how our AI and IT solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Get Free Consultation;
-  </
-              <a
-                href="tel:+1234567890"
-                className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
-                Call Now;
-  </
+              <a>Get Free Consultation</a>
+              <a>Call Now</a>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
   </a>
   </a>

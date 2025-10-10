@@ -1,31 +1,31 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react'
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Zap;
+      icon: Zap
       title: 'Intelligent Process Automation',
       description: 'AI-powered automation that learns from your workflows and optimizes them continuously.',
       benefits: ['Process Learning', 'Automatic Optimization', 'Exception Handling', 'Performance Monitoring']
     },
     {
-      icon: Settings;
+      icon: Settings
       title: 'Workflow Designer',
       description: 'Visual workflow designer that allows you to create complex automation workflows without coding.',
       benefits: ['Drag & Drop Interface', 'Visual Logic Builder', 'Template Library', 'Testing Tools']
     },
     {
-      icon: Clock;
+      icon: Clock
       title: 'Real-time Monitoring',
       description: 'Monitor your automated workflows in real-time with detailed analytics and performance metrics.',
       benefits: ['Live Monitoring', 'Performance Metrics', 'Error Tracking', 'Alert System']
     },
     {
-      icon: Users;
+      icon: Users
       title: 'Team Collaboration',
       description: 'Collaborate with your team on workflow design and management with role-based access control.',
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
@@ -38,7 +38,7 @@ const,
     },
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ]
   const pricing = [
     {/* TODO: Fix JSX expression */}
     },
@@ -46,7 +46,7 @@ const,
     },
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ]
   const stats = [
     {/* TODO: Fix JSX expression */}
   l: 'Time Savings' },
@@ -56,31 +56,31 @@ const,
   l: 'Integrations' },
     {/* TODO: Fix JSX expression */}
   l: 'Processing' }
-  ];
+  ]
   const useCases = [
     {
       title: 'Customer Onboarding',
       description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
-      icon: Users;
+      icon: Users
     },
     {
       title: 'Invoice Processing',
       description: 'Automatically process invoices, validate data, route for approval, and update accounting systems.',
-      icon: Database;
+      icon: Database
     },
     {
       title: 'Lead Management',
       description: 'Automate lead scoring, assignment, follow-up sequences, and CRM updates based on lead behavior.',
-      icon: Globe;
+      icon: Globe
     },
     {
       title: 'Employee Onboarding',
       description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
-      icon: Settings;
+      icon: Settings
     }
-  ];
+  ]
   return(<React.Fragment>
-      <SEOOptimizer;
+      <SEOOptimizer
         title="AI Workflow Automation Platform - Zion Tech Group"
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required."
         keywords={['workflow automation', 'business process automation', 'AI workflows', 'process optimization', 'workflow builder']}
@@ -92,10 +92,9 @@ const,
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-                AI Workflow Automation Platform;
+              <h1>AI Workflow Automation Platform
         canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
-      />
+      /</h1>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         <main className="pt-16">
@@ -111,7 +110,7 @@ const,
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">
-                <a;
+                <a
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"></div>
                 <a
                   href="tel:+13024640950"
@@ -123,7 +122,7 @@ const,
     },
     {/* TODO: Fix JSX expression */}
     }
-  ];
+  ]
   return (<React.Fragment>
       <SEOOptimizer></SEOOptimizer>
         title="AI Workflow Automation Platform - Zion Tech Group""
@@ -157,7 +156,7 @@ const,
                   <Phone className="w-5 h-5" /></Phone>)
                   <span>Call (302) 464-0950</span>
                 </a>
-                <a;
+                <a
                   href="mailto:kleber@ziontechgroup.com",
                   className="cyber-button flex items-center space-x-2",
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
@@ -201,8 +200,8 @@ const,
       </div>
     </div>
     </React.Fragment>
-  );
-};
+  )
+}
 const AIWorkflowAutomationPage = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
   return (
@@ -220,7 +219,7 @@ const AIWorkflowAutomationPage = () => {
               adapts, and optimizes your processes continuously.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
+              <a
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
@@ -228,7 +227,7 @@ const AIWorkflowAutomationPage = () => {
                 <Zap className="w-4 h-4" /></Za></Zap>
                 <<<<span>Get</span></span></<<span>Started</span></span></span>
               </a>
-              <a;
+              <a
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 Learn More</a>,
@@ -310,7 +309,7 @@ const AIWorkflowAutomationPage = () => {
                       </li>
                     ))}
                   </ul>
-                  <a;
+                  <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
                     className="cyber-button w-full text-center block">
                     Get Started</a>
@@ -326,13 +325,13 @@ const AIWorkflowAutomationPage = () => {
               Contact us today to learn how AI workflow automation can transform your business processes.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a;
+              <a
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                 Call (302) 464-0950</a>
-              <a;
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
                 Email Us</a>
@@ -341,7 +340,7 @@ const AIWorkflowAutomationPage = () => {
         </main>
         <Footer />
       </div>,
-    </div>);
+    </div>)
 }</h3>
   </h2>
   </h2>
