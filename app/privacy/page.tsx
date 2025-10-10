@@ -1,18 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import {Helmet}}from 'react-helmet-async';
-import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle}}from 'lucide-react';
-  const dataTypes = [
-    {category: 'Personal Information',
-      icon: User,},
-    {category: 'Usage Data',
-      icon: Database,},
-    {category: 'Technical Data',
-      icon: Server,}];
-  const purposes = [
-    {}];
-=======
 import { Helmet } from 'react-helmet-async';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -65,40 +52,19 @@ export default function PrivacyPage() {
     }
   ];
 
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
   const rights = [
     {title: 'Access',
       description: 'Request access to your personal data',
-<<<<<<< HEAD
-      icon: Eye;,},
-    {title: 'Rectification',
-      description: 'Correct inaccurate or incomplete data',},
-    {title: 'Erasure',
-      description: 'Request deletion of your personal data',},
-    {title: 'Portability',
-      description: 'Receive your data in a structured format',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Database;,},
-    {title: 'Restriction',
 =======
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
       icon: Database
     },
     {
       title: 'Restriction',
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
       description: 'Limit how we process your data',
       icon: Lock;,},
     {title: 'Objection',
       description: 'Object to certain types of processing',
-<<<<<<< HEAD
-      icon: Shield;,}]
-=======
       icon: Shield
 =======
       icon: Eye
@@ -117,35 +83,16 @@ export default function PrivacyPage() {
       title: 'Portability',
       description: 'Receive your data in a structured format',
       icon: Database
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 
-<<<<<<< HEAD
-  const contactInfo = {email: 'privacy@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-<<<<<<< HEAD
-    address: '364 E Main St STE 1008, Middletown, DE 19709'}return(<>)
-      <Helmet />
-        <title>Privacy Policy - Zion Tech Group</title>
-=======
     address: '364 E Main St STE 1008, Middletown, DE 19709'
-<<<<<<< HEAD
-  }
-
-<<<<<<< HEAD
-
-=======
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   return (
     <>
       <Helmet></Helmet>
         <title></titl>Privacy Policy - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
   return (
     <>
@@ -332,4 +279,3 @@ export default function PrivacyPage() {
     </>
   );
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-a217

@@ -22,20 +22,13 @@ const Ai3dGenerationPage: React.FC = () => {,
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
-  ]
-=======
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 ];
 =======
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   },
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',

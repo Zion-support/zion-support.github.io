@@ -1,72 +1,25 @@
 'use client';
-<<<<<<< HEAD
-import React, {useState, useEffect}from 'react';
-import {Cloud, Zap, Shield, Globe, Brain, Star}}from 'lucide-react';
-
-const DynamicContentShowcase: React.FC = () => {,
-=======
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Cloud, Zap, Shield, Brain, Globe, CheckCircle } from 'lucide-react';
-
-const DynamicContentShowcase: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
 import { Cloud, Zap, Shield, Brain, Star, CheckCircle } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 =======
 import { Cloud, Zap, Shield, Brain, Globe, CheckCircle } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
 import { Cloud, Zap, Shield, Globe, Brain, Star, Users, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   const [currentFeature, setCurrentFeature] = useState(0);
 
   const features = [
     {
       id: 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'AI Solutions',
-<<<<<<< HEAD
-      description: 'Transform your business with cutting-edge artificial intelligence solutions.',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-600',},
-    {id: 2,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      icon: Cloud,
-      color: 'from-green-500 to-blue-600',},
-    {id: 3,
-      title: 'AI Automation',
-      description: 'Automate complex business processes with intelligent AI systems.',
-      icon: Zap,
-      color: 'from-orange-500 to-red-600',},
-    {id: 4,
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with comprehensive AI-powered security solutions.',
-      icon: Shield,
-      color: 'from-blue-500 to-indigo-600',},
-    {id: 5,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.',
-      icon: Globe,
-      color: 'from-teal-500 to-cyan-600',}];
-=======
       description: 'Transform your business with cutting-edge AI technology and automation.',
 =======
       title: 'AI-Powered Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
       icon: Brain,
       color: 'from-purple-500 to-pink-600'
 =======
@@ -74,13 +27,11 @@ const DynamicContentShowcase: React.FC = () => {
       description: 'Transform your business with cutting-edge artificial intelligence solutions.',
       icon: Brain,
       color: 'from-blue-500 to-purple-600'
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
       title: 'AI-Powered Analytics',
       description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
       icon: Brain,
       color: 'from-cyan-500 to-blue-600'
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
     },
     {
       id: 2,
@@ -91,47 +42,19 @@ const DynamicContentShowcase: React.FC = () => {
     },
     {
       id: 3,
-<<<<<<< HEAD
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with comprehensive AI-powered security solutions.',
-      icon: Shield,
-      color: 'from-red-500 to-orange-600'
-<<<<<<< HEAD
-    },
-    {
-      id: 4,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing.',
-      icon: Globe,
-      color: 'from-blue-500 to-cyan-600'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
-    }
-  ];
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 =======
       title: 'AI Automation',
       description: 'Automate complex business processes with intelligent AI systems.',
       icon: Zap,
-<<<<<<< HEAD
-      color: 'from-orange-500 to-red-600'
-=======
       color: 'from-purple-500 to-pink-600'
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
     },
     {
       id: 4,
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       icon: Shield,
-<<<<<<< HEAD
-      color: 'from-red-500 to-pink-600'
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
-=======
       color: 'from-red-500 to-orange-600'
     },
     {
@@ -142,7 +65,6 @@ const DynamicContentShowcase: React.FC = () => {
       color: 'from-indigo-500 to-purple-600'
     }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
   const benefits = [
     'Advanced AI technology integration',
@@ -154,16 +76,8 @@ const DynamicContentShowcase: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
   const testimonials = [
     {name: 'Sarah Johnson',
@@ -180,57 +94,31 @@ const DynamicContentShowcase: React.FC = () => {
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      rating: 5;,}];
-
-  useEffect(() => {const timer = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);}, 3000);
-=======
 =======
       rating: 5
     }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 =======
       rating: 5
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
       rating: 5
     }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }, 4000);
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+    }, 5000);
 =======
     }, 5000);
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 =======
     }, 5000);
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
-=======
-    }, 5000);
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
     return () => clearInterval(timer);
   }, [features.length]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return(<div className="py-16 px-4">)</div>
-      <div className="max-w-7xl mx-auto">{/* Header */</div>} <div className="text-center mb-16">
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h2>
-=======
 =======
   const nextFeature = () => {
     setCurrentFeature((prev) => (prev + 1) % features.length);
@@ -240,40 +128,19 @@ const DynamicContentShowcase: React.FC = () => {
     setCurrentFeature((prev) => (prev - 1 + features.length) % features.length);
   };
 
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   return (
     <div className="py-16 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
             Dynamic <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our AI and IT solutions through interactive demonstrations and real-world applications.</p>
           </p>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Features Carousel */} <div className="mb-16">
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">,</div>
-            <div>
-              <h3 className="text-3xl font-bold text-white mb-4">
-                {features[currentFeature].title} </h3>
-              <p className="text-xl text-gray-300 mb-6">{features[currentFeature].description</p>} </p>
-              <div className="flex space-x-2">{features.map((_, index) => (</div>
-                  <button;
-                    key={index}onClick={() =>setCurrentFeature(index)</button>}className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentFeature ? 'bg-blue-500' : 'bg-gray-400'}`}
-                  />
-                ))}
-              </div>
 =======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
         {/* Feature Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
@@ -283,26 +150,6 @@ const DynamicContentShowcase: React.FC = () => {
             <p className="text-lg text-gray-300 mb-6">
               {features[currentFeature].description}
             </p>
-<<<<<<< HEAD
-            <div className="space-y-3">
-              {features.map((feature, index) => (
-                <button
-                  key={feature.id}
-                  onClick={() => setCurrentFeature(index)}
-                  className={`w-full text-left p-4 rounded-lg transition-all ${
-                    index === currentFeature
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white/5 text-gray-300 hover:bg-white/10'
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <feature.icon className="w-5 h-5" />
-                    <span className="font-medium">{feature.title}</span>
-                  </div>
-                </button>
-              ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
         {/* Feature Showcase */}
         <div className="mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -327,18 +174,9 @@ const DynamicContentShowcase: React.FC = () => {
                   <ChevronRight className="w-6 h-6 text-white" />
                 </button>
               </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
             </div>
           </div>
 
-<<<<<<< HEAD
-            {/* Feature Visual */} <div className="flex justify-center">
-              <div className={`w-80 h-80 bg-gradient-to-br ${features[currentFeature].color}rounded-2xl flex items-center justify-center relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-black/20"></div>
-                {React.createElement(features[currentFeature].icon, { className: "w-32 h-32 text-white/90 relative z-10" ,)})}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              </div>
-=======
 =======
         {/* Feature Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
@@ -358,7 +196,6 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
           </div>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 =======
             <div className="flex space-x-2">
               {features.map((_, index) => (
@@ -373,56 +210,36 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
           </div>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
           {/* Feature Visual */}
           <div className="flex justify-center">
             <div className={`w-80 h-80 bg-gradient-to-br ${features[currentFeature].color} rounded-2xl flex items-center justify-center relative overflow-hidden`}>
               <div className="absolute inset-0 bg-black/20"></div>
               {React.createElement(features[currentFeature].icon, { className: "w-32 h-32 text-white/90 relative z-10" })}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
             </div>
           </div>
         </div>
 
         {/* Benefits Section */} <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">,</div>
-            {benefits.map((benefit, index) => (
-              <div key={index}className="flex items-center space-x-3 p-3 rounded-lg bg-white/5">
-                <Star className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit</span>}</span>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3 p-3 rounded-lg bg-white/5">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300 text-sm">{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
@@ -431,7 +248,6 @@ const DynamicContentShowcase: React.FC = () => {
                   <Star className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-gray-300">{benefit}</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
               </div>
             ))}
           </div>
