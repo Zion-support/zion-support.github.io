@@ -15,11 +15,14 @@ import {
   Search,
   Filter
 } from 'lucide-react';
-<<<<<<< HEAD
 const ServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
   const services = [
     // AI Services
     {
+      id: 1,
       icon: Brain,
       title: 'AI Solutions',
       description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
@@ -29,6 +32,7 @@ const ServicesPage: React.FC = () => {
       popular: true
     },
     {
+      id: 2,
       icon: Brain,
       title: 'AI Voice Assistant Platform',
       description: 'Build custom voice assistants with natural language understanding, multi-language support, and enterprise integration.',
@@ -37,6 +41,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 3,
       icon: Brain,
       title: 'AI Predictive Maintenance',
       description: 'Prevent equipment failures with AI-powered predictive maintenance and real-time monitoring systems.',
@@ -45,6 +50,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 4,
       icon: Brain,
       title: 'AI Supply Chain Optimization',
       description: 'Optimize supply chain operations with AI-driven demand forecasting, inventory management, and logistics planning.',
@@ -53,6 +59,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 5,
       icon: Brain,
       title: 'AI Quality Control System',
       description: 'Automated quality inspection using computer vision and machine learning for manufacturing and production lines.',
@@ -61,6 +68,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 6,
       icon: Brain,
       title: 'AI Energy Management',
       description: 'Optimize energy consumption with AI-powered smart grid management and renewable energy integration.',
@@ -69,6 +77,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 7,
       icon: Brain,
       title: 'AI Legal Document Analysis',
       description: 'Automated legal document review, contract analysis, and compliance monitoring with AI technology.',
@@ -77,6 +86,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 8,
       icon: Brain,
       title: 'AI Real Estate Analytics',
       description: 'Property valuation, market analysis, and investment recommendations powered by artificial intelligence.',
@@ -85,6 +95,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 9,
       icon: Brain,
       title: 'AI Human Resources Assistant',
       description: 'Streamline HR processes with AI-powered recruitment, employee analytics, and performance management.',
@@ -93,6 +104,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 10,
       icon: Brain,
       title: 'AI Insurance Risk Assessment',
       description: 'Advanced risk evaluation and fraud detection for insurance companies using machine learning algorithms.',
@@ -101,6 +113,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 11,
       icon: Brain,
       title: 'AI Educational Platform',
       description: 'Personalized learning experiences with AI-powered content adaptation and student performance analytics.',
@@ -109,6 +122,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 12,
       icon: Brain,
       title: 'AI Transportation Optimization',
       description: 'Optimize transportation routes, fleet management, and logistics with AI-powered decision making.',
@@ -117,6 +131,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 13,
       icon: Brain,
       title: 'AI Environmental Monitoring',
       description: 'Monitor environmental conditions and predict climate impacts using AI and IoT sensor data.',
@@ -125,6 +140,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 14,
       icon: Brain,
       title: 'AI Retail Personalization',
       description: 'Create personalized shopping experiences with AI-driven product recommendations and customer insights.',
@@ -133,6 +149,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 15,
       icon: Brain,
       title: 'AI Sports Analytics',
       description: 'Advanced sports performance analysis, injury prediction, and team optimization using AI technology.',
@@ -141,6 +158,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 16,
       icon: Brain,
       title: 'AI Mental Health Assistant',
       description: 'AI-powered mental health monitoring, mood tracking, and therapeutic support applications.',
@@ -149,6 +167,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 17,
       icon: Brain,
       title: 'AI Marketing Automation',
       description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
@@ -157,6 +176,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 18,
       icon: Brain,
       title: 'AI Customer Support',
       description: 'Intelligent customer support with chatbots, sentiment analysis, and automated ticket routing.',
@@ -165,6 +185,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 19,
       icon: Brain,
       title: 'AI Data Analytics',
       description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling.',
@@ -173,6 +194,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 20,
       icon: Brain,
       title: 'AI Content Generation',
       description: 'Create high-quality content at scale with AI-powered writing, image generation, and video production.',
@@ -181,6 +203,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 21,
       icon: Brain,
       title: 'AI Healthcare Solutions',
       description: 'HIPAA-compliant AI solutions for medical imaging, drug discovery, and patient care optimization.',
@@ -189,6 +212,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 22,
       icon: Brain,
       title: 'AI Financial Services',
       description: 'Advanced AI solutions for fraud detection, risk assessment, and algorithmic trading.',
@@ -197,6 +221,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     {
+      id: 23,
       icon: Brain,
       title: 'AI E-commerce Solutions',
       description: 'Intelligent e-commerce platform with recommendation engines and dynamic pricing.',
@@ -206,6 +231,7 @@ const ServicesPage: React.FC = () => {
     },
     // Cloud Services
     {
+      id: 24,
       icon: Cloud,
       title: 'Cloud Services',
       description: 'Scalable cloud infrastructure and migration services for enhanced performance and reliability.',
@@ -215,6 +241,7 @@ const ServicesPage: React.FC = () => {
       popular: true
     },
     {
+      id: 25,
       icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamless migration to AWS, Azure, or Google Cloud with zero downtime and data integrity.',
@@ -223,6 +250,7 @@ const ServicesPage: React.FC = () => {
       category: 'Cloud Services'
     },
     {
+      id: 26,
       icon: Cloud,
       title: 'Cloud Security',
       description: 'Comprehensive cloud security solutions with threat detection and compliance management.',
@@ -231,6 +259,7 @@ const ServicesPage: React.FC = () => {
       category: 'Cloud Services'
     },
     {
+      id: 27,
       icon: Cloud,
       title: 'DevOps & CI/CD',
       description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
@@ -240,6 +269,7 @@ const ServicesPage: React.FC = () => {
     },
     // Cybersecurity
     {
+      id: 28,
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your business from evolving threats.',
@@ -249,6 +279,7 @@ const ServicesPage: React.FC = () => {
       popular: true
     },
     {
+      id: 29,
       icon: Shield,
       title: 'Security Monitoring',
       description: '24/7 security monitoring with AI-powered threat detection and automated response.',
@@ -257,6 +288,7 @@ const ServicesPage: React.FC = () => {
       category: 'Cybersecurity'
     },
     {
+      id: 30,
       icon: Shield,
       title: 'Penetration Testing',
       description: 'Comprehensive security testing to identify vulnerabilities and strengthen your defenses.',
@@ -265,6 +297,7 @@ const ServicesPage: React.FC = () => {
       category: 'Cybersecurity'
     },
     {
+      id: 31,
       icon: Shield,
       title: 'Compliance Management',
       description: 'Ensure regulatory compliance with automated monitoring and reporting solutions.',
@@ -274,6 +307,7 @@ const ServicesPage: React.FC = () => {
     },
     // Data Analytics
     {
+      id: 32,
       icon: BarChart3,
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics and visualization.',
@@ -283,6 +317,7 @@ const ServicesPage: React.FC = () => {
       popular: true
     },
     {
+      id: 33,
       icon: BarChart3,
       title: 'Big Data Solutions',
       description: 'Handle massive datasets with scalable big data processing and analytics platforms.',
@@ -291,6 +326,7 @@ const ServicesPage: React.FC = () => {
       category: 'Data Analytics'
     },
     {
+      id: 34,
       icon: BarChart3,
       title: 'Business Intelligence',
       description: 'Comprehensive BI solutions with interactive dashboards and automated reporting.',
@@ -300,6 +336,7 @@ const ServicesPage: React.FC = () => {
     },
     // Mobile Development
     {
+      id: 35,
       icon: Smartphone,
       title: 'Mobile Development',
       description: 'Custom mobile applications for iOS and Android platforms with modern technologies.',
@@ -309,6 +346,7 @@ const ServicesPage: React.FC = () => {
       popular: true
     },
     {
+      id: 36,
       icon: Smartphone,
       title: 'Mobile App Maintenance',
       description: 'Ongoing maintenance and updates for your mobile applications with performance optimization.',
@@ -318,6 +356,7 @@ const ServicesPage: React.FC = () => {
     },
     // Database Services
     {
+      id: 37,
       icon: Database,
       title: 'Database Services',
       description: 'Database design, optimization, and management for optimal performance and reliability.',
@@ -327,6 +366,7 @@ const ServicesPage: React.FC = () => {
       popular: true
     },
     {
+      id: 38,
       icon: Database,
       title: 'Database Migration',
       description: 'Seamless database migration with zero downtime and data integrity preservation.',
@@ -336,6 +376,7 @@ const ServicesPage: React.FC = () => {
     },
     // Automation
     {
+      id: 39,
       icon: Zap,
       title: 'Process Automation',
       description: 'Streamline your workflows with intelligent automation solutions and RPA.',
@@ -345,6 +386,7 @@ const ServicesPage: React.FC = () => {
       popular: true
     },
     {
+      id: 40,
       icon: Zap,
       title: 'IT Automation',
       description: 'Automate IT operations with intelligent monitoring, deployment, and maintenance solutions.',
@@ -354,6 +396,7 @@ const ServicesPage: React.FC = () => {
     },
     // Web Development
     {
+      id: 41,
       icon: Globe,
       title: 'Web Development',
       description: 'Modern, responsive web applications built with cutting-edge technologies.',
@@ -363,6 +406,7 @@ const ServicesPage: React.FC = () => {
       popular: true
     },
     {
+      id: 42,
       icon: Globe,
       title: 'E-commerce Development',
       description: 'Custom e-commerce solutions with advanced features and integrations.',
@@ -372,6 +416,7 @@ const ServicesPage: React.FC = () => {
     },
     // IT Services
     {
+      id: 43,
       icon: Database,
       title: 'IT Infrastructure',
       description: 'Complete IT infrastructure setup and management for enterprise environments.',
@@ -380,6 +425,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 44,
       icon: Shield,
       title: 'Managed IT Services',
       description: 'Comprehensive IT management with 24/7 support and proactive monitoring.',
@@ -388,6 +434,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 45,
       icon: BarChart3,
       title: 'IT Consulting',
       description: 'Strategic IT consulting to optimize your technology infrastructure and processes.',
@@ -396,6 +443,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 46,
       icon: Cloud,
       title: 'Cloud Infrastructure Management',
       description: 'Comprehensive cloud infrastructure management with 99.9% uptime guarantee and 24/7 monitoring.',
@@ -404,6 +452,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 47,
       icon: Shield,
       title: 'Network Security Solutions',
       description: 'Advanced network security with firewall management, intrusion detection, and threat prevention.',
@@ -412,6 +461,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 48,
       icon: Database,
       title: 'Data Backup & Recovery',
       description: 'Comprehensive data backup and disaster recovery solutions with automated backups and instant recovery.',
@@ -420,6 +470,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 49,
       icon: Settings,
       title: 'IT Asset Management',
       description: 'Complete IT asset lifecycle management with inventory tracking, maintenance scheduling, and cost optimization.',
@@ -428,6 +479,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 50,
       icon: Globe,
       title: 'Website Hosting & Maintenance',
       description: 'Reliable website hosting with SSL certificates, CDN, and regular maintenance for optimal performance.',
@@ -436,6 +488,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 51,
       icon: Smartphone,
       title: 'Mobile Device Management',
       description: 'Enterprise mobile device management with security policies, app management, and remote control.',
@@ -444,6 +497,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 52,
       icon: Shield,
       title: 'Compliance & Audit Services',
       description: 'Ensure regulatory compliance with automated monitoring, audit trails, and compliance reporting.',
@@ -452,6 +506,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 53,
       icon: BarChart3,
       title: 'IT Performance Monitoring',
       description: 'Real-time IT performance monitoring with alerting, reporting, and optimization recommendations.',
@@ -460,6 +515,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 54,
       icon: Users,
       title: 'IT Training & Support',
       description: 'Comprehensive IT training programs and ongoing support for your team and end users.',
@@ -468,6 +524,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 55,
       icon: Settings,
       title: 'IT Project Management',
       description: 'Professional IT project management with planning, execution, and delivery of technology initiatives.',
@@ -476,6 +533,7 @@ const ServicesPage: React.FC = () => {
       category: 'IT Services'
     },
     {
+      id: 56,
       icon: Shield,
       title: 'Vulnerability Assessment',
       description: 'Comprehensive security vulnerability assessment with penetration testing and remediation guidance.',
