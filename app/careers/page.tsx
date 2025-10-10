@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { MapPin, Clock, CheckCircle, Star, Users, Heart, Award, ArrowRight } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -12,6 +13,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in AI/ML preferred']
     },
     {
       title: 'Cloud Architect',
@@ -23,6 +26,22 @@ const CareersPage: React.FC = () => {
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
     {
+      title: 'DevOps Engineer',
+      department: 'Engineering',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Build and maintain CI/CD pipelines and infrastructure automation.',
+      requirements: ['Docker, Kubernetes, Terraform', '4+ years DevOps experience', 'Cloud platform expertise']
+    },
+    {
+      title: 'Data Scientist',
+      department: 'AI Solutions',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Analyze complex data sets and develop predictive models for business insights.',
+      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistics and ML knowledge']
     }
   ];
 
@@ -127,10 +146,64 @@ const CareersPage: React.FC = () => {
                     </ul>
                   </div>
 
+                  <button className="w-full bg-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-cyan-700 transition-colors flex items-center justify-center">
+                    Apply Now
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                  <div className="flex items-center mb-3">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <span className="text-white font-semibold">{benefit}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Company Values */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Don't See Your Dream Job?
+              </h2>
+              <p className="text-xl text-cyan-100 mb-6">
+                We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+              </p>
+              <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Send Resume
+              </button>
             </div>
           </div>
         </section>
