@@ -4,10 +4,7 @@ import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-<<<<<<< HEAD
 import StructuredData from './components/StructuredData';
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 // Dynamically import heavy components for better performance
@@ -58,7 +55,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
   const features = [
     {
       icon: Brain,
@@ -101,9 +97,7 @@ const HomePage: React.FC = () => {
         image="/images/og-image.jpg"
         url="https://ziontechgroup.com"
         type="website"
-=======
-  return (
-    <React.Fragment>
+      />
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -146,14 +140,12 @@ const HomePage: React.FC = () => {
       />
       <PerformanceOptimizer
         enableImageOptimization={true}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
-<<<<<<< HEAD
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
@@ -497,11 +489,6 @@ const HomePage: React.FC = () => {
           <StructuredData type="LocalBusiness" />
         </div>
       </PerformanceOptimizer>
-=======
-        enableScreenReaderSupport={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
-      />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         {/* Navigation */}
         <Navigation />
@@ -898,7 +885,6 @@ const HomePage: React.FC = () => {
         </main>
         <Footer />
       </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </React.Fragment>
   );
 };

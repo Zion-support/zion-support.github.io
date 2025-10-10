@@ -1,14 +1,11 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 
 const PricingPage: React.FC = () => {
   const pricingPlans = [
@@ -18,20 +15,17 @@ const PricingPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses getting started with AI',
       features: [
-<<<<<<< HEAD
         'Basic AI consultation',
         'Up to 5 AI models',
         'Email support',
         'Monthly reporting',
         'Basic analytics dashboard',
         'Standard security features'
-=======
         'Basic AI integration',
         'Email support',
         'Standard analytics',
         'Up to 5 users',
         'Basic automation'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       ],
       popular: false,
       cta: 'Get Started'
@@ -40,7 +34,6 @@ const PricingPage: React.FC = () => {
       name: 'Professional',
       price: '$3,999',
       period: '/month',
-<<<<<<< HEAD
       description: 'Ideal for growing businesses with advanced AI needs',
       features: [
         'Advanced AI consultation',
@@ -49,14 +42,12 @@ const PricingPage: React.FC = () => {
         'Weekly reporting',
         'Advanced analytics dashboard',
         'Enhanced security features',
-=======
       description: 'Ideal for growing businesses with advanced needs',
       features: [
         'Advanced AI solutions',
         'Priority support',
         'Advanced analytics',
         'Up to 25 users',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
         'Custom integrations',
         'Dedicated account manager'
       ],
@@ -69,7 +60,6 @@ const PricingPage: React.FC = () => {
       period: '',
       description: 'For large organizations with complex requirements',
       features: [
-<<<<<<< HEAD
         'Unlimited AI consultation',
         'Unlimited AI models',
         '24/7 dedicated support',
@@ -80,7 +70,6 @@ const PricingPage: React.FC = () => {
         'Dedicated team',
         'SLA guarantee',
         'On-site support'
-=======
         'Custom AI solutions',
         '24/7 dedicated support',
         'Custom analytics',
@@ -88,14 +77,12 @@ const PricingPage: React.FC = () => {
         'White-label options',
         'On-premise deployment',
         'Custom training'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       ],
       popular: false,
       cta: 'Contact Sales'
     }
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -240,7 +227,6 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
   const addOnServices = [
     {
       name: 'AI Consulting',
@@ -404,7 +390,6 @@ const PricingPage: React.FC = () => {
       </main>
       
       <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </div>
   );
 };

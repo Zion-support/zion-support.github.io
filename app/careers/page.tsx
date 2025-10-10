@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react';
 
@@ -18,12 +17,10 @@ interface JobPosition {
   featured: boolean;
 }
 
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 const CareersPage: React.FC = () => {
   const openPositions = [
     {
@@ -31,7 +28,6 @@ const CareersPage: React.FC = () => {
       title: 'Senior AI Engineer',
       department: 'Engineering',
       location: 'Remote',
-<<<<<<< HEAD
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
@@ -141,7 +137,6 @@ const CareersPage: React.FC = () => {
     { icon: <Award className="w-8 h-8 text-green-600" />, value: '98%', label: 'Employee Satisfaction' },
     { icon: <GraduationCap className="w-8 h-8 text-purple-600" />, value: '100%', label: 'Learning & Development' },
     { icon: <Star className="w-8 h-8 text-yellow-600" />, value: '4.8/5', label: 'Glassdoor Rating' }
-=======
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.'
@@ -187,13 +182,11 @@ const CareersPage: React.FC = () => {
       title: 'Career Growth',
       description: 'Opportunities for advancement and skill development'
     }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore career opportunities in AI, cloud computing, and cybersecurity." />
         <meta name="keywords" content="tech careers, AI jobs, cloud computing jobs, cybersecurity careers, remote work" />
@@ -381,7 +374,6 @@ const CareersPage: React.FC = () => {
                 <span>Send Resume</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-=======
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Join Zion Tech Group and be part of a team that's transforming businesses with AI and IT solutions. Explore career opportunities." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, technology careers" />
@@ -524,7 +516,6 @@ const CareersPage: React.FC = () => {
                   Send Your Resume
                 </button>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
             </div>
           </div>
         </section>

@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -242,7 +241,6 @@ const BlogPage: React.FC = () => {
           )}
         </div>
       </section>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -370,7 +368,6 @@ const BlogPage: React.FC = () => {
       </main>
       
       <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </div>
   );
 };

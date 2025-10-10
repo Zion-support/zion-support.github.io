@@ -1,155 +1,23 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
+  domContentLoaded: number;
+  loadComplete: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  totalResources: number;
+  memoryUsage?: {
+    used: number;
+    total: number;
+    limit: number;
+  };
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env.NODE_ENV === 'development' || 
-                         localStorage.getItem('performance-monitoring') === 'true';
-
-    if (!shouldMonitor) return;
-
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
-    };
-
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => updateMetrics({ cls: metric.value }));
-        getFID((metric) => updateMetrics({ fid: metric.value }));
-        getFCP((metric) => updateMetrics({ fcp: metric.value }));
-        getLCP((metric) => updateMetrics({ lcp: metric.value }));
-        getTTFB((metric) => updateMetrics({ ttfb: metric.value }));
-      });
-    }
-
-    // Monitor performance with Performance Observer
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            updateMetrics({ lcp: entry.startTime });
-          }
-          if (entry.entryType === 'first-input') {
-            updateMetrics({ fid: entry.processingStart - entry.startTime });
-          }
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              updateMetrics({ fcp: entry.startTime });
-            }
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported:', e);
-      }
-
-      return () => observer.disconnect();
-    }
-
-    // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isVisible || Object.keys(metrics).length === 0) {
-    return null;
-  }
-
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
-  };
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-cyan-400">Performance</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-1">
-        {metrics.lcp && (
-          <div className="flex justify-between">
-            <span>LCP:</span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.fid && (
-          <div className="flex justify-between">
-            <span>FID:</span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.cls && (
-          <div className="flex justify-between">
-            <span>CLS:</span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.fcp && (
-          <div className="flex justify-between">
-            <span>FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.ttfb && (
-          <div className="flex justify-between">
-            <span>TTFB:</span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
-            </span>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-=======
-import React, { useEffect } from 'react';
-
-const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
@@ -158,7 +26,7 @@ const PerformanceMonitor: React.FC = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       
-      const metrics = {
+      const performanceMetrics: PerformanceMetrics = {
         // Navigation timing
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
@@ -175,12 +43,14 @@ const PerformanceMonitor: React.FC = () => {
           used: (performance as any).memory.usedJSHeapSize,
           total: (performance as any).memory.totalJSHeapSize,
           limit: (performance as any).memory.jsHeapSizeLimit
-        } : null
+        } : undefined
       };
+
+      setMetrics(performanceMetrics);
 
       // Log metrics in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', metrics);
+        console.log('Performance Metrics:', performanceMetrics);
       }
 
       // Send metrics to analytics
@@ -189,21 +59,21 @@ const PerformanceMonitor: React.FC = () => {
         
         gtag('event', 'performance_metrics', {
           event_category: 'performance',
-          dom_content_loaded: Math.round(metrics.domContentLoaded),
-          load_complete: Math.round(metrics.loadComplete),
-          first_paint: Math.round(metrics.firstPaint),
-          first_contentful_paint: Math.round(metrics.firstContentfulPaint),
-          total_resources: metrics.totalResources
+          dom_content_loaded: Math.round(performanceMetrics.domContentLoaded),
+          load_complete: Math.round(performanceMetrics.loadComplete),
+          first_paint: Math.round(performanceMetrics.firstPaint),
+          first_contentful_paint: Math.round(performanceMetrics.firstContentfulPaint),
+          total_resources: performanceMetrics.totalResources
         });
       }
 
       // Check for performance issues
-      if (metrics.firstContentfulPaint > 3000) {
-        console.warn('Slow First Contentful Paint detected:', metrics.firstContentfulPaint);
+      if (performanceMetrics.firstContentfulPaint > 3000) {
+        console.warn('Slow First Contentful Paint detected:', performanceMetrics.firstContentfulPaint);
       }
       
-      if (metrics.loadComplete > 5000) {
-        console.warn('Slow page load detected:', metrics.loadComplete);
+      if (performanceMetrics.loadComplete > 5000) {
+        console.warn('Slow page load detected:', performanceMetrics.loadComplete);
       }
     };
 
@@ -231,8 +101,65 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
-  return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development' || !metrics) {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+      <div className="flex justify-between items-center mb-2">
+        <h3 className="text-sm font-semibold">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(!isVisible)}
+          className="text-xs text-gray-400 hover:text-white"
+        >
+          {isVisible ? 'Hide' : 'Show'}
+        </button>
+      </div>
+      
+      {isVisible && (
+        <div className="space-y-2 text-xs">
+          <div className="flex justify-between">
+            <span>DOM Content Loaded:</span>
+            <span className={metrics.domContentLoaded > 1000 ? 'text-red-400' : 'text-green-400'}>
+              {Math.round(metrics.domContentLoaded)}ms
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>Load Complete:</span>
+            <span className={metrics.loadComplete > 2000 ? 'text-red-400' : 'text-green-400'}>
+              {Math.round(metrics.loadComplete)}ms
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>First Paint:</span>
+            <span className={metrics.firstPaint > 1000 ? 'text-red-400' : 'text-green-400'}>
+              {Math.round(metrics.firstPaint)}ms
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>First Contentful Paint:</span>
+            <span className={metrics.firstContentfulPaint > 2000 ? 'text-red-400' : 'text-green-400'}>
+              {Math.round(metrics.firstContentfulPaint)}ms
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>Total Resources:</span>
+            <span>{metrics.totalResources}</span>
+          </div>
+          {metrics.memoryUsage && (
+            <div className="flex justify-between">
+              <span>Memory Used:</span>
+              <span>
+                {Math.round(metrics.memoryUsage.used / 1024 / 1024)}MB
+              </span>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default PerformanceMonitor;

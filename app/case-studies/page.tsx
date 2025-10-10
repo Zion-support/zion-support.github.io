@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -17,18 +16,15 @@ interface CaseStudy {
   duration: string;
   team: string;
 }
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, TrendingUp, Users, DollarSign, Clock, CheckCircle } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
-<<<<<<< HEAD
       id: '1',
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
@@ -52,7 +48,6 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Financial Services',
       challenge: 'Legacy on-premise infrastructure causing scalability issues and high maintenance costs.',
       solution: 'Complete migration to AWS cloud with microservices architecture and automated CI/CD pipelines.',
-=======
       id: 1,
       title: 'AI-Powered Supply Chain Optimization',
       client: 'Global Manufacturing Corp',
@@ -75,10 +70,8 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Finance',
       challenge: 'Legacy systems causing security vulnerabilities and scalability issues',
       solution: 'Migrated to secure cloud infrastructure with advanced threat detection',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       results: [
         '99.9% uptime achieved',
-<<<<<<< HEAD
         '50% faster deployment times',
         'Enhanced security and compliance'
       ],
@@ -222,7 +215,6 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                     <p className="text-gray-300 text-sm">{study.challenge}</p>
-=======
         '60% reduction in security incidents',
         '50% faster application deployment',
         '100% compliance with regulations'
@@ -330,7 +322,6 @@ const CaseStudiesPage: React.FC = () => {
                         </div>
                       </div>
                     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
                   </div>
                   
                   <div className="mb-6">
@@ -355,17 +346,13 @@ const CaseStudiesPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
-=======
               ))}
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -391,7 +378,6 @@ const CaseStudiesPage: React.FC = () => {
                 <span>View Our Services</span>
                 <ExternalLink className="w-5 h-5" />
               </Link>
-=======
         {/* Stats Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -454,7 +440,6 @@ const CaseStudiesPage: React.FC = () => {
                   View Our Services
                 </button>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
             </div>
           </div>
         </section>
