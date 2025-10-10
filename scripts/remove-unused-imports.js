@@ -2,9 +2,9 @@
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 // Files to process;
 const filePatterns = [
+];
   'app/**/*.{ts,tsx}',
   'src/**/*.{ts,tsx}',
   'components/**/*.{ts,tsx}',
@@ -13,9 +13,9 @@ const filePatterns = [
   'hooks/**/*.{ts,tsx}',
   'lib/**/*.{ts,tsx}'
 ];
-
 // Files to exclude;
 const excludePatterns = [
+];
   '**/node_modules/**',
   '**/dist/**',
   '**/.next/**',
@@ -38,11 +38,9 @@ let removedImports = 0;
 function removeUnusedImports(content) {;
 let newContent = content;
   let removedCount = 0;
-
   // Find all import statements;
   const importRegex = /import\s+.*?from\s+['"][^'"]+['"];?\s*\n/g;
   const imports = content.match(importRegex) || [];
-
   imports.forEach(importStatement => {)
     // Extract imported names;);
 const importMatch = importStatement.match(/import\s+{([^}]+)}/);
@@ -51,22 +49,17 @@ const importedNames = importMatch[1]
         .split(',')
         .map(name => name.trim().split(' as ')[0].trim())
         .filter(name => name);
-
       // Check if any of these names are used in the file;
       const usedNames = importedNames.filter(name => {)
         // Skip default imports and special cases;)
         if (name === 'default' || name === '*' || name.includes(' ')) return true;
-        
         // Create regex to find usage of this name;
         const usageRegex = new RegExp(`\\b${name}\\b`, 'g');
         const matches = newContent.match(usageRegex) || [];
-        
         // Count occurrences, excluding the import statement itself;
         const importOccurrences = (importStatement.match(usageRegex) || []).length;
         const totalOccurrences = matches.length;
-        
         return totalOccurrences>importOccurrences</totalOccurrences>});
-
       // If no names are used, remove the entire import;
       if (usedNames.length === 0) {
         newContent = newContent.replace(importStatement, '');
@@ -77,7 +70,7 @@ const importedNames = importMatch[1]
           `{ ${usedNames.join(', ')} }`
         );
         newContent = newContent.replace(importStatement, newImportStatement);
-        removedCount += importedNames.length - usedNames.length}
+        removedCount += importedNames.length - usedNames.length};
     } else {
       // Handle default imports;
       const defaultImportMatch = importStatement.match(/import\s+(\w+)/);
@@ -86,34 +79,28 @@ const importName = defaultImportMatch[1];
         const usageRegex = new RegExp(`\\b${importName}\\b`, 'g');
         const matches = newContent.match(usageRegex) || [];
         const importOccurrences = (importStatement.match(usageRegex) || []).length;
-        
         if (matches.length <= importOccurrences) {
           newContent = newContent.replace(importStatement, '');
-          removedCount++}
-      }
-    }
+          removedCount++};
+      };
+    };
   });
-
   // Clean up multiple empty lines;
   newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
-  return { content: newContent, removedCount }}
+  return { content: newContent, removedCount }};
 ;
 function processFile(filePath) {
   try {;
 const content = fs.readFileSync(filePath, 'utf8');
     const result = removeUnusedImports(content);
-    
     if (result.removedCount > 0) {
       fs.writeFileSync(filePath, result.content, 'utf8');
       // console.log removed for production
-removedImports += result.removedCount}
-
+removedImports += result.removedCount};
     processedFiles++} catch (error) {
     // console.error removed for production
-}
-}
-
+};
+};
 async function main() {
   // console.log removed for production
 // Get all files to process;
@@ -122,23 +109,18 @@ async function main() {
 const files = await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
-    allFiles.push(...files)}
-
+    allFiles.push(...files)};
   // Remove duplicates;
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
-
   // console.log removed for production
 // Process each file;
   uniqueFiles.forEach(processFile);
-
   // console.log removed for production
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-}
-
+};
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main()}
-
+  main()};
 export { processFile, removeUnusedImports };

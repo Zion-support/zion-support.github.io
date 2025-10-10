@@ -1,7 +1,7 @@
 import React from 'react';
-
 export default function EnterpriseAISolutions(): React.JSX.Element {;
 const solutions = [
+];
     {
       icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
@@ -10,9 +10,9 @@ const solutions = [
         'Advanced Analytics',
         'Custom AI Models',
         '24/7 Support'],
-export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix JSX expression */}
+export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
     {
       icon: <Zap className="w-8 h-8" />,</Zap>title</Zap>: 'AI Automation Suite',
@@ -22,7 +22,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         'Workflow Optimization',
         'Intelligent Routing',
         'Performance Monitoring']}];
-
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
@@ -33,7 +32,6 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
           content="Comprehensive AI solutions designed for enterprise-scale deployments."
         /></meta>
       </Helmet>
-
       <div className="container mx-auto px-4 py-16"></div>
         <div className="text-center mb-16"></div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Enterprise AI Solutions</h1>
@@ -46,7 +44,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
           {solutions.map((solution, index) => (
             <div;
-              key={index}
+              key={index};
               className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow",
             >,
               <div className="flex items-center mb-4">,
@@ -54,18 +52,16 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
             organizations.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (</div>
             <div
-              key={index}
+              key={index};
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
             ></div>
               <div className="flex items-center mb-4"></div>
                 <div className="text-blue-600 mr-3">{solution.icon}</div>
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     }];
-
   return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
       <Helmet></Helmet>
         <title>Enterprise AI Solutions - Zion Website</title>
@@ -87,7 +83,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <div className="grid,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
-          {/* TODO: Fix JSX expression */}
+          {/* TODO: Fix JSX expression */};
               key={index}"
               className="bg-white rounded-lg shadow-lg p-6,"
   hover:shadow-xl transition-shadow"
@@ -103,14 +99,14 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
                 {/* TODO: Fix JSX expression */}"
                   <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                     <Target className="w-4 h-4 text-green-500 mr-2" /></Target>
-                    {feature}
+                    {feature};
                   </li>)
-                ))}
+                ))};
               </ul>
             </div>
-          ))}
+          ))};
         </div>
       </div>
     </div>
-  )}
+  )};
 "

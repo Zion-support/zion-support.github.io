@@ -1,4 +1,5 @@
 export interface BlogPost {
+}
   slug: string;
   title: string;
   description: string;
@@ -9,8 +10,7 @@ export interface BlogPost {
   tags: string[];
   featured: boolean;
   readTime: string;
-  image?: string}
-
+  image?: string};
 export const blogPosts: BlogPost[] = [,
   {,
     slug: 'ai-2025-oct-04-operational-ai-scorecards-v2',
@@ -19,7 +19,6 @@ export const blogPosts: BlogPost[] = [,
       'KPI-linked SLIs, online canaries, and rollback-first ops that raise velocity while reducing incidents.',
     content: `
 # Operational AI Scorecards v2: Ship AI features weekly without surprises by wiring measurement to decisions.
-
 ## What You'll Implement;
 - KPI-linked SLIs that predict outcomes;
 - Online canaries as deploy gates;
@@ -42,7 +41,6 @@ export const blogPosts: BlogPost[] = [,
       'Freshness windows, retrieval tiers, and semantic caches that raise answer quality while reducing cost.',
     content: '
 # Enterprise RAG Quality Budgets: Production RAG needs governance and budgets.
-
 ## Core Patterns;
 - Domain schemas and strict source governance;
 - Freshness windows per intent;
@@ -64,7 +62,6 @@ export const blogPosts: BlogPost[] = [,
     content: `,
 # Enterprise Agents in Production: Budgets, Approvals, and Rollback;
 This guide shows how to ship agentic systems that operate within explicit budgets and guardrails while driving measurable outcomes.
-
 ## Ship Safely;
 - Signed tools with scopes and quotas;
 - Budget-aware action routing with KPI-linked SLIs;
@@ -103,7 +100,6 @@ Control GenAI costs without UX regressions: quality-tier routers, request coales
     content: `,
 # Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts;
 Modern enterprises need shipping speed without surprise risk. This field guide shows how to wire governance into the product lifecycle so teams move faster with fewer incidents and lower costs.
-
 ## What You'll Ship;
 - Policy tests in CI that gate risky changes;
 - KPI-linked scorecards across reliability, latency, and cost;
@@ -120,18 +116,17 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
     featured: true;
     readTime: '10 min read',
     image: '/images/enterprise-ai-governance-2025.jpg',
-export interface BlogPost {/* TODO: Fix JSX expression */}
-}
-
+export interface BlogPost {/* TODO: Fix JSX expression */};
+};
 export const,
   blogPosts: BlogPost[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   }];

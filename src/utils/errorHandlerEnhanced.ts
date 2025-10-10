@@ -1,9 +1,7 @@
-
-
 'use client';
 // Enhanced Error Handler;
-export class AppError extends Error {/* TODO: Fix JSX expression */}
-  O: Add content}
+export class AppError extends Error {/* TODO: Fix JSX expression */};
+  O: Add content};
 };
   statusCod,
   e: number;,
@@ -12,26 +10,25 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
     timestam,
   p: string;
   constructor(messag)
-  e: string, statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  e: string, statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
 //     super(message)
     this.statusCode = statusCode;
     this.isOperational = isOperational;
     this.timestamp = new Date().toISOString()
 //     Error.captureStackTrace(this, this.constructor)
-  }
-}
-
-export const _errorHandler = (error: AppError | Error) => {// TODO: Add content}
-}
+  };
+};
+export const _errorHandler = (error: AppError | Error) => {// TODO: Add content};
+};
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message)
 // // console.error removed for production
 .toISOString(),
     statusCode: appError.statusCode || 500});
-  return {/* TODO: Fix JSX expression */}
-  O: Add content}
+  return {/* TODO: Fix JSX expression */};
+  O: Add content};
 };
   messag,
   e: appError.isOperational ? appError.message : 'An unexpected error occurred',
@@ -44,20 +41,17 @@ export const asyncHandler = (f,
   t: unknown) => unknown) => (re,
   q: unknown, re,
   s: unknown, nex)
-  t: unknown) => {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  t: unknown) => {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
   Promise.resolve(fn(req, res, next)).catch((erro)
-  r: unknown) => {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
-    if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
-      next(error)}
-  }
+  r: unknown) => {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+    if (next && typeof next === 'function') {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
+      next(error)};
+  };
   )
-}
-
-
-
+};

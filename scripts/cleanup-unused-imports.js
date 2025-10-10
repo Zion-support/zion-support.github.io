@@ -12,17 +12,14 @@ function cleanupFile(filePath) {
   try {;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
     // Remove console.log, console.warn, console.error statements;
     const consoleRegex = /^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm;
     if (consoleRegex.test(content)) {
       content = content.replace(consoleRegex, '');
-      modified = true}
-
+      modified = true};
     // Remove unused imports (basic cleanup);
 const importRegex = /^import\s+{[^}]*}\s+from\s+['"][^'"]+['"];?\s*$/gm;
     const imports = content.match(importRegex) || [];
-    
     imports.forEach(importStatement => {)
       // Extract imported items;);
 const match = importStatement.match(/import\s+{([^}]+)}\s+from/);
@@ -34,7 +31,6 @@ const itemName = item.split(' as ')[0].trim();
           const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g');
           const matches = content.match(usageRegex) || [];
           return matches.length <= 1; // Only appears in the import statement});
-        
         if (unusedItems.length === importedItems.length) {
           // Remove entire import if all items are unused;
           content = content.replace(importStatement, '');
@@ -43,52 +39,43 @@ const itemName = item.split(' as ')[0].trim();
           const usedItems = importedItems.filter(item => !unusedItems.includes(item));
           const newImport = `import { ${usedItems.join(', ')} } from ${importStatement.match(/from\s+['"][^'"]+['"]/)[0]};`;
           content = content.replace(importStatement, newImport);
-          modified = true}
-      }
+          modified = true};
+      };
     });
-
     if (modified) {
       fs.writeFileSync(filePath, content);
       // console.log removed for production
-return true}
+return true};
     return false} catch (error) {
     // console.error removed for production
-return false}
-}
-
+return false};
+};
 // Function to find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;
 let files = [];
-  
   try {;
 const items = fs.readdirSync(dir);
-    
     for (const item of items) {;
 const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory()) {
         // Skip node_modules, .git, dist, etc.
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          files = files.concat(findFiles(fullPath, extensions))}
+          files = files.concat(findFiles(fullPath, extensions))};
       } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath)}
-    }
+        files.push(fullPath)};
+    };
   } catch (error) {
-    // Skip directories we can't read}
-  
-  return files}
-
+    // Skip directories we can't read};
+  return files};
 // Main cleanup process;
 const files = findFiles('./app');
 let cleanedCount = 0;
-
 // console.log removed for production
 files.forEach(file => {)
   if (cleanupFile(file)) {
-    cleanedCount++}
+    cleanedCount++};
 });
-
 // console.log removed for production
 // Run ESLint fix to clean up remaining issues;
 // console.log removed for production
@@ -97,6 +84,5 @@ try {
   // console.log removed for production
 } catch (error) {
   // console.log removed for production
-}
-
+};
 // console.log removed for production

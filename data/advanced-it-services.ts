@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
   id: string;
   name: string;
   tagline: string;
@@ -256,7 +254,7 @@ varian,
     popula,
   r: true,
     websit,
-  e: string}
+  e: string};
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -803,13 +801,13 @@ marketSize: '$15B cloud migration market',
         contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
     launchDate: '2024-10-01',
     customers: 89;
     rating: 4.8;
-    reviews: 45}
+    reviews: 45};
   },
       'AI-powered automation',
     id: 'ai - powered - devops - platform',
@@ -834,7 +832,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true;
     implementationDetail,
@@ -846,7 +844,7 @@ varian,
     ratin,
   g: 4.8;
     review,
-  s: 45}
+  s: 45};
   },
       'AI-powered automation',
     i,
@@ -1693,27 +1691,27 @@ varian,
     ratin,
   g: 4 && 4.8,
     review,
-  s: 45}
+  s: 45};
 ];
 ;
-export interface AdvancedITService {/* TODO: Fix JSX expression */}
-  }
+export interface AdvancedITService {/* TODO: Fix JSX expression */};
+  };
 ];
 ];
-}
+};
 ];
 ];
-export interface AdvancedITService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface AdvancedITService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 ;
 export const advancedITServices: AdvancedITService[] = [;
   {
@@ -1745,8 +1743,8 @@ export const advancedITServices: AdvancedITService[] = [;
     competitors: ['IBM Quantum ($1000+/month)AWS Braket ($5000+/month)Google Quantum AI'];
     marketSize: '$500 M quantum computing market';
     growthRate: '500% annual growth';
-    variant: 'quantum-cloud'}
-    contactInfo: {}
+    variant: 'quantum-cloud'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1786,8 +1784,8 @@ export const advancedITServices: AdvancedITService[] = [;
     competitors: ['AWS Greengrass ($1000+/month)Azure IoT Edge ($2000+/month)Google Cloud IoT'];
     marketSize: '$50 B edge computing market';
     growthRate: '250% annual growth';
-    variant: 'edge-futuristic'}
-    contactInfo: {}
+    variant: 'edge-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1827,8 +1825,8 @@ export const advancedITServices: AdvancedITService[] = [;
     competitors: ['Palo Alto Networks ($10000+/month)CrowdStrike ($5000+/month)Zscaler'];
     marketSize: '$30 B zero trust market';
     growthRate: '200% annual growth';
-    variant: 'zero-trust-futuristic'}
-    contactInfo: {}
+    variant: 'zero-trust-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1868,8 +1866,8 @@ export const advancedITServices: AdvancedITService[] = [;
     competitors: ['GitLab ($99+/month)GitHub Actions ($1000+/month)Jenkins'];
     marketSize: '$8 B DevOps market';
     growthRate: '180% annual growth';
-    variant: 'ai-devops-futuristic'}
-    contactInfo: {}
+    variant: 'ai-devops-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1909,8 +1907,8 @@ export const advancedITServices: AdvancedITService[] = [;
     competitors: ['IBM Blockchain ($10000+/month)ConsenSys ($5000+/month)R3 Corda'];
     marketSize: '$20 B enterprise blockchain market';
     growthRate: '300% annual growth';
-    variant: 'blockchain-futuristic'}
-    contactInfo: {}
+    variant: 'blockchain-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1950,8 +1948,8 @@ export const advancedITServices: AdvancedITService[] = [;
     competitors: ['AWS ($50000+/month)Azure ($40000+/month)Google Cloud ($45000+/month)'];
     marketSize: '$200 B data center market';
     growthRate: '150% annual growth';
-    variant: 'quantum-infrastructure'}
-    contactInfo: {}
+    variant: 'quantum-infrastructure'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1991,8 +1989,8 @@ export const advancedITServices: AdvancedITService[] = [;
     competitors: ['Cisco ($8000+/month)Palo Alto Networks ($10000+/month)Fortinet ($5000+/month)'];
     marketSize: '$25 B network security market';
     growthRate: '180% annual growth';
-    variant: 'ai-network-futuristic'}
-    contactInfo: {}
+    variant: 'ai-network-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2032,8 +2030,8 @@ export const advancedITServices: AdvancedITService[] = [;
     competitors: ['AWS IoT ($1000+/month)Azure IoT ($2000+/month)Google Cloud IoT ($1500+/month)'];
     marketSize: '$100 B IoT market';
     growthRate: '250% annual growth';
-    variant: 'quantum-iot-futuristic'}
-    contactInfo: {}
+    variant: 'quantum-iot-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2073,8 +2071,8 @@ export const advancedITServices: AdvancedITService[] = [;
     competitors: ['Accenture ($50000+/month)Deloitte ($40000+/month)AWS Migration Hub'];
     marketSize: '$15 B cloud migration market';
     growthRate: '200% annual growth';
-    variant: 'ai-migration-futuristic'}
-    contactInfo: {}
+    variant: 'ai-migration-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2096,14 +2094,14 @@ export const advancedITServices: AdvancedITService[] = [;
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   advancedITServices: AdvancedITService[] = [;
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-cloud'}
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-cloud'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2126,10 +2124,10 @@ export const,
   g: 4.9;
     review,
   s: 4};
-  {/* TODO: Fix JSX expression */}
-  t: 'edge-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'edge-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2152,10 +2150,10 @@ export const,
   g: 4.7;
     review,
   s: 89};
-  {/* TODO: Fix JSX expression */}
-  t: 'zero-trust-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'zero-trust-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2178,10 +2176,10 @@ export const,
   g: 4.8;
     review,
   s: 45};
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-devops-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-devops-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2204,10 +2202,10 @@ export const,
   g: 4.6;
     review,
   s: 123};
-  {/* TODO: Fix JSX expression */}
-  t: 'blockchain-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'blockchain-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2230,10 +2228,10 @@ export const,
   g: 4.7;
     review,
   s: 34};
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-infrastructure'}
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-infrastructure'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2256,10 +2254,10 @@ export const,
   g: 4.9;
     review,
   s: 6};
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-network-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-network-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2282,10 +2280,10 @@ export const,
   g: 4.7;
     review,
   s: 89};
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-iot-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-iot-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2308,10 +2306,10 @@ export const,
   g: 4.6;
     review,
   s: 123};
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-migration-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-migration-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2333,9 +2331,9 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 45}
-export interface AdvancedITService {/* TODO: Fix JSX expression */}
-  }
+  s: 45};
+export interface AdvancedITService {/* TODO: Fix JSX expression */};
+  };
 ];
 i,
   d: string; nam,
@@ -2822,7 +2820,7 @@ i,
   e: '2024-10-01' customer,
   s: 89, ratin,
   g: 4 && 4.8, review,
-  s: 45 } ]; export interface AdvancedITService {} ]; ]} ]; ]; export interface AdvancedITService {/* TODO: Fix JSX expression */}
+  s: 45 } ]; export interface AdvancedITService {} ]; ]} ]; ]; export interface AdvancedITService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2831,7 +2829,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  advancedITServices: AdvancedITService[] = [; {/* TODO: Fix JSX expression */}
+  advancedITServices: AdvancedITService[] = [; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2841,7 +2839,7 @@ i,
   e: '2024-12-01'; customer,
   s: 8; ratin,
   g: 4.9; review,
-  s: 4}; {/* TODO: Fix JSX expression */}
+  s: 4}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2851,7 +2849,7 @@ i,
   e: '2024-10-01'; customer,
   s: 156; ratin,
   g: 4.7; review,
-  s: 89}; {/* TODO: Fix JSX expression */}
+  s: 89}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2861,7 +2859,7 @@ i,
   e: '2024-09-01'; customer,
   s: 89; ratin,
   g: 4.8; review,
-  s: 45}; {/* TODO: Fix JSX expression */}
+  s: 45}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2871,7 +2869,7 @@ i,
   e: '2024-08-01'; customer,
   s: 234; ratin,
   g: 4.6; review,
-  s: 123}; {/* TODO: Fix JSX expression */}
+  s: 123}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2881,7 +2879,7 @@ i,
   e: '2024-07-01'; customer,
   s: 67; ratin,
   g: 4.7; review,
-  s: 34}; {/* TODO: Fix JSX expression */}
+  s: 34}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2891,7 +2889,7 @@ i,
   e: '2024-11-01'; customer,
   s: 12; ratin,
   g: 4.9; review,
-  s: 6}; {/* TODO: Fix JSX expression */}
+  s: 6}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2901,7 +2899,7 @@ i,
   e: '2024-09-15'; customer,
   s: 178; ratin,
   g: 4.7; review,
-  s: 89}; {/* TODO: Fix JSX expression */}
+  s: 89}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2911,7 +2909,7 @@ i,
   e: '2024-08-15'; customer,
   s: 234; ratin,
   g: 4.6; review,
-  s: 123}; {/* TODO: Fix JSX expression */}
+  s: 123}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2922,10 +2920,3 @@ i,
   s: 89; ratin,
   g: 4.8; review,
   s: 45} export interface AdvancedITService {} ]; '
-=======
-    marketSize: '$500M quantum computing market'
-    growthRate: '500% annual growth';
-variant: 'quantum-cloud'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

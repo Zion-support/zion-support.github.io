@@ -1,71 +1,73 @@
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-
 export default function PrivacyPage() {;
 const lastUpdated = 'January 1, 2024';
 ;
 const dataTypes = [
-    {
+[
+        {
       category: 'Personal Information',
       icon: User,
       description: 'Name, email address, phone number, company information',
       examples: ['Contact forms', 'Newsletter signups', 'Account creation']
     },
-    {
+        {
       category: 'Usage Data',
       icon: Eye,
       description: 'Website interactions, pages visited, time spent',
       examples: ['Analytics data', 'User behavior', 'Performance metrics']
     },
-    {
+        {
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, device information',
       examples: ['Log files', 'Error reports', 'System diagnostics']
     },
-    {
+        {
       category: 'Communication Data',
       icon: Mail,
       description: 'Messages, emails, support tickets',
       examples: ['Contact forms', 'Support requests', 'Email correspondence']
-    }
+    };
   ];
 ;
 const rights = [
-    {
+[
+        {
       title: 'Right to Access',
       description: 'Request a copy of your personal data',
       icon: Eye
     },
-    {
+        {
       title: 'Right to Rectification',
       description: 'Correct inaccurate or incomplete data',
       icon: FileText
     },
-    {
+        {
       title: 'Right to Erasure',
       description: 'Request deletion of your personal data',
       icon: Database
     },
-    {
+        {
       title: 'Right to Portability',
       description: 'Receive your data in a structured format',
       icon: ArrowRight
     },
-    {
+        {
       title: 'Right to Object',
       description: 'Object to processing of your data',
       icon: AlertTriangle
     },
-    {
+        {
       title: 'Right to Restrict',
       description: 'Limit how we process your data',
       icon: Lock
-    }
+    };
   ];
 ;
 const securityMeasures = [
+];
     'SSL/TLS encryption for data transmission',
     'Regular security audits and penetration testing',
     'Access controls and authentication systems',
@@ -73,10 +75,9 @@ const securityMeasures = [
     'Employee training on data protection',
     'Incident response and breach notification procedures'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
+      {/* Hero Section */};
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -104,14 +105,13 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-
-      {/* Last Updated */}
+      {/* Last Updated */};
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
               <p className="text-gray-300">
-                <strong>Last Updated:</strong> {lastUpdated}
+                <strong>Last Updated:</strong> {lastUpdated};
               </p>
               <p className="text-sm text-gray-400 mt-2">
                 This privacy policy may be updated from time to time. We will notify you of any changes.
@@ -120,8 +120,7 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-
-      {/* Introduction */}
+      {/* Introduction */};
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -140,8 +139,7 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-
-      {/* Information We Collect */}
+      {/* Information We Collect */};
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -150,7 +148,7 @@ const securityMeasures = [
               {dataTypes.map((type, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center space-x-3 mb-4">
-                    <type.icon className="w-8 h-8 text-cyan-400" />
+                    <type .icon className="w-8 h-8 text-cyan-400" />
                     <h3 className="text-xl font-bold text-white">{type.category}</h3>
                   </div>
                   <p className="text-gray-300 mb-4">{type.description}</p>
@@ -160,19 +158,18 @@ const securityMeasures = [
                       {type.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className="text-sm text-gray-400 flex items-center">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {example}
+                          {example};
                         </li>
-                      ))}
+                      ))};
                     </ul>
                   </div>
                 </div>
-              ))}
+              ))};
             </div>
           </div>
         </div>
       </section>
-
-      {/* How We Use Your Information */}
+      {/* How We Use Your Information */};
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -212,8 +209,7 @@ const securityMeasures = [
           </div>
         </div>
       </section>
-
-      {/* Data Security */}
+      {/* Data Security */};
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -227,13 +223,12 @@ const securityMeasures = [
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{measure}</span>
                 </div>
-              ))}
+              ))};
             </div>
           </div>
         </div>
       </section>
-
-      {/* Your Rights */}
+      {/* Your Rights */};
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -241,17 +236,16 @@ const securityMeasures = [
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {rights.map((right, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                  <right.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <right .icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-bold text-white mb-3">{right.title}</h3>
                   <p className="text-gray-300 text-sm">{right.description}</p>
                 </div>
-              ))}
+              ))};
             </div>
           </div>
         </div>
       </section>
-
-      {/* Contact Information */}
+      {/* Contact Information */};
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -273,10 +267,8 @@ const securityMeasures = [
                 <span className="text-white">Middletown, DE</span>
               </div>
             </div>
-            <a
-              href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
-            >
+            <a href="/contact"
+              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" />
               Contact Us
             </a>
@@ -284,4 +276,4 @@ const securityMeasures = [
         </div>
       </section>
     </div>
-  )}
+  )};

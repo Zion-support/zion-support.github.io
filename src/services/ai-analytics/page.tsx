@@ -1,20 +1,14 @@
 import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
-const AIAnalyticsPage: React.FC = () => {;
-const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
 const AIAnalyticsPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+};
+const features = [
+[
+        {
       ico,
     n: Brain,
       title: 'Predictive Analytics',
@@ -29,26 +23,15 @@ const AIAnalyticsPage: React.FC = () => {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Interactive dashboards that provide instant insights into your business performance',
-
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
-const AIAnalyticsPage: React.FC = () => {;
+const AIAnalyticsPage: React.FC = () => {
+};
 const features = [];
   return (
-    {// TODO: Add content}
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const AIAnalyticsPage: React.FC = () => {
-  const features = [];
-  return (
-    {/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
+    {// TODO: Add content};
 };
   ico,
   n: Brain,
@@ -103,10 +86,11 @@ ico,
         'Pattern recognition',
         'Risk assessment',
         'Automated responses'
-    }
+    };
   ];
 ;
 const useCases = [
+];
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
@@ -120,17 +104,10 @@ titletitle: 'Financial Forecasting',
       color:       ,
 titletitle: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
-<<<<<<< HEAD
       color: 'text-yellow-400';
 const pricingTiers = [
+];
       name: 'Starter',
-=======
-      color: 'text-yellow-400'
-
-  const pricingTiers = [
-      nam,
-    e: 'Starter',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       price: '$1,500',
       period: '
       descriptio,
@@ -169,17 +146,10 @@ namename: 'Professional',
         'On-premise deployment',
         'SLA guarantees'
       color: 'text-cyan-400',
-<<<<<<< HEAD
       bgColor: 'bg-cyan-500/10';
 const benefits = [
+];
       icon: Star,
-=======
-      bgColor: 'bg-cyan-500
-
-  const benefits = [
-      ico,
-    n: Star,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       title: '95% Accuracy',
       description:       ,
 title$5: 'Real-time Processing',
@@ -190,22 +160,16 @@ icon$5: Award,
       title: 'Proven Results',
       description: '300% average ROI for our analytics clients';
 const useCases = [
-
+];
       titl,
     e: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
       color: 'text-green-400',
-
   return (
-<<<<<<< HEAD
-    <React.Fragment>
+    <React .Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    <>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-16">
@@ -227,7 +191,6 @@ const useCases = [
               <div className="flex items-center text-green-400">
                 <Target className="w-5 h-5 mr-2" 
                 <span className="font-medium">Predictive Intelligence<
-
           {/* Features *
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
@@ -244,13 +207,11 @@ const useCases = [
                       <p className="text-gray-300 mb-4">{feature.description}<
                   <ul className="space-y-2">)
                     {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="text-sm text-gray-300 flex items-start">
-                        
             Coming Soon
           <
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
                 <Brain className="w-5 h-5 mr-2" 
-
                 <span className="font-medium">AI-Powered Insights<
               <
               <div className="flex items-center text-purple-400"><
@@ -279,21 +240,19 @@ const useCases = [
                     {feature.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="text-sm text-gray-300 flex items-start"><
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><
-                        {benefit}
+                        {benefit};
                       <
-                    ))}
+                    ))};
                   <
-
           {/* Use Cases *
               Use Cases
             <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-4 gap-6">
               {useCases.map((useCase), index) => (<div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover: border-cyan-400)
                   <div className={`w-16 h-16 ${useCase.color.replace('text-'), 'bg-').replace('-400', '-500
-                    <useCase.icon className={`w-8 h-8 ${useCase.color}`} 
+                    <useCase.icon className={`w-8 h-8 ${useCase.color}`};
                   <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<
                   <p className="text-gray-300 text-sm">{useCase.description}<
-
           {/* Pricing *
               Pricing Plans
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">)
@@ -304,7 +263,7 @@ const useCases = [
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
                         Most Popular
                       <
-                  )}
+                  )};
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}<
                     <div className="flex items-baseline justify-center">
@@ -313,19 +272,16 @@ const useCases = [
                     <p className="text-gray-300 text-sm mt-2">{tier.description}<
                   <ul className="space-y-3 mb-6">
                     {tier.features.map((feature, featureIndex) => (<li key={featureIndex} className="text-sm text-gray-300 flex items-start">
-                        {feature}
-                  <a
-                    href="
+                        {feature};
+                  <a href="
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
                       tier.popular
                         ? 'bg-cyan-400 text-slate-900 hover: bg-cyan-300'
                         : 'bg-slate-700 text-white hove,
     r:bg-slate-600'
-                    }`}
-                  >
+                    }`};>
                     Get Started
                   <
-
           {/* Benefits *
               Why Choose Our AI Analytics?)
               {benefits.map((benefit, index) => (<div key={index} className="text-center">
@@ -333,7 +289,6 @@ const useCases = [
                     <benefit.icon className="w-8 h-8 text-cyan-400" 
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}<
                   <p className="text-gray-300 text-sm">{benefit.description}<
-
           {/* CTA Section *
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -353,17 +308,9 @@ const useCases = [
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   )};
-=======
-      <Footer 
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
 export default AIAnalyticsPage;
 {/* Use Cases *
               Use Cases;"
@@ -398,25 +345,16 @@ export default AIAnalyticsPage;
                   <ul className="space-y-3 mb-6"><
                     {tier.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="text-sm text-gray-300 flex items-start"><
-                        {feature}
-
+                        {feature};
                   <a
-<<<<<<< HEAD
-                    href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
-  // TODO: Add content}
+                    href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${};
+  // TODO: Add content};
 //                       tier.popular;
-=======
-                    href="
-  /
-
-}
-/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                         ? 'bg-cyan-400 text-slate-900,
   hover:bg-cyan-300'
                         : 'bg-slate-700 text-white,
   hover:bg-slate-600'`
-                    }`}
+                    }`};
 /
 /
           <
@@ -434,7 +372,6 @@ export default AIAnalyticsPage;
               Ready to Transform Your Data?"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"><
               Start your journey with AI analytics today. Get a free consultation and discover;
-
               how our platform can revolutionize your business intelligence.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
@@ -446,15 +383,6 @@ export default AIAnalyticsPage;
                 <Mail className="w-4 h-4 mr-2" 
                 Email Us;
       <Footer 
-
-<<<<<<< HEAD
     </div>
   )};
-=======
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
 export default AiAnalyticsPage;
-

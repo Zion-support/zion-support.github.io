@@ -3,13 +3,11 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import { readFileSync, writeFileSync } from 'fs';
-
 // console.log removed for production
 ;
 function resolveConflicts(filePath) {
   try {;
 const content = readFileSync(filePath, 'utf8');
-    
     // Check if file has conflict markers;
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts;
@@ -21,81 +19,66 @@ const conflictFiles = gitStatus;
   .filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'))
   .map(line => line.substring(3).trim())
   .filter(file => file);
-
 // console.log removed for production
 // Function to resolve conflicts in a file;
 function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
   found: ${filePath}`);
-      return false}
-
+      return false};
     // console.log removed for production
 // Split by conflict markers and keep the incoming version (after );
 const lines = content.split('\n');
     const resolvedLines = [];
     let skipUntilNextMarker = false;
-    
     for (let i = 0; i < lines.length; i++) {;
 const line = lines[i];
-      
       if (line.includes('')) {
         skipUntilNextMarker = true;
-        continue}
-      
+        continue};
       if (line.includes('')) {
         skipUntilNextMarker = false;
-        continue}
-      
+        continue};
       if (line.includes('>>>>>>>')) {
-        continue}
-      
+        continue};
       if (!skipUntilNextMarker) {
-        resolvedLines.push(line)}
-    }
-    
+        resolvedLines.push(line)};
+    };
     // Write the resolved content;
     writeFileSync(filePath, resolvedLines.join('\n'));
     // console.log removed for production
 return true} catch (error) {
     // console.log removed for production
-return false}
-}
-
+return false};
+};
 try {
   // Get list of files with conflicts;
   const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
-  
   if (!conflictFiles.trim()) {
     // console.log removed for production
-process.exit(0)}
-
+process.exit(0)};
   // console.log removed for production
 // console.log removed for production
 ;
 const files = conflictFiles.trim().split('\n');
   let resolvedCount = 0;
-
   for (const file of files) {
     if (file.trim()) {,
       if (resolveConflicts(file.trim())) {,
-        resolvedCount++}
-    }
+        resolvedCount++};
+    };
     // Check if file has conflict markers;
-    if (!content.includes(' 0) {/* TODO: Fix JSX expression */}
+    if (!content.includes(' 0) {/* TODO: Fix JSX expression */};
   o: 'inherit' });
     // console.log removed for production
-} catch (error) {/* TODO: Fix JSX expression */}
-  }
-
+} catch (error) {/* TODO: Fix JSX expression */};
+  };
   // console.log removed for production
 // Add all resolved files;
   execSync('git add .', { stdio: 'inherit' });
-
   // Commit the resolution;
   execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: 'inherit' });
-
   // console.log removed for production
 } catch (error) {
   // console.error removed for production
-process.exit(1)}
+process.exit(1)};
 // console.log removed for production
 `

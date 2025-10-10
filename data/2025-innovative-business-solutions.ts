@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -31,8 +29,10 @@ import React from 'react';
     mobile: string;
     email: string;
     address: string;
-    website: string}
-export interface InnovativeBusinessSolution {id: string, name: string;
+    website: string};
+export interface InnovativeBusinessSolution {
+id: string, name: string;
+}
   tagline: string, price: string;
   period: string, description: string;
   features: string[], popular: boolean;
@@ -48,12 +48,12 @@ export interface InnovativeBusinessSolution {id: string, name: string;
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string}
+    website: string};
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite;
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
@@ -78,7 +78,7 @@ variant: 'ai-business-intelligence',
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
     launch_date: '2025 - 05 - 01',
@@ -150,9 +150,9 @@ variant: 'ai-business-intelligence',
     addres,
   s: string;
     websit,
-  e: string}
-export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
-  e: string}
+  e: string};
+export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */};
+  e: string};
     },
     realImplementatio,
   n: boolean, implementationDetail,
@@ -163,7 +163,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite,
@@ -223,7 +223,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -243,9 +243,9 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
 ];
-}
+};
 ];
 ;
     realImplementation: true;
@@ -255,7 +255,7 @@ varian,
     customers:
         customers: 89;
     rating: 4.7;
-    reviews: 62}
+    reviews: 62};
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -275,7 +275,7 @@ varian,
     ratin,
   g: 4.7;
     review,
-  s: 62}
+  s: 62};
   // AI Sales Intelligence Platform,
   id: 'ai-sales-intelligence-platform-v2'
     nam,
@@ -372,7 +372,7 @@ marketSize: '$5.2 B sales intelligence market',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered sales intelligence platform with intelligent optimization, forecasting, and seamless CRM integration.'
@@ -380,7 +380,7 @@ marketSize: '$5.2 B sales intelligence market',
     customers:
         customers: 67;
     rating: 4.9;
-    reviews: 45}
+    reviews: 45};
   // AI Customer Service Platform;
     id: 'ai-customer-service-platform',
     name: 'AI Customer Service Platform',
@@ -410,7 +410,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -423,7 +423,7 @@ varian,
     ratin,
   g: 4.9;
     review,
-  s: 45}
+  s: 45};
   // AI Customer Service Platform,
   id: 'ai-customer-service-platform'
     nam,
@@ -520,7 +520,7 @@ marketSize: '$4.8 B customer service market',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered customer service platform with intelligent automation, support optimization, and seamless support tool integration.'
@@ -528,7 +528,7 @@ marketSize: '$4.8 B customer service market',
     customers:
         customers: 54;
     rating: 4.7;
-    reviews: 38}
+    reviews: 38};
   // AI HR Management Platform;
     id: 'ai-hr-management-platform',
     name: 'AI HR Management Platform',
@@ -558,7 +558,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -571,7 +571,7 @@ varian,
     ratin,
   g: 4.7;
     review,
-  s: 38}
+  s: 38};
   // AI HR Management Platform,
   id: 'ai-hr-management-platform'
     nam,
@@ -668,7 +668,7 @@ marketSize: '$6.2 B HR technology market',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered HR management platform with intelligent automation, workforce optimization, and seamless HR system integration.'
@@ -676,7 +676,7 @@ marketSize: '$6.2 B HR technology market',
     customers:
         customers: 42;
     rating: 4.8;
-    reviews: 29}
+    reviews: 29};
   // AI Financial Analytics Platform;
     id: 'ai-financial-analytics-platform',
     name: 'AI Financial Analytics Platform',
@@ -706,7 +706,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -719,7 +719,7 @@ varian,
     ratin,
   g: 4.8;
     review,
-  s: 29}
+  s: 29};
   // AI Financial Analytics Platform,
   id: 'ai-financial-analytics-platform'
     nam,
@@ -816,7 +816,7 @@ marketSize: '$8.5 B financial analytics market',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered financial analytics platform with intelligent analysis, risk management, and seamless financial system integration.'
@@ -824,7 +824,7 @@ marketSize: '$8.5 B financial analytics market',
     customers:
         customers: 28;
     rating: 4.9;
-    reviews: 19}
+    reviews: 19};
   // AI Project Management Platform;
     id: 'ai-project-management-platform',
     name: 'AI Project Management Platform',
@@ -854,7 +854,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -867,7 +867,7 @@ varian,
     ratin,
   g: 4.9;
     review,
-  s: 19}
+  s: 19};
   // AI Project Management Platform,
   id: 'ai-project-management-platform'
     nam,
@@ -964,7 +964,7 @@ marketSize: '$5.5 B project management market',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.'
@@ -975,7 +975,7 @@ marketSize: '$5.5 B project management market',
     reviews: 26}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Comprehensive AI-powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
     launchDate: '2025-05-01',
@@ -1004,7 +1004,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1026,7 +1026,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1038,19 +1038,19 @@ varian,
     ratin,
   g: 4.7;
     review,
-  s: 26}
+  s: 26};
 ];
-export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 ;
     realImplementation: true;
     implementationDetails:,
@@ -1059,7 +1059,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     customers:
         customers: 89;
     rating: 4.7;
-    reviews: 62}
+    reviews: 62};
   // AI Sales Intelligence Platform;
     id: 'ai-sales-intelligence-platform-v2',
     name: 'AI Sales Intelligence Platform',
@@ -1081,7 +1081,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
     realImplementatio,
   n: true,
@@ -1095,7 +1095,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 62}
+  s: 62};
   // AI Sales Intelligence Platform,
   id: 'ai-sales-intelligence-platform-v2'
     nam,
@@ -1411,7 +1411,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       'Communication tools'
     ]
     useCase,
-  s: [}
+  s: [};
 ;
 export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
@@ -1449,30 +1449,30 @@ export const,
     contactInfo: {,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite;
       address: '364 E Main St STE 1008 Middletown DE 19709',
-    reviews: 26}
-      website: 'https://ziontechgroup.com'}
+    reviews: 26};
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'Comprehensive AI - powered project management platform with intelligent planning, optimization, and seamless project tool integration.',
     launch_date: '2025 - 05 - 01',
     customers: 38;
     rating: 4.7;
     reviews: 26;
-  {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+  {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
 export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
   // AI Business Intelligence Suite,
   address: '364 E Main St STE 1008 Middletown DE 19709',
     review,
-  s: 26}
+  s: 26};
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1484,7 +1484,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 26}
+  s: 26};
 ];
 ;
 i,
@@ -1810,7 +1810,7 @@ i,
   e: '2025-05-01' customer,
   s: 38, ratin,
   g: 4.7,
-  reviews: 26 } ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
+  reviews: 26 } ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -1905,7 +1905,7 @@ i,
   technology: [' 'Artificial Intelligence'' 'Machine Learning'' 'Project Management'' 'Resource Optimization'' 'Python'' 'TensorFlow'' 'React' ] integration,
   s: [' 'Project management tools'' 'Collaboration platforms'' 'Time tracking tools'' 'Resource management systems'' 'Communication tools' ] useCase,
   s: [ } ; export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [; // AI Business Intelligence Suite; {/* TODO: Fix JSX expression */}
+  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [; // AI Business Intelligence Suite; {/* TODO: Fix JSX expression */};
   s: '364 E Main St STE 1008 Middletown DE 19709'} export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [ // AI Business Intelligence Suite ' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'} review,
@@ -1918,8 +1918,3 @@ i,
   s: 38, ratin,
   g: 4.7, review,
   s: 26} ]; '
-=======
-    marketSize: '$5.2 B sales intelligence market'
-    growthRate: '30% annual growth';
-variant: 'ai-sales',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

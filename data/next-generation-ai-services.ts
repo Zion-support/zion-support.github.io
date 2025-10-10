@@ -1,7 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 export interface NextGenerationAIService;
-export interface NextGenerationAIService {;
+export interface NextGenerationAIService {
+;
+}
   id: string;
   name: string;
   tagline: string;
@@ -37,11 +38,11 @@ export interface NextGenerationAIService {;
   launchDate: string;
   customers: number;
   rating: number;
-export interface NextGenerationAIService {}
+export interface NextGenerationAIService {};
   reviews: number,    mobile: string;
     email: string;
     address: string;
-    website: string}
+    website: string};
   },
   realImplementation: boolean;
   implementationDetails: string;
@@ -49,8 +50,8 @@ export interface NextGenerationAIService {}
   customers: number;
   rating: number;
   reviews: number;
-export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
-export interface NextGenerationAIService {}
+export interface NextGenerationAIService {/* TODO: Fix JSX expression */};
+export interface NextGenerationAIService {};
   review,
   s: number,    mobil,
   e: string,
@@ -59,7 +60,7 @@ export interface NextGenerationAIService {}
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
   },
   realImplementatio,
   n: boolean,
@@ -72,7 +73,7 @@ export interface NextGenerationAIService {}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
   i,
   d: string;
   nam,
@@ -126,27 +127,27 @@ export interface NextGenerationAIService {}
   varian,
   t: string;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string}
+  o: {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
   reviews: number;    mobile: string;
     email: string;
     address: string;
-    website: string}
+    website: string};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   // Advanced AI Agents & Autonomous Systems;
     id: 'ai-autonomous-business-agent',
@@ -167,7 +168,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
   review,
   s: number;    mobil,
   e: string;
@@ -176,7 +177,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     addres,
   s: string;
     websit,
-  e: string}
+  e: string};
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -188,7 +189,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 export const,
   nextGenerationAIServices: NextGenerationAIService[] = [,
   // Advanced AI Agents & Autonomous Systems,
@@ -1467,9 +1468,9 @@ varian,
     ratin,
   g: 4.7,
     review,
-  s: 125}
+  s: 125};
 ];
-export interface NextGenerationAIService export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
+export interface NextGenerationAIService export interface NextGenerationAIService {/* TODO: Fix JSX expression */};
   g: number; export interface NextGenerationAIService {} review,
   s: number, mobil,
   e: string, emai,
@@ -1508,7 +1509,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   e: string; growthRat,
   e: string; varian,
   t: string; contactInf,
-  o: {/* TODO: Fix JSX expression */}
+  o: {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -1922,10 +1923,3 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   s: 220, ratin,
   g: 4.7, review,
   s: 125 } ];'
-=======
-    marketSize: '$50B autonomous systems market'
-    growthRate: '400% annual growth';
-variant: 'ai-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

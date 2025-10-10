@@ -3,9 +3,9 @@ import crypto from 'crypto';
 ;
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true'});
-
 /** @type {import('next').NextConfig} */;
 const nextConfig = {
+};
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
@@ -14,7 +14,6 @@ const nextConfig = {
     ignoreDuringBuilds: true},
   typescript: {
     ignoreBuildErrors: true},
-  
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
     formats: ['image/webp', 'image/avif'],
@@ -23,15 +22,13 @@ const nextConfig = {
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"},
-
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Fix for "self is not defined" error by providing a polyfill
     if (isServer) {
       config.plugins.push(
         new webpack.DefinePlugin({
           'self': 'undefined'})
-      )}
-
+      )};
     // Optimize bundle size
     config.optimization = {
       ...config.optimization,
@@ -79,12 +76,9 @@ const _hash = crypto.createHash('sha1');
         maxInitialRequests: 25,
         minSize: 20000},
       minimize: !dev};
-
     // Tree shaking
     config.optimization.usedExports = true;
-
     return config},
-
   async headers() {
     return [
       {
@@ -123,29 +117,24 @@ const _hash = crypto.createHash('sha1');
           {
             key: 'Cache-Control',
             value: 'public, max-age=86400, s-maxage=604800, stale-while-revalidate'}]}]},
-
   async redirects() {
     return [
       {
         source: '/home',
         destination: '/',
         permanent: true}]},
-
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@heroicons/react'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB']},
-
   // Performance optimizations
   modularizeImports: {
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}'},
     '@heroicons/react': {
       transform: '@heroicons/react/{{member}}'}},
-
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn']} : false}};
-
 export default bundleAnalyzer(nextConfig);

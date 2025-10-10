@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 export default function ContactSection() {;
 const [formData, setFormData] = useState({
     name: '',
@@ -19,13 +18,14 @@ const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     // console.log removed for production
-};
+}
 ;
 const contactInfo = [
+[
     {
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth=    {2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
         </svg>
       ),
       title: 'Email Us',
@@ -52,11 +52,12 @@ const contactInfo = [
       title: 'Visit Us',
       details: '123 Tech Street, Innovation City, IC 12345',
       link: '#'
-    }
+    };
   ];
 ;
 const services = [
-    'AI & Machine Learning',
+];
+'AI & Machine Learning',
     'Cloud Solutions',
     'Web Development',
     'Mobile Development',
@@ -65,7 +66,6 @@ const services = [
     'IT Consulting',
     'Other'
   ];
-
   return (
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,7 +79,6 @@ const services = [
             Let's discuss your project and create something amazing together.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Information */}
           <div className="space-y-8">
@@ -92,15 +91,12 @@ const services = [
                 how AI and IT solutions can benefit your business, we're here to help. 
                 Our team of experts is ready to provide personalized consultation.
               </p>
-
               {/* Contact Info Cards */}
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <a
-                    key={index}
+                  <a key={index}
                     href={info.link}
-                    className="flex items-center p-4 cyber-card hover:scale-105 transition-all duration-300 group"
-                  >
+                    className="flex items-center p-4 cyber-card hover:scale-105 transition-all duration-300 group">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mr-4 text-black group-hover:scale-110 transition-transform duration-300">
                       {info.icon}
                     </div>
@@ -111,10 +107,9 @@ const services = [
                       <p className="text-gray-400">{info.details}</p>
                     </div>
                   </a>
-                ))}
+                ))};
               </div>
             </div>
-
             {/* Why Choose Us */}
             <div className="cyber-card-advanced p-8">
               <h3 className="text-xl font-bold text-white mb-6">
@@ -148,7 +143,6 @@ const services = [
               </ul>
             </div>
           </div>
-
           {/* Contact Form */}
           <div className="cyber-card-advanced p-8">
             <h3 className="text-2xl font-bold text-white mb-6">
@@ -160,8 +154,7 @@ const services = [
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Full Name *
                   </label>
-                  <input
-                    type="text"
+                  <input type="text"
                     id="name"
                     name="name"
                     value={formData.name}
@@ -175,8 +168,7 @@ const services = [
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address *
                   </label>
-                  <input
-                    type="email"
+                  <input type="email"
                     id="email"
                     name="email"
                     value={formData.email}
@@ -187,13 +179,11 @@ const services = [
                   />
                 </div>
               </div>
-
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                   Company Name
                 </label>
-                <input
-                  type="text"
+                <input type="text"
                   id="company"
                   name="company"
                   value={formData.company}
@@ -202,33 +192,28 @@ const services = [
                   placeholder="Your company name"
                 />
               </div>
-
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                   Service Interested In
                 </label>
-                <select
-                  id="service"
+                <select id="service"
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
-                >
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300">
                   <option value="">Select a service</option>
                   {services.map((service, index) => (
                     <option key={index} value={service}>
                       {service}
                     </option>
-                  ))}
+                  ))};
                 </select>
               </div>
-
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
                 </label>
-                <textarea
-                  id="message"
+                <textarea id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -238,11 +223,8 @@ const services = [
                   placeholder="Tell us about your project..."
                 />
               </div>
-
-              <button
-                type="submit"
-                className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+              <button type="submit"
+                className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 Send Message
               </button>
             </form>
@@ -250,4 +232,4 @@ const services = [
         </div>
       </div>
     </section>
-  )}
+  )};

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -6,7 +5,10 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 ;
-const EnterprisePage: React.FC = () => {const features = [
+const EnterprisePage: React.FC = () => {
+const features = [
+];
+};
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -42,37 +44,39 @@ const EnterprisePage: React.FC = () => {const features = [
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
 benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']]
-    }
+    };
   ];
 ;
 const solutions = [
-    {
+[
+        {
       title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
       icon: Building,
       benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']]
     },
-    {
+        {
       title: 'Customer Relationship Management',
       description: 'Advanced CRM systems for managing customer relationships and sales processes.',
       icon: Users,
       benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']]
     },
-    {
+        {
       title: 'Business Intelligence',
       description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
       icon: BarChart,
       benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring']]
     },
-    {
+        {
       title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
 benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']]
-    }
+    };
   ];
 ;
 const benefits = [
+];
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
     'Enhance security and compliance',
@@ -84,22 +88,20 @@ const benefits = [
   ];
 ;
 const stats = [
-    { number: '500+', label: 'Enterprise Clients', icon: Building },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
+[
+        { number: '500+', label: 'Enterprise Clients', icon: Building },
+        { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+        { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
+        { number: '24/7', label: 'Support Available', icon: Clock };
   ];
-
   return (
     <div>
-      <SEOOptimizer
-        title="Enterprise Solutions - Zion Tech Group"
+      <SEOOptimizer title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
       />
       <Navigation />
-      
-      {/* Hero Section */}
+      {/* Hero Section */};
       <section className="relative py-20 px-4 overflow-hidden"></section>
         <div>
         <div>
@@ -125,15 +127,14 @@ const stats = [
           </div>
         </div>
       </section>
-
-      {/* Stats Section */}
+      {/* Stats Section */};
       <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4"></div>
-                  <stat.icon className="w-12 h-12 text-purple-400" />
+                  <stat .icon className="w-12 h-12 text-purple-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2"></di>{stat.number}</div>
                 <div className="text-gray-300 text-sm"></di>{stat.label}</div>
@@ -142,8 +143,7 @@ const stats = [
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* Features Section */};
       <section className="py-20 px-4"></section>
         <div>
           <div>
@@ -154,9 +154,8 @@ const stats = [
               Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
+                  <feature .icon className="w-8 h-8 text-purple-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white"></h>{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -164,7 +163,7 @@ const stats = [
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
+                      {benefit};
                     </li>
                   ));
                 </ul>
@@ -173,7 +172,6 @@ const stats = [
           </div>
         </div>
       </section>
-
             <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Comprehensive Solutions
             </h2>
@@ -181,7 +179,6 @@ const stats = [
               End-to-end enterprise solutions that address every aspect of your business operations.
             </p>
           </div>
-          
                     </li>
                   ));
                 </ul>
@@ -190,8 +187,7 @@ const stats = [
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* Benefits Section */};
       <section className="py-20 px-4"></section>
                 </button>
               </div>
@@ -199,8 +195,7 @@ const stats = [
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20 px-4"></section>
         <div>
           <h2 className="text-4xl font-bold text-white mb-6"></h2>
@@ -220,12 +215,8 @@ const stats = [
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
 )]
     };
 export default EnterprisePage;
-=======
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

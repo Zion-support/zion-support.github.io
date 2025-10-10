@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
     id: 'customer - feedback - intelligence',
     name: 'Customer Feedback Intelligence',
     tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',
@@ -1138,7 +1136,7 @@ roi: 'Grow partner revenue by 1025%',
 		launchDate: '2026-01-10',
 		customers: 12;
 		rating: 4 && 4.6;
-		reviews: 7}
+		reviews: 7};
 		id: 'customer-feedback-intelligence',
 		name: 'Customer Feedback Intelligence',
 		tagline: 'Summarize NPS/CSAT and reviews into prioritized insights',
@@ -1173,7 +1171,7 @@ roi: 'Ship high-impact features faster',
 		launchDate: '2026-01-12',
 		customers: 9;
 		rating: 4 && 4.7;
-		reviews: 5}
+		reviews: 5};
 		id: 'api-security-posture-monitor',
 		name: 'API Security Posture Monitor',
 		tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
@@ -1208,7 +1206,7 @@ roi: 'Reduce security escapes by 60%',
 		launchDate: '2026-01-14',
 		customers: 11;
 		rating: 4 && 4.5;
-		reviews: 6}
+		reviews: 6};
 		id: 'edge-cron-orchestrator',
 		name: 'Edge Cron Orchestrator',
 		tagline: 'Reliable schedules with retries, jitter and DLQs',
@@ -1244,7 +1242,7 @@ roi: 'Fewer missed jobs and incidents',
 		launchDate: '2026-01-18',
 		customers: 7;
 		rating: 4 && 4.5;
-		reviews: 4}
+		reviews: 4};
 		id: 'email-parsing-routing-api',
 		name: 'Email Parsing & Routing API',
 		tagline: 'Inbound email to structured events with attachments',
@@ -1280,7 +1278,7 @@ roi: 'Automate manual email triage',
 		launchDate: '2026-01-20',
 		customers: 8;
 		rating: 4 && 4.6;
-		reviews: 5}
+		reviews: 5};
 		id: 'ai-marketing-content-studio',
 		name: 'AI Marketing Content Studio',
 		tagline: 'Campaign-ready blogs, emails and ads with brand guardrails',
@@ -1315,7 +1313,7 @@ roi: 'Scale content 5 faster',
 		launchDate: '2026-01-22',
 		customers: 15;
 		rating: 4 && 4.6;
-		reviews: 9}
+		reviews: 9};
 		id: 'security-headers-scanner',
 		name: 'Security Headers Scanner',
 		tagline: 'Continuous CSP/HSTS/cookie flag auditing with diffs',
@@ -1351,7 +1349,7 @@ roi: 'Reduce risk and review toil',
 		launchDate: '2026-01-25',
 		customers: 20;
 		rating: 4 && 4.5;
-		reviews: 10}
+		reviews: 10};
 		id: 'ml-feature-store-starter',
 		name: 'ML Feature Store Starter',
 		tagline: 'Versioned features, validation and online serving',
@@ -1386,7 +1384,7 @@ roi: 'Shorter time-to-prod models',
 		launchDate: '2026-01-28',
 		customers: 6;
 		rating: 4 && 4.5;
-		reviews: 3}
+		reviews: 3};
 		id: 'slo-burn-rate-coach',
 		name: 'SLO Burn Rate Coach',
 		tagline: 'Compute SLOs and coach on burn-rate risks',
@@ -1422,7 +1420,7 @@ roi: 'Fewer incidents',
 		launchDate: '2026-02-01',
 		customers: 10;
 		rating: 4 && 4.5;
-		reviews: 6}
+		reviews: 6};
 		id: 'browser-performance-optimizer',
 		name: 'Browser Performance Optimizer',
 		tagline: 'Budget-driven CWV with hints and PR annotations',
@@ -1457,7 +1455,7 @@ roi: '+20 LCP, fewer regressions',
 		launchDate: '2026-02-05',
 		customers: 5;
 		rating: 4 && 4.5;
-		reviews: 3}
+		reviews: 3};
 		id: 'cloud-cost-governance-suite',
 		name: 'Cloud Cost Governance Suite',
 		tagline: 'Budgets, owners, and policy guardrails across clouds',
@@ -1493,7 +1491,7 @@ roi: 'Reduce overspend by 1030%',
 		launchDate: '2026-02-08',
 		customers: 6;
 		rating: 4 && 4.6;
-		reviews: 4}
+		reviews: 4};
 		id: 'api-changelog-sdk-publisher',
 		name: 'API Changelog & SDK Publisher',
 		tagline: 'Generate docs, changelogs and SDKs from schemas',
@@ -1528,7 +1526,7 @@ roi: 'Docs/SDKs 5 faster',
 		launchDate: '2026-02-12',
 		customers: 9;
 		rating: 4 && 4.7;
-		reviews: 6}
+		reviews: 6};
 ];
 const contact =
 	mobile: '+1 302 464 0950',
@@ -1613,7 +1611,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 7}
+  s: 7};
 		i,
   d: 'customer-feedback-intelligence'
 		nam,
@@ -1680,7 +1678,7 @@ varian,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'api-security-posture-monitor'
 		nam,
@@ -1747,7 +1745,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 6}
+  s: 6};
 		i,
   d: 'edge-cron-orchestrator'
 		nam,
@@ -1814,7 +1812,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'email-parsing-routing-api'
 		nam,
@@ -1881,7 +1879,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'ai-marketing-content-studio'
 		nam,
@@ -1948,7 +1946,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 9}
+  s: 9};
 		i,
   d: 'security-headers-scanner'
 		nam,
@@ -2015,7 +2013,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 10}
+  s: 10};
 		i,
   d: 'ml-feature-store-starter'
 		nam,
@@ -2082,7 +2080,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'slo-burn-rate-coach'
 		nam,
@@ -2149,7 +2147,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 6}
+  s: 6};
 		i,
   d: 'browser-performance-optimizer'
 		nam,
@@ -2216,7 +2214,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'cloud-cost-governance-suite'
 		nam,
@@ -2283,7 +2281,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'api-changelog-sdk-publisher'
 		nam,
@@ -2350,7 +2348,7 @@ varian,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 6}
+  s: 6};
 ];
 const contact =
 	mobil,
@@ -3936,7 +3934,7 @@ variant: 'neural-quantum',
 		customers:
         customers: 9;
 		rating: 4.7;
-		reviews: 6}
+		reviews: 6};
 ];
 		reviews: 6;
     popula,
@@ -4798,10 +4796,10 @@ varian,
 		ratin,
   g: 4.7,
 		review,
-  s: 6}
+  s: 6};
 ];
 		review,
-  s: 6}
+  s: 6};
 ];
 i,
   d: 'customer - feedback - intelligence',' nam,
@@ -6389,7 +6387,3 @@ i,
   g: 4.7, review,
   s: 6 } ]; review,
   s: 6 } ]; '
-=======
-    reviews: 5},
-    id: 'api - security - posture - monitor'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

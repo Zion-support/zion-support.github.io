@@ -1,4 +1,3 @@
-
 ];      phone: '+1 302 464 0950',
   id:
         id: string;
@@ -21,7 +20,7 @@
     email: string;
 ],      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
     trial_days: 60;
     setup_time: '4 - 6 weeks',
     competitors:
@@ -30,7 +29,7 @@
     launch_date: '2024 - 01 - 10',
     customers: 950;
     rating: 4 && 4.9;
-    reviews: 520}
+    reviews: 520};
 ];
   id: string, name: string;
   tagline: string, description: string;
@@ -54,7 +53,7 @@
   competitors: string[], roi: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const comprehensiveRealServices: ComprehensiveService[] = [,
   // AI & Machine Learning Services;
     id: 'ai-content-factory-pro', name: 'AI Content Factory Pro',
@@ -296,12 +295,12 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     launchDate: '2024-01-10', customers: 950;
     rating: 4.9;
     reviews: 520;
-export interface ComprehensiveService {}
+export interface ComprehensiveService {};
 ];
 ;
 ];      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
     trialDays: 60;
     setupTime: '4-6 weeks',
     competitors:
@@ -355,7 +354,7 @@ export interface ComprehensiveService {}
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
     trial_day,
   s: 60;
     setup_tim,
@@ -371,7 +370,7 @@ export interface ComprehensiveService {}
     ratin,
   g: 4 && 4.9,
     review,
-  s: 520}
+  s: 520};
 ];
   i,
   d: string, nam,
@@ -429,7 +428,7 @@ export interface ComprehensiveService {}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   comprehensiveRealServices: ComprehensiveService[] = [,
   // AI & Machine Learning Services,
@@ -962,8 +961,8 @@ export const,
   g: 4.9,
     review,
   s: 520;
-export interface ComprehensiveService {/* TODO: Fix JSX expression */}
-  }
+export interface ComprehensiveService {/* TODO: Fix JSX expression */};
+  };
 ];
 ;
 ];      phon,
@@ -972,7 +971,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
     trialDay,
   s: 60;
     setupTim,
@@ -988,12 +987,12 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.9;
     review,
-  s: 520}
+  s: 520};
 ];
-export interface ComprehensiveService {/* TODO: Fix JSX expression */}
-  l: string}
+export interface ComprehensiveService {/* TODO: Fix JSX expression */};
+  l: string};
     addres,
-  s: string}
+  s: string};
   };
   trialDays: number;
   setupTime: string;
@@ -1018,7 +1017,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   comprehensiveRealServices: ComprehensiveService[] = [;
@@ -1043,8 +1042,8 @@ export const,
     ];
     integrations: ['WordPressShopifyHubSpotMailchimpGoogle AnalyticsSEMrush'];
     compliance: ['GDPRCCPASOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-content-factory-pro'}
-    contact: {}
+    website: 'https://ziontechgroup.com/ai-content-factory-pro'};
+    contact: {};
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -1077,8 +1076,8 @@ export const,
     ];
     integrations: ['SalesforceHubSpotPipedriveIntercomZendeskSlack'];
     compliance: ['GDPRCCPASOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-customer-success-platform'}
-    contact: {}
+    website: 'https://ziontechgroup.com/ai-customer-success-platform'};
+    contact: {};
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -1111,8 +1110,8 @@ export const,
     ];
     integrations: ['FiservJack HenryFISTemenosSalesforceOracle'];
     compliance: ['Basel IIIDodd-FrankSOXGDPRSOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-financial-risk-manager'}
-    contact: {}
+    website: 'https://ziontechgroup.com/ai-financial-risk-manager'};
+    contact: {};
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -1145,8 +1144,8 @@ export const,
     ];
     integrations: ['EpicCernerAllscriptsGE HealthcareSiemensPhilips'];
     compliance: ['HIPAAFDACE MarkSOC2 ISO 27001 ISO 13485'];
-    website: 'https://ziontechgroup.com/ai-healthcare-diagnostics'}
-    contact: {}
+    website: 'https://ziontechgroup.com/ai-healthcare-diagnostics'};
+    contact: {};
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -1179,8 +1178,8 @@ export const,
     ];
     integrations: ['ShopifyWooCommerceMagentoBigCommerceSalesforceKlaviyo'];
     compliance: ['GDPRCCPAPCI DSSSOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-ecommerce-optimizer'}
-    contact: {}
+    website: 'https://ziontechgroup.com/ai-ecommerce-optimizer'};
+    contact: {};
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -1213,8 +1212,8 @@ export const,
     ];
     integrations: ['SplunkServiceNowJiraSlackMicrosoft 365 Google Workspace'];
     compliance: ['SOC2 ISO 27001 NISTGDPRHIPAAPCI DSS'];
-    website: 'https://ziontechgroup.com/ai-cybersecurity-suite'}
-    contact: {}
+    website: 'https://ziontechgroup.com/ai-cybersecurity-suite'};
+    contact: {};
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -1247,8 +1246,8 @@ export const,
     ];
     integrations: ['SnowflakeDatabricksAWSGoogle CloudAzureTableau'];
     compliance: ['SOC2 ISO 27001 GDPRCCPAHIPAA'];
-    website: 'https://ziontechgroup.com/ai-data-pipeline-platform'}
-    contact: {}
+    website: 'https://ziontechgroup.com/ai-data-pipeline-platform'};
+    contact: {};
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -1281,8 +1280,8 @@ export const,
     ];
     integrations: ['WorkdayBambooHRGreenhouseLeverSlackMicrosoft Teams'];
     compliance: ['EEOCOFCCPGDPRCCPASOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-hr-recruitment-platform'}
-    contact: {}
+    website: 'https://ziontechgroup.com/ai-hr-recruitment-platform'};
+    contact: {};
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -1315,8 +1314,8 @@ export const,
     ];
     integrations: ['ClioMyCasePracticePantherLexisNexisWestlawDocuSign'];
     compliance: ['SOC2 ISO 27001 GDPRCCPAAttorney-client privilege'];
-    website: 'https://ziontechgroup.com/ai-legal-contract-analyzer'}
-    contact: {}
+    website: 'https://ziontechgroup.com/ai-legal-contract-analyzer'};
+    contact: {};
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'};
@@ -1349,15 +1348,15 @@ export const,
     ];
     integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'];
     compliance: ['ISO 9001 ISO 14001 OHSAS 18001 SOC2 ISO 27001'];
-    website: 'https://ziontechgroup.com/ai-manufacturing-optimizer'}
-    contact: {}
+    website: 'https://ziontechgroup.com/ai-manufacturing-optimizer'};
+    contact: {};
       phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-  {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/ai-content-factory-pro'}
+  {/* TODO: Fix JSX expression */};
+  s://ziontechgroup.com/ai-content-factory-pro'};
     contac,
-  t: {}
+  t: {};
       phon,
   e: '+1 302 464 0950';
       emai,
@@ -1382,10 +1381,10 @@ export const,
     review,
   s: 1250};
   // Customer Success & Support;
-  {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/ai-customer-success-platform'}
+  {/* TODO: Fix JSX expression */};
+  s://ziontechgroup.com/ai-customer-success-platform'};
     contac,
-  t: {}
+  t: {};
       phon,
   e: '+1 302 464 0950';
       emai,
@@ -1410,10 +1409,10 @@ export const,
     review,
   s: 950};
   // Financial Technology;
-  {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/ai-financial-risk-manager'}
+  {/* TODO: Fix JSX expression */};
+  s://ziontechgroup.com/ai-financial-risk-manager'};
     contac,
-  t: {}
+  t: {};
       phon,
   e: '+1 302 464 0950';
       emai,
@@ -1438,10 +1437,10 @@ export const,
     review,
   s: 680};
   // Healthcare & Biotech;
-  {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/ai-healthcare-diagnostics'}
+  {/* TODO: Fix JSX expression */};
+  s://ziontechgroup.com/ai-healthcare-diagnostics'};
     contac,
-  t: {}
+  t: {};
       phon,
   e: '+1 302 464 0950';
       emai,
@@ -1466,10 +1465,10 @@ export const,
     review,
   s: 420};
   // E-commerce & Retail;
-  {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/ai-ecommerce-optimizer'}
+  {/* TODO: Fix JSX expression */};
+  s://ziontechgroup.com/ai-ecommerce-optimizer'};
     contac,
-  t: {}
+  t: {};
       phon,
   e: '+1 302 464 0950';
       emai,
@@ -1494,10 +1493,10 @@ export const,
     review,
   s: 1680};
   // Cybersecurity & Compliance;
-  {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/ai-cybersecurity-suite'}
+  {/* TODO: Fix JSX expression */};
+  s://ziontechgroup.com/ai-cybersecurity-suite'};
     contac,
-  t: {}
+  t: {};
       phon,
   e: '+1 302 464 0950';
       emai,
@@ -1522,10 +1521,10 @@ export const,
     review,
   s: 1100};
   // Data & Analytics;
-  {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/ai-data-pipeline-platform'}
+  {/* TODO: Fix JSX expression */};
+  s://ziontechgroup.com/ai-data-pipeline-platform'};
     contac,
-  t: {}
+  t: {};
       phon,
   e: '+1 302 464 0950';
       emai,
@@ -1550,10 +1549,10 @@ export const,
     review,
   s: 1450};
   // Human Resources;
-  {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/ai-hr-recruitment-platform'}
+  {/* TODO: Fix JSX expression */};
+  s://ziontechgroup.com/ai-hr-recruitment-platform'};
     contac,
-  t: {}
+  t: {};
       phon,
   e: '+1 302 464 0950';
       emai,
@@ -1578,10 +1577,10 @@ export const,
     review,
   s: 890};
   // Legal & Compliance;
-  {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/ai-legal-contract-analyzer'}
+  {/* TODO: Fix JSX expression */};
+  s://ziontechgroup.com/ai-legal-contract-analyzer'};
     contac,
-  t: {}
+  t: {};
       phon,
   e: '+1 302 464 0950';
       emai,
@@ -1606,10 +1605,10 @@ export const,
     review,
   s: 580};
   // Manufacturing & IoT;
-  {/* TODO: Fix JSX expression */}
-  s://ziontechgroup.com/ai-manufacturing-optimizer'}
+  {/* TODO: Fix JSX expression */};
+  s://ziontechgroup.com/ai-manufacturing-optimizer'};
     contac,
-  t: {}
+  t: {};
       phon,
   e: '+1 302 464 0950';
       emai,
@@ -1635,12 +1634,12 @@ export const,
   s: 520;
     review,
   s: 520;
-export interface ComprehensiveService {/* TODO: Fix JSX expression */}
-  }
+export interface ComprehensiveService {/* TODO: Fix JSX expression */};
+  };
 ];
     phone: string;
     email: string;
-    address: string}
+    address: string};
   competitors: string[];
   roi: string;
   launch_date: string;
@@ -1655,7 +1654,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     emai,
   l: string;
     addres,
-  s: string}
+  s: string};
   competitor,
   s: string[];
   ro,
@@ -1792,7 +1791,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     website: 'https://ziontechgroup.com/ai-content-factory-pro',
     contact: phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
     trialDays: 14;
     setupTime: '5 minutes',
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business']
@@ -1800,7 +1799,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     launchDate: '2024-01-15',
     customers: 2500;
     rating: 4.8;
-    reviews: 1250}
+    reviews: 1250};
   // Customer Success & Support;
     id: 'ai-customer-success-platform',
     name: 'AI Customer Success Platform',
@@ -1825,7 +1824,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
     trialDay,
   s: 14,
     setupTim,
@@ -1841,7 +1840,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8;
     review,
-  s: 1250}
+  s: 1250};
   // Customer Success & Support,
   id: 'ai-customer-success-platform'
     nam,
@@ -2709,8 +2708,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   s: 520;
     review,
   s: 520;
-export interface ComprehensiveService {/* TODO: Fix JSX expression */}
-  }
+export interface ComprehensiveService {/* TODO: Fix JSX expression */};
+  };
 ];
   id: string, name: string;
   tagline: string, description: string;
@@ -2727,7 +2726,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   competitors: string[], roi: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const comprehensiveRealServices: ComprehensiveService[] = [,
   // AI & Machine Learning Services;
       address: '364 E Main St STE 1008 Middletown DE 19709'},
@@ -2994,7 +2993,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   comprehensiveRealServices: ComprehensiveService[] = [,
   // AI & Machine Learning Services,
@@ -3489,7 +3488,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 520}
+  s: 520};
 ];
 ;
 ]; phon,
@@ -3848,7 +3847,7 @@ export const,
   e: '2024-01-10' customer,
   s: 950, ratin,
   g: 4.9,
-  reviews: 520 } ]; export interface ComprehensiveService {/* TODO: Fix JSX expression */}
+  reviews: 520 } ]; export interface ComprehensiveService {/* TODO: Fix JSX expression */};
   l: string} addres,
   s: string} }; trialDay,
   s: number; setupTim,
@@ -3859,7 +3858,7 @@ export const,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  comprehensiveRealServices: ComprehensiveService[] = [; // AI & Machine Learning Services; {/* TODO: Fix JSX expression */}
+  comprehensiveRealServices: ComprehensiveService[] = [; // AI & Machine Learning Services; {/* TODO: Fix JSX expression */};
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3870,7 +3869,7 @@ export const,
   e: '2024-01-15'; customer,
   s: 2500; ratin,
   g: 4.8; review,
-  s: 1250}; // Customer Success & Support; {/* TODO: Fix JSX expression */}
+  s: 1250}; // Customer Success & Support; {/* TODO: Fix JSX expression */};
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3881,7 +3880,7 @@ export const,
   e: '2024-02-20'; customer,
   s: 1800; ratin,
   g: 4.9; review,
-  s: 950}; // Financial Technology; {/* TODO: Fix JSX expression */}
+  s: 950}; // Financial Technology; {/* TODO: Fix JSX expression */};
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3892,7 +3891,7 @@ export const,
   e: '2024-03-10'; customer,
   s: 1200; ratin,
   g: 4.7; review,
-  s: 680}; // Healthcare & Biotech; {/* TODO: Fix JSX expression */}
+  s: 680}; // Healthcare & Biotech; {/* TODO: Fix JSX expression */};
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3903,7 +3902,7 @@ export const,
   e: '2024-01-30'; customer,
   s: 850; ratin,
   g: 4.9; review,
-  s: 420}; // E-commerce & Retail; {/* TODO: Fix JSX expression */}
+  s: 420}; // E-commerce & Retail; {/* TODO: Fix JSX expression */};
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3914,7 +3913,7 @@ export const,
   e: '2024-02-15'; customer,
   s: 3200; ratin,
   g: 4.8; review,
-  s: 1680}; // Cybersecurity & Compliance; {/* TODO: Fix JSX expression */}
+  s: 1680}; // Cybersecurity & Compliance; {/* TODO: Fix JSX expression */};
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3925,7 +3924,7 @@ export const,
   e: '2024-03-01'; customer,
   s: 2100; ratin,
   g: 4.9; review,
-  s: 1100}; // Data & Analytics; {/* TODO: Fix JSX expression */}
+  s: 1100}; // Data & Analytics; {/* TODO: Fix JSX expression */};
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3936,7 +3935,7 @@ export const,
   e: '2024-02-01'; customer,
   s: 2800; ratin,
   g: 4.8; review,
-  s: 1450}; // Human Resources; {/* TODO: Fix JSX expression */}
+  s: 1450}; // Human Resources; {/* TODO: Fix JSX expression */};
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3947,7 +3946,7 @@ export const,
   e: '2024-01-20'; customer,
   s: 1900; ratin,
   g: 4.7; review,
-  s: 890}; // Legal & Compliance; {/* TODO: Fix JSX expression */}
+  s: 890}; // Legal & Compliance; {/* TODO: Fix JSX expression */};
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,
@@ -3958,7 +3957,7 @@ export const,
   e: '2024-02-10'; customer,
   s: 1100; ratin,
   g: 4.8; review,
-  s: 580}; // Manufacturing & IoT; {/* TODO: Fix JSX expression */}
+  s: 580}; // Manufacturing & IoT; {/* TODO: Fix JSX expression */};
   e: '+1 302 464 0950'}' emai,
   l: 'kleber@ziontechgroup.com'};' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709' }; trialDay,

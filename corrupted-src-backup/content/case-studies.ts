@@ -1,5 +1,6 @@
 import React from 'react';
 export type CaseStudy = {
+};
   id: string;
   title: string;
   company: string;
@@ -10,7 +11,6 @@ export type CaseStudy = {
   technologies: string[];
   duration: string;
   imageUrl?: string};
-
 export const caseStudies: CaseStudy[] = [
   {
     id: 'global-energy-digital-twin-850 m',
@@ -170,26 +170,25 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['RAG', 'Vector DB', 'TypeScript', 'OpenAI', 'ClickHouse'],
     duration: '10 weeks',
     imageUrl: '/images/case-studies/enterprise-rag.jpg',
-export type CaseStudy = {/* TODO: Fix JSX expression */}
+export type CaseStudy = {/* TODO: Fix JSX expression */};
 };
-
 export const,
   caseStudies: CaseStudy[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   }];

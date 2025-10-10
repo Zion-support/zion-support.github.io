@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type ZionEmergingTechService2029 =
   id: string;
   name: string;
@@ -44,7 +43,7 @@ export type ZionEmergingTechService2029 =
     professional: number;
     enterprise: number;
     currency: string;
-    period: string}}
+    period: string}};
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   // 1. Space Technology & Satellite Management Platform;
     id: 'space-technology-satellite-management',
@@ -143,7 +142,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     currenc,
   y: string;
     perio,
-  d: string}}
+  d: string}};
 export const,
   zionEmergingTechServices2029: ZionEmergingTechService2029[] = [,
   // 1. Space Technology & Satellite Management Platform,
@@ -215,7 +214,7 @@ marketSize: '$469.8B space economy',
       professional: 14999;
       enterprise: 39999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 2. Biotechnology & Synthetic Biology Platform;
     id: 'biotechnology-synthetic-biology',
@@ -302,7 +301,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 2. Biotechnology & Synthetic Biology Platform,
   id: 'biotechnology-synthetic-biology',
@@ -373,7 +372,7 @@ marketSize: '$83.9B synthetic biology market',
       professional: 9999;
       enterprise: 24999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 3. Renewable Energy & Smart Grid Optimization;
     id: 'renewable-energy-smart-grid',
@@ -460,7 +459,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 3. Renewable Energy & Smart Grid Optimization,
   id: 'renewable-energy-smart-grid',
@@ -531,7 +530,7 @@ marketSize: '$1.3T renewable energy market',
       professional: 7499;
       enterprise: 18999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 4. Advanced Robotics & Automation Platform;
     id: 'advanced-robotics-automation',
@@ -618,7 +617,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 4. Advanced Robotics & Automation Platform,
   id: 'advanced-robotics-automation',
@@ -689,7 +688,7 @@ marketSize: '$43.8B industrial robotics market',
       professional: 12999;
       enterprise: 29999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 5. Quantum Internet & Secure Communications;
     id: 'quantum-internet-secure-communications',
@@ -776,7 +775,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 5. Quantum Internet & Secure Communications,
   id: 'quantum-internet-secure-communications',
@@ -847,7 +846,7 @@ marketSize: '$3.9B quantum communications market',
       professional: 17999;
       enterprise: 44999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 6. Advanced Materials & Nanotechnology Platform;
     id: 'advanced-materials-nanotechnology',
@@ -934,7 +933,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 6. Advanced Materials & Nanotechnology Platform,
   id: 'advanced-materials-nanotechnology',
@@ -1005,7 +1004,7 @@ marketSize: '$67.8B advanced materials market',
       professional: 8999;
       enterprise: 21999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 7. Autonomous Transportation & Mobility Platform;
     id: 'autonomous-transportation-mobility',
@@ -1092,7 +1091,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 7. Autonomous Transportation & Mobility Platform,
   id: 'autonomous-transportation-mobility',
@@ -1163,7 +1162,7 @@ marketSize: '$556.7B autonomous vehicle market',
       professional: 11999;
       enterprise: 28999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 8. Digital Twin & Simulation Platform;
     id: 'digital-twin-simulation',
@@ -1250,7 +1249,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 8. Digital Twin & Simulation Platform,
   id: 'digital-twin-simulation',
@@ -1321,7 +1320,7 @@ marketSize: '$86.1B digital twin market',
       professional: 6999;
       enterprise: 17999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 9. Edge Computing & IoT Platform;
     id: 'edge-computing-iot-platform',
@@ -1408,7 +1407,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 9. Edge Computing & IoT Platform,
   id: 'edge-computing-iot-platform',
@@ -1479,7 +1478,7 @@ marketSize: '$43.4B edge computing market',
       professional: 4999;
       enterprise: 12999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 10. Metaverse & Virtual Reality Platform;
     id: 'metaverse-virtual-reality',
@@ -1566,7 +1565,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 10. Metaverse & Virtual Reality Platform,
   id: 'metaverse-virtual-reality',
@@ -1637,8 +1636,8 @@ marketSize: '$74.2B metaverse market',
       professional: 8299;
       enterprise: 20999;
       currency: 'USD',
-      period: 'month'}
-  }
+      period: 'month'};
+  };
 ];
 export const getServicesByCategory = (category: string) =>;
   return zionEmergingTechServices2029.filter(service => service.category === category);,
@@ -1719,8 +1718,8 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
-  }
+    };
+  };
 ];
 export const getServicesByCategory = (categor)
   y: string) =>;
@@ -2266,10 +2265,3 @@ export type ZionEmergingTechService2029 = i,
   e: number) maxPric,
   e: number) => return zionEmergingTechServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
   y: string) => return zionEmergingTechServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'
-=======
-    marketSize: '$469.8B space economy'
-    growthRate: '8.5% annual growth';
-variant: 'space-tech-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -13,3 +13,4 @@
  * - Missing pages and routes;
  * - SEO and accessibility issues;
  */import axios from 'axios'
+;

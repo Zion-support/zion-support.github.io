@@ -3,9 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import Navigation from '../components
 import Footer from '../components
-
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
-}
+};
   return (<div><Helmet><
         <title>AI Data Visualization Solutions - Zion Tech Group<
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /><
@@ -30,7 +29,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               Turn complex data into beautiful, interactive visualizations with AI-powered insights that help you make data-driven decisions faster and more accurately.
             <
           <
-
           {/* Features Grid *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features<
@@ -86,7 +84,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <
             <
           <
-
           {/* Pricing Section *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<
@@ -134,7 +131,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <
             <
           <
-
           {/* Use Cases Section *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For<
@@ -166,7 +162,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <
             <
           <
-
           {/* CTA Section *
           <section className="text-center"><
             <h2 className="text-3xl font-bold text-white mb-6">Start Visualizing Your Data Today<
@@ -189,16 +184,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             <
           <
         <
-        
-<<<<<<< HEAD
         <Footer /></Footer>
       </div>
     </div>
   )}"
-=======
-        <Footer /><
-      <
-    <
-  );
-}"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

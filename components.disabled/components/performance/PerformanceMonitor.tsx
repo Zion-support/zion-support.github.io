@@ -1,12 +1,12 @@
-// import React; { useEffect } from 'react''  // Common interfaces for better type safety interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
+// import React; { useEffect } from 'react''  // Common interfaces for better type safety interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */};
   a: T} statu,
-  s: number} message?: string} interface User {/* TODO: Fix JSX expression */}
+  s: number} message?: string} interface User {/* TODO: Fix JSX expression */};
   l: string} nam,
   e: string}' rol,
-  e: 'admin' | 'user' | 'guest'} interface Service {/* TODO: Fix JSX expression */}
+  e: 'admin' | 'user' | 'guest'} interface Service {/* TODO: Fix JSX expression */};
   n: string} pric,
   e: number} categor,
-  y: string} interface FormData {/* TODO: Fix JSX expression */}
+  y: string} interface FormData {/* TODO: Fix JSX expression */};
   y: string]: string | number | boolean | File} interface ComponentProps {className?: string; children?: React.ReactNode} [ke,
   y: string]: unknown} interface PerformanceMetrics {fcp?: number; lcp?: number; fid?: number; cls?: number; ttfb?: number} fmp?: number} const,
   PerformanceMonitor: React.FC = () => {useEffect(() => { // Only run in browser environment}' if (typeof window === 'undefined') return} const,
@@ -21,11 +21,11 @@ S: ') clsValue)})' clsObserver.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] }) // Time to First Byte (TTFB);' const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart}' // // console.log removed for production
 B: '} metrics.ttfb)} // First Meaningful Paint (FMP) - approximation; const fmpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) {' if (entry.name === 'first-meaningful-paint') { metrics.fmp = entry.startTime}' // // console.log removed for production
 P: '} entry.startTime)} } })' fmpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] }) // Send metrics to analytics after page load; const sendMetrics = () => {' if (typeof window !== 'undefined' && (window as unknown).gtag) { // Send to Google Analytics}' (window as unknown).gtag('event,web_vitals' {/* TODO: Fix JSX expression */}
+  s: ['paint'] }) // Send metrics to analytics after page load; const sendMetrics = () => {' if (typeof window !== 'undefined' && (window as unknown).gtag) { // Send to Google Analytics}' (window as unknown).gtag('event,web_vitals' {/* TODO: Fix JSX expression */};
   4: 'cls'}' metric_)
   5: 'ttfb'}) valu,
   e: Math.round(metrics.fcp || 0), non_interactio,
-  n: true})} // Send to custom analytics endpoint;' if (process.env['NODE_ENV'] === 'production') {/* TODO: Fix JSX expression */}
+  n: true})} // Send to custom analytics endpoint;' if (process.env['NODE_ENV'] === 'production') {/* TODO: Fix JSX expression */};
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json'}, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})

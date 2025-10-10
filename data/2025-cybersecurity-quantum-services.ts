@@ -1,7 +1,8 @@
 import React from 'react';
-
 export interface CybersecurityQuantumService;
-export interface CybersecurityQuantumService {;
+export interface CybersecurityQuantumService {
+;
+}
   id: string;
   name: string;
   tagline: string;
@@ -11,7 +12,7 @@ export interface CybersecurityQuantumService {;
     monthly: number;
     yearly: number;
     currency: string;
-    trialDays: number}
+    trialDays: number};
     setupTime: string;
     id: 'quantum - resistant - encryption - platform',
     name: 'Quantum - Resistant Encryption Platform',
@@ -26,9 +27,9 @@ export interface CybersecurityQuantumService {;
       currency: 'USD',
       trial_days: 30;
       setup_time: '1 - 2 weeks',
-      enterprise: 'Custom pricing'}
-export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
-  s: number}
+      enterprise: 'Custom pricing'};
+export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */};
+  s: number};
     setupTim,
   e: string,
     i,
@@ -55,7 +56,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       setup_tim,
   e: '1 - 2 weeks',
       enterpris,
-  e: 'Custom pricing'}
+  e: 'Custom pricing'};
     },
     feature,
   s: [,
@@ -858,7 +859,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   icon: string, color: string;
   popular: boolean, launchDate: string;
   customers: number, rating: number;
-  reviews: number}
+  reviews: number};
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring'
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'];
@@ -949,7 +950,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   s: number, ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 ];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring'
     ];
     integration,
@@ -975,14 +976,16 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 1900}
-export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
-  }
+  s: 1900};
+export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */};
+  };
 ];
 ;
-}
+};
 ];
-export interface CybersecurityQuantumService {;
+export interface CybersecurityQuantumService {
+;
+}
   id: string;
   name: string;
   tagline: string;
@@ -993,8 +996,8 @@ export interface CybersecurityQuantumService {;
     yearly: number;
     currency: string;
     trialDays: number;
-    setupTime: string}
-    enterprise: string}
+    setupTime: string};
+    enterprise: string};
   };
   features: string[];
   benefits: string[];
@@ -1016,7 +1019,7 @@ export interface CybersecurityQuantumService {;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 ;
 export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [;
   {
@@ -1024,8 +1027,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     name: 'Quantum-Resistant Encryption Platform';
     tagline: 'Future-proof security with post-quantum cryptography';
     description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.';
-    category: 'Quantum Security & Cryptography'}
-    price: {}
+    category: 'Quantum Security & Cryptography'};
+    price: {};
       monthly: 499;
       yearly: 4990;
       currency: 'USD';
@@ -1065,8 +1068,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     name: 'AI-Powered Threat Hunting Platform';
     tagline: 'Proactive threat detection with autonomous security intelligence';
     description: 'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.';
-    category: 'AI Cybersecurity & Threat Intelligence'}
-    price: {}
+    category: 'AI Cybersecurity & Threat Intelligence'};
+    price: {};
       monthly: 399;
       yearly: 3990;
       currency: 'USD';
@@ -1106,8 +1109,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     name: 'Zero-Trust Network Access Platform';
     tagline: 'Secure access with continuous verification and least privilege';
     description: 'Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.';
-    category: 'Zero-Trust Security & Access Control'}
-    price: {}
+    category: 'Zero-Trust Security & Access Control'};
+    price: {};
       monthly: 299;
       yearly: 2990;
       currency: 'USD';
@@ -1147,8 +1150,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     name: 'Quantum Key Distribution Network';
     tagline: 'Unhackable communication with quantum entanglement';
     description: 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.';
-    category: 'Quantum Communications & Security'}
-    price: {}
+    category: 'Quantum Communications & Security'};
+    price: {};
       monthly: 999;
       yearly: 9990;
       currency: 'USD';
@@ -1188,8 +1191,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     name: 'AI-Powered Vulnerability Assessment Platform';
     tagline: 'Intelligent security scanning with AI-driven risk analysis';
     description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.';
-    category: 'Vulnerability Management & Security Testing'}
-    price: {}
+    category: 'Vulnerability Management & Security Testing'};
+    price: {};
       monthly: 199;
       yearly: 1990;
       currency: 'USD';
@@ -1223,14 +1226,14 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launchDate: '2024-02-15';
     customers: 2500;
     rating: 4.8;
-    reviews: 1900}
+    reviews: 1900};
 ];
     rating: 4.8;
     reviews: 1900;
-export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
-  e: string}
+export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */};
+  e: string};
     enterpris,
-  e: string}
+  e: string};
   };
   feature,
   s: string[];
@@ -1273,14 +1276,14 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [;
-  {/* TODO: Fix JSX expression */}
-  y: 'Quantum Security & Cryptography'}
+  {/* TODO: Fix JSX expression */};
+  y: 'Quantum Security & Cryptography'};
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 499;
       yearl,
@@ -1347,10 +1350,10 @@ export const,
   g: 4.9;
     review,
   s: 480};
-  {/* TODO: Fix JSX expression */}
-  y: 'AI Cybersecurity & Threat Intelligence'}
+  {/* TODO: Fix JSX expression */};
+  y: 'AI Cybersecurity & Threat Intelligence'};
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 399;
       yearl,
@@ -1417,10 +1420,10 @@ export const,
   g: 4.8;
     review,
   s: 950};
-  {/* TODO: Fix JSX expression */}
-  y: 'Zero-Trust Security & Access Control'}
+  {/* TODO: Fix JSX expression */};
+  y: 'Zero-Trust Security & Access Control'};
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 299;
       yearl,
@@ -1487,10 +1490,10 @@ export const,
   g: 4.7;
     review,
   s: 1400};
-  {/* TODO: Fix JSX expression */}
-  y: 'Quantum Communications & Security'}
+  {/* TODO: Fix JSX expression */};
+  y: 'Quantum Communications & Security'};
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 999;
       yearl,
@@ -1558,10 +1561,10 @@ export const,
   g: 4.9;
     review,
   s: 95};
-  {/* TODO: Fix JSX expression */}
-  y: 'Vulnerability Management & Security Testing'}
+  {/* TODO: Fix JSX expression */};
+  y: 'Vulnerability Management & Security Testing'};
     pric,
-  e: {}
+  e: {};
       monthl,
   y: 199;
       yearl,
@@ -1627,14 +1630,14 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 1900}
+  s: 1900};
 ];
     ratin,
   g: 4.8,
     review,
-  s: 1900}
+  s: 1900};
 ];
-export interface CybersecurityQuantumService export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
+export interface CybersecurityQuantumService export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */};
   s: number} setupTim,
   e: string, i,
   d: 'quantum - resistant - encryption - platform',' nam,
@@ -1905,7 +1908,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   g: 4 && 4.8, review,
   s: 1900,
   rating: 4.8, review,
-  s: 1900} export interface CybersecurityQuantumService {} ]; } ]; export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
+  s: 1900} export interface CybersecurityQuantumService {} ]; } ]; export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */};
   e: string} enterpris,
   e: string} }; feature,
   s: string[]; benefit,
@@ -1929,7 +1932,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [; {/* TODO: Fix JSX expression */}
+  cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [; {/* TODO: Fix JSX expression */};
   s: 30}' setupTim,
   e: '1-2 weeks'};' enterpris,
   e: 'Custom pricing' }; feature,
@@ -1955,7 +1958,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   e: '2024-01-15'; customer,
   s: 650; ratin,
   g: 4.9; review,
-  s: 480}; {/* TODO: Fix JSX expression */}
+  s: 480}; {/* TODO: Fix JSX expression */};
   s: 21}' setupTim,
   e: '1-2 weeks'};' enterpris,
   e: 'Custom pricing' }; feature,
@@ -1981,7 +1984,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   e: '2024-02-01'; customer,
   s: 1200; ratin,
   g: 4.8; review,
-  s: 950}; {/* TODO: Fix JSX expression */}
+  s: 950}; {/* TODO: Fix JSX expression */};
   s: 21}' setupTim,
   e: '1-2 weeks'};' enterpris,
   e: 'Custom pricing' }; feature,
@@ -2007,7 +2010,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   e: '2024-01-20'; customer,
   s: 1800; ratin,
   g: 4.7; review,
-  s: 1400}; {/* TODO: Fix JSX expression */}
+  s: 1400}; {/* TODO: Fix JSX expression */};
   s: 30}' setupTim,
   e: '2-4 weeks'};' enterpris,
   e: 'Custom pricing' }; feature,
@@ -2034,7 +2037,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   e: '2024-03-01'; customer,
   s: 120; ratin,
   g: 4.9; review,
-  s: 95}; {/* TODO: Fix JSX expression */}
+  s: 95}; {/* TODO: Fix JSX expression */};
   s: 14}' setupTim,
   e: '1-3 days'};' enterpris,
   e: 'Custom pricing' }; feature,

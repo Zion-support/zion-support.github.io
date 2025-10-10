@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -93,7 +91,7 @@ import React from 'react';
     addres,
   s: string;
     websit,
-  e: string}
+  e: string};
         'Real-time brain signal interpretation',
   real_implementatio,
   n: boolean;
@@ -1020,7 +1018,7 @@ varian,
       ratin,
   g: 5.0;
       review,
-  s: 2}
+  s: 2};
         mobil,
   e: '+1 302 464 0950',
         emai,
@@ -1339,10 +1337,3 @@ i,
   s://ziontechgroup && ziontechgroup.com'}, real_implementatio,
   n: true, implementation_detail,
   s:; '
-=======
-      marketSize: '$5 B market'
-      growthRate: '800% annual growth';
-variant: 'space-futuristic'
-      contactInfo: unknown;
-      color: 'from - purple - 600 via - pink - 600 to - rose - 600'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

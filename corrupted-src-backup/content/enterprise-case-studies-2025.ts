@@ -1,5 +1,6 @@
 // Enterprise case studies showcasing real-world AI implementations and results;
 export interface EnterpriseCaseStudy {
+}
   id: string;
   slug?: string;
   title: string;
@@ -13,15 +14,14 @@ export interface EnterpriseCaseStudy {
     efficiencyGain: string;
     roi: string;
     timeline: string;
-export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
+export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */};
   };
   feature,
   d: boolean;
   publishedA,
   t: string;
   tag,
-  s: string[]}
-
+  s: string[]};
 export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
   {
     id: 'fortune-500-ai-automation',
@@ -59,7 +59,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
     tags: ['AI Analytics', 'Financial Services', 'Fraud Detection', 'Accuracy'],
 export const,
   enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
     },
     feature,
   d: true,
@@ -67,7 +67,7 @@ export const,
   t: '2025-10-01',
     tag,
   s: ['AI Automation', 'Manufacturing', 'Cost Reduction', 'ROI']},
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
     },
     feature,
   d: true,

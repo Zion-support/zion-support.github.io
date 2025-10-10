@@ -1,25 +1,23 @@
 import React, { useState } from 'react';
-
 export default function EnhancedContactForm(): React.JSX.Element {;
 const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
   return(<form;)
       aria-label="Contact form")
-      onSubmit={e => e.preventDefault()}
+      onSubmit={e => e.preventDefault()};
       className="grid gap-4 max-w-xl mx-auto"
     >
       <input;
         aria-label="Name"
-export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix JSX expression */}
-      onSubmit={e => e.preventDefault()}
+export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix JSX expression */};
+      onSubmit={e => e.preventDefault()};
       className="grid gap-4 max-w-xl mx-auto"
     >
       <input></input>"
         aria-label="Name""
         placeholder="Name"
-        value={name}
+        value={name};
         onChange={e => setName(e.target.value)}"
         className="border p-2 rounded"
       />
@@ -28,7 +26,7 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
       <input></input>"
         aria-label="Email""
         placeholder="Email"
-        value={email}
+        value={email};
         onChange={e => setEmail(e.target.value)}"
         className="border p-2 rounded"
       />
@@ -37,7 +35,7 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
       <textarea></textarea>"
         aria-label="Message""
         placeholder="Message"
-        value={message}
+        value={message};
         onChange={e => setMessage(e.target.value)}"
         className="border p-2 rounded"
       />
@@ -47,5 +45,5 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
         Send;
       </button>
     </form>
-  )}
+  )};
 "

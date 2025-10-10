@@ -11,27 +11,27 @@ const TrendingContentBanne, r: React.FC = () => {,
       ic, o, n: Trendin, g, U, p,",
       li, n, k: "/bl, o, g/ai-disast, e, r-recove, r, y-playboo, k, s-2, 0, 2, 5",
       bad, g, e: "NE, W";
-const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
+const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
-    }
-  ]; useEffect(() => {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
+    };
+  ]; useEffect(() => {/* TODO: Fix JSX expression */};
      }, 40, 0, 0);
     return () => clearInterv, a, l(interv, a, l)}, [trendingIte, m, s.leng, t, h]);
-  const currentIte, m = trendingIte, m, s[currentInd, e, x]; const getBadgeColo, r = (bad, g, e: str, i, n, g) => {/* TODO: Fix JSX expression */}
-    }
+  const currentIte, m = trendingIte, m, s[currentInd, e, x]; const getBadgeColo, r = (bad, g, e: str, i, n, g) => {/* TODO: Fix JSX expression */};
+    };
   };
   const Ico, n = currentIt, e, m.ic, o, n; return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p"></div>
       <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
@@ -49,7 +49,7 @@ const Ico, n = currentIt, e, m.ic, o, n; return (<div, className="bg-gradie, n, 
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>
             </div>)
             <div, classNam, e = { `px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.b, a, d, g, e) }, anima, t, e-boun, c, e`}></div>
-              {currentIt, e, m.bad, g, e}
+              {currentIt, e, m.bad, g, e};
             </div>
           </div>"
           <div, classNam, e = "flex, item, s-start, ga, p-4"></div>"
@@ -58,14 +58,14 @@ const Ico, n = currentIt, e, m.ic, o, n; return (<div, className="bg-gradie, n, 
             <div, className="fl, e, x-1"></div>"
               <div, className="flex, item, s-center, ga, p-2, m, b-1"></div>"
                 <span, className="te, x, t-xs, fon, t-medium, tex, t-zi, o, n-sla, t, e-light, uppercase, tracking-wid, e, r"></span>
-                  {currentIt, e, m.cate, g, o, r, y}
+                  {currentIt, e, m.cate, g, o, r, y};
                 </sp, a, n>
               </div>"
               <h3, classNam, e = "te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s"></h3>
-                {currentIt, e, m.t, i, t, l, e}
+                {currentIt, e, m.t, i, t, l, e};
               </h3>"
               <p, classNam, e = "te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-3"></p>
-                {currentIt, e, m.description}
+                {currentIt, e, m.description};
               </p>"
               <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t"></div>"
                 <div, className="flex, item, s-center, ga, p-1"></div>"
@@ -87,9 +87,9 @@ const Ico, n = currentIt, e, m.ic, o, n; return (<div, className="bg-gradie, n, 
         <div, className="flex, fle, x-col, item, s-end, ga, p-3"></div>"
           <Link, t, o = { currentIt, e, m.l, i, n, k }, classNa, m, e = "bg-zi, o, n-cyan, tex, t-white, hove, r: bg-zi, o, n-bl, u, e-light, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2, grou, p/b, t, n"
           ></Link>
-            <BookOpen, className="w-4 h-4" />
+            <BookOpen , className="w-4 h-4" />
             Read, No, w;
-            <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transfo, r, m" />
+            <Link , className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transfo, r, m" />
           ></Link>"
             <BookOpen, className="w-4 h-4" /></BookOpen>
             Read, No, w;"
@@ -102,17 +102,17 @@ const Ico, n = currentIt, e, m.ic, o, n; return (<div, className="bg-gradie, n, 
                   ind, e, x === currentInd, e, x;
                      ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' 
                     : 'bg-whi, t, e/30, hove, r : bg-whi, t, e/, 5, 0'
-            {/* TODO: Fix JSX expression */}
+            {/* TODO: Fix JSX expression */};
               <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = {/* TODO: Fix JSX expression */}`
-                 }`}
-            ))}
+                 }`};
+            ))};
           </button></div>
         </div>
       </div>
       {/* Progress, ba, r */}"
       <div, classNam, e = "mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1"></div>"
         <d, i, v > className="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"`
-          sty, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}
+          sty, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }};
       </div>
     </div>
   )};

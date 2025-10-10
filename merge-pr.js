@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 // console.log removed for production
 try {
   // Check current branch;
@@ -10,11 +9,9 @@ try {
 // Switch to main branch;
   // console.log removed for production
 execSync('git checkout main', { stdio: 'inherit' });
-
   // Pull latest changes;
   // console.log removed for production
 execSync('git pull origin main', { stdio: 'inherit' });
-
   // Check if our branch exists;
   const branchName = 'cursor/enhance-app-with-new-services-and-futuristic-design-c013';
   // console.log removed for production
@@ -23,8 +20,7 @@ try {
     // console.log removed for production
 } catch (error) {
     // console.log removed for production
-process.exit(1)}
-
+process.exit(1)};
   // Try to merge the branch;
   // console.log removed for production
 try {
@@ -45,16 +41,14 @@ try {
         // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-process.exit(1)}
-    }
-  }
-
+process.exit(1)};
+    };
+  };
   // Push changes to main;
   // console.log removed for production
 execSync('git push origin main', { stdio: 'inherit' });
-
   // console.log removed for production
 // console.log removed for production
 } catch (error) {
   // console.error removed for production
-process.exit(1)}
+process.exit(1)};

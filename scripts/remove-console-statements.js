@@ -2,9 +2,9 @@
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 // Patterns to match console statements;
 const consolePatterns = [
+];
   /console\.log\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   /console\.error\([^)]*\);?/g,
@@ -19,9 +19,9 @@ const consolePatterns = [
   /console\.count\([^)]*\);?/g,
   /console\.clear\([^)]*\);?/g;
 ];
-
 // Files to process;
 const filePatterns = [
+];
   'app/**/*.{ts,tsx,js,jsx}',
   'src/**/*.{ts,tsx,js,jsx}',
   'components/**/*.{ts,tsx,js,jsx}',
@@ -30,9 +30,9 @@ const filePatterns = [
   'hooks/**/*.{ts,tsx,js,jsx}',
   'lib/**/*.{ts,tsx,js,jsx}'
 ];
-
 // Files to exclude;
 const excludePatterns = [
+];
   '**/node_modules/**',
   '**/dist/**',
   '**/.next/**',
@@ -57,7 +57,6 @@ function processFile(filePath) {
 const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileRemovedCount = 0;
-
     // Remove console statements;
     consolePatterns.forEach(pattern => {);
 const matches = newContent.match(pattern);
@@ -65,20 +64,19 @@ const matches = newContent.match(pattern);
         fileRemovedCount += matches.length;
         newContent = newContent.replace(pattern, '');
 // Function to remove console statements from a file;
-function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
-  from: ${filePath}`)}
-    
+function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */};
+  from: ${filePath}`)};
     return modified} catch (error) {/* TODO: Fix JSX expression */}`
     // // console.error removed for production
-return false}
-}
-
+return false};
+};
 // Main function;
-async function main() {/* TODO: Fix JSX expression */}
-}
+async function main() {/* TODO: Fix JSX expression */};
+};
   // // console.log removed for production
 // Get all TypeScript and JavaScript files in the app directory;
   const patterns = [
+];
     'app/**/*.{ts,tsx,js,jsx}',
     '!app/**/*.test.{ts,tsx,js,jsx}',
     '!app/**/*.spec.{ts,tsx,js,jsx}',
@@ -89,24 +87,19 @@ async function main() {/* TODO: Fix JSX expression */}
   ;
 let totalFiles = 0;
   let modifiedFiles = 0;
-  
-  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-      }
+  for (const pattern of patterns) {/* TODO: Fix JSX expression */};
+      };
     });
-
     // Clean up empty lines that might be left behind;
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n');
-
     if (fileRemovedCount > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       // console.log removed for production
-removedStatements += fileRemovedCount}
-
+removedStatements += fileRemovedCount};
     processedFiles++} catch (error) {
     // console.error removed for production
-}
-}
-
+};
+};
 async function main() {
   // console.log removed for production
 // Get all files to process;
@@ -115,26 +108,21 @@ async function main() {
 const files = await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
-    allFiles.push(...files)}
-
+    allFiles.push(...files)};
   // Remove duplicates;
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
-
   // console.log removed for production
 // Process each file;
   uniqueFiles.forEach(processFile);
-
   // console.log removed for production
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-}
-
+};
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main()}
-
-export { processFile, consolePatterns }}
+  main()};
+export { processFile, consolePatterns }};
   `
   // // console.log removed for production
 `
@@ -148,13 +136,10 @@ export { processFile, consolePatterns }}
   // // console.log removed for production
 `
   removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
-  
-  if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-}
-
+  if (modifiedFiles > 0) {/* TODO: Fix JSX expression */};
+  } else {/* TODO: Fix JSX expression */};
+  };
+};
 // Run the script;
 main().catch(console.error);
-
 export { removeConsoleStatements };`

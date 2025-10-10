@@ -1,5 +1,3 @@
-
-
 'use client';
 import React, { useState } from 'react';
 const,
@@ -32,15 +30,6 @@ const calculateROI = () => {return Math.max(0, roi)};return (
   focus:ring-blue-500,
   focus:border-transparent'
 // />
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </div>
 Expected Efficiency Gain (%)
                   type='range'
@@ -73,7 +62,4 @@ Expected Efficiency Gain (%)
                 </p>
     </section>
   );
-
 export default InteractiveAIROICalculator;
-
-

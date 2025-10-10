@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-
-export interface ComprehensiveITService {id: string;
+export interface ComprehensiveITService {
+id: string;
+}
   name: string;
   tagline: string;
   price: string;
@@ -29,7 +29,7 @@ export interface ComprehensiveITService {id: string;
   variant: string;
   contact_info: unknown;
     mobile: string;
-    email: string}
+    email: string};
     address: string;
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
@@ -42,8 +42,8 @@ export interface ComprehensiveITService {id: string;
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
     market_position: unknown;
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
-  l: string}
+export interface ComprehensiveITService {/* TODO: Fix JSX expression */};
+  l: string};
     addres,
   s: string,
     i,
@@ -153,7 +153,7 @@ growth_rate: '8% annual growth',
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'}
+      website: 'https://ziontechgroup && ziontechgroup.com'};
     },
     real_implementation: true;
     implementation_details: unknown;
@@ -183,7 +183,7 @@ varian,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}
+  s://ziontechgroup && ziontechgroup.com'};
     },
     real_implementatio,
   n: true,
@@ -697,7 +697,7 @@ growth_rate: '15% annual growth',
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services;
     id: 'enterprise-it-infrastructure', name: 'Enterprise IT Infrastructure Management',
@@ -815,7 +815,7 @@ varian,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services,
@@ -1964,7 +1964,7 @@ growth_rate: '400% annual growth',
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services;
     price: '$25,999',
@@ -2113,7 +2113,7 @@ varian,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services,
@@ -2231,8 +2231,8 @@ variant: 'enterprise-futuristic',
   contactInfo: {,
     mobile: string;
     email: string;
-    address: string}
-    website: string}
+    address: string};
+    website: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -2312,10 +2312,10 @@ varian,
   varian,
   t: string;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string}
+  o: {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementatio,
   n: boolean;
@@ -2328,7 +2328,7 @@ varian,
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [;
@@ -2362,22 +2362,22 @@ export const,
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'];
     marketSize: '$1.2 T IT services market, 8% annual growth';
     growthRate: '8% annual growth';
-    variant: 'enterprise-futuristic'}
-    contactInfo: {}
+    variant: 'enterprise-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launch_date: '2024 - 09 - 15',
     customers: 180;
     rating: 4.9;
     reviews: 156;
-  {/* TODO: Fix JSX expression */}
-  t: 'enterprise-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'enterprise-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2387,7 +2387,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -2399,12 +2399,12 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 156}
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
-  }
+  s: 156};
+export interface ComprehensiveITService {/* TODO: Fix JSX expression */};
+  };
 ];
 ;
-}
+};
 ];
 ;
     realImplementation: true;
@@ -2414,7 +2414,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     customers:
         customers: 18;
     rating: 4.7;
-    reviews: 12}
+    reviews: 12};
   // Cybersecurity Operations Center;
     id: 'cybersecurity-operations-center',
     name: 'Cybersecurity Operations Center (SOC)',
@@ -2434,7 +2434,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 12}
+  s: 12};
   // Cybersecurity Operations Center,
   id: 'cybersecurity-operations-center'
     nam,
@@ -2537,7 +2537,7 @@ marketSize: '$200B cybersecurity market, 15% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.'
@@ -2545,7 +2545,7 @@ marketSize: '$200B cybersecurity market, 15% annual growth',
     customers:
         customers: 32;
     rating: 4.8;
-    reviews: 24}
+    reviews: 24};
   // Data Center Management Services;
     id: 'data-center-management',
     name: 'Data Center Management & Optimization',
@@ -2579,7 +2579,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2592,7 +2592,7 @@ varian,
     ratin,
   g: 4.8;
     review,
-  s: 24}
+  s: 24};
   // Data Center Management Services,
   id: 'data-center-management'
     nam,
@@ -2695,13 +2695,13 @@ marketSize: '$200B data center market, 12% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24/7 operations center and strategic consulting.',
     launchDate: '2024-01-20',
     customers: 15;
     rating: 4.7;
-    reviews: 11}
+    reviews: 11};
   // Network Security & SD-WAN Services;
     id: 'network-security-sdwan',
     name: 'Network Security & SD-WAN Management',
@@ -2738,7 +2738,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2750,7 +2750,7 @@ varian,
     ratin,
   g: 4.7;
     review,
-  s: 11}
+  s: 11};
   // Network Security & SD-WAN Services,
   id: 'network-security-sdwan'
     nam,
@@ -2853,13 +2853,13 @@ marketSize: '$8B SD-WAN market, 35% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Fully functional network security and SD-WAN management service with comprehensive security integration and network optimization capabilities. Includes 24/7 network support and monitoring.',
     launchDate: '2024-02-15',
     customers: 28;
     rating: 4.6;
-    reviews: 19}
+    reviews: 19};
   // IT Project Management Services;
     id: 'it-project-management',
     name: 'IT Project Management & Consulting',
@@ -2893,7 +2893,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true;
     implementationDetail,
@@ -2905,7 +2905,7 @@ varian,
     ratin,
   g: 4.6;
     review,
-  s: 19}
+  s: 19};
   // IT Project Management Services,
   id: 'it-project-management'
     nam,
@@ -3002,13 +3002,13 @@ marketSize: '$50 B IT consulting market, 10% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.',
     launchDate: '2024-01-10',
     customers: 45;
     rating: 4.7;
-    reviews: 32}
+    reviews: 32};
   // IT Training & Certification Services;
     id: 'it-training-certification',
     name: 'IT Training & Certification Programs',
@@ -3038,7 +3038,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true;
     implementationDetail,
@@ -3050,7 +3050,7 @@ varian,
     ratin,
   g: 4.7;
     review,
-  s: 32}
+  s: 32};
   // IT Training & Certification Services,
   id: 'it-training-certification'
     nam,
@@ -3153,13 +3153,13 @@ marketSize: '$15B IT training market, 12% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24/7 support.',
     launchDate: '2024-01-05',
     customers: 120;
     rating: 4.8;
-    reviews: 89}
+    reviews: 89};
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next-generation quantum-powered cloud infrastructure',
@@ -3192,7 +3192,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true;
     implementationDetail,
@@ -3204,7 +3204,7 @@ varian,
     ratin,
   g: 4.8;
     review,
-  s: 89}
+  s: 89};
     i,
   d: 'quantum-cloud-infrastructure'
     nam,
@@ -3302,7 +3302,7 @@ marketSize: '$400B cloud market, quantum segment growing 400% annually',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.'
@@ -3310,7 +3310,7 @@ marketSize: '$400B cloud market, quantum segment growing 400% annually',
     customers:
         customers: 45;
     rating: 4.9;
-    reviews: 32}
+    reviews: 32};
     id: 'ai-powered-devops-automation',
     name: 'AI-Powered DevOps Automation',
     tagline: 'Intelligent DevOps automation with AI-driven optimization',
@@ -3342,7 +3342,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3355,7 +3355,7 @@ varian,
     ratin,
   g: 4.9;
     review,
-  s: 32}
+  s: 32};
     i,
   d: 'ai-powered-devops-automation'
     nam,
@@ -3454,7 +3454,7 @@ marketSize: '$8 B DevOps market, AI segment growing 350% annually',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.'
@@ -3462,7 +3462,7 @@ marketSize: '$8 B DevOps market, AI segment growing 350% annually',
     customers:
         customers: 320;
     rating: 4.8;
-    reviews: 245}
+    reviews: 245};
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Unhackable quantum-secured cybersecurity platform',
@@ -3493,7 +3493,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3506,7 +3506,7 @@ varian,
     ratin,
   g: 4.8;
     review,
-  s: 245}
+  s: 245};
     i,
   d: 'quantum-cybersecurity-suite'
     nam,
@@ -3612,7 +3612,7 @@ growthRate: '400% annual growth',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
@@ -3620,7 +3620,7 @@ growthRate: '400% annual growth',
     customers:
         customers: 180;
     rating: 4.9;
-    reviews: 156}
+    reviews: 156};
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDate: '2024-09-15',
     customers:
@@ -3630,7 +3630,7 @@ growthRate: '400% annual growth',
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDate: '2024-09-15',
@@ -3663,7 +3663,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3676,7 +3676,7 @@ varian,
     ratin,
   g: 4.9;
     review,
-  s: 156}
+  s: 156};
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDat,
   e: '2024-09-15',
@@ -3695,7 +3695,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3707,12 +3707,12 @@ varian,
     ratin,
   g: 4.9;
     review,
-  s: 156}
+  s: 156};
 ];
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface ComprehensiveITService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -3731,7 +3731,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [;
@@ -3765,8 +3765,8 @@ export const,
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'];
     marketSize: '$1.2 T IT services market, 8% annual growth';
     growthRate: '8% annual growth';
-    variant: 'enterprise-futuristic'}
-    contactInfo: {}
+    variant: 'enterprise-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -3807,8 +3807,8 @@ export const,
     competitors: ['AWS Professional ServicesMicrosoft ConsultingGoogle CloudAccentureDeloitte'];
     marketSize: '$400 B cloud services market, 20% annual growth';
     growthRate: '20% annual growth';
-    variant: 'cloud-futuristic'}
-    contactInfo: {}
+    variant: 'cloud-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -3849,8 +3849,8 @@ export const,
     competitors: ['CrowdStrike Falcon CompletePalo Alto Networks CortexSentinelOne VigilanceCarbon BlackCylance'];
     marketSize: '$200 B cybersecurity market, 15% annual growth';
     growthRate: '15% annual growth';
-    variant: 'cybersecurity-futuristic'}
-    contactInfo: {}
+    variant: 'cybersecurity-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -3891,8 +3891,8 @@ export const,
     competitors: ['EquinixDigital RealtyCyrusOneCoreSiteQTS Realty'];
     marketSize: '$200 B data center market, 12% annual growth';
     growthRate: '12% annual growth';
-    variant: 'datacenter-futuristic'}
-    contactInfo: {}
+    variant: 'datacenter-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -3933,8 +3933,8 @@ export const,
     competitors: ['Cisco SD-WANVMware SD-WANFortinetPalo Alto NetworksJuniper Networks'];
     marketSize: '$8 B SD-WAN market, 35% annual growth';
     growthRate: '35% annual growth';
-    variant: 'network-futuristic'}
-    contactInfo: {}
+    variant: 'network-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -3975,8 +3975,8 @@ export const,
     competitors: ['McKinseyBCGBainAccentureDeloitte'];
     marketSize: '$50 B IT consulting market, 10% annual growth';
     growthRate: '10% annual growth';
-    variant: 'consulting-futuristic'}
-    contactInfo: {}
+    variant: 'consulting-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -4017,8 +4017,8 @@ export const,
     competitors: ['CompTIACiscoMicrosoftAWS TrainingGoogle Cloud Training'];
     marketSize: '$15 B IT training market, 12% annual growth';
     growthRate: '12% annual growth';
-    variant: 'training-futuristic'}
-    contactInfo: {}
+    variant: 'training-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -4058,8 +4058,8 @@ export const,
     competitors: ['AWSAzureGoogle CloudTraditional cloud providers'];
     marketSize: '$400 B cloud market, quantum segment growing 400% annually';
     growthRate: '400% annual growth';
-    variant: 'quantum-advanced'}
-    contactInfo: {}
+    variant: 'quantum-advanced'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -4099,8 +4099,8 @@ export const,
     competitors: ['GitLab CI/CDJenkinsCircleCIGitHub Actions'];
     marketSize: '$8 B DevOps market, AI segment growing 350% annually';
     growthRate: '350% annual growth';
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -4140,8 +4140,8 @@ export const,
     competitors: ['Palo Alto NetworksCrowdStrikeSymantecTraditional security tools'];
     marketSize: '$150 B cybersecurity market, quantum segment growing 400% annually';
     growthRate: '400% annual growth';
-    variant: 'quantum-cyberpunk'}
-    contactInfo: {}
+    variant: 'quantum-cyberpunk'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -4152,10 +4152,10 @@ export const,
     customers: 180;
     rating: 4.9;
     reviews: 156;
-  {/* TODO: Fix JSX expression */}
-  t: 'enterprise-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'enterprise-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -4179,10 +4179,10 @@ export const,
     review,
   s: 18};
   // Cloud Migration & Optimization Services;
-  {/* TODO: Fix JSX expression */}
-  t: 'cloud-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'cloud-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -4206,10 +4206,10 @@ export const,
     review,
   s: 12};
   // Cybersecurity Operations Center;
-  {/* TODO: Fix JSX expression */}
-  t: 'cybersecurity-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'cybersecurity-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -4233,10 +4233,10 @@ export const,
     review,
   s: 24};
   // Data Center Management Services;
-  {/* TODO: Fix JSX expression */}
-  t: 'datacenter-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'datacenter-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -4260,10 +4260,10 @@ export const,
     review,
   s: 11};
   // Network Security & SD-WAN Services;
-  {/* TODO: Fix JSX expression */}
-  t: 'network-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'network-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -4287,10 +4287,10 @@ export const,
     review,
   s: 19};
   // IT Project Management Services;
-  {/* TODO: Fix JSX expression */}
-  t: 'consulting-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'consulting-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -4314,10 +4314,10 @@ export const,
     review,
   s: 32};
   // IT Training & Certification Services;
-  {/* TODO: Fix JSX expression */}
-  t: 'training-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'training-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -4340,10 +4340,10 @@ export const,
   g: 4.8;
     review,
   s: 89};
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-advanced'}
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-advanced'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -4366,10 +4366,10 @@ export const,
   g: 4.9;
     review,
   s: 32};
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -4392,10 +4392,10 @@ export const,
   g: 4.8;
     review,
   s: 245};
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-cyberpunk'}
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-cyberpunk'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -4417,12 +4417,12 @@ export const,
     ratin,
   g: 4.9;
     review,
-  s: 156}
-]}
+  s: 156};
+]};
 ];
     website: string;
     websit,
-  e: string}
+  e: string};
       'Network infrastructure management',
       'Server and storage management',
       'Security monitoring and management',
@@ -4620,7 +4620,7 @@ roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performanc
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.'
@@ -4628,7 +4628,7 @@ roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performanc
     customers:
         customers: 25;
     rating: 4.8;
-    reviews: 18}
+    reviews: 18};
   // Cloud Migration & Optimization Services;
     id: 'cloud-migration-optimization',
     name: 'Cloud Migration & Optimization Service',
@@ -4660,7 +4660,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4673,7 +4673,7 @@ varian,
     ratin,
   g: 4.8;
     review,
-  s: 18}
+  s: 18};
   // Cloud Migration & Optimization Services,
   id: 'cloud-migration-optimization'
     nam,
@@ -5876,11 +5876,11 @@ growthRate: '400% annual growth',
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const comprehensiveITServices: ComprehensiveITService[] = [,
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 156;
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launch_date: '2024 - 09 - 15',
@@ -5987,7 +5987,7 @@ varian,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [,
       addres,
@@ -5997,7 +5997,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -6009,7 +6009,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 156}
+  s: 156};
 ;
 export interface ComprehensiveITService,
   id: string; nam,
@@ -6687,7 +6687,7 @@ export interface ComprehensiveITService,
   e: string; growthRat,
   e: string; varian,
   t: string; contactInf,
-  o: {/* TODO: Fix JSX expression */}
+  o: {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -6696,7 +6696,7 @@ export interface ComprehensiveITService,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services; {/* TODO: Fix JSX expression */}
+  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7044,7 +7044,7 @@ export interface ComprehensiveITService,
   e: '2024-09-15' customer,
   s: 180, ratin,
   g: 4.9,
-  reviews: 156 } ]; export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
+  reviews: 156 } ]; export interface ComprehensiveITService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -7053,7 +7053,7 @@ export interface ComprehensiveITService,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services; {/* TODO: Fix JSX expression */}
+  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7063,7 +7063,7 @@ export interface ComprehensiveITService,
   e: '2024-01-01'; customer,
   s: 25; ratin,
   g: 4.8; review,
-  s: 18}; // Cloud Migration & Optimization Services; {/* TODO: Fix JSX expression */}
+  s: 18}; // Cloud Migration & Optimization Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7073,7 +7073,7 @@ export interface ComprehensiveITService,
   e: '2024-02-01'; customer,
   s: 18; ratin,
   g: 4.7; review,
-  s: 12}; // Cybersecurity Operations Center; {/* TODO: Fix JSX expression */}
+  s: 12}; // Cybersecurity Operations Center; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7083,7 +7083,7 @@ export interface ComprehensiveITService,
   e: '2024-01-15'; customer,
   s: 32; ratin,
   g: 4.8; review,
-  s: 24}; // Data Center Management Services; {/* TODO: Fix JSX expression */}
+  s: 24}; // Data Center Management Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7093,7 +7093,7 @@ export interface ComprehensiveITService,
   e: '2024-01-20'; customer,
   s: 15; ratin,
   g: 4.7; review,
-  s: 11}; // Network Security & SD-WAN Services; {/* TODO: Fix JSX expression */}
+  s: 11}; // Network Security & SD-WAN Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7103,7 +7103,7 @@ export interface ComprehensiveITService,
   e: '2024-02-15'; customer,
   s: 28; ratin,
   g: 4.6; review,
-  s: 19}; // IT Project Management Services; {/* TODO: Fix JSX expression */}
+  s: 19}; // IT Project Management Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7113,7 +7113,7 @@ export interface ComprehensiveITService,
   e: '2024-01-10'; customer,
   s: 45; ratin,
   g: 4.7; review,
-  s: 32}; // IT Training & Certification Services; {/* TODO: Fix JSX expression */}
+  s: 32}; // IT Training & Certification Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7123,7 +7123,7 @@ export interface ComprehensiveITService,
   e: '2024-01-05'; customer,
   s: 120; ratin,
   g: 4.8; review,
-  s: 89}; {/* TODO: Fix JSX expression */}
+  s: 89}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7133,7 +7133,7 @@ export interface ComprehensiveITService,
   e: '2024-11-15'; customer,
   s: 45; ratin,
   g: 4.9; review,
-  s: 32}; {/* TODO: Fix JSX expression */}
+  s: 32}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7143,7 +7143,7 @@ export interface ComprehensiveITService,
   e: '2024-10-01'; customer,
   s: 320; ratin,
   g: 4.8; review,
-  s: 245}; {/* TODO: Fix JSX expression */}
+  s: 245}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -7560,7 +7560,3 @@ export interface ComprehensiveITService,
   s: 180, ratin,
   g: 4.9, review,
   s: 156} ; '
-=======
-    growth_rate: '8% annual growth';
-variant: 'enterprise - futuristic'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

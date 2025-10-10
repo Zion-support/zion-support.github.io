@@ -1,30 +1,23 @@
 'use client';
 import React from 'react';
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
-
-
-
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-
-
 'use client';
 /**
  * Offline Page;
  * Displayed when the user is offline and tries to access a page;
  */;
 const,
-  OfflinePage: React.FC = () => {const handleRetry = () => {}
+  OfflinePage: React.FC = () => {const handleRetry = () => {};
     window.location.reload()};
-  const handleGoHome = () => {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  const handleGoHome = () => {/* TODO: Fix JSX expression */};
+  O: Add content};
+};
     window.location.href = '/';
   return (<div>Coming Soon</div>)
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
       <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>"
         <div className="w-16 h-16 mx-auto mb-6 bg-orange-500/20 rounded-full flex items-center justify-center"></div>"
@@ -42,14 +35,6 @@ const,
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500,"
   hover:bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
 // >
-            
-          
-          
-          
-          
-          
-          
-          
           "
           <RefreshCw className="w-4 h-4" /></RefreshCw>
 // Try Again;
@@ -69,8 +54,4 @@ onClick={handleGoHome}"
             Some content may be available offline thanks to our service worker.
             Try refreshing the page once you're back online.
   )};
-
-
 export default OfflinePage;
-
-

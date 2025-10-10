@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 interface ImageOptimizerProps {
-  src: string;
+  src: string
+}
   alt: string;
   className?: string;
   width?: number;
@@ -9,7 +9,7 @@ interface ImageOptimizerProps {
   priority?: boolean;
   placeholder?: string;
   onLoad?: () => void;
-  onError?: () => void}
+  onError?: () => void};
 ;
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   src;
@@ -41,29 +41,29 @@ const observer = new IntersectionObserver(
         rootMargin: '50px 0px',
         threshold: 0.01}
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current)}
-
     return () => observer.disconnect()}, [priority]);
 ;
 const handleLoad = () => {
+}
     setIsLoaded(true);
     onLoad?.()};
 ;
 const handleError = () => {
+}
     setHasError(true);
     onError?.()};
 ;
 const generatePlaceholder = () => {
+}
 return (
-
     if (placeholder) return placeholder;
     ;
 const svg = `
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
 );
-}
+};
         <rect width="100%" height="100%" fill="#1e293b"/>
         <rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
@@ -76,10 +76,9 @@ const svg = `
     `;
     ,
     return `data:image/svg+xml;base64,${btoa(svg)}`};
-
   if (hasError) {
     return(<div;
-        className={`bg-slate-800 flex items-center justify-center ${className}`}
+        className={`bg-slate-800 flex items-center justify-center ${className}`};
         style={{ width, height }}
       ></div>
         <div className="text-gray-400 text-center"></div>
@@ -87,16 +86,14 @@ const svg = `
           <div className="text-sm">Image failed to load</div>)
         </div>)
       </div>)
-    )}
-
-  return(<div;
+    )};
+  return(<div ;
       ref={imgRef}
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
-    >
+      className={`relative overflow-hidden ${className}`};
+      style={{ width, height }}>
       {/* Placeholder */})
       {!isLoaded && ()
-        <img;)
+        <img ;)
       {/* Placeholder */}
       {!isLoaded && (</div>
         <img
@@ -105,24 +102,22 @@ const svg = `
           className="absolute inset-0 w-full h-full object-cover animate-pulse"
           style={{ filter: 'blur(1 px)' }}
         /></img>
-      )}
-      
+      )};
       {/* Actual Image */}
       {isInView && (
         <img;
           src={src}
           alt={alt}
           className={`w-full h-full object-cover transition-opacity duration-300 ${}
-            isLoaded ? 'opacity-100' : 'opacity-0'}
-          }`}
+            isLoaded ? 'opacity-100' : 'opacity-0'};
+          }`};
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
           onLoad={handleLoad}
           onError={handleError}
           style={{ width, height }}
         /></img>
-      )}
+      )};
     </div>
   )};
-
 export default ImageOptimizer;

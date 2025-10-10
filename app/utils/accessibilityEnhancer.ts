@@ -2,44 +2,33 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
 const AccessibilityEnhancerPage: React.FC = () => {
+};
   const features = [
-    {
+[
+        {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
-    {
+        {
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    {
+        {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
-    {
+        {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-      description: 'Worldwide deployment and support for international businesses'});;)
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
->>>>>>> main
->>>>>>> origin/main
+    };
     focusableElements[nextIndex]?.focus();
     event.preventDefault(););)
-}
+};
   /**
    * Handle escape key
    */
@@ -56,7 +45,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
       trigger?.click(););)
 });;);)
-}
+};
   /**
    * Handle arrow key navigation
    */
@@ -66,12 +55,12 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // Handle radio button groups
     if (currentElement instanceof HTMLInputElement && currentElement.type === 'radio') {
       this.handleRadioGroupNavigation(event, currentElement););)
-}
+};
     // Handle menu navigation
     if (currentElement.getAttribute('role') === 'menuitem') {
       this.handleMenuNavigation(event, currentElement););)
-}
-  }
+};
+  };
   /**
    * Handle radio group navigation
    */
@@ -85,11 +74,11 @@ const AccessibilityEnhancerPage: React.FC = () => {
       nextIndex = currentIndex > 0 ? currentIndex - 1 : radioButtons.length - 1});;)
 } else {
       nextIndex = currentIndex < radioButtons.length - 1 ? currentIndex + 1 : 0});;)
-}
+};
     radioButtons[nextIndex]?.focus();
     radioButtons[nextIndex]?.click();
     event.preventDefault(););)
-}
+};
   /**
    * Handle menu navigation
    */
@@ -105,10 +94,10 @@ const AccessibilityEnhancerPage: React.FC = () => {
       nextIndex = currentIndex < menuItems.length - 1 ? currentIndex + 1 : 0});;)
 } else {
       return});;)
-}
+};
     menuItems[nextIndex]?.focus();
     event.preventDefault(););)
-}
+};
   /**
    * Setup screen reader support
    */
@@ -122,7 +111,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.addAriaLandmarks();
     // Setup live regions for dynamic content
     this.setupLiveRegions(););)
-}
+};
   /**
    * Add skip links
    */
@@ -142,7 +131,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
         top: -40px;
         left: 6px;
         z-index: 1000});;)
-}
+};
       .skip-link {
         position: absolute;
         top: -40px;
@@ -154,14 +143,14 @@ const AccessibilityEnhancerPage: React.FC = () => {
         border-radius: 4px;
         z-index: 1000;
         transition: top 0.3s});;)
-}
+};
       .skip-link:focus {;
   top: 6px});;)
-}
+};
     `;
     document.head.appendChild(style);
     document.body.insertBefore(skipLinks, document.body.firstChild););)
-}
+};
   /**
    * Enhance form labels
    */
@@ -174,19 +163,19 @@ const AccessibilityEnhancerPage: React.FC = () => {
         const placeholder = element.getAttribute('placeholder');
         if (placeholder) {
           element.setAttribute('aria-label', placeholder););)
-}
-      }
+};
+      };
       // Add required attribute announcement
       if (element.hasAttribute('required')) {
         element.setAttribute('aria-required', 'true'););)
-}
+};
       // Add error states
       if (element.classList.contains('error') || element.getAttribute('aria-invalid') === 'true') {
         element.setAttribute('aria-invalid', 'true');
         this.announceToScreenReader('Error in form field'););)
-}
+};
     });;);)
-}
+};
   /**
    * Add ARIA landmarks
    */
@@ -195,18 +184,18 @@ const AccessibilityEnhancerPage: React.FC = () => {
     const main = document.querySelector('main') || document.querySelector('[role="main"]');
     if (main) {
       main.setAttribute('id', 'main-content'););)
-}
+};
     // Navigation
     const nav = document.querySelector('nav') || document.querySelector('[role="navigation"]');
     if (nav) {
       nav.setAttribute('id', 'navigation'););)
-}
+};
     // Footer
     const footer = document.querySelector('footer') || document.querySelector('[role="contentinfo"]');
     if (footer) {
       footer.setAttribute('id', 'footer'););)
-}
-  }
+};
+  };
   /**
    * Setup live regions
    */
@@ -225,7 +214,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     assertiveRegion.className = 'sr-only';
     assertiveRegion.id = 'assertive-live-region';
     document.body.appendChild(assertiveRegion););)
-}
+};
   /**
    * Setup focus management
    */
@@ -238,7 +227,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     document.addEventListener('focusout', (event) => {
       this.handleFocusOut(event););)
 });;);)
-}
+};
   /**
    * Handle focus in
    */
@@ -249,15 +238,15 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // Announce focus changes for important elements
     if (element.getAttribute('role') === 'button' || element.tagName === 'BUTTON') {
       this.announceToScreenReader(`Focused on button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button'}`););)
-}
-  }
+};
+  };
   /**
    * Handle focus out
    */
   private handleFocusOut(event: FocusEvent): void {
     const element = event.target as HTMLElement;
     element.classList.remove('focus-visible'););)
-}
+};
   /**
    * Setup high contrast mode
    */
@@ -266,16 +255,16 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // Check for high contrast preference
     if (window.matchMedia('(prefers-contrast: high)').matches) {
       document.body.classList.add('high-contrast'););)
-}
+};
     // Listen for changes
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
       if (e.matches) {
         document.body.classList.add('high-contrast'););)
 } else {
         document.body.classList.remove('high-contrast'););)
-}
+};
     });;);)
-}
+};
   /**
    * Setup reduced motion
    */
@@ -284,16 +273,16 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // Check for reduced motion preference
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.body.classList.add('reduced-motion'););)
-}
+};
     // Listen for changes
     window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
       if (e.matches) {
         document.body.classList.add('reduced-motion'););)
 } else {
         document.body.classList.remove('reduced-motion'););)
-}
+};
     });;);)
-}
+};
   /**
    * Setup ARIA labels
    */
@@ -304,7 +293,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       const element = button as HTMLElement;
       if (!element.textContent?.trim()) {
         element.setAttribute('aria-label', 'Button'););)
-}
+};
     });;
     // Add ARIA labels to links without text
     const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
@@ -312,9 +301,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
       const element = link as HTMLElement;
       if (!element.textContent?.trim()) {
         element.setAttribute('aria-label', 'Link'););)
-}
+};
     });;);)
-}
+};
   /**
    * Setup color contrast checking
    */
@@ -322,7 +311,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // This would typically use a color contrast library
     // For now, we'll just count potential issues
     this.metrics.colorContrastIssues = 0});;)
-}
+};
   /**
    * Setup image alt text checking
    */
@@ -332,9 +321,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
     images.forEach((img) => {
       if (!img.alt) {
         this.metrics.imagesWithoutAlt++});;)
-}
+};
     });;);)
-}
+};
   /**
    * Setup heading structure checking
    */
@@ -344,9 +333,9 @@ const AccessibilityEnhancerPage: React.FC = () => {
     headings.forEach((heading) => {
       if (!heading.textContent?.trim()) {
         this.metrics.headingsWithoutContent++});;)
-}
+};
     });;);)
-}
+};
   /**
    * Setup form accessibility
    */
@@ -363,11 +352,11 @@ const AccessibilityEnhancerPage: React.FC = () => {
           const label = form.querySelector(`label[for="${id}"]`);
           if (label) {
             element.setAttribute('aria-labelledby', id););)
-}
+};
         });;)
 });;);)
 });;);)
-}
+};
   /**
    * Setup navigation accessibility
    */
@@ -377,13 +366,13 @@ const AccessibilityEnhancerPage: React.FC = () => {
       // Add navigation role if not present
       if (!nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation'););)
-}
+};
       // Add aria-label if not present
       if (!nav.getAttribute('aria-label')) {
         nav.setAttribute('aria-label', 'Main navigation'););)
-}
+};
     });;);)
-}
+};
   /**
    * Setup content announcements
    */
@@ -399,10 +388,10 @@ const AccessibilityEnhancerPage: React.FC = () => {
               // Announce new content
               if (element.getAttribute('aria-live') === 'polite') {
                 this.announceToScreenReader(element.textContent || ''););)
-}
+};
             });;)
 });;);)
-}
+};
       });;);)
 });;
     observer.observe(document.body, {
@@ -410,7 +399,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       subtree: true});;)
 });;
     this.observers.push(observer););)
-}
+};
   /**
    * Setup metrics collection
    */
@@ -419,7 +408,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     setInterval(() => {
       this.scanAccessibility(););)
 }, 5000););)
-}
+};
   /**
    * Scan accessibility issues
    */
@@ -430,7 +419,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.metrics.headingsWithoutContent = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length - 
       Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(h => h.textContent?.trim()).length;
     this.calculateScores(););)
-}
+};
   /**
    * Calculate accessibility scores
    */
@@ -443,7 +432,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     this.metrics.overallScore = Math.round(
       (this.metrics.keyboardNavigationScore + this.metrics.screenReaderScore) / 2
     ););)
-}
+};
   /**
    * Calculate keyboard navigation score
    */
@@ -453,7 +442,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (totalElements === 0) return 0;
     const focusableRatio = focusableElements.length / totalElements;
     return Math.min(100, Math.round(focusableRatio * 100)););)
-}
+};
   /**
    * Calculate screen reader score
    */
@@ -466,12 +455,13 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // Deduct for empty headings
     score -= this.metrics.headingsWithoutContent * 2;
     return Math.max(0, score););)
-}
+};
   /**
    * Get focusable elements
    */
   private getFocusableElements(): HTMLElement[] {
     const focusableSelectors = [
+];
       'a[href]',
       'button:not([disabled])',
       'input:not([disabled])',
@@ -481,7 +471,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
       '[contenteditable="true"]'
     ];
     return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[]});;)
-}
+};
   /**
    * Announce to screen reader
    */
@@ -495,14 +485,14 @@ const AccessibilityEnhancerPage: React.FC = () => {
       setTimeout(() => {
         liveRegion.textContent = ''});;)
 }, 1000););)
-}
-  }
+};
+  };
   /**
    * Get accessibility metrics
    */
   getMetrics(): AccessibilityMetrics {
     return { ...this.metrics }});;)
-}
+};
   /**
    * Get accessibility report
    */
@@ -515,151 +505,10 @@ Accessibility Report:
 - Screen Reader Score: ${metrics.screenReaderScore}/100
 - ARIA Implementation Score: ${metrics.ariaImplementationScore}/100
 - Overall Score: ${metrics.overallScore}/100
-
 Recommendations:
 - Focus on improving color contrast for better accessibility
 - Ensure all interactive elements are keyboard accessible
 - Implement proper ARIA labels and roles
 - Test with screen readers regularly
 `});;)
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AccessibilityEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="accessibilityEnhancer, AI solutions, IT services, Zion Tech Group, accessibilityenhancer" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AccessibilityEnhancer
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced accessibilityenhancer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AccessibilityEnhancer?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our accessibilityenhancer solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our accessibilityenhancer solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your accessibilityenhancer needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
 };
-
-export default AccessibilityEnhancerPage;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
->>>>>>> main
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
->>>>>>> origin/main

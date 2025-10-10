@@ -3,44 +3,41 @@ const path = require('path');
 ;
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'subscribers.json');
-
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return}
+    return};
 ;
 const { email, name, preferences } = req.body || {};
-
   if (!email) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
-    return}
-
+    return};
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })}
+    fs.mkdirSync(dir, { recursive: true })};
 ;
 let existing = [];
   try {
     if (fs.existsSync(file)) {;
 const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = []}
+      if (!Array.isArray(existing)) existing = []};
   } catch (error) {
     // console.error removed for production
-existing = []}
-
+existing = []};
   // Check if email already exists;
 const existingSubscriber = existing.find(sub => sub.email === email);
   if (existingSubscriber) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email already subscribed' }));
-    return}
+    return};
 ;
 const newSubscriber = {
+};
     id: Date.now().toString(),
     email,
     name: name || '',
@@ -48,9 +45,7 @@ const newSubscriber = {
     timestamp: new Date().toISOString(),
     status: 'active'
   };
-
   existing.push(newSubscriber);
-
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
@@ -63,5 +58,5 @@ const newSubscriber = {
     // console.error removed for production
 res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save subscription' }))}
-}
+    res.end(JSON.stringify({ error: 'Failed to save subscription' }))};
+};

@@ -1,18 +1,18 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface ErrorBoundaryState {
-  hasError: boolean;
+  hasError: boolean
+}
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string | null}
-
+  errorId: string | null};
 interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode}
-
+  children: ReactNode
+}
+  fallback?: ReactNode};
 interface ErrorReport {
-  errorId: string | null;
+  errorId: string | null
+}
   error: Error;
   errorInfo: ErrorInfo;
   errorMessage: string;
@@ -21,8 +21,7 @@ interface ErrorReport {
   errorBoundary: string;
   errorTimestamp: string;
   errorUserAgent: string | null;
-  errorUrl: string | null}
-
+  errorUrl: string | null};
 class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
 constructor(props: ErrorBoundaryProps) {
     super(props);
@@ -31,32 +30,27 @@ constructor(props: ErrorBoundaryProps) {
       error: null,
       errorInfo: null,
       errorId: null
-    }}
-
+    }};
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }}
-
+    }};
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       // console.error removed for production
 }
-
     // Send error report in production
     if (process.env.NODE_ENV === 'production') {
       this.reportError(error, errorInfo)}
-  }
-
+  };
   private reportError = async (error: Error, errorInfo: ErrorInfo) => {
     try {;
 const errorReport: ErrorReport = {
@@ -70,8 +64,7 @@ const errorReport: ErrorReport = {
         errorTimestamp: new Date().toISOString(),
         errorUserAgent: typeof window !== 'undefined' ? window.navigator.userAgent : null,
         errorUrl: typeof window !== 'undefined' ? window.location.href : null
-      };
-
+      }
       // Send to error reporting service
       await fetch('/api/error-report', {
         method: 'POST',
@@ -81,7 +74,6 @@ const errorReport: ErrorReport = {
       // console.error removed for production
 }
   };
-
   private handleRetry = () => {
     this.setState({
       hasError: false,
@@ -89,17 +81,14 @@ const errorReport: ErrorReport = {
       errorInfo: null,
       errorId: null
     })};
-
   private handleReload = () => {
     if (typeof window !== 'undefined') {
       window.location.reload()}
   };
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback}
-
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -118,42 +107,33 @@ const errorReport: ErrorReport = {
                 </p>
               </div>
             </div>
-            
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
                 <h4 className="text-sm font-medium text-red-800 mb-2">Error Details:</h4>
                 <pre className="text-xs text-red-700 overflow-auto">
                   {this.state.error.message}
-                  {this.state.error.stack && `\n\n${this.state.error.stack}`}
+                  {this.state.error.stack && `\n\n${this.state.error.stack}`};
                 </pre>
               </div>
-            )}
-
+            )};
             <div className="flex space-x-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              >
+              <button onClick={this.handleRetry}
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                 Try Again
               </button>
-              <button
-                onClick={this.handleReload}
-                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-              >
+              <button onClick={this.handleReload}
+                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
                 Reload Page
               </button>
             </div>
-
             {this.state.errorId && (
               <p className="mt-4 text-xs text-gray-500 text-center">
                 Error ID: {this.state.errorId}
               </p>
-            )}
+            )};
           </div>
         </div>
-      )}
-
-    return this.props.children}
-}
-
+      )};
+    return this.props.children};
+};
 export default AdvancedErrorBoundary;

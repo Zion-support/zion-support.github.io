@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-interface SEOHeadProps {/* TODO: Fix JSX expression */}
-}
+interface SEOHeadProps {/* TODO: Fix JSX expression */};
+};
 ;
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -19,6 +18,7 @@ const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion 
     : `https://zion.app${canonicalUrl}`;
 ;
 const defaultStructuredData = {
+};
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -26,13 +26,12 @@ const defaultStructuredData = {
     logo: 'https://zion.app/logo.png',
     description: description;
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
-
   return(<Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonicalUrl} />
-      {/* Open Graph */}
+      {/* Open Graph */};
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
@@ -40,35 +39,34 @@ const defaultStructuredData = {
       <meta property="og:type" content={ogType} />
       <meta property="og: site_name" content="Zion Tech Group" />,
 ,
-      {/* Twitter */}
+      {/* Twitter */};
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      {/* Additional SEO */}
+      {/* Additional SEO */};
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#2563eb" />
-      {/* Performance hints */}
+      {/* Performance hints */};
       <link rel="preconnect" href="https: //fonts.googleapis.com" />)
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />)
       <link rel="dns-prefetch" href="//www.google-analytics.com" />)
 ),
-      {/* Structured Data */}
+      {/* Structured Data */};
       <script type="application/ld+json">;
 const,
   SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+}) => {/* TODO: Fix JSX expression */};
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;`
     : `http,`
   s://zion.app${canonicalUrl}`;
 ;
-const defaultStructuredData = {/* TODO: Fix JSX expression */}
+const defaultStructuredData = {/* TODO: Fix JSX expression */};
   };
-
   return (<Helmet></Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} /></meta>"
@@ -109,10 +107,9 @@ const defaultStructuredData = {/* TODO: Fix JSX expression */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
       {/* Structured Data */}"
       <script type="application/ld+json"></script>)
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(structuredData || defaultStructuredData)};
       </script>
     </Helmet>
   )};
-
 export default SEOHead;
 "`

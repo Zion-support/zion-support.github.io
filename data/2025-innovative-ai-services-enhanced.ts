@@ -1,5 +1,4 @@
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -91,7 +90,7 @@ import React from 'react';
     addres,
   s: string;
     websit,
-  e: string}
+  e: string};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -111,14 +110,16 @@ import React from 'react';
     reviews: 89}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'AI - powered education platform with personalized learning algorithms and adaptive curriculum generation.',
     launch_date: '2024 - 03 - 25',
     customers: 156;
     rating: 4 && 4.8;
     reviews: 89;
-export interface InnovativeAIService2025 {id: string, name: string;
+export interface InnovativeAIService2025 {
+id: string, name: string;
+}
   tagline: string, price: string;
   period: string, description: string;
   features: string[], popular: boolean;
@@ -134,12 +135,12 @@ export interface InnovativeAIService2025 {id: string, name: string;
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string}
+    website: string};
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
   // AI Consciousness & Emotional Intelligence;
     id: 'ai-consciousness-evolution', name: 'AI Consciousness Evolution Platform',
@@ -288,7 +289,9 @@ variant: 'ai-education-enterprise',
     launchDate: '2024-03-25', customers: 156;
     rating: 4.8;
     reviews: 89;
-export interface InnovativeAIService2025 {;
+export interface InnovativeAIService2025 {
+;
+}
   id: string;
   name: string;
   tagline: string;
@@ -318,8 +321,8 @@ export interface InnovativeAIService2025 {;
   contactInfo: {,
     mobile: string;
     email: string;
-    address: string}
-    website: string}
+    address: string};
+    website: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -348,7 +351,7 @@ export interface InnovativeAIService2025 {;
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true;
     implementation_detail,
@@ -361,8 +364,8 @@ export interface InnovativeAIService2025 {;
   g: 4 && 4.8,
     review,
   s: 89,
-export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
-  e: string}
+export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */};
+  e: string};
     },
     realImplementatio,
   n: boolean, implementationDetail,
@@ -373,7 +376,7 @@ export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [,
   // AI Consciousness & Emotional Intelligence,
@@ -720,10 +723,10 @@ varian,
   g: 4.8,
     review,
   s: 89,
-export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementatio,
   n: boolean;
@@ -736,7 +739,7 @@ export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
@@ -770,8 +773,8 @@ export const,
     competitors: ['OpenAI, Anthropic, DeepMind, Google AI'];
     marketSize: '$2.5 B AI research market';
     growthRate: '400% annual growth';
-    variant: 'ai-consciousness-advanced'}
-    contactInfo: {}
+    variant: 'ai-consciousness-advanced'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -812,8 +815,8 @@ export const,
     competitors: ['Google AutoML, Azure AutoML, DataRobot, H2 O.ai'];
     marketSize: '$8.5 B AutoML market';
     growthRate: '250% annual growth';
-    variant: 'ai-autonomy-enterprise'}
-    contactInfo: {}
+    variant: 'ai-autonomy-enterprise'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -854,8 +857,8 @@ export const,
     competitors: ['Ethics consulting firms, Governance platforms, Compliance tools'];
     marketSize: '$3.5 B AI ethics market';
     growthRate: '180% annual growth';
-    variant: 'ai-ethics-enterprise'}
-    contactInfo: {}
+    variant: 'ai-ethics-enterprise'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -896,8 +899,8 @@ export const,
     competitors: ['Midjourney, DALL-E, Stable Diffusion, Runway ML'];
     marketSize: '$15.5 B creative AI market';
     growthRate: '320% annual growth';
-    variant: 'ai-creativity-pro'}
-    contactInfo: {}
+    variant: 'ai-creativity-pro'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -938,8 +941,8 @@ export const,
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo, Pluralsight'];
     marketSize: '$250 B global education market';
     growthRate: '95% annual growth';
-    variant: 'ai-education-enterprise'}
-    contactInfo: {}
+    variant: 'ai-education-enterprise'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -949,20 +952,22 @@ export const,
     launchDate: '2024-03-25';
     customers: 156;
     rating: 4.8;
-    reviews: 89}
+    reviews: 89};
 ];
 ;
     rating: 4.8;
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     reviews: 89;
     realImplementation: true;
     implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.',
     launchDate: '2024-03-25',
     customers: 156;
-export interface InnovativeAIService2025 {;
+export interface InnovativeAIService2025 {
+;
+}
   id: string;
   name: string;
   tagline: string;
@@ -992,8 +997,8 @@ export interface InnovativeAIService2025 {;
   contactInfo: {,
     mobile: string;
     email: string;
-    address: string}
-    website: string}
+    address: string};
+    website: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -1001,10 +1006,10 @@ export interface InnovativeAIService2025 {;
   customers: number;
   rating: number;
   reviews: number;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-consciousness-advanced'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-consciousness-advanced'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1028,10 +1033,10 @@ export interface InnovativeAIService2025 {;
     review,
   s: 8};
   // AI Autonomous Ecosystem Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-autonomy-enterprise'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-autonomy-enterprise'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1055,10 +1060,10 @@ export interface InnovativeAIService2025 {;
     review,
   s: 19};
   // AI Ethics & Governance Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-ethics-enterprise'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-ethics-enterprise'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1082,10 +1087,10 @@ export interface InnovativeAIService2025 {;
     review,
   s: 31};
   // AI Creativity Studio Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-creativity-pro'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-creativity-pro'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1109,10 +1114,10 @@ export interface InnovativeAIService2025 {;
     review,
   s: 89};
   // AI Education Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-education-enterprise'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-education-enterprise'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1134,7 +1139,7 @@ export interface InnovativeAIService2025 {;
     ratin,
   g: 4.8;
     review,
-  s: 89}
+  s: 89};
 ];
 ;
     ratin,
@@ -1147,7 +1152,7 @@ export interface InnovativeAIService2025 {;
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     review,
   s: 89;
     realImplementatio,
@@ -1158,10 +1163,10 @@ export interface InnovativeAIService2025 {;
   e: '2024-03-25'
     customer,
   s: 156,
-export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementatio,
   n: boolean;
@@ -1174,7 +1179,7 @@ export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
@@ -1208,8 +1213,8 @@ export const,
     competitors: ['OpenAI, Anthropic, DeepMind, Google AI'];
     marketSize: '$2.5 B AI research market';
     growthRate: '400% annual growth';
-    variant: 'ai-consciousness-advanced'}
-    contactInfo: {}
+    variant: 'ai-consciousness-advanced'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1250,8 +1255,8 @@ export const,
     competitors: ['Google AutoML, Azure AutoML, DataRobot, H2 O.ai'];
     marketSize: '$8.5 B AutoML market';
     growthRate: '250% annual growth';
-    variant: 'ai-autonomy-enterprise'}
-    contactInfo: {}
+    variant: 'ai-autonomy-enterprise'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1292,8 +1297,8 @@ export const,
     competitors: ['Ethics consulting firms, Governance platforms, Compliance tools'];
     marketSize: '$3.5 B AI ethics market';
     growthRate: '180% annual growth';
-    variant: 'ai-ethics-enterprise'}
-    contactInfo: {}
+    variant: 'ai-ethics-enterprise'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1334,8 +1339,8 @@ export const,
     competitors: ['Midjourney, DALL-E, Stable Diffusion, Runway ML'];
     marketSize: '$15.5 B creative AI market';
     growthRate: '320% annual growth';
-    variant: 'ai-creativity-pro'}
-    contactInfo: {}
+    variant: 'ai-creativity-pro'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1376,8 +1381,8 @@ export const,
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo, Pluralsight'];
     marketSize: '$250 B global education market';
     growthRate: '95% annual growth';
-    variant: 'ai-education-enterprise'}
-    contactInfo: {}
+    variant: 'ai-education-enterprise'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1388,10 +1393,10 @@ export const,
     customers: 156;
     rating: 4.8;
     reviews: 89;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-consciousness-advanced'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-consciousness-advanced'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1415,10 +1420,10 @@ export const,
     review,
   s: 8};
   // AI Autonomous Ecosystem Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-autonomy-enterprise'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-autonomy-enterprise'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1442,10 +1447,10 @@ export const,
     review,
   s: 19};
   // AI Ethics & Governance Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-ethics-enterprise'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-ethics-enterprise'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1469,10 +1474,10 @@ export const,
     review,
   s: 31};
   // AI Creativity Studio Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-creativity-pro'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-creativity-pro'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1496,10 +1501,10 @@ export const,
     review,
   s: 89};
   // AI Education Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-education-enterprise'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-education-enterprise'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1521,7 +1526,7 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 89}
+  s: 89};
 ];
 i,
   d: string; nam,
@@ -1805,7 +1810,7 @@ i,
   e: '2024-03-25', customer,
   s: 156, ratin,
   g: 4.8, review,
-  s: 89, ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
+  s: 89, ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -1814,7 +1819,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [; // AI Consciousness & Emotional Intelligence; {/* TODO: Fix JSX expression */}
+  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [; // AI Consciousness & Emotional Intelligence; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1824,7 +1829,7 @@ i,
   e: '2024-12-01'; customer,
   s: 12; ratin,
   g: 4.9; review,
-  s: 8}; // AI Autonomous Ecosystem Platform; {/* TODO: Fix JSX expression */}
+  s: 8}; // AI Autonomous Ecosystem Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1834,7 +1839,7 @@ i,
   e: '2024-11-15'; customer,
   s: 28; ratin,
   g: 4.8; review,
-  s: 19}; // AI Ethics & Governance Platform; {/* TODO: Fix JSX expression */}
+  s: 19}; // AI Ethics & Governance Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1844,7 +1849,7 @@ i,
   e: '2024-10-20'; customer,
   s: 45; ratin,
   g: 4.7; review,
-  s: 31}; // AI Creativity Studio Platform; {/* TODO: Fix JSX expression */}
+  s: 31}; // AI Creativity Studio Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1854,7 +1859,7 @@ i,
   e: '2024-09-15'; customer,
   s: 156; ratin,
   g: 4.8; review,
-  s: 89}; // AI Education Platform; {/* TODO: Fix JSX expression */}
+  s: 89}; // AI Education Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1875,7 +1880,7 @@ i,
   n: true;' implementationDetail,
   s: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.'' launchDat,
   e: '2024-03-25' customer,
-  s: 156, ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */}
+  s: 156, ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeAIService2025 {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -1884,7 +1889,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [; // AI Consciousness & Emotional Intelligence; {/* TODO: Fix JSX expression */}
+  innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [; // AI Consciousness & Emotional Intelligence; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1894,7 +1899,7 @@ i,
   e: '2024-12-01'; customer,
   s: 12; ratin,
   g: 4.9; review,
-  s: 8}; // AI Autonomous Ecosystem Platform; {/* TODO: Fix JSX expression */}
+  s: 8}; // AI Autonomous Ecosystem Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1904,7 +1909,7 @@ i,
   e: '2024-11-15'; customer,
   s: 28; ratin,
   g: 4.8; review,
-  s: 19}; // AI Ethics & Governance Platform; {/* TODO: Fix JSX expression */}
+  s: 19}; // AI Ethics & Governance Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1914,7 +1919,7 @@ i,
   e: '2024-10-20'; customer,
   s: 45; ratin,
   g: 4.7; review,
-  s: 31}; // AI Creativity Studio Platform; {/* TODO: Fix JSX expression */}
+  s: 31}; // AI Creativity Studio Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1924,7 +1929,7 @@ i,
   e: '2024-09-15'; customer,
   s: 156; ratin,
   g: 4.8; review,
-  s: 89}; // AI Education Platform; {/* TODO: Fix JSX expression */}
+  s: 89}; // AI Education Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,

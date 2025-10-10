@@ -1,5 +1,4 @@
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -30,7 +29,7 @@ import React from 'react';
     mobile: string;
     email: string;
     address: string;
-    website: string}
+    website: string};
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -45,7 +44,7 @@ const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'};
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'};
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.'
     features: [;
@@ -113,7 +112,7 @@ const contact =
     addres,
   s: string;
     websit,
-  e: string}
+  e: string};
   real_implementatio,
   n: boolean;
   implementation_detail,
@@ -141,7 +140,7 @@ const contact =
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-    }
+    };
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'};
   ];    descriptio,
   n: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.'
@@ -177,9 +176,9 @@ const contact =
     ],
     popula,
   r: true, ico,
-  n: ''}
+  n: ''};
 ];
-}
+};
 ];
 ;
     popular: true, icon: '',
@@ -246,12 +245,12 @@ varian,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'],
     marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-  }
+  };
 ];
-export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -261,7 +260,7 @@ export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
   reviews: number;
   benefits: string[];
   capabilities: string[];
-  marketAdvantage: string}
+  marketAdvantage: string};
 ;
     marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth',;
 variant: 'ai-futuristic', contactInfo: contact;
@@ -270,10 +269,12 @@ variant: 'ai-futuristic', contactInfo: contact;
     rating: 4.8, reviews: 34;
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
-const contact = {,
+const contact = {
+,
+};
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  address: '364 E Main St STE 1008 Middletown DE 19709'};
   website: 'https://ziontechgroup.com',
   realImplementatio,
   n: boolean;
@@ -292,7 +293,7 @@ const contact = {,
   capabilitie,
   s: string[];
   marketAdvantag,
-  e: string}
+  e: string};
 ;
     marketSiz,
   e: '$2.1B neuromorphic computing market', growthRat,
@@ -314,8 +315,8 @@ varian,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'];
     marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities';
-const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
   websit,
   e: 'http,
   s://ziontechgroup.com'
@@ -348,7 +349,7 @@ export const,
     technology: ['Unity, Unreal Engine, WebXR, Three.js, React, Node.js'];
     integrations: ['Oculus, HTC Vive, Microsoft HoloLens, Mobile AR frameworks'];
     useCases: ['Virtual training, E-commerce experiences, Educational content, Real estate tours'];
-    roi: 'Average 400% ROI through increased engagement and conversion rates'}
+    roi: 'Average 400% ROI through increased engagement and conversion rates'};
     competitors: ['Unity, Unreal Engine, VRChat} AltspaceVR'];
     marketSize: '$28.8 B AR/VR market';
     growthRate: '280% annual growth';
@@ -389,7 +390,7 @@ export const,
     technology: ['AI/ML, 5 G/6 G protocols, Python, TensorFlow, Network protocols'];
     integrations: ['Ericsson, Nokia, Huawei, Cisco, Major telecom equipment'];
     useCases: ['Network optimizationPerformance monitoringCapacity planningMaintenance automation'];
-    roi: 'Average 500% ROI through improved network performance and reduced operational costs'}
+    roi: 'Average 500% ROI through improved network performance and reduced operational costs'};
     competitors: ['Ericsson, Nokia, Huawei} Cisco'];
     marketSize: '$31.2 B 5 G network market';
     growthRate: '320% annual growth';
@@ -430,7 +431,7 @@ export const,
     technology: ['Deep Learning, Bioinformatics, Python, TensorFlow, PyTorch, R'];
     integrations: ['Lab equipment, Research databases, Clinical trial platforms, Patent databases'];
     useCases: ['Drug discoveryGenetic researchClinical trialsBiomarker analysis'];
-    roi: 'Average 800% ROI through accelerated research and reduced development costs'}
+    roi: 'Average 800% ROI through accelerated research and reduced development costs'};
     competitors: ['Insilico Medicine, Atomwise, BenevolentAI} Recursion Pharmaceuticals'];
     marketSize: '$22.4 B AI biotech market';
     growthRate: '350% annual growth';
@@ -471,7 +472,7 @@ export const,
     technology: ['AI/ML, IoT, Python, TensorFlow, Energy management systems'];
     integrations: ['Solar panels, Wind turbines, Energy storage, Smart meters, Grid systems'];
     useCases: ['Energy optimizationGrid managementPredictive maintenanceCarbon reduction'];
-    roi: 'Average 600% ROI through improved energy efficiency and reduced operational costs'}
+    roi: 'Average 600% ROI through improved energy efficiency and reduced operational costs'};
     competitors: ['GE Digital, Siemens, Schneider Electric} ABB'];
     marketSize: '$19.8 B smart grid market';
     growthRate: '280% annual growth';
@@ -512,7 +513,7 @@ export const,
     technology: ['Edge Computing, AI/ML, Kubernetes, Docker, Python, TensorFlow Lite'];
     integrations: ['AWS, Azure, GCP, IoT platforms, Edge devices'];
     useCases: ['Real-time processingIoT applicationsLow-latency servicesEdge AI deployment'];
-    roi: 'Average 350% ROI through reduced latency and improved performance'}
+    roi: 'Average 350% ROI through reduced latency and improved performance'};
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge} EdgeX Foundry'];
     marketSize: '$12.4 B edge computing market';
     growthRate: '240% annual growth';
@@ -553,7 +554,7 @@ export const,
     technology: ['Quantum Computing, Quantum Cryptography, Python, Qiskit, Quantum protocols'];
     integrations: ['Classical networks, Quantum devices, Security systems, Communication platforms'];
     useCases: ['Ultra-secure communicationQuantum networkingGovernment communicationsFinancial transactions'];
-    roi: 'Average 1200% ROI through enhanced security and communication capabilities'}
+    roi: 'Average 1200% ROI through enhanced security and communication capabilities'};
     competitors: ['ID Quantique, Toshiba, Quantum Xchange} Qubitekk'];
     marketSize: '$3.8 B quantum internet market';
     growthRate: '600% annual growth';
@@ -606,11 +607,11 @@ export const,
     customers: 45;
     rating: 4.8;
     reviews: 34;
-    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']}
-    capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}
+    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']};
+    capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']};
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-  {/* TODO: Fix JSX expression */}
-  i: 'Average 400% ROI through increased engagement and conversion rates'}
+  {/* TODO: Fix JSX expression */};
+  i: 'Average 400% ROI through increased engagement and conversion rates'};
     competitor,
   s: ['Unity, Unreal Engine, VRChat} AltspaceVR'];
     marketSiz,
@@ -641,8 +642,8 @@ export const,
   e: 'First platform to combine AR/VR development with metaverse creation tools'
   };
   // 5G/6G Network Services;
-  {/* TODO: Fix JSX expression */}
-  i: 'Average 500% ROI through improved network performance and reduced operational costs'}
+  {/* TODO: Fix JSX expression */};
+  i: 'Average 500% ROI through improved network performance and reduced operational costs'};
     competitor,
   s: ['Ericsson, Nokia, Huawei} Cisco'];
     marketSiz,
@@ -673,8 +674,8 @@ export const,
   e: 'First AI-powered platform for comprehensive 5G/6G network optimization'
   };
   // Biotechnology AI Services;
-  {/* TODO: Fix JSX expression */}
-  i: 'Average 800% ROI through accelerated research and reduced development costs'}
+  {/* TODO: Fix JSX expression */};
+  i: 'Average 800% ROI through accelerated research and reduced development costs'};
     competitor,
   s: ['Insilico Medicine, Atomwise, BenevolentAI} Recursion Pharmaceuticals'];
     marketSiz,
@@ -705,8 +706,8 @@ export const,
   e: 'First platform to combine AI-powered drug discovery with comprehensive biotech research tools'
   };
   // Renewable Energy AI Services;
-  {/* TODO: Fix JSX expression */}
-  i: 'Average 600% ROI through improved energy efficiency and reduced operational costs'}
+  {/* TODO: Fix JSX expression */};
+  i: 'Average 600% ROI through improved energy efficiency and reduced operational costs'};
     competitor,
   s: ['GE Digital, Siemens, Schneider Electric} ABB'];
     marketSiz,
@@ -737,8 +738,8 @@ export const,
   e: 'First AI-powered platform for comprehensive renewable energy optimization'
   };
   // Edge AI Computing Services;
-  {/* TODO: Fix JSX expression */}
-  i: 'Average 350% ROI through reduced latency and improved performance'}
+  {/* TODO: Fix JSX expression */};
+  i: 'Average 350% ROI through reduced latency and improved performance'};
     competitor,
   s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge} EdgeX Foundry'];
     marketSiz,
@@ -769,8 +770,8 @@ export const,
   e: 'First platform to combine edge computing with comprehensive AI capabilities'
   };
   // Quantum Internet Services;
-  {/* TODO: Fix JSX expression */}
-  i: 'Average 1200% ROI through enhanced security and communication capabilities'}
+  {/* TODO: Fix JSX expression */};
+  i: 'Average 1200% ROI through enhanced security and communication capabilities'};
     competitor,
   s: ['ID Quantique, Toshiba, Quantum Xchange} Qubitekk'];
     marketSiz,
@@ -801,18 +802,18 @@ export const,
   e: 'First comprehensive quantum internet platform with commercial applications'
   };
   // Neuromorphic Computing Services;
-  {/* TODO: Fix JSX expression */}
-  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']}
+  {/* TODO: Fix JSX expression */};
+  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']};
     capabilitie,
-  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}
+  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']};
     marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
-  }
+  };
 ];
     ];
     popula,
   r: true, ico,
-  n: ''}
+  n: ''};
 ];
 i,
   d: string; nam,
@@ -896,7 +897,7 @@ i,
   s: 34' benefit,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ' import { ServiceVariant } from '../types/service-variants'; export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ' import { ServiceVariant } from '../types/service-variants'; export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -920,30 +921,30 @@ i,
   s: 34' benefit,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' const contact = {/* TODO: Fix JSX expression */}
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  specializedEmergingTechServices: SpecializedEmergingTechService[] = [; // AR/VR & Metaverse Services; {/* TODO: Fix JSX expression */}
+  specializedEmergingTechServices: SpecializedEmergingTechService[] = [; // AR/VR & Metaverse Services; {/* TODO: Fix JSX expression */};
   s: ['Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach']}' capabilitie,
   s: ['Content creationMetaverse developmentAnalyticsHardware integration']};' marketAdvantag,
-  e: 'First platform to combine AR/VR development with metaverse creation tools' }; // 5G/6G Network Services; {/* TODO: Fix JSX expression */}
+  e: 'First platform to combine AR/VR development with metaverse creation tools' }; // 5G/6G Network Services; {/* TODO: Fix JSX expression */};
   s: ['Improved network performanceReduced operational costsPredictive maintenanceEnergy efficiency']}' capabilitie,
   s: ['AI optimizationReal-time monitoringPredictive analyticsMulti-vendor support']};' marketAdvantag,
-  e: 'First AI-powered platform for comprehensive 5G/6G network optimization' }; // Biotechnology AI Services; {/* TODO: Fix JSX expression */}
+  e: 'First AI-powered platform for comprehensive 5G/6G network optimization' }; // Biotechnology AI Services; {/* TODO: Fix JSX expression */};
   s: ['Accelerated researchCost reductionImproved accuracyCollaboration tools']}' capabilitie,
   s: ['Drug discoveryGenetic analysisClinical optimizationResearch collaboration']};' marketAdvantag,
-  e: 'First platform to combine AI-powered drug discovery with comprehensive biotech research tools' }; // Renewable Energy AI Services; {/* TODO: Fix JSX expression */}
+  e: 'First platform to combine AI-powered drug discovery with comprehensive biotech research tools' }; // Renewable Energy AI Services; {/* TODO: Fix JSX expression */};
   s: ['Improved energy efficiencyCost reductionCarbon reductionPredictive maintenance']}' capabilitie,
   s: ['Energy optimizationGrid managementReal-time monitoringPredictive analytics']};' marketAdvantag,
-  e: 'First AI-powered platform for comprehensive renewable energy optimization' }; // Edge AI Computing Services; {/* TODO: Fix JSX expression */}
+  e: 'First AI-powered platform for comprehensive renewable energy optimization' }; // Edge AI Computing Services; {/* TODO: Fix JSX expression */};
   s: ['Reduced latencyImproved performanceCost reductionReal-time processing']}' capabilitie,
   s: ['Edge AI deploymentReal-time processingDevice managementMulti-cloud support']};' marketAdvantag,
-  e: 'First platform to combine edge computing with comprehensive AI capabilities' }; // Quantum Internet Services; {/* TODO: Fix JSX expression */}
+  e: 'First platform to combine edge computing with comprehensive AI capabilities' }; // Quantum Internet Services; {/* TODO: Fix JSX expression */};
   s: ['Ultra-secure communicationQuantum networkingFuture-proof technologyGovernment compliance']}' capabilitie,
   s: ['Quantum key distributionNetwork managementSecurity protocolsMulti-node support']};' marketAdvantag,
-  e: 'First comprehensive quantum internet platform with commercial applications' }; // Neuromorphic Computing Services; {/* TODO: Fix JSX expression */}
+  e: 'First comprehensive quantum internet platform with commercial applications' }; // Neuromorphic Computing Services; {/* TODO: Fix JSX expression */};
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']}' capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}' marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ]; ' popula,

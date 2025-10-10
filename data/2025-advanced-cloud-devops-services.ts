@@ -1,8 +1,8 @@
 import React from 'react';
-export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
-  s: number}
+export interface CloudDevOpsService {/* TODO: Fix JSX expression */};
+  s: number};
     setupTim,
-  e: string}
+  e: string};
   };
   keyFeatures: string[];
   benefits: string[];
@@ -24,7 +24,7 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
@@ -80,7 +80,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 export const,
   advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     i,
@@ -732,7 +732,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 123}
+  s: 123};
 ];
 export interface CloudDevOpsService,
   id: string; nam,

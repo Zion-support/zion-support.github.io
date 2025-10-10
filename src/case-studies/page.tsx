@@ -1,9 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
-const CaseStudiesPage: React.FC = () => {;
+const CaseStudiesPage: React.FC = () => {
+};
 const caseStudies = [
-    {
+[
+        {
       i,
     d: 1,
       title: 'E-commerce Platform Transformation',
@@ -11,7 +13,7 @@ const caseStudies = [
       industry: 'E-commerce',
       challenge: 'Low conversion rates and high customer acquisition costs',
       solution: 'AI-powered personalization and dynamic pricing optimization',
-      results: {
+      results:     {
         ro,
     i: '340%',
         conversion: '+85%',
@@ -71,26 +73,18 @@ const caseStudies = [
       },
       image: '🏭',
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
-    }
+    };
   ];
-<<<<<<< HEAD
   return (
-    <React.Fragment>
+    <React .Fragment>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
       </Helmet>
-=======
-  return (<div>
-        <title>Case Studies - Zion Tech Group<
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header *
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4">
-            
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -139,7 +133,7 @@ const caseStudies = [
                         <
                         <div className="text-center p-3 bg-blue-50 rounded-lg">
                           <div className="text-2xl font-bold text-blue-600">)
-                            {Object.values(study.results)[1]}
+                            {Object.values(study.results)[1]};
                           <
                           <div className="text-sm text-gray-600">
                             {Object.keys(study.results)[1].replace(/([A-Z])/g, ' $1').replace(/^.
@@ -148,7 +142,6 @@ const caseStudies = [
                       <
                     <
                     <div className="flex items-center justify-between">
-                      
                         Learn More
                       <
                       <div className="flex items-center text-green-600">
@@ -158,7 +151,7 @@ const caseStudies = [
                     <
                   <
                 <)
-              ))}
+              ))};
             <
           <
         <
@@ -205,11 +198,8 @@ const caseStudies = [
             <
             <div className="flex flex-col s,
     m:flex-row gap-4 justify-center">
-              
                 Start Your Project
-                
                 View Our Services
-<<<<<<< HEAD
               </Link>
             </div>
           </div>
@@ -217,14 +207,4 @@ const caseStudies = [
       </div>
     </React.Fragment>
   )};
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default CaseStudiesPage;

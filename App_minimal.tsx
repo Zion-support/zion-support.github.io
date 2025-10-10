@@ -4,8 +4,8 @@ import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-
 const App: React.FC = () => {
+};
   return (
     <HelmetProvider>
       <Router>
@@ -22,5 +22,4 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
-
 export default App;

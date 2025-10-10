@@ -1,21 +1,21 @@
   Webcam as WebcamIcon, Speaker as SpeakerIcon;)
 } from 'lucide-react';
 ;
-const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all');
+const ITConsultingPage: React.FC = () => {
+const [selectedCategory, setSelectedCategory] = useState('all');
+};
 const [searchTerm, setSearchTerm] = useState('');
 ;
 const itServices = [
-<<<<<<< HEAD
-=======
+];
   Webcam as WebcamIcon, Speaker as SpeakerIcon]
     } from 'lucide-react';
-
 const ITConsultingPage: React.FC = () => {
+};
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const itServices = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+];
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -336,21 +336,22 @@ const ITConsultingPage: React.FC = () => {
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
 caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits']
-    }
+    };
   ];
 ;
 const categories = [
-    { id: 'all', name: 'All IT Services', icon: Grid3X3 },
-    { id: 'infrastructure', name: 'Infrastructure', icon: Server },
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },
-    { id: 'security', name: 'Cybersecurity', icon: Shield },
-    { id: 'networking', name: 'Networking', icon: Network },
-    { id: 'database', name: 'Database', icon: Database },
-    { id: 'support', name: 'IT Support', icon: Headphones },
-    { id: 'development', name: 'Development', icon: Code },
-    { id: 'consulting', name: 'Consulting', icon: Briefcase },
-    { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
+[
+        { id: 'all', name: 'All IT Services', icon: Grid3X3 },
+        { id: 'infrastructure', name: 'Infrastructure', icon: Server },
+        { id: 'cloud', name: 'Cloud Services', icon: Cloud },
+        { id: 'security', name: 'Cybersecurity', icon: Shield },
+        { id: 'networking', name: 'Networking', icon: Network },
+        { id: 'database', name: 'Database', icon: Database },
+        { id: 'support', name: 'IT Support', icon: Headphones },
+        { id: 'development', name: 'Development', icon: Code },
+        { id: 'consulting', name: 'Consulting', icon: Briefcase },
+        { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
+        { id: 'compliance', name: 'Compliance', icon: CheckSquare };
   ];
 ;
 const filteredServices = itServices.filter(service => {;
@@ -359,7 +360,6 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch]
     });;
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
@@ -391,8 +391,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
           </div>
         </div>
       </section>
-
-      {/* Search and Filter Section */}
+      {/* Search and Filter Section */};
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div>
           <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
@@ -403,49 +402,46 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                 <input
                   type="text"
                   placeholder="Search IT services..."
-                  value={searchTerm}
+                  value={searchTerm};
                   onChange={(e) => setSearchTerm(e.target.value);
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
             </div>
-            
-            {/* Category Filter */}
+            {/* Category Filter */};
             <div>
               <select
-                value={selectedCategory}
+                value={selectedCategory};
                 onChange={(e) =></select> setSelectedCategory(e.target.value);
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}></option>
-                    {category.name}
+                    {category.name};
                   </option>
                 ));
               </select>
             </div>
           </div>
-
-          {/* Category Pills */}
+          {/* Category Pills */};
           <div className="flex flex-wrap gap-2 mb-8"></div>
             {categories.map((category) => (</div>
               <button
-                key={category.id}
+                key={category.id};
                 onClick={() =></button> setSelectedCategory(category.id);
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400']
-    }`}
+    }`};
               >
-                {category.name}
+                {category.name};
               </button>
             ));
           </div>
         </div>
       </section>
-
-      {/* Services Grid */}
+      {/* Services Grid */};
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -453,17 +449,15 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
               <div>
                 <div>
                   <div>
-                    <service.icon className="w-12 h-12" />
+                    <service .icon className="w-12 h-12" />
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-white"></di>{service.price}</div>
                     <div className="text-sm text-gray-400"></di>starting price</div>
                   </div>
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow"></h>{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                
                 <div>
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Key Features:</h4>
@@ -476,7 +470,6 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                       ));
                     </ul>
                   </div>
-                  
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Benefits:</h4>
                     <ul className="space-y-1"></ul>
@@ -489,7 +482,6 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                     </ul>
                   </div>
                 </div>
-
                 <div>
                   <div>
                     <span className="text-gray-400"></spa>Setup Time:</span>
@@ -504,16 +496,14 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                     <span className="text-white"></spa>{service.targetAudience}</span>
                   </div>
                 </div>
-
                 {service.caseStudy && (
                   <div>
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
                   </div>
                 );
-
                 <div>
                   <a
-                    href={service.link}
+                    href={service.link};
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -533,8 +523,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
         <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse"></h2>
@@ -566,5 +555,3 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
 )]
     };
 export default ITConsultingPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

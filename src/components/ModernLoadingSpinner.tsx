@@ -1,10 +1,11 @@
 import React from 'react';
 'use client';
 interface ModernLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+}
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
-  fullScreen?: boolean}
+  fullScreen?: boolean};
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
@@ -15,8 +16,12 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl:   ,
-$4};
+$4}
   const colorClasses = {
+};
+};
+};
+}
     primary: 'text-cyan-400',
     secondary: 'text-purple-400',
     accent:   ,
@@ -42,29 +47,27 @@ $4};
         </div>
         {text && (
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
-        )}
+        )};
       </div>
-
-
 'use client';
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
-  fullScreen?: boolean}
+  fullScreen?: boolean};
 const,
   ModernLoadingSpinner: React.FC;
           <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
   size = 'md',
   color = 'primary',
   text = 'Loading...',
   fullScreen = false;)
 }) => {/* TODO: Fix JSX expression */}
-  m: 'w-4 h-4'}
+  m: 'w-4 h-4'};
     m,
   d: 'w-8 h-8',
     l,
@@ -73,7 +76,7 @@ const,
   l: 'w-16 h-16'
   };
   const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content}
+  O: Add content};
 };
   primar,
   y: 'text-cyan-400',
@@ -96,7 +99,6 @@ const,
     : 'flex items-center justify-center p-4';
   return (<div>Coming Soon</div>)
   )
-    
           <div className={containerClasses} role="status" aria-label="Loading"></div>"
       <div className="flex flex-col items-center space-y-4"></div>"
         <div className="relative"></div>
@@ -105,14 +107,10 @@ const,
         </div>
         {text && ()}"
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
-        )}
+        )};
       </div>"
       <span className="sr-only">Loading content, please wait...</span>
     </div>
   )};
 export default ModernLoadingSpinner;
-
 export default ModernLoadingSpinner;"`
-
-
-

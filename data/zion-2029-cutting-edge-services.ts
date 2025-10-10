@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type ZionCuttingEdgeService2029 =
   id: string;
   name: string;
@@ -44,7 +43,7 @@ export type ZionCuttingEdgeService2029 =
     professional: number;
     enterprise: number;
     currency: string;
-    period: string}}
+    period: string}};
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // 1. AI-Powered Quantum Computing Optimization Platform;
     id: 'ai-quantum-computing-optimization',
@@ -143,7 +142,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     currenc,
   y: string;
     perio,
-  d: string}}
+  d: string}};
 export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [,
   // 1. AI-Powered Quantum Computing Optimization Platform,
@@ -215,7 +214,7 @@ marketSize: '$1.3B quantum computing market',
       professional: 7999;
       enterprise: 19999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 2. Autonomous Drone Fleet Management System;
     id: 'autonomous-drone-fleet-management',
@@ -302,7 +301,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 2. Autonomous Drone Fleet Management System,
   id: 'autonomous-drone-fleet-management',
@@ -373,7 +372,7 @@ marketSize: '$45.8B drone market',
       professional: 3999;
       enterprise: 9999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 3. Blockchain-Based Decentralized Identity Management;
     id: 'blockchain-decentralized-identity',
@@ -460,7 +459,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 3. Blockchain-Based Decentralized Identity Management,
   id: 'blockchain-decentralized-identity',
@@ -531,7 +530,7 @@ marketSize: '$28.6B identity management market',
       professional: 799;
       enterprise: 1999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 4. AI-Powered Climate Change Prediction & Mitigation Platform;
     id: 'ai-climate-change-prediction',
@@ -618,7 +617,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 4. AI-Powered Climate Change Prediction & Mitigation Platform,
   id: 'ai-climate-change-prediction',
@@ -689,7 +688,7 @@ marketSize: '$15.2B climate tech market',
       professional: 4999;
       enterprise: 12999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 5. Neuromorphic Computing AI Platform;
     id: 'neuromorphic-computing-ai',
@@ -776,7 +775,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 5. Neuromorphic Computing AI Platform,
   id: 'neuromorphic-computing-ai',
@@ -847,7 +846,7 @@ marketSize: '$8.7B neuromorphic computing market',
       professional: 9999;
       enterprise: 24999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 6. Autonomous Supply Chain Optimization Platform;
     id: 'autonomous-supply-chain-optimization',
@@ -934,7 +933,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 6. Autonomous Supply Chain Optimization Platform,
   id: 'autonomous-supply-chain-optimization',
@@ -1005,7 +1004,7 @@ marketSize: '$19.2B supply chain management market',
       professional: 5999;
       enterprise: 14999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 7. AI-Powered Healthcare Diagnostics & Treatment Platform;
     id: 'ai-healthcare-diagnostics-treatment',
@@ -1092,7 +1091,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 7. AI-Powered Healthcare Diagnostics & Treatment Platform,
   id: 'ai-healthcare-diagnostics-treatment',
@@ -1163,7 +1162,7 @@ marketSize: '$45.2B AI healthcare market',
       professional: 4499;
       enterprise: 11999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 8. Autonomous Financial Trading & Portfolio Management;
     id: 'autonomous-financial-trading',
@@ -1250,7 +1249,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 8. Autonomous Financial Trading & Portfolio Management,
   id: 'autonomous-financial-trading',
@@ -1321,7 +1320,7 @@ marketSize: '$12.8B algorithmic trading market',
       professional: 9999;
       enterprise: 24999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 9. AI-Powered Cybersecurity Threat Intelligence Platform;
     id: 'ai-cybersecurity-threat-intelligence',
@@ -1408,7 +1407,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 9. AI-Powered Cybersecurity Threat Intelligence Platform,
   id: 'ai-cybersecurity-threat-intelligence',
@@ -1479,7 +1478,7 @@ marketSize: '$182.3B cybersecurity market',
       professional: 5499;
       enterprise: 13999;
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 10. Autonomous Smart City Infrastructure Management;
     id: 'autonomous-smart-city-infrastructure',
@@ -1566,7 +1565,7 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 10. Autonomous Smart City Infrastructure Management,
   id: 'autonomous-smart-city-infrastructure',
@@ -1637,8 +1636,8 @@ marketSize: '$225.1B smart city market',
       professional: 12999;
       enterprise: 29999;
       currency: 'USD',
-      period: 'month'}
-  }
+      period: 'month'};
+  };
 ];
 export const getServicesByCategory = (category: string) =>;
   return zionCuttingEdgeServices2029.filter(service => service.category === category);,
@@ -1719,8 +1718,8 @@ varian,
   y: 'USD',
       perio,
   d: 'month'
-    }
-  }
+    };
+  };
 ];
 export const getServicesByCategory = (categor)
   y: string) =>;
@@ -2266,10 +2265,3 @@ export type ZionCuttingEdgeService2029 = i,
   e: number) maxPric,
   e: number) => return zionCuttingEdgeServices2029.filter(service => const starterPrice = service.pricing.starter; return starterPrice >= minPrice && starterPrice <= maxPrice) })}; export const getServicesByTechnology = (technolog)
   y: string) => return zionCuttingEdgeServices2029.filter(service => service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())) )};'
-=======
-    marketSize: '$1.3B quantum computing market'
-    growthRate: '32.1% annual growth';
-variant: 'quantum-ai-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
       'Intent classification + prioritization'
       'On-brand response drafting'
       'Automatic polite follow-ups'
@@ -98,7 +96,7 @@ varian,
     customers:
         customers: 48;
     rating: 4.7;
-    reviews: 12}
+    reviews: 12};
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
 market_size: '$10B+ email productivity',
     growth_rate: '15% CAGR',
@@ -178,7 +176,7 @@ marketSize: '$10B+ email productivity',
     ratin,
   g: 4.7;
     review,
-  s: 12}
+  s: 12};
     competitor,
   s: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
     market_siz,
@@ -250,7 +248,7 @@ varian,
     ratin,
   g: 4.7;
     review,
-  s: 12}
+  s: 12};
       'Branching logic + A/B prompts',
       'SMS/WhatsApp/web delivery',
       'Real-time analytics',
@@ -2321,7 +2319,7 @@ varian,
     ratin,
   g: 4.4;
     review,
-  s: 3}
+  s: 3};
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
@@ -2799,7 +2797,7 @@ varian,
     ratin,
   g: 4.6;
     review,
-  s: 5}
+  s: 5};
     i,
   d: 's3-lifecycle-optimizer'
     nam,
@@ -2849,7 +2847,7 @@ roi: 'Save 1030% storage spend',
     customers: 17;
     rating: 4.5;
 reviews: 4;
-  }
+  };
     id: 'pii-discovery-scanner',
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
@@ -2908,7 +2906,7 @@ varian,
     ratin,
   g: 4.5;
     review,
-  s: 4}
+  s: 4};
     i,
   d: 'pii-discovery-scanner'
     nam,
@@ -3010,7 +3008,7 @@ varian,
     ratin,
   g: 4.6;
     review,
-  s: 5}
+  s: 5};
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
@@ -3583,7 +3581,7 @@ marketSize: '$1 B API tooling',
     customers: 12;
     rating: 4.5;
 reviews: 3;
-  }
+  };
     id: 'feature - flag - auditor',
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end - of - life automation',
@@ -3642,7 +3640,7 @@ varian,
     ratin,
   g: 4.5;
     review,
-  s: 3}
+  s: 3};
     i,
   d: 'feature - flag - auditor',
     nam,
@@ -4792,7 +4790,7 @@ roi: 'Cuts manual email time by 6080%',
 		launchDate: '2025-08-20',
 		customers: 48;
 		rating: 4 && 4.7;
-		reviews: 12}
+		reviews: 12};
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics',
@@ -4829,7 +4827,7 @@ roi: '24 x higher completion on mobile',
 		launchDate: '2025-08-20',
 		customers: 22;
 		rating: 4 && 4.6;
-		reviews: 9}
+		reviews: 9};
 		id: 'niche-productivity-planner',
 		name: 'Niche Productivity Planner',
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks',
@@ -4868,7 +4866,7 @@ roi: 'Saves 35 hrs/week per user',
 		launchDate: '2025-08-20',
 		customers: 18;
 		rating: 4 && 4.5;
-		reviews: 7}
+		reviews: 7};
 		id: 'event-management-dashboard',
 		name: 'Event Management Dashboard',
 		tagline: 'Tickets, scheduling, comms, and post-event analytics',
@@ -4907,7 +4905,7 @@ roi: 'Saves 50% ops time per event',
 		launchDate: '2025-08-20',
 		customers: 31;
 		rating: 4 && 4.7;
-		reviews: 11}
+		reviews: 11};
 		id: 'affiliate-tracking-suite',
 		name: 'Affiliate Tracking Suite',
 		tagline: 'Links, attribution, commission rules, and payouts',
@@ -4944,7 +4942,7 @@ roi: '+1525% new revenue from partners',
 		launchDate: '2025-08-20',
 		customers: 12;
 		rating: 4 && 4.5;
-		reviews: 5}
+		reviews: 5};
 		id: 'smb-analytics-lite',
 		name: 'SMB Analytics Lite',
 		tagline: 'Traffic, funnels, and conversions without complexity',
@@ -4979,7 +4977,7 @@ roi: 'Clarity on what converts, 1020% lift',
 		launchDate: '2025-08-20',
 		customers: 40;
 		rating: 4 && 4.6;
-		reviews: 8}
+		reviews: 8};
 		id: 'it-helpdesk-portal',
 		name: 'IT Helpdesk Portal',
 		tagline: 'Tickets, knowledge base, SLAs, and client portal',
@@ -5016,7 +5014,7 @@ roi: '2540% faster resolution time',
 		launchDate: '2025-08-20',
 		customers: 16;
 		rating: 4 && 4.7;
-		reviews: 6}
+		reviews: 6};
 		id: 'ecommerce-returns-manager',
 		name: 'Ecommerce Returns Manager',
 		tagline: 'Customer-friendly returns with labels and status tracking',
@@ -5054,7 +5052,7 @@ roi: 'Reduce returns costs by 1020%',
 		customers: 14;
 		rating: 4 && 4.6;
 reviews: 5;
-	}
+	};
 		id: 'automated-email-followups',
 		name: 'Automated Email Followups',
 		tagline: 'No-lead-left-behind sequences across inboxes',
@@ -5090,7 +5088,7 @@ roi: '+1025% more replies',
 		launchDate: '2025-08-20',
 		customers: 28;
 		rating: 4 && 4.5;
-		reviews: 8}
+		reviews: 8};
 		id: 'podcast-transcription-service',
 		name: 'Podcast Transcription Service',
 		tagline: 'Accurate transcripts, chapters, and SEO blog exports',
@@ -5127,7 +5125,7 @@ roi: 'Saves 24 hrs/episode',
 		launchDate: '2025-08-20',
 		customers: 20;
 		rating: 4 && 4.6;
-		reviews: 6}
+		reviews: 6};
 		id: 'ai-seo-content-optimizer',
 		name: 'AI SEO Content Optimizer',
 		tagline: 'Live on-page audits and SEO-aware rewrites',
@@ -5164,7 +5162,7 @@ roi: '+2040% organic traffic lift',
 		launchDate: '2025-08-20',
 		customers: 33;
 		rating: 4 && 4.7;
-		reviews: 10}
+		reviews: 10};
 		id: 'social-scheduler-ai',
 		name: 'Social Scheduler AI',
 		tagline: 'Auto-generate, schedule, and repurpose posts cross-platform',
@@ -5201,7 +5199,7 @@ roi: 'Saves 46 hrs/week',
 		launchDate: '2025-08-20',
 		customers: 26;
 		rating: 4 && 4.5;
-		reviews: 7}
+		reviews: 7};
 		id: 'lead-enrichment-api',
 		name: 'Lead Enrichment API',
 		tagline: 'Company, role, and social signals from an email/domain',
@@ -5237,7 +5235,7 @@ roi: 'Improves MQLSQL by 1020%',
 		launchDate: '2025-08-20',
 		customers: 9;
 		rating: 4 && 4.4;
-		reviews: 4}
+		reviews: 4};
 		id: 'consent-management-cmp',
 		name: 'Consent Management CMP',
 		tagline: 'GDPR/CCPA consent banners, preferences, and audit logs',
@@ -5273,7 +5271,7 @@ roi: 'Avoid fines, preserve UX',
 		launchDate: '2025-08-20',
 		customers: 37;
 		rating: 4 && 4.7;
-		reviews: 10}
+		reviews: 10};
 		id: 'cookie-scanner-pro',
 		name: 'Cookie Scanner Pro',
 		tagline: 'Auto-detects cookies + trackers and updates your policy',
@@ -5310,7 +5308,7 @@ roi: 'Automates tedious checks',
 		launchDate: '2025-08-20',
 		customers: 19;
 		rating: 4 && 4.5;
-		reviews: 5}
+		reviews: 5};
 		id: 'statuspage-sla-tracker',
 		name: 'StatusPage SLA Tracker',
 		tagline: 'Track uptime/incidents and publish SLA reports',
@@ -5347,7 +5345,7 @@ roi: 'Reduce support tickets ~20%',
 		launchDate: '2025-08-20',
 		customers: 11;
 		rating: 4 && 4.4;
-		reviews: 3}
+		reviews: 3};
 		id: 'agentic-lead-qualifier',
 		name: 'Agentic Lead Qualifier',
 		tagline: 'Website chat agent that pre-qualifies and routes leads',
@@ -5384,7 +5382,7 @@ roi: '+1530% qualified demos',
 		launchDate: '2025-08-20',
 		customers: 23;
 		rating: 4 && 4.6;
-		reviews: 7}
+		reviews: 7};
 		id: 'gdpr-dsar-portal-lite',
 		name: 'GDPR DSAR Portal Lite',
 		tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -5421,7 +5419,7 @@ roi: 'Avoid compliance toil and risk',
 		launchDate: '2025-08-20',
 		customers: 10;
 		rating: 4 && 4.5;
-		reviews: 4}
+		reviews: 4};
 		id: 'feature-flag-auditor',
 		name: 'Feature Flag Auditor',
 		tagline: 'Flag hygiene checks and end-of-life automation',
@@ -5458,7 +5456,7 @@ roi: 'Avoid outages, reduce toil',
 		launchDate: '2025-08-20',
 		customers: 8;
 		rating: 4 && 4.4;
-		reviews: 3}
+		reviews: 3};
 		id: 'postgres-index-advisor-pro',
 		name: 'Postgres Index Advisor Pro',
 		tagline: 'Index recommendations and controlled PR rollouts',
@@ -5496,7 +5494,7 @@ roi: 'Cut query costs 2050%',
 		customers: 15;
 		rating: 4 && 4.6;
 reviews: 5;
-	}
+	};
 		id: 's3-lifecycle-optimizer',
 		name: 'S3 Lifecycle Optimizer',
 		tagline: 'Move objects between storage classes to cut costs',
@@ -5532,7 +5530,7 @@ roi: 'Save 1030% storage spend',
 		launchDate: '2025-08-20',
 		customers: 17;
 		rating: 4 && 4.5;
-		reviews: 4}
+		reviews: 4};
 		id: 'pii-discovery-scanner',
 		name: 'PII Discovery Scanner',
 		tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
@@ -5569,7 +5567,7 @@ roi: 'Avoid incidents and fines',
 		launchDate: '2025-08-20',
 		customers: 13;
 		rating: 4 && 4.6;
-		reviews: 5}
+		reviews: 5};
 		id: 'api-breaking-change-watcher',
 		name: 'API Breaking Change Watcher',
 		tagline: 'Schema diffs with CI gates and notifications',
@@ -5606,7 +5604,7 @@ roi: 'Fewer incidents, faster integration',
 		launchDate: '2025-08-20',
 		customers: 12;
 		rating: 4 && 4.5;
-		reviews: 3}
+		reviews: 3};
 		id: 'synthetic-journey-monitor',
 		name: 'Synthetic Journey Monitor',
 		tagline: 'Record and replay user flows with SLO alerts',
@@ -5644,7 +5642,7 @@ roi: 'Prevent broken funnels',
 		customers: 21;
 		rating: 4 && 4.5;
 reviews: 6;
-	}
+	};
 		id: 'iam-permission-analyzer',
 		name: 'IAM Permission Analyzer',
 		tagline: 'Detect over-privileged access and propose least-privilege policies',
@@ -5681,7 +5679,7 @@ roi: 'Reduce risk + audit toil',
 		customers: 9;
 		rating: 4 && 4.6;
 reviews: 3;
-	}
+	};
 		id: 'warehouse-cost-optimizer',
 		name: 'Data Warehouse Cost Optimizer',
 		tagline: 'Right-size warehouses and schedule off-peak workloads',
@@ -5718,7 +5716,7 @@ roi: '1030% lower DW costs',
 		customers: 7;
 		rating: 4 && 4.5;
 reviews: 3;
-	}
+	};
 		id: 'email-warmup-monitor',
 		name: 'Email Warmup & Reputation Monitor',
 		tagline: 'Track sender reputation and run inbox placement tests',
@@ -5754,7 +5752,7 @@ roi: 'Protects domain reputation',
 		launchDate: '2025-08-20',
 		customers: 16;
 		rating: 4 && 4.5;
-		reviews: 4}
+		reviews: 4};
 		id: 'ai-meeting-to-ticket',
 		name: 'AI MeetingtoTicket Copilot',
 		tagline: 'Turn meeting action items into Jira/GitHub tickets',
@@ -5791,7 +5789,7 @@ roi: 'Close the loop on action items',
 		launchDate: '2025-08-20',
 		customers: 24;
 		rating: 4 && 4.6;
-		reviews: 6}
+		reviews: 6};
 ];
   id: 'ai - email - responder',
   name: 'AI Email Responder',
@@ -5830,7 +5828,7 @@ roi: 'Cuts manual email time by 6080%',
   launch_date: '2025 - 08 - 20',
   customers: 48;
   rating: 4.7;
-  reviews: 12}
+  reviews: 12};
   id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
   tagline: 'Adaptive, mobile - first surveys with branching logic and analytics',
@@ -5867,7 +5865,7 @@ roi: '24 x higher completion on mobile',
   launch_date: '2025 - 08 - 20',
   customers: 22;
   rating: 4.6;
-  reviews: 9}
+  reviews: 9};
   id: 'niche - productivity - planner',
   name: 'Niche Productivity Planner',
   tagline: 'Industry - specific planners with templates, rituals, and benchmarks',
@@ -5906,7 +5904,7 @@ roi: 'Saves 35 hrs / week per user',
   launch_date: '2025 - 08 - 20',
   customers: 18;
   rating: 4.5;
-  reviews: 7}
+  reviews: 7};
   id: 'event - management - dashboard',
   name: 'Event Management Dashboard',
   tagline: 'Tickets, scheduling, comms, and post - event analytics',
@@ -5945,7 +5943,7 @@ roi: 'Saves 50% ops time per event',
   launch_date: '2025 - 08 - 20',
   customers: 31;
   rating: 4.7;
-  reviews: 11}
+  reviews: 11};
   id: 'affiliate - tracking - suite',
   name: 'Affiliate Tracking Suite',
   tagline: 'Links, attribution, commission rules, and payouts',
@@ -5982,7 +5980,7 @@ roi: '+1525% new revenue from partners',
   launch_date: '2025 - 08 - 20',
   customers: 12;
   rating: 4.5;
-  reviews: 5}
+  reviews: 5};
   id: 'smb - analytics - lite',
   name: 'SMB Analytics Lite',
   tagline: 'Traffic, funnels, and conversions without complexity',
@@ -6017,7 +6015,7 @@ roi: 'Clarity on what converts, 1020% lift',
   launch_date: '2025 - 08 - 20',
   customers: 40;
   rating: 4.6;
-  reviews: 8}
+  reviews: 8};
   id: 'it - helpdesk - portal',
   name: 'IT Helpdesk Portal',
   tagline: 'Tickets, knowledge base, SLAs, and client portal',
@@ -6054,7 +6052,7 @@ roi: '2540% faster resolution time',
   launch_date: '2025 - 08 - 20',
   customers: 16;
   rating: 4.7;
-  reviews: 6}
+  reviews: 6};
   id: 'ecommerce - returns - manager',
   name: 'Ecommerce Returns Manager',
   tagline: 'Customer - friendly returns with labels and status tracking',
@@ -6092,7 +6090,7 @@ roi: 'Reduce returns costs by 1020%',
   customers: 14;
   rating: 4.6;
 reviews: 5;
-}
+};
   id: 'automated - email - followups',
   name: 'Automated Email Followups',
   tagline: 'No - lead - left - behind sequences across inboxes',
@@ -6128,7 +6126,7 @@ roi: '+1025% more replies',
   launch_date: '2025 - 08 - 20',
   customers: 28;
   rating: 4.5;
-  reviews: 8}
+  reviews: 8};
   id: 'podcast - transcription - service',
   name: 'Podcast Transcription Service',
   tagline: 'Accurate transcripts, chapters, and SEO blog exports',
@@ -6165,7 +6163,7 @@ roi: 'Saves 24 hrs / episode',
   launch_date: '2025 - 08 - 20',
   customers: 20;
   rating: 4.6;
-  reviews: 6}
+  reviews: 6};
   id: 'ai - seo - content - optimizer',
   name: 'AI SEO Content Optimizer',
   tagline: 'Live on - page audits and SEO - aware rewrites',
@@ -6202,7 +6200,7 @@ roi: '+2040% organic traffic lift',
   launch_date: '2025 - 08 - 20',
   customers: 33;
   rating: 4.7;
-  reviews: 10}
+  reviews: 10};
   id: 'social - scheduler - ai',
   name: 'Social Scheduler AI',
   tagline: 'Auto - generate, schedule, and repurpose posts cross - platform',
@@ -6239,7 +6237,7 @@ roi: 'Saves 46 hrs / week',
   launch_date: '2025 - 08 - 20',
   customers: 26;
   rating: 4.5;
-  reviews: 7}
+  reviews: 7};
   id: 'lead - enrichment - api',
   name: 'Lead Enrichment API',
   tagline: 'Company, role, and social signals from an email / domain',
@@ -6275,7 +6273,7 @@ roi: 'Improves MQLSQL by 1020%',
   launch_date: '2025 - 08 - 20',
   customers: 9;
   rating: 4.4;
-  reviews: 4}
+  reviews: 4};
   id: 'consent - management - cmp',
   name: 'Consent Management CMP',
   tagline: 'GDPR / CCPA consent banners, preferences, and audit logs',
@@ -6311,7 +6309,7 @@ roi: 'Avoid fines, preserve UX',
   launch_date: '2025 - 08 - 20',
   customers: 37;
   rating: 4.7;
-  reviews: 10}
+  reviews: 10};
   id: 'cookie - scanner - pro',
   name: 'Cookie Scanner Pro',
   tagline: 'Auto - detects cookies + trackers and updates your policy',
@@ -6348,7 +6346,7 @@ roi: 'Automates tedious checks',
   launch_date: '2025 - 08 - 20',
   customers: 19;
   rating: 4.5;
-  reviews: 5}
+  reviews: 5};
   id: 'statuspage - sla - tracker',
   name: 'StatusPage SLA Tracker',
   tagline: 'Track uptime / incidents and publish SLA reports',
@@ -6385,7 +6383,7 @@ roi: 'Reduce support tickets ~20%',
   launch_date: '2025 - 08 - 20',
   customers: 11;
   rating: 4.4;
-  reviews: 3}
+  reviews: 3};
   id: 'agentic - lead - qualifier',
   name: 'Agentic Lead Qualifier',
   tagline: 'Website chat agent that pre - qualifies and routes leads',
@@ -6422,7 +6420,7 @@ roi: '+1530% qualified demos',
   launch_date: '2025 - 08 - 20',
   customers: 23;
   rating: 4.6;
-  reviews: 7}
+  reviews: 7};
   id: 'gdpr - dsar - portal - lite',
   name: 'GDPR DSAR Portal Lite',
   tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -6459,7 +6457,7 @@ roi: 'Avoid compliance toil and risk',
   launch_date: '2025 - 08 - 20',
   customers: 10;
   rating: 4.5;
-  reviews: 4}
+  reviews: 4};
   id: 'feature - flag - auditor',
   name: 'Feature Flag Auditor',
   tagline: 'Flag hygiene checks and end - of - life automation',
@@ -6496,7 +6494,7 @@ roi: 'Avoid outages, reduce toil',
   launch_date: '2025 - 08 - 20',
   customers: 8;
   rating: 4.4;
-  reviews: 3}
+  reviews: 3};
   id: 'postgres - index - advisor - pro',
   name: 'Postgres Index Advisor Pro',
   tagline: 'Index recommendations and controlled PR rollouts',
@@ -6534,7 +6532,7 @@ roi: 'Cut query costs 2050%',
   customers: 15;
   rating: 4.6;
 reviews: 5;
-}
+};
   id: 's3 - lifecycle - optimizer',
   name: 'S3 Lifecycle Optimizer',
   tagline: 'Move objects between storage classes to cut costs',
@@ -6570,7 +6568,7 @@ roi: 'Save 1030% storage spend',
   launch_date: '2025 - 08 - 20',
   customers: 17;
   rating: 4.5;
-  reviews: 4}
+  reviews: 4};
   id: 'pii - discovery - scanner',
   name: 'PII Discovery Scanner',
   tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -6607,7 +6605,7 @@ roi: 'Avoid incidents and fines',
   launch_date: '2025 - 08 - 20',
   customers: 13;
   rating: 4.6;
-  reviews: 5}
+  reviews: 5};
   id: 'api - breaking - change - watcher',
   name: 'API Breaking Change Watcher',
   tagline: 'Schema diffs with CI gates and notifications',
@@ -6644,7 +6642,7 @@ roi: 'Fewer incidents, faster integration',
   launch_date: '2025 - 08 - 20',
   customers: 12;
   rating: 4.5;
-  reviews: 3}
+  reviews: 3};
   id: 'synthetic - journey - monitor',
   name: 'Synthetic Journey Monitor',
   tagline: 'Record and replay user flows with SLO alerts',
@@ -6682,7 +6680,7 @@ roi: 'Prevent broken funnels',
   customers: 21;
   rating: 4.5;
 reviews: 6;
-}
+};
   id: 'iam - permission - analyzer',
   name: 'IAM Permission Analyzer',
   tagline: 'Detect over - privileged access and propose least - privilege policies',
@@ -6719,7 +6717,7 @@ roi: 'Reduce risk + audit toil',
   customers: 9;
   rating: 4.6;
 reviews: 3;
-}
+};
   id: 'warehouse - cost - optimizer',
   name: 'Data Warehouse Cost Optimizer',
   tagline: 'Right - size warehouses and schedule off - peak workloads',
@@ -6756,7 +6754,7 @@ roi: '1030% lower DW costs',
   customers: 7;
   rating: 4.5;
 reviews: 3;
-}
+};
   id: 'email - warmup - monitor',
   name: 'Email Warmup & Reputation Monitor',
   tagline: 'Track sender reputation and run inbox placement tests',
@@ -6792,7 +6790,7 @@ roi: 'Protects domain reputation',
   launch_date: '2025 - 08 - 20',
   customers: 16;
   rating: 4.5;
-  reviews: 4}
+  reviews: 4};
   id: 'ai - meeting - to - ticket',
   name: 'AI MeetingtoTicket Copilot',
   tagline: 'Turn meeting action items into Jira / GitHub tickets',
@@ -6829,13 +6827,15 @@ roi: 'Close the loop on action items',
   launch_date: '2025 - 08 - 20',
   customers: 24;
   rating: 4.6;
-  reviews: 6}
+  reviews: 6};
 		rating: 4.6;
 		reviews: 6;
-// const contact = {;
+// const contact = {
+;
+};
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
+	address: '364 E Main St STE 1008 Middletown DE 19709'};
 	website: 'https://ziontechgroup.com'};
 export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	{,
@@ -6872,8 +6872,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard';
 		launchDate: '2025-08-20';
 		customers: 48;
-		rating: 4.7}
-		reviews: 12}
+		rating: 4.7};
+		reviews: 12};
 	};
 	{;
 		id: 'mobile-survey-studio';
@@ -6909,8 +6909,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		implementationDetails: 'Survey builder + delivery channels + analytics + export';
 		launchDate: '2025-08-20';
 		customers: 22;
-		rating: 4.6}
-		reviews: 9}
+		rating: 4.6};
+		reviews: 9};
 	};
 	{;
 		id: 'niche-productivity-planner';
@@ -6946,8 +6946,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		implementationDetails: 'Templates + KPI widgets + export';
 		launchDate: '2025-08-20';
 		customers: 18;
-		rating: 4.5}
-		reviews: 7}
+		rating: 4.5};
+		reviews: 7};
 	};
 	{;
 		id: 'event-management-dashboard';
@@ -6983,8 +6983,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		implementationDetails: 'Ticketing + agenda + comms + analytics';
 		launchDate: '2025-08-20';
 		customers: 31;
-		rating: 4.7}
-		reviews: 11}
+		rating: 4.7};
+		reviews: 11};
 		popula,
   r: true;
 		ico,
@@ -7037,7 +7037,7 @@ varian,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 12}
+  s: 12};
 		i,
   d: 'mobile-survey-studio'
 		nam,
@@ -7106,7 +7106,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 9}
+  s: 9};
 		i,
   d: 'niche-productivity-planner'
 		nam,
@@ -7175,7 +7175,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 7}
+  s: 7};
 		i,
   d: 'event-management-dashboard'
 		nam,
@@ -7244,7 +7244,7 @@ varian,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 11}
+  s: 11};
 		i,
   d: 'affiliate-tracking-suite'
 		nam,
@@ -7311,7 +7311,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'smb-analytics-lite'
 		nam,
@@ -7378,7 +7378,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 8}
+  s: 8};
 		i,
   d: 'it-helpdesk-portal'
 		nam,
@@ -7445,7 +7445,7 @@ varian,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 6}
+  s: 6};
 		i,
   d: 'ecommerce-returns-manager'
 		nam,
@@ -7512,7 +7512,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'automated-email-followups'
 		nam,
@@ -7579,7 +7579,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 8}
+  s: 8};
 		i,
   d: 'podcast-transcription-service'
 		nam,
@@ -7646,7 +7646,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 6}
+  s: 6};
 		i,
   d: 'ai-seo-content-optimizer'
 		nam,
@@ -7713,7 +7713,7 @@ varian,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 10}
+  s: 10};
 		i,
   d: 'social-scheduler-ai'
 		nam,
@@ -7780,7 +7780,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 7}
+  s: 7};
 		i,
   d: 'lead-enrichment-api'
 		nam,
@@ -7847,7 +7847,7 @@ varian,
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'consent-management-cmp'
 		nam,
@@ -7914,7 +7914,7 @@ varian,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 10}
+  s: 10};
 		i,
   d: 'cookie-scanner-pro'
 		nam,
@@ -7981,7 +7981,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'statuspage-sla-tracker'
 		nam,
@@ -8048,7 +8048,7 @@ varian,
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'agentic-lead-qualifier'
 		nam,
@@ -8115,7 +8115,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 7}
+  s: 7};
 		i,
   d: 'gdpr-dsar-portal-lite'
 		nam,
@@ -8182,7 +8182,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'feature-flag-auditor'
 		nam,
@@ -8249,7 +8249,7 @@ varian,
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'postgres-index-advisor-pro'
 		nam,
@@ -8316,7 +8316,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 's3-lifecycle-optimizer'
 		nam,
@@ -8383,7 +8383,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'pii-discovery-scanner'
 		nam,
@@ -8450,7 +8450,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'api-breaking-change-watcher'
 		nam,
@@ -8517,7 +8517,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'synthetic-journey-monitor'
 		nam,
@@ -8584,7 +8584,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 6}
+  s: 6};
 		i,
   d: 'iam-permission-analyzer'
 		nam,
@@ -8651,7 +8651,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'warehouse-cost-optimizer'
 		nam,
@@ -8718,7 +8718,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'email-warmup-monitor'
 		nam,
@@ -8785,7 +8785,7 @@ varian,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'ai-meeting-to-ticket'
 		nam,
@@ -8852,7 +8852,7 @@ varian,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 6}
+  s: 6};
 ];
   i,
   d: 'ai - email - responder'
@@ -8922,7 +8922,7 @@ varian,
   ratin,
   g: 4.7,
   review,
-  s: 12}
+  s: 12};
   i,
   d: 'mobile - survey - studio'
   nam,
@@ -8991,7 +8991,7 @@ varian,
   ratin,
   g: 4.6,
   review,
-  s: 9}
+  s: 9};
   i,
   d: 'niche - productivity - planner'
   nam,
@@ -9060,7 +9060,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 7}
+  s: 7};
   i,
   d: 'event - management - dashboard'
   nam,
@@ -9129,7 +9129,7 @@ varian,
   ratin,
   g: 4.7,
   review,
-  s: 11}
+  s: 11};
   i,
   d: 'affiliate - tracking - suite'
   nam,
@@ -9196,7 +9196,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 5}
+  s: 5};
   i,
   d: 'smb - analytics - lite'
   nam,
@@ -9263,7 +9263,7 @@ varian,
   ratin,
   g: 4.6,
   review,
-  s: 8}
+  s: 8};
   i,
   d: 'it - helpdesk - portal'
   nam,
@@ -9330,7 +9330,7 @@ varian,
   ratin,
   g: 4.7,
   review,
-  s: 6}
+  s: 6};
   i,
   d: 'ecommerce - returns - manager'
   nam,
@@ -9397,7 +9397,7 @@ varian,
   ratin,
   g: 4.6,
   review,
-  s: 5}
+  s: 5};
   i,
   d: 'automated - email - followups'
   nam,
@@ -9464,7 +9464,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 8}
+  s: 8};
   i,
   d: 'podcast - transcription - service'
   nam,
@@ -9531,7 +9531,7 @@ varian,
   ratin,
   g: 4.6,
   review,
-  s: 6}
+  s: 6};
   i,
   d: 'ai - seo - content - optimizer'
   nam,
@@ -9598,7 +9598,7 @@ varian,
   ratin,
   g: 4.7,
   review,
-  s: 10}
+  s: 10};
   i,
   d: 'social - scheduler - ai'
   nam,
@@ -9665,7 +9665,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 7}
+  s: 7};
   i,
   d: 'lead - enrichment - api'
   nam,
@@ -9732,7 +9732,7 @@ varian,
   ratin,
   g: 4.4,
   review,
-  s: 4}
+  s: 4};
   i,
   d: 'consent - management - cmp'
   nam,
@@ -9799,7 +9799,7 @@ varian,
   ratin,
   g: 4.7,
   review,
-  s: 10}
+  s: 10};
   i,
   d: 'cookie - scanner - pro'
   nam,
@@ -9866,7 +9866,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 5}
+  s: 5};
   i,
   d: 'statuspage - sla - tracker'
   nam,
@@ -9933,7 +9933,7 @@ varian,
   ratin,
   g: 4.4,
   review,
-  s: 3}
+  s: 3};
   i,
   d: 'agentic - lead - qualifier'
   nam,
@@ -10000,7 +10000,7 @@ varian,
   ratin,
   g: 4.6,
   review,
-  s: 7}
+  s: 7};
   i,
   d: 'gdpr - dsar - portal - lite'
   nam,
@@ -10067,7 +10067,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 4}
+  s: 4};
   i,
   d: 'feature - flag - auditor'
   nam,
@@ -10134,7 +10134,7 @@ varian,
   ratin,
   g: 4.4,
   review,
-  s: 3}
+  s: 3};
   i,
   d: 'postgres - index - advisor - pro'
   nam,
@@ -10201,7 +10201,7 @@ varian,
   ratin,
   g: 4.6,
   review,
-  s: 5}
+  s: 5};
   i,
   d: 's3 - lifecycle - optimizer'
   nam,
@@ -10268,7 +10268,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 4}
+  s: 4};
   i,
   d: 'pii - discovery - scanner'
   nam,
@@ -10335,7 +10335,7 @@ varian,
   ratin,
   g: 4.6,
   review,
-  s: 5}
+  s: 5};
   i,
   d: 'api - breaking - change - watcher'
   nam,
@@ -10402,7 +10402,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 3}
+  s: 3};
   i,
   d: 'synthetic - journey - monitor'
   nam,
@@ -10469,7 +10469,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 6}
+  s: 6};
   i,
   d: 'iam - permission - analyzer'
   nam,
@@ -10536,7 +10536,7 @@ varian,
   ratin,
   g: 4.6,
   review,
-  s: 3}
+  s: 3};
   i,
   d: 'warehouse - cost - optimizer'
   nam,
@@ -10603,7 +10603,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 3}
+  s: 3};
   i,
   d: 'email - warmup - monitor'
   nam,
@@ -10670,7 +10670,7 @@ varian,
   ratin,
   g: 4.5,
   review,
-  s: 4}
+  s: 4};
   i,
   d: 'ai - meeting - to - ticket'
   nam,
@@ -10737,165 +10737,167 @@ varian,
   ratin,
   g: 4.6,
   review,
-  s: 6}
+  s: 6};
 		ratin,
   g: 4.6;
 		review,
   s: 6,
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
 	websit,
   e: 'http,
   s://ziontechgroup.com'
 };
 export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 12}
+  s: 12};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 9}
+  s: 9};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 7}
+  s: 7};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 11}
+  s: 11};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 5}
+  s: 5};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 8}
+  s: 8};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 6}
+  s: 6};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
+  s: 5};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 8}
+  s: 8};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 6}
+  s: 6};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 10}
+  s: 10};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 7}
+  s: 7};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 4}
+  s: 4};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 10}
+  s: 10};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 5}
+  s: 5};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 3}
+  s: 3};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 7}
+  s: 7};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
+  s: 4};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 3}
+  s: 3};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
+  s: 5};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
+  s: 4};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
+  s: 5};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 3}
+  s: 3};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 6}
+  s: 6};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 3}
+  s: 3};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 3}
+  s: 3};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
+  s: 4};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 6}
-	}
+  s: 6};
+	};
 ];
 ;
-// const contact = {;
+// const contact = {
+;
+};
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
+	address: '364 E Main St STE 1008 Middletown DE 19709'};
 	website: 'https://ziontechgroup.com'};
 export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	{,
@@ -10932,8 +10934,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard';
 		launchDate: '2025-08-20';
 		customers: 48;
-		rating: 4.7}
-		reviews: 12}
+		rating: 4.7};
+		reviews: 12};
 	};
 	{;
 		id: 'mobile-survey-studio';
@@ -10969,8 +10971,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		implementationDetails: 'Survey builder + delivery channels + analytics + export';
 		launchDate: '2025-08-20';
 		customers: 22;
-		rating: 4.6}
-		reviews: 9}
+		rating: 4.6};
+		reviews: 9};
 	};
 	{;
 		id: 'niche-productivity-planner';
@@ -11006,8 +11008,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		implementationDetails: 'Templates + KPI widgets + export';
 		launchDate: '2025-08-20';
 		customers: 18;
-		rating: 4.5}
-		reviews: 7}
+		rating: 4.5};
+		reviews: 7};
 	};
 	{;
 		id: 'event-management-dashboard';
@@ -11043,156 +11045,156 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		implementationDetails: 'Ticketing + agenda + comms + analytics';
 		launchDate: '2025-08-20';
 		customers: 31;
-		rating: 4.7}
-		reviews: 11}
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+		rating: 4.7};
+		reviews: 11};
+// const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
 	websit,
   e: 'http,
   s://ziontechgroup.com'
 };
 export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 12}
+  s: 12};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 9}
+  s: 9};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 7}
+  s: 7};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 11}
+  s: 11};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 5}
+  s: 5};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 8}
+  s: 8};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 6}
+  s: 6};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
+  s: 5};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 8}
+  s: 8};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 6}
+  s: 6};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 10}
+  s: 10};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 7}
+  s: 7};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 4}
+  s: 4};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 10}
+  s: 10};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 5}
+  s: 5};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 3}
+  s: 3};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 7}
+  s: 7};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
+  s: 4};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 3}
+  s: 3};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
+  s: 5};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
+  s: 4};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
+  s: 5};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 3}
+  s: 3};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 6}
+  s: 6};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 3}
+  s: 3};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 3}
+  s: 3};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
+  s: 4};
 	};
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 6}
-	}
+  s: 6};
+	};
 ];
 'Intent classification + prioritization'' 'On-brand response drafting'' 'Automatic polite follow-ups'' 'Lead/contact enrichment'' 'Analytics and response SLAs' ] popula,
   r: true' ico,
@@ -14598,132 +14600,126 @@ export const,
   g: 4.6, review,
   s: 6} ratin,
   g: 4.6,
-  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
+  s: 12} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 9} }; {/* TODO: Fix JSX expression */}
+  s: 9} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
+  s: 7} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 11} }; {/* TODO: Fix JSX expression */}
+  s: 11} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
+  s: 8} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
+  s: 6} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
+  s: 8} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
+  s: 6} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
+  s: 10} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
+  s: 7} }; {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
+  s: 4} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
+  s: 10} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
+  s: 7} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
+  s: 4} }; {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
+  s: 4} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
+  s: 6} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
+  s: 4} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
+  s: 12} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 9} }; {/* TODO: Fix JSX expression */}
+  s: 9} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
+  s: 7} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 11} }; {/* TODO: Fix JSX expression */}
+  s: 11} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
+  s: 8} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
+  s: 6} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
+  s: 8} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
+  s: 6} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
+  s: 10} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
+  s: 7} }; {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
+  s: 4} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
+  s: 10} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
+  s: 7} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
+  s: 4} }; {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
+  s: 4} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
+  s: 6} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
+  s: 4} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
   s: 6} } ]; '
-=======
-    market_size: '$10B+ email productivity'
-    growth_rate: '15% CAGR';
-variant: 'network - futuristic'
-    contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

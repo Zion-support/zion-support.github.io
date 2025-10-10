@@ -14,7 +14,7 @@ function: 'todo_scanner_runner')})}} catch (error) {
         error: 'todo_scanner_runner function failed'),
         message: error.message),
         timestamp: new Date().toISOString(),
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-      })}} catch (error) {/* TODO: Fix JSX expression */}
-      })}}
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */};
+      })}} catch (error) {/* TODO: Fix JSX expression */};
+      })}};
 };

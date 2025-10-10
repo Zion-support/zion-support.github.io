@@ -1,64 +1,54 @@
 'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
-
-class ErrorBoundary extends Component<Props, State> {;
+class ErrorBoundary extends Component<Props, State> {
 constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null
-    };
-  }
-
+    }
+  };
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
       errorInfo: null
-    };
-  }
-
+    }
+  };
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     })
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       // console.error removed for production
 }
-
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo);
     }
-
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-  }
-
+  };
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to an error reporting service
-    // like Sentry, LogRocket, or Bugsnag;
-const errorData = {
+    // like Sentry, LogRocket, or Bugsnag
+    const errorData = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -66,18 +56,16 @@ const errorData = {
       userAgent: navigator.userAgent,
       url: window.location.href
     };
-
     // Example: Send to analytics
-    if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      const gtag = (window as any).gtag;
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
-      })
+      });
     }
-
     // console.error removed for production
 };
-
   handleRetry = () => {
     this.setState({
       hasError: false,
@@ -85,18 +73,15 @@ const errorData = {
       errorInfo: null
     })
   };
-  
   handleGoHome = () => {
     window.location.href = '/';
-  };
-
+  }
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       // Default error UI
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
@@ -104,15 +89,12 @@ const errorData = {
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
-
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-red-400 cursor-pointer mb-2">
@@ -129,63 +111,36 @@ const errorData = {
                         {this.state.error.stack}
                       </pre>
                     </div>
-<<<<<<< HEAD
-                  )}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-<<<<<<< HEAD
-                  )}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+                  )};
                 </div>
                 </details>
-              )}
+              )};
             <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
-              >
+              <button onClick={this.handleRetry}
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
-              
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-white/20"
-              >
+              <button onClick={this.handleGoHome}
+                className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-white/20">
                 <Home className="w-4 h-4" />
                 Go Home
               </button>
             </div>
-
             <div className="mt-6 text-sm text-gray-400">
               <p>If this problem persists, please contact our support team:</p>
               <p className="mt-2">
-                <a 
-                  href="mailto:support@ziontechgroup.com" 
-                  className="text-cyan-400 hover:text-cyan-300"
-                >
+                <a href="mailto:support@ziontechgroup.com" 
+                  className="text-cyan-400 hover:text-cyan-300">
                   support@ziontechgroup.com
                 </a>
               </p>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       );
-    }
+    };
     return this.props.children;
-  }
-=======
-    return this.props.children}
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
-}
-
+  };
+};
 export default ErrorBoundary;

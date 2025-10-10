@@ -1,4 +1,3 @@
-
   id: string;
   name: string;
   description: string;
@@ -33,7 +32,7 @@
     mobile: string;
     email: string;
     website: string;
-    address: string}
+    address: string};
 ;
 export const emergingTechServices2029 V2: EmergingTechService2029 V2[] = [,
     id: 'quantum - internet - security - gateway',
@@ -108,7 +107,7 @@ export const emergingTechServices2029 V2: EmergingTechService2029 V2[] = [,
     websit,
   e: string;
     addres,
-  s: string}
+  s: string};
 ;
 export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [,
@@ -195,8 +194,8 @@ export const,
       'Research',
       'Innovation'],
     price: '$25,999/month'
-    }
-  }
+    };
+  };
     id: 'quantum-financial-trading-platform',
     name: 'Quantum Financial Trading Platform',
     description:,
@@ -251,8 +250,8 @@ export const,
     ]
     pric,
   e: '$25,999/month'
-    }
-  }
+    };
+  };
     i,
   d: 'quantum-financial-trading-platform'
     nam,
@@ -330,8 +329,8 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
+  };
     id: 'quantum-creativity-studio',
     name: 'Quantum Creativity Studio',
     description:,
@@ -402,8 +401,8 @@ export const,
   s://ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
     i,
   d: 'quantum-creativity-studio'
     nam,
@@ -536,8 +535,8 @@ export const,
   s://ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -576,7 +575,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   };
     feature,
   s: [;
@@ -968,8 +967,8 @@ export const,
     exit: 'Acquisition by major creative platform',
     contact: unknown;
       mobile: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
+  };
 ];
   id: string, name: string;
   description: string, category: string[],
@@ -1101,8 +1100,8 @@ export const,
   e: '+1 302 464 0950'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
   i,
   d: string, nam,
@@ -1162,8 +1161,8 @@ export const,
     websit,
   e: string,
     addres,
-  s: string}
-}
+  s: string};
+};
 export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [,
     i,
@@ -1268,7 +1267,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   };
     i,
   d: 'biotech-dna-computing-platform', nam,
@@ -1359,19 +1358,19 @@ export const,
   s: 'Trading analytics, performance reports',
     customizatio,
   n: 'Custom trading strategies, integration',
-export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
-    }
-  }
+export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */};
+    };
+  };
 ];
-}
-  }
+};
+  };
 ];
-export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
-  e: string}
+export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */};
+  e: string};
     addres,
-  s: string}
-  }
-}
+  s: string};
+  };
+};
 ;
 export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
   {,
@@ -1413,12 +1412,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     referral: '$50,000 bonus for partnerships';
     partnership: 'Strategic security partnerships';
     funding: 'Series C funding, $300 M valuation';
-    exit: 'IPO or security acquisition'}
-    contact: {}
+    exit: 'IPO or security acquisition'};
+    contact: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
   };
   {;
     id: 'biotech-dna-computing-platform';
@@ -1459,12 +1458,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     referral: '$75,000 bonus for partnerships';
     partnership: 'Research institution partnerships';
     funding: 'Series B funding, $150 M valuation';
-    exit: 'IPO or biotech acquisition'}
-    contact: {}
+    exit: 'IPO or biotech acquisition'};
+    contact: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
   };
   {;
     id: 'quantum-financial-trading-platform';
@@ -1505,12 +1504,12 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     referral: '$100,000 bonus for partnerships';
     partnership: 'Financial institution partnerships';
     funding: 'Series C funding, $500 M valuation';
-    exit: 'IPO or financial acquisition'}
-    contact: {}
+    exit: 'IPO or financial acquisition'};
+    contact: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
   };
   {;
     id: 'quantum-creativity-studio';
@@ -1551,13 +1550,13 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     referral: '$10,000 bonus for partnerships';
     partnership: 'Creative agency partnerships';
     funding: 'Series A funding, $80 M valuation';
-    exit: 'Acquisition by major creative platform'}
-    contact: {}
+    exit: 'Acquisition by major creative platform'};
+    contact: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       website: 'https://ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
+  };
 ];
     funding: 'Series C funding, $500 M valuation',
     exit: 'IPO or financial acquisition',
@@ -1571,10 +1570,10 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
     description: unknown;
 export const,
   emergingTechServices2029V2: EmergingTechService2029V2[] = [;
-  {/* TODO: Fix JSX expression */}
-  t: 'IPO or security acquisition'}
+  {/* TODO: Fix JSX expression */};
+  t: 'IPO or security acquisition'};
     contac,
-  t: {}
+  t: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1584,12 +1583,12 @@ export const,
   s://ziontechgroup.com';
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   };
-  {/* TODO: Fix JSX expression */}
-  t: 'IPO or biotech acquisition'}
+  {/* TODO: Fix JSX expression */};
+  t: 'IPO or biotech acquisition'};
     contac,
-  t: {}
+  t: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1599,12 +1598,12 @@ export const,
   s://ziontechgroup.com';
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   };
-  {/* TODO: Fix JSX expression */}
-  t: 'IPO or financial acquisition'}
+  {/* TODO: Fix JSX expression */};
+  t: 'IPO or financial acquisition'};
     contac,
-  t: {}
+  t: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1614,12 +1613,12 @@ export const,
   s://ziontechgroup.com';
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   };
-  {/* TODO: Fix JSX expression */}
-  t: 'Acquisition by major creative platform'}
+  {/* TODO: Fix JSX expression */};
+  t: 'Acquisition by major creative platform'};
     contac,
-  t: {}
+  t: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1629,8 +1628,8 @@ export const,
   s://ziontechgroup.com';
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
     fundin,
   g: 'Series C funding, $500M valuation',
@@ -1738,8 +1737,8 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
 ;
 i,
@@ -2161,22 +2160,22 @@ i,
   p: 'Real - time backup, disaster recovery',' monitorin,
   g: 'Trading performance monitoring',' analytic,
   s: 'Trading analytics, performance reports',' customizatio,
-  n: 'Custom trading strategies, integration', export interface EmergingTechService2029V2 {} } ]} } ]; export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */}
+  n: 'Custom trading strategies, integration', export interface EmergingTechService2029V2 {} } ]} } ]; export interface EmergingTechService2029V2 {/* TODO: Fix JSX expression */};
   e: string} addres,
   s: string} } } ; export const,
-  emergingTechServices2029V2: EmergingTechService2029V2[] = [; {/* TODO: Fix JSX expression */}
+  emergingTechServices2029V2: EmergingTechService2029V2[] = [; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' websit,
   e: 'http,
   s://ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */}
+  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' websit,
   e: 'http,
   s://ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */}
+  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' websit,
   e: 'http,
   s://ziontechgroup.com'};' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */}
+  s: '364 E Main St STE 1008 Middletown DE 19709' } }; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' websit,
   e: 'http,
   s://ziontechgroup.com'};' addres,

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
   i,
   d: string;
   nam,
@@ -36,7 +34,7 @@
   l: string;
     addres,
   s: string;
-    website?: string}
+    website?: string};
 ;
 const contact_info =
   mobil,
@@ -47,7 +45,7 @@ const contact_info =
   s: '364 E Main St STE 1008 Middletown DE 19709',
   websit,
   e: 'http,
-  s://ziontechgroup.com'}
+  s://ziontechgroup.com'};
 ;
 export const marketValidatedServices: MarketValidatedService[] = [;
   // AI and Assistants;
@@ -1138,9 +1136,11 @@ category: 'AI & Search',
     customers: 410;
     trialDays: 14;
     setupTime: '2 hours',
-    contactInfo}
-];import { ServiceVariant  } from "../types/service-variants"
-export interface MarketValidatedService {id: 'vector - search - starter',
+    contactInfo};
+];import { ServiceVariant  } from "../types/service-variants";
+export interface MarketValidatedService {
+id: 'vector - search - starter',
+}
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
     price: '$89',
@@ -1157,7 +1157,7 @@ export interface MarketValidatedService {id: 'vector - search - starter',
         customers: 420;
     trial_days: 14;
     setup_time: '30 minutes',
-    contact_info}
+    contact_info};
   },
     customers: 380;
     trial_days: 7;
@@ -1177,10 +1177,10 @@ varian,
   s: 14,
     setupTim,
   e: '2 hours'
-    contactInfo}
+    contactInfo};
 ];import { ServiceVariant } from '../types/service-variants';
-export interface MarketValidatedService {/* TODO: Fix JSX expression */}
-    contact_info}
+export interface MarketValidatedService {/* TODO: Fix JSX expression */};
+    contact_info};
   },
     customer,
   s: 380,
@@ -1203,15 +1203,19 @@ category: 'AI & Search',
     setup_time: '2 hours',
     contact_info},
 export interface MarketValidatedService;
-export interface MarketValidatedService {;
+export interface MarketValidatedService {
+;
+}
 export interface MarketValidatedService;
-export interface MarketValidatedService {}
+export interface MarketValidatedService {};
     trialDays: 14;
     setupTime: '2 hours',
-    contactInfo}
+    contactInfo};
   };
-];import { ServiceVariant  } from "../types/service-variants"
-export interface MarketValidatedService {;
+];import { ServiceVariant  } from "../types/service-variants";
+export interface MarketValidatedService {
+;
+}
 	id: string;
 	name: string;
 	tagline: string;
@@ -1233,7 +1237,7 @@ export interface MarketValidatedService {;
 	contactInfo: unknown;
 		mobile: string;
 		email: string;
-		address: string}
+		address: string};
     categor,
   y: 'AI & Search',
     lin,
@@ -1251,19 +1255,19 @@ varian,
   e: '2 hours',
     contact_info},
 export interface MarketValidatedService;
-export interface MarketValidatedService {/* TODO: Fix JSX expression */}
-export interface MarketValidatedService {}
+export interface MarketValidatedService {/* TODO: Fix JSX expression */};
+export interface MarketValidatedService {};
     trialDay,
   s: 14,
     setupTim,
   e: '2 hours',
-    contactInfo}
+    contactInfo};
   };
 ];import { ServiceVariant } from '../types/service-variants';
-export interface MarketValidatedService {/* TODO: Fix JSX expression */}
-  s: string}
-		website?: string}
-	}}
+export interface MarketValidatedService {/* TODO: Fix JSX expression */};
+  s: string};
+		website?: string};
+	}};
 export const,
   marketValidatedServices: MarketValidatedService[] = [;
 	// AI and Assistants;
@@ -1286,7 +1290,7 @@ category: 'AI & Assistants',
 		customers: 1200;
 		trialDays: 14;
 		setupTime: "30 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "ai-evals-observability",
@@ -1307,7 +1311,7 @@ category: 'AI & MLOps',
 		customers: 600;
 		trialDays: 14;
 		setupTime: "1 hour",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "agentic-rag-platform",
@@ -1328,7 +1332,7 @@ category: 'AI & Search',
 		customers: 900;
 		trialDays: 14;
 		setupTime: "2 hours",
-		contactInfo}}
+		contactInfo}};
 },
 	// Security and APIs;
 	{;
@@ -1347,7 +1351,7 @@ category: 'Enterprise IT - Security',
 		customers: 750;
 		trialDays: 14;
 		setupTime: "20 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "api-observability",
@@ -1365,7 +1369,7 @@ category: 'Enterprise IT - Observability',
 		customers: 640;
 		trialDays: 14;
 		setupTime: "40 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	// Cloud and Infra;
 	{;
@@ -1384,7 +1388,7 @@ category: 'Enterprise IT - FinOps',
 		customers: 820;
 		trialDays: 14;
 		setupTime: "1 hour",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "database-performance-monitor",
@@ -1402,7 +1406,7 @@ category: 'Enterprise IT - Data',
 		customers: 560;
 		trialDays: 14;
 		setupTime: "45 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "managed-postgres-ha",
@@ -1420,7 +1424,7 @@ category: 'Enterprise IT - Data',
 		customers: 240;
 		trialDays: 7;
 		setupTime: "1 day",
-		contactInfo}}
+		contactInfo}};
 },
 	// Reliability & Monitoring;
 	{;
@@ -1439,7 +1443,7 @@ category: 'Enterprise IT - SRE',
 		customers: 1100;
 		trialDays: 14;
 		setupTime: "25 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "tls-certificate-monitor",
@@ -1457,7 +1461,7 @@ category: 'Enterprise IT - Security',
 		customers: 2200;
 		trialDays: 14;
 		setupTime: "10 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "domain-dns-monitor",
@@ -1475,7 +1479,7 @@ category: 'Enterprise IT - Networking',
 		customers: 980;
 		trialDays: 14;
 		setupTime: "15 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	// Dev & Productivity;
 	{;
@@ -1494,7 +1498,7 @@ category: 'Micro SaaS',
 		customers: 1300;
 		trialDays: 7;
 		setupTime: "10 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "browser-performance-monitor",
@@ -1512,7 +1516,7 @@ category: 'Micro SaaS',
 		customers: 760;
 		trialDays: 14;
 		setupTime: "20 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "feature-flags-edge",
@@ -1530,7 +1534,7 @@ category: 'Micro SaaS',
 		customers: 430;
 		trialDays: 14;
 		setupTime: "30 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "serverless-cron-manager",
@@ -1548,7 +1552,7 @@ category: 'Micro SaaS',
 		customers: 1150;
 		trialDays: 14;
 		setupTime: "15 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	// Compliance & Risk;
 	{;
@@ -1567,7 +1571,7 @@ category: 'Enterprise IT - Compliance',
 		customers: 310;
 		trialDays: 7;
 		setupTime: "1 day",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "vendor-risk-automation",
@@ -1585,7 +1589,7 @@ category: 'Enterprise IT - Compliance',
 		customers: 520;
 		trialDays: 14;
 		setupTime: "2 hours",
-		contactInfo}}
+		contactInfo}};
 },
 	// Developer and Ops Utilities;
 	{;
@@ -1604,7 +1608,7 @@ category: 'Micro SaaS',
 		customers: 1650;
 		trialDays: 14;
 		setupTime: "10 minutes",
-		contactInfo}}
+		contactInfo}};
 },
 	{;
 		id: "audit-log-vault",
@@ -1619,9 +1623,11 @@ category: 'Micro SaaS',
 variant: "quantum-neural",
 		rating: 4 && 4.5;
 		customers: 420;
-		trialDays: 14}
-];import { ServiceVariant   } from '../types / service - variants'
-export interface MarketValidatedService {id: string;
+		trialDays: 14};
+];import { ServiceVariant   } from '../types / service - variants';
+export interface MarketValidatedService {
+id: string;
+}
 name: string;
 tagline: string;
 price: string;
@@ -1637,77 +1643,77 @@ trial_days?: number;
 setup_time?: string;
 contact_info: unknown;
   mobile: string;
-  email: string}
+  email: string};
   address: string;
 const contact_info =
   mobile: '+1 302 464 0950',
 email: 'kleber@ziontechgroup.com',
 address: "364 E Main St STE 1008 Middletown DE 19709",
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
 	// Security and APIs;
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
 	// Cloud and Infra;
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
 	// Reliability & Monitoring;
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
 	// Dev & Productivity;
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
 	// Compliance & Risk;
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
 	// Developer and Ops Utilities;
-	{/* TODO: Fix JSX expression */}
-		contactInfo}}
+	{/* TODO: Fix JSX expression */};
+		contactInfo}};
 },
-	{/* TODO: Fix JSX expression */}
-  s: 14}
+	{/* TODO: Fix JSX expression */};
+  s: 14};
 ];import { ServiceVariant } from '../types / service - variants';
-export interface MarketValidatedService {/* TODO: Fix JSX expression */}
-  l: string}
+export interface MarketValidatedService {/* TODO: Fix JSX expression */};
+  l: string};
   addres,
   s: string,;
 const contact_info =
@@ -1721,8 +1727,8 @@ addres,"
   websit,"
   e: 'http,',
   s:
-        s://ziontechgroup.com"}
-}
+        s://ziontechgroup.com"};
+};
 export const marketValidatedServices: MarketValidatedService[] = [;
 // AI and Assistants;
   id: "ai - assistant - pro",
@@ -2574,7 +2580,7 @@ k: 'http,',
   s: 14,
   setup_tim,"
   e: "2 hours",
-  contact_info}]}}
+  contact_info}]}};
   // Search and Knowledge;
   id: 'vector - search - starter',
   name: 'Vector Search Starter',
@@ -2625,9 +2631,9 @@ varian,
   contact_info}];
 ;
 ;
-		contactInfo}
+		contactInfo};
 ];
-}}
+}};
 i,
   d: string; nam,
   e: string; taglin,
@@ -2995,7 +3001,7 @@ i,
   s: 14,' setup_tim,
   e: '2 hours', contact_info}, export interface MarketValidatedService export interface MarketValidatedService {; export interface MarketValidatedService export interface MarketValidatedService {} trialDay,
   s: 14,' setupTim,"
-  e: '2 hours', contactInfo} }; ];import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */}
+  e: '2 hours', contactInfo} }; ];import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */};
   s: string} website?: string} }} export const,
   marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants; {/* TODO: Fix JSX expression */}"
   e: "30 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
@@ -3015,7 +3021,7 @@ i,
   e: "15 minutes", contactInfo}} }, // Compliance & Risk; {/* TODO: Fix JSX expression */}"
   e: "1 day", contactInfo}} }, {/* TODO: Fix JSX expression */}"
   e: "2 hours", contactInfo}} }, // Developer and Ops Utilities; {/* TODO: Fix JSX expression */}"
-  e: "10 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}
+  e: "10 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */};
   s: 14} ' ];import { ServiceVariant } from '../types / service - variants' export interface MarketValidatedService,
   id: string; nam,
   e: string; taglin,
@@ -3369,9 +3375,3 @@ i,
   s: 410; trial_day,
   s: 14;' setup_tim,
   e: '2 hours' contact_info}]; ; contactInfo } ]}} '"
-=======
-    category: 'AI & Assistants'
-    link: 'https://ziontechgroup.com / ai - assistant';
-variant: 'ai - futuristic'
-    rating: 4.8;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

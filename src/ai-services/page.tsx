@@ -4,20 +4,14 @@ import { Link } from 'react-router-dom';
 import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
-const AIServicesPage: React.FC = () => {;
-const services = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
 const AIServicesPage: React.FC = () => {
-  const services = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+};
+const services = [
+[
+        {
       titl,
     e: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
@@ -40,21 +34,19 @@ titletitle: 'AI Analytics & Insights',
       icon: BarChart,
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price:     ,
-$4}
+$4};
   ];
 ;
 const benefits = [
+];
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
     '99.9% Uptime Guarantee'
-
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>AI Services | Zion Tech Group<
         <meta name="description" content="Advanced AI services solutions by Zion Tech Group." 
       <
-
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Services<
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -68,16 +60,8 @@ const benefits = [
     r:text-slate-900 transition-colors">
               Learn More
           <
-      
-<<<<<<< HEAD
       <Footer />
   )};
-=======
-      <Footer)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';
@@ -87,24 +71,15 @@ import {
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
 } from 'lucide-react';
-
 export default function AIServicesPage() {;
 const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
-
-<<<<<<< HEAD
   useEffect(() => {
     setIsVisible(true)}, []);
 ;
 const aiServices = [
-=======
-  useEffect (() => {
-    setIsVisible(true);
-  }, []);
-
-  const aiServices = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+[
+        {
       id: 'ai-automation',
       title: 'AI Process Automation',
       description: 'Intelligent automation solutions that reduce manual work by 80% and increase efficiency by 300%',
@@ -116,12 +91,12 @@ const aiServices = [
         'API integration capabilities',
         'Performance monitoring & analytics'
       ],
-      pricing: {
-        starter: { pric,
+      pricing:     {
+        starter:     { pric,
     e: '$2,500', period: '
-        professional: { pric,
+        professional:     { pric,
     e: '$7,500', period: '
-        enterprise: { pric,
+        enterprise:     { pric,
     e: '$15,000', period: '
       },
       icon: Zap,
@@ -249,20 +224,19 @@ const aiServices = [
       icon: Cpu,
       color: 'from-indigo-500 to-purple-600',
       popular: false
-    }
+    };
   ];
 ;
 const stats = [
-    { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
-    { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
-    { icon: Clock, value: '24
-    { ico,
-    n: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
+[
+        { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
+        { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
+        { icon: Clock, value: '24
+        { ico,
+    n: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' };
   ];
-
-<<<<<<< HEAD
   return (
-    <React.Fragment>
+    <React .Fragment>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
         <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
@@ -272,19 +246,6 @@ const stats = [
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
       </Helmet>
-=======
-  return (<div>
-        <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing<
-        <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." 
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" 
-        <meta property="og: title" content="AI Services - Zion Tech Group" 
-        <meta property="o,
-    g:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." 
-        <meta property="og: type" content="website" 
-        <meta property="og:url" content="https://ziontechgroup.com/ai-services" 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
       <div className="min-h-screen bg-slate-900 cyber-grid">
         {/* Hero Section *
         <section className="relative py-20 l,
@@ -300,11 +261,8 @@ const stats = [
                 and 90% efficiency gains with our comprehensive AI services.
               <
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg"
-                >
-
+                <a href="tel:+13024640950"
+                  className="cyber-button inline-flex items-center px-8 py-4 text-lg">
             <div className="grid grid-cols-2 l,
     g:grid-cols-4 gap-8">
               {stats.map((stat, index) => (<div key={index} className="text-center">
@@ -314,11 +272,10 @@ const stats = [
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}<
                   <div className="text-gray-300">{stat.label}<
                 <)
-              ))}
+              ))};
             <
           <
         <
-
         {/* Services Section *
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -330,30 +287,26 @@ const stats = [
                 Comprehensive AI solutions designed to transform your business operations and drive unprecedented growth.
               <
             <
-
             <div className="grid grid-cols-1 l,
     g:grid-cols-2 gap-8">
               {aiServices.map((service), index) => (
                 <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}`}>
                   <div className="flex items-start justify-between mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}>
-                      <service.icon className="w-8 h-8 text-white" 
+                      <service .icon className="w-8 h-8 text-white" 
                     <
                     {service.popular && (
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
                         Most Popular
                       <
-                    )}
+                    )};
                   <
-
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}<
                   <p className="text-gray-300 mb-6">{service.description}<
-
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features: <
                     <ul className="space-y-2">
                       {service.features.map((feature), featureIndex) => (<li key={featureIndex} className="flex items-center text-gray-300">
-                          
                     <h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing:<
                     <div className="space-y-3">
                       {Object.entries(service.pricing).map(([tier, details]) => (<div key={tier} className="flex justify-between items-center p-3 bg-slate-800
@@ -365,31 +318,25 @@ const stats = [
                             <div className="text-cyan-400 font-bold">{details.price}{details.period}<
                           <
                         <)
-                      ))}
+                      ))};
                     <
                   <
-
                   <div className="mt-6 flex gap-3">
-                    <a
-                      href="tel: +13024640950"
-                      className="flex-1 cyber-button text-center py-3"
-                    >
+                    <a href="tel: +13024640950"
+                      className="flex-1 cyber-button text-center py-3">
                       Get Started
                     <
-                    <a
-                      href="mailto:kleber@ziontechgroup.com"
+                    <a href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hove,
-    r:bg-slate-700 transition-colors text-center"
-                    >
+    r:bg-slate-700 transition-colors text-center">
                       Learn More
                     <
                   <
                 <
-              ))}
+              ))};
             <
           <
         <
-
         {/* CTA Section *
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600
           <div className="container mx-auto px-4 text-center">
@@ -400,29 +347,15 @@ const stats = [
               Join 500+ companies already using our AI solutions to achieve unprecedented growth and efficiency.
             <
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="te,
+              <a href="te,
     l:+13024640950"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg"
-              >
-                
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                 <Mail className="w-5 h-5 mr-2" 
                 Email Us
-<<<<<<< HEAD
               </a>
             </div>
           </div>
         </section>
       </div>
     </React.Fragment>
-  )}
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+  )};

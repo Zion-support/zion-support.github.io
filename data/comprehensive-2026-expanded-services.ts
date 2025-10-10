@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-export interface ComprehensiveService {/* TODO: Fix JSX expression */}
-  e: string}
+export interface ComprehensiveService {/* TODO: Fix JSX expression */};
+  e: string};
     emai,
-  l: string}
+  l: string};
     addres,
   s: string};
   lin,
@@ -28,7 +27,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 const contact =
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
@@ -71,7 +70,7 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 const contact =
   mobil,
   e: "+1 302 464 0950",
@@ -2274,12 +2273,14 @@ reviews: 34;
     customers:
         customers: 34;
     rating: 4.7;
-    reviews: 28}
+    reviews: 28};
 ];
-export const serviceCategories = [{name: 'Micro SaaS',
+export const serviceCategories = [
+{name: 'Micro SaaS',
+];
     description: 'Affordable, specialized software solutions for small businesses',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),
-    icon: ''}
+    icon: ''};
     color: 'from-blue-600 to-cyan-700'},
     name: 'AI & Machine Learning',
     description: 'Intelligent automation and decision-making systems',
@@ -2364,10 +2365,12 @@ export const serviceCategories = [{name: 'Micro SaaS',
     ratin,
   g: 4.7,
     review,
-  s: 28}
+  s: 28};
 ];
-export const serviceCategories = [{/* TODO: Fix JSX expression */}
-  n: ''}
+export const serviceCategories = [
+{/* TODO: Fix JSX expression */};
+];
+  n: ''};
     colo,
   r: 'from-blue-600 to-cyan-700'
   },
@@ -2447,7 +2450,7 @@ export const serviceCategories = [{/* TODO: Fix JSX expression */}
   n: '',
     colo,
   r: 'from-violet-600 to-purple-700'
-  }
+  };
 ];
 export interface ComprehensiveService,
   id: string; nam,
@@ -3221,7 +3224,9 @@ export interface ComprehensiveService,
   e: '2025-02-15', customer,
   s: 34, ratin,
   g: 4.7, review,
-  s: 28 } ]; export const serviceCategories = [ ' nam,
+  s: 28 } ]; export const serviceCategories = [
+ ' nam,
+];
   e: 'Micro SaaS',' descriptio,
   n: 'Affordable, specialized software solutions for small businesses',' service,
   s: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),' ico,
@@ -3262,8 +3267,3 @@ export interface ComprehensiveService,
   s: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),' ico,
   n: '🚀',' colo,
   r: 'from-violet-600 to-purple-700' } ];'"
-=======
-    reviews: 89},
-    id: 'zero-trust-security-platform'
-    name: 'Zero Trust Security Platform'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

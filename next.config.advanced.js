@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */;
 const nextConfig = {
+};
   reactStrictMode: true,
   swcMinify: true,
   compress: true,
@@ -35,5 +36,4 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'public, max-age=3600, s-maxage=3600'}]}]}};
-
 module.exports = nextConfig;

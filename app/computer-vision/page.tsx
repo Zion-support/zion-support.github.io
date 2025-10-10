@@ -3,6 +3,7 @@ import React from 'react';
   ];
 ;
 const benefits = [
+];
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -12,7 +13,6 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
@@ -22,7 +22,6 @@ const benefits = [
           </div>
         </div>
       </section>
-
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -31,14 +30,12 @@ const benefits = [
           </div>
         </div>
       </section>
-
               </div>
             ))
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

@@ -1,4 +1,4 @@
   y: ${report.summary.successfulSteps }/${report.summary.totalSteps} steps successful`)); // // console.log removed for production
 Report: '), // // console.log removed for production
 2);); return report} catch (error) {/* TODO: Fix JSX expression */}`
-  failed: ${error.message}`)'ERROR'); throw error} } } if() {const runner = new ComprehensiveAutomationRunner;(;)} runner.run().catch(console.error) } module.exports = ComprehensiveAutomationRunner;#!/usr/bin/env node const {execSync}spawn } = require('child_process'); const fs = require('fs') const path = require('path') class ComprehensiveAutomationRunner {/* TODO: Fix JSX expression */}
+  failed: ${error.message}`)'ERROR'); throw error} } } if() {const runner = new ComprehensiveAutomationRunner;(;)} runner.run().catch(console.error) } module.exports = ComprehensiveAutomationRunner;#!/usr/bin/env node const {execSync}spawn } = require('child_process'); const fs = require('fs') const path = require('path') class ComprehensiveAutomationRunner {/* TODO: Fix JSX expression */};

@@ -11,10 +11,11 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+    };
   ];
 ;
 const benefits = [
+];
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -24,25 +25,20 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
           </div>
         </div>
       </section>
-
               </div>
             ))
           </div>
         </div>
       </section>
-
           </div>
-
               </div>
             ))
           </div>
         </div>
       </section>
-
-}
+};
 export default PagePage;

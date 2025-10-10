@@ -62,7 +62,7 @@ export type ExpandedServicePricing =
     phone: string;
     email: string;
     website: string;
-    address: string}}
+    address: string}};
 // 1. CYBERSECURITY SERVICES PRICING;
 export const cybersecurityPricing: ExpandedServicePricing[] = [
     serviceId: 'quantum-threat-hunter',
@@ -198,7 +198,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
     websit,
   e: string,
     addres,
-  s: string}}
+  s: string}};
 // 1. CYBERSECURITY SERVICES PRICING;
 export const,
   cybersecurityPricing: ExpandedServicePricing[] = [,
@@ -361,7 +361,7 @@ export const,
           'Custom security requirements'
         ],
         setupFee: 50000;
-        contractTerm: 'negotiable'}
+        contractTerm: 'negotiable'};
     },
     marketComparison: unknown;
       competitors['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
@@ -376,7 +376,7 @@ export const,
   e: 50000,
         contractTer,
   m: 'negotiable'
-      }
+      };
     },
     marketCompariso,
   n: unknown,
@@ -437,7 +437,7 @@ export const,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-threat-hunter',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
   },
     serviceId: 'ai-compliance-automator',
     serviceName: 'AI Compliance Automator',
@@ -459,7 +459,7 @@ export const,
   s://ziontechgroup.com/quantum-threat-hunter',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
     serviceI,
   d: 'ai-compliance-automator',
@@ -609,7 +609,7 @@ export const,
           'Custom compliance requirements'
         ],
         setupFee: 20000;
-        contractTerm: 'negotiable'}
+        contractTerm: 'negotiable'};
     },
     marketComparison: unknown;
       competitors['OneTrust', 'TrustArc', 'LogicGate'],
@@ -624,7 +624,7 @@ export const,
   e: 20000,
         contractTer,
   m: 'negotiable'
-      }
+      };
     },
     marketCompariso,
   n: unknown,
@@ -697,8 +697,8 @@ export const,
   s://ziontechgroup.com/ai-compliance-automator',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
 // 2. DATA ANALYTICS SERVICES PRICING;
 export const dataAnalyticsPricing: ExpandedServicePricing[] = [
@@ -860,7 +860,7 @@ export const,
           'Custom AI requirements'
         ],
         setupFee: 30000;
-        contractTerm: 'negotiable'}
+        contractTerm: 'negotiable'};
     },
     marketComparison: unknown;
       competitors['Tableau', 'Power BI', 'Qlik', 'Looker'],
@@ -875,7 +875,7 @@ export const,
   e: 30000,
         contractTer,
   m: 'negotiable'
-      }
+      };
     },
     marketCompariso,
   n: unknown,
@@ -948,8 +948,8 @@ export const,
   s://ziontechgroup.com/predictive-insights-engine',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
 // 3. CLOUD & DEVOPS SERVICES PRICING;
 export const cloudDevOpsPricing: ExpandedServicePricing[] = [
@@ -1111,7 +1111,7 @@ export const,
           'Custom cloud requirements'
         ],
         setupFee: 40000;
-        contractTerm: 'negotiable'}
+        contractTerm: 'negotiable'};
     },
     marketComparison: unknown;
       competitors['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
@@ -1126,7 +1126,7 @@ export const,
   e: 40000,
         contractTer,
   m: 'negotiable'
-      }
+      };
     },
     marketCompariso,
   n: unknown,
@@ -1199,8 +1199,8 @@ export const,
   s://ziontechgroup.com/multi-cloud-orchestrator',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
 // 4. IOT & EDGE COMPUTING SERVICES PRICING;
 export const iotEdgePricing: ExpandedServicePricing[] = [
@@ -1362,7 +1362,7 @@ export const,
           'Custom IoT requirements'
         ],
         setupFee: 50000;
-        contractTerm: 'negotiable'}
+        contractTerm: 'negotiable'};
     },
     marketComparison: unknown;
       competitors['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
@@ -1377,7 +1377,7 @@ export const,
   e: 50000,
         contractTer,
   m: 'negotiable'
-      }
+      };
     },
     marketCompariso,
   n: unknown,
@@ -1450,8 +1450,8 @@ export const,
   s://ziontechgroup.com/industrial-iot-intelligence',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
 // 5. FINANCIAL TECHNOLOGY SERVICES PRICING;
 export const finTechPricing: ExpandedServicePricing[] = [
@@ -1613,7 +1613,7 @@ export const,
           'Custom quantum requirements'
         ],
         setupFee: 150000;
-        contractTerm: 'negotiable'}
+        contractTerm: 'negotiable'};
     },
     marketComparison: unknown;
       competitors['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
@@ -1628,7 +1628,7 @@ export const,
   e: 150000,
         contractTer,
   m: 'negotiable'
-      }
+      };
     },
     marketCompariso,
   n: unknown,
@@ -1701,8 +1701,8 @@ export const,
   s://ziontechgroup.com/quantum-financial-modeling',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING;
 export const healthcarePricing: ExpandedServicePricing[] = [
@@ -1864,7 +1864,7 @@ export const,
           'Custom medical requirements'
         ],
         setupFee: 70000;
-        contractTerm: 'negotiable'}
+        contractTerm: 'negotiable'};
     },
     marketComparison: unknown;
       competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],
@@ -1879,7 +1879,7 @@ export const,
   e: 70000,
         contractTer,
   m: 'negotiable'
-      }
+      };
     },
     marketCompariso,
   n: unknown,
@@ -1952,11 +1952,12 @@ export const,
   s://ziontechgroup.com/ai-diagnostic-assistant',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
 // Export all pricing data;
 export const ALL_EXPANDED_SERVICES_PRICING = [
+];
   ...cybersecurityPricing,
   ...dataAnalyticsPricing,
   ...cloudDevOpsPricing,

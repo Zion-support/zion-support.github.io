@@ -1,11 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
-
 import React from 'react';
-const AnalyticsToolsPage: React.FC = () => {;
+const AnalyticsToolsPage: React.FC = () => {
+};
 const analyticsTools = [
-    {
+[
+        {
       titl,
     e: 'AI Business Intelligence',
       price: '$399
@@ -50,9 +51,10 @@ titletitle: 'AI Financial Analytics',
       features: ['Financial reporting', 'Risk analysis', 'Budget tracking', 'Cost optimization', 'Revenue analysis', 'Predictive modeling'],
       icon: '💳',
       category:     ,
-$4}
+$4};
   ];
   const benefits = [
+];
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
       description:       ,
@@ -65,31 +67,18 @@ icon$5: BarChart,
 icon$5: Brain,
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-
-
 import { Link } from 'react-router-dom';
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const PagePage: React.FC = () => {
+};
 return (
-
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Analytics Tools - Zion Tech Group</title>
@@ -97,27 +86,8 @@ return (
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
       </Helmet>
 );
-}
-      {/* Hero Section */}
-=======
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
-import { Link )} from 'react-router-dom';
-
-import Navigation from '../components
-import Footer from '../components
-
-const PagePage: React.FC = () => {
-  return (<div>Coming Soon<)
-  )
-    
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
-        <title>Analytics Tools - Zion Tech Group<
-        <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." 
-        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" 
-      <
-      {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+};
+      {/* Hero Section */};
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm: text-5xl m,
@@ -126,7 +96,6 @@ const PagePage: React.FC = () => {
           <
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
-
       {/* Hero Section *
       <section className="pt-24 pb-16 px-4"><
         <div className="max-w-7xl mx-auto text-center"><
@@ -134,7 +103,6 @@ const PagePage: React.FC = () => {
   sm:text-5xl,"
   md: text-6xl font-bold text-white mb-6"><
 /
-
           <
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
@@ -177,17 +145,14 @@ const PagePage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}<
                   <p className="text-gray-300 text-sm mb-4">{tool.description}<
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
-                    {tool.category}
+                    {tool.category};
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features: <
                   <ul className="space-y-2">)
                     {tool.features.map((feature), featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}<
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block"
-                  >
+                  <a href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`};
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all inline-block">
                     Get Started
                   <
       {/* Benefits Section *
@@ -198,7 +163,6 @@ const PagePage: React.FC = () => {
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<
                 <p className="text-gray-300 text-sm">{benefit.description}<
-
               <div className="text-gray-300">Analytics Tools<
             <
               <div className="text-3xl font-bold text-green-400 mb-2">$179<
@@ -247,9 +211,9 @@ const PagePage: React.FC = () => {
                     {tool.features.map((feature), featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"><
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /><
-                        {feature}
+                        {feature};
                       <
-                    ))}
+                    ))};
                   <
                 <div className="text-center"><
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}<
@@ -274,7 +238,6 @@ Why Choose Our Analytics Tools?"
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /><
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<
                 <p className="text-gray-300 text-sm">{benefit.description}<
-
       {/* CTA Section *
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -299,9 +262,6 @@ Ready to Unlock Your Data?
 Call (302) 464-0950;
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,
     r:text-purple-600 transition-colors"
-
               Email Us;
   )};
-
 export default AnalyticsToolsPage;
-

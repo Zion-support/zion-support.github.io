@@ -1,166 +1,123 @@
 #!/usr/bin/env python3
-<<<<<<< HEAD
-=======
 """
-<<<<<<< HEAD
-Script to automatically resolve merge conflicts by keeping the newer version (after =======)
-=======
-Script to fix merge conflicts in the codebase
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
+Script to automatically resolve merge conflicts in the codebase
 """
-
->>>>>>> origin/main
 import os
 import re
 import glob
+from pathlib import Path
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a file by keeping the HEAD version"""
+    """Fix merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-<<<<<<< HEAD
-        # Remove merge conflict markers and keep HEAD version
-        # Pattern to match merge conflicts and keep content between <<<<<<< HEAD and =======
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]+\n'
-        replacement = r'\1\n'
+        original_content = content
         
-        # First pass: remove conflicts keeping HEAD
-        content = re.sub(pattern, replacement, content, flags=re.DOTALL)
+        # Remove merge conflict markers and keep the HEAD version
+        # Pattern 1: <<<<<<< HEAD ... ======= ... >>>>>>> branch
+        pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
+        content = re.sub(pattern1, r'\1', content, flags=re.DOTALL)
         
-        # Second pass: remove any remaining conflict markers
+        # Pattern 2: <<<<<<< HEAD ... ======= ... >>>>>>> main
+        pattern2 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> main'
+        content = re.sub(pattern2, r'\1', content, flags=re.DOTALL)
+        
+        # Pattern 3: <<<<<<< HEAD ... ======= ... >>>>>>> cursor/...
+        pattern3 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> cursor/[^\n]+'
+        content = re.sub(pattern3, r'\1', content, flags=re.DOTALL)
+        
+        # Pattern 4: <<<<<<< HEAD ... ======= ... >>>>>>> origin/...
+        pattern4 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> origin/[^\n]+'
+        content = re.sub(pattern4, r'\1', content, flags=re.DOTALL)
+        
+        # Clean up any remaining merge conflict markers
         content = re.sub(r'<<<<<<< HEAD\n', '', content)
         content = re.sub(r'=======\n', '', content)
         content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
         
-        # Clean up any double newlines
-        content = re.sub(r'\n\n\n+', '\n\n', content)
-=======
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
+        # Fix common syntax errors
+        # Fix unterminated strings
+        content = re.sub(r'<title>([^<]*?)\n', r'<title>\1</title>\n', content)
+        content = re.sub(r'<meta name="([^"]*?)" content="([^"]*?)\n', r'<meta name="\1" content="\2" />\n', content)
+        
+        # Fix missing semicolons and brackets
+        content = re.sub(r'}\s*$', '};\n', content, flags=re.MULTILINE)
+        content = re.sub(r'const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{([^}]*?)\s*$', r'const \1 = () => {\n\2\n};\n', content, flags=re.MULTILINE | re.DOTALL)
+        
+        # Fix broken JSX syntax
+        content = re.sub(r'<(\w+)\s*([^>]*?)\s*>\s*$', r'<\1 \2>', content, flags=re.MULTILINE)
+        content = re.sub(r'</(\w+)\s*>\s*$', r'</\1>', content, flags=re.MULTILINE)
+        
+        # Fix missing closing tags
+        content = re.sub(r'<(\w+)([^>]*?)\s*>\s*$', r'<\1\2>', content, flags=re.MULTILINE)
+        
+        # Fix broken function declarations
+        content = re.sub(r'const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{([^}]*?)\s*$', r'const \1: React.FC = () => {\n\2\n};\n', content, flags=re.MULTILINE | re.DOTALL)
+        
+        # Fix broken array declarations
+        content = re.sub(r'const\s+(\w+)\s*=\s*\[([^\]]*?)\s*$', r'const \1 = [\n\2\n];\n', content, flags=re.MULTILINE | re.DOTALL)
+        
+        # Fix broken object declarations
+        content = re.sub(r'const\s+(\w+)\s*=\s*\{([^}]*?)\s*$', r'const \1 = {\n\2\n};\n', content, flags=re.MULTILINE | re.DOTALL)
+        
+        # Fix missing semicolons after imports
+        content = re.sub(r'from\s+[\'"][^\'"]+[\'"]\s*$', lambda m: m.group(0) + ';', content, flags=re.MULTILINE)
+        
+        # Fix broken interface declarations
+        content = re.sub(r'interface\s+(\w+)\s*\{([^}]*?)\s*$', r'interface \1 {\n\2\n}\n', content, flags=re.MULTILINE | re.DOTALL)
+        
+        # Fix broken type declarations
+        content = re.sub(r'type\s+(\w+)\s*=\s*\{([^}]*?)\s*$', r'type \1 = {\n\2\n};\n', content, flags=re.MULTILINE | re.DOTALL)
+        
+        # Fix broken export statements
+        content = re.sub(r'export\s+default\s+(\w+)\s*$', r'export default \1;\n', content, flags=re.MULTILINE)
+        
+        # Clean up extra whitespace and empty lines
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        content = re.sub(r'^\s*\n', '', content, flags=re.MULTILINE)
+        
+        # Only write if content changed
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Fixed merge conflicts in: {file_path}")
+            return True
+        else:
             return False
-        
-<<<<<<< HEAD
-        # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> .*?\n', content, flags=re.DOTALL)
-        
-        if len(parts) < 3:
-            return False
-        
-        # Keep the newer version (after =======)
-        new_content = parts[0]  # Content before first conflict
-        for i in range(1, len(parts), 3):
-            if i + 2 < len(parts):
-                new_content += parts[i + 1]  # Content after =======
-                if i + 3 < len(parts):
-                    new_content += parts[i + 3]  # Content after >>>>>>>
->>>>>>> origin/main
-        
-        # Write the fixed content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(new_content)
-=======
-        print(f"Fixing merge conflicts in: {file_path}")
-        
-        # Remove merge conflict markers and keep the HEAD version
-        lines = content.split('\n')
-        new_lines = []
-        skip_until_end = False
-        
-        for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
-                skip_until_end = False
-                continue
-            elif line.strip() == '=======':
-                skip_until_end = True
-                continue
-            elif line.strip().startswith('>>>>>>>'):
-                skip_until_end = False
-                continue
-            elif not skip_until_end:
-                new_lines.append(line)
-        
-        # Write the cleaned content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(new_lines))
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
-        
-<<<<<<< HEAD
-        print(f"Fixed merge conflicts in {file_path}")
-=======
->>>>>>> origin/main
-        return True
-        
+            
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-<<<<<<< HEAD
-    # Find all TypeScript/TSX files with merge conflicts
-    patterns = [
-        '/workspace/app/**/*.tsx',
-        '/workspace/app/**/*.ts'
+    """Main function to fix merge conflicts"""
+    # Get all relevant files
+    file_patterns = [
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.js',
+        '**/*.jsx'
     ]
     
-    files_to_fix = []
-    for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+    files_to_process = []
+    for pattern in file_patterns:
+        files_to_process.extend(glob.glob(pattern, recursive=True))
     
-    # Filter files that actually have merge conflicts
-    files_with_conflicts = []
-    for file_path in files_to_fix:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '<<<<<<< HEAD' in content:
-                    files_with_conflicts.append(file_path)
-        except:
-            continue
+    # Filter out node_modules and other directories we don't want to process
+    files_to_process = [f for f in files_to_process if not any(exclude in f for exclude in [
+        'node_modules', '.git', 'dist', 'build', '.next', 'out', 'coverage'
+    ])]
     
-    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
+    print(f"Found {len(files_to_process)} files to process")
     
-    # Fix each file
     fixed_count = 0
-    for file_path in files_with_conflicts:
+    for file_path in files_to_process:
         if fix_merge_conflicts(file_path):
             fixed_count += 1
-=======
-    """Main function to fix all merge conflicts"""
-    # Find all TypeScript/JavaScript files with merge conflicts
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'src/**/*.tsx',
-        'src/**/*.ts',
-<<<<<<< HEAD
-        '**/*.tsx',
-        '**/*.ts'
-    ]
     
-    fixed_count = 0
-=======
-        'components/**/*.tsx',
-        'components/**/*.ts'
-    ]
->>>>>>> origin/main
-    
-    files_fixed = 0
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
-    total_files = 0
-    
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            total_files += 1
-            if fix_merge_conflicts(file_path):
-                files_fixed += 1
-    
-<<<<<<< HEAD
-    print(f"\nFixed merge conflicts in {fixed_count} out of {total_files} files")
-=======
-    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files")
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
+    print(f"Fixed merge conflicts in {fixed_count} files")
 
 if __name__ == "__main__":
     main()

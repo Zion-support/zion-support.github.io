@@ -1,33 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-const [servicesOpen, setServicesOpen] = useState(false);
-const [aiServicesOpen, setAiServicesOpen] = useState(false);
-const [itServicesOpen, setItServicesOpen] = useState(false);
-const [microSaasOpen, setMicroSaasOpen] = useState(false);
-const [isScrolled, setIsScrolled] = useState(false);
-const handleResize = () => {
-    if (window.innerWidth >= 1024) {
-      setIsOpen(false);
-    }
-  }
-const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50);
-  };
-  
-=======
->>>>>>> main
->>>>>>> origin/main
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -35,7 +9,14 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+  const handleResize = () => {
+    if (window.innerWidth >= 768) {
+      setIsOpen(false);
+    }
+  };
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 10);
+  };
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
@@ -44,17 +25,17 @@ const Navigation: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-const closeAllMenus = () => {
+  const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
-  }
-const toggleMenu = () => {
+  };
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
-  }
-const aiServices = [
+  };
+  const aiServices = [
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
     { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support Systems' },
@@ -87,7 +68,7 @@ const aiServices = [
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
     { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
   ];
-const itServices = [
+  const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
@@ -118,7 +99,7 @@ const itServices = [
     { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
     { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
   ];
-const microSaasServices = [
+  const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
     { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Customer Management' },
@@ -152,7 +133,7 @@ const microSaasServices = [
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
   ];
-const emergingTech = [
+  const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics & Automation', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
     { name: 'IoT & Edge Computing', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
@@ -195,8 +176,7 @@ const emergingTech = [
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
                     {aiServices.map((service) => (
-                      <Link
-                        key={service.name}
+                      <Link key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
@@ -211,7 +191,7 @@ const emergingTech = [
                       ))}
                   </div>
                 </div>
-              )}
+              )};
             </div>
             {/* IT Services Dropdown */}
             <div className="relative group">
@@ -227,8 +207,7 @@ const emergingTech = [
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
                     {itServices.map((service) => (
-                      <Link
-                        key={service.name}
+                      <Link key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
@@ -243,7 +222,7 @@ const emergingTech = [
                       ))}
                   </div>
                 </div>
-              )}
+              )};
             </div>
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
@@ -259,8 +238,7 @@ const emergingTech = [
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
                     {microSaasServices.map((service) => (
-                      <Link
-                        key={service.name}
+                      <Link key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
@@ -275,7 +253,7 @@ const emergingTech = [
                       ))}
                   </div>
                 </div>
-              )}
+              )};
             </div>
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
@@ -291,8 +269,7 @@ const emergingTech = [
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
                     {emergingTech.map((service) => (
-                      <Link
-                        key={service.name}
+                      <Link key={service.name}
                         href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
@@ -307,58 +284,52 @@ const emergingTech = [
                       ))}
                   </div>
                 </div>
-              )}
+              )};
             </div>
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
+              About;
             </Link>
             <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
+              Services;
             </Link>
             <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Pricing
+              Pricing;
             </Link>
             <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
+              Blog;
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Contact
+              Contact;
             </Link>
           </div>
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-            >
+            <a href="tel:+13024640950"
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
               <Phone className="w-4 h-4" />
               <span className="text-sm">(302) 464-0950</span>
             </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-            >
+            <a href="mailto:kleber@ziontechgroup.com"
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
               <Mail className="w-4 h-4" />
               <span className="text-sm">Email</span>
             </a>
           </div>
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
-            <button
-              onClick={toggleMenu}
+            <button onClick={toggleMenu}
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-              aria-label="Toggle menu"
-            >
+              aria-label="Toggle menu">
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
-        {/* Mobile Menu */}
-        {isOpen && (
+    {/* Mobile Menu */}
+    {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Home
+                Home;
               </Link>
               {/* Mobile AI Services */}
               <div>
@@ -375,8 +346,7 @@ const emergingTech = [
                 {aiServicesOpen && (
                   <div className="mt-2 ml-4 space-y-2">
                     {aiServices.slice(0, 8).map((service) => (
-                      <Link
-                        key={service.name}
+                      <Link key={service.name}
                         href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
@@ -384,15 +354,14 @@ const emergingTech = [
                         {service.name}
                       </Link>
                       ))}
-                    <Link
-                      href="/ai-services"
+                    <Link href="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
-                    >
+                      >
                       View All AI Services →
                     </Link>
                   </div>
-                )}
+                )};
               </div>
               {/* Mobile IT Services */}
               <div>
@@ -409,8 +378,7 @@ const emergingTech = [
                 {itServicesOpen && (
                   <div className="mt-2 ml-4 space-y-2">
                     {itServices.map((service) => (
-                      <Link
-                        key={service.name}
+                      <Link key={service.name}
                         href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
@@ -419,7 +387,7 @@ const emergingTech = [
                       </Link>
                       ))}
                   </div>
-                )}
+                )};
               </div>
               {/* Mobile Micro SAAS */}
               <div>
@@ -436,8 +404,7 @@ const emergingTech = [
                 {microSaasOpen && (
                   <div className="mt-2 ml-4 space-y-2">
                     {microSaasServices.slice(0, 8).map((service) => (
-                      <Link
-                        key={service.name}
+                      <Link key={service.name}
                         href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
@@ -445,44 +412,39 @@ const emergingTech = [
                         {service.name}
                       </Link>
                       ))}
-                    <Link
-                      href="/micro-saas"
+                    <Link href="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
-                    >
+                      >
                       View All Micro SAAS →
                     </Link>
                   </div>
-                )}
+                )};
               </div>
               <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                About
+                About;
               </Link>
               <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Services
+                Services;
               </Link>
               <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Pricing
+                Pricing;
               </Link>
               <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
+                Blog;
               </Link>
               <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Contact
+                Contact;
               </Link>
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-cyan-500/20 space-y-2">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                >
+                <a href="tel:+13024640950"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
                   <Phone className="w-4 h-4" />
                   <span>(302) 464-0950</span>
                 </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                >
+                <a href="mailto:kleber@ziontechgroup.com"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
                   <Mail className="w-4 h-4" />
                   <span>kleber@ziontechgroup.com</span>
                 </a>
@@ -493,9 +455,9 @@ const emergingTech = [
               </div>
             </div>
           </div>
-        )}
+        )};
       </div>
       </nav>
     );
-  }
+  };
 export default Navigation;

@@ -1,14 +1,14 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import React from 'react';
 import Navigation from '../components
 import Footer from '../components
-
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
-const DeveloperToolsPage: React.FC = () => {;
+const DeveloperToolsPage: React.FC = () => {
+};
 const _devTools = [
-    {
+[
+        {
       titl,
     e: 'AI Code Generator',
       description: 'Generate high-quality code using advanced AI models',
@@ -17,7 +17,7 @@ const _devTools = [
       benefits: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],
       price:     ,
 $4},
-    {
+        {
       title: 'API Testing Suite',
       description: 'Comprehensive API testing and monitoring tools',
       icon: Zap,
@@ -25,7 +25,7 @@ $4},
       benefits: ['Ensure API Reliability', 'Reduce Testing Time by 70%', 'Improve Performance', 'Prevent Downtime'],
       price:     ,
 $4},
-    {
+        {
       title: 'Database Management Tool',
       description: 'Advanced database administration and optimization',
       icon: BarChart,
@@ -33,7 +33,7 @@ $4},
       benefits: ['Improve Database Performance', 'Reduce Query Time by 80%', 'Automate Backups', 'Prevent Data Loss'],
       price:     ,
 $4},
-    {
+        {
       title: 'DevOps Automation',
       description: 'Streamline development and deployment processes',
       icon: Target,
@@ -42,7 +42,7 @@ $4},
     s: ['Faster Deployments', 'Reduce Errors by 90%', 'Improve Collaboration', 'Scale Efficiently'],
       price:     ,
 $4},
-    {
+        {
       title: 'Code Review Assistant',
       description: 'AI-powered code review and quality assurance',
       icon: Users,
@@ -50,33 +50,23 @@ $4},
       benefits: ['Improve Code Quality', 'Catch Bugs Early', 'Enforce Standards', 'Reduce Review Time'],
       price:     ,
 $4},
-    {
+        {
       title: 'Performance Profiler',
       description: 'Advanced application performance monitoring and optimization',
       icon: TrendingUp,
       features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],
       benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       price:     ,
-$4}
+$4};
   ];
-
-<<<<<<< HEAD
   return (
-    <React.Fragment>
+    <React .Fragment>
       <Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
         <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
       </Helmet>
-=======
-  return (<div>
-        <title>Developer Tools - Zion Tech Group<
-        <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." 
-        <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
               Developer Tools
@@ -84,7 +74,6 @@ $4}
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               AI-powered development tools that accelerate your coding workflow and improve productivity
             <
-            
             {/* Stats *
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white
@@ -104,7 +93,6 @@ $4}
                 <div className="text-gray-300">Uptime<
               <
             <
-
             {/* Contact Info *
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
               <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 m,
@@ -118,29 +106,16 @@ $4}
                   <span className="text-white font-medium">kleber@ziontechgroup.com<
                 <
                 <div className="flex items-center space-x-2">
-<<<<<<< HEAD
                   <MapPin className="w-5 h-5" />
     <div>Coming Soon</div>
-
   )};
-=======
-                  <MapPin className="w-5 h-5" 
-    <div>Coming Soon<)
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   const _devTools = [
+];
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
-    {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
 };
   titl,
   e: 'AI Code Generator',
@@ -155,14 +130,8 @@ $4}
       pric,
   e: 'Starting at $99
     },
-<<<<<<< HEAD
-    {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
 };
   titl,
   e: 'API Testing Suite',
@@ -177,14 +146,8 @@ $4}
       pric,
   e: 'Starting at $149
     },
-<<<<<<< HEAD
-    {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
 };
   titl,
   e: 'Database Management Tool',
@@ -199,14 +162,8 @@ $4}
       pric,
   e: 'Starting at $199
     },
-<<<<<<< HEAD
-    {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
 };
   titl,
   e: 'DevOps Automation',
@@ -221,14 +178,8 @@ $4}
       pric,
   e: 'Starting at $299
     },
-<<<<<<< HEAD
-    {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
 };
   titl,
   e: 'Code Review Assistant',
@@ -243,14 +194,8 @@ $4}
       pric,
   e: 'Starting at $79
     },
-<<<<<<< HEAD
-    {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
 };
   titl,
   e: 'Performance Profiler',
@@ -264,13 +209,11 @@ $4}
   s: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       pric,
   e: 'Starting at $179
-    }
+    };
   ];
   return (<div>Coming Soon<)
   )
-    
-<<<<<<< HEAD
-          <React.Fragment>
+          <React .Fragment>
       <Helmet></Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." /></meta>"
@@ -281,18 +224,6 @@ $4}
         {/* Hero Section */}"
         <section className="pt-24 pb-16 px-4"></section>"
           <div className="max-w-7xl mx-auto text-center"></div>"
-=======
-          <div><Helmet><
-        <title>Developer Tools - Zion Tech Group<
-        <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." /><
-        <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" /><
-      <
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <Navigation /><
-        {/* Hero Section *
-        <section className="pt-24 pb-16 px-4"><
-          <div className="max-w-7xl mx-auto text-center"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <h1 className="text-4xl,
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"><
@@ -343,7 +274,6 @@ $4}
             <
           <
         <
-
         {/* Tools Grid *
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -361,11 +291,9 @@ $4}
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{tool.title}<
                     <p className="text-gray-600 text-sm">{tool.description}<
                   <
-                  
                   <div className="mb-6">
                     <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}<
                   <
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features: <
                     <ul className="space-y-2">)
@@ -401,12 +329,11 @@ $4}
                       {tool.features.map((feature), featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"><
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /><
-                          {feature}
+                          {feature};
                         <
-                      ))}
+                      ))};
                     <
                   <
-
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits: <
                     <ul className="space-y-1">
@@ -420,17 +347,14 @@ $4}
                       {tool.benefits.map((benefit), benefitIndex) => ()}"
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"><
                           <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" /><
-                          {benefit}
+                          {benefit};
                         <
-                      ))}
+                      ))};
                     <
                   <
-
                   <div className="text-center">
-                    <a
-                      href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block"
-                    >
+                    <a href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`};
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
                       Get Started Now
                     <
                   <
@@ -447,11 +371,10 @@ $4}
           <
                   <
                 <
-              ))}
+              ))};
             <
           <
         <
-
         {/* CTA Section *
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -462,23 +385,17 @@ $4}
               Join thousands of developers who have accelerated their productivity with our AI-powered tools.
             <
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              >
+              <a href="tel:+13024640950"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
                 Call (302) 464-0950
               <
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              >
+              <a href="mailto:kleber@ziontechgroup.com"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
                 Email Us
               <
             <
           <
         <
-
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
@@ -487,42 +404,12 @@ $4}
           <div className="max-w-4xl mx-auto text-center"></div>"
             <h2 className="text-3xl font-bold text-white mb-6"></h2>
 // Ready to Supercharge Your Development?
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </h2>"
             <p className="text-xl text-purple-100 mb-8"></p>
 // Join thousands of developers who have accelerated their productivity with our AI-powered tools.
-            
-          
-          
-          
-          
-          
-          
-          
-          
-=======
-        <Footer 
-      <
-    <
-        {/* CTA Section *
-        <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"><
-          <div className="max-w-4xl mx-auto text-center"><
-            <h2 className="text-3xl font-bold text-white mb-6"><
-/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
           <
             <p className="text-xl text-purple-100 mb-8"><
 /
-
           <
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -533,7 +420,6 @@ $4}
               <a
                 href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,
     r:text-purple-600 transition-colors"
-
 /
 /
           <
@@ -542,15 +428,6 @@ $4}
         <
       <
       <Footer /><
-
-<<<<<<< HEAD
     </div>
   )};
-=======
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
 export default DeveloperToolsPage;
-

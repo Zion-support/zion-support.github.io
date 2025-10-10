@@ -3,7 +3,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react';
 ;
-const BackupRecoveryPage: React.FC = () => {const features = [
+const BackupRecoveryPage: React.FC = () => {
+const features = [
+];
+};
     {
       icon: Database,
       title: 'Automated Backups',
@@ -23,10 +26,11 @@ const BackupRecoveryPage: React.FC = () => {const features = [
       icon: Globe,
       title: 'Cloud Integration',
       description: 'Seamless cloud backup and recovery across multiple platforms'
-    }
+    };
   ];
 ;
 const benefits = [
+];
     'Automated backup scheduling',
     'Real-time data protection',
     'Enterprise-grade security and compliance',
@@ -36,7 +40,6 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -44,8 +47,7 @@ const benefits = [
         <meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="backup recovery, data protection, disaster recovery, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-
-      {/* Hero Section */}
+      {/* Hero Section */};
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -57,8 +59,7 @@ const benefits = [
           </p>
         </div>
       </section>
-
-      {/* Features Section */}
+      {/* Features Section */};
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -69,11 +70,10 @@ const benefits = [
               Our backup and recovery solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <feature .icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -81,8 +81,7 @@ const benefits = [
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* Benefits Section */};
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -93,7 +92,6 @@ const benefits = [
               Experience the power of our backup and recovery solutions for your business.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
@@ -104,8 +102,7 @@ const benefits = [
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

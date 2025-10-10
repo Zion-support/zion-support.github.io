@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -93,7 +91,7 @@ import React from 'react';
     addres,
   s: string;
     websit,
-  e: string}
+  e: string};
   real_implementatio,
   n: boolean;
   implementation_detail,
@@ -1451,7 +1449,9 @@ market_size: '$45B+ market',
       rating: 4 && 4.8;
       reviews: 45};
   ];    features: [,
-export interface InnovativeMicroSaasService2025 {id: string, name: string;
+export interface InnovativeMicroSaasService2025 {
+id: string, name: string;
+}
   tagline: string, price: string;
   period: string, description: string;
   features: string[], popular: boolean;
@@ -1467,12 +1467,12 @@ export interface InnovativeMicroSaasService2025 {id: string, name: string;
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string}
+    website: string};
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [,
   // AI Content Factory;
     id: 'ai-content-factory', name: 'AI Content Factory Platform',
@@ -1517,8 +1517,8 @@ varian,
   s: 45};
   ];    feature,
   s: [,
-export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
-  e: string}
+export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */};
+  e: string};
     },
     realImplementatio,
   n: boolean, implementationDetail,
@@ -1529,7 +1529,7 @@ export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [,
   // AI Content Factory,
@@ -1592,7 +1592,7 @@ marketSize: '$45 B+ market',
         contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com'}
+        website: 'https://ziontechgroup.com'};
       realImplementation: true;
       implementationDetails:,
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.'
@@ -1657,7 +1657,9 @@ marketSize: '$45 B+ market',
     rating: 4.8;
     reviews: 45;
 ]
-export interface InnovativeMicroSaasService2025 {;
+export interface InnovativeMicroSaasService2025 {
+;
+}
   id: string;
   name: string;
   tagline: string;
@@ -1687,8 +1689,8 @@ export interface InnovativeMicroSaasService2025 {;
   contactInfo: {,
     mobile: string;
     email: string;
-    address: string}
-    website: string}
+    address: string};
+    website: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -1719,7 +1721,7 @@ varian,
         websit,
   e: 'http,
   s://ziontechgroup.com'
-      }
+      };
       realImplementatio,
   n: true,
       implementationDetail,
@@ -1879,10 +1881,10 @@ varian,
     review,
   s: 45;
 ],
-export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementatio,
   n: boolean;
@@ -1895,7 +1897,7 @@ export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [;
@@ -1929,8 +1931,8 @@ export const,
     competitors: ['Basic content generation toolsTraditional CMS platforms'];
     marketSize: '$50 B+ market';
     growthRate: '250%+ annual growth';
-    variant: 'saas-content'}
-    contactInfo: {}
+    variant: 'saas-content'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1971,8 +1973,8 @@ export const,
     competitors: ['Basic CRM platformsTraditional sales tools'];
     marketSize: '$80 B+ market';
     growthRate: '300%+ annual growth';
-    variant: 'saas-crm'}
-    contactInfo: {}
+    variant: 'saas-crm'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2013,8 +2015,8 @@ export const,
     competitors: ['Basic analytics toolsTraditional BI platforms'];
     marketSize: '$100 B+ market';
     growthRate: '350%+ annual growth';
-    variant: 'saas-intelligence'}
-    contactInfo: {}
+    variant: 'saas-intelligence'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2055,8 +2057,8 @@ export const,
     competitors: ['Basic e-commerce toolsTraditional analytics platforms'];
     marketSize: '$60 B+ market';
     growthRate: '280%+ annual growth';
-    variant: 'saas-ecommerce'}
-    contactInfo: {}
+    variant: 'saas-ecommerce'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2097,8 +2099,8 @@ export const,
     competitors: ['Basic HR platformsTraditional recruitment tools'];
     marketSize: '$40 B+ market';
     growthRate: '250%+ annual growth';
-    variant: 'saas-hr'}
-    contactInfo: {}
+    variant: 'saas-hr'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2139,8 +2141,8 @@ export const,
     competitors: ['Basic financial toolsTraditional analytics platforms'];
     marketSize: '$90 B+ market';
     growthRate: '320%+ annual growth';
-    variant: 'saas-financial'}
-    contactInfo: {}
+    variant: 'saas-financial'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2181,8 +2183,8 @@ export const,
     competitors: ['Basic supply chain toolsTraditional inventory management'];
     marketSize: '$70 B+ market';
     growthRate: '300%+ annual growth';
-    variant: 'saas-supply-chain'}
-    contactInfo: {}
+    variant: 'saas-supply-chain'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2223,8 +2225,8 @@ export const,
     competitors: ['Basic marketing toolsTraditional automation platforms'];
     marketSize: '$55 B+ market';
     growthRate: '280%+ annual growth';
-    variant: 'saas-marketing'}
-    contactInfo: {}
+    variant: 'saas-marketing'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2265,16 +2267,16 @@ export const,
     competitors: ['Basic project management toolsTraditional planning platforms'];
     marketSize: '$45 B+ market';
     growthRate: '250%+ annual growth';
-    variant: 'saas-project'}
-    contactInfo: {}
+    variant: 'saas-project'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com',
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-content'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-content'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2298,10 +2300,10 @@ export const,
     review,
   s: 89};
   // CRM Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-crm'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-crm'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2325,10 +2327,10 @@ export const,
     review,
   s: 125};
   // Decision Engine Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-intelligence'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-intelligence'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2352,10 +2354,10 @@ export const,
     review,
   s: 78};
   // E-commerce Optimization Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-ecommerce'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-ecommerce'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2379,10 +2381,10 @@ export const,
     review,
   s: 95};
   // HR Automation Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-hr'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-hr'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2406,10 +2408,10 @@ export const,
     review,
   s: 58};
   // Financial Analytics Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-financial'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-financial'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2433,10 +2435,10 @@ export const,
     review,
   s: 52};
   // Supply Chain Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-supply-chain'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-supply-chain'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2460,10 +2462,10 @@ export const,
     review,
   s: 38};
   // Marketing Automation Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-marketing'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-marketing'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2487,10 +2489,10 @@ export const,
     review,
   s: 82};
   // Project Management Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-project'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-project'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2513,17 +2515,17 @@ export const,
   g: 4.8;
     review,
   s: 45;
-]}
+]};
 ];
 ;
-}
+};
 ];
-}
+};
 ];
-export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -2542,7 +2544,7 @@ export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [;
@@ -2576,8 +2578,8 @@ export const,
     competitors: ['Basic content generation toolsTraditional CMS platforms'];
     marketSize: '$50 B+ market';
     growthRate: '250%+ annual growth';
-    variant: 'saas-content'}
-    contactInfo: {}
+    variant: 'saas-content'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2618,8 +2620,8 @@ export const,
     competitors: ['Basic CRM platformsTraditional sales tools'];
     marketSize: '$80 B+ market';
     growthRate: '300%+ annual growth';
-    variant: 'saas-crm'}
-    contactInfo: {}
+    variant: 'saas-crm'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2660,8 +2662,8 @@ export const,
     competitors: ['Basic analytics toolsTraditional BI platforms'];
     marketSize: '$100 B+ market';
     growthRate: '350%+ annual growth';
-    variant: 'saas-intelligence'}
-    contactInfo: {}
+    variant: 'saas-intelligence'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2702,8 +2704,8 @@ export const,
     competitors: ['Basic e-commerce toolsTraditional analytics platforms'];
     marketSize: '$60 B+ market';
     growthRate: '280%+ annual growth';
-    variant: 'saas-ecommerce'}
-    contactInfo: {}
+    variant: 'saas-ecommerce'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2744,8 +2746,8 @@ export const,
     competitors: ['Basic HR platformsTraditional recruitment tools'];
     marketSize: '$40 B+ market';
     growthRate: '250%+ annual growth';
-    variant: 'saas-hr'}
-    contactInfo: {}
+    variant: 'saas-hr'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2786,8 +2788,8 @@ export const,
     competitors: ['Basic financial toolsTraditional analytics platforms'];
     marketSize: '$90 B+ market';
     growthRate: '320%+ annual growth';
-    variant: 'saas-financial'}
-    contactInfo: {}
+    variant: 'saas-financial'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2828,8 +2830,8 @@ export const,
     competitors: ['Basic supply chain toolsTraditional inventory management'];
     marketSize: '$70 B+ market';
     growthRate: '300%+ annual growth';
-    variant: 'saas-supply-chain'}
-    contactInfo: {}
+    variant: 'saas-supply-chain'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2870,8 +2872,8 @@ export const,
     competitors: ['Basic marketing toolsTraditional automation platforms'];
     marketSize: '$55 B+ market';
     growthRate: '280%+ annual growth';
-    variant: 'saas-marketing'}
-    contactInfo: {}
+    variant: 'saas-marketing'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2912,8 +2914,8 @@ export const,
     competitors: ['Basic project management toolsTraditional planning platforms'];
     marketSize: '$45 B+ market';
     growthRate: '250%+ annual growth';
-    variant: 'saas-project'}
-    contactInfo: {}
+    variant: 'saas-project'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -2924,10 +2926,10 @@ export const,
     customers: 75;
     rating: 4.8;
     reviews: 45;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-content'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-content'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2951,10 +2953,10 @@ export const,
     review,
   s: 89};
   // CRM Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-crm'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-crm'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2978,10 +2980,10 @@ export const,
     review,
   s: 125};
   // Decision Engine Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-intelligence'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-intelligence'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -3005,10 +3007,10 @@ export const,
     review,
   s: 78};
   // E-commerce Optimization Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-ecommerce'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-ecommerce'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -3032,10 +3034,10 @@ export const,
     review,
   s: 95};
   // HR Automation Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-hr'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-hr'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -3059,10 +3061,10 @@ export const,
     review,
   s: 58};
   // Financial Analytics Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-financial'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-financial'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -3086,10 +3088,10 @@ export const,
     review,
   s: 52};
   // Supply Chain Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-supply-chain'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-supply-chain'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -3113,10 +3115,10 @@ export const,
     review,
   s: 38};
   // Marketing Automation Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-marketing'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-marketing'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -3140,10 +3142,10 @@ export const,
     review,
   s: 82};
   // Project Management Intelligence Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'saas-project'}
+  {/* TODO: Fix JSX expression */};
+  t: 'saas-project'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -3165,7 +3167,7 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 45}
+  s: 45};
 ];
 ;
 i,
@@ -3716,7 +3718,7 @@ i,
   e: '2025 - 03 - 05', customer,
   s: 75, ratin,
   g: 4.8, review,
-  s: 45; ], ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
+  s: 45; ], ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -3725,7 +3727,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [; // AI Content Factory; {/* TODO: Fix JSX expression */}
+  innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [; // AI Content Factory; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3735,7 +3737,7 @@ i,
   e: '2025-01-01'; customer,
   s: 150; ratin,
   g: 4.9; review,
-  s: 89}; // CRM Intelligence Platform; {/* TODO: Fix JSX expression */}
+  s: 89}; // CRM Intelligence Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3745,7 +3747,7 @@ i,
   e: '2025-01-15'; customer,
   s: 200; ratin,
   g: 4.9; review,
-  s: 125}; // Decision Engine Platform; {/* TODO: Fix JSX expression */}
+  s: 125}; // Decision Engine Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3755,7 +3757,7 @@ i,
   e: '2025-01-20'; customer,
   s: 120; ratin,
   g: 4.9; review,
-  s: 78}; // E-commerce Optimization Platform; {/* TODO: Fix JSX expression */}
+  s: 78}; // E-commerce Optimization Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3765,7 +3767,7 @@ i,
   e: '2025-02-01'; customer,
   s: 180; ratin,
   g: 4.8; review,
-  s: 95}; // HR Automation Platform; {/* TODO: Fix JSX expression */}
+  s: 95}; // HR Automation Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3775,7 +3777,7 @@ i,
   e: '2025-02-15'; customer,
   s: 95; ratin,
   g: 4.8; review,
-  s: 58}; // Financial Analytics Platform; {/* TODO: Fix JSX expression */}
+  s: 58}; // Financial Analytics Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3785,7 +3787,7 @@ i,
   e: '2025-02-10'; customer,
   s: 85; ratin,
   g: 4.9; review,
-  s: 52}; // Supply Chain Intelligence Platform; {/* TODO: Fix JSX expression */}
+  s: 52}; // Supply Chain Intelligence Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3795,7 +3797,7 @@ i,
   e: '2025-03-01'; customer,
   s: 65; ratin,
   g: 4.8; review,
-  s: 38}; // Marketing Automation Platform; {/* TODO: Fix JSX expression */}
+  s: 38}; // Marketing Automation Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3805,7 +3807,7 @@ i,
   e: '2025-02-20'; customer,
   s: 140; ratin,
   g: 4.9; review,
-  s: 82}; // Project Management Intelligence Platform; {/* TODO: Fix JSX expression */}
+  s: 82}; // Project Management Intelligence Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3815,7 +3817,7 @@ i,
   e: '2025-03-05'; customer,
   s: 75; ratin,
   g: 4.8; review,
-  s: 45; ]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */}
+  s: 45; ]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2025 {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -3824,7 +3826,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [; // AI Content Factory; {/* TODO: Fix JSX expression */}
+  innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] = [; // AI Content Factory; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3834,7 +3836,7 @@ i,
   e: '2025-01-01'; customer,
   s: 150; ratin,
   g: 4.9; review,
-  s: 89}; // CRM Intelligence Platform; {/* TODO: Fix JSX expression */}
+  s: 89}; // CRM Intelligence Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3844,7 +3846,7 @@ i,
   e: '2025-01-15'; customer,
   s: 200; ratin,
   g: 4.9; review,
-  s: 125}; // Decision Engine Platform; {/* TODO: Fix JSX expression */}
+  s: 125}; // Decision Engine Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3854,7 +3856,7 @@ i,
   e: '2025-01-20'; customer,
   s: 120; ratin,
   g: 4.9; review,
-  s: 78}; // E-commerce Optimization Platform; {/* TODO: Fix JSX expression */}
+  s: 78}; // E-commerce Optimization Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3864,7 +3866,7 @@ i,
   e: '2025-02-01'; customer,
   s: 180; ratin,
   g: 4.8; review,
-  s: 95}; // HR Automation Platform; {/* TODO: Fix JSX expression */}
+  s: 95}; // HR Automation Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3874,7 +3876,7 @@ i,
   e: '2025-02-15'; customer,
   s: 95; ratin,
   g: 4.8; review,
-  s: 58}; // Financial Analytics Platform; {/* TODO: Fix JSX expression */}
+  s: 58}; // Financial Analytics Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3884,7 +3886,7 @@ i,
   e: '2025-02-10'; customer,
   s: 85; ratin,
   g: 4.9; review,
-  s: 52}; // Supply Chain Intelligence Platform; {/* TODO: Fix JSX expression */}
+  s: 52}; // Supply Chain Intelligence Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3894,7 +3896,7 @@ i,
   e: '2025-03-01'; customer,
   s: 65; ratin,
   g: 4.8; review,
-  s: 38}; // Marketing Automation Platform; {/* TODO: Fix JSX expression */}
+  s: 38}; // Marketing Automation Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3904,7 +3906,7 @@ i,
   e: '2025-02-20'; customer,
   s: 140; ratin,
   g: 4.9; review,
-  s: 82}; // Project Management Intelligence Platform; {/* TODO: Fix JSX expression */}
+  s: 82}; // Project Management Intelligence Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -3915,10 +3917,3 @@ i,
   s: 75; ratin,
   g: 4.8; review,
   s: 45} ]; '
-=======
-      market_size: '$50B+ market'
-      growth_rate: '250%+ annual growth';
-variant: 'saas - content'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

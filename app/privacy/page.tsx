@@ -1,77 +1,78 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
+import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 export default function PrivacyPage() {;
 const lastUpdated = 'January 1, 2024';
   ;
 const dataTypes = [
-    {
+[
+        {
       category: 'Personal Information',
       icon: User,
       description: 'Name, email address, phone number, company information',
       examples: ['Contact forms', 'Newsletter signups', 'Account creation']]
     },
-    {
+        {
       category: 'Usage Data',
       icon: Database,
       description: 'Information about how you use our website and services',
       examples: ['Page views', 'Time spent', 'Features used', 'Device information']]
     },
-    {
+        {
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
 examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']]
-    }
+    };
   ];
 ;
 const purposes = [
-    {
+[
+        {
       title: 'Service Provision',
       icon: Globe,
       description: 'To provide and maintain our services']
     },
-    {
+        {
       title: 'Communication',
       icon: Mail,
       description: 'To communicate with you about our services']
     },
-    {
+        {
       title: 'Improvement',
       icon: ArrowRight,
       description: 'To improve and develop new features']
     },
-    {
+        {
       title: 'Security',
       icon: Shield,
 description: 'To protect against fraud and abuse']
-    }
+    };
   ];
 ;
 const rights = [
-    {
+[
+        {
       title: 'Access',
       description: 'Request access to your personal data',
       icon: Eye]
     },
-    {
+        {
       title: 'Rectification',
       description: 'Correct inaccurate or incomplete data',
       icon: CheckCircle]
     },
-    {
+        {
       title: 'Erasure',
       description: 'Request deletion of your personal data',
       icon: Lock]
     },
-    {
+        {
       title: 'Portability',
       description: 'Receive your data in a structured format',
 icon: Database]
-    }
+    };
   ];
-
   return (
     <div>
       <div>
@@ -84,11 +85,10 @@ icon: Database]
           </p>
           <div>
             <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated}
+            Last updated: {lastUpdated};
           </div>
         </div>
       </div>
-
       <div>
         <div>
           <div className="max-w-4xl mx-auto space-y-12"></div>
@@ -102,15 +102,14 @@ icon: Database]
                 By using our services, you agree to the collection and use of information in accordance with this policy.
               </p>
             </section>
-
-            {/* Information We Collect */}
+            {/* Information We Collect */};
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Information We Collect</h2>
               <div className="grid md:grid-cols-3 gap-6"></div>
                 {dataTypes.map((type, index) => (</div>
                   <div>
                     <div>
-                      <type.icon className="h-6 w-6 text-blue-600 mr-3" />
+                      <type .icon className="h-6 w-6 text-blue-600 mr-3" />
                       <h3 className="text-lg font-semibold text-gray-900"></h>{type.category}</h3>
                     </div>
                     <p className="text-gray-700 mb-3">{type.description}</p>
@@ -123,15 +122,14 @@ icon: Database]
                 ));
               </div>
             </section>
-
-            {/* How We Use Information */}
+            {/* How We Use Information */};
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>How We Use Your Information</h2>
               <div className="grid md:grid-cols-2 gap-6"></div>
                 {purposes.map((purpose, index) => (</div>
                   <div>
                     <div>
-                      <purpose.icon className="h-6 w-6 text-blue-600" />
+                      <purpose .icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>{purpose.title}</h3>
@@ -141,8 +139,7 @@ icon: Database]
                 ));
               </div>
             </section>
-
-            {/* Data Security */}
+            {/* Data Security */};
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Data Security</h2>
               <div>
@@ -163,15 +160,14 @@ icon: Database]
                 </div>
               </div>
             </section>
-
-            {/* Your Rights */}
+            {/* Your Rights */};
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Your Rights</h2>
               <div className="grid md:grid-cols-2 gap-6"></div>
                 {rights.map((right, index) => (</div>
                   <div>
                     <div>
-                      <right.icon className="h-6 w-6 text-green-600 mr-3" />
+                      <right .icon className="h-6 w-6 text-green-600 mr-3" />
                       <h3 className="text-lg font-semibold text-gray-900"></h>{right.title}</h3>
                     </div>
                     <p className="text-gray-700">{right.description}</p>
@@ -179,8 +175,7 @@ icon: Database]
                 ));
               </div>
             </section>
-
-            {/* Contact Information */}
+            {/* Contact Information */};
             <section className="bg-gray-50 rounded-lg p-8"></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Contact Us</h2>
               <p className="text-gray-700 mb-6"></p>
@@ -205,8 +200,7 @@ icon: Database]
                 </div>
               </div>
             </section>
-
-            {/* Updates */}
+            {/* Updates */};
             <section></section>
               <div>
                 <div>
@@ -225,7 +219,4 @@ icon: Database]
       </div>
     </div>
 )]
-    }
-=======
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+    };

@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-
-export interface SpaceTechService {id: string;
+export interface SpaceTechService {
+id: string;
+}
   name: string;
   tagline: string;
   price: string;
@@ -30,9 +30,9 @@ export interface SpaceTechService {id: string;
   contact_info: unknown;
     mobile: string;
     email: string;
-    address: string}
-    website: string}
-  }
+    address: string};
+    website: string};
+  };
     trialDays: 30;
     setupTime: '2 weeks',
     category: 'Space Technology',
@@ -44,11 +44,11 @@ export interface SpaceTechService {id: string;
     price: '$5, 999',
     period: '/month',
     description: unknown;
-export interface SpaceTechService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface SpaceTechService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
     trialDay,
   s: 30;
     setupTim,
@@ -1378,7 +1378,7 @@ market_size: '$8B space education market',
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const spaceTechServices: SpaceTechService[] = [,
     id: 'space-mission-management-platform', name: 'Space Mission Management Platform',
     tagline: 'Complete space mission planning and execution platform',
@@ -1401,7 +1401,7 @@ export const spaceTechServices: SpaceTechService[] = [,
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.',
     launch_date: '2024 - 03 - 10',
@@ -1502,7 +1502,7 @@ varian,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   spaceTechServices: SpaceTechService[] = [,
     i,
@@ -1562,7 +1562,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1574,12 +1574,12 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 250}
-export interface SpaceTechService {/* TODO: Fix JSX expression */}
-  }
+  s: 250};
+export interface SpaceTechService {/* TODO: Fix JSX expression */};
+  };
 ];
 ;
-}
+};
 ];
 ;
     realImplementation: true;
@@ -1589,7 +1589,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     customers:
         customers: 25;
     rating: 5.0;
-    reviews: 12}
+    reviews: 12};
     id: 'satellite-constellation-management',
     name: 'Satellite Constellation Management System',
     tagline: 'Manage large satellite networks with AI-powered optimization',
@@ -1608,7 +1608,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     ratin,
   g: 5.0;
     review,
-  s: 12}
+  s: 12};
     i,
   d: 'satellite-constellation-management'
     nam,
@@ -2086,7 +2086,7 @@ marketSize: '$8 B space education market',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.'
@@ -2097,7 +2097,7 @@ marketSize: '$8 B space education market',
     reviews: 250}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.',
     launchDate: '2024-03-10',
@@ -2126,7 +2126,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2148,7 +2148,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2160,19 +2160,19 @@ varian,
     ratin,
   g: 4.9;
     review,
-  s: 250}
+  s: 250};
 ];
-export interface SpaceTechService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface SpaceTechService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 ;
 export const spaceTechServices: SpaceTechService[] = [;
   {
@@ -2204,12 +2204,12 @@ export const spaceTechServices: SpaceTechService[] = [;
     competitors: ['SpaceX StarlinkOneWebBasic satellite services'];
     marketSize: '$469 B space economy';
     growthRate: '400% annual growth';
-    variant: 'space-futuristic'}
-    contactInfo: {}
+    variant: 'space-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.',
     launch_date: '2024 - 03 - 10',
@@ -2227,14 +2227,14 @@ export const spaceTechServices: SpaceTechService[] = [;
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   spaceTechServices: SpaceTechService[] = [;
-  {/* TODO: Fix JSX expression */}
-  t: 'space-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'space-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2244,7 +2244,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -2256,8 +2256,8 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 250}
-]}
+  s: 250};
+]};
 ;
 export interface SpaceTechService,
   id: string; nam,
@@ -2904,7 +2904,7 @@ export interface SpaceTechService,
   e: '2024-03-10' customer,
   s: 500, ratin,
   g: 4.9,
-  reviews: 250 } ]; export interface SpaceTechService {/* TODO: Fix JSX expression */}
+  reviews: 250 } ]; export interface SpaceTechService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2913,7 +2913,7 @@ export interface SpaceTechService,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  spaceTechServices: SpaceTechService[] = [; {/* TODO: Fix JSX expression */}
+  spaceTechServices: SpaceTechService[] = [; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2924,10 +2924,3 @@ export interface SpaceTechService,
   s: 500, ratin,
   g: 4.9, review,
   s: 250} ]} ; '
-=======
-    market_size: '$469B space economy'
-    growth_rate: '400% annual growth';
-variant: 'space - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

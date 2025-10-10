@@ -1,8 +1,7 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-
 export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression *
-}
+};
   return (<div><Helmet><
         <title>AI Inventory Management Solutions - Zion Tech Group<
         <meta name="description" content="Intelligent AI-powered inventory management with predictive analytics, automated reordering, and real-time optimization. Starting at $149/month." /><
@@ -27,7 +26,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.
             <
           <
-
           {/* Features Grid *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features<
@@ -83,7 +81,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <
             <
           <
-
           {/* Pricing Section *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<
@@ -131,7 +128,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <
             <
           <
-
           {/* Results Section *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results<
@@ -163,7 +159,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <
             <
           <
-
           {/* Use Cases Section *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For<
@@ -195,7 +190,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <
             <
           <
-
           {/* CTA Section *
           <section className="text-center"><
             <h2 className="text-3xl font-bold text-white mb-6">Optimize Your Inventory Today<
@@ -218,16 +212,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
             <
           <
         <
-        
-<<<<<<< HEAD
         <Footer /></Footer>
       </div>
     </div>
   )}"
-=======
-        <Footer /><
-      <
-    <
-  );
-}"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-
-export interface BiotechAIService {id: string;
+export interface BiotechAIService {
+id: string;
+}
   name: string;
   tagline: string;
   price: string;
@@ -30,13 +30,13 @@ export interface BiotechAIService {id: string;
   contact_info: unknown;
     mobile: string;
     email: string;
-    address: string}
-    website: string}
-export interface BiotechAIService {/* TODO: Fix JSX expression */}
-  s: string}
+    address: string};
+    website: string};
+export interface BiotechAIService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
       'Machine Learning',
       'Bioinformatics',
       'React',
@@ -1240,7 +1240,7 @@ market_size: '$40B biomanufacturing market',
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const biotechAIServices: BiotechAIService[] = [,
     id: 'ai-drug-discovery-platform', name: 'AI Drug Discovery Platform',
     tagline: 'Accelerate drug development with AI-powered discovery',
@@ -1263,7 +1263,7 @@ export const biotechAIServices: BiotechAIService[] = [,
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.',
     launch_date: '2024 - 03 - 10',
@@ -1364,7 +1364,7 @@ varian,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   biotechAIServices: BiotechAIService[] = [,
     i,
@@ -1423,7 +1423,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1435,12 +1435,12 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 45}
-export interface BiotechAIService {/* TODO: Fix JSX expression */}
-  }
+  s: 45};
+export interface BiotechAIService {/* TODO: Fix JSX expression */};
+  };
 ];
 ;
-}
+};
 ];
 ;
     realImplementation: true;
@@ -1450,7 +1450,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     customers:
         customers: 120;
     rating: 5.0;
-    reviews: 60}
+    reviews: 60};
     id: 'ai-genetic-engineering-suite',
     name: 'AI Genetic Engineering Suite',
     tagline: 'Revolutionary genetic engineering with AI precision',
@@ -1469,7 +1469,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     ratin,
   g: 5.0;
     review,
-  s: 60}
+  s: 60};
     i,
   d: 'ai-genetic-engineering-suite'
     nam,
@@ -1947,7 +1947,7 @@ marketSize: '$40 B biomanufacturing market',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.'
@@ -1958,7 +1958,7 @@ marketSize: '$40 B biomanufacturing market',
     reviews: 45}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.',
     launchDate: '2024-03-10',
@@ -1987,7 +1987,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2009,7 +2009,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2021,19 +2021,19 @@ varian,
     ratin,
   g: 4.9;
     review,
-  s: 45}
+  s: 45};
 ];
-export interface BiotechAIService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface BiotechAIService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 ;
 export const biotechAIServices: BiotechAIService[] = [;
   {
@@ -2065,12 +2065,12 @@ export const biotechAIServices: BiotechAIService[] = [;
     competitors: ['InsitroRecursionBasic research tools'];
     marketSize: '$150 B AI in healthcare market';
     growthRate: '250% annual growth';
-    variant: 'biotech-futuristic'}
-    contactInfo: {}
+    variant: 'biotech-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.',
     launch_date: '2024 - 03 - 10',
@@ -2088,14 +2088,14 @@ export const biotechAIServices: BiotechAIService[] = [;
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   biotechAIServices: BiotechAIService[] = [;
-  {/* TODO: Fix JSX expression */}
-  t: 'biotech-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'biotech-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2105,7 +2105,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -2117,8 +2117,8 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 45}
-]}
+  s: 45};
+]};
 ;
 export interface BiotechAIService,
   id: string; nam,
@@ -2730,7 +2730,7 @@ export interface BiotechAIService,
   e: '2024-03-10' customer,
   s: 90, ratin,
   g: 4.9,
-  reviews: 45 } ]; export interface BiotechAIService {/* TODO: Fix JSX expression */}
+  reviews: 45 } ]; export interface BiotechAIService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2739,7 +2739,7 @@ export interface BiotechAIService,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  biotechAIServices: BiotechAIService[] = [; {/* TODO: Fix JSX expression */}
+  biotechAIServices: BiotechAIService[] = [; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2750,10 +2750,3 @@ export interface BiotechAIService,
   s: 90, ratin,
   g: 4.9, review,
   s: 45} ]} ; '
-=======
-    market_size: '$50B genetic engineering market'
-    growth_rate: '300% annual growth';
-variant: 'biotech - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

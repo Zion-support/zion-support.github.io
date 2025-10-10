@@ -7,12 +7,13 @@ const __filename = fileURLToPath(import.meta.url);
 // __dirname removed
 // Essential functions that should be kept;
 const essentialFunctions = [
+];
   'test-function.js', // Keep for testing;
   'scheduled-nudges.ts', // Keep for scheduled tasks;
 ];
-
 // Functions that are clearly test/development and can be removed;
 const functionsToRemove = [
+];
   // AI and automation functions (most are test/development)
   'ai-changelog-',
   'ai-trends-',
@@ -21,11 +22,9 @@ const functionsToRemove = [
   'ai-alt-text-',
   'ai_changelog_',
   'ai_trends_',
-  
   // Autonomous functions (test/development)
   'autonomous-',
   'autonomous_',
-  
   // Audit and analysis functions (test/development)
   'a11 y-',
   'a11 y_',
@@ -48,10 +47,8 @@ const functionsToRemove = [
   'seo_',
   'security-',
   'security_',
-  
   // Cron functions (test/development)
   'cron-',
-  
   // Frontend functions (test/development)
   'front-',
   'front_',
@@ -61,7 +58,6 @@ const functionsToRemove = [
   'home-',
   'home_',
   'homepage-',
-  
   // Optimization functions (test/development)
   'optimize-',
   'optimize_',
@@ -73,7 +69,6 @@ const functionsToRemove = [
   'hyper_',
   'fast-',
   'fast_',
-  
   // Report functions (test/development)
   'report-',
   'report_',
@@ -81,7 +76,6 @@ const functionsToRemove = [
   'runner_',
   'scheduler-',
   'scheduler_',
-  
   // Other test/development functions;
   'auto-',
   'auto_',
@@ -137,39 +131,34 @@ function shouldRemoveFunction(filename) {
   // Keep essential functions;
   if (essentialFunctions.includes(filename)) {
     return false;
-function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */}
-  }
-  
+function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */};
+  };
   // Remove functions that match any of the patterns;
-  return functionsToRemove.some(pattern => filename.includes(pattern))}
+  return functionsToRemove.some(pattern => filename.includes(pattern))};
 ;
-function cleanupFunctions() {/* TODO: Fix JSX expression */}
-}
-  if (!fs.existsSync(functionsDir)) {/* TODO: Fix JSX expression */}
-  }
+function cleanupFunctions() {/* TODO: Fix JSX expression */};
+};
+  if (!fs.existsSync(functionsDir)) {/* TODO: Fix JSX expression */};
+  };
 ;
 const _files = fs.readdirSync(functionsDir);
   let _removedCount = 0;
   let _keptCount = 0;
-
-
   files.forEach(file => {)
     if (file.endsWith('.js') || file.endsWith('.ts')) {
       if (shouldRemoveFunction(file)) {;
 const _filePath = path.join(functionsDir, file);
         try {
           fs.unlinkSync(filePath);
-
-          removedCount++} catch (error) {}
+          removedCount++} catch (error) {};
       } else {
         keptCount++;
   files.forEach(file => {/* TODO: Fix JSX expression */})
-        } catch (error) {/* TODO: Fix JSX expression */}
-        }
-      } else {/* TODO: Fix JSX expression */}
-      }
-    }
-  })}
-
+        } catch (error) {/* TODO: Fix JSX expression */};
+        };
+      } else {/* TODO: Fix JSX expression */};
+      };
+    };
+  })};
 // Run the cleanup;
 cleanupFunctions();

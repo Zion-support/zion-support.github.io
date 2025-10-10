@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-
 // Performance optimization script;
 const optimizePerformance = () => {
+};
   // console.log removed for production
 // This is a placeholder for performance optimizations
   // In a real implementation, you would:
@@ -11,8 +11,6 @@ const optimizePerformance = () => {
   // 3. Generate critical CSS
   // 4. Optimize fonts
   // 5. Generate service worker
-  
   // console.log removed for production
 };
-
 optimizePerformance();

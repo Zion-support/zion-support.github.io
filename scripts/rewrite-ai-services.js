@@ -1,26 +1,20 @@
 #!/usr/bin
 import fs from 'fs';
-
 // console.log removed for production
 ;
 const content = `'use client';
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
-const AIServicesPage: React.FC = () => {;
-const aiServices = [,
-=======
-import Navigation from '../components
-import Footer from '../components
-import SEOOptimizer from '../components
-
 const AIServicesPage: React.FC = () => {
-  const aiServices = [,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+;
+};
+const aiServices = [
+,
+];
     {,
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making',
@@ -116,10 +110,9 @@ const AIServicesPage: React.FC = () => {
       pric,
     e: '$1,200
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
-      color: 'text-gray-400'}
+      color: 'text-gray-400'};
   ];
-
-  return(<React.Fragment>
+  return(<React .Fragment>
       <SEOOptimizer;
         title="AI Services - Zion Tech Group"
         description="Advanced AI services including machine learning, natural language processing, computer vision, and automation solutions for enterprise applications."
@@ -153,36 +146,32 @@ const AIServicesPage: React.FC = () => {
                   <
                   <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}<
                   <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
+                    {service.description};
                   <
-                  
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-purple-400 mb-2">Features: <
                     <ul className="space-y-1" role="list">,)
                       {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-xs text-gray-300"><
                           <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"><
-                          {feature}
+                          {feature};
                         <)
-                      ))}
+                      ))};
                     <
                   <
-                  
                   <div className="text-center"><
                     <div className={\`text-lg font-bold mb-2 neon-text \${service.color}\`}>{service.price}<
-                    <a;
+                    <a ;
                       href="
                       className={\`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 \${service.color} border border-current hover: bg-current hove,
-    r:text-slate-900\`}
-                      aria-label="Get Started"
-                    >
+    r:text-slate-900\`};
+                      aria-label="Get Started">
                       Get Started;
                     <
                   <
                 <
-              ))}
+              ))};
             <
           <
-
           {/* CTA Section *
           <section className="text-center"><
             <div className="cyber-card p-8 max-w-4 xl mx-auto"><
@@ -193,18 +182,16 @@ const AIServicesPage: React.FC = () => {
                 that will revolutionize your business operations and drive unprecedented growth.
               <
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a;
+                <a ;
                   href="
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                  aria-label="Get Free Consultation"
-                >
+                  aria-label="Get Free Consultation">
                   Get Free Consultation;
                 <
-                <a;
+                <a ;
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
-    r:text-slate-900 transition-all duration-300"
-                >
+    r:text-slate-900 transition-all duration-300">
                   <Phone className="w-5 h-5" 
                   +1 302 464 0950;
                 <
@@ -212,24 +199,9 @@ const AIServicesPage: React.FC = () => {
             <
           <
         <
-
-<<<<<<< HEAD
         <Footer />
       </div>,
     </React.Fragment>)};
-
 export default AIServicesPage;`;
-
 fs.writeFileSync('./app/ai-services/page.tsx', content);
 // console.log removed for production
-=======
-        <Footer 
-      <
-    <
-};
-
-export default AIServicesPage;`;
-
-fs.writeFileSync('./app/ai-services)
-console.log('✅ Rewritten ai-services page successfully');
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

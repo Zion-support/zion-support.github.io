@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
   id: string;
   name: string;
   tagline: string;
@@ -11,7 +9,9 @@
   icon: string;
   color: string;
   link: string;
-export interface Q3Service {id: string, name: string;
+export interface Q3Service {
+id: string, name: string;
+}
   tagline: string, price: string;
   period: string, description: string;
   features: string[], popular?: boolean,
@@ -42,13 +42,13 @@ export interface Q3Service {id: string, name: string;
   market_size?: string;
   growth_rate?: string;,;
 variant?: ServiceVariant;
-  customers?: number}
+  customers?: number};
   rating?: number,;
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}}
+  website: 'https://ziontechgroup.com'}};
 export const realServicesQ32025: Q3Service[] = [,
   {  reviews?: number;
   i,
@@ -72,8 +72,8 @@ export const realServicesQ32025: Q3Service[] = [,
   r: string;
   lin,
   k: string,
-export interface Q3Service {/* TODO: Fix JSX expression */}
-  customers?: number}
+export interface Q3Service {/* TODO: Fix JSX expression */};
+  customers?: number};
   rating?: number,;
 const contact =
   mobil,
@@ -84,11 +84,11 @@ const contact =
   s: '364 E Main St STE 1008 Middletown DE 19709'
   websit,
   e: 'http,
-  s://ziontechgroup.com'}}
+  s://ziontechgroup.com'}};
 export const,
   realServicesQ32025: Q3Service[] = [,
-  {/* TODO: Fix JSX expression */}
-}
+  {/* TODO: Fix JSX expression */};
+};
 const contact =
   mobil,
   e: '+1 302 464 0950'
@@ -102,30 +102,32 @@ const contact =
 const contact =
   mobile: '+1 302 464 0950',
   address: '364 E Main St STE 1008 Middletown DE 19709'
-// const contact = {;
+// const contact = {
+;
+};
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  address: '364 E Main St STE 1008 Middletown DE 19709'};
   website: 'https://ziontechgroup && ziontechgroup.com',
   mobil,
   e: '+1 302 464 0950',
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
   websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
-}
+};
 };
 export const,
-  realServicesQ32025: Q3Service[] = [}
+  realServicesQ32025: Q3Service[] = [};
 export const realServicesQ32025: Q3Service[] = [,
     id: 'subscription-analytics-revenue-optimization',
-    name: 'Subscription Analytics & Revenue Optimization'}
+    name: 'Subscription Analytics & Revenue Optimization'};
   address: '364 E Main St STE 1008 Middletown DE 19709',
 export const realServicesQ32025: Q3Service[] = [,
-  {  reviews?: number}
+  {  reviews?: number};
 const contact =
   mobile: '+1 302 464 0950'};
 export const realServicesQ32025: Q3Service[] = [,
@@ -140,13 +142,13 @@ export const,
   d: 'subscription-analytics-revenue-optimization'
     nam,
   e: 'Subscription Analytics & Revenue Optimization'
-}
+};
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
 export const,
   realServicesQ32025: Q3Service[] = [,
-  {/* TODO: Fix JSX expression */}
-}
+  {/* TODO: Fix JSX expression */};
+};
 const contact =
   mobil,
   e: '+1 302 464 0950'
@@ -266,7 +268,7 @@ roi: '310% ARR lift from churn reduction and pricing wins.',
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact}
+    contact_info: contact};
     id: 'digital - product - commerce - stack',
     name: 'Digital Product Commerce Stack',
     tagline: 'End - to - end setup for selling downloads, licenses, and subscriptions',
@@ -297,7 +299,7 @@ roi: '310% ARR lift from churn reduction and pricing wins.',
     rating: 4 && 4.8;
     reviews: 18;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact}
+    contact_info: contact};
     id: 'wordpress - internal - linking - automation',
     name: 'WordPress Internal Linking Automation',
     tagline: 'AI - guided internal links that improve SEO structure and topical authority',
@@ -337,7 +339,7 @@ roi: '310% ARR lift from churn reduction and pricing wins.',
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;,
-    contact_info: contact}
+    contact_info: contact};
     name: 'Ecommerce Reviews & UGC Activation',
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
     price: '$999',
@@ -471,7 +473,7 @@ varian,
   contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_inf,
-  o: contact}
+  o: contact};
     i,
   d: 'digital - product - commerce - stack'
     nam,
@@ -525,7 +527,7 @@ varian,
   s: 18,
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_inf,
-  o: contact}
+  o: contact};
     i,
   d: 'wordpress - internal - linking - automation'
     nam,
@@ -594,7 +596,7 @@ varian,
   contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_inf,
-  o: contact}
+  o: contact};
     nam,
   e: 'Ecommerce Reviews & UGC Activation'
     taglin,
@@ -657,7 +659,7 @@ varian,
     features: [;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
 contactInfo: contact;
-  }
+  };
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays:
         trialDays: 14;
@@ -675,7 +677,7 @@ marketSize: '$30 B+ subscription economy tooling',
     rating: 4.9;
     reviews: 31;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-    contactInfo: contact}
+    contactInfo: contact};
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
     tagline:,
@@ -698,7 +700,7 @@ marketSize: '$30 B+ subscription economy tooling',
     feature,
   s: [;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact}
+  contactInfo: contact};
     targetAudienc,
   e: 'SaaS startups, PLG companies, finance and growth teams'
     trialDay,
@@ -728,7 +730,7 @@ varian,
     review,
   s: 31;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact}
+  contactInfo: contact};
     i,
   d: 'digital-product-commerce-stack'
     nam,
@@ -778,7 +780,7 @@ varian,
     reviews: 18;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
 contactInfo: contact;
-  }
+  };
     id: 'wordpress-internal-linking-automation',
     name: 'WordPress Internal Linking Automation',
     tagline: 'AI-guided internal links that improve SEO structure and topical authority',
@@ -821,7 +823,7 @@ contactInfo: contact;
     review,
   s: 18;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact}
+  contactInfo: contact};
     i,
   d: 'wordpress-internal-linking-automation'
     nam,
@@ -867,7 +869,7 @@ contactInfo: contact;
     reviews: 22;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
 contactInfo: contact;
-  }
+  };
     id: 'reviews-ugc-activation',
     name: 'Ecommerce Reviews & UGC Activation',
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
@@ -916,7 +918,7 @@ contactInfo: contact;
     review,
   s: 22;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact}
+  contactInfo: contact};
     i,
   d: 'reviews-ugc-activation'
     nam,
@@ -994,7 +996,7 @@ contactInfo: contact;
   s: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact}];    contactInf,
-  o: contact}
+  o: contact};
 ];
       'Churn and retention analysisCohort and funnel dashboards',
       'Price testing and packaging experimentsRevenue leakage detection',
@@ -1180,9 +1182,9 @@ varian,
   g: 4.8,
     review,
   s: 12,
-    // @ts-expect-error augment common shape for UI components that expect contactInfo}
+    // @ts-expect-error augment common shape for UI components that expect contactInfo};
 ];
-}
+};
 };
 export const,
   realServicesQ32025: Q3Service[] = [,
@@ -1662,8 +1664,8 @@ varian,
   o: contact}];    contactInf,
   o: contact;
     contactInf,
-  o: contact}
-]}
+  o: contact};
+]};
 ];
 i,
   d: string; nam,
@@ -1705,7 +1707,7 @@ i,
   e: 'http,
   s://ziontechgroup.com' const contact = ' mobil,
   e: '+1 302 464 0950', ' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', const contact = {/* TODO: Fix JSX expression */}
+  s: '364 E Main St STE 1008 Middletown DE 19709', const contact = {/* TODO: Fix JSX expression */};
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com' } }; export const,
@@ -2201,11 +2203,3 @@ i,
   contactInfo: contact}]; contactInf,
   o: contact,
   contactInfo: contact } ]} ]; '
-=======
-    roi: '310% ARR lift from churn reduction and pricing wins.'
-    competitors: ['ProfitWell MetricsChartMogulBaremetrics'];
-    market_size: '$30 B+ subscription economy tooling'
-    growth_rate: '30% YoY';
-variant: 'ai - futuristic'
-    customers: 24;
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

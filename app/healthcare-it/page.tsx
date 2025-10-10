@@ -5,7 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
-
       icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -40,20 +39,16 @@ import SEOOptimizer from '../components/SEOOptimizer';
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
-    }
+    };
   ];
-
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
-      <SEOOptimizer 
-        title="Healthcare IT Solutions - Zion Tech Group"
+      <SEOOptimizer title="Healthcare IT Solutions - Zion Tech Group"
         description="Comprehensive healthcare IT solutions including HIPAA compliance, patient data security, and system integration for healthcare organizations."
         keywords="healthcare IT, HIPAA compliance, patient data security, EHR integration, healthcare analytics, medical technology"
       />
       <Navigation />
-      
-      {/* Hero Section */}
+      {/* Hero Section */};
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -76,14 +71,12 @@ import SEOOptimizer from '../components/SEOOptimizer';
 </div>
         </div>
       </section>
-
-{/* Features Section */}
+{/* Features Section */};
       <section className="py-20 px-4">
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
@@ -95,8 +88,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* Benefits Section */};
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -107,7 +99,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
               Experience the benefits of modern healthcare technology with our proven solutions.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -115,14 +106,12 @@ import SEOOptimizer from '../components/SEOOptimizer';
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-
               </div>
             ))
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */};
 <section className="py-20 px-4">
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
@@ -131,6 +120,5 @@ import SEOOptimizer from '../components/SEOOptimizer';
           </div>
         </div>
       </section>
-
       <Footer />
 </div>

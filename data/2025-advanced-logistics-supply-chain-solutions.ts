@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
   id: string;
   name: string;
   tagline: string;
@@ -92,7 +90,7 @@
     addres,
   s: string;
     websit,
-  e: string}
+  e: string};
   real_implementatio,
   n: boolean;
   implementation_detail,
@@ -743,7 +741,9 @@ varian,
       rating: 4 && 4.8;
       reviews: 112};
   ];    features: [,
-export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: string;
+export interface AdvancedLogisticsSupplyChainSolution2025 {
+id: string, name: string;
+}
   tagline: string, price: string;
   period: string, description: string;
   features: string[], popular: boolean;
@@ -759,12 +759,12 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: str
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string}
+    website: string};
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
     id: 'ai-powered-supply-chain-optimization', name: 'AI-Powered Supply Chain Optimization',
     tagline: 'Intelligent supply chain planning and optimization',
@@ -787,8 +787,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
   s: 112};
   ];    feature,
   s: [,
-export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
-  e: string}
+export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */};
+  e: string};
     },
     realImplementatio,
   n: boolean, implementationDetail,
@@ -799,7 +799,7 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expr
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [,
     i,
@@ -900,7 +900,7 @@ marketSize: '$28 B warehouse automation market',
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com'}
+        website: 'https://ziontechgroup.com'};
       realImplementation: true;
       implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
@@ -929,7 +929,7 @@ varian,
         websit,
   e: 'http,
   s://ziontechgroup.com'
-      }
+      };
       realImplementatio,
   n: true,
       implementationDetail,
@@ -975,7 +975,7 @@ varian,
     popula,
   r: true, ico,
   n: ''];
-;}
+;};
 ];
 ;
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'
@@ -1404,19 +1404,19 @@ varian,
     ratin,
   g: 4.8,
     review,
-  s: 112}
+  s: 112};
 ];
-export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
-  s: string}
+export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 ;
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
   {
@@ -1448,8 +1448,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['SAP, Oracle, Manhattan Associates, Blue Yonder, Kinaxis'];
     marketSize: '$45 B supply chain management market';
     growthRate: '28% annual growth';
-    variant: 'logistics'}
-    contactInfo: {}
+    variant: 'logistics'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1489,8 +1489,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['IBM Quantum, Google Quantum, Microsoft Azure Quantum, D-Wave, Rigetti'];
     marketSize: '$8 B quantum computing market';
     growthRate: '65% annual growth';
-    variant: 'quantum-logistics'}
-    contactInfo: {}
+    variant: 'quantum-logistics'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1530,8 +1530,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['Verizon Connect, Geotab, Samsara, Fleet Complete, Trimble'];
     marketSize: '$30 B fleet management market';
     growthRate: '32% annual growth';
-    variant: 'iot-futuristic'}
-    contactInfo: {}
+    variant: 'iot-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1571,8 +1571,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['IBM Food Trust, VeChain, WaltonChain, OriginTrail, Provenance'];
     marketSize: '$22 B blockchain supply chain market';
     growthRate: '45% annual growth';
-    variant: 'blockchain-futuristic'}
-    contactInfo: {}
+    variant: 'blockchain-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1612,8 +1612,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     competitors: ['Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore'];
     marketSize: '$28 B warehouse automation market';
     growthRate: '38% annual growth';
-    variant: 'ai-supply-chain-enterprise'}
-    contactInfo: {}
+    variant: 'ai-supply-chain-enterprise'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1635,14 +1635,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
-  {/* TODO: Fix JSX expression */}
-  t: 'logistics'}
+  {/* TODO: Fix JSX expression */};
+  t: 'logistics'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1665,10 +1665,10 @@ export const,
   g: 4.8;
     review,
   s: 98};
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-logistics'}
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-logistics'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1691,10 +1691,10 @@ export const,
   g: 4.9;
     review,
   s: 23};
-  {/* TODO: Fix JSX expression */}
-  t: 'iot-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'iot-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1717,10 +1717,10 @@ export const,
   g: 4.7;
     review,
   s: 145};
-  {/* TODO: Fix JSX expression */}
-  t: 'blockchain-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'blockchain-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1743,10 +1743,10 @@ export const,
   g: 4.6;
     review,
   s: 56};
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-supply-chain-enterprise'}
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-supply-chain-enterprise'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1768,7 +1768,7 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 112}
+  s: 112};
 ];
 ;
 i,
@@ -2236,7 +2236,7 @@ i,
   e: '2025-02-18', customer,
   s: 178, ratin,
   g: 4.8, review,
-  s: 112 } ];' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
+  s: 112 } ];' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2245,7 +2245,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [; {/* TODO: Fix JSX expression */}
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2255,7 +2255,7 @@ i,
   e: '2025-01-26'; customer,
   s: 156; ratin,
   g: 4.8; review,
-  s: 98}; {/* TODO: Fix JSX expression */}
+  s: 98}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2265,7 +2265,7 @@ i,
   e: '2025-02-02'; customer,
   s: 34; ratin,
   g: 4.9; review,
-  s: 23}; {/* TODO: Fix JSX expression */}
+  s: 23}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2275,7 +2275,7 @@ i,
   e: '2025-02-07'; customer,
   s: 234; ratin,
   g: 4.7; review,
-  s: 145}; {/* TODO: Fix JSX expression */}
+  s: 145}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2285,7 +2285,7 @@ i,
   e: '2025-02-12'; customer,
   s: 89; ratin,
   g: 4.6; review,
-  s: 56}; {/* TODO: Fix JSX expression */}
+  s: 56}; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2296,10 +2296,3 @@ i,
   s: 178; ratin,
   g: 4.8; review,
   s: 112} ]; '
-=======
-      market_size: '$45B supply chain management market'
-      growth_rate: '28% annual growth';
-variant: 'logistics'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

@@ -1,5 +1,6 @@
-
-export interface EnterpriseITService2029V2 {;
+export interface EnterpriseITService2029V2 {
+;
+}
   id: string;
   name: string;
   description: string;
@@ -36,18 +37,18 @@ export interface EnterpriseITService2029V2 {;
   contact: unknown;
     mobile: string;
     email: string;
-    website: string}
-    address: string}
-  }
+    website: string};
+    address: string};
+  };
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
     description:,
-export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
-  e: string}
+export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */};
+  e: string};
     addres,
-  s: string}
-  }
+  s: string};
+  };
 export const,
   enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     i,
@@ -117,8 +118,8 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
+  };
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
     description:,
@@ -194,8 +195,8 @@ export const,
   s://ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
     i,
   d: 'quantum-cloud-infrastructure'
     nam,
@@ -280,8 +281,8 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
+  };
     id: 'ai-powered-enterprise-security',
     name: 'AI-Powered Enterprise Security',
     description:,
@@ -347,8 +348,8 @@ export const,
   s://ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
     i,
   d: 'ai-powered-enterprise-security'
     nam,
@@ -424,8 +425,8 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
+  };
     id: 'autonomous-it-operations-center',
     name: 'Autonomous IT Operations Center',
     description:,
@@ -504,8 +505,8 @@ export const,
   s://ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
     i,
   d: 'autonomous-it-operations-center'
     nam,
@@ -631,8 +632,8 @@ export const,
   s://ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -733,7 +734,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   };
     i,
   d: 'ai-powered-enterprise-security', nam,
@@ -837,7 +838,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   };
     i,
   d: 'autonomous-it-operations-center', nam,
@@ -915,8 +916,8 @@ export const,
   i: '450% within 18 months'
     deploymen,
   t: 'Cloud-native, hybrid options'
-    }
-  }
+    };
+  };
 ];
 ;
 ];      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management'
@@ -946,8 +947,8 @@ export const,
     contact:
         contact: unknown;
       mobile: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
+  };
 ];
     api: 'Operations management APIs', mobile: 'Mobile operations apps',
     security: 'Enterprise security, access controls',
@@ -1012,8 +1013,8 @@ export const,
   e: '+1 302 464 0950'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
     ap,
   i: 'Operations management APIs', mobil,
@@ -1049,11 +1050,11 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
 ;
-export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
+export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */};
   e: string} addres,
   s: string} } export const,
   enterpriseITServices2029V2: EnterpriseITService2029V2[] = [ i,

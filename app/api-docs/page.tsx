@@ -1,37 +1,26 @@
 'use client';
 import React, { useState } from 'react';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer'
+import SEOOptimizer from '../components/SEOOptimizer';
 export default function APIDocsPage() {;
 const [copiedCode, setCopiedCode] = useState<string | null>(null);
 const [searchQuery, setSearchQuery] = useState('');
 ;
 const copyToClipboard = (code: string, id: string) => {
-=======
-import Navigation from '../components
-import Footer from '../components
-import SEOOptimizer from '../components
-
-export default function APIDocsPage() {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const copyToClipboard = (code: string, id: string) => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
 ;
 const apiEndpoints = [
-    {
+[
+        {
       title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
       icon: Brain,
       endpoints: [
-        {
+            {
           nam,
     e: 'Text Analysis',
           method: 'POST',
@@ -42,7 +31,7 @@ const apiEndpoints = [
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Typ,
     e: application
-  -d '{
+  -d '    {
     "text": "Your text to analyze",
     "features": ["sentiment", "entities", "key_phrases"]
   }'`
@@ -61,7 +50,7 @@ const apiEndpoints = [
     s://example.com
     "features": ["objects", "faces", "text"]
   }'`
-        }
+        };
       ]
     },
     {
@@ -87,9 +76,9 @@ const apiEndpoints = [
       "cpu": "2",
       "memory": "4GB",
       "instances": 3
-    }
+    };
   }'`
-        }
+        };
       ]
     },
     {
@@ -113,9 +102,9 @@ const apiEndpoints = [
     "operations": ["aggregate", "filter", "transform"],
     "output_format": "json"
   }'`
-        }
+        };
       ]
-    }
+    };
   ];
 ;
 const filteredEndpoints = apiEndpoints.map(category => ({
@@ -126,12 +115,8 @@ const filteredEndpoints = apiEndpoints.map(category => ({
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )
   })).filter(category => category.endpoints.length > 0);
-
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
-<<<<<<< HEAD
-=======
-      {/* Hero Section */}
+      {/* Hero Section */};
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -143,10 +128,8 @@ const filteredEndpoints = apiEndpoints.map(category => ({
           </p>
         </div>
       </section>
-
-      {/* Quick Start */}
+      {/* Quick Start */};
       <section className="py-16 px-4">
->>>>>>> main
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start<
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
@@ -160,7 +143,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                 Get API Key →
               <
             <
-            
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Code className="w-6 h-6 text-white" 
@@ -171,7 +153,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                 View Examples →
               <
             <
-            
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" 
@@ -186,7 +167,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({
           <
         <
       <
-
       {/* API Endpoints *
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -195,14 +175,13 @@ const filteredEndpoints = apiEndpoints.map(category => ({
             {filteredEndpoints.map((category), categoryIndex) => (<div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    <category.icon className="w-6 h-6 text-white" 
+                    <category .icon className="w-6 h-6 text-white" 
                   <
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}<
                     <p className="text-gray-300">{category.description}<
                   <
                 <
-                
                 <div className="space-y-6">)
                   {category.endpoints.map((endpoint, endpointIndex) => (<div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white
                       <div className="flex items-center justify-between mb-4">
@@ -212,8 +191,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                               ? 'bg-green-500
                               : 'bg-blue-500
                           }`}>
-                            {endpoint.method}
-<<<<<<< HEAD
+                            {endpoint.method};
                           </span>
                           <code className="text-purple-400 font-mono">{endpoint.path}</code>
                         </div>
@@ -222,40 +200,20 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                         >
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
-                            <React.Fragment>
+                            <React .Fragment>
                               <Check className="w-4 h-4" />
                               Copied!
                             </React.Fragment>
                           ) : (
-                            <React.Fragment>
+                            <React .Fragment>
                               <Copy className="w-4 h-4" />
                               Copy
                             </React.Fragment>);
                         </button>
                       </div>
-=======
-                          <
-                          <code className="text-purple-400 font-mono">{endpoint.path}<
-                        <
-                        <button)
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
-                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-                        >
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? (<>
-                              
-                              <Copy className="w-4 h-4" 
-
-                            <)
-                          )}
-                        <
-                      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                      
                       <p className="text-gray-300 mb-4">{endpoint.description}<
-                      
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-gray-300 text-sm">
-<<<<<<< HEAD
                           <code>{endpoint.code}</code>
                         </pre>
                       </div>
@@ -267,20 +225,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({
           </div>
         </div>
       </section>
-=======
-                          <code>{endpoint.code}<
-                        <
-                      <
-                    <
-                  ))}
-                <
-              <
-            ))}
-          <
-        <
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
       {/* CTA Section *
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
@@ -301,17 +245,5 @@ const filteredEndpoints = apiEndpoints.map(category => ({
           <
         <
       <
-
-<<<<<<< HEAD
       <Footer />
-<<<<<<< HEAD
     </div>);
-=======
-      <Footer 
-    <
-  );
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-=======
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

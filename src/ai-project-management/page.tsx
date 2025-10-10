@@ -1,8 +1,7 @@
 'use client';
 import { Helmet } from 'react-helmet-async';
-
 export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
-}
+};
   return (<div><Helmet><
         <title>AI Project Management Solutions - Zion Tech Group<
         <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /><
@@ -27,7 +26,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.
             <
           <
-
           {/* Features Grid *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features<
@@ -83,7 +81,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <
             <
           <
-
           {/* Pricing Section *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<
@@ -131,7 +128,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <
             <
           <
-
           {/* Benefits Section *
           <section className="mb-16"><
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results<
@@ -163,7 +159,6 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <
             <
           <
-
           {/* CTA Section *
           <section className="text-center"><
             <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today<
@@ -186,16 +181,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
             <
           <
         <
-        
-<<<<<<< HEAD
         <Footer /></Footer>
       </div>
     </div>
   )}"
-=======
-        <Footer /><
-      <
-    <
-  );
-}"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

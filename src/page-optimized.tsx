@@ -1,4 +1,3 @@
-
 'use client';
 import React, { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
@@ -13,36 +12,27 @@ const UnifiedBanner = lazy(() =>
 //   )
 );
 const ContentPromotion = lazy(() =>
-  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {// TODO: Add content}
-}
+  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {// TODO: Add content};
+};
     return { default: EmptyComponent } as { default: React.ComponentType }});
 const ContentShowcase = lazy(() =>
-  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({// TODO: Add content}
+  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({// TODO: Add content};
 };
   default: EmptyComponent}))
-export default function OptimizedHomePage() {// TODO: Add content}
-}
+export default function OptimizedHomePage() {// TODO: Add content};
+};
   return (
-    
-          
-          
-          
-          
-          
-          
-          
           <div>Coming Soon</div>
   )
-    
           <div className="min-h-screen bg-white">
       <SEOOptimizer />
       <AccessibilityEnhancer>
         <div />
       </AccessibilityEnhancer>
       <PerformanceMonitor />
-      {/* Main Content */}
+      {/* Main Content */};
       <main className="relative">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -57,20 +47,10 @@ export default function OptimizedHomePage() {// TODO: Add content}
 // Transform your enterprise with AI-powered solutions that deliver 300% ROI,
 //                 70% cost reduction, and 90% efficiency gains. Expert AI consulting,
 //                 autonomous systems, and digital transformation services.
-              
-          
-          
-          
-          
-          
-          
-          
-          
           </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
-// >
+                <a href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
+//>
 //                   Get Your Free AI Assessment;
           </a>
                   href="/case-studies" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
@@ -80,6 +60,4 @@ View Success Stories;
       </main>
       <Footer />
     </div>
-  )}
-
-
+  )};

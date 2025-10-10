@@ -1,35 +1,33 @@
 const fs = require('fs');
 const path = require('path');
-
 // Simple wrapper function to replace withSentry;
 // withSentry removed
 ;
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
-
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return}
+    return};
 ;
 const { name, email, company, phone, message, location } = req.body || {};
-
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })}
+    fs.mkdirSync(dir, { recursive: true })};
 ;
 let existing = [];
   try {
     if (fs.existsSync(file)) {;
 const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = []}
+      if (!Array.isArray(existing)) existing = []};
   } catch (error) {
     // console.error removed for production
-existing = []}
+existing = []};
 ;
 const newRequest = {
+};
     id: Date.now().toString(),
     name,
     email,
@@ -40,9 +38,7 @@ const newRequest = {
     timestamp: new Date().toISOString(),
     status: 'pending'
   };
-
   existing.push(newRequest);
-
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
@@ -55,7 +51,6 @@ const newRequest = {
     // console.error removed for production
 res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save request' }))}
-}
+    res.end(JSON.stringify({ error: 'Failed to save request' }))};
+};
 module.exports = handler;
-

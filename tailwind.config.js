@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [,
@@ -142,6 +141,7 @@ export default {
   plugins: [,;
 function({ addUtilities }) {;
 const newUtilities = {
+};
         '.neon-text': {
           color: 'var(--neon-cyan)',
           animation: 'neon-glow 2 s ease-in-out infinite alternate'},
@@ -213,16 +213,7 @@ border: 'none',
           margin: 'inherit',
           overflow: 'visible',
           clip: 'auto',
-          whiteSpace: 'normal'}}
+          whiteSpace: 'normal'}};
       addUtilities(newUtilities)
-    }
-  ]}
-=======
-          border: 'none'
-          color: 'white'
-          padding: '12px 24px'
-          borderRadius: '8px'
-          fontWeight: '600'
-          textTransform: 'uppercase',;
-letterSpacing: '1 px',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+    };
+  ]};

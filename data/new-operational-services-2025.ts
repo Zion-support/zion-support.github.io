@@ -1,4 +1,3 @@
-
   id: string;
   name: string;
   tagline: string;
@@ -11,8 +10,10 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface NewOperationalService2025 {;,
-    address: string}
+export interface NewOperationalService2025 {
+;,
+}
+    address: string};
   i,
   d: string;
   nam,
@@ -37,8 +38,8 @@ export interface NewOperationalService2025 {;,
   e: string;
     emai,
   l: string;
-export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
-  s: string}
+export interface NewOperationalService2025 {/* TODO: Fix JSX expression */};
+  s: string};
 };
   i,
   d: string;
@@ -59,14 +60,14 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean;
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  l: string}
+  o: {/* TODO: Fix JSX expression */};
+  l: string};
     addres,
-  s: string}
-  }
-}
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
+  s: string};
+  };
+};
+      address: "364 E Main St STE 1008 Middletown DE 19709"};
+  };
 ];
   id: string, name: string;
   tagline: string, price: string;
@@ -75,8 +76,8 @@ export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
   realImplementation: boolean;
   contactInfo: unknown;
     mobile: string, email: string;
-    address: string}
-}
+    address: string};
+};
 export const newOperationalServices2025: NewOperationalService2025[] = [,
     id: "smart-operations-center", name: "Smart Operations Center",
     tagline: "AI-powered operations management", price: '$119/month',
@@ -89,19 +90,19 @@ export const newOperationalServices2025: NewOperationalService2025[] = [,
       "Performance insights"],
     link: "/services/smart-operations-center", category: "New Operational Services 2025",
     realImplementation: true;
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
+    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"};
+  };
 ];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
+      address: "364 E Main St STE 1008 Middletown DE 19709"};
+  };
 ];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+    };
+  };
 ];
   i,
   d: string, nam,
@@ -123,8 +124,8 @@ export const newOperationalServices2025: NewOperationalService2025[] = [,
   e: string, emai,
   l: string,
     addres,
-  s: string}
-}
+  s: string};
+};
 export const,
   newOperationalServices2025: NewOperationalService2025[] = [,
     i,"
@@ -151,23 +152,23 @@ export const,
     contactInf,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+    };
+  };
 ];
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+    };
+  };
 ];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+    };
+  };
 ];
 ;
     id: 'smart-operations-center',
@@ -242,8 +243,8 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+    };
+  };
 ];
 i,
   d: string; nam,
@@ -257,7 +258,7 @@ i,
   n: boolean; contactInf,
   o: mobil,
   e: string; emai,
-  l: string; export interface NewOperationalService2025 {/* TODO: Fix JSX expression */}
+  l: string; export interface NewOperationalService2025 {/* TODO: Fix JSX expression */};
   s: string }; i,
   d: string; nam,
   e: string; taglin,
@@ -268,7 +269,7 @@ i,
   k: string; categor,
   y: string; realImplementatio,
   n: boolean; contactInf,
-  o: {/* TODO: Fix JSX expression */}
+  o: {/* TODO: Fix JSX expression */};
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,

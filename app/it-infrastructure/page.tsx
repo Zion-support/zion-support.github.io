@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -22,10 +21,11 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+    };
   ];
 ;
 const benefits = [
+];
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -35,9 +35,7 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>Page | Zion Tech Group<
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." 
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" 
@@ -46,33 +44,16 @@ const benefits = [
           <
         <
       <
-
-<<<<<<< HEAD
               </div>
             ))
           </div>
         </div>
       </section>
-
               </div>
             ))
           </div>
         </div>
       </section>
-=======
-              <)
-            ))}
-          <
-        <
-      <
-
-              <
-            ))}
-          <
-        <
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
       {/* CTA Section *
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -86,25 +67,12 @@ const benefits = [
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,
     r:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                
                 <Mail className="mr-2 h-5 w-5" 
                 Email Us
-<<<<<<< HEAD
               </button>
             </div>
           </div>
         </div>
       </section>
     </div>)
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default PagePage;

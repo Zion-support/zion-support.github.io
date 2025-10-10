@@ -1,13 +1,10 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    return}
-
+    return};
   try {;
 const { name, email, phone, details, country, service } = req.body || {};
-
     if (!name || !email || !phone || !details) {
-      return}
-
+      return};
     // Process quote submission logic here
     // In a real application, you would:
     // 1. Save to your database
@@ -15,6 +12,7 @@ const { name, email, phone, details, country, service } = req.body || {};
     // 3. Send confirmation email to the customer
     // 4. Integrate with your CRM;
 const quoteData = {
+};
       name,
       email,
       phone,
@@ -24,7 +22,6 @@ const quoteData = {
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
-
     // console.log removed for production
 res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -37,5 +34,5 @@ res.statusCode = 200;
     // console.error removed for production
 res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Internal server error' }))}
-}
+    res.end(JSON.stringify({ error: 'Internal server error' }))};
+};

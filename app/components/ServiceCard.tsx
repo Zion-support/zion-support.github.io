@@ -1,16 +1,16 @@
 'use client';
 import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-
 interface ServiceCardProps {
-  title: string;
+  title: string
+}
   description: string;
   features: string[];
   price?: string;
   popular?: boolean;
   onClick?: () => void;
   className?: string;
-}
+};
 ;
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
@@ -35,7 +35,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         {price && (
           <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
       </div>
-
       <ul className="space-y-3 mb-6">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
@@ -44,16 +43,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           </li>
         ))
       </ul>
-
       {onClick && (
-        <button
-          onClick={onClick}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
-        >
+        <button onClick={onClick}
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
           Get Started
           <ArrowRight className="w-4 h-4 ml-2" />
         </button>);
     </div>
   );
-}
+};
 export default ServiceCard;

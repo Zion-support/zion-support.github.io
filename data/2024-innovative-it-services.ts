@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-export interface InnovativeITService2024 {id: string;
+export interface InnovativeITService2024 {
+id: string;
+}
   name: string;
   tagline: string;
   price: string;
@@ -31,13 +32,13 @@ export interface InnovativeITService2024 {id: string;
   contactInfo: unknown;
     mobile: string;
     email: string;
-    address: string}
-    website: string}
+    address: string};
+    website: string};
 };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
-  reviews: number}
+  reviews: number};
 export const innovativeITServices2024: InnovativeITService2024[] = [
     id: "autonomous-devops-platform",
     name: "Autonomous DevOps Platform",
@@ -89,10 +90,10 @@ marketSize: '$8.2B market',
         customers: 950;
     rating: 4.8;
     reviews: 520;
-export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeITService2024 {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
 };
   realImplementatio,
   n: boolean;
@@ -101,7 +102,7 @@ export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   launchDat,
   e: string;
   review,
-  s: number}
+  s: number};
 export const,
   innovativeITServices2024: InnovativeITService2024[] = [,
     i,
@@ -195,7 +196,7 @@ varian,"
     ratin,
   g: 4.8,
     review,
-  s: 520}
+  s: 520};
 ];
 export interface InnovativeITService2024,
   id: string; nam,
@@ -279,11 +280,3 @@ export interface InnovativeITService2024,
   s: 950, ratin,
   g: 4.8, review,
   s: 520 } ];"
-=======
-    marketSize: "$8.2B market"
-    growthRate: "20.1% annual growth";
-variant: "ai-futuristic"
-    contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com",
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

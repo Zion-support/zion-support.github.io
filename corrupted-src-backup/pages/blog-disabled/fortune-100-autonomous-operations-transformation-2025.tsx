@@ -1,26 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function CaseStudy(): React.JSX.Element {
-<<<<<<< HEAD
-  return(<React.Fragment>
+  return(<React .Fragment>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
           <title>Fortune 100 Autonomous Operations Transformation 2025 - Zion Tech Group</title>
-=======
-  return(<>
-      <Header 
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"><
-        
-          <title>Fortune 100 Autonomous Operations Transformation 2025 - Zion Tech Group<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <meta;
             name="description"
             content="Case study: Fortune 100 Autonomous Operations Transformation 2025 from Zion Tech Group"
           /><
         <
-
         <div className="max-w-4xl mx-auto px-4 py-20"><
           <div className="mb-12"><
             <h1 className="text-4xl m,
@@ -33,7 +23,6 @@ export default function CaseStudy(): React.JSX.Element {
               <span>2025-01-01<
             <
           <
-
           <div className="prose prose-lg prose-invert max-w-none"><
             <div className="text-gray-200 leading-relaxed"><
               <h2>Introduction<
@@ -47,7 +36,6 @@ export default function CaseStudy(): React.JSX.Element {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor;
                 incididunt ut labore et dolore magna aliqua.
               <
-
               <h2>Conclusion<
               <p>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
@@ -55,7 +43,6 @@ export default function CaseStudy(): React.JSX.Element {
               <
             <
           <
-
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
             <div className="flex flex-col sm: flex-row justify-between items-center gap-6">)
               <div>)
@@ -67,15 +54,13 @@ export default function CaseStudy(): React.JSX.Element {
               <div><
                 <h3 className="text-xl font-bold mb-2">Share this case study<
                 <div className="flex gap-4"><
-                  <a
-                    href = { `https://twitter.com/intent
+                  <a href = { `https://twitter.com/intent
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-                  >
+                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
                     Twitter;
                   <
-                  <a;
+                  <a ;
                     href={`https://www.linkedin.com/sharing/share-offsite
                     target="_blank"
                     rel="noopener noreferrer"
@@ -86,8 +71,7 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
-  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-                  >
+  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
                     Twitter;
                   <
                   <a><
@@ -113,20 +97,10 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
   hover:bg-gray-100 transition-colors"
               >
                 Back to Home;
-<<<<<<< HEAD
               </a>
             </div>
           </div>
         </div>
       </div>,
-    </React.Fragment>)}
-=======
-              <
-            <
-          <
-        <
-      <
-    <
- };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+    </React.Fragment>)};
 "`

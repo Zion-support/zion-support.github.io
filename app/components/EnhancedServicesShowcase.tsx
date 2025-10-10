@@ -1,8 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
 ;
-const EnhancedServicesShowcase: React.FC = () => {const services = [
+const EnhancedServicesShowcase: React.FC = () => {
+const services = [
+];
+}
     {
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
@@ -35,8 +37,7 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
 stats: '95% Efficiency']
     }
-  ];
-
+];;
   return (
     <section className="py-16"></section>
       <div className="container mx-auto px-4"></div>
@@ -48,19 +49,16 @@ stats: '95% Efficiency']
             Comprehensive AI and IT solutions designed to transform your business and drive innovation
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
           {services.map((service, index) => (</div>
             <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300"></div>
               <div className="flex items-center mb-4"></div>
-                <service.icon className={`w-12 h-12 ${service.color} mr-4`} />
+                <service .icon className={`w-12 h-12 ${service.color} mr-4`} />
                 <div>
                   <h3 className="text-xl font-bold text-white"></h>{service.title}</h3>
                   <div className="text-sm text-cyan-400 font-semibold"></di>{service.stats}</div>
               </div>
-              
               <p className="text-gray-300 mb-4">{service.description}</p>
-              
               <ul className="space-y-2 mb-6"></ul>
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
@@ -69,7 +67,6 @@ stats: '95% Efficiency']
                   </li>
                 ));
               </ul>
-              
               <a
                 href="/services"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
@@ -79,7 +76,6 @@ stats: '95% Efficiency']
             </div>
           ));
         </div>
-
         <div className="text-center mt-12"></div>
           <a
             href="/services"
@@ -93,7 +89,4 @@ stats: '95% Efficiency']
 )]
     };
 export default EnhancedServicesShowcase;
-}
-=======
-      stats: '95% Efficiency';);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
+};

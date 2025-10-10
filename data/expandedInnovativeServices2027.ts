@@ -45,7 +45,7 @@ export type ExpandedService2027 =
   rating: number;
   reviews: number;
   launchDate: string;
-  status: 'active' | 'beta' | 'coming-soon'}
+  status: 'active' | 'beta' | 'coming-soon'};
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
 export const advancedCybersecurityServices: ExpandedService2027[] = [
     id: 'quantum-threat-hunter',
@@ -144,7 +144,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
   e: string,
   statu,
   s: 'active' | 'beta' | 'coming-soon'
-}
+};
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
 export const,
   advancedCybersecurityServices: ExpandedService2027[] = [,
@@ -407,7 +407,7 @@ export const,
         rating: 4.8;
     reviews: 189;
     launchDate: '2027-02-01',
-    status: 'active'}
+    status: 'active'};
 ];
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
 export const advancedDataAnalyticsServices: ExpandedService2027[] = [
@@ -494,7 +494,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
   e: '2027-02-01',
     statu,
   s: 'active'
-  }
+  };
 ];
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
 export const,
@@ -758,7 +758,7 @@ export const,
         rating: 4.8;
     reviews: 198;
     launchDate: '2027-02-15',
-    status: 'active'}
+    status: 'active'};
 ];
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
 export const advancedCloudDevOpsServices: ExpandedService2027[] = [
@@ -845,7 +845,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
   e: '2027-02-15',
     statu,
   s: 'active'
-  }
+  };
 ];
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
 export const,
@@ -1103,7 +1103,7 @@ export const,
         rating: 4.7;
     reviews: 245;
     launchDate: '2027-02-05',
-    status: 'active'}
+    status: 'active'};
 ];
 // 4. ADVANCED IOT & EDGE COMPUTING;
 export const advancedIoTServices: ExpandedService2027[] = [,
@@ -1190,7 +1190,7 @@ export const advancedIoTServices: ExpandedService2027[] = [,
   e: '2027-02-05',
     statu,
   s: 'active'
-  }
+  };
 ];
 // 4. ADVANCED IOT & EDGE COMPUTING;
 export const,
@@ -1448,7 +1448,7 @@ export const,
         rating: 4.9;
     reviews: 156;
     launchDate: '2027-02-10',
-    status: 'active'}
+    status: 'active'};
 ];
 // 5. ADVANCED FINANCIAL TECHNOLOGY;
 export const advancedFinTechServices: ExpandedService2027[] = [
@@ -1535,7 +1535,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
   e: '2027-02-10',
     statu,
   s: 'active'
-  }
+  };
 ];
 // 5. ADVANCED FINANCIAL TECHNOLOGY;
 export const,
@@ -1793,7 +1793,7 @@ export const,
         rating: 4.6;
     reviews: 423;
     launchDate: '2027-01-01',
-    status: 'active'}
+    status: 'active'};
 ];
 // 6. ADVANCED HEALTHCARE TECHNOLOGY;
 export const advancedHealthcareServices: ExpandedService2027[] = [
@@ -1880,7 +1880,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
   e: '2027-01-01',
     statu,
   s: 'active'
-  }
+  };
 ];
 // 6. ADVANCED HEALTHCARE TECHNOLOGY;
 export const,
@@ -2216,10 +2216,11 @@ export const,
   e: '2027-01-15',
     statu,
   s: 'active'
-  }
+  };
 ];
 // Export all expanded services;
 export const ALL_EXPANDED_SERVICES_2027 = [
+];
   ...advancedCybersecurityServices,
   ...advancedDataAnalyticsServices,
   ...advancedCloudDevOpsServices,
@@ -2229,6 +2230,7 @@ export const ALL_EXPANDED_SERVICES_2027 = [
 ];
 // Service categories for filtering;
 export const EXPANDED_SERVICE_CATEGORIES = [
+];
   'All',
   'Cybersecurity',
   'Data Analytics',
@@ -2243,7 +2245,7 @@ export const getExpandedServicesByCategory = (category: string): ExpandedService
 export const getExpandedServicesByCategory = (categor)
   y: string): ExpandedService2027[] =>;
   if (category === 'All')
-    return ALL_EXPANDED_SERVICES_2027}
+    return ALL_EXPANDED_SERVICES_2027};
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)};
 // Helper function to get services by subcategory;
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] =>;

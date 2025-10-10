@@ -1,14 +1,12 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
-
 function fixAllJSXIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
     // Fix all self-closing div tags that should contain content
     const patterns = [
+];
       // Fix self-closing div tags with content after them
       {
         regex: /<div([^>]*)><\/div>\s*([^<]+)\s*<\/div>/g,
@@ -70,33 +68,30 @@ function fixAllJSXIssues(filePath) {
       {
         regex: /<\/b>/g,
         replacement: '</button>'
-      }
+      };
     ];
-
     patterns.forEach(pattern => {
       const newContent = content.replace(pattern.regex, pattern.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
-      }
+      };
     });
-
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed JSX issues in: ${filePath}`);
       return true;
-    }
+    };
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
-
+  };
+};
 // Fix the main page file
 const filePath = '/workspace/app/page.tsx';
 if (fixAllJSXIssues(filePath)) {
   console.log('All JSX issues fixed successfully');
 } else {
   console.log('No JSX issues found');
-}
+};

@@ -1,18 +1,14 @@
 import React from 'react';
-
-
   children: ReactNode;
-
   fallback?: ReactNode;
   onError?: (erro,
   r: Error, errorInf)
   o: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   maxRetries?: number;
-  showRetryButton?: boolean}
-
+  showRetryButton?: boolean};
 interface State {/* TODO: Fix JSX expression */}
-  O: Add content}
+  O: Add content};
 };
   hasErro,
   r: boolean;
@@ -22,21 +18,18 @@ interface State {/* TODO: Fix JSX expression */}
     retryCoun,
   t: number;,
     isRetryin,
-  g: boolean}
+  g: boolean};
 class ComprehensiveErrorBoundary extends Component;
           <Props, State> {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
-
+  O: Add content};
+};
   private maxRetries: number;
   constructor(props: Props) {// TODO: Add content}
-}
-
+};
 class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
 constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = {// TODO: Add content}
-
 };
   hasErro,
   r: false,
@@ -47,14 +40,14 @@ constructor(props: ErrorBoundaryProps) {
       errorI,
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
-    this.maxRetries = props.maxRetries || 3}
+    this.maxRetries = props.maxRetries || 3};
   static getDerivedStateFromError(erro)
   r: Error): Partial;
           <State> {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
     return {/* TODO: Fix JSX expression */}
-  O: Add content}
+  O: Add content};
 };
   hasErro,
   r: true,
@@ -64,29 +57,27 @@ constructor(props: ErrorBoundaryProps) {
       retryCoun,
   t: 0,
       isRetryin,
-  g: false}}
+  g: false}};
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
     this.setState({/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
 //       error,
 //       errorInfo;)
     });
     if (this.props.onError) {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
-      this.props.onError(error, errorInfo)}
+  O: Add content};
+};
+      this.props.onError(error, errorInfo)};
     if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
-  O: Add content}
-
-}
-      this.reportError(error, errorInfo)}
-  }
-
+  O: Add content};
+};
+      this.reportError(error, errorInfo)};
+  };
   private reportError = (erro,
   r: Error, errorInf)
   o: ErrorInfo) => {// Enhanced error reporting}
@@ -108,10 +99,10 @@ constructor(props: ErrorBoundaryProps) {
   t: this.state.retryCount};
     // Send to error reporting service;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
       (window as any).gtag('event', 'exception', {/* TODO: Fix JSX expression */}
-  O: Add content}
+  O: Add content};
 };
   descriptio,
   n: error.message,
@@ -119,32 +110,32 @@ constructor(props: ErrorBoundaryProps) {
   l: false,
         custom_ma,
   p: {/* TODO: Fix JSX expression */}
-  O: Add content}
+  O: Add content};
 };
   error_i,
   d: this.state.errorId,
           retry_coun,
   t: this.state.retryCount})
-      })}
+      })};
     // Log to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
-      }
+  O: Add content};
+};
+      };
   };
   private handleRetry = async () => {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
     if (this.state.retryCount;)
           < this.maxRetries) {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
       this.setState({/* TODO: Fix JSX expression */})
   g: true });
       // Simulate retry delay;
       await new Promise(resolve => setTimeout(resolve, 1000));
       this.setState(prevState => ({/* TODO: Fix JSX expression */}
-  O: Add content}
+  O: Add content};
 };
   hasErro,
   r: false,
@@ -156,36 +147,33 @@ constructor(props: ErrorBoundaryProps) {
   t: prevState.retryCount + 1,
         isRetryin,
   g: false;)
-      }))}
+      }))};
   };
   private handleReload = () => {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
     window.location.reload()};
   render() {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
     if (this.state.hasError) {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
       if (this.props.fallback) {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
-        return this.props.fallback}
+  O: Add content};
+};
+        return this.props.fallback};
       if (this.state.isRetrying) {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
         return (<div>Coming Soon</div>)
   )
-          
           <ModernLoadingSpinner></ModernLoadingSpinner>
             size="lg""
-
             text="Retrying..."
             fullScreen={true}
 //           />
-        )}
-
+        )};
       return (<div>Coming Soon</div>)
   )
         "
@@ -197,15 +185,6 @@ constructor(props: ErrorBoundaryProps) {
           </h1>"
             <p className="text-gray-300 mb-6"></p>
 // We encountered an unexpected error. Our team has been notified and is working to fix it.
-            
-          
-          
-          
-          
-          
-          
-          
-          
           </p>"
             <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left"></div>"
               <h3 className="text-white font-semibold mb-2">Error,
@@ -229,61 +208,40 @@ constructor(props: ErrorBoundaryProps) {
           <button></button>
                   onClick={this.handleRetry}"
                   className="cyber-button"`
-
-                  aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
+                  aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`};
 //                 >
                    Try Again ({this.maxRetries - this.state.retryCount} left)
                 </button>
-              )}
+              )};
               <button></button>
                 onClick={this.handleReload}"
                 className="cyber-button""
                 aria-label="Reload the entire page"
-
 // >
 //                  Reload Page;
           </button>
               <a></a>"
                 href="/contact""
                 className="cyber-button""
-
                 aria-label="Contact support for help with this error"
 //               >
 //                  Contact Support
               </a>
             </div>
-
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()}"
           <details className="mt-6 text-left"></details>"
                 <summary className="text-white cursor-pointer,"
   hover:text-cyan-400"></summary>
 // Technical Details (Development)
-                
-          
-          
-          
-          
-          
-          
-          
-          
           </summary>"
                 <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto"></pre>
-
                   {this.state.error.stack}
                 </pre>
               </details>
-            )}
+            )};
           </div>
         </div>
-
-      )}
-
-    return this.props.children}
-}
-
+      )};
+    return this.props.children};
+};
 export default ComprehensiveErrorBoundary;"`
-
-
-
-

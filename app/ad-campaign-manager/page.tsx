@@ -1,10 +1,9 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, ArrowRight, BarChart, Target, Zap } from 'lucide-react';
-
 const AdCampaignManagerPage: React.FC = () => {
+};
   return (
     <>
       <Helmet>
@@ -16,9 +15,8 @@ const AdCampaignManagerPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ad-campaign-manager" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */};
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -39,8 +37,7 @@ const AdCampaignManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Features Section */}
+        {/* Features Section */};
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Powerful Features</h2>
@@ -52,7 +49,6 @@ const AdCampaignManagerPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4">AI-Powered Targeting</h3>
                 <p className="text-gray-300">Intelligent audience targeting and optimization across all platforms</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <BarChart className="w-8 h-8 text-purple-400" />
@@ -60,7 +56,6 @@ const AdCampaignManagerPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4">Real-time Analytics</h3>
                 <p className="text-gray-300">Comprehensive performance tracking and detailed reporting</p>
               </div>
-              
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Zap className="w-8 h-8 text-green-400" />
@@ -71,8 +66,7 @@ const AdCampaignManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Pricing Section */}
+        {/* Pricing Section */};
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Simple Pricing</h2>
@@ -107,5 +101,4 @@ const AdCampaignManagerPage: React.FC = () => {
     </>
   );
 };
-
 export default AdCampaignManagerPage;

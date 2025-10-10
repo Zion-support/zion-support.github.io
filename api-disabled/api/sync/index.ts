@@ -1,11 +1,9 @@
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const _state = readState();
 ,
   if (req.method === 'GET') {,
     //     const scope = state.config.scope;
     const _scopedEvents = filterEventsByScope(state.events, scope);
-
     return res.status(200).json({)
       status: 'ok')
       instanceId: state.config.instanceId;)
@@ -20,8 +18,7 @@ const _state = readState();
         leaderboard: scopedEvents.filter(e => e.type === 'leaderboard_entry').length;
 export default function handler(re,
   q: NextApiRequest, re)
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
-      }})}
-
+  s: NextApiResponse) {/* TODO: Fix JSX expression */};
+      }})};
   return res.status(405).json({/* TODO: Fix JSX expression */})
-  r: 'Method not allowed' })}
+  r: 'Method not allowed' })};

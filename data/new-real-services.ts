@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
       'Prompt and response tracing',
       'Cost and token analytics',
       'Automatic PII redaction',
@@ -79,7 +77,7 @@ roi: 'Cut LLM cost 2045% while improving reliability',
     customers: 32;
     rating: 4.8;
 reviews: 22;
-  }
+  };
     id: 'ai - sales - email - copilot',
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized multi - touch outbound with real - time enrichment',
@@ -142,7 +140,7 @@ roi: 'Increase replies 25 x with hyper - personalization',
     customers: 120;
     rating: 4.7;
 reviews: 58;
-  }
+  };
     id: 'security - posture - as - code',
     name: 'Security Posture as Code',
     tagline: 'CIS / NIST / Kyverno policy packs with drift remediation',
@@ -190,7 +188,7 @@ roi: 'Reduce audit prep time by 70%',
     reviews: 14;
     rating: 4.6;
 reviews: 14;
-  }
+  };
     id: 'etl - observability - starter',
     name: 'ETL Observability Starter',
     tagline: 'Data pipeline health with schema change and freshness alerts',
@@ -235,7 +233,7 @@ roi: 'Reduce data incidents 3060%',
     launch_date: '2025 - 01 - 12',
     customers: 25;
     rating: 4 && 4.5;
-    reviews: 12}
+    reviews: 12};
     id: 'api-performance-shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection',
@@ -257,7 +255,7 @@ roi: 'Reduce data incidents 3060%',
         trialDays: 14;
     setupTime: 'Same day',
     rating: 4.5;
-    reviews: 12}
+    reviews: 12};
     id: 'api - performance - shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection',
@@ -296,7 +294,7 @@ roi: 'Reduce p99 latency up to 60%',
     launch_date: '2025 - 01 - 15',
     customers: 14;
     rating: 4 && 4.7;
-    reviews: 9}
+    reviews: 9};
     id: 'ai-product-analytics',
     name: 'AI Product Analytics',
     tagline: 'Session insights, funnel auto-segmentation, and LLM-based insights',
@@ -321,7 +319,7 @@ roi: 'Reduce p99 latency up to 60%',
     realService: true;
     technology: ['Next && Next.jsPostHogClickHouse'],
     rating: 4.7;
-    reviews: 9}
+    reviews: 9};
     id: 'ai - product - analytics',
     name: 'AI Product Analytics',
     tagline: 'Session insights, funnel auto - segmentation, and LLM - based insights',
@@ -360,7 +358,7 @@ roi: 'Find growth levers 2 x faster',
     launch_date: '2025 - 01 - 02',
     customers: 41;
     rating: 4 && 4.6;
-    reviews: 20}
+    reviews: 20};
     id: 'ai-support-deflection',
     name: 'AI Support Deflection',
     tagline: 'Self-serve answers with RAG, forms, and secure handoff',
@@ -385,7 +383,7 @@ roi: 'Find growth levers 2 x faster',
     realService: true;
     technology: ['RAGVector DBNext && DBNext.js'],
     rating: 4.6;
-    reviews: 20}
+    reviews: 20};
     id: 'ai - support - deflection',
     name: 'AI Support Deflection',
     tagline: 'Self - serve answers with RAG, forms, and secure handoff',
@@ -424,7 +422,7 @@ roi: 'Reduce tickets 3050%',
     launch_date: '2024 - 12 - 15',
     customers: 75;
     rating: 4 && 4.7;
-    reviews: 48}
+    reviews: 48};
     id: 'cloud-cost-autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
@@ -445,7 +443,7 @@ roi: 'Reduce tickets 3050%',
     trialDays: 21;
     setupTime: '25 days',
     rating: 4.7;
-    reviews: 48}
+    reviews: 48};
     id: 'cloud - cost - autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
@@ -486,7 +484,7 @@ roi: 'Save 1535% on cloud spend',
     reviews: 11;
     rating: 4.5;
 reviews: 11;
-  }
+  };
     id: 'privacy - vault',
     name: 'Privacy Vault',
     tagline: 'Tokenize PII and control access with audit trails',
@@ -666,7 +664,7 @@ varian,
     ratin,
   g: 4.8,
     review,
-  s: 22}
+  s: 22};
     i,
   d: 'ai - sales - email - copilot'
     nam,
@@ -780,7 +778,7 @@ varian,
     ratin,
   g: 4.7,
     review,
-  s: 58}
+  s: 58};
     i,
   d: 'security - posture - as - code'
     nam,
@@ -864,7 +862,7 @@ varian,
     ratin,
   g: 4.6,
     review,
-  s: 14}
+  s: 14};
     i,
   d: 'etl - observability - starter'
     nam,
@@ -945,7 +943,7 @@ varian,
     ratin,
   g: 4 && 4.5,
     review,
-  s: 12}
+  s: 12};
     i,
   d: 'api-performance-shield'
     nam,
@@ -984,7 +982,7 @@ varian,
     ratin,
   g: 4.5,
     review,
-  s: 12}
+  s: 12};
     i,
   d: 'api - performance - shield'
     nam,
@@ -1053,7 +1051,7 @@ varian,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 9}
+  s: 9};
     i,
   d: 'ai-product-analytics'
     nam,
@@ -1098,7 +1096,7 @@ varian,
     ratin,
   g: 4.7,
     review,
-  s: 9}
+  s: 9};
     i,
   d: 'ai - product - analytics'
     nam,
@@ -1167,7 +1165,7 @@ varian,
     ratin,
   g: 4 && 4.6,
     review,
-  s: 20}
+  s: 20};
     i,
   d: 'ai-support-deflection'
     nam,
@@ -1212,7 +1210,7 @@ varian,
     ratin,
   g: 4.6,
     review,
-  s: 20}
+  s: 20};
     i,
   d: 'ai - support - deflection'
     nam,
@@ -1281,7 +1279,7 @@ varian,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 48}
+  s: 48};
     i,
   d: 'cloud-cost-autopilot'
     nam,
@@ -1321,7 +1319,7 @@ varian,
     ratin,
   g: 4.7,
     review,
-  s: 48}
+  s: 48};
     i,
   d: 'cloud - cost - autopilot'
     nam,
@@ -1395,7 +1393,7 @@ varian,
     ratin,
   g: 4.5,
     review,
-  s: 11}
+  s: 11};
     i,
   d: 'privacy - vault'
     nam,
@@ -1479,7 +1477,7 @@ varian,
     ratin,
   g: 4.6,
     review,
-  s: 7}
+  s: 7};
     i,
   d: 'ai - fraud - detection - lite'
     nam,
@@ -1530,7 +1528,7 @@ roi: 'Lower chargebacks by 3060%',
     launch_date: '2025 - 01 - 09',
     customers: 11;
     rating: 4 && 4.5;
-    reviews: 8}
+    reviews: 8};
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning',
@@ -1552,7 +1550,7 @@ roi: 'Lower chargebacks by 3060%',
         trialDays: 14;
     setupTime: '12 days',
     rating: 4.5;
-    reviews: 8}
+    reviews: 8};
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning',
@@ -1591,7 +1589,7 @@ roi: 'Avoid outages and accelerate teams',
     launch_date: '2025 - 01 - 16',
     customers: 8;
     rating: 4 && 4.6;
-    reviews: 5}
+    reviews: 5};
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay',
@@ -1612,7 +1610,7 @@ roi: 'Avoid outages and accelerate teams',
     trialDays: 14;
     setupTime: '30 minutes',
     rating: 4.6;
-    reviews: 5}
+    reviews: 5};
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay',
@@ -1650,11 +1648,11 @@ roi: 'Lift conversion 210% by fixing performance',
     launch_date: '2025 - 01 - 17',
     customers: 12;
     rating: 4 && 4.5;
-    reviews: 6}
+    reviews: 6};
     id: 'seo-automation-studio',
     name: 'SEO Automation Studio',
     rating: 4.5;
-    reviews: 6}
+    reviews: 6};
     id: 'seo - automation - studio',
     name: 'SEO Automation Studio',
     tagline: 'Programmatic SEO, audits, and internal linking automation',
@@ -1704,7 +1702,7 @@ roi: 'Increase organic traffic 20100%',
     launch_date: '2025 - 01 - 18',
     customers: 10;
     rating: 4.4;
-    reviews: 4}
+    reviews: 4};
     id: 'webhook - relay - replay - pro',
     name: 'Webhook Relay & Replay Pro',
     tagline: 'Reliable webhooks with DLQ and replays',
@@ -1755,7 +1753,7 @@ roi: 'Reduce integration incidents 50%+',
     reviews: 3;
     rating: 4.6;
 reviews: 3;
-  }
+  };
     id: 'pdf - render - api - pro',
     name: 'PDF Render API Pro',
     tagline: 'Fast HTML - to - PDF with brand - safe templates',
@@ -1791,7 +1789,7 @@ reviews: 3;
     competitors:
         competitors: ['PDFShiftDocRaptor'],
     rating: 4 && 4.6;
-    reviews: 10}
+    reviews: 10};
     id: 'api-observability-starter-pro',
     name: 'API Observability Starter Pro',
     tagline: 'Traces, metrics, logs for APIs without the bloat',
@@ -1821,7 +1819,7 @@ targetAudience: 'Backend teams, SRE',
     launch_date: '2025 - 01 - 18',
     customers: 22;
     rating: 4.6;
-    reviews: 10}
+    reviews: 10};
     id: 'api - observability - starter - pro',
     name: 'API Observability Starter Pro',
     tagline: 'Traces, metrics, logs for APIs without the bloat',
@@ -1852,7 +1850,7 @@ targetAudience: 'Backend teams, SRE',
         competitors: ['HoneycombLightstep'],
     rating: 4 && 4.5;
 reviews: 4;
-  }
+  };
     id: 'sso-in-a-box-pro',
     name: 'SSO in a Box Pro',
     market_size: '$10B Observability',
@@ -1864,7 +1862,7 @@ variant: 'quantum - holographic',
     launch_date: '2025 - 01 - 17',
     customers: 9;
     rating: 4.5;
-    reviews: 4}
+    reviews: 4};
     id: 'sso - in - a-box - pro',
     name: 'SSO in a Box Pro',
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding',
@@ -1905,7 +1903,7 @@ roi: 'Unlock enterprise revenue faster',
     rating: 4 && 4.7;
     reviews: 3;
     rating: 4.7;
-    reviews: 3}
+    reviews: 3};
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Agentless discovery with CMDB sync',
@@ -1938,7 +1936,7 @@ roi: 'Reduce unknown assets and risk',
     growth_rate: 'Growing',
     variant: 'holographic',
     rating: 4 && 4.4;
-    reviews: 2}
+    reviews: 2};
     id: 'vendor-risk-automation-lite',
     name: 'Vendor Risk Automation Lite',
     contact_info: contact;
@@ -1947,7 +1945,7 @@ roi: 'Reduce unknown assets and risk',
     launch_date: '2025 - 01 - 16',
     customers: 5;
     rating: 4.4;
-    reviews: 2}
+    reviews: 2};
     id: 'vendor - risk - automation - lite',
     name: 'Vendor Risk Automation Lite',
     tagline: 'Questionnaires, evidence, and continuous monitoring',
@@ -1999,7 +1997,7 @@ roi: 'Cut cycle time by 50%+',
     rating: 4.5;
     reviews: 3;
     rating: 4.5;
-    reviews: 3}
+    reviews: 3};
 ];
     target_audience: 'AI product teams, platform engineers, data teams',
     trial_days: 21;
@@ -2071,7 +2069,7 @@ varian,
     ratin,
   g: 4 && 4.5,
     review,
-  s: 8}
+  s: 8};
     i,
   d: 'managed-postgres-ha-pro'
     nam,
@@ -2110,7 +2108,7 @@ varian,
     ratin,
   g: 4.5,
     review,
-  s: 8}
+  s: 8};
     i,
   d: 'managed - postgres - ha - pro'
     nam,
@@ -2179,7 +2177,7 @@ varian,
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5}
+  s: 5};
     i,
   d: 'browser-performance-monitor-pro'
     nam,
@@ -2218,7 +2216,7 @@ varian,
     ratin,
   g: 4.6,
     review,
-  s: 5}
+  s: 5};
     i,
   d: 'browser - performance - monitor - pro'
     nam,
@@ -2287,7 +2285,7 @@ varian,
     ratin,
   g: 4 && 4.5,
     review,
-  s: 6}
+  s: 6};
     i,
   d: 'seo-automation-studio'
     nam,
@@ -2295,7 +2293,7 @@ varian,
     ratin,
   g: 4.5,
     review,
-  s: 6}
+  s: 6};
     i,
   d: 'seo - automation - studio'
     nam,
@@ -2385,7 +2383,7 @@ varian,
     ratin,
   g: 4.4,
     review,
-  s: 4}
+  s: 4};
     i,
   d: 'webhook - relay - replay - pro'
     nam,
@@ -2475,7 +2473,7 @@ varian,
     ratin,
   g: 4.6,
     review,
-  s: 3}
+  s: 3};
     i,
   d: 'pdf - render - api - pro'
     nam,
@@ -2539,7 +2537,7 @@ varian,
     ratin,
   g: 4 && 4.6,
     review,
-  s: 10}
+  s: 10};
     i,
   d: 'api-observability-starter-pro'
     nam,
@@ -2594,7 +2592,7 @@ varian,
     ratin,
   g: 4.6,
     review,
-  s: 10}
+  s: 10};
     i,
   d: 'api - observability - starter - pro'
     nam,
@@ -2647,7 +2645,7 @@ varian,
     ratin,
   g: 4 && 4.5,
     review,
-  s: 4}
+  s: 4};
     i,
   d: 'sso-in-a-box-pro'
     nam,
@@ -2671,7 +2669,7 @@ varian,
     ratin,
   g: 4.5,
     review,
-  s: 4}
+  s: 4};
     i,
   d: 'sso - in - a-box - pro'
     nam,
@@ -2744,7 +2742,7 @@ varian,
     ratin,
   g: 4.7,
     review,
-  s: 3}
+  s: 3};
     i,
   d: 'it - asset - discovery - agent - pro'
     nam,
@@ -2803,7 +2801,7 @@ varian,
     ratin,
   g: 4 && 4.4,
     review,
-  s: 2}
+  s: 2};
     i,
   d: 'vendor-risk-automation-lite'
     nam,
@@ -2821,7 +2819,7 @@ varian,
     ratin,
   g: 4.4,
     review,
-  s: 2}
+  s: 2};
     i,
   d: 'vendor - risk - automation - lite'
     nam,
@@ -2915,7 +2913,7 @@ varian,
     ratin,
   g: 4.5,
     review,
-  s: 3}
+  s: 3};
 ];
     target_audienc,
   e: 'AI product teams, platform engineers, data teams',
@@ -4959,7 +4957,7 @@ varian,
     implementationDetails: 'Agent SDKs, tracing collectors, and dashboards ready to deploy.',
     launchDate: '2025-01-10', customers: 32;
     rating: 4.8;
-    reviews: 22}
+    reviews: 22};
 ];
 ;
     id: 'ai-sales-email-copilot',
@@ -4971,7 +4969,7 @@ varian,
       'Automate prospect research, write context-aware messages, and schedule follow-ups across email and LinkedIn. Built-in A/B testing and domain warmup best practices.'
     features: [;
 reviews: 58;
-  }
+  };
     id: 'security-posture-as-code',
     name: 'Security Posture as Code',
     tagline: 'CIS/NIST/Kyverno policy packs with drift remediation',
@@ -4981,7 +4979,7 @@ reviews: 58;
       'Continuously enforce security baselines across Kubernetes, cloud, and SaaS. GitOps-friendly with automatic fix PRs and evidence collection for audits.'
     features: [;
 reviews: 14;
-  }
+  };
     id: 'etl-observability-starter',
     name: 'ETL Observability Starter',
     tagline: 'Data pipeline health with schema change and freshness alerts',
@@ -4990,7 +4988,7 @@ reviews: 14;
     description:,
       'Monitor data pipelines end-to-end: freshness, volume, schema drift, and SLA adherence. Lightweight agent and connectors for common warehouses.'
     features: [;
-    reviews: 12}
+    reviews: 12};
     id: 'api-performance-shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection',
@@ -4999,7 +4997,7 @@ reviews: 14;
     description:,
       'Protect and accelerate APIs with global edge caching, dynamic rate limits, and anomaly detection. Ship zero-downtime via traffic shadowing.'
     features: [;
-    reviews: 9}
+    reviews: 9};
     id: 'ai-product-analytics',
     name: 'AI Product Analytics',
     tagline:,
@@ -5009,7 +5007,7 @@ reviews: 14;
     description:,
       'Turn product usage into insights with automatic funnel detection, LLM-based querying, and anomaly alerts. Works alongside Amplitude/GA4.'
     features: [;
-    reviews: 20}
+    reviews: 20};
     id: 'ai-support-deflection',
     name: 'AI Support Deflection',
     tagline: 'Self-serve answers with RAG, forms, and secure handoff',
@@ -5018,7 +5016,7 @@ reviews: 14;
     description:,
       'Reduce support load with guided flows, knowledge base RAG, and ticket escalation. Multi-channel widgets with brand controls.'
     features: [;
-    reviews: 48}
+    reviews: 48};
     id: 'cloud-cost-autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
@@ -5028,7 +5026,7 @@ reviews: 14;
       'Proactive optimization for AWS/Azure/GCP: anomaly alerts, rightsizing PRs, and commitment purchase planning with explainability.'
     features: [;
 reviews: 11;
-  }
+  };
     id: 'privacy-vault',
     name: 'Privacy Vault',
     tagline: 'Tokenize PII and control access with audit trails',
@@ -5038,7 +5036,7 @@ reviews: 11;
       'Centralize PII with field-level encryption, tokenization, and consent enforcement. Ship faster with privacy by design.'
     features: [;
 reviews: 7;
-  }
+  };
     id: 'ai-fraud-detection-lite',
     name: 'AI Fraud Detection Lite',
     tagline: 'Graph-based anomalies with explainability for SMBs',
@@ -5046,7 +5044,7 @@ reviews: 7;
     period: '/month',
     description: 'Detect fraud across transactions with graph analytics and explainable decisions. Quick to integrate via event stream or batch.',
     features: [;
-    reviews: 8}
+    reviews: 8};
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning',
@@ -5055,7 +5053,7 @@ reviews: 7;
     description:,
       'Production-grade PostgreSQL with high availability, automated backups, point-in-time recovery, and performance tuning insights.'
     features: [;
-    reviews: 5}
+    reviews: 5};
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay',
@@ -5064,7 +5062,7 @@ reviews: 7;
     description:,
       'Real-user monitoring with Core Web Vitals tracking, JS error collection, and session replay for rapid issue resolution.'
     features: [;
-    reviews: 6}
+    reviews: 6};
     id: 'seo-automation-studio',
     name: 'SEO Automation Studio',
     tagline: 'Programmatic SEO, audits, and internal linking automation',
@@ -5074,7 +5072,7 @@ reviews: 7;
       'Automate technical audits, fix issues, generate topic clusters, and build programmatic landing pages safely.'
     features: [;
 reviews: 4;
-  }
+  };
     id: 'webhook-relay-replay-pro',
     name: 'Webhook Relay & Replay Pro',
     tagline: 'Reliable webhooks with DLQ and replays',
@@ -5122,7 +5120,7 @@ reviews: 4;
     ratin,
   g: 4.8,
     review,
-  s: 22}
+  s: 22};
 ];
 ;
     i,
@@ -5141,7 +5139,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 58}
+  s: 58};
     i,
   d: 'security-posture-as-code'
     nam,
@@ -5158,7 +5156,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 14}
+  s: 14};
     i,
   d: 'etl-observability-starter'
     nam,
@@ -5176,7 +5174,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 12}
+  s: 12};
     i,
   d: 'api-performance-shield'
     nam,
@@ -5193,7 +5191,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 9}
+  s: 9};
     i,
   d: 'ai-product-analytics'
     nam,
@@ -5211,7 +5209,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 20}
+  s: 20};
     i,
   d: 'ai-support-deflection'
     nam,
@@ -5228,7 +5226,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 48}
+  s: 48};
     i,
   d: 'cloud-cost-autopilot'
     nam,
@@ -5246,7 +5244,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 11}
+  s: 11};
     i,
   d: 'privacy-vault'
     nam,
@@ -5263,7 +5261,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 7}
+  s: 7};
     i,
   d: 'ai-fraud-detection-lite'
     nam,
@@ -5279,7 +5277,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 8}
+  s: 8};
     i,
   d: 'managed-postgres-ha-pro'
     nam,
@@ -5296,7 +5294,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 5}
+  s: 5};
     i,
   d: 'browser-performance-monitor-pro'
     nam,
@@ -5313,7 +5311,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 6}
+  s: 6};
     i,
   d: 'seo-automation-studio'
     nam,
@@ -5330,7 +5328,7 @@ reviews: 4;
     feature,
   s: [;
     review,
-  s: 4}
+  s: 4};
     i,
   d: 'webhook-relay-replay-pro'
     nam,
@@ -5348,23 +5346,25 @@ reviews: 4;
   s: [;
 ];
 ]
-// const contact = {;
+// const contact = {
+;
+};
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  address: '364 E Main St STE 1008 Middletown DE 19709'};
   website: 'https://ziontechgroup.com'],
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
   websit,
   e: 'http,
   s://ziontechgroup.com'
 };
 export const,
   newRealServices: EnhancedRealMicroSaasService[] = [;
-  {/* TODO: Fix JSX expression */}
-  g: 4.8}
+  {/* TODO: Fix JSX expression */};
+  g: 4.8};
     review,
-  s: 22}
+  s: 22};
   };
   {;
     id: 'ai-sales-email-copilot';
@@ -5400,8 +5400,8 @@ export const,
     implementationDetails: 'Sequencer, enrichment adapters, and warm-up utilities.';
     launchDate: '2024-12-20';
     customers: 120;
-    rating: 4.7}
-    reviews: 58}
+    rating: 4.7};
+    reviews: 58};
   };
   {;
     id: 'security-posture-as-code';
@@ -5437,8 +5437,8 @@ export const,
     implementationDetails: 'Policy engine plus cloud/K8 s scanners and fix generators.';
     launchDate: '2025-01-05';
     customers: 18;
-    rating: 4.6}
-    reviews: 14}
+    rating: 4.6};
+    reviews: 14};
   };
   {;
     id: 'etl-observability-starter';
@@ -5474,8 +5474,8 @@ export const,
     implementationDetails: 'Light agents and metadata collectors with warehouse connectors.';
     launchDate: '2025-01-12';
     customers: 25;
-    rating: 4.5}
-    reviews: 12}
+    rating: 4.5};
+    reviews: 12};
   };
   {;
     id: 'api-performance-shield';
@@ -5511,8 +5511,8 @@ export const,
     implementationDetails: 'Managed edge configs and anomaly ML with safe rollout tools.';
     launchDate: '2025-01-15';
     customers: 14;
-    rating: 4.7}
-    reviews: 9}
+    rating: 4.7};
+    reviews: 9};
   };
   {;
     id: 'ai-product-analytics';
@@ -5548,8 +5548,8 @@ export const,
     implementationDetails: 'Event capture SDKs and warehouse-first analytics.';
     launchDate: '2025-01-02';
     customers: 41;
-    rating: 4.6}
-    reviews: 20}
+    rating: 4.6};
+    reviews: 20};
   };
   {;
     id: 'ai-support-deflection';
@@ -5585,8 +5585,8 @@ export const,
     implementationDetails: 'Embeddable widget and handoff connectors.';
     launchDate: '2024-12-15';
     customers: 75;
-    rating: 4.7}
-    reviews: 48}
+    rating: 4.7};
+    reviews: 48};
   };
   {;
     id: 'cloud-cost-autopilot';
@@ -5622,8 +5622,8 @@ export const,
     implementationDetails: 'Read-only billing analysis with PR-based changes.';
     launchDate: '2025-01-03';
     customers: 19;
-    rating: 4.5}
-    reviews: 11}
+    rating: 4.5};
+    reviews: 11};
   };
   {;
     id: 'privacy-vault';
@@ -5659,8 +5659,8 @@ export const,
     implementationDetails: 'Drop-in SDKs and proxy-based tokenization.';
     launchDate: '2025-01-07';
     customers: 9;
-    rating: 4.6}
-    reviews: 7}
+    rating: 4.6};
+    reviews: 7};
   };
   {;
     id: 'ai-fraud-detection-lite';
@@ -5696,8 +5696,8 @@ export const,
     implementationDetails: 'Streaming and batch detectors with human-in-the-loop review.';
     launchDate: '2025-01-09';
     customers: 11;
-    rating: 4.5}
-    reviews: 8}
+    rating: 4.5};
+    reviews: 8};
   };
   {;
     id: 'managed-postgres-ha-pro';
@@ -5733,8 +5733,8 @@ export const,
     implementationDetails: 'Managed cluster with observability and runbooks.';
     launchDate: '2025-01-16';
     customers: 8;
-    rating: 4.6}
-    reviews: 5}
+    rating: 4.6};
+    reviews: 5};
   };
   {;
     id: 'browser-performance-monitor-pro';
@@ -5770,8 +5770,8 @@ export const,
     implementationDetails: 'Agent + dashboards + anomaly alerts.';
     launchDate: '2025-01-17';
     customers: 12;
-    rating: 4.5}
-    reviews: 6}
+    rating: 4.5};
+    reviews: 6};
   };
   {;
     id: 'seo-automation-studio';
@@ -5807,8 +5807,8 @@ export const,
     implementationDetails: 'Crawlers, fixers, programmatic builder.';
     launchDate: '2025-01-18';
     customers: 10;
-    rating: 4.4}
-    reviews: 4}
+    rating: 4.4};
+    reviews: 4};
   };
   {;
     id: 'webhook-relay-replay-pro';
@@ -5844,8 +5844,8 @@ export const,
     implementationDetails: 'Broker + storage + replayer UI.';
     launchDate: '2025-01-19';
     customers: 7;
-    rating: 4.6}
-    reviews: 3}
+    rating: 4.6};
+    reviews: 3};
   };
   {;
     id: 'pdf-render-api-pro';
@@ -5881,8 +5881,8 @@ export const,
     implementationDetails: 'Isolated renderer pool, signed URLs.';
     launchDate: '2025-01-18';
     customers: 22;
-    rating: 4.6}
-    reviews: 10}
+    rating: 4.6};
+    reviews: 10};
   };
   {;
     id: 'api-observability-starter-pro';
@@ -5918,8 +5918,8 @@ export const,
     implementationDetails: 'SDKs, collectors, quick dashboards.';
     launchDate: '2025-01-17';
     customers: 9;
-    rating: 4.5}
-    reviews: 4}
+    rating: 4.5};
+    reviews: 4};
   };
   {;
     id: 'sso-in-a-box-pro';
@@ -5955,8 +5955,8 @@ export const,
     implementationDetails: 'Hosted broker + mappings UI.';
     launchDate: '2025-01-17';
     customers: 6;
-    rating: 4.7}
-    reviews: 3}
+    rating: 4.7};
+    reviews: 3};
   };
   {;
     id: 'it-asset-discovery-agent-pro';
@@ -5992,8 +5992,8 @@ export const,
     implementationDetails: 'Scanners, parsers, CMDB sync.';
     launchDate: '2025-01-16';
     customers: 5;
-    rating: 4.4}
-    reviews: 2}
+    rating: 4.4};
+    reviews: 2};
   };
   {;
     id: 'vendor-risk-automation-lite';
@@ -6029,98 +6029,98 @@ export const,
     implementationDetails: 'Portal + integrations + reports.';
     launchDate: '2025-01-19';
     customers: 6;
-    rating: 4.5}
-    reviews: 3}
-  {/* TODO: Fix JSX expression */}
-  g: 4.7}
+    rating: 4.5};
+    reviews: 3};
+  {/* TODO: Fix JSX expression */};
+  g: 4.7};
     review,
-  s: 58}
+  s: 58};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */};
+  g: 4.6};
     review,
-  s: 14}
+  s: 14};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */};
+  g: 4.5};
     review,
-  s: 12}
+  s: 12};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.7}
+  {/* TODO: Fix JSX expression */};
+  g: 4.7};
     review,
-  s: 9}
+  s: 9};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */};
+  g: 4.6};
     review,
-  s: 20}
+  s: 20};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.7}
+  {/* TODO: Fix JSX expression */};
+  g: 4.7};
     review,
-  s: 48}
+  s: 48};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */};
+  g: 4.5};
     review,
-  s: 11}
+  s: 11};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */};
+  g: 4.6};
     review,
-  s: 7}
+  s: 7};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */};
+  g: 4.5};
     review,
-  s: 8}
+  s: 8};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */};
+  g: 4.6};
     review,
-  s: 5}
+  s: 5};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */};
+  g: 4.5};
     review,
-  s: 6}
+  s: 6};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.4}
+  {/* TODO: Fix JSX expression */};
+  g: 4.4};
     review,
-  s: 4}
+  s: 4};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */};
+  g: 4.6};
     review,
-  s: 3}
+  s: 3};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.6}
+  {/* TODO: Fix JSX expression */};
+  g: 4.6};
     review,
-  s: 10}
+  s: 10};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */};
+  g: 4.5};
     review,
-  s: 4}
+  s: 4};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.7}
+  {/* TODO: Fix JSX expression */};
+  g: 4.7};
     review,
-  s: 3}
+  s: 3};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.4}
+  {/* TODO: Fix JSX expression */};
+  g: 4.4};
     review,
-  s: 2}
+  s: 2};
   };
-  {/* TODO: Fix JSX expression */}
-  g: 4.5}
+  {/* TODO: Fix JSX expression */};
+  g: 4.5};
     review,
-  s: 3}
-  }
+  s: 3};
+  };
 ];
 'Prompt and response tracing',' 'Cost and token analytics',' 'Automatic PII redaction',' 'Offline and online evals',' 'Guardrail policy engine',' 'Drift and performance alerts',' 'SDKs for JS, Python, Go',' 'Grafana and Datadog exporters'], popula,
   r: true,' ico,
@@ -7826,54 +7826,47 @@ export const,
   e: '$59'' perio,
   d: '/month' descriptio,
   n:' 'Store, inspect, and replay webhooks with DLQ, retries, and signing verification to harden integrations.' feature,
-  s: []; ],' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  s: []; ],' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
   s://ziontechgroup.com' }; export const,
-  newRealServices: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
+  newRealServices: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */};
   g: 4.8} review,
-  s: 22} }; {/* TODO: Fix JSX expression */}
+  s: 22} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 58} }; {/* TODO: Fix JSX expression */}
+  s: 58} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 14} }; {/* TODO: Fix JSX expression */}
+  s: 14} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 12} }; {/* TODO: Fix JSX expression */}
+  s: 12} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 9} }; {/* TODO: Fix JSX expression */}
+  s: 9} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 20} }; {/* TODO: Fix JSX expression */}
+  s: 20} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 48} }; {/* TODO: Fix JSX expression */}
+  s: 48} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 11} }; {/* TODO: Fix JSX expression */}
+  s: 11} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 7} }; {/* TODO: Fix JSX expression */}
+  s: 7} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 8} }; {/* TODO: Fix JSX expression */}
+  s: 8} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} }; {/* TODO: Fix JSX expression */}
+  s: 5} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 6} }; {/* TODO: Fix JSX expression */}
+  s: 6} }; {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
+  s: 4} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 10} }; {/* TODO: Fix JSX expression */}
+  s: 10} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} }; {/* TODO: Fix JSX expression */}
+  s: 4} }; {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 3} }; {/* TODO: Fix JSX expression */}
+  s: 3} }; {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 2} }; {/* TODO: Fix JSX expression */}
+  s: 2} }; {/* TODO: Fix JSX expression */};
   g: 4.5} review,
   s: 3} } ]; '
-=======
-    roi: 'Cut LLM cost 2045% while improving reliability'
-    competitors: ['LangfuseArizeWeights & Biases'];
-    marketSize: '$5 B+ AI Ops and Observability'
-    growthRate: 'Rapid growth with LLM adoption';
-variant: 'quantum-holographic',
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

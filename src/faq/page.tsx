@@ -1,38 +1,28 @@
 import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 const FAQPage: React.FC = () => {
+};
 return (
 ;
 const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>
+  const [openItems, setOpenItems] = useState<number []>
 );
 }([]);
 ;
 const toggleItem = (index: number) => {
     setOpenItems(prev => 
-=======
-import Navigation from '../components
-import Footer from '../components
-
-const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
-  const toggleItem = (index: number) => {
-    setOpenItems(prev =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
     )};
 ;
 const faqData = [
-    {
+[
+        {
       category: 'General Questions',
       questions: [
           questio,
@@ -46,7 +36,7 @@ questionquestion: 'How can I get started?',
           questio,
     n: 'Do you offer custom solutions?',
           answer:         ,
-$4}
+$4};
       ]
       category: 'AI Services',
           question: 'What AI services do you provide?',
@@ -103,16 +93,10 @@ const filteredData = faqData.map(category => ({
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.questions.length > 0);
-
-<<<<<<< HEAD
   return (
-    <React.Fragment>
+    <React .Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  return (<>
-      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header *
           <div className="text-center mb-12">
@@ -122,7 +106,6 @@ const filteredData = faqData.map(category => ({
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers to common questions about our AI and IT services, pricing, and support.
             <
-            
             {/* Search Bar *
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" 
@@ -133,14 +116,12 @@ const filteredData = faqData.map(category => ({
                 onChange = { (e) => setSearchTerm(e.target.value) };
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
-              
             <
-
           {/* FAQ Content *
           <div className="max-w-4xl mx-auto">
             {filteredData.map((category), categoryIndex) => (<div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
-                  {category.category}
+                  {category.category};
                 <
                 <div className="space-y-4">)
                   {category.questions.map((item, itemIndex) => {
@@ -148,14 +129,9 @@ return (
 ;
 const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                    
-<<<<<<< HEAD
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
 );
-}
-=======
-                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+};
                         <button
                           onClick = { () => toggleItem(globalIndex) };
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700
@@ -163,9 +139,8 @@ const globalIndex = categoryIndex * 100 + itemIndex;
                           <span className="text-white font-medium pr-4">{item.question}<
                           {isOpen ? (
                             <p className="text-gray-300 leading-relaxed">{item.answer}<)
-                  })}
-            ))}
-
+                  })};
+            ))};
           {/* Contact CTA *
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -173,8 +148,7 @@ const globalIndex = categoryIndex * 100 + itemIndex;
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a
-                href="tel:+13024640950"
+              <a href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <Phone className="w-5 h-5 mr-2" 
                 Call (302) 464-0950
@@ -188,35 +162,20 @@ const globalIndex = categoryIndex * 100 + itemIndex;
     r:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <MessageSquare className="w-4 h-4 mr-2" 
                 Contact Form
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
-=======
-      <Footer 
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
 export default FAQPage;
-
 import { Link } from 'react-router-dom';
-
 import Navigation from '../components
 import Footer from '../components
 const FAQPage: React.FC = () => {
-<<<<<<< HEAD
+};
 return (
-
   return (
     <div>Coming Soon</div>
 );
-}
-
-  )};
-=======
-  return (<div>Coming Soon<)
-  );
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+  )};
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 const toggleItem = (inde)
@@ -226,23 +185,17 @@ const toggleItem = (inde)
         : [...prev, index]
     )};
   const faqData = [
+];
   /
   O: Add items;
 ];;
-<<<<<<< HEAD
-    {/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-    {/* TODO: Fix JSX expression *
-  ,
-    O: Add content;}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+    {/* TODO: Fix JSX expression */};
+  O: Add content};
 };
   categor,
   y: 'General Questions',
       question,
   s: [,
-
       questio,
   n: 'What is Zion Tech Group?',
           answe,
@@ -256,12 +209,11 @@ const toggleItem = (inde)
   n: 'How can I get started?',
           answe,
   r: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.',
-
           questio,
   n: 'Do you offer custom solutions?',
           answe,
   r: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.'
-        }
+        };
       ]
       categor,
   y: 'AI Services',
@@ -309,7 +261,6 @@ const toggleItem = (inde)
   n: 'How quickly can I deploy a Micro SAAS solution?',
           answe,
   r: 'Most Micro SAAS solutions can be deployed within 24-48 hours. They are designed for quick implementation and immediate value delivery.',
-
           questio,
   n: 'Do I need technical expertise to use Micro SAAS?',
           answe,
@@ -355,15 +306,9 @@ const toggleItem = (inde)
           answe,
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
-<<<<<<< HEAD
-  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
-  O: Add content}
-=======
-  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression *
-  ,
-    O: Add content;)}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-}
+  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */};
+  O: Add content};
+};
 /
     question,
   s: category.questions.filter(q =>)
@@ -373,37 +318,24 @@ const toggleItem = (inde)
   })).filter(category => category.questions.length > 0);
   return (<div>Coming Soon<)
   )
-    
-<<<<<<< HEAD
-          <React.Fragment>
+          <React .Fragment>
       <Navigation /></Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-12"></div>"
-=======
-          <>
-      <Navigation /><
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <div className="container mx-auto px-4 py-16 pt-24"><
-          {/* Header *
-          <div className="text-center mb-12"><
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"><
 /
           <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"><
 /
-
           <
-
             {/* Search Bar *
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" 
               <input
 type="text" placeholder="Search FAQs..."
-
                 value = { searchTerm };
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400,
@@ -412,31 +344,20 @@ type="text" placeholder="Search FAQs..."
   focus:ring-2,"
   focus: ring-cyan-400
 // 
-
           <
           {/* FAQ Content *
           <div className="max-w-4xl mx-auto"><
             {filteredData.map((category), categoryIndex) => ()}"
           <div key={categoryIndex} className="mb-12"><
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text"><
-                  {category.category}
-<<<<<<< HEAD
+                  {category.category};
                 </h2>"
                 <div className="space-y-4"></div>
-                  {category.questions.map((item, itemIndex) => {}
+                  {category.questions.map((item, itemIndex) => {};
   // TOD,
-  O: Add content}
-=======
-                <
-                <div className="space-y-4"><
-                  {category.questions.map ((item, itemIndex) => {}
-  /
-  O: Add content;
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+  O: Add content};
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-
           "
           <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"><
                         <button><
@@ -444,7 +365,6 @@ type="text" placeholder="Search FAQs..."
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
   hover:bg-slate-700
 /
-
           "
           <span className="text-white font-medium pr-4">{item.question}<
                           {isOpen ? ()}"
@@ -452,14 +372,13 @@ type="text" placeholder="Search FAQs..."
                           ) : ()
                             "
           <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" /><
-                          )}
+                          )};
                         <
                         {isOpen && ()}"
           <div className="px-6 pb-4"><
                             <p className="text-gray-300 leading-relaxed">{item.answer}<
-                  })}
-            ))}
-
+                  })};
+            ))};
 {/* Contact CTA *
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900
             <h2 className="text-2xl font-bold text-white mb-4">
@@ -478,16 +397,8 @@ type="text" placeholder="Search FAQs..."
                 Email Us;
                 href="
                 <MessageSquare className="w-4 h-4 mr-2" 
-
                 Contact Form;
-<<<<<<< HEAD
       <Footer /></Footer>
     </React.Fragment>
-=======
-      <Footer /><
-    <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default FAQPage;
-
 export default FaqPage;
-

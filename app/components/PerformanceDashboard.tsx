@@ -1,22 +1,26 @@
 'use client';
 import React from 'react';
 import React, { useState, useEffect } from 'react';
-
-
 interface PerformanceMetrics {
+}
+}
+}
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
-  fps: number}
-
+  fps: number};
 interface PerformanceMetrics {
+}
+}
+}
   loadTime: number,
   renderTime: number,
   memoryUsage: number,
   fps: number,
-  [key: string]: number}
+  [key: string]: number};
 ;
 const PerformanceDashboard: React.FC = () => {
+}
 return (;
 const [metrics, setMetrics] = useState<PerformanceMetrics>
 );
@@ -26,19 +30,18 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
     memoryUsage: 0,
     fps: 0})
 const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {;
-const updateMetrics = () => {const navigation = performance.getEntriesByType(
+const updateMetrics = () => {
+const navigation = performance.getEntriesByType(
+}
         'navigation'
       )[0] as PerformanceNavigationTiming;
 const loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
-
       // Measure render time// Measure memory usage;
 let _memoryUsage = 0;
       if ('memory' in performance) {memoryUsage = memory?.usedJSHeapSize || 0}
-
       // Measure FPS (simplified);
 let _fps = 0;
       if ($1) { let _lastTime = performance.now();
@@ -57,9 +60,7 @@ const measureFPS = (currentTime: number) => {
         memoryUsage,
         fps})
     updateMetrics();
-
     // Update metrics every 5 secondsreturn () => clearInterval(interval)}, []);
-
   if (!isVisible) {
     return (
       <button
@@ -79,7 +80,6 @@ const measureFPS = (currentTime: number) => {
           ×
         </button>
       </div>
-
       <div className="space-y-3">
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Load Time:</span>
@@ -87,26 +87,22 @@ const measureFPS = (currentTime: number) => {
             {metrics.loadTime.toFixed(2)}ms
           </span>
         </div>
-
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Render Time:</span>
           <span className="text-sm font-mono">
             {metrics.renderTime.toFixed(2)}ms
           </span>
         </div>
-
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">Memory Usage:</span>
           <span className="text-sm font-mono">
             {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
           </span>
         </div>
-
         <div className="flex justify-between">
           <span className="text-sm text-gray-600">FPS:</span>
           <span className="text-sm font-mono">{metrics.fps}</span>
         </div>
-
         <div className="pt-2 border-t border-gray-200">
           <div className="text-xs text-gray-500">
             Last updated: {new Date().toLocaleTimeString()}</div>

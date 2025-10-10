@@ -2,6 +2,8 @@ import React from 'react';
 // Real Micro SAAS Services for Zion Tech Group;
 // Comprehensive list of innovative, real-world micro SAAS solutions
 export interface MicroSaasService {
+}
+}
   id: string,
   title: string,
   description: string,
@@ -35,8 +37,7 @@ export interface MicroSaasService {
     monthly: number,
     yearly: number,
     enterprise: number,
-    features: string[]}}
-
+    features: string[]}};
 export const microSaasServices: MicroSaasService[] = [
   // AI-Powered Productivity Tools;
   {,
@@ -181,9 +182,8 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 490,
       enterprise: 149,
       features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']
-    }
+    };
   },
-
   // AI Content & Marketing Tools;
   {
     id: 'ai-content-writer-pro',
@@ -327,9 +327,8 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 890,
       enterprise: 249,
       features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']
-    }
+    };
   },
-
   // AI Business & Finance Tools;
   {
     id: 'ai-crm-intelligence',
@@ -474,9 +473,8 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 1990,
       enterprise: 599,
       features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']
-    }
+    };
   },
-
   // AI Customer Service Tools;
   {
     id: 'ai-customer-support-bot',
@@ -549,9 +547,8 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 590,
       enterprise: 199,
       features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']
-    }
+    };
   },
-
   // AI Development Tools;
   {
     id: 'ai-code-review-assistant',
@@ -624,9 +621,8 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 790,
       enterprise: 249,
       features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']
-    }
+    };
   },
-
   // AI Healthcare Tools;
   {
     id: 'ai-healthcare-assistant',
@@ -699,9 +695,8 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 1490,
       enterprise: 499,
       features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']
-    }
+    };
   },
-
   // AI E-commerce Tools;
   {
     id: 'ai-ecommerce-optimizer',
@@ -774,9 +769,8 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 1190,
       enterprise: 399,
       features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']
-    }
+    };
   },
-
   // AI Education Tools;
   {
     id: 'ai-education-platform',
@@ -849,12 +843,12 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 890,
       enterprise: 299,
       features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']
-    }
-  }
+    };
+  };
 ];
-
 // Service categories for filtering and organization
 export const serviceCategories = [
+];
   'All',
   'Productivity',
   'Content & Marketing',
@@ -868,9 +862,10 @@ export const serviceCategories = [
   'Analytics',
   'Automation'
 ];
-
 // Pricing tiers for comparison
 export const pricingTiers = {
+};
+};
   starter: {,
     name: 'Starter',
     price: '$29-99/month',
@@ -885,11 +880,12 @@ export const pricingTiers = {
     name: 'Enterprise',
     price: '$299-999/month',
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
-  }
+  };
 };
-
 // Contact information
 export const contactInfo = {
+};
+};
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',

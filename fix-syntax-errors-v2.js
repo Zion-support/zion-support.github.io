@@ -1,17 +1,15 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
 // Function to fix specific syntax errors in a file;
 function fixSyntaxErrors(filePath) {
   try {;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
     // Fix specific patterns found in the files;
 const fixes = [
+];
       // Fix missing commas in object properties (like the values array in about/page.tsx)
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
@@ -30,11 +28,15 @@ const fixes = [
       // Fix malformed metadata objects
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:'
+        replacement: 'export const metadata = {
+\n  $1: \'$2\',\n  $3:'
+};
       },
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: "$2",\n  $3:'
+        replacement: 'export const metadata = {
+\n  $1: "$2",\n  $3:'
+};
       },
       // Fix malformed function parameters
       {
@@ -65,18 +67,17 @@ const fixes = [
       {
         pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: 'function $1({\n  $2:'
-      }
+      };
     ];
-    
     for (const fix of fixes) {;
 const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true}
-    }
-    
+        modified = true};
+    };
     // Additional specific fixes for common patterns;
 const specificFixes = [
+];
       // Fix the specific pattern in about/page.tsx
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
@@ -85,41 +86,38 @@ const specificFixes = [
       // Fix malformed metadata
       {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:'
+        replacement: 'export const metadata = {
+\n  $1: \'$2\',\n  $3:'
+};
       },
       // Fix malformed function parameters
       {
         pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: 'export default function $1({\n  $2:'
-      }
+      };
     ];
-    
     for (const fix of specificFixes) {;
 const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true}
-    }
-    
+        modified = true};
+    };
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       // console.log removed for production
-return true}
-    
+return true};
     return false} catch (error) {
     // console.error removed for production
-return false}
-}
-
+return false};
+};
 // Function to find files with syntax errors;
 function findFilesWithSyntaxErrors() {
   try {;
 const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
     return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {
     // console.error removed for production
-return []}
-}
-
+return []};
+};
 // Main execution
 // console.log removed for production
 ;
@@ -129,9 +127,8 @@ const filesWithErrors = findFilesWithSyntaxErrors();
 let fixedCount = 0;
 for (const file of filesWithErrors) {
   if (fixSyntaxErrors(file)) {
-    fixedCount++}
-}
-
+    fixedCount++};
+};
 // console.log removed for production
 // Verify no more syntax errors exist
 try {;
@@ -141,7 +138,7 @@ const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing er
     // console.log removed for production
 } else {
     // console.log removed for production
-}
+};
 } catch (error) {
   // console.log removed for production
-}
+};

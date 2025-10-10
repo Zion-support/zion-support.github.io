@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -93,7 +91,7 @@ import React from 'react';
     addres,
   s: string;
     websit,
-  e: string}
+  e: string};
         'Hybrid quantum-classical computing',
         'Quantum-resistant encryption',
   real_implementatio,
@@ -909,7 +907,9 @@ varian,
       rating: 4 && 4.8;
       reviews: 550};
   ];    features: [,
-export interface Innovative2026ITInfrastructureService {id: string, name: string;
+export interface Innovative2026ITInfrastructureService {
+id: string, name: string;
+}
   tagline: string, price: string;
   period: string, description: string;
   features: string[], popular: boolean;
@@ -925,12 +925,12 @@ export interface Innovative2026ITInfrastructureService {id: string, name: string
   contactInfo: unknown;
     mobile: string, email: string;
     address: string;
-    website: string}
+    website: string};
     },
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [,
   // Quantum-Enhanced Cloud Infrastructure;
     id: 'quantum-enhanced-cloud-platform', name: 'Quantum-Enhanced Cloud Platform',
@@ -948,8 +948,8 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
   s: 550};
   ];    feature,
   s: [,
-export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
-  e: string}
+export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */};
+  e: string};
     },
     realImplementatio,
   n: boolean, implementationDetail,
@@ -960,7 +960,7 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [,
   // Quantum-Enhanced Cloud Infrastructure,
@@ -1064,7 +1064,9 @@ marketSize: '$397.4B market', growthRate: '280% annual growth',
     rating: 4.8;
     reviews: 550;
 ]
-export interface Innovative2026ITInfrastructureService {;
+export interface Innovative2026ITInfrastructureService {
+;
+}
   id: string;
   name: string;
   tagline: string;
@@ -1094,8 +1096,8 @@ export interface Innovative2026ITInfrastructureService {;
   contactInfo: {,
     mobile: string;
     email: string;
-    address: string}
-    website: string}
+    address: string};
+    website: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -1271,10 +1273,10 @@ varian,
     review,
   s: 550;
 ],
-export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementatio,
   n: boolean;
@@ -1287,7 +1289,7 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
@@ -1321,8 +1323,8 @@ export const,
     competitors: ['AWSGoogle CloudMicrosoft AzureIBM CloudOracle Cloud'];
     marketSize: '$397.4 B market';
     growthRate: '280% annual growth';
-    variant: 'quantum-futuristic'}
-    contactInfo: {}
+    variant: 'quantum-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1363,8 +1365,8 @@ export const,
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoT EdgeFogHornClearBlade'];
     marketSize: '$43.4 B market';
     growthRate: '240% annual growth';
-    variant: 'edge-futuristic'}
-    contactInfo: {}
+    variant: 'edge-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1405,8 +1407,8 @@ export const,
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper Networks'];
     marketSize: '$45.2 B market';
     growthRate: '260% annual growth';
-    variant: 'security-futuristic'}
-    contactInfo: {}
+    variant: 'security-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1447,8 +1449,8 @@ export const,
     competitors: ['GitLabGitHub ActionsJenkinsCircleCITravis CI'];
     marketSize: '$8.2 B market';
     growthRate: '190% annual growth';
-    variant: 'devops-futuristic'}
-    contactInfo: {}
+    variant: 'devops-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1489,16 +1491,16 @@ export const,
     competitors: ['AWS S3 Google Cloud StorageAzure BlobDropbox BusinessBox'];
     marketSize: '$78.4 B market';
     growthRate: '220% annual growth';
-    variant: 'quantum-futuristic'}
-    contactInfo: {}
+    variant: 'quantum-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com',
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1522,10 +1524,10 @@ export const,
     review,
   s: 400};
   // Edge Computing Orchestration Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'edge-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'edge-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1549,10 +1551,10 @@ export const,
     review,
   s: 600};
   // Zero-Trust Network Architecture;
-  {/* TODO: Fix JSX expression */}
-  t: 'security-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'security-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1576,10 +1578,10 @@ export const,
     review,
   s: 450};
   // AI-Powered DevOps Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'devops-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'devops-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1603,10 +1605,10 @@ export const,
     review,
   s: 1250};
   // Quantum-Safe Data Storage;
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1629,17 +1631,17 @@ export const,
   g: 4.8;
     review,
   s: 550;
-]}
+]};
 ];
 ;
-}
+};
 ];
-}
+};
 ];
-export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
@@ -1658,7 +1660,7 @@ export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX express
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [;
@@ -1692,8 +1694,8 @@ export const,
     competitors: ['AWSGoogle CloudMicrosoft AzureIBM CloudOracle Cloud'];
     marketSize: '$397.4 B market';
     growthRate: '280% annual growth';
-    variant: 'quantum-futuristic'}
-    contactInfo: {}
+    variant: 'quantum-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1734,8 +1736,8 @@ export const,
     competitors: ['AWS GreengrassAzure IoT EdgeGoogle Cloud IoT EdgeFogHornClearBlade'];
     marketSize: '$43.4 B market';
     growthRate: '240% annual growth';
-    variant: 'edge-futuristic'}
-    contactInfo: {}
+    variant: 'edge-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1776,8 +1778,8 @@ export const,
     competitors: ['Palo Alto NetworksCiscoFortinetCheck PointJuniper Networks'];
     marketSize: '$45.2 B market';
     growthRate: '260% annual growth';
-    variant: 'security-futuristic'}
-    contactInfo: {}
+    variant: 'security-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1818,8 +1820,8 @@ export const,
     competitors: ['GitLabGitHub ActionsJenkinsCircleCITravis CI'];
     marketSize: '$8.2 B market';
     growthRate: '190% annual growth';
-    variant: 'devops-futuristic'}
-    contactInfo: {}
+    variant: 'devops-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1860,8 +1862,8 @@ export const,
     competitors: ['AWS S3 Google Cloud StorageAzure BlobDropbox BusinessBox'];
     marketSize: '$78.4 B market';
     growthRate: '220% annual growth';
-    variant: 'quantum-futuristic'}
-    contactInfo: {}
+    variant: 'quantum-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
@@ -1872,10 +1874,10 @@ export const,
     customers: 1100;
     rating: 4.8;
     reviews: 550;
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1899,10 +1901,10 @@ export const,
     review,
   s: 400};
   // Edge Computing Orchestration Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'edge-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'edge-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1926,10 +1928,10 @@ export const,
     review,
   s: 600};
   // Zero-Trust Network Architecture;
-  {/* TODO: Fix JSX expression */}
-  t: 'security-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'security-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1953,10 +1955,10 @@ export const,
     review,
   s: 450};
   // AI-Powered DevOps Platform;
-  {/* TODO: Fix JSX expression */}
-  t: 'devops-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'devops-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1980,10 +1982,10 @@ export const,
     review,
   s: 1250};
   // Quantum-Safe Data Storage;
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -2005,7 +2007,7 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 550}
+  s: 550};
 ];
 ;
 i,
@@ -2391,7 +2393,7 @@ i,
   e: '2025 - 11 - 20', customer,
   s: 1100, ratin,
   g: 4.8, review,
-  s: 550; ], ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 550; ], ' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2400,7 +2402,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [; // Quantum-Enhanced Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [; // Quantum-Enhanced Cloud Infrastructure; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2410,7 +2412,7 @@ i,
   e: '2025-08-15'; customer,
   s: 800; ratin,
   g: 4.9; review,
-  s: 400}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  s: 400}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2420,7 +2422,7 @@ i,
   e: '2025-07-20'; customer,
   s: 1200; ratin,
   g: 4.8; review,
-  s: 600}; // Zero-Trust Network Architecture; {/* TODO: Fix JSX expression */}
+  s: 600}; // Zero-Trust Network Architecture; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2430,7 +2432,7 @@ i,
   e: '2025-09-10'; customer,
   s: 900; ratin,
   g: 4.9; review,
-  s: 450}; // AI-Powered DevOps Platform; {/* TODO: Fix JSX expression */}
+  s: 450}; // AI-Powered DevOps Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2440,7 +2442,7 @@ i,
   e: '2025-10-15'; customer,
   s: 2500; ratin,
   g: 4.7; review,
-  s: 1250}; // Quantum-Safe Data Storage; {/* TODO: Fix JSX expression */}
+  s: 1250}; // Quantum-Safe Data Storage; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2450,7 +2452,7 @@ i,
   e: '2025-11-20'; customer,
   s: 1100; ratin,
   g: 4.8; review,
-  s: 550; ]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 550; ]} ]; } ]} ];' import { ServiceVariant } from '../types/service-variants'; export interface Innovative2026ITInfrastructureService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -2459,7 +2461,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [; // Quantum-Enhanced Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] = [; // Quantum-Enhanced Cloud Infrastructure; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2469,7 +2471,7 @@ i,
   e: '2025-08-15'; customer,
   s: 800; ratin,
   g: 4.9; review,
-  s: 400}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  s: 400}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2479,7 +2481,7 @@ i,
   e: '2025-07-20'; customer,
   s: 1200; ratin,
   g: 4.8; review,
-  s: 600}; // Zero-Trust Network Architecture; {/* TODO: Fix JSX expression */}
+  s: 600}; // Zero-Trust Network Architecture; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2489,7 +2491,7 @@ i,
   e: '2025-09-10'; customer,
   s: 900; ratin,
   g: 4.9; review,
-  s: 450}; // AI-Powered DevOps Platform; {/* TODO: Fix JSX expression */}
+  s: 450}; // AI-Powered DevOps Platform; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2499,7 +2501,7 @@ i,
   e: '2025-10-15'; customer,
   s: 2500; ratin,
   g: 4.7; review,
-  s: 1250}; // Quantum-Safe Data Storage; {/* TODO: Fix JSX expression */}
+  s: 1250}; // Quantum-Safe Data Storage; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -2510,10 +2512,3 @@ i,
   s: 1100; ratin,
   g: 4.8; review,
   s: 550} ]; '
-=======
-      market_size: '$397.4B market'
-      growth_rate: '280% annual growth';
-variant: 'quantum - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

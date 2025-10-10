@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 ;
@@ -7,7 +6,6 @@ function fixJsxFile(filePath) {
   try {;
 let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
     // Fix self-closing div tags that have content after them;
 const selfClosingDivPattern = /<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g;
     const selfClosingDivReplacement = '<div$1>';
@@ -17,13 +15,11 @@ const newContent = content.replace(selfClosingDivPattern, selfClosingDivReplacem
       content = newContent;
       modified = true;
       // console.log removed for production
-}
-    
+};
     // Fix mismatched section/div tags;
 const sectionDivPattern = /<section([^>]*)>[\s\S]*?<\/div>/g;
     const sectionDivReplacement = (match, sectionAttrs) => {
 return (
-
       return match.replace(/<\/div>$/, '</section>
 );
 }')};
@@ -33,41 +29,34 @@ const newContent2 = content.replace(sectionDivPattern, sectionDivReplacement);
       content = newContent2;
       modified = true;
       // console.log removed for production
-}
-    
+};
     if (modified) {
       fs.writeFileSync(filePath, content);
-      return true}
+      return true};
     return false} catch (error) {
     // console.error removed for production
-return false}
-}
+return false};
+};
 ;
 function findTsxFiles(dir) {;
 const files = [];
   const items = fs.readdirSync(dir);
-  
   for (const item of items) {;
 const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
       files.push(...findTsxFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath)}
-  }
-  
-  return files}
-
+      files.push(fullPath)};
+  };
+  return files};
 // Main execution
 // console.log removed for production
 ;
 const tsxFiles = findTsxFiles('/workspace');
 let fixedCount = 0;
-
 tsxFiles.forEach(file => {
   if (fixJsxFile(file)) {
-    fixedCount++}
+    fixedCount++};
 });
-
 // console.log removed for production
 // console.log removed for production

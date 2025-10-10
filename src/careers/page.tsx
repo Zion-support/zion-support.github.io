@@ -4,9 +4,11 @@ import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
-const CareersPage: React.FC = () => {;
+const CareersPage: React.FC = () => {
+};
 const openPositions = [
-    {
+[
+        {
       id: 'senior-ai-engineer',
       title: 'Senior AI Engineer',
       department: 'Engineering',
@@ -23,7 +25,7 @@ const openPositions = [
       ],
       benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']
     },
-    {
+        {
       id: 'full-stack-developer',
       title: 'Full-Stack Developer',
       department: 'Engineering',
@@ -40,7 +42,7 @@ const openPositions = [
       ],
       benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']
     },
-    {
+        {
       id: 'data-scientist',
       title: 'Data Scientist',
       department: 'Data Science',
@@ -57,7 +59,7 @@ const openPositions = [
       ],
       benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities']
     },
-    {
+        {
       id: 'cybersecurity-specialist',
       title: 'Cybersecurity Specialist',
       department: 'Security',
@@ -74,7 +76,7 @@ const openPositions = [
       ],
       benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work']
     },
-    {
+        {
       id: 'product-manager',
       title: 'Product Manager',
       department: 'Product',
@@ -91,7 +93,7 @@ const openPositions = [
       ],
       benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development']
     },
-    {
+        {
       id: 'sales-engineer',
       title: 'Sales Engineer',
       department: 'Sales',
@@ -107,33 +109,35 @@ const openPositions = [
         'Ability to travel to client sites (25% travel)'
       ],
       benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
-    }
+    };
   ];
 ;
 const benefits = [
-    {
+[
+        {
       icon: Heart,
       title: 'Health & Wellness',
       description: 'Comprehensive health insurance, dental, vision, and mental health support'
     },
-    {
+        {
       icon: Zap,
       title: 'Learning & Growth',
       description: 'Professional development budget, conference attendance, and skill development programs'
     },
-    {
+        {
       icon: Shield,
       title: 'Work-Life Balance',
       description: 'Flexible work hours, remote work options, and unlimited PTO'
     },
-    {
+        {
       icon: Star,
       title: 'Recognition',
       description: 'Performance bonuses, stock options, and recognition programs'
-    }
+    };
   ];
 ;
 const culture = [
+];
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
     'Opportunities to work on cutting-edge AI and technology projects',
@@ -141,12 +145,10 @@ const culture = [
     'Regular team events and company retreats',
     'Open communication and transparent leadership'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
-      {/* Hero Section */}
+      {/* Hero Section */};
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -156,23 +158,18 @@ const culture = [
             Be part of the future of AI and IT solutions. We're looking for passionate individuals who want to make a real impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="#open-positions"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
+            <Link to="#open-positions"
+              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               View Open Positions
             </Link>
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
+            <Link to="/contact"
+              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
               Contact Us
             </Link>
           </div>
         </div>
       </section>
-
-      {/* Why Work With Us */}
+      {/* Why Work With Us */};
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -187,17 +184,16 @@ const culture = [
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                  <benefit .icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
-            ))}
+            ))};
           </div>
         </div>
       </section>
-
-      {/* Company Culture */}
+      {/* Company Culture */};
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -216,7 +212,7 @@ const culture = [
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600">{item}</span>
                   </li>
-                ))}
+                ))};
               </ul>
             </div>
             <div className="bg-white rounded-xl shadow-lg p-8">
@@ -243,8 +239,7 @@ const culture = [
           </div>
         </div>
       </section>
-
-      {/* Open Positions */}
+      {/* Open Positions */};
       <section id="open-positions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -265,32 +260,28 @@ const culture = [
                       <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
                         <span className="flex items-center">
                           <Briefcase className="w-4 h-4 mr-1" />
-                          {position.department}
+                          {position.department};
                         </span>
                         <span className="flex items-center">
                           <MapPin className="w-4 h-4 mr-1" />
-                          {position.location}
+                          {position.location};
                         </span>
                         <span className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
-                          {position.type}
+                          {position.type};
                         </span>
                         <span className="flex items-center">
                           <Users className="w-4 h-4 mr-1" />
-                          {position.experience}
+                          {position.experience};
                         </span>
                       </div>
                     </div>
-                    <Link
-                      to="/contact"
-                      className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center"
-                    >
+                    <Link to="/contact"
+                      className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center">
                       Apply Now <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
-                  
                   <p className="text-gray-600 mb-6">{position.description}</p>
-                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements</h4>
@@ -298,9 +289,9 @@ const culture = [
                         {position.requirements.map((req, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                            {req}
+                            {req};
                           </li>
-                        ))}
+                        ))};
                       </ul>
                     </div>
                     <div>
@@ -309,20 +300,19 @@ const culture = [
                         {position.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
-                            {benefit}
+                            {benefit};
                           </li>
-                        ))}
+                        ))};
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
+            ))};
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -332,24 +322,18 @@ const culture = [
             We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-            >
+            <Link to="/contact"
+              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
               Send Us Your Resume
             </Link>
-            <Link
-              to="/team"
-              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
+            <Link to="/team"
+              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Meet Our Team
             </Link>
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   )};
-
 export default CareersPage;

@@ -1,7 +1,7 @@
 import React from 'react';
-
 export default function AboutSection() {;
 const stats = [
+[
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
@@ -9,6 +9,7 @@ const stats = [
   ];
 ;
 const values = [
+[
     {
       title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions.',
@@ -37,7 +38,6 @@ const values = [
       )
     }
   ];
-
   return (
     <section id="about" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,7 +51,6 @@ const values = [
             that transform businesses and drive digital innovation.
           </p>
         </div>
-
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Left Content */}
@@ -71,7 +70,6 @@ const values = [
                 needs but also scale with your future ambitions.
               </p>
             </div>
-
             <div className="cyber-card-advanced p-8">
               <h3 className="text-2xl font-bold text-white mb-6">
                 Why Choose Us?
@@ -104,7 +102,6 @@ const values = [
               </ul>
             </div>
           </div>
-
           {/* Right Content - Stats */}
           <div className="space-y-8">
             <div className="grid grid-cols-2 gap-6">
@@ -119,7 +116,6 @@ const values = [
                 </div>
               ))}
             </div>
-
             <div className="cyber-card-advanced p-8">
               <h3 className="text-xl font-bold text-white mb-4">
                 Our Expertise
@@ -137,7 +133,6 @@ const values = [
             </div>
           </div>
         </div>
-
         {/* Values Section */}
         <div className="mb-16">
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -159,7 +154,6 @@ const values = [
             ))}
           </div>
         </div>
-
         {/* Team Section */}
         <div className="cyber-card-advanced p-8">
           <h3 className="text-2xl font-bold text-white text-center mb-8">

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-
 interface AnimatedCounterProps {
-  end: number;
+  end: number
+}
   duration?: number;
   prefix?: string;
   suffix?: string;
-  className?: string}
+  className?: string};
 ;
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
@@ -28,15 +28,11 @@ const observer = new IntersectionObserver(
       },
       { threshold: 0.1 }
     );
-
     if (counterRef.current) {
       observer.observe(counterRef.current)}
-
     return () => observer.disconnect()}, [isVisible]);
-
   useEffect(() => {
 return (
-
     if (!isVisible) return;
 ;
 let startTime: number;
@@ -45,30 +41,23 @@ let startTime: number;
 const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
       // Easing function for smooth animation;
 const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       const currentCount = Math.floor(easeOutQuart * end);
-      
       setCount(currentCount);
-
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)}
     };
-
     animationFrame = requestAnimationFrame(animate);
-
     return () =>
 );
 } {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)}
     }}, [isVisible, end, duration]);
-
   return (
     <div ref={counterRef} className={className}></di>
       {prefix}{count.toLocaleString()}{suffix}
     </div>
   )};
-
 export default AnimatedCounter;

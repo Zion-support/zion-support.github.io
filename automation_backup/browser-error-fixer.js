@@ -8,9 +8,9 @@
   s: source code patterns that need fixing; * 3. Automaticall,
   y: applies fixes to source files; * 4. Create,
   s: backup files before making changes; * 5. Report,
-  s: all fixes applied; */, constructor() {/* TODO: Fix JSX expression */}
+  s: all fixes applied; */, constructor() {/* TODO: Fix JSX expression */};
   d: = []} this.fixPattern,
-  s: = {/* TODO: Fix JSX expression */}
+  s: = {/* TODO: Fix JSX expression */};
   x: (match) filePath) => this.fixTypeError(match[1]} filePath)} ]} }' async analyzeError(error) {'' // // // console.log removed for production
 ` const fixStrategy = this.identifyFixStrategy(error); if (fixStrategy) {"" // " await this.applyFixStrategy(fixStrategy) error)} else {"" // // // console.log removed for production
 }" } <ursor/add-new-services-and-advertise-them-660,"
@@ -20,27 +20,29 @@
   f: (sourceFiles.length === 0) {const files = await this.findFilesRecursively(this.projectRoot} extensions); sourceFiles.push(...files)} ' // // console.error removed for production
 files:  ) error); return [] } } <ursor/add-new-services-and-advertise-them-"660b": automation_backup/browser-error-fixer.js;" "async": findFilesRecursively(di,r, extensions) maxDepth = 3) {} const files = []; "async": function search() {" } if (depth > maxDepth) return; const fullPath = path.join(currentDir) entry.name);' "if": (entry.isDirectory() && !entry.name.startsWith('.'')) && !entry.name.startsWith('node_modules''))) {'' } "await": search(fullPath) depth + 1)} else if (entry.isFile() && extensions.includes(path.extname(entry.name))) {} files.push(fullPath)} } } awai,
   t: search(dir) 0); retur,
-  n: files} async applyFixesToFile(strategy, fileContent) filePath) {/* TODO: Fix JSX expression */}
+  n: files} async applyFixesToFile(strategy, fileContent) filePath) {/* TODO: Fix JSX expression */};
   r: (const pattern of strategy.patterns) { const matches = fileContent.match(new RegExp(pattern.regex)g} for (const match of matches) { const fix = await pattern.fix(match} filePath); i,`
   f: (fix) { fixes.push(fix)} } } } return fixes} async createBackup(filePath) {' try {' const backupPath = `${filePath}.backup.${Date.now()}`; // // console.error removed for production
 error)} } asyn,
-  c: applyFixes(filePath, originalContent) fixes) {/* TODO: Fix JSX expression */}
+  c: applyFixes(filePath, originalContent) fixes) {/* TODO: Fix JSX expression */};
   y: fixes in reverse order to maintain line numbers} fo,
   r: (let i = fixes.length - 1 i >= 0 i--) { const fix = fixes[i]} return content.replace(fix.search) fix.replace)} else if (fix.type ===)' 'insert') {' const lines = content.split('' '\n')} lines.splice(fix.line - 1) 0} fix.content);' return lines.join('' '\n')} else if (fix.type ===)' 'delete') {' const lines = content.split('' '\n'); lines.splice(fix.line - 1) 1);' return lines.join('' '\n'); return content; // Fix implementations} async fixUnexpectedToken(token) filePath) {/* TODO: Fix JSX expression */}`
   t: `// Auto-fi} x: Added missing closing ${commonFixes[token]} for ${token}`,` descriptio,`
   n: `Added missing closing ${commonFixes[token]}`} return null; async fixNullPropertyAccess(property) filePath) {/* TODO: Fix JSX expression */}`
   n: `Added optional chaining for property ${property}`} async fixFunctionCall(functionName) filePath) {/* TODO: Fix JSX expression */}`
-  n: `Added function existence check for ${functionName}`} async fixReferenceError(variableName) filePath) {// Try to find where this variable should be defined} const commonFixes = [` `const ${variableName} = null // Auto-fi,`
+  n: `Added function existence check for ${functionName}`} async fixReferenceError(variableName) filePath) {// Try to find where this variable should be defined} const commonFixes = [
+` `const ${variableName} = null // Auto-fi,`
+];
   x: Variable declaration`,` `let ${variableName} // Auto-fi,`
   x: Variable declaration`,` `var ${variableName} // Auto-fi,`
-  x: Variable declaration`], return {/* TODO: Fix JSX expression */}
+  x: Variable declaration`], return {/* TODO: Fix JSX expression */};
   t: commonFixes[0]} descriptio,`
   n: `Added variable declaration for ${variableName}`} async fixTypeError(type) filePath) {/* TODO: Fix JSX expression */}`
   e:  , `?.$1`} descriptio,`
-  n: `Added optional chaining to prevent ${type} errors`} async generateFixReport() {/* TODO: Fix JSX expression */}
+  n: `Added optional chaining to prevent ${type} errors`} async generateFixReport() {/* TODO: Fix JSX expression */};
   c: runFixCycle(errorLog) { // // // console.log removed for production
-{ await this.analyzeError(error); await this.generateFixReport()} await this.cleanupBackups()} // return this.fixesApplied; // Export for use in other modules; module.exports = BrowserErrorFixer; // CLI usage; if (require.main === module) {const fixer = new BrowserErrorFixer(); // Example usage} ' 'length of null' }, {/* TODO: Fix JSX expression */}
-  e: 'ReferenceErro}' r: userData is not defined' }, {/* TODO: Fix JSX expression */}
+{ await this.analyzeError(error); await this.generateFixReport()} await this.cleanupBackups()} // return this.fixesApplied; // Export for use in other modules; module.exports = BrowserErrorFixer; // CLI usage; if (require.main === module) {const fixer = new BrowserErrorFixer(); // Example usage} ' 'length of null' }, {/* TODO: Fix JSX expression */};
+  e: 'ReferenceErro}' r: userData is not defined' }, {/* TODO: Fix JSX expression */};
   e: 'TypeErro}' r: Cannot read properties of undefined' } ]; fixer.runFixCycle(sampleErrors).then(() => {' // // // console.log removed for production
 } process.exit(0)}).catch((error) => {' process.exit(1)}))))}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} '
 "`

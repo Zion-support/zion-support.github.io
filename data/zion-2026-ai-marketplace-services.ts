@@ -20,7 +20,7 @@ export type Zion2026AIMarketplaceService =
     phone: string;
     email: string;
     website: string;
-    address: string}}
+    address: string}};
 export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,
     id: 'ai-marketplace-001',
     name: 'Zion AI Service Marketplace Platform',
@@ -75,7 +75,7 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     websit,
   e: string;
     addres,
-  s: string}}
+  s: string}};
 export const,
   zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
     i,
@@ -158,7 +158,7 @@ export const,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
   },
     id: 'ai-marketplace-002',
     name: 'AI Service Integration Hub',
@@ -181,7 +181,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
     i,
   d: 'ai-marketplace-002',
@@ -263,7 +263,7 @@ export const,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
   },
     id: 'ai-marketplace-003',
     name: 'AI Service Quality Assurance Platform',
@@ -286,7 +286,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
     i,
   d: 'ai-marketplace-003',
@@ -368,7 +368,7 @@ export const,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
   },
     id: 'ai-marketplace-004',
     name: 'AI Service Analytics Dashboard',
@@ -391,7 +391,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
     i,
   d: 'ai-marketplace-004',
@@ -473,7 +473,7 @@ export const,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
   },
     id: 'ai-marketplace-005',
     name: 'AI Service Development Studio',
@@ -496,7 +496,7 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
     i,
   d: 'ai-marketplace-005',
@@ -590,8 +590,8 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];
 export type Zion2026AIMarketplaceService = i,
   d: string; nam,

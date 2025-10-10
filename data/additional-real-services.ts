@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-
-export interface AdditionalRealService {id: string;
+export interface AdditionalRealService {
+id: string;
+}
   name: string;
   tagline: string;
   price: string;
@@ -10,12 +10,12 @@ export interface AdditionalRealService {id: string;
   category: string;
   real_implementation: boolean;
   contact_info: unknown;
-    mobile: string}
-    email: string}
-}
-    address: string}
+    mobile: string};
+    email: string};
+};
+    address: string};
 export const additionalEnhancedServices: AdditionalRealService[] = [;
-    address: string}
+    address: string};
 ;
 export const additionalEnhancedServices: AdditionalRealService[] = [
     id: 'ai - automation - suite',
@@ -23,17 +23,17 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     tagline: 'Intelligent automation for modern businesses',
     price: '$79 / month',
     description: unknown;
-export interface AdditionalRealService {/* TODO: Fix JSX expression */}
-  e: string}
+export interface AdditionalRealService {/* TODO: Fix JSX expression */};
+  e: string};
     emai,
-  l: string}
-}
+  l: string};
+};
     addres,
-  s: string}
+  s: string};
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [;
     addres,
-  s: string}
+  s: string};
 ;
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [,
@@ -82,8 +82,8 @@ export const,
   contactInfo: unknown;
     mobile: string;
     email: string;
-    address: string}}
-}
+    address: string}};
+};
     address: string;
     lin,
   k: '/services / ai - automation - suite',
@@ -145,10 +145,10 @@ export const,
     emai,
   l: string;
     addres,
-  s: string}}
-}
+  s: string}};
+};
     addres,
-  s: string}
+  s: string};
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [;
     i,
@@ -188,8 +188,8 @@ export const,
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
     i,
   d: 'data-warehouse-solution'
     nam,
@@ -213,8 +213,8 @@ export const,
     realImplementation: true;
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
+  };
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
     id: 'data - warehouse - solution',
@@ -235,8 +235,8 @@ export const,
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];      mobil,
   e: "+1 302 464 0950",
   emai,"
@@ -284,7 +284,7 @@ export const,
     contactInfo: unknown;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      address: "364 E Main St STE 1008 Middletown DE 19709"};
   },
     id: 'data-warehouse-solution',
     name: 'Data Warehouse Solution',
@@ -351,7 +351,7 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    };
   },
     i,"
   d: "data-warehouse-solution",
@@ -384,8 +384,8 @@ export const,
   l: "kleber@ziontechgroup.com"
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+    };
+  };
 ];
 ;
 ];
@@ -440,7 +440,7 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    };
   },
     i,
   d: 'mobile-first-survey',
@@ -7522,8 +7522,8 @@ varian,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+    };
+  };
 ];
 export interface AdditionalRealService,
   id: string; nam,
@@ -10067,8 +10067,3 @@ export interface AdditionalRealService,
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
-=======
-    reviews: 24},
-    id: 'churn-risk-alerts'
-    name: 'Churn Risk Alerts for Slack'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

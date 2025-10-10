@@ -1,24 +1,15 @@
 'use client';
 import React from 'react';
 import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const $1: React.FC = () => {const webServices = [,
-=======
-import Navigation from '../components
-import Footer from '../components
-import SEOOptimizer from '../components
-import PerformanceOptimizer from '../components
-import AccessibilityEnhancer from '../components
-import SecurityEnhancer from '../components
-const $1: React.FC = () => {
-  const webServices = [,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+const $1: React.FC = () => {const webServices = [
+,
+];
     {,
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
@@ -59,32 +50,22 @@ const $1: React.FC = () => {
       price: '$500
       features: ['24
       colo,
-    r: 'text-gray-400'}
+    r: 'text-gray-400'};
   ];
-<<<<<<< HEAD
 ;
 const technologies = [
-    { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
-    { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
-    { name: 'Python/Django', icon: Globe, description: 'Backend development' },
-    { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
-    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
-    { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-=======
-
-  const technologies = [
-    { name: 'React
-    { nam,
-    e: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
-    { name: 'Python
-    { name: 'MongoDB
-    { name: 'AWS
-    { name: 'Docker
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+[
+        { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
+        { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
+        { name: 'Python/Django', icon: Globe, description: 'Backend development' },
+        { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
+        { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
+        { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' };
   ];
 ;
 const process = [
-    {
+[
+        {
       ste,
     p: '01',
       title: 'Discovery & Planning',
@@ -108,80 +89,44 @@ const process = [
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield,})
-}
+};
   ];
-
-<<<<<<< HEAD
-  return(<React.Fragment>
-=======
-  return(<>
-<<<<<<< HEAD
-      
-<
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><
-        <Navigation 
-
-        <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}<
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl l,
-    g:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.<
-              From frontend to backend, we deliver solutions that drive business growth.<
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section *
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl l,
-    g:text-6xl font-bold text-white mb-6 neon-text">
-              Web Development Services;<
-            <
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
-              Build modern, scalable, and high-performance web applications with our expert development team.
-              From frontend to backend, we deliver solutions that drive business growth.
-            <
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"><
-              <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"><
-              <a
-                href="
-                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-              >Start Your Project<a
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+  return(<React .Fragment>
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
-        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
+        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']};
         canonicalUrl="https: //ziontechgroup.com/web-development",
       />,
-        <PerformanceOptimizer;
-          enableImageOptimization={true}
-          enableLazyLoading={true}
-          enableCodeSplitting={true}
-          enablePrefetching={true}
+        <PerformanceOptimizer ;
+          enableImageOptimization={true};
+          enableLazyLoading={true};
+          enableCodeSplitting={true};
+          enablePrefetching={true};
         />
-      <AccessibilityEnhancer;
-        enableKeyboardNavigation={true}
-        enableScreenReaderSupport={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
+      <AccessibilityEnhancer ;
+        enableKeyboardNavigation={true};
+        enableScreenReaderSupport={true};
+        enableHighContrast={true};
+        enableFocusManagement={true};
       />
-      <SecurityEnhancer;
-        enableCSP={true}
-        enableHTTPSRedirect={true}
-        enableXSSProtection={true}
-        enableClickjackingProtection={true}
+      <SecurityEnhancer ;
+        enableCSP={true};
+        enableHTTPSRedirect={true};
+        enableXSSProtection={true};
+        enableClickjackingProtection={true};
       />
       <Analytics />
       <div>
 </div>
       <div>
         <Navigation />
-
         <mai></mai>{/* Hero Section */}</main>
           <section></section>
             <h></h>Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
               From frontend to backend, we deliver solutions that drive business growth.</p>
         <main></main>
-          {/* Hero Section */}
+          {/* Hero Section */};
           <section></section>
             <h1></h1>
               Web Development Services;</h1>
@@ -194,29 +139,21 @@ const process = [
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></a></section>
               <a></a>Start Your Project<a
->>>>>>> main
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >Call +1 302 464 0950<
               >
                 Start Your Project;
-<<<<<<< HEAD
               <
-              <a;
+              <a ;
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
-    r:text-slate-900 transition-all duration-300"
-              >
-=======
-              </a>
-              <a></a>
->>>>>>> main
+    r:text-slate-900 transition-all duration-300">
                 Call +1 302 464 0950;
               <
             <
           <
 ,
-<<<<<<< HEAD
           {/* Services Grid *
           <section className="mb-20">)
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 l,
@@ -245,7 +182,6 @@ const process = [
                       <div className={`font-semibold ${service.color}`}>{service.price}<
                     <
                   <
-
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}<)
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8">{webServices.map((service), index) => (<
@@ -256,84 +192,23 @@ const process = [
                     <
                     <div><
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}<
-
                   <div className="mb-6"><)
                     <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (<
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}<
                         <)
-                      ))}
+                      ))};
                     <
                   <
-
                   {service.benefits && (<div className="mb-6"><)
                       <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (<
                           <li key={benefitIndex} className="flex items-center text-gray-300">
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}<
                           <)
-                        ))}
+                        ))};
                       <
                     <
-                  )}
-=======
-          {/* Services Grid */}
-          <section></section>
-            <h2></h2>Our Web Development Services<di></di>{webServices.map((service, index) => (</div>
-                <div>
-                  <div>
-                    <div>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3>{service.title}<div>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h2></h2>
-              Our Web Development Services}
-            </h2>)
-)
-            <div>),
-              {webServices.map((service, index) => (</div>
-                <div>
-                  <di></di>,</div>
-                    <di></di>,</div>
-                      <service.icon className="w-8 h-8 text-white" />,
-                    </div>,
-                    <di></di>,</div>
-                      <h></h>{service.title}</h3>
-                      <di></di>{service.price}</div>
-                    </div>
-                  </div>
-
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h></h>Our Web Development Services</h2><div>{webServices.map((service, index) => (</section>
-                <div>
-                  <div>
-                    <div>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h></h>{service.title}</h3><di></di>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-
-                  <div>
-                    <h4></h4>Features<u></u>{service.features.map((feature, featureIndex) => (</ul>
-                        <li></li>
-                          <CheckCircl></CheckCircl>{feature}</CheckCircle>
-                        </CheckCircle>
-                      ))
-                    </ul>
-                  </div>
-
-                  {service.benefits && (
-                    <div>
-                      <h4></h4>Benefits<u></u>{service.benefits.map((benefit, benefitIndex) => (</ul>
-                          <li></li>
-                            <ArrowRigh></ArrowRigh>{benefit}</ArrowRight>
-                          </ArrowRight>
-                        ))
-                      </ul>
-                    </div>
-                  );
->>>>>>> main
-
+                  )};
                   <a;
                     href="
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
@@ -343,12 +218,10 @@ const process = [
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
                   >
                     Get Started;
-<<<<<<< HEAD
                   <
                 <
             <
           <
-
           {/* Technologies *
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 l,
@@ -357,55 +230,10 @@ const process = [
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}<
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-=======
-                  </a>,
-                </div>))
-            </div>
-          </section>
-
-          {/* Technologies */}
-          <section></section>
-            <h2></h2>Technologies We Use<di></di>{technologies.map((tech, index) => (</div>
-                <div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3>{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
-            <h2></h2>
->>>>>>> main
               Technologies We Use;
             <
 ,
-<<<<<<< HEAD
             <div>,
-=======
-<<<<<<< HEAD
-            <div className="grid grid-cols-2 md: grid-cols-3 l,
-    g:grid-cols-6 gap-6">,)
-              {technologies.map((tech, index) => (<
-                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,<
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<
-                  <p className="text-sm text-gray-300">{tech.description}<)
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2><div className="grid grid-cols-2 md:grid-cols-3 l,
-    g:grid-cols-6 gap-6">{technologies.map((tech), index) => (<
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}<
-                <)
-              ))}
-            <
-          <
-
-          {/* Process *
-          <section className="mb-20">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8">{process.map((step), index) => (<
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"><
-                    <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}<
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-=======
-            <div></div>,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               {technologies.map((tech, index) => (</div>
                 <di></di>,</div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
@@ -413,70 +241,23 @@ const process = [
                   <p className="text-sm text-gray-300">{tech.description}</p>
             <h></h>Technologies We Use</h2><div>{technologies.map((tech, index) => (</section>
                 <div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <tech .icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
               ))
             </div>
           </section>
-
-          {/* Process */}
+          {/* Process */};
           <section></section>
             <h2></h2>Our Development Process<di></di>{process.map((step, index) => (</div>
                 <div>
                   <div>
                     <span></span>{step.step}<h3>{step.title}<p className="text-gray-300">{step.description}</p>
             <h2></h2>
->>>>>>> main
               Our Development Process;
             <
 ,
-<<<<<<< HEAD
             <div>,
-=======
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-4 gap-8">,)
-              {process.map((step, index) => (<
-                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,<
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">,<
-                    <span className="text-2xl font-bold text-white">{step.step}<
-                  <
-                  <h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<
-                  <p className="text-gray-300">{step.description}<)
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2><div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8">{process.map((step), index) => (<
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"><
-                    <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}<
-                <)
-              ))}
-            <
-          <
-
-          {/* CTA Section *
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto"><
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.<
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Build Your Next Web Application?
-              <
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss your project requirements and create a custom solution that drives your business forward.
-              <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"><
-                <a;
-            <div className="cyber-card p-12 max-w-4xl mx-auto"><
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.<
-              <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"><
-                <a
-                  href="
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >Start Your Project<a
-=======
-            <div></div>,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               {process.map((step, index) => (</div>
                 <di></di>,</div>
                   <di></di>,</div>
@@ -492,8 +273,7 @@ const process = [
               ))
             </div>
           </section>
-
-          {/* CTA Section */}
+          {/* CTA Section */};
           <section></section>
             <div>
               <h2></h2>Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
@@ -510,53 +290,27 @@ const process = [
               </p>
               <div>
                 <a></a>Start Your Project<a
->>>>>>> main
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >Call +1 302 464 0950<
                 >
                   Start Your Project;
-<<<<<<< HEAD
                 <
-                <a;
+                <a ;
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
-    r:text-slate-900 transition-all duration-300"
-                >
-=======
-                </a>
-                <a></a>
->>>>>>> main
+    r:text-slate-900 transition-all duration-300">
                   Call +1 302 464 0950;
                 <
               <
             <
           <
         <
-
-<<<<<<< HEAD
-        <Footer 
-      <
+        <Footer <
     <
-=======
-        <Footer />
-<<<<<<< HEAD
-      </div>,
-<<<<<<< HEAD
-    </>);)
-<<<<<<< HEAD
-=======
-    </>)]
-    };
-=======
->>>>>>> main
 };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-=======
       </div>
     </>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd
-
 export default WebDevelopmentPage;

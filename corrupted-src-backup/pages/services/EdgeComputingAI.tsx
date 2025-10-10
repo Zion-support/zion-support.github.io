@@ -6,17 +6,10 @@ impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m "luci, d, e-rea, c, t";';"
-<<<<<<< HEAD
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, EdgeComputingA, I: Rea, c, t.FC = () => {;
 const, feature, s = [
-=======
-import, Header, from "../../componen, t, s
-import, Footer, from "../../componen, t, s
-const, EdgeComputingA, I: Rea, c, t.FC = () => {
-  const, feature, s = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       i, c, o;
   n: C, p, u;
@@ -25,7 +18,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       tit, l, e: "Edge, AI, Processing",";
       descripti, o, n: "Deploy, AI, models directly, on, edge devices, for, real-time, inference, without cloud, dependenc, y.",";
       benef, i, t: "S, u, b-10 ms, response, times"
-    }
+    };
     {
       ic, o, n: Z, a, p;
       tit, l, e: "Re, a, l-Time, Analytic, s","
@@ -33,7 +26,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       tit, l, e: "Re, a, l-Time, Analytic, s",";
       descripti, o, n: "Process, and, analyze data, at, the edge, for, instant insights, and, immediate action, trigger, s.",";
       benef, i, t: "99.9% uptime, with, offline capabili, t, y"
-    }
+    };
     {
       ic, o, n: Wi, f, i;
       tit, l, e: "L, o, w-Latency, Communicatio, n","
@@ -41,7 +34,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       tit, l, e: "L, o, w-Latency, Communicatio, n",";
       descripti, o, n: "Optimized, protocols, for minimal, latency, between edge, devices, and central, system, s.",";
       benef, i, t: "90% reduction, in, network laten, c, y"
-    }
+    };
     {
       ic, o, n: Shie, l, d;
       tit, l, e: "Enhanced, Securit, y","
@@ -49,7 +42,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       tit, l, e: "Enhanced, Securit, y",";
       descripti, o, n: "Data, processing, at the, edge, reduces exposure, and, provides local, security, controls.",";
       benef, i, t: "Zero, data, transmission vulnerabiliti, e, s"
-    }
+    };
     {
       ic, o, n: Clo, c, k;
       tit, l, e: "Continuous, Operatio, n","
@@ -57,7 +50,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       tit, l, e: "Continuous, Operatio, n",";
       descripti, o, n: "Edge, devices, operate independent, l, y, ensuring, functionality, even during, network, outages.",";
       benef, i, t: "1, 0, 0% local, processing, capability"
-    }
+    };
     {
       ic, o, n: Use, r, s;
       tit, l, e: "Scalable, Deploymen, t","
@@ -65,7 +58,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       tit, l, e: "Scalable, Deploymen, t",";
       descripti, o, n: "Easily, scale, from single, devices, to thousands, of, edge nodes, across, multiple locatio, n, s.",";
       benef, i, t: "Unlimited, edge, node deployme, n, t"
-    }
+    };
   ];
   const, pricin, g = [
     {
@@ -83,7 +76,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
         "Standard, protocol, s"
         "Cloud, backup, integration"
       ]
-      popul, a, r: fal, s, e}
+      popul, a, r: fal, s, e};
     {
       na, m, e: "Edge, Professiona, l"
       pri, c, e: "$5,9, 9, 9"
@@ -101,7 +94,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
         "Custom, model, training"
         "API, acces, s"
       ]
-      popul, a, r: tr, u, e}
+      popul, a, r: tr, u, e};
     {
       na, m, e: "Edge, Enterpris, e"
       pri, c, e: "$15,9, 9, 9"
@@ -137,7 +130,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
         "Standard, protocol, s",";
         "Cloud, backup, integration"
       ]
-      popul, a, r: fal, s, e}
+      popul, a, r: fal, s, e};
     {
       na, m, e: "Edge, Professiona, l",";
       pri, c, e: "$5,9, 9, 9",";
@@ -155,7 +148,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
         "Custom, model, training",";
         "API, acces, s"
       ]
-      popul, a, r: tr, u, e}
+      popul, a, r: tr, u, e};
     {
       na, m, e: "Edge, Enterpris, e",";
       pri, c, e: "$15,9, 9, 9",";
@@ -175,7 +168,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
         "SLA, guarante, e",";
         "Traini, n, g & consultati, o, n"
       ]
-      popul, a, r: fal, s, e}
+      popul, a, r: fal, s, e};
   ];
   const, testimonial, s = [
     {
@@ -187,7 +180,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       conte, n, t: "Edge, AI, processing reduced, our, production line, response, times from, 500ms, to 8, m, s. This, enabled, real-time, quality, control that, increased, our product, quality, by 40%.",";
       rati, n, g: 5;
       compa, n, y: "Manufacturing, Solution, s"
-    }
+    };
     {
       na, m, e: "Lisa, Che, n","
       ro, l, e: "VP, Engineerin, g, Smart, City, Initiative","
@@ -197,7 +190,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       conte, n, t: "The, edge, computing platform, enabled, us to, process, traffic data, locall, y, reducing, network, costs by, 6, 0% while, improving, traffic management, response, times by, 10, x.",";
       rati, n, g: 5;
       compa, n, y: "Smart, City, Initiative"
-    }
+    };
     {
       na, m, e: "Dr. Michael, Rodrigue, z","
       ro, l, e: "Head, of, Innovation, Healthcare, System, s","
@@ -207,7 +200,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       conte, n, t: "Edge, AI, deployment in, our, medical devices, enabled, real-time, patient, monitoring with, zero, network dependen, c, y. Patient, safety, improved significantly, with, instant aler, t, s.",";
       rati, n, g: 5;
       compa, n, y: "Healthcare, System, s"
-    }
+    };
   ];
   const, useCase, s = [
     {
@@ -215,19 +208,19 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       ic, o, n: Monit, o, r;
       descripti, o, n: "Re, a, l-time, monitoring, and control, of, industrial equipment, with, predictive maintenance, capabilitie, s.","
       benefi, t, s: ["50% reduction, in, downtime", "30% improvement, in, efficiency", "40% cost, savings, in maintenan, c, e"]"
-    }
+    };
     {
       tit, l, e: "Smart, Citie, s","
       ic, o, n: Glo, b, e;
       descripti, o, n: "Intelligent, traffic, management, environmental, monitorin, g, and, public, safety syste, m, s.","
       benefi, t, s: ["60% reduction, in, traffic congesti, o, n", "25% improvement, in, air quali, t, y", "35% faster, emergency, response"]"
-    }
+    };
     {
       tit, l, e: "Healthca, r, e","
       ic, o, n: Smartpho, n, e;
       descripti, o, n: "Re, a, l-time, patient, monitoring, medical, device, control, and, emergency, response syste, m, s.","
       benefi, t, s: ["45% improvement, in, patient outcom, e, s", "70% faster, emergency, detection", "50% reduction, in, hospital readmissio, n, s"]"
-    }
+    };
     {
       tit, l, e: "Reta, i, l & Commer, c, e","
       ic, o, n: Databa, s, e;
@@ -236,130 +229,119 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {
       tit, l, e: "Industrial, Io, T",";
       ic, o, n: Monit, o, r;
       descripti, o, n: "Re, a, l-time, monitoring, and control, of, industrial equipment, with, predictive maintenance, capabilitie, s.",";
-      benefi, t, s: ["50% reduction, in, downtime", "30% improvement, in, efficiency", "40% cost, savings, in maintenan, c, e"]"}
+      benefi, t, s: ["50% reduction, in, downtime", "30% improvement, in, efficiency", "40% cost, savings, in maintenan, c, e"]"};
     {
       tit, l, e: "Smart, Citie, s",";
       ic, o, n: Glo, b, e;
       descripti, o, n: "Intelligent, traffic, management, environmental, monitorin, g, and, public, safety syste, m, s.",";
-      benefi, t, s: ["60% reduction, in, traffic congesti, o, n", "25% improvement, in, air quali, t, y", "35% faster, emergency, response"]"}
+      benefi, t, s: ["60% reduction, in, traffic congesti, o, n", "25% improvement, in, air quali, t, y", "35% faster, emergency, response"]"};
     {
       tit, l, e: "Healthca, r, e",";
       ic, o, n: Smartpho, n, e;
       descripti, o, n: "Re, a, l-time, patient, monitoring, medical, device, control, and, emergency, response syste, m, s.",";
-      benefi, t, s: ["45% improvement, in, patient outcom, e, s", "70% faster, emergency, detection", "50% reduction, in, hospital readmissio, n, s"]"}
+      benefi, t, s: ["45% improvement, in, patient outcom, e, s", "70% faster, emergency, detection", "50% reduction, in, hospital readmissio, n, s"]"};
     {
       tit, l, e: "Reta, i, l & Commer, c, e",";
       ic, o, n: Databa, s, e;
       descripti, o, n: "Intelligent, inventory, management, customer, behavior, analysis, and, automated, checkout syste, m, s.",";
       benefi, t, s: ["35% improvement, in, inventory accura, c, y", "25% increase, in, sales", "40% reduction, in, checkout ti, m, e"]";
 const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
   ];
   const, pricin, g = [
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
   ];
   const, testimonial, s = [
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
   ];
   const, useCase, s = [
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
   ];
   const, technologie, s = [
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
   ];
-<<<<<<< HEAD
-  return(<React.Fragment>
+  return(<React .Fragment>
       <Helmet>
         <title>Edge, Computing, AI - Zion, Tech, Group | Re, a, l-Time, Edge, Intelligence</title>
         <me, t, a;
   na, m, e="descripti, o, n"
           content="Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10ms, response, times. Edge, computing, solutions for, Io, T, industrial, automatio, n, smart, citie, s, and, healthcare, applications." /><meta name="keywor, d, s" content="edge, computin, g, edge, A, I, I, o, T, re, a, l-time, processin, g, edge, analytic, s, distributed, computin, g, edge, deploymen, t, low, latency, AI" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ed, g, e-computi, n, g-ai/>"
-  return (<React.Fragment>
+  return (<React .Fragment>
       <Helmet></Helmet>
         <title>Edge, Computing, AI - Zion, Tech, Group | Re, a, l-Time, Edge, Intelligence</title>
-=======
-  return(<div>
-        <title>Edge, Computing, AI - Zion, Tech, Group | Re, a, l-Time, Edge, Intelligence<
-        <me, t, a;
-  na, m, e="descripti, o, n"
-          content="Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10ms, response, times. Edge, computing, solutions for, Io, T, industrial, automatio, n, smart, citie, s, and, healthcare, applications." /><meta name="keywor, d, s" content="edge, computin, g, edge, A, I, I, o, T, re, a, l-time, processin, g, edge, analytic, s, distributed, computin, g, edge, deploymen, t, low, latency, AI" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ed, g, e-computi, n, g-ai
-  return (<div><Helmet><
-        <title>Edge, Computing, AI - Zion, Tech, Group | Re, a, l-Time, Edge, Intelligence<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <me, t, a;"
   na, m, e="descripti, o, n""
           content="Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10ms, response, times. Edge, computing, solutions for, Io, T, industrial, automatio, n, smart, citie, s, and, healthcare, applications." /><meta name="keywor, d, s" content="edge, computin, g, edge, A, I, I, o, T, re, a, l-time, processin, g, edge, analytic, s, distributed, computin, g, edge, deploymen, t, low, latency, AI" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ed, g, e-computi, n, g-ai
           content="Deploy, AI, at the, edge, for re, a, l-time, processing, with s, u, b-10ms, response, times. Edge, computing, solutions for, Io, T, industrial, automatio, n, smart, citie, s, and, healthcare, applications."
-         
         <meta name="keywor, d, s" content="edge, computin, g, edge, A, I, I, o, T, re, a, l-time, processin, g, edge, analytic, s, distributed, computin, g, edge, deploymen, t, low, latency, AI" 
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ed, g, e-computi, n, g-ai" 
       <
       <Head, e, r   /><
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
         {/* Hero, Sectio, n *
-        <section, className="bg-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">
+        <section , className="bg-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
-            <div, className="te, x, t-cent, e, r">
+            <div , className="te, x, t-cent, e, r">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   ,
     g:px-8">"<
@@ -435,12 +417,11 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 >
                   View, Pricin, g;"
                   <Link, className="w-5 h-5, m, l-2  /><
-                  
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
-            <div, className="text-center mb-12">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+            <div , className="text-center mb-12">
+              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="text-center mb-12">";
@@ -470,8 +451,8 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-4, ga, p-8">"
-              <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">
+              <div , className="te, x, t-cent, e, r">
+                <div , className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-4">
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-4, ga, p-8">"<
               <div, className="te, x, t-cent, e, r"><
@@ -546,7 +527,7 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
           <
         <
         {/* Use, Case, s *
-        <section, className="py-20">
+        <section , className="py-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
@@ -581,36 +562,24 @@ const, EdgeComputingA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">"
-<<<<<<< HEAD
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
 return (
 ;
 const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }"
-=======
-              {useCas, e, s.m, a, p ((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">
+                    <div , className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">
                       <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0)
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-4, ga, p-8">";)
-<<<<<<< HEAD
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
 return (
 ;
 const, Ico, n = useCa, s, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }";
-=======
-              {useCas, e, s.m, a, p ((useCa, s, e, ind, e, x) => {
-                const, Ico, n = useCa, s, e.ic, o, n;
-                return (<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">";
                 return (<
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"<
@@ -619,12 +588,11 @@ const, Ico, n = useCa, s, e.ic, o, n;
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8"><
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
-<<<<<<< HEAD
 return (
 ;
 const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+                  <div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">";</div>
@@ -632,18 +600,8 @@ const, Ico, n = useCa, s, e.ic, o, n;
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";)
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";)
-=======
-                const, Ico, n = useCa, s, e.ic, o, n;
-                return (<
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";<
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-te, a, l-100, rounde, d-full, m, b-6">";<
-                      <Icon, className="w-8 h-8, tex, t-te, a, l-6, 0, 0" 
-                    <
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}<
-                    <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}<)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <ul, className="spa, c, e-y-2">";)
-                      {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (<li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
+                      {useCa, s, e.benefi, t, s.m, a, p((benef, i, t, benefitInd, e, x) => (<li , ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}<
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
@@ -673,31 +631,20 @@ const, Ico, n = useCa, s, e.ic, o, n;
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" 
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}<
                         <)
-                      ))}
-<<<<<<< HEAD
+                      ))};
                     </ul>
                   </d, i, v>
-                )})}
+                )})};
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Technologi, e, s */}
-=======
-                    <
-                  <
-                );
-              })}
-            <
-          <
-        <
-        {/* Technologi, e, s *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-        <section, className="py-20, b, g-gr, a, y-50">
+        {/* Technologi, e, s */};
+        <section , className="py-20, b, g-gr, a, y-50">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+            <div , className="te, x, t-center, m, b-16">
+              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -745,17 +692,17 @@ const, Ico, n = useCa, s, e.ic, o, n;
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{te, c, h.na, m, e}<
                   <p, className="te, x, t-gr, a, y-6, 0, 0">{te, c, h.descripti, o, n}<
                 <)
-              ))}
+              ))};
             <
           <
         <
         {/* Featur, e, s *
-        <section, className="py-20">
+        <section , className="py-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+            <div , className="te, x, t-center, m, b-16">
+              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -785,20 +732,14 @@ const, Ico, n = useCa, s, e.ic, o, n;
             <
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
-<<<<<<< HEAD
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
 ;
 const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }"
-=======
-              {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">
+                    <div , className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">
                 return (<
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"<
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4"><
@@ -806,35 +747,28 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
+                    <div , className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
-<<<<<<< HEAD
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
 ;
 const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }";
-=======
-              {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return (<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"><
                       <CheckCircle, className="w-4 h-4, m, r-1  
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"><)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-<<<<<<< HEAD
 return (
 ;
 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+                  <div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">";</div>
@@ -844,18 +778,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
             </d, i, v>"
-=======
-                const, Ico, n = featu, r, e.ic, o, n;
-                return (<
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";<
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-te, a, l-100, rounde, d-lg, m, b-4">";<
-                      <Icon, className="w-6 h-6, tex, t-te, a, l-6, 0, 0" 
-                    <
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";<
-            <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression *
@@ -877,25 +799,21 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
-<<<<<<< HEAD
                       <CheckCircle, className="w-4 h-4, m, r-1" />";
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
                   </d, i, v>)
-                )})}
+                )})};
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* Prici, n, g */}
-        <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
-=======
-                      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+        {/* Prici, n, g */};
+        <section , i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+            <div , className="te, x, t-center, m, b-16">
+              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -936,7 +854,7 @@ const, Ico, n = featu, r, e.ic, o, n;
                         Most, Popula, r;
                       <
                     <
-                  )}
+                  )};
                   <div, className="te, x, t-center, m, b-8">";<
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}<
                     <div, className="flex, item, s-center, justif, y-center, m, b-2">";<
@@ -966,7 +884,7 @@ const, Ico, n = featu, r, e.ic, o, n;
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" 
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}<
                       <
-                    ))}
+                    ))};
                   <
                   <a;
   hr, e, f="
@@ -975,12 +893,8 @@ const, Ico, n = featu, r, e.ic, o, n;
 pl, a, n.popul, a, r;
 ? 'bg-te, a, l-600, tex, t-white, hove, r: bg-te, a, l-7, 0, 0'
 ? 'bg-te, a, l-600, tex, t-white, hov, e;
-<<<<<<< HEAD
-  r: bg-te, a, l-7, 0, 0','}
-=======
-  r: bg-te, a, l-7, 0, 0','; };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
+  r: bg-te, a, l-7, 0, 0','};
+: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'};
                   <a><
   hr, e, f="
                     classNa, m, e={/* TODO: Fix JSX expression *
@@ -989,7 +903,7 @@ pl, a, n.popul, a, r;
                     Get, Starte, d;
                   <
                 <
-              ))}
+              ))};
             <
             <div, className="te, x, t-center, m, t-12">";<
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom edge, solutio, n?<
@@ -1004,12 +918,11 @@ pl, a, n.popul, a, r;
               >
                 Contact, our, Edge Computing, Tea, m;"
                 <Link, className="w-4 h-4, m, l-1  /><
-                
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+            <div , className="te, x, t-center, m, b-16">
+              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -1057,7 +970,7 @@ pl, a, n.popul, a, r;
                     {/* TODO: Fix JSX expression *
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /><
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t")
-                    ))}
+                    ))};
                   <
                   <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"
                     "{testimoni, a, l.conte, n, t}"
@@ -1068,16 +981,16 @@ pl, a, n.popul, a, r;
                     <div, className="te, x, t-te, a, l-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}<
                   <
                 <
-              ))}
+              ))};
             <
           <
         <
         {/* CTA, Sectio, n *
-        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">
+        <section , className="py-20, b, g-gradie, n, t-to-br, fro, m-te, a, l-900, vi, a-cy, a, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8, tex, t-cent, e, r">"
-            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
+            <h2 , className="te, x, t-4xl, fon, t-bold, m, b-6">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   ,
     g:px-8, tex, t-cent, e, r">"<
@@ -1129,7 +1042,6 @@ pl, a, n.popul, a, r;
   r:te, x, t-te, a, l-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 View, Success, Stories;"
-<<<<<<< HEAD
                 <Link, className="w-5 h-5, m, l-2  /></Link>"
                 <Link, className="w-5 h-5, m, l-2" />";
               </a>
@@ -1141,18 +1053,3 @@ pl, a, n.popul, a, r;
     </React.Fragment>
   )};
 export default EdgeComputingAI}}}}"`
-=======
-                <Link, className="w-5 h-5, m, l-2  /><
-                <Link, className="w-5 h-5, m, l-2" 
-              <
-            <
-          <
-        <
-      <
-      <Foot, e, r   /><
-    <
-  );
-};
-export default EdgeComputingAI;
-}}}}"`
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b

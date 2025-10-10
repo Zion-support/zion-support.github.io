@@ -3,14 +3,13 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-
 // Performance optimization patterns;
 const optimizations = {
+};
   // Remove unused CSS classes;
   removeUnusedCSS: (content) => {,
     // This is a simplified version - in production, use tools like PurgeCSS;
     return content},
-
   // Optimize images (placeholder - would need actual image processing)
   optimizeImages: (content) => {,
     // Replace large image references with optimized versions;
@@ -18,7 +17,6 @@ const optimizations = {
       .replace(/\.jpg/g, '.webp')
       .replace(/\.png/g, '.webp')
       .replace(/\.jpeg/g, '.webp')},
-
   // Minify inline styles;
   minifyInlineStyles: (content) => {,
     return content.replace(/style="([^"]*)"/g, (match, styles) => {;
@@ -28,14 +26,12 @@ const minified = styles;
         .replace(/:\s*/g, ':')
         .trim();
       return `style="${minified}"`})},
-
   // Remove empty lines and extra whitespace;
   removeExtraWhitespace: (content) => {,
     return content;
       .replace(/\n\s*\n\s*\n/g, '\n\n')
       .replace(/[ \t]+$/gm, '')
       .replace(/\n{3}/g, '\n\n')},
-
   // Optimize React components;
   optimizeReactComponents: (content) => {
     // Add React.memo to functional components;
@@ -48,13 +44,11 @@ const minified = styles;
       content = content.replace()
         /(\w+)\.displayName = '\w+';/g;
         '$1.displayName = \'$1\';\n});'
-      )}
+      )};
     return content},
-
   // Add performance hints;
   addPerformanceHints: (content) => {
 return (
-
     // Add preload hints for critical resources;
     if (content.includes('<head>')) {;
 const preloadHints = `
@@ -63,12 +57,12 @@ const preloadHints = `
     <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;
       content = content.replace('<head>', `<head>
 );
-}${preloadHints}`)}
-    return content}
+}${preloadHints}`)};
+    return content};
 };
-
 // Files to process;
 const filePatterns = [
+];
   'app/**/*.{ts,tsx,js,jsx}',
   'src/**/*.{ts,tsx,js,jsx}',
   'components/**/*.{ts,tsx,js,jsx}',
@@ -78,9 +72,9 @@ const filePatterns = [
   'lib/**/*.{ts,tsx,js,jsx}',
   'dist/**/*.{html,css,js}'
 ];
-
 // Files to exclude;
 const excludePatterns = [
+];
   '**/node_modules/**',
   '**/.next/**',
   '**/build/**',
@@ -104,25 +98,21 @@ function processFile(filePath) {
 const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     let fileOptimizations = 0;
-
     // Apply optimizations;
     Object.entries(optimizations).forEach(([name, optimizer]) => {;
 const before = newContent;
       newContent = optimizer(newContent);
       if (newContent !== before) {
-        fileOptimizations++}
+        fileOptimizations++};
     });
-
     if (fileOptimizations > 0) {
       fs.writeFileSync(filePath, newContent, 'utf8');
       // console.log removed for production
-optimizationsApplied += fileOptimizations}
-
+optimizationsApplied += fileOptimizations};
     processedFiles++} catch (error) {
     // console.error removed for production
-}
-}
-
+};
+};
 async function main() {
   // console.log removed for production
 // Get all files to process;
@@ -131,23 +121,18 @@ async function main() {
 const files = await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()});
-    allFiles.push(...files)}
-
+    allFiles.push(...files)};
   // Remove duplicates;
   const uniqueFiles = [...new Set(allFiles)];
   totalFiles = uniqueFiles.length;
-
   // console.log removed for production
 // Process each file;
   uniqueFiles.forEach(processFile);
-
   // console.log removed for production
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-}
-
+};
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main()}
-
+  main()};
 export { processFile, optimizations };

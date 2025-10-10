@@ -1,7 +1,5 @@
 import React from 'react';
-
 interface ContentPreviewCardProps {// TODO: Add content}
-
 };
   i,
   d: string;
@@ -21,18 +19,18 @@ interface ContentPreviewCardProps {// TODO: Add content}
   e: string;
   featured?: boolean;
   stats?: {/* TODO: Fix JSX expression */}
-  O: Add content}
+  O: Add content};
 };
   view,
   s: number;,
     engagemen,
   t: number};
-  excerpt?: string}
+  excerpt?: string};
 const,
   ContentPreviewCard: React.FC;
           <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
   // id,
 //   title,
 //   description,
@@ -46,18 +44,18 @@ const,
 //   excerpt;)
 }) => {if (num >= 1000) {}
   // TOD,
-  O: Add content}
-      return (num / 1000).toFixed(1) + 'k'}
+  O: Add content};
+      return (num / 1000).toFixed(1) + 'k'};
     return num.toString()};
   const getCategoryColor = (categor)
   y: string): string => {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
     const,
   colors: {/* TODO: Fix JSX expression */}
   y: string]: string } = {/* TODO: Fix JSX expression */}
-  O: Add content}
-}
+  O: Add content};
+};
       'Success Story': 'from-green-500 to-emerald-600',
       'Mega Trends': 'from-blue-500 to-cyan-600',
       'Architecture': 'from-purple-500 to-pink-600',
@@ -70,22 +68,13 @@ const,
     return colors[category] || colors.default};
   return (<div>Coming Soon</div>)
   )
-    
           <article className={/* TODO: Fix JSX expression */}
   hover:-translate-y-1 ${}
   // TOD,
-  O: Add content}
+  O: Add content};
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}></article>
       {/* Image/Visual Header */}
-      
-          
-          
-          
-          
-          
-          
-          
           `
           <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}></div>
         <div className="text-center text-white"></div>"
@@ -99,7 +88,7 @@ const,
 // Featured;
           </span>
           </div>
-        )}
+        )};
         {/* Stats Overlay */}
         {stats && ()}"
           <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2"></div>"
@@ -110,7 +99,7 @@ const,
               <div className="text-xs text-white opacity-90">views</div>
             </div>
           </div>
-        )}
+        )};
         {/* Read Time Badge */}"
         <div className="absolute bottom-4 left-4"></div>"
           <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"></span>
@@ -150,7 +139,7 @@ const,
               </div>
             </div>
           </div>
-        )}
+        )};
         {/* Date and CTA */}"
         <div className="flex items-center justify-between"></div>"
           <span className="text-sm text-gray-500">{date}</span>
@@ -168,8 +157,4 @@ const,
       </div>
     </article>
   )};
-
 export default ContentPreviewCard;"`
-
-
-

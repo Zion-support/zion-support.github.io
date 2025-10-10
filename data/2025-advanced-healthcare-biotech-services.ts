@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
   id: string;
   name: string;
   tagline: string;
@@ -93,7 +91,7 @@ import React from 'react';
     addres,
   s: string;
     websit,
-  e: string}
+  e: string};
         'AI-powered molecular modeling and simulation',
   real_implementatio,
   n: boolean;
@@ -1168,10 +1166,3 @@ i,
   n: true, implementation_detail,
   s:  ,' 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',' launch_dat,
   e: '2024 - 11 - 01', '
-=======
-      marketSize: '$45 && 45.8B AI drug discovery market'
-      growthRate: '35% annual growth';
-variant: 'ai-drug-discovery-enterprise'
-      contactInfo: unknown;
-      color: 'from - green - 600 to - emerald - 600'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

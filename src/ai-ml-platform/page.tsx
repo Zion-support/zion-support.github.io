@@ -3,25 +3,17 @@ import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
-
 import { Link } from 'react-router-dom';
-
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
-const AIMLPlatformPage: React.FC = () => {;
-const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-
 const AIMLPlatformPage: React.FC = () => {
-  const features = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    {
+};
+const features = [
+[
+        {
       ico,
     n: Brain,
       title: 'Complete ML Platform',
@@ -40,10 +32,11 @@ const AIMLPlatformPage: React.FC = () => {
       title: 'Team Collaboration',
       description: 'Collaborative tools for data scientists and ML engineers',
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
-    }
+    };
   ];
 ;
 const pricingPlans = [
+];
       name: 'Developer',
       price: '$999',
       period: '
@@ -63,12 +56,7 @@ const pricingPlans = [
       description: 'Ideal for development teams',;
 const features = [];
   return (
-<<<<<<< HEAD
-    {// TODO: Add content}
-=======
-    {/
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
+    {// TODO: Add content};
 };
   ico,
   n: Brain,
@@ -94,9 +82,10 @@ const features = [];
   n: 'Collaborative tools for data scientists and ML engineers',
       benefit,
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
-    }
+    };
   ];
   const pricingPlans = [
+];
       nam,
   e: 'Team',
       pric,
@@ -117,7 +106,6 @@ const features = [];
         'Unlimited models',
       popula,
   r: true,
-
       nam,
   e: 'Enterprise',
       pric,
@@ -130,34 +118,25 @@ const features = [];
         'Custom compute',
         'Custom analytics',
         'White-label options',
-<<<<<<< HEAD
         'API access';
-const stats = [;
 const stats = [
+;
+];
+const stats = [
+];
   // TOD,
-=======
-        'API access'
-
-  const stats = [
-  const stats = [
-  /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   O: Add items;
 ];;
-
     { ico,
     n: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
     { icon: Star, value: '4.9
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      
         <title>AI ML Platform | Zion Tech Group<
         <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." 
       <
-
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform<
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -170,10 +149,8 @@ const stats = [
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
           <
-
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-
           <
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
@@ -181,7 +158,6 @@ const stats = [
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hove,
     r:bg-cyan-600 transition-colors">
-
 /
           <
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg),
@@ -189,12 +165,8 @@ const stats = [
   hover:text-slate-900 transition-colors"><
 Learn More;
           <
-
       <Footer 
     <
-
   )};
-
 export default $1;
 export default AiMlPlatformPage;
-

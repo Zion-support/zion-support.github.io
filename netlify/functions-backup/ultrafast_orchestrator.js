@@ -9,16 +9,15 @@ exports.handler = async function (event, context) {
         timestamp: timestamp),;
 function: 'ultrafast_orchestrator'})
     }} catch (error) {
-
     return {
       statusCode: 500;
       body: JSON.stringify({)
         error: 'ultrafast_orchestrator function failed'),
         message: error.message),
         timestamp: new Date().toISOString(),
-exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
+exports.handler = async function (event, context) {/* TODO: Fix JSX expression */};
       })
-    }} catch (error) {/* TODO: Fix JSX expression */}
+    }} catch (error) {/* TODO: Fix JSX expression */};
       })
-    }}
+    }};
 };

@@ -2,16 +2,16 @@
  * Enhanced Performance Hook
  * Combines performance monitoring, error tracking, and analytics
  */
-
 import { useEffect, useCallback, useRef } from 'react';
 import { errorTracker } from '../utils/enhancedErrorTracking';
-import { analytics } from '../utils/enhancedAnalytics'
+import { analytics } from '../utils/enhancedAnalytics';
 export interface UseEnhancedPerformanceOptions {
+}
+}
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
-  trackAnalytics?: boolean}
-
+  trackAnalytics?: boolean};
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {;
 const {
     component = 'Unknown',
@@ -19,11 +19,9 @@ const {
     trackPerformance = true,
     trackAnalytics = true} = _options;
 const _renderCountRef = useRef<number>(0);
-
   useEffect(() => {
     mountTimeRef.current = performance.now();
     renderCountRef.current = 0;
-
     // Track component mount
     if (trackAnalytics) {
       analytics.trackCustomEvent('Component', 'Mounted', component);
@@ -37,20 +35,16 @@ const _renderCountRef = useRef<number>(0);
             'Long Component Lifetime',
             component,
             Math.round(duration));
-      }
-
+      };
       // Track component unmount
       if (trackAnalytics) {
         analytics.trackCustomEvent('Component', 'Unmounted', component);
     }}, [component, trackAnalytics, trackPerformance]);
-
   // Track render performance
   useEffect(() => {
     renderCountRef.current++;
-
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-
       analytics.trackCustomEvent(
         'Performance',
         'High Render Count',
@@ -80,11 +74,9 @@ const measureOperation = useCallback(
     (operationName: string) => {;
 const _markName = `${component}-${operationName}`;
 const _startTime = performance.now();
-
       return {
         end: () => {;
 const _duration = performance.now() - startTime;
-          
           if (trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
@@ -93,10 +85,8 @@ const _duration = performance.now() - startTime;
           return duration}}},
     [component, trackPerformance]
   );
-
   return {
     trackError,
     trackUserAction,
-    measureOperation}}
-
+    measureOperation}};
 export default useEnhancedPerformance;

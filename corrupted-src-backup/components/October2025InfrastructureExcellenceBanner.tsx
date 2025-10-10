@@ -8,7 +8,7 @@ const, newArticle, s = [
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-traci, n, g-microservic, e, s"
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
       metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"]
-    }
+    };
     {
       id: 2;
       tit, l, e: "Kubernetes, Security, Best Practic, e, s"
@@ -17,7 +17,7 @@ const, newArticle, s = [
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-kubernet, e, s-securi, t, y-be, s, t-practic, e, s"
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
       metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"]
-    }
+    };
     {
       id: 3;
       tit, l, e: "Re, a, l-Time, Data, Streaming"
@@ -26,37 +26,37 @@ const, newArticle, s = [
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-da, t, a-streami, n, g-architectur, e, s"
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0"
       metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"]
-    }
+    };
   ];
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">"),
-      {/* Animated, background, effects */}
+      {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0"></div>
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] bg-center, opacit, y-10  /></div>
         <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t  /></div>
       </d, i, v>
       <div, className="relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8">",
-        {/* Head, e, r */}
-        <div, className="text-center mb-12">
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4">
+        {/* Head, e, r */};
+        <div , className="text-center mb-12">
+          <div , className="inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4">
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">"
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0"></div>
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] bg-center, opacit, y-10  /></div>
-        <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t  />
+        <div , className="absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t  />
       </d, i, v>
       <div, className="relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8">"
         {/* Head, e, r */}</div>
         <div, className="text-center mb-12"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4"></div>
-            <TrendingUp, className="h-5 w-5, tex, t-bl, u, e-4, 0, 0  />
+            <TrendingUp , className="h-5 w-5, tex, t-bl, u, e-4, 0, 0  />
             <span, className="te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-4, 0, 0">;
-const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
+const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
   ];
   return (<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">"
       {/* Animated, background, effects */}"
@@ -80,7 +80,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Activi, t, y;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-traci, n, g-microservic, e, s",";
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0",";
-      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],"}
+      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],"};
     {
       id: 2;
       tit, l, e: "Kubernetes, Security, Best Practic, e, s",";
@@ -88,7 +88,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-kubernet, e, s-securi, t, y-be, s, t-practic, e, s",";
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0",";
-      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],"}
+      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],"};
     {
       id: 3;
       tit, l, e: "Re, a, l-Time, Data, Streaming",";
@@ -96,10 +96,10 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-da, t, a-streami, n, g-architectur, e, s",";
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0",";
-      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"],"}
+      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"],"};
   ];
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">";),
-      {/* Animated, background, effects */}
+      {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0">";
         <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] bg-center, opacit, y-10" />";
   return (</h2>
@@ -114,11 +114,11 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       ic, o, n: Activi, t, y;"
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-traci, n, g-microservic, e, s",";"
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0",";"
-      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],"}
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
+      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],"};
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
   ];
   return ("
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">";
@@ -148,38 +148,38 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
             Batt, l, e-tested, patterns, from enterprises, processing, billions of, events, daily.
           </p>
         </d, i, v>
-        {/* Articles, Gri, d */}
+        {/* Articles, Gri, d */};
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">"</div>
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">";
           {newArticl, e, s.m, a, p((artic, l, e) => {
 return (
 ;
 const, Ico, n = artic, l, e.ic, o, n;
-            return(<Li, n, k;
+            return(<Li , n, k;
             return (</div>
-              <Li, n, k
-  k, e, y={artic, l, e.id}
-                to={artic, l, e.li, n, k}
+              <Li , n, k
+  k, e, y={artic, l, e.id};
+                to={artic, l, e.li, n, k};
                 classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hov, e;
         {/* Articles, Gri, d */}"
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">
 );
 }""
         <div, className="grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10">";
-          {/* TODO: Fix JSX expression */}
-  k, e, y={artic, l, e.id}
+          {/* TODO: Fix JSX expression */};
+  k, e, y={artic, l, e.id};
                 to={artic, l, e.li, n, k}"
                 classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hov, e,"
   r:shad, o, w-2, x, l"
               ></Li>
-                {/* Gradient, accen, t */}
+                {/* Gradient, accen, t */};
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-3, 0, 0`} />`;`</div>
                 <div, className="relati, v, e">";
                   {/* Ic, o, n */}</div>
                   <div, className={`inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} mb-4`}>`;`</div>
-                    <Icon, className="h-6 w-6, tex, t-whi, t, e  />
+                    <Icon , className="h-6 w-6, tex, t-whi, t, e  />
                   </d, i, v>
-                  {/* Tit, l, e */}
+                  {/* Tit, l, e */};
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"</h3>
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-3, 0, 0`} />`;`"
                 <div, className="relati, v, e">";
@@ -193,34 +193,34 @@ const, Ico, n = artic, l, e.ic, o, n;
                   </d, i, v>
                   {/* Tit, l, e */}"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
-                    {artic, l, e.tit, l, e}
+                    {artic, l, e.tit, l, e};
                   </h3>
                   {/* Descripti, o, n */}"
                   <p, className="te, x, t-gr, a, y-400, tex, t-sm, m, b-4">";
-                    {artic, l, e.descripti, o, n}
+                    {artic, l, e.descripti, o, n};
                   </p>)
                   {/* Metri, c, s */})
                   <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";)
                     {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (
-                      <sp, a, n;
+                      <sp , a, n;
                   </p>
                   {/* Metri, c, s */}"
                   <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";
                     {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (</div>
                       <sp, a, n
-  k, e, y={i, d, x}
-                    {/* TODO: Fix JSX expression */}
+  k, e, y={i, d, x};
+                    {/* TODO: Fix JSX expression */};
   k, e, y={i, d, x}"
                         classNa, m, e="inli, n, e-flex, item, s-center, p, x-2.5, p, y-1, rounde, d-md, b, g-whi, t, e/5, tex, t-xs, fon, t-medium, tex, t-gr, a, y-300, border, border-whi, t, e/10"
                       ></sp>
-                        {metr, i, c}
+                        {metr, i, c};
                       </sp, a, n>
-                    ))}
+                    ))};
                   </d, i, v>
-                  {/* Read, more, link */}
+                  {/* Read, more, link */};
                   <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"</div>
                     <sp, a, n>Read, Full, Guide</sp, a, n>
-                    <Link, className="h-4 w-4  />
+                    <Link , className="h-4 w-4  />
                   <div, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";</div>
                     <sp, a, n>Read, Full, Guide</sp, a, n>
                   {/* Read, more, link */}"
@@ -233,10 +233,10 @@ const, Ico, n = artic, l, e.ic, o, n;
                   </d, i, v>
                 </d, i, v>
               </Li, n, k>
-            )})}
+            )})};
         </d, i, v>
-        {/* CTA, Sectio, n */}
-        <div, className="te, x, t-cent, e, r">
+        {/* CTA, Sectio, n */};
+        <div , className="te, x, t-cent, e, r">
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">"
         <div, className="te, x, t-cent, e, r">";
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">";
@@ -272,7 +272,7 @@ const, Ico, n = artic, l, e.ic, o, n;
             </Li, n, k>
           </d, i, v>
         </d, i, v>
-        {/* Stats, Ba, r */}
+        {/* Stats, Ba, r */};
         <div, className="mt-12, grid, grid-co, l, s-2, ga, p-4, s, m: gr, i, d-co, l, s-4, tex, t-cent, e, r">"</div>
           <div, className="round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4"></div>
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">99.99%</d, i, v>

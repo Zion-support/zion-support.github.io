@@ -1,5 +1,6 @@
-
 export interface EmergingTechService;
-export interface EmergingTechService {;
-export interface EmergingTechService {/* TODO: Fix JSX expression */}
+export interface EmergingTechService {
+;
 }
+export interface EmergingTechService {/* TODO: Fix JSX expression */};
+};

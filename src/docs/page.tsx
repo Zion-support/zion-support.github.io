@@ -5,21 +5,24 @@ import Footer from '../components
 import SEOOptimizer from '../components
 import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
 ;
-const DocsPage: React.FC = () => {;
+const DocsPage: React.FC = () => {
+};
 const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 ;
 const docCategories = [
-    { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
-    { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
-    { id: 'api', name: 'API Reference', icon: Code, count: 15 },
-    { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
-    { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
+[
+        { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
+        { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
+        { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
+        { id: 'api', name: 'API Reference', icon: Code, count: 15 },
+        { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
+        { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 };
   ];
 ;
 const documentation = [
-    {
+[
+        {
       id: 1,
       title: 'Quick Start Guide',
       description: 'Get up and running with Zion Tech Group services in minutes',
@@ -29,7 +32,7 @@ const documentation = [
       icon: Zap,
       content: 'Learn how to set up your account, configure your first AI service, and start getting results immediately.'
     },
-    {
+        {
       id: 2,
       title: 'AI Project Manager API',
       description: 'Complete API reference for AI Project Manager service',
@@ -39,7 +42,7 @@ const documentation = [
       icon: Code,
       content: 'Detailed API documentation including endpoints, parameters, authentication, and code examples.'
     },
-    {
+        {
       id: 3,
       title: 'Machine Learning Integration',
       description: 'Integrate our ML services with your existing applications',
@@ -49,7 +52,7 @@ const documentation = [
       icon: Brain,
       content: 'Step-by-step guide to integrating our machine learning capabilities into your business processes.'
     },
-    {
+        {
       id: 4,
       title: 'AI Analytics Dashboard Setup',
       description: 'Configure and customize your analytics dashboard',
@@ -59,7 +62,7 @@ const documentation = [
       icon: BarChart,
       content: 'Learn how to set up dashboards, configure data sources, and create custom visualizations.'
     },
-    {
+        {
       id: 5,
       title: 'Authentication & Security',
       description: 'Secure your API access and data transmission',
@@ -69,7 +72,7 @@ const documentation = [
       icon: Shield,
       content: 'Best practices for API authentication, security headers, and data protection.'
     },
-    {
+        {
       id: 6,
       title: 'Troubleshooting Common Issues',
       description: 'Solutions to frequently encountered problems',
@@ -79,7 +82,7 @@ const documentation = [
       icon: Settings,
       content: 'Common issues and their solutions, including error codes and debugging tips.'
     },
-    {
+        {
       id: 7,
       title: 'AI Content Generation API',
       description: 'Generate high-quality content using our AI API',
@@ -89,7 +92,7 @@ const documentation = [
       icon: FileText,
       content: 'Complete guide to using our content generation API for blogs, social media, and marketing materials.'
     },
-    {
+        {
       id: 8,
       title: 'Webhook Configuration',
       description: 'Set up real-time notifications and data sync',
@@ -99,7 +102,7 @@ const documentation = [
       icon: MessageSquare,
       content: 'Configure webhooks to receive real-time updates and synchronize data across your systems.'
     },
-    {
+        {
       id: 9,
       title: 'AI Customer Support Bot Setup',
       description: 'Deploy and configure your AI-powered support bot',
@@ -109,7 +112,7 @@ const documentation = [
       icon: Bot,
       content: 'Complete setup guide for deploying intelligent customer support bots on your website.'
     },
-    {
+        {
       id: 10,
       title: 'Performance Optimization',
       description: 'Optimize your AI service performance and reduce costs',
@@ -118,11 +121,12 @@ const documentation = [
       readTime: '40 min',
       icon: Zap,
       content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
-    }
+    };
   ];
 ;
 const quickLinks = [
-    {
+[
+        {
       title: 'API Reference',
       description: 'Complete API documentation',
       icon: Code,
@@ -130,7 +134,7 @@ const quickLinks = [
       colo,
     r: 'text-blue-400'
     },
-    {
+        {
       title: 'SDK Downloads',
       description: 'Client libraries and tools',
       icon: Download,
@@ -138,7 +142,7 @@ const quickLinks = [
       colo,
     r: 'text-green-400'
     },
-    {
+        {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides',
       icon: Play,
@@ -146,28 +150,22 @@ const quickLinks = [
       colo,
     r: 'text-purple-400'
     },
-    {
+        {
       title: 'Community Forum',
       description: 'Connect with other developers',
       icon: Users,
       link: '
       colo,
     r: 'text-cyan-400'
-    }
+    };
   ];
 ;
 const filteredDocs = selectedCategory === 'all' 
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory);
-<<<<<<< HEAD
 ;
 const searchResults = searchQuery 
     ? documentation.filter(doc => 
-=======
-
-  const searchResults = searchQuery 
-    ? documentation.filter(doc =>)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
@@ -176,42 +174,24 @@ const searchResults = searchQuery
 ;
 const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-<<<<<<< HEAD
       case 'Beginner': return 'text-green-400 bg-green-500/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
       case 'Advanced': return 'text-red-400 bg-red-500/20';
-      default: return 'text-gray-400 bg-gray-500/20'}
+      default: return 'text-gray-400 bg-gray-500/20'};
   };
-
   return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="Documentation - Zion Tech Group"
+    <React .Fragment>
+      <SEOOptimizer title="Documentation - Zion Tech Group"
         description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples."
-        keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}
+        keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']};
         canonicalUrl="https://ziontechgroup.com/docs"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-=======
-      case 'Beginner': return 'text-green-400 bg-green-500
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-500
-      case 'Advanced': return 'text-red-400 bg-red-500
-      defaul,
-    t: return 'text-gray-400 bg-gray-500
-    }
-  };
-
-  return (<>
-
-          {/* Hero Section *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+          {/* Hero Section */};
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-
             <
             <p className="text-xl text-cyan-400 mb-8">
               Everything you need to build with AI
@@ -221,7 +201,6 @@ const getDifficultyColor = (difficulty: string) => {
               integrate and optimize our AI services for your business.
             <
           <
-
           {/* Search Section *
           <section className="mb-16">
             <div className="max-w-2xl mx-auto">
@@ -233,11 +212,9 @@ const getDifficultyColor = (difficulty: string) => {
                   value = { searchQuery };)
                   onChange = { (e) => setSearchQuery(e.target.value) };
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none"
-                
               <
             <
           <
-
           {/* Quick Links *
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -246,16 +223,15 @@ const getDifficultyColor = (difficulty: string) => {
             <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-6">
               {quickLinks.map((link), index) => (
-                  <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`} 
+                  <link .icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`};
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {link.title}
+                    {link.title};
                   <
                   <p className="text-gray-300">{link.description}<
                 <)
-              ))}
+              ))};
             <
           <
-
           {/* Categories *
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -270,56 +246,51 @@ const getDifficultyColor = (difficulty: string) => {
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
                       : 'bg-slate-800 text-white hover:bg-slate-700'
-                  }`}
+                  }`};
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" 
                   <div className="text-sm font-semibold">{category.name}<
                   <div className="text-xs opacity-75">{category.count} docs<
                 <
-              ))}
+              ))};
             <
           <
-
           {/* Documentation List *
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-
             <
             <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-6">
               {searchResults.map((doc) => (<div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-start mb-4">
-                    <doc.icon className="w-8 h-8 text-cyan-400 mr-4 flex-shrink-0" 
+                    <doc .icon className="w-8 h-8 text-cyan-400 mr-4 flex-shrink-0" 
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">)
                         <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(doc.difficulty)}`}>
-                          {doc.difficulty}
+                          {doc.difficulty};
                         <
                         <span className="text-gray-400 text-xs">{doc.readTime}<
                       <
                     <
                   <
                   <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
-                    {doc.title}
+                    {doc.title};
                   <
                   <p className="text-gray-300 mb-4 leading-relaxed">
-                    {doc.description}
+                    {doc.description};
                   <
                   <p className="text-gray-400 text-sm mb-4">
-                    {doc.content}
+                    {doc.content};
                   <
                   <div className="flex items-center justify-between">
-                    
                       Read More
-                      
                       {doc.category };
                     <
                   <
                 <
-              ))}
+              ))};
             <
           <
-
           {/* Getting Started CTA *
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -330,26 +301,8 @@ const getDifficultyColor = (difficulty: string) => {
                 Start building with our AI services today
               <
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
-<<<<<<< HEAD
         <Footer />
       </div>
     </React.Fragment>
   )};
-=======
-                  <Play className="w-5 h-5 mr-2" 
-                  Request Demo
-                <
-              <
-            <
-          <
-        <
-
-        <Footer 
-      <
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-
 export default DocsPage;

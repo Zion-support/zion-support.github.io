@@ -11,9 +11,8 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
     },
     {
-    }
+    };
   ];
-
   return (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform provides everything you need to build, deploy, and scale 
@@ -27,8 +26,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
           </div>
         </div>
       </section>
-
-      {/* Use Cases Section */}
+      {/* Use Cases Section */};
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -40,7 +38,6 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
               from smart manufacturing to connected cities.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
@@ -52,8 +49,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
           </div>
         </div>
       </section>
-
-      {/* Benefits Section */}
+      {/* Benefits Section */};
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -65,7 +61,6 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
               security, and performance.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
@@ -78,8 +73,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
+      {/* CTA Section */};
           <p className="text-xl text-gray-300 mb-8">
             Start building your IoT platform today. Get started with a free consultation 
             and discover how we can help you succeed.
@@ -91,7 +85,6 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
           </div>
         </div>
       </section>
-
       <Footer />
 </div>)
 export default PagePage;

@@ -3,7 +3,6 @@ import React from 'react';
 import { Brain, Cpu, Zap, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
 export default function AutonomousSystemsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -20,10 +19,8 @@ export default function AutonomousSystemsPage() {
             <p className="text-gray-300 mb-6">
               We're developing cutting-edge autonomous systems solutions. Contact us to learn more.
             </p>
-            <a
-              href="/contact"
-              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
-            >
+            <a href="/contact"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />
               Contact Us
             </a>
@@ -31,4 +28,4 @@ export default function AutonomousSystemsPage() {
         </div>
       </div>
     </div>
-  )}
+  )};

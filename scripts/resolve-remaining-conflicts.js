@@ -1,13 +1,11 @@
 #!/usr/bin/env node;
 import { execSync } from 'child_process';
 import fs from 'fs';
-
 // console.log removed for production
 // Function to resolve merge conflicts in a file;
 function resolveMergeConflicts(filePath) {
   try {;
 const content = fs.readFileSync(filePath, 'utf8');
-    
     // Check if file has merge conflicts;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       // console.log removed for production
@@ -31,14 +29,14 @@ const incoming = parts[1].replace(/            return incoming;)
         .replace(/      )
       fs.writeFileSync(filePath, resolvedContent);
       // console.log removed for production
-return true}
+return true};
     return false} catch (error) {
     // console.log removed for production
-return false}
-}
-
+return false};
+};
 // List of files with conflicts;
 const conflictedFiles = [
+];
   'App.tsx',
   'app/ai-services/page.tsx',
   'app/components/Navigation.tsx',
@@ -46,16 +44,14 @@ const conflictedFiles = [
   'app/micro-saas/page.tsx',
   'public/sitemap.xml'
 ];
-
 async function main() {
   // console.log removed for production
 // Resolve conflicts in each file;
   let resolvedCount = 0;
   for (const file of conflictedFiles) {
     if (resolveMergeConflicts(file)) {
-      resolvedCount++}
-  }
-  
+      resolvedCount++};
+  };
   // console.log removed for production
 if (resolvedCount > 0) {
     // Add resolved files;
@@ -65,8 +61,7 @@ try {
       // console.log removed for production
 } catch (error) {
       // console.log removed for production
-}
-    
+};
     // Commit the resolution;
     // console.log removed for production
 try {
@@ -74,9 +69,8 @@ try {
       // console.log removed for production
 } catch (error) {
       // console.log removed for production
-}
-  }
-  
+};
+  };
   // Final status;
   // console.log removed for production
 try {,;
@@ -84,9 +78,7 @@ const status = execSync('git status', { encoding: 'utf8', cwd: process.cwd() });
     // console.log removed for production
 } catch (error) {
     // console.log removed for production
-}
-  
+};
   // console.log removed for production
-}
-
+};
 main().catch(console.error);

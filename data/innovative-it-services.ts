@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-
-export interface InnovativeITService {id: string;
+export interface InnovativeITService {
+id: string;
+}
   name: string;
   tagline: string;
   price: string;
@@ -30,20 +30,20 @@ export interface InnovativeITService {id: string;
   contact_info: unknown;
     mobile: string;
     email: string;
-    address: string}
-    website: string}
-  }
+    address: string};
+    website: string};
+  };
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Next - generation cybersecurity with zero trust architecture',
     price: '$599',
     period: '/month',
     description: unknown;
-export interface InnovativeITService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeITService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
     i,
   d: 'zero - trust - security - platform',
     nam,
@@ -817,7 +817,7 @@ market_size: '$12B DevOps market',
     realImplementation: boolean, implementationDetails: string;
   launchDate: string, customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 export const innovativeITServices: InnovativeITService[] = [,
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Next-generation cybersecurity with zero trust architecture', price: '$599',
@@ -840,7 +840,7 @@ export const innovativeITServices: InnovativeITService[] = [,
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.',
     launch_date: '2024 - 01 - 20',
@@ -937,7 +937,7 @@ varian,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeITServices: InnovativeITService[] = [,
     i,
@@ -997,7 +997,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1009,12 +1009,12 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 1250}
-export interface InnovativeITService {/* TODO: Fix JSX expression */}
-  }
+  s: 1250};
+export interface InnovativeITService {/* TODO: Fix JSX expression */};
+  };
 ];
 ;
-}
+};
 ];
 ;
     realImplementation: true;
@@ -1025,7 +1025,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
         customers: 800;
     rating: 4.9;
 reviews: 400;
-  }
+  };
     id: 'edge-computing-platform',
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
@@ -1044,7 +1044,7 @@ reviews: 400;
     ratin,
   g: 4.9;
     review,
-  s: 400}
+  s: 400};
     i,
   d: 'edge-computing-platform'
     nam,
@@ -1350,7 +1350,7 @@ marketSize: '$12B DevOps market',
         contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails:,
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
@@ -1361,7 +1361,7 @@ marketSize: '$12B DevOps market',
     reviews: 1250}];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true;
     implementationDetails: 'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.',
     launchDate: '2024-01-20',
@@ -1384,7 +1384,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1406,7 +1406,7 @@ varian,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1418,19 +1418,19 @@ varian,
     ratin,
   g: 4.7;
     review,
-  s: 1250}
+  s: 1250};
 ];
-export interface InnovativeITService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeITService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
+  e: string};
   };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number}
+  reviews: number};
 ;
 export const innovativeITServices: InnovativeITService[] = [;
   {
@@ -1462,12 +1462,12 @@ export const innovativeITServices: InnovativeITService[] = [;
     competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'];
     marketSize: '$45 B cybersecurity market';
     growthRate: '110% annual growth';
-    variant: 'cyberpunk'}
-    contactInfo: {}
+    variant: 'cyberpunk'};
+    contactInfo: {};
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true;
     implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.',
     launch_date: '2024 - 01 - 20',
@@ -1485,14 +1485,14 @@ export const innovativeITServices: InnovativeITService[] = [;
   ratin,
   g: number;
   review,
-  s: number}
+  s: number};
 ;
 export const,
   innovativeITServices: InnovativeITService[] = [;
-  {/* TODO: Fix JSX expression */}
-  t: 'cyberpunk'}
+  {/* TODO: Fix JSX expression */};
+  t: 'cyberpunk'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950';
       emai,
@@ -1502,7 +1502,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1514,8 +1514,8 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 1250}
-]}
+  s: 1250};
+]};
 ;
 export interface InnovativeITService,
   id: string; nam,
@@ -1931,7 +1931,7 @@ export interface InnovativeITService,
   e: '2024-01-20' customer,
   s: 2500, ratin,
   g: 4.7,
-  reviews: 1250 } ]; export interface InnovativeITService {/* TODO: Fix JSX expression */}
+  reviews: 1250 } ]; export interface InnovativeITService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
@@ -1940,7 +1940,7 @@ export interface InnovativeITService,
   s: number; ratin,
   g: number; review,
   s: number} ; export const,
-  innovativeITServices: InnovativeITService[] = [; {/* TODO: Fix JSX expression */}
+  innovativeITServices: InnovativeITService[] = [; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
@@ -1951,10 +1951,3 @@ export interface InnovativeITService,
   s: 2500, ratin,
   g: 4.7, review,
   s: 1250} ]} ; '
-=======
-    market_size: '$45B cybersecurity market'
-    growth_rate: '110% annual growth';
-variant: 'cyberpunk'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
->>>>>>> cursor/fix-errors-and-merge-to-main-e7dd

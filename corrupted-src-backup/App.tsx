@@ -1,6 +1,5 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import './index.css';
-
 // Lazy load pages for better performance;
 // const Home = lazy(() => import('./pages/Home'));
 // const About = lazy(() => import('./pages/About'));
@@ -17,18 +16,16 @@ function App() {
     //     // Cleanup on unmount;
     return () => {
       //       }}, []);
-
   return(<ErrorBoundary>
       <div>
   return (
     <ErrorBoundary>
       <div></div>
         <Router>;
-function App() {/* TODO: Fix JSX expression */}
-}
-  useEffect(() => {/* TODO: Fix JSX expression */}
+function App() {/* TODO: Fix JSX expression */};
+};
+  useEffect(() => {/* TODO: Fix JSX expression */};
       //       }}, []);
-
   return (<ErrorBoundary></ErrorBoundary>
       <div></div>
         <Router></Router>
@@ -51,24 +48,20 @@ function App() {/* TODO: Fix JSX expression */}
         </Router>
       </div>
     </ErrorBoundary>)
-  )}
-
+  )};
 // Simple Error Boundary;
 class ErrorBoundary extends React.Component<
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   n: React.ReactNode; fallback?: React.ReactNode },
-  {/* TODO: Fix JSX expression */}
-  r: boolean }
-> {/* TODO: Fix JSX expression */}
-  n: React.ReactNode; fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
-  r: false }}
-
-  static getDerivedStateFromError() {/* TODO: Fix JSX expression */}
-  r: true }}
-
+  {/* TODO: Fix JSX expression */};
+  r: boolean };
+> {/* TODO: Fix JSX expression */};
+  n: React.ReactNode; fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */};
+  r: false }};
+  static getDerivedStateFromError() {/* TODO: Fix JSX expression */};
+  r: true }};
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
-    //     }
-
+    //     };
   render() {
     if (this.state.hasError) {
       return(this.props.fallback || ()
@@ -82,14 +75,13 @@ class ErrorBoundary extends React.Component<
             <div className="text-center"></div>
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
               <button
-                onClick={() => this.setState({ hasError: false })}
+                onClick={() => this.setState({ hasError: false })};
                 className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
   componentDidCatch(erro,
   r: Error, errorInf)
-  o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
-    //     }
-
-  render() {/* TODO: Fix JSX expression */}
+  o: React.ErrorInfo) {/* TODO: Fix JSX expression */};
+    //     };
+  render() {/* TODO: Fix JSX expression */};
   r: false })}"
                 className="bg-blue-600 text-white px-4 py-2 rounded,"
   hover:bg-blue-700"
@@ -97,10 +89,8 @@ class ErrorBoundary extends React.Component<
                 Try again;
               </button>
             </div>
-          </div>))}
-
-    return this.props.children}
-}
-
+          </div>))};
+    return this.props.children};
+};
 export default App;
 "

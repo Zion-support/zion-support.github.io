@@ -1,5 +1,6 @@
 // Accessibility utilities and components;
 export const accessibilityUtils = {
+};
   // Focus management;
   trapFocus: element => {,;
 const focusableElements = element.querySelectorAll()
@@ -7,21 +8,19 @@ const focusableElements = element.querySelectorAll()
     );
     const _firstElement = focusableElements[0];
     const _lastElement = focusableElements[focusableElements.length - 1];
-
     element.addEventListener('keydown', e => {)
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             lastElement.focus();
             e.preventDefault();
-export const accessibilityUtils = {/* TODO: Fix JSX expression */}
-          }
-        } else {/* TODO: Fix JSX expression */}
-          }
-        }
-      }
+export const accessibilityUtils = {/* TODO: Fix JSX expression */};
+          };
+        } else {/* TODO: Fix JSX expression */};
+          };
+        };
+      };
     })},
-
   // Screen reader announcements;
   announceToScreenReader: message => {,;
 const _announcement = document.createElement('div');
@@ -30,10 +29,8 @@ const _announcement = document.createElement('div');
     announcement.className = 'sr-only';
     announcement.textContent = message;
     document.body.appendChild(announcement);
-
     setTimeout(() => {
       document.body.removeChild(announcement)}, 1000)},
-
   // Color contrast checker;
   checkColorContrast: (foreground, background) => {
 return (
@@ -50,22 +47,18 @@ const [rs, gs, bs] = [r, g, b].map(c => {)
   // Screen reader announcements,
   announceToScreenReader: message =>
 );
-} {/* TODO: Fix JSX expression */}
+} {/* TODO: Fix JSX expression */};
     }, 1000)},
-
   // Color contrast checker,
-  checkColorContrast: (foreground, background) => {/* TODO: Fix JSX expression */}
+  checkColorContrast: (foreground, background) => {/* TODO: Fix JSX expression */};
       });
-
       return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs};
-
     //     const l1 = getLuminance(foreground);
     //     const l2 = getLuminance(background);
     //     const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
-
     return {
       ratio,
       meetsAA: ratio >= 4.5;
       meetsAAA: ratio >= 7;
-    return {/* TODO: Fix JSX expression */}
+    return {/* TODO: Fix JSX expression */};
     }}};

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 :corrupted-src-backup/components/AnalyticsDashboard.tsx;
 interface AnalyticsData {
+}
   pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
@@ -12,10 +13,9 @@ interface AnalyticsData {
   trafficSources: Array<{,
     source: string;
     percentage: number;
-interface AnalyticsData {/* TODO: Fix JSX expression */}
+interface AnalyticsData {/* TODO: Fix JSX expression */};
   }>;
   trafficSource,
-  s: Array<{/* TODO: Fix JSX expression */}
-  }>}
-
+  s: Array<{/* TODO: Fix JSX expression */};
+  }>};
 export default AnalyticsDashboard;

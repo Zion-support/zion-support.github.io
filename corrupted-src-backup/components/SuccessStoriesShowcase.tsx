@@ -16,7 +16,7 @@ const, storie, s = [
         "2 M, users, impacted"
       ]
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
-    }
+    };
     {
       compa, n, y: "Global, Manufacturing, Inc"
       indust, r, y: "Manufacturi, n, g"
@@ -28,7 +28,7 @@ const, storie, s = [
         "99.9% uptime, achieve, d"
       ]
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
-    }
+    };
     {
       company: 'FinanceFirst Bank',
       industry: 'Financial Services',
@@ -45,7 +45,7 @@ const, storie, s = [
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
           {stories.map((story, index) => (
             <div;
-key={index}
+key={index};
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
             >,
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
@@ -54,7 +54,7 @@ key={index}
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
           {stories.map((story, index) => (</div>
             <div
-key={index}
+key={index};
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
             ></div>
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>
@@ -62,18 +62,18 @@ key={index}
                   {story.icon}</div>
                   <div></div>
                     <h3 className="font-bold text-xl">{story.company}</h3>;
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-key={index}
+const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+key={index};
               className="bg-white rounded-2xl shadow-xl overflow-hidden,"
   hover:scale-105 transition-all duration-300"
             >
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>"
                 <div className="flex items-center gap-3 mb-4"></div>
-                  {story.icon}
+                  {story.icon};
                   <div></div>"
                     <h3 className="font-bold text-xl">{story.company}</h3>"
                     <p className="text-sm opacity-90">{story.industry}</p>

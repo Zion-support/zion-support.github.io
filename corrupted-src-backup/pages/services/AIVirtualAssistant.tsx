@@ -6,17 +6,10 @@ impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
 impo, r, t {/* TODO: Fix JSX expression *
 } fr, o, m "luci, d, e-rea, c, t";';"
-<<<<<<< HEAD
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";';
 const, AIVirtualAssistan, t: Rea, c, t.FC = () => {;
 const, feature, s = [
-=======
-import, Header, from "../../componen, t, s
-import, Footer, from "../../componen, t, s
-const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
-  const, feature, s = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       i, c, o;
   n: Bra, i, n;
@@ -25,7 +18,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       tit, l, e: "Natural, Language, Processing",";
       descripti, o, n: "Advanced, NLP, capabilities that, understand, context, sentime, n, t, and, intent, with 95% accura, c, y.",";
       benef, i, t: "95% conversation, accuracy, rate"
-    }
+    };
     {
       ic, o, n: MessageCirc, l, e;
       tit, l, e: "Mul, t, i-Channel, Suppor, t","
@@ -33,7 +26,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       tit, l, e: "Mul, t, i-Channel, Suppor, t",";
       descripti, o, n: "Deploy, across, web, mobi, l, e, social, medi, a, and, voice, channels with, unified, conversation histo, r, y.",";
       benef, i, t: "Unified, customer, experience"
-    }
+    };
     {
       ic, o, n: Languag, e, s;
       tit, l, e: "1, 2, 0+ Language, Suppor, t","
@@ -41,7 +34,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       tit, l, e: "1, 2, 0+ Language, Suppor, t",";
       descripti, o, n: "Re, a, l-time, translation, and multilingual, support, for global, customer, bases.",";
       benef, i, t: "Global, reach, capability"
-    }
+    };
     {
       ic, o, n: Shie, l, d;
       tit, l, e: "Enterprise, Securit, y","
@@ -49,7 +42,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       tit, l, e: "Enterprise, Securit, y",";
       descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryptio, n, GDPR, complianc, e, and, data, privacy protecti, o, n.",";
       benef, i, t: "1, 0, 0% compliance, guarantee, d"
-    }
+    };
     {
       ic, o, n: Clo, c, k;
       tit, l, e: "24
@@ -57,7 +50,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       tit, l, e: "24
       descripti, o, n: "Never, miss, a customer, inquiry, with rou, n, d-t, h, e-clock, intelligent, assistance.",";
       benef, i, t: "99.9% uptime, SL, A"
-    }
+    };
     {
       ic, o, n: Use, r, s;
       tit, l, e: "Human, Handof, f","
@@ -65,60 +58,45 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {
       tit, l, e: "Human, Handof, f",";
       descripti, o, n: "Seamless, escalation, to human, agents, when complex, issues, require personal, attentio, n.",";
       benef, i, t: "Perfect, customer, satisfaction"
-    }
+    };
   ];
-<<<<<<< HEAD
-  return(<React.Fragment>
+  return(<React .Fragment>
       <Helmet>
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t</title>
         <me, t, a;
   na, m, e="descripti, o, n"
           content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t/>";
-const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-=======
-  return (<div>
-        <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t<
-        <me, t, a;
-  na, m, e="descripti, o, n"
-          content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t)
-const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-    }
+const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
     {/* TODO: Fix JSX expression *
-    }
+    };
   ];
-<<<<<<< HEAD
-  return (<React.Fragment>
+  return (<React .Fragment>
       <Helmet></Helmet>
         <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t</title>
-=======
-  return (<div><Helmet><
-        <title>AI, Virtual, Assistant - Zion, Tech, Group | 24/7, Intelligent, Customer Suppo, r, t<
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
         <me, t, a;"
   na, m, e="descripti, o, n""
           content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t
           content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4
-         
         <meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" 
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t" 
       <
       <Head, e, r   /><
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
         {/* Hero, Sectio, n *
-        <section, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20">
+        <section , className="bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
-            <div, className="te, x, t-cent, e, r">
+            <div , className="te, x, t-cent, e, r">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   ,
     g:px-8">"<
@@ -126,7 +104,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 AI, Virtua, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Assista, n, t<
               <
-              <p, className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-purp, l, e-100, ma, x-w-4xl, m, x-auto, m, b-8">
+              <p , className="te, x, t-xl, m, d:te, x, t-2xl, tex, t-purp, l, e-100, ma, x-w-4xl, m, x-auto, m, b-8">
                 Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4
   support, 12, 0+ languag, e, s, and, seamlessly, integrate with, your, existing syste, m, s.
               <
@@ -194,12 +172,11 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
                 >
                   View, Pricin, g;"
                   <Link, className="w-5 h-5, m, l-2  /><
-                  
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",
-            <div, className="text-center mb-12">
-              <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+            <div , className="text-center mb-12">
+              <h2 , className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="text-center mb-12">";
@@ -229,8 +206,8 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <
             <div, className="gri, d, m;
   d: gr, i, d-co, l, s-4, ga, p-8">"
-              <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">
+              <div , className="te, x, t-cent, e, r">
+                <div , className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-4, ga, p-8">"<
               <div, className="te, x, t-cent, e, r"><
@@ -305,7 +282,7 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
           <
         <
         {/* Featur, e, s *
-        <section, className="py-20">
+        <section , className="py-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8">",)
@@ -340,20 +317,14 @@ const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression *
             <
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-3, ga, p-8">"
-<<<<<<< HEAD
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
 ;
 const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }"
-=======
-              {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">
+                    <div , className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">
                 return (<
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"<
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4"><
@@ -361,35 +332,28 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
+                    <div , className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l;)
   g:gr, i, d-co, l, s-3, ga, p-8">";)
-<<<<<<< HEAD
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
 return (
 ;
 const, Ico, n = featu, r, e.ic, o, n;
-                return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+                return(<div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }";
-=======
-              {featur, e, s.m, a, p ((featu, r, e, ind, e, x) => {
-                const, Ico, n = featu, r, e.ic, o, n;
-                return (<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"><
                       <CheckCircle, className="w-4 h-4, m, r-1  
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8"><)
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
-<<<<<<< HEAD
 return (
 ;
 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
+                  <div , ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">
 );
 }";</div>
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";</div>
@@ -402,21 +366,6 @@ const, Ico, n = featu, r, e.ic, o, n;
                       {featu, r, e.benef, i, t})
                     </d, i, v>)
             </d, i, v>"
-=======
-                const, Ico, n = featu, r, e.ic, o, n;
-                return (<
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";<
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";<
-                      <Icon, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0" 
-                    <
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";<
-                      <CheckCircle, className="w-4 h-4, m, r-1")
-                      {featu, r, e.benef, i, t});
-                    <
-            <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression *
@@ -438,24 +387,20 @@ const, Ico, n = featu, r, e.ic, o, n;
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}<
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}<
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
-<<<<<<< HEAD
                       <CheckCircle, className="w-4 h-4, m, r-1" />";
-                      {featu, r, e.benef, i, t}
+                      {featu, r, e.benef, i, t};
                     </d, i, v>
                   </d, i, v>)
-                )})}
+                )})};
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-        {/* CTA, Sectio, n */}
-        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">
-=======
-                      
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+        {/* CTA, Sectio, n */};
+        <section , className="py-20, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;
   ,
     g:px-8, tex, t-cent, e, r">"
-            <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
+            <h2 , className="te, x, t-4xl, fon, t-bold, m, b-6">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   ,
     g:px-8, tex, t-cent, e, r">"<
@@ -507,7 +452,6 @@ const, Ico, n = featu, r, e.ic, o, n;
   r:te, x, t-purp, l, e-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 View, Success, Stories;"
-<<<<<<< HEAD
                 <Link, className="w-5 h-5, m, l-2  /></Link>"
                 <Link, className="w-5 h-5, m, l-2" />";
               </a>
@@ -518,18 +462,5 @@ const, Ico, n = featu, r, e.ic, o, n;
       <Foot, e, r   /></Foot>
     </React.Fragment>
   )};
-=======
-                <Link, className="w-5 h-5, m, l-2  /><
-                <Link, className="w-5 h-5, m, l-2" 
-              <
-            <
-          <
-        <
-      <
-      <Foot, e, r   /><
-    <
-  );
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default AIVirtualAssistant;
 }}"
