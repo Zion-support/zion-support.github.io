@@ -50,7 +50,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
       }
     }
 
@@ -76,7 +76,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
       }
     }
 
@@ -103,7 +103,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
       }
     }
 
@@ -127,7 +127,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory,
       }));
     } catch (error) {
-      // eslint-disable-next-line no-console
+       
     }
 
     // Cleanup observers
@@ -136,7 +136,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-          // eslint-disable-next-line no-console
+           
         }
       });
     };
@@ -152,7 +152,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     if (slowResources.length > 0) {
        
-      // eslint-disable-next-line no-console
+       
       console.log(
         'Slow resources detected:',
         slowResources.map((r: PerformanceResourceTiming) => ({
