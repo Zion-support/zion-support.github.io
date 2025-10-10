@@ -1,142 +1,137 @@
-'use client'
 /**
- * Enhanced Analytics Tracker
- * Provides comprehensive tracking for user interactions, performance metrics, and errors
+ * Analytics Tracker
+ * Provides comprehensive analytics tracking for the application
  */
+
 interface AnalyticsEvent {
-  category: string
-  action: string
-  label?: string
-  value?: number
-  nonInteraction?: boolean;}
+  action: string;
+  category: string;
+  label?: string;
+  value?: number;
+  nonInteraction?: boolean;
 }
+
 interface PerformanceMetrics {
-  metric: string
-  value: number
-  rating?: 'good' | 'needs-improvement' | 'poor';}
+  metric: string;
+  value: number;
+  rating?: 'good' | 'needs-improvement' | 'poor';
 }
+
 interface ErrorReport {
-  message: string
-  stack?: string
-  componentStack?: string
-  severity: 'low' | 'medium' | 'high' | 'critical';}
+  message: string;
+  stack?: string;
+  componentStack?: string;
+  severity: 'low' | 'medium' | 'high' | 'critical';
 }
+
 class AnalyticsTracker {
-  private isInitialized = false
-  private queue: Array<() => void> = []
+  private isInitialized = false;
+  private queue: Array<() => void> = [];
+
   /**
    * Initialize the analytics tracker
    */
   initialize(): void {
-    if (typeof window === 'undefined') return
-    this.isInitialized = true
+    if (typeof window === 'undefined') return;
+    
+    this.isInitialized = true;
+    
     // Process queued events
-    this.queue.forEach(fn => fn())
-    this.queue = []
+    this.queue.forEach(fn => fn());
+    this.queue = [];
+    
     // Track initial page view
-    this.trackPageView(window.location.pathname);}
+    this.trackPageView(window.location.pathname);
   }
+
+  /**
+   * Track a page view
+   */
+  trackPageView(path: string): void {
+    const event = () => {
+      console.log('Page view tracked:', path);
+      // Add your analytics implementation here
+    };
+
+    if (this.isInitialized) {
+      event();
+    } else {
+      this.queue.push(event);
+    }
+  }
+
   /**
    * Track a custom event
    */
   trackEvent(event: AnalyticsEvent): void {
-    if (typeof window === 'undefined') return
-      }
-      // Also log to console in development
-      if (process.env.NODE_ENV === 'development') {}
-        }
-    }
+    const trackFn = () => {
+      console.log('Event tracked:', event);
+      // Add your analytics implementation here
+    };
+
     if (this.isInitialized) {
-      track();}
+      trackFn();
     } else {
-      this.queue.push(track);}
+      this.queue.push(trackFn);
     }
   }
-  /**
-   * Track page views
-   */
-  trackPageView(path: string): void {
-    if (typeof window === 'undefined') return
-      }
-      if (process.env.NODE_ENV === 'development') {}
-        }
-    }
-    if (this.isInitialized) {
-      track();}
-    } else {
-      this.queue.push(track);}
-    }
-  }
+
   /**
    * Track performance metrics
    */
   trackPerformance(metrics: PerformanceMetrics): void {
-    if (typeof window === 'undefined') return
-      }
-      if (process.env.NODE_ENV === 'development') {}
-        }
-    }
+    const trackFn = () => {
+      console.log('Performance tracked:', metrics);
+      // Add your performance tracking implementation here
+    };
+
     if (this.isInitialized) {
-      track();}
+      trackFn();
     } else {
-      this.queue.push(track);}
+      this.queue.push(trackFn);
     }
   }
+
   /**
-   * Track errors
+   * Track an error
    */
   trackError(error: ErrorReport): void {
-    if (typeof window === 'undefined') return
-      }
-      // Always log errors to console
-      }
+    const trackFn = () => {
+      console.error('Error tracked:', error);
+      // Add your error tracking implementation here
+    };
+
     if (this.isInitialized) {
-      track();}
+      trackFn();
     } else {
-      this.queue.push(track);}
+      this.queue.push(trackFn);
     }
   }
+
   /**
-   * Track user timing
+   * Track user interaction
    */
-  trackTiming(category: string, variable: string, value: number, label?: string): void {
-    if (typeof window === 'undefined') return
-      }
-      if (process.env.NODE_ENV === 'development') {}
-        }
-    }
-    if (this.isInitialized) {
-      track();}
-    } else {
-      this.queue.push(track);}
-    }
+  trackInteraction(action: string, element?: string): void {
+    this.trackEvent({
+      action,
+      category: 'user-interaction',
+      label: element
+    });
   }
+
   /**
-   * Track conversions
+   * Track conversion
    */
-  trackConversion(conversionId: string, value?: number): void {
-    if (typeof window === 'undefined') return
-      }
-      if (process.env.NODE_ENV === 'development') {}
-        }
-    }
-    if (this.isInitialized) {
-      track();}
-    } else {
-      this.queue.push(track);}
-    }
+  trackConversion(conversionType: string, value?: number): void {
+    this.trackEvent({
+      action: 'conversion',
+      category: conversionType,
+      value
+    });
   }
 }
-// Export singleton instance
-export const analyticsTracker = new AnalyticsTracker()
-// Auto-initialize when window is available
-if (typeof window !== 'undefined') {
-  if (document.readyState === 'complete') {
-    analyticsTracker.initialize();}
-  } else {
-    window.addEventListener('load', () => {
-      analyticsTracker.initialize();}
-    })
-  }
-}
-export default analyticsTracker
+
+// Create singleton instance
+export const analyticsTracker = new AnalyticsTracker();
+
+export default AnalyticsTracker;

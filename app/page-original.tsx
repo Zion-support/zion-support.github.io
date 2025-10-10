@@ -77,8 +77,7 @@ const HomePage: React.FC = React.memo((props) => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-<<<<<<< HEAD
-            availableLanguage: 'en'}
+            availableLanguage: 'en'
           },
           address: {
             '@type': 'PostalAddress',
@@ -87,9 +86,6 @@ const HomePage: React.FC = React.memo((props) => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
-=======
-            availableLanguage: 'en'
->>>>>>> cursor/analyze-improve-and-deploy-application-7c78
           }
         },
         address: {
@@ -1631,14 +1627,8 @@ const HomePage: React.FC = React.memo((props) => {
       {/* Footer */}
       <Footer />
     </div>
-<<<<<<< HEAD
-  )
-}
-export default HomePage
-=======
     </>
   );
 };
 
 export default HomePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-7c78
