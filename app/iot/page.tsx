@@ -2,8 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 ;
-const IoTPage: React.FC = () => {const iotServices = [
-    {
+
+const $1Page: React.FC = () => {}
+  const iotServices = [
+    {}
       titl,
     e: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
@@ -15,7 +17,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Device Management',
       technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']]
     },
-    {
+    {}
       title: 'Smart City Solutions',
       description: 'Comprehensive smart city infrastructure including traffic management, environmental monitoring, and citizen services.',
       icon: '🏙️',
@@ -26,7 +28,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Smart Cities',
       technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics']]
     },
-    {
+    {}
       title: 'Industrial IoT (IIoT)',
       description: 'Industrial IoT solutions for manufacturing, energy, and logistics with predictive maintenance and optimization.',
       icon: '🏭',
@@ -37,9 +39,9 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Industrial IoT',
       technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Edge Computing', 'Machine Learning']]
     },
-      technologies: ['OPC UA', 'Modbus', 'Ethernet
+      technologies: ['OPC UA', 'Modbus', 'Ethernet]
     },
-    {
+    {}
       title: 'Smart Agriculture Platform',
       description: 'IoT-powered agricultural monitoring and optimization for crop management and livestock tracking.',
       icon: '🌾',
@@ -50,7 +52,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Smart Agriculture',
       technologies: ['LoRaWAN', 'Sigfox', 'Satellite IoT', 'Drones', 'Computer Vision']]
     },
-    {
+    {}
       title: 'Smart Home Automation',
       description: 'Complete smart home solutions with energy management, security, and comfort automation.',
       icon: '🏠',
@@ -61,7 +63,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Smart Homes',
       technologies: ['Zigbee', 'Z-Wave', 'WiFi', 'Bluetooth', 'Matter']]
     },
-    {
+    {}
       title: 'Healthcare IoT Solutions',
       description: 'Medical IoT devices and platforms for patient monitoring, telemedicine, and health analytics.',
       icon: '🏥',
@@ -72,7 +74,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Healthcare IoT',
       technologies: ['Bluetooth LE', 'WiFi', 'Cellular', 'Edge Computing', 'AI Analytics']]
     },
-    {
+    {}
       title: 'Fleet Management IoT',
       description: 'Comprehensive fleet tracking and management solutions for vehicles, drones, and logistics.',
       icon: '🚛',
@@ -83,7 +85,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Fleet Management',
       technologies: ['GPS', 'Cellular', 'Satellite', 'OBD-II', 'Telematics']]
     },
-    {
+    {}
       title: 'Environmental Monitoring',
       description: 'IoT-based environmental monitoring for air quality, water quality, and climate data collection.',
       icon: '🌍',
@@ -94,7 +96,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Environmental',
       technologies: ['LoRaWAN', 'NB-IoT', 'Satellite', 'Edge Computing', 'AI Analytics']]
     },
-    {
+    {}
       title: 'Retail IoT Solutions',
       description: 'Smart retail solutions including inventory management, customer analytics, and automated checkout.',
       icon: '🛒',
@@ -105,7 +107,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Retail IoT',
       technologies: ['RFID', 'Computer Vision', 'Beacons', 'Edge Computing', 'AI Analytics']]
     },
-    {
+    {}
       title: 'Energy Management IoT',
       description: 'Smart energy management solutions for buildings, grids, and renewable energy systems.',
       icon: '⚡',
@@ -116,7 +118,7 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'Energy Management',
       technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization']]
     },
-    {
+    {}
       title: 'IoT Security Solutions',
       description: 'Comprehensive IoT security including device authentication, data encryption, and threat monitoring.',
       icon: '🔒',
@@ -127,9 +129,9 @@ const IoTPage: React.FC = () => {const iotServices = [
       category: 'IoT Security',
       technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Threat Intelligence']]
     },
-      technologies: ['PKI', 'TLS
+      technologies: ['PKI', 'TLS]
     },
-    {
+    {}
       title: 'IoT Data Analytics Platform',
       description: 'Advanced analytics platform for IoT data processing, visualization, and insights generation.',
       icon: '📊',
@@ -177,7 +179,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
           <
         <
 
-        {/* Key Benefits *
+        {/* Key Benefits *}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><
             <div className="text-center mb-12"><
@@ -223,8 +225,8 @@ const categories = [...new Set(iotServices.map(service => service.category))];
           <
         <
 
-        {/* Services by Category *
-        {categories.map(category => (
+        {/* Services by Category *}
+        {categories.map(category => (}
           <section key={category)} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
               <div className="text-center mb-12"><
@@ -238,7 +240,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
               <
               <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8">
-                {iotServices
+                {iotServices}
                   .filter(service => service.category === category)
                   .map((service, index) => (<
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"><
@@ -270,7 +272,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
                       <div className="mb-4"><
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies: <
                         <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech), techIndex) => (<
+                          {service.technologies.map((tech), techIndex) => (<}
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                               {tech}
                             <)
@@ -292,7 +294,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
           <
         ))}
 
-        {/* IoT Capabilities Showcase *
+        {/* IoT Capabilities Showcase *}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
             <div className="text-center mb-12"><
@@ -339,7 +341,7 @@ const categories = [...new Set(iotServices.map(service => service.category))];
           <
         <
 
-        {/* Contact Section *
+        {/* Contact Section *}
         <section className="py-16 bg-gradient-to-r from-green-600 to-teal-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"><
             <h2 className="text-3xl md:text-4xl font-bold mb-4">

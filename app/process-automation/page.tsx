@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
+import {}
   Zap,
   Settings,
   CheckCircle,
@@ -21,27 +21,28 @@ import {
   Eye,
   Database,
   Workflow,
-
+;
 } from 'lucide-react';
 ;
-const ProcessAutomationPage: React.FC = () => {const features = [
-    {
-      ico,
-    n: Zap,
+
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+      icon: Zap,
       title: 'Workflow Automation',
       description: 'Streamline your business processes with intelligent automation that reduces manual work and errors.'
     },
-    {
+    {}
       icon: Bot,
       title: 'AI-Powered Automation',
       description: 'Leverage artificial intelligence to create smart, adaptive automation solutions for complex processes.'
     },
-    {
+    {}
       icon: Settings,
       title: 'Custom Integration',
       description: 'Seamlessly integrate with your existing systems and tools for a unified automation experience.'
     },
-    {
+    {}
       icon: BarChart,
       title: 'Performance Monitoring',
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
@@ -68,7 +69,7 @@ const benefits = [
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section *
+        {/* Hero Section *}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -106,7 +107,7 @@ const benefits = [
           </div>
         </section>
 
-        {/* Benefits Section *
+        {/* Benefits Section *}
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -119,7 +120,7 @@ const benefits = [
             <
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
@@ -129,7 +130,7 @@ const benefits = [
           </div>
         </section>
 
-        {/* CTA Section *
+        {/* CTA Section *}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

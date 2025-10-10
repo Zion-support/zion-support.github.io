@@ -67,7 +67,7 @@ const AppLoadingSpinner = () => (
     fullScreen 
   />
 );
-const App: React.FC = () => {
+const App: React.FC = () => {}
   return (
     <ErrorBoundary>
       <HelmetProvider>

@@ -3,24 +3,24 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
+const ContentPromotionBanner: React.FC = () => {}
   const features = [
-    {
+    {}
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
-    {
+    {}
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    {
+    {}
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
-    {
+    {}
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment with local support and compliance'
@@ -39,19 +39,19 @@ const ContentPromotionBanner: React.FC = () => {
   ];
 
   const stats = [
-    {
+    {}
       icon: Users,
       value: '10,000+',
       label: 'Happy Customers',
       description: 'Businesses trust our solutions'
     },
-    {
+    {}
       icon: TrendingUp,
       value: '99.9%',
       label: 'Uptime',
       description: 'Reliable service guarantee'
     },
-    {
+    {}
       icon: Star,
       value: '4.9/5',
       label: 'Rating',
@@ -85,7 +85,7 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {stats.map((stat, index) => (
+          {stats.map((stat, index) => (}
             <div key={index} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <stat.icon className="w-8 h-8 text-white" />
@@ -99,7 +99,7 @@ const ContentPromotionBanner: React.FC = () => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
+          {features.map((feature, index) => (}
             <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <feature.icon className="w-8 h-8 text-white" />
@@ -120,7 +120,7 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>

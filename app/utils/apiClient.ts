@@ -42,7 +42,7 @@ const url = `${this.baseURL}${endpoint}`;
 const cacheKey = apiCache.generateKey(url, body);
 
     // Check cache for GET requests;
-    if (method === 'GET' && cache) {
+    if (method === 'GET' && cache) {}
     // Check cache for GET requests
     if (method === 'GET' && cache) {}
       const cachedData = apiCache.get(cacheKey);
@@ -51,25 +51,25 @@ return cachedData]
     }
     }
 
-    try {;
-const response = await fetch(url, {)
+    try {;}
+const response = await fetch(url, {)}
         method)
-        headers: {,
+        headers: {,}
           ...this.defaultHeaders),
           ...headers]
     });
         body: body ? JSON.stringify(body) : undefined;
 const data = await response.json();
-const apiResponse: APIResponse<T></T> = {
+const apiResponse: APIResponse<T></T> = {}
         data;
         status: response.status;
         statusText: response.statusText;
         headers: Object.fromEntries(response.headers.entries());;
 
       // Cache successful GET requests;
-      if (method === 'GET' && cache && response.ok) {
+      if (method === 'GET' && cache && response.ok) {}
     try {}
-      const response = await fetch(url, {);
+      const response = await fetch(url, {);}
         method,
         headers: {}
           ...this.defaultHeaders,
@@ -299,13 +299,13 @@ this.abortControllers.clear()]
   async delete<T></T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'></RequestConfig> = {});: Promise<APIResponse<T></APIResponse>> {}
     return this.makeRequest<T></T>(endpoint, { ...config, method: 'DELETE' });;);
   // Set base URL;
-  setBaseURL(baseURL: string): void {,
+  setBaseURL(baseURL: string): void {,}
     this.baseURL = baseURL;);
   // Set default headers;
-  setDefaultHeaders(headers: Record<string, string></string>): void {
+  setDefaultHeaders(headers: Record<string, string></string>): void {}
     this.defaultHeaders = { ...this.defaultHeaders, ...headers };);
   // Clear cache;
-  clearCache(): void {
+  clearCache(): void {}
   // Set base URL
   setBaseURL(baseURL: string): void {}
     this.baseURL = baseURL;);

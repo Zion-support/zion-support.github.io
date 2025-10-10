@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'};
   ];
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -11,7 +11,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         <meta name="keywords" content="AdvancedSEOOptimizer_new, AI solutions, IT services, Zion Tech Group, advancedseooptimizer_new" 
       <
 
-      {/* Hero Section *
+      {/* Hero Section *}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -37,7 +37,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         <
       <
 
-      {/* Features Section *
+      {/* Features Section *}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -64,7 +64,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
 
-      {/* Benefits Section *
+      {/* Benefits Section *}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -77,7 +77,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           <
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
@@ -87,7 +87,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
 
-      {/* CTA Section *
+      {/* CTA Section *}
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

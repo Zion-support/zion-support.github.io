@@ -3,23 +3,25 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react';
 ;
-const BackupRecoveryPage: React.FC = () => {const features = [
-    {
+
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
       icon: Database,
       title: 'Automated Backups',
       description: 'Automated backup solutions with intelligent scheduling and monitoring'
     },
-    {
+    {}
       icon: Clock,
       title: 'Fast Recovery',
       description: 'Quick data recovery with minimal downtime and maximum efficiency'
     },
-    {
+    {}
       icon: ShieldCheck,
       title: 'Data Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
-    {
+    {}
       icon: Globe,
       title: 'Cloud Integration',
       description: 'Seamless cloud backup and recovery across multiple platforms'
@@ -71,7 +73,7 @@ const benefits = [
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -95,7 +97,7 @@ const benefits = [
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>

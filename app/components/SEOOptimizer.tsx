@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
+interface SEOOptimizerProps {}
   title: string;
   description: string;
   keywords: string[];
@@ -12,7 +12,7 @@ interface SEOOptimizerProps {
   ogType?: string;
   twitterCard?: string}
 ;
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({}
   title,
   description,
   keywords,
@@ -21,7 +21,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ogImage = '/images/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image'
-}) => {;
+}) => {;}
 const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
 
@@ -46,7 +46,7 @@ const fullDescription = description || 'Leading provider of AI-powered enterpris
       <meta name="twitter:image" content={ogImage} />
       
       {/* Structured Data */}
-      {structuredData && (
+      {structuredData && (}
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

@@ -2,7 +2,7 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
-const Footer: React.FC = memo(() => {;
+const Footer: React.FC = memo(() => {;}
 const currentYear = new Date().getFullYear();
 const aiServices = [
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
@@ -84,7 +84,7 @@ const supportLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
   ];
-const contactInfo = {
+const contactInfo = {}
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
@@ -102,7 +102,7 @@ const contactInfo = {
               AI Services
             </h3>
             <ul className="space-y-2">
-              {aiServices.slice(0, 8).map((service, index) => (
+              {aiServices.slice(0, 8).map((service, index) => (}
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -129,7 +129,7 @@ const contactInfo = {
               IT Services
             </h3>
             <ul className="space-y-2">
-              {itServices.slice(0, 6).map((service, index) => (
+              {itServices.slice(0, 6).map((service, index) => (}
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -156,7 +156,7 @@ const contactInfo = {
               Micro SAAS
             </h3>
             <ul className="space-y-2">
-              {microSaasServices.slice(0, 8).map((service, index) => (
+              {microSaasServices.slice(0, 8).map((service, index) => (}
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -183,7 +183,7 @@ const contactInfo = {
               Emerging Tech
             </h3>
             <ul className="space-y-2">
-              {emergingTech.map((service, index) => (
+              {emergingTech.map((service, index) => (}
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -202,7 +202,7 @@ const contactInfo = {
               Company
             </h3>
             <ul className="space-y-2 mb-6">
-              {companyLinks.map((link, index) => (
+              {companyLinks.map((link, index) => (}
                 <li key={index}>
                   <Link 
                     href={link.url}
@@ -215,7 +215,7 @@ const contactInfo = {
             </ul>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
             <ul className="space-y-2 mb-6">
-              {supportLinks.map((link, index) => (
+              {supportLinks.map((link, index) => (}
                 <li key={index}>
                   <Link 
                     href={link.url}

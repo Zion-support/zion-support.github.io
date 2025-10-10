@@ -8,18 +8,18 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import { CheckCircle, Handshake, Users, Award } from 'lucide-react';
 
-const PartnersPage = () => {
+const PartnersPage = () => {}
   const partners = [
-    {
+    {}
       name: 'Microsoft',
       logo: '/api/placeholder/200/100',
     },
-    {
+    {}
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200/100',
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 
-interface Partner {
+interface Partner {}
   name: string;
   logo: string;
   description: string;
@@ -28,9 +28,9 @@ interface Partner {
   tier: 'strategic' | 'preferred' | 'certified'});;)
 }
 
-const PartnersPage: React.FC = () => {
+const PartnersPage: React.FC = () => {}
   const partners: Partner[] = [
-    {
+    {}
       name: 'Microsoft',
       logo: '/images/partners/microsoft.png',
       description: 'Strategic partnership for Azure cloud solutions and AI services',
@@ -38,7 +38,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://microsoft.com',
       tier: 'strategic'
     },
-    {
+    {}
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
       description: 'Leading cloud infrastructure and machine learning platform provider',
@@ -48,7 +48,7 @@ const PartnersPage: React.FC = () => {
     },
       tier: 'strategic'});;)
 },
-    {
+    {}
       name: 'Google Cloud',
       logo: '/images/partners/google-cloud.png',
       description: 'Advanced AI and machine learning platform with global reach',
@@ -56,7 +56,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://cloud.google.com',
       tier: 'strategic'
     },
-    {
+    {}
       name: 'IBM',
       logo: '/images/partners/ibm.png',
       description: 'Enterprise AI solutions and hybrid cloud platform',
@@ -64,7 +64,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://ibm.com',
       tier: 'preferred'
     },
-    {
+    {}
       name: 'Salesforce',
       logo: '/images/partners/salesforce.png',
       description: 'Customer relationship management and business automation',
@@ -73,7 +73,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://salesforce.com',
       tier: 'preferred'});;)
 },
-    {
+    {}
       name: 'Splunk',
       logo: '/images/partners/splunk.png',
       description: 'Data analytics and security monitoring platform',
@@ -93,21 +93,21 @@ const PartnersPage: React.FC = () => {
   ];
 
   const partnershipTiers = [
-    {
+    {}
       name: 'Strategic',
       description: 'Deep integration and co-innovation',
       bgColor: 'bg-gradient-to-br from-purple-500/20 to-blue-500/20',
       borderColor: 'border-purple-400/50',
       icon: Award
     },
-    {
+    {}
       name: 'Preferred',
       description: 'Enhanced support and collaboration',
       bgColor: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20',
       borderColor: 'border-blue-400/50',
       icon: Handshake
     },
-    {
+    {}
       name: 'Certified',
       description: 'Verified expertise and capabilities',
       bgColor: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20',
@@ -116,11 +116,11 @@ const PartnersPage: React.FC = () => {
     }
   ];
 
-  const getTierInfo = (tier: string) => {
+  const getTierInfo = (tier: string) => {}
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});;)
 };
 
-const PagePage: React.FC = () => {
+const PagePage: React.FC = () => {}
   return (
     <>
       <Helmet>
@@ -168,7 +168,7 @@ const PagePage: React.FC = () => {
             </div>
 
             <div></div>
-              {partnershipTiers.map((tier, index) => (
+              {partnershipTiers.map((tier, index) => (}
                 <div></div>
                   <div></div>
                     <tier.icon className={`w-8 h-8 ${tier.color}`} />
@@ -199,7 +199,7 @@ const PagePage: React.FC = () => {
       <div></div>
                     <div></div>
                       <div></div>
-                        <di></di>{partner.name.charAt(0);</div>
+                        <di></di>{partner.name.charAt(0);</div>}
                       </div>
                       <h3></h3>
                         {partner.name}
@@ -208,7 +208,7 @@ const PagePage: React.FC = () => {
                       <div></div>
                         {partner.category}
                       </div>
-                      {partner.website && (
+                      {partner.website && (}
                         <a></a>
                           Visit Website
                           <ExternalLink className="w-3 h-3" />
@@ -234,7 +234,7 @@ const PagePage: React.FC = () => {
 
             <div></div>
               <div></div>
-                {benefits.map((benefit, index) => (
+                {benefits.map((benefit, index) => (}
                   <div></div>
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{benefit}</span>
@@ -266,22 +266,20 @@ const PagePage: React.FC = () => {
       nam,
     e: 'Microsoft',
       logo: '/api/placeholder/200
-      descriptio,
-    n: 'Strategic partnership for Azure cloud solutions and AI services',
+      description: 'Strategic partnership for Azure cloud solutions and AI services',
       category: 'Cloud & AI'
     },
-    {
+    {}
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200
-      descriptio,
-    n: 'Leading cloud infrastructure and machine learning platform provider',
+      description: 'Leading cloud infrastructure and machine learning platform provider',
       category: 'Cloud Computing'
     },
-    {
+    {}
       name: 'Google Cloud',
       logo: '/api/placeholder/200
     },
-    {
+    {}
       name: 'IBM',
       logo: '/api/placeholder/200
   ];

@@ -2,8 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 ;
-const BlockchainPage: React.FC = () => {const blockchainServices = [
-    {
+
+const $1Page: React.FC = () => {}
+  const blockchainServices = [
+    {}
       titl,
     e: 'Smart Contract Development',
       description: 'Custom smart contract development for DeFi, NFTs, and enterprise blockchain applications.',
@@ -15,7 +17,7 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
       category: 'Smart Contracts',
       technologies: ['Solidity', 'Vyper', 'Rust', 'Go', 'JavaScript']
     },
-    {
+    {}
       title: 'DeFi Protocol Development',
       description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions.',
       icon: '💰',
@@ -26,18 +28,18 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
       category: 'DeFi',
       technologies: ['Ethereum', 'Polygon', 'BSC', 'Avalanche', 'Arbitrum']
     },
-    {
+    {}
       title: 'NFT Marketplace Development',
       description: 'Complete NFT marketplace solutions with minting, trading, and auction capabilities.',
       icon: '🎨',
       price: 'Starting at $15,000
-      features: ['NFT minting', 'Marketplace UI
+      features: ['NFT minting', 'Marketplace UI]
       benefits: ['Enable digital ownership', 'Create new revenue streams', 'Support digital artists'],
       marketPrice: '$30,000-100,000
       category: 'NFTs',
       technologies: ['ERC-721', 'ERC-1155', 'IPFS', 'OpenSea API', 'Web3']
     },
-    {
+    {}
       title: 'Enterprise Blockchain Solutions',
       description: 'Private and consortium blockchain solutions for enterprise applications and supply chain management.',
       icon: '🏢',
@@ -48,7 +50,7 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
       category: 'Enterprise',
       technologies: ['Hyperledger', 'Ethereum Enterprise', 'Corda', 'Quorum', 'Fabric']
     },
-    {
+    {}
       title: 'Cross-Chain Bridge Development',
       description: 'Interoperability solutions for seamless asset and data transfer between different blockchain networks.',
       icon: '🌉',
@@ -59,7 +61,7 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
       category: 'Interoperability',
       technologies: ['Polkadot', 'Cosmos', 'LayerZero', 'Wormhole', 'Chainlink']
     },
-    {
+    {}
       title: 'Web3 Application Development',
       description: 'Full-stack Web3 applications with wallet integration, smart contract interaction, and decentralized storage.',
       icon: '🌐',
@@ -71,7 +73,7 @@ const BlockchainPage: React.FC = () => {const blockchainServices = [
 technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
       technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
 },
-    {
+    {}
       title: 'Blockchain Analytics Platform',
       description: 'Comprehensive blockchain data analysis and visualization platform for insights and monitoring.',
       icon: '📊',
@@ -82,7 +84,7 @@ technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
       category: 'Analytics',
       technologies: ['The Graph', 'Alchemy', 'Moralis', 'Infura', 'Custom APIs'];)
 },
-    {
+    {}
       title: 'Staking & Validator Services',
       description: 'Professional staking services and validator node management for various blockchain networks.',
       icon: '🏦',
@@ -93,7 +95,7 @@ technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
       category: 'Staking',
       technologies: ['Ethereum 2.0', 'Cosmos', 'Polkadot', 'Solana', 'Cardano'];)
 },
-    {
+    {}
       title: 'Blockchain Consulting',
       description: 'Strategic blockchain consulting for enterprise adoption, technology selection, and implementation planning.',
       icon: '💡',
@@ -164,7 +166,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
           <
         <
 
-        {/* Key Benefits *
+        {/* Key Benefits *}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><
             <div className="text-center mb-12"><
@@ -216,7 +218,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blockchainServices.map((service, index) => (
+              {blockchainServices.map((service, index) => (}
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
@@ -227,8 +229,8 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                     <span className="text-sm text-gray-500 ml-2">(Market: {service.marketPrice})</span>
                   </div>
 
-        {/* Services by Category *
-        {categories.map(category => (
+        {/* Services by Category *}
+        {categories.map(category => (}
           <section key={category)} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
               <div className="text-center mb-12"><
@@ -242,7 +244,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
               <
               <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8">
-                {blockchainServices
+                {blockchainServices}
                   .filter(service => service.category === category)
                   .map((service, index) => (<
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"><
@@ -274,7 +276,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                       <div className="mb-4"><
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies: <
                         <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech), techIndex) => (<
+                          {service.technologies.map((tech), techIndex) => (<}
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                               {tech}
                             <)
@@ -296,7 +298,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
           <
         ))}
 
-        {/* Blockchain Capabilities Showcase *
+        {/* Blockchain Capabilities Showcase *}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
             <div className="text-center mb-12"><
@@ -342,7 +344,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
           <
         <
 
-        {/* Contact Section *
+        {/* Contact Section *}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -353,7 +355,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                     <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -365,7 +367,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
                     <ul className="space-y-1">
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.map((benefit, benefitIndex) => (}
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                           <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                           {benefit}
@@ -377,7 +379,7 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {service.technologies.map((tech, techIndex) => (
+                      {service.technologies.map((tech, techIndex) => (}
                         <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                           {tech}
                         </span>

@@ -3,44 +3,44 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);}
 const [servicesOpen, setServicesOpen] = useState(false);
 const [aiServicesOpen, setAiServicesOpen] = useState(false);
 const [itServicesOpen, setItServicesOpen] = useState(false);
 const [microSaasOpen, setMicroSaasOpen] = useState(false);
 const [isScrolled, setIsScrolled] = useState(false);
-const handleResize = () => {
-    if (window.innerWidth >= 1024) {
+const handleResize = () => {}
+    if (window.innerWidth >= 1024) {}
       setIsOpen(false);
     }
   }
-const handleScroll = () => {
+const handleScroll = () => {}
     setIsScrolled(window.scrollY > 50);
   };
   
-const Navigation: React.FC = () => {
+const Navigation: React.FC = () => {}
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
+  useEffect(() => {}
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-    return () => {
+    return () => {}
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-const closeAllMenus = () => {
+const closeAllMenus = () => {}
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
   }
-const toggleMenu = () => {
+const toggleMenu = () => {}
     setIsOpen(!isOpen);
   }
 const aiServices = [
@@ -153,7 +153,7 @@ const emergingTech = [
     { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' }
   ];
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${}
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -180,10 +180,10 @@ const emergingTech = [
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              {aiServicesOpen && (
+              {aiServicesOpen && (}
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
-                    {aiServices.map((service) => (
+                    {aiServices.map((service) => (}
                       <Link
                         key={service.name}
                         href={service.href}
@@ -212,10 +212,10 @@ const emergingTech = [
                 <span>IT Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              {itServicesOpen && (
+              {itServicesOpen && (}
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
-                    {itServices.map((service) => (
+                    {itServices.map((service) => (}
                       <Link
                         key={service.name}
                         href={service.href}
@@ -244,10 +244,10 @@ const emergingTech = [
                 <span>Micro SAAS</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
               </button>
-              {microSaasOpen && (
+              {microSaasOpen && (}
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
-                    {microSaasServices.map((service) => (
+                    {microSaasServices.map((service) => (}
                       <Link
                         key={service.name}
                         href={service.href}
@@ -276,10 +276,10 @@ const emergingTech = [
                 <span>Emerging Tech</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              {servicesOpen && (
+              {servicesOpen && (}
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
                   <div className="grid grid-cols-1 gap-2">
-                    {emergingTech.map((service) => (
+                    {emergingTech.map((service) => (}
                       <Link
                         key={service.name}
                         href={service.href}
@@ -343,7 +343,7 @@ const emergingTech = [
           </div>
         </div>
         {/* Mobile Menu */}
-        {isOpen && (
+        {isOpen && (}
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
@@ -361,9 +361,9 @@ const emergingTech = [
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                {aiServicesOpen && (
+                {aiServicesOpen && (}
                   <div className="mt-2 ml-4 space-y-2">
-                    {aiServices.slice(0, 8).map((service) => (
+                    {aiServices.slice(0, 8).map((service) => (}
                       <Link
                         key={service.name}
                         href={service.href}
@@ -395,9 +395,9 @@ const emergingTech = [
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                {itServicesOpen && (
+                {itServicesOpen && (}
                   <div className="mt-2 ml-4 space-y-2">
-                    {itServices.map((service) => (
+                    {itServices.map((service) => (}
                       <Link
                         key={service.name}
                         href={service.href}
@@ -422,9 +422,9 @@ const emergingTech = [
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
                 </button>
-                {microSaasOpen && (
+                {microSaasOpen && (}
                   <div className="mt-2 ml-4 space-y-2">
-                    {microSaasServices.slice(0, 8).map((service) => (
+                    {microSaasServices.slice(0, 8).map((service) => (}
                       <Link
                         key={service.name}
                         href={service.href}

@@ -5,7 +5,7 @@
  * Provides common validation functions for forms and data
  */
 
-export interface ValidationResult {
+export interface ValidationResult {}
   isValid: boolean;
   errors: string[];
   error?: string;
@@ -34,18 +34,18 @@ const URL_REGEX = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9
 /**
  * Validate email address
  */
-export function validateEmail(email: string): ValidationResult {
+export function validateEmail(email: string): ValidationResult {}
   const errors: string[] = [];
   
-  if (!email) {
+  if (!email) {}
     errors.push('Email is required');
   } else if (email.length > 254) {
-    errors.push('Email is too long');
+    errors.push('Email is too long');}
   } else if (!EMAIL_REGEX.test(email)) {
-    errors.push('Invalid email format');
+    errors.push('Invalid email format');}
   }
   
-  return {
+  return {}
     isValid: errors.length === 0,
     errors
   };
@@ -54,16 +54,16 @@ export function validateEmail(email: string): ValidationResult {
 /**
  * Validate phone number
  */
-export function validatePhone(phone: string): ValidationResult {
+export function validatePhone(phone: string): ValidationResult {}
   const errors: string[] = [];
   
-  if (!phone) {
+  if (!phone) {}
     errors.push('Phone number is required');
   } else if (!PHONE_REGEX.test(phone)) {
-    errors.push('Invalid phone number format');
+    errors.push('Invalid phone number format');}
   }
   
-  return {
+  return {}
     isValid: errors.length === 0,
     errors
   };
@@ -72,18 +72,18 @@ export function validatePhone(phone: string): ValidationResult {
 /**
  * Validate name
  */
-export function validateName(name: string): ValidationResult {
+export function validateName(name: string): ValidationResult {}
   const errors: string[] = [];
   
-  if (!name) {
+  if (!name) {}
     errors.push('Name is required');
   } else if (name.length > 100) {
-    errors.push('Name is too long');
+    errors.push('Name is too long');}
   } else if (!NAME_REGEX.test(name)) {
-    errors.push('Name contains invalid characters');
+    errors.push('Name contains invalid characters');}
   }
   
-  return {
+  return {}
     isValid: errors.length === 0,
     errors
   };
@@ -92,16 +92,16 @@ export function validateName(name: string): ValidationResult {
 /**
  * Validate URL
  */
-export function validateUrl(url: string): ValidationResult {
+export function validateUrl(url: string): ValidationResult {}
   const errors: string[] = [];
   
-  if (!url) {
+  if (!url) {}
     errors.push('URL is required');
   } else if (!URL_REGEX.test(url)) {
-    errors.push('Invalid URL format');
+    errors.push('Invalid URL format');}
   }
   
-  return {
+  return {}
     isValid: errors.length === 0,
     errors
   };
@@ -110,16 +110,16 @@ export function validateUrl(url: string): ValidationResult {
 /**
  * Validate message
  */
-export function validateMessage(message: string): ValidationResult {
+export function validateMessage(message: string): ValidationResult {}
   const errors: string[] = [];
   
-  if (!message) {
+  if (!message) {}
     errors.push('Message is required');
   } else if (message.length > 1000) {
-    errors.push('Message is too long');
+    errors.push('Message is too long');}
   }
   
-  return {
+  return {}
     isValid: errors.length === 0,
     errors
   };
@@ -128,38 +128,38 @@ export function validateMessage(message: string): ValidationResult {
 /**
  * Validate form data
  */
-export function validateFormData(data: Record<string, any>): ValidationResult {
+export function validateFormData(data: Record<string, any>): ValidationResult {}
   const errors: string[] = [];
   
-  if (data.email) {
+  if (data.email) {}
     const emailResult = validateEmail(data.email);
-    if (!emailResult.isValid) {
+    if (!emailResult.isValid) {}
       errors.push(...emailResult.errors);
     }
   }
   
-  if (data.phone) {
+  if (data.phone) {}
     const phoneResult = validatePhone(data.phone);
-    if (!phoneResult.isValid) {
+    if (!phoneResult.isValid) {}
       errors.push(...phoneResult.errors);
     }
   }
   
-  if (data.name) {
+  if (data.name) {}
     const nameResult = validateName(data.name);
-    if (!nameResult.isValid) {
+    if (!nameResult.isValid) {}
       errors.push(...nameResult.errors);
     }
   }
   
-  if (data.message) {
+  if (data.message) {}
     const messageResult = validateMessage(data.message);
-    if (!messageResult.isValid) {
+    if (!messageResult.isValid) {}
       errors.push(...messageResult.errors);
     }
   }
   
-  return {
+  return {}
     isValid: errors.length === 0,
     errors
   };

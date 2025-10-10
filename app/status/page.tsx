@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer'
-export default function StatusPage() {;
+import SEOOptimizer from '../components/SEOOptimizer';
+export default function StatusPage() {;}
 const [lastUpdated, setLastUpdated] = useState(new Date())
 const [isRefreshing, setIsRefreshing] = useState(false);
 ;
-const refreshStatus = async () => {
+const refreshStatus = async () => {}
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000))
@@ -16,7 +16,7 @@ const refreshStatus = async () => {
     setIsRefreshing(false);
 ;
 const services = [
-    {
+    {}
       name: 'API Services',
       status: 'operational',
       uptime: '99.9%',
@@ -24,7 +24,7 @@ const services = [
       lastIncident: '2024-01-15',
       description: 'Core API endpoints and authentication'
     },
-    {
+    {}
       name: 'AI Services',
       status: 'operational',
       uptime: '99.8%',
@@ -32,7 +32,7 @@ const services = [
       lastIncident: '2024-01-10',
       description: 'Machine learning and AI processing'
     },
-    {
+    {}
       name: 'Cloud Infrastructure',
       status: 'operational',
       uptime: '99.95%',
@@ -40,7 +40,7 @@ const services = [
       lastIncident: '2024-01-05',
       description: 'Cloud hosting and storage services'
     },
-    {
+    {}
       name: 'Database',
       status: 'operational',
       uptime: '99.9%',
@@ -48,7 +48,7 @@ const services = [
       lastIncident: '2024-01-12',
       description: 'Primary and backup databases'
     },
-    {
+    {}
       name: 'CDN',
       status: 'operational',
       uptime: '99.99%',
@@ -56,7 +56,7 @@ const services = [
       lastIncident: '2024-01-08',
       description: 'Content delivery network'
     },
-    {
+    {}
       name: 'Monitoring',
       status: 'operational',
       uptime: '100%',
@@ -67,7 +67,7 @@ const services = [
   ];
 ;
 const incidents = [
-    {
+    {}
       id: 1,
       title: 'API Response Time Degradation',
       status: 'resolved',
@@ -77,7 +77,7 @@ const incidents = [
       description: 'Some API endpoints experienced increased response times due to high traffic load.',
       affectedServices: ['API Services', 'AI Services']
     },
-    {
+    {}
       id: 2,
       title: 'Database Connection Issues',
       status: 'resolved',
@@ -89,10 +89,10 @@ const incidents = [
     }
   ];
 ;
-const getStatusIcon = (status: string) => {
+const getStatusIcon = (status: string) => {}
 return (
 
-    switch (status) {
+    switch (status) {}
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'degraded':
@@ -105,8 +105,8 @@ return (
 }}
   };
 ;
-const getStatusColor = (status: string) => {
-    switch (status) {
+const getStatusColor = (status: string) => {}
+    switch (status) {}
       case 'operational':
         return 'text-green-400';
       case 'degraded':
@@ -117,8 +117,8 @@ const getStatusColor = (status: string) => {
         return 'text-gray-400'}
   };
 ;
-const getSeverityColor = (severity: string) => {
-    switch (severity) {
+const getSeverityColor = (severity: string) => {}
+    switch (severity) {}
       case 'critical':
         return 'bg-red-500/20 text-red-400 border-red-500/50';
       case 'major':
@@ -144,9 +144,9 @@ const overallStatus = services.every(service => service.status === 'operational'
           
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="flex items-center gap-2">
-              {getStatusIcon(overallStatus);
+              {getStatusIcon(overallStatus);}
               <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
-                {overallStatus === 'operational' ? 'All Systems Operational' : 
+                {overallStatus === 'operational' ? 'All Systems Operational' : }
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
               </span>
             </div>
@@ -161,7 +161,7 @@ const overallStatus = services.every(service => service.status === 'operational'
           </div>
           
           <p className="text-gray-400 text-sm">
-            Last updated: {lastUpdated.toLocaleString();
+            Last updated: {lastUpdated.toLocaleString();}
           </p>
         </div>
       </section>
@@ -171,11 +171,11 @@ const overallStatus = services.every(service => service.status === 'operational'
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
+            {services.map((service, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    {getStatusIcon(service.status);
+                    {getStatusIcon(service.status);}
                     <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   </div>
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
@@ -210,7 +210,7 @@ const overallStatus = services.every(service => service.status === 'operational'
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
           <div className="space-y-6">
-            {incidents.map((incident) => (
+            {incidents.map((incident) => (}
               <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -224,7 +224,7 @@ const overallStatus = services.every(service => service.status === 'operational'
                     <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
                       {incident.severity}
                     </span>
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${}
                       incident.status === 'resolved' 
                         ? 'bg-green-500/20 text-green-400' 
                         : 'bg-yellow-500/20 text-yellow-400'

@@ -11,31 +11,31 @@ import SEOOptimizer from '../components/SEOOptimizer';
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
       benefits: ['Automated compliance', 'Audit trails', 'Risk management']
     },
-    {
+    {}
       icon: Zap,
       title: 'Patient Data Security',
       description: 'Bank-level security for patient data with encryption, access controls, and monitoring.',
       benefits: ['Data encryption', 'Access controls', 'Security monitoring']
     },
-    {
+    {}
       icon: Clock,
       title: '24/7 System Monitoring',
       description: 'Continuous monitoring of healthcare systems with real-time alerts and notifications.',
       benefits: ['Always-on monitoring', 'Instant alerts', 'System health']
     },
-    {
+    {}
       icon: Users,
       title: 'Interoperability',
       description: 'Seamless integration with EHR systems, medical devices, and healthcare applications.',
       benefits: ['EHR integration', 'Device connectivity', 'Data exchange']
     },
-    {
+    {}
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Advanced cybersecurity measures designed specifically for healthcare environments.',
       benefits: ['Threat detection', 'Incident response', 'Security training']
     },
-    {
+    {}
       icon: BarChart,
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
@@ -85,7 +85,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+            {services.map((service, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -109,7 +109,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />

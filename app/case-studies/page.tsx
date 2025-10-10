@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
 
-interface CaseStudy {
+interface CaseStudy {}
   id: string;
   title: string;
   client: string;
@@ -18,16 +18,16 @@ interface CaseStudy {
   team: string;
 }
 
-const CaseStudiesPage: React.FC = () => {
+const CaseStudiesPage: React.FC = () => {}
   const caseStudies: CaseStudy[] = [
-    {
+    {}
       id: '1',
       title: 'AI-Powered Customer Service Transformation',
       client: 'TechCorp Solutions',
       industry: 'Technology',
       challenge: 'High customer service costs and long response times affecting customer satisfaction.',
       solution: 'Implemented AI-powered chatbots and automated ticket routing system.',
-      results: [
+      results: []
         'Reduced response time by 80%',
         'Cut customer service costs by 60%',
         'Improved customer satisfaction by 45%',
@@ -37,14 +37,14 @@ const CaseStudiesPage: React.FC = () => {
       duration: '6 months',
       team: 'AI & Customer Experience Team'
     },
-    {
+    {}
       id: '2',
       title: 'Cybersecurity Infrastructure Overhaul',
       client: 'Financial Services Company',
       industry: 'Finance',
       challenge: 'Outdated security systems vulnerable to modern cyber threats.',
       solution: 'Complete security infrastructure redesign with AI-powered threat detection.',
-      results: [
+      results: []
         'Zero security breaches in 12 months',
         '99.9% threat detection accuracy',
         'Reduced false positives by 70%',
@@ -54,7 +54,7 @@ const CaseStudiesPage: React.FC = () => {
       duration: '8 months',
       team: 'Cybersecurity & Compliance Team'
     },
-    {
+    {}
       id: '3',
       title: 'Cloud Migration & Optimization',
       client: 'Manufacturing Corporation',
@@ -66,7 +66,7 @@ const CaseStudiesPage: React.FC = () => {
       image: '/images/case-studies/ai-customer-service.jpg',
       challenge: 'High customer service costs and long response times',
       solution: 'Implemented AI chatbot and automated ticketing system',
-      results: [
+      results: []
         '60% reduction in response time',
         '40% cost savings',
         '95% customer satisfaction rate'
@@ -77,7 +77,7 @@ const CaseStudiesPage: React.FC = () => {
     },
       team: '8 specialists'});;)
 },
-    {
+    {}
       id: 2,
       title: 'Cloud Migration for Financial Services',
       company: 'FinanceFlow Ltd.',
@@ -86,7 +86,7 @@ const CaseStudiesPage: React.FC = () => {
       solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.',
       challenge: 'Legacy systems causing performance issues and security concerns',
       solution: 'Complete cloud migration with enhanced security measures',
-      results: [
+      results: []
         '50% improvement in system performance',
         '99.9% uptime achieved',
         '30% reduction in operational costs'
@@ -97,14 +97,14 @@ const CaseStudiesPage: React.FC = () => {
     },
       team: '12 specialists'});;)
 },
-    {
+    {}
       id: '3',
       title: 'Cybersecurity Enhancement for Healthcare',
       client: 'MediCare Plus',
       industry: 'Healthcare',
       challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
       solution: 'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.',
-      results: [
+      results: []
         '100% HIPAA compliance achieved',
         'Zero security breaches in 12 months',
         'Real-time threat detection and response',
@@ -114,14 +114,14 @@ const CaseStudiesPage: React.FC = () => {
       duration: '4 months',
       team: '10 specialists'});;)
 },
-    {
+    {}
       id: '4',
       title: 'Machine Learning for Predictive Analytics',
       client: 'RetailMax',
       industry: 'Retail',
       challenge: 'Inventory management inefficiencies leading to stockouts and overstock situations.',
       solution: 'ML-powered demand forecasting system with real-time inventory optimization.',
-      results: [
+      results: []
         '40% reduction in stockouts',
         '25% decrease in excess inventory',
         '15% increase in revenue',
@@ -131,14 +131,14 @@ const CaseStudiesPage: React.FC = () => {
       duration: '5 months',
       team: '6 specialists'});;)
 },
-    {
+    {}
       id: '5',
       title: 'Digital Transformation for Manufacturing',
       client: 'ManufacturingPro',
       industry: 'Manufacturing',
       challenge: 'Legacy systems causing operational inefficiencies and high maintenance costs.',
       solution: 'Complete cloud migration with microservices architecture and AI optimization.',
-      results: [
+      results: []
         '50% reduction in infrastructure costs',
         '99.9% uptime achieved',
         '3x faster application deployment',
@@ -148,14 +148,14 @@ const CaseStudiesPage: React.FC = () => {
       duration: '8 months',
       team: '15 specialists'
     },
-    {
+    {}
       id: '6',
       title: 'Blockchain Integration for Supply Chain',
       client: 'GlobalLogistics',
       industry: 'Logistics',
       challenge: 'Lack of transparency and traceability in complex supply chain operations.',
       solution: 'Blockchain-based supply chain tracking system with smart contracts and real-time verification.',
-      results: [
+      results: []
         'Complete supply chain transparency',
         '60% reduction in disputes',
         'Real-time shipment tracking',
@@ -203,7 +203,7 @@ const CaseStudiesPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4">
                     <stat.icon className="w-8 h-8 text-white" />
@@ -220,7 +220,7 @@ const CaseStudiesPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study) => (
+              {caseStudies.map((study) => (}
                 <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                   <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative">
                     <div className="absolute inset-0 bg-black/20"></div>
@@ -255,7 +255,7 @@ const CaseStudiesPage: React.FC = () => {
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
                       <ul className="space-y-2">
-                        {study.results.map((result, index) => (
+                        {study.results.map((result, index) => (}
                           <li key={index} className="flex items-center text-gray-300 text-sm">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                             {result}

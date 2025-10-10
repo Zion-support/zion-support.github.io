@@ -3,46 +3,46 @@ import React, { useState } from 'react';
 import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer'
-export default function DocsPage() {;
+import SEOOptimizer from '../components/SEOOptimizer';
+export default function DocsPage() {;}
 const [searchQuery, setSearchQuery] = useState('');
 ;
 const docCategories = [
-    {
+    {}
       title: 'Getting Started',
       icon: 'rocket',
       description: 'Quick start guides and basic setup instructions',
-      docs: [
+      docs: []
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
         { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
       ]
     },
-    {
+    {}
       title: 'API Reference',
       icon: 'code',
       description: 'Complete API documentation and endpoints',
-      docs: [
+      docs: []
         { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },
         { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },
         { title: 'SDKs', description: 'Client SDKs and libraries', link: '/docs/api/sdks' }
       ]
     },
-    {
+    {}
       title: 'AI Solutions',
       icon: 'brain',
       description: 'AI and machine learning documentation',
-      docs: [
+      docs: []
         { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' },
         { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' },
         { title: 'Deployment', description: 'Deploying AI models to production', link: '/docs/ai/deployment' }
       ]
     },
-    {
+    {}
       title: 'Cloud Services',
       icon: 'cloud',
       description: 'Cloud infrastructure and services',
-      docs: [
+      docs: []
         { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },
         { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },
         { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
@@ -57,7 +57,7 @@ const popularDocs = [
     { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
   ];
 ;
-const filteredDocs = docCategories.map(category => ({
+const filteredDocs = docCategories.map(category => ({}
     ...category,
     docs: category.docs.filter(doc => 
       doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -84,7 +84,7 @@ const filteredDocs = docCategories.map(category => ({
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {popularDocs.map((doc, index) => (
+            {popularDocs.map((doc, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -114,7 +114,7 @@ const filteredDocs = docCategories.map(category => ({
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredDocs.map((category, index) => (
+            {filteredDocs.map((category, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -127,7 +127,7 @@ const filteredDocs = docCategories.map(category => ({
                 </div>
                 
                 <div className="space-y-4">
-                  {category.docs.map((doc, docIndex) => (
+                  {category.docs.map((doc, docIndex) => (}
                     <a
                       key={docIndex}
                       href={doc.link}

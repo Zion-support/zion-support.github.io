@@ -4,16 +4,18 @@ import React from 'react';
 
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
+import {}
   Phone,
   Mail,
   MapPin,
   Clock,
-  Send,
+  Send,;
   CheckCircle;)
 } from 'lucide-react';
 ;
-const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
+
+const $1Page: React.FC = () => {}
+  const [formData, setFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -25,38 +27,38 @@ phone: '',
 });
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;}
 const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData(prev => ({}
       ...prev,
       [name]: value;)
 }););)
 }, []);
-const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {}
     message: '']
     });;
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData(prev => ({}
       ...prev,
       [name]: value]
     });)]
     }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
     
-    try {
+    try {}
       /
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
-      setFormData({
+      setFormData({}
         name: '',
         email: '',
         company: '',
@@ -67,16 +69,16 @@ const handleSubmit = async (e: React.FormEvent) => {
 message: '']
     });]
     } catch (error) {
-      setSubmitStatus('error')]
+      setSubmitStatus('error')]}
     } finally {
-      setIsSubmitting(false)]
+      setIsSubmitting(false)]}
     }
         message: '')
       });
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error');}
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false);}
     }
   };
 ;
@@ -93,25 +95,25 @@ const services = [
   ];
 ;
 const contactInfo = [
-    {
+    {}
       icon: Phone,
       title: 'Phone',
       details: '+1 (302) 464-0950',
       description: 'Mon-Fri 9AM-6PM EST']
     },
-    {
+    {}
       icon: Mail,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
       description: 'We respond within 24 hours']
     },
-    {
+    {}
       icon: MapPin,
       title: 'Address',
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
       description: 'Visit our office']
     },
-    {
+    {}
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - ,
@@ -129,7 +131,7 @@ const contactInfo = [
 
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
-          {/* Header *
+          {/* Header *}
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
               Get in
@@ -146,18 +148,18 @@ const contactInfo = [
         <
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form *
+            {/* Contact Form *}
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message<
               
-              {submitStatus === 'success' && (
+              {submitStatus === 'success' && (}
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500
                   <CheckCircle className="w-5 h-5 text-green-400" 
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.<
                 <
               )}
 
-              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500
+              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500}
                   <span className="text-red-400">Failed to send message. Please try again.<
                 <)
               )}
@@ -206,7 +208,7 @@ const contactInfo = [
                   <
                   <div className="relative">
                     
-                  {isSubmitting ? (<>
+                  {isSubmitting ? (<>}
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"><
                       <span>Sending...<
                     <)
@@ -219,7 +221,7 @@ const contactInfo = [
               <
             <
 
-            {/* Contact Information *
+            {/* Contact Information *}
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information<
@@ -230,7 +232,7 @@ const contactInfo = [
 
               <
 
-              {/* Contact Information *
+              {/* Contact Information *}
               <div className="space-y-8">
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch<

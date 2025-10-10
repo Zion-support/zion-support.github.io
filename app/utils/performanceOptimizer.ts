@@ -1,11 +1,11 @@
 // Performance optimization utilities
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
-  wait: number): ((...args: Parameters<T>) => void) => {
+  wait: number): ((...args: Parameters<T>) => void) => {}
 return (
 ;
 let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {,
+  return (...args: Parameters<T>) => {,}
   func: T,
   wait: number
 ): ((...args: Parameters<T>
@@ -17,12 +17,12 @@ let timeout: NodeJS.Timeout;
     timeout = setTimeout(() => func(...args), wait)}}
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
-  limit: number): ((...args: Parameters<T>) => void) => {
+  limit: number): ((...args: Parameters<T>) => void) => {}
 return (
 ;
 let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {,
+  return (...args: Parameters<T>) => {}
+    if (!inThrottle) {,}
   func: T,
   limit: number
 ): ((...args: Parameters<T>
@@ -48,10 +48,10 @@ const observer = new IntersectionObserver((entries) => {}
   }, options);
 
   return observer}
-export const preloadImage = (src: string): Promise<void> => {
+export const preloadImage = (src: string): Promise<void> => {}
 return (
 ,
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {}
 export const preloadImage = (src: string): Promise<void>
 );
 } => {}
@@ -60,10 +60,10 @@ export const preloadImage = (src: string): Promise<void>
     img.onload = () => resolve();
     img.onerror = reject;
     img.src = src}
-export const preloadScript = (src: string): Promise<void> => {
+export const preloadScript = (src: string): Promise<void> => {}
 return (
 ,
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {}
 export const preloadScript = (src: string): Promise<void>
 );
 } => {}
@@ -73,8 +73,8 @@ export const preloadScript = (src: string): Promise<void>
     script.onload = () => resolve();
     script.onerror = reject;
     document.head.appendChild(script)
-export const measurePerformance = (name: string, fn: () => void) => {,
-  if (typeof window === 'undefined' || !('performance' in window)) {,
+export const measurePerformance = (name: string, fn: () => void) => {,}
+  if (typeof window === 'undefined' || !('performance' in window)) {,}
 export const measurePerformance = (name: string, fn: () => void) => {}
   if (typeof window === 'undefined' || !('performance' in window)) {}
     fn();
@@ -92,13 +92,13 @@ export const getDeviceInfo = () => {}
     return { isMobile: false, isTablet: false, isDesktop: true }}
 ;
 const width = window.innerWidth;
-  return {
+  return {}
     isMobile: width < 768;
     isTablet: width >= 768 && width < 1024;
     isDesktop: width >= 1024};
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
-  constructor(config?: Partial<OptimizationConfig>) {,
+  constructor(config?: Partial<OptimizationConfig>) {,}
   return {}
     isMobile: width < 768,
     isTablet: width >= 768 && width < 1024,
@@ -148,7 +148,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   private initializePerformanceMonitoring(): void {}
     if (typeof window === 'undefined') return;
     // Monitor page load performance;
-    window.addEventListener('load', () => {
+    window.addEventListener('load', () => {}
     // Monitor page load performance
     window.addEventListener('load', () => {}
       this.measureLoadTime();
@@ -228,7 +228,7 @@ const lastEntry = entries[entries.length - 1]
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,
+        entries.forEach((entry: PerformanceEntry) => {,}
         entries.forEach((entry: PerformanceEntry) => {}
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
     } catch {/* TODO: Fix JSX expression */}
@@ -244,14 +244,14 @@ const lastEntry = entries[entries.length - 1]
     } catch {
       // Ignore if not supported}
   }
-  private observeCLS() {
-    try {;
+  private observeCLS() {}
+    try {;}
 let clsValue = 0;
-const observer = new PerformanceObserver((list) => {;
+const observer = new PerformanceObserver((list) => {;}
 const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,;
+        entries.forEach((entry: PerformanceEntry) => {,;}
 const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
-          if (!clsEntry.hadRecentInput) {
+          if (!clsEntry.hadRecentInput) {}
             clsValue += clsEntry.value} catch {}
       // Ignore if not supported
     }
@@ -279,8 +279,8 @@ const observer = new PerformanceObserver((list) => {}
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
-        entries.forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
+        entries.forEach((entry) => {}
+          if (entry.name === 'first-contentful-paint') {}
             this.metrics.fcp = entry.startTime;
         entries.forEach((entry) => {}
           if (entry.name === 'first-contentful-paint') {}
@@ -316,9 +316,9 @@ const observer = new PerformanceObserver((list) => {}
     try {}
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {,;
+        entries.forEach((entry: PerformanceEntry) => {,;}
 const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
-          if (navEntry.responseStart > 0) {
+          if (navEntry.responseStart > 0) {}
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
         entries.forEach((entry: PerformanceEntry) => {}
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
@@ -339,9 +339,9 @@ const navEntry = entry as PerformanceEntry & { responseStart: number; requestSta
     } catch {
       // Ignore if not supported}
   }
-  private observeMemory() {
+  private observeMemory() {}
     if ($1) { const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
-      if (memory) {
+      if (memory) {}
         this.metrics.memoryUsage = memory.usedJSHeapSize} catch {}
       // Ignore if not supported
     }
@@ -384,17 +384,17 @@ const memory = (window.performance as Performance & {}
     if (typeof window === 'undefined') return;
     if (!this.config.enableImageOptimization) return;
 const images = document.querySelectorAll('img');
-    images.forEach((img) => {
+    images.forEach((img) => {}
       // Add loading="lazy" for better performance;
-      if (!img.hasAttribute('loading')) {
+      if (!img.hasAttribute('loading')) {}
         img.setAttribute('loading', 'lazy');
       // Add proper alt text if missing;
-      if (!img.hasAttribute('alt')) {
+      if (!img.hasAttribute('alt')) {}
         img.setAttribute('alt', 'Zion Tech Group content');
       // Optimize image format;
-      if (img.src.includes('.webp') || img.src.includes('.webp')) {
+      if (img.src.includes('.webp') || img.src.includes('.webp')) {}
         // Convert to WebP if supported;
-        if (this.supportsWebP()) {
+        if (this.supportsWebP()) {}
     images.forEach((img) => {}
       // Add loading="lazy" for better performance
       if (!img.hasAttribute('loading')) {}

@@ -3,24 +3,24 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const Next.dPage: React.FC = () => {
+const Next.dPage: React.FC = () => {}
   const features = [
-    {
+    {}
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'});;)
 },
-    {
+    {}
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'});;)
 },
-    {
+    {}
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'});;)
 },
-    {
+    {}
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'});;)
@@ -45,29 +45,29 @@ const Next.dPage: React.FC = () => {
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
 // Type definitions for Next.js compatibility in Vite
-export interface Metadata {
+export interface Metadata {}
   title?: string;
   description?: string;
   keywords?: string[];
   authors?: Array<{ name: string; url?: string }> | string[];
   creator?: string;
   publisher?: string;
-  formatDetection?: {
+  formatDetection?: {}
     email?: boolean;
     address?: boolean;
     telephone?: boolean;
   };
   metadataBase?: URL;
-  alternates?: {
+  alternates?: {}
     canonical?: string;
     languages?: Record<string, string>;
   };
-  openGraph?: {
+  openGraph?: {}
     title?: string;
     description?: string;
     url?: string;
     siteName?: string;
-    images?: Array<{
+    images?: Array<{}
       url: string,
       width?: number;
       height?: number;
@@ -78,7 +78,7 @@ export interface Metadata {
     authors?: Array<{ name: string; url?: string }> | string[];
     publishedTime?: string;
   };
-  twitter?: {
+  twitter?: {}
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
     site?: string;
     creator?: string;
@@ -86,10 +86,10 @@ export interface Metadata {
     description?: string;
     images?: string[];
   };
-  robots?: {
+  robots?: {}
     index?: boolean;
     follow?: boolean;
-    googleBot?: {
+    googleBot?: {}
       index?: boolean;
       follow?: boolean;
       'max-video-preview'?: number;
@@ -97,7 +97,7 @@ export interface Metadata {
       'max-snippet'?: number;
     };
   };
-  verification?: {
+  verification?: {}
     google?: string;
     yandex?: string;
     yahoo?: string;
@@ -105,14 +105,14 @@ export interface Metadata {
   };
 }
 
-export interface MetadataRoute {
+export interface MetadataRoute {}
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
 
-export interface MetadataRouteSitemap extends MetadataRoute {
+export interface MetadataRouteSitemap extends MetadataRoute {}
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
@@ -120,7 +120,7 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 }
 
 // Custom Next.js types
-export interface NextPageProps {
+export interface NextPageProps {}
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
@@ -165,12 +165,12 @@ export interface NextPageProps {
             </p>
           </div>
 // API route types
-export interface ApiRouteHandler {
+export interface ApiRouteHandler {}
   (req: Request): Promise<Response>;
 }
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
@@ -197,7 +197,7 @@ export interface ApiRouteHandler {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div></div>
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
@@ -237,19 +237,19 @@ export interface ApiRouteHandler {
 
 export default Next.dPage;
 // Server components types
-export interface ServerComponentProps {
+export interface ServerComponentProps {}
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
 // Client components types
-export interface ClientComponentProps {
+export interface ClientComponentProps {}
   children?: React.ReactNode;
   className?: string;
 }
 
 // Route handlers
-export interface RouteHandler {
+export interface RouteHandler {}
   GET?: (req: Request) => Promise<Response>;
   POST?: (req: Request) => Promise<Response>;
   PUT?: (req: Request) => Promise<Response>;
@@ -258,37 +258,37 @@ export interface RouteHandler {
 }
 
 // Dynamic route types
-export interface DynamicRoute {
+export interface DynamicRoute {}
   params: { [key: string]: string };
 }
 
 // Static generation types
-export interface StaticProps {
+export interface StaticProps {}
   props: { [key: string]: any };
   revalidate?: number;
   notFound?: boolean;
 }
 
 // ISR types
-export interface ISRConfig {
+export interface ISRConfig {}
   revalidate: number;
   tags?: string[];
 }
 
 // Edge runtime types
-export interface EdgeRuntime {
+export interface EdgeRuntime {}
   runtime: 'edge';
 }
 
 // Node.js runtime types
-export interface NodeRuntime {
+export interface NodeRuntime {}
   runtime: 'nodejs';
 }
 
 // Extend Next.js types
-declare module 'next' {
-  interface NextApiRequest {
-    user?: {
+declare module 'next' {}
+  interface NextApiRequest {}
+    user?: {}
       id: string;
       email: string;
       name?: string;

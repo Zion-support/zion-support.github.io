@@ -1,19 +1,21 @@
   Webcam as WebcamIcon, Speaker as SpeakerIcon;)
 } from 'lucide-react';
 ;
-const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all');
+
+const $1Page: React.FC = () => {}
+  const [selectedCategory, setSelectedCategory] = useState('all');
 const [searchTerm, setSearchTerm] = useState('');
 ;
 const itServices = [
     // IT Infrastructure Services
-    {
+    {}
       id: 'it-infrastructure-design',
       name: 'IT Infrastructure Design & Implementation',
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',
       category: 'infrastructure',
       icon: Server,
       price: 'Starting at $5,000',
-      features: [
+      features: []
         'Network architecture design',
         'Server deployment and configuration',
         'Storage solutions implementation',
@@ -23,7 +25,7 @@ const itServices = [
         'Documentation and training',
         'Ongoing support and maintenance'
       ],
-      benefits: [
+      benefits: []
         'Scalable and reliable infrastructure',
         'Improved system performance',
         'Enhanced security posture',
@@ -38,14 +40,14 @@ const itServices = [
       link: 'https://ziontechgroup.com/it-infrastructure-design',
       caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design']
     },
-    {
+    {}
       id: 'cloud-migration-services',
       name: 'Cloud Migration & Optimization',
       description: 'Seamless migration to cloud platforms with optimization for cost and performance',
       category: 'cloud',
       icon: Cloud,
       price: 'Starting at $3,000',
-      features: [
+      features: []
         'Cloud readiness assessment',
         'Migration strategy development',
         'Data and application migration',
@@ -55,7 +57,7 @@ const itServices = [
         'Disaster recovery setup',
         'Training and documentation'
       ],
-      benefits: [
+      benefits: []
         'Reduce IT costs by 30-50%',
         'Improve scalability and flexibility',
         'Enhanced security and compliance',
@@ -70,14 +72,14 @@ const itServices = [
       link: 'https://ziontechgroup.com/cloud-migration-services',
       caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure']
     },
-    {
+    {}
       id: 'cybersecurity-services',
       name: 'Cybersecurity Solutions',
       description: 'Comprehensive security assessment, implementation, and ongoing protection',
       category: 'security',
       icon: Shield,
       price: 'Starting at $2,500',
-      features: [
+      features: []
         'Security risk assessment',
         'Penetration testing',
         'Security policy development',
@@ -87,7 +89,7 @@ const itServices = [
         'Compliance auditing',
         'Incident response planning'
       ],
-      benefits: [
+      benefits: []
         'Protect against cyber threats',
         'Ensure regulatory compliance',
         'Reduce security risks by 90%',
@@ -102,14 +104,14 @@ const itServices = [
       link: 'https://ziontechgroup.com/cybersecurity-services',
       caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations']
     },
-    {
+    {}
       id: 'network-design-optimization',
       name: 'Network Design & Optimization',
       description: 'High-performance network infrastructure design and optimization for reliability',
       category: 'networking',
       icon: Network,
       price: 'Starting at $2,000',
-      features: [
+      features: []
         'Network architecture design',
         'Bandwidth optimization',
         'Quality of Service (QoS) setup',
@@ -119,7 +121,7 @@ const itServices = [
         'Redundancy and failover setup',
         'Performance tuning'
       ],
-      benefits: [
+      benefits: []
         'Improve network performance by 200%',
         'Reduce network downtime',
         'Optimize bandwidth usage',
@@ -134,14 +136,14 @@ const itServices = [
       link: 'https://ziontechgroup.com/network-design-optimization',
       caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues']
     },
-    {
+    {}
       id: 'database-management',
       name: 'Database Management & Optimization',
       description: 'Database design, implementation, optimization, and ongoing management',
       category: 'database',
       icon: Database,
       price: 'Starting at $1,500',
-      features: [
+      features: []
         'Database design and architecture',
         'Performance optimization',
         'Backup and recovery setup',
@@ -151,7 +153,7 @@ const itServices = [
         'Capacity planning',
         'Maintenance and updates'
       ],
-      benefits: [
+      benefits: []
         'Improve database performance by 150%',
         'Ensure data integrity and security',
         'Reduce maintenance overhead',
@@ -166,14 +168,14 @@ const itServices = [
       link: 'https://ziontechgroup.com/database-management',
       caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%']
     },
-    {
+    {}
       id: 'it-support-services',
       name: 'Managed IT Support Services',
       description: 'Comprehensive IT support and management for ongoing operations',
       category: 'support',
       icon: Headphones,
       price: 'Starting at $99/user/month',
-      features: [
+      features: []
         '24/7 technical support',
         'Remote monitoring and management',
         'Proactive maintenance',
@@ -183,7 +185,7 @@ const itServices = [
         'IT asset management',
         'Help desk services'
       ],
-      benefits: [
+      benefits: []
         'Reduce IT downtime by 80%',
         'Lower IT support costs',
         'Improve user productivity',
@@ -198,14 +200,14 @@ const itServices = [
       link: 'https://ziontechgroup.com/it-support-services',
       caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity']
     },
-    {
+    {}
       id: 'software-development',
       name: 'Custom Software Development',
       description: 'Tailored software solutions built to meet specific business requirements',
       category: 'development',
       icon: Code,
       price: 'Starting at $5,000',
-      features: [
+      features: []
         'Requirements analysis',
         'Custom application development',
         'Web and mobile app development',
@@ -215,7 +217,7 @@ const itServices = [
         'Deployment and maintenance',
         'User training and documentation'
       ],
-      benefits: [
+      benefits: []
         'Streamline business processes',
         'Improve operational efficiency',
         'Gain competitive advantage',
@@ -230,14 +232,14 @@ const itServices = [
       link: 'https://ziontechgroup.com/software-development',
       caseStudy: 'Logistics company automated 80% of manual processes with custom software']
     },
-    {
+    {}
       id: 'it-consulting',
       name: 'Strategic IT Consulting',
       description: 'Technology strategy and roadmap development for digital transformation',
       category: 'consulting',
       icon: Briefcase,
       price: 'Starting at $200/hour',
-      features: [
+      features: []
         'IT strategy development',
         'Technology roadmap planning',
         'Digital transformation consulting',
@@ -247,7 +249,7 @@ const itServices = [
         'Change management planning',
         'Implementation guidance'
       ],
-      benefits: [
+      benefits: []
         'Align IT with business goals',
         'Optimize technology investments',
         'Reduce implementation risks',
@@ -262,14 +264,14 @@ const itServices = [
       link: 'https://ziontechgroup.com/it-consulting',
       caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning']
     },
-    {
+    {}
       id: 'disaster-recovery',
       name: 'Disaster Recovery & Business Continuity',
       description: 'Comprehensive disaster recovery planning and implementation',
       category: 'recovery',
       icon: RefreshCw,
       price: 'Starting at $3,500',
-      features: [
+      features: []
         'Business impact analysis',
         'Recovery time objective planning',
         'Backup strategy implementation',
@@ -279,7 +281,7 @@ const itServices = [
         'Documentation and procedures',
         'Regular testing and updates'
       ],
-      benefits: [
+      benefits: []
         'Minimize business disruption',
         'Ensure rapid recovery',
         'Protect critical data',
@@ -294,14 +296,14 @@ const itServices = [
       link: 'https://ziontechgroup.com/disaster-recovery',
       caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution']
     },
-    {
+    {}
       id: 'compliance-auditing',
       name: 'IT Compliance & Auditing',
       description: 'Compliance assessment and implementation for various industry standards',
       category: 'compliance',
       icon: CheckSquare,
       price: 'Starting at $2,000',
-      features: [
+      features: []
         'Compliance gap analysis',
         'Policy and procedure development',
         'Security control implementation',
@@ -311,7 +313,7 @@ const itServices = [
         'Documentation and reporting',
         'Remediation planning'
       ],
-      benefits: [
+      benefits: []
         'Ensure regulatory compliance',
         'Reduce audit findings',
         'Improve security posture',
@@ -342,7 +344,7 @@ const categories = [
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
 ;
-const filteredServices = itServices.filter(service => {;
+const filteredServices = itServices.filter(service => {;}
 const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
 const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -393,7 +395,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   type="text"
                   placeholder="Search IT services..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value);
+                  onChange={(e) => setSearchTerm(e.target.value);}
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
@@ -403,10 +405,10 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
             <div>
               <select
                 value={selectedCategory}
-                onChange={(e) =></select> setSelectedCategory(e.target.value);
+                onChange={(e) =></select> setSelectedCategory(e.target.value);}
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >
-                {categories.map((category) => (
+                {categories.map((category) => (}
                   <option key={category.id} value={category.id}></option>
                     {category.name}
                   </option>
@@ -417,11 +419,11 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
 
           {/* Category Pills */}
           <div className="flex flex-wrap gap-2 mb-8"></div>
-            {categories.map((category) => (</div>
+            {categories.map((category) => (</div>}
               <button
                 key={category.id}
-                onClick={() =></button> setSelectedCategory(category.id);
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                onClick={() =></button> setSelectedCategory(category.id);}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${}
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400']
@@ -438,7 +440,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {filteredServices.map((service) => (</div>
+            {filteredServices.map((service) => (</div>}
               <div>
                 <div>
                   <div>
@@ -457,7 +459,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Key Features:</h4>
                     <ul className="space-y-1"></ul>
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                      {service.features.slice(0, 4).map((feature, idx) => (}
                         <li key={idx} className="flex items-center text-sm text-gray-300"></li>
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
@@ -469,7 +471,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Benefits:</h4>
                     <ul className="space-y-1"></ul>
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      {service.benefits.slice(0, 2).map((benefit, idx) => (}
                         <li key={idx} className="flex items-center text-sm text-gray-300"></li>
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           <span>{benefit}</span>
@@ -494,7 +496,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   </div>
                 </div>
 
-                {service.caseStudy && (
+                {service.caseStudy && (}
                   <div>
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
                   </div>

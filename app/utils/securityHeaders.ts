@@ -62,7 +62,7 @@ return headers]
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Array<{ key: string; value: string }> {
 export function getNextSecurityHeaders()
-  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
+  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>}
 ): Array<{ key: string; value: string }> {}
   const headers = getSecurityHeaders(customConfig)
   return Object.entries(headers).map(([key, value]) => ({}

@@ -4,20 +4,22 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
 ;
-const ItServicesPage: React.FC = () => {const itServices = [
-    {
+
+const $1Page: React.FC = () => {}
+  const itServices = [
+    {}
       titl,
     e: 'Cloud Infrastructure Management',
       description: 'Complete cloud migration, optimization, and management services for AWS, Azure, and Google Cloud.',
       icon: '☁️',
       price: 'Starting at $2,500
-      features: ['Cloud migration strategy', 'Cost optimization', 'Security hardening', '24
+      features: ['Cloud migration strategy', 'Cost optimization', 'Security hardening', '24]
       benefits: ['Reduce cloud costs by 30%', 'Improve performance by 40%', 'Ensure 99.9% uptime'],
       marketPrice: '$4,000-8,000
       category: 'Cloud Services',
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Kubernetes', 'Docker']
     },
-    {
+    {}
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive security services including threat detection, vulnerability assessment, and incident response.',
       icon: '🔒',
@@ -28,20 +30,20 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Security',
       technologies: ['SIEM', 'EDR', 'Firewall', 'VPN', 'Zero Trust']
     },
-    {
-      title: 'DevOps & CI
-      descriptio,
+    {}
+      title: 'DevOps & CI'
+      descriptio,'
     n: 'Automated deployment pipelines, infrastructure as code, and continuous integration services.',
       icon: '🔄',
       price: 'Starting at $2,000
-      features: ['CI
+      features: ['CI]
       benefit,
     s: ['Deploy 10x faster', 'Reduce deployment errors by 90%', 'Improve team productivity'],
       marketPrice: '$3,500-7,000
       category: 'DevOps',
       technologies: ['Jenkins', 'GitLab CI', 'Terraform', 'Ansible', 'Prometheus']
     },
-    {
+    {}
       title: 'Database Administration',
       description: 'Database design, optimization, backup, and maintenance for SQL and NoSQL databases.',
       icon: '🗄️',
@@ -52,7 +54,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Database',
       technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
     },
-    {
+    {}
       title: 'Network Infrastructure',
       description: 'Network design, implementation, and management for enterprise-grade connectivity.',
       icon: '🌐',
@@ -63,20 +65,19 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Networking',
       technologies: ['Cisco', 'Juniper', 'Fortinet', 'SD-WAN', 'MPLS']
     },
-    {
+    {}
       title: 'IT Support & Helpdesk',
-      description: '24
-      ico,
-    n: '🛠️',
+      description: '24'
+      icon: '🛠️',
       price: 'Starting at $1,200
-      features: ['24
+      features: ['24]
       benefit,
     s: ['Reduce downtime by 70%', 'Improve user satisfaction', 'Lower support costs'],
       marketPrice: '$2,000-4,000
       category: 'Support',
       technologies: ['ServiceNow', 'Jira', 'Remote Desktop', 'Active Directory', 'Office 365']
     },
-    {
+    {}
       title: 'Data Analytics & BI',
       description: 'Data warehouse design, ETL processes, and business intelligence dashboard development.',
       icon: '📊',
@@ -87,7 +88,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Analytics',
       technologies: ['Tableau', 'Power BI', 'Snowflake', 'Apache Airflow', 'Python']
     },
-    {
+    {}
       title: 'API Development & Integration',
       description: 'Custom API development, third-party integrations, and microservices architecture.',
       icon: '🔌',
@@ -98,18 +99,18 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Integration',
       technologies: ['Node.js', 'Python', 'GraphQL', 'Kong', 'Postman']
     },
-    {
+    {}
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile application development for iOS and Android.',
       icon: '📱',
       price: 'Starting at $3,500
-      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI
+      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI]
       benefits: ['Reach mobile users', 'Improve user engagement', 'Increase revenue'],
       marketPrice: '$6,000-15,000
       category: 'Mobile',
       technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
     },
-    {
+    {}
       title: 'Web Application Development',
       description: 'Custom web applications, e-commerce solutions, and enterprise web platforms.',
       icon: '💻',
@@ -120,7 +121,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Web Development',
       technologies: ['React', 'Vue.js', 'Node.js', 'PHP', 'WordPress']
     },
-    {
+    {}
       title: 'IT Consulting & Strategy',
       description: 'Technology roadmap development, digital transformation planning, and IT strategy consulting.',
       icon: '💡',
@@ -133,7 +134,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
     y: 'Consulting',
       technologies: ['Strategic Planning', 'Architecture Design', 'Risk Assessment', 'ROI Analysis']
     },
-    {
+    {}
       title: 'Disaster Recovery & Backup',
       description: 'Comprehensive backup solutions, disaster recovery planning, and business continuity services.',
       icon: '🔄',
@@ -144,7 +145,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Backup & Recovery',
       technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
     },
-    {
+    {}
       title: 'Blockchain Infrastructure',
       description: 'Enterprise blockchain solutions, smart contract development, and decentralized application deployment.',
       icon: '⛓️',
@@ -155,7 +156,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Blockchain',
       technologies: ['Ethereum', 'Hyperledger', 'Solidity', 'Web3', 'IPFS']
     },
-    {
+    {}
       title: 'IoT Platform Management',
       description: 'Comprehensive IoT infrastructure management and device connectivity solutions.',
       icon: '🌐',
@@ -166,7 +167,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'IoT',
       technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'CoAP', 'Edge Computing']
     },
-    {
+    {}
       title: 'Edge Computing Infrastructure',
       description: 'Distributed computing infrastructure for low-latency applications and edge data processing.',
       icon: '⚡',
@@ -177,7 +178,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Edge Computing',
       technologies: ['Kubernetes', 'Docker', 'CDN', 'Edge Servers', '5G Networks']
     },
-    {
+    {}
       title: 'Quantum Computing Infrastructure',
       description: 'Quantum computing platform setup and quantum algorithm development services.',
       icon: '⚛️',
@@ -188,7 +189,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Quantum Computing',
       technologies: ['IBM Qiskit', 'Google Cirq', 'Rigetti', 'IonQ', 'Quantum Simulators']
     },
-    {
+    {}
       title: '5G Network Implementation',
       description: '5G network infrastructure deployment and optimization for enterprise applications.',
       icon: '📡',
@@ -199,7 +200,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: '5G Networks',
       technologies: ['5G Core', 'RAN', 'Network Slicing', 'MEC', 'NFV']
     },
-    {
+    {}
       title: 'Microservices Architecture',
       description: 'Modern microservices architecture design and implementation for scalable applications.',
       icon: '🔧',
@@ -210,7 +211,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Microservices',
       technologies: ['Kubernetes', 'Docker', 'Istio', 'API Gateway', 'Service Mesh']
     },
-    {
+    {}
       title: 'Serverless Computing Platform',
       description: 'Serverless architecture implementation and management for event-driven applications.',
       icon: '☁️',
@@ -221,7 +222,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Serverless',
       technologies: ['AWS Lambda', 'Azure Functions', 'Google Cloud Functions', 'Serverless Framework']
     },
-    {
+    {}
       title: 'Data Lake Architecture',
       description: 'Enterprise data lake design and implementation for big data analytics and storage.',
       icon: '🏞️',
@@ -232,20 +233,19 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Data Architecture',
       technologies: ['AWS S3', 'Azure Data Lake', 'Hadoop', 'Spark', 'Delta Lake']
     },
-    {
+    {}
       title: 'AI Infrastructure Setup',
-      description: 'AI
-      ico,
-    n: '🤖',
+      description: 'AI'
+      icon: '🤖',
       price: 'Starting at $4,800
       features: ['GPU cluster setup', 'ML pipeline deployment', 'Model serving', 'Data preprocessing', 'Monitoring'],
-      benefits: ['Enable AI
+      benefits: ['Enable AI]
       marketPric,
     e: '$8,000-30,000
       category: 'AI Infrastructure',
       technologies: ['NVIDIA GPUs', 'Kubernetes', 'TensorFlow', 'PyTorch', 'MLflow']
     },
-    {
+    {}
       title: 'Hybrid Cloud Management',
       description: 'Multi-cloud and hybrid cloud infrastructure management and optimization.',
       icon: '☁️',
@@ -256,7 +256,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Cloud Management',
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'CloudFormation']
     },
-    {
+    {}
       title: 'Zero Trust Security Architecture',
       description: 'Zero trust security model implementation for enterprise network protection.',
       icon: '🔒',
@@ -267,7 +267,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Security Architecture',
       technologies: ['Zero Trust', 'Identity Management', 'Network Security', 'SIEM', 'EDR']
     },
-    {
+    {}
       title: 'High-Performance Computing (HPC)',
       description: 'High-performance computing cluster setup and management for scientific and engineering workloads.',
       icon: '💻',
@@ -278,7 +278,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'HPC',
       technologies: ['Slurm', 'OpenMPI', 'CUDA', 'InfiniBand', 'Parallel File Systems']
     },
-    {
+    {}
       title: 'Content Delivery Network (CDN)',
       description: 'Global CDN implementation and optimization for improved content delivery performance.',
       icon: '🌍',
@@ -289,7 +289,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'CDN',
       technologies: ['CloudFlare', 'AWS CloudFront', 'Azure CDN', 'Akamai', 'Fastly']
     },
-    {
+    {}
       title: 'Database Performance Optimization',
       description: 'Database performance tuning and optimization for improved application performance.',
       icon: '🗄️',
@@ -300,7 +300,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Database Optimization',
       technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch']
     },
-    {
+    {}
       title: 'API Gateway Management',
       description: 'Enterprise API gateway setup and management for secure and scalable API operations.',
       icon: '🚪',
@@ -311,7 +311,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'API Management',
       technologies: ['Kong', 'AWS API Gateway', 'Azure API Management', 'Apigee', 'Zuul']
     },
-    {
+    {}
       title: 'Container Orchestration',
       description: 'Kubernetes and container orchestration platform setup and management.',
       icon: '🐳',
@@ -322,7 +322,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
       category: 'Containerization',
       technologies: ['Kubernetes', 'Docker', 'Helm', 'Istio', 'Prometheus']
     },
-    {
+    {}
       title: 'Real-time Data Streaming',
       description: 'Real-time data streaming platform setup and management for live data processing.',
       icon: '📊',
@@ -381,7 +381,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
           <
         <
 
-        {/* Key Benefits *
+        {/* Key Benefits *}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><
             <div className="text-center mb-12"><
@@ -426,8 +426,8 @@ const ItServicesPage: React.FC = () => {const itServices = [
           <
         <
 
-        {/* Services by Category *
-        {categories.map(category => (
+        {/* Services by Category *}
+        {categories.map(category => (}
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
               <div className="text-center mb-12"><
@@ -441,7 +441,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
               <
               <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8">
-                {itServices
+                {itServices}
                   .filter(service => service.category === category)
                   .map((service, index) => (<
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"><
@@ -473,7 +473,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
                       <div className="mb-4"><
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies: <
                         <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech), techIndex) => (<
+                          {service.technologies.map((tech), techIndex) => (<}
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                               {tech}
                             <)
@@ -495,7 +495,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
           <
         ))}
 
-        {/* Contact Section *
+        {/* Contact Section *}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"><
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -547,7 +547,7 @@ const ItServicesPage: React.FC = () => {const itServices = [
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
+              {itServices.map((service, index) => (}
                 <Link
                   key={index}
                   to={service.href}

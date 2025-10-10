@@ -7,25 +7,25 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-const $1: React.FC = () => {const webServices = [,
-    {,
+const $1: React.FC = () => {const webServices = [,}
+    {,}
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
       icon: Code,
       price: '$1,200
-      features: ['React/Next.js', 'Vue.js
+      features: ['React/Next.js', 'Vue.js]
       benefits: ['50% faster load times', 'Mobile-first approach', 'SEO optimized'],
       color: 'text-blue-400'},
-    {
+    {}
       title: 'Backend Development',
       description: 'Scalable server-side solutions and API development',
       icon: Database,
       price: '$1,500
-      features: ['Node.js
+      features: ['Node.js]
       benefit,
     s: ['99.9% uptime', 'Scalable architecture', 'Secure APIs'],
       color: 'text-green-400'},
-    {
+    {}
       title: 'Full-Stack Development',
       description: 'Complete web solutions from frontend to backend',
       icon: Globe,
@@ -33,7 +33,7 @@ const $1: React.FC = () => {const webServices = [,
       features: ['End-to-end development', 'Cloud deployment', 'DevOps integration', 'Testing & QA'],
       benefits: ['Unified solution', 'Faster development', 'Better performance'],
       color: 'text-purple-400'},
-    {
+    {}
       title: 'E-commerce Development',
       description: 'Custom e-commerce platforms and online stores',
       icon: Smartphone,
@@ -41,12 +41,12 @@ const $1: React.FC = () => {const webServices = [,
       features: ['Custom platforms', 'Payment integration', 'Inventory management', 'Analytics'],
       benefits: ['Higher conversion rates', 'Mobile optimized', 'Secure payments'],
       color: 'text-orange-400'},
-    {
+    {}
       title: 'Maintenance & Support',
       description: 'Ongoing maintenance and support for your web applications',
       icon: Users,
       price: '$500
-      features: ['24
+      features: ['24]
       colo,
     r: 'text-gray-400'}
   ];
@@ -61,26 +61,26 @@ const technologies = [
   ];
 ;
 const process = [
-    {
+    {}
       ste,
     p: '01',
       title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project plan',
       icon: BarChart,})
 },
-    {
+    {}
       step: '02',
       title: 'Design & Prototyping',
       description: 'Create wireframes and prototypes to visualize your solution',
       icon: Code,})
 },
-    {
+    {}
       step: '03',
       title: 'Development',
       description: 'Build your web application using modern technologies and best practices',
       icon: Globe,})
 },
-    {
+    {}
       step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
@@ -100,7 +100,7 @@ const process = [
     g:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.<
               From frontend to backend, we deliver solutions that drive business growth.<
         <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section *
+          {/* Hero Section *}
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl l,
     g:text-6xl font-bold text-white mb-6 neon-text">
@@ -181,10 +181,10 @@ const process = [
             <
           <
 ,
-          {/* Services Grid *
+          {/* Services Grid *}
           <section className="mb-20">)
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-8">{webServices.map((service), index) => (<
+    g:grid-cols-3 gap-8">{webServices.map((service), index) => (<}
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"><
                   <div className="flex items-center mb-6"><
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"><
@@ -198,7 +198,7 @@ const process = [
 )
             <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8">),
-              {webServices.map((service, index) => (<
+              {webServices.map((service, index) => (<}
                 <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300"><
                   <div className="flex items-center mb-6">,<
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,<
@@ -212,7 +212,7 @@ const process = [
 
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}<)
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-8">{webServices.map((service), index) => (<
+    g:grid-cols-3 gap-8">{webServices.map((service), index) => (<}
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"><
                   <div className="flex items-center mb-6"><
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"><
@@ -222,7 +222,7 @@ const process = [
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3><div className={`font-semibold ${service.color}`}>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}<
 
                   <div className="mb-6"><)
-                    <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (<
+                    <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (<}
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}<
                         <)
@@ -230,8 +230,8 @@ const process = [
                     <
                   <
 
-                  {service.benefits && (<div className="mb-6"><)
-                      <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (<
+                  {service.benefits && (<div className="mb-6"><)}
+                      <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (<}
                           <li key={benefitIndex} className="flex items-center text-gray-300">
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}<
                           <)
@@ -254,10 +254,10 @@ const process = [
             <
           <
 
-          {/* Technologies *
+          {/* Technologies *}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 l,
-    g:grid-cols-6 gap-6">{technologies.map((tech), index) => (<
+    g:grid-cols-6 gap-6">{technologies.map((tech), index) => (<}
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}<
@@ -268,13 +268,13 @@ const process = [
             <div>,
             <div className="grid grid-cols-2 md: grid-cols-3 l,
     g:grid-cols-6 gap-6">,)
-              {technologies.map((tech, index) => (<
+              {technologies.map((tech, index) => (<}
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,<
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<
                   <p className="text-sm text-gray-300">{tech.description}<)
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use</h2><div className="grid grid-cols-2 md:grid-cols-3 l,
-    g:grid-cols-6 gap-6">{technologies.map((tech), index) => (<
+    g:grid-cols-6 gap-6">{technologies.map((tech), index) => (<}
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" 
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}<
@@ -283,20 +283,20 @@ const process = [
             <
           <
 
-          {/* Process *
+          {/* Process *}
           <section className="mb-20">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8">{process.map((step), index) => (<
+    g:grid-cols-4 gap-8">{process.map((step), index) => (<}
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"><
                     <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}<
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              {technologies.map((tech, index) => (</div>
+              {technologies.map((tech, index) => (</div>}
                 <di></di>,</div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
                   <h></h>{tech.name}</h3>
                   <p className="text-sm text-gray-300">{tech.description}</p>
-            <h></h>Technologies We Use</h2><div>{technologies.map((tech, index) => (</section>
+            <h></h>Technologies We Use</h2><div>{technologies.map((tech, index) => (</section>}
                 <div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
@@ -307,7 +307,7 @@ const process = [
 
           {/* Process */}
           <section></section>
-            <h2></h2>Our Development Process<di></di>{process.map((step, index) => (</div>
+            <h2></h2>Our Development Process<di></di>{process.map((step, index) => (</div>}
                 <div>
                   <div>
                     <span></span>{step.step}<h3>{step.title}<p className="text-gray-300">{step.description}</p>
@@ -318,7 +318,7 @@ const process = [
             <div>,
             <div className="grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-4 gap-8">,)
-              {process.map((step, index) => (<
+              {process.map((step, index) => (<}
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,<
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">,<
                     <span className="text-2xl font-bold text-white">{step.step}<
@@ -326,7 +326,7 @@ const process = [
                   <h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<
                   <p className="text-gray-300">{step.description}<)
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process</h2><div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8">{process.map((step), index) => (<
+    g:grid-cols-4 gap-8">{process.map((step), index) => (<}
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"><
                     <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}<
@@ -335,7 +335,7 @@ const process = [
             <
           <
 
-          {/* CTA Section *
+          {/* CTA Section *}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto"><
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.<
@@ -355,14 +355,14 @@ const process = [
                   href="
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >Start Your Project<a
-              {process.map((step, index) => (</div>
+              {process.map((step, index) => (</div>}
                 <di></di>,</div>
                   <di></di>,</div>
                     <spa></spa>{step.step}</span>
                   </div>
                   <h></h>{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-            <h></h>Our Development Process</h2><div>{process.map((step, index) => (</section>
+            <h></h>Our Development Process</h2><div>{process.map((step, index) => (</section>}
                 <div>
                   <div>
                     <spa></spa>{step.step}</span><h></h>{step.title}</h3><p className="text-gray-300">{step.description}</p>

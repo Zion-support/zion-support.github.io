@@ -5,7 +5,9 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
-const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
+
+const $1Page: React.FC = () => {}
+  const [formData, setFormData] = useState({}
     name: '',
     email: '',
     company: '',
@@ -15,29 +17,29 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
 })
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
-    setFormData(prev => ({
+const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
+    setFormData(prev => ({}
       ...prev,
       [e.target.name]: e.target.value;)
 })))
 }, []);
-const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    setFormData(prev => ({
+const handleSubmit = useCallback(async (e: React.FormEvent) => {}
+    setFormData(prev => ({}
       ...prev,
       [e.target.name]: e.target.value]
     });)]
     }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-  const handleSubmit = useCallback (async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {}
+  const handleSubmit = useCallback (async (e: React.FormEvent) => {}
     e.preventDefault();
     setIsSubmitting(true);
     
-    try {
+    try {}
       /
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
-      setFormData({
+      setFormData({}
         name: '',
         email: '',
         company: '',
@@ -46,16 +48,16 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
 message: '']
     });]
     } catch (error) {
-      setSubmitStatus('error')]
+      setSubmitStatus('error')]}
     } finally {
-      setIsSubmitting(false)]
+      setIsSubmitting(false)]}
     }
         message: '')
       });
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error');}
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false);}
     }
   }, []);
 
@@ -68,7 +70,7 @@ message: '']
 
       <Navigation 
       
-      {/* Hero Section *
+      {/* Hero Section *}
       <section className="relative py-20 px-4 overflow-hidden">)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
@@ -110,22 +112,22 @@ message: '']
         <
       <
 
-      {/* Contact Form and Info *
+      {/* Contact Form and Info *}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 l,
     g:grid-cols-2 gap-12">
-            {/* Contact Form *
+            {/* Contact Form *}
             <div className="bg-white/5 backdrop-blur-sm border border-white
               <h2 className="text-3xl font-bold text-white mb-6">Send us a message<
               
-              {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-500/20 border border-green-500
+              {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-500/20 border border-green-500}
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" 
                   <span className="text-green-400">Message sent successfully!<
                 <)
               )}
 
-              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500
+              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500}
                   <span className="text-red-400">Failed to send message. Please try again.<
                 <)
               )}
@@ -239,7 +241,7 @@ message: '']
                   className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 disabled:opacity-50 disable,
     d:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
                 >
-                  {isSubmitting ? (<>
+                  {isSubmitting ? (<>}
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
                       Sending...
                     <)

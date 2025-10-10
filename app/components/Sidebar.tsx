@@ -2,7 +2,7 @@
 import React from 'react';
 import React, { memo, useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
+import { }
   X, 
   Menu, 
   Home, 
@@ -17,17 +17,17 @@ import {
   ChevronRight,
   Phone,
   Mail,
-  MapPin,
+  MapPin,;
   Clock;)
 } from 'lucide-react';
 ;
-const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);}
 const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']))
 const location = useLocation();
 
-  useEffect(() => {;
-const handleResize = () => {
-      if (window.innerWidth >= 1024) {
+  useEffect(() => {;}
+const handleResize = () => {}
+      if (window.innerWidth >= 1024) {}
         setIsOpen(false););
     };
 
@@ -37,160 +37,160 @@ const handleResize = () => {
     </div>)
   );
   }, []);
-const toggleSection = (section: string) => {;
+const toggleSection = (section: string) => {;}
 const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {
+    if (newExpanded.has(section)) {}
       newExpanded.delete(section);)
 } else {
       newExpanded.add(section););
     setExpandedSections(newExpanded););
 const navigationSections = [
-
-  const toggleSection = (section: string) => {
+}
+  const toggleSection = (section: string) => {}
     const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {
+    if (newExpanded.has(section)) {}
       newExpanded.delete(section)]
     } else {
-      newExpanded.add(section)]
+      newExpanded.add(section)]}
     }
     setExpandedSections(newExpanded)]
     };
 
   const navigationSections = [
-    {
+    {}
       title: 'Main',
-      items: [
-        { nam,
+      items: []
+        { nam,}
     e: 'Home', path: '
-        { nam,
+        { nam,}
     e: 'About', path: '
-        { nam,
+        { nam,}
     e: 'Services', path: '
-        { nam,
+        { nam,}
     e: 'Contact', path: '
-        { nam,
+        { nam,}
     e: 'Blog', path: '
-        { nam,
+        { nam,}
     e: 'Case Studies', path: '
       ]
     },
       ]]
     },
-    {
+    {}
       title: 'AI Services',
       key: 'ai-services',
-      items: [
-        { nam,
+      items: []
+        { nam,}
     e: 'AI Services Overview', path: '
-        { nam,
+        { nam,}
     e: 'Business Intelligence', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'Document Processing', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'Customer Experience', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'Marketing Automation', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'Predictive Maintenance', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'Supply Chain', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'Fraud Detection', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'Content Generation', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'HR Analytics', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'Process Automation', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'Quality Assurance', path: '/ai-services
-        { nam,
+        { nam,}
     e: 'Energy Management', path: '/ai-services
       ]
     },
       ]]
     },
-    {
+    {}
       title: 'Micro SaaS',
       key: 'micro-saas',
-      items: [
-        { nam,
+      items: []
+        { nam,}
     e: 'Micro SaaS Overview', path: '
-        { nam,
+        { nam,}
     e: 'Analytics Dashboard', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'Support Bot', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'Social Manager', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'Email Marketing', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'Inventory Management', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'Lead Scoring', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'Document Processor', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'SEO Optimizer', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'Appointment Scheduler', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'Chat Analytics', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'Expense Tracker', path: '/micro-saas
-        { nam,
+        { nam,}
     e: 'Content Generator', path: '/micro-saas
       ]
     },
       ]]
     },
-    {
+    {}
       title: 'IT Services',
       key: 'it-services',
-      items: [
-        { nam,
+      items: []
+        { nam,}
     e: 'IT Services Overview', path: '
-        { nam,
+        { nam,}
     e: 'IT Consulting', path: '
-        { nam,
+        { nam,}
     e: 'IT Infrastructure', path: '
-        { nam,
+        { nam,}
     e: 'IT Support', path: '
-        { nam,
+        { nam,}
     e: 'Cloud Infrastructure', path: '
-        { nam,
+        { nam,}
     e: 'Cloud Migration', path: '
-        { nam,
+        { nam,}
     e: 'Cybersecurity', path: '
-        { nam,
+        { nam,}
     e: 'Database Management', path: '
-        { nam,
+        { nam,}
     e: 'Managed IT', path: '
       ]
     },
-    {
+    {}
       title: 'Company',
-      items: [
-        { nam,
+      items: []
+        { nam,}
     e: 'Team', path: '
-        { nam,
+        { nam,}
     e: 'Careers', path: '
-        { nam,
+        { nam,}
     e: 'Consultation', path: '
-        { nam,
+        { nam,}
     e: 'Pricing', path: '
       ]
     },
-    {
+    {}
       title: 'Resources',
-      items: [
-        { nam,
+      items: []
+        { nam,}
     e: 'Documentation', path: '
-        { nam,
+        { nam,}
     e: 'API Docs', path: '
-        { nam,
+        { nam,}
     e: 'Support', path: '
-        { nam,
+        { nam,}
     e: 'Status', path: '
       ]
     }
@@ -198,14 +198,14 @@ const navigationSections = [
     }
   ];
 ;
-const contactInfo = {
+const contactInfo = {}
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
 hours: 'Mon-Fri 9AM-6PM EST']
     };
   return (<>
-      {/* Mobile Menu Button *
+      {/* Mobile Menu Button *}
       <button)
         onClick = { () => setIsOpen(true) };
         className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hove,
@@ -214,21 +214,21 @@ hours: 'Mon-Fri 9AM-6PM EST']
     <React.Fragment>
       {/* Mobile Menu Button */}
       <button
-        onClick={() =></button> setIsOpen(true);
+        onClick={() =></button> setIsOpen(true);}
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
       >
         <Menu className="w-6 h-6" 
       <
 
-      {/* Sidebar Overlay *
-      {isOpen && (<div 
+      {/* Sidebar Overlay *}
+      {isOpen && (<div }
           className="fixed inset-0 bg-black)
           onClick = { () => setIsOpen(false) };
       )}
 
       {/* Sidebar */}<
-      <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400
+      <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400}
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } lg: translate-x-0 lg:static l,
     g:z-auto`}>
@@ -257,20 +257,20 @@ hours: 'Mon-Fri 9AM-6PM EST']
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
                     <span>{section.title}<
-                    {section.key && (
+                    {section.key && (}
                       expandedSections.has(section.key) ? 
                         <ChevronDown className="w-4 h-4" 
                         <ChevronRight className="w-4 h-4" 
                     )}
                   <
                   
-                  {(!section.key || expandedSections.has(section.key)) && (<div className="ml-4 space-y-1">)
-                      {section.items.map((item, itemIndex) => (<
+                  {(!section.key || expandedSections.has(section.key)) && (<div className="ml-4 space-y-1">)}
+                      {section.items.map((item, itemIndex) => (<}
                         <Link
                           key = { itemIndex };
                           to = { item.path };)
                           onClick = { () => setIsOpen(false) };
-                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
+                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${}
                             location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400
                               : 'text-gray-300 hover: text-white hove,
@@ -288,7 +288,7 @@ hours: 'Mon-Fri 9AM-6PM EST']
             <
           <
 
-          {/* Contact Info *
+          {/* Contact Info *}
           <div className="border-t border-slate-700
             <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information<
             <div className="space-y-3 text-sm text-gray-300">

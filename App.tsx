@@ -23,20 +23,7 @@ import SecurityEnhancer from './app/components/SecurityEnhancer';
 // Lazy load pages
 const HomePage = React.lazy(() => import('./app/page'));
 
-// Lazy load pages for better performance;
-const App: React.FC = () => {
-  return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-gray-50">
-          <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </Suspense>
-        </div>
-      </Router>
-    </HelmetProvider>
+// Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));

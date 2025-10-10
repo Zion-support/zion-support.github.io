@@ -15,20 +15,20 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = () => {}
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   
-  useEffect(() => {
+  useEffect(() => {}
     setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);
 
-  const handlePhoneClick = () => {
+  const handlePhoneClick = () => {}
     // Analytics tracking
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'phone_click', {
+    if (typeof window !== 'undefined' && window.gtag) {}
+      window.gtag('event', 'phone_click', {}
         event_category: 'engagement',
         event_label: 'header_phone'
       });
@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
           <section
-            className={`text-center mb-16 transition-all duration-1000 ${
+            className={`text-center mb-16 transition-all duration-1000 ${}
               isLoaded && isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'

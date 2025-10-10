@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
-const TeamPage: React.FC = () => {
+const TeamPage: React.FC = () => {}
   return (<div>
         <title>Our Team - Zion Tech Group<
         <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." 

@@ -2,34 +2,35 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
 ;
-const AIAnalyticsDashboardPage: React.FC = () => {const features = [
-    {
-      ico,
-    n: BarChart,
+
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+      icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Live data visualization with instant updates and interactive charts.']
     },
-    {
+    {}
       icon: TrendingUp,
       title: 'Predictive Insights',
       description: 'AI-powered forecasting and trend analysis for better decision making.']
     },
-    {
+    {}
       icon: Users,
       title: 'User Behavior Tracking',
       description: 'Comprehensive user analytics and engagement metrics tracking.']
     },
-    {
+    {}
       icon: DollarSign,
       title: 'Revenue Analytics',
       description: 'Detailed financial metrics and revenue optimization insights.']
     },
-    {
+    {}
       icon: Zap,
       title: 'Custom Dashboards',
       description: 'Build personalized dashboards tailored to your business needs.']
     },
-    {
+    {}
       icon: Target,
       title: 'Goal Tracking',
 description: 'Monitor KPIs and business objectives with automated alerts.']
@@ -49,7 +50,7 @@ const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
-    { label: 'User Satisfaction', value: '4.9
+    { label: 'User Satisfaction', value: '4.9}
   ];
 
   return (<div>
@@ -89,7 +90,7 @@ const metrics = [
             <
             <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8">
-              {features.map((feature), index) => (<
+              {features.map((feature), index) => (<}
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group"><
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hove,
     r:scale-110 transition-transform"><
@@ -103,7 +104,7 @@ const metrics = [
           <
         <
 
-        {/* Metrics Section *
+        {/* Metrics Section *}
         <section className="py-16 px-4 bg-slate-800
           <div className="max-w-7xl mx-auto"><
             <div className="text-center mb-16"><
@@ -113,7 +114,7 @@ const metrics = [
               <
             <
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-              {metrics.map((metric), index) => (<
+              {metrics.map((metric), index) => (<}
                 <div key={index} className="text-center"><
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"><
                     <metric.icon className="w-8 h-8 text-white" 
@@ -126,7 +127,7 @@ const metrics = [
           <
         <
 
-        {/* Benefits Section *
+        {/* Benefits Section *}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto"><
             <div className="text-center mb-16"><
@@ -137,7 +138,7 @@ const metrics = [
             <
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8"><
               <div className="space-y-6">
-                {benefits.map((benefit), index) => (<
+                {benefits.map((benefit), index) => (<}
                   <div key={index} className="flex items-start space-x-3"><
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" 
                     <span className="text-gray-300 text-lg">{benefit}<
@@ -165,7 +166,7 @@ const metrics = [
           <
         <
 
-        {/* CTA Section *
+        {/* CTA Section *}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center"><
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"><

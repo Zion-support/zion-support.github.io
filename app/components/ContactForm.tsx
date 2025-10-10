@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
-interface FormData {
+interface FormData {}
   name: string;
   email: string;
   company: string;
@@ -10,12 +10,12 @@ interface FormData {
   message: string;
 }
 
-interface FormStatus {
+interface FormStatus {}
   type: 'idle' | 'loading' | 'success' | 'error';
   message: string;
 }
 ;
-const ContactForm: React.FC = () => {const [formData, setFormData] = useState<FormData>({
+const ContactForm: React.FC = () => {const [formData, setFormData] = useState<FormData>({}
     name: '',
     email: '',
     company: '',
@@ -24,36 +24,36 @@ const ContactForm: React.FC = () => {const [formData, setFormData] = useState<Fo
     message: '')
   });
 ;
-const [status, setStatus] = useState<FormStatus>({
-  const [status, setStatus] = useState<FormStatus>({
+const [status, setStatus] = useState<FormStatus>({}
+  const [status, setStatus] = useState<FormStatus>({}
     type: 'idle',
     message: '')
   });
 ;
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;}
 const { name, value } = e.target;
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData(prev => ({}
       ...prev,
       [name]: value
     }))
 ;
-const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
-    setStatus({ typ,
+    setStatus({ typ,}
     e: 'loading', message: 'Sending message...' });
-    try {
+    try {}
       /
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      setStatus({
+      setStatus({}
         type: 'success',
         message: 'Thank you! Your message has been sent successfully.'
       })
       
       // Reset form
-      setFormData({
+      setFormData({}
         name: '',
         email: '',
         company: '',
@@ -61,7 +61,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         service: '',
         message: ''
       })} catch (error) {
-      setStatus({
+      setStatus({}
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again.')
       });
@@ -165,7 +165,7 @@ const services = [
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="">Select a service</option>
-              {services.map((service) => (
+              {services.map((service) => (}
                 <option key={service} value={service}>
                   {service}
                 </option>
@@ -189,15 +189,15 @@ const services = [
             />
           </div>
 
-          {status.message && (
-            <div className={`p-4 rounded-lg flex items-center ${
+          {status.message && (}
+            <div className={`p-4 rounded-lg flex items-center ${}
               status.type === 'success' 
                 ? 'bg-green-100 text-green-800' 
                 : status.type === 'error'
                 ? 'bg-red-100 text-red-800'
                 : 'bg-blue-100 text-blue-800'
             }`}>
-              {status.type === 'success' ? (
+              {status.type === 'success' ? (}
                 <CheckCircle className="w-5 h-5 mr-2" />
               ) : status.type === 'error' ? (
                 <AlertCircle className="w-5 h-5 mr-2" />
@@ -209,7 +209,7 @@ const services = [
             disabled={status.type === 'loading'}
             className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 px-6 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
           >
-            {status.type === 'loading' ? (
+            {status.type === 'loading' ? (}
               <>
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                 Sending...

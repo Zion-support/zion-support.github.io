@@ -5,38 +5,40 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 ;
-const EnterprisePage: React.FC = () => {const features = [
-    {
+
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
       benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']]
     },
-    {
+    {}
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your business needs.',
       benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']]
     },
-    {
+    {}
       icon: Brain,
       title: 'AI Integration',
       description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
       benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights']]
     },
-    {
+    {}
       icon: Database,
       title: 'Data Management',
       description: 'Advanced data management and analytics for enterprise-scale operations.',
       benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence']]
     },
-    {
+    {}
       icon: Users,
       title: 'User Management',
       description: 'Comprehensive user and access management for large organizations.',
       benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails']]
     },
-    {
+    {}
       icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
@@ -45,25 +47,25 @@ benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'D
   ];
 ;
 const solutions = [
-    {
+    {}
       title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
       icon: Building,
       benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']]
     },
-    {
+    {}
       title: 'Customer Relationship Management',
       description: 'Advanced CRM systems for managing customer relationships and sales processes.',
       icon: Users,
       benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']]
     },
-    {
+    {}
       title: 'Business Intelligence',
       description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
       icon: BarChart,
       benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring']]
     },
-    {
+    {}
       title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
@@ -129,7 +131,7 @@ const stats = [
       <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => (
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4"></div>
                   <stat.icon className="w-12 h-12 text-purple-400" />
@@ -160,7 +162,7 @@ const stats = [
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2"></ul>
-                  {feature.benefits.map((benefit, idx) => (
+                  {feature.benefits.map((benefit, idx) => (}
                     <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}

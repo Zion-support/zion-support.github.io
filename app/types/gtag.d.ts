@@ -1,7 +1,7 @@
 /**
  * Google Analytics gtag types
  */
-interface GtagEvent {
+interface GtagEvent {}
   event_category?: string;
   event_label?: string;
   value?: number;
@@ -9,5 +9,5 @@ interface GtagEvent {
 
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
 
-interface Window {
+interface Window {}
   gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void}

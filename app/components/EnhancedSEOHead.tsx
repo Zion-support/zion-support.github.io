@@ -3,7 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface EnhancedSEOHeadProps {
+interface EnhancedSEOHeadProps {}
   title?: string;
   description?: string;
   keywords?: string[];
@@ -18,7 +18,7 @@ interface EnhancedSEOHeadProps {
   tags?: string[];
 }
 
-const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
+const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -85,12 +85,12 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {section && <meta property="article:section" content={section} />}
-      {tags.map((tag, index) => (
+      {tags.map((tag, index) => (}
         <meta key={index} property="article:tag" content={tag} />
       ))}
       
       {/* Structured Data */}
-      {structuredData && (
+      {structuredData && (}
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
@@ -98,7 +98,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       
       {/* Default Organization Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify({
+        {JSON.stringify({}
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'Zion Tech Group',
@@ -108,7 +108,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
           foundingDate: '2020',
           numberOfEmployees: '50-100',
           industry: 'Technology',
-          address: {
+          address: {}
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
@@ -116,14 +116,14 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
             postalCode: '19709',
             addressCountry: 'US'
           },
-          contactPoint: {
+          contactPoint: {}
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
             availableLanguage: 'en'
           },
-          sameAs: [
+          sameAs: []
             'https://linkedin.com/company/ziontechgroup',
             'https://twitter.com/ziontechgroup'
           ]

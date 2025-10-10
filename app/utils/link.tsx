@@ -1,5 +1,5 @@
 
-interface LinkProps {
+interface LinkProps {}
   href: string,
     children: React.ReactNode
 interface LinkProps {}
@@ -11,7 +11,7 @@ interface LinkProps {}
   onClick?: () => void
   'aria-label'?: string;});
 }
-export const Link: React.FC<LinkProps></LinkProps>= ({
+export const Link: React.FC<LinkProps></LinkProps>= ({}
 export const Link: React.FC<LinkProps></LinkProps> = ({}
   href,
   href: string,
@@ -22,7 +22,7 @@ export const Link: React.FC<LinkProps></LinkProps> = ({}
   onClick?: () => void;
   'aria-label'?: string;});
 }
-export const Link: React.FC<LinkProps></LinkProps> = ({,
+export const Link: React.FC<LinkProps></LinkProps> = ({,}
   href;
   children,
   className,
@@ -37,7 +37,7 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
       onClick();});
 }
     // Handle internal navigation;
-    if (href.startsWith('/') && !href.startsWith('//')) {
+    if (href.startsWith('/') && !href.startsWith('//')) {}
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {}
       e.preventDefault()

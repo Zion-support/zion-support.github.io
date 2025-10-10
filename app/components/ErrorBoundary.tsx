@@ -3,62 +3,62 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
-interface Props {
+interface Props {}
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
-interface State {
+interface State {}
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {;
-constructor(props: Props) {
+class ErrorBoundary extends Component<Props, State> {;}
+constructor(props: Props) {}
     super(props);
-    this.state = {
+    this.state = {}
       hasError: false,
       error: null,
       errorInfo: null
     };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return {
+  static getDerivedStateFromError(error: Error): State {}
+    return {}
       hasError: true,
       error,
       errorInfo: null
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+    this.setState({}
       error,
       errorInfo
     })
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {}
       // console.error removed for production
 }
 
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production') {}
       this.logErrorToService(error, errorInfo);
     }
 
     // Call custom error handler if provided
-    if (this.props.onError) {
+    if (this.props.onError) {}
       this.props.onError(error, errorInfo);
     }
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {}
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag;
-const errorData = {
+const errorData = {}
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -69,7 +69,7 @@ const errorData = {
 
     // Example: Send to analytics
     if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-      gtag('event', 'exception', {
+      gtag('event', 'exception', {}
         description: error.message,
         fatal: false
       })
@@ -78,22 +78,22 @@ const errorData = {
     // console.error removed for production
 };
 
-  handleRetry = () => {
-    this.setState({
+  handleRetry = () => {}
+    this.setState({}
       hasError: false,
       error: null,
       errorInfo: null
     })
   };
   
-  handleGoHome = () => {
+  handleGoHome = () => {}
     window.location.href = '/';
   };
 
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       // Custom fallback UI
-      if (this.props.fallback) {
+      if (this.props.fallback) {}
         return this.props.fallback;
       }
 
@@ -113,7 +113,7 @@ const errorData = {
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && (}
               <details className="mb-6 text-left">
                 <summary className="text-red-400 cursor-pointer mb-2">
                   Error Details (Development)
@@ -122,7 +122,7 @@ const errorData = {
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
-                  {this.state.error.stack && (
+                  {this.state.error.stack && (}
                     <div className="mb-2">
                       <strong>Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1">
@@ -130,7 +130,7 @@ const errorData = {
                       </pre>
                     </div>
                   )}
-                  {this.state.errorInfo && (
+                  {this.state.errorInfo && (}
                     <div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1">

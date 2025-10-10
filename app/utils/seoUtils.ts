@@ -13,19 +13,19 @@
   section?: string;
   tags?: string[]}
 
-export class SEOManager {
+export class SEOManager {}
   private config: SEOConfig;
 ;
-constructor(config: SEOConfig) {
+constructor(config: SEOConfig) {}
     this.config = config}
 
-  public updateConfig(newConfig: Partial<SEOConfig>): void {
+  public updateConfig(newConfig: Partial<SEOConfig>): void {}
     this.config = { ...this.config, ...newConfig };
     this.applyConfig();
-  public getConfig(): SEOConfig {
+  public getConfig(): SEOConfig {}
     return { ...this.config }}
 
-  private applyConfig(): void {
+  private applyConfig(): void {}
     if (typeof document === 'undefined') return;
 
     // Update title
@@ -47,47 +47,47 @@ constructor(config: SEOConfig) {
     this.updateTwitterTags();
 
     // Update robots meta
-    if (this.config.robots) {
+    if (this.config.robots) {}
       this.updateMetaTag('robots', this.config.robots);
     // Update author
-    if (this.config.author) {
+    if (this.config.author) {}
       this.updateMetaTag('author', this.config.author);
     // Update published time
-    if (this.config.publishedTime) {
+    if (this.config.publishedTime) {}
       this.updateMetaTag('article:published_time', this.config.publishedTime);
     // Update modified time
-    if (this.config.modifiedTime) {
+    if (this.config.modifiedTime) {}
       this.updateMetaTag('article:modified_time', this.config.modifiedTime);
     // Update section
-    if (this.config.section) {
+    if (this.config.section) {}
       this.updateMetaTag('article:section', this.config.section);
     // Update tags
-    if (this.config.tags) {
-      this.config.tags.forEach(tag => {
+    if (this.config.tags) {}
+      this.config.tags.forEach(tag => {}
         this.addMetaTag('article:tag', tag)});
   }
 
-  private updateMetaTag(name: string, content: string): void {
+  private updateMetaTag(name: string, content: string): void {}
     if (typeof document === 'undefined') return;
 ;
 let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-    if (!meta) {
+    if (!meta) {}
       meta = document.createElement('meta');
       meta.name = name;
       document.head.appendChild(meta);
     meta.content = content}
 
-  private updateCanonicalUrl(): void {
+  private updateCanonicalUrl(): void {}
     if (typeof document === 'undefined' || !this.config.canonicalUrl) return;
 ;
 let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
+    if (!canonical) {}
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     canonical.href = this.config.canonicalUrl}
 
-  private updateOpenGraphTags(): void {
+  private updateOpenGraphTags(): void {}
     if (typeof document === 'undefined') return;
 ;
 const ogTags = [
@@ -96,11 +96,11 @@ const ogTags = [
       { property: 'og:type', content: this.config.ogType || 'website' },
       { property: 'og:url', content: this.config.canonicalUrl || window.location.href }];
 
-    if (this.config.ogImage) {
+    if (this.config.ogImage) {}
       ogTags.push({ property: 'og:image', content: this.config.ogImage });
-    ogTags.forEach(tag => {
+    ogTags.forEach(tag => {}
       this.updateMetaTagByProperty(tag.property, tag.content)});
-  private updateTwitterTags(): void {
+  private updateTwitterTags(): void {}
     if (typeof document === 'undefined') return;
 ;
 const twitterTags = [
@@ -108,21 +108,21 @@ const twitterTags = [
       { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },
       { name: 'twitter:description', content: this.config.twitterDescription || this.config.description }];
 
-    if (this.config.twitterImage) {
+    if (this.config.twitterImage) {}
       twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage });
-    twitterTags.forEach(tag => {
+    twitterTags.forEach(tag => {}
       this.updateMetaTag(tag.name, tag.content)});
-  private updateMetaTagByProperty(property: string, content: string): void {
+  private updateMetaTagByProperty(property: string, content: string): void {}
     if (typeof document === 'undefined') return;
 ;
 let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
-    if (!meta) {
+    if (!meta) {}
       meta = document.createElement('meta');
       meta.setAttribute('property', property);
       document.head.appendChild(meta);
     meta.content = content}
 
-  private addMetaTag(name: string, content: string): void {
+  private addMetaTag(name: string, content: string): void {}
     if (typeof document === 'undefined') return;
 ;
 const meta = document.createElement('meta');
@@ -132,10 +132,10 @@ const meta = document.createElement('meta');
 }
 
 // Utility functions
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
+export const generateMetaDescription = (content: string, maxLength: number = 160): string => {}
 return (;
 const cleanContent = content.replace(/<[^>]*>/g, '').trim();
-  if (cleanContent.length <= maxLength) {
+  if (cleanContent.length <= maxLength) {}
     return cleanContent}
   return cleanContent.substring(0, maxLength - 3) + '...'}})
 export const addStructuredData = (data: any): void =>
@@ -146,4 +146,4 @@ export const addStructuredData = (data: any): void =>
 const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = createStructuredData(data);
-  document.head.appendChild(script);
+  document.head.appendChild(script);}

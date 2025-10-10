@@ -1,2 +1,4 @@
 ;
-const PagePage: React.FC = () => {const features = [
+
+const $1Page: React.FC = () => {}
+  const features = [

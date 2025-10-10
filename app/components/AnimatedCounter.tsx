@@ -1,14 +1,14 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 
-interface AnimatedCounterProps {
+interface AnimatedCounterProps {}
   end: number;
   duration?: number;
   prefix?: string;
   suffix?: string;
   className?: string}
 ;
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({}
   end,
   duration = 2000,
   prefix = '',
@@ -17,11 +17,11 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 }) => {
 return (;
 const [count, setCount] = useState(0);
-
-  useEffect(() => {;
+}
+  useEffect(() => {;}
 let startTime: number;
     let animationFrame: number;
-const animate = (currentTime: number) => {
+const animate = (currentTime: number) => {}
       if (!startTime) startTime = currentTime;
 const progress = Math.min((currentTime - startTime) / duration, 1);
       
@@ -31,7 +31,7 @@ const currentCount = Math.floor(easeOutQuart * end);
       
       setCount(currentCount);
       
-      if (progress < 1) {
+      if (progress < 1) {}
         animationFrame = requestAnimationFrame(animate);
     };
 
@@ -40,7 +40,7 @@ const currentCount = Math.floor(easeOutQuart * end);
     return () =>
 );
 } {
-      if (animationFrame) {
+      if (animationFrame) {}
         cancelAnimationFrame(animationFrame);
     }}, [end, duration]);
 

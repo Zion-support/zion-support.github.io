@@ -1,27 +1,27 @@
     text: string;)
 }>;
   onSubscribe?: (email: string) => void;);
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({)
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({)}
   title = "Stay Updated with Our Latest Insights"),
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({}
   title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
   placeholder = "Enter your email address",
   buttonText = "Subscribe Now",
   features = [
-    {
+    {}
       icon: CheckCircle,
       text: "Weekly industry insights"]
     },
-    {
+    {}
       icon: Star,
       text: "Exclusive content and tips"]
     },
-    {
+    {}
       icon: Users,
       text: "Join 10,000+ subscribers"]
     },
-    {
+    {}
       icon: Globe,
       text: "Global community access";);
   ],
@@ -30,50 +30,50 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
 }); => {;
 const [email, setEmail] = useState('');
 const [isSubscribed, setIsSubscribed] = useState(false);
-const [isLoading, setIsLoading] = useState(false);
-const handleSubmit = async (e: React.FormEvent) => {
+const [isLoading, setIsLoading] = useState(false);}
+const handleSubmit = async (e: React.FormEvent) => {}
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
     if (!email) return;
 
     setIsLoading(true);
     
-    try {
-      if (onSubscribe) {
+    try {}
+      if (onSubscribe) {}
         await onSubscribe(email)]
     } else {
         // Simulate API call
         await new Promise(resolve => setTimeout(resolve, 1000)););
-        await onSubscribe(email);
+        await onSubscribe(email);}
       } else {
         /
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        await new Promise(resolve => setTimeout(resolve, 1000));}
       }
       
       setIsSubscribed(true);
       setEmail('');)
 } catch (error) {
       // console.error removed for production
-)
+)}
 } finally {
       setIsLoading(false););
-        await new Promise(resolve => setTimeout(resolve, 1000))]
+        await new Promise(resolve => setTimeout(resolve, 1000))]}
     }
       
       setIsSubscribed(true);
       setEmail('')]
     } catch (error) {
-      console.error('Subscription failed:', error)]
+      console.error('Subscription failed:', error)]}
     } finally {
-      setIsLoading(false)]
+      setIsLoading(false)]}
     }
   };
 
-  if (isSubscribed) {
+  if (isSubscribed) {}
     return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-16 h-16 bg-white
@@ -97,7 +97,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   return (<div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
-          {/* Content *
+          {/* Content *}
           <div>
             <h2 className="text-4xl m,
     d:text-5xl font-bold text-white mb-6">
@@ -118,7 +118,7 @@ const handleSubmit = async (e: React.FormEvent) => {
             <
           <
 
-          {/* Newsletter Form *
+          {/* Newsletter Form *}
           <div className="bg-white/10 backdrop-blur-sm border border-white
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -143,7 +143,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover: bg-blue-50 disabled:opacity-50 disable,
     d:cursor-not-allowed transition-all duration-300 flex items-center justify-center"
               >
-                {isLoading ? (<>
+                {isLoading ? (<>}
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"><
                     <div>
                     Subscribing...

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
+import {}
   Shield,
   Search,
   AlertTriangle,
@@ -22,27 +22,28 @@ import {
   Settings,
   Database,
   Target,
-
+;
 } from 'lucide-react';
 ;
-const PenetrationTestingPage: React.FC = () => {const features = [
-    {
-      ico,
-    n: Search,
+
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+      icon: Search,
       title: 'Comprehensive Vulnerability Assessment',
       description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'
     },
-    {
+    {}
       icon: Target,
       title: 'Simulated Attack Scenarios',
       description: 'Real-world attack simulations to test your defenses and response capabilities.'
     },
-    {
+    {}
       icon: BarChart,
       title: 'Detailed Security Reports',
       description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'
     },
-    {
+    {}
       icon: Zap,
       title: 'Expert Security Analysis',
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
@@ -69,7 +70,7 @@ const benefits = [
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section *
+        {/* Hero Section *}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -107,7 +108,7 @@ const benefits = [
           </div>
         </section>
 
-        {/* Benefits Section *
+        {/* Benefits Section *}
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -120,7 +121,7 @@ const benefits = [
             <
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
@@ -130,7 +131,7 @@ const benefits = [
           </div>
         </section>
 
-        {/* CTA Section *
+        {/* CTA Section *}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

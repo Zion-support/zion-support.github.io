@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
-const CookiesPage: React.FC = () => {
+const CookiesPage: React.FC = () => {}
   return (<div>
         <title>Cookie Policy - Zion Tech Group<
         <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." 

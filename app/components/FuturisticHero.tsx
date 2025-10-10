@@ -3,23 +3,25 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 ;
-const FuturisticHeroPage: React.FC = () => {const features = [
-    {
+
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
-    {
+    {}
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    {
+    {}
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
-    {
+    {}
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
@@ -40,7 +42,7 @@ const benefits = [
   return (
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>

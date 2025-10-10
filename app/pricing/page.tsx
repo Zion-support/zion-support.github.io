@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
-const PagePage: React.FC = () => {
+const PagePage: React.FC = () => {}
   return (
     <>
       <Helmet>
@@ -25,16 +25,16 @@ const PagePage: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {plans.map((plan, index) => (
+            {plans.map((plan, index) => (}
               <div
                 key={plan.name}
-                className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
+                className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${}
                   plan.popular
                     ? 'border-purple-400 shadow-2xl shadow-purple-500/25 scale-105'
                     : 'border-white/20'
                 }`}
               >
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                       <Star className="w-4 h-4 fill-current" />
@@ -53,7 +53,7 @@ const PagePage: React.FC = () => {
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -63,7 +63,7 @@ const PagePage: React.FC = () => {
 
                 <Link
                   to="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${}
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105'
                       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'

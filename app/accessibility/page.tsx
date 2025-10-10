@@ -3,39 +3,40 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
 ;
-const AccessibilityPage: React.FC = () => {const features = [
-    {
-      ico,
-    n: Eye,
+
+const $1Page: React.FC = () => {}
+  const features = [
+    {}
+      icon: Eye,
       title: 'Visual Accessibility',
       description: 'Comprehensive visual accessibility features including high contrast modes, text scaling, and screen reader compatibility.',
       benefits: ['High contrast mode', 'Text scaling', 'Screen reader support', 'Color blind friendly']
     },
-    {
+    {}
       icon: MousePointer,
       title: 'Motor Accessibility',
       description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
       benefits: ['Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls']
     },
-    {
+    {}
       icon: Volume2,
       title: 'Audio Accessibility',
       description: 'Audio alternatives and visual indicators for users with hearing impairments.',
       benefits: ['Audio descriptions', 'Visual alerts', 'Captions', 'Sign language support']
     },
-    {
+    {}
       icon: Shield,
       title: 'Security & Privacy',
       description: 'Secure accessibility features that protect user data while providing inclusive experiences.',
       benefits: ['Data protection', 'Secure forms', 'Privacy controls', 'Encrypted communications']
     },
-    {
+    {}
       icon: Users,
       title: 'Inclusive Design',
       description: 'Design principles that ensure our solutions work for users of all abilities and backgrounds.',
       benefits: ['Universal design', 'Cultural sensitivity', 'Language support', 'Age-friendly interfaces']
     },
-    {
+    {}
       icon: Globe,
       title: 'Global Standards',
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
@@ -44,22 +45,22 @@ const AccessibilityPage: React.FC = () => {const features = [
   ];
 ;
 const standards = [
-    {
+    {}
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
       status: 'Fully Compliant'
     },
-    {
+    {}
       name: 'Section 508',
       description: 'US federal accessibility standards for electronic and information technology',
       status: 'Fully Compliant'
     },
-    {
+    {}
       name: 'ADA',
       description: 'Americans with Disabilities Act compliance for digital accessibility',
       status: 'Fully Compliant'
     },
-    {
+    {}
       name: 'EN 301 549',
       description: 'European accessibility standard for ICT products and services',
       status: 'Fully Compliant'
@@ -75,7 +76,7 @@ const standards = [
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section *
+        {/* Hero Section *}
         <section className="relative py-20 px-4 overflow-hidden">)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
@@ -101,7 +102,7 @@ const standards = [
           <
         <
 
-        {/* Features Section *
+        {/* Features Section *}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -115,7 +116,7 @@ const standards = [
 
             <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-3 gap-8">
-              {features.map((feature), index) => (<div
+              {features.map((feature), index) => (<div}
                   key = { index };
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400
                 >
@@ -128,7 +129,7 @@ const standards = [
                   </h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
+                    {feature.benefits.map((benefit, benefitIndex) => (}
                       <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {benefit}
@@ -155,7 +156,7 @@ const standards = [
 
             <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-8">
-              {standards.map((standard), index) => (<div
+              {standards.map((standard), index) => (<div}
                   key = { index };
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white
                 >
@@ -173,7 +174,7 @@ const standards = [
           </div>
         </section>
 
-        {/* CTA Section *
+        {/* CTA Section *}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white

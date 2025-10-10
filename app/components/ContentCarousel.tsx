@@ -3,60 +3,60 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
-interface Slide {
+interface Slide {}
   icon: React.ComponentType<any>;
   title: string;
   description: string;
   features: string[];
-  stats?: {
+  stats?: {}
     value: string;
     label: string;
   }[];
 }
 
-const ContentCarousel: React.FC = () => {
+const ContentCarousel: React.FC = () => {}
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [
-    {
+    {}
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: [
+      stats: []
         { value: '95%', label: 'Accuracy Rate' },
         { value: '10x', label: 'Faster Processing' },
         { value: '24/7', label: 'Automation' }
       ]
     },
-    {
+    {}
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
       features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency'],
-      stats: [
+      stats: []
         { value: '99.9%', label: 'Uptime' },
         { value: '< 100ms', label: 'Response Time' },
         { value: '10M+', label: 'Requests/Day' }
       ]
     },
-    {
+    {}
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
       features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring'],
-      stats: [
+      stats: []
         { value: '256-bit', label: 'Encryption' },
         { value: 'SOC 2', label: 'Compliance' },
         { value: 'Zero', label: 'Security Breaches' }
       ]
     },
-    {
+    {}
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
       features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support'],
-      stats: [
+      stats: []
         { value: '50+', label: 'Countries' },
         { value: '15+', label: 'Languages' },
         { value: '24/7', label: 'Global Support' }
@@ -64,15 +64,15 @@ const ContentCarousel: React.FC = () => {
     }
   ];
 
-  const nextSlide = () => {
+  const nextSlide = () => {}
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  const prevSlide = () => {
+  const prevSlide = () => {}
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  useEffect(() => {
+  useEffect(() => {}
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, []);
@@ -116,7 +116,7 @@ const ContentCarousel: React.FC = () => {
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {currentSlideData.features.map((feature, index) => (
+                    {currentSlideData.features.map((feature, index) => (}
                       <div key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -126,9 +126,9 @@ const ContentCarousel: React.FC = () => {
                 </div>
 
                 {/* Stats */}
-                {currentSlideData.stats && (
+                {currentSlideData.stats && (}
                   <div className="grid grid-cols-3 gap-6">
-                    {currentSlideData.stats.map((stat, index) => (
+                    {currentSlideData.stats.map((stat, index) => (}
                       <div key={index} className="text-center">
                         <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                         <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -185,11 +185,11 @@ const ContentCarousel: React.FC = () => {
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
-            {slides.map((_, index) => (
+            {slides.map((_, index) => (}
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                className={`w-3 h-3 rounded-full transition-colors duration-200 ${}
                   index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
                 }`}
               />

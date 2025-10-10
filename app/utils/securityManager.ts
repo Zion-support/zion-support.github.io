@@ -3,7 +3,7 @@
  * Enhanced Security Utilities;
  * Generated: 2025-10-08T02:06:22.083Z;
  */,
-export class SecurityManager {,
+export class SecurityManager {,}
  * Enhanced Security Utilities
  * Generated: 2025-10-08 T02:06:22.083 Z
  */
@@ -27,7 +27,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   /**
    * Sanitize user input to prevent XSS attacks;
    */
-  sanitizeInput(input: string): string {,
+  sanitizeInput(input: string): string {,}
     return input;
   sanitizeInput(input: string): string {}
     return input
@@ -41,10 +41,10 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   /**
    * Validate and sanitize URL;
    */
-  sanitizeUrl(url: string): string {,
-    try {,;
+  sanitizeUrl(url: string): string {,}
+    try {,;}
 const parsed = new URL(url),
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,
+      if (!['http:', 'https: '].includes(parsed.protocol)) {,}
   sanitizeUrl(url: string): string {}
     try {}
       const parsed = new URL(url)
@@ -63,12 +63,12 @@ const parsed = new URL(url),
   /**
    * Generate secure random token;
    */
-  generateSecureToken(length: number = 32): string {,;
+  generateSecureToken(length: number = 32): string {,;}
 const array = new Uint8Array(length),
-    if (typeof window !== 'undefined' && window.crypto) {,
+    if (typeof window !== 'undefined' && window.crypto) {,}
       window.crypto.getRandomValues(array);
     } else {
-      // Fallback for Node.js environment;
+      // Fallback for Node.js environment;}
   generateSecureToken(length: number = 32): string {}
     const array = new Uint8Array(length)
     if (typeof window !== 'undefined' && window.crypto) {}
@@ -93,7 +93,7 @@ const storage = this.getRateLimitStorage();
 const requests = storage.get(key) || []
     // Remove old requests;
 const validRequests = requests.filter((time: number) => time > windowStart),
-    if (validRequests.length >= limit) {,
+    if (validRequests.length >= limit) {,}
     // Remove old requests;
 const validRequests = requests.filter((time: number) => time > windowStart)
     if (validRequests.length >= limit) {}

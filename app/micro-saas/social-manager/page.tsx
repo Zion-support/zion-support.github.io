@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Share2, ArrowRight } from 'lucide-react';
 ;
-const SocialMediaManagerPage: React.FC = () => {
+const SocialMediaManagerPage: React.FC = () => {}
   return (<div>
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation<
         <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence." 

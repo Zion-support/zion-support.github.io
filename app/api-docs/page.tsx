@@ -3,48 +3,46 @@ import React, { useState } from 'react';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer'
-export default function APIDocsPage() {;
+import SEOOptimizer from '../components/SEOOptimizer';
+export default function APIDocsPage() {;}
 const [copiedCode, setCopiedCode] = useState<string | null>(null);
 const [searchQuery, setSearchQuery] = useState('');
 ;
-const copyToClipboard = (code: string, id: string) => {
+const copyToClipboard = (code: string, id: string) => {}
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
 ;
 const apiEndpoints = [
-    {
+    {}
       title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
       icon: Brain,
-      endpoints: [
-        {
+      endpoints: []
+        {}
           nam,
     e: 'Text Analysis',
           method: 'POST',
           path: '/api/ai
-          descriptio,
-    n: 'Analyze text sentiment, entities, and key phrases',
+          description: 'Analyze text sentiment, entities, and key phrases',
           code: `curl -X POST "https://api.ziontechgroup.com/ai
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Typ,
     e: application
-  -d '{
+  -d '{}
     "text": "Your text to analyze",
     "features": ["sentiment", "entities", "key_phrases"]
   }'`
         },
-        {
+        {}
           name: 'Image Recognition',
           method: 'POST',
           path: '/api/ai
-          descriptio,
-    n: 'Identify objects, faces, and scenes in images',
+          description: 'Identify objects, faces, and scenes in images',
           code: `curl -X POST "https://api.ziontechgroup.com/ai
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application
-  -d '{
+  -d '{}
     "image_url": "http,
     s://example.com
     "features": ["objects", "faces", "text"]
@@ -52,26 +50,25 @@ const apiEndpoints = [
         }
       ]
     },
-    {
+    {}
       title: 'Cloud Services',
       description: 'Cloud infrastructure and deployment APIs',
       icon: Cloud,
-      endpoints: [
-        {
+      endpoints: []
+        {}
           nam,
     e: 'Deploy Application',
           method: 'POST',
           path: '/api/cloud
-          descriptio,
-    n: 'Deploy applications to cloud infrastructure',
+          description: 'Deploy applications to cloud infrastructure',
           code: `curl -X POST "https://api.ziontechgroup.com/cloud
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Typ,
     e: application
-  -d '{
+  -d '{}
     "app_name": "my-app",
     "environment": "production",
-    "config": {
+    "config": {}
       "cpu": "2",
       "memory": "4GB",
       "instances": 3
@@ -80,23 +77,22 @@ const apiEndpoints = [
         }
       ]
     },
-    {
+    {}
       title: 'Data Analytics',
       description: 'Data processing and analytics APIs',
       icon: Database,
-      endpoints: [
-        {
+      endpoints: []
+        {}
           nam,
     e: 'Process Data',
           method: 'POST',
           path: '/api/analytics
-          descriptio,
-    n: 'Process and analyze large datasets',
+          description: 'Process and analyze large datasets',
           code: `curl -X POST "https://api.ziontechgroup.com/analytics
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Typ,
     e: application
-  -d '{
+  -d '{}
     "dataset_id": "dataset_123",
     "operations": ["aggregate", "filter", "transform"],
     "output_format": "json"
@@ -106,7 +102,7 @@ const apiEndpoints = [
     }
   ];
 ;
-const filteredEndpoints = apiEndpoints.map(category => ({
+const filteredEndpoints = apiEndpoints.map(category => ({}
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -157,7 +153,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
         <
       <
 
-      {/* API Endpoints *
+      {/* API Endpoints *}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints<
@@ -177,7 +173,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                   {category.endpoints.map((endpoint, endpointIndex) => (<div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-4">
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${}
                             endpoint.method === 'POST' 
                               ? 'bg-green-500
                               : 'bg-blue-500
@@ -219,7 +215,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
         </div>
       </section>
 
-      {/* CTA Section *
+      {/* CTA Section *}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">

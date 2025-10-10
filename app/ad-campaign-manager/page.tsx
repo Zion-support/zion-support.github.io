@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, ArrowRight, BarChart, Target, Zap } from 'lucide-react';
 
-const AdCampaignManagerPage: React.FC = () => {
+const AdCampaignManagerPage: React.FC = () => {}
   return (
     <>
       <Helmet>

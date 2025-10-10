@@ -2,7 +2,7 @@
 import React from 'react';
 'use client'
 import React, { useState, useCallback } from 'react'
-interface ImageProps {
+interface ImageProps {}
   src: string,
     alt: string
 interface ImageProps {}
@@ -14,7 +14,7 @@ interface ImageProps {}
   priority?: boolean
   _quality?: number
   src: string,
-  alt: string,
+  alt: string,;
   width?: number;
   height?: number;
   className?: string;
@@ -28,10 +28,10 @@ interface ImageProps {}
   onLoad?: () => void;
   onError?: () => void;}
 }
-export const Image: React.FC<ImageProps>= ({
+export const Image: React.FC<ImageProps>= ({}
 export const Image: React.FC<ImageProps> = ({}
   src,
-export const Image: React.FC<ImageProps> = ({,
+export const Image: React.FC<ImageProps> = ({,}
   src;
   alt,
   width,
@@ -58,9 +58,9 @@ export const Image: React.FC<ImageProps> = ({,
     setHasError(true)
     if (onError) onError();}
   }, [onError])
-  const imageStyle: React.CSSProperties = {
+  const imageStyle: React.CSSProperties = {}
     ...style;
-    ...(fill && {
+    ...(fill && {}
       position: 'absolute',
       top:
         top: 0,
@@ -76,12 +76,12 @@ export const Image: React.FC<ImageProps> = ({,
       objectFit: 'cover'}
     })
   }
-  if (hasError) {</ImageProps>
+  if (hasError) {</ImageProps>}
     return (</ImageProps>
   if (hasError) {}
     return (
       <div}
-  if (hasError) {
+  if (hasError) {}
     return(<div}
 'use client';
 import React, { useState, useCallback } from 'react';

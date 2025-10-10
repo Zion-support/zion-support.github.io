@@ -13,16 +13,16 @@ export interface EnvConfig {}
   sentryDsn?: string;
   gaTrackingId?: string}
 }
-class EnvironmentConfig {
+class EnvironmentConfig {}
   private config: EnvConfig,
   private isInitialized = false;
-  constructor() {,
+  constructor() {,}
     this.config = this.loadConfig(),
     this.isInitialized = true}
   }
-  private loadConfig(): EnvConfig {
+  private loadConfig(): EnvConfig {}
     // Safely access environment variables with defaults;
-    return {
+    return {}
 class EnvironmentConfig {}
   private config: EnvConfig
   private isInitialized = false;
@@ -60,7 +60,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   /**
    * Get a specific configuration value;
    */
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
+  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,}
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
     return this.config[key]}
   public get<K extends keyof EnvConfig>(ke)
@@ -90,17 +90,17 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   /**
    * Validate required environment variables;
    */
-  public validate(requiredVars: (keyof EnvConfig)[]): {,
+  public validate(requiredVars: (keyof EnvConfig)[]): {,}
     valid: boolean,
     missing: string[]}
   } {;
-const missing: string[] = [],
-    for (const varName of requiredVars) {,
-      if (!this.config[varName]) {,
+const missing: string[] = [],}
+    for (const varName of requiredVars) {,}
+      if (!this.config[varName]) {,}
         missing.push(varName);
       }
     }
-    return {
+    return {}
       valid: missing.length === 0;
   public validate(requiredVars: (keyof EnvConfig)[]): {}
     valid: boolean
