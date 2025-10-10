@@ -336,21 +336,7 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.6,
       users: '1,700+',
-<<<<<<< HEAD
       trial: '21-day free trial'
-    },
-    { 
-      name: 'AI Quantum Financial Oracle', 
-      href: '/ai-quantum-financial-oracle', 
-      icon: DollarSign, 
-      category: 'Finance', 
-      price: '$2,999/mo',
-      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
-      features: ['Quantum Market Analysis', 'Ultra-fast Predictions', 'Risk Assessment', 'Portfolio Optimization', 'Cryptocurrency Analysis', 'Real-time Trading Signals'],
-      popular: true,
-      rating: 4.9,
-      users: '150+',
-      trial: '30-day free trial'
     },
     { 
       name: 'AI 3D Generation Studio', 
@@ -493,7 +479,6 @@ const MicroSAASPage: React.FC = () => {
     { 
       name: 'AI Logo Designer Pro', 
       href: '/ai-logo-designer', 
-<<<<<<< HEAD
       icon: FileText, 
       category: 'Design', 
       price: '$89/mo',

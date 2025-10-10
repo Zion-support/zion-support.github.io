@@ -3,41 +3,6 @@
 import React from 'react';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home } from 'lucide-react';
 import Footer from './components/Footer';
-<<<<<<< HEAD
-import SEOHead from './components/SEOHead';
-import ErrorBoundary from './components/ErrorBoundary';
-import Loading from './components/Loading';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import ServiceCardSkeleton from './components/ServiceCardSkeleton';
-import LazyImage from './components/LazyImage';
-import AnimatedCounter from './components/AnimatedCounter';
-import { 
-  Brain, 
-  Zap, 
-  Target, 
-  BarChart, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock, 
-  Settings, 
-  FileText,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Award,
-  Rocket,
-  Code,
-  Cloud,
-  Smartphone,
-  TrendingUp,
-  Award as Trophy,
-  Users as People,
-  CheckCircle2
-} from 'lucide-react';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-0ad0
 
 // Service data
 const microSAASServices = [
@@ -191,11 +156,11 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+      <section className="relative py-20 overflow-hidden" aria-labelledby="hero-heading">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" aria-hidden="true"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             AI-Powered Enterprise Solutions
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -203,31 +168,37 @@ const HomePage: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+            <button 
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+              aria-label="Get started with Zion Tech Group AI solutions"
+            >
               Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
             </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+            <button 
+              className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50"
+              aria-label="Watch a demo of our AI solutions"
+            >
               Watch Demo
             </button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8" role="region" aria-label="Key performance metrics">
+            <div className="text-center" role="group" aria-label="Average ROI">
+              <div className="text-4xl font-bold text-cyan-400 mb-2" aria-label="300 percent">300%</div>
               <div className="text-gray-400">Average ROI</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
+            <div className="text-center" role="group" aria-label="Cost Reduction">
+              <div className="text-4xl font-bold text-purple-400 mb-2" aria-label="70 percent">70%</div>
               <div className="text-gray-400">Cost Reduction</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">90%</div>
+            <div className="text-center" role="group" aria-label="Efficiency Gains">
+              <div className="text-4xl font-bold text-pink-400 mb-2" aria-label="90 percent">90%</div>
               <div className="text-gray-400">Efficiency Gains</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
+            <div className="text-center" role="group" aria-label="Uptime Guarantee">
+              <div className="text-4xl font-bold text-green-400 mb-2" aria-label="99.9 percent">99.9%</div>
               <div className="text-gray-400">Uptime Guarantee</div>
             </div>
           </div>
@@ -235,10 +206,10 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Micro SAAS Section */}
-      <section className="py-16 bg-white/5">
+      <section className="py-16 bg-white/5" aria-labelledby="micro-saas-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4">
               Micro SAAS Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -246,45 +217,50 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list" aria-label="Micro SAAS solutions">
             {microSAASServices.map((service, index) => (
-              <div
+              <article
                 key={index}
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative"
+                role="listitem"
+                aria-labelledby={`service-${index}-title`}
               >
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
+                      <Star className="w-3 h-3 mr-1" aria-hidden="true" />
                       Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" aria-hidden="true">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
+                  <h3 id={`service-${index}-title`} className="text-xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
                   
-                  <div className="space-y-2 mb-6">
+                  <ul className="space-y-2 mb-6" role="list" aria-label={`Features of ${service.name}`}>
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" aria-hidden="true" />
                         {feature}
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                   
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2" aria-label={`Price: ${service.price}`}>{service.price}</div>
+                    <button 
+                      className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400/50 rounded"
+                      aria-label={`Learn more about ${service.name}`}
+                    >
                       Learn More →
                     </button>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
