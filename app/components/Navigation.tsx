@@ -182,11 +182,13 @@ const Navigation: React.FC = () => {
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea37
 
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
   };
-<<<<<<< HEAD
 
   const microSAASServices = [
     { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$199/mo' },
@@ -234,15 +236,14 @@ const Navigation: React.FC = () => {
     { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
   ];
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-5aa9
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea37
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-<<<<<<< HEAD
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-border-glow' : 'bg-transparent'
-=======
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -253,14 +254,10 @@ const Navigation: React.FC = () => {
             onClick={closeAllMenus}
           >
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
-              <Zap className="w-5 h-5 text-white" />
-            </div>
-<<<<<<< HEAD
-            <span className="text-white neon-text-advanced cyber-text">
-=======
-            <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
-              Zion Tech Group
+            <Zap className="w-5 h-5 text-white" />
+          </div>
+          <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
+            Zion Tech Group
             </span>
           </Link>
 
@@ -484,5 +481,3 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e12a
