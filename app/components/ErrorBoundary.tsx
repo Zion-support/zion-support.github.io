@@ -52,7 +52,7 @@ class ErrorBoundary extends Component<Props, State>{
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
             <div className="mb-6">
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>
+              <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1><p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.</p>
               </p>
             </div>
 

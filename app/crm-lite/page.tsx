@@ -112,7 +112,7 @@ const CRMLitePage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            CRM <span className="text-cyan-400">Lite<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">The perfect CRM solution for small and medium businesses. Simple, powerful, and affordable customer relationship management</p>
+            CRM <span className="text-cyan-400">Lite</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">The perfect CRM solution for small and medium businesses. Simple, powerful, and affordable customer relationship management</p>
             that helps you grow your business without the complexity.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -141,7 +141,7 @@ const CRMLitePage: React.FC = () => {
               >
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -166,7 +166,7 @@ const CRMLitePage: React.FC = () => {
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<p className="text-gray-300 mb-4">{plan.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-cyan-400">{plan.price}<span className="text-gray-400 ml-2">{plan.period}<ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -250,29 +250,29 @@ const CRMLitePage: React.FC = () => {
             <div className="text-center">
               <div className="p-4 bg-white/10 rounded-lg mb-4">
                 <Mail className="w-8 h-8 text-cyan-400 mx-auto" />
-              <h3 className="text-lg font-semibold text-white">Email<p className="text-gray-300 text-sm">Gmail, Outlook, Yahoo</p>
+              <h3 className="text-lg font-semibold text-white">Email</h3><p className="text-gray-300 text-sm">Gmail, Outlook, Yahoo</p>
             </div>
             <div className="text-center">
               <div className="p-4 bg-white/10 rounded-lg mb-4">
                 <Phone className="w-8 h-8 text-cyan-400 mx-auto" />
-              <h3 className="text-lg font-semibold text-white">Phone<p className="text-gray-300 text-sm">VoIP integration</p>
+              <h3 className="text-lg font-semibold text-white">Phone</h3><p className="text-gray-300 text-sm">VoIP integration</p>
             </div>
             <div className="text-center">
               <div className="p-4 bg-white/10 rounded-lg mb-4">
                 <Calendar className="w-8 h-8 text-cyan-400 mx-auto" />
-              <h3 className="text-lg font-semibold text-white">Calendar<p className="text-gray-300 text-sm">Google Calendar, Outlook</p>
+              <h3 className="text-lg font-semibold text-white">Calendar</h3><p className="text-gray-300 text-sm">Google Calendar, Outlook</p>
             </div>
             <div className="text-center">
               <div className="p-4 bg-white/10 rounded-lg mb-4">
                 <BarChart className="w-8 h-8 text-cyan-400 mx-auto" />
-              <h3 className="text-lg font-semibold text-white">Analytics<p className="text-gray-300 text-sm">Google Analytics, Mixpanel</p>
+              <h3 className="text-lg font-semibold text-white">Analytics</h3><p className="text-gray-300 text-sm">Google Analytics, Mixpanel</p>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Start Managing Your Customers Better Today<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using CRM Lite to streamline their customer relationships and grow their sales.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Start Managing Your Customers Better Today</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using CRM Lite to streamline their customer relationships and grow their sales.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

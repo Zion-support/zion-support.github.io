@@ -154,7 +154,7 @@ const AI3DGenerationPage: React.FC = () => {
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Cube className="w-4 h-4 mr-2" >Revolutionary 3D Technology<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">AI 3D Model Generation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning 3D models, characters, and environments from simple text descriptions.</p>
+            <Cube className="w-4 h-4 mr-2" >Revolutionary 3D Technology<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">AI 3D Model Generation</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning 3D models, characters, and environments from simple text descriptions.</p>
             Transform your ideas into photorealistic 3D assets in minutes, not months.</p>
           </p>
 
@@ -227,7 +227,7 @@ const AI3DGenerationPage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl"><span className="sr-only">Screen reader: </span>{step.icon}<div className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">Step {step.step}</div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}<p className="text-gray-300 text-sm">{step.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3><p className="text-gray-300 text-sm">{step.description}</p>
               </div>
             ))}
           </div>
@@ -239,7 +239,7 @@ const AI3DGenerationPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Applications & Use Cases<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{applications.map((app, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-4xl mb-4">{app.icon}<h3 className="text-xl font-bold text-white mb-3">{app.title}<p className="text-gray-300 mb-4">{app.description}</p>
+                <div className="text-4xl mb-4">{app.icon}<h3 className="text-xl font-bold text-white mb-3">{app.title}</h3><p className="text-gray-300 mb-4">{app.description}</p>
                 <div className="space-y-2">
                   <h4 className="text-sm font-semibold text-cyan-400">Examples:<ul className="space-y-1" role="list">{app.examples.map((example, exampleIndex) => (</ul>
                       <li key={exampleIndex} className="text-sm text-gray-400 flex items-center" style={{ color: "#9CA3AF" }}>
@@ -265,7 +265,7 @@ const AI3DGenerationPage: React.FC = () => {
                   </div>
                 )}
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}<p className="text-gray-600 mb-4">{plan.description}</p>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3><p className="text-gray-600 mb-4">{plan.description}</p>
                   <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}<p className="text-gray-500">per month<ul className="space-y-3 mb-8" role="list">{plan.features.map((feature, featureIndex) => (</ul>
                     <li key={featureIndex} className="flex items-center text-gray-600">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" >{feature}</CheckCircle>
@@ -301,7 +301,7 @@ const AI3DGenerationPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Generate 3D Models?<p className="text-xl text-purple-100 mb-8">Start creating stunning 3D assets with our AI-powered generation technology.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Generate 3D Models?</h2><p className="text-xl text-purple-100 mb-8">Start creating stunning 3D assets with our AI-powered generation technology.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

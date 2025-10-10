@@ -22,7 +22,7 @@ const CloudSecurityPage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Shield className="w-10 h-10 text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Cloud Security & Compliance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced cloud security solutions with compliance management and data protection.</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Cloud Security & Compliance</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced cloud security solutions with compliance management and data protection.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -43,7 +43,7 @@ const CloudSecurityPage: React.FC = () => {
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             </p>
           </div>
 
@@ -51,27 +51,27 @@ const CloudSecurityPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Cloud Security<p className="text-gray-300">Advanced cloud security capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Cloud Security</h3><p className="text-gray-300">Advanced cloud security capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Compliance Management<p className="text-gray-300">Advanced compliance management capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Compliance Management</h3><p className="text-gray-300">Advanced compliance management capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Data Encryption<p className="text-gray-300">Advanced data encryption capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Data Encryption</h3><p className="text-gray-300">Advanced data encryption capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Access Control<p className="text-gray-300">Advanced access control capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Access Control</h3><p className="text-gray-300">Advanced access control capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Audit Logging<p className="text-gray-300">Advanced audit logging capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Audit Logging</h3><p className="text-gray-300">Advanced audit logging capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Threat Detection<p className="text-gray-300">Advanced threat detection capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Threat Detection</h3><p className="text-gray-300">Advanced threat detection capabilities powered by AI</p>
             </div>
           </div>
         </section>
@@ -79,7 +79,7 @@ const CloudSecurityPage: React.FC = () => {
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Cloud Security & Compliance?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Cloud Security & Compliance?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             </p>
           </div>
 
@@ -87,19 +87,19 @@ const CloudSecurityPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Enhanced Cloud Security<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Enhanced Cloud Security</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Compliance Assurance<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Compliance Assurance</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Data Protection<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Data Protection</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Risk Mitigation<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Risk Mitigation</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
           </div>
         </section>
@@ -107,7 +107,7 @@ const CloudSecurityPage: React.FC = () => {
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
             </p>
           </div>
 
@@ -126,7 +126,7 @@ const CloudSecurityPage: React.FC = () => {
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             </p>
           </div>
 
@@ -145,7 +145,7 @@ const CloudSecurityPage: React.FC = () => {
 
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Visit Us<p className="text-gray-300 mb-4">Our headquarters location</p>
+              <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3><p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
                 364 E Main St STE 1008<br >Middletown DE 19709</br>
               </br>

@@ -210,7 +210,7 @@ const TermsPage: React.FC = () => {
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us<p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Contact Us</h2><p className="text-gray-300 mb-6">If you have any questions about these Terms of Service, please contact us:</p>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>

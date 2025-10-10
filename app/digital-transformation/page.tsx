@@ -110,7 +110,7 @@ const DigitalTransformationPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Digital <span className="text-cyan-400">Transformation<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your business with cutting-edge digital solutions. Our comprehensive approach helps you modernize operations,</p>
+            Digital <span className="text-cyan-400">Transformation</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your business with cutting-edge digital solutions. Our comprehensive approach helps you modernize operations,</p>
             improve efficiency, and stay competitive in the digital age.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -199,19 +199,19 @@ const DigitalTransformationPage: React.FC = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center">
-              <h3 className="text-xl font-semibold text-white mb-4">Healthcare<p className="text-gray-300 mb-4">HIPAA-compliant digital solutions for healthcare providers</p>
+              <h3 className="text-xl font-semibold text-white mb-4">Healthcare</h3><p className="text-gray-300 mb-4">HIPAA-compliant digital solutions for healthcare providers</p>
               <ul className="text-sm text-cyan-400 space-y-1">
                 <li>• Electronic Health Records<li>• Telemedicine Platforms<li>• Patient Management Systems</li>
               </ul>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center">
-              <h3 className="text-xl font-semibold text-white mb-4">Finance<p className="text-gray-300 mb-4">Secure financial technology solutions and compliance</p>
+              <h3 className="text-xl font-semibold text-white mb-4">Finance</h3><p className="text-gray-300 mb-4">Secure financial technology solutions and compliance</p>
               <ul className="text-sm text-cyan-400 space-y-1">
                 <li>• Banking Systems<li>• Payment Processing<li>• Risk Management</li>
               </ul>
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center">
-              <h3 className="text-xl font-semibold text-white mb-4">Manufacturing<p className="text-gray-300 mb-4">Industry 4.0 solutions for smart manufacturing</p>
+              <h3 className="text-xl font-semibold text-white mb-4">Manufacturing</h3><p className="text-gray-300 mb-4">Industry 4.0 solutions for smart manufacturing</p>
               <ul className="text-sm text-cyan-400 space-y-1">
                 <li>• IoT Integration<li>• Predictive Maintenance<li>• Supply Chain Optimization</li>
               </ul>
@@ -226,11 +226,11 @@ const DigitalTransformationPage: React.FC = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company<p className="text-gray-300 mb-4">"Zion Tech Group helped us implement IoT sensors and predictive analytics,</p>
+              <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company</h3><p className="text-gray-300 mb-4">"Zion Tech Group helped us implement IoT sensors and predictive analytics,</p>
                 reducing equipment downtime by 60% and increasing production efficiency by 40%."<div className="text-cyan-400 font-semibold">- CEO, Tech Manufacturing Inc.</div>
             </div>
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-4">Healthcare Provider<p className="text-gray-300 mb-4">"Their digital transformation solution streamlined our patient management,</p>
+              <h3 className="text-2xl font-semibold text-white mb-4">Healthcare Provider</h3><p className="text-gray-300 mb-4">"Their digital transformation solution streamlined our patient management,</p>
                 reducing administrative overhead by 50% and improving patient satisfaction scores."<div className="text-purple-400 font-semibold">- CTO, Regional Medical Center</div>
             </div>
           </div>
@@ -238,7 +238,7 @@ const DigitalTransformationPage: React.FC = () => {
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join hundreds of businesses that have successfully transformed their operations with our digital solutions.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join hundreds of businesses that have successfully transformed their operations with our digital solutions.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

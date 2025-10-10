@@ -114,7 +114,7 @@ const AIPasswordManagerPage: React.FC = () => {
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mr-4">
                 <Shield className="w-8 h-8 text-white" />
-              <h1 className="text-5xl font-bold text-white neon-text">AI Password Manager<p className="text-xl text-gray-300 mb-8 leading-relaxed">Secure your digital life with our AI-powered password manager. Military-grade encryption,</p>
+              <h1 className="text-5xl font-bold text-white neon-text">AI Password Manager</h1><p className="text-xl text-gray-300 mb-8 leading-relaxed">Secure your digital life with our AI-powered password manager. Military-grade encryption,</p>
               intelligent threat detection, and seamless user experience.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -202,7 +202,7 @@ const AIPasswordManagerPage: React.FC = () => {
           {/* CTA Section */}
           <section className="py-16 px-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Secure Your Digital Life Today<p className="text-xl text-gray-300 mb-8">Don't wait for a security breach. Protect your accounts with our AI-powered password manager.</p>
+              <h2 className="text-4xl font-bold text-white mb-6">Secure Your Digital Life Today</h2><p className="text-xl text-gray-300 mb-8">Don't wait for a security breach. Protect your accounts with our AI-powered password manager.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

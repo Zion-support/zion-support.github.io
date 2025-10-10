@@ -68,7 +68,7 @@ const AIVisionPage: React.FC = () => {
           <div className="cyber-card p-8">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}<p className="text-gray-300 text-sm">{benefit}</p>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}</div><p className="text-gray-300 text-sm">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -80,7 +80,7 @@ const AIVisionPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Common Use Cases<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
               <div key={index} className="cyber-card p-6 text-center">
                 <useCase.icon className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}<p className="text-gray-300">{useCase.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3><p className="text-gray-300">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -89,7 +89,7 @@ const AIVisionPage: React.FC = () => {
         {/* Contact CTA */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Implement Computer Vision?<p className="text-lg text-gray-300 mb-8">Contact us today to discuss your computer vision requirements and get a custom solution.</p>
+            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Implement Computer Vision?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss your computer vision requirements and get a custom solution.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

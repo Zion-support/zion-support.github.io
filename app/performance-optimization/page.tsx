@@ -78,7 +78,7 @@ const PerformanceOptimizationPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Performance <span className="text-cyan-400">Optimization<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Maximize your system performance with our comprehensive optimization services.</p>
+            Performance <span className="text-cyan-400">Optimization</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Maximize your system performance with our comprehensive optimization services.</p>
             We analyze, tune, and optimize every aspect of your infrastructure for maximum speed and efficiency.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -107,7 +107,7 @@ const PerformanceOptimizationPage: React.FC = () => {
               >
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
                   <service.icon className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}<p className="text-gray-300">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3><p className="text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
@@ -154,19 +154,19 @@ const PerformanceOptimizationPage: React.FC = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">1<h3 className="text-xl font-semibold text-white mb-3">Analysis<p className="text-gray-300">Comprehensive performance analysis and bottleneck identification</p>
+                <span className="text-2xl font-bold text-white">1<h3 className="text-xl font-semibold text-white mb-3">Analysis</h3><p className="text-gray-300">Comprehensive performance analysis and bottleneck identification</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">2<h3 className="text-xl font-semibold text-white mb-3">Planning<p className="text-gray-300">Develop optimization strategy and implementation roadmap</p>
+                <span className="text-2xl font-bold text-white">2<h3 className="text-xl font-semibold text-white mb-3">Planning</h3><p className="text-gray-300">Develop optimization strategy and implementation roadmap</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">3<h3 className="text-xl font-semibold text-white mb-3">Implementation<p className="text-gray-300">Execute optimization changes with minimal downtime</p>
+                <span className="text-2xl font-bold text-white">3<h3 className="text-xl font-semibold text-white mb-3">Implementation</h3><p className="text-gray-300">Execute optimization changes with minimal downtime</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">4<h3 className="text-xl font-semibold text-white mb-3">Monitoring<p className="text-gray-300">Continuous monitoring and fine-tuning for optimal performance</p>
+                <span className="text-2xl font-bold text-white">4<h3 className="text-xl font-semibold text-white mb-3">Monitoring</h3><p className="text-gray-300">Continuous monitoring and fine-tuning for optimal performance</p>
             </div>
           </div>
         </div>
@@ -194,7 +194,7 @@ const PerformanceOptimizationPage: React.FC = () => {
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Boost Your Performance Today<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't let slow performance hold your business back. Let our experts optimize your systems for maximum speed and efficiency.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Boost Your Performance Today</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't let slow performance hold your business back. Let our experts optimize your systems for maximum speed and efficiency.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

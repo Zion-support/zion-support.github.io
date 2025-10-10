@@ -142,7 +142,7 @@ const ContentStatistics: React.FC = () => {
                   ? `${counts[stat.id as keyof typeof counts]}${stat.suffix}`
                   : `${counts[stat.id as keyof typeof counts]}${stat.suffix}`</div>
                 }</div>
-              <h3 className="text-lg font-semibold text-white mb-2">{stat.label}<p className="text-gray-400 text-sm">{stat.description}</p>
+              <h3 className="text-lg font-semibold text-white mb-2">{stat.label}</h3><p className="text-gray-400 text-sm">{stat.description}</p>
               </p>
             </div>
           ))}

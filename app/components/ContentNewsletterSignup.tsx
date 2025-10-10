@@ -64,14 +64,14 @@ const ContentNewsletterSignup: React.FC = () => {
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">{/* Content */}</div>
               <div>
-                <h2 id="newsletter-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">Stay Updated<p className="text-gray-300 text-lg mb-6 leading-relaxed">Join thousands of professionals who trust us for the latest in AI and IT solutions.</p>
+                <h2 id="newsletter-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text">Stay Updated</h2><p className="text-gray-300 text-lg mb-6 leading-relaxed">Join thousands of professionals who trust us for the latest in AI and IT solutions.</p>
                   Get exclusive insights, early access to new features, and expert tips delivered to your inbox.<div className="space-y-4 mb-8">{benefits.map((benefit, index) => (</div>
                     <div key={index} className="flex items-start space-x-3">
                       <div className="p-2 bg-cyan-500/20 rounded-lg">
                         <benefit.icon className="w-5 h-5 text-cyan-400" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-white mb-1">{benefit.title}<p className="text-gray-400 text-sm">{benefit.description}</p>
+                        <h3 className="font-semibold text-white mb-1">{benefit.title}</h3><p className="text-gray-400 text-sm">{benefit.description}</p>
                       </div>
                     </div>
                   ))}

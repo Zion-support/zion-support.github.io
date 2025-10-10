@@ -239,7 +239,7 @@ export const UserExperienceEnhancer: React.FC = () => {
         </div>
 
         <div className="mt-3 pt-2 border-t border-gray-700">
-          <p className="text-xs text-gray-400">Shortcuts: Ctrl+K (search), Ctrl+D (theme)</p>
+          </div><p className="text-xs text-gray-400">Shortcuts: Ctrl+K (search), Ctrl+D (theme)</p>
           </p>
         </div>
       </div>

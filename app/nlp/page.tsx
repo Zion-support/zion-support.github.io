@@ -152,7 +152,7 @@ const NLPPage: React.FC = () => {
           {/* CTA Section */}
           <section className="text-center">
             <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Unlock the Power of Text Data?<p className="text-lg text-gray-300 mb-8">Our NLP experts are ready to help you extract valuable insights from your text data.</p>
+              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Unlock the Power of Text Data?</h2><p className="text-lg text-gray-300 mb-8">Our NLP experts are ready to help you extract valuable insights from your text data.</p>
                 Contact us today for a free consultation and discover the potential of natural language processing.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

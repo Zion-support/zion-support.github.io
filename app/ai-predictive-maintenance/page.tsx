@@ -149,7 +149,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-blue-600 rounded-full mb-6">
               <Settings className="w-10 h-10 text-white" />
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Predictive Maintenance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your maintenance operations with AI-powered predictive analytics. Reduce costs by 30-50%, prevent unexpected failures, and optimize equipment performance with machine learning algorithms.</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Predictive Maintenance</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your maintenance operations with AI-powered predictive analytics. Reduce costs by 30-50%, prevent unexpected failures, and optimize equipment performance with machine learning algorithms.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <div className="flex items-center space-x-2 text-green-400">
@@ -190,7 +190,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center">
                     <Brain className="w-5 h-5 text-white" />
-                  <h3 className="text-lg font-semibold text-white">{feature}<p className="text-gray-300 text-sm">{feature === 'Machine learning algorithms for failure prediction' && 'Advanced ML models analyze historical data and sensor readings to predict equipment failures with 95%+ accuracy.'}
+                  <h3 className="text-lg font-semibold text-white">{feature}</h3><p className="text-gray-300 text-sm">{feature === 'Machine learning algorithms for failure prediction' && 'Advanced ML models analyze historical data and sensor readings to predict equipment failures with 95%+ accuracy.'}
                   {feature === 'Real-time sensor data analysis' && 'Continuous monitoring of sensor data with real-time analysis to detect anomalies and potential issues immediately.'}
                   {feature === 'Predictive maintenance scheduling' && 'Intelligent scheduling system that optimizes maintenance windows based on predicted failure timelines and operational requirements.'}
                   {feature === 'Equipment health monitoring' && 'Comprehensive health scoring system that tracks equipment condition and provides actionable insights for maintenance teams.'}
@@ -235,7 +235,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit}<p className="text-gray-300">{benefit === 'Reduce maintenance costs by 30-50%' && 'Optimize maintenance schedules and prevent unnecessary repairs, resulting in significant cost savings.'}
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3><p className="text-gray-300">{benefit === 'Reduce maintenance costs by 30-50%' && 'Optimize maintenance schedules and prevent unnecessary repairs, resulting in significant cost savings.'}
                   {benefit === 'Increase equipment uptime by 25%' && 'Predict and prevent failures before they occur, maximizing equipment availability and productivity.'}
                   {benefit === 'Prevent unexpected breakdowns' && 'AI algorithms identify potential failures weeks or months in advance, allowing for planned maintenance.'}
                   {benefit === 'Optimize maintenance schedules' && 'Intelligent scheduling ensures maintenance is performed at the optimal time, balancing cost and reliability.'}
@@ -307,7 +307,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
       {/* Contact Section */}
       <section id="contact" className="py-16 px-4 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Maintenance?<p className="text-xl text-green-100 mb-8">Contact us today for a free predictive maintenance assessment and ROI analysis.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Maintenance?</h2><p className="text-xl text-green-100 mb-8">Contact us today for a free predictive maintenance assessment and ROI analysis.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a

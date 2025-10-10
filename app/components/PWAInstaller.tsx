@@ -70,7 +70,7 @@ const PWAInstaller: React.FC = () => {
         </div>
 
         <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-semibold mb-1">Install App<p className="text-xs text-white/90 mb-3">Install Zion Tech Group app for a better experience with offline access and faster loading.</p>
+          <h3 className="text-sm font-semibold mb-1">Install App</h3><p className="text-xs text-white/90 mb-3">Install Zion Tech Group app for a better experience with offline access and faster loading.</p>
           </p>
 
           <div className="flex space-x-2">

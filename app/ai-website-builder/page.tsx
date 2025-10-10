@@ -130,7 +130,7 @@ const AIWebsiteBuilderPage: React.FC = () => {
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mr-4">
                 <Code className="w-8 h-8 text-white" />
-              <h1 className="text-5xl font-bold text-white neon-text">AI Website Builder<p className="text-xl text-gray-300 mb-8 leading-relaxed">Create stunning, professional websites in minutes with our AI-powered builder.</p>
+              <h1 className="text-5xl font-bold text-white neon-text">AI Website Builder</h1><p className="text-xl text-gray-300 mb-8 leading-relaxed">Create stunning, professional websites in minutes with our AI-powered builder.</p>
               No coding required, mobile-first design, and instant deployment.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -216,7 +216,7 @@ const AIWebsiteBuilderPage: React.FC = () => {
           {/* CTA Section */}
           <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Website?<p className="text-xl text-gray-300 mb-8">Join thousands of businesses that have already created stunning websites with our AI builder.</p>
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your Website?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of businesses that have already created stunning websites with our AI builder.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

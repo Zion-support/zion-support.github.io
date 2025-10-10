@@ -151,7 +151,7 @@ const MachineLearningPage: React.FC = () => {
           {/* CTA Section */}
           <section className="text-center">
             <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Harness the Power of Machine Learning?<p className="text-lg text-gray-300 mb-8">Our ML experts are ready to help you build custom models that transform your business.</p>
+              <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Harness the Power of Machine Learning?</h2><p className="text-lg text-gray-300 mb-8">Our ML experts are ready to help you build custom models that transform your business.</p>
                 Contact us today for a free consultation and discover the potential of your data.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

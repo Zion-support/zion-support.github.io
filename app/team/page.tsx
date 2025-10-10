@@ -262,7 +262,7 @@ export default function TeamPage() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Meet Our Team<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">World-class experts in AI, quantum computing, and enterprise technology</p>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Meet Our Team</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">World-class experts in AI, quantum computing, and enterprise technology</p>
               working together to transform your business.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -375,7 +375,7 @@ export default function TeamPage() {
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <value.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{value.title}<p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -385,7 +385,7 @@ export default function TeamPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Join Our Team<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals who share our passion for AI and technology.</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Join Our Team</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals who share our passion for AI and technology.</p>
             Join us in building the future.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

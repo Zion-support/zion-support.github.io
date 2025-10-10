@@ -78,7 +78,7 @@ const ITConsultingPage: React.FC = () => {
         <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">{/* Hero Section */}</div>
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">IT Consulting Services<p className="text-xl text-gray-600 max-w-3xl mx-auto">Transform your business with expert IT consulting. We provide strategic guidance,</p>
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">IT Consulting Services</h1><p className="text-xl text-gray-600 max-w-3xl mx-auto">Transform your business with expert IT consulting. We provide strategic guidance,</p>
                 digital transformation, and technology solutions that drive growth and efficiency.</p>
               </p>
             </div>
@@ -91,7 +91,7 @@ const ITConsultingPage: React.FC = () => {
                       <service.icon className="w-8 h-8 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{service.title}<p className="text-gray-600">{service.description}</p>
+                      <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3><p className="text-gray-600">{service.description}</p>
                     </div>
                   </div>
 
@@ -128,7 +128,7 @@ const ITConsultingPage: React.FC = () => {
                   <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <benefit.icon className="w-8 h-8 text-blue-600" />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}<p className="text-gray-600">{benefit.description}</p>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3><p className="text-gray-600">{benefit.description}</p>
                   </div>
                 ))}
               </div>
@@ -136,7 +136,7 @@ const ITConsultingPage: React.FC = () => {
 
             {/* CTA Section */}
             <section className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT?<p className="text-xl mb-8">Contact our experts for a free consultation and discover how we can help your business.</p>
+              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your IT?</h2><p className="text-xl mb-8">Contact our experts for a free consultation and discover how we can help your business.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

@@ -329,7 +329,7 @@ export default function CareersPage() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Join Our Team<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Build the future of AI with us. Join a team of passionate innovators</p>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Join Our Team</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Build the future of AI with us. Join a team of passionate innovators</p>
               working on cutting-edge technology that transforms businesses worldwide.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -426,7 +426,7 @@ export default function CareersPage() {
                         </div>
                         <div className="flex items-center space-x-1">
                           <Calendar className="w-4 h-4" />
-                          <span>Posted {new Date(position.postedDate).toLocaleDateString()}<p className="text-gray-300 mb-4">{position.description}</p>
+                          <span>Posted {new Date(position.postedDate).toLocaleDateString()}</span><p className="text-gray-300 mb-4">{position.description}</p>
                     </div>
                     <div className="lg:ml-6 lg:text-right">
                       <div className="text-2xl font-bold text-cyan-400 mb-1">{position.salary}<div className="text-gray-400 text-sm">{position.experience}</div>
@@ -474,7 +474,7 @@ export default function CareersPage() {
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <benefit.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -489,7 +489,7 @@ export default function CareersPage() {
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <item.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}<p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -499,7 +499,7 @@ export default function CareersPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Don't See the Right Role?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals. Send us your resume and we'll</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Don't See the Right Role?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals. Send us your resume and we'll</p>
             reach out when we have a position that matches your skills.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

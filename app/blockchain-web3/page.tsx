@@ -146,7 +146,7 @@ const BlockchainWeb3Page: React.FC = () => {
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
                     <service.icon className="w-6 h-6 text-white" />
-                  <h3 className="text-xl font-bold text-white">{service.title}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                  <h3 className="text-xl font-bold text-white">{service.title}</h3><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 </p>
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-indigo-400 mb-2">Features:</h4>
@@ -176,7 +176,7 @@ const BlockchainWeb3Page: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Supported Blockchain Platforms<p className="text-xl text-gray-300 max-w-3xl mx-auto">We develop on all major blockchain platforms to ensure maximum compatibility and reach.<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">{platforms.map((platform, index) => (</div>
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl font-bold text-white">{platform.icon}<h3 className="text-white font-semibold mb-2">{platform.name}<p className="text-gray-400 text-sm">{platform.description}</p>
+                    <span className="text-2xl font-bold text-white">{platform.icon}<h3 className="text-white font-semibold mb-2">{platform.name}</h3><p className="text-gray-400 text-sm">{platform.description}</p>
                 </div>
               ))}
             </div>
@@ -204,7 +204,7 @@ const BlockchainWeb3Page: React.FC = () => {
         {/* CTA Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-12 text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to Build on Blockchain?<p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">Let our blockchain experts help you build the next generation of decentralized applications.</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Build on Blockchain?</h2><p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">Let our blockchain experts help you build the next generation of decentralized applications.</p>
               From concept to deployment, we've got you covered.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

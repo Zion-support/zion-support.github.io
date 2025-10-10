@@ -22,7 +22,7 @@ const AnalyticsToolsPage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <BarChart3 className="w-10 h-10 text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Analytics Tools<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced analytics tools and platforms for data-driven business insights.</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Analytics Tools</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced analytics tools and platforms for data-driven business insights.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -43,7 +43,7 @@ const AnalyticsToolsPage: React.FC = () => {
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             </p>
           </div>
 
@@ -51,27 +51,27 @@ const AnalyticsToolsPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Data Visualization<p className="text-gray-300">Advanced data visualization capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Data Visualization</h3><p className="text-gray-300">Advanced data visualization capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Predictive Analytics<p className="text-gray-300">Advanced predictive analytics capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Predictive Analytics</h3><p className="text-gray-300">Advanced predictive analytics capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Real-time Dashboards<p className="text-gray-300">Advanced real-time dashboards capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Real-time Dashboards</h3><p className="text-gray-300">Advanced real-time dashboards capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Custom Reports<p className="text-gray-300">Advanced custom reports capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Custom Reports</h3><p className="text-gray-300">Advanced custom reports capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Data Integration<p className="text-gray-300">Advanced data integration capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Data Integration</h3><p className="text-gray-300">Advanced data integration capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Machine Learning<p className="text-gray-300">Advanced machine learning capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Machine Learning</h3><p className="text-gray-300">Advanced machine learning capabilities powered by AI</p>
             </div>
           </div>
         </section>
@@ -79,7 +79,7 @@ const AnalyticsToolsPage: React.FC = () => {
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Analytics Tools?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Analytics Tools?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             </p>
           </div>
 
@@ -87,19 +87,19 @@ const AnalyticsToolsPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Better Insights<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Better Insights</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Data-driven Decisions<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Data-driven Decisions</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Competitive Advantage<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Competitive Advantage</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Improved Performance<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Improved Performance</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
           </div>
         </section>
@@ -107,7 +107,7 @@ const AnalyticsToolsPage: React.FC = () => {
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
             </p>
           </div>
 
@@ -126,7 +126,7 @@ const AnalyticsToolsPage: React.FC = () => {
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             </p>
           </div>
 
@@ -145,7 +145,7 @@ const AnalyticsToolsPage: React.FC = () => {
 
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Visit Us<p className="text-gray-300 mb-4">Our headquarters location</p>
+              <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3><p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
                 364 E Main St STE 1008<br >Middletown DE 19709</br>
               </br>

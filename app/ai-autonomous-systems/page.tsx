@@ -166,7 +166,7 @@ const AIAutonomousSystemsPage: React.FC = () => {
               <span>Self-Managing AI Systems</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Systems<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build intelligent systems that operate independently, make decisions autonomously, and adapt to changing</p>
+              AI Autonomous <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Systems</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build intelligent systems that operate independently, make decisions autonomously, and adapt to changing</p>
               environments without human intervention.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -193,7 +193,7 @@ const AIAutonomousSystemsPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Autonomous AI Capabilities<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our autonomous systems platform provides the intelligence and capabilities needed for</p>
+            <h2 className="text-4xl font-bold text-white mb-6">Autonomous AI Capabilities</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our autonomous systems platform provides the intelligence and capabilities needed for</p>
               truly independent operation.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors">
                 <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">
@@ -267,7 +267,7 @@ const AIAutonomousSystemsPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Autonomous Systems?<p className="text-xl text-gray-300 mb-8">Start building intelligent systems that operate independently and adapt to your needs.</p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Autonomous Systems?</h2><p className="text-xl text-gray-300 mb-8">Start building intelligent systems that operate independently and adapt to your needs.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Building</a>

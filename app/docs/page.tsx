@@ -157,7 +157,7 @@ const DocsPage: React.FC = () => {
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
               >
                 <Code className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">API Reference<p className="text-sm text-gray-400">Complete API documentation</p>
+                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">API Reference</h3><p className="text-sm text-gray-400">Complete API documentation</p>
               </Link>
 
               <Link
@@ -165,7 +165,7 @@ const DocsPage: React.FC = () => {
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
               >
                 <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Micro SAAS<p className="text-sm text-gray-400">Micro SAAS solutions guide</p>
+                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Micro SAAS</h3><p className="text-sm text-gray-400">Micro SAAS solutions guide</p>
               </Link>
 
               <Link
@@ -173,7 +173,7 @@ const DocsPage: React.FC = () => {
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
               >
                 <FileText className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Compliance<p className="text-sm text-gray-400">Security and compliance info</p>
+                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Compliance</h3><p className="text-sm text-gray-400">Security and compliance info</p>
               </Link>
 
               <Link
@@ -181,7 +181,7 @@ const DocsPage: React.FC = () => {
                 className="cyber-card hologram-card p-6 text-center group hover:scale-105 transition-transform"
               >
                 <Download className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Get Help<p className="text-sm text-gray-400">Contact our support team</p>
+                <h3 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors">Get Help</h3><p className="text-sm text-gray-400">Contact our support team</p>
               </Link>
             </div>
           </div>
@@ -190,7 +190,7 @@ const DocsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Can't Find What You're Looking For?<p className="text-lg text-gray-300 mb-8">Our support team is here to help you with any questions or issues you might have.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Can't Find What You're Looking For?</h2><p className="text-lg text-gray-300 mb-8">Our support team is here to help you with any questions or issues you might have.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

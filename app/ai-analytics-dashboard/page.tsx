@@ -278,7 +278,7 @@ export default function AIAnalyticsDashboardPage() {
                 )}
 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}<p className="text-gray-400 mb-6">{tier.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3><p className="text-gray-400 mb-6">{tier.description}</p>
 
                   <div className="mb-6">
                     <span className="text-5xl font-bold text-white">{tier.price}<span className="text-gray-400 text-lg">{tier.period}<Link
@@ -328,7 +328,7 @@ export default function AIAnalyticsDashboardPage() {
       <div className="py-20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="container mx-auto px-4">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data Analytics?<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of businesses already using AI Analytics Dashboard to unlock insights and drive growth.</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data Analytics?</h2><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of businesses already using AI Analytics Dashboard to unlock insights and drive growth.</p>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -22,7 +22,7 @@ const AiEcommerceSolutionsPage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <ShoppingCart className="w-10 h-10 text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI E-commerce Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent e-commerce solutions with AI-powered recommendations, optimization, and analytics.</p>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI E-commerce Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Intelligent e-commerce solutions with AI-powered recommendations, optimization, and analytics.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -43,7 +43,7 @@ const AiEcommerceSolutionsPage: React.FC = () => {
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             </p>
           </div>
 
@@ -51,27 +51,27 @@ const AiEcommerceSolutionsPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Product Recommendations<p className="text-gray-300">Advanced product recommendations capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Product Recommendations</h3><p className="text-gray-300">Advanced product recommendations capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Price Optimization<p className="text-gray-300">Advanced price optimization capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Price Optimization</h3><p className="text-gray-300">Advanced price optimization capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Inventory Management<p className="text-gray-300">Advanced inventory management capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Inventory Management</h3><p className="text-gray-300">Advanced inventory management capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Customer Segmentation<p className="text-gray-300">Advanced customer segmentation capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Customer Segmentation</h3><p className="text-gray-300">Advanced customer segmentation capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">A/B Testing<p className="text-gray-300">Advanced a/b testing capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">A/B Testing</h3><p className="text-gray-300">Advanced a/b testing capabilities powered by AI</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Analytics Dashboard<p className="text-gray-300">Advanced analytics dashboard capabilities powered by AI</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Analytics Dashboard</h3><p className="text-gray-300">Advanced analytics dashboard capabilities powered by AI</p>
             </div>
           </div>
         </section>
@@ -79,7 +79,7 @@ const AiEcommerceSolutionsPage: React.FC = () => {
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI E-commerce Solutions?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI E-commerce Solutions?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             </p>
           </div>
 
@@ -87,19 +87,19 @@ const AiEcommerceSolutionsPage: React.FC = () => {
 
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Higher Conversions<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Higher Conversions</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Increased Revenue<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Increased Revenue</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Better Customer Experience<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Better Customer Experience</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Data-driven Decisions<p className="text-gray-300">Measurable improvement in your business metrics</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Data-driven Decisions</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
             </div>
           </div>
         </section>
@@ -107,7 +107,7 @@ const AiEcommerceSolutionsPage: React.FC = () => {
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
             </p>
           </div>
 
@@ -126,7 +126,7 @@ const AiEcommerceSolutionsPage: React.FC = () => {
         {/* Contact Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             </p>
           </div>
 
@@ -145,7 +145,7 @@ const AiEcommerceSolutionsPage: React.FC = () => {
 
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Visit Us<p className="text-gray-300 mb-4">Our headquarters location</p>
+              <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3><p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
                 364 E Main St STE 1008<br >Middletown DE 19709</br>
               </br>

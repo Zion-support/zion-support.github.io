@@ -162,7 +162,7 @@ const StatusPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
         <section className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">System Status<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Real-time status of all our services and systems. We monitor our infrastructure 24/7 to ensure optimal performance.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">System Status</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Real-time status of all our services and systems. We monitor our infrastructure 24/7 to ensure optimal performance.</p>
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -210,7 +210,7 @@ const StatusPage: React.FC = () => {
               <div key={incident.id} className="cyber-card p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2">{incident.title}<p className="text-gray-300 mb-4">{incident.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2">{incident.title}</h3><p className="text-gray-300 mb-4">{incident.description}</p>
                   </div>
                   <div className="flex items-center space-x-2 ml-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${getSeverityColor(incident.severity)}`}>{incident.severity}<span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(incident.status)}`}>{incident.status}</span>
@@ -260,7 +260,7 @@ const StatusPage: React.FC = () => {
         {/* Contact Information */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4">Need Help?<p className="text-xl text-gray-300 mb-8">If you're experiencing issues not reflected in our status page, please contact our support team.</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Need Help?</h2><p className="text-xl text-gray-300 mb-8">If you're experiencing issues not reflected in our status page, please contact our support team.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

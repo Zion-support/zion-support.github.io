@@ -130,7 +130,7 @@ const AICodeAssistant: React.FC = memo(() => {
         </div><section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-purple-600/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Code className="w-4 h-4" />
-            <span>AI-Powered Development<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Code Assistant<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Supercharge your development workflow with our intelligent AI code assistant.</p>
+            <span>AI-Powered Development<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Code Assistant</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Supercharge your development workflow with our intelligent AI code assistant.</p>
             Generate code, debug issues, and improve code quality with advanced AI technology.</p>
           </p>
 
@@ -173,7 +173,7 @@ const AICodeAssistant: React.FC = memo(() => {
                     <feature.icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}<p className="text-gray-400">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3><p className="text-gray-400">{feature.description}</p>
                   </div>
                 </div>
               </div>
@@ -187,7 +187,7 @@ const AICodeAssistant: React.FC = memo(() => {
               <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-purple-400" />
-                  <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
+                  <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3><p className="text-gray-400 text-sm">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -236,7 +236,7 @@ const AICodeAssistant: React.FC = memo(() => {
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Code Smarter?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 2,000+ developers already using our AI Code Assistant to boost their productivity.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Code Smarter?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 2,000+ developers already using our AI Code Assistant to boost their productivity.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

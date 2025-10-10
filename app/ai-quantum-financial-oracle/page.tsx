@@ -20,7 +20,7 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Quantum Financial Oracle<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Predict financial markets with unprecedented accuracy using quantum computing and advanced AI algorithms. Make informed investment decisions with quantum-powered financial intelligence.</p>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Quantum Financial Oracle</h1><p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Predict financial markets with unprecedented accuracy using quantum computing and advanced AI algorithms. Make informed investment decisions with quantum-powered financial intelligence.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Quantum Predictions<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">View Demo</a>
@@ -34,7 +34,7 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Financial Intelligence<p className="text-xl text-gray-300 max-w-3xl mx-auto">Harness the power of quantum computing to predict market movements and optimize your financial strategy.</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Financial Intelligence</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Harness the power of quantum computing to predict market movements and optimize your financial strategy.</p>
             </p>
           </div>
 
@@ -42,42 +42,42 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                 <Cpu className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Quantum Market Analysis<p className="text-gray-300">Process millions of market variables simultaneously using quantum parallel processing for comprehensive analysis.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Quantum Market Analysis</h3><p className="text-gray-300">Process millions of market variables simultaneously using quantum parallel processing for comprehensive analysis.</p>
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <BarChart className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Predictive Modeling<p className="text-gray-300">Advanced AI models that predict market movements with 95%+ accuracy using quantum-enhanced algorithms.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Predictive Modeling</h3><p className="text-gray-300">Advanced AI models that predict market movements with 95%+ accuracy using quantum-enhanced algorithms.</p>
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-red-500 rounded-lg flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Risk Assessment<p className="text-gray-300">Quantum-powered risk analysis that identifies potential threats and opportunities in real-time.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Risk Assessment</h3><p className="text-gray-300">Quantum-powered risk analysis that identifies potential threats and opportunities in real-time.</p>
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg flex items-center justify-center mb-4">
                 <DollarSign className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Portfolio Optimization<p className="text-gray-300">AI-driven portfolio management that maximizes returns while minimizing risk using quantum algorithms.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Portfolio Optimization</h3><p className="text-gray-300">AI-driven portfolio management that maximizes returns while minimizing risk using quantum algorithms.</p>
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Real-time Insights<p className="text-gray-300">Instant financial insights and recommendations based on live market data and quantum analysis.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Real-time Insights</h3><p className="text-gray-300">Instant financial insights and recommendations based on live market data and quantum analysis.</p>
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Secure Trading<p className="text-gray-300">Quantum-encrypted trading platform with advanced security protocols and fraud detection.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Secure Trading</h3><p className="text-gray-300">Quantum-encrypted trading platform with advanced security protocols and fraud detection.</p>
               </p>
             </div>
           </div>
@@ -88,7 +88,7 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Financial Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect quantum financial oracle plan for your investment needs.</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Financial Pricing</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect quantum financial oracle plan for your investment needs.</p>
             </p>
           </div>
 
@@ -161,7 +161,7 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Predict the Future of Finance?<p className="text-xl text-gray-300 mb-8">Join institutional investors and financial professionals using quantum AI for superior market intelligence.</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Predict the Future of Finance?</h2><p className="text-xl text-gray-300 mb-8">Join institutional investors and financial professionals using quantum AI for superior market intelligence.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Quantum Trading<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Schedule Demo</a>
@@ -177,7 +177,7 @@ const AIQuantumFinancialOraclePage: React.FC = () => {
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group<p className="text-gray-300 mb-4">Leading provider of AI-powered enterprise solutions and quantum financial intelligence.</p>
+            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span><p className="text-gray-300 mb-4">Leading provider of AI-powered enterprise solutions and quantum financial intelligence.</p>
           </p>
           <div className="flex justify-center space-x-6">
             <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors">Privacy Policy<a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service<a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>

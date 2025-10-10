@@ -47,7 +47,7 @@ const FuturisticHero: React.FC = memo(() => {
 
             {/* Main Heading */}
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">Transform Your<span className="block holographic-text cyber-text">{heroTexts[currentText]}<p className="text-xl text-gray-300 leading-relaxed max-w-lg">Unlock the power of artificial intelligence, quantum computing, and autonomous systems</p>
+              <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">Transform Your<span className="block holographic-text cyber-text">{heroTexts[currentText]}</span><p className="text-xl text-gray-300 leading-relaxed max-w-lg">Unlock the power of artificial intelligence, quantum computing, and autonomous systems</p>
                 to revolutionize your business operations and achieve unprecedented growth.</p>
               </p>
             </div>

@@ -132,7 +132,7 @@ const AICybersecurityPage: React.FC = memo(() => {
         </div><section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Shield className="w-4 h-4" />
-            <span>AI-Powered Security<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Cybersecurity Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Protect your business with advanced AI-powered cybersecurity solutions.</p>
+            <span>AI-Powered Security<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Cybersecurity Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Protect your business with advanced AI-powered cybersecurity solutions.</p>
             Detect threats in real-time, automate responses, and maintain compliance with 99.9% accuracy.</p>
           </p>
 
@@ -167,7 +167,7 @@ const AICybersecurityPage: React.FC = memo(() => {
                     <feature.icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}<p className="text-gray-400">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3><p className="text-gray-400">{feature.description}</p>
                   </div>
                 </div>
               </div>
@@ -181,7 +181,7 @@ const AICybersecurityPage: React.FC = memo(() => {
               </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-red-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-red-400" />
-                  <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
+                  <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3><p className="text-gray-400 text-sm">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -220,7 +220,7 @@ const AICybersecurityPage: React.FC = memo(() => {
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-red-600/20 to-orange-600/20 p-12 rounded-lg border border-red-500/30">
-          <h2 className="text-3xl font-bold text-white mb-4">Don't Wait for a Breach<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,000+ organizations already protected by our AI Cybersecurity solutions.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Don't Wait for a Breach</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,000+ organizations already protected by our AI Cybersecurity solutions.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

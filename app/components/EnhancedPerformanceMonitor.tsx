@@ -114,7 +114,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </div>
       
       <div className="mt-3 pt-2 border-t border-gray-700">
-        <p className="text-xs text-gray-400">Press Ctrl+Shift+P to toggle</p>
+        </div><p className="text-xs text-gray-400">Press Ctrl+Shift+P to toggle</p>
         </p>
       </div>
     </div>

@@ -52,7 +52,7 @@ const AIOpsPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
 
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">AI IT Operations<span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">(AIOps)<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Transform your IT operations with AI-powered automation, intelligent monitoring, and predictive analytics.</p>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">AI IT Operations<span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">(AIOps)</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Transform your IT operations with AI-powered automation, intelligent monitoring, and predictive analytics.</p>
             Reduce downtime, improve efficiency, and ensure optimal performance across your entire infrastructure.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -88,7 +88,7 @@ const AIOpsPage: React.FC = () => {
       {/* CTA Section */}
 <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your IT Operations?<p className="text-xl text-gray-300 mb-8">Join thousands of enterprises already using AIOps to optimize their IT infrastructure</p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your IT Operations?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of enterprises already using AIOps to optimize their IT infrastructure</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>

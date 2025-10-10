@@ -20,7 +20,7 @@ const AIQuantumTaskOptimizerPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Quantum Task Optimizer<p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Revolutionary quantum-powered task optimization that delivers unprecedented efficiency and performance through advanced quantum algorithms and AI intelligence.</p>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">AI Quantum Task Optimizer</h1><p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Revolutionary quantum-powered task optimization that delivers unprecedented efficiency and performance through advanced quantum algorithms and AI intelligence.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Quantum Optimization<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">View Demo</a>
@@ -34,7 +34,7 @@ const AIQuantumTaskOptimizerPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum-Powered Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the future of task optimization with quantum computing and advanced AI algorithms.</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum-Powered Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the future of task optimization with quantum computing and advanced AI algorithms.</p>
             </p>
           </div>
 
@@ -42,42 +42,42 @@ const AIQuantumTaskOptimizerPage: React.FC = () => {
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                 <Cpu className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Quantum Processing<p className="text-gray-300">Leverage quantum computing power to process complex optimization problems exponentially faster than classical computers.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Quantum Processing</h3><p className="text-gray-300">Leverage quantum computing power to process complex optimization problems exponentially faster than classical computers.</p>
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Intelligent Prioritization<p className="text-gray-300">AI-driven task prioritization that considers multiple variables and constraints to optimize your workflow.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Intelligent Prioritization</h3><p className="text-gray-300">AI-driven task prioritization that considers multiple variables and constraints to optimize your workflow.</p>
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-red-500 rounded-lg flex items-center justify-center mb-4">
                 <BarChart className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Real-time Analytics<p className="text-gray-300">Advanced analytics and reporting to track performance improvements and identify optimization opportunities.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Real-time Analytics</h3><p className="text-gray-300">Advanced analytics and reporting to track performance improvements and identify optimization opportunities.</p>
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Quantum Speed<p className="text-gray-300">Process millions of task combinations in seconds using quantum parallel processing capabilities.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Quantum Speed</h3><p className="text-gray-300">Process millions of task combinations in seconds using quantum parallel processing capabilities.</p>
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">Quantum Security<p className="text-gray-300">Advanced quantum encryption ensures your task data remains secure and protected from quantum threats.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">Quantum Security</h3><p className="text-gray-300">Advanced quantum encryption ensures your task data remains secure and protected from quantum threats.</p>
               </p>
             </div>
 
             <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                 <Brain className="w-6 h-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-3">AI Learning<p className="text-gray-300">Machine learning algorithms that continuously improve optimization strategies based on your usage patterns.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">AI Learning</h3><p className="text-gray-300">Machine learning algorithms that continuously improve optimization strategies based on your usage patterns.</p>
               </p>
             </div>
           </div>
@@ -88,7 +88,7 @@ const AIQuantumTaskOptimizerPage: React.FC = () => {
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect quantum optimization plan for your needs.</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Quantum Pricing</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect quantum optimization plan for your needs.</p>
             </p>
           </div>
 
@@ -161,7 +161,7 @@ const AIQuantumTaskOptimizerPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Experience Quantum Optimization?<p className="text-xl text-gray-300 mb-8">Join thousands of organizations already using quantum-powered task optimization to achieve unprecedented efficiency.</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Experience Quantum Optimization?</h2><p className="text-xl text-gray-300 mb-8">Join thousands of organizations already using quantum-powered task optimization to achieve unprecedented efficiency.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">Start Your Quantum Journey<a href="/demo" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Schedule Demo</a>
@@ -177,7 +177,7 @@ const AIQuantumTaskOptimizerPage: React.FC = () => {
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group<p className="text-gray-300 mb-4">Leading provider of AI-powered enterprise solutions and quantum computing services.</p>
+            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span><p className="text-gray-300 mb-4">Leading provider of AI-powered enterprise solutions and quantum computing services.</p>
           </p>
           <div className="flex justify-center space-x-6">
             <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors">Privacy Policy<a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service<a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>

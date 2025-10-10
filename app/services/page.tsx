@@ -280,7 +280,7 @@ const ServicesPage: React.FC = () => {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Our Services<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business.</p>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Our Services</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business.</p>
               From cutting-edge AI platforms to robust IT infrastructure, we've got you covered.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -310,7 +310,7 @@ const ServicesPage: React.FC = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <benefit.icon className="w-10 h-10 text-white" />
                 <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -368,7 +368,7 @@ const ServicesPage: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Implementation Process<p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful implementation</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Implementation Process</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful implementation</p>
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -392,19 +392,19 @@ const ServicesPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 lg:p-12">
             <div className="text-center mb-8">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Transform Your Business?<p className="text-xl text-cyan-100 mb-8">Get in touch with our experts to discuss your project requirements</p>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2><p className="text-xl text-cyan-100 mb-8">Get in touch with our experts to discuss your project requirements</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Phone className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-2">Phone<p className="text-cyan-100">+1 302 464 0950</p>
+                <h3 className="text-xl font-bold text-white mb-2">Phone</h3><p className="text-cyan-100">+1 302 464 0950</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-2">Email<p className="text-cyan-100">kleber@ziontechgroup.com</p>
+                <h3 className="text-xl font-bold text-white mb-2">Email</h3><p className="text-cyan-100">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">

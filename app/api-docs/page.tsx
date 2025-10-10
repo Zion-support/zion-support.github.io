@@ -212,7 +212,7 @@ const APIDocsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Get Started?<p className="text-lg text-gray-300 mb-8">Get your API key and start building with our powerful AI and micro SAAS services.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Get Started?</h2><p className="text-lg text-gray-300 mb-8">Get your API key and start building with our powerful AI and micro SAAS services.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

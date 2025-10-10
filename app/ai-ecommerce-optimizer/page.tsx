@@ -168,7 +168,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {
               <span>AI-Powered E-commerce Optimization</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment,</p>
+              AI E-commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Optimizer</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your online store with AI-powered optimization. Increase conversions, reduce cart abandonment,</p>
               and maximize revenue with intelligent automation and analytics.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -290,7 +290,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your E-commerce Store?<p className="text-xl text-gray-300 mb-8">Start your AI-powered optimization journey today and see immediate results.</p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your E-commerce Store?</h2><p className="text-xl text-gray-300 mb-8">Start your AI-powered optimization journey today and see immediate results.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Free Trial</a>

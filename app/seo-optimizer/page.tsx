@@ -61,7 +61,7 @@ const SEOOptimizerPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            SEO <span className="text-cyan-400">Optimizer<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Boost your search rankings with our AI-powered SEO optimization platform.</p>
+            SEO <span className="text-cyan-400">Optimizer</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Boost your search rankings with our AI-powered SEO optimization platform.</p>
             Get more organic traffic, higher rankings, and better visibility in search results.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -90,7 +90,7 @@ const SEOOptimizerPage: React.FC = () => {
               >
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -103,7 +103,7 @@ const SEOOptimizerPage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}<p className="text-gray-300">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -111,7 +111,7 @@ const SEOOptimizerPage: React.FC = () => {
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Dominate Search Results?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using our SEO optimizer to rank higher and get more traffic.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Dominate Search Results?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using our SEO optimizer to rank higher and get more traffic.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -88,7 +88,7 @@ const SystemAdminPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            System <span className="text-cyan-400">Administration<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Professional system administration services to keep your infrastructure running smoothly.</p>
+            System <span className="text-cyan-400">Administration</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Professional system administration services to keep your infrastructure running smoothly.</p>
             Our certified administrators provide 24/7 monitoring, maintenance, and optimization for your critical systems.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -117,7 +117,7 @@ const SystemAdminPage: React.FC = () => {
               >
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
                   <service.icon className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}<p className="text-gray-300">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3><p className="text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
@@ -150,7 +150,7 @@ const SystemAdminPage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}<p className="text-gray-300">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -164,19 +164,19 @@ const SystemAdminPage: React.FC = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">1<h3 className="text-xl font-semibold text-white mb-3">Assessment<p className="text-gray-300">Comprehensive analysis of your current infrastructure and needs</p>
+                <span className="text-2xl font-bold text-white">1<h3 className="text-xl font-semibold text-white mb-3">Assessment</h3><p className="text-gray-300">Comprehensive analysis of your current infrastructure and needs</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">2<h3 className="text-xl font-semibold text-white mb-3">Planning<p className="text-gray-300">Develop a customized administration strategy and timeline</p>
+                <span className="text-2xl font-bold text-white">2<h3 className="text-xl font-semibold text-white mb-3">Planning</h3><p className="text-gray-300">Develop a customized administration strategy and timeline</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">3<h3 className="text-xl font-semibold text-white mb-3">Implementation<p className="text-gray-300">Deploy monitoring tools and establish administration protocols</p>
+                <span className="text-2xl font-bold text-white">3<h3 className="text-xl font-semibold text-white mb-3">Implementation</h3><p className="text-gray-300">Deploy monitoring tools and establish administration protocols</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">4<h3 className="text-xl font-semibold text-white mb-3">Ongoing Support<p className="text-gray-300">Continuous monitoring, maintenance, and optimization</p>
+                <span className="text-2xl font-bold text-white">4<h3 className="text-xl font-semibold text-white mb-3">Ongoing Support</h3><p className="text-gray-300">Continuous monitoring, maintenance, and optimization</p>
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ const SystemAdminPage: React.FC = () => {
           <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 rounded-2xl p-8 border border-red-500/30">
             <div className="flex items-center mb-4">
               <AlertTriangle className="w-8 h-8 text-red-400 mr-3" />
-              <h2 className="text-2xl font-bold text-white">24/7 Emergency Support<p className="text-gray-300 mb-6">Critical system issues can't wait. Our emergency support team is available around the clock to resolve urgent problems and minimize downtime.</p>
+              <h2 className="text-2xl font-bold text-white">24/7 Emergency Support</h2><p className="text-gray-300 mb-6">Critical system issues can't wait. Our emergency support team is available around the clock to resolve urgent problems and minimize downtime.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -207,7 +207,7 @@ const SystemAdminPage: React.FC = () => {
 
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Secure Your Infrastructure Today<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't wait for system failures. Let our expert administrators keep your infrastructure running smoothly and securely.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Secure Your Infrastructure Today</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Don't wait for system failures. Let our expert administrators keep your infrastructure running smoothly and securely.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

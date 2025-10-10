@@ -184,7 +184,7 @@ export default function AIClimateSolutionsProPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
               <Globe className="w-4 h-4 text-cyan-400" />
-              <span className="text-cyan-400 text-sm font-medium">AI Climate Solutions Pro<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">AI-Powered Climate Solutions<span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Saving Our Planet<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Combat climate change with intelligent environmental monitoring, carbon footprint optimization,</p>
+              <span className="text-cyan-400 text-sm font-medium">AI Climate Solutions Pro<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">AI-Powered Climate Solutions<span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Saving Our Planet</span><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Combat climate change with intelligent environmental monitoring, carbon footprint optimization,</p>
               and sustainability planning. Make data-driven decisions for a greener future.</p>
             </p>
 
@@ -269,14 +269,14 @@ export default function AIClimateSolutionsProPage() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Enterprise Pricing<p className="text-lg text-gray-300 max-w-3xl mx-auto">Flexible pricing options for organizations committed to climate action</p>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Enterprise Pricing</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Flexible pricing options for organizations committed to climate action</p>
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-2xl p-8">
               <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-white mb-2">AI Climate Solutions Pro<p className="text-gray-300 mb-6">Complete AI-powered climate solutions platform</p>
+                <h3 className="text-3xl font-bold text-white mb-2">AI Climate Solutions Pro</h3><p className="text-gray-300 mb-6">Complete AI-powered climate solutions platform</p>
 
                 <div className="flex items-baseline justify-center mb-6">
                   <span className="text-5xl font-bold text-white">${pricing.monthly.toLocaleString()}<span className="text-gray-400 ml-2">/month<div className="text-green-400 text-sm mb-8">Save ${(pricing.monthly * 12) - pricing.yearly} per year with annual billing</div>
@@ -342,7 +342,7 @@ export default function AIClimateSolutionsProPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Take Climate Action?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading organizations using AI to combat climate change and build a sustainable future.</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Take Climate Action?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading organizations using AI to combat climate change and build a sustainable future.</p>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

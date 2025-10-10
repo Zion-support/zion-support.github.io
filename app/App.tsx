@@ -36,7 +36,7 @@ const App: React.FC = () => {
     return <LoadingSpinner />;
   }
 
-  return (</LoadingSpinner>
+  return (
     <div className="App">
       <HomePage />
     </div>

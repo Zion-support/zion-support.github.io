@@ -162,7 +162,7 @@ const Footer: React.FC = memo(() => {
             <div className="flex items-center space-x-2 mb-6 group">
 <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 neon-glow">
                 <Zap className="w-5 h-5 text-white" />
-              <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent cyber-text">Zion Tech Group<p className="text-gray-300 mb-6 leading-relaxed">Leading provider of AI-powered enterprise solutions, quantum computing,
+              <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent cyber-text">Zion Tech Group</span><p className="text-gray-300 mb-6 leading-relaxed">Leading provider of AI-powered enterprise solutions, quantum computing,
               autonomous systems, and digital transformation services. Transforming businesses</p>
               with cutting-edge technology and innovative solutions.</p>
             </p>
@@ -278,7 +278,7 @@ const Footer: React.FC = memo(() => {
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-gray-700">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-white font-semibold text-lg mb-4 neon-text cyber-text">Stay Updated with Our Latest Innovations<p className="text-gray-300 mb-6">Get the latest news about AI breakthroughs, quantum computing advances,</p>
+            <h3 className="text-white font-semibold text-lg mb-4 neon-text cyber-text">Stay Updated with Our Latest Innovations</h3><p className="text-gray-300 mb-6">Get the latest news about AI breakthroughs, quantum computing advances,</p>
               technology updates, and industry insights delivered to your inbox.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">

@@ -166,7 +166,7 @@ const AIQuantumComputingPage: React.FC = () => {
               <span>Next-Generation Quantum AI</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Quantum <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Computing<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Harness the power of quantum computing with AI to solve complex problems that are impossible for classical computers.</p>
+              AI Quantum <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Computing</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Harness the power of quantum computing with AI to solve complex problems that are impossible for classical computers.</p>
               Experience exponential speedup and breakthrough capabilities.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -193,7 +193,7 @@ const AIQuantumComputingPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Revolutionary Quantum AI Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our quantum computing platform combines the power of quantum mechanics with artificial intelligence</p>
+            <h2 className="text-4xl font-bold text-white mb-6">Revolutionary Quantum AI Features</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Our quantum computing platform combines the power of quantum mechanics with artificial intelligence</p>
               to deliver unprecedented computational capabilities.<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors">
                 <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">
@@ -267,7 +267,7 @@ const AIQuantumComputingPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Experience Quantum AI?<p className="text-xl text-gray-300 mb-8">Join the quantum revolution and unlock the power of quantum computing with AI.</p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Experience Quantum AI?</h2><p className="text-xl text-gray-300 mb-8">Join the quantum revolution and unlock the power of quantum computing with AI.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact" className="cyber-button px-8 py-4 text-lg">Start Quantum Journey</a>

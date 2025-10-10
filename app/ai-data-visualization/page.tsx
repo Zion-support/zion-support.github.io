@@ -170,7 +170,7 @@ const AIDataVisualizationPage: React.FC = () => {
                     </div>
                   )}
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<p className="text-gray-400 mb-4">{plan.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-400 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-cyan-400">{plan.price}<span className="text-gray-400 ml-1">{plan.period}<ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -196,7 +196,7 @@ const AIDataVisualizationPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Data Visualization?<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="text-center">
                   <benefit.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}<p className="text-gray-300">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -204,7 +204,7 @@ const AIDataVisualizationPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-12 border border-cyan-500/20">
-            <h2 className="text-3xl font-bold text-white mb-6 neon-text">Ready to Visualize Your Data?<p className="text-gray-300 mb-8 max-w-2xl mx-auto">Get started with our AI data visualization platform today. Contact us for a free demo</p>
+            <h2 className="text-3xl font-bold text-white mb-6 neon-text">Ready to Visualize Your Data?</h2><p className="text-gray-300 mb-8 max-w-2xl mx-auto">Get started with our AI data visualization platform today. Contact us for a free demo</p>
               and custom implementation plan.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

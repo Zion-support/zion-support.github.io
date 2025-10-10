@@ -24,32 +24,32 @@ export default function CloudInfrastructurePage() {
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Cloud Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">☁️<h3 className="text-xl font-bold text-white mb-4 text-center">Cloud Migration<p className="text-gray-300 text-center">Seamlessly migrate your applications and data to the cloud with zero downtime.</p>
+                <div className="text-4xl mb-4 text-center">☁️<h3 className="text-xl font-bold text-white mb-4 text-center">Cloud Migration</h3><p className="text-gray-300 text-center">Seamlessly migrate your applications and data to the cloud with zero downtime.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">⚡<h3 className="text-xl font-bold text-white mb-4 text-center">Auto Scaling<p className="text-gray-300 text-center">Automatically scale resources up or down based on demand to optimize costs and performance.</p>
+                <div className="text-4xl mb-4 text-center">⚡<h3 className="text-xl font-bold text-white mb-4 text-center">Auto Scaling</h3><p className="text-gray-300 text-center">Automatically scale resources up or down based on demand to optimize costs and performance.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🔒<h3 className="text-xl font-bold text-white mb-4 text-center">Enterprise Security<p className="text-gray-300 text-center">Bank-level security with encryption, access controls, and compliance certifications.</p>
+                <div className="text-4xl mb-4 text-center">🔒<h3 className="text-xl font-bold text-white mb-4 text-center">Enterprise Security</h3><p className="text-gray-300 text-center">Bank-level security with encryption, access controls, and compliance certifications.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🌍<h3 className="text-xl font-bold text-white mb-4 text-center">Global CDN<p className="text-gray-300 text-center">Worldwide content delivery network for lightning-fast performance across all regions.</p>
+                <div className="text-4xl mb-4 text-center">🌍<h3 className="text-xl font-bold text-white mb-4 text-center">Global CDN</h3><p className="text-gray-300 text-center">Worldwide content delivery network for lightning-fast performance across all regions.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📊<h3 className="text-xl font-bold text-white mb-4 text-center">Monitoring<p className="text-gray-300 text-center">24/7 monitoring and alerting to ensure optimal performance and uptime.</p>
+                <div className="text-4xl mb-4 text-center">📊<h3 className="text-xl font-bold text-white mb-4 text-center">Monitoring</h3><p className="text-gray-300 text-center">24/7 monitoring and alerting to ensure optimal performance and uptime.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🔄<h3 className="text-xl font-bold text-white mb-4 text-center">Backup & Recovery<p className="text-gray-300 text-center">Automated backups and disaster recovery solutions to protect your data.</p>
+                <div className="text-4xl mb-4 text-center">🔄<h3 className="text-xl font-bold text-white mb-4 text-center">Backup & Recovery</h3><p className="text-gray-300 text-center">Automated backups and disaster recovery solutions to protect your data.</p>
                 </p>
               </div>
             </div>
@@ -60,7 +60,7 @@ export default function CloudInfrastructurePage() {
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Supported Cloud Providers</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="cyber-card p-8 text-center">
-                <div className="text-6xl mb-6">🟠<h3 className="text-2xl font-bold text-white mb-4">Amazon Web Services<p className="text-gray-300 mb-6">Comprehensive AWS solutions with cost optimization and best practices implementation.</p>
+                <div className="text-6xl mb-6">🟠<h3 className="text-2xl font-bold text-white mb-4">Amazon Web Services</h3><p className="text-gray-300 mb-6">Comprehensive AWS solutions with cost optimization and best practices implementation.</p>
                 <ul className="text-gray-300 space-y-2 text-left">
                   <li>• EC2, S3, RDS, Lambda<li>• CloudFormation & Terraform</li>
                   <li>• Cost optimization<li>• Security best practices</li>
@@ -68,7 +68,7 @@ export default function CloudInfrastructurePage() {
               </div>
 
               <div className="cyber-card p-8 text-center">
-                <div className="text-6xl mb-6">🔵<h3 className="text-2xl font-bold text-white mb-4">Microsoft Azure<p className="text-gray-300 mb-6">Enterprise-grade Azure solutions with hybrid cloud capabilities and enterprise integration.</p>
+                <div className="text-6xl mb-6">🔵<h3 className="text-2xl font-bold text-white mb-4">Microsoft Azure</h3><p className="text-gray-300 mb-6">Enterprise-grade Azure solutions with hybrid cloud capabilities and enterprise integration.</p>
                 <ul className="text-gray-300 space-y-2 text-left">
                   <li>• Virtual Machines & App Service<li>• Azure SQL & Cosmos DB</li>
                   <li>• Active Directory integration<li>• Hybrid cloud solutions</li>
@@ -76,7 +76,7 @@ export default function CloudInfrastructurePage() {
               </div>
 
               <div className="cyber-card p-8 text-center">
-                <div className="text-6xl mb-6">🟡<h3 className="text-2xl font-bold text-white mb-4">Google Cloud<p className="text-gray-300 mb-6">Advanced GCP solutions with AI/ML integration and data analytics capabilities.</p>
+                <div className="text-6xl mb-6">🟡<h3 className="text-2xl font-bold text-white mb-4">Google Cloud</h3><p className="text-gray-300 mb-6">Advanced GCP solutions with AI/ML integration and data analytics capabilities.</p>
                 <ul className="text-gray-300 space-y-2 text-left">
                   <li>• Compute Engine & App Engine<li>• BigQuery & Cloud Storage</li>
                   <li>• AI/ML services<li>• Kubernetes Engine</li>
@@ -121,26 +121,26 @@ export default function CloudInfrastructurePage() {
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our Cloud Solutions?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="cyber-card p-6 text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-4">50%<h3 className="text-xl font-bold text-white mb-2">Cost Reduction<p className="text-gray-300">Average 50% reduction in infrastructure costs</p>
+                <div className="text-4xl font-bold text-cyan-400 mb-4">50%<h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3><p className="text-gray-300">Average 50% reduction in infrastructure costs</p>
               </div>
 
               <div className="cyber-card p-6 text-center">
-                <div className="text-4xl font-bold text-green-400 mb-4">99.9%<h3 className="text-xl font-bold text-white mb-2">Uptime Guarantee<p className="text-gray-300">99.9% uptime SLA with monitoring</p>
+                <div className="text-4xl font-bold text-green-400 mb-4">99.9%<h3 className="text-xl font-bold text-white mb-2">Uptime Guarantee</h3><p className="text-gray-300">99.9% uptime SLA with monitoring</p>
               </div>
 
               <div className="cyber-card p-6 text-center">
-                <div className="text-4xl font-bold text-pink-400 mb-4">3x<h3 className="text-xl font-bold text-white mb-2">Faster Deployment<p className="text-gray-300">3x faster application deployment</p>
+                <div className="text-4xl font-bold text-pink-400 mb-4">3x<h3 className="text-xl font-bold text-white mb-2">Faster Deployment</h3><p className="text-gray-300">3x faster application deployment</p>
               </div>
 
               <div className="cyber-card p-6 text-center">
-                <div className="text-4xl font-bold text-yellow-400 mb-4">24/7<h3 className="text-xl font-bold text-white mb-2">Support<p className="text-gray-300">Round-the-clock expert support</p>
+                <div className="text-4xl font-bold text-yellow-400 mb-4">24/7<h3 className="text-xl font-bold text-white mb-2">Support</h3><p className="text-gray-300">Round-the-clock expert support</p>
               </div>
             </div>
           </section>
 
           {/* CTA Section */}
           <section className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Move to the Cloud?<p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,500+ companies using our cloud infrastructure solutions to scale their business and reduce costs.</p>
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2><p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 1,500+ companies using our cloud infrastructure solutions to scale their business and reduce costs.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Consultation</a>

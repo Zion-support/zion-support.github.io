@@ -987,7 +987,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                                 : 'bg-white/10 text-gray-300'
                             }`}
                           >
-                            <p className="text-sm">{message.content}</p>
+                            </div><p className="text-sm">{message.content}</p>
                             <p className="text-xs opacity-70 mt-1">
                               {message.timestamp.toLocaleTimeString()}
                             </p>

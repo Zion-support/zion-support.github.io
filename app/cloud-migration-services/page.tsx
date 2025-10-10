@@ -173,7 +173,7 @@ const CloudMigrationServicesPage: React.FC = () => {
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center bg-blue-600/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Sparkles className="w-4 h-4 mr-2" >Professional Cloud Migration<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">Cloud Migration Services<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Seamlessly migrate your infrastructure to the cloud with our expert team. Zero-downtime deployment,</p>
+            <Sparkles className="w-4 h-4 mr-2" >Professional Cloud Migration<h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">Cloud Migration Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Seamlessly migrate your infrastructure to the cloud with our expert team. Zero-downtime deployment,</p>
             security-first approach, and automated migration processes. Reduce costs by 40% while improving performance.</p>
           </p>
 
@@ -247,7 +247,7 @@ const CloudMigrationServicesPage: React.FC = () => {
                   </div>
                 )}
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<p className="text-gray-300 text-sm mb-4">{plan.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-300 text-sm mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-blue-400">{plan.price}<span className="text-gray-300 ml-1">{plan.period}<ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -287,7 +287,7 @@ const CloudMigrationServicesPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?<p className="text-xl text-blue-100 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert services.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?</h2><p className="text-xl text-blue-100 mb-8">Join hundreds of businesses that have successfully migrated to the cloud with our expert services.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

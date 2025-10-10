@@ -19,7 +19,7 @@ const AIAnalyticsDashboard: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard<p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Analytics Dashboard</h1><p className="text-xl text-gray-300 text-center mb-12">Get intelligent insights from your data with AI-powered analytics</p>
           </p>
 
           <div className="cyber-card p-8 mb-8">
@@ -35,7 +35,7 @@ const AIAnalyticsDashboard: React.FC = () => {
               ))}
             </div>
             <div className="h-64 bg-gray-800 rounded-lg flex items-center justify-center">
-              <p className="text-gray-400">Interactive chart would be displayed here</p>
+              </div><p className="text-gray-400">Interactive chart would be displayed here</p>
             </div>
           </div>
 

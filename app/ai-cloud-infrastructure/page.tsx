@@ -132,7 +132,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {
         <section className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-blue-600/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Cloud className="w-4 h-4" />
-            <span>AI-Powered Cloud<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Cloud Infrastructure<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your cloud infrastructure with AI-powered management, optimization, and security.</p>
+            <span>AI-Powered Cloud<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Cloud Infrastructure</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your cloud infrastructure with AI-powered management, optimization, and security.</p>
             Reduce costs by 50% and achieve 99.9% uptime with intelligent cloud solutions.</p>
           </p>
 
@@ -168,7 +168,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {
                     <feature.icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}<p className="text-gray-400">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3><p className="text-gray-400">{feature.description}</p>
                   </div>
                 </div>
               </div>
@@ -182,7 +182,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {
               </div><div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-blue-400" />
-                  <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
+                  <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3><p className="text-gray-400 text-sm">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -221,7 +221,7 @@ const AICloudInfrastructurePage: React.FC = memo(() => {
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-12 rounded-lg border border-blue-500/30">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Cloud?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 2,000+ organizations already using our AI Cloud Infrastructure to reduce costs and improve performance.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Cloud?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 2,000+ organizations already using our AI Cloud Infrastructure to reduce costs and improve performance.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

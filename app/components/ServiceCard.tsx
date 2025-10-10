@@ -31,7 +31,7 @@ const ServiceCard: React.FC<ServiceCardProps>= memo(({,
       <div className="text-center space-y-4">
         <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
           <Icon className="w-8 h-8 text-cyan-400" />
-        <h3 className="text-2xl font-bold text-white">{title}<p className="text-gray-300">{description}</p>
+        <h3 className="text-2xl font-bold text-white">{title}</h3><p className="text-gray-300">{description}</p>
         {price && <div className="text-cyan-400 font-bold text-xl">{price}</div>}
       </div>
 

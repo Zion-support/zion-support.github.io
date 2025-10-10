@@ -56,7 +56,7 @@ const AIContentGenerationPage: React.FC = () => {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">AI Content Generation<span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Services<p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your content strategy with our AI-powered content generation services.</p>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">AI Content Generation<span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Services</span><p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your content strategy with our AI-powered content generation services.</p>
               Create high-quality blog posts, social media content, and marketing copy 10x faster.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -85,7 +85,7 @@ const AIContentGenerationPage: React.FC = () => {
                 <div className="flex items-center mb-4">
                   <span className="text-4xl mr-4">{service.icon}</span>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900">{service.title}<p className="text-gray-600">{service.description}</p>
+                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3><p className="text-gray-600">{service.description}</p>
                   </div>
                 </div>
                 <div className="mb-6">
@@ -110,7 +110,7 @@ const AIContentGenerationPage: React.FC = () => {
                   </ul>
                 </div>
                 <div className="border-t pt-4">
-                  <p className="text-sm text-gray-600">{service.contactInfo}</p>
+                  </div><p className="text-sm text-gray-600">{service.contactInfo}</p>
                 </div>
               </div>
             ))}

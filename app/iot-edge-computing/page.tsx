@@ -131,7 +131,7 @@ const IoTEdgeComputingPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-cyan-500/20"><div className="relative container mx-auto px-4 py-24">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">IoT & Edge Computing<p className="text-xl text-gray-300 mb-8 leading-relaxed">Transform your business with intelligent IoT solutions and edge computing.</p>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">IoT & Edge Computing</span><p className="text-xl text-gray-300 mb-8 leading-relaxed">Transform your business with intelligent IoT solutions and edge computing.</p>
                 Real-time processing, AI at the edge, and smart device management for the connected world.<div className="flex flex-wrap justify-center gap-8 mt-12">{stats.map((stat, index) => (</div>
                   <div key={index} className="text-center">
                     <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full mx-auto mb-4">
@@ -152,7 +152,7 @@ const IoTEdgeComputingPage: React.FC = () => {
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
                     <service.icon className="w-6 h-6 text-white" />
-                  <h3 className="text-xl font-bold text-white">{service.title}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                  <h3 className="text-xl font-bold text-white">{service.title}</h3><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 </p>
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-green-400 mb-2">Features:</h4>
@@ -183,7 +183,7 @@ const IoTEdgeComputingPage: React.FC = () => {
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <industry.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-white font-semibold mb-2">{industry.name}<p className="text-gray-400 text-sm">{industry.description}</p>
+                  <h3 className="text-white font-semibold mb-2">{industry.name}</h3><p className="text-gray-400 text-sm">{industry.description}</p>
                 </div>
               ))}
             </div>
@@ -195,7 +195,7 @@ const IoTEdgeComputingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Solution Examples<p className="text-xl text-gray-300 max-w-3xl mx-auto">Real-world applications of IoT and edge computing across different industries.<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">{solutions.map((solution, index) => (</div>
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
-                <h3 className="text-2xl font-bold text-white mb-4">{solution.title}<p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3><p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
                 </p>
 
                 <div className="mb-6">
@@ -224,7 +224,7 @@ const IoTEdgeComputingPage: React.FC = () => {
         {/* CTA Section */}
         <div className="container mx-auto px-4 py-20">
           <div className="bg-gradient-to-r from-green-600 to-cyan-600 rounded-2xl p-12 text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to Build Your IoT Ecosystem?<p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">Let our IoT and edge computing experts help you build intelligent, connected solutions.</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Build Your IoT Ecosystem?</h2><p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">Let our IoT and edge computing experts help you build intelligent, connected solutions.</p>
               From concept to deployment, we've got you covered.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

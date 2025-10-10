@@ -115,7 +115,7 @@ const DemoPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Book a Demo<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.</p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Book a Demo</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">See our AI and IT solutions in action. Schedule a personalized demo to discover how we can transform your business.</p>
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
@@ -143,7 +143,7 @@ const DemoPage: React.FC = () => {
                 }`}</div>
               ></div>
                 <div className="text-center">
-                  <div className="text-4xl mb-4">{demo.icon}<h3 className="text-xl font-bold text-white mb-2">{demo.title}<p className="text-gray-300 text-sm mb-4">{demo.description}</p>
+                  <div className="text-4xl mb-4">{demo.icon}<h3 className="text-xl font-bold text-white mb-2">{demo.title}</h3><p className="text-gray-300 text-sm mb-4">{demo.description}</p>
                   <div className="flex items-center justify-center text-cyan-400 text-sm mb-4">
                     <Clock className="w-4 h-4 mr-1" >{demo.duration}<ul className="space-y-1 text-xs text-gray-400">{demo.features.map((feature, index) => (</ul>
                       <li key={index} className="flex items-center">
@@ -164,7 +164,7 @@ const DemoPage: React.FC = () => {
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-lg font-bold text-white mb-2">{benefit.title}<p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3><p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -282,7 +282,7 @@ const DemoPage: React.FC = () => {
         {/* Contact Information */}
         <section className="mb-16">
           <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Need Help Scheduling?<p className="text-gray-300 mb-6">If you need assistance scheduling your demo or have questions about our solutions, our team is here to help.</p>
+            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Need Help Scheduling?</h2><p className="text-gray-300 mb-6">If you need assistance scheduling your demo or have questions about our solutions, our team is here to help.</p>
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">

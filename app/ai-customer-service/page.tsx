@@ -24,32 +24,32 @@ export default function AICustomerServicePage() {
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🤖<h3 className="text-xl font-bold text-white mb-4 text-center">Intelligent Chatbots<p className="text-gray-300 text-center">Advanced conversational AI that understands context, emotions, and complex queries with 95% accuracy.</p>
+                <div className="text-4xl mb-4 text-center">🤖<h3 className="text-xl font-bold text-white mb-4 text-center">Intelligent Chatbots</h3><p className="text-gray-300 text-center">Advanced conversational AI that understands context, emotions, and complex queries with 95% accuracy.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🌍<h3 className="text-xl font-bold text-white mb-4 text-center">Multilingual Support<p className="text-gray-300 text-center">Support customers in 50+ languages with real-time translation and cultural context awareness.</p>
+                <div className="text-4xl mb-4 text-center">🌍<h3 className="text-xl font-bold text-white mb-4 text-center">Multilingual Support</h3><p className="text-gray-300 text-center">Support customers in 50+ languages with real-time translation and cultural context awareness.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">📊<h3 className="text-xl font-bold text-white mb-4 text-center">Analytics Dashboard<p className="text-gray-300 text-center">Real-time insights into customer satisfaction, response times, and conversation quality.</p>
+                <div className="text-4xl mb-4 text-center">📊<h3 className="text-xl font-bold text-white mb-4 text-center">Analytics Dashboard</h3><p className="text-gray-300 text-center">Real-time insights into customer satisfaction, response times, and conversation quality.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">⚡<h3 className="text-xl font-bold text-white mb-4 text-center">Instant Response<p className="text-gray-300 text-center">Sub-second response times with 99.9% uptime guarantee for uninterrupted customer support.</p>
+                <div className="text-4xl mb-4 text-center">⚡<h3 className="text-xl font-bold text-white mb-4 text-center">Instant Response</h3><p className="text-gray-300 text-center">Sub-second response times with 99.9% uptime guarantee for uninterrupted customer support.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🔗<h3 className="text-xl font-bold text-white mb-4 text-center">Easy Integration<p className="text-gray-300 text-center">Seamless integration with existing CRM, helpdesk, and communication platforms.</p>
+                <div className="text-4xl mb-4 text-center">🔗<h3 className="text-xl font-bold text-white mb-4 text-center">Easy Integration</h3><p className="text-gray-300 text-center">Seamless integration with existing CRM, helpdesk, and communication platforms.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6 energy-pulse">
-                <div className="text-4xl mb-4 text-center">🎯<h3 className="text-xl font-bold text-white mb-4 text-center">Personalization<p className="text-gray-300 text-center">AI learns from each interaction to provide increasingly personalized and relevant responses.</p>
+                <div className="text-4xl mb-4 text-center">🎯<h3 className="text-xl font-bold text-white mb-4 text-center">Personalization</h3><p className="text-gray-300 text-center">AI learns from each interaction to provide increasingly personalized and relevant responses.</p>
                 </p>
               </div>
             </div>
@@ -91,22 +91,22 @@ export default function AICustomerServicePage() {
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Customer Service?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-4">95% Customer Satisfaction<p className="text-gray-300">Our AI solutions consistently achieve 95% customer satisfaction rates, matching or exceeding human agents.</p>
+                <h3 className="text-xl font-bold text-white mb-4">95% Customer Satisfaction</h3><p className="text-gray-300">Our AI solutions consistently achieve 95% customer satisfaction rates, matching or exceeding human agents.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-4">70% Cost Reduction<p className="text-gray-300">Reduce customer service costs by up to 70% while maintaining high-quality support standards.</p>
+                <h3 className="text-xl font-bold text-white mb-4">70% Cost Reduction</h3><p className="text-gray-300">Reduce customer service costs by up to 70% while maintaining high-quality support standards.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-4">24/7 Availability<p className="text-gray-300">Never miss a customer inquiry with round-the-clock AI support that never sleeps or takes breaks.</p>
+                <h3 className="text-xl font-bold text-white mb-4">24/7 Availability</h3><p className="text-gray-300">Never miss a customer inquiry with round-the-clock AI support that never sleeps or takes breaks.</p>
                 </p>
               </div>
 
               <div className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Instant Scalability<p className="text-gray-300">Handle traffic spikes effortlessly with AI that scales automatically to meet demand.</p>
+                <h3 className="text-xl font-bold text-white mb-4">Instant Scalability</h3><p className="text-gray-300">Handle traffic spikes effortlessly with AI that scales automatically to meet demand.</p>
                 </p>
               </div>
             </div>
@@ -114,7 +114,7 @@ export default function AICustomerServicePage() {
 
           {/* CTA Section */}
           <section className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Service?<p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 500+ companies already using our AI customer service solutions to deliver exceptional support experiences.</p>
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Service?</h2><p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join 500+ companies already using our AI customer service solutions to deliver exceptional support experiences.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" className="cyber-button">📞 Call: (302) 464-0950<a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">Get Free Demo</a>

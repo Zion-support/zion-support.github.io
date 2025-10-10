@@ -22,7 +22,7 @@ const AIContentGenerator: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Content Generator<p className="text-xl text-gray-300 text-center mb-12">Generate high-quality content using advanced AI technology</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text text-center">AI Content Generator</h1><p className="text-xl text-gray-300 text-center mb-12">Generate high-quality content using advanced AI technology</p>
           </p>
 
           <div className="cyber-card p-8 mb-8">
@@ -74,7 +74,7 @@ const AIContentGenerator: React.FC = () => {
               </button>
               {content && (
                 <div className="mt-4 p-4 bg-gray-800 rounded-lg">
-                  <h3 className="text-white font-bold mb-2">Generated Content:<p className="text-gray-300">{content}</p>
+                  <h3 className="text-white font-bold mb-2">Generated Content:</h3><p className="text-gray-300">{content}</p>
                 </div>
               )}
             </div>

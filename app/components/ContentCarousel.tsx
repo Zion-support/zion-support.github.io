@@ -80,7 +80,7 @@ const ContentCarousel: React.FC = () => {
                   <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 rounded-2xl`}>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                       <div>
-                        <div className="text-6xl mb-6">{slide.image}<h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{slide.title}<p className="text-white/90 text-lg mb-6 leading-relaxed">{slide.description}</p>
+                        <div className="text-6xl mb-6">{slide.image}<h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{slide.title}</h3><p className="text-white/90 text-lg mb-6 leading-relaxed">{slide.description}</p>
                         </p>
                         <div className="flex items-center space-x-2 text-white">
                           <slide.icon className="w-6 h-6" />

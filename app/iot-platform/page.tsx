@@ -52,7 +52,7 @@ description: 'Comprehensive security measures designed specifically for IoT envi
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
 
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">IoT Platform<span className="block bg-gradient-to-r from-orange-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Comprehensive IoT platform for connecting, managing, and analyzing millions of devices.</p>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">IoT Platform<span className="block bg-gradient-to-r from-orange-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">Solutions</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Comprehensive IoT platform for connecting, managing, and analyzing millions of devices.</p>
             Built for smart cities, industrial IoT, and connected device ecosystems.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -88,7 +88,7 @@ description: 'Comprehensive security measures designed specifically for IoT envi
       {/* CTA Section */}
 <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your IoT Platform?<p className="text-xl text-gray-300 mb-8">Join leading organizations using our IoT platform to connect and manage millions of devices</p>
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Your IoT Platform?</h2><p className="text-xl text-gray-300 mb-8">Join leading organizations using our IoT platform to connect and manage millions of devices</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>

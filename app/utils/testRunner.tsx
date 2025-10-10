@@ -457,7 +457,7 @@ export class TestRunner {
 <body>
     <h2 id="heading-test-results">Test Results</h2>
     <div class="summary">
-        <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
+        <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results
           .map()</div>

@@ -149,7 +149,7 @@ export default function BlogPage() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Blog & Insights<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Stay updated with the latest trends in AI, cloud computing, cybersecurity,</p>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Blog & Insights</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Stay updated with the latest trends in AI, cloud computing, cybersecurity,</p>
               and digital transformation. Expert insights from our team of specialists.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -328,7 +328,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-700 rounded-lg p-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Stay Updated with Our Latest Insights<p className="text-xl text-gray-200 mb-8">Get the latest articles, industry insights, and expert opinions delivered to your inbox.</p>
+              <h2 className="text-3xl font-bold text-white mb-4">Stay Updated with Our Latest Insights</h2><p className="text-xl text-gray-200 mb-8">Get the latest articles, industry insights, and expert opinions delivered to your inbox.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <input

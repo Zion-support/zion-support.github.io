@@ -376,7 +376,7 @@ const AIDocumentScannerPage: React.FC = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full px-4 py-2 mb-6 border border-blue-400/30">
               <Scan className="w-5 h-5 text-blue-400" />
-              <span className="text-blue-400 font-medium">AI Document Scanner Pro<h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent">AI Document Scanner Pro<p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">Intelligent document scanning with 99% OCR accuracy, AI-powered data extraction, 
+              <span className="text-blue-400 font-medium">AI Document Scanner Pro<h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-500 bg-clip-text text-transparent">AI Document Scanner Pro</h1><p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">Intelligent document scanning with 99% OCR accuracy, AI-powered data extraction, 
               and seamless integration. Transform your paper documents into digital assets </p>
               with advanced processing capabilities.</p>
             </p>
@@ -391,7 +391,7 @@ const AIDocumentScannerPage: React.FC = () => {
                     {isScanning ? <Scan className="w-8 h-8 text-white" >: <Upload className="w-8 h-8 text-white" >}</Upload>
                   </Upload>
                   <div className="text-center">
-                    <h3 className="text-lg font-semibold mb-2">Try Document Scanning<p className="text-gray-400 text-sm">Upload a document to see AI processing</p>
+                    <h3 className="text-lg font-semibold mb-2">Try Document Scanning</h3><p className="text-gray-400 text-sm">Upload a document to see AI processing</p>
                   </div>
                 </div>
                 
@@ -509,7 +509,7 @@ const AIDocumentScannerPage: React.FC = () => {
                   )}
                   
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}<p className="text-gray-400 mb-4">{plan.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3><p className="text-gray-400 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-white">{plan.price}<span className="text-gray-400 ml-1">{plan.period}<ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -547,7 +547,7 @@ const AIDocumentScannerPage: React.FC = () => {
 
           {/* CTA Section */}
           <div className="text-center bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-blue-400/30">
-            <h2 className="text-3xl font-bold mb-4 text-white">Ready to Digitize Your Documents?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses that have transformed their document processing with AI Document Scanner Pro.</p>
+            <h2 className="text-3xl font-bold mb-4 text-white">Ready to Digitize Your Documents?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses that have transformed their document processing with AI Document Scanner Pro.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center">Start Your Free Trial</button>

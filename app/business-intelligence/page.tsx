@@ -100,7 +100,7 @@ const BusinessIntelligencePage: React.FC = () => {
       </Navigation><section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="absolute inset-0 bg-black opacity-20"><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Business Intelligence Services<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into strategic insights that drive business growth.</p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Business Intelligence Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into strategic insights that drive business growth.</p>
             Make informed decisions with our comprehensive BI solutions.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,7 +167,7 @@ const BusinessIntelligencePage: React.FC = () => {
         {/* CTA Section */}
         <section className="text-center">
           <div className="cyber-card p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data?<p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data?</h2><p className="text-xl text-gray-300 mb-8">Join hundreds of businesses who have unlocked the power of their data with our BI solutions.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -199,7 +199,7 @@ const BusinessIntelligencePage: React.FC = () => {
                 <div className="flex items-center mb-4">
                   <service.icon className="w-12 h-12 text-purple-400 mr-4" />
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}<span className="text-sm text-purple-400 bg-purple-400/20 px-3 py-1 rounded-full">{service.category}<p className="text-gray-300 mb-6">{service.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}<span className="text-sm text-purple-400 bg-purple-400/20 px-3 py-1 rounded-full">{service.category}</span><p className="text-gray-300 mb-6">{service.description}</p>
 
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
@@ -244,7 +244,7 @@ const BusinessIntelligencePage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Process<p className="text-xl text-gray-300 max-w-3xl mx-auto">A proven methodology to deliver successful business intelligence solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{processSteps.map((step, index) => (</div>
               <div key={index} className="text-center">
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-semibold text-white mb-2">{step.title}<p className="text-gray-300">{step.description}</p>
+                  <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3><p className="text-gray-300">{step.description}</p>
               </div>
             ))}
           </div>
@@ -269,7 +269,7 @@ const BusinessIntelligencePage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?<p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2><p className="text-xl text-gray-200 mb-8">Get started with our business intelligence services and unlock the power of your data.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

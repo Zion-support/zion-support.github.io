@@ -176,7 +176,7 @@ const SupportPage: React.FC = () => {
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Support Center<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get help when you need it. Our support team is here 24/7 to assist you with any questions or issues.</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Support Center</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get help when you need it. Our support team is here 24/7 to assist you with any questions or issues.</p>
           </p>
           
           {/* Search Bar */}
@@ -200,7 +200,7 @@ const SupportPage: React.FC = () => {
               <div key={index} className="cyber-card p-6 text-center group hover:scale-105 transition-transform">
                 <div className={`w-16 h-16 ${channel.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
                   <channel.icon className={`w-8 h-8 ${channel.color}`} />
-                <h3 className="text-xl font-bold text-white mb-2">{channel.title}<p className="text-gray-300 mb-4">{channel.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3><p className="text-gray-300 mb-4">{channel.description}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-gray-400">Availability:<span className="text-cyan-400">{channel.availability}</span>
@@ -217,7 +217,7 @@ const SupportPage: React.FC = () => {
         {/* FAQ Section */}
         <section className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-gray-300 mb-6">Find answers to common questions</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2><p className="text-gray-300 mb-6">Find answers to common questions</p>
             
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-2 mb-8">{categories.map((category) => (<button
@@ -236,7 +236,7 @@ const SupportPage: React.FC = () => {
               <div key={faq.id} className="cyber-card p-6">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-3">{faq.question}<p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3><p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                   </div>
                   <div className="ml-4 flex items-center space-x-2">
                     <div className="flex items-center text-sm text-gray-400">
@@ -259,7 +259,7 @@ const SupportPage: React.FC = () => {
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <resource.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{resource.title}<p className="text-gray-300 mb-4">{resource.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{resource.title}</h3><p className="text-gray-300 mb-4">{resource.description}</p>
                 <div className="flex items-center justify-center text-cyan-400 text-sm">
                   <span>{resource.type}</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -272,7 +272,7 @@ const SupportPage: React.FC = () => {
         {/* Contact CTA */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?<p className="text-xl text-gray-300 mb-8">Our support team is standing by to help you succeed. Get in touch with us today.</p>
+            <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2><p className="text-xl text-gray-300 mb-8">Our support team is standing by to help you succeed. Get in touch with us today.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

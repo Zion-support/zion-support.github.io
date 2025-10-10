@@ -68,7 +68,7 @@ const AIMLPage: React.FC = () => {
           <div className="cyber-card p-8">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Proven Benefits<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}<p className="text-gray-300 text-sm">{benefit}</p>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.split(' ')[0]}</div><p className="text-gray-300 text-sm">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -80,7 +80,7 @@ const AIMLPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Common Use Cases<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
               <div key={index} className="cyber-card p-6 text-center">
                 <useCase.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}<p className="text-gray-300">{useCase.description}</p>
+                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3><p className="text-gray-300">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -94,19 +94,19 @@ const AIMLPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">1<h3 className="text-lg font-bold text-white mb-2">Data Analysis<p className="text-gray-300 text-sm">Analyze your data and identify patterns</p>
+                  <span className="text-2xl font-bold text-white">1<h3 className="text-lg font-bold text-white mb-2">Data Analysis</h3><p className="text-gray-300 text-sm">Analyze your data and identify patterns</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">2<h3 className="text-lg font-bold text-white mb-2">Model Development<p className="text-gray-300 text-sm">Build and train custom ML models</p>
+                  <span className="text-2xl font-bold text-white">2<h3 className="text-lg font-bold text-white mb-2">Model Development</h3><p className="text-gray-300 text-sm">Build and train custom ML models</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">3<h3 className="text-lg font-bold text-white mb-2">Testing & Validation<p className="text-gray-300 text-sm">Validate model performance and accuracy</p>
+                  <span className="text-2xl font-bold text-white">3<h3 className="text-lg font-bold text-white mb-2">Testing & Validation</h3><p className="text-gray-300 text-sm">Validate model performance and accuracy</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-white">4<h3 className="text-lg font-bold text-white mb-2">Deployment<p className="text-gray-300 text-sm">Deploy and monitor in production</p>
+                  <span className="text-2xl font-bold text-white">4<h3 className="text-lg font-bold text-white mb-2">Deployment</h3><p className="text-gray-300 text-sm">Deploy and monitor in production</p>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@ const AIMLPage: React.FC = () => {
         {/* Contact CTA */}
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Implement Machine Learning?<p className="text-lg text-gray-300 mb-8">Contact us today to discuss your ML requirements and get a custom solution.</p>
+            <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Implement Machine Learning?</h2><p className="text-lg text-gray-300 mb-8">Contact us today to discuss your ML requirements and get a custom solution.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
