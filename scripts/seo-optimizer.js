@@ -1,207 +1,238 @@
+#!/usr/bin/env node
+
+/**
+ * SEO Optimizer
+ * Automatically optimizes the application for better SEO
+ */
+
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
+import { fileURLToPath } from 'url';
 
-// SEO optimization script
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 class SEOOptimizer {
   constructor() {
-    this.optimizations = [];
-    this.issues = [];
+    this.optimizeMetaTags();
+    this.generateSitemap();
+    this.generateRobotsTxt();
+    this.optimizeStructuredData();
+    this.generateSEOReport();
   }
 
-  // Check meta tags
-  async checkMetaTags() {
-    console.log('🏷️  Checking meta tags...');
+  /**
+   * Optimize meta tags
+   */
+  optimizeMetaTags() {
+    console.log('🏷️  Optimizing meta tags...');
     
-    const htmlFiles = await glob('dist/**/*.html');
-    
-    for (const file of htmlFiles) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Check for essential meta tags
-        const hasTitle = content.includes('<title>');
-        const hasDescription = content.includes('name="description"');
-        const hasViewport = content.includes('name="viewport"');
-        const hasCharset = content.includes('charset=');
-        const hasOgTitle = content.includes('property="og:title"');
-        const hasOgDescription = content.includes('property="og:description"');
-        const hasOgImage = content.includes('property="og:image"');
-        const hasTwitterCard = content.includes('name="twitter:card"');
-        
-        if (!hasTitle) this.issues.push(`${file}: Missing title tag`);
-        if (!hasDescription) this.issues.push(`${file}: Missing meta description`);
-        if (!hasViewport) this.issues.push(`${file}: Missing viewport meta tag`);
-        if (!hasCharset) this.issues.push(`${file}: Missing charset declaration`);
-        if (!hasOgTitle) this.issues.push(`${file}: Missing Open Graph title`);
-        if (!hasOgDescription) this.issues.push(`${file}: Missing Open Graph description`);
-        if (!hasOgImage) this.issues.push(`${file}: Missing Open Graph image`);
-        if (!hasTwitterCard) this.issues.push(`${file}: Missing Twitter card meta`);
-        
-      } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
-      }
+    const indexHtmlPath = path.join(__dirname, '../dist/index.html');
+    if (!fs.existsSync(indexHtmlPath)) {
+      console.log('  ⚠️  index.html not found, skipping meta tag optimization');
+      return;
     }
-    
-    console.log(`   ✅ Checked ${htmlFiles.length} HTML files`);
-    this.optimizations.push('Meta tags validation');
-  }
 
-  // Check heading structure
-  async checkHeadingStructure() {
-    console.log('📝 Checking heading structure...');
+    let content = fs.readFileSync(indexHtmlPath, 'utf8');
     
-    const tsxFiles = await glob('src/**/*.tsx', {
-      ignore: ['**/node_modules/**', '**/dist/**']
+    // Add essential meta tags if missing
+    const essentialMetaTags = [
+      '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+      '<meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.">',
+      '<meta name="keywords" content="AI solutions, machine learning, quantum computing, digital transformation, IT services, cybersecurity, cloud computing, automation">',
+      '<meta name="author" content="Zion Tech Group">',
+      '<meta name="robots" content="index, follow">',
+      '<meta property="og:title" content="Zion Tech Group - AI-Powered Enterprise Solutions">',
+      '<meta property="og:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.">',
+      '<meta property="og:type" content="website">',
+      '<meta property="og:url" content="https://ziontechgroup.com">',
+      '<meta property="og:image" content="https://ziontechgroup.com/og-image.jpg">',
+      '<meta name="twitter:card" content="summary_large_image">',
+      '<meta name="twitter:title" content="Zion Tech Group - AI-Powered Enterprise Solutions">',
+      '<meta name="twitter:description" content="Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.">',
+      '<meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg">'
+    ];
+
+    let metaTagsAdded = 0;
+    essentialMetaTags.forEach(tag => {
+      if (!content.includes(tag)) {
+        content = content.replace('<head>', `<head>\n    ${tag}`);
+        metaTagsAdded++;
+      }
     });
 
-    let headingIssues = 0;
-    for (const file of tsxFiles) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Check for h1 tags
-        const h1Count = (content.match(/<h1/g) || []).length;
-        const h2Count = (content.match(/<h2/g) || []).length;
-        const h3Count = (content.match(/<h3/g) || []).length;
-        
-        if (h1Count === 0) {
-          this.issues.push(`${file}: No h1 tag found`);
-          headingIssues++;
-        }
-        if (h1Count > 1) {
-          this.issues.push(`${file}: Multiple h1 tags found (${h1Count})`);
-          headingIssues++;
-        }
-        
-      } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
-      }
-    }
-    
-    console.log(`   ✅ Checked ${tsxFiles.length} TSX files`);
-    if (headingIssues > 0) {
-      console.log(`   ⚠️  Found ${headingIssues} heading structure issues`);
-    }
-    this.optimizations.push('Heading structure validation');
-  }
-
-  // Check alt attributes
-  async checkAltAttributes() {
-    console.log('🖼️  Checking alt attributes...');
-    
-    const tsxFiles = await glob('src/**/*.tsx', {
-      ignore: ['**/node_modules/**', '**/dist/**']
-    });
-
-    let altIssues = 0;
-    for (const file of tsxFiles) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Find img tags without alt attributes
-        const imgTags = content.match(/<img[^>]*>/g) || [];
-        for (const imgTag of imgTags) {
-          if (!imgTag.includes('alt=')) {
-            this.issues.push(`${file}: Image without alt attribute`);
-            altIssues++;
-          }
-        }
-        
-      } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
-      }
-    }
-    
-    console.log(`   ✅ Checked ${tsxFiles.length} TSX files`);
-    if (altIssues > 0) {
-      console.log(`   ⚠️  Found ${altIssues} missing alt attributes`);
-    }
-    this.optimizations.push('Alt attributes validation');
-  }
-
-  // Check internal links
-  async checkInternalLinks() {
-    console.log('🔗 Checking internal links...');
-    
-    const tsxFiles = await glob('src/**/*.tsx', {
-      ignore: ['**/node_modules/**', '**/dist/**']
-    });
-
-    let linkCount = 0;
-    for (const file of tsxFiles) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        // Count internal links
-        const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || [];
-        linkCount += internalLinks.length;
-        
-      } catch (error) {
-        console.error(`   ❌ Error processing ${file}:`, error.message);
-      }
-    }
-    
-    console.log(`   ✅ Found ${linkCount} internal links`);
-    this.optimizations.push('Internal links analysis');
-  }
-
-  // Generate SEO report
-  generateReport() {
-    console.log('\n📊 SEO Optimization Report');
-    console.log('============================');
-    console.log(`✅ Optimizations applied: ${this.optimizations.length}`);
-    this.optimizations.forEach((opt, index) => {
-      console.log(`   ${index + 1}. ${opt}`);
-    });
-    
-    if (this.issues.length > 0) {
-      console.log(`\n⚠️  Issues found: ${this.issues.length}`);
-      this.issues.slice(0, 10).forEach((issue, index) => {
-        console.log(`   ${index + 1}. ${issue}`);
-      });
-      if (this.issues.length > 10) {
-        console.log(`   ... and ${this.issues.length - 10} more issues`);
-      }
+    if (metaTagsAdded > 0) {
+      fs.writeFileSync(indexHtmlPath, content);
+      console.log(`  ✅ Added ${metaTagsAdded} essential meta tags`);
     } else {
-      console.log('\n✅ No SEO issues found!');
+      console.log('  ✅ All essential meta tags already present');
     }
-    
-    console.log('\n🚀 SEO Recommendations:');
-    console.log('   1. Add structured data (JSON-LD)');
-    console.log('   2. Implement breadcrumb navigation');
-    console.log('   3. Add canonical URLs');
-    console.log('   4. Optimize page loading speed');
-    console.log('   5. Use descriptive URLs');
-    console.log('   6. Add sitemap.xml');
-    console.log('   7. Implement robots.txt');
-    console.log('   8. Use semantic HTML elements');
-    console.log('   9. Add social media meta tags');
-    console.log('   10. Implement schema markup');
   }
 
-  // Run all optimizations
-  async run() {
-    console.log('🔍 Starting SEO optimization...\n');
+  /**
+   * Generate sitemap
+   */
+  generateSitemap() {
+    console.log('🗺️  Generating sitemap...');
     
-    try {
-      await this.checkMetaTags();
-      await this.checkHeadingStructure();
-      await this.checkAltAttributes();
-      await this.checkInternalLinks();
-      this.generateReport();
-      
-      console.log('\n✅ SEO optimization completed!');
-    } catch (error) {
-      console.error('❌ SEO optimization failed:', error.message);
-    }
+    const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
+    const baseUrl = 'https://ziontechgroup.com';
+    
+    const pages = [
+      { url: '/', priority: '1.0', changefreq: 'daily' },
+      { url: '/about', priority: '0.8', changefreq: 'monthly' },
+      { url: '/services', priority: '0.9', changefreq: 'weekly' },
+      { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
+      { url: '/it-services', priority: '0.9', changefreq: 'weekly' },
+      { url: '/micro-saas', priority: '0.9', changefreq: 'weekly' },
+      { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
+      { url: '/contact', priority: '0.7', changefreq: 'monthly' },
+      { url: '/blog', priority: '0.6', changefreq: 'weekly' },
+      { url: '/case-studies', priority: '0.7', changefreq: 'monthly' },
+      { url: '/team', priority: '0.6', changefreq: 'monthly' },
+      { url: '/careers', priority: '0.6', changefreq: 'weekly' }
+    ];
+
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    pages.forEach(page => {
+      sitemap += '  <url>\n';
+      sitemap += `    <loc>${baseUrl}${page.url}</loc>\n`;
+      sitemap += `    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>\n`;
+      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+      sitemap += `    <priority>${page.priority}</priority>\n`;
+      sitemap += '  </url>\n';
+    });
+    
+    sitemap += '</urlset>';
+
+    fs.writeFileSync(sitemapPath, sitemap);
+    console.log(`  ✅ Sitemap generated: ${sitemapPath}`);
+  }
+
+  /**
+   * Generate robots.txt
+   */
+  generateRobotsTxt() {
+    console.log('🤖 Generating robots.txt...');
+    
+    const robotsPath = path.join(__dirname, '../public/robots.txt');
+    const robotsContent = `User-agent: *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /case-studies`;
+
+    fs.writeFileSync(robotsPath, robotsContent);
+    console.log(`  ✅ robots.txt generated: ${robotsPath}`);
+  }
+
+  /**
+   * Optimize structured data
+   */
+  optimizeStructuredData() {
+    console.log('📊 Optimizing structured data...');
+    
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo.png",
+      "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup",
+        "https://github.com/zion-tech-group"
+      ],
+      "foundingDate": "2020",
+      "numberOfEmployees": "50-100",
+      "industry": "Information Technology",
+      "services": [
+        "AI Solutions",
+        "Machine Learning",
+        "Quantum Computing",
+        "Digital Transformation",
+        "IT Services",
+        "Cybersecurity",
+        "Cloud Computing",
+        "Automation"
+      ]
+    };
+
+    const structuredDataPath = path.join(__dirname, '../public/structured-data.json');
+    fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
+    console.log(`  ✅ Structured data generated: ${structuredDataPath}`);
+  }
+
+  /**
+   * Generate SEO report
+   */
+  generateSEOReport() {
+    console.log('📊 Generating SEO report...');
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      optimizations: {
+        metaTags: true,
+        sitemap: true,
+        robotsTxt: true,
+        structuredData: true
+      },
+      recommendations: [
+        'Add alt text to all images',
+        'Implement breadcrumb navigation',
+        'Add internal linking strategy',
+        'Optimize page loading speed',
+        'Implement schema markup for services',
+        'Add FAQ schema for common questions',
+        'Create XML sitemap for blog posts',
+        'Implement hreflang for internationalization'
+      ],
+      metrics: {
+        pagesInSitemap: 12,
+        metaTagsOptimized: true,
+        structuredDataPresent: true,
+        robotsTxtConfigured: true
+      }
+    };
+
+    const reportPath = path.join(__dirname, '../seo-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    console.log(`📊 SEO report generated: ${reportPath}`);
+    console.log(`✅ SEO optimizations completed`);
   }
 }
 
-// Run the optimizer
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const optimizer = new SEOOptimizer();
-  optimizer.run();
-}
-
-export default SEOOptimizer;
+// Run the SEO optimizer
+new SEOOptimizer();

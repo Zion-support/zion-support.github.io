@@ -283,19 +283,9 @@ const HomePage: React.FC = () => {
                       </span>
                     )}
                   </div>
-<<<<<<< HEAD
-=======
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-purple-400 mb-2">{service.price}</div>
-                  <a href={service.link} className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-all duration-300">
-                    Learn More →
-                  </a>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </section>
 
@@ -883,7 +873,6 @@ const HomePage: React.FC = () => {
                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
                     +1 (302) 464-0950
                   </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-24cb
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-4">
@@ -928,15 +917,9 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-        <Footer />
-        <PerformanceMonitor />
-      </div>
-    </ErrorBoundary>
-=======
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-24cb
+    </ErrorBoundary>
   );
 };
 

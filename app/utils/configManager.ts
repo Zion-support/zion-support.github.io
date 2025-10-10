@@ -1,470 +1,227 @@
-'use client'
 /**
  * Configuration Manager
- * Centralized configuration management with environment-based settings
+ * Centralized configuration management for the application
  */
-export type Environment = 'development' | 'staging' | 'production' | 'test'
+
 export interface AppConfig {
-  environment: Environment
   api: {
-    baseURL: string
-    timeout: number
-    retryAttempts: number
-    enableCaching: boolean;}
-  }
+    baseURL: string;
+    timeout: number;
+    retryAttempts: number;
+    enableCaching: boolean;
+  };
   features: {
-    enableAnalytics: boolean
-    enableErrorReporting: boolean
-    enablePerformanceMonitoring: boolean
-    enableAccessibility: boolean
-    enableSEO: boolean
-    enablePWA: boolean;}
-  }
+    enableAnalytics: boolean;
+    enableErrorReporting: boolean;
+    enablePerformanceMonitoring: boolean;
+    enableAccessibility: boolean;
+    enableSEO: boolean;
+    enablePWA: boolean;
+  };
   performance: {
-    enableCodeSplitting: boolean
-    enableLazyLoading: boolean
-    enableImageOptimization: boolean
-    enableCaching: boolean;}
-  }
+    enableCodeSplitting: boolean;
+    enableLazyLoading: boolean;
+    enableImageOptimization: boolean;
+    enableCaching: boolean;
+  };
   security: {
-    enableCSP: boolean
-    enableCORS: boolean
-    enableRateLimiting: boolean
-    maxRequestsPerMinute: number;}
-  }
+    enableCSP: boolean;
+    enableCORS: boolean;
+    enableRateLimiting: boolean;
+    maxRequestsPerMinute: number;
+  };
   ui: {
-    theme: 'light' | 'dark' | 'auto'
-    language: string
-    timezone: string;}
-  }
-  logging: {
-    level: 'debug' | 'info' | 'warn' | 'error'
-    enableConsole: boolean
-    enableNetwork: boolean;}
-  }
+    theme: 'light' | 'dark' | 'auto';
+    language: string;
+    enableAnimations: boolean;
+    enableNotifications: boolean;
+  };
+  analytics: {
+    googleAnalyticsId?: string;
+    googleTagManagerId?: string;
+    facebookPixelId?: string;
+    enableEventTracking: boolean;
+  };
+  seo: {
+    siteName: string;
+    siteDescription: string;
+    siteUrl: string;
+    defaultImage: string;
+    enableSitemap: boolean;
+    enableRobots: boolean;
+  };
+  accessibility: {
+    enableScreenReader: boolean;
+    enableKeyboardNavigation: boolean;
+    enableHighContrast: boolean;
+    enableReducedMotion: boolean;
+  };
+  errorHandling: {
+    enableErrorBoundary: boolean;
+    enableErrorReporting: boolean;
+    enableErrorLogging: boolean;
+    maxErrorRetries: number;
+  };
+  caching: {
+    enableMemoryCache: boolean;
+    enableLocalStorage: boolean;
+    enableSessionStorage: boolean;
+    cacheExpiration: number;
+  };
+  monitoring: {
+    enablePerformanceMonitoring: boolean;
+    enableErrorMonitoring: boolean;
+    enableUserAnalytics: boolean;
+    enableRealTimeMonitoring: boolean;
+  };
 }
+
 const defaultConfig: AppConfig = {
-  environment: 'development',
   api: {
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
-    timeout: 30000,
+    baseURL: process.env.VITE_API_BASE_URL || 'https://api.ziontechgroup.com',
+    timeout: 10000,
     retryAttempts: 3,
-    enableCaching: true}
+    enableCaching: true,
   },
   features: {
-    enableAnalytics: false,
+    enableAnalytics: true,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true}
+    enablePWA: true,
   },
   performance: {
     enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-    enableCaching: true}
+    enableCaching: true,
   },
   security: {
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 100}
+    maxRequestsPerMinute: 100,
   },
   ui: {
-    theme: 'auto',
+    theme: 'dark',
     language: 'en',
-    timezone: 'UTC'}
+    enableAnimations: true,
+    enableNotifications: true,
   },
-  logging: {
-    level: 'info',
-    enableConsole: true,
-    enableNetwork: false}
-  }
-}
-const developmentConfig: Partial<AppConfig> = {
-  environment: 'development',
-  api: {
-    baseURL: 'http://localhost:3000/api',
-    timeout: 30000,
-    retryAttempts: 1,
-    enableCaching: false}
+  analytics: {
+    googleAnalyticsId: process.env.VITE_GA_MEASUREMENT_ID,
+    googleTagManagerId: process.env.VITE_GTM_ID,
+    facebookPixelId: process.env.VITE_FB_PIXEL_ID,
+    enableEventTracking: true,
   },
-  features: {
-    enableAnalytics: false,
+  seo: {
+    siteName: 'Zion Tech Group',
+    siteDescription: 'Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.',
+    siteUrl: 'https://ziontechgroup.com',
+    defaultImage: '/og-image.jpg',
+    enableSitemap: true,
+    enableRobots: true,
+  },
+  accessibility: {
+    enableScreenReader: true,
+    enableKeyboardNavigation: true,
+    enableHighContrast: false,
+    enableReducedMotion: false,
+  },
+  errorHandling: {
+    enableErrorBoundary: true,
     enableErrorReporting: true,
+    enableErrorLogging: true,
+    maxErrorRetries: 3,
+  },
+  caching: {
+    enableMemoryCache: true,
+    enableLocalStorage: true,
+    enableSessionStorage: true,
+    cacheExpiration: 3600000, // 1 hour
+  },
+  monitoring: {
     enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: false,
-    enablePWA: false}
+    enableErrorMonitoring: true,
+    enableUserAnalytics: true,
+    enableRealTimeMonitoring: true,
   },
-  logging: {
-    level: 'debug',
-    enableConsole: true,
-    enableNetwork: false}
-  }
-}
-const stagingConfig: Partial<AppConfig> = {
-  environment: 'staging',
-  api: {
-    baseURL: 'https://staging-api.ziontech.com',
-    timeout: 30000,
-    retryAttempts: 3,
-    enableCaching: true}
-  },
-  features: {
-    enableAnalytics: true,
-    enableErrorReporting: true,
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: true,
-    enablePWA: true}
-  },
-  logging: {
-    level: 'info',
-    enableConsole: true,
-    enableNetwork: true}
-  }
-}
-const productionConfig: Partial<AppConfig> = {
-  environment: 'production',
-  api: {
-    baseURL: 'https://api.ziontech.com',
-    timeout: 30000,
-    retryAttempts: 3,
-    enableCaching: true}
-  },
-  features: {
-    enableAnalytics: true,
-    enableErrorReporting: true,
-    enablePerformanceMonitoring: true,
-    enableAccessibility: true,
-    enableSEO: true,
-    enablePWA: true}
-  },
-  logging: {
-    level: 'error',
-    enableConsole: false,
-    enableNetwork: true}
-  },
-  security: {
-    enableCSP: true,
-    enableCORS: true,
-    enableRateLimiting: true,
-    maxRequestsPerMinute: 60}
-  }
-}
-const testConfig: Partial<AppConfig> = {
-  environment: 'test',
-  api: {
-    baseURL: 'http://localhost:3000/api',
-    timeout: 5000,
-    retryAttempts: 0,
-    enableCaching: false}
-  },
-  features: {
-    enableAnalytics: false,
-    enableErrorReporting: false,
-    enablePerformanceMonitoring: false,
-    enableAccessibility: true,
-    enableSEO: false,
-    enablePWA: false}
-  },
-  logging: {
-    level: 'error',
-    enableConsole: false,
-    enableNetwork: false}
-  }
-}
-export class ConfigManager {
-  private static instance: ConfigManager
-  private config: AppConfig
-  private environment: Environment;}
-  private overrides: Partial<AppConfig> = {}
+};
+
+class ConfigManager {
+  private config: AppConfig;
+  private listeners: Array<(config: AppConfig) => void> = [];
+
   constructor() {
-    this.environment = this.detectEnvironment()
-    this.config = this.loadConfig();}
+    this.config = { ...defaultConfig };
+    this.loadFromEnvironment();
   }
-  static getInstance(): ConfigManager {
-    if (!ConfigManager.instance) {
-      ConfigManager.instance = new ConfigManager();}
+
+  private loadFromEnvironment(): void {
+    // Override with environment variables
+    if (process.env.VITE_GA_MEASUREMENT_ID) {
+      this.config.analytics.googleAnalyticsId = process.env.VITE_GA_MEASUREMENT_ID;
     }
-    return ConfigManager.instance
+    if (process.env.VITE_GTM_ID) {
+      this.config.analytics.googleTagManagerId = process.env.VITE_GTM_ID;
+    }
+    if (process.env.VITE_FB_PIXEL_ID) {
+      this.config.analytics.facebookPixelId = process.env.VITE_FB_PIXEL_ID;
+    }
   }
-  /**
-   * Detect current environment
-   */
-  private detectEnvironment(): Environment {
-    if (typeof process !== 'undefined') {
-      
-      
-      if (nextEnv) {
-        return nextEnv as Environment;}
+
+  public getConfig(): AppConfig {
+    return { ...this.config };
+  }
+
+  public updateConfig(updates: Partial<AppConfig>): void {
+    this.config = { ...this.config, ...updates };
+    this.notifyListeners();
+  }
+
+  public get<K extends keyof AppConfig>(key: K): AppConfig[K] {
+    return this.config[key];
+  }
+
+  public set<K extends keyof AppConfig>(key: K, value: AppConfig[K]): void {
+    this.config[key] = value;
+    this.notifyListeners();
+  }
+
+  public subscribe(listener: (config: AppConfig) => void): () => void {
+    this.listeners.push(listener);
+    return () => {
+      const index = this.listeners.indexOf(listener);
+      if (index > -1) {
+        this.listeners.splice(index, 1);
       }
-      if (nodeEnv === 'test') return 'test'
-      if (nodeEnv === 'production') return 'production'
-      if (nodeEnv === 'development') return 'development'
-    }
-    return 'development'
+    };
   }
-  /**
-   * Load configuration based on environment
-   */
-  private loadConfig(): AppConfig {}
-    let config = { ...defaultConfig }
-    switch (this.environment) {
-      case 'development':
-        config = this.mergeConfig(config, developmentConfig)
-        break
-      case 'staging':
-        config = this.mergeConfig(config, stagingConfig)
-        break
-      case 'production':
-        config = this.mergeConfig(config, productionConfig)
-        break
-      case 'test':
-        config = this.mergeConfig(config, testConfig)
-        break;}
-    }
-    // Apply overrides
-    config = this.mergeConfig(config, this.overrides)
-    return config
+
+  private notifyListeners(): void {
+    this.listeners.forEach(listener => listener(this.config));
   }
-  /**
-   * Deep merge two config objects
-   */
-  private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {}
-    const result = { ...base } as AppConfig
-    (Object.keys(override) as Array<keyof AppConfig>).forEach(
-      <K extends keyof AppConfig>(key: K) => {
-        const value = override[key]
-        if (value !== undefined) {
-          const baseValue = result[key]
-          if (
-            typeof value === 'object' &&
-            !Array.isArray(value) &&
-            value !== null &&
-            typeof baseValue === 'object' &&
-            !Array.isArray(baseValue) &&
-            baseValue !== null
-          ) {}
-            result[key] = Object.assign({}, baseValue, value) as typeof baseValue
-          } else {
-            result[key] = value as typeof baseValue;}
-          }
-        }
-      }
-    )
-    return result
+
+  public resetToDefaults(): void {
+    this.config = { ...defaultConfig };
+    this.loadFromEnvironment();
+    this.notifyListeners();
   }
-  /**
-   * Get configuration value
-   */
-  get<K extends keyof AppConfig>(key: K): AppConfig[K]
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
-    key: K,
-    nestedKey: NK
-  ): AppConfig[K][NK]
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
-    key: K,
-    nestedKey?: NK
-  ): AppConfig[K] | AppConfig[K][NK] {
-    if (nestedKey !== undefined) {
-      return this.config[key][nestedKey];}
-    }
-    return this.config[key]
+
+  public isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
+    return this.config.features[feature];
   }
-  /**
-   * Set configuration value
-   */
-  set<K extends keyof AppConfig>(key: K, value: AppConfig[K]): void
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
-    key: K,
-    nestedKey: NK,
-    value: AppConfig[K][NK]
-  ): void
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
-    key: K,
-    nestedKeyOrValue: NK | AppConfig[K],
-    value?: AppConfig[K][NK]
-  ): void {
-    if (value !== undefined && typeof nestedKeyOrValue === 'string') {
-      const currentValue = this.config[key]
-      if (
-        typeof currentValue === 'object' &&
-        !Array.isArray(currentValue) &&
-        currentValue !== null
-      ) {}
-        this.config[key] = Object.assign({}, currentValue, {
-          [nestedKeyOrValue]: value}
-        }) as AppConfig[K]
-      } else {
-        // If current value is not an object, create a new object by merging with default
-        const defaultValue = this.getDefaultForKey(key);}
-        this.config[key] = Object.assign({}, defaultValue, {
-          [nestedKeyOrValue]: value}
-        }) as AppConfig[K]
-      }
-    } else {
-      this.config[key] = nestedKeyOrValue as AppConfig[K];}
-    }
+
+  public isPerformanceEnabled(feature: keyof AppConfig['performance']): boolean {
+    return this.config.performance[feature];
   }
-  /**
-   * Get default value for a config key
-   */
-  private getDefaultForKey<K extends keyof AppConfig>(key: K): AppConfig[K] {
-    const defaultValues: AppConfig = {
-      environment: 'development',
-      api: {
-        baseURL: '',
-        timeout: 30000,
-        retryAttempts: 3,
-        enableCaching: true}
-      },
-      features: {
-        enableAnalytics: false,
-        enableErrorReporting: true,
-        enablePerformanceMonitoring: false,
-        enableAccessibility: true,
-        enableSEO: true,
-        enablePWA: false}
-      },
-      performance: {
-        enableCodeSplitting: true,
-        enableLazyLoading: true,
-        enableImageOptimization: true,
-        enableCaching: true}
-      },
-      security: {
-        enableCSP: true,
-        enableCORS: false,
-        enableRateLimiting: true,
-        maxRequestsPerMinute: 100}
-      },
-      ui: {
-        theme: 'light',
-        language: 'en',
-        timezone: 'UTC'}
-      },
-      logging: {
-        level: 'info',
-        enableConsole: true,
-        enableNetwork: false}
-      }
-    }
-    return defaultValues[key]
-  }
-  /**
-   * Get full configuration
-   */
-  getConfig(): AppConfig {}
-    return { ...this.config }
-  }
-  /**
-   * Get environment
-   */
-  getEnvironment(): Environment {
-    return this.environment;}
-  }
-  /**
-   * Check if feature is enabled
-   */
-  isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
-    return this.config.features[feature];}
-  }
-  /**
-   * Enable feature
-   */
-  enableFeature(feature: keyof AppConfig['features']): void {
-    this.config.features[feature] = true;}
-  }
-  /**
-   * Disable feature
-   */
-  disableFeature(feature: keyof AppConfig['features']): void {
-    this.config.features[feature] = false;}
-  }
-  /**
-   * Get API configuration
-   */
-  getAPIConfig() {}
-    return { ...this.config.api }
-  }
-  /**
-   * Update API configuration
-   */
-  updateAPIConfig(config: Partial<AppConfig['api']>): void {}
-    this.config.api = { ...this.config.api, ...config }
-  }
-  /**
-   * Check if in production
-   */
-  isProduction(): boolean {
-    return this.environment === 'production';}
-  }
-  /**
-   * Check if in development
-   */
-  isDevelopment(): boolean {
-    return this.environment === 'development';}
-  }
-  /**
-   * Check if in test
-   */
-  isTest(): boolean {
-    return this.environment === 'test';}
-  }
-  /**
-   * Check if in staging
-   */
-  isStaging(): boolean {
-    return this.environment === 'staging';}
-  }
-  /**
-   * Override configuration
-   */
-  override(config: Partial<AppConfig>): void {
-    this.overrides = config
-    this.config = this.loadConfig();}
-  }
-  /**
-   * Reset configuration
-   */
-  reset(): void {}
-    this.overrides = {}
-    this.config = this.loadConfig()
-  }
-  /**
-   * Export configuration as JSON
-   */
-  export(): string {
-    return JSON.stringify(this.config, null, 2);}
-  }
-  /**
-   * Validate configuration
-   */
-  validate(): { valid: boolean; errors: string[] } {
-    const errors: string[] = []
-    // Validate API configuration
-    if (!this.config.api.baseURL) {
-      errors.push('API baseURL is required');}
-    }
-    if (this.config.api.timeout < 1000) {
-      errors.push('API timeout must be at least 1000ms');}
-    }
-    if (this.config.api.retryAttempts < 0) {
-      errors.push('API retryAttempts must be non-negative');}
-    }
-    // Validate security configuration
-    if (this.config.security.maxRequestsPerMinute < 1) {
-      errors.push('Security maxRequestsPerMinute must be at least 1');}
-    }
-    return {
-      valid: errors.length === 0,
-      errors}
-    }
+
+  public isSecurityEnabled(feature: keyof AppConfig['security']): boolean {
+    return this.config.security[feature];
   }
 }
+
 // Export singleton instance
-export const configManager = ConfigManager.getInstance()
-export default ConfigManager
+export const configManager = new ConfigManager();
+export default configManager;

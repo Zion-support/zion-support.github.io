@@ -78,17 +78,7 @@ const HomePage: React.FC = React.memo((props) => {
             contactType: 'Customer Service',
             areaServed: 'US',
             availableLanguage: 'en'
-<<<<<<< HEAD
-          },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '364 E Main St STE 1008',
-            addressLocality: 'Middletown',
-            addressRegion: 'DE',
-            postalCode: '19709',
-            addressCountry: 'US'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
+
           }
         },
         address: {

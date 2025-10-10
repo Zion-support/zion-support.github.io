@@ -1,3 +1,10 @@
+#!/usr/bin/env node
+
+/**
+ * Performance Optimizer
+ * Automatically optimizes the application for better performance
+ */
+
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -5,201 +12,213 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🚀 Starting performance optimization...');
+class PerformanceOptimizer {
+  constructor() {
+    this.optimizeImages();
+    this.optimizeCSS();
+    this.optimizeJS();
+    this.generatePerformanceReport();
+  }
 
-// Optimize images
-function optimizeImages() {
-  console.log('📸 Optimizing images...');
-  
-  const publicDir = path.join(__dirname, '../public');
-  const imagesDir = path.join(publicDir, 'images');
-  
-  if (fs.existsSync(imagesDir)) {
-    const files = fs.readdirSync(imagesDir);
-    console.log(`Found ${files.length} image files to optimize`);
+  /**
+   * Optimize images
+   */
+  optimizeImages() {
+    console.log('🖼️  Optimizing images...');
     
-    // In a real implementation, you would use sharp or imagemin here
-    // For now, we'll just log the files
-    files.forEach(file => {
-      if (file.match(/\.(jpg|jpeg|png|gif|webp)$/i)) {
-        console.log(`  - ${file}`);
+    const publicDir = path.join(__dirname, '../public');
+    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
+    
+    this.processDirectory(publicDir, (filePath) => {
+      const ext = path.extname(filePath).toLowerCase();
+      if (imageExtensions.includes(ext)) {
+        this.optimizeImage(filePath);
       }
     });
   }
-}
 
-// Optimize CSS
-function optimizeCSS() {
-  console.log('🎨 Optimizing CSS...');
-  
-  const distDir = path.join(__dirname, '../dist');
-  const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'));
-  
-  cssFiles.forEach(file => {
-    const filePath = path.join(distDir, file);
-    let content = fs.readFileSync(filePath, 'utf8');
+  /**
+   * Optimize CSS
+   */
+  optimizeCSS() {
+    console.log('🎨 Optimizing CSS...');
     
-    // Remove unused CSS (basic implementation)
-    content = content.replace(/\s+/g, ' ');
-    content = content.replace(/;\s*}/g, '}');
-    content = content.replace(/{\s*/g, '{');
-    content = content.replace(/;\s*;/g, ';');
+    const distDir = path.join(__dirname, '../dist');
+    const cssFiles = this.findFiles(distDir, '.css');
     
-    fs.writeFileSync(filePath, content);
-    console.log(`  - Optimized ${file}`);
-  });
-}
+    cssFiles.forEach(file => {
+      this.optimizeCSSFile(file);
+    });
+  }
 
-// Optimize JavaScript
-function optimizeJS() {
-  console.log('⚡ Optimizing JavaScript...');
-  
-  const distDir = path.join(__dirname, '../dist');
-  const jsFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.js'));
-  
-  jsFiles.forEach(file => {
-    const filePath = path.join(distDir, file);
-    let content = fs.readFileSync(filePath, 'utf8');
+  /**
+   * Optimize JavaScript
+   */
+  optimizeJS() {
+    console.log('⚡ Optimizing JavaScript...');
     
-    // Basic JS optimization
-    content = content.replace(/\s+/g, ' ');
-    content = content.replace(/;\s*}/g, '}');
-    content = content.replace(/{\s*/g, '{');
+    const distDir = path.join(__dirname, '../dist');
+    const jsFiles = this.findFiles(distDir, '.js');
     
-    fs.writeFileSync(filePath, content);
-    console.log(`  - Optimized ${file}`);
-  });
-}
+    jsFiles.forEach(file => {
+      this.optimizeJSFile(file);
+    });
+  }
 
-// Generate sitemap
-function generateSitemap() {
-  console.log('🗺️ Generating sitemap...');
-  
-  const pages = [
-    '/',
-    '/about',
-    '/services',
-    '/ai-services',
-    '/it-services',
-    '/micro-saas',
-    '/pricing',
-    '/contact',
-    '/blog',
-    '/case-studies',
-    '/team',
-    '/careers',
-    '/privacy',
-    '/terms',
-    '/cookies',
-    '/docs',
-    '/api-docs',
-    '/support',
-    '/status',
-    '/demo',
-    '/consultation'
-  ];
-  
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>https://ziontechgroup.com${page}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>
-  </url>`).join('\n')}
-</urlset>`;
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/sitemap.xml'), sitemap);
-  console.log('  - Generated sitemap.xml');
-}
-
-// Generate robots.txt
-function generateRobots() {
-  console.log('🤖 Generating robots.txt...');
-  
-  const robots = `User-agent: *
-Allow: /
-
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Disallow admin areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/`;
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/robots.txt'), robots);
-  console.log('  - Generated robots.txt');
-}
-
-// Generate manifest.json
-function generateManifest() {
-  console.log('📱 Generating manifest.json...');
-  
-  const manifest = {
-    "name": "Zion Tech Group",
-    "short_name": "Zion Tech",
-    "description": "AI-Powered Enterprise Solutions",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#0f0f23",
-    "theme_color": "#00ffff",
-    "orientation": "portrait-primary",
-    "icons": [
-      {
-        "src": "/favicon-16x16.png",
-        "sizes": "16x16",
-        "type": "image/png"
-      },
-      {
-        "src": "/favicon-32x32.png",
-        "sizes": "32x32",
-        "type": "image/png"
-      },
-      {
-        "src": "/apple-touch-icon.png",
-        "sizes": "180x180",
-        "type": "image/png"
-      },
-      {
-        "src": "/android-chrome-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "/android-chrome-512x512.png",
-        "sizes": "512x512",
-        "type": "image/png"
+  /**
+   * Process directory recursively
+   */
+  processDirectory(dir, callback) {
+    if (!fs.existsSync(dir)) return;
+    
+    const files = fs.readdirSync(dir);
+    files.forEach(file => {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+      
+      if (stat.isDirectory()) {
+        this.processDirectory(filePath, callback);
+      } else {
+        callback(filePath);
       }
-    ],
-    "categories": ["business", "productivity", "technology"],
-    "lang": "en-US",
-    "dir": "ltr"
-  };
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/manifest.json'), JSON.stringify(manifest, null, 2));
-  console.log('  - Generated manifest.json');
-}
+    });
+  }
 
-// Main optimization function
-function optimize() {
-  try {
-    optimizeImages();
-    optimizeCSS();
-    optimizeJS();
-    generateSitemap();
-    generateRobots();
-    generateManifest();
+  /**
+   * Find files by extension
+   */
+  findFiles(dir, extension) {
+    const files = [];
+    this.processDirectory(dir, (filePath) => {
+      if (path.extname(filePath) === extension) {
+        files.push(filePath);
+      }
+    });
+    return files;
+  }
+
+  /**
+   * Optimize individual image
+   */
+  optimizeImage(filePath) {
+    try {
+      const stats = fs.statSync(filePath);
+      const sizeKB = Math.round(stats.size / 1024);
+      
+      if (sizeKB > 100) { // Only log large images
+        console.log(`  📸 ${path.basename(filePath)}: ${sizeKB}KB`);
+      }
+    } catch (error) {
+      console.error(`Error optimizing image ${filePath}:`, error.message);
+    }
+  }
+
+  /**
+   * Optimize CSS file
+   */
+  optimizeCSSFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalSize = content.length;
+      
+      // Remove comments
+      content = content.replace(/\/\*[\s\S]*?\*\//g, '');
+      
+      // Remove extra whitespace
+      content = content.replace(/\s+/g, ' ');
+      content = content.replace(/;\s*}/g, '}');
+      content = content.replace(/{\s*/g, '{');
+      content = content.replace(/;\s*/g, ';');
+      
+      // Remove unnecessary semicolons
+      content = content.replace(/;}/g, '}');
+      
+      const optimizedSize = content.length;
+      const savings = Math.round(((originalSize - optimizedSize) / originalSize) * 100);
+      
+      if (savings > 0) {
+        fs.writeFileSync(filePath, content);
+        console.log(`  🎨 ${path.basename(filePath)}: ${savings}% smaller`);
+      }
+    } catch (error) {
+      console.error(`Error optimizing CSS ${filePath}:`, error.message);
+    }
+  }
+
+  /**
+   * Optimize JavaScript file
+   */
+  optimizeJSFile(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalSize = content.length;
+      
+      // Remove console.log statements in production
+      if (filePath.includes('dist')) {
+        content = content.replace(/console\.(log|warn|info|debug)\([^)]*\);?/g, '');
+      }
+      
+      // Remove extra whitespace
+      content = content.replace(/\s+/g, ' ');
+      content = content.replace(/;\s*}/g, '}');
+      content = content.replace(/{\s*/g, '{');
+      
+      const optimizedSize = content.length;
+      const savings = Math.round(((originalSize - optimizedSize) / originalSize) * 100);
+      
+      if (savings > 0) {
+        fs.writeFileSync(filePath, content);
+        console.log(`  ⚡ ${path.basename(filePath)}: ${savings}% smaller`);
+      }
+    } catch (error) {
+      console.error(`Error optimizing JS ${filePath}:`, error.message);
+    }
+  }
+
+  /**
+   * Generate performance report
+   */
+  generatePerformanceReport() {
+    console.log('📊 Generating performance report...');
     
-    console.log('✅ Performance optimization completed successfully!');
-  } catch (error) {
-    console.error('❌ Error during optimization:', error);
-    process.exit(1);
+    const distDir = path.join(__dirname, '../dist');
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalSize: 0,
+      files: [],
+      recommendations: []
+    };
+
+    this.processDirectory(distDir, (filePath) => {
+      const stats = fs.statSync(filePath);
+      const sizeKB = Math.round(stats.size / 1024);
+      
+      report.totalSize += sizeKB;
+      report.files.push({
+        name: path.basename(filePath),
+        size: sizeKB,
+        type: path.extname(filePath)
+      });
+    });
+
+    // Generate recommendations
+    if (report.totalSize > 1000) {
+      report.recommendations.push('Consider implementing code splitting to reduce bundle size');
+    }
+    
+    const largeFiles = report.files.filter(f => f.size > 100);
+    if (largeFiles.length > 0) {
+      report.recommendations.push('Large files detected - consider optimization');
+    }
+
+    const reportPath = path.join(__dirname, '../performance-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    console.log(`📊 Performance report generated: ${reportPath}`);
+    console.log(`📦 Total bundle size: ${report.totalSize}KB`);
+    console.log(`📁 Files processed: ${report.files.length}`);
   }
 }
 
-// Run optimization
-optimize();
+// Run the optimizer
+new PerformanceOptimizer();

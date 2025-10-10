@@ -1,392 +1,351 @@
 /**
  * Analytics Tracker
- * Provides comprehensive analytics tracking for the application
+ * Comprehensive analytics tracking for user interactions and performance
  */
 
-interface AnalyticsEvent {
-<<<<<<< HEAD
-  action: string;
-  category: string;
-=======
+export interface AnalyticsEvent {
+  name: string;
   category: string;
   action: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
   label?: string;
   value?: number;
-  nonInteraction?: boolean;
+  customParameters?: Record<string, any>;
 }
 
-interface PerformanceMetrics {
-  metric: string;
-  value: number;
-  rating?: 'good' | 'needs-improvement' | 'poor';
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
 }
 
-interface ErrorReport {
-  message: string;
-  stack?: string;
-  componentStack?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+export interface UserProperties {
+  userId?: string;
+  sessionId: string;
+  userAgent: string;
+  language: string;
+  timezone: string;
+  screenResolution: string;
+  viewportSize: string;
 }
 
 class AnalyticsTracker {
   private isInitialized = false;
-  private queue: Array<() => void> = [];
+  private sessionId: string;
+  private userId?: string;
+  private eventQueue: AnalyticsEvent[] = [];
+  private performanceObserver?: PerformanceObserver;
 
-  /**
-   * Initialize the analytics tracker
-   */
-  initialize(): void {
-    if (typeof window === 'undefined') return;
-    
-    this.isInitialized = true;
-    
-    // Process queued events
-    this.queue.forEach(fn => fn());
-    this.queue = [];
-    
-    // Track initial page view
-    this.trackPageView(window.location.pathname);
+  constructor() {
+    this.sessionId = this.generateSessionId();
+    this.initialize();
   }
 
-<<<<<<< HEAD
-  /**
-   * Track a page view
-   */
-  trackPageView(path: string): void {
-    const event = () => {
-      console.log('Page view tracked:', path);
-      // Add your analytics implementation here
-    };
+  private generateSessionId(): string {
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  }
 
-    if (this.isInitialized) {
-      event();
-    } else {
-      this.queue.push(event);
+  private initialize(): void {
+    if (typeof window === 'undefined') return;
+
+    try {
+      this.setupPerformanceMonitoring();
+      this.setupErrorTracking();
+      this.setupUserInteractionTracking();
+      this.isInitialized = true;
+    } catch (error) {
+      console.error('Failed to initialize analytics tracker:', error);
     }
   }
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
+  private setupPerformanceMonitoring(): void {
+    if ('PerformanceObserver' in window) {
+      this.performanceObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            this.trackPageLoad(entry as PerformanceNavigationTiming);
+          } else if (entry.entryType === 'paint') {
+            this.trackPaintMetrics(entry as PerformancePaintTiming);
+          }
+        });
+      });
+
+      this.performanceObserver.observe({ entryTypes: ['navigation', 'paint'] });
+    }
+  }
+
+  private setupErrorTracking(): void {
+    window.addEventListener('error', (event) => {
+      this.trackError({
+        message: event.message,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+        error: event.error,
+      });
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      this.trackError({
+        message: 'Unhandled Promise Rejection',
+        reason: event.reason,
+        promise: event.promise,
+      });
+    });
+  }
+
+  private setupUserInteractionTracking(): void {
+    // Track clicks
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      if (target) {
+        this.trackEvent({
+          name: 'click',
+          category: 'user_interaction',
+          action: 'click',
+          label: this.getElementLabel(target),
+        });
+      }
+    });
+
+    // Track form submissions
+    document.addEventListener('submit', (event) => {
+      const form = event.target as HTMLFormElement;
+      if (form) {
+        this.trackEvent({
+          name: 'form_submit',
+          category: 'user_interaction',
+          action: 'submit',
+          label: form.id || form.className || 'unknown_form',
+        });
+      }
+    });
+
+    // Track scroll depth
+    let maxScrollDepth = 0;
+    window.addEventListener('scroll', () => {
+      const scrollDepth = Math.round(
+        (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+      );
+      if (scrollDepth > maxScrollDepth) {
+        maxScrollDepth = scrollDepth;
+        this.trackEvent({
+          name: 'scroll_depth',
+          category: 'user_engagement',
+          action: 'scroll',
+          value: maxScrollDepth,
+        });
+      }
+    });
+  }
+
+  private getElementLabel(element: HTMLElement): string {
+    return (
+      element.id ||
+      element.className ||
+      element.tagName ||
+      element.textContent?.slice(0, 50) ||
+      'unknown_element'
+    );
+  }
+
+  private trackPageLoad(entry: PerformanceNavigationTiming): void {
+    const metrics: PerformanceMetrics = {
+      loadTime: entry.loadEventEnd - entry.loadEventStart,
+      firstContentfulPaint: 0,
+      largestContentfulPaint: 0,
+      firstInputDelay: 0,
+      cumulativeLayoutShift: 0,
+      timeToInteractive: entry.domInteractive - entry.navigationStart,
+    };
+
+    this.trackPerformance(metrics);
+  }
+
+  private trackPaintMetrics(entry: PerformancePaintTiming): void {
+    if (entry.name === 'first-contentful-paint') {
+      this.trackEvent({
+        name: 'first_contentful_paint',
+        category: 'performance',
+        action: 'paint',
+        value: entry.startTime,
+      });
+    }
+  }
+
   /**
    * Track a custom event
    */
-  trackEvent(event: AnalyticsEvent): void {
-<<<<<<< HEAD
-    const trackFn = () => {
-      console.log('Event tracked:', event);
-      // Add your analytics implementation here
-    };
+  public trackEvent(event: AnalyticsEvent): void {
+    if (!this.isInitialized) {
+      this.eventQueue.push(event);
+      return;
+    }
 
-    if (this.isInitialized) {
-      trackFn();
-    } else {
-      this.queue.push(trackFn);
-=======
-    if (typeof window === 'undefined') return;
-    
-    const track = () => {
-      // Send to analytics service (replace with your preferred service)
+    try {
+      // Send to Google Analytics if available
       if (typeof gtag !== 'undefined') {
         gtag('event', event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
-          non_interaction: event.nonInteraction
+          custom_parameters: event.customParameters,
         });
       }
-      
-      // Also log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Analytics Event:', event);
-      }
-    };
-    
-    if (this.isInitialized) {
-      track();
-    } else {
-      this.queue.push(track);
-    }
-  }
 
-  /**
-   * Track page views
-   */
-  trackPageView(path: string, title?: string): void {
-    if (typeof window === 'undefined') return;
-    
-    const track = () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('config', 'GA_MEASUREMENT_ID', {
-          page_path: path,
-          page_title: title || document.title
-        });
-      }
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Page View:', { path, title: title || document.title });
-      }
-    };
-    
-    if (this.isInitialized) {
-      track();
-    } else {
-      this.queue.push(track);
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
+      // Send to custom analytics endpoint
+      this.sendToAnalytics(event);
+    } catch (error) {
+      console.error('Failed to track event:', error);
     }
   }
 
   /**
    * Track performance metrics
    */
-  trackPerformance(metrics: PerformanceMetrics): void {
-<<<<<<< HEAD
-    const trackFn = () => {
-      console.log('Performance tracked:', metrics);
-      // Add your performance tracking implementation here
-    };
-
-    if (this.isInitialized) {
-      trackFn();
-    } else {
-      this.queue.push(trackFn);
-=======
-    if (typeof window === 'undefined') return;
-    
-    const track = () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'timing_complete', {
-          name: metrics.metric,
-          value: Math.round(metrics.value),
-          event_category: 'Performance'
-        });
-      }
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metric:', metrics);
-      }
-    };
-    
-    if (this.isInitialized) {
-      track();
-    } else {
-      this.queue.push(track);
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
-    }
+  public trackPerformance(metrics: PerformanceMetrics): void {
+    this.trackEvent({
+      name: 'performance_metrics',
+      category: 'performance',
+      action: 'measure',
+      customParameters: metrics,
+    });
   }
 
   /**
    * Track an error
    */
-  trackError(error: ErrorReport): void {
-<<<<<<< HEAD
-    const trackFn = () => {
-      console.error('Error tracked:', error);
-      // Add your error tracking implementation here
-    };
-
-    if (this.isInitialized) {
-      trackFn();
-    } else {
-      this.queue.push(trackFn);
-=======
-    if (typeof window === 'undefined') return;
-    
-    const track = () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'exception', {
-          description: error.message,
-          fatal: error.severity === 'critical' || error.severity === 'high',
-          event_category: 'Error'
-        });
-      }
-      
-      // Always log errors to console
-      console.error('Analytics Error:', error);
-    };
-    
-    if (this.isInitialized) {
-      track();
-    } else {
-      this.queue.push(track);
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
-    }
+  public trackError(error: any): void {
+    this.trackEvent({
+      name: 'error',
+      category: 'error',
+      action: 'occurred',
+      label: error.message || 'Unknown error',
+      customParameters: {
+        stack: error.stack,
+        filename: error.filename,
+        lineno: error.lineno,
+        colno: error.colno,
+      },
+    });
   }
 
   /**
-<<<<<<< HEAD
-   * Track user interaction
+   * Track page view
    */
-  trackInteraction(action: string, element?: string): void {
+  public trackPageView(page: string, title?: string): void {
     this.trackEvent({
-      action,
-      category: 'user-interaction',
-      label: element
+      name: 'page_view',
+      category: 'navigation',
+      action: 'view',
+      label: page,
+      customParameters: {
+        page_title: title || document.title,
+        page_url: window.location.href,
+        referrer: document.referrer,
+      },
+    });
+  }
+
+  /**
+   * Track user identification
+   */
+  public identifyUser(userId: string, properties?: Record<string, any>): void {
+    this.userId = userId;
+    this.trackEvent({
+      name: 'user_identify',
+      category: 'user',
+      action: 'identify',
+      customParameters: {
+        user_id: userId,
+        ...properties,
+      },
+    });
+  }
+
+  /**
+   * Set user properties
+   */
+  public setUserProperties(properties: Partial<UserProperties>): void {
+    this.trackEvent({
+      name: 'user_properties',
+      category: 'user',
+      action: 'update',
+      customParameters: properties,
     });
   }
 
   /**
    * Track conversion
    */
-  trackConversion(conversionType: string, value?: number): void {
+  public trackConversion(conversionId: string, value?: number, currency?: string): void {
     this.trackEvent({
-      action: 'conversion',
-      category: conversionType,
-      value
-    });
-=======
-   * Track user interactions
-   */
-  trackInteraction(element: string, action: string, details?: Record<string, any>): void {
-    this.trackEvent({
-      category: 'User Interaction',
-      action,
-      label: element,
-      value: details?.value
+      name: 'conversion',
+      category: 'conversion',
+      action: 'completed',
+      label: conversionId,
+      value: value,
+      customParameters: {
+        conversion_id: conversionId,
+        currency: currency || 'USD',
+      },
     });
   }
 
-  /**
-   * Track conversion events
-   */
-  trackConversion(conversionType: string, value?: number, currency?: string): void {
-    if (typeof window === 'undefined') return;
-    
-    const track = () => {
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'conversion', {
-          send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL',
-          value: value,
-          currency: currency || 'USD',
-          event_category: 'Conversion'
-        });
-      }
-      
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Conversion:', { conversionType, value, currency });
-      }
-    };
-    
-    if (this.isInitialized) {
-      track();
-    } else {
-      this.queue.push(track);
-    }
-  }
+  private async sendToAnalytics(event: AnalyticsEvent): Promise<void> {
+    try {
+      const payload = {
+        ...event,
+        sessionId: this.sessionId,
+        userId: this.userId,
+        timestamp: new Date().toISOString(),
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+      };
 
-  /**
-   * Track scroll depth
-   */
-  trackScrollDepth(depth: number): void {
-    this.trackEvent({
-      category: 'Engagement',
-      action: 'scroll',
-      label: `${depth}%`,
-      value: depth
-    });
-  }
-
-  /**
-   * Track time on page
-   */
-  trackTimeOnPage(timeInSeconds: number): void {
-    this.trackEvent({
-      category: 'Engagement',
-      action: 'time_on_page',
-      value: timeInSeconds
-    });
-  }
-
-  /**
-   * Track form submissions
-   */
-  trackFormSubmission(formName: string, success: boolean, errorMessage?: string): void {
-    this.trackEvent({
-      category: 'Form',
-      action: success ? 'submit_success' : 'submit_error',
-      label: formName,
-      value: success ? 1 : 0
-    });
-    
-    if (!success && errorMessage) {
-      this.trackError({
-        message: `Form submission failed: ${errorMessage}`,
-        severity: 'medium'
+      // Send to your analytics endpoint
+      await fetch('/api/analytics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
+    } catch (error) {
+      console.error('Failed to send analytics data:', error);
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
   }
 
   /**
-   * Track external link clicks
+   * Flush queued events
    */
-  trackExternalLink(url: string, linkText?: string): void {
-    this.trackEvent({
-      category: 'Outbound',
-      action: 'click',
-      label: linkText || url
-    });
+  public flush(): void {
+    while (this.eventQueue.length > 0) {
+      const event = this.eventQueue.shift();
+      if (event) {
+        this.trackEvent(event);
+      }
+    }
   }
 
   /**
-   * Track search queries
+   * Get current session ID
    */
-  trackSearch(query: string, resultsCount?: number): void {
-    this.trackEvent({
-      category: 'Search',
-      action: 'search',
-      label: query,
-      value: resultsCount
-    });
+  public getSessionId(): string {
+    return this.sessionId;
   }
 
   /**
-   * Track video interactions
+   * Get current user ID
    */
-  trackVideoInteraction(videoId: string, action: 'play' | 'pause' | 'complete', progress?: number): void {
-    this.trackEvent({
-      category: 'Video',
-      action,
-      label: videoId,
-      value: progress
-    });
-  }
-
-  /**
-   * Track download events
-   */
-  trackDownload(fileName: string, fileType: string): void {
-    this.trackEvent({
-      category: 'Download',
-      action: 'download',
-      label: `${fileName}.${fileType}`
-    });
-  }
-
-  /**
-   * Get analytics data (for debugging)
-   */
-  getAnalyticsData(): {
-    isInitialized: boolean;
-    queueLength: number;
-  } {
-    return {
-      isInitialized: this.isInitialized,
-      queueLength: this.queue.length
-    };
+  public getUserId(): string | undefined {
+    return this.userId;
   }
 }
 
-// Create singleton instance
-<<<<<<< HEAD
+// Export singleton instance
 export const analyticsTracker = new AnalyticsTracker();
-=======
-export const analytics = new AnalyticsTracker();
-
-// Initialize on client side
-if (typeof window !== 'undefined') {
-  analytics.initialize();
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-7c55
-
-export default AnalyticsTracker;
+export default analyticsTracker;
