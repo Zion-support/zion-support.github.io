@@ -23,10 +23,12 @@ const ContactForm: React.FC = () => {
     phone: '',
     service: '',
     message: ''
+  });
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;

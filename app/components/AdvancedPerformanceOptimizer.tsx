@@ -30,6 +30,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     fid: 0,
     cls: 0,
     ttfb: 0
+  });
 
   // Web Vitals monitoring
   useEffect(() => {
@@ -82,9 +83,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     if ('serviceWorker' in navigator && enableServiceWorker) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          // })
+          console.log('Service Worker registered:', registration);
+        })
         .catch((registrationError) => {
-          // });
+          console.error('Service Worker registration failed:', registrationError);
+        });
     }
 
     // Memory-based caching for API responses
