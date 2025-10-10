@@ -33,7 +33,10 @@ export default function handler(req, res) {
       if (!Array.isArray(existing)) existing = [];
     }
   } catch (error) {
-    // console.error('Error reading existing subscribers:', error);
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error reading existing subscribers:', error);
+    }
     existing = [];
   }
 
@@ -67,7 +70,10 @@ export default function handler(req, res) {
       id: newSubscriber.id
     }));
   } catch (error) {
-    // console.error('Error saving subscriber:', error);
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error saving subscriber:', error);
+    }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save subscription' }));

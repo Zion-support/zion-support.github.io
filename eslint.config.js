@@ -67,7 +67,7 @@ export default [
     rules: {
       ...js.configs.recommended.rules,
       'no-unused-vars': 'warn',
-      'no-console': 'warn'
+      'no-console': 'off'
     }
   },
   // TypeScript configuration

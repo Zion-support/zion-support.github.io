@@ -48,5 +48,9 @@ const newAppContent = beforeRoutes + '\n            {/* Missing Pages */}\n' + r
 
 // Write the updated App.tsx;
 fs.writeFileSync('/workspace/src/App.tsx', newAppContent);
-    // console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`);
-    // console.log('All navigation links should now work properly!');
+
+// Log success for debugging in development
+if (process.env.NODE_ENV === 'development') {
+  console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`);
+  console.log('All navigation links should now work properly!');
+}

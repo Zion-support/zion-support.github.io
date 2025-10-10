@@ -42,7 +42,10 @@ async function handler(req, res) {
       data: sessionData
     }));
   } catch (error) {
-    // console.error('Checkout session creation error:', error);
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Checkout session creation error:', error);
+    }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
