@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-
 // Files with merge conflicts
 const filesWithConflicts = [
   './src/components/PerformanceDashboard.tsx',
@@ -26,21 +24,17 @@ const filesWithConflicts = [
   './app/ai-autonomous-systems/page.tsx',
   './app/ai-climate-solutions-pro/page.tsx'
 ];
-
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
     // Split by merge conflict markers
     const lines = content.split('\n');
     const resolvedLines = [];
     let inConflict = false;
     let inHead = false;
     let inSeparator = false;
-    
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      
       if (line.trim() === '<<<<<<< HEAD') {
         inConflict = true;
         inHead = true;
@@ -56,7 +50,6 @@ function resolveMergeConflicts(filePath) {
         inSeparator = false;
         continue;
       }
-      
       if (inConflict) {
         if (inHead) {
           resolvedLines.push(line);
@@ -66,19 +59,15 @@ function resolveMergeConflicts(filePath) {
         resolvedLines.push(line);
       }
     }
-    
     const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
     console.log(`✅ Resolved merge conflicts in ${filePath}`);
-    
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 }
-
 // Process all files
 console.log('🔧 Resolving merge conflicts...\n');
-
 filesWithConflicts.forEach(filePath => {
   if (fs.existsSync(filePath)) {
     resolveMergeConflicts(filePath);
@@ -86,5 +75,4 @@ filesWithConflicts.forEach(filePath => {
     console.log(`⚠️  File not found: ${filePath}`);
   }
 });
-
 console.log('\n✨ Merge conflict resolution complete!');

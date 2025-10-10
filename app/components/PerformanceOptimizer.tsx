@@ -16,84 +16,130 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableCodeSplitting = true
 }) => {
   useEffect(() => {
-    // Preload critical resources
-    if (enablePreloading && typeof window !== 'undefined') {
-      // Preload critical fonts
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontPreload.as = 'style';
-      document.head.appendChild(fontPreload);
+    // Image optimization
+    if (enableImageOptimization) {
+      const optimizeImages = () => {
+        const images = document.querySelectorAll('img[data-src]');
+        images.forEach((img) => {
+          const image = img as HTMLImageElement;
+          if (image.dataset.src) {
+            image.src = image.dataset.src;
+            image.removeAttribute('data-src');
+          }
+        });
+      };
 
-      // Preload critical images
-      const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png'
-      ];
-
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = src;
-        link.as = 'image';
-        document.head.appendChild(link);
-      });
+      // Run optimization after page load
+      if (document.readyState === 'complete') {
+        optimizeImages();
+      } else {
+        window.addEventListener('load', optimizeImages);
+      }
     }
 
-    // Optimize images
-    if (enableImageOptimization && typeof window !== 'undefined') {
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        // Add loading="lazy" for non-critical images
-        if (enableLazyLoading && !img.hasAttribute('loading')) {
-          img.loading = 'lazy';
-        }
-
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.decoding = 'async';
-        }
-      });
-    }
-
-    // Intersection Observer for lazy loading
-    if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+    // Lazy loading for images
+    if (enableLazyLoading) {
+      const lazyImages = document.querySelectorAll('img[data-lazy]');
+      
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              observer.unobserve(img);
+            if (img.dataset.lazy) {
+              img.src = img.dataset.lazy;
+              img.removeAttribute('data-lazy');
+              imageObserver.unobserve(img);
             }
           }
         });
       });
 
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => imageObserver.observe(img));
+      lazyImages.forEach((img) => imageObserver.observe(img));
     }
 
-    // Performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+    // Preload critical resources
+    if (enablePreloading) {
+      const preloadCriticalResources = () => {
+        // Preload critical CSS
+        const criticalCSS = document.createElement('link');
+        criticalCSS.rel = 'preload';
+        criticalCSS.href = '/styles/critical.css';
+        criticalCSS.as = 'style';
+        document.head.appendChild(criticalCSS);
+
+        // Preload critical fonts
+        const criticalFont = document.createElement('link');
+        criticalFont.rel = 'preload';
+        criticalFont.href = '/fonts/inter-var.woff2';
+        criticalFont.as = 'font';
+        criticalFont.type = 'font/woff2';
+        criticalFont.crossOrigin = 'anonymous';
+        document.head.appendChild(criticalFont);
+      };
+
+      preloadCriticalResources();
+    }
+
+    // Code splitting optimization
+    if (enableCodeSplitting) {
+      // Preload next likely pages
+      const preloadNextPages = () => {
+        const links = document.querySelectorAll('a[href^="/"]');
+        const preloadedPages = new Set();
+
+        links.forEach((link) => {
+          const href = link.getAttribute('href');
+          if (href && !preloadedPages.has(href)) {
+            preloadedPages.add(href);
+            
+            // Preload on hover
+            link.addEventListener('mouseenter', () => {
+              const prefetchLink = document.createElement('link');
+              prefetchLink.rel = 'prefetch';
+              prefetchLink.href = href;
+              document.head.appendChild(prefetchLink);
+            }, { once: true });
           }
         });
-      });
+      };
 
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
-        // Fallback for browsers that don't support these entry types
-      }
+      // Run after initial load
+      setTimeout(preloadNextPages, 2000);
     }
+
+    // Resource hints
+    const addResourceHints = () => {
+      // DNS prefetch for external domains
+      const externalDomains = [
+        'fonts.googleapis.com',
+        'fonts.gstatic.com',
+        'www.google-analytics.com',
+        'www.googletagmanager.com'
+      ];
+
+      externalDomains.forEach((domain) => {
+        const link = document.createElement('link');
+        link.rel = 'dns-prefetch';
+        link.href = `//${domain}`;
+        document.head.appendChild(link);
+      });
+    };
+
+    addResourceHints();
+
+    // Service Worker registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('SW registered: ', registration);
+          })
+          .catch((registrationError) => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
   return null;

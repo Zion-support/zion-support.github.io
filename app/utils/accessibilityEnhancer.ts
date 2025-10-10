@@ -2,23 +2,19 @@
  * Accessibility Enhancer Utility
  * Provides comprehensive accessibility improvements for web applications
  */
-
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = [];
   private skipLinks: HTMLElement[] = [];
   private landmarks: HTMLElement[] = [];
   private isInitialized = false;
-
   constructor() {
     this.init();
   }
-
   /**
    * Initialize accessibility enhancements
    */
   private init(): void {
     if (this.isInitialized) return;
-    
     this.setupFocusManagement();
     this.setupKeyboardNavigation();
     this.setupSkipLinks();
@@ -26,24 +22,19 @@ export class AccessibilityEnhancer {
     this.setupAriaLabels();
     this.setupColorContrast();
     this.setupScreenReaderSupport();
-    
     this.isInitialized = true;
   }
-
   /**
    * Setup focus management
    */
   private setupFocusManagement(): void {
     // Update focusable elements
     this.updateFocusableElements();
-    
     // Add focus indicators
     this.addFocusIndicators();
-    
     // Handle focus trapping
     this.setupFocusTrapping();
   }
-
   /**
    * Update list of focusable elements
    */
@@ -57,12 +48,10 @@ export class AccessibilityEnhancer {
       '[tabindex]:not([tabindex="-1"])',
       '[contenteditable="true"]'
     ];
-    
     this.focusableElements = Array.from(
       document.querySelectorAll(selectors.join(', '))
     ) as HTMLElement[];
   }
-
   /**
    * Add focus indicators
    */
@@ -73,11 +62,9 @@ export class AccessibilityEnhancer {
         outline: 2px solid #3b82f6 !important;
         outline-offset: 2px !important;
       }
-      
       *:focus:not(:focus-visible) {
         outline: none !important;
       }
-      
       *:focus-visible {
         outline: 2px solid #3b82f6 !important;
         outline-offset: 2px !important;
@@ -85,7 +72,6 @@ export class AccessibilityEnhancer {
     `;
     document.head.appendChild(style);
   }
-
   /**
    * Setup focus trapping for modals
    */
@@ -100,16 +86,13 @@ export class AccessibilityEnhancer {
       }
     });
   }
-
   /**
    * Handle tab key navigation
    */
   private handleTabKey(event: KeyboardEvent): void {
     const activeElement = document.activeElement as HTMLElement;
     const currentIndex = this.focusableElements.indexOf(activeElement);
-    
     if (currentIndex === -1) return;
-    
     if (event.shiftKey) {
       // Shift + Tab (backward)
       const prevIndex = currentIndex > 0 ? currentIndex - 1 : this.focusableElements.length - 1;
@@ -119,17 +102,8 @@ export class AccessibilityEnhancer {
       const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;
       this.focusableElements[nextIndex]?.focus();
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    focusableElements[nextIndex]?.focus();
-=======
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     event.preventDefault();
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
   }
-
   /**
    * Handle escape key
    */
@@ -140,7 +114,6 @@ export class AccessibilityEnhancer {
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click();
     });
-    
     // Close any open menus
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {
@@ -148,20 +121,17 @@ export class AccessibilityEnhancer {
       trigger?.click();
     });
   }
-
   /**
    * Handle arrow key navigation
    */
   private handleArrowKeys(event: KeyboardEvent): void {
     const activeElement = document.activeElement as HTMLElement;
-    
     // Handle arrow keys for radio groups, menus, etc.
     if (activeElement.getAttribute('role') === 'menuitem' || 
         activeElement.getAttribute('type') === 'radio') {
       this.handleMenuNavigation(event);
     }
   }
-
   /**
    * Handle menu navigation with arrow keys
    */
@@ -170,13 +140,9 @@ export class AccessibilityEnhancer {
     const menuItems = Array.from(
       activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
     ) as HTMLElement[];
-    
     const currentIndex = menuItems.indexOf(activeElement);
-    
     if (currentIndex === -1) return;
-    
     let nextIndex = currentIndex;
-    
     switch (event.key) {
       case 'ArrowDown':
         nextIndex = (currentIndex + 1) % menuItems.length;
@@ -191,11 +157,9 @@ export class AccessibilityEnhancer {
         nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
         break;
     }
-    
     menuItems[nextIndex]?.focus();
     event.preventDefault();
   }
-
   /**
    * Setup skip links
    */
@@ -206,10 +170,8 @@ export class AccessibilityEnhancer {
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
     document.body.insertBefore(skipLink, document.body.firstChild);
-    
     this.skipLinks.push(skipLink);
   }
-
   /**
    * Setup landmarks
    */
@@ -220,7 +182,6 @@ export class AccessibilityEnhancer {
       mainContent.setAttribute('role', 'main');
       mainContent.id = 'main-content';
     }
-    
     // Setup navigation landmarks
     const navs = document.querySelectorAll('nav');
     navs.forEach((nav, index) => {
@@ -228,20 +189,17 @@ export class AccessibilityEnhancer {
         nav.setAttribute('aria-label', `Navigation ${index + 1}`);
       }
     });
-    
     // Setup banner landmark
     const header = document.querySelector('header');
     if (header) {
       header.setAttribute('role', 'banner');
     }
-    
     // Setup contentinfo landmark
     const footer = document.querySelector('footer');
     if (footer) {
       footer.setAttribute('role', 'contentinfo');
     }
   }
-
   /**
    * Setup ARIA labels
    */
@@ -255,7 +213,6 @@ export class AccessibilityEnhancer {
         button.setAttribute('aria-label', iconName);
       }
     });
-    
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
     inputs.forEach(input => {
@@ -268,14 +225,12 @@ export class AccessibilityEnhancer {
       }
     });
   }
-
   /**
    * Setup color contrast improvements
    */
   private setupColorContrast(): void {
     // Add high contrast mode support
     const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    
     const handleContrastChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
@@ -283,11 +238,9 @@ export class AccessibilityEnhancer {
         document.body.classList.remove('high-contrast');
       }
     };
-    
     mediaQuery.addEventListener('change', handleContrastChange);
     handleContrastChange(mediaQuery);
   }
-
   /**
    * Setup screen reader support
    */
@@ -299,11 +252,9 @@ export class AccessibilityEnhancer {
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
-    
     // Announce page changes
     this.announcePageChange();
   }
-
   /**
    * Announce page changes to screen readers
    */
@@ -314,7 +265,6 @@ export class AccessibilityEnhancer {
       liveRegion.textContent = `Page loaded: ${title}`;
     }
   }
-
   /**
    * Announce messages to screen readers
    */
@@ -324,35 +274,30 @@ export class AccessibilityEnhancer {
       liveRegion.textContent = message;
     }
   }
-
   /**
    * Update focusable elements (call when DOM changes)
    */
   public updateFocusableElements(): void {
     this.updateFocusableElements();
   }
-
   /**
    * Get current focusable elements
    */
   public getFocusableElements(): HTMLElement[] {
     return [...this.focusableElements];
   }
-
   /**
    * Focus first focusable element
    */
   public focusFirst(): void {
     this.focusableElements[0]?.focus();
   }
-
   /**
    * Focus last focusable element
    */
   public focusLast(): void {
     this.focusableElements[this.focusableElements.length - 1]?.focus();
   }
-
   /**
    * Cleanup and destroy
    */
@@ -362,28 +307,3 @@ export class AccessibilityEnhancer {
     this.skipLinks = [];
     this.landmarks = [];
   }
-<<<<<<< HEAD
-}
-=======
-}
-
-// Create global instance
-export const accessibilityEnhancer = new AccessibilityEnhancer();
-
-// Export utility functions
-export const announceToScreenReader = (message: string) => {
-  accessibilityEnhancer.announce(message);
-};
-
-export const updateFocusableElements = () => {
-  accessibilityEnhancer.updateFocusableElements();
-};
-
-export const focusFirstElement = () => {
-  accessibilityEnhancer.focusFirst();
-};
-
-export const focusLastElement = () => {
-  accessibilityEnhancer.focusLast();
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce

@@ -2,10 +2,126 @@
 
 import React, { useEffect } from 'react';
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface EnhancedAccessibilityProps {
+  enableReducedMotion?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusVisible?: boolean;
+}
+
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+  enableReducedMotion = true,
+  enableHighContrast = true,
+  enableFocusVisible = true
+}) => {
+  useEffect(() => {
+    // Reduced motion support
+    if (enableReducedMotion) {
+      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      
+      const handleMotionChange = (e: MediaQueryListEvent) => {
+        if (e.matches) {
+          document.documentElement.classList.add('reduce-motion');
+        } else {
+          document.documentElement.classList.remove('reduce-motion');
+        }
+      };
+
+      // Set initial state
+      handleMotionChange(mediaQuery);
+      
+      // Listen for changes
+      mediaQuery.addEventListener('change', handleMotionChange);
+      
+      return () => mediaQuery.removeEventListener('change', handleMotionChange);
+    }
+  }, [enableReducedMotion]);
+
+  useEffect(() => {
+    // High contrast support
+    if (enableHighContrast) {
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      
+      const handleContrastChange = (e: MediaQueryListEvent) => {
+        if (e.matches) {
+          document.documentElement.classList.add('high-contrast');
+        } else {
+          document.documentElement.classList.remove('high-contrast');
+        }
+      };
+
+      // Set initial state
+      handleContrastChange(mediaQuery);
+      
+      // Listen for changes
+      mediaQuery.addEventListener('change', handleContrastChange);
+      
+      return () => mediaQuery.removeEventListener('change', handleContrastChange);
+    }
+  }, [enableHighContrast]);
+
+  useEffect(() => {
+    // Focus visible support
+    if (enableFocusVisible) {
+      const addFocusVisibleStyles = () => {
+        const style = document.createElement('style');
+        style.id = 'focus-visible-styles';
+        style.textContent = `
+          .js-focus-visible :focus:not(.focus-visible) {
+            outline: none;
+          }
+          
+          .js-focus-visible .focus-visible {
+            outline: 2px solid #06b6d4;
+            outline-offset: 2px;
+          }
+          
+          @media (prefers-reduced-motion: reduce) {
+            * {
+              animation-duration: 0.01ms !important;
+              animation-iteration-count: 1 !important;
+              transition-duration: 0.01ms !important;
+            }
+          }
+          
+          @media (prefers-contrast: high) {
+            .cyber-card, .quantum-card, .hologram-card {
+              border: 2px solid currentColor !important;
+            }
+            
+            .cyber-button, .quantum-button {
+              border: 2px solid currentColor !important;
+            }
+          }
+        `;
+        document.head.appendChild(style);
+      };
+
+      addFocusVisibleStyles();
+
+      // Add focus-visible polyfill behavior
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          document.body.classList.add('js-focus-visible');
+        }
+      };
+
+      const handleMouseDown = () => {
+        document.body.classList.remove('js-focus-visible');
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('mousedown', handleMouseDown);
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+      };
+    }
+  }, [enableFocusVisible]);
+
   useEffect(() => {
     // Add ARIA landmarks
-    const addLandmarks = () => {
+    const addAriaLandmarks = () => {
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
@@ -22,64 +138,16 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       }
     };
 
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
+    addAriaLandmarks();
 
-    // Enhance focus management
-    const enhanceFocusManagement = () => {
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        .sr-only.focus:not-sr-only {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `;
-      document.head.appendChild(style);
-    };
+    // Re-run when DOM changes
+    const observer = new MutationObserver(addAriaLandmarks);
+    observer.observe(document.body, { childList: true, subtree: true });
 
-    // Initialize accessibility enhancements
-    addLandmarks();
-    addSkipLinks();
-    enhanceFocusManagement();
-
-    // Cleanup function
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');
-      if (skipLink) {
-        skipLink.remove();
-      }
-    };
+    return () => observer.disconnect();
   }, []);
 
-  return <>{children}</>;
+  return null;
 };
 
 export default EnhancedAccessibility;

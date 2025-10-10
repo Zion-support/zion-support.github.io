@@ -18,6 +18,8 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+import { ThemeProvider } from './app/components/ThemeProvider';
+import ThemeToggle from './app/components/ThemeToggle';
 
 // Structured data for SEO - moved to SEOHead component
 
@@ -49,48 +51,50 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <SEOHead />
-        <SkipLink />
-        <Router>
-          <AppWithPerformanceMonitoring>
-            <AnalyticsProvider>
-              <PerformanceOptimizer>
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
-                    <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                      <Navigation />
-                      <Breadcrumb />
-                      <main id="main-content" className="flex-1">
-                        <Suspense fallback={<PageLoader />}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/faq" element={<FAQPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                            <Route path="/ai-services" element={<AiServicesPage />} />
-                            <Route path="/it-services" element={<ItServicesPage />} />
-                          </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </div>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
-              </PerformanceOptimizer>
-            </AnalyticsProvider>
-          </AppWithPerformanceMonitoring>
-        </Router>
+        <ThemeProvider>
+          <SEOHead />
+          <SkipLink />
+          <Router>
+            <AppWithPerformanceMonitoring>
+              <AnalyticsProvider>
+                <PerformanceOptimizer>
+                  <EnhancedAccessibility>
+                    <AccessibilityEnhancer>
+                      <PerformanceMonitor />
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-slate-900 dark:via-purple-900 dark:to-slate-900 light:from-gray-50 light:via-blue-50 light:to-indigo-50">
+                        <Navigation />
+                        <Breadcrumb />
+                        <main id="main-content" className="flex-1">
+                          <Suspense fallback={<PageLoader />}>
+                            <Routes>
+                              <Route path="/" element={<HomePage />} />
+                              <Route path="/about" element={<AboutPage />} />
+                              <Route path="/contact" element={<ContactPage />} />
+                              <Route path="/services" element={<ServicesPage />} />
+                              <Route path="/pricing" element={<PricingPage />} />
+                              <Route path="/blog" element={<BlogPage />} />
+                              <Route path="/case-studies" element={<CaseStudiesPage />} />
+                              <Route path="/careers" element={<CareersPage />} />
+                              <Route path="/partners" element={<PartnersPage />} />
+                              <Route path="/support" element={<SupportPage />} />
+                              <Route path="/faq" element={<FAQPage />} />
+                              <Route path="/demo" element={<DemoPage />} />
+                              <Route path="/consultation" element={<ConsultationPage />} />
+                              <Route path="/micro-saas" element={<MicroSaasPage />} />
+                              <Route path="/ai-services" element={<AiServicesPage />} />
+                              <Route path="/it-services" element={<ItServicesPage />} />
+                            </Routes>
+                          </Suspense>
+                        </main>
+                        <Footer />
+                      </div>
+                    </AccessibilityEnhancer>
+                  </EnhancedAccessibility>
+                </PerformanceOptimizer>
+              </AnalyticsProvider>
+            </AppWithPerformanceMonitoring>
+          </Router>
+        </ThemeProvider>
       </HelmetProvider>
     </ErrorBoundary>
   );
