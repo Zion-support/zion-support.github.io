@@ -1,9 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-
-const PartnersPage: React.FC = () => {
-  const partners = [
 import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react';
 
 interface Partner {
@@ -21,107 +18,62 @@ const PartnersPage: React.FC = () => {
   const [selectedTier, setSelectedTier] = useState('all');
 
   const partners: Partner[] = [
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
     {
       id: '1',
       name: 'Microsoft',
       logo: '/images/partners/microsoft.png',
+      description: 'Leading cloud and AI platform provider',
+      category: 'Cloud & AI',
+      website: 'https://microsoft.com',
+      tier: 'strategic'
     },
     {
       id: '2',
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
+      description: 'Comprehensive cloud computing services',
+      category: 'Cloud & AI',
+      website: 'https://aws.amazon.com',
+      tier: 'strategic'
+    },
+    {
+      id: '3',
+      name: 'Google Cloud',
+      logo: '/images/partners/google-cloud.png',
+      description: 'AI-first cloud platform',
+      category: 'Cloud & AI',
+      website: 'https://cloud.google.com',
+      tier: 'preferred'
+    },
+    {
+      id: '4',
+      name: 'NVIDIA',
+      logo: '/images/partners/nvidia.png',
+      description: 'AI computing and GPU technology leader',
+      category: 'Hardware & AI',
+      website: 'https://nvidia.com',
+      tier: 'preferred'
+    },
+    {
+      id: '5',
+      name: 'Salesforce',
+      logo: '/images/partners/salesforce.png',
+      description: 'Customer relationship management platform',
+      category: 'Business Software',
+      website: 'https://salesforce.com',
+      tier: 'certified'
+    },
+    {
+      id: '6',
+      name: 'ServiceNow',
+      logo: '/images/partners/servicenow.png',
+      description: 'Digital workflow and IT management',
+      category: 'IT Management',
+      website: 'https://servicenow.com',
+      tier: 'certified'
     }
-    'Access to cutting-edge technology',
-    'Joint go-to-market opportunities',
-    'Technical support and training',
-    'Co-innovation projects',
-    'Global reach and scalability',
-    'Certified expertise and solutions'
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
   ];
-<<<<<<< HEAD
-  const benefits = [
-    {
-      title: 'Certified Expertise',
-      description: 'Our team holds certifications from leading technology partners',
-      icon: CheckCircle
-    },
-    {
-      title: 'Priority Support',
-      description: 'Get priority access to partner resources and support channels',
-      icon: CheckCircle
-    },
-    {
-      title: 'Latest Technology',
-      description: 'Access to cutting-edge tools and early release features',
-      icon: CheckCircle
-    },
-    {
-      title: 'Cost Optimization',
-      description: 'Leverage partner pricing and volume discounts for your projects',
-      icon: CheckCircle
-    }
-  ];
-  const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
 
-  return (
-    <>
-      <Helmet>
-        <title>Partners | Zion Tech Group</title>
-        <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support." />
-        <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise" />
-      </Helmet>
-
-      <Navigation />
-      
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Our Technology Partners
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We work with leading technology companies to deliver the best solutions for our clients.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {partners.map((partner, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
-                  <div className="aspect-video bg-white/10 rounded-xl mb-4 flex items-center justify-center">
-                    <div className="text-4xl opacity-50">🏢</div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
-                </div>
-              ))}
-            </div>
-
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
   const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
   const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
 
@@ -408,7 +360,6 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
   );
 };
 

@@ -30,6 +30,21 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
+const TeamPage = React.lazy(() => import('./app/team/page'));
+const PartnersPage = React.lazy(() => import('./app/partners/page'));
+const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
+const SupportPage = React.lazy(() => import('./app/support/page'));
+const FaqPage = React.lazy(() => import('./app/faq/page'));
+const DocsPage = React.lazy(() => import('./app/docs/page'));
+const CommunityPage = React.lazy(() => import('./app/community/page'));
+const DemoPage = React.lazy(() => import('./app/demo/page'));
+const EnterprisePage = React.lazy(() => import('./app/enterprise/page'));
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'));
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -67,6 +82,21 @@ const App: React.FC = () => {
                             <Route path="/blog" element={<BlogPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />
                             <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/team" element={<TeamPage />} />
+                            <Route path="/partners" element={<PartnersPage />} />
+                            <Route path="/tutorials" element={<TutorialsPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/faq" element={<FaqPage />} />
+                            <Route path="/docs" element={<DocsPage />} />
+                            <Route path="/community" element={<CommunityPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/enterprise" element={<EnterprisePage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            <Route path="/sitemap" element={<SitemapPage />} />
                           </Routes>
                         </Suspense>
                       </main>

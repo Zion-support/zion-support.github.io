@@ -235,7 +235,7 @@ const Footer: React.FC = memo(() => {
               {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
                   >
                     <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -402,18 +402,18 @@ const Footer: React.FC = memo(() => {
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Connect</h3>
             <div className="space-y-3">
               <div className="flex space-x-4">
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   LinkedIn
                 </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   Twitter
                 </a>
               </div>
               <div className="flex space-x-4">
-                <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   GitHub
                 </a>
-                <a href="https://youtube.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                <a href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   YouTube
                 </a>
               </div>
@@ -435,18 +435,18 @@ const Footer: React.FC = memo(() => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center md:justify-end space-x-6 gap-y-2">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
                 Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
+              </Link>
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
                 Terms of Service
-              </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
+              </Link>
+              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
                 Cookie Policy
-              </a>
-              <a href="/sitemap" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
+              </Link>
+              <Link to="/sitemap" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
                 Sitemap
-              </a>
+              </Link>
             </div>
           </div>
         </div>
