@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
@@ -113,7 +111,41 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-          </div>
+    <div className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Our Impact in Numbers
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            See how we've helped businesses transform with our AI and IT solutions
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {statistics.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-10 h-10 text-white" />
+              </div>
+              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+                {stat.value}{stat.suffix}
+              </div>
+              <div className="text-white/80">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
+                <feature.icon className="h-6 w-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
