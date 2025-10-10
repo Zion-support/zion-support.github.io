@@ -2,8 +2,10 @@
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
+  
   const aiServices = [
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -22,6 +24,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' }
   ];
+  
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' },
@@ -38,6 +41,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Web Development', url: '/web-development', description: 'Web applications' },
     { name: 'Process Automation', url: '/process-automation', description: 'Workflow automation' }
   ];
+  
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Business intelligence' },
@@ -56,6 +60,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Supply Chain Optimizer', url: '/supply-chain-optimizer', description: 'Manufacturing' },
     { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' }
   ];
+  
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics & Automation', url: '/robotics', description: 'Intelligent robotics' },
@@ -67,6 +72,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D AI solutions' },
     { name: 'Holographic Workspace', url: '/ai-holographic-workspace', description: 'Holographic AI' }
   ];
+  
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -76,6 +82,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Partners', url: '/partners' },
     { name: 'Contact', url: '/contact' }
   ];
+  
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -84,6 +91,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
   ];
+  
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
@@ -91,6 +99,7 @@ const Footer: React.FC = memo(() => {
     hours: 'Mon-Fri: 9AM-6PM EST',
     emergency: '24/7 Emergency Support Available'
   };
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -120,6 +129,7 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
+
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
@@ -145,6 +155,7 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
+
           {/* Micro SAAS */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
@@ -170,6 +181,7 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
+
           {/* Emerging Technologies */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
@@ -188,6 +200,7 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
+
           {/* Company & Support */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
@@ -205,6 +218,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
             </ul>
+            
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
             <ul className="space-y-2 mb-6">
               {supportLinks.map((link, index) => (
@@ -217,6 +231,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
             </ul>
+            
             <div className="space-y-3">
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2 text-cyan-400" />
@@ -244,6 +259,7 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
         </div>
+        
         <div className="mt-8 pt-8 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
@@ -266,5 +282,6 @@ const Footer: React.FC = memo(() => {
     </footer>
   );
 });
+
 Footer.displayName = 'Footer';
 export default Footer;
