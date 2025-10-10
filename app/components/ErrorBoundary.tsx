@@ -1,88 +1,91 @@
 'use client'
-import React, { Component, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react'
-interface ErrorBoundaryState {
-  hasError: boolean
-  error: Error | null
-  errorInfo: any
-}
-interface ErrorBoundaryProps {
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+
+interface Props {
   children: ReactNode
   fallback?: ReactNode
 }
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+
+interface State {
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
+}
+
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props)
     this.state = { hasError: false }
   }
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
   }
-  componentDidCatch(error: Error, errorInfo: any) {
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     })
+
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
-    // You can also log the error to an error reporting service here
-    // Example: logErrorToService(error, errorInfo)
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // You can integrate with error reporting services like Sentry here
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
+    }
   }
-  handleRefresh = () => {
-    window.location.reload()
-  }
-  handleGoHome = () => {
-    window.location.href = '/'
-  }
+
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback
-      }
-
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            <h1 className="text-3xl font-bold text-white mb-4">Oops! Something went wrong
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="text-center p-8 max-w-md mx-auto">
+            <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page or go back to the home page.
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <div className="space-y-4">
+              <button
+                onClick={() => window.location.reload()}
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+              >
+                Refresh Page
+              </button>
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="block w-full text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+              >
+                Try Again
+              </button>
+            </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
+              <details className="mt-6 text-left">
+                <summary className="text-gray-400 cursor-pointer hover:text-cyan-400">
                   Error Details (Development)
-                <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
+                </summary>
+                <pre className="mt-2 text-xs text-gray-500 bg-gray-800 p-4 rounded overflow-auto">
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
             )}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <$2 />
-                onClick={this.handleRefresh}
-                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors">
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              <$2 />
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors">
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-            <div className="mt-6 pt-6 border-t border-white/20">
-              <p className="text-sm text-gray-400 mb-3">
-                Still having trouble? Contact our support team:
-              <$2 />
-                href="mailto:support@ziontechgroup.com"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                <Phone className="w-4 h-4 mr-2" />
-                support@ziontechgroup.com
+          </div>
+        </div>
       )
     }
+
     return this.props.children
   }
 }
-export default ErrorBoundary</div></div></div></div></div></p></p></p></h1>
+
+export default ErrorBoundary

@@ -1,37 +1,52 @@
 'use client'
 import React from 'react'
-import { useLocation } from 'react-router-dom'
+import Link from 'next/link'
 import { ChevronRight, Home } from 'lucide-react'
-const Breadcrumb: React.FC = () => {
-  const location = useLocation()
-  const pathnames = location.pathname.split('/').filter((x) => x)
+
+interface BreadcrumbItem {
+  label: string
+  href?: string
+}
+
+interface BreadcrumbProps {
+  items?: BreadcrumbItem[]
+}
+
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ items = [] }) => {
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    ...items
+  ]
+
   return (
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <ol className="flex items-center space-x-2 text-sm">
-          <li>
-            <$2 />
-              to="/"
-              className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors">
-              <Home className="w-4 h-4 mr-1" />
-              Home
-          {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`
-            const isLast = index === pathnames.length - 1
-            const displayName = name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ')
-            return (
-              <li key={name} className="flex items-center">
+    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20" aria-label="Breadcrumb">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ol className="flex items-center space-x-2 py-3 text-sm">
+          {breadcrumbItems.map((item, index) => (
+            <li key={index} className="flex items-center">
+              {index > 0 && (
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-                {isLast ? (
-                  <span className="text-white font-medium">{displayName}
-                ) : (
-                  <$2 />
-                    to={routeTo}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors">
-                    {displayName}
-                )}
-            )
-          })}
+              )}
+              {item.href ? (
+                <Link
+                  href={item.href}
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center"
+                >
+                  {index === 0 && <Home className="w-4 h-4 mr-1" />}
+                  {item.label}
+                </Link>
+              ) : (
+                <span className="text-cyan-400 font-medium flex items-center">
+                  {index === 0 && <Home className="w-4 h-4 mr-1" />}
+                  {item.label}
+                </span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </div>
+    </nav>
   )
 }
-export default Breadcrumb</div></span></ol></li></li></nav>
+
+export default Breadcrumb

@@ -1,35 +1,22 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
+import Link from 'next/link'
+import { Brain, ChevronDown, Menu, X, ArrowRight } from 'lucide-react'
+
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [aiServicesOpen, setAiServicesOpen] = useState(false)
-  const [itServicesOpen, setItServicesOpen] = useState(false)
-  const [microSaasOpen, setMicroSaasOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false)
-      }
-    }
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      setIsScrolled(window.scrollY > 0)
     }
-    window.addEventListener('resize', handleResize)
     window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-      window.removeEventListener('scroll', handleScroll)
-    }
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
   const toggleMenu = () => setIsOpen(!isOpen)
-  const toggleServices = () => setServicesOpen(!servicesOpen)
-  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen)
-  const toggleItServices = () => setItServicesOpen(!itServicesOpen)
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -39,259 +26,111 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
-              <span className="text-xl font-bold text-white">Zion Tech Group
+              </div>
+              <span className="text-xl font-bold text-white">Zion Tech</span>
+            </Link>
+          </div>
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
-            {/* AI Services Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                <Brain className="w-4 h-4" />
-                <span>AI Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {aiServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                        onClick={closeAllMenus}
-                      >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
-                        <div>
-                          <div className="text-white font-medium">{service.name}</div>
-                          <div className="text-xs text-gray-400">{service.description}</div>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
-                      </div>
-                    ))}
-                  </div>
-                )}
-              <Link href="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                About
-              </Link>
-              <Link href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Contact
-              </Link>
-            {/* IT Services Dropdown */}
-            <div className="relative group">
-              <$2 />
-                onClick={() => setItServicesOpen(!itServicesOpen)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                <Cloud className="w-4 h-4" />
-                <span>IT Services
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
-              {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {itServices.map((service) => (
-                      <$2 />
-                        key={service.name}
-                        href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                        onClick={closeAllMenus}
-                      >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
-                        <div>
-                          <div className="text-white font-medium">{service.name}
-                          <div className="text-xs text-gray-400">{service.description}
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
-                    ))}
-              )}
-            {/* Micro SAAS Dropdown */}
-            <div className="relative group">
-              <$2 />
-                onClick={() => setMicroSaasOpen(!microSaasOpen)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                <Cpu className="w-4 h-4" />
-                <span>Micro SAAS
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
-              {microSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {microSaasServices.map((service) => (
-                      <$2 />
-                        key={service.name}
-                        href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                        onClick={closeAllMenus}
-                      >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
-                        <div>
-                          <div className="text-white font-medium">{service.name}
-                          <div className="text-xs text-gray-400">{service.description}
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
-                    ))}
-              )}
-            {/* Emerging Technologies Dropdown */}
-            <div className="relative group">
-              <$2 />
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                <Zap className="w-4 h-4" />
-                <span>Emerging Tech
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {emergingTech.map((service) => (
-                      <$2 />
-                        key={service.name}
-                        href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                        onClick={closeAllMenus}
-                      >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
-                        <div>
-                          <div className="text-white font-medium">{service.name}
-                          <div className="text-xs text-gray-400">{service.description}
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
-                    ))}
-              )}
+            </Link>
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
+            </Link>
             <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Services
-            <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Pricing
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
+            </Link>
+            <Link href="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              AI Services
+            </Link>
+            <Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              IT Services
+            </Link>
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <$2 />
-              href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
-              <Phone className="w-4 h-4" />
-              <span className="text-sm">(302) 464-0950
-            <$2 />
-              href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
-              <Mail className="w-4 h-4" />
-              <span className="text-sm">Email
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <$2 />
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
+            </Link>
+            <Link 
+              href="/consultation" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
-            <div className="pt-4 space-y-4">
-              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2">
+              <Link 
+                href="/" 
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={toggleMenu}
+              >
                 Home
-              {/* Mobile AI Services */}
-              <div>
-                <$2 />
-                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                  <span className="flex items-center space-x-2">
-                    <Brain className="w-4 h-4" />
-                    <span>AI Services
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
-                {aiServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {aiServices.slice(0, 8).map((service) => (
-                      <$2 />
-                        key={service.name}
-                        href={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                    ))}
-                    <$2 />
-                      href="/ai-services"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus}
-                    >
-                      View All AI Services →
-                )}
-              {/* Mobile IT Services */}
-              <div>
-                <$2 />
-                  onClick={() => setItServicesOpen(!itServicesOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                  <span className="flex items-center space-x-2">
-                    <Cloud className="w-4 h-4" />
-                    <span>IT Services
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
-                {itServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {itServices.map((service) => (
-                      <$2 />
-                        key={service.name}
-                        href={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                    ))}
-                )}
-              {/* Mobile Micro SAAS */}
-              <div>
-                <$2 />
-                  onClick={() => setMicroSaasOpen(!microSaasOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                  <span className="flex items-center space-x-2">
-                    <Cpu className="w-4 h-4" />
-                    <span>Micro SAAS
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
-                {microSaasOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {microSaasServices.slice(0, 8).map((service) => (
-                      <$2 />
-                        key={service.name}
-                        href={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                    ))}
-                    <$2 />
-                      href="/micro-saas"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus}
-                    >
-                      View All Micro SAAS →
-                )}
-              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              </Link>
+              <Link 
+                href="/about" 
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={toggleMenu}
+              >
                 About
-              <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              </Link>
+              <Link 
+                href="/services" 
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={toggleMenu}
+              >
                 Services
-              <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Pricing
-              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
-              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              </Link>
+              <Link 
+                href="/ai-services" 
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={toggleMenu}
+              >
+                AI Services
+              </Link>
+              <Link 
+                href="/it-services" 
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={toggleMenu}
+              >
+                IT Services
+              </Link>
+              <Link 
+                href="/contact" 
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                onClick={toggleMenu}
+              >
                 Contact
-              {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-cyan-500/20 space-y-2">
-                <$2 />
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
-                  <Phone className="w-4 h-4" />
-                  <span>(302) 464-0950
-                <$2 />
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium">
-                  <Mail className="w-4 h-4" />
-                  <span>kleber@ziontechgroup.com
-                <div className="flex items-center space-x-2 text-gray-400">
-                  <MapPin className="w-4 h-4" />
-                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709
+              </Link>
+              <Link 
+                href="/consultation" 
+                className="block px-3 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white rounded-lg font-medium transition-all duration-300 text-center"
+                onClick={toggleMenu}
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
         )}
+      </div>
+    </nav>
   )
 }
-export default Navigation</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link>
+
+export default Navigation
