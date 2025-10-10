@@ -1,7 +1,7 @@
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -58,6 +58,34 @@ const Footer: React.FC = memo(() => {
     { name: 'Database Management', url: '/database-management', description: 'Database solutions' },
     { name: 'Network Security', url: '/network-security', description: 'Network protection' },
     { name: 'IT Support', url: '/it-support', description: '24/7 technical support' }
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Our Team', url: '/team' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'Partners', url: '/partners' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'News & Press', url: '/news' }
+  ];
+
+  const resourcesLinks = [
+    { name: 'Blog', url: '/blog' },
+    { name: 'Tutorials', url: '/tutorials' },
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api' },
+    { name: 'Community', url: '/community' },
+    { name: 'Support Center', url: '/support' },
+    { name: 'FAQ', url: '/faq' }
+  ];
+
+  const enterpriseLinks = [
+    { name: 'Enterprise Solutions', url: '/enterprise' },
+    { name: 'Custom Development', url: '/custom-development' },
+    { name: 'Consulting Services', url: '/consulting' },
+    { name: 'Training Programs', url: '/training' },
+    { name: 'Security & Compliance', url: '/security' },
+    { name: 'SLA & Support', url: '/sla' }
   ];
 
   return (
@@ -152,7 +180,7 @@ const Footer: React.FC = memo(() => {
               {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
                   >
                     <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -352,18 +380,18 @@ const Footer: React.FC = memo(() => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex flex-wrap justify-center md:justify-end space-x-6 gap-y-2">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
                 Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
+              </Link>
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
                 Terms of Service
-              </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
+              </Link>
+              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
                 Cookie Policy
-              </a>
-              <a href="/sitemap" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
+              </Link>
+              <Link to="/sitemap" className="text-sm text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-105">
                 Sitemap
-              </a>
+              </Link>
             </div>
           </div>
         </div>

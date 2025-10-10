@@ -6,6 +6,7 @@ import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import Sidebar from './app/components/Sidebar';
 import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
@@ -35,6 +36,7 @@ const SupportPage = React.lazy(() => import('./app/support/page'));
 const FAQPage = React.lazy(() => import('./app/faq/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const ConsultingPage = React.lazy(() => import('./app/consulting/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
@@ -54,6 +56,16 @@ const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({
 
 // Main App Component
 const App: React.FC = () => {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
+  const toggleSidebar = React.useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+
+  const closeSidebar = React.useCallback(() => {
+    setSidebarOpen(false);
+  }, []);
+
   return (
     <EnhancedErrorBoundary>
       <HelmetProvider>
@@ -69,7 +81,8 @@ const App: React.FC = () => {
                     <PerformanceMonitor />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <FuturisticBackground />
-                      <Navigation />
+                      <Navigation onSidebarToggle={toggleSidebar} />
+                      <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
                       <Breadcrumb />
                       <main id="main-content" className="flex-1" tabIndex={-1}>
                         <Suspense fallback={<PageLoader />}>
@@ -87,6 +100,7 @@ const App: React.FC = () => {
                             <Route path="/faq" element={<FAQPage />} />
                             <Route path="/demo" element={<DemoPage />} />
                             <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/consulting" element={<ConsultingPage />} />
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
