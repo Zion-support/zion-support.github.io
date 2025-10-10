@@ -81,13 +81,7 @@ const Footer: React.FC = () => {
     { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
-    { name: 'AI Edge Computing', href: '/ai-edge-computing' },
-    { name: 'AI Metaverse Solutions', href: '/ai-metaverse-solutions' },
-    { name: 'AI Climate Solutions', href: '/ai-climate-solutions' },
-    { name: 'AI Space Technology', href: '/ai-space-technology' },
-    { name: 'AI Biotechnology', href: '/ai-biotechnology' },
     { name: 'AI Robotics', href: '/ai-robotics' },
-    { name: 'AI Digital Twin', href: '/ai-digital-twin' },
   ];
 
   const itServices = [

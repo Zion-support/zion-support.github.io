@@ -135,14 +135,17 @@ const Navigation: React.FC = () => {
     { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
     { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
+    { name: 'Quantum AI Computing', href: '/ai-quantum-computing', icon: Cpu },
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
     { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
     { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
     { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
     { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar },
+    { name: 'AI Robotics', href: '/ai-robotics', icon: Settings },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings }
   ];
 
   const itServices = [
