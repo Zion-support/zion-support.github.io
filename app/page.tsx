@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy, memo } from 'react';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
@@ -11,6 +11,9 @@ import ServiceCardSkeleton from './components/ServiceCardSkeleton';
 import LazyImage from './components/LazyImage';
 import AnimatedCounter from './components/AnimatedCounter';
 import Navigation from './components/Navigation';
+import OptimizedImage from './components/OptimizedImage';
+import EnhancedLoading from './components/EnhancedLoading';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import { 
   Brain, 
   Zap, 
@@ -1081,7 +1084,7 @@ const ServiceCardSkeleton = () => (
   </div>
 );
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = memo(() => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -1515,7 +1518,7 @@ const HomePage: React.FC = () => {
       <Footer />
     </div>
   );
-};
+});
 
 HomePage.displayName = 'HomePage';
 

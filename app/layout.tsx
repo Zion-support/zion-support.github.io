@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
+import EnhancedSEOHead from './components/EnhancedSEOHead';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 export default function RootLayout({
   children,
@@ -87,6 +89,8 @@ export default function RootLayout({
         />
       </head>
       <body className='antialiased'>
+        <EnhancedSEOHead />
+        <AccessibilityEnhancer />
         <PerformanceMonitor />
         <ServiceWorkerRegistration />
         {children}
