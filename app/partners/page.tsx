@@ -274,7 +274,7 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -25,13 +25,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-<<<<<<< HEAD
-    focusableElements[nextIndex]?.focus();
-    event.preventDefault();
-  }
-  /**
-   * Handle escape key
-   */
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
