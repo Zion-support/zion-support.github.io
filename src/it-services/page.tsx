@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'}
+import React from 'react'}
+import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react'}
+import Navigation from '../components/Navigation'}
+import Footer from '../components/Footer'}
 const ITServicesPage: React.FC = () => {
   const itServices = [
     // Infrastructure & Cloud Services
@@ -238,7 +238,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]}
   const categories = [
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
@@ -252,7 +252,7 @@ const ITServicesPage: React.FC = () => {
     { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-  ];
+  ]}
   const services = [
     {
       icon: Cloud,
@@ -302,7 +302,7 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $2,500/project',
       color: 'text-orange-400'
     }
-  ];
+  ]}
   const additionalServices = [
     {
       icon: Users,
@@ -340,7 +340,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Firewall configuration and network security implementation.',
       price: 'Starting at $399/month'
     }
-  ];
+  ]}
   const benefits = [
     {
       icon: Star,
@@ -362,7 +362,7 @@ const ITServicesPage: React.FC = () => {
       title: 'Certified Professionals',
       description: 'Microsoft, AWS, and Google certified engineers'
     }
-  ];
+  ]}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -563,8 +563,8 @@ const ITServicesPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-  );
-};
+  )}
+}}
 export default ITServicesPage</a>
   </a>
   </a>

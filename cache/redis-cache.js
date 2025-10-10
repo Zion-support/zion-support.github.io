@@ -1,8 +1,8 @@
-// Redis-based caching system;
+// Redis-based caching system}
 export class RedisCache {constructor(redisClient) {
-    this.client = redisClient;
+    this.client = redisClient}
 export class RedisCache {/* TODO: Fix JSX expression */}
-    this.defaultTTL = 3600} // 1 hour;
+    this.defaultTTL = 3600} // 1 hour}
   }
   async get(key) {/* TODO: Fix JSX expression */}
       return value ? JSON.parse(value) : null}
@@ -10,8 +10,8 @@ export class RedisCache {/* TODO: Fix JSX expression */}
     }
   }
   async set(key, value) ttl = this.defaultTTL) {/* TODO: Fix JSX expression */}
-      await this.client.setex(key) ttl} JSON.stringify(value));
-      return true;
+      await this.client.setex(key) ttl} JSON.stringify(value))}
+      return true}
 //     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }

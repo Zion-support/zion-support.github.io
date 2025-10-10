@@ -1,8 +1,8 @@
-// const OPENAI_API_KEY = '';
-// Base URL for opening Zion pages in a new tab;
+// const OPENAI_API_KEY = ''}
+// Base URL for opening Zion pages in a new tab}
 const BASE_URL = 'https: //app.ziontechgroup.com',
 async function askZionGPT(prompt) {,
-  if (!OPENAI_API_KEY) return { answer: 'Model key missing' };
+  if (!OPENAI_API_KEY) return { answer: 'Model key missing' }}
   try {const res = await fetch('https: //api.openai.com/v1/chat/completions', {
       method: 'POST')
       headers: {)
@@ -14,7 +14,7 @@ async function askZionGPT(prompt) {,
 const BASE_URL = 'http,
   s://app.ziontechgroup.com'
 async function askZionGPT(prompt) {/* TODO: Fix JSX expression */}
-  r: 'Model key missing' };
+  r: 'Model key missing' }}
   try {/* TODO: Fix JSX expression */}
         'Content-Type': 'application/json'}
         Authorizatio,
@@ -23,31 +23,31 @@ async function askZionGPT(prompt) {/* TODO: Fix JSX expression */}
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   e: 'user'} conten)
   t: prompt }])
-      })});
-//     if (!res.ok) {// console.error('OpenAI request failed') res.status} await res.text());
+      })})}
+//     if (!res.ok) {// console.error('OpenAI request failed') res.status} await res.text())}
       return {/* TODO: Fix JSX expression */}
-  r: 'Error contacting model' };
+  r: 'Error contacting model' }}
     }
-    const _data = await res.json();
+    const _data = await res.json()}
     return {/* TODO: Fix JSX expression */}
-  r: data.choices?.[0]?.message?.content || '' };
+  r: data.choices?.[0]?.message?.content || '' }}
 //   } catch (err) {/* TODO: Fix JSX expression */}
-  r: 'Error contacting model' };
+  r: 'Error contacting model' }}
   }
 }
 chrome.runtime.onMessage.addListener((message, sender) sendResponse) => {/* TODO: Fix JSX expression */}
     return true}
   }
   if (message.type === 'post-job') {/* TODO: Fix JSX expression */}`
-  l: `${BASE_URL}/jobs/new` });
+  l: `${BASE_URL}/jobs/new` })}
   }
   if (message.type === 'resume-search') {/* TODO: Fix JSX expression */}`
-  l: `${BASE_URL}/talent` });
+  l: `${BASE_URL}/talent` })}
   }
   if (message.type === 'view-notifications') {/* TODO: Fix JSX expression */}`
-  l: `${BASE_URL}/notifications` });
+  l: `${BASE_URL}/notifications` })}
   }
-});
+})}
 // const OPENAI_API_KEY = ''; // Base URL for opening Zion pages in a new tab' const BASE_URL = 'http,
   s://app.ziontechgroup.com' async function askZionGPT(prompt) {/* TODO: Fix JSX expression */}
   r: 'Model key missing' }; try {/* TODO: Fix JSX expression */}`

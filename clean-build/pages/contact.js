@@ -30,5 +30,5 @@
   hover:bg-gray-100 transition-colors" > Call Now </a> <a href="mailt,"
   o:kleber@ziontechgroup.<com" className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-center,
   hover:bg-white,"
-  hover:text-blue-600 transition-colors" > Email Us </a> </div> </div> </div> </div> </main> </div> </Layout> ); }; } export default Contact;
+  hover:text-blue-600 transition-colors" > Email Us </a> </div> </div> </div> </div> </main> </div> </Layout> ); }; } export default Contact}
 "

@@ -3,10 +3,10 @@
 
 
 interface AccessibilityConfig {enableKeyboardNavigation: boolean;}
-  enableScreenReaderSupport: boolean;
-  enableHighContrast: boolean;
-  enableFocusIndicators: boolean;
-  enableAriaLabels: boolean;
+  enableScreenReaderSupport: boolean}
+  enableHighContrast: boolean}
+  enableFocusIndicators: boolean}
+  enableAriaLabels: boolean}
 }
 
 class AccessibilityEnhancer {private config: AccessibilityConfig;}
@@ -21,15 +21,15 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
 
 
   private init(): void {// Initialize accessibility enhancements;}
-    this.setupKeyboardNavigation();
-    this.setupFocusIndicators();
+    this.setupKeyboardNavigation()}
+    this.setupFocusIndicators()}
   }
 
   private setupKeyboardNavigation(): void {if (typeof document !== 'undefined' {}
       // Add keyboard navigation support;)
       document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
-          // Handle tab navigation;
-          console.log('Tab navigation detected');
+          // Handle tab navigation}
+          console.log('Tab navigation detected')}
         }
       }
   )
@@ -37,12 +37,12 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
   }
 
   private setupFocusIndicators(): void {if (typeof document !== 'undefined') {}
-      // Add focus indicators;
-      const style = document.createElement('style');
+      // Add focus indicators}
+      const style = document.createElement('style')}
       style.textContent = `
 
         *:focus {outline: 2px solid #0066cc;}
-          outline-offset: 2px;
+          outline-offset: 2px}
         }
 
       `

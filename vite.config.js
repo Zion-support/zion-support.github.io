@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
+import { defineConfig } from 'vite'}
+import react from '@vitejs/plugin-react'}
+import { visualizer } from 'rollup-plugin-visualizer'}
 
 export default defineConfig({
   plugins: [
@@ -39,26 +39,26 @@ export default defineConfig({
         manualChunks: (id) => {
           // React and React DOM
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-            return 'react';
+            return 'react'}
           }
           // Router library
           if (id.includes('node_modules/react-router-dom')) {
-            return 'router';
+            return 'router'}
           }
           // UI libraries
           if (
             id.includes('node_modules/framer-motion') ||
             id.includes('node_modules/lucide-react')
           ) {
-            return 'ui';
+            return 'ui'}
           }
           // Utilities and web vitals
           if (id.includes('node_modules/web-vitals')) {
-            return 'vitals';
+            return 'vitals'}
           }
           // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {
-            return 'vendor';
+            return 'vendor'}
           }
         },
         assetFileNames: 'assets/[name]-[hash][extname]',
@@ -113,4 +113,4 @@ export default defineConfig({
       '@components': '/app/components',
     },
   },
-});
+})}

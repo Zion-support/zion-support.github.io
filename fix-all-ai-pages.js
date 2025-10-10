@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from 'fs'}
 
 // Template for AI pages
-const createAiPageTemplate = (pageName, title, description, keywords) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+const createAiPageTemplate = (pageName, title, description, keywords) => `'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
+import Navigation from '../components/Navigation'}
+import Footer from '../components/Footer'}
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'}
 
 const ${pageName}Page: React.FC = () => {
   const features = [
@@ -36,7 +36,7 @@ const ${pageName}Page: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]}
 
   return (
     <>
@@ -123,10 +123,10 @@ const ${pageName}Page: React.FC = () => {
       
       <Footer />
     </>
-  );
-};
+  )}
+}}
 
-export default ${pageName}Page;`;
+export default ${pageName}Page;`}
 
 // AI pages to fix
 const aiPages = [
@@ -228,19 +228,19 @@ const aiPages = [
     description: 'Intelligent CRM assistant powered by AI technology.',
     keywords: 'AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM'
   }
-];
+]}
 
 // Process all AI pages
-console.log('🔧 Fixing all AI pages...\n');
+console.log('🔧 Fixing all AI pages...\n')}
 
 aiPages.forEach(page => {
   try {
-    const content = createAiPageTemplate(page.name, page.title, page.description, page.keywords);
-    fs.writeFileSync(page.file, content, 'utf8');
-    console.log(`✅ Fixed ${page.file}`);
+    const content = createAiPageTemplate(page.name, page.title, page.description, page.keywords)}
+    fs.writeFileSync(page.file, content, 'utf8')}
+    console.log(`✅ Fixed ${page.file}`)}
   } catch (error) {
-    console.error(`❌ Error processing ${page.file}:`, error.message);
+    console.error(`❌ Error processing ${page.file}:`, error.message)}
   }
-});
+})}
 
-console.log('\n✨ All AI pages fixed!');
+console.log('\n✨ All AI pages fixed!')}

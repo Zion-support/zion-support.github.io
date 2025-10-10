@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'}
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
 const OptimizedImage = React.memo(function OptimizedImage({ className = '' }: OptimizedImageProps) {
@@ -14,7 +14,7 @@ const OptimizedImage = React.memo(function OptimizedImage({ className = '' }: Op
       <h3 className="text-lg font-semibold text-blue-800">OptimizedImage</h3>"
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
-export default OptimizedImage;
+  )}
+})}
+export default OptimizedImage}
 "`

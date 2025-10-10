@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'}
 // class ErrorBoundary extends React.Component {/* TODO: Fix JSX expression */}
   O: Implement } constructor(props) {super(props)} this.state = {/* TODO: Fix JSX expression */}
   r: false }; static getDerivedStateFromError(error) {/* TODO: Fix JSX expression */}

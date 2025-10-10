@@ -1,9 +1,9 @@
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react';
-'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react'}
+'use client'}
+import React, { useState } from 'react'}
+import { Link } from 'react-router-dom'}
+import Navigation from '../components/Navigation'}
+import Footer from '../components/Footer'}
 const SignupPage: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -15,31 +15,31 @@ const SignupPage: React.FC = () => {
     confirmPassword: '',
     agreeToTerms: false,
     subscribeNewsletter: false
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  })}
+  const [showPassword, setShowPassword] = useState(false)}
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)}
+  const [isLoading, setIsLoading] = useState(false)}
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked } = e.target}
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+    }))}
+  }}
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()}
     if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
-      return;
+      alert('Passwords do not match')}
+      return}
     }
     if (!formData.agreeToTerms) {
-      alert('Please agree to the terms and conditions');
-    setIsLoading(true);
+      alert('Please agree to the terms and conditions')}
+    setIsLoading(true)}
     // Simulate signup process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
+    await new Promise(resolve => setTimeout(resolve, 2000))}
+    setIsLoading(false)}
     // Redirect to dashboard or home page
-    window.location.href = '/';
+    window.location.href = '/'}
   const features = [
     {
       icon: Shield,
@@ -52,7 +52,7 @@ $4},
 icon$5: Globe,
       title: 'Global Support',
       description:   ,
-$4];
+$4]}
   const benefits = [
     'Free 14-day trial',
     'No setup fees',
@@ -63,11 +63,11 @@ $4];
   return (
     <React.Fragment>
     <div>Coming Soon</div>
-  );
-};
+  )}
+}}
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}}
   firstNam,
   e: '',
     lastNam,
@@ -86,47 +86,47 @@ $4];
   s: false,
     subscribeNewslette,
   r: false;)
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  })}
+  const [showPassword, setShowPassword] = useState(false)}
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)}
+  const [isLoading, setIsLoading] = useState(false)}
 const handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked } = e.target}
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
-    }));
-  };
+    }))}
+  }}
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    e.preventDefault();
+    e.preventDefault()}
     if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      alert('Passwords do not match');
-      return;
+      alert('Passwords do not match')}
+      return}
     }
     if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      alert('Please agree to the terms and conditions');
-    setIsLoading(true);
-    // Simulate signup process;
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
-    // Redirect to dashboard or home page;
-    window.location.href = '/';
+      alert('Please agree to the terms and conditions')}
+    setIsLoading(true)}
+    // Simulate signup process}
+    await new Promise(resolve => setTimeout(resolve, 2000))}
+    setIsLoading(false)}
+    // Redirect to dashboard or home page}
+    window.location.href = '/'}
   const features = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items}
+];}
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}}
   ico,
   n: Shield,
       titl,
@@ -148,18 +148,18 @@ const PagePage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-                  Create Your Account;
-  </
+                  Create Your Account}
+  </button>
                 <p className="text-gray-300">
-                  Join thousands of businesses transforming with AI and IT solutions;
-  </
+                  Join thousands of businesses transforming with AI and IT solutions}
+  </button>
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      First Name;
-  </
+                      First Name}
+  </button>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
@@ -220,10 +220,10 @@ const PagePage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
               <div className="text-center mb-8"></div>"
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
-// Create Your Account;
+// Create Your Account}
           </h1>"
                 <p className="text-gray-300"></p>
-// Join thousands of businesses transforming with AI and IT solutions;
+// Join thousands of businesses transforming with AI and IT solutions}
           </p>
               </div>"
               <form onSubmit={handleSubmit} className="space-y-6"></form>"
@@ -231,7 +231,7 @@ const PagePage: React.FC = () => {
   md:grid-cols-2 gap-4"></div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// First Name;
+// First Name}
           </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -242,20 +242,20 @@ type="text" name="firstName"
 // required
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
 />
-                      Last Name;
+                      Last Name}
                         name="lastName" value={formData.lastName}
-                        placeholder="Enter your last name" Email Address;
+                        placeholder="Enter your last name" Email Address}
           <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type="email" name="email"
                       value={formData.email}
-                      placeholder="Enter your email" Company Name;
+                      placeholder="Enter your email" Company Name}
                     <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       name="company" value={formData.company}
-                      placeholder="Enter your company name" Phone Number;
+                      placeholder="Enter your company name" Phone Number}
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type="tel" name="phone"
                       value={formData.phone}
-                      placeholder="Enter your phone number" Password;
+                      placeholder="Enter your phone number" Password}
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type={showPassword ? 'text' : 'password'}
                       name="password" value={formData.password}
@@ -267,7 +267,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       {showPassword ?}"
           <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
-Confirm Password;
+Confirm Password}
                       type={showConfirmPassword ? 'text' : 'password'}
                       name="confirmPassword" value={formData.confirmPassword}
                       placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
@@ -280,12 +280,12 @@ Confirm Password;
                     <span className="ml-2 text-sm text-gray-300">
                       I agree to the{' '}
                       <a href="/terms" className="text-cyan-400 hover:text-cyan-300">
-                        Terms of Service;
+                        Terms of Service}
   </{' '}
                       and{' '}
                       <a href="/privacy" className="text-cyan-400 hover:text-cyan-300">
-                        Privacy Policy;
-  </
+                        Privacy Policy}
+  </button>
                     </span>
                       name="subscribeNewsletter"
                       checked={formData.subscribeNewsletter}
@@ -310,8 +310,8 @@ Confirm Password;
             {/* Right Side - Features and Benefits */}
             <div className="space-y-8">
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Transform Your Business Today;
-  </
+                  Transform Your Business Today}
+  </button>
                 <p className="text-xl text-gray-300 mb-8">
                   Join thousands of businesses already using our AI and IT solutions 
                   to achieve unprecedented growth and efficiency.
@@ -341,16 +341,16 @@ Confirm Password;
                   <div className="text-2xl font-bold text-white">Amazon</div>
       <Footer />
     </React.Fragment>
-// Terms of Service;
+// Terms of Service}
           </a>{' '}
                       and{' '}"
                       <a href="/privacy" className="text-cyan-400,"
   hover:text-cyan-300"></a>
-// Privacy Policy;
+// Privacy Policy}
           </a>
                     </span>
 name="subscribeNewsletter" checked={formData.subscribeNewsletter}
-                      Subscribe to our newsletter for updates and tips;
+                      Subscribe to our newsletter for updates and tips}
                   type="submit" disabled={isLoading}
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? ()}
@@ -365,14 +365,14 @@ Creating Account...
                   Already have an account?{' '}
                   <a
                     href="/login" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-Sign in here;
+Sign in here}
             {/* Right Side - Features and Benefits */}"
             <div className="space-y-8"></div>"
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
-// Transform Your Business Today;
+// Transform Your Business Today}
           </h2>"
                 <p className="text-xl text-gray-300 mb-8"></p>
-Join thousands of businesses already using our AI and IT solutions;
+Join thousands of businesses already using our AI and IT solutions}
                   to achieve unprecedented growth and efficiency."
               <div className="space-y-6"></div>
                 {features.map((feature, index) => ()}"
@@ -402,8 +402,8 @@ Join thousands of businesses already using our AI and IT solutions;
                   <div className="text-2xl font-bold text-white">Amazon</div>
       <Footer />
     </div>
-  );
-export default SignupPage;
+  )}
+export default SignupPage}
   </a>
   </div>
   </p>

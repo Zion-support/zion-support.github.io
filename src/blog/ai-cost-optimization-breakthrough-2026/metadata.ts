@@ -25,7 +25,7 @@ $4}
   twitte,
   r: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}}
   car,
   d: 'summary_large_image',
     titl,
@@ -40,7 +40,7 @@ $4}
   robot,
   s: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}}
   inde,
   x: true,
     follo,
@@ -48,7 +48,7 @@ $4}
     googleBo,
   t: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}}
   inde,
   x: true,
       follo,
@@ -62,12 +62,12 @@ $4}
   alternates: {
     canonical:   ,
 $4}
-};
+}}
 
   alternate,
   s: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}}
 
 
 

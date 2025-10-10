@@ -1,8 +1,8 @@
-import React from 'react';
-import Reac, t, { useState } fr, o, m 'rea, c, t';
+import React from 'react'}
+import Reac, t, { useState } fr, o, m 'rea, c, t'}
 interface NewContentPromoBannerProp, s {
-  varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g';
-  classNa, m, e ?  : string;
+  varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g'}
+  classNa, m, e ?  : string}
 interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
 const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
@@ -32,7 +32,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
     },
     {/* TODO: Fix JSX expression */}
     }
-  ]; if (isDismiss, e, d) return, nul, l;
+  ]; if (isDismiss, e, d) return, nul, l}
   return(<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10">
@@ -85,7 +85,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <Star, className="w-5 h-5, animat, e-sp, i, n" /></Star>
             </div>"
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2"></h3>
-              Just, Publishe, d: New, Guides, for 20, 2, 6;
+              Just, Publishe, d: New, Guides, for 20, 2, 6}
             </h3>"
             <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm"></p>
               Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
@@ -110,7 +110,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                       {it, e, m.description}
                     </p>
                   </L, i, n, k>)
-                );
+                )}
               })}
             </div>
             {/* Action, button, s */}
@@ -118,18 +118,18 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <Link, t, o="/bl, o, g"
                 className="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
                 <BookOpen, className="w-4 h-4" />
-                Read, All, Articles;
+                Read, All, Articles}
                 <Link, className="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
               </Li, n, k>
               <Link, t, o="/ca, s, e-studi, e, s"
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
                 <TrendingUp, className="w-4 h-4" />
-                View, Case, Studies;
+                View, Case, Studies}
               </Li, n, k>
               <Link, t, o="/servic, e, s"
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
                 <Shield, className="w-4 h-4" />
-                Explore, Service, s;
+                Explore, Service, s}
               </Li, n, k>
             </div>
             {/* S, t, a, t, s */}
@@ -152,12 +152,12 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <Link, t, o="/ca, s, e-studi, e, s""
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"></Link>"
                 <TrendingUp, className="w-4 h-4" /></TrendingUp>
-                View, Case, Studies;
+                View, Case, Studies}
               </Li, n, k>"
               <Link, t, o="/servic, e, s""
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"></Link>"
                 <Shield, className="w-4 h-4" /></Shield>
-                Explore, Service, s;
+                Explore, Service, s}
               </Li, n, k>
             </div>
             {/* S, t, a, t, s */}"
@@ -182,6 +182,6 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
         </div>
       </div>
     </div>
-  );
-};
+  )}
+}}
 export default React.me, m, o(NewContentPromoBann, e, r);"`

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react'}
+import { Link } from 'react-router-dom'}
+import Navigation from '../components/Navigation'}
+import Footer from '../components/Footer'}
+import SEOOptimizer from '../components/SEOOptimizer'}
+import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react'}
 const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('')}
+  const [selectedCategory, setSelectedCategory] = useState('all')}
   const supportCategories = [
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
@@ -15,7 +15,7 @@ const SupportPage: React.FC = () => {
     { id: 'technical', name: 'Technical Support', icon: Code, count: 10 },
     { id: 'account', name: 'Account Management', icon: Users, count: 5 },
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
-  ];
+  ]}
   const faqs = [
     {
       id: 1,
@@ -53,7 +53,7 @@ const SupportPage: React.FC = () => {
       answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',
       category: 'getting-started'
     }
-  ];
+  ]}
   const supportChannels = [
     {
       icon: Phone,
@@ -87,7 +87,7 @@ const SupportPage: React.FC = () => {
       availability: 'Flexible scheduling',
       color: 'text-cyan-400'
     }
-  ];
+  ]}
   const resources = [
     {
       title: 'Documentation',
@@ -125,16 +125,16 @@ const SupportPage: React.FC = () => {
       icon: Users,
       link: '/community'
     }
-  ];
+  ]}
   const filteredFaqs = selectedCategory === 'all' 
     ? faqs 
-    : faqs.filter(faq => faq.category === selectedCategory);
+    : faqs.filter(faq => faq.category === selectedCategory)}
   const searchResults = searchQuery 
     ? faqs.filter(faq => 
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : filteredFaqs;
+    : filteredFaqs}
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -149,11 +149,11 @@ const SupportPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Support Center;
-  </
+              Support Center}
+  </button>
             <p className="text-xl text-cyan-400 mb-8">
-              We're here to help you succeed with AI;
-  </
+              We're here to help you succeed with AI}
+  </button>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Get instant answers to your questions, access comprehensive resources, 
               and connect with our expert support team.
@@ -177,8 +177,8 @@ const SupportPage: React.FC = () => {
           {/* Support Channels */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Get Support;
-  </
+              Get Support}
+  </button>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
@@ -194,8 +194,8 @@ const SupportPage: React.FC = () => {
           {/* FAQ Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category;
-  </
+              Browse by Category}
+  </button>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
               {supportCategories.map((category) => (
                 <button
@@ -217,8 +217,8 @@ const SupportPage: React.FC = () => {
           {/* FAQ Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Frequently Asked Questions;
-  </
+              Frequently Asked Questions}
+  </button>
             <div className="max-w-4xl mx-auto space-y-4">
               {searchResults.map((faq) => (
                 <div key={faq.id} className="cyber-card p-6">
@@ -231,8 +231,8 @@ const SupportPage: React.FC = () => {
           {/* Resources Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Helpful Resources;
-  </
+              Helpful Resources}
+  </button>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {resources.map((resource, index) => (
                 <Link
@@ -258,21 +258,21 @@ const SupportPage: React.FC = () => {
                 Still Need Help?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our expert team is ready to assist you with any questions or issues;
-  </
+                Our expert team is ready to assist you with any questions or issues}
+  </button>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (302) 464-0950;
-  </
+                  Call (302) 464-0950}
+  </button>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Mail className="w-5 h-5 mr-2" />
-                  Send Email;
-  </
+                  Send Email}
+  </button>
               </div>
             </div>
           </section>
@@ -280,9 +280,9 @@ const SupportPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default SupportPage;
+  )}
+}}
+export default SupportPage}
   </a>
   </a>
   </p>

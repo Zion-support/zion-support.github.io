@@ -1,4 +1,4 @@
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'}
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   return(<div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t { 
@@ -6,7 +6,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
       <Helm, e, t>
         <title>
-          Agent, Reliability, Runbooks v5 — Budg, e, t, s, Canari, e, s, Rollba, c, k;
+          Agent, Reliability, Runbooks v5 — Budg, e, t, s, Canari, e, s, Rollba, c, k}
         </title>
         <meta, nam, e = 'description'
           conte, n, t='Agent, Reliability, Runbooks v5 - Budg, e, t, s, Canari, e, s, Rollback, strategies, for AI, system, s'
@@ -17,7 +17,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Agent, Reliability, Runbooks v5;
+          Agent, Reliability, Runbooks v5}
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Practical, runbooks, for governing, autonomous, agents with, budgeted, actio, n, s, K, P, I‑linked, canarie, s, and, deterministic, rollback that, preserve, customer experience, while, accelerating delive, r, y.
@@ -29,10 +29,10 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         </div>
         <div, className='mt-8'></div>
           <Link, t, o='/<bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
-            ← Back, to, Blog;
+            ← Back, to, Blog}
           </Li, n, k>
         </div>
       </div>
-    </d, i, v > );
+    </d, i, v > )}
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
  }

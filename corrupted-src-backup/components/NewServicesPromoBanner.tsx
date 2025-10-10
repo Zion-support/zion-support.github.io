@@ -5,7 +5,7 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
   showCou, n, t =  , 3,
   featuredOn, l, y = t, r, u, e,
             <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">
-              Revolutionary, AI, Services Now, Availabl, e;
+              Revolutionary, AI, Services Now, Availabl, e}
               Revolutionary, AI, Services Now, Availabl, e</h2>
           <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">
             { servic, e, s.m, a, p((serv, i, c, e) = > (</div>
@@ -18,9 +18,9 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
                       <Zap, classNam, e="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1" />
                       <span, classNam, e="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}</sp, a, n>
                     </di, v>
-                    Learn, Mor, e;
+                    Learn, Mor, e}
                     <Link, classNam, e="w-4 h-4" />
-              View, All, Services;
+              View, All, Services}
               <Link, classNam, e="w-6 h-6" />
   if (varia, n, t = == 'prem, i, u, m') {
     retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>

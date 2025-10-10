@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'}
 const LatestContentBanner202, 5: React.FC = () => {,
   const latestArticle, s = [
     {
@@ -80,12 +80,12 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/20, t, o-fuchs, i, a-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in"></div>
             <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e" />
             <span, className="te, x, t-cy, a, n-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-              🔥 3, REVOLUTIONARY, NEW ARTICLES, PUBLISHE, D • Januar, y, 3, 0, 20, 2, 6;
+              🔥 3, REVOLUTIONARY, NEW ARTICLES, PUBLISHE, D • Januar, y, 3, 0, 20, 2, 6}
             </sp, a, n>
             <Sparkles, classNam, e = "w-5 h-5, tex, t-fuchs, i, a-400, animat, e-pul, s, e" /></Sparkles>
           </div>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-fuchs, i, a-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
-            Latest, Enterprise, AI Guid, e, s;
+            Latest, Enterprise, AI Guid, e, s}
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3 xl, m, x-auto, leadin, g-relax, e, d">
             Master, revolutionary, AI breakthro, u, g, h, s, explore, future, predictions, and, transform, your enterprise, with, proven framewor, k, s. 
@@ -123,12 +123,12 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/20, t, o-fuchs, i, a-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in"></div>"
             <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e" /></Sparkles>"
             <span, className="te, x, t-cy, a, n-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"></span>
-              🔥 3, REVOLUTIONARY, NEW ARTICLES, PUBLISHE, D • Januar, y, 3, 0, 20, 2, 6;
+              🔥 3, REVOLUTIONARY, NEW ARTICLES, PUBLISHE, D • Januar, y, 3, 0, 20, 2, 6}
             </sp, a, n>"
             <Sparkles, classNam, e = "w-5 h-5, tex, t-fuchs, i, a-400, animat, e-pul, s, e" /></Sparkles>
           </div>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-fuchs, i, a-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in"></h2>
-            Latest, Enterprise, AI Guid, e, s;
+            Latest, Enterprise, AI Guid, e, s}
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d"></p>
             Master, revolutionary, AI breakthro, u, g, h, s, explore, future, predictions, and, transform, your enterprise, with, proven framewor, k, s. 
@@ -180,7 +180,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
                     {/* TODO: Fix JSX expression */}
                       </di, v > )  }"
                     <span, classNam, e = "px-3, p, y-1.5, rounde, d-full, b, g-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-400, tex, t-xs, fon, t-semibold, border, border-cy, a, n-5, 0, 0/30"></span>
-                      N, E, W;
+                      N, E, W}
                     </sp, a, n>
                   </div>
                 </div>
@@ -230,7 +230,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-fuchs, i, a-5, 0, 0"></div>
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
-                Stay, Ahead, of the, AI, Revolution;
+                Stay, Ahead, of the, AI, Revolution}
               </h3>
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2 xl, m, x-au, t, o">
                 Get, weekly, insight, s, case, studie, s, and, breakthrough, research delivered, directly, to your, inbo, x. 
@@ -243,7 +243,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-fuchs, i, a-5, 0, 0"></div>"
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>"
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4"></h3>
-                Stay, Ahead, of the, AI, Revolution;
+                Stay, Ahead, of the, AI, Revolution}
               </h3>"
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o"></p>
                 Get, weekly, insight, s, case, studie, s, and, breakthrough, research delivered, directly, to your, inbo, x. 
@@ -297,6 +297,6 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
         </div>
       </div>
     </di, v>
-  );
-};
+  )}
+}}
 export default LatestContentBanner2025;"`

@@ -1,14 +1,14 @@
-'use client';
-import React, { useState } from 'react';
+'use client'}
+import React, { useState } from 'react'}
 const,
   InteractiveAIROICalculator: React.FC = () => {return (}
     <div>Coming Soon</div>)
-  );
-};
-  const [currentCost, setCurrentCost] = useState(100000);
-  const [efficiencyGain, setEfficiencyGain] = useState(70);
-  const [timeframe, setTimeframe] = useState(12);
-  const calculateROI = () => {return Math.max(0, roi);
+  )}
+}}
+  const [currentCost, setCurrentCost] = useState(100000)}
+  const [efficiencyGain, setEfficiencyGain] = useState(70)}
+  const [timeframe, setTimeframe] = useState(12)}
+  const calculateROI = () => {return Math.max(0, roi)}
   };return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
@@ -59,7 +59,7 @@ Expected Efficiency Gain (%)
                 <p className='text-gray-600 text-sm'></p>
                   Expected return on investment over {timeframe} months</p>
     </section>
-  );
+  )}
 export default InteractiveAIROICalculator</div>
   </div>
   </div>

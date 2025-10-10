@@ -1,5 +1,5 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import, React, from 'rea, c, t'}
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'}
       i,
   d:  , 4,
       titl,

@@ -1,25 +1,2 @@
-import { describe, test, expect } from '@jest/globals';
-import { render, screen } from '@testing-library/react';
-import { HelmetProvider } from 'react-helmet-async';
-<<<<<<< HEAD
-import LoadingSpinner from '../src/components/LoadingSpinner';
-import SEOEnhancer from '../src/components/SEOEnhancer';
-=======
-import LoadingSpinner from '../app/components/LoadingSpinner';
-import SEOEnhancer from '../app/components/SEOEnhancer';
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-describe('Component Tests', () => {
-  test('LoadingSpinner renders correctly', () => {
-    render(<LoadingSpinner />);
-    expect(screen.getByRole('status')).toBeInTheDocument();
-  });
-  test('SEOEnhancer renders without crashing', () => {
-    render(
-      <HelmetProvider>
-        <SEOEnhancer />
-      </HelmetProvider>
-    );
-    expect(document.head).toBeInTheDocument();
-  });
-});
+import LoadingSpinner from '../src/components/LoadingSpinner'}
+import SEOEnhancer from '../src/components/SEOEnhancer'}

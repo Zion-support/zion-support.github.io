@@ -1,7 +1,7 @@
 impo, r, t {/* TODO: Fix JSX expression */}
-} fr, o, m 'luci, d, e-rea, c, t';
+} fr, o, m 'luci, d, e-rea, c, t'}
 interface October2025AIRevolutionBannerProp, s {
-  classNa, m, e ?  : string;
+  classNa, m, e ?  : string}
  }
 export default function October2025AIRevolutionBann, e, r({)
   classNa, m, e = '')
@@ -29,7 +29,7 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4'></div>
             <Sparkles, className='w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e' /></Sparkles>
             <span, className='te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r'></span>
-              🚀 JUST, PUBLISHE, D - Octob, e, r , 1, 20, 2, 5;
+              🚀 JUST, PUBLISHE, D - Octob, e, r , 1, 20, 2, 5}
             </sp, a, n>
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e' /></Sparkles>
           </div>
@@ -37,16 +37,16 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides;)
           </h2>)
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>)
-            <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming;
-            The, Complete, AI Revoluti, o, n: 3, Essential, Guides;
-  </
+            <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming}
+            The, Complete, AI Revoluti, o, n: 3, Essential, Guides}
+  </button>
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
             <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
-            The, Complete, AI Revoluti, o, n: 3, Essential, Guides;
+            The, Complete, AI Revoluti, o, n: 3, Essential, Guides}
           </h2>
           <p, className='te, x, t-xl, tex, t-whi, t, e/80, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
-            <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming;
+            <strong, className='te, x, t-whi, t, e'>NEW, TODA, Y:</stro, n, g> Master, autonomous, AI agen, t, s (94% task, automat, i, o, n), AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). The, definitive, guides for, forwar, d-thinking, organizations, transforming}
             with, AI, in 20, 2, 5.
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 <Bot, className='w-6 h-6, tex, t-purp, l, e-4, 0, 0' />
               </div>
               <span, className='px-3, p, y-1, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30'>
-                AUTONOMOUS, AGENT, S;
+                AUTONOMOUS, AGENT, S}
               </sp, a, n>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
@@ -75,11 +75,11 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 <Bot, className='w-6 h-6, tex, t-purp, l, e-4, 0, 0' /></Bot>
               </div>
               <span, className='px-3, p, y-1, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30'></span>
-                AUTONOMOUS, AGENT, S;
+                AUTONOMOUS, AGENT, S}
               </sp, a, n>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'></h3>
-              Autonomous, AI, Agents in, Production, 2025;
+              Autonomous, AI, Agents in, Production, 2025}
             </h3>
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'></p>
               Deploy, productio, n-grade, AI, agents that, automate, 94% of, routine, tas, k, s, reduce, costs, by 78%, and, deliver, 10x productivity, gain, s.
@@ -109,7 +109,7 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 <Code2, className='w-6 h-6, tex, t-indi, g, o-4, 0, 0' />
               </div>
               <span, className='px-3, p, y-1, b, g-indi, g, o-5, 0, 0/20, tex, t-indi, g, o-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-indi, g, o-5, 0, 0/30'>
-                AI, DEVELOPMEN, T;
+                AI, DEVELOPMEN, T}
               </sp, a, n>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'>
@@ -119,11 +119,11 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 <Code2, className='w-6 h-6, tex, t-indi, g, o-4, 0, 0' /></Code2>
               </div>
               <span, className='px-3, p, y-1, b, g-indi, g, o-5, 0, 0/20, tex, t-indi, g, o-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-indi, g, o-5, 0, 0/30'></span>
-                AI, DEVELOPMEN, T;
+                AI, DEVELOPMEN, T}
               </sp, a, n>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'></h3>
-              L, L, M-Powered, Development, Tools Revoluti, o, n;
+              L, L, M-Powered, Development, Tools Revoluti, o, n}
             </h3>
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'></p>
               Transform, your, engineering workflow, with, AI-native, tool, s. Top, teams, achieve 5x, faster, developme, n, t, 80% fewer, bug, s, and, 9, 2%
@@ -155,11 +155,11 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 <Shield, className='w-6 h-6, tex, t-emera, l, d-4, 0, 0' />
               </div>
               <span, className='px-3, p, y-1, b, g-emera, l, d-5, 0, 0/20, tex, t-emera, l, d-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-emera, l, d-5, 0, 0/30'>
-                AI, SAFET, Y;
+                AI, SAFET, Y}
               </sp, a, n>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-emera, l, d-300, transitio, n-colo, r, s'>
-              AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;
+              AI, Safet, y & Alignment, for, Enterprise 20, 2, 5}
             </h3>
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'>
           ></Link>
@@ -168,14 +168,14 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
                 <Shield, className='w-6 h-6, tex, t-emera, l, d-4, 0, 0' /></Shield>
               </div>
               <span, className='px-3, p, y-1, b, g-emera, l, d-5, 0, 0/20, tex, t-emera, l, d-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-emera, l, d-5, 0, 0/30'></span>
-                AI, SAFET, Y;
+                AI, SAFET, Y}
               </sp, a, n>
             </div>
             <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-emera, l, d-300, transitio, n-colo, r, s'></h3>
-              AI, Safet, y & Alignment, for, Enterprise 20, 2, 5;
+              AI, Safet, y & Alignment, for, Enterprise 20, 2, 5}
             </h3>
             <p, className='te, x, t-whi, t, e/70, m, b-4, leadin, g-relax, e, d'></p>
-              Deploy, AI, safely and, responsibl, y. Leading, organizations, achieve;
+              Deploy, AI, safely and, responsibl, y. Leading, organizations, achieve}
               99.2% safety, complia, n, c, e, prevent, costly, failures, and, build, stakeholder tru, s, t. Your, complete, responsible AI, framewor, k.
             </p>
             <div, classNam, e = 'grid, gri, d-co, l, s-3, ga, p-3, m, b-4'></div>
@@ -208,6 +208,6 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
         </div>
       </div>
     </div>
-  );
+  )}
 }
 `

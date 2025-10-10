@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
+'use client'}
+import React from 'react'}
 
 interface StructuredDataProps {
-  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';
-  data?: Record<string, unknown>;
+  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness'}
+  data?: Record<string, unknown>}
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ 
@@ -51,7 +51,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "Data Analytics",
             "IT Consulting"
           ]
-        };
+        }}
       
       case 'WebSite':
         return {
@@ -69,7 +69,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
-        };
+        }}
       
       case 'WebPage':
         return {
@@ -98,7 +98,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
               }
             ]
           }
-        };
+        }}
       
       case 'Service':
         return {
@@ -125,7 +125,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             "description": "Professional AI and IT consulting services",
             "availability": "https://schema.org/InStock"
           }
-        };
+        }}
       
       case 'LocalBusiness':
         return {
@@ -160,14 +160,14 @@ const StructuredData: React.FC<StructuredDataProps> = ({
             },
             "geoRadius": "100000"
           }
-        };
+        }}
       
       default:
-        return {};
+        return {}}
     }
-  };
+  }}
 
-  const structuredData = data || getDefaultData();
+  const structuredData = data || getDefaultData()}
 
   return (
     <script
@@ -176,7 +176,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({
         __html: JSON.stringify(structuredData, null, 2)
       }}
     />
-  );
-};
+  )}
+}}
 
-export default StructuredData;
+export default StructuredData}

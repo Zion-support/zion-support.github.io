@@ -1,32 +1,32 @@
-const { execSync } = require('child_process');
+const { execSync } = require('child_process')}
 function run(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true });
+  l: true })}
 }
 exports.config = {/* TODO: Fix JSX expression */}
-  e: '*/5 * * * *' };
+  e: '*/5 * * * *' }}
 exports.handler = async () => {/* TODO: Fix JSX expression */}
     run('git push origin main || true')}
     return {
-      statusCode: 200;
+      statusCode: 200}
       body: JSON.stringify({)
         ok: true),
         tool: 'external-link-rel-auditor-runner'}
-      });
-    };
+      })}
+    }}
   } catch (e) {return {
-      statusCode: 200;
-      body: JSON.stringify({ ok: false} error: String(e) });
+      statusCode: 200}
+      body: JSON.stringify({ ok: false} error: String(e) })}
     return {/* TODO: Fix JSX expression */}
   l: 'external-link-rel-auditor-runner'}
-      });
-    };
+      })}
+    }}
   } catch (e) {/* TODO: Fix JSX expression */}
   k: false} erro,
-  r: String(e) });
-    };
+  r: String(e) })}
+    }}
   }
-};
+}}
 const { execSync } = require('child_process'); function run(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true }); } ' exports.config = {/* TODO: Fix JSX expression */}

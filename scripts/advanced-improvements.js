@@ -1,5 +1,5 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node}
 /**
- * Advanced Improvements Script;
- * This script implements advanced improvements to the Zion Tech Group website;
+ * Advanced Improvements Script}
+ * This script implements advanced improvements to the Zion Tech Group website}
  */

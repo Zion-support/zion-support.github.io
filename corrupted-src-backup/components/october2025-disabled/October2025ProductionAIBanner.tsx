@@ -18,10 +18,10 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             <sp, a, n>N, E, W: October, 2025, Production AI, Insight, s</sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-            Production, AI, Excellence: Latest, Enterprise, Strategies;
+            Production, AI, Excellence: Latest, Enterprise, Strategies}
           </h2>
           <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-whi, t, e/90, ma, x-w-3xl, m, x-au, t, o'>
-            Master, production, AI deploy, m, e, n, t, re, a, l-time, monitorin, g, and, multimodal, RAG systems, with, our comprehensive, October, 2025 guid, e, s;
+            Master, production, AI deploy, m, e, n, t, re, a, l-time, monitorin, g, and, multimodal, RAG systems, with, our comprehensive, October, 2025 guid, e, s}
           </p>
         </div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'>
@@ -35,16 +35,16 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
               </div>
               <div, className='fl, e, x-1'></div>
                 <h3, className='te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r:te, x, t-yell, o, w-300, transitio, n-colo, r, s'>
-                  Production, AI, Agents: Best, Practices, 2025;
+                  Production, AI, Agents: Best, Practices, 2025}
             <Rocket, className='w-4 h-4' /></Rocket>
             <sp, a, n>N, E, W: October, 2025, Production AI, Insight, s</sp, a, n>
           </div>
           <h2, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'></h2>
             Production, AI, Excellenc,
-  e: Latest, Enterprise, Strategies;
+  e: Latest, Enterprise, Strategies}
           </h2>
           <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-whi, t, e/90, ma, x-w-3xl, m, x-au, t, o'></p>
-            Master, production, AI deploy, m, e, n, t, re, a, l-time, monitorin, g, and, multimodal, RAG systems, with, our comprehensive, October, 2025 guid, e, s;
+            Master, production, AI deploy, m, e, n, t, re, a, l-time, monitorin, g, and, multimodal, RAG systems, with, our comprehensive, October, 2025 guid, e, s}
           </p>
         </div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'></div>
@@ -59,7 +59,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
               <div, className='fl, e, x-1'></div>
                 <h3, className='te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r:te, x, t-yell, o, w-300, transitio, n-colo, r, s'></h3>
                   Production, AI, Agent,
-  s: Best, Practices, 2025;
+  s: Best, Practices, 2025}
                 </h3>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
               </div>
               <div, className='fl, e, x-1'></div>
                 <h3, className='te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r:te, x, t-yell, o, w-300, transitio, n-colo, r, s'></h3>
-                  Re, a, l-Time, AI, Model Monitori, n, g;
+                  Re, a, l-Time, AI, Model Monitori, n, g}
                 </h3>
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
               </div>
               <div, className='fl, e, x-1'></div>
                 <h3, className='te, x, t-xl, fon, t-bold, m, b-2, grou, p-hov, e, r:te, x, t-yell, o, w-300, transitio, n-colo, r, s'></h3>
-                  Multimodal, RAG, Systems Revoluti, o, n;
+                  Multimodal, RAG, Systems Revoluti, o, n}
                 </h3>
               </div>
             </div>
@@ -206,24 +206,24 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
               className='px-8, p, y-4, b, g-white, tex, t-indi, g, o-600, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r:bg-yell, o, w-300, hove, r:te, x, t-indi, g, o-700, transitio, n-all, duratio, n-300, shado, w-xl, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'
             >
             ></Link>
-              Explore, All, Production AI, Article, s;
+              Explore, All, Production AI, Article, s}
             </Li, n, k>
             <Link, t, o='/conta, c, t'
               className='px-8, p, y-4, b, g-indi, g, o-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r:bg-indi, g, o-9, 0, 0/70, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'
             >
-              Get, Expert, Implementation He, l, p;
+              Get, Expert, Implementation He, l, p}
             </Li, n, k>
           </div>
           <p, className='mt-6, tex, t-whi, t, e/70, tex, t-sm'>
             ></Link>
-              Get, Expert, Implementation He, l, p;
+              Get, Expert, Implementation He, l, p}
             </Li, n, k>
           </div>
           <p, className='mt-6, tex, t-whi, t, e/70, tex, t-sm'></p>
-            🚀 J, o, i, n , 5,0, 0, 0+ enterprises, implementing, production-grade, AI, systems;
+            🚀 J, o, i, n , 5,0, 0, 0+ enterprises, implementing, production-grade, AI, systems}
           </p>
         </div>)
       </div>)
     </secti, o, n>)
-  );
+  )}
 }

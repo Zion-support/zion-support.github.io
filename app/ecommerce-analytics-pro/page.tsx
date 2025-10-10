@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
+import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react'}
 const EcommerceAnalyticsProPage: React.FC = () => {
   const features = [
     {
@@ -34,7 +34,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       title: 'Conversion Tracking',
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
     }
-  ];
+  ]}
   return (
     <React.Fragment>
       <Helmet>
@@ -47,8 +47,8 @@ const EcommerceAnalyticsProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                E-commerce Analytics Pro;
-  </
+                E-commerce Analytics Pro}
+  </button>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.
               </p>
@@ -70,7 +70,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default EcommerceAnalyticsProPage;
+  )}
+}}
+export default EcommerceAnalyticsProPage}
   </h1>

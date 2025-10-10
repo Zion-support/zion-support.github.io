@@ -1,5 +1,5 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
-impo, r, t { moti, o, n } fr, o, m "fram, e, r-moti, o, n";
+impo, r, t { moti, o, n } fr, o, m "fram, e, r-moti, o, n"}
 const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -64,7 +64,7 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
           </moti, o, n.d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-black, tex, t-white, m, b-6, leadin, g-tig, h, t">
             🚀 <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-3, 0, 0%">
-              The, AI, Revolution Accelerat, e, s;
+              The, AI, Revolution Accelerat, e, s}
             🚀</h2> <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-3, 0, 0%">
               The, AI, Revolution Accelerat, e, s
             </sp, a, n> 🚀
@@ -88,7 +88,7 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
           </moti, o, n.d, i, v>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-black, tex, t-white, m, b-6, leadin, g-tig, h, t"></h2>"
             🚀 <span, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-3, 0, 0%"></span>
-              The, AI, Revolution Accelerat, e, s;
+              The, AI, Revolution Accelerat, e, s}
             </sp, a, n> 🚀
           </h2>"
           <p, className="te, x, t-2xl, m, d:te, x, t-3xl, tex, t-cy, a, n-100, m, b-4, ma, x-w-5xl, m, x-auto, leadin, g-relaxed, fon, t-semibo, l, d"></p>"
@@ -280,6 +280,6 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </moti, o, n.d, i, v>
-  );
-};
+  )}
+}}
 export default September30MegaBanner2025;"`

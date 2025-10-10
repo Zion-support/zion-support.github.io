@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'}
 impo, r, t {/* TODO: Fix JSX expression */}
-} fr, o, m 'luci, d, e-rea, c, t';
+} fr, o, m 'luci, d, e-rea, c, t'}
 const October2025CognitiveRevolutionBanne, r: React.FC = () => { ,
   return()
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/20, overflo, w-hidd, e, n' > {/* Animated, background, effec, t, s */ })
@@ -40,55 +40,55 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
             <div, className='fl, e, x-1, mi, n-w-0'></div>
               <div, className='flex, item, s-center, ga, p-2, m, b-2, fle, x-wr, a, p'></div>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e'>
-                  🚀 BRAND, NEW, OCTOBER 20, 2, 5;
+                  🚀 BRAND, NEW, OCTOBER 20, 2, 5}
                 </sp, a, n>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg'></span>
                   <Award, className='w-3 h-3, m, r-1' />
-                  BREAKTHROUGH, CONTEN, T;
+                  BREAKTHROUGH, CONTEN, T}
                 </sp, a, n>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg'></span>
                   <TrendingUp, className='w-3 h-3, m, r-1' />
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e'></span>
-                  🚀 BRAND, NEW, OCTOBER 20, 2, 5;
+                  🚀 BRAND, NEW, OCTOBER 20, 2, 5}
                 </sp, a, n>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg'></span>
                   <Award, className='w-3 h-3, m, r-1' /></Award>
-                  BREAKTHROUGH, CONTEN, T;
+                  BREAKTHROUGH, CONTEN, T}
                 </sp, a, n>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg'></span>
                   <TrendingUp, className='w-3 h-3, m, r-1' /></TrendingUp>
-                  $4.7B, VALUE, DELIVERED;
+                  $4.7B, VALUE, DELIVERED}
                 </sp, a, n>
               </div>
               <h2, className='te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t'>
-                🧠 Cognitive, Computing, Revolution: Hum, a, n-Like, AI, Intelligence;
+                🧠 Cognitive, Computing, Revolution: Hum, a, n-Like, AI, Intelligence}
               </h2>
               <p, className='te, x, t-purp, l, e-100, tex, t-sm, s, m:te, x, t-base, leadin, g-relaxed, m, b-3'></p>
                 <span, className='fo, n, t-bold, tex, t-yell, o, w-3, 0, 0'>
                   JUST, PUBLISHED, TODAY:
               <h2, className='te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t'></h2>
                 🧠 Cognitive, Computing, Revolutio,
-  n: Hum, a, n-Like, AI, Intelligence;
+  n: Hum, a, n-Like, AI, Intelligence}
               </h2>
               <p, className='te, x, t-purp, l, e-100, tex, t-sm, s, m:te, x, t-base, leadin, g-relaxed, m, b-3'></p>
                 <span, className='fo, n, t-bold, tex, t-yell, o, w-3, 0, 0'></span>
                   JUST, PUBLISHED, TODA,
   Y:
                 </sp, a, n>{' '}
-                Discover, how, Fortune 500, companies, are deploying, cognitive, AI;
+                Discover, how, Fortune 500, companies, are deploying, cognitive, AI}
                 systems, that, understand, reas, o, n, and, learn, like huma, n, s —
                 achievi, n, g{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
-                  98.7% decision, accurac, y;
+                  98.7% decision, accurac, y}
                 </span>
                 ,{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                  98.7% decision, accurac, y;
+                  98.7% decision, accurac, y}
                 </span>
                 ,{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                  $4.7B+ in, value, creation;
+                  $4.7B+ in, value, creation}
                 </span>
                 , a, n, d{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>, 3,6, 0, 0% R, O, I</sp, a, n>.
@@ -164,6 +164,6 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
         </div>
       </div>
     </di, v>
-  );
-};
-export default October2025 CognitiveRevolutionBanner;
+  )}
+}}
+export default October2025 CognitiveRevolutionBanner}

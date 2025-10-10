@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Globe, Headphones, Shield, Zap, CheckCircle, Star,  Globe,  Headphones,  Zap } from 'lucide-react';
+import React from 'react'}
+import { Link } from 'react-router-dom'}
+import Navigation from '../components/Navigation'}
+import Footer from '../components/Footer'}
+import { Globe, Headphones, Shield, Zap, CheckCircle, Star,  Globe,  Headphones,  Zap } from 'lucide-react'}
 const GlobalITSupportPage: React.FC = () => {
-  const features = [];
+  const features = []}
   return (
     {// TODO: Add content;}
-};
+}}
   ico,
   n: Globe,
       titl,
@@ -15,7 +15,7 @@ const GlobalITSupportPage: React.FC = () => {
       descriptio,
   n: '24/7 IT support across multiple time zones',
       benefit,
-  s: ['Worldwide coverage', 'Local expertise', 'Multi-language support'];
+  s: ['Worldwide coverage', 'Local expertise', 'Multi-language support']}
     },
       ico,
   n: Headphones,
@@ -34,7 +34,7 @@ const GlobalITSupportPage: React.FC = () => {
       benefit,
   s: ['Fast resolution', 'Escalation procedures', 'SLA guarantees']
     }
-  ];
+  ]}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -46,7 +46,7 @@ const GlobalITSupportPage: React.FC = () => {
 // Worldwide IT Support Services
           </p>"
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
-            Get comprehensive IT support wherever you are in the world. Our global team of experts provides;
+            Get comprehensive IT support wherever you are in the world. Our global team of experts provides}
             24/7 support across all time zones with local expertise and multi-language capabilities.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -86,6 +86,6 @@ const GlobalITSupportPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default GlobalItSupportPage;
+  )}
+}}
+export default GlobalItSupportPage}

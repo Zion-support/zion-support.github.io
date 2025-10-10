@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react'}
+import { Helmet } from 'react-helmet-async'}
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedSEO: React.FC<SEOProps> = ({,
@@ -17,20 +17,20 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   noindex = false,
   nofollow = false,
   canonical}) => {
-  const _location = useLocation();
+  const _location = useLocation()}
 const,
   EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  //   const currentUrl = url || `${window.location.origin}${location.pathname}`;
-  //   const canonicalUrl = canonical || currentUrl;
-  //   const currentTime = new Date().toISOString();
-  // Generate structured data;
+  //   const currentUrl = url || `${window.location.origin}${location.pathname}`}
+  //   const canonicalUrl = canonical || currentUrl}
+  //   const currentTime = new Date().toISOString()}
+  // Generate structured data}
   const structuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description;
-    url: window.location.origin;
+    description: description}
+    url: window.location.origin}
     logo: `${window.location.origin}/images/logo.png`,
     sameAs: [,
       'https://linkedin.com/company/zion-tech-group',
@@ -58,18 +58,18 @@ const,
       addressCountry: 'US',
     addres,
   s: {/* TODO: Fix JSX expression */}
-    }};
-  // Add article structured data if type is article;
+    }}}
+  // Add article structured data if type is article}
   if (type === 'article') {
     const articleData = {
       '@context': 'https: //schema.org',
       '@type': 'Article',
-      headline: title;
-      description: description;
-      image: image;
+      headline: title}
+      description: description}
+      image: image}
       author: {,
         '@type': 'Organization',
-        name: author;
+        name: author}
       },
       publisher: {,
         '@type': 'Organization',
@@ -77,8 +77,8 @@ const,
         logo: {,
           '@type': 'ImageObject',
           url: `${window.location.origin}/images/logo.png`}},
-      datePublished: publishedTime || currentTime;
-      dateModified: modifiedTime || currentTime;
+      datePublished: publishedTime || currentTime}
+      dateModified: modifiedTime || currentTime}
       mainEntityOfPage: {,
         '@type': 'WebPage',
         '@id': currentUrl,
@@ -93,33 +93,33 @@ const,
   d: modifiedTime || currentTime,
       mainEntityOfPag,
   e: {/* TODO: Fix JSX expression */}
-      }};
+      }}}
     if (section) {/* TODO: Fix JSX expression */}
     }
     if (tags.length > 0) {/* TODO: Fix JSX expression */}
     }
-    (structuredData as any)['@graph'] = [structuredData, articleData];
+    (structuredData as any)['@graph'] = [structuredData, articleData]}
   }
-  // Track page view;
+  // Track page view}
   useEffect(() => {
-    // Google Analytics tracking;
+    // Google Analytics tracking}
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
         page_location: currentUrl),
   useEffect(() => {/* TODO: Fix JSX expression */}
-      });
+      })}
     }
-    // Custom analytics tracking;
+    // Custom analytics tracking}
     if (typeof window !== 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Page Viewed', {)
         title)
         url: currentUrl),
         type),
     if (typeof window !== 'undefined' && (window as any).analytics) {/* TODO: Fix JSX expression */}
-      });
+      })}
     }
-  }, [title, currentUrl, type]);
+  }, [title, currentUrl, type])}
   return(<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -127,7 +127,7 @@ const,
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       {/* Robots */}
-      <meta;
+      <meta}
         name="robots"
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}
       />
@@ -149,7 +149,7 @@ const,
       <meta name="twitter: card" content="summary_large_image" />,
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta;
+      <meta}
         name="twitter: image",
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />
@@ -191,9 +191,9 @@ const,
             itemListElement: [
               {
                 '@type': 'ListItem'
-                position: 1;
+                position: 1}
                 name: 'Home',
-                item: window.location.origin;
+                item: window.location.origin}
               },
               {
                 '@type': 'ListItem')
@@ -284,9 +284,9 @@ const,
         </script>
       )}
     </Helmet>
-  );
-};
-export default EnhancedSEO;
+  )}
+}}
+export default EnhancedSEO}
 "`
   </SEOProps>
   </SEOProps>

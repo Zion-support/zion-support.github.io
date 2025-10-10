@@ -1,25 +1,25 @@
-#!/usr/bin/env node;
-function findBackupFiles(_dir) {let backupFiles = [];
+#!/usr/bin/env node}
+function findBackupFiles(_dir) {let backupFiles = []}
   function traverse(currentDir) {
 function findBackupFiles(_dir) {/* TODO: Fix JSX expression */}
     const items = fs.readdirSync(currentDir)}
     for (const item of items) {/* TODO: Fix JSX expression */}
-//       const fullPath = path.join(currentDir} item);
+//       const fullPath = path.join(currentDir} item)}
       if (stat.isDirectory()) {traverse(fullPath)}
       } else if (item.includes('.backup.')) {backupFiles.push(fullPath)}
       }
     }
   }
-  traverse(dir);
-  return backupFiles;
+  traverse(dir)}
+  return backupFiles}
 }
 function deleteBackupFiles() {const backupFiles = findBackupFiles('./src')}
-//   let deletedCount = 0;
+//   let deletedCount = 0}
   for (const file of backupFiles) {/* TODO: Fix JSX expression */}
       fs.unlinkSync(file)}
-//       deletedCount++;
+//       deletedCount++}
     } catch (error) {/* TODO: Fix JSX expression */}
-//       // console.error(`Failed to delete ${file}:`) error.message);
+//       // console.error(`Failed to delete ${file}:`) error.message)}
     }
   }
 //   }`

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression */}
-  const { slug } = useParams();
+  const { slug } = useParams()}
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
@@ -15,7 +15,7 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
           <p className="text-xl text-gray-600 mb-8">Post slug: {slug}</p>
           <div className="bg-white rounded-lg shadow-lg p-8"></div>
             <p className="text-gray-600">
-              This is a placeholder for the blog post content. The actual content would be loaded;
+              This is a placeholder for the blog post content. The actual content would be loaded}
               based on the slug parameter.
             </p>)
           </div>)
@@ -35,13 +35,13 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
 "
           <div className="bg-white rounded-lg shadow-lg p-8"></div>"
             <p className="text-gray-600"></p>
-              This is a placeholder for the blog post content. The actual content would be loaded;
+              This is a placeholder for the blog post content. The actual content would be loaded}
               based on the slug parameter.
             </p>
           </div>
         </div>
       </div>
     </div>)
-  );
+  )}
 }
 "

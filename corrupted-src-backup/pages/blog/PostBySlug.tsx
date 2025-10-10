@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'}
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
-  const { slug } = useParams();
-  // Mock data - in a real app, this would come from an API or CMS;
+  const { slug } = useParams()}
+  // Mock data - in a real app, this would come from an API or CMS}
   const latestArticles = [
     {
       slug: 'ai-autonomous-workflows-2026',
@@ -15,7 +15,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       readTime: '8 min read',
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */}
-    }];
+    }]}
   const blogPosts = [
     {
       slug: 'enterprise-ai-transformation-roadmap-2026',
@@ -48,7 +48,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }];
+    }]}
   const featuredPosts = [
     {
       slug: 'autonomous-enterprise-operations-2026',
@@ -81,10 +81,10 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }];
-  // Find the current post;
+    }]}
+  // Find the current post}
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
-  );
+  )}
   if (!currentPost) {
     return(<div className="min-h-screen bg-gray-50">
     return (
@@ -95,14 +95,14 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
           <p className="text-lg text-gray-600 mb-8">
             The blog post you're looking for doesn't exist.
           </p>
-          <a;
+          <a}
             href="/blog"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
             Back to Blog;)
           </a>)
         </div>)
       </div>)
-    );
+    )}
   }
   return(<div className="min-h-screen bg-gray-50">
   return (
@@ -157,8 +157,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <div className="prose prose-lg max-w-none"></div>
               <h2>Introduction</h2>
               <p></p>
-                Welcome to our comprehensive guide on {currentPost.title}. This article will provide;
-                you with detailed insights, practical implementation strategies, and real-world;
+                Welcome to our comprehensive guide on {currentPost.title}. This article will provide}
+                you with detailed insights, practical implementation strategies, and real-world}
                 examples to help you understand and leverage this cutting-edge technology.
               </p>
               <h2>Key Benefits</h2>
@@ -171,22 +171,22 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
               <h2>Implementation Strategy</h2>
               <p>
               <p></p>
-                Implementing {currentPost.title} requires careful planning and execution. Our team;
-                of experts has developed proven methodologies that ensure successful deployment and;
+                Implementing {currentPost.title} requires careful planning and execution. Our team}
+                of experts has developed proven methodologies that ensure successful deployment and}
                 maximum value extraction.
               </p>
               <h2>Real-World Applications</h2>
               <p>
               <p></p>
-                Many leading organizations have already implemented {currentPost.title} with;
-                remarkable results. Case studies show consistent improvements in efficiency, cost;
+                Many leading organizations have already implemented {currentPost.title} with}
+                remarkable results. Case studies show consistent improvements in efficiency, cost}
                 reduction, and competitive advantage.
               </p>
               <h2>Conclusion</h2>
               <p>
               <p></p>
-                {currentPost.title} represents a significant opportunity for organizations looking;
-                to stay ahead in today's competitive landscape. With proper implementation and;
+                {currentPost.title} represents a significant opportunity for organizations looking}
+                to stay ahead in today's competitive landscape. With proper implementation and}
                 expert guidance, the benefits can be transformative.
               </p>
             </div>
@@ -200,7 +200,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>)
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">),
               {featuredPosts.slice(0, 3).map((post, index) => (
-                <div;
+                <div}
                   key={index}
                   className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow",
                 >,
@@ -221,7 +221,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                     <span className="mx-2">•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <a;
+                  <a}
                     href={`/blog/${post.slug}`}
                     className="text-blue-600 font-semibold hover: text-blue-800 transition-colors",
                   >,
@@ -262,6 +262,6 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
         </div>
       </div>
     </div>
-  );
+  )}
 }
 "`
