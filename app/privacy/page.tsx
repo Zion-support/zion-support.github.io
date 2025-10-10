@@ -5,16 +5,13 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
   const dataTypes = [
     {
       category: 'Personal Information',
-      icon: User,
-    },
+      icon: User},
     {
       category: 'Usage Data',
-      icon: Database,
-    },
+      icon: Database},
     {
       category: 'Technical Data',
-      icon: Server,
-    }
+      icon: Server}
   ];
   const purposes = [
     {
@@ -28,17 +25,14 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
     },
     {
       title: 'Rectification',
-      description: 'Correct inaccurate or incomplete data',
-    },
+      description: 'Correct inaccurate or incomplete data'},
     {
       title: 'Erasure',
-      description: 'Request deletion of your personal data',
-    },
+      description: 'Request deletion of your personal data'},
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
       icon: Database
-<<<<<<< HEAD
     },
     {
       title: 'Restriction',
@@ -51,15 +45,11 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
       icon: Shield
     }
   ]
-
   const contactInfo = {
     email: 'privacy@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
     address: '364 E Main St STE 1008, Middletown, DE 19709'
   }
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
   return (
     <>
       <Helmet>

@@ -24,8 +24,7 @@ import Footer from '../components/Footer';
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-  ]
+    }]
   return (
     <React.Fragment>
       <Helmet>
@@ -159,12 +158,9 @@ import Footer from '../components/Footer';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
-  ),
-};
-
+  )};
 export default AiContentStudioPage
   </button>
   </button>
@@ -176,5 +172,3 @@ export default AiContentStudioPage
   </button>
   </h1>
   </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

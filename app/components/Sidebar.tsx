@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -15,13 +14,9 @@ import {
   BarChart,
   ChevronDown,
   ChevronRight,
-
   Phone,
-
   Mail,
-
   MapPin,
-
   Clock
   }
 } from 'lucide-react'
@@ -43,7 +38,6 @@ window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 const toggleSection = (;
-
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
     ) => {
@@ -68,8 +62,7 @@ const navigationSections = [
         { name: 'Services', path: '/services', icon: Settings },
         { name: 'Contact', path: '/contact', icon: Phone },
         { name: 'Blog', path: '/blog', icon: BarChart },
-        { name: 'Case Studies', path: '/case-studies', icon: BarChart },
-      ]
+        { name: 'Case Studies', path: '/case-studies', icon: BarChart }]
     },
     {
     title: 'AI Services',
@@ -88,8 +81,7 @@ const navigationSections = [
         { name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart },
         { name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings },
         { name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield },
-        { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
-      ]
+        { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings }]
     },
     {
     title: 'Micro SaaS',
@@ -108,8 +100,7 @@ const navigationSections = [
         { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock },
         { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },
         { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },
-        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
-      ]
+        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings }]
     },
     {
     title: 'IT Services',
@@ -124,8 +115,7 @@ const navigationSections = [
         { name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud },
         { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
         { name: 'Database Management', path: '/database-management', icon: Settings },
-        { name: 'Managed IT', path: '/managed-it', icon: Settings },
-      ]
+        { name: 'Managed IT', path: '/managed-it', icon: Settings }]
     },
     {
     title: 'Company',
@@ -134,8 +124,7 @@ const navigationSections = [
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Consultation', path: '/consultation', icon: Phone },
-        { name: 'Pricing', path: '/pricing', icon: BarChart },
-      ]
+        { name: 'Pricing', path: '/pricing', icon: BarChart }]
     },
     {
     title: 'Resources',
@@ -144,8 +133,7 @@ const navigationSections = [
         { name: 'Documentation', path: '/docs', icon: Settings },
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
-        { name: 'Status', path: '/status', icon: Settings },
-      ]
+        { name: 'Status', path: '/status', icon: Settings }]
     }
   ]
 const contactInfo = {
@@ -157,17 +145,14 @@ const contactInfo = {
   }
 return (
     <>
-
       {/* Mobile Menu Button */}
       <button;
         onClick={() => setIsOpen(true)}
-
         className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar"
       >,
         <Menu>
       </button>
-
       {/* Sidebar Overlay */}
       {
     isOpen && (;
@@ -196,9 +181,6 @@ return (
               aria-label="Close sidebar"
             >,
               <X>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
             </button>
           </div>
-
           {/* Navigation */}

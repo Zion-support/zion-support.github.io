@@ -120,11 +120,8 @@ const BusinessAppsPage: React.FC = () => {
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-<<<<<<< HEAD
               Email Us
   </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           </div>
         </div>
         <div className="text-center">
@@ -147,9 +144,7 @@ const BusinessAppsPage: React.FC = () => {
         </div>
       </div>
     </div>
-  ),
-};
-
+  )};
 export default BusinessAppsPage
   </button>
   </button>

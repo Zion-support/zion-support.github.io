@@ -40,27 +40,21 @@
         'Success metrics definition'
       ],
       popular: false
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
-    }
+>    }
   ];
   const process = [
     {
-      step: '1',
-    },
+      step: '1'},
     {
       step: '2',
-      title: 'Strategy Development',
-    },
+      title: 'Strategy Development'},
     {
       step: '3',
-      title: 'Implementation Plan',
-    },
+      title: 'Implementation Plan'},
     {
       step: '4',
-      title: 'Ongoing Support',
-    }
+      title: 'Ongoing Support'}
   ]
-
   return (
     <>
       <Helmet>
@@ -68,7 +62,6 @@
         <meta name="description" content="Expert consultation services for AI strategy, cloud migration, and cybersecurity. Get personalized guidance for your technology needs." />
         <meta name="keywords" content="AI consultation, cloud migration, cybersecurity audit, technology consulting, IT strategy" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -80,13 +73,11 @@
                 Get personalized guidance and strategic insights to transform your business with cutting-edge technology.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
               {services.map((service, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
-                  
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -95,7 +86,6 @@
                       </li>
                     ))}
                   </ul>
-
                   <div className="border-t border-white/10 pt-6">
                     <div className="flex justify-between items-center mb-4">
                       <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
@@ -111,17 +101,13 @@
                 </div>
               ))}
             </div>
-
               </div>
             </div>
-
       description: 'Provide continuous guidance and support throughout implementation.',
       icon: Clock
     }
   ];
-
   const selectedConsultation = consultationTypes.find(type => type.id === selectedType);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -129,7 +115,6 @@
         <meta name="description" content="Get expert consultation on AI strategy, technical architecture, and digital transformation. Our consultants help you make informed technology decisions." />
         <meta name="keywords" content="AI consultation, IT consulting, digital transformation, technology strategy, technical architecture, business consulting" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -151,7 +136,6 @@
           </div>
         </div>
       </section>
-
       {/* Consultation Types */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -161,7 +145,6 @@
               Choose the consultation type that best fits your needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {consultationTypes.map((type) => (
               <div
@@ -180,7 +163,6 @@
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{type.name}</h3>
                   <p className="text-gray-300 mb-4">{type.description}</p>
@@ -189,7 +171,6 @@
                     <span className="text-gray-400">{type.duration}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-3">
                   {type.features.map((feature, index) => (
                     <li key={index} className="flex items-center text-gray-300">
@@ -203,7 +184,6 @@
           </div>
         </div>
       </section>
-
       {/* Selected Consultation Details */}
       {selectedConsultation && (
         <section className="py-16 px-4 bg-white/5">
@@ -212,7 +192,6 @@
               <h2 className="text-4xl font-bold text-white mb-6">{selectedConsultation.name}</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">{selectedConsultation.description}</p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6">What's Included</h3>
@@ -225,7 +204,6 @@
                   ))}
                 </ul>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h3>
                 <div className="space-y-4">
@@ -245,17 +223,14 @@
                 <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
                   Book Now
                 </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
-              </div>
+>              </div>
             </div>
           </div>
         </section>
     </>
   );
 };
-
       )}
-
       {/* Process Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -265,7 +240,6 @@
               A structured approach to delivering exceptional consultation services
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((step, index) => (
               <div key={index} className="text-center">
@@ -280,7 +254,6 @@
           </div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -288,7 +261,6 @@
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-xl text-gray-300">Contact our consultation team today</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -298,7 +270,6 @@
               <p className="text-gray-300">+1 (555) 123-4567</p>
               <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
             </div>
-
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-6 h-6 text-white" />
@@ -307,7 +278,6 @@
               <p className="text-gray-300">consultation@ziontechgroup.com</p>
               <p className="text-sm text-gray-400">24/7 Response</p>
             </div>
-
             <div className="text-center">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-6 h-6 text-white" />
@@ -319,7 +289,6 @@
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -345,6 +314,5 @@
     </div>
   );
 };
-
 export default ConsultationPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
+>

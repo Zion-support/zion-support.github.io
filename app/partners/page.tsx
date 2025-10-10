@@ -1,11 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const PartnersPage: React.FC = () => {
   const partners = [
 import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react';
-
 interface Partner {
   id: string;
   name: string;
@@ -15,32 +13,25 @@ interface Partner {
   website: string;
   tier: 'preferred' | 'certified' | 'strategic';
 }
-
 const PartnersPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTier, setSelectedTier] = useState('all');
-
   const partners: Partner[] = [
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
-    {
+>    {
       id: '1',
       name: 'Microsoft',
-      logo: '/images/partners/microsoft.png',
-    },
+      logo: '/images/partners/microsoft.png'},
     {
       id: '2',
       name: 'Amazon Web Services',
-      logo: '/images/partners/aws.png',
-    }
+      logo: '/images/partners/aws.png'}
     'Access to cutting-edge technology',
     'Joint go-to-market opportunities',
     'Technical support and training',
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
-  ];
-<<<<<<< HEAD
+>  ];
   const benefits = [
     {
       title: 'Certified Expertise',
@@ -64,7 +55,6 @@ const PartnersPage: React.FC = () => {
     }
   ];
   const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
-
   return (
     <>
       <Helmet>
@@ -72,12 +62,7 @@ const PartnersPage: React.FC = () => {
         <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support." />
         <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise" />
       </Helmet>
-
       <Navigation />
-      
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -89,7 +74,6 @@ const PartnersPage: React.FC = () => {
                 We work with leading technology companies to deliver the best solutions for our clients.
               </p>
             </div>
-
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
                 <button
@@ -100,7 +84,6 @@ const PartnersPage: React.FC = () => {
                 </button>
               ))}
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {partners.map((partner, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
@@ -111,12 +94,10 @@ const PartnersPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
                   </div>
                 ))}
               </div>
             </div>
-
             </div>
           </div>
         </section>
@@ -124,13 +105,11 @@ const PartnersPage: React.FC = () => {
     </>
   const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
   const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
-
   const filteredPartners = partners.filter(partner => {
     const matchesCategory = selectedCategory === 'all' || partner.category === selectedCategory;
     const matchesTier = selectedTier === 'all' || partner.tier === selectedTier;
     return matchesCategory && matchesTier;
   });
-
   const getTierColor = (tier: string) => {
     switch (tier) {
       case 'strategic':
@@ -143,7 +122,6 @@ const PartnersPage: React.FC = () => {
         return 'from-gray-500 to-gray-600';
     }
   };
-
   const getTierIcon = (tier: string) => {
     switch (tier) {
       case 'strategic':
@@ -156,7 +134,6 @@ const PartnersPage: React.FC = () => {
         return <Handshake className="w-4 h-4" />;
     }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -164,7 +141,6 @@ const PartnersPage: React.FC = () => {
         <meta name="description" content="Meet our strategic partners and learn about our technology partnerships that enable us to deliver cutting-edge AI and IT solutions." />
         <meta name="keywords" content="partners, partnerships, strategic partners, technology partners, AI partners, cloud partners" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -177,7 +153,6 @@ const PartnersPage: React.FC = () => {
           </p>
         </div>
       </section>
-
       {/* Partnership Benefits */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -187,7 +162,6 @@ const PartnersPage: React.FC = () => {
               We offer comprehensive partnership programs that benefit both our partners and our clients
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -198,7 +172,6 @@ const PartnersPage: React.FC = () => {
                 Work together to develop innovative solutions that benefit both organizations and their customers.
               </p>
             </div>
-
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Users className="w-8 h-8 text-white" />
@@ -208,7 +181,6 @@ const PartnersPage: React.FC = () => {
                 Leverage our combined expertise and market presence to reach new customers and expand market share.
               </p>
             </div>
-
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Award className="w-8 h-8 text-white" />
@@ -221,7 +193,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Partners Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -249,7 +220,6 @@ const PartnersPage: React.FC = () => {
               ))}
             </select>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPartners.map((partner) => (
               <div key={partner.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 border border-white/20">
@@ -262,11 +232,9 @@ const PartnersPage: React.FC = () => {
                     {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{partner.category}</p>
                 <p className="text-gray-300 mb-6">{partner.description}</p>
-
                 <div className="flex items-center justify-between">
                   <a
                     href={partner.website}
@@ -281,7 +249,6 @@ const PartnersPage: React.FC = () => {
               </div>
             ))}
           </div>
-
           {filteredPartners.length === 0 && (
             <div className="text-center py-12">
               <p className="text-gray-400 text-lg">No partners found matching your criteria.</p>
@@ -289,7 +256,6 @@ const PartnersPage: React.FC = () => {
           )}
         </div>
       </section>
-
       {/* Partnership Tiers */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -299,7 +265,6 @@ const PartnersPage: React.FC = () => {
               We offer different partnership levels to meet the needs of various organizations
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="flex items-center gap-3 mb-6">
@@ -327,7 +292,6 @@ const PartnersPage: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/50 ring-2 ring-blue-400/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -354,7 +318,6 @@ const PartnersPage: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
@@ -384,7 +347,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -408,8 +370,6 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
-  );
+>  );
 };
-
 export default PartnersPage;

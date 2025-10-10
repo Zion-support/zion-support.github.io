@@ -43,8 +43,8 @@ return (
     <>
       <Helmet>
         <title>Ai Workflow Automation - Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></div>
@@ -97,21 +97,16 @@ return (
   }
                         <li>
                           <CheckCircle>
-
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users } from 'lucide-react';
-
 const AIWorkflowAutomation: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-
   const features = [
     {
       icon: Brain,
@@ -150,7 +145,6 @@ const AIWorkflowAutomation: React.FC = () => {
       benefits: ['Performance metrics', 'ROI tracking', 'Custom reports']
     }
   ];
-
   const services = [
     {
       icon: Zap,
@@ -174,14 +168,12 @@ const AIWorkflowAutomation: React.FC = () => {
       benefits: ['Custom AI models', 'Dedicated support', 'White-label options']
     }
   ];
-
   const stats = [
     { number: '90%', label: 'Time Savings' },
     { number: '75%', label: 'Error Reduction' },
     { number: '500+', label: 'Integrations' },
     { number: '24/7', label: 'Automation' }
   ];
-
   return (
     <>
       <SEOOptimizer
@@ -192,7 +184,6 @@ const AIWorkflowAutomation: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles">
         <Navigation />
-        
         <main className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
@@ -207,7 +198,6 @@ const AIWorkflowAutomation: React.FC = () => {
                 Our AI-powered workflow automation platform helps businesses eliminate manual tasks, 
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <a
                   href="tel:+13024640950"
@@ -225,7 +215,6 @@ const AIWorkflowAutomation: React.FC = () => {
                   <span>Start Free Trial</span>
                 </a>
               </div>
-
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                 {stats.map((stat, index) => (
@@ -239,14 +228,12 @@ const AIWorkflowAutomation: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-16">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
                 Powerful Automation Features
               </h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
                   <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
@@ -266,7 +253,6 @@ const AIWorkflowAutomation: React.FC = () => {
                   )}
                 </div>
               ))}
-
             </div>
           </div>
         </section>
@@ -312,20 +298,17 @@ const AIWorkflowAutomation: React.FC = () => {
                 <button>
                   Learn More
                 </button>
-=======
                   </div>
                 ))}
               </div>
             </div>
           </section>
-
           {/* Services Section */}
           <section className="py-16 bg-gray-900/50">
             <div className="container mx-auto px-4">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
                 Automation Services
               </h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service, index) => (
                   <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
@@ -342,7 +325,6 @@ const AIWorkflowAutomation: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                    
                     <a 
                       href="/contact"
                       className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-flex items-center justify-center mt-4"
@@ -360,5 +342,4 @@ const AIWorkflowAutomation: React.FC = () => {
     </>
   );
 };
-
 export default AiWorkflowAutomationPage;

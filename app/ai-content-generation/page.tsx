@@ -29,8 +29,7 @@ const AiContentGenerationPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-  ]
+    }]
   return (
     <React.Fragment>
       <Helmet>
@@ -164,12 +163,9 @@ const AiContentGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
-  ),
-};
-
+  )};
 export default AiContentGenerationPage
   </button>
   </button>
@@ -181,5 +177,3 @@ export default AiContentGenerationPage
   </button>
   </h1>
   </main>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

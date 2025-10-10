@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiCloudInfrastructurePage: React.FC = () => {
   const features = [
@@ -30,8 +29,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-  ]
+    }]
   return (
     <React.Fragment>
       <Helmet>
@@ -89,8 +87,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
                 </div>
               ))}
             </div>
@@ -109,19 +105,14 @@ const AiCloudInfrastructurePage: React.FC = () => {
               Start Your Free Trial
   </
           </div>
-<<<<<<< HEAD
 </section>
       </main>
       <Footer />
     </React.Fragment>
-  ),
-};
-
+  )};
 export default AiCloudInfrastructurePage
   </button>
   </h2>
   </button>
   </button>
   </h1>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

@@ -43,8 +43,8 @@ return (
     <>
       <Helmet>
         <title>Ai Analytics Dashboard - Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta />
+        <meta />
       </Helmet>
       <Navigation>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div>
@@ -97,7 +97,6 @@ return (
   }
                         <li>
                           <CheckCircle>
-
                           {benefit}
                         </li>
                       ))}
@@ -105,7 +104,6 @@ return (
                   )}
                 </div>
               ))}
-
             </div>
           </div>
         </section>
@@ -158,23 +156,17 @@ return (
       </div>
       <Footer>
     </>
-  ),
-}
+  )}
 export default AiAnalyticsDashboardPage;
-
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, TrendingUp, Users, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Database, Target, Globe } from 'lucide-react';
-
 const AIAnalyticsDashboard: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
   }, []);
-
   const features = [
     {
       icon: BarChart,
@@ -213,7 +205,6 @@ const AIAnalyticsDashboard: React.FC = () => {
       benefits: ['SOC 2 compliant', 'GDPR ready', 'End-to-end encryption']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -261,7 +252,6 @@ const AIAnalyticsDashboard: React.FC = () => {
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -282,11 +272,9 @@ const AIAnalyticsDashboard: React.FC = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-bg quantum-particles">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className={`text-center mb-16 transition-all duration-1000 ${
@@ -296,20 +284,16 @@ const AIAnalyticsDashboard: React.FC = () => {
             <Brain className="w-4 h-4 text-cyan-400" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
             AI Analytics Dashboard
           </h1>
-          
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
             Transform Your Data Into Actionable Insights
           </p>
-          
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
             Our AI-powered analytics platform provides real-time business intelligence, predictive analytics, 
             and automated reporting. Make data-driven decisions with confidence using our advanced machine learning algorithms.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <a
               href="tel:+13024640950"
@@ -325,7 +309,6 @@ const AIAnalyticsDashboard: React.FC = () => {
               Start Free Trial
             </a>
           </div>
-
           {/* Key Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="hologram-card-enhanced p-6 text-center">
@@ -342,13 +325,11 @@ const AIAnalyticsDashboard: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
             Powerful Features
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="hologram-card-enhanced p-6 hover:scale-105 transition-all duration-300">
@@ -369,13 +350,11 @@ const AIAnalyticsDashboard: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
             Simple, Transparent Pricing
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`hologram-card-enhanced p-8 relative ${
@@ -388,7 +367,6 @@ const AIAnalyticsDashboard: React.FC = () => {
                     </div>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -397,7 +375,6 @@ const AIAnalyticsDashboard: React.FC = () => {
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
@@ -406,7 +383,6 @@ const AIAnalyticsDashboard: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <a
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -421,13 +397,11 @@ const AIAnalyticsDashboard: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
             What Our Customers Say
           </h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="hologram-card-enhanced p-6">
@@ -445,7 +419,6 @@ const AIAnalyticsDashboard: React.FC = () => {
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="hologram-card-enhanced p-12 max-w-4xl mx-auto">
@@ -473,10 +446,8 @@ const AIAnalyticsDashboard: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default AIAnalyticsDashboard;

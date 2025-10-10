@@ -29,8 +29,7 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-  ]
+    }]
   return (
     <React.Fragment>
       <Helmet>
@@ -165,10 +164,7 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  ),
-<<<<<<< HEAD
-};
-
+  )};
 export default PagePage
   </button>
   </button>
@@ -180,7 +176,3 @@ export default PagePage
   </button>
   </h1>
   </main>
-=======
-}
-export default PagePage;
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
