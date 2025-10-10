@@ -2483,6 +2483,676 @@ const aiServices: AIService[] = [
     enterprise: true,
     icon: Building,
     link: "https://ziontechgroup.com/ai-smart-city-management"
+  },
+  {
+    name: "AI Quantum Machine Learning Platform",
+    description: "Next-generation quantum machine learning with exponential speedup for complex problems",
+    price: "$8,500/mo",
+    features: ["Quantum Algorithms", "Exponential Speedup", "Complex Problem Solving", "Quantum Neural Networks"],
+    category: "Quantum AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-ml-platform"
+  },
+  {
+    name: "AI Space Mission Control",
+    description: "Advanced space mission management with AI-powered navigation and mission planning",
+    price: "$15,000/mo",
+    features: ["Mission Planning", "Navigation Control", "Satellite Management", "Space Analytics"],
+    category: "Space Technology",
+    enterprise: true,
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-space-mission-control"
+  },
+  {
+    name: "AI Climate Intelligence Pro",
+    description: "Advanced climate monitoring and prediction with AI-powered environmental analysis",
+    price: "$4,200/mo",
+    features: ["Climate Prediction", "Environmental Analysis", "Carbon Tracking", "Sustainability Planning"],
+    category: "Environmental AI",
+    enterprise: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-climate-intelligence"
+  },
+  {
+    name: "AI Pharmaceutical Research Pro",
+    description: "Revolutionary drug discovery and pharmaceutical research with AI-powered molecular analysis",
+    price: "$6,800/mo",
+    features: ["Drug Discovery", "Molecular Analysis", "Clinical Trials", "Patent Research"],
+    category: "Healthcare AI",
+    enterprise: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-pharmaceutical-research"
+  },
+  {
+    name: "AI Financial Intelligence Suite",
+    description: "Comprehensive financial AI platform with real-time market analysis and trading algorithms",
+    price: "$5,500/mo",
+    features: ["Market Analysis", "Trading Algorithms", "Risk Assessment", "Portfolio Optimization"],
+    category: "Financial AI",
+    enterprise: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-financial-intelligence"
+  },
+  {
+    name: "AI Autonomous Vehicles Pro",
+    description: "Complete autonomous vehicle management system with AI-powered navigation and safety",
+    price: "$9,500/mo",
+    features: ["Autonomous Navigation", "Safety Systems", "Fleet Management", "Real-time Monitoring"],
+    category: "Autonomous Systems",
+    enterprise: true,
+    icon: Car,
+    link: "https://ziontechgroup.com/ai-autonomous-vehicles"
+  },
+  {
+    name: "AI Blockchain Intelligence Platform",
+    description: "Advanced blockchain analysis and DeFi optimization with AI-powered insights",
+    price: "$4,800/mo",
+    features: ["Blockchain Analysis", "DeFi Optimization", "Smart Contract AI", "Crypto Analytics"],
+    category: "Blockchain AI",
+    enterprise: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-blockchain-intelligence"
+  },
+  {
+    name: "AI Supply Chain Intelligence Pro",
+    description: "Intelligent supply chain optimization with AI-powered logistics and demand forecasting",
+    price: "$7,200/mo",
+    features: ["Logistics Optimization", "Demand Forecasting", "Risk Management", "Cost Optimization"],
+    category: "Supply Chain AI",
+    enterprise: true,
+    icon: Truck,
+    link: "https://ziontechgroup.com/ai-supply-chain-intelligence"
+  },
+  {
+    name: "AI Legal Intelligence Platform",
+    description: "Advanced legal AI with case analysis, contract review, and compliance monitoring",
+    price: "$6,000/mo",
+    features: ["Case Analysis", "Contract Review", "Compliance Monitoring", "Legal Research"],
+    category: "Legal AI",
+    enterprise: true,
+    icon: Scale,
+    link: "https://ziontechgroup.com/ai-legal-intelligence"
+  },
+  {
+    name: "AI Agricultural Intelligence Pro",
+    description: "Smart farming solutions with AI-powered crop monitoring and yield optimization",
+    price: "$5,800/mo",
+    features: ["Crop Monitoring", "Yield Optimization", "Weather Analysis", "Automation Control"],
+    category: "Agricultural AI",
+    enterprise: true,
+    icon: Sprout,
+    link: "https://ziontechgroup.com/ai-agricultural-intelligence"
+  },
+  {
+    name: "AI Energy Grid Intelligence Pro",
+    description: "Smart energy management with AI-powered grid optimization and renewable integration",
+    price: "$8,200/mo",
+    features: ["Grid Optimization", "Renewable Integration", "Demand Forecasting", "Energy Storage"],
+    category: "Energy AI",
+    enterprise: true,
+    icon: Zap,
+    link: "https://ziontechgroup.com/ai-energy-grid-intelligence"
+  },
+  {
+    name: "AI Manufacturing Intelligence Pro",
+    description: "Smart manufacturing with AI-powered process optimization and quality control",
+    price: "$7,800/mo",
+    features: ["Process Optimization", "Quality Control", "Predictive Maintenance", "Supply Chain Integration"],
+    category: "Manufacturing AI",
+    enterprise: true,
+    icon: Factory,
+    link: "https://ziontechgroup.com/ai-manufacturing-intelligence"
+  },
+  {
+    name: "AI Neural Network Architecture Designer",
+    description: "Automated neural network design and optimization for custom AI model development",
+    price: "$4,500/mo",
+    features: ["Auto Architecture", "Model Optimization", "Performance Tuning", "Custom Training"],
+    category: "AI Development",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-network-designer"
+  },
+  {
+    name: "AI Predictive Maintenance Platform",
+    description: "Advanced predictive maintenance for industrial equipment with AI-powered failure prediction",
+    price: "$3,800/mo",
+    features: ["Failure Prediction", "Maintenance Scheduling", "Cost Optimization", "Equipment Monitoring"],
+    category: "Industrial AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-predictive-maintenance"
+  },
+  {
+    name: "AI Natural Language Processing Suite",
+    description: "Comprehensive NLP platform with sentiment analysis, translation, and text generation",
+    price: "$2,800/mo",
+    features: ["Sentiment Analysis", "Language Translation", "Text Generation", "Entity Recognition"],
+    category: "NLP",
+    enterprise: false,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-nlp-suite"
+  },
+  {
+    name: "AI Recommendation Engine Pro",
+    description: "Advanced recommendation system with deep learning algorithms for personalized content",
+    price: "$3,200/mo",
+    features: ["Deep Learning", "Real-time Recommendations", "A/B Testing", "Performance Analytics"],
+    category: "Recommendation Systems",
+    enterprise: false,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-recommendation-engine"
+  },
+  {
+    name: "AI Time Series Forecasting Pro",
+    description: "Advanced time series analysis and forecasting with machine learning algorithms",
+    price: "$2,400/mo",
+    features: ["Time Series Analysis", "Forecasting Models", "Anomaly Detection", "Trend Analysis"],
+    category: "Data Science",
+    enterprise: false,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-time-series-forecasting"
+  },
+  {
+    name: "AI Speech Recognition Platform Pro",
+    description: "High-accuracy speech recognition with real-time processing and multi-language support",
+    price: "$2,200/mo",
+    features: ["Real-time Processing", "Multi-language", "Noise Cancellation", "Custom Models"],
+    category: "Speech AI",
+    enterprise: false,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-speech-recognition"
+  },
+  {
+    name: "AI Image Generation Studio Pro",
+    description: "Advanced AI image generation with style transfer, upscaling, and creative tools",
+    price: "$1,800/mo",
+    features: ["Style Transfer", "Image Upscaling", "Creative Generation", "Batch Processing"],
+    category: "Computer Vision",
+    enterprise: false,
+    icon: Camera,
+    link: "https://ziontechgroup.com/ai-image-generation"
+  },
+  {
+    name: "AI Autonomous Vehicle Platform Pro",
+    description: "Complete autonomous vehicle management system with AI-powered navigation and safety",
+    price: "$12,500/mo",
+    features: ["Autonomous Navigation", "Safety Systems", "Fleet Management", "Real-time Monitoring"],
+    category: "Autonomous Systems",
+    enterprise: true,
+    icon: Car,
+    link: "https://ziontechgroup.com/ai-autonomous-vehicles"
+  },
+  {
+    name: "AI Smart City Management Pro",
+    description: "Comprehensive smart city solution with AI-powered traffic, energy, and resource management",
+    price: "$15,000/mo",
+    features: ["Traffic Optimization", "Energy Management", "Resource Allocation", "Citizen Services"],
+    category: "Smart Cities",
+    enterprise: true,
+    icon: Building,
+    link: "https://ziontechgroup.com/ai-smart-city-management"
+  },
+  {
+    name: "AI Quantum Computing Platform Pro",
+    description: "Next-generation quantum computing solutions for complex problem solving and optimization",
+    price: "$18,000/mo",
+    features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Simulation"],
+    category: "Quantum AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-computing"
+  },
+  {
+    name: "AI Healthcare Solutions Pro",
+    description: "Comprehensive AI-powered healthcare solutions for diagnosis, treatment, and patient care",
+    price: "$8,500/mo",
+    features: ["Medical Imaging", "Diagnosis Support", "Treatment Planning", "Patient Monitoring"],
+    category: "Healthcare AI",
+    enterprise: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-healthcare"
+  },
+  {
+    name: "AI Computer Vision Platform Pro",
+    description: "Advanced image recognition and computer vision solutions for various industries",
+    price: "$4,200/mo",
+    features: ["Object Detection", "Image Classification", "Facial Recognition", "Quality Control"],
+    category: "Computer Vision",
+    enterprise: false,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-computer-vision"
+  },
+  {
+    name: "AI Supply Chain Optimization Pro",
+    description: "Intelligent supply chain management with predictive analytics and optimization algorithms",
+    price: "$9,500/mo",
+    features: ["Demand Forecasting", "Inventory Optimization", "Route Planning", "Risk Management"],
+    category: "Supply Chain AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+  },
+  {
+    name: "AI Neural Network Architecture Designer Pro",
+    description: "Automated neural network design and optimization for custom AI model development",
+    price: "$6,500/mo",
+    features: ["Auto Architecture", "Model Optimization", "Performance Tuning", "Custom Training"],
+    category: "AI Development",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-network-designer"
+  },
+  {
+    name: "AI Predictive Maintenance Platform Pro",
+    description: "Advanced predictive maintenance for industrial equipment with AI-powered failure prediction",
+    price: "$5,200/mo",
+    features: ["Failure Prediction", "Maintenance Scheduling", "Cost Optimization", "Equipment Monitoring"],
+    category: "Industrial AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-predictive-maintenance"
+  },
+  {
+    name: "AI Natural Language Processing Suite Pro",
+    description: "Comprehensive NLP platform with sentiment analysis, translation, and text generation",
+    price: "$4,200/mo",
+    features: ["Sentiment Analysis", "Language Translation", "Text Generation", "Entity Recognition"],
+    category: "NLP",
+    enterprise: false,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-nlp-suite"
+  },
+  {
+    name: "AI Recommendation Engine Pro Plus",
+    description: "Advanced recommendation system with deep learning algorithms for personalized content",
+    price: "$4,800/mo",
+    features: ["Deep Learning", "Real-time Recommendations", "A/B Testing", "Performance Analytics"],
+    category: "Recommendation Systems",
+    enterprise: false,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-recommendation-engine"
+  },
+  {
+    name: "AI Time Series Forecasting Pro Plus",
+    description: "Advanced time series analysis and forecasting with machine learning algorithms",
+    price: "$3,600/mo",
+    features: ["Time Series Analysis", "Forecasting Models", "Anomaly Detection", "Trend Analysis"],
+    category: "Data Science",
+    enterprise: false,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-time-series-forecasting"
+  },
+  {
+    name: "AI Speech Recognition Platform Pro Plus",
+    description: "High-accuracy speech recognition with real-time processing and multi-language support",
+    price: "$3,200/mo",
+    features: ["Real-time Processing", "Multi-language", "Noise Cancellation", "Custom Models"],
+    category: "Speech AI",
+    enterprise: false,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-speech-recognition"
+  },
+  {
+    name: "AI Image Generation Studio Pro Plus",
+    description: "Advanced AI image generation with style transfer, upscaling, and creative tools",
+    price: "$2,800/mo",
+    features: ["Style Transfer", "Image Upscaling", "Creative Generation", "Batch Processing"],
+    category: "Computer Vision",
+    enterprise: false,
+    icon: Camera,
+    link: "https://ziontechgroup.com/ai-image-generation"
+  },
+  {
+    name: "AI Autonomous Vehicle Platform Pro Plus",
+    description: "Complete autonomous vehicle management system with AI-powered navigation and safety",
+    price: "$18,500/mo",
+    features: ["Autonomous Navigation", "Safety Systems", "Fleet Management", "Real-time Monitoring"],
+    category: "Autonomous Systems",
+    enterprise: true,
+    icon: Car,
+    link: "https://ziontechgroup.com/ai-autonomous-vehicles"
+  },
+  {
+    name: "AI Smart City Management Pro Plus",
+    description: "Comprehensive smart city solution with AI-powered traffic, energy, and resource management",
+    price: "$22,000/mo",
+    features: ["Traffic Optimization", "Energy Management", "Resource Allocation", "Citizen Services"],
+    category: "Smart Cities",
+    enterprise: true,
+    icon: Building,
+    link: "https://ziontechgroup.com/ai-smart-city-management"
+  },
+  {
+    name: "AI Quantum Computing Platform Pro Plus",
+    description: "Next-generation quantum computing solutions for complex problem solving and optimization",
+    price: "$25,000/mo",
+    features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Simulation"],
+    category: "Quantum AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-computing"
+  },
+  {
+    name: "AI Healthcare Solutions Pro Plus",
+    description: "Comprehensive AI-powered healthcare solutions for diagnosis, treatment, and patient care",
+    price: "$12,500/mo",
+    features: ["Medical Imaging", "Diagnosis Support", "Treatment Planning", "Patient Monitoring"],
+    category: "Healthcare AI",
+    enterprise: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-healthcare"
+  },
+  {
+    name: "AI Computer Vision Platform Pro Plus",
+    description: "Advanced image recognition and computer vision solutions for various industries",
+    price: "$6,200/mo",
+    features: ["Object Detection", "Image Classification", "Facial Recognition", "Quality Control"],
+    category: "Computer Vision",
+    enterprise: false,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-computer-vision"
+  },
+  {
+    name: "AI Supply Chain Optimization Pro Plus",
+    description: "Intelligent supply chain management with predictive analytics and optimization algorithms",
+    price: "$14,500/mo",
+    features: ["Demand Forecasting", "Inventory Optimization", "Route Planning", "Risk Management"],
+    category: "Supply Chain AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+  },
+  {
+    name: "AI Neural Network Architecture Designer Pro Plus",
+    description: "Automated neural network design and optimization for custom AI model development",
+    price: "$9,500/mo",
+    features: ["Auto Architecture", "Model Optimization", "Performance Tuning", "Custom Training"],
+    category: "AI Development",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-network-designer"
+  },
+  {
+    name: "AI Predictive Maintenance Platform Pro Plus",
+    description: "Advanced predictive maintenance for industrial equipment with AI-powered failure prediction",
+    price: "$7,800/mo",
+    features: ["Failure Prediction", "Maintenance Scheduling", "Cost Optimization", "Equipment Monitoring"],
+    category: "Industrial AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-predictive-maintenance"
+  },
+  {
+    name: "AI Natural Language Processing Suite Pro Plus",
+    description: "Comprehensive NLP platform with sentiment analysis, translation, and text generation",
+    price: "$6,200/mo",
+    features: ["Sentiment Analysis", "Language Translation", "Text Generation", "Entity Recognition"],
+    category: "NLP",
+    enterprise: false,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-nlp-suite"
+  },
+  {
+    name: "AI Recommendation Engine Pro Plus Ultra",
+    description: "Advanced recommendation system with deep learning algorithms for personalized content",
+    price: "$7,200/mo",
+    features: ["Deep Learning", "Real-time Recommendations", "A/B Testing", "Performance Analytics"],
+    category: "Recommendation Systems",
+    enterprise: false,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-recommendation-engine"
+  },
+  {
+    name: "AI Time Series Forecasting Pro Plus Ultra",
+    description: "Advanced time series analysis and forecasting with machine learning algorithms",
+    price: "$5,400/mo",
+    features: ["Time Series Analysis", "Forecasting Models", "Anomaly Detection", "Trend Analysis"],
+    category: "Data Science",
+    enterprise: false,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-time-series-forecasting"
+  },
+  {
+    name: "AI Speech Recognition Platform Pro Plus Ultra",
+    description: "High-accuracy speech recognition with real-time processing and multi-language support",
+    price: "$4,800/mo",
+    features: ["Real-time Processing", "Multi-language", "Noise Cancellation", "Custom Models"],
+    category: "Speech AI",
+    enterprise: false,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-speech-recognition"
+  },
+  {
+    name: "AI Image Generation Studio Pro Plus Ultra",
+    description: "Advanced AI image generation with style transfer, upscaling, and creative tools",
+    price: "$4,200/mo",
+    features: ["Style Transfer", "Image Upscaling", "Creative Generation", "Batch Processing"],
+    category: "Computer Vision",
+    enterprise: false,
+    icon: Camera,
+    link: "https://ziontechgroup.com/ai-image-generation"
+  },
+  {
+    name: "AI Autonomous Vehicle Platform Pro Plus Ultra",
+    description: "Complete autonomous vehicle management system with AI-powered navigation and safety",
+    price: "$28,500/mo",
+    features: ["Autonomous Navigation", "Safety Systems", "Fleet Management", "Real-time Monitoring"],
+    category: "Autonomous Systems",
+    enterprise: true,
+    icon: Car,
+    link: "https://ziontechgroup.com/ai-autonomous-vehicles"
+  },
+  {
+    name: "AI Smart City Management Pro Plus Ultra",
+    description: "Comprehensive smart city solution with AI-powered traffic, energy, and resource management",
+    price: "$35,000/mo",
+    features: ["Traffic Optimization", "Energy Management", "Resource Allocation", "Citizen Services"],
+    category: "Smart Cities",
+    enterprise: true,
+    icon: Building,
+    link: "https://ziontechgroup.com/ai-smart-city-management"
+  },
+  {
+    name: "AI Quantum Computing Platform Pro Plus Ultra",
+    description: "Next-generation quantum computing solutions for complex problem solving and optimization",
+    price: "$45,000/mo",
+    features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Simulation"],
+    category: "Quantum AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-computing"
+  },
+  {
+    name: "AI Healthcare Solutions Pro Plus Ultra",
+    description: "Comprehensive AI-powered healthcare solutions for diagnosis, treatment, and patient care",
+    price: "$18,500/mo",
+    features: ["Medical Imaging", "Diagnosis Support", "Treatment Planning", "Patient Monitoring"],
+    category: "Healthcare AI",
+    enterprise: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-healthcare"
+  },
+  {
+    name: "AI Computer Vision Platform Pro Plus Ultra",
+    description: "Advanced image recognition and computer vision solutions for various industries",
+    price: "$9,200/mo",
+    features: ["Object Detection", "Image Classification", "Facial Recognition", "Quality Control"],
+    category: "Computer Vision",
+    enterprise: false,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-computer-vision"
+  },
+  {
+    name: "AI Supply Chain Optimization Pro Plus Ultra",
+    description: "Intelligent supply chain management with predictive analytics and optimization algorithms",
+    price: "$22,500/mo",
+    features: ["Demand Forecasting", "Inventory Optimization", "Route Planning", "Risk Management"],
+    category: "Supply Chain AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+  },
+  {
+    name: "AI Neural Network Architecture Designer Pro Plus Ultra",
+    description: "Automated neural network design and optimization for custom AI model development",
+    price: "$14,500/mo",
+    features: ["Auto Architecture", "Model Optimization", "Performance Tuning", "Custom Training"],
+    category: "AI Development",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-network-designer"
+  },
+  {
+    name: "AI Predictive Maintenance Platform Pro Plus Ultra",
+    description: "Advanced predictive maintenance for industrial equipment with AI-powered failure prediction",
+    price: "$11,800/mo",
+    features: ["Failure Prediction", "Maintenance Scheduling", "Cost Optimization", "Equipment Monitoring"],
+    category: "Industrial AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-predictive-maintenance"
+  },
+  {
+    name: "AI Natural Language Processing Suite Pro Plus Ultra",
+    description: "Comprehensive NLP platform with sentiment analysis, translation, and text generation",
+    price: "$9,200/mo",
+    features: ["Sentiment Analysis", "Language Translation", "Text Generation", "Entity Recognition"],
+    category: "NLP",
+    enterprise: false,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-nlp-suite"
+  },
+  {
+    name: "AI Recommendation Engine Pro Plus Ultra Max",
+    description: "Advanced recommendation system with deep learning algorithms for personalized content",
+    price: "$10,800/mo",
+    features: ["Deep Learning", "Real-time Recommendations", "A/B Testing", "Performance Analytics"],
+    category: "Recommendation Systems",
+    enterprise: false,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-recommendation-engine"
+  },
+  {
+    name: "AI Time Series Forecasting Pro Plus Ultra Max",
+    description: "Advanced time series analysis and forecasting with machine learning algorithms",
+    price: "$8,100/mo",
+    features: ["Time Series Analysis", "Forecasting Models", "Anomaly Detection", "Trend Analysis"],
+    category: "Data Science",
+    enterprise: false,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-time-series-forecasting"
+  },
+  {
+    name: "AI Speech Recognition Platform Pro Plus Ultra Max",
+    description: "High-accuracy speech recognition with real-time processing and multi-language support",
+    price: "$7,200/mo",
+    features: ["Real-time Processing", "Multi-language", "Noise Cancellation", "Custom Models"],
+    category: "Speech AI",
+    enterprise: false,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-speech-recognition"
+  },
+  {
+    name: "AI Image Generation Studio Pro Plus Ultra Max",
+    description: "Advanced AI image generation with style transfer, upscaling, and creative tools",
+    price: "$6,300/mo",
+    features: ["Style Transfer", "Image Upscaling", "Creative Generation", "Batch Processing"],
+    category: "Computer Vision",
+    enterprise: false,
+    icon: Camera,
+    link: "https://ziontechgroup.com/ai-image-generation"
+  },
+  {
+    name: "AI Autonomous Vehicle Platform Pro Plus Ultra Max",
+    description: "Complete autonomous vehicle management system with AI-powered navigation and safety",
+    price: "$42,500/mo",
+    features: ["Autonomous Navigation", "Safety Systems", "Fleet Management", "Real-time Monitoring"],
+    category: "Autonomous Systems",
+    enterprise: true,
+    icon: Car,
+    link: "https://ziontechgroup.com/ai-autonomous-vehicles"
+  },
+  {
+    name: "AI Smart City Management Pro Plus Ultra Max",
+    description: "Comprehensive smart city solution with AI-powered traffic, energy, and resource management",
+    price: "$52,000/mo",
+    features: ["Traffic Optimization", "Energy Management", "Resource Allocation", "Citizen Services"],
+    category: "Smart Cities",
+    enterprise: true,
+    icon: Building,
+    link: "https://ziontechgroup.com/ai-smart-city-management"
+  },
+  {
+    name: "AI Quantum Computing Platform Pro Plus Ultra Max",
+    description: "Next-generation quantum computing solutions for complex problem solving and optimization",
+    price: "$67,500/mo",
+    features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Simulation"],
+    category: "Quantum AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-computing"
+  },
+  {
+    name: "AI Healthcare Solutions Pro Plus Ultra Max",
+    description: "Comprehensive AI-powered healthcare solutions for diagnosis, treatment, and patient care",
+    price: "$27,500/mo",
+    features: ["Medical Imaging", "Diagnosis Support", "Treatment Planning", "Patient Monitoring"],
+    category: "Healthcare AI",
+    enterprise: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-healthcare"
+  },
+  {
+    name: "AI Computer Vision Platform Pro Plus Ultra Max",
+    description: "Advanced image recognition and computer vision solutions for various industries",
+    price: "$13,800/mo",
+    features: ["Object Detection", "Image Classification", "Facial Recognition", "Quality Control"],
+    category: "Computer Vision",
+    enterprise: false,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-computer-vision"
+  },
+  {
+    name: "AI Supply Chain Optimization Pro Plus Ultra Max",
+    description: "Intelligent supply chain management with predictive analytics and optimization algorithms",
+    price: "$33,750/mo",
+    features: ["Demand Forecasting", "Inventory Optimization", "Route Planning", "Risk Management"],
+    category: "Supply Chain AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+  },
+  {
+    name: "AI Neural Network Architecture Designer Pro Plus Ultra Max",
+    description: "Automated neural network design and optimization for custom AI model development",
+    price: "$21,750/mo",
+    features: ["Auto Architecture", "Model Optimization", "Performance Tuning", "Custom Training"],
+    category: "AI Development",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-network-designer"
+  },
+  {
+    name: "AI Predictive Maintenance Platform Pro Plus Ultra Max",
+    description: "Advanced predictive maintenance for industrial equipment with AI-powered failure prediction",
+    price: "$17,700/mo",
+    features: ["Failure Prediction", "Maintenance Scheduling", "Cost Optimization", "Equipment Monitoring"],
+    category: "Industrial AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-predictive-maintenance"
+  },
+  {
+    name: "AI Natural Language Processing Suite Pro Plus Ultra Max",
+    description: "Comprehensive NLP platform with sentiment analysis, translation, and text generation",
+    price: "$13,800/mo",
+    features: ["Sentiment Analysis", "Language Translation", "Text Generation", "Entity Recognition"],
+    category: "NLP",
+    enterprise: false,
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/ai-nlp-suite"
   }
 ];
 
@@ -2720,6 +3390,717 @@ const itServices: ITService[] = [
     category: "Consulting",
     icon: Settings,
     link: "https://ziontechgroup.com/digital-transformation-consulting"
+  },
+  {
+    name: "AI-Powered IT Operations (AIOps)",
+    description: "Intelligent IT operations with AI-powered monitoring, automation, and incident response",
+    price: "$4,500/mo",
+    features: ["Intelligent Monitoring", "Automated Response", "Predictive Analytics", "Root Cause Analysis"],
+    category: "AI Operations",
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-ops"
+  },
+  {
+    name: "Zero Trust Security Architecture",
+    description: "Comprehensive zero trust security implementation with continuous verification and monitoring",
+    price: "$6,500/mo",
+    features: ["Continuous Verification", "Identity Management", "Network Segmentation", "Threat Detection"],
+    category: "Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/zero-trust-architecture"
+  },
+  {
+    name: "Multi-Cloud Management Platform",
+    description: "Unified multi-cloud management with cost optimization and security across all platforms",
+    price: "$4,200/mo",
+    features: ["Multi-cloud Support", "Cost Optimization", "Security Management", "Resource Monitoring"],
+    category: "Cloud Management",
+    icon: Cloud,
+    link: "https://ziontechgroup.com/multi-cloud-management"
+  },
+  {
+    name: "Hybrid Cloud Architecture",
+    description: "Seamless hybrid cloud solutions with on-premises and cloud integration",
+    price: "$5,800/mo",
+    features: ["Hybrid Integration", "Data Synchronization", "Workload Migration", "Unified Management"],
+    category: "Cloud Architecture",
+    icon: Globe,
+    link: "https://ziontechgroup.com/hybrid-cloud-architecture"
+  },
+  {
+    name: "AI-Powered Network Security",
+    description: "Advanced network security with AI-powered threat detection and automated response",
+    price: "$3,800/mo",
+    features: ["AI Threat Detection", "Automated Response", "Behavioral Analysis", "Zero Trust Architecture"],
+    category: "Network Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-network-security"
+  },
+  {
+    name: "Disaster Recovery & Business Continuity",
+    description: "Comprehensive disaster recovery solution with automated failover and data protection",
+    price: "$3,200/mo",
+    features: ["Automated Failover", "Data Protection", "RTO/RPO Optimization", "Testing & Validation"],
+    category: "Disaster Recovery",
+    icon: Shield,
+    link: "https://ziontechgroup.com/disaster-recovery"
+  },
+  {
+    name: "AI Performance Monitoring",
+    description: "Intelligent application performance monitoring with AI-powered insights and optimization",
+    price: "$2,800/mo",
+    features: ["AI Insights", "Performance Optimization", "Anomaly Detection", "Capacity Planning"],
+    category: "Performance Monitoring",
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-performance-monitoring"
+  },
+  {
+    name: "Quantum-Safe Security Implementation",
+    description: "Future-proof security with quantum-resistant cryptography and encryption",
+    price: "$8,500/mo",
+    features: ["Quantum-Resistant Crypto", "Post-Quantum Security", "Encryption Migration", "Compliance"],
+    category: "Quantum Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/quantum-safe-security"
+  },
+  {
+    name: "AI Data Center Management",
+    description: "Intelligent data center management with AI-powered optimization and predictive maintenance",
+    price: "$6,200/mo",
+    features: ["AI Optimization", "Predictive Maintenance", "Energy Efficiency", "Capacity Planning"],
+    category: "Data Center",
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-data-center-management"
+  },
+  {
+    name: "Cybersecurity Operations Center (SOC)",
+    description: "24/7 cybersecurity monitoring with threat detection, incident response, and compliance",
+    price: "$9,500/mo",
+    features: ["24/7 Monitoring", "Threat Detection", "Incident Response", "Compliance Management"],
+    category: "Cybersecurity",
+    icon: Shield,
+    link: "https://ziontechgroup.com/cybersecurity-operations-center"
+  },
+  {
+    name: "AI-Powered Security Operations",
+    description: "Advanced security operations with AI-powered threat hunting and automated response",
+    price: "$7,800/mo",
+    features: ["AI Threat Hunting", "Automated Response", "Behavioral Analysis", "Incident Investigation"],
+    category: "Security Operations",
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-security-operations"
+  },
+  {
+    name: "Real-time Data Platform",
+    description: "High-performance real-time data processing and analytics platform",
+    price: "$5,500/mo",
+    features: ["Real-time Processing", "Stream Analytics", "Data Pipeline", "Scalable Architecture"],
+    category: "Data Platform",
+    icon: Database,
+    link: "https://ziontechgroup.com/real-time-data-platform"
+  },
+  {
+    name: "Data Lake & Warehouse Modernization",
+    description: "Modern data architecture with cloud-native data lakes and warehouses",
+    price: "$4,800/mo",
+    features: ["Cloud Migration", "Data Governance", "Analytics Platform", "Cost Optimization"],
+    category: "Data Architecture",
+    icon: Database,
+    link: "https://ziontechgroup.com/data-modernization"
+  },
+  {
+    name: "MLOps Platform Implementation",
+    description: "Complete MLOps platform for machine learning model lifecycle management",
+    price: "$6,800/mo",
+    features: ["Model Training", "Deployment Pipeline", "Monitoring", "Version Control"],
+    category: "MLOps",
+    icon: Settings,
+    link: "https://ziontechgroup.com/mlops-platform"
+  },
+  {
+    name: "Web3 Infrastructure Services",
+    description: "Complete Web3 infrastructure with blockchain, DeFi, and NFT solutions",
+    price: "$8,200/mo",
+    features: ["Blockchain Development", "DeFi Integration", "NFT Platform", "Smart Contracts"],
+    category: "Web3",
+    icon: Shield,
+    link: "https://ziontechgroup.com/web3-infrastructure"
+  },
+  {
+    name: "Metaverse Platform Development",
+    description: "Immersive metaverse solutions with VR/AR integration and virtual worlds",
+    price: "$12,500/mo",
+    features: ["Virtual Worlds", "VR/AR Integration", "Avatar Systems", "Social Features"],
+    category: "Metaverse",
+    icon: Eye,
+    link: "https://ziontechgroup.com/metaverse-development"
+  },
+  {
+    name: "AI Infrastructure as a Service",
+    description: "Complete AI infrastructure platform with GPU clusters and ML frameworks",
+    price: "$9,800/mo",
+    features: ["GPU Clusters", "ML Frameworks", "Auto-scaling", "Model Serving"],
+    category: "AI Infrastructure",
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-infrastructure-service"
+  },
+  {
+    name: "Smart City IT Solutions",
+    description: "Comprehensive smart city technology infrastructure and management systems",
+    price: "$15,000/mo",
+    features: ["IoT Integration", "Traffic Management", "Energy Systems", "Citizen Services"],
+    category: "Smart Cities",
+    icon: Building,
+    link: "https://ziontechgroup.com/smart-city-solutions"
+  },
+  {
+    name: "AI-Powered IT Asset Management",
+    description: "Intelligent IT asset management with automated discovery and optimization",
+    price: "$3,500/mo",
+    features: ["Asset Discovery", "Lifecycle Management", "Cost Optimization", "Compliance Tracking"],
+    category: "Asset Management",
+    icon: Package,
+    link: "https://ziontechgroup.com/ai-it-asset-management"
+  },
+  {
+    name: "Intelligent Database Migration",
+    description: "AI-powered database migration with zero downtime and performance optimization",
+    price: "$4,200/mo",
+    features: ["Zero Downtime", "Performance Optimization", "Data Validation", "Rollback Support"],
+    category: "Database Migration",
+    icon: Database,
+    link: "https://ziontechgroup.com/intelligent-database-migration"
+  },
+  {
+    name: "Intelligent Email Infrastructure",
+    description: "Advanced email infrastructure with AI-powered security and delivery optimization",
+    price: "$2,800/mo",
+    features: ["Email Security", "Delivery Optimization", "Spam Protection", "Analytics"],
+    category: "Email Infrastructure",
+    icon: Mail,
+    link: "https://ziontechgroup.com/intelligent-email-infrastructure"
+  },
+  {
+    name: "AI-Powered IT Training",
+    description: "Comprehensive IT training programs with AI-powered personalized learning",
+    price: "$1,500/mo",
+    features: ["Personalized Learning", "Skill Assessment", "Certification Programs", "Progress Tracking"],
+    category: "Training",
+    icon: GraduationCap,
+    link: "https://ziontechgroup.com/ai-it-training"
+  },
+  {
+    name: "Quantum Computing Infrastructure",
+    description: "Quantum computing infrastructure setup with quantum algorithms and optimization",
+    price: "$25,000/mo",
+    features: ["Quantum Hardware", "Algorithm Development", "Quantum Optimization", "Research Support"],
+    category: "Quantum Computing",
+    icon: Brain,
+    link: "https://ziontechgroup.com/quantum-computing-infrastructure"
+  },
+  {
+    name: "AI-Powered IT Consulting",
+    description: "Strategic IT consulting with AI-powered insights and recommendations",
+    price: "$3,800/mo",
+    features: ["Strategic Planning", "Technology Assessment", "AI Insights", "Implementation Support"],
+    category: "Consulting",
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-it-consulting"
+  },
+  {
+    name: "Intelligent IT Performance Optimization",
+    description: "AI-powered IT performance optimization with automated tuning and monitoring",
+    price: "$4,500/mo",
+    features: ["Performance Tuning", "Automated Optimization", "Resource Management", "Cost Reduction"],
+    category: "Performance Optimization",
+    icon: Activity,
+    link: "https://ziontechgroup.com/intelligent-it-performance"
+  },
+  {
+    name: "AI-Powered IT Governance",
+    description: "Intelligent IT governance with automated compliance and risk management",
+    price: "$5,200/mo",
+    features: ["Compliance Automation", "Risk Management", "Policy Enforcement", "Audit Support"],
+    category: "IT Governance",
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-it-governance"
+  },
+  {
+    name: "Intelligent IT Service Management",
+    description: "AI-powered IT service management with automated ticketing and resolution",
+    price: "$3,200/mo",
+    features: ["Automated Ticketing", "Intelligent Routing", "Knowledge Management", "SLA Monitoring"],
+    category: "Service Management",
+    icon: Settings,
+    link: "https://ziontechgroup.com/intelligent-it-service-management"
+  },
+  {
+    name: "AI-Powered IT Change Management",
+    description: "Intelligent change management with risk assessment and automated approval",
+    price: "$2,800/mo",
+    features: ["Risk Assessment", "Automated Approval", "Change Tracking", "Rollback Support"],
+    category: "Change Management",
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-it-change-management"
+  },
+  {
+    name: "Intelligent IT Capacity Planning",
+    description: "AI-powered capacity planning with predictive analytics and resource optimization",
+    price: "$3,500/mo",
+    features: ["Predictive Analytics", "Resource Optimization", "Capacity Forecasting", "Cost Planning"],
+    category: "Capacity Planning",
+    icon: BarChart,
+    link: "https://ziontechgroup.com/intelligent-it-capacity-planning"
+  },
+  {
+    name: "AI-Powered IT Incident Management",
+    description: "Intelligent incident management with automated detection and resolution",
+    price: "$4,200/mo",
+    features: ["Automated Detection", "Intelligent Resolution", "Root Cause Analysis", "Prevention"],
+    category: "Incident Management",
+    icon: AlertTriangle,
+    link: "https://ziontechgroup.com/ai-it-incident-management"
+  },
+  {
+    name: "Intelligent IT Problem Management",
+    description: "AI-powered problem management with pattern recognition and solution automation",
+    price: "$3,800/mo",
+    features: ["Pattern Recognition", "Solution Automation", "Knowledge Base", "Trend Analysis"],
+    category: "Problem Management",
+    icon: Search,
+    link: "https://ziontechgroup.com/intelligent-it-problem-management"
+  },
+  {
+    name: "AI-Powered IT Release Management",
+    description: "Intelligent release management with automated testing and deployment",
+    price: "$4,500/mo",
+    features: ["Automated Testing", "Deployment Automation", "Rollback Support", "Quality Assurance"],
+    category: "Release Management",
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-it-release-management"
+  },
+  {
+    name: "Intelligent IT Configuration Management",
+    description: "AI-powered configuration management with automated discovery and tracking",
+    price: "$3,200/mo",
+    features: ["Automated Discovery", "Configuration Tracking", "Change Detection", "Compliance"],
+    category: "Configuration Management",
+    icon: Settings,
+    link: "https://ziontechgroup.com/intelligent-it-configuration-management"
+  },
+  {
+    name: "AI-Powered IT Availability Management",
+    description: "Intelligent availability management with predictive maintenance and optimization",
+    price: "$4,800/mo",
+    features: ["Predictive Maintenance", "Availability Optimization", "SLA Management", "Monitoring"],
+    category: "Availability Management",
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-it-availability-management"
+  },
+  {
+    name: "Intelligent IT Service Level Management",
+    description: "AI-powered service level management with automated monitoring and reporting",
+    price: "$3,500/mo",
+    features: ["Automated Monitoring", "SLA Reporting", "Performance Analytics", "Improvement Planning"],
+    category: "Service Level Management",
+    icon: BarChart,
+    link: "https://ziontechgroup.com/intelligent-it-service-level-management"
+  },
+  {
+    name: "AI-Powered IT Financial Management",
+    description: "Intelligent IT financial management with cost optimization and budgeting",
+    price: "$4,200/mo",
+    features: ["Cost Optimization", "Budget Planning", "Financial Analytics", "ROI Tracking"],
+    category: "Financial Management",
+    icon: Calculator,
+    link: "https://ziontechgroup.com/ai-it-financial-management"
+  },
+  {
+    name: "Intelligent IT Vendor Management",
+    description: "AI-powered vendor management with performance tracking and contract optimization",
+    price: "$3,800/mo",
+    features: ["Performance Tracking", "Contract Optimization", "Vendor Analytics", "Risk Management"],
+    category: "Vendor Management",
+    icon: Building,
+    link: "https://ziontechgroup.com/intelligent-it-vendor-management"
+  },
+  {
+    name: "AI-Powered IT Knowledge Management",
+    description: "Intelligent knowledge management with automated documentation and search",
+    price: "$2,500/mo",
+    features: ["Automated Documentation", "Intelligent Search", "Knowledge Base", "Expert Systems"],
+    category: "Knowledge Management",
+    icon: BookOpen,
+    link: "https://ziontechgroup.com/ai-it-knowledge-management"
+  },
+  {
+    name: "Intelligent IT Communication Management",
+    description: "AI-powered communication management with automated notifications and collaboration",
+    price: "$2,200/mo",
+    features: ["Automated Notifications", "Collaboration Tools", "Communication Analytics", "Integration"],
+    category: "Communication Management",
+    icon: MessageSquare,
+    link: "https://ziontechgroup.com/intelligent-it-communication-management"
+  },
+  {
+    name: "AI-Powered IT Security Management",
+    description: "Intelligent security management with threat detection and automated response",
+    price: "$6,500/mo",
+    features: ["Threat Detection", "Automated Response", "Security Analytics", "Compliance"],
+    category: "Security Management",
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-it-security-management"
+  },
+  {
+    name: "Intelligent IT Quality Management",
+    description: "AI-powered quality management with automated testing and quality assurance",
+    price: "$4,800/mo",
+    features: ["Automated Testing", "Quality Assurance", "Defect Detection", "Process Improvement"],
+    category: "Quality Management",
+    icon: CheckCircle,
+    link: "https://ziontechgroup.com/intelligent-it-quality-management"
+  },
+  {
+    name: "AI-Powered IT Risk Management",
+    description: "Intelligent risk management with automated assessment and mitigation",
+    price: "$5,500/mo",
+    features: ["Risk Assessment", "Automated Mitigation", "Risk Analytics", "Compliance"],
+    category: "Risk Management",
+    icon: AlertTriangle,
+    link: "https://ziontechgroup.com/ai-it-risk-management"
+  },
+  {
+    name: "Intelligent IT Compliance Management",
+    description: "AI-powered compliance management with automated monitoring and reporting",
+    price: "$4,200/mo",
+    features: ["Compliance Monitoring", "Automated Reporting", "Audit Support", "Policy Management"],
+    category: "Compliance Management",
+    icon: Shield,
+    link: "https://ziontechgroup.com/intelligent-it-compliance-management"
+  },
+  {
+    name: "AI-Powered IT Innovation Management",
+    description: "Intelligent innovation management with technology assessment and implementation",
+    price: "$6,800/mo",
+    features: ["Technology Assessment", "Innovation Tracking", "Implementation Support", "ROI Analysis"],
+    category: "Innovation Management",
+    icon: Lightbulb,
+    link: "https://ziontechgroup.com/ai-it-innovation-management"
+  },
+  {
+    name: "Intelligent IT Strategy Management",
+    description: "AI-powered strategy management with planning and execution support",
+    price: "$7,500/mo",
+    features: ["Strategic Planning", "Execution Support", "Performance Tracking", "Alignment"],
+    category: "Strategy Management",
+    icon: Target,
+    link: "https://ziontechgroup.com/intelligent-it-strategy-management"
+  },
+  {
+    name: "AI-Powered IT Portfolio Management",
+    description: "Intelligent portfolio management with project optimization and resource allocation",
+    price: "$5,800/mo",
+    features: ["Project Optimization", "Resource Allocation", "Portfolio Analytics", "Decision Support"],
+    category: "Portfolio Management",
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-it-portfolio-management"
+  },
+  {
+    name: "Intelligent IT Project Management",
+    description: "AI-powered project management with automated planning and execution",
+    price: "$4,500/mo",
+    features: ["Automated Planning", "Execution Support", "Progress Tracking", "Risk Management"],
+    category: "Project Management",
+    icon: Calendar,
+    link: "https://ziontechgroup.com/intelligent-it-project-management"
+  },
+  {
+    name: "AI-Powered IT Resource Management",
+    description: "Intelligent resource management with optimization and allocation",
+    price: "$3,800/mo",
+    features: ["Resource Optimization", "Allocation Planning", "Utilization Tracking", "Cost Management"],
+    category: "Resource Management",
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-it-resource-management"
+  },
+  {
+    name: "Intelligent IT Cost Management",
+    description: "AI-powered cost management with optimization and budgeting",
+    price: "$3,200/mo",
+    features: ["Cost Optimization", "Budget Planning", "Spend Analytics", "ROI Tracking"],
+    category: "Cost Management",
+    icon: Calculator,
+    link: "https://ziontechgroup.com/intelligent-it-cost-management"
+  },
+  {
+    name: "AI-Powered IT Value Management",
+    description: "Intelligent value management with measurement and optimization",
+    price: "$4,800/mo",
+    features: ["Value Measurement", "Optimization", "ROI Analysis", "Business Alignment"],
+    category: "Value Management",
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-it-value-management"
+  },
+  {
+    name: "Intelligent IT Performance Management",
+    description: "AI-powered performance management with monitoring and optimization",
+    price: "$4,200/mo",
+    features: ["Performance Monitoring", "Optimization", "Analytics", "Improvement Planning"],
+    category: "Performance Management",
+    icon: Activity,
+    link: "https://ziontechgroup.com/intelligent-it-performance-management"
+  },
+  {
+    name: "AI-Powered IT Service Delivery",
+    description: "Intelligent service delivery with automation and optimization",
+    price: "$5,500/mo",
+    features: ["Service Automation", "Delivery Optimization", "Quality Assurance", "Customer Satisfaction"],
+    category: "Service Delivery",
+    icon: Truck,
+    link: "https://ziontechgroup.com/ai-it-service-delivery"
+  },
+  {
+    name: "Intelligent IT Service Support",
+    description: "AI-powered service support with automated resolution and customer service",
+    price: "$3,800/mo",
+    features: ["Automated Resolution", "Customer Service", "Knowledge Base", "Escalation Management"],
+    category: "Service Support",
+    icon: Headphones,
+    link: "https://ziontechgroup.com/intelligent-it-service-support"
+  },
+  {
+    name: "AI-Powered IT Service Operations",
+    description: "Intelligent service operations with automation and monitoring",
+    price: "$4,500/mo",
+    features: ["Service Automation", "Operations Monitoring", "Incident Management", "Performance Tracking"],
+    category: "Service Operations",
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-it-service-operations"
+  },
+  {
+    name: "Intelligent IT Service Strategy",
+    description: "AI-powered service strategy with planning and execution",
+    price: "$6,200/mo",
+    features: ["Service Planning", "Strategy Execution", "Market Analysis", "Competitive Intelligence"],
+    category: "Service Strategy",
+    icon: Target,
+    link: "https://ziontechgroup.com/intelligent-it-service-strategy"
+  },
+  {
+    name: "AI-Powered IT Service Design",
+    description: "Intelligent service design with automation and optimization",
+    price: "$5,800/mo",
+    features: ["Service Design", "Process Automation", "User Experience", "Quality Assurance"],
+    category: "Service Design",
+    icon: Palette,
+    link: "https://ziontechgroup.com/ai-it-service-design"
+  },
+  {
+    name: "Intelligent IT Service Transition",
+    description: "AI-powered service transition with automation and quality assurance",
+    price: "$4,800/mo",
+    features: ["Transition Automation", "Quality Assurance", "Risk Management", "Change Control"],
+    category: "Service Transition",
+    icon: ArrowRight,
+    link: "https://ziontechgroup.com/intelligent-it-service-transition"
+  },
+  {
+    name: "AI-Powered IT Service Improvement",
+    description: "Intelligent service improvement with analytics and optimization",
+    price: "$3,500/mo",
+    features: ["Service Analytics", "Improvement Planning", "Performance Optimization", "Customer Feedback"],
+    category: "Service Improvement",
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-it-service-improvement"
+  },
+  {
+    name: "Intelligent IT Service Measurement",
+    description: "AI-powered service measurement with analytics and reporting",
+    price: "$2,800/mo",
+    features: ["Service Analytics", "Performance Measurement", "Reporting", "Dashboard"],
+    category: "Service Measurement",
+    icon: BarChart,
+    link: "https://ziontechgroup.com/intelligent-it-service-measurement"
+  },
+  {
+    name: "AI-Powered IT Service Reporting",
+    description: "Intelligent service reporting with automation and insights",
+    price: "$2,500/mo",
+    features: ["Automated Reporting", "Insights Generation", "Dashboard Creation", "Data Visualization"],
+    category: "Service Reporting",
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-it-service-reporting"
+  },
+  {
+    name: "Intelligent IT Service Analytics",
+    description: "AI-powered service analytics with insights and recommendations",
+    price: "$4,200/mo",
+    features: ["Service Analytics", "Insights Generation", "Recommendations", "Predictive Analytics"],
+    category: "Service Analytics",
+    icon: BarChart,
+    link: "https://ziontechgroup.com/intelligent-it-service-analytics"
+  },
+  {
+    name: "AI-Powered IT Service Intelligence",
+    description: "Intelligent service intelligence with AI-powered insights and automation",
+    price: "$5,500/mo",
+    features: ["Service Intelligence", "AI Insights", "Automation", "Decision Support"],
+    category: "Service Intelligence",
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-it-service-intelligence"
+  },
+  {
+    name: "Intelligent IT Service Innovation",
+    description: "AI-powered service innovation with technology assessment and implementation",
+    price: "$6,800/mo",
+    features: ["Service Innovation", "Technology Assessment", "Implementation Support", "ROI Analysis"],
+    category: "Service Innovation",
+    icon: Lightbulb,
+    link: "https://ziontechgroup.com/intelligent-it-service-innovation"
+  },
+  {
+    name: "AI-Powered IT Service Transformation",
+    description: "Intelligent service transformation with digital modernization and optimization",
+    price: "$8,500/mo",
+    features: ["Digital Transformation", "Service Modernization", "Process Optimization", "Technology Integration"],
+    category: "Service Transformation",
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-it-service-transformation"
+  },
+  {
+    name: "Intelligent IT Service Excellence",
+    description: "AI-powered service excellence with quality management and continuous improvement",
+    price: "$7,200/mo",
+    features: ["Service Excellence", "Quality Management", "Continuous Improvement", "Best Practices"],
+    category: "Service Excellence",
+    icon: Award,
+    link: "https://ziontechgroup.com/intelligent-it-service-excellence"
+  },
+  {
+    name: "AI-Powered IT Service Leadership",
+    description: "Intelligent service leadership with strategic guidance and execution",
+    price: "$9,500/mo",
+    features: ["Service Leadership", "Strategic Guidance", "Execution Support", "Team Development"],
+    category: "Service Leadership",
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-it-service-leadership"
+  },
+  {
+    name: "Intelligent IT Service Governance",
+    description: "AI-powered service governance with policy management and compliance",
+    price: "$6,500/mo",
+    features: ["Service Governance", "Policy Management", "Compliance", "Risk Management"],
+    category: "Service Governance",
+    icon: Shield,
+    link: "https://ziontechgroup.com/intelligent-it-service-governance"
+  },
+  {
+    name: "AI-Powered IT Service Quality",
+    description: "Intelligent service quality with automated testing and assurance",
+    price: "$5,800/mo",
+    features: ["Service Quality", "Automated Testing", "Quality Assurance", "Defect Management"],
+    category: "Service Quality",
+    icon: CheckCircle,
+    link: "https://ziontechgroup.com/ai-it-service-quality"
+  },
+  {
+    name: "Intelligent IT Service Reliability",
+    description: "AI-powered service reliability with monitoring and optimization",
+    price: "$4,800/mo",
+    features: ["Service Reliability", "Monitoring", "Optimization", "Uptime Management"],
+    category: "Service Reliability",
+    icon: Activity,
+    link: "https://ziontechgroup.com/intelligent-it-service-reliability"
+  },
+  {
+    name: "AI-Powered IT Service Availability",
+    description: "Intelligent service availability with predictive maintenance and optimization",
+    price: "$5,200/mo",
+    features: ["Service Availability", "Predictive Maintenance", "Optimization", "SLA Management"],
+    category: "Service Availability",
+    icon: Clock,
+    link: "https://ziontechgroup.com/ai-it-service-availability"
+  },
+  {
+    name: "Intelligent IT Service Security",
+    description: "AI-powered service security with threat detection and protection",
+    price: "$7,500/mo",
+    features: ["Service Security", "Threat Detection", "Protection", "Compliance"],
+    category: "Service Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/intelligent-it-service-security"
+  },
+  {
+    name: "AI-Powered IT Service Compliance",
+    description: "Intelligent service compliance with automated monitoring and reporting",
+    price: "$4,500/mo",
+    features: ["Service Compliance", "Automated Monitoring", "Reporting", "Audit Support"],
+    category: "Service Compliance",
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-it-service-compliance"
+  },
+  {
+    name: "Intelligent IT Service Risk",
+    description: "AI-powered service risk management with assessment and mitigation",
+    price: "$5,800/mo",
+    features: ["Service Risk Management", "Risk Assessment", "Mitigation", "Monitoring"],
+    category: "Service Risk",
+    icon: AlertTriangle,
+    link: "https://ziontechgroup.com/intelligent-it-service-risk"
+  },
+  {
+    name: "AI-Powered IT Service Value",
+    description: "Intelligent service value management with measurement and optimization",
+    price: "$6,200/mo",
+    features: ["Service Value Management", "Value Measurement", "Optimization", "ROI Analysis"],
+    category: "Service Value",
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-it-service-value"
+  },
+  {
+    name: "Intelligent IT Service Cost",
+    description: "AI-powered service cost management with optimization and budgeting",
+    price: "$4,200/mo",
+    features: ["Service Cost Management", "Cost Optimization", "Budgeting", "Spend Analytics"],
+    category: "Service Cost",
+    icon: Calculator,
+    link: "https://ziontechgroup.com/intelligent-it-service-cost"
+  },
+  {
+    name: "AI-Powered IT Service Performance",
+    description: "Intelligent service performance management with monitoring and optimization",
+    price: "$5,500/mo",
+    features: ["Service Performance", "Monitoring", "Optimization", "Analytics"],
+    category: "Service Performance",
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-it-service-performance"
+  },
+  {
+    name: "Intelligent IT Service Customer Experience",
+    description: "AI-powered service customer experience with personalization and optimization",
+    price: "$6,800/mo",
+    features: ["Customer Experience", "Personalization", "Optimization", "Satisfaction"],
+    category: "Service Customer Experience",
+    icon: Users,
+    link: "https://ziontechgroup.com/intelligent-it-service-customer-experience"
+  },
+  {
+    name: "AI-Powered IT Service Digital Transformation",
+    description: "Intelligent service digital transformation with modernization and innovation",
+    price: "$12,500/mo",
+    features: ["Digital Transformation", "Service Modernization", "Innovation", "Technology Integration"],
+    category: "Service Digital Transformation",
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-it-service-digital-transformation"
+  },
+  {
+    name: "Intelligent IT Service Future",
+    description: "AI-powered service future planning with technology assessment and roadmap",
+    price: "$8,500/mo",
+    features: ["Future Planning", "Technology Assessment", "Roadmap", "Innovation"],
+    category: "Service Future",
+    icon: Rocket,
+    link: "https://ziontechgroup.com/intelligent-it-service-future"
   }
 ];
 
