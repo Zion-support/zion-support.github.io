@@ -91,6 +91,7 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
+<<<<<<< HEAD
       title: 'AI Content Writer Pro',
       description: 'Generate high-quality content with AI-powered writing assistance for blogs, social media, and marketing materials. Create 10x more content in half the time.',
       icon: '✍️',
@@ -572,6 +573,8 @@ const HomePage: React.FC = () => {
     }
   ];
     {
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-74f7
       title: 'AI Task Manager Pro',
       description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
       icon: '✅',
