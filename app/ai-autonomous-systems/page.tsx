@@ -49,7 +49,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
     {
       title: 'Autonomous Vehicles',
       description: 'Self-driving cars, trucks, and drones with advanced AI navigation and safety systems.',
-<<<<<<< HEAD
       icon: '🚗'
     },
     {
@@ -113,7 +112,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Build intelligent autonomous systems with our advanced AI technology. 
               Self-managing, adaptive, and goal-oriented systems for various industries and applications.
-=======
       icon: Car,
       useCases: ['Self-driving cars', 'Autonomous trucks', 'Delivery drones', 'Fleet management']
     },
@@ -241,7 +239,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               AI Autonomous</h1> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Systems</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build intelligent systems that operate independently, make decisions autonomously, and adapt to changing</p>
               environments without human intervention.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
@@ -255,7 +252,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -272,7 +268,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
-=======
           {/* Capabilities */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">{capabilities.map((capability, index) => (</div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">,</h1>
@@ -423,7 +418,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
                     <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular;
                     </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -512,11 +506,9 @@ const AIAutonomousSystemsPage: React.FC = () => {
         </section>
       </main>
 
-<<<<<<< HEAD
       <Footer />
     </>
   );
-=======
       {/* CTA Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-4xl text-center"></section>
@@ -541,7 +533,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
 
       <Footer />,
     </div>);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default AIAutonomousSystemsPage;

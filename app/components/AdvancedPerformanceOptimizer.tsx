@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const AdvancedPerformanceOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const AdvancedPerformanceOptimizerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface AdvancedPerformanceOptimizerProps {}
   enableAdvancedCaching?: boolean;
   enableImageOptimization?: boolean;
@@ -126,7 +124,6 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
       };
 
       measureWebVitals();
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 

@@ -6,7 +6,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -57,7 +56,6 @@ const PagePage: React.FC = () => {
               </span>
               <br />
               <span className="text-white">Solutions</span>
-=======
       icon: Cpu,
       title: 'Quantum AI Algorithms',
       description: 'Advanced quantum machine learning algorithms that leverage quantum superposition and entanglement for exponential computational speedup.',
@@ -239,13 +237,11 @@ const PagePage: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">{quantumAdvantages.map((advantage, index) => (</div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6"></h1>
               AI Quantum <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Computing</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -255,7 +251,6 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg">
                 Explore Quantum AI;
@@ -278,19 +273,16 @@ const PagePage: React.FC = () => {
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{advantage.metric}</div><div className="text-gray-300">{advantage.description}</div>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
-=======
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl"></div>
           <div className="text-center mb-16"></div>
@@ -304,20 +296,17 @@ const PagePage: React.FC = () => {
                   <feature.icon className="w-6 h-6 text-cyan-400" />
             <h2 className="text-4xl font-bold text-white mb-6">
               Revolutionary Quantum AI Features;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-=======
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover: border-cyan-400/40 transition-colors">,</div>
@@ -370,7 +359,6 @@ const PagePage: React.FC = () => {
                       <Target className="w-4 h-4 mr-2" >{useCase}</Target>
                     </Target>
                   ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -380,14 +368,12 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
-=======
       {/* Pricing Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl"></div>
@@ -404,20 +390,17 @@ const PagePage: React.FC = () => {
                     <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
             <h2 className="text-4xl font-bold text-white mb-6">
               Quantum Computing Plans;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
           <div className="grid md: grid-cols-3 gap-8">,
             {pricingPlans.map((plan, index) => (</div>
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
@@ -449,7 +432,6 @@ const PagePage: React.FC = () => {
                 }`}>
                   Get Started;
                 </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -457,7 +439,6 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -477,7 +458,6 @@ const PagePage: React.FC = () => {
                 Email Us
               </button>
             </div>
-=======
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-4xl text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Experience Quantum AI?</h2><p className="text-xl text-gray-300 mb-8">Join the quantum revolution and unlock the power of quantum computing with AI.</p>
@@ -495,7 +475,6 @@ const PagePage: React.FC = () => {
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
               Schedule Consultation;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

@@ -6,8 +6,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-=======
       icon: Heart,
     {}
       icon: Heart,
@@ -17,13 +15,11 @@ const PagePage: React.FC = () => {
     {
       icon: Brain,
     {}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
-<<<<<<< HEAD
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
@@ -40,7 +36,6 @@ const PagePage: React.FC = () => {
     }
   ];
 
-=======
       icon: Stethoscope,
     {}
       icon: Stethoscope,
@@ -134,7 +129,6 @@ const PagePage: React.FC = () => {
       result: '60% faster'}
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -146,7 +140,6 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -200,7 +193,6 @@ const PagePage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
   return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -307,7 +299,6 @@ const PagePage: React.FC = () => {
                   <div></div>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3><p className="text-gray-400">{feature.description}</p>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -317,7 +308,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -335,7 +325,6 @@ const PagePage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
         {/* Use Cases */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Medical Specialties<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
@@ -362,14 +351,12 @@ const PagePage: React.FC = () => {
                 <div className="flex items-center justify-between mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-green-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div><h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3><p className="text-gray-400 text-sm">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -393,7 +380,6 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
         {/* Pricing */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Healthcare Solutions<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-green-500 ring-2 ring-green-500/20' : 'border-gray-700'} hover:border-green-500/50 transition-all duration-300`}>{plan.popular && (</div>
@@ -485,7 +471,6 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     </div>
   );
 };

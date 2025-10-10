@@ -1,6 +1,4 @@
 'use client';
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import { Users, Award, Clock, Star, Shield, Globe } from 'lucide-react';
 
@@ -259,7 +257,6 @@ const ContentStatistics: React.FC = () => {}
 };
 
 export default ContentStatistics;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -300,7 +297,6 @@ const ContentStatisticsPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentStatistics | Zion Tech Group</title>
@@ -409,7 +405,6 @@ const ContentStatisticsPage: React.FC = () => {
         </div>
       </section>
     </div>
-=======
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -426,7 +421,6 @@ const ContentStatisticsPage: React.FC = () => {
           ))}
         </div>
     </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

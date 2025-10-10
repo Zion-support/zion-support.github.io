@@ -38,14 +38,11 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
-=======
 const $1: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,</div>
       <SEOOptimizer;
         title="Enterprise Security Solutions - Zion Tech Group",
 const EnterpriseSecurityPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -82,14 +79,12 @@ const EnterpriseSecurityPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
-=======
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
         canonicalUrl="https: //ziontechgroup.com/enterprise-security",
       />,
@@ -139,14 +134,12 @@ const EnterpriseSecurityPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Features;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -157,25 +150,21 @@ const EnterpriseSecurityPage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
             </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
@@ -211,14 +200,12 @@ const EnterpriseSecurityPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Enterprise Security Solutions?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Why Choose Our Enterprise Security Solutions?
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -226,24 +213,20 @@ const EnterpriseSecurityPage: React.FC = () => {
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Enterprise Security Solutions?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
             </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
 
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
@@ -309,7 +292,6 @@ const EnterpriseSecurityPage: React.FC = () => {
           <div className="text-center mb-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">

@@ -1,6 +1,4 @@
 'use client';
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star, ArrowRight, Brain, Cpu, Shield, Zap, Target, BarChart, Users, Settings } from 'lucide-react';
 
@@ -352,7 +350,6 @@ const $1: React.FC = () => {
 };
 
 export default ContentCarousel;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -393,7 +390,6 @@ const ContentCarouselPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentCarousel | Zion Tech Group</title>
@@ -424,7 +420,6 @@ const ContentCarouselPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -444,11 +439,9 @@ const ContentCarouselPage: React.FC = () => {
               <div className="border-t border-gray-700 pt-4">
                 <div className="font-semibold text-white">{testimonial.author}</div>
                 <div className="text-sm text-cyan-400">{testimonial.company}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Features Section */}
@@ -524,9 +517,7 @@ const ContentCarouselPage: React.FC = () => {
         </div>
       </section>
     </div>
-=======
     </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

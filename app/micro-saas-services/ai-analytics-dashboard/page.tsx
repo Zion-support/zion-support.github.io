@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -71,7 +70,6 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
 const $1: React.FC = () => {
   const [selectedMetric, setSelectedMetric] = useState('revenue');
 
@@ -207,7 +205,6 @@ const $1: React.FC = () => {
             >
               Start Analytics;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

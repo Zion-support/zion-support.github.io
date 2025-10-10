@@ -3,17 +3,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
-=======
 const $1: React.FC = () => {
   return(<>)
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>)
     </>)
 const ITInfrastructurePage: React.FC = () => {
   const services = [
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -54,7 +51,6 @@ const ITInfrastructurePage: React.FC = () => {
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -79,7 +75,6 @@ const ITInfrastructurePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation />
@@ -126,13 +121,11 @@ const ITInfrastructurePage: React.FC = () => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We provide comprehensive IT infrastructure solutions tailored to your business needs
               </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -153,7 +146,6 @@ const ITInfrastructurePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (</div>
                 <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"></div>
@@ -186,14 +178,12 @@ const ITInfrastructurePage: React.FC = () => {
                     <div className="text-xl">{stat.label}</div>
                   </div>
                 ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -211,7 +201,6 @@ const ITInfrastructurePage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
           {/* Pricing Section */}
           <section className="container mx-auto px-4 py-16">
             <div className="text-center mb-16"></div>
@@ -280,7 +269,6 @@ const ITInfrastructurePage: React.FC = () => {
                 >
                   Call (302) 464-0950
                 </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>

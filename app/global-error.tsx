@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const GlobalErrorPage: React.FC = () => {
   const features = [
     {
@@ -27,7 +26,6 @@ const GlobalErrorPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-=======
 export default function GlobalError({)
   error)
   reset)
@@ -56,7 +54,6 @@ export default function GlobalError({)
             >
               Try again;
 import { useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const benefits = [
     'Advanced AI technology integration',
@@ -70,7 +67,6 @@ import { useEffect } from 'react';
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Global Error | Zion Tech Group</title>
@@ -102,7 +98,6 @@ import { useEffect } from 'react';
                 Learn More
               </button>
             </div>
-=======
     <html>
       <body>
         <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
@@ -114,7 +109,6 @@ import { useEffect } from 'react';
             >
               Try again
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

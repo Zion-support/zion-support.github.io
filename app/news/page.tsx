@@ -38,7 +38,6 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -46,7 +45,6 @@ const PagePage: React.FC = () => {
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-=======
 const NewsPage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
   return (</div>
@@ -75,7 +73,6 @@ const NewsPage: React.FC = () => {
       <Footer />)
     </div>)
       </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

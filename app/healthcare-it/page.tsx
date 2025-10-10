@@ -6,15 +6,12 @@ import Footer from '../components/Footer';
 import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-<<<<<<< HEAD
 export default function HealthcareITPage() {
   const features = [
     {
-=======
 const $1: React.FC = () => {
   const features = [,
     {,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -52,14 +49,12 @@ const $1: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const stats = [
     { number: '99.9%', label: 'System Uptime', icon: Clock },
     { number: '500+', label: 'Healthcare Clients', icon: Users },
     { number: '15+', label: 'Years Experience', icon: Shield },
     { number: '24/7', label: 'Support Available', icon: Heart }
   ];
-=======
   return (
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
@@ -74,7 +69,6 @@ const $1: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Healthcare<span className="block bg-gradient-to-r from-red-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -100,12 +94,10 @@ const $1: React.FC = () => {
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations. 
             Protect patient data while improving operational efficiency.
           </p>
-<<<<<<< HEAD
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
               Get Started
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">Get Started Today</button>
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -123,7 +115,6 @@ const $1: React.FC = () => {
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
               Get Started Today;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
@@ -135,7 +126,6 @@ const $1: React.FC = () => {
 
 {/* Features Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
 
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -193,7 +183,6 @@ const $1: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">
               Healthcare Services
             </h2>
-=======
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">Healthcare IT Solutions<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for healthcare industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
@@ -206,7 +195,6 @@ const $1: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <feature.icon className="w-6 h-6 text-white" />
             <h2 className="text-4xl font-bold text-white mb-4">Healthcare IT Solutions</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
@@ -244,8 +232,6 @@ const $1: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
 
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-red-400/50 transition-all duration-300 group">,</div>
@@ -259,7 +245,6 @@ const $1: React.FC = () => {
                     </CheckCircle>
                   ))}
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -268,7 +253,6 @@ const $1: React.FC = () => {
 
       {/* CTA Section */}
 <section className="py-20 px-4">
-<<<<<<< HEAD
 
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -280,7 +264,6 @@ const $1: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
               Schedule Consultation
-=======
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Healthcare IT Excellence?<p className="text-xl text-gray-300 mb-8">Join leading healthcare organizations using our specialized IT solutions for compliance and security</p>
         <div className="max-w-4xl mx-auto text-center"></section>
@@ -295,7 +278,6 @@ const $1: React.FC = () => {
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
               View Case Studies

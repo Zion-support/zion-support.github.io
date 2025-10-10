@@ -5,10 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, ArrowRight, FileText, Image, Video, Music, Globe, Zap, Brain, Target, Users, Phone, Mail, MapPin } from 'lucide-react';
 
-<<<<<<< HEAD
 const AIContentGenerationPage: React.FC = () => {
   const features = [
-=======
 const $1: React.FC = () => {
   const contentServices = [,
     {,
@@ -33,7 +31,6 @@ const $1: React.FC = () => {
       marketPrice: '$500-1000/month',
       technologies: ['OpenAI GPT-4', 'Claude', 'Custom Fine-tuned Models', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'},
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     {
       icon: FileText,
       title: 'AI Blog Content Generator',
@@ -117,7 +114,6 @@ const $1: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Content Generation - Zion Tech Group</title>
@@ -183,7 +179,6 @@ const $1: React.FC = () => {
                 </div>
               ))}
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">{/* Hero Section */}</div>
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></section>
@@ -293,7 +288,6 @@ const $1: React.FC = () => {
                 </div>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </section>
 

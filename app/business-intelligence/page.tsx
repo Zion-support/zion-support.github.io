@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 const BusinessIntelligencePage: React.FC = () => {
   const features = [,
     {,
@@ -159,7 +157,6 @@ const BusinessIntelligencePage: React.FC = () => {
       marketPrice: '$500-1,200/hour',
       category: 'BI Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -174,10 +171,8 @@ const BusinessIntelligencePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   const processSteps = [
     {
       step: '01',
@@ -208,7 +203,6 @@ const BusinessIntelligencePage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
   return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -216,7 +210,6 @@ const BusinessIntelligencePage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -240,7 +233,6 @@ const BusinessIntelligencePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="absolute inset-0 bg-black opacity-20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
@@ -463,30 +455,25 @@ const BusinessIntelligencePage: React.FC = () => {
                   Get Started;
                 </button>,
               </div>))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-=======
       {/* Process Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our BI Process<p className="text-xl text-gray-300 max-w-3xl mx-auto">A proven methodology to deliver successful business intelligence solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{processSteps.map((step, index) => (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -497,7 +484,6 @@ const BusinessIntelligencePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -512,7 +498,6 @@ const BusinessIntelligencePage: React.FC = () => {
               <div key={index} className="text-center"></div>
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3><p className="text-gray-300">{step.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -520,21 +505,17 @@ const BusinessIntelligencePage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-=======
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our BI Services?<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of data-driven decision making with our expert BI solutions.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Experience the power of our page solutions for your business.
             </p>
           </div>
@@ -544,7 +525,6 @@ const BusinessIntelligencePage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
               Experience the power of data-driven decision making with our expert BI solutions.,
             </p>,
           </div>,
@@ -561,7 +541,6 @@ const BusinessIntelligencePage: React.FC = () => {
                 <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <CheckCircle className="w-8 h-8 text-white" />
                 <p className="text-white font-medium">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -569,7 +548,6 @@ const BusinessIntelligencePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -589,7 +567,6 @@ const BusinessIntelligencePage: React.FC = () => {
                 Email Us
               </button>
             </div>
-=======
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2>
@@ -623,7 +600,6 @@ const BusinessIntelligencePage: React.FC = () => {
               <Mail className="w-5 h-5 mr-2" />
               Email Us;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

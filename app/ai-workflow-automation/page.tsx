@@ -6,7 +6,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -17,7 +16,6 @@ const PagePage: React.FC = () => {
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
-=======
       icon: Workflow,
       title: 'Intelligent Process Automation',
       description: 'AI-powered workflow automation that learns from your processes and optimizes them automatically.',
@@ -42,17 +40,14 @@ const PagePage: React.FC = () => {
       benefits: ['Role management', 'Approval chains', 'Team coordination']
     },
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
-<<<<<<< HEAD
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
       icon: BarChart,
       title: 'Analytics & Reporting',
       description: 'Comprehensive analytics to track workflow performance and identify optimization opportunities.',
@@ -106,12 +101,10 @@ const PagePage: React.FC = () => {
         'SLA guarantee'
       ],
       popular: false,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -120,7 +113,6 @@ const PagePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-=======
     {
       icon: Clock,
       title: 'Save 20+ Hours/Week',
@@ -137,7 +129,6 @@ const PagePage: React.FC = () => {
       icon: Star,
       title: 'Scalable Solutions',
       description: 'Scale your automation as your business grows'}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   ];
 
   return (
@@ -148,7 +139,6 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -159,7 +149,6 @@ const PagePage: React.FC = () => {
               </span>
               <br />
               <span className="text-white">Solutions</span>
-=======
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">AI Workflow Automation</h1><p className="text-xl text-cyan-400 mb-8 font-medium">Automate any business process with intelligent workflows</p><p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">Transform your business operations with AI-powered workflow automation that learns,</p>
@@ -173,13 +162,11 @@ const PagePage: React.FC = () => {
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
               AI Workflow Automation;</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -188,7 +175,6 @@ const PagePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
@@ -239,13 +225,11 @@ const PagePage: React.FC = () => {
                   </ul>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -257,7 +241,6 @@ const PagePage: React.FC = () => {
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-=======
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`cyber-card hologram-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>{plan.popular && (</div>
@@ -362,7 +345,6 @@ const PagePage: React.FC = () => {
             </div>
           </section>
         </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (

@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const LazyImagePage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const LazyImagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface LazyImageProps {
   src: string;,
     alt: string,
@@ -70,7 +68,6 @@ const LazyImage: React.FC<LazyImageProps> = ({,
   React.useEffect(() => {}
     if (entry?.isIntersecting) {}
       setIsInView(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -85,7 +82,6 @@ const LazyImage: React.FC<LazyImageProps> = ({,
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -93,7 +89,6 @@ const LazyImage: React.FC<LazyImageProps> = ({,
         <meta name="description" content="Professional LazyImage services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="LazyImage, AI solutions, IT services, Zion Tech Group, lazyimage" />
       </Helmet>
-=======
   const handleError = () => {}
     setHasError(true);
     onError?.();
@@ -130,7 +125,6 @@ const LazyImage: React.FC<LazyImageProps> = ({,
           loading="lazy")
         />)
       )}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -160,7 +154,6 @@ const LazyImage: React.FC<LazyImageProps> = ({,
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -184,13 +177,11 @@ const LazyImage: React.FC<LazyImageProps> = ({,
               </div>
             ))}
           </div>
-=======
       {hasError && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
       {hasError && (}
         <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
           <span>Failed to load image</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
         </div>
       </section>
 

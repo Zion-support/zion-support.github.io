@@ -39,7 +39,6 @@ const FuturisticHeroPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>FuturisticHero | Zion Tech Group</title>
@@ -112,7 +111,6 @@ const FuturisticHeroPage: React.FC = () => {
               Experience the power of our futuristichero solutions for your business.
             </p>
           </div>
-=======
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden neural-network-bg">{/* Animated Background Elements */}</section>
       <div className="absolute inset-0 particle-field">
         <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"><div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-1000"><div className="absolute bottom-40 left-20 w-3 h-3 bg-green-400 rounded-full animate-pulse delay-2000"><div className="absolute bottom-20 right-10 w-1 h-1 bg-yellow-400 rounded-full animate-pulse delay-500"><div className="container mx-auto px-4 relative z-10">
@@ -233,7 +231,6 @@ const FuturisticHeroPage: React.FC = () => {
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                   <div className="text-xs text-white font-medium text-center">{feature.title}</div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -266,12 +263,10 @@ const FuturisticHeroPage: React.FC = () => {
                 Email Us
               </button>
             </div>
-<<<<<<< HEAD
           </div>
         </div>
       </section>
     </div>
-=======
 
             {/* Floating Elements */}
             <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full animate-bounce"><div className="absolute -bottom-4 -right-4 w-6 h-6 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full animate-bounce delay-1000"><div className="absolute top-1/2 -left-8 w-4 h-4 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full animate-bounce delay-2000">
@@ -281,7 +276,6 @@ const FuturisticHeroPage: React.FC = () => {
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse">
     </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

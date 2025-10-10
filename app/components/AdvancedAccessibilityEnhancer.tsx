@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface AdvancedAccessibilityEnhancerProps {}
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
@@ -143,7 +141,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       root.classList.add('high-contrast');
     } else {}
       root.classList.remove('high-contrast');
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 

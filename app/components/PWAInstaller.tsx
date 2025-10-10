@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PWAInstallerPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const PWAInstallerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;</void></<<<void>userChoice</void></void>: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
@@ -40,7 +38,6 @@ const $1: React.FC = () => {
     if (window.matchMedia('(display-mode: standalone)').matches) {,
       setIsInstalled(true);
       return;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -63,7 +60,6 @@ const $1: React.FC = () => {
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -89,7 +85,6 @@ const $1: React.FC = () => {
               </button>
             </div>
           </div>
-=======
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
 
@@ -136,11 +131,9 @@ const $1: React.FC = () => {
       <div className="flex items-start space-x-3">
         <div className="flex-shrink-0">
           <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">📱</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -215,7 +208,6 @@ const $1: React.FC = () => {
       </section>
     </div>
   );
-=======
         <div className="flex-1 min-w-0">
           <h3 className="text-sm font-semibold mb-1">Install App</h3><p className="text-xs text-white/90 mb-3">Install Zion Tech Group app for a better experience with offline access and faster loading.</p>
 
@@ -254,7 +246,6 @@ const $1: React.FC = () => {
         </button>,
       </div>,
     </div>);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default PWAInstallerPage;

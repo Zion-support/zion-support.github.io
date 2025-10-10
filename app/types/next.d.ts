@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -27,7 +26,6 @@ const Next.dPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-=======
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
@@ -95,7 +93,6 @@ export interface MetadataRoute {
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const benefits = [
     'Advanced AI technology integration',
@@ -108,7 +105,6 @@ export interface MetadataRoute {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -116,14 +112,12 @@ export interface MetadataRoute {
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
-=======
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

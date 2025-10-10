@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -25,7 +24,6 @@ const GlobalErrorBoundaryPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface Props {
   children: ReactNode,
   fallback?: ReactNode;
@@ -57,7 +55,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -80,7 +77,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
         <meta name="keywords" content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group, globalerrorboundary" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -108,7 +104,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       </section>
-=======
     // In production, you might want to send this to an error reporting service;
     if (process.env.NODE_ENV === 'production') {
       // Example: Send to error reporting service;
@@ -183,7 +178,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>,
         </div>);
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

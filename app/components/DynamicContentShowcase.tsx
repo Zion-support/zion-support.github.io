@@ -3,18 +3,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const DynamicContentShowcasePage: React.FC = () => {
   const features = [
-=======
 const $1: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
@@ -32,7 +28,6 @@ const $1: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       content: {,
@@ -115,7 +110,6 @@ const $1: React.FC = () => {
           { label: 'ROI', value: '250%', icon: TrendingUp }
         ]
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -131,7 +125,6 @@ const $1: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>DynamicContentShowcase | Zion Tech Group</title>
@@ -158,7 +151,6 @@ const $1: React.FC = () => {
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
-=======
     <section className="py-16" aria-labelledby="showcase-heading">
       <div className="container mx-auto px-4"></section>
         <h2 id="showcase-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Our Solutions</h2><div className="max-w-6xl mx-auto">{/* Tab Navigation */}</div>
@@ -188,7 +180,6 @@ const $1: React.FC = () => {
               ></button>
                 <tab.icon className="w-5 h-5" /></ta>
                 <span className="font-medium">{tab.title}</spa>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
@@ -224,7 +215,6 @@ const $1: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -272,7 +262,6 @@ const $1: React.FC = () => {
         </div>
       </section>
     </div>
-=======
           {/* Tab Content */}
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 md:p-12 cyber-card">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{/* Content */}</div>
@@ -409,7 +398,6 @@ const DynamicContentShowcase: React.FC = () => {
           ))}
         </div>
     </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

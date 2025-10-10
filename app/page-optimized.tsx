@@ -150,9 +150,7 @@ const PageOptimizedPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PageOptimizedPage;
-=======
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
@@ -176,4 +174,3 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 export default HomePage;
 
 export default HomePage;"
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc

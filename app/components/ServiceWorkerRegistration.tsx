@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
 import { useEffect } from 'react';
 
 const $1: React.FC = () => {
@@ -44,14 +42,12 @@ const ServiceWorkerRegistration: React.FC = () => {}
           })
           .catch((registrationError) => {
 
-
       // Listen for service worker messages;
       navigator.serviceWorker.addEventListener('message', (event) => {}
       // Listen for service worker messages
       navigator.serviceWorker.addEventListener('message', (event) => {}
         if (event.data && event.data.type === 'CACHE_UPDATED') {}
         }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
 const ServiceWorkerRegistrationPage: React.FC = () => {
   const features = [

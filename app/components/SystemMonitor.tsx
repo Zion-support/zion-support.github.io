@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const SystemMonitorPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const SystemMonitorPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
@@ -160,11 +158,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       setLastUpdate(new Date());
     } catch (error) {
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -191,7 +187,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 SystemMonitor
-=======
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
@@ -368,7 +363,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
               <span className="text-sm font-medium text-gray-600">CLS</span>
               <span className="text-lg font-semibold text-gray-900">
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -387,7 +381,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
               </button>
             </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Features Section */}
@@ -462,7 +455,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           </div>
         </div>
       </section>
-=======
 
       {/* Error Metrics */}
       <div className="mb-8">
@@ -596,7 +588,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
               </div>
           </div>
       )}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     </div>
   );
 };

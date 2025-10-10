@@ -44,9 +44,7 @@ const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ childre
     return () => observer.disconnect();
   }, []);
 
-<<<<<<< HEAD
   return <>{children}</>;
-=======
   useEffect(() => {
     const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
     return () => clearInterval(interval);
@@ -106,7 +104,6 @@ const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ childre
       )}
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default PerformanceOptimizer;

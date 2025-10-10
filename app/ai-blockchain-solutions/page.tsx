@@ -49,7 +49,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
     {
       title: 'DeFi Platforms',
       description: 'AI-enhanced decentralized finance platforms with intelligent trading and risk management.',
-<<<<<<< HEAD
       icon: '🏦'
     },
     {
@@ -76,7 +75,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
       title: 'Financial Services',
       description: 'AI-powered financial services built on blockchain technology.',
       icon: '💳'
-=======
       icon: CreditCard,
       useCases: ['Automated trading', 'Risk management', 'Yield farming', 'Liquidity optimization']
     },
@@ -109,12 +107,10 @@ const AIBlockchainSolutionsPage: React.FC = () => {
       description: 'Decentralized energy trading platforms with AI for grid optimization.',
       icon: Zap,
       useCases: ['Energy trading', 'Grid optimization', 'Renewable energy', 'Carbon credits']
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Increase transaction speed by 80%',
     'Reduce costs by 70%',
     'Improve security by 95%',
@@ -158,7 +154,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                 View Demo
               </button>
             </div>
-=======
     {
       metric: '99.9%',
       description: 'Security improvement over traditional systems',
@@ -285,11 +280,9 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.metric}</div><div className="text-gray-300">{benefit.description}</div>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -306,7 +299,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
-=======
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl"></div>
@@ -421,7 +413,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                     <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
                       Most Popular;
                     </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -510,11 +501,9 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         </section>
       </main>
 
-<<<<<<< HEAD
       <Footer />
     </>
   );
-=======
       {/* CTA Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-4xl text-center"></section>
@@ -539,7 +528,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
 
       <Footer />,
     </div>);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default AIBlockchainSolutionsPage;

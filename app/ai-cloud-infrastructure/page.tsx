@@ -51,7 +51,6 @@ const AICloudInfrastructurePage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Reduce infrastructure costs by 40%',
     'Improve performance by 60%',
@@ -61,7 +60,6 @@ const AICloudInfrastructurePage: React.FC = () => {
     'Automate infrastructure management',
     'Enhance security and compliance',
     'Optimize resource utilization'
-=======
   const pricingPlans = [
     {
       name: 'Starter'
@@ -113,12 +111,10 @@ const AICloudInfrastructurePage: React.FC = () => {
       popular: false}
       popular: false,
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   ];
 
   const useCases = [
     {
-<<<<<<< HEAD
       title: 'Enterprise Migration',
       description: 'Migrate enterprise applications to cloud with AI-powered optimization',
       icon: '🏢'
@@ -202,7 +198,6 @@ const AICloudInfrastructurePage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
-=======
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud with AI-powered optimization and cost reduction',
       icon: Cloud,
@@ -330,7 +325,6 @@ const AICloudInfrastructurePage: React.FC = () => {
                   </div>
                   <div></div>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3><p className="text-gray-400">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -348,7 +342,6 @@ const AICloudInfrastructurePage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -366,7 +359,6 @@ const AICloudInfrastructurePage: React.FC = () => {
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
-=======
         {/* Use Cases */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Solutions<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
@@ -381,14 +373,12 @@ const AICloudInfrastructurePage: React.FC = () => {
                 <div className="flex items-center justify-between mb-4">,</div>
                   <useCase.icon className="w-8 h-8 text-blue-400" />,
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -405,7 +395,6 @@ const AICloudInfrastructurePage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg mb-4">
                     <CheckCircle className="w-6 h-6 text-white" />
-=======
         {/* Pricing */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Infrastructure Plans<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'} hover:border-blue-500/50 transition-all duration-300`}>{plan.popular && (</div>
@@ -422,7 +411,6 @@ const AICloudInfrastructurePage: React.FC = () => {
                     <div className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular;</div>
                     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
                 </div>
@@ -432,7 +420,6 @@ const AICloudInfrastructurePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-sky-500 to-blue-500 rounded-2xl p-12">
@@ -452,7 +439,6 @@ const AICloudInfrastructurePage: React.FC = () => {
                 </button>
               </div>
             </div>
-=======
         <section className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-12 rounded-lg border border-blue-500/30">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Cloud?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 2,000+ organizations already using our AI Cloud Infrastructure to reduce costs and improve performance.</p>
           </p>
@@ -480,7 +466,6 @@ const AICloudInfrastructurePage: React.FC = () => {
               <Mail className="w-5 h-5 mr-2" />
               Email Us;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </section>
       </main>

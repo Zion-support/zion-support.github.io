@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -37,7 +36,6 @@ const PagePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-=======
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -259,7 +257,6 @@ const TrainingPage: React.FC = () => {}
       instructor: 'Dr. James Liu',
       spots: 30,
       price: '$199'}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   ];
 
   return (
@@ -271,7 +268,6 @@ const TrainingPage: React.FC = () => {}
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -316,7 +312,6 @@ const TrainingPage: React.FC = () => {}
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-=======
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
@@ -362,7 +357,6 @@ const TrainingPage: React.FC = () => {}
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <stat.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -372,19 +366,16 @@ const TrainingPage: React.FC = () => {}
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-=======
       {/* Categories Filter */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center mb-12"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-12"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
@@ -393,7 +384,6 @@ const TrainingPage: React.FC = () => {}
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -409,7 +399,6 @@ const TrainingPage: React.FC = () => {}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-=======
           <div className="flex flex-wrap justify-center gap-4 mb-12">,
             {categories.map((category) => (,</div>
               <button;
@@ -541,14 +530,12 @@ const TrainingPage: React.FC = () => {}
           <div className="text-center mb-12"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-12"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -562,7 +549,6 @@ const TrainingPage: React.FC = () => {}
           </div>
         </div>
       </section>
-=======
           </div>,
 ,
           <div className="space-y-6">,
@@ -615,7 +601,6 @@ const TrainingPage: React.FC = () => {}
       </section>
 
       <Footer /></Footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     </div>
   );
 };

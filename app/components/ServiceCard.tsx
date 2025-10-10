@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const ServiceCardPage: React.FC = () => {
   const features = [
     {
@@ -38,7 +37,6 @@ const ServiceCardPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-=======
 interface ServiceCardProps {
   icon: LucideIcon,
   title: string,
@@ -48,10 +46,8 @@ interface ServiceCardProps {
   popular?: boolean;
   onSelect: () => void;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ServiceCard | Zion Tech Group</title>
@@ -86,7 +82,6 @@ interface ServiceCardProps {
           </div>
         </div>
       </section>
-=======
     <div className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group ${popular ? 'ring-2 ring-cyan-400' : ''}`}>
       {popular && (</div>
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -113,7 +108,6 @@ interface ServiceCardProps {
           </li>
         ))}
       </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

@@ -21,11 +21,9 @@ const ContentPromotionBannerPage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
-<<<<<<< HEAD
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
       icon: TrendingUp,
       title: '📈 300% Average ROI',
       description: 'Our clients achieve 300% ROI and $50M+ in annual savings with our solutions.',
@@ -66,7 +64,6 @@ const $1: React.FC = () => {
       color: "from-green-500 to-emerald-600",
       icon: Zap,
       icon: Zap
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -82,7 +79,6 @@ const $1: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentPromotionBanner | Zion Tech Group</title>
@@ -190,7 +186,6 @@ const $1: React.FC = () => {
           </div>
         </div>
       </section>
-=======
     <div className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-cyan-400/20">
       {/* Animated Background */}</div>
       <div className="absolute inset-0">
@@ -387,7 +382,6 @@ const ContentPromotionBanner: React.FC = () => {
             Explore Now <ArrowRight className="w-4 h-4 ml-2" />
           </a>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     </div>
   );
 };

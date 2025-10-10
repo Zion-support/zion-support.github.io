@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -70,7 +69,6 @@ const PagePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
 const $1: React.FC = () => {
   const features = [,
     'Custom Model Development',
@@ -146,13 +144,11 @@ const $1: React.FC = () => {
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -163,7 +159,6 @@ const $1: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-=======
         {/* Benefits */}
         <section className="mb-16">
           <div className="cyber-card p-8"></div>
@@ -182,10 +177,8 @@ const $1: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -194,7 +187,6 @@ const $1: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
         {/* Use Cases */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Common Use Cases<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{useCases.map((useCase, index) => (</div>
@@ -208,14 +200,12 @@ const $1: React.FC = () => {
               <div key={index} className="cyber-card p-6 text-center"></div>
                 <useCase.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3><p className="text-gray-300">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -258,7 +248,6 @@ const $1: React.FC = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-=======
         {/* Process */}
         <section className="mb-16">
           <div className="cyber-card p-8"></div>
@@ -328,7 +317,6 @@ const $1: React.FC = () => {
                 <Phone className="w-5 h-5" />
                 Call +1 302 464 0950;
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>

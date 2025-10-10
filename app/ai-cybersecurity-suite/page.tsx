@@ -39,14 +39,12 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-=======
     <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Cybersecurity Suite - Advanced Threat Protection | Zion Tech Group"
@@ -92,7 +90,6 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -192,17 +189,14 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
     </div>
-=======
         </section>
       </main>
 
       <Footer /></Footer>
     </ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

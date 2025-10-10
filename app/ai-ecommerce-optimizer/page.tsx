@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -70,7 +69,6 @@ const PagePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
 const $1: React.FC = () => {
   const features = [,
     {,
@@ -286,20 +284,17 @@ const $1: React.FC = () => {
               <div className="text-3xl font-bold text-yellow-400 mb-2">50%<div className="text-gray-300">Faster Checkout</div>
             <div className="text-center"></div>
               <div className="text-3xl font-bold text-yellow-400 mb-2">50%</div><div className="text-gray-300">Faster Checkout</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
-=======
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl"></div>
           <div className="text-center mb-16"></div>
@@ -314,28 +309,24 @@ const $1: React.FC = () => {
                   <feature.icon className="w-6 h-6 text-cyan-400" />
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful AI Features for E-commerce Success;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-=======
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover: border-cyan-400/40 transition-colors">,</div>
                 <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">,</div>
                   <feature.icon className="w-6 h-6 text-cyan-400" />,
                 </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -344,14 +335,12 @@ const $1: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
-=======
       {/* Optimization Areas */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="container mx-auto max-w-6xl"></div>
@@ -367,20 +356,17 @@ const $1: React.FC = () => {
                   <area.icon className="w-6 h-6 text-purple-400" />
             <h2 className="text-4xl font-bold text-white mb-6">
               Comprehensive E-commerce Optimization;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {optimizationAreas.map((area, index) => (</div>
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover: border-purple-400/40 transition-colors">,</div>
@@ -486,7 +472,6 @@ const $1: React.FC = () => {
                 <div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div><div className="text-cyan-400 text-sm">{testimonial.role}</div><div className="text-gray-400 text-sm">{testimonial.company}</div>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -494,7 +479,6 @@ const $1: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -514,7 +498,6 @@ const $1: React.FC = () => {
                 Email Us
               </button>
             </div>
-=======
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Optimize Your E-commerce Store?</h2><p className="text-xl text-gray-300 mb-8">Start your AI-powered optimization journey today and see immediate results.</p>
@@ -532,7 +515,6 @@ const $1: React.FC = () => {
             <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
               Schedule Demo;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

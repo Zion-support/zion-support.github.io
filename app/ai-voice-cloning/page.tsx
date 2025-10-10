@@ -39,7 +39,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -70,7 +69,6 @@ const PagePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
     <ErrorBoundary></ErrorBoundar>
       <SEOHead 
         title="AI Voice Cloning Pro - Professional Voice Synthesis | Zion Tech Group"
@@ -113,7 +111,6 @@ const PagePage: React.FC = () => {
                   <Play className="mr-2 w-5 h-5" /></Play></<<<Play>Watch</Play></<<Play>Demo</Play>
                 </a>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>
@@ -189,11 +186,9 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
     </div>
-=======
         </section>
 
         {/* Contact Info */}
@@ -219,7 +214,6 @@ const PagePage: React.FC = () => {
 
       <Footer /></Footer>
     </ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

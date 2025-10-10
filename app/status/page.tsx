@@ -137,7 +137,6 @@ export default function StatusPage() {
       : 'degraded';
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="System Status - Zion Tech Group"
@@ -156,13 +155,11 @@ export default function StatusPage() {
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Status
             </span>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             System Status</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Real-time status of all our services. We're committed to providing reliable, 

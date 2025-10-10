@@ -39,7 +39,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -71,7 +70,6 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Navigation */}</div>
 const $1: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
@@ -368,7 +366,6 @@ const $1: React.FC = () => {
           <div className="flex justify-center space-x-6"></div>
           <div className="flex justify-center space-x-6"></div>
             <a href="/privacy" className="text-gray-300 hover:text-cyan-400 transition-colors">Privacy Policy<a href="/terms" className="text-gray-300 hover:text-cyan-400 transition-colors">Terms of Service<a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

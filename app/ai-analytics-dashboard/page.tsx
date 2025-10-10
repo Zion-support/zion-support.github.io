@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
 'use client',
 import React from 'react',
 import { Helmet } from 'react-helmet-async',
 import { Link } from 'react-router-dom',
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 import {
   BarChart3,
   TrendingUp,
@@ -66,11 +63,8 @@ import {
   Phone as PhoneIcon,
   Mail as MailIcon,
   MapPin as Location
-<<<<<<< HEAD
 } from 'lucide-react';
-=======
 } from 'lucide-react',
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
@@ -114,7 +108,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
   const benefits = [
     'Reduce data analysis time by 90%',
-<<<<<<< HEAD
     'Increase decision-making speed by 75%',
     'Improve data accuracy by 95%',
     'Lower operational costs by 40%',
@@ -123,18 +116,15 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     'Scale analytics across departments',
     'Enhance competitive advantage'
   ];
-=======
     'Increase decision-making speed by 5x',
     'Improve accuracy with AI-powered insights',
     'Automate reporting and dashboards',
     'Scale analytics across all departments',
     'Integrate with existing systems seamlessly'
   ],
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const useCases = [
     {
-<<<<<<< HEAD
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
       icon: '📊'
@@ -163,7 +153,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       title: 'Sales Performance',
       description: 'Track sales metrics and forecast revenue',
       icon: '🎯'
-=======
       name: "Starter"
       price: "$199",
       period: "/month",
@@ -211,11 +200,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         "SLA guarantee"
       ],
       popular: false,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ],
 
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -236,7 +223,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Analytics Dashboard
             </h1>
-=======
   const testimonials = [
     {
       name: "David Kim"
@@ -553,7 +539,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Data Analytics?
             </h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your data into actionable insights with our advanced AI Analytics Dashboard. 
               Real-time analytics, predictive modeling, and custom dashboards for better business decisions.
@@ -570,7 +555,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -621,7 +605,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <Link,
       <div className="py-20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
@@ -654,7 +637,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                     kleber@ziontechgroup.com,
                   </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
               ))}
             </div>
@@ -706,7 +688,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
       </main>
 
@@ -716,11 +697,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 };
 
 export default AIAnalyticsDashboardPage;
-=======
         </div>
       </div>,
     </div>),
 },
 
 export default AIAnalyticsDashboardPage,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc

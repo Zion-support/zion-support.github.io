@@ -1,9 +1,7 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
 import { Server, Shield, Monitor, Settings, Users, Database, Cloud, AlertTriangle, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 
@@ -38,7 +36,6 @@ const $1: React.FC = () => {
       description: 'User account management, permissions, and access control'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
 const PagePage: React.FC = () => {
   const features = [
@@ -65,7 +62,6 @@ const PagePage: React.FC = () => {
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -108,7 +104,6 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
     {
       icon: CheckCircle,
       title: 'Reduced Downtime',
@@ -372,7 +367,6 @@ const PagePage: React.FC = () => {
               <Settings className="w-5 h-5 mr-2" />
               View Pricing;
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -9,7 +8,6 @@ import { CheckCircle, TrendingUp, Brain, BarChart, Target, Zap, Users, Star, Awa
 const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
-=======
 'use client',
 import React, { useState, useEffect } from 'react',
 import { BarChart, TrendingUp, Users, Target, Zap, CheckCircle, ArrowRight, Star, Award, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Phone, Mail, MapPin, Eye, Sparkles, Globe, Shield } from 'lucide-react',
@@ -50,7 +48,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       benefits: ['Live dashboards', 'Instant updates', 'Real-time alerts']
     },
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent insights and recommendations powered by advanced machine learning algorithms.',
@@ -70,7 +67,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
     },
     {
       icon: TrendingUp,
-<<<<<<< HEAD
       title: 'Performance Analytics',
       description: 'Track and analyze performance metrics across all your business operations.',
       benefits: ['KPI tracking', 'Performance monitoring', 'Efficiency metrics', 'Growth analysis']
@@ -86,7 +82,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       title: 'Data Visualization',
       description: 'Transform complex data into clear, actionable insights with advanced visualization tools.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export options']
-=======
       title: 'Performance Tracking',
       description: 'Track KPIs and performance metrics with advanced analytics and benchmarking.',
       benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']
@@ -126,12 +121,10 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       title: 'Automated Reports',
       description: 'Generate and schedule automated reports for stakeholders',
       benefits: ['Scheduled reports', 'Email delivery', 'Custom formats']
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ],
 
   const benefits = [
-<<<<<<< HEAD
     'Increase data accuracy by 95%',
     'Reduce analysis time by 80%',
     'Improve decision-making speed by 70%',
@@ -141,7 +134,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
     'Scale analytics across departments',
     'Enhance competitive advantage'
   ];
-=======
     'Reduce data analysis time by 90%',
     'Increase decision-making speed by 5x',
     'Improve accuracy with AI-powered insights',
@@ -238,7 +230,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       popular: false
     }
   ],
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const useCases = [
     {
@@ -257,11 +248,9 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       icon: '🔮'
     },
     {
-<<<<<<< HEAD
       title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences',
       icon: '👥'
-=======
       industry: 'Finance',
       icon: CreditCard,
       description: 'Risk assessment, fraud detection, and investment analysis',
@@ -277,7 +266,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       quote: 'AI Analytics helped us increase our conversion rate by 35% in just 3 months. The insights are incredibly accurate and actionable.',
       rating: 5,
       image: '👩‍💼'
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     },
     {
       title: 'Financial Analytics',
@@ -300,7 +288,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       </Helmet>
 
       <Navigation />
-<<<<<<< HEAD
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
@@ -311,7 +298,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Analytics
-=======
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
         <main className="container mx-auto px-4 py-16 pt-24">
@@ -373,13 +359,11 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 neon-text">
               AI-Powered Analytics Dashboard,</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your data into actionable insights with our advanced AI Analytics solution. 
               Real-time monitoring, predictive modeling, and intelligent reporting for better business decisions.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
                 Start Analyzing
@@ -388,7 +372,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
               <button className="border border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300">
                 View Demo
               </button>
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="cyber-button px-8 py-4 text-lg" aria-label="Start Free Trial" tabIndex="0">
                 Start Free Trial,
@@ -417,12 +400,10 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7<div className="text-gray-300">Real-time Data</div>
             <div className="text-center"></div>
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div><div className="text-gray-300">Real-time Data</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -433,7 +414,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Our AI Analytics solution combines cutting-edge technology with intuitive design
               </p>
-=======
               <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
               <div className="text-gray-300">Real-time Data</div>
             </div>,
@@ -526,22 +506,18 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
                 <div className="text-3xl font-bold text-green-400 neon-text mb-2">24/7</div>
                 <div className="text-gray-300">Real-time Monitoring</div>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
-=======
               {features.map((feature, index) => (</div>
                 <div key={feature.title} className={`cyber-card p-8 hover:scale-105 transition-all duration-300 ${
                   isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`} style={{ transitionDelay: `${index * 100}ms` }}></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6"></div>
                     <feature.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -559,14 +535,12 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Applications & Use Cases
-=======
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
@@ -686,7 +660,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
             <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Transform Your Data into Intelligence?
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 From startups to enterprises, our AI Analytics solution serves diverse industries
@@ -738,7 +711,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
               <p className="text-xl text-indigo-100 mb-8">
                 Join thousands of businesses who are already using our AI Analytics solution
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   Get Started Now
@@ -746,7 +718,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
                 </button>
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                   Schedule Demo
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
@@ -812,7 +783,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
                     : 'bg-slate-700 text-white hover:bg-slate-600'}
                 }`} aria-label="Get Started" tabIndex="0">
                   Get Started,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </button>
               </div>
             </div>
@@ -820,8 +790,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         </section>
       </main>
 
-<<<<<<< HEAD
-=======
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center"></section>
@@ -843,14 +811,10 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
 
       <Footer />,
     </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       <Footer />
     </>
   ),
 },
 
-<<<<<<< HEAD
 export default AIAnalyticsPage;
-=======
 export default AIAnalyticsPage,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc

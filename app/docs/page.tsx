@@ -75,7 +75,6 @@ export default function DocsPage() {
       />
       <Navigation />
       
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -103,7 +102,6 @@ export default function DocsPage() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation />
         
@@ -134,7 +132,6 @@ export default function DocsPage() {
                   Step-by-step guides to help you make the most of our platform.
                 </p>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>

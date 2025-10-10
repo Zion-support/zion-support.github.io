@@ -38,7 +38,6 @@ const ServiceCardSkeletonPage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -148,7 +147,6 @@ const ServiceCardSkeletonPage: React.FC = () => {
         </div>
       </section>
     </div>
-=======
 const ServiceCardSkeleton: React.FC = () => {
   return(<div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 animate-pulse">
       <div className="flex items-start justify-between mb-4">
@@ -177,7 +175,6 @@ export default ServiceCardSkeleton;</div>
 )
       <div className="h-12 bg-gray-600 rounded">)
     </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

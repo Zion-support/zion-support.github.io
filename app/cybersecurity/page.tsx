@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -26,7 +25,6 @@ const PagePage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-=======
 
 const $1: React.FC = () => {
   const features = [,
@@ -38,7 +36,6 @@ const $1: React.FC = () => {
     'Security Audits',
     'Compliance Management',
     '24/7 Security Operations Center'
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   ];
 
   const benefits = [
@@ -52,10 +49,8 @@ const $1: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   const services = [
     {
       title: 'Network Security',
@@ -74,13 +69,11 @@ const $1: React.FC = () => {
     }
   ];return (
     <>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -105,7 +98,6 @@ const $1: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
       
       <Navigation />
       
@@ -180,7 +172,6 @@ const $1: React.FC = () => {
               >
                 View Security Suite
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>

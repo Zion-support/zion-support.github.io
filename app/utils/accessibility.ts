@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const AccessibilityPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 export interface AccessibilityConfig {}
   enableAnnouncements?: boolean;
   enableFocusManagement?: boolean;
@@ -77,11 +75,9 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
   private initialize(): void {}
     if (this.config.enableAnnouncements && typeof document !== 'undefined') {}
       this.createLiveRegion();
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -92,7 +88,6 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-=======
   private createLiveRegion(): void {}
     this.liveRegion = document.createElement('div');
     this.liveRegion.setAttribute('aria-live', 'polite');
@@ -107,7 +102,6 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
     `;
     document.body.appendChild(this.liveRegion);
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -194,7 +188,6 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -220,7 +213,6 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
       </section>
     </div>
   );
-=======
     const previousElement = this.focusHistory.pop();
     if (previousElement) {}
       previousElement.focus();
@@ -574,7 +566,6 @@ export const accessibilityUtils = {}
     attributes.forEach(attr => {)}
       element.removeAttribute(attr);
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default AccessibilityPage;

@@ -38,7 +38,6 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -71,7 +70,6 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
 const SystemStatusPage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
   return (</div>
@@ -105,7 +103,6 @@ const SystemStatusPage: React.FC = () => {
     </section>
 import React from 'react';
 
-
 const SystemStatusPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50"></div>
@@ -115,7 +112,6 @@ const SystemStatusPage: React.FC = () => {
           <div className="flex items-center mb-4"></div>
             <span className="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
             <span className="text-lg font-semibold text-gray-900">All Systems Operational</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

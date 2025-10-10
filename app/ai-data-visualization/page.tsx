@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 const $1: React.FC = () => {
   const features = [,
     {,
@@ -112,12 +110,10 @@ const $1: React.FC = () => {
         'SLA guarantee'
       ],
       popular: false,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -128,7 +124,6 @@ const $1: React.FC = () => {
     'Proven track record of success'
   ];
 
-=======
     {
       icon: Users,
       title: 'Better Decision Making',
@@ -235,7 +230,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function AIDataVisualizationPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -247,7 +241,6 @@ export default function AIDataVisualizationPage() {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -255,18 +248,15 @@ export default function AIDataVisualizationPage() {
               </span>
               <br />
               <span className="text-white">Solutions</span>
-=======
           {/* Hero Section */}</div>
           <section className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
               AI Data Visualization Solutions</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -277,7 +267,6 @@ export default function AIDataVisualizationPage() {
               </button>
             </div>
           </div>
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="tel:+13024640950"
@@ -446,7 +435,6 @@ export default function AIDataVisualizationPage() {
               </a>
             </div>
           </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
         </div>
       </section>
 

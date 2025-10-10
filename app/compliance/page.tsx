@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -70,7 +69,6 @@ const PagePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
 const $1: React.FC = () => {
   const complianceFrameworks = [,
     {,
@@ -248,13 +246,11 @@ const $1: React.FC = () => {
             <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
               <CheckCircle className="w-5 h-5 text-purple-400" />
               <span className="text-white font-medium">GDPR Compliant</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -275,7 +271,6 @@ const $1: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
         {/* Compliance Frameworks */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Frameworks<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{complianceFrameworks.map((framework, index) => (</div>
@@ -300,14 +295,12 @@ const $1: React.FC = () => {
                     </CheckCircle>
                   ))}
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -325,7 +318,6 @@ const $1: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
         {/* Compliance Areas */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Compliance Areas<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{complianceAreas.map((area, index) => (</div>
@@ -344,7 +336,6 @@ const $1: React.FC = () => {
                     </span>
                   ))}
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -372,12 +363,10 @@ const $1: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
     </div>
   );
-=======
         </section>
 
         {/* Compliance Process */}
@@ -571,7 +560,6 @@ const $1: React.FC = () => {
 ,
       <Footer />,
     </div>);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default PagePage;

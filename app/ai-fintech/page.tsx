@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -10,7 +9,6 @@ const PagePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
@@ -26,7 +24,6 @@ const $1: React.FC = () => {
       marketPrice: '$8,000-25,000/month',
       category: 'Trading',
       technologies: ['QuantLib', 'Zipline', 'Backtrader', 'TensorFlow', 'PyTorch']
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     },
     {
       icon: Zap,
@@ -44,7 +41,6 @@ const $1: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-<<<<<<< HEAD
 
   const benefits = [
     'Advanced AI technology integration',
@@ -166,7 +162,6 @@ const $1: React.FC = () => {
         </div>
       </section>
     </div>
-=======
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
   return(<>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -423,7 +418,6 @@ const $1: React.FC = () => {
         <Footer /></Footer>
       </div>
     
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

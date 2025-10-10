@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -39,7 +38,6 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-=======
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -207,7 +205,6 @@ const HelpPage: React.FC = () => {}
     setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -217,7 +214,6 @@ const HelpPage: React.FC = () => {}
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -249,7 +245,6 @@ const HelpPage: React.FC = () => {}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-=======
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
@@ -289,14 +284,12 @@ const HelpPage: React.FC = () => {}
           <div className="text-center mb-16"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -307,7 +300,6 @@ const HelpPage: React.FC = () => {}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -402,33 +394,28 @@ const HelpPage: React.FC = () => {}
                     ))}
                   </div>
                 )}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-=======
       {/* Contact Support */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center mb-16"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -436,7 +423,6 @@ const HelpPage: React.FC = () => {}
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
@@ -462,14 +448,12 @@ const HelpPage: React.FC = () => {}
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-6 rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all">,
                   {method.action}
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -493,9 +477,7 @@ const HelpPage: React.FC = () => {}
           </div>
         </div>
       </section>
-=======
       <Footer /></Footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     </div>
   );
 };

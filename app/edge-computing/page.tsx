@@ -8,12 +8,9 @@ import { CheckCircle, Zap, Cpu, Clock, Users, Shield, BarChart, ArrowRight } fro
 const EdgeComputingPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
 icon: Cpu,
 
-=======
       icon: Cpu,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       title: 'Low-Latency Processing',
       description: 'Process data at the edge for ultra-low latency applications and real-time decision making.',
       benefits: ['< 1 ms latency', 'Real-time processing', 'Instant responses']
@@ -32,7 +29,6 @@ icon: Cpu,
     },
     {
       icon: Users,
-<<<<<<< HEAD
 title: 'IoT Integration',
       description: 'Seamlessly integrate with IoT devices and sensors for comprehensive edge solutions.',
       benefits: ['IoT connectivity', 'Sensor integration', 'Device management']
@@ -74,7 +70,6 @@ title: 'IoT Integration',
       title: 'Healthcare',
       description: 'Support real-time medical monitoring and diagnostics',
       icon: '🏥'
-=======
       title: 'Scalable Infrastructure',
       description: 'Easily scale your edge computing infrastructure as your needs grow.',
       benefits: ['Auto-scaling', 'Flexible deployment', 'Resource optimization']
@@ -90,12 +85,10 @@ description: 'Comprehensive security measures designed specifically for edge com
       title: 'Performance Monitoring',
       description: 'Monitor edge performance with real-time analytics and optimization recommendations.',
       benefits: ['Live monitoring', 'Performance insights', 'Proactive optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Edge Computing Solutions - Zion Tech Group | Distributed Computing</title>
@@ -114,7 +107,6 @@ description: 'Comprehensive security measures designed specifically for edge com
             Edge Computing
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="relative py-20 px-4 overflow-hidden">
@@ -141,28 +133,23 @@ description: 'Comprehensive security measures designed specifically for edge com
             Edge Computing;</h1>
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Solutions;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Bring computing power closer to your data and users with our edge computing solutions. 
             Reduce latency, improve performance, and enable real-time applications.
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Get Edge Computing Demo
-=======
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
               Get Started Today;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
             </button>
-<<<<<<< HEAD
 </div>
         </div>
       </section>
@@ -171,7 +158,6 @@ description: 'Comprehensive security measures designed specifically for edge com
 <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-=======
           </div>
         </div>,
       </section>,
@@ -180,7 +166,6 @@ description: 'Comprehensive security measures designed specifically for edge com
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-4xl font-bold text-white mb-4">Advanced Edge Computing Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive edge computing solution designed for modern applications and IoT deployments<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
@@ -269,12 +254,9 @@ description: 'Comprehensive security measures designed specifically for edge com
 
       {/* CTA Section */}
 <section className="py-20 px-4">
-<<<<<<< HEAD
 
         <div className="max-w-4xl mx-auto text-center">
-=======
         <div className="max-w-4xl mx-auto text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?<p className="text-xl text-gray-300 mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2><p className="text-xl text-gray-300 mb-8">Join leading enterprises using edge computing to optimize their applications and reduce latency</p>

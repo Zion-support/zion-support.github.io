@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -46,7 +45,6 @@ const PagePage: React.FC = () => {
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-=======
 const AISolutionsPage: React.FC = () => {
   const aiServices = [,
     {,
@@ -163,7 +161,6 @@ const AISolutionsPage: React.FC = () => {
   return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"></div>
       <Navigation />
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -193,7 +190,6 @@ const AISolutionsPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -215,7 +211,6 @@ const AISolutionsPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-=======
         {/* AI Services Grid */}
         <section className="mb-16" aria-labelledby="ai-services-heading">
           <h2 id="ai-services-heading" className="text-4xl font-bold text-white mb-8 text-center neon-text">Our AI Services</h2><p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">Comprehensive AI solutions tailored to your business needs</p><div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">{aiServices.map((service, index) => (</section>
@@ -267,7 +262,6 @@ const AISolutionsPage: React.FC = () => {
                     ))}
                   <div className="text-lg font-bold text-cyan-400 neon-text">{service.price}</div>
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             ))}
           </div>
         </div>
@@ -280,7 +274,6 @@ const AISolutionsPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
@@ -316,7 +309,6 @@ const AISolutionsPage: React.FC = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-=======
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="text-center"></div>
@@ -376,7 +368,6 @@ const AISolutionsPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5" />
                 Call +1 302 464 0950;
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>

@@ -38,7 +38,6 @@ const LoadingPage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -149,7 +148,6 @@ const LoadingPage: React.FC = () => {
       </section>
     </div>
   );
-=======
   const textSizeClasses = {
     sm: 'text-sm',
     md: 'text-base',
@@ -179,7 +177,6 @@ const LoadingPage: React.FC = () => {
   }
 
   return content;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default LoadingPage;

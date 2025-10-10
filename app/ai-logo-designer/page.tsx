@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -71,7 +70,6 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
 const $1: React.FC = () => {
   const features = [,
     'AI-powered logo generation',
@@ -328,19 +326,16 @@ const $1: React.FC = () => {
                 </p>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
-=======
       {/* Logo Styles Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-6xl"></div>
@@ -354,12 +349,10 @@ const $1: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white">{style.name}<span className="text-purple-400 font-semibold">{style.price}<p className="text-gray-300 text-sm mb-4">{style.description}<ul className="space-y-1">{style.examples.map((example, exampleIndex) => (</ul>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Logo Design Styles;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -367,7 +360,6 @@ const $1: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-=======
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -379,7 +371,6 @@ const $1: React.FC = () => {
                 <div className="flex items-center justify-between mb-2">,</div>
                   <h3 className="text-lg font-semibold text-white">{style.name}</h3>
                   <span className="text-purple-400 font-semibold">{style.price}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -390,7 +381,6 @@ const $1: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -407,7 +397,6 @@ const $1: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-6xl"></div>
           <div className="text-center mb-16"></div>
@@ -437,21 +426,18 @@ const $1: React.FC = () => {
                   {benefit === 'Brand consistency tools' && 'Generate brand guidelines and templates to maintain consistency across all your marketing materials.'}</p>
                   {benefit === '24/7 design support' && 'Get help from our design experts whenever you need assistance with your logo creation process.'}</p>
                 </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
-=======
       {/* Pricing Section */}
       <section id="pricing" className="py-16 px-4">
         <div className="container mx-auto max-w-6xl"></div>
@@ -523,12 +509,10 @@ const $1: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Success Stories<p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Logo Designer Pro has helped businesses create amazing brand identities.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Success Stories;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -542,7 +526,6 @@ const $1: React.FC = () => {
           </div>
         </div>
       </section>
-=======
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
@@ -609,7 +592,6 @@ const $1: React.FC = () => {
       </section>
 
       <Footer /></Footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     </div>
   );
 };

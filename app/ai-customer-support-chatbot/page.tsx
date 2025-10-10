@@ -58,7 +58,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
   const useCases = [
     {
-<<<<<<< HEAD
       title: 'E-commerce Support',
       description: 'Handle product inquiries, order tracking, and returns with AI assistance',
       icon: '🛒'
@@ -92,7 +91,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
   return (
     <>
-=======
       name: 'E-commerce Support',
       description: 'Handle product inquiries, order tracking, and returns',
       icon: ShoppingCart,
@@ -216,14 +214,12 @@ const AICustomerSupportChatbotPage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
   return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       <Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Transform your customer support with our AI Customer Support Chatbot. 24/7 availability, natural language processing, and intelligent escalation for better customer experience." />
         <meta name="keywords" content="AI chatbot, customer support chatbot, virtual assistant, customer service automation, AI support bot" />
       </Helmet>
 
-<<<<<<< HEAD
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
@@ -249,7 +245,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                 View Demo
               </button>
             </div>
-=======
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center"></div>
@@ -283,11 +278,9 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                 <div className="text-2xl font-bold text-green-400 mb-1">{stat.value}</div><div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -315,7 +308,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-=======
           {/* CTA Buttons */}
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>
             <a;
@@ -477,14 +469,12 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                 <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div></div>
                   <div className="font-semibold text-white">{testimonial.name}</div><div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -505,7 +495,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                 </div>
               ))}
             </div>
-=======
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center"></div>
@@ -538,7 +527,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
             >
               Email Us;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </section>
 

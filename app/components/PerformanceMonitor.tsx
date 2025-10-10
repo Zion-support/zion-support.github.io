@@ -1,30 +1,44 @@
 'use client';
 
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { measureWebVitals } from '../../src/utils/performanceMonitor';
-=======
+import React, { useState, useEffect } from 'react';
+import { Activity, Clock, Zap, Database } from 'lucide-react';
+
 interface PerformanceMetrics {
-  loadTime: number,
-  memoryUsage: number,
-  connectionSpeed: string,
-  renderTime: number,
+  loadTime: number;
+  memoryUsage: number;
+  connectionSpeed: string;
+  renderTime: number;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
 const PerformanceMonitor: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+
   useEffect(() => {
     // Initialize performance monitoring
-    measureWebVitals();
-
-    // Track page load performance
-    const trackPageLoad = () => {
+    const measureWebVitals = () => {
+      // Basic web vitals measurement
       if (typeof window !== 'undefined' && 'performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         
         if (navigation) {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
           const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          
+          // Get memory usage if available
+          const memory = (performance as any).memory;
+          const memoryUsage = memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0;
+          
+          // Get connection speed
+          const connection = (navigator as any).connection;
+          const connectionSpeed = connection ? connection.effectiveType || 'unknown' : 'unknown';
+          
+          setMetrics({
+            loadTime: Math.round(loadTime),
+            memoryUsage,
+            connectionSpeed,
+            renderTime: Math.round(domContentLoaded)
+          });
           
           console.log('Page Load Performance:', {
             loadTime,
@@ -37,19 +51,27 @@ const PerformanceMonitor: React.FC = () => {
 
     // Track performance after page load
     if (document.readyState === 'complete') {
-      trackPageLoad();
+      measureWebVitals();
     } else {
-      window.addEventListener('load', trackPageLoad);
+      window.addEventListener('load', measureWebVitals);
     }
 
+    // Keyboard shortcut to toggle visibility
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
     return () => {
-      window.removeEventListener('load', trackPageLoad);
+      window.removeEventListener('load', measureWebVitals);
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
-<<<<<<< HEAD
-  return null;
-=======
   if (!isVisible || !metrics) return null;
 
   return (
@@ -99,12 +121,13 @@ const PerformanceMonitor: React.FC = () => {
           </span>
           <span className="text-purple-400">{metrics.connectionSpeed}</span>
         </div>
+      </div>
       
       <div className="mt-2 text-xs text-gray-400">
-        Press Ctrl+Shift+P to toggle</div>
+        Press Ctrl+Shift+P to toggle
+      </div>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default PerformanceMonitor;

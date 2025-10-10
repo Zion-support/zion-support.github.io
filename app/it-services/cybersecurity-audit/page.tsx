@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -69,7 +68,6 @@ const PagePage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
-=======
 const $1: React.FC = () => {
   const [auditType, setAuditType] = useState('');
   const [companySize, setCompanySize] = useState('');
@@ -173,7 +171,6 @@ const $1: React.FC = () => {
               </div>
               <button className="cyber-button w-full">
                 Schedule Audit;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </button>
             </div>
           </div>
@@ -201,9 +198,7 @@ const $1: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-<<<<<<< HEAD
             ))}
-=======
               <div className="space-y-4"></div>
                 <div className="flex items-center space-x-3"></div>
                   <div className="w-2 h-2 bg-pink-400 rounded-full"></div><span className="text-gray-300">GDPR</span>
@@ -272,7 +267,6 @@ const $1: React.FC = () => {
             >
               Schedule Audit;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

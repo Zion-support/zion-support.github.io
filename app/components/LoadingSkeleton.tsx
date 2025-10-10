@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -152,7 +151,6 @@ const LoadingSkeletonPage: React.FC = () => {
 };
 
 export default LoadingSkeletonPage;
-=======
 export const ServiceCardSkeleton: React.FC = React.memo(() => (
   <div className="cyber-card p-6 animate-pulse">
     <div className="w-16 h-16 bg-gray-700 rounded-xl mx-auto mb-6"><div className="h-6 bg-gray-700 rounded mb-3"><div className="h-4 bg-gray-700 rounded mb-4"><div className="space-y-2 mb-4">
@@ -196,4 +194,3 @@ export const CardSkeleton: React.FC = React.memo(() => (
 );
 ,
 export default ServiceCardSkeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc

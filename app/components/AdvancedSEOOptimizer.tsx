@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface SEOData {}
   title: string,
   description: string,
@@ -66,7 +64,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   const generateStructuredData = useCallback(() => {}
     if (!enableStructuredData || !seoData.structuredData) {}
       return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 

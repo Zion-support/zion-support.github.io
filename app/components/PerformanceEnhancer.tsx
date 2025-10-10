@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PerformanceEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const PerformanceEnhancerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface PerformanceEnhancerProps {}
   enableWebVitals?: boolean;
   enableResourceTiming?: boolean;
@@ -140,7 +138,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         value: 1),
         custom_parameter_1: error.message),
         custom_parameter_2: error.stack;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -240,7 +237,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -266,7 +262,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
       </section>
     </div>
   );
-=======
           (window as any).gtag('event', 'web_vitals', {)
             event_category: 'Performance')
             event_label: metric.name)
@@ -619,7 +614,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
   }, [enableAnalytics, enableConsoleLogging, performanceMetrics, reportError]);
 
   return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default PerformanceEnhancerPage;

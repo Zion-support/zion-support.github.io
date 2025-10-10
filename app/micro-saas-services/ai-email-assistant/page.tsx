@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -27,13 +26,11 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-=======
 const $1: React.FC = () => {
   const [emailType, setEmailType] = useState('');
   const [recipient, setRecipient] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const benefits = [
     'Advanced AI technology integration',
@@ -46,7 +43,6 @@ const $1: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -77,7 +73,6 @@ const $1: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
   return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
@@ -190,14 +185,12 @@ const $1: React.FC = () => {
                 className="cyber-button w-full"
               >
                 Generate with AI;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </button>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -220,7 +213,6 @@ const $1: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-=======
           <div className="cyber-card p-8 mb-8"></div>
             <h2 className="text-2xl font-bold text-white mb-6">Features</h2>
             <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
@@ -302,7 +294,6 @@ const $1: React.FC = () => {
             >
               Start Writing;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

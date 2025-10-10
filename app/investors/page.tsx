@@ -6,13 +6,11 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
-=======
       icon: DollarSign,
     {}
       icon: DollarSign,
@@ -81,13 +79,11 @@ const PagePage: React.FC = () => {
     {
       icon: Zap,
     {}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
-<<<<<<< HEAD
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
@@ -108,13 +104,11 @@ const PagePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-=======
       icon: Target,
     {}
       icon: Target,
       title: 'Market Leadership',
       description: 'Leading position in enterprise AI solutions'}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   ];
 
   return (
@@ -126,7 +120,6 @@ const PagePage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -158,7 +151,6 @@ const PagePage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-=======
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
@@ -184,14 +176,12 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -199,7 +189,6 @@ const PagePage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-=======
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -217,7 +206,6 @@ const PagePage: React.FC = () => {
               <div key={index} className="text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                   <metric.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -227,26 +215,22 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-=======
       {/* Investors Section */}
       <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
           <div className="text-center mb-16"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
           <div className="text-center mb-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -254,7 +238,6 @@ const PagePage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
           </div>,
 ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
@@ -314,7 +297,6 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{highlight.title}</h>
                 <p className="text-gray-300">{highlight.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -322,7 +304,6 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -342,7 +323,6 @@ const PagePage: React.FC = () => {
                 Email Us
               </button>
             </div>
-=======
       <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
@@ -362,7 +342,6 @@ const PagePage: React.FC = () => {
               Download Pitch Deck;
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>Download</butto></<<butto>Pitch</butto></<butto>Deck</butto>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>

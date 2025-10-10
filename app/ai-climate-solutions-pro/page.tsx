@@ -11,17 +11,14 @@ const AIClimateSolutionsProPage: React.FC = () => {
 
   const features = [
     {
-<<<<<<< HEAD
       title: 'Carbon Footprint Analysis',
       description: 'Comprehensive AI-powered carbon footprint tracking and reduction strategies for organizations',
       icon: Leaf,
       benefits: [
-=======
       title: 'Carbon Footprint Analysis'
       description: 'Comprehensive AI-powered carbon footprint tracking and reduction strategies for organizations'
       icon: Leaf,
       benefits: [,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
         'Real-time carbon tracking',
         'Automated reduction recommendations',
         'Industry-specific benchmarks',
@@ -29,17 +26,14 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Weather Prediction & Modeling',
       description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction',
       icon: Cloud,
       benefits: [
-=======
       title: 'Weather Prediction & Modeling'
       description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction'
       icon: Cloud,
       benefits: [,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
         '95% accuracy in weather predictions',
         'Extreme weather early warning',
         'Climate trend analysis',
@@ -47,17 +41,14 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Sustainability Planning',
       description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies',
       icon: Target,
       benefits: [
-=======
       title: 'Sustainability Planning'
       description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies'
       icon: Target,
       benefits: [,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
         'Custom sustainability roadmaps',
         'ROI analysis for green initiatives',
         'Resource optimization',
@@ -65,17 +56,14 @@ const AIClimateSolutionsProPage: React.FC = () => {
       ]
     },
     {
-<<<<<<< HEAD
       title: 'Emission Tracking & Monitoring',
       description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations',
       icon: Activity,
       benefits: [
-=======
       title: 'Emission Tracking & Monitoring'
       description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations'
       icon: Activity,
       benefits: [,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
         'Real-time emission monitoring',
         'Automated compliance reporting',
         'Predictive emission modeling',
@@ -106,7 +94,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Reduce carbon emissions by 40%',
     'Lower energy costs by 35%',
@@ -116,7 +103,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
     'Automate environmental reporting',
     'Scale sustainability initiatives',
     'Enhance environmental reputation'
-=======
   const pricing = {
     monthly: 3200,
     yearly: 32000,
@@ -168,7 +154,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
       content: 'The sustainability planning feature helped us create a comprehensive roadmap to net-zero emissions. This is exactly what we needed for our climate goals.',
       rating: 5,
       avatar: 'SR'}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   ];
 
   const useCases = [
@@ -205,7 +190,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Climate Solutions Pro - Zion Tech Group</title>
@@ -265,7 +249,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="relative py-20 lg:py-32 overflow-hidden">
@@ -507,12 +490,10 @@ const AIClimateSolutionsProPage: React.FC = () => {
                       <li key={index} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -591,7 +572,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
 
       <Footer />
     </>
-=======
 
                 <div></div>
                 <div></div>
@@ -724,7 +704,6 @@ const AIClimateSolutionsProPage: React.FC = () => {
 
       <Footer /></Footer>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

@@ -4,13 +4,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-<<<<<<< HEAD
   title?: string;
   description?: string;
-=======
   title: string,
   description: string,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   keywords?: string;
   image?: string;
   url?: string;

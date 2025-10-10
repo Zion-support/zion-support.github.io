@@ -46,7 +46,6 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
         <meta name="keywords" content="EnhancedPerformanceOptimizer, AI solutions, IT services, Zion Tech Group, enhancedperformanceoptimizer" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -74,13 +73,11 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
     const observerOptions = {
       root: null,
   // Lazy loading for images and components
   useEffect(() => {}
     if (!enableLazyLoading || typeof window === 'undefined') return;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -158,9 +155,7 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedPerformanceOptimizerPage;
-=======
     addResourceHints();
   }, [enableResourceHints]);
 
@@ -425,7 +420,6 @@ export default EnhancedPerformanceOptimizerPage;
     value: Math.round(value),
             non_interaction: true,
 
-
           (window as any).gtag('event', 'performance_metric', {)
             event_category: 'Performance'),
             event_label: key),
@@ -446,4 +440,3 @@ export default EnhancedPerformanceOptimizerPage;
   return null;
 };
 </<<<PerformanceOptimizerProps>export</PerformanceOptimizerProps></<<PerformanceOptimizerProps>default</PerformanceOptimizerProps> EnhancedPerformanceOptimizer;</PerformanceOptimizerProps>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc

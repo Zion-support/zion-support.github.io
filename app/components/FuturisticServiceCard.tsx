@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const FuturisticServiceCardPage: React.FC = () => {
   const features = [
     {
@@ -27,7 +26,6 @@ const FuturisticServiceCardPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-=======
 interface FuturisticServiceCardProps {
   title: string,
   description: string,
@@ -37,7 +35,6 @@ interface FuturisticServiceCardProps {
   icon: React.ComponentType<{ className?: string }>;
   onSelect: () => void;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const benefits = [
     'Advanced AI technology integration',
@@ -84,7 +81,6 @@ interface FuturisticServiceCardProps {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Features Section */}
@@ -160,8 +156,6 @@ interface FuturisticServiceCardProps {
         </div>
       </section>
     </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

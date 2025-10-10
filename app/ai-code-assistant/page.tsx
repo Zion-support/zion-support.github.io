@@ -14,40 +14,30 @@ const AICodeAssistantPage: React.FC = () => {
 
   const features = [
     {
-<<<<<<< HEAD
-=======
       icon: Code,
     {}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       icon: Code,
       title: 'Intelligent Code Generation',
       description: 'Generate clean, efficient code from natural language descriptions with AI-powered suggestions.',
       benefits: ['Natural language to code', 'Code completion', 'Smart suggestions', 'Multi-language support']
     },
     {
-<<<<<<< HEAD
-=======
       icon: Bug,
     {}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       icon: Bug,
       title: 'Smart Debugging',
       description: 'Automatically detect and fix bugs, suggest optimizations, and improve code quality.',
       benefits: ['Bug detection', 'Auto-fix suggestions', 'Code optimization', 'Quality analysis']
     },
     {
-<<<<<<< HEAD
-=======
       icon: Terminal,
     {}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       icon: Terminal,
       title: 'Multi-Language Support',
       description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, and more.',
       benefits: ['50+ languages', 'Syntax highlighting', 'Language-specific features', 'Cross-platform support']
     },
     {
-<<<<<<< HEAD
       icon: GitBranch,
       title: 'Version Control Integration',
       description: 'Seamlessly integrate with Git, GitHub, and other version control systems.',
@@ -64,7 +54,6 @@ const AICodeAssistantPage: React.FC = () => {
       title: 'Security Analysis',
       description: 'Automatically scan code for security vulnerabilities and suggest secure coding practices.',
       benefits: ['Vulnerability scanning', 'Security recommendations', 'Best practices', 'Compliance checking']
-=======
       icon: GitBranch,
     {}
       icon: GitBranch,
@@ -126,7 +115,6 @@ const AICodeAssistantPage: React.FC = () => {
       ],
       popular: false}
       popular: false,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -142,7 +130,6 @@ const AICodeAssistantPage: React.FC = () => {
   ];
 
   const useCases = [
-<<<<<<< HEAD
     {
       title: 'Software Development',
       description: 'Accelerate software development with AI-powered coding assistance',
@@ -207,7 +194,6 @@ const AICodeAssistantPage: React.FC = () => {
               <button className="border border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300">
                 View Demo
               </button>
-=======
     {}
       title: 'Code Generation',
       description: 'Generate boilerplate code, functions, and complete modules from descriptions',
@@ -315,12 +301,10 @@ const AICodeAssistantPage: React.FC = () => {
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7<div className="text-white font-semibold mb-2">Available<div className="text-gray-400 text-sm">AI assistant available around the clock</div>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20"></div>
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div><div className="text-white font-semibold mb-2">Available</div><div className="text-gray-400 text-sm">AI assistant available around the clock</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -337,7 +321,6 @@ const AICodeAssistantPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
-=======
         {/* Features */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
@@ -370,7 +353,6 @@ const AICodeAssistantPage: React.FC = () => {
                   </div>
                   <div></div>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3><p className="text-gray-400">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -388,7 +370,6 @@ const AICodeAssistantPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -406,7 +387,6 @@ const AICodeAssistantPage: React.FC = () => {
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
-=======
         {/* Use Cases */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
@@ -424,14 +404,12 @@ const AICodeAssistantPage: React.FC = () => {
                 <div className="flex items-center justify-between mb-4">,</div>
                   <useCase.icon className="w-8 h-8 text-purple-400" />,
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -450,7 +428,6 @@ const AICodeAssistantPage: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
-=======
         {/* Supported Languages */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Supported Programming Languages<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">{supportedLanguages.map((language, index) => (</div>
@@ -500,7 +477,6 @@ const AICodeAssistantPage: React.FC = () => {
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                   <p className="text-gray-400 mt-2">{plan.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
               ))}
             </div>
@@ -508,7 +484,6 @@ const AICodeAssistantPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl p-12">
@@ -528,7 +503,6 @@ const AICodeAssistantPage: React.FC = () => {
                 </button>
               </div>
             </div>
-=======
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Code Smarter?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 2,000+ developers already using our AI Code Assistant to boost their productivity.</p>
           </p>
@@ -556,7 +530,6 @@ const AICodeAssistantPage: React.FC = () => {
               <MessageSquare className="w-5 h-5 mr-2" />
               Email Us;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </section>
       </main>

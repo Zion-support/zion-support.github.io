@@ -1,13 +1,16 @@
-<<<<<<< HEAD
 'use client';
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
-import React, { useEffect } from 'react';
-
-<<<<<<< HEAD
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [settings, setSettings] = useState({
+    fontSize: 'medium' as 'small' | 'medium' | 'large',
+    highContrast: false,
+    reducedMotion: false,
+    screenReader: false,
+    keyboardNavigation: false
+  });
+
   useEffect(() => {
     // Add ARIA landmarks
     const addLandmarks = () => {
@@ -36,48 +39,47 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-    // Initialize accessibility features
+    // Apply accessibility settings
+    const applySettings = () => {
+      const root = document.documentElement;
+      
+      // Font size
+      root.style.setProperty('--font-size', settings.fontSize === 'small' ? '14px' : settings.fontSize === 'large' ? '18px' : '16px');
+      
+      // High contrast
+      if (settings.highContrast) {
+        root.classList.add('high-contrast');
+      } else {
+        root.classList.remove('high-contrast');
+      }
+      
+      // Reduced motion
+      if (settings.reducedMotion) {
+        root.style.setProperty('--animation-duration', '0.01ms');
+        root.style.setProperty('--animation-iteration-count', '1');
+      } else {
+        root.style.removeProperty('--animation-duration');
+        root.style.removeProperty('--animation-iteration-count');
+      }
+    };
+
     addLandmarks();
     addSkipLinks();
-  }, []);
+    applySettings();
 
-  return <>{children}</>;
-=======
-const EnhancedAccessibility: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 'medium',
-    highContrast: false,
-    reducedMotion: false,
-    screenReader: false,
-    keyboardNavigation: false
-  });
-
-  useEffect(() => {
-    // Load settings from localStorage
+    // Load saved settings
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
-    }
-  }, []);
-
-  useEffect(() => {
-    // Apply settings to document
-    document.documentElement.style.fontSize = 
-      settings.fontSize === 'small' ? '14px' : 
-      settings.fontSize === 'large' ? '18px' : '16px';
-    
-    document.documentElement.classList.toggle('high-contrast', settings.highContrast);
-    document.documentElement.classList.toggle('reduced-motion', settings.reducedMotion);
-    
-    if (settings.screenReader) {
-      document.body.setAttribute('aria-live', 'polite');
-    } else {
-      document.body.removeAttribute('aria-live');
+      try {
+        const parsed = JSON.parse(savedSettings);
+        setSettings(prev => ({ ...prev, ...parsed }));
+      } catch (error) {
+        console.error('Error loading accessibility settings:', error);
+      }
     }
   }, [settings]);
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = (key: keyof typeof settings, value: any) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
@@ -91,9 +93,12 @@ const EnhancedAccessibility: React.FC = () => {
 
   return (
     <>
+      {children}
+      
+      {/* Accessibility Settings Button */}
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-40"
+        className="fixed bottom-4 right-4 bg-cyan-600 text-white p-3 rounded-full shadow-lg hover:bg-cyan-700 transition-colors z-50"
         aria-label="Open accessibility settings"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,6 +106,7 @@ const EnhancedAccessibility: React.FC = () => {
         </svg>
       </button>
 
+      {/* Accessibility Settings Modal */}
       {isVisible && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
@@ -154,7 +160,7 @@ const EnhancedAccessibility: React.FC = () => {
                     onChange={(e) => updateSetting('highContrast', e.target.checked)}
                     className="mr-2"
                   />
-                  <span className="text-sm font-medium text-gray-700">High Contrast</span>
+                  <span className="text-sm font-medium text-gray-700">High Contrast Mode</span>
                 </label>
               </div>
 
@@ -178,7 +184,7 @@ const EnhancedAccessibility: React.FC = () => {
                     onChange={(e) => updateSetting('screenReader', e.target.checked)}
                     className="mr-2"
                   />
-                  <span className="text-sm font-medium text-gray-700">Screen Reader Support</span>
+                  <span className="text-sm font-medium text-gray-700">Screen Reader Optimized</span>
                 </label>
               </div>
 
@@ -217,7 +223,6 @@ const EnhancedAccessibility: React.FC = () => {
       )}
     </>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default EnhancedAccessibility;

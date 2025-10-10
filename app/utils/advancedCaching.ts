@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const AdvancedCachingPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const AdvancedCachingPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds;
 export interface CacheOptions {}
@@ -64,7 +62,6 @@ class AdvancedCache<T = unknown> {}
     // Load from persistent storage if needed
     if (this.options.storage !== 'memory') {}
       this.loadFromStorage();
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -191,9 +188,7 @@ class AdvancedCache<T = unknown> {}
   );
 };
 
-<<<<<<< HEAD
 export default AdvancedCachingPage;
-=======
   private cleanExpired(): void {}
     const now = Date.now();
     const expiredKeys: string[] = [];
@@ -483,4 +478,3 @@ export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<
 // Export default cache instance;
 export const defaultCache = new AdvancedCache();
 export default AdvancedCache;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc

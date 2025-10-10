@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const AdvancedSEOOptimizer_newPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const AdvancedSEOOptimizer_newPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface SEOData {
   title: string,
   description: string,
@@ -66,11 +64,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   const generateStructuredData = useCallback(() => {}
     if (!enableStructuredData || !seoData.structuredData) {}
       return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -81,7 +77,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-=======
     const baseStructuredData = {
       '@context': 'https: //schema.org',
     const baseStructuredData = {}
@@ -572,7 +567,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       document.head.appendChild(link);
     }
   }, [seoData]);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

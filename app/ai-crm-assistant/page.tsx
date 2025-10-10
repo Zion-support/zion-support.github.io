@@ -97,9 +97,7 @@ const AICRMAssistantPage: React.FC = () => {
         <meta name="keywords" content="AI CRM, customer relationship management, sales automation, lead scoring, CRM AI, business intelligence" />
       </Helmet>
 
-<<<<<<< HEAD
       <Navigation />
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="container mx-auto px-4 py-16"></div>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -114,7 +112,6 @@ const AICRMAssistantPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Ai Crm Assistant</h1><p className="text-xl text-gray-300 mb-8">Professional ai crm assistant services powered by advanced AI and cutting-edge technology.</p>
             </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
@@ -142,7 +139,6 @@ const AICRMAssistantPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -241,7 +237,6 @@ const AICRMAssistantPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
                   Schedule Demo
                 </button>
-=======
             <div className="space-y-4"></div>
               <a;
             <div className="space-y-4"></div>
@@ -262,7 +257,6 @@ const AICRMAssistantPage: React.FC = () => {
                 >
                   ← Back to Home;
                 </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             </div>
           </div>

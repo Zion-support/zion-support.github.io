@@ -6,11 +6,9 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
-=======
       title: 'Satellite Operations Management'
       description: 'AI-powered satellite constellation management with autonomous operations and predictive maintenance'
       icon: Satellite,
@@ -67,7 +65,6 @@ const PagePage: React.FC = () => {
         'Payload operations',
         'Ground station coordination'
       ]
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     },
     {
       icon: Zap,
@@ -86,7 +83,6 @@ const PagePage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -96,7 +92,6 @@ const PagePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-=======
   const pricing = {
     monthly: 5500,
     yearly: 55000,
@@ -148,11 +143,9 @@ const PagePage: React.FC = () => {
       content: 'The astronomical data analysis helped us discover 3 new exoplanets and identify 15 potential habitable zones. This is exactly what we needed for our research missions.',
       rating: 5,
       avatar: 'ER'}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -194,7 +187,6 @@ const PagePage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation >{/* Hero Section */}</Navigation>
       </Navigation><section className="relative py-20 lg:py-32 overflow-hidden">
@@ -301,12 +293,10 @@ const PagePage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}<p className="text-gray-300">{feature.description}<div className="space-y-3">{feature.benefits.map((benefit, benefitIndex) => (</div>
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
               Advanced Space AI Capabilities;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -314,7 +304,6 @@ const PagePage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-=======
           </div>,
 ,
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">,
@@ -348,7 +337,6 @@ const PagePage: React.FC = () => {
                       <span className="text-gray-300">{benefit}</span>
                     </div>
                   ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -358,7 +346,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -376,7 +363,6 @@ const PagePage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
       {/* Capabilities */}
       <section className="py-20">
         <div className="container mx-auto px-4"></div>
@@ -538,7 +524,6 @@ const PagePage: React.FC = () => {
                     <div className="font-semibold text-white">{testimonial.name}</div><div className="text-sm text-cyan-400">{testimonial.role}</div><div className="text-sm text-gray-400">{testimonial.company}</div>
                   </div>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -546,7 +531,6 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -569,7 +553,6 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center"></div>
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Explore the Universe?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join leading space agencies using AI to advance space exploration and satellite operations.</p>
@@ -628,7 +611,6 @@ const PagePage: React.FC = () => {
       </section>
 
       <Footer /></Footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     </div>
   );
 };

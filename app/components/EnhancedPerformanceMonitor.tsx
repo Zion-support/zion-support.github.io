@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const EnhancedPerformanceMonitorPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 import React, { useEffect, useState } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
@@ -80,7 +78,6 @@ const $1: React.FC = () => {
 
       window.addEventListener('keydown', handleKeyPress);
       return () => window.removeEventListener('keydown', handleKeyPress);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -96,7 +93,6 @@ const $1: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>EnhancedPerformanceMonitor | Zion Tech Group</title>
@@ -129,7 +125,6 @@ const $1: React.FC = () => {
               </button>
             </div>
           </div>
-=======
     <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 shadow-lg z-50 max-w-sm">
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-white font-semibold text-sm">Performance Monitor</h3><button
@@ -160,7 +155,6 @@ const $1: React.FC = () => {
           <span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>
             {metrics.CLS ? metrics.CLS.toFixed(3) : '...'} ({getScoreText(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })})
           </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
         </div>
       </section>
 
@@ -235,10 +229,8 @@ const $1: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
     </div>
-=======
         
         <div className="flex justify-between items-center">
           <span className="text-gray-300">TTFB:<span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}>{metrics.TTFB ? `${metrics.TTFB.toFixed(0)}ms` : '...'} ({getScoreText(metrics.TTFB, { good: 800, needsImprovement: 1800 })})</span>
@@ -278,7 +270,6 @@ const $1: React.FC = () => {
           Press Ctrl+Shift+P to toggle;
         </p>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
   );
 };
 

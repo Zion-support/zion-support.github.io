@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -15,7 +14,6 @@ const PagePage: React.FC = () => {
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
-=======
 const $1: React.FC = () => {
   const services = [,
     {,
@@ -61,7 +59,6 @@ const $1: React.FC = () => {
       title: 'Web Performance',
       description: 'Optimize websites and web applications for speed',
       features: ['CDN optimization', 'Image compression', 'Code minification', 'Caching strategies']
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     },
     {
       icon: Shield,
@@ -87,7 +84,6 @@ const $1: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -119,7 +115,6 @@ const $1: React.FC = () => {
                 Learn More
               </button>
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}</div>
@@ -146,12 +141,10 @@ const $1: React.FC = () => {
             ></Lin>
               <Gauge className="w-5 h-5 mr-2" >Free Assessment</Gaug>
             </Gauge>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -172,7 +165,6 @@ const $1: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
         {/* Services Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -214,14 +206,12 @@ const $1: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3><p className="text-gray-300">{service.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -232,7 +222,6 @@ const $1: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
-=======
         {/* Optimization Areas */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -267,16 +256,13 @@ const $1: React.FC = () => {
                 </ul>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
         {/* Benefits Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -293,14 +279,12 @@ const $1: React.FC = () => {
                   <TrendingUp className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 mb-4">{benefit.description}</p><div className="text-cyan-400 font-bold text-lg">{benefit.metric}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -326,7 +310,6 @@ const $1: React.FC = () => {
       </section>
     </div>
   );
-=======
         {/* Process Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -441,7 +424,6 @@ const $1: React.FC = () => {
         </div>
       </div>,
     </div>);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default PagePage;

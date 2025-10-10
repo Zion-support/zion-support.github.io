@@ -27,7 +27,6 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -152,7 +151,6 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
 };
 
 export default EnhancedLoadingSkeletonPage;
-=======
 const Skeleton: React.FC<SkeletonProps>= ({ className = '', children }) => (</SkeletonProps><div className={`animate-pulse bg-gray-700/50 rounded ${className}`}>{children}</div>
 );
 
@@ -292,4 +290,3 @@ export const PageSkeleton: React.FC = React.memo(() => (
 );
 ,
 export default Skeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc

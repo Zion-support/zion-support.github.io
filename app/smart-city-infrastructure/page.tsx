@@ -39,14 +39,12 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
       
@@ -73,7 +71,6 @@ const PagePage: React.FC = () => {
             </button>
             <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"></button></<<<butto>View</butto></<<butto>Case</butto></<butto>Studies</butto>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -114,14 +111,12 @@ const PagePage: React.FC = () => {
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => (</div>
@@ -132,7 +127,6 @@ const PagePage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h>
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -153,14 +147,12 @@ const PagePage: React.FC = () => {
               Experience the power of our page solutions for your business.
             </p>
           </div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12"></div>
             {solutions.map((solution, index) => (</div>
@@ -301,7 +293,6 @@ const PagePage: React.FC = () => {
                     <p className="text-gray-500 text-xs">{testimonial.company}</p>
                   </div>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             ))}
           </div>
@@ -331,11 +322,8 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
       <Footer /></Footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     </div>
   );
 };

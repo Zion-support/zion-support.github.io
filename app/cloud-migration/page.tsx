@@ -6,13 +6,11 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
-=======
       icon: Cloud,
     {}
       icon: Cloud,
@@ -47,13 +45,11 @@ const PagePage: React.FC = () => {
     {
       icon: Zap,
     {}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
-<<<<<<< HEAD
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
@@ -62,7 +58,6 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
       icon: Target,
     {}
       icon: Target,
@@ -140,7 +135,6 @@ const PagePage: React.FC = () => {
         'Dedicated team'
       ],
       popular: false,
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -155,10 +149,8 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
   return (</div>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -445,13 +437,11 @@ import { Helmet } from 'react-helmet-async';
 const CloudMigrationPage: React.FC = () => {
   return (
     <>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -463,20 +453,17 @@ const CloudMigrationPage: React.FC = () => {
               </span>
               <br />
               <span className="text-white">Solutions</span>
-=======
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               Cloud <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Migration</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -485,7 +472,6 @@ const CloudMigrationPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -526,7 +512,6 @@ const CloudMigrationPage: React.FC = () => {
                 <li>• Testing & Validation</li>
                 <li>• Performance Optimization</li>
               </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
             </div>
           </div>
         </div>

@@ -148,8 +148,6 @@ const LoadingSpinnerPage: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
-=======
 
   if (fullScreen) {
     return (
@@ -159,7 +157,6 @@ const LoadingSpinnerPage: React.FC = () => {
   }
 
   return spinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
 
 export default LoadingSpinnerPage;

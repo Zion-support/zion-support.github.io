@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const EnhancedErrorBoundaryPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const EnhancedErrorBoundaryPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 interface Props {
   children: ReactNode,
   fallback?: ReactNode;
@@ -63,7 +61,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error Boundary caught an error:', error, errorInfo);
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
@@ -86,7 +83,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         <meta name="keywords" content="EnhancedErrorBoundary, AI solutions, IT services, Zion Tech Group, enhancederrorboundary" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -114,7 +110,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       </section>
-=======
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     try {
       // Send to Google Analytics
@@ -275,7 +270,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           </div>
       );
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

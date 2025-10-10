@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const EnhancedSEOPage: React.FC = () => {
   const features = [
     {
@@ -27,7 +26,6 @@ const EnhancedSEOPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-=======
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -61,7 +59,6 @@ interface EnhancedSEOProps {
   dnsPrefetch?: string[];
   preconnect?: string[];
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 
   const benefits = [
     'Advanced AI technology integration',

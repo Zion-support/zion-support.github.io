@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -25,7 +24,6 @@ const AccessibilityCheckerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 /**
  * Accessibility Checker Utility;
  *
@@ -167,7 +165,6 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
         score: 100,
   public checkDocument(): A11yCheckResult {/* TODO: Fix JSX expression */}
       };
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
     }
   ];
 
