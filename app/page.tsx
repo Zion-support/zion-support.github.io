@@ -125,6 +125,186 @@ const microSAASServices = [
     popular: true,
     icon: Palette,
     link: "https://ziontechgroup.com/ai-logo-designer"
+  },
+  {
+    name: "AI Invoice Generator",
+    description: "Automated invoice creation with smart templates and payment tracking",
+    price: "$49/mo",
+    features: ["Auto Generation", "Payment Tracking", "Tax Calculations", "Multi-currency"],
+    category: "Finance",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-invoice-generator"
+  },
+  {
+    name: "AI Expense Tracker",
+    description: "Smart expense management with receipt scanning and categorization",
+    price: "$39/mo",
+    features: ["Receipt Scanning", "Auto Categorization", "Tax Reports", "Budget Alerts"],
+    category: "Finance",
+    popular: true,
+    icon: Calculator,
+    link: "https://ziontechgroup.com/ai-expense-tracker"
+  },
+  {
+    name: "AI Lead Generation",
+    description: "Automated lead discovery and qualification with AI-powered prospecting",
+    price: "$199/mo",
+    features: ["Lead Discovery", "Contact Enrichment", "Qualification Scoring", "CRM Integration"],
+    category: "Sales",
+    popular: true,
+    icon: Target,
+    link: "https://ziontechgroup.com/ai-lead-generation"
+  },
+  {
+    name: "AI HR Assistant",
+    description: "Intelligent human resources management with automated screening and onboarding",
+    price: "$149/mo",
+    features: ["Resume Screening", "Interview Scheduling", "Onboarding Automation", "Performance Tracking"],
+    category: "HR",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-hr-assistant"
+  },
+  {
+    name: "AI Legal Assistant",
+    description: "Legal document analysis and contract review with AI-powered insights",
+    price: "$299/mo",
+    features: ["Contract Review", "Legal Research", "Document Analysis", "Compliance Checking"],
+    category: "Legal",
+    popular: false,
+    icon: Scale,
+    link: "https://ziontechgroup.com/ai-legal-assistant"
+  },
+  {
+    name: "AI Inventory Manager",
+    description: "Smart inventory optimization with demand forecasting and automated reordering",
+    price: "$179/mo",
+    features: ["Demand Forecasting", "Auto Reordering", "Stock Optimization", "Supplier Management"],
+    category: "Operations",
+    popular: true,
+    icon: Package,
+    link: "https://ziontechgroup.com/ai-inventory-manager"
+  },
+  {
+    name: "AI Fitness Coach",
+    description: "Personalized fitness training with AI-powered workout plans and nutrition guidance",
+    price: "$59/mo",
+    features: ["Custom Workouts", "Nutrition Plans", "Progress Tracking", "Form Analysis"],
+    category: "Health",
+    popular: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-fitness-coach"
+  },
+  {
+    name: "AI E-commerce Optimizer",
+    description: "Boost online sales with AI-powered product recommendations and pricing optimization",
+    price: "$199/mo",
+    features: ["Product Recommendations", "Price Optimization", "Inventory Management", "Customer Insights"],
+    category: "E-commerce",
+    popular: true,
+    icon: ShoppingCart,
+    link: "https://ziontechgroup.com/ai-ecommerce-optimizer"
+  },
+  {
+    name: "AI Fraud Detection",
+    description: "Advanced fraud prevention with real-time transaction monitoring and risk scoring",
+    price: "$249/mo",
+    features: ["Real-time Monitoring", "Risk Scoring", "Pattern Detection", "Alert System"],
+    category: "Security",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-fraud-detection"
+  },
+  {
+    name: "AI Music Composer",
+    description: "Create original music with AI-powered composition and arrangement tools",
+    price: "$89/mo",
+    features: ["Original Compositions", "Style Adaptation", "Instrument Arrangement", "Royalty-free"],
+    category: "Creative",
+    popular: true,
+    icon: Music,
+    link: "https://ziontechgroup.com/ai-music-composition"
+  },
+  {
+    name: "AI Image Recognition",
+    description: "Advanced image analysis and object detection for various business applications",
+    price: "$129/mo",
+    features: ["Object Detection", "Face Recognition", "Quality Analysis", "Custom Models"],
+    category: "Computer Vision",
+    popular: true,
+    icon: Eye,
+    link: "https://ziontechgroup.com/ai-image-recognition"
+  },
+  {
+    name: "AI Document Processor",
+    description: "Intelligent document processing with OCR, data extraction, and classification",
+    price: "$159/mo",
+    features: ["OCR Processing", "Data Extraction", "Document Classification", "Batch Processing"],
+    category: "Document Management",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-document-processor"
+  },
+  {
+    name: "AI Load Testing",
+    description: "Automated performance testing with AI-powered load generation and analysis",
+    price: "$199/mo",
+    features: ["Auto Load Generation", "Performance Analysis", "Bottleneck Detection", "Scalability Testing"],
+    category: "Testing",
+    popular: false,
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-load-testing"
+  },
+  {
+    name: "AI Manufacturing Optimizer",
+    description: "Smart manufacturing process optimization with predictive maintenance and quality control",
+    price: "$399/mo",
+    features: ["Predictive Maintenance", "Quality Control", "Process Optimization", "Supply Chain Integration"],
+    category: "Manufacturing",
+    popular: true,
+    icon: Factory,
+    link: "https://ziontechgroup.com/ai-manufacturing"
+  },
+  {
+    name: "AI Insurance Assistant",
+    description: "Intelligent insurance management with automated claims processing and risk assessment",
+    price: "$179/mo",
+    features: ["Claims Processing", "Risk Assessment", "Policy Management", "Fraud Detection"],
+    category: "Insurance",
+    popular: false,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-insurance"
+  },
+  {
+    name: "AI Education Platform",
+    description: "Personalized learning experience with AI-powered curriculum and progress tracking",
+    price: "$99/mo",
+    features: ["Personalized Learning", "Progress Tracking", "Adaptive Content", "Assessment Tools"],
+    category: "Education",
+    popular: true,
+    icon: GraduationCap,
+    link: "https://ziontechgroup.com/ai-education"
+  },
+  {
+    name: "AI Code Assistant",
+    description: "Intelligent coding assistant with automated code generation and debugging",
+    price: "$79/mo",
+    features: ["Code Generation", "Bug Detection", "Code Review", "Documentation"],
+    category: "Development",
+    popular: true,
+    icon: Code,
+    link: "https://ziontechgroup.com/ai-code-assistant"
+  },
+  {
+    name: "AI Design Studio",
+    description: "Complete design suite with AI-powered graphics, layouts, and brand consistency",
+    price: "$149/mo",
+    features: ["Auto Layout", "Brand Consistency", "Template Generation", "Color Optimization"],
+    category: "Design",
+    popular: true,
+    icon: Palette,
+    link: "https://ziontechgroup.com/ai-design-studio"
   }
 ];
 
