@@ -196,7 +196,7 @@ const Navigation: React.FC = () => {
   };
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-glow-cyan' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -206,10 +206,10 @@ const Navigation: React.FC = () => {
             className="flex items-center space-x-2 text-2xl font-bold group"
             onClick={closeAllMenus}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 rotate-slow">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
+            <span className="text-white cyber-text font-bold">
               Zion Tech Group
             </span>
           </Link>
@@ -218,28 +218,28 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow-cyan"
               onClick={closeAllMenus}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               About
             </Link>
             <Link 
               to="/services" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               Services
             </Link>
             <Link 
               to="/pricing" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               Pricing
@@ -321,7 +321,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
+              className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
               onClick={closeAllMenus}
             >
               Get Started

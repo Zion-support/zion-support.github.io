@@ -2,6 +2,7 @@
 import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import './src/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import { PageLoader } from './src/components/EnhancedLoadingStates';

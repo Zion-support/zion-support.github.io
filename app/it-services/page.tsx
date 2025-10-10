@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, DollarSign, Clock as ClockIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, DollarSign, Clock as ClockIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon, MessageSquare, Calendar } from 'lucide-react';
 
 export default function ITServicesPage() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -232,6 +232,74 @@ export default function ITServicesPage() {
           trial: 'Free monitoring setup',
           timeline: '1-2 weeks',
           link: 'https://ziontechgroup.com/performance-monitoring',
+          popular: false
+        },
+        {
+          name: 'AI-Powered IT Operations',
+          description: 'Intelligent IT operations with AI-driven automation, predictive maintenance, and self-healing systems',
+          features: ['AI Automation', 'Predictive Maintenance', 'Self-healing Systems', 'Intelligent Alerting', 'Root Cause Analysis', 'Performance Optimization', 'Capacity Planning', 'Cost Optimization'],
+          pricing: 'Starting at $5,000/month',
+          trial: 'Free AI assessment',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/ai-it-operations',
+          popular: true
+        },
+        {
+          name: 'Quantum-Safe Security Solutions',
+          description: 'Future-proof security solutions designed to protect against quantum computing threats',
+          features: ['Quantum-Safe Encryption', 'Post-Quantum Cryptography', 'Security Assessment', 'Migration Planning', 'Compliance Support', 'Risk Analysis', 'Implementation', 'Ongoing Support'],
+          pricing: 'Starting at $15,000',
+          trial: 'Free security audit',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/quantum-safe-security',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Emerging Technologies',
+      icon: Zap,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {
+          name: 'Blockchain Integration Services',
+          description: 'Complete blockchain integration with smart contracts, DeFi solutions, and Web3 applications',
+          features: ['Smart Contract Development', 'DeFi Solutions', 'Web3 Integration', 'NFT Platforms', 'Token Development', 'Blockchain Migration', 'Security Audits', 'Maintenance'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free consultation',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/blockchain-integration',
+          popular: true
+        },
+        {
+          name: 'IoT & Edge Computing Solutions',
+          description: 'Comprehensive IoT solutions with edge computing, real-time analytics, and device management',
+          features: ['IoT Device Management', 'Edge Computing', 'Real-time Analytics', 'Device Security', 'Data Processing', 'Cloud Integration', 'Monitoring', 'Maintenance'],
+          pricing: 'Starting at $18,000',
+          trial: 'Free IoT assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/iot-edge-solutions',
+          popular: true
+        },
+        {
+          name: 'AR/VR Development Services',
+          description: 'Immersive AR/VR applications for training, marketing, and customer engagement',
+          features: ['AR Application Development', 'VR Experience Design', '3D Modeling', 'Interactive Content', 'Cross-platform Support', 'Performance Optimization', 'User Testing', 'Deployment'],
+          pricing: 'Starting at $30,000',
+          trial: 'Free demo',
+          timeline: '10-20 weeks',
+          link: 'https://ziontechgroup.com/ar-vr-development',
+          popular: false
+        },
+        {
+          name: 'Quantum Computing Integration',
+          description: 'Quantum computing solutions for optimization, cryptography, and advanced problem solving',
+          features: ['Quantum Algorithm Development', 'Quantum Simulation', 'Hybrid Computing', 'Quantum Security', 'Performance Optimization', 'Integration', 'Training', 'Support'],
+          pricing: 'Starting at $50,000',
+          trial: 'Free quantum assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/quantum-computing',
           popular: false
         }
       ]
@@ -473,16 +541,16 @@ export default function ITServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               IT Services
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">
               Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently. 
               From infrastructure to security, we've got you covered.
             </p>
@@ -550,7 +618,7 @@ export default function ITServicesPage() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                   {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 relative">
+                    <div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
                       {service.popular && (
                         <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                           Popular
@@ -725,23 +793,26 @@ export default function ITServicesPage() {
             Ready to Modernize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Join hundreds of enterprises that have already transformed their IT operations with our solutions.
+            Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href="/contact"
+              href="https://ziontechgroup.com/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
               <MessageSquare className="w-5 h-5 mr-2" />
               Get Started Today
             </a>
             <a
-              href="/consultation"
+              href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
-              <Calendar className="w-5 h-5 mr-2" />
-              Free Consultation
+              <Phone className="w-5 h-5 mr-2" />
+              Call: +1 (302) 464-0950
             </a>
+          </div>
+          <div className="text-gray-200 text-sm">
+            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>
       </section>
