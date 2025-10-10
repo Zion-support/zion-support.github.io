@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Cloud, 
@@ -131,6 +132,22 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive IT solutions for modern businesses',
       services: [
         {
+          name: 'AI Cybersecurity Pro',
+          description: 'Next-generation AI cybersecurity with advanced threat detection',
+          price: 'Starting at $799/mo',
+          features: ['AI Threat Detection', 'Multi-layer Security', '24/7 Monitoring', 'Compliance & Governance'],
+          popular: true,
+          link: '/ai-cybersecurity-pro'
+        },
+        {
+          name: 'AI Cloud Optimization Pro',
+          description: 'Intelligent cloud infrastructure management and optimization',
+          price: 'Starting at $499/mo',
+          features: ['AI-Powered Optimization', 'Real-time Analytics', 'Security & Compliance', 'Automated Scaling'],
+          popular: true,
+          link: '/ai-cloud-optimization-pro'
+        },
+        {
           name: 'Cloud Migration & Setup',
           description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and cost optimization',
           price: 'Starting at $10,000',
@@ -171,6 +188,14 @@ const ServicesPage: React.FC = () => {
       color: 'from-green-500 to-emerald-600',
       description: 'Powerful AI-powered micro SaaS tools for business operations',
       services: [
+        {
+          name: 'AI Smart Calendar Pro',
+          description: 'Intelligent calendar management with AI-powered scheduling',
+          price: '$49/mo',
+          features: ['AI-Powered Scheduling', 'Team Collaboration', 'Automation & Integration', 'Analytics & Insights'],
+          popular: true,
+          link: '/ai-smart-calendar-pro'
+        },
         {
           name: 'AI Project Manager Pro',
           description: 'Intelligent project management with AI insights and predictive analytics',

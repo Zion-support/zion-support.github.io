@@ -48,6 +48,7 @@ const Footer: React.FC = memo(() => {
       title: 'Micro SAAS',
       icon: Code,
       services: [
+        { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar-pro' },
         { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
         { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
         { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
@@ -88,7 +89,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Pricing', href: '/pricing' }
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Investors', href: '/investors' }
   ];
 
   const supportLinks = [
@@ -97,7 +100,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Documentation', href: '/docs' },
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Status Page', href: '/status' },
-    { name: 'System Health', href: '/health' }
+    { name: 'System Health', href: '/health' },
+    { name: 'Knowledge Base', href: '/knowledge-base' },
+    { name: 'Community Forum', href: '/community' }
   ];
 
   const legalLinks = [
@@ -106,7 +111,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR Compliance', href: '/gdpr' },
     { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'Data Processing Agreement', href: '/dpa' },
+    { name: 'Service Level Agreement', href: '/sla' }
   ];
 
   return (
@@ -117,9 +124,9 @@ const Footer: React.FC = memo(() => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="md:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6 group">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 rotate-slow">
                 <Zap className="w-5 h-5 text-white" />
@@ -206,8 +213,8 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-1">
-            <div className="space-y-8">
+          <div className="md:col-span-2 lg:col-span-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
               {/* Company */}
               <div>
                 <h4 className="text-white font-semibold mb-4">Company</h4>
