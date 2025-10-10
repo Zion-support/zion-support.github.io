@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
@@ -113,6 +111,63 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
+    <div className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Our Impact in Numbers
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            See how we've helped businesses transform with our AI solutions
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {statistics.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="w-20 h-20 bg-white/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <stat.icon className={`w-10 h-10 ${stat.color}`} />
+              </div>
+              <div className="text-4xl font-bold mb-2">
+                {stat.value}{stat.suffix}
+              </div>
+              <div className="text-gray-300">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <feature.icon className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+              <p className="text-white/80 text-sm">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold mb-4">Why Choose Zion Tech Group?</h3>
+            <p className="text-white/90">Experience the difference with our comprehensive AI solutions</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <span className="text-white/90">{benefit}</span>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <button className="bg-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-cyan-600 transition-colors duration-200 flex items-center space-x-2 mx-auto">
+              <span>Get Started Today</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>
