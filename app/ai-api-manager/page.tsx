@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
-const PagePage: React.FC = () => {
+const AIAPIManagerPage: React.FC = () => {
   const features = [
     {
       title: 'Feature 1',
@@ -230,4 +230,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default AIAPIManagerPage;
