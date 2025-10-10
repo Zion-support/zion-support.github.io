@@ -1,46 +1,36 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
 
   const slides = [
     {
-      id: 1,
-      title: 'AI-Powered Business Intelligence',
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
-      image: '/images/ai-analytics.jpg',
-      cta: 'Learn More',
-      href: '/ai-services'
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
-      id: 2,
-      title: 'Cloud Infrastructure Solutions',
-      description: 'Scalable, secure, and reliable cloud infrastructure tailored to your business needs.',
-      image: '/images/cloud-infrastructure.jpg',
-      cta: 'Get Started',
-      href: '/it-services'
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
+      features: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']
     },
     {
-      id: 3,
-      title: 'Micro SaaS Applications',
-      description: 'Ready-to-use business tools that solve specific problems with AI and automation.',
-      image: '/images/micro-saas.jpg',
-      cta: 'Explore',
-      href: '/micro-saas'
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards',
+      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring']
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses',
+      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
     }
   ];
-
-  useEffect(() => {
-    if (isPlaying) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % slides.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isPlaying, slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -50,82 +40,78 @@ const ContentCarousel: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <div className="relative bg-slate-900 rounded-lg overflow-hidden">
-      <div className="relative h-96">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-500 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <div className="h-full bg-gradient-to-r from-slate-800 to-slate-900 flex items-center">
-              <div className="w-full px-8 md:px-16">
-                <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                    {slide.title}
-                  </h2>
-                  <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
-                    {slide.description}
-                  </p>
-                  <a
-                    href={slide.href}
-                    className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    {slide.cta}
-                    <ChevronRight className="w-5 h-5 ml-2" />
-                  </a>
+    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We deliver cutting-edge AI and IT solutions that drive real business results
+          </p>
+        </div>
+
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div key={index} className="w-full flex-shrink-0 bg-white/5 backdrop-blur-lg p-12">
+                  <div className="text-center">
+                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-8">
+                      <slide.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-3xl font-bold text-white mb-6">{slide.title}</h3>
+                    <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">{slide.description}</p>
+                    
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                      {slide.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-cyan-400 mr-2 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
 
-      {/* Navigation Controls */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
-        <button
-          onClick={prevSlide}
-          className="p-2 bg-slate-800/50 hover:bg-slate-800 text-white rounded-full transition-colors"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        
-        <button
-          onClick={togglePlayPause}
-          className="p-2 bg-slate-800/50 hover:bg-slate-800 text-white rounded-full transition-colors"
-          aria-label={isPlaying ? 'Pause' : 'Play'}
-        >
-          {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-        </button>
-        
-        <button
-          onClick={nextSlide}
-          className="p-2 bg-slate-800/50 hover:bg-slate-800 text-white rounded-full transition-colors"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-4 right-4 flex space-x-2">
-        {slides.map((_, index) => (
+          {/* Navigation Buttons */}
           <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentSlide ? 'bg-white' : 'bg-white/50'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="flex justify-center mt-8 space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

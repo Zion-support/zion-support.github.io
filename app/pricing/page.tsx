@@ -1,410 +1,137 @@
 'use client';
-import React, { useState } from 'react';
+
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Brain, Cloud, Users, ArrowRight } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
-  const [selectedPlan, setSelectedPlan] = useState('ai');
-
-  const aiPlans = [
+  const plans = [
     {
-      name: 'AI Starter',
-      price: '$299',
+      name: 'Starter',
+      price: '$2,999',
       period: '/month',
       description: 'Perfect for small businesses getting started with AI',
       features: [
-        'AI-Powered Chatbot (up to 1,000 conversations/month)',
-        'Basic AI Analytics Dashboard',
+        'Basic AI Integration',
+        'Cloud Infrastructure Setup',
         'Email Support',
-        'Standard AI Models',
-        'Basic Integration (2 platforms)',
-        'Monthly AI Training Sessions'
+        'Monthly Reports',
+        'Basic Analytics Dashboard'
       ],
-      popular: false,
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-600'
+      popular: false
     },
     {
-      name: 'AI Professional',
-      price: '$799',
+      name: 'Professional',
+      price: '$7,999',
       period: '/month',
-      description: 'Advanced AI solutions for growing businesses',
+      description: 'Ideal for growing companies with advanced needs',
       features: [
-        'Advanced AI Chatbot (unlimited conversations)',
-        'AI Data Analytics with Predictive Insights',
-        'AI Computer Vision (up to 10,000 images/month)',
-        'Priority Support',
-        'Custom AI Model Training',
-        'Advanced Integrations (10 platforms)',
-        'Weekly AI Optimization',
-        'AI Fraud Detection',
-        'Voice AI Processing'
-      ],
-      popular: true,
-      icon: Zap,
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      name: 'AI Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'Comprehensive AI solutions for large enterprises',
-      features: [
-        'All AI Professional Features',
-        'Custom AI Development',
-        'AI Supply Chain Optimization',
-        'AI Healthcare Diagnostics',
-        'AI Financial Modeling',
-        '24/7 Dedicated Support',
-        'Unlimited Integrations',
-        'Daily AI Optimization',
-        'AI Compliance Management',
-        'Custom AI Training Programs',
-        'Dedicated AI Consultant'
-      ],
-      popular: false,
-      icon: Shield,
-      color: 'from-green-500 to-emerald-600'
-    }
-  ];
-
-  const itPlans = [
-    {
-      name: 'IT Essentials',
-      price: '$1,200',
-      period: '/month',
-      description: 'Core IT services for small to medium businesses',
-      features: [
-        'Cloud Infrastructure Management',
-        'Basic Cybersecurity Monitoring',
-        'Database Management (up to 5 databases)',
-        'Email Support',
-        'Monthly Security Reports',
-        'Basic Backup & Recovery',
-        'Network Monitoring'
-      ],
-      popular: false,
-      icon: Cloud,
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      name: 'IT Professional',
-      price: '$2,500',
-      period: '/month',
-      description: 'Comprehensive IT solutions for growing businesses',
-      features: [
-        'Advanced Cloud Infrastructure',
-        'Comprehensive Cybersecurity Suite',
-        'DevOps & CI/CD Pipeline',
-        'Database Management (unlimited)',
-        'Priority Support',
-        'Advanced Backup & Recovery',
-        'Network Infrastructure Management',
-        'IT Consulting (10 hours/month)',
-        'Compliance Management',
-        'Performance Monitoring'
-      ],
-      popular: true,
-      icon: Zap,
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      name: 'IT Enterprise',
-      price: '$5,000',
-      period: '/month',
-      description: 'Full-scale IT solutions for large enterprises',
-      features: [
-        'All IT Professional Features',
-        'Data Center Services',
-        'Advanced Security Services',
-        'Custom Software Development',
-        '24/7 Dedicated Support',
-        'Disaster Recovery Planning',
-        'IT Audit & Compliance',
-        'Unlimited IT Consulting',
-        'Custom Integration Development',
-        'Dedicated IT Manager',
-        'Advanced Analytics & BI'
-      ],
-      popular: false,
-      icon: Shield,
-      color: 'from-green-500 to-emerald-600'
-    }
-  ];
-
-  const saasPlans = [
-    {
-      name: 'SaaS Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Essential micro SaaS tools for small businesses',
-      features: [
-        'Zion Invoice Genius (up to 100 invoices/month)',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        'Standard Templates',
-        'Basic Integrations (3 platforms)',
-        'Monthly Updates'
-      ],
-      popular: false,
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-600'
-    },
-    {
-      name: 'SaaS Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Advanced micro SaaS solutions for growing businesses',
-      features: [
-        'Zion Chat AI (unlimited conversations)',
-        'Zion Analytics Pro (up to 25 users)',
-        'Zion Lead Magnet',
-        'Zion Project Master',
-        'Priority Support',
-        'Advanced Integrations (10 platforms)',
-        'Custom Branding',
-        'API Access',
-        'Advanced Analytics',
-        'Weekly Optimization'
-      ],
-      popular: true,
-      icon: Zap,
-      color: 'from-purple-500 to-pink-600'
-    },
-    {
-      name: 'SaaS Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'Complete micro SaaS suite for large organizations',
-      features: [
-        'All SaaS Professional Features',
-        'Zion Security Shield',
-        'Zion Cloud Vault',
-        'Zion CRM Intelligence',
-        'Zion Workflow Automation',
-        '24/7 Dedicated Support',
-        'Unlimited Users',
-        'White-label Solutions',
+        'Advanced AI Solutions',
         'Custom Development',
-        'Advanced Security',
-        'Dedicated Account Manager',
-        'Custom Training Programs'
+        'Priority Support',
+        'Weekly Reports',
+        'Advanced Analytics',
+        'API Access',
+        'Training Sessions'
       ],
-      popular: false,
-      icon: Shield,
-      color: 'from-green-500 to-emerald-600'
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations',
+      features: [
+        'Custom AI Solutions',
+        'Dedicated Team',
+        '24/7 Support',
+        'Real-time Monitoring',
+        'Custom Integrations',
+        'White-label Options',
+        'On-site Training',
+        'SLA Guarantee'
+      ],
+      popular: false
     }
   ];
-
-  const getCurrentPlans = () => {
-    switch (selectedPlan) {
-      case 'ai': return aiPlans;
-      case 'it': return itPlans;
-      case 'saas': return saasPlans;
-      default: return aiPlans;
-    }
-  };
-
-  const plans = getCurrentPlans();
 
   return (
     <>
       <Helmet>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for AI services, IT solutions, and micro SaaS tools. Choose the perfect plan for your business needs." />
+        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
+        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
+        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Header */}
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Transparent Pricing
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our industry-leading support and regular updates.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Choose the perfect plan for your business needs. All plans include our core AI and IT services.
               </p>
             </div>
 
-            {/* Plan Selector */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <button
-                onClick={() => setSelectedPlan('ai')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  selectedPlan === 'ai'
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                }`}
-              >
-                AI Services
-              </button>
-              <button
-                onClick={() => setSelectedPlan('it')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  selectedPlan === 'it'
-                    ? 'bg-purple-500 text-white'
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                }`}
-              >
-                IT Services
-              </button>
-              <button
-                onClick={() => setSelectedPlan('saas')}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  selectedPlan === 'saas'
-                    ? 'bg-green-500 text-white'
-                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                }`}
-              >
-                Micro SaaS
-              </button>
-            </div>
-
-            {/* Pricing Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {plans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-slate-800/50 rounded-lg p-8 hover:bg-slate-800/70 transition-all duration-300 ${
-                    plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''
+                  className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
+                    plan.popular 
+                      ? 'border-cyan-400/50 scale-105' 
+                      : 'border-white/10 hover:border-cyan-400/30'
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Most Popular
-                      </span>
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">
+                      Most Popular
                     </div>
                   )}
                   
-                  <div className="text-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${plan.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                      <plan.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
+                  <p className="text-gray-300 mb-6">{plan.description}</p>
+                  
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-white">${plan.price}</span>
+                    <span className="text-gray-400 ml-2">/month</span>
                   </div>
 
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{feature}</span>
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <div className="text-center">
-                    <a
-                      href="/contact"
-                      className={`w-full bg-gradient-to-r ${plan.color} hover:opacity-90 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center`}
-                    >
-                      Get Started
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
-                  </div>
+                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
+                      : 'bg-white/10 text-white hover:bg-white/20'
+                  }`}>
+                    {plan.popular ? 'Get Started' : 'Choose Plan'}
+                  </button>
                 </div>
               ))}
             </div>
 
-            {/* Enterprise Section */}
-            <div className="bg-slate-800/50 rounded-lg p-8 text-center mb-16">
-              <h2 className="text-2xl font-bold text-white mb-4">Need a Custom Solution?</h2>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                For enterprise clients with specific requirements, we offer custom solutions tailored to your unique needs. 
-                Contact us for a personalized quote and consultation.
+            <div className="text-center mt-16">
+              <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Contact Sales
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Call: (302) 464-0950
-                </a>
-              </div>
-            </div>
-
-            {/* FAQ Section */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">Can I change plans anytime?</h3>
-                  <p className="text-gray-300">
-                    Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, 
-                    and we'll prorate any billing differences.
-                  </p>
-                </div>
-                <div className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">Is there a free trial?</h3>
-                  <p className="text-gray-300">
-                    Yes, we offer a 14-day free trial for all our plans. No credit card required, 
-                    and you can cancel anytime during the trial period.
-                  </p>
-                </div>
-                <div className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">What support is included?</h3>
-                  <p className="text-gray-300">
-                    All plans include email support. Professional and Enterprise plans include priority support, 
-                    and Enterprise includes 24/7 dedicated support.
-                  </p>
-                </div>
-                <div className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">Do you offer custom pricing?</h3>
-                  <p className="text-gray-300">
-                    Yes, for enterprise clients with specific needs, we offer custom pricing and solutions. 
-                    Contact our sales team to discuss your requirements.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Section */}
-            <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Get Started?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Choose the perfect plan for your business and start transforming your operations with our AI and IT solutions.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Start Free Trial
-                  </a>
-                  <a
-                    href="tel:+13024640950"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  >
-                    Call: (302) 464-0950
-                  </a>
-                </div>
-              </div>
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                Contact Sales
+              </button>
             </div>
           </div>
-        </div>
-      </main>
-      
-      <Footer />
+        </section>
+      </div>
     </>
   );
 };
