@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState, useEffect } from 'react';
-
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [settings, setSettings] = useState({
-    fontSize: 'medium' as 'small' | 'medium' | 'large',
-=======
 import React, { useState, useEffect } from 'react';
 
 interface AccessibilitySettings {
@@ -21,7 +12,6 @@ const EnhancedAccessibility: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     fontSize: 'medium',
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     highContrast: false,
     reducedMotion: false,
     screenReader: false,
@@ -29,66 +19,7 @@ const EnhancedAccessibility: React.FC = () => {
   });
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Add ARIA landmarks
-    const addLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    // Apply accessibility settings
-    const applySettings = () => {
-      const root = document.documentElement;
-      
-      // Font size
-      root.style.setProperty('--font-size', settings.fontSize === 'small' ? '14px' : settings.fontSize === 'large' ? '18px' : '16px');
-      
-      // High contrast
-      if (settings.highContrast) {
-        root.classList.add('high-contrast');
-      } else {
-        root.classList.remove('high-contrast');
-      }
-      
-      // Reduced motion
-      if (settings.reducedMotion) {
-        root.style.setProperty('--animation-duration', '0.01ms');
-        root.style.setProperty('--animation-iteration-count', '1');
-      } else {
-        root.style.removeProperty('--animation-duration');
-        root.style.removeProperty('--animation-iteration-count');
-      }
-    };
-
-    addLandmarks();
-    addSkipLinks();
-    applySettings();
-
-    // Load saved settings
-=======
     // Load settings from localStorage
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       try {

@@ -167,18 +167,6 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-6">Our Benefits</h3>
-              <div className="grid grid-cols-1 gap-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-cyan-400" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-=======
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Benefits & Perks</h2>
@@ -192,7 +180,6 @@ const CareersPage: React.FC = () => {
                   <p className="text-white font-medium">{benefit}</p>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
 
@@ -268,25 +255,6 @@ const CareersPage: React.FC = () => {
           </div>
 
           {/* CTA Section */}
-<<<<<<< HEAD
-          <div className="text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Don't See Your Role?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We're always looking for talented individuals who share our passion for innovation. 
-                Send us your resume and let us know how you'd like to contribute.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Send Resume
-                </button>
-                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn About Our Culture
-                </button>
-              </div>
-=======
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
             <h2 className="text-4xl font-bold text-white mb-4">
               Don't See Your Role?
@@ -308,7 +276,6 @@ const CareersPage: React.FC = () => {
               >
                 Learn About Us
               </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

@@ -156,15 +156,6 @@ const EnterprisePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center mb-4">
-            {enterpriseFeatures.map((feature, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"></div>
-                <div className="flex items-center mb-4"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
@@ -183,17 +174,6 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Solutions Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-      {/* Industries */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Solutions
             </h2>
@@ -202,33 +182,6 @@ const EnterprisePage: React.FC = () => {
             </p>
           </div>
           
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <solution.icon className="w-12 h-12 text-purple-400 mr-4" />
-                  <h3 className="text-2xl font-semibold text-white">{solution.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-6">{solution.description}</p>
-                <ul className="space-y-3">
-                  {solution.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {benefit}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (</div>
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"></div>
-                <industry.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">{industry.name}</h3>
-                <p className="text-gray-300 mb-4">{industry.description}</p>
-                <ul className="space-y-2">
-                  {industry.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                     </li>
                   ))}
                 </ul>
@@ -240,80 +193,6 @@ const EnterprisePage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Enterprise Solutions?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our enterprise solutions are designed to meet the unique challenges of large organizations, 
-                providing the scalability, security, and performance you need to succeed.
-              </p>
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Get Started Today</h3>
-              <p className="text-gray-300 mb-6">
-                Ready to transform your enterprise? Contact our experts to discuss your requirements 
-                and get a customized solution that fits your business needs.
-              </p>
-              <div className="space-y-4">
-                <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
-                  Schedule Consultation
-                </button>
-                <button className="w-full border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
-                  Download Brochure
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your organization's needs.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (</div>
-              <div key={index} className={`bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${tier.popular ? 'border-purple-400 bg-purple-500/10' : 'border-white/10'} hover:bg-white/10 transition-all duration-300`}>
-                {tier.popular && (</div>
-                  <div className="text-center mb-4"></div>
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6"></div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <div className="text-4xl font-bold text-purple-400 mb-2">
-                    {tier.price}</div>
-                    <span className="text-lg text-gray-400">{tier.period}</span>
-                  </div>
-                  <p className="text-gray-300">{tier.description}</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  tier.popular 
-                    ? 'bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white' 
-                    : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
-                }`}>
-                  {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </button>
               </div>
             </div>

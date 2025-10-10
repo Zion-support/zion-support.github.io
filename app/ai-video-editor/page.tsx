@@ -39,60 +39,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-    <ErrorBoundary></ErrorBoundar>
-      <SEOHead 
-        title="AI Video Editor Pro - Automated Video Editing | Zion Tech Group"
-        description="Create professional videos with AI-powered editing tools. Automated cutting, effects, and optimization. Starting at $149/month."
-        keywords="AI video editor, automated video editing, video AI, video production, AI video tools, video automation"
-        canonical="https://ziontechgroup.com/ai-video-editor"
-      /></SEOHea>
-      <Navigation /></Navigatio>
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></mai>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto"></section>
-            <div className="text-center"></div>
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-6"></div>
-                <Video className="w-4 h-4 mr-2" />
-                AI Video Technology
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
-                AI Video Editor</h1>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                  Professional Video Production
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto">
-                Create professional videos with AI-powered editing tools. Automated cutting, effects, 
-                and optimization for content creators and businesses.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <a 
-                  href="#pricing" 
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
-                ></a></<<<a>Start</a></<<a>Free</a> Trial
-                  <ArrowRight className="ml-2 w-5 h-5" /></ArrowRigh>
-                </a>
-                <a 
-                  href="#demo" 
-                  className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-                ></a>
-                  <Play className="mr-2 w-5 h-5" /></Play></<<<Play>Watch</Play></<<Play>Demo</Play>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -192,17 +138,6 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-    </div>
-        </section>
-      </main>
-
-      <Footer /></Footer>
-    </ErrorBoundary>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 

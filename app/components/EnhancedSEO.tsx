@@ -3,65 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-const EnhancedSEOPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-interface EnhancedSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  noIndex?: boolean;
-  noFollow?: boolean;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  locale?: string;
-  alternateLocales?: string[];
-  robots?: string;
-  viewport?: string;
-  themeColor?: string;
-  colorScheme?: string;
-  preload?: Array<{
-    href: string;,
-    as: string,
-    type?: string;}>;
-  prefetch?: Array<{
-    href: string;,
-    as: string,
-  }>;
-  dnsPrefetch?: string[];
-  preconnect?: string[];
-}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
   const benefits = [
     'Advanced AI technology integration',
