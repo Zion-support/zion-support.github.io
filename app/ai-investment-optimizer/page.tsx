@@ -795,7 +795,8 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
           { action: 'Buy', symbol: 'AAPL', shares: 25, reason: 'Strong fundamentals and growth potential' },
           { action: 'Sell', symbol: 'META', shares: 10, reason: 'High volatility and regulatory concerns' },
           { action: 'Hold', symbol: 'MSFT', shares: 50, reason: 'Stable performance and dividend yield' }
-        ];
+        ]
+      });
 
       setIsOptimizing(false);
     }, 3000);
