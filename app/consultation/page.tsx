@@ -109,7 +109,7 @@ const ConsultationPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real app, this would submit the form data
-    console.log('Form submitted:', formData);
+    // Form submitted successfully
     alert('Thank you for your interest! We will contact you within 24 hours.');
   };
 
