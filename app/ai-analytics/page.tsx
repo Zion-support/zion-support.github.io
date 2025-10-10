@@ -419,11 +419,13 @@ const AIAnalyticsPage: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <feature.icon className="w-6 h-6 text-white" />
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2" role="list">{feature.benefits.map((benefit, idx) => (</ul>
                     <li key={idx} className="flex items-center text-sm text-gray-400" style={{ color: "#9CA3AF" }}>
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" >{benefit}</CheckCircle>
-                    </CheckCircle>
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      {benefit}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -457,6 +459,7 @@ const AIAnalyticsPage: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4"></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <type.icon className="w-6 h-6 text-white" />
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
                 <p className="text-gray-300 mb-4">{type.description}</p><ul className="space-y-1" role="list">{type.metrics.map((metric, idx) => (<li key={idx} className="text-sm text-gray-400" style={{ color: "#9CA3AF" }}>• {metric}</li>
                   ))}

@@ -186,8 +186,8 @@ const AIAutonomousSystemsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="cyber-button px-8 py-4 text-lg">Build Autonomous Systems</a>
                 <ArrowRight className="w-5 h-5 ml-2" />
-              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">View Demo</a>
               </a>
+              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">View Demo</a>
             </div>
           </div>
 
@@ -267,8 +267,9 @@ const AIAutonomousSystemsPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, idx) => (</ul>
                     <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" >{benefit}</CheckCircle>
-                    </CheckCircle>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
                   ))}
                 </ul>
               </div>

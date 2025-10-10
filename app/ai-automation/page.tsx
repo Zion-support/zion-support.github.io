@@ -240,7 +240,8 @@ const AIAutomationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <Navigation />
         <main className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">{/* Hero Section */}</div>
+          <div className="max-w-7xl mx-auto">
+            {/* Hero Section */}
             <section className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">AI Automation</h1><p className="text-xl text-cyan-400 mb-8">Intelligent process automation with decision-making capabilities</p><p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">Transform your business operations with cutting-edge AI automation. Achieve 80% efficiency increase,</p>
                 60% time savings, and zero human error with our intelligent automation platform.</p>
@@ -275,6 +276,7 @@ const AIAutomationPage: React.FC = () => {
 <<<<<<< HEAD
                 >Get Started</a>
                   <ArrowRight className="w-5 h-5 ml-2" />
+                </a>
                 <a
                   href="/demo"
                   className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 inline-flex items-center"
@@ -372,8 +374,9 @@ const AIAutomationPage: React.FC = () => {
                           {feature.benefits.map((benefit, benefitIndex) => (}
 >>>>>>> origin/merge-error-fixes
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
-                            </CheckCircle>
+                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                              {benefit}
+                            </li>
                           ))}
                         </ul>
                       </div>
