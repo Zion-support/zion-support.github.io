@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Star, Users, MapPin, Clock, CheckCircle } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -23,6 +24,13 @@ const CareersPage: React.FC = () => {
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
     {
+      title: 'DevOps Engineer',
+      department: 'Engineering',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Build and maintain CI/CD pipelines and infrastructure automation.',
+      requirements: ['Docker, Kubernetes', '4+ years DevOps experience', 'Cloud platform expertise']
     }
   ];
 
@@ -129,8 +137,6 @@ const CareersPage: React.FC = () => {
 
                 </div>
               ))}
-            </div>
-
             </div>
           </div>
         </section>
