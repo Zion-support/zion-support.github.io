@@ -1,12 +1,9 @@
 'use client';
 import React from 'react';
 import React, { memo, useMemo } from 'react';
-<<<<<<< HEAD
 interface OptimizedLoadingSpinnerProps {
-=======
 ;
 interface OptimizedLoadingSpinnerProps {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
   text?: string;
@@ -14,7 +11,6 @@ interface OptimizedLoadingSpinnerProps {;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   fullScreen?: boolean;}
 }
-<<<<<<< HEAD
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',
@@ -60,7 +56,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2].map(i => (</div>
                 <div
-=======
 ;
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
   ({;
@@ -110,40 +105,33 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>;
               {[0, 1, 2].map(i => (</div>;
                 <div;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   key={i}
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
                 /></div>;
               ))}</div>;
           );
-<<<<<<< HEAD
         case 'pulse':
           return (
             <div
-=======
 ;
         case 'pulse':;
           return (;
             <div;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               className={`${baseClasses} rounded-full animate-pulse`}
               role='status';
               aria-label='Loading';
             /></div>;
           );
-<<<<<<< HEAD
         case 'skeleton':
           return (</div>
             <div className='space-y-2' role='status' aria-label='Loading'></div>
               <div
-=======
 ;
         case 'skeleton':;
           return (</div>;
             <div className='space-y-2' role='status' aria-label='Loading'></div>;
               <div;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
               /></div>;
               <div;
@@ -155,20 +143,17 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
                 style={{ width: '50%' }}
               /></div>;
           );
-<<<<<<< HEAD
         case 'bars':
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2, 3].map(i => (</div>
                 <div
-=======
 ;
         case 'bars':;
           return (;
             <div className='flex space-x-1' role='status' aria-label='Loading'></div>;
               {[0, 1, 2, 3].map(i => (</div>;
                 <div;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{;}
@@ -178,18 +163,15 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
                 /></div>;
               ))}</div>;
           );
-<<<<<<< HEAD
         case 'spinner':
         default:
           return (
             <div
-=======
 ;
         case 'spinner':;
         default:;
           return (;
             <div;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status';
               aria-label='Loading';
@@ -197,13 +179,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
-<<<<<<< HEAD
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
     return (</div>
       <div className={containerClasses}></div>
         <div className='text-center'>
-=======
 ;
     const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
@@ -211,7 +191,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
     return (</div>;
       <div className={containerClasses}></div>;
         <div className='text-center'></div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {renderSpinner}
           {text && (</div>;}
             <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>;
@@ -222,14 +201,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
     );
   }
 );
-<<<<<<< HEAD
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;
   </OptimizedLoadingSpinnerProps>
-=======
 ;
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 ;
 export default OptimizedLoadingSpinner;
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
   ];
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -63,7 +62,6 @@ import React from 'react';
 export default PagePage;
   </button>
   </button>
-=======
 ;
   const benefits = [;
     'Advanced AI technology integration',;
@@ -126,4 +124,3 @@ export default PagePage;
 };
 ;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

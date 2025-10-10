@@ -2,9 +2,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
-=======
 import { 
   Cloud, 
   Shield, 
@@ -34,384 +32,40 @@ import {
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const ItServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const itServices = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    {
-      id: 1,
-      title: 'Cloud Infrastructure & Migration',
-      description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services.',
-      icon: Cloud,
-      category: 'Cloud',
-      features: [
-        'Cloud architecture design',
-        'Multi-cloud strategies',
-        'Cost optimization',
-        'Disaster recovery',
-        'Auto-scaling solutions',
-        'Security compliance'
-      ],
-      price: 'Starting at $2,500/month',
-      marketPrice: '$4000-15000/month',
-      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support']
-    },
-    {
-      id: 2,
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security services including threat detection, compliance, and incident response.',
-      icon: Shield,
-      category: 'Security',
-      features: [
-        'Threat detection & response',
-        'Vulnerability assessments',
-        'Penetration testing',
-        'Security monitoring',
-        'Compliance management',
-        'Employee training'
-      ],
-      price: 'Starting at $1,800/month',
-      marketPrice: '$3000-12000/month',
-      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team']
-    },
-    {
-      id: 3,
-      title: 'DevOps & CI/CD',
-      description: 'Modern development operations with automated deployment, monitoring, and infrastructure as code.',
-      icon: Settings,
-      category: 'DevOps',
-      features: [
-        'CI/CD pipeline setup',
-        'Infrastructure as Code',
-        'Container orchestration',
-        'Monitoring & logging',
-        'Automated testing',
-        'Deployment automation'
-      ],
-      price: 'Starting at $2,200/month',
-      marketPrice: '$3500-10000/month',
-      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows']
-    },
-    {
-      id: 4,
-      title: 'Database Management',
-      description: 'Expert database design, optimization, and management for all major database systems.',
-      icon: Database,
-      category: 'Database',
-      features: [
-        'Database design & optimization',
-        'Performance tuning',
-        'Backup & recovery',
-        'Data migration',
-        'Security hardening',
-        'Monitoring & maintenance'
-      ],
-      price: 'Starting at $1,200/month',
-      marketPrice: '$2000-8000/month',
-      benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support']
-    },
-    {
-      id: 5,
-      title: 'IT Infrastructure Management',
-      description: 'Complete infrastructure setup and management including servers, networks, and hardware.',
-      icon: Server,
-      category: 'Infrastructure',
-      features: [
-        'Server setup & configuration',
-        'Network design & implementation',
-        'Hardware procurement',
-        'System administration',
-        'Performance monitoring',
-        'Capacity planning'
-      ],
-      price: 'Starting at $1,500/month',
-      marketPrice: '$2500-10000/month',
-      benefits: ['Reliable infrastructure', 'Proactive monitoring', 'Cost optimization', 'Expert administration']
-    },
-    {
-      id: 6,
-      title: 'Managed IT Services',
-      description: 'Comprehensive IT support and management including helpdesk, maintenance, and monitoring.',
-      icon: Headphones,
-      category: 'Support',
-      features: [
-        '24/7 helpdesk support',
-        'Remote monitoring',
-        'Proactive maintenance',
-        'Software management',
-        'User support',
-        'Incident management'
-      ],
-      price: 'Starting at $800/month',
-      marketPrice: '$1200-5000/month',
-      benefits: ['Reduced IT costs', 'Improved uptime', 'Expert support', 'Proactive maintenance']
-    },
-    {
-      id: 7,
-      title: 'Web Development',
-      description: 'Custom web applications and websites built with modern technologies and best practices.',
-      icon: Globe,
-      category: 'Development',
-      features: [
-        'Custom web applications',
-        'Responsive design',
-        'E-commerce solutions',
-        'API development',
-        'Performance optimization',
-        'Security implementation'
-      ],
-      price: 'Starting at $5,000/project',
-      marketPrice: '$8000-50000/project',
-      benefits: ['Modern technology stack', 'Mobile-responsive design', 'SEO optimization', 'Security best practices']
-    },
-    {
-      id: 8,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android with modern UI/UX.',
-      icon: Smartphone,
-      category: 'Development',
-      features: [
-        'iOS & Android apps',
-        'Cross-platform development',
-        'UI/UX design',
-        'App store optimization',
-        'Push notifications',
-        'Offline capabilities'
-      ],
-      price: 'Starting at $8,000/project',
-      marketPrice: '$15000-100000/project',
-      benefits: ['Native performance', 'Cross-platform compatibility', 'Modern UI/UX', 'App store optimization']
-    },
-    {
-      id: 9,
-      title: 'Data Analytics & BI',
-      description: 'Business intelligence solutions with data visualization, reporting, and analytics.',
-      icon: BarChart3,
-      category: 'Analytics',
-      features: [
-        'Data visualization',
-        'Business intelligence',
-        'Custom dashboards',
-        'Data warehousing',
-        'Predictive analytics',
-        'Report automation'
-      ],
-      price: 'Starting at $1,800/month',
-      marketPrice: '$3000-15000/month',
-      benefits: ['Data-driven insights', 'Custom dashboards', 'Automated reporting', 'Predictive analytics']
-    },
-    {
-      id: 10,
-      title: 'Network Solutions',
-      description: 'Complete network design, implementation, and management including LAN, WAN, and wireless.',
-      icon: Network,
-      category: 'Networking',
-      features: [
-        'Network design & implementation',
-        'Wireless solutions',
-        'VPN setup',
-        'Network security',
-        'Performance optimization',
-        'Monitoring & maintenance'
-      ],
-      price: 'Starting at $1,000/month',
-      marketPrice: '$1500-6000/month',
-      benefits: ['Reliable connectivity', 'Enhanced security', 'Performance optimization', 'Expert management']
-    },
-    {
-      id: 11,
-      title: 'IT Consulting',
-      description: 'Strategic IT consulting to help plan, implement, and optimize your technology infrastructure.',
-      icon: Users,
-      category: 'Consulting',
-      features: [
-        'IT strategy planning',
-        'Technology assessment',
-        'Digital transformation',
-        'Vendor management',
-        'Project management',
-        'Change management'
-      ],
-      price: 'Starting at $200/hour',
-      marketPrice: '$300-500/hour',
-      benefits: ['Strategic guidance', 'Technology expertise', 'Cost optimization', 'Digital transformation']
-    },
-    {
-      id: 12,
-      title: 'Process Automation',
-      description: 'Workflow automation solutions to streamline business processes and improve efficiency.',
-      icon: Zap,
-      category: 'Automation',
-      features: [
-        'Workflow automation',
-        'Process optimization',
-        'Integration solutions',
-        'Document management',
-        'Task automation',
-        'Performance monitoring'
-      ],
-      price: 'Starting at $1,500/month',
-      marketPrice: '$2500-8000/month',
-      benefits: ['Improved efficiency', 'Reduced errors', 'Cost savings', 'Scalable automation']
-=======
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
     { 
       name: 'Cloud Infrastructure & Migration', 
       href: '/cloud-services', 
       icon: Cloud, 
-<<<<<<< HEAD
-      description: 'Complete cloud solutions including AWS, Azure, and GCP migration and management',
-      price: 'Starting at $2,500/month',
-      features: ['Cloud architecture design', 'Migration planning & execution', 'Cost optimization', 'Security compliance', '24/7 monitoring', 'Disaster recovery']
-=======
-      description: 'Complete cloud solutions including AWS, Azure, GCP setup, migration, and optimization',
-      price: '$2,000 - $50,000',
-      features: ['Cloud architecture design', 'Migration planning & execution', 'Cost optimization', 'Security compliance']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
     },
     { 
       name: 'DevOps & CI/CD Pipeline', 
       href: '/devops', 
       icon: Settings, 
-<<<<<<< HEAD
-      description: 'Automated development workflows and deployment pipelines for faster delivery',
-      price: 'Starting at $3,000/month',
-      features: ['CI/CD pipeline setup', 'Container orchestration', 'Infrastructure as Code', 'Automated testing', 'Deployment automation', 'Performance monitoring']
-    },
-    { 
-      name: 'Database Management & Optimization', 
-      href: '/database', 
-      icon: Database, 
-      description: 'Comprehensive database services including design, optimization, and maintenance',
-      price: 'Starting at $1,800/month',
-      features: ['Database design & architecture', 'Performance optimization', 'Backup & recovery', 'Security hardening', 'Migration services', '24/7 support']
-=======
-      description: 'Automated deployment pipelines, infrastructure as code, and continuous integration',
-      price: '$3,000 - $25,000',
-      features: ['Docker & Kubernetes', 'Jenkins/GitLab CI', 'Infrastructure automation', 'Monitoring & alerting']
-    },
-    { 
-      name: 'Database Design & Optimization', 
-      href: '/database', 
-      icon: Database, 
-      description: 'Database architecture, performance tuning, and data migration services',
-      price: '$1,500 - $20,000',
-      features: ['Database design', 'Performance optimization', 'Data migration', 'Backup & recovery']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
     },
     { 
       name: 'Cybersecurity Solutions', 
       href: '/cybersecurity', 
       icon: Shield, 
-<<<<<<< HEAD
-      description: 'Advanced security solutions to protect your digital assets and ensure compliance',
-      price: 'Starting at $4,000/month',
-      features: ['Security assessment', 'Threat detection', 'Vulnerability management', 'Compliance auditing', 'Incident response', 'Security training']
-=======
-      description: 'Comprehensive security assessment, implementation, and monitoring services',
-      price: '$5,000 - $100,000',
-      features: ['Security audits', 'Penetration testing', 'Compliance (SOC2, GDPR)', 'Incident response']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
     },
     { 
       name: 'Managed IT Services', 
       href: '/managed-it', 
       icon: Settings, 
-<<<<<<< HEAD
-      description: 'Complete IT management including helpdesk, monitoring, and maintenance',
-      price: 'Starting at $2,200/month',
-      features: ['24/7 helpdesk support', 'Proactive monitoring', 'Patch management', 'Asset management', 'User training', 'Vendor management']
-=======
-      description: '24/7 IT support, monitoring, and maintenance for your entire infrastructure',
-      price: '$500 - $5,000/month',
-      features: ['24/7 monitoring', 'Proactive maintenance', 'Help desk support', 'Security updates']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
     },
     { 
       name: 'IT Strategy & Consulting', 
       href: '/it-consulting', 
       icon: Globe, 
-<<<<<<< HEAD
-      description: 'Strategic IT consulting to align technology with business objectives',
-      price: 'Starting at $1,500/month',
-      features: ['Technology roadmap', 'Vendor evaluation', 'Cost analysis', 'Digital transformation', 'Change management', 'Training programs']
-    },
-    { 
-      name: 'Data Analytics & Business Intelligence', 
-      href: '/data-analytics', 
-      icon: Database, 
-      description: 'Transform your data into actionable insights with advanced analytics solutions',
-      price: 'Starting at $2,800/month',
-      features: ['Data warehouse design', 'ETL/ELT processes', 'Dashboard development', 'Predictive analytics', 'Data governance', 'Real-time reporting']
-    },
-    { 
-      name: 'Mobile Application Development', 
-      href: '/mobile-development', 
-      icon: Smartphone, 
-      description: 'Native and cross-platform mobile applications for iOS and Android',
-      price: 'Starting at $8,000/project',
-      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI/UX design', 'API integration', 'App store deployment', 'Maintenance & updates']
-=======
-      description: 'Strategic IT planning, digital transformation, and technology roadmap development',
-      price: '$2,000 - $30,000',
-      features: ['IT strategy planning', 'Digital transformation', 'Technology assessment', 'Vendor management']
-    },
-    { 
-      name: 'Data Analytics & BI', 
-      href: '/data-analytics', 
-      icon: Database, 
-      description: 'Business intelligence solutions, data warehousing, and advanced analytics',
-      price: '$3,000 - $40,000',
-      features: ['Data warehousing', 'BI dashboards', 'Predictive analytics', 'Data visualization']
-    },
-    { 
-      name: 'Mobile App Development', 
-      href: '/mobile-development', 
-      icon: Smartphone, 
-      description: 'Native and cross-platform mobile applications for iOS and Android',
-      price: '$10,000 - $150,000',
-      features: ['Native iOS/Android', 'Cross-platform (React Native)', 'UI/UX design', 'App store deployment']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
     },
     { 
       name: 'Web Application Development', 
       href: '/web-development', 
       icon: Globe, 
-<<<<<<< HEAD
-      description: 'Custom web applications and e-commerce solutions built with modern technologies',
-      price: 'Starting at $6,000/project',
-      features: ['Custom web applications', 'E-commerce solutions', 'API development', 'Responsive design', 'Performance optimization', 'SEO optimization']
-    },
-    { 
-      name: 'Process Automation & RPA', 
-      href: '/process-automation', 
-      icon: Zap, 
-      description: 'Automate repetitive business processes to improve efficiency and reduce costs',
-      price: 'Starting at $3,500/month',
-      features: ['Process analysis', 'Automation design', 'RPA implementation', 'Workflow optimization', 'Integration services', 'Training & support']
-    },
-    { 
-      name: 'Network Infrastructure & Security', 
-      href: '/network-solutions', 
-      icon: Globe, 
-      description: 'Complete network design, implementation, and security solutions',
-      price: 'Starting at $2,000/month',
-      features: ['Network design & implementation', 'Firewall configuration', 'VPN setup', 'Wireless solutions', 'Network monitoring', 'Security hardening']
-    },
-    { 
-      name: 'IT Support & Helpdesk', 
-      href: '/it-support', 
-      icon: Settings, 
-      description: 'Comprehensive IT support services for all your technology needs',
-      price: 'Starting at $1,200/month',
-      features: ['24/7 technical support', 'Remote assistance', 'Hardware maintenance', 'Software installation', 'User training', 'Issue resolution']
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
       description: 'Custom web applications, e-commerce platforms, and enterprise solutions',
       price: '$5,000 - $100,000',
       features: ['Custom web apps', 'E-commerce platforms', 'API development', 'Performance optimization']
@@ -439,7 +93,6 @@ const ItServicesPage: React.FC = () => {
       description: 'Comprehensive backup solutions and disaster recovery planning',
       price: '$1,000 - $15,000',
       features: ['Backup solutions', 'Disaster recovery planning', 'Business continuity', 'Testing & validation']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
     }
   ];
 
@@ -459,25 +112,19 @@ const ItServicesPage: React.FC = () => {
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
   ];
   return (
-<<<<<<< HEAD
     <React.Fragment>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <Helmet>
         <title>IT Services - Zion Tech Group | Comprehensive Information Technology Solutions</title>
         <meta name="description" content="Complete IT services including cloud solutions, cybersecurity, infrastructure management, DevOps, and more. Expert IT support and consulting for modern businesses." />
         <meta name="keywords" content="IT services, cloud solutions, cybersecurity, IT infrastructure, managed IT, IT consulting, DevOps, database management, web development" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
       
       <Navigation />
       
       <main className="pt-20">
         {/* Hero Section */}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -503,21 +150,12 @@ const ItServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (
                 <div
                   key={index}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  to={service.href}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
-=======
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group"
-                >
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
                   <service.icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" />
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {service.name}
@@ -535,7 +173,6 @@ const ItServicesPage: React.FC = () => {
                   <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     <span className="text-sm font-medium">Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-=======
 
         {/* Stats Section */}
         <section className="py-16 px-4">
@@ -545,14 +182,7 @@ const ItServicesPage: React.FC = () => {
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
                     {stat.icon}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
-<<<<<<< HEAD
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
-=======
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group hover:bg-slate-800/70"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -579,16 +209,13 @@ const ItServicesPage: React.FC = () => {
                     <span>Get Quote</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-1dd1
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
     </React.Fragment>
-=======
 
         {/* Search and Filter Section */}
         <section className="py-10 px-4 sm:px-6 lg:px-8">
@@ -748,7 +375,6 @@ const ItServicesPage: React.FC = () => {
       
       <Footer />
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
 export default ItServicesPage;

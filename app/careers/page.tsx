@@ -3,12 +3,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Zap } from 'lucide-react';
-=======
 import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 interface JobPosition {
   id: string;
   title: string;
@@ -22,10 +19,7 @@ interface JobPosition {
   posted: string;
   featured: boolean;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
     {
@@ -35,11 +29,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
-<<<<<<< HEAD
 description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-=======
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       requirements: [
         '5+ years experience in AI/ML development',
         'Expertise in Python, TensorFlow, PyTorch',
@@ -64,9 +55,7 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-<<<<<<< HEAD
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
-=======
       requirements: [
         '7+ years experience in cloud architecture',
         'Expertise in AWS, Azure, and GCP',
@@ -153,11 +142,9 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       icon: <Award className="w-8 h-8 text-purple-600" />,
       title: 'Innovation',
       description: 'We embrace innovation and continuously push the boundaries of what\'s possible with technology.'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     }
   ];
   const benefits = [
-<<<<<<< HEAD
     'Competitive salary and equity',
     'Comprehensive health insurance',
     'Flexible work arrangements',
@@ -216,7 +203,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
       label: 'Glassdoor Rating',
       description: 'Highly rated workplace'
     }
-=======
     'Competitive salary and equity participation',
     'Comprehensive health, dental, and vision insurance',
     '401k with company matching',
@@ -227,7 +213,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
     'Team building events and company retreats',
     'Mentorship and career growth opportunities',
     'Wellness programs and gym memberships'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   ];
   return (
     <div className="min-h-screen bg-gray-50">
@@ -236,7 +221,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
         <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore career opportunities in AI, cloud computing, and cybersecurity." />
         <meta name="keywords" content="tech careers, AI jobs, cloud computing jobs, cybersecurity careers, remote work" />
       </Helmet>
-<<<<<<< HEAD
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -288,66 +272,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                   <div className="text-gray-400 text-sm">{item.label}</div>
                   <div className="text-gray-500 text-xs mt-1">{item.description}</div>
                 </div>
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Company Values */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Values</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                These core values guide everything we do and shape our company culture.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
-                  <div className={`w-16 h-16 ${value.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center`}>
-                    <value.icon className="w-8 h-8" />
-=======
-
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Join Our Team
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Be part of a team that's shaping the future of technology and transforming businesses worldwide
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <div className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2" />
-                <span>Remote & On-site</span>
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-2" />
-                <span>Flexible Hours</span>
-              </div>
-              <div className="flex items-center">
-                <Briefcase className="w-4 h-4 mr-2" />
-                <span>Growth Opportunities</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Values */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Our Values</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {companyValues.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    {value.icon}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-gray-900">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>
@@ -355,191 +279,11 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-        {/* Benefits */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Benefits & Perks</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We offer comprehensive benefits and perks to support our team members' well-being and growth.
-              </p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-=======
-        </div>
-      </section>
-
-      {/* Benefits */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Why Work With Us</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Open Positions */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Open Positions</h2>
-            
-            {openPositions.length === 0 ? (
-              <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">No open positions at the moment. Check back soon!</p>
-              </div>
-            ) : (
-              <div className="space-y-8">
-                {openPositions.map((position) => (
-                  <div key={position.id} className={`bg-white rounded-xl shadow-lg p-8 border-l-4 ${position.featured ? 'border-blue-500' : 'border-gray-300'}`}>
-                    {position.featured && (
-                      <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 mb-4">
-                        <Star className="w-4 h-4 mr-1" />
-                        Featured
-                      </div>
-                    )}
-                    
-                    <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}</h3>
-                        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-4">
-                          <div className="flex items-center">
-                            <Briefcase className="w-4 h-4 mr-2" />
-                            <span>{position.department}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <MapPin className="w-4 h-4 mr-2" />
-                            <span>{position.location}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <Clock className="w-4 h-4 mr-2" />
-                            <span>{position.type}</span>
-                          </div>
-                          <div className="flex items-center">
-                            <GraduationCap className="w-4 h-4 mr-2" />
-                            <span>{position.experience}</span>
-                          </div>
-                        </div>
-                        <p className="text-gray-700 mb-4">{position.description}</p>
-                      </div>
-                      <div className="mt-4 lg:mt-0 lg:ml-6">
-                        <span className="text-sm text-gray-500">Posted {position.posted}</span>
-                      </div>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-8 mb-6">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Requirements</h4>
-                        <ul className="space-y-2">
-                          {position.requirements.map((req, index) => (
-                            <li key={index} className="flex items-start">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-1 flex-shrink-0" />
-                              <span className="text-gray-700 text-sm">{req}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-3">Benefits</h4>
-                        <ul className="space-y-2">
-                          {position.benefits.map((benefit, index) => (
-                            <li key={index} className="flex items-start">
-                              <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-1 flex-shrink-0" />
-                              <span className="text-gray-700 text-sm">{benefit}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4">
-                      <button className="flex-1 sm:flex-none bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
-                        Apply Now <ArrowRight className="w-4 h-4 ml-2" />
-                      </button>
-                      <button className="flex-1 sm:flex-none border border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-lg font-medium transition-colors duration-200">
-                        View Details
-                      </button>
-                    </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                 ))}
               </div>
             )}
           </div>
-<<<<<<< HEAD
-        </section>
-        {/* Open Positions */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Open Positions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Explore our current job openings and find the perfect role for you.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {openPositions.map((position) => (
-                <div
-                  key={position.id}
-                  className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                    position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20'
-                  } hover:border-purple-400 transition-all duration-300 group`}
-                >
-                  {position.featured && (
-                    <div className="flex items-center gap-2 mb-4">
-                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                      <span className="text-yellow-400 text-sm font-semibold">Featured Position</span>
-                    </div>
-                  )}
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-                        {position.title}
-                      </h3>
-                      <p className="text-gray-300">{position.department}</p>
-                    </div>
-                    <span className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full">
-                      {position.type}
-                    </span>
-                  </div>
-                  <p className="text-gray-300 mb-6">{position.description}</p>
-                  <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
-                    <div className="flex items-center gap-1">
-                      <MapPin className="w-4 h-4" />
-                      <span>{position.location}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
-                      <span>{position.experience}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Users className="w-4 h-4" />
-                      <span>Posted {position.posted}</span>
-                    </div>
-                  </div>
-                  <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                    Apply Now;
-  </
-                </div>
-<p className="text-gray-300 mb-4">{position.description}</p>
-=======
-                <p className="text-gray-300 mb-4">{position.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
@@ -557,33 +301,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                 </button>
               </div>
             ))}
-<<<<<<< HEAD
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Don't See Your Dream Job?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our mission.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                  <Zap className="w-5 h-5" />
-                  Send Resume;
-  </
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  Contact Us;
-  </
-              </div>
-            </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
           </div>
         </div>
       </section>
@@ -621,7 +338,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-=======
         </div>
       </section>
 
@@ -641,7 +357,6 @@ description: 'Lead the development of cutting-edge AI solutions and machine lear
                 Contact Us
               </button>
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
       </section>

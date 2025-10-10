@@ -15,13 +15,10 @@ const ContactPage: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-<<<<<<< HEAD
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
 
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -30,11 +27,8 @@ const ContactPage: React.FC = () => {
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-<<<<<<< HEAD
-=======
     setSubmitStatus('idle');
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -56,8 +50,6 @@ const ContactPage: React.FC = () => {
       setIsSubmitting(false);
     }
   }, []);
-<<<<<<< HEAD
-=======
 
   const services = [
     'AI Solutions',
@@ -69,7 +61,6 @@ const ContactPage: React.FC = () => {
     'Other'
   ];
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -77,7 +68,6 @@ const ContactPage: React.FC = () => {
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support." />
         <meta name="keywords" content="contact, AI solutions, IT consulting, support, consultation" />
       </Helmet>
-<<<<<<< HEAD
       <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -116,7 +106,6 @@ const ContactPage: React.FC = () => {
               )}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
       
       <Navigation />
       
@@ -220,7 +209,6 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
@@ -256,7 +244,6 @@ const ContactPage: React.FC = () => {
                       placeholder="Tell us about your project..."
                     />
                   </div>
-<<<<<<< HEAD
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
@@ -401,7 +388,6 @@ const ContactPage: React.FC = () => {
                     <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
                     <p className="text-gray-300">Sunday: Closed</p>
                   </div>
-=======
 
                   <button
                     type="submit"
@@ -495,24 +481,19 @@ const ContactPage: React.FC = () => {
                       Proven track record of success
                     </li>
                   </ul>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
-=======
         </section>
       </main>
       
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <Footer />
     </div>
   );
 };
-<<<<<<< HEAD
 export default ContactPage;
   </textarea>
   </label>
@@ -520,7 +501,5 @@ export default ContactPage;
   </label>
   </span>
   </HTMLInputElement>
-=======
 
 export default ContactPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
