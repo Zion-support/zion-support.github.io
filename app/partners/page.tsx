@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, Handshake, Users, Award } from 'lucide-react';
 
 const PartnersPage = () => {
@@ -13,7 +12,6 @@ const PartnersPage = () => {
     {
       name: 'Amazon Web Services',
       logo: '/api/placeholder/200/100',
-=======
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 
 interface Partner {
@@ -42,7 +40,6 @@ const PartnersPage: React.FC = () => {
       category: 'Cloud Computing',
       website: 'https://aws.amazon.com',
       tier: 'strategic'
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
     },
     {
       name: 'Google Cloud',
@@ -54,7 +51,6 @@ const PartnersPage: React.FC = () => {
     },
     {
       name: 'IBM',
-<<<<<<< HEAD
       logo: '/api/placeholder/200/100',
     }
   ];
@@ -66,7 +62,6 @@ const PartnersPage: React.FC = () => {
     'Co-selling programs',
     'Early access to new features',
     'Dedicated partner success manager'
-=======
       logo: '/images/partners/ibm.png',
       description: 'Enterprise AI solutions and hybrid cloud platform',
       category: 'Enterprise AI',
@@ -105,7 +100,6 @@ const PartnersPage: React.FC = () => {
       website: 'https://splunk.com',
       tier: 'certified'
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
   ];
 
   const benefits = [
@@ -156,7 +150,6 @@ const PartnersPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
-<<<<<<< HEAD
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities with Zion Tech Group. Strategic partnerships for mutual growth and innovation." />
         <meta name="keywords" content="technology partners, strategic partnerships, business partnerships, technology ecosystem, partner program" />
       </Helmet>
@@ -235,7 +228,6 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
-=======
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
       </Helmet>
@@ -383,7 +375,6 @@ const PartnersPage: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
   );
 };
 

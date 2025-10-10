@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, Calendar, CheckCircle, Clock, Users } from 'lucide-react';
@@ -12,7 +11,6 @@ const ConsultationPage = () => {
     'Digital Transformation',
     'IT Infrastructure Review',
     'Technology Roadmap Development'
-=======
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -93,7 +91,6 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: false
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
   ];
 
   const experts = [
@@ -134,7 +131,6 @@ const ConsultationPage: React.FC = () => {
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -158,7 +154,6 @@ const ConsultationPage: React.FC = () => {
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
               </button>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -341,7 +336,6 @@ const ConsultationPage: React.FC = () => {
                   View All Services
                 </Link>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
             </div>
           </div>
         </div>

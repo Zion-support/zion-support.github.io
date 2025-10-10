@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiBlockchainAnalyticsPage: React.FC = () => {
@@ -31,7 +30,6 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -50,43 +48,35 @@ const PagePage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description of feature 3',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-=======
     'Benefit 1',
     'Benefit 2',
     'Benefit 3',
     'Benefit 4',
     'Benefit 5',
     'Benefit 6'
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Ai Blockchain Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai blockchain analytics solution for modern businesses." />
         <meta name="keywords" content="AI ai blockchain analytics, artificial intelligence, ai blockchain analytics, AI solutions, intelligent automation" />
-=======
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
       </Helmet>
       
       <Navigation />
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -107,7 +97,6 @@ const PagePage: React.FC = () => {
                 View Demo
               </button>
             </div>
-=======
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -131,12 +120,10 @@ const PagePage: React.FC = () => {
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Demo
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -215,7 +202,6 @@ const PagePage: React.FC = () => {
                 <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
-=======
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -242,11 +228,9 @@ const PagePage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </section>
       </div>
       <Footer />
@@ -255,7 +239,6 @@ const PagePage: React.FC = () => {
 };
 
 export default AiBlockchainAnalyticsPage;
-=======
         </div>
       </section>
 
@@ -306,4 +289,3 @@ export default AiBlockchainAnalyticsPage;
 };
 
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4

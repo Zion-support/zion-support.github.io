@@ -3,16 +3,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
 
 const AiContentStudioPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -35,7 +31,6 @@ const AiContentStudioPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
       title: 'AI Content Generation',
       description: 'Generate high-quality content using advanced AI algorithms',
       benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
@@ -49,12 +44,10 @@ const AiContentStudioPage: React.FC = () => {
       title: 'Collaboration',
       description: 'Work together with your team on content projects',
       benefits: ['Real-time editing', 'Comments', 'Version control']
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -172,7 +165,6 @@ const AiContentStudioPage: React.FC = () => {
                 <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
-=======
     'Increase content production by 10x',
     'Improve engagement by 200%',
     'Save 50+ hours per week',
@@ -244,14 +236,11 @@ const AiContentStudioPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </section>
       </div>
-=======
         </div>
       </section>
 
@@ -296,14 +285,10 @@ const AiContentStudioPage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
       <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default AiContentStudioPage;
-=======
 export default AIContentStudioPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
