@@ -101,6 +101,7 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
@@ -136,6 +137,48 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
               )}
+=======
+          <div className="hidden lg:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Home
+              </Link>
+              
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleServices}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  Services
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                
+                {servicesOpen && (
+                  <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    <Link to="/services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      All Services
+                    </Link>
+                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Services
+                    </Link>
+                    <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      IT Services
+                    </Link>
+                    <Link to="/micro-saas" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Micro SaaS
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <Link to="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                About
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Contact
+              </Link>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-45f6
             </div>
 
             {/* IT Services Dropdown */}
@@ -280,6 +323,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
+<<<<<<< HEAD
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
@@ -394,6 +438,29 @@ const Navigation: React.FC = () => {
                 Blog
               </Link>
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+=======
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
+              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Home
+              </Link>
+              <Link to="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                All Services
+              </Link>
+              <Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                AI Services
+              </Link>
+              <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                IT Services
+              </Link>
+              <Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Micro SaaS
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                About
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-45f6
                 Contact
               </Link>
 

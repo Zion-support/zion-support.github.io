@@ -1275,6 +1275,76 @@ const HomePage: React.FC = memo(() => {
           </div>
         </section>
 
+        {/* Service Categories Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our Service Categories
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose from our comprehensive range of AI, IT, and Micro SaaS solutions
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* AI Services */}
+              <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300 group">
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4">🤖</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">AI Services</h3>
+                  <p className="text-gray-300 mb-6">Advanced artificial intelligence solutions including chatbots, content generation, analytics, and automation.</p>
+                  <div className="text-sm text-purple-300 mb-4">Starting from $199/month</div>
+                  <div className="flex flex-wrap gap-2 justify-center mb-6">
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">NLP</span>
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">Machine Learning</span>
+                    <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-1 rounded">Automation</span>
+                  </div>
+                </div>
+                <a href="/ai-services" className="block w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center">
+                  Explore AI Services
+                </a>
+              </div>
+
+              {/* IT Services */}
+              <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 group">
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4">💻</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">IT Services</h3>
+                  <p className="text-gray-300 mb-6">Complete IT solutions including cloud migration, cybersecurity, DevOps, and infrastructure management.</p>
+                  <div className="text-sm text-cyan-300 mb-4">Starting from $500/month</div>
+                  <div className="flex flex-wrap gap-2 justify-center mb-6">
+                    <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded">Cloud</span>
+                    <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded">Security</span>
+                    <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded">DevOps</span>
+                  </div>
+                </div>
+                <a href="/it-services" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center">
+                  Explore IT Services
+                </a>
+              </div>
+
+              {/* Micro SaaS */}
+              <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all duration-300 group">
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4">📱</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3>
+                  <p className="text-gray-300 mb-6">Ready-to-use business tools including analytics dashboards, email marketing, and project management.</p>
+                  <div className="text-sm text-green-300 mb-4">Starting from $15/month</div>
+                  <div className="flex flex-wrap gap-2 justify-center mb-6">
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Analytics</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Marketing</span>
+                    <span className="text-xs bg-green-500/20 text-green-300 px-2 py-1 rounded">Productivity</span>
+                  </div>
+                </div>
+                <a href="/micro-saas" className="block w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center">
+                  Explore Micro SaaS
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1285,7 +1355,27 @@ const HomePage: React.FC = memo(() => {
               <p className="text-xl text-gray-300 mb-8">
                 Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-2xl mb-2">📞</div>
+                  <div className="text-white font-semibold">Phone</div>
+                  <div className="text-gray-300">+1 302 464 0950</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl mb-2">✉️</div>
+                  <div className="text-white font-semibold">Email</div>
+                  <div className="text-gray-300">kleber@ziontechgroup.com</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl mb-2">📍</div>
+                  <div className="text-white font-semibold">Address</div>
+                  <div className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</div>
+                </div>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                 <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
@@ -1293,6 +1383,20 @@ const HomePage: React.FC = memo(() => {
                   Learn More
                 </button>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+=======
+                <a 
+                  href="tel:+13024640950"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  Call Now
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+                >
+                  Email Us
+                </a>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-45f6
               </div>
             </div>
           </div>
