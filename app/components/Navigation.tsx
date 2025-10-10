@@ -77,7 +77,8 @@ import {
   ChefHat,
   Rocket,
   Sprout,
-  Scale
+  Scale,
+  DollarSign
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -183,7 +184,7 @@ const Navigation: React.FC = () => {
   ];
 
   const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
+    setServicesOpen(!servicesOpen);
   };
 
   const microSAASServices = [
