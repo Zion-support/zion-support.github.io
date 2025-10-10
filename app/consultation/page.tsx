@@ -1,7 +1,16 @@
 'use client';
 import React from 'react';
-'use client';
+import { Helmet } from 'react-helmet-async';
+import { Phone, Mail, Calendar, CheckCircle } from 'lucide-react';
 
+const ConsultationPage = () => {
+  const consultationServices = [
+    'AI Strategy & Implementation',
+    'Cloud Migration Planning',
+    'Cybersecurity Assessment',
+    'Digital Transformation',
+    'IT Infrastructure Review',
+    'Technology Roadmap Development'
   ];
 
   return (
