@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -988,8 +987,33 @@ const AiServicesPage: React.FC = () => {
       icon: Mic
     },
     {
+      id: 'ai-content-generation',
+      name: 'AI Content Generation Pro',
+      description: 'Advanced content generation platform with multi-format support and brand consistency',
+      price: '$499/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'Multi-format content generation',
+        'Brand voice customization',
+        'SEO-optimized content',
+        'Content planning and scheduling',
+        'Plagiarism detection',
+        'Content performance analytics',
+        'Integration with CMS platforms',
+        'Custom content templates'
+      ],
+      benefits: [
+        'Scale content production',
+        'Maintain brand consistency',
+        'Improve SEO performance',
+        'Reduce content costs'
+      ],
+      category: 'Content Generation',
+      popular: true,
+      icon: FileText
     }
-  ];
+  ]
+
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
@@ -1160,8 +1184,6 @@ const AiServicesPage: React.FC = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default AiServicesPage;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
