@@ -93,103 +93,103 @@ const Footer: React.FC = memo(() => {
     emergency: '24/7 Emergency Support Available'
   };
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="bg-gray-900 text-white"></footer>
+      <div className="container mx-auto px-4 py-12"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"></div>
           {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div></div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3>
               <Brain className="w-5 h-5 mr-2" />
-              AI Services
+              AI Services;
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2"></ul>
               {aiServices.slice(0, 8).map((service, index) => (
-                <li key={index}>
-                  <Link 
+                <li key={index}></li>
+                  <Link ;
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link 
+              <li></li>
+                <Link ;
                   href="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
+                ></Link>
                   View All AI Services →
                 </Link>
               </li>
             </ul>
           </div>
           {/* IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div></div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3>
               <Cloud className="w-5 h-5 mr-2" />
-              IT Services
+              IT Services;
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2"></ul>
               {itServices.slice(0, 6).map((service, index) => (
-                <li key={index}>
-                  <Link 
+                <li key={index}></li>
+                  <Link ;
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link 
+              <li></li>
+                <Link ;
                   href="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
+                ></Link>
                   View All IT Services →
                 </Link>
               </li>
             </ul>
           </div>
           {/* Micro SAAS */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div></div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3>
               <Code className="w-5 h-5 mr-2" />
-              Micro SAAS
+              Micro SAAS;
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2"></ul>
               {microSaasServices.slice(0, 8).map((service, index) => (
-                <li key={index}>
-                  <Link 
+                <li key={index}></li>
+                  <Link ;
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link 
+              <li></li>
+                <Link ;
                   href="/micro-saas"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
+                ></Link>
                   View All Micro SAAS →
                 </Link>
               </li>
             </ul>
           </div>
           {/* Emerging Technologies */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div></div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3>
               <Zap className="w-5 h-5 mr-2" />
-              Emerging Tech
+              Emerging Tech;
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2"></ul>
               {emergingTech.map((service, index) => (
-                <li key={index}>
-                  <Link 
+                <li key={index}></li>
+                  <Link ;
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {service.name}
                   </Link>
                 </li>
@@ -197,77 +197,77 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           {/* Company & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div></div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3>
               <Users className="w-5 h-5 mr-2" />
-              Company
+              Company;
             </h3>
-            <ul className="space-y-2 mb-6">
+            <ul className="space-y-2 mb-6"></ul>
               {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
+                <li key={index}></li>
+                  <Link ;
                     href={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
-            <ul className="space-y-2 mb-6">
+            <ul className="space-y-2 mb-6"></ul>
               {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
+                <li key={index}></li>
+                  <Link ;
                     href={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="space-y-3">
-              <div className="flex items-center text-sm text-gray-300">
+            <div className="space-y-3"></div>
+              <div className="flex items-center text-sm text-gray-300"></div>
                 <Phone className="w-4 h-4 mr-2 text-cyan-400" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-cyan-400 transition-colors font-medium">
+                <a href={`tel:${contactInfo.phone}`} className="hover:text-cyan-400 transition-colors font-medium"></a>
                   {contactInfo.phone}
                 </a>
               </div>
-              <div className="flex items-center text-sm text-gray-300">
+              <div className="flex items-center text-sm text-gray-300"></div>
                 <Mail className="w-4 h-4 mr-2 text-cyan-400" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors font-medium">
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors font-medium"></a>
                   {contactInfo.email}
                 </a>
               </div>
-              <div className="flex items-start text-sm text-gray-300">
+              <div className="flex items-start text-sm text-gray-300"></div>
                 <MapPin className="w-4 h-4 mr-2 text-cyan-400 mt-0.5" />
                 <span className="leading-relaxed">{contactInfo.address}</span>
               </div>
-              <div className="flex items-center text-sm text-gray-300">
+              <div className="flex items-center text-sm text-gray-300"></div>
                 <Clock className="w-4 h-4 mr-2 text-cyan-400" />
                 <span>{contactInfo.hours}</span>
               </div>
-              <div className="text-xs text-cyan-400 font-medium">
+              <div className="text-xs text-cyan-400 font-medium"></div>
                 {contactInfo.emergency}
               </div>
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-700">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
+        <div className="mt-8 pt-8 border-t border-gray-700"></div>
+          <div className="flex flex-col md:flex-row justify-between items-center"></div>
+            <div className="text-sm text-gray-400 mb-4 md:mb-0"></div>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
+            <div className="flex space-x-6"></div>
+              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"></a>
+                Privacy Policy;
               </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
+              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"></a>
+                Terms of Service;
               </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
+              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"></a>
+                Cookie Policy;
               </a>
             </div>
           </div>

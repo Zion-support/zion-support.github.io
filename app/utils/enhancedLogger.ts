@@ -33,7 +33,7 @@ export interface LogEntry {
   /** Timestamp when the log was created */,
   timestamp: Date,
   /** Optional data associated with the log */,
-  data?: Record<string, unknown>
+  data?: Record<string, unknown></string>
   /** Source of the log (component, module, etc.) */
   source?: string;
   /** Stack trace for errors */
@@ -626,8 +626,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */
   public getStatistics(): {
     total: number,
-    byLevel: Record<string, number>
-    bySource: Record<string, number>
+    byLevel: Record<string, number></string>
+    bySource: Record<string, number></string>
   } {
     const byLevel: Record<string, number> = {}
     const bySource: Record<string, number> = {}

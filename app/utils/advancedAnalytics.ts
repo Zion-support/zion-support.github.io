@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client'
 
 interface UserEvent {
@@ -11,7 +9,7 @@ interface UserEvent {
   sessionId: string,
   userId?: string;
   url: string,
-  metadata?: Record<string, unknown>
+  metadata?: Record<string, unknown></string>
 }
 
 interface UserSession {
@@ -21,23 +19,23 @@ interface UserSession {
   duration?: number;
   pageViews: number,
 interface UserEvent {}
-  id: string
-  type: string
-  name: string
-  value?: number
+  id: string;
+  type: string;
+  name: string;
+  value?: number;
   timestamp: string,
-    sessionId: string
-  userId?: string
-  url: string
+    sessionId: string;
+  userId?: string;
+  url: string;
   metadata?: Record<string, unknown></strin>
 }
 
 interface UserSession {}
-  id: string
-  startTime: string
-  endTime?: string
-  duration?: number
-  pageViews: number
+  id: string;
+  startTime: string;
+  endTime?: string;
+  duration?: number;
+  pageViews: number;
   events: UserEvent[]
   referrer?: string;
   userAgent: string,
@@ -76,20 +74,20 @@ class AdvancedAnalytics {
       enableErrorTracking: true,
       enableUserJourneyTracking: true,
 interface AnalyticsConfig {}
-  enableTracking: boolean
-  enableHeatmaps: boolean
-  enableSessionRecording: boolean
-  enableA_BTesting: boolean
-  enableConversionTracking: boolean
-  enablePerformanceTracking: boolean
-  enableErrorTracking: boolean
-  enableUserJourneyTracking: boolean
+  enableTracking: boolean;
+  enableHeatmaps: boolean;
+  enableSessionRecording: boolean;
+  enableA_BTesting: boolean;
+  enableConversionTracking: boolean;
+  enablePerformanceTracking: boolean;
+  enableErrorTracking: boolean;
+  enableUserJourneyTracking: boolean;
 }
 
 class AdvancedAnalytics {}
-  private static instance: AdvancedAnalytics
-  private config: AnalyticsConfig
-  private currentSession: UserSession
+  private static instance: AdvancedAnalytics;
+  private config: AnalyticsConfig;
+  private currentSession: UserSession;
   private eventQueue: UserEvent[] = []
 
   constructor() {}
@@ -101,7 +99,7 @@ class AdvancedAnalytics {}
       enableConversionTracking: true,
       enablePerformanceTracking: true,
       enableErrorTracking: true,
-      enableUserJourneyTracking: true
+      enableUserJourneyTracking: true;
     }
     this.currentSession = this.createNewSession()
     this.initializeTracking()
@@ -110,7 +108,6 @@ class AdvancedAnalytics {}
   static getInstance(): AdvancedAnalytics {}
     if (!AdvancedAnalytics.instance) {}
       AdvancedAnalytics.instance = new AdvancedAnalytics()
->>>>>>> origin/main
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -152,35 +149,35 @@ const AdvancedAnalyticsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>AdvancedAnalytics | Zion Tech Group</title>
         <meta name="description" content="Professional AdvancedAnalytics services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="advancedAnalytics, AI solutions, IT services, Zion Tech Group, advancedanalytics" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AdvancedAnalytics
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"></span>
+                AdvancedAnalytics;
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your business with our advanced advancedanalytics solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
+                Learn More;
               </button>
             </div>
           </div>
@@ -188,21 +185,21 @@ const AdvancedAnalyticsPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Choose Our AdvancedAnalytics?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our advancedanalytics solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -214,20 +211,20 @@ const AdvancedAnalyticsPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+              Key Benefits;
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Experience the power of our advancedanalytics solutions for your business.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -237,23 +234,23 @@ const AdvancedAnalyticsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xl text-purple-100 mb-8"></p>
               Contact our experts to discuss your advancedanalytics needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                Call Now;
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us
+                Email Us;
               </button>
             </div>
           </div>
@@ -264,9 +261,7 @@ const AdvancedAnalyticsPage: React.FC = () => {
 };
 
 export default AdvancedAnalyticsPage;
-<<<<<<< HEAD
-=======
-    // Track user journey
+    // Track user journey;
     if (this.config.enableUserJourneyTracking) {}
       this.trackUserJourney()
     }
@@ -333,7 +328,7 @@ export default AdvancedAnalyticsPage;
       url: url || window.location.href,
       metadata: {}
         title: title || document.title,
-        referrer: document.referrer
+        referrer: document.referrer;
   trackPageView(url?: string, title?: string): void {/* TODO: Fix JSX expression */}
         }
       }
@@ -375,7 +370,7 @@ export default AdvancedAnalyticsPage;
         this.trackEvent('click', undefined, {)
   private trackClicks(): void {}
     document.addEventListener('click', (event) => {}
-      const target = event.target as HTMLElement
+      const target = event.target as HTMLElement;
       const element = target.closest('a, button, [role="button"]')
 
       if (element) {}
@@ -414,17 +409,17 @@ export default AdvancedAnalyticsPage;
           scrollPercent;
   private trackScrolls(): void {}
     let scrollTimeout: NodeJS.Timeout
-
+;
     window.addEventListener('scroll', () => {}
       clearTimeout(scrollTimeout)
       scrollTimeout = setTimeout(() => {}
         const scrollPercent = Math.round()
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
         )
 
         this.trackEvent('scroll', scrollPercent, {)}
           scrollY: window.scrollY,
-          scrollPercent
+          scrollPercent;
         })
       }, 150)
     })
@@ -449,12 +444,12 @@ export default AdvancedAnalyticsPage;
         fieldCount: form.elements.length;
   private trackFormSubmissions(): void {}
     document.addEventListener('submit', (event) => {}
-      const form = event.target as HTMLFormElement
+      const form = event.target as HTMLFormElement;
       this.trackEvent('form_submit', undefined, {)}
         formId: form.id,
         formAction: form.action,
         formMethod: form.method,
-        fieldCount: form.elements.length
+        fieldCount: form.elements.length;
       })
     })
   private trackFormSubmissions(): void {/* TODO: Fix JSX expression */}
@@ -475,9 +470,9 @@ export default AdvancedAnalyticsPage;
         this.trackEvent('download', undefined, {)
   private trackDownloads(): void {}
     document.addEventListener('click', (event) => {}
-      const target = event.target as HTMLElement
+      const target = event.target as HTMLElement;
       const link = target.closest('a[href]') as HTMLAnchorElement
-
+;
       if (link && this.isDownloadLink(link.href)) {}
         this.trackEvent('download', undefined, {)}
           fileName: link.href.split('/').pop(),
@@ -509,17 +504,17 @@ export default AdvancedAnalyticsPage;
           firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
   private trackPerformance(): void {}
     if (typeof window.performance === 'undefined') return
-
+;
     window.addEventListener('load', () => {}
       setTimeout(() => {}
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paint = performance.getEntriesByType('paint')
 
         this.trackEvent('performance', undefined, {)}
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
+          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
         })
       }, 0)
     })
@@ -555,15 +550,15 @@ export default AdvancedAnalyticsPage;
     // Track focus changes;
     window.addEventListener('focus', () => {
   private trackUserJourney(): void {}
-    // Track page visibility changes
+    // Track page visibility changes;
     document.addEventListener('visibilitychange', () => {}
       this.trackEvent('visibility_change', undefined, {)}
         hidden: document.hidden,
-        visibilityState: document.visibilityState
+        visibilityState: document.visibilityState;
       })
     })
 
-    // Track focus changes
+    // Track focus changes;
     window.addEventListener('focus', () => {}
       this.trackEvent('window_focus')
     })
@@ -590,11 +585,11 @@ export default AdvancedAnalyticsPage;
         rtt: connection.rtt;
   private setupNetworkMonitoring(): void {}
     if ('connection' in navigator) {}
-      const connection = (navigator as any).connection
+      const connection = (navigator as any).connection;
       this.trackEvent('connection_info', undefined, {)}
         effectiveType: connection.effectiveType,
         downlink: connection.downlink,
-        rtt: connection.rtt
+        rtt: connection.rtt;
       })
   private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */}
     });
@@ -645,7 +640,7 @@ export default AdvancedAnalyticsPage;
   private sendToAnalytics(event: UserEvent): void {,
     // Implement your analytics service integration here;
   private sendToAnalytics(event: UserEvent): void {}
-    // Implement your analytics service integration here
+    // Implement your analytics service integration here;
    * Flush event queue when back online;
    */
   private async flushEventQueue(): Promise<void> {/* TODO: Fix JSX expression */}
@@ -766,4 +761,3 @@ export default AdvancedAnalyticsPage;
 export const advancedAnalytics = AdvancedAnalytics.getInstance();
 export default advancedAnalytics;
 `
->>>>>>> origin/main

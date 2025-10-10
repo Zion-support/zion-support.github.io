@@ -9,16 +9,16 @@ const Breadcrumb: React.FC = () => {
   const pathnames = location.pathname.split('/').filter((x) => x);
 
   return (
-    <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-white/10 py-4">
-      <div className="container mx-auto px-4">
-        <ol className="flex items-center space-x-2 text-sm">
-          <li>
-            <Link
+    <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-white/10 py-4"></nav>
+      <div className="container mx-auto px-4"></div>
+        <ol className="flex items-center space-x-2 text-sm"></ol>
+          <li></li>
+            <Link;
               to="/"
               className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"
-            >
+            ></Link>
               <Home className="w-4 h-4 mr-1" />
-              Home
+              Home;
             </Link>
           </li>
           {pathnames.map((name, index) => {
@@ -27,15 +27,15 @@ const Breadcrumb: React.FC = () => {
             const displayName = name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ');
 
             return (
-              <li key={name} className="flex items-center">
+              <li key={name} className="flex items-center"></li>
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
                 {isLast ? (
                   <span className="text-white font-medium">{displayName}</span>
                 ) : (
-                  <Link
+                  <Link;
                     to={routeTo}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
+                  ></Link>
                     {displayName}
                   </Link>
                 )}

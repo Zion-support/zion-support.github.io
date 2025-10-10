@@ -91,34 +91,33 @@ const AIAPIManagerPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>AI API Manager - Zion Tech Group</title>
         <meta name="description" content="Streamline and secure your API infrastructure with our AI API Manager solution. Advanced security, performance optimization, and intelligent monitoring." />
         <meta name="keywords" content="AI API manager, API gateway, API security, microservices, API monitoring, API optimization" />
       </Helmet>
 
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900"></main>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto text-center"></div>
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mb-8"></div>
               <Code className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI API Manager
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+              AI API Manager;
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Streamline and secure your API infrastructure with our advanced AI API Manager solution. 
               Intelligent monitoring, security, and optimization for better API performance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center">
-                Get Started
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center"></button>
+                Get Started;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <button className="border border-orange-400 text-orange-300 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
-                View Demo
+              <button className="border border-orange-400 text-orange-300 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"></button>
+                View Demo;
               </button>
             </div>
           </div>

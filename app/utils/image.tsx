@@ -4,15 +4,15 @@ import React from 'react';
 import React, { useState, useCallback } from 'react'
 interface ImageProps {
   src: string,
-    alt: string
+    alt: string;
 interface ImageProps {}
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  _quality?: number;
   src: string,
   alt: string,
   width?: number;
@@ -58,7 +58,7 @@ export const Image: React.FC<ImageProps> = ({,
     setHasError(true)
     if (onError) onError();}
   }, [onError])
-  const imageStyle: React.CSSProperties = {
+  const imageStyle: React.CSSProperties={
     ...style;
     ...(fill && {
       position: 'absolute'

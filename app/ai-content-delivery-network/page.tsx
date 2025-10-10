@@ -91,34 +91,33 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>AI Content Delivery Network - Zion Tech Group</title>
         <meta name="description" content="Accelerate your content delivery with our AI-powered CDN. Global edge network, intelligent optimization, and advanced security for better performance." />
         <meta name="keywords" content="AI CDN, content delivery network, edge computing, global CDN, content optimization, CDN security" />
       </Helmet>
 
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900"></main>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto text-center"></div>
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-8"></div>
               <Globe className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Content Delivery Network
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+              AI Content Delivery Network;
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Accelerate your content delivery with our AI-powered CDN. Global edge network, 
               intelligent optimization, and advanced security for better performance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
-                Start Delivering
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"></button>
+                Start Delivering;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <button className="border border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
-                View Demo
+              <button className="border border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"></button>
+                View Demo;
               </button>
             </div>
           </div>

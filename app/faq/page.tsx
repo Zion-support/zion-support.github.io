@@ -39,59 +39,59 @@ const FAQPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Frequently Asked Questions - Zion Tech Group</title>
         <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Frequently Asked Questions
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h1 className="text-5xl font-bold text-white mb-6"></h1>
+              Frequently Asked Questions;
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Find answers to common questions about our AI and IT solutions, 
               services, and how we can help transform your business.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="space-y-6"></div>
               {faqs.map((faq, index) => (
-                <div
+                <div;
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                ></div>
+                  <h3 className="text-xl font-semibold text-white mb-3"></h3>
                     {faq.question}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed"></p>
                     {faq.answer}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-16 text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
+            <div className="mt-16 text-center"></div>
+              <h2 className="text-3xl font-bold text-white mb-6"></h2>
                 Still have questions?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Our team is here to help. Contact us for personalized assistance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <a;
                   href="/contact"
                   className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
-                >
-                  Contact Us
+                ></a>
+                  Contact Us;
                 </a>
-                <a
+                <a;
                   href="/consultation"
                   className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-                >
-                  Free Consultation
+                ></a>
+                  Free Consultation;
                 </a>
               </div>
             </div>

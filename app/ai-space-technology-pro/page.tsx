@@ -28,7 +28,7 @@ const PagePage: React.FC = () => {
 
   return (
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
                 </div>

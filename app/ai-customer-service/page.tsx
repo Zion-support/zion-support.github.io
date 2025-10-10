@@ -90,14 +90,14 @@ const AICustomerServicePage: React.FC = () => {
   ];
 
   return (
-      <Helmet>
+      <Helmet></Helmet>
         <title>AI Customer Service - Zion Tech Group</title>
         <meta name="description" content="Transform your customer service with our AI Customer Service solutions. 24/7 support, multilingual capabilities, and intelligent problem solving for better customer experience." />
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support, AI support" />
       </Helmet>
 
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your customer service with our AI Customer Service solutions. 24/7 support, 
               multilingual capabilities, and intelligent problem solving for better customer experience.
             </p>
@@ -105,21 +105,20 @@ const AICustomerServicePage: React.FC = () => {
           </div>
         </section>
 
-
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Applications & Use Cases
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+                Applications & Use Cases;
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                From e-commerce to technical support, our AI Customer Service serves diverse needs
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
+                From e-commerce to technical support, our AI Customer Service serves diverse needs;
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"></div>
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
@@ -130,20 +129,20 @@ const AICustomerServicePage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 Why Choose Our AI Customer Service?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experience the future of customer service with our revolutionary AI technology
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
+                Experience the future of customer service with our revolutionary AI technology;
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mb-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mb-4"></div>
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
@@ -154,22 +153,22 @@ const AICustomerServicePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl p-12"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
                 Ready to Transform Your Customer Service?
               </h2>
-              <p className="text-xl text-green-100 mb-8">
-                Join thousands of businesses who are already using our AI Customer Service solutions
+              <p className="text-xl text-green-100 mb-8"></p>
+                Join thousands of businesses who are already using our AI Customer Service solutions;
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  Get Started Now
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
+                  Get Started Now;
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300">
-                  Schedule Demo
+                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"></button>
+                  Schedule Demo;
                 </button>
               </div>
             </div>

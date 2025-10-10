@@ -26,7 +26,7 @@ class Logger {
     level: LogLevel,
     message: string,
     context?: LogContext;
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown></string>
     timestamp: number,
   }> = []
 
@@ -50,7 +50,7 @@ class Logger {
   error(message: string;),
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>)
     contextOrMetadata?: string | Record<string, unknown>)
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown></string>
   ): void {
     let error: Error | undefined;
     let context: LogContext | undefined;
@@ -65,7 +65,7 @@ class Logger {
       meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;
     } else if (typeof errorOrContextOrMetadata === 'object') {
       context = errorOrContextOrMetadata;
-      meta = contextOrMetadata as Record<string, unknown>
+      meta = contextOrMetadata as Record<string, unknown></string>
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
  */
@@ -130,7 +130,7 @@ class Logger {/* TODO: Fix JSX expression */}
   private log(level: LogLevel;),
     message: string),
     context?: LogContext),
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown></string>
   ): void {
     if (level < this.logLevel) return;
     const logEntry = {
@@ -169,7 +169,7 @@ class Logger {/* TODO: Fix JSX expression */}
     level: LogLevel,
     message: string,
     context?: LogContext;
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown></string>
     timestamp: number,
   }> {
     if (level !== undefined) {

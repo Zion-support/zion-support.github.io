@@ -12,7 +12,7 @@ export enum CacheStorage {}
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds;
 export interface CacheOptions {}
-  ttl?: number; // Time to live in milliseconds
+  ttl?: number; // Time to live in milliseconds;
   storage?: CacheStorage;
   compress?: boolean;
 }
@@ -56,14 +56,14 @@ export class CacheManager<T = unknown> {}
     misses: 0,
     hitRate: 0,
     count: 0,
-    entries: 0
+    entries: 0;
   };
   private config: Required<CacheConfig>;
 
   constructor(config: CacheConfig = {}) {}
     this.config = {}
       storage: config.storage || CacheStorage.Memory,
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes
+      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;
     };
   }
 
@@ -85,7 +85,7 @@ export class CacheManager<T = unknown> {}
 
     // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory) {
-    // Save to persistent storage if needed
+    // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory) {}
       this.saveToStorage();
 export enum CacheStorage {/* TODO: Fix JSX expression */}
@@ -185,7 +185,7 @@ export class CacheManager {/* TODO: Fix JSX expression */}
 
     // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {
-    // Check if entry has expired
+    // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {}
       this.cache.delete(key);
       this.stats.misses++;
@@ -249,7 +249,7 @@ export class CacheManager {/* TODO: Fix JSX expression */}
       return false;
     }
 
-    // Check if entry has expired
+    // Check if entry has expired;
     if (Date.now() - entry.timestamp > entry.ttl) {}
       this.cache.delete(key);
       this.stats.entries = this.cache.size;
@@ -269,7 +269,7 @@ export class CacheManager {/* TODO: Fix JSX expression */}
 
       // Save to persistent storage if needed;
       if (this.config.storage !== CacheStorage.Memory) {,
-      // Save to persistent storage if needed
+      // Save to persistent storage if needed;
       if (this.config.storage !== CacheStorage.Memory) {}
         this.saveToStorage();
    * Check if key exists and is not expired;
@@ -316,7 +316,7 @@ export class CacheManager {/* TODO: Fix JSX expression */}
 
     // Clear persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory) {
-    // Clear persistent storage if needed
+    // Clear persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory) {}
       this.clearStorage();
     }
@@ -366,7 +366,7 @@ export class CacheManager {/* TODO: Fix JSX expression */}
 
     // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
-    // Save to persistent storage if needed
+    // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}
       this.saveToStorage();
     }
@@ -540,11 +540,11 @@ export const sessionStorageCache = new CacheManager({)
 export const localStorageCache = new CacheManager({)}
   storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes
-
+;
 export const sessionStorageCache = new CacheManager({)}
   storage: CacheStorage.SessionStorage,
   defaultTTL: 60 * 60 * 1000 // 1 hour
-
+;
 export default CacheManager;
     return {/* TODO: Fix JSX expression */}
     };

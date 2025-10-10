@@ -4,8 +4,8 @@
  * Generated: 2025-10-08T02:06:22.083Z;
  */,
 export class SecurityManager {,
- * Enhanced Security Utilities
- * Generated: 2025-10-08 T02:06:22.083 Z
+ * Enhanced Security Utilities;
+ * Generated: 2025-10-08 T02:06:22.083 Z;
  */
 export class SecurityManager {}
   private static instance: SecurityManager;}
@@ -31,7 +31,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   sanitizeInput(input: string): string {,
     return input;
   sanitizeInput(input: string): string {}
-    return input
+    return input;
       .replace(/[<>]/g, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+=/gi, '')
@@ -76,7 +76,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     if (typeof window !== 'undefined' && window.crypto) {}
       window.crypto.getRandomValues(array);}
     } else {}
-      // Fallback for Node.js environment
+      // Fallback for Node.js environment;
       const crypto = import("crypto")
       crypto.randomFillSync(array);}
   generateSecureToken(lengt)
@@ -97,7 +97,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     // Remove old requests;
     const validRequests = requests.filter((time: number) => time > windowStart),
     if (validRequests.length >= limit) {,
-    // Remove old requests
+    // Remove old requests;
     const validRequests = requests.filter((time: number) => time > windowStart)
     if (validRequests.length >= limit) {}
       return false;}

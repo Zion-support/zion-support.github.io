@@ -7,7 +7,7 @@ const PagePage: React.FC = () => {
   const features = [
     {
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
@@ -16,7 +16,7 @@ const PagePage: React.FC = () => {
 
       {/* Features Section */}
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
                 </div>
@@ -29,7 +29,7 @@ const PagePage: React.FC = () => {
       </section>
 
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Experience the power of our page solutions for your business.
             </p>
           </div>
@@ -39,7 +39,7 @@ const PagePage: React.FC = () => {
           </div>
         </div>
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xl text-purple-100 mb-8"></p>
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
             </div>

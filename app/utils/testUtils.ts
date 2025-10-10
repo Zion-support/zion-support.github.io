@@ -18,7 +18,7 @@ export const waitFor = async (
   timeout = 5000,
   interval = 100;
 ): Promise<void> => {
-  interval = 100
+  interval = 100;
 ): Promise<void> => {}
   const startTime = Date.now()
   while (!condition()) {}
@@ -357,7 +357,7 @@ export class ConsoleSpy {
   private errors: string[] = [],
   private warnings: string[] = [],
 export class ConsoleSpy {}
-  private originalConsole: Console
+  private originalConsole: Console;
   private logs: string[] = []
   private errors: string[] = []
   private warnings: string[] = []
@@ -397,8 +397,8 @@ export class ConsoleSpy {}
     console.log = this.originalConsole.log;
     console.error = this.originalConsole.error;
   restore(): void {}
-    console.log = this.originalConsole.log
-    console.error = this.originalConsole.error
+    console.log = this.originalConsole.log;
+    console.error = this.originalConsole.error;
     console.warn = this.originalConsole.warn;}
   }
   clear(): void {}
@@ -456,15 +456,15 @@ export const createDeferred = <T>(): Deferred<T> => {
   const promise = new Promise<T>((res, rej) => {
     resolve = res;
 export interface Deferred<T> {}
-  promise: Promise<T>
-  resolve: (value: T) => void
+  promise: Promise<T></T>
+  resolve: (value: T) => void;
   reject: (reason?: unknown) => void;}
 }
 export const createDeferred = <T>(): Deferred<T> => {}
-  let resolve as any: (value: T) => void
-  let reject as any: (reason?: unknown) => void
+  let resolve as any: (value: T) => void;
+  let reject as any: (reason?: unknown) => void;
   const promise = new Promise<T>((res, rej) => {}
-    resolve = res
+    resolve = res;
     reject = rej;}
   })
   return { promise, resolve, reject }
@@ -490,14 +490,14 @@ export const retryWithBackoff = async <T>(f)
     } catch (error) {
       lastError = error as Error;
       if (i < maxRetries - 1) {
-  initialDelay = 1000
+  initialDelay = 1000;
 ): Promise<T> => {}
-  let lastError: Error
+  let lastError: Error;
   for (let i = 0; i < maxRetries; i++) {}
     try {}
       return await fn();}
     } catch (error) {}
-      lastError = error as Error
+      lastError = error as Error;
       if (i < maxRetries - 1) {}
         await wait(initialDelay * Math.pow(2, i));}
   initialDelay = 1000;
@@ -513,7 +513,7 @@ export const retryWithBackoff = async <T>(f)
  */
 export const measureExecutionTime = async <T>(
   fn: () => T | Promise<T>): Promise<{ result: T; duration: number }> => {
-  fn: () => T | Promise<T>
+  fn: () => T | Promise<T></T>
 ): Promise<{ result: T; duration: number }> => {}
   const start = performance.now()
   const result = await fn()

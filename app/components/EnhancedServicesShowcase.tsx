@@ -38,21 +38,21 @@ const EnhancedServicesShowcase: React.FC = () => {
   ];
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
-            Our Core Services
+    <section className="py-16"></section>
+      <div className="container mx-auto px-4"></div>
+        <div className="text-center mb-16"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse"></h2>
+            Our Core Services;
           </h2>
-          <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation
+          <p className="text-xl text-cyan-400 max-w-3xl mx-auto"></p>
+            Comprehensive AI and IT solutions designed to transform your business and drive innovation;
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
           {services.map((service, index) => (</div>
-            <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300">
-              <div className="flex items-center mb-4">
+            <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300"></div>
+              <div className="flex items-center mb-4"></div>
                 <service.icon className={`w-12 h-12 ${service.color} mr-4`} />
                 <div></div>
                   <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -61,31 +61,31 @@ const EnhancedServicesShowcase: React.FC = () => {
               
               <p className="text-gray-300 mb-4">{service.description}</p>
               
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-6"></ul>
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                  <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                     {feature}
                   </li>
                 ))}
               </ul>
               
-              <a
+              <a;
                 href="/services"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
-              >
+              ></a>
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <a
+        <div className="text-center mt-12"></div>
+          <a;
             href="/services"
             className="cyber-button inline-flex items-center"
-          >
-            View All Services
+          ></a>
+            View All Services;
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>
         </div>

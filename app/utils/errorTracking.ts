@@ -20,7 +20,7 @@ export interface ErrorMetadata {
   severity: ErrorSeverity,
   userId?: string;
   sessionId?: string;
-  context?: Record<string, unknown>
+  context?: Record<string, unknown></string>
   tags?: string[]
   timestamp: number,
   stackTrace?: string;
@@ -271,12 +271,12 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
 
   getErrorStats(): {
     total: number,
-    byCategory: Record<ErrorCategory, number>
-    bySeverity: Record<ErrorSeverity, number>
+    byCategory: Record<ErrorCategory, number></ErrorCategory>
+    bySeverity: Record<ErrorSeverity, number></ErrorSeverity>
   } {
     const errors = this.getErrors()
-    const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory, number>
-    const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity, number>
+    const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory, number></ErrorCategory>
+    const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity, number></ErrorSeverity>
     // Initialize counters;
     Object.values(ErrorCategory).forEach(category => {)
       byCategory[category] = 0;)

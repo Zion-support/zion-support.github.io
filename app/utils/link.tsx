@@ -1,14 +1,14 @@
 
 interface LinkProps {
   href: string,
-    children: React.ReactNode
+    children: React.ReactNode;
 interface LinkProps {}
-  href: string
-  children: React.ReactNode
-  className?: string
-  target?: string
-  rel?: string
-  onClick?: () => void
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+  target?: string;
+  rel?: string;
+  onClick?: () => void;
   'aria-label'?: string;}
 }
 export const Link: React.FC<LinkProps>= ({
@@ -38,13 +38,13 @@ export const Link: React.FC<LinkProps> = ({,
     }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {
-    // Handle internal navigation
+    // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {}
       e.preventDefault()
       window.location.href = href;}
     }
   }</LinkProps>
-  return (<a
+  return (<a;
   }
   return(<a;
 import React from 'react';

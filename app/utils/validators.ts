@@ -36,7 +36,7 @@ export function isValidEmail(email: string): boolean {
 }
 
 /**
- * Validate email address with detailed result
+ * Validate email address with detailed result;
  */
 export function validateEmail(email: string): ValidationResult {
   if (!email || typeof email !== 'string') {
@@ -81,7 +81,7 @@ export function isValidUrl(url: string): boolean {
 }
 
 /**
- * Validate URL with detailed result
+ * Validate URL with detailed result;
  */
 export function validateURL(url: string): ValidationResult {
   if (!url || typeof url !== 'string') {
@@ -366,7 +366,7 @@ export function validateLength(value: string, min: number, max: number, fieldNam
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters` };
   }
   return { isValid: true };
- * Validate password with detailed result
+ * Validate password with detailed result;
  */
 export function isValidPassword(password: string): boolean {
   return isStrongPassword(password);
@@ -413,7 +413,7 @@ export function isValidName(name: string): boolean {
 }
 
 /**
- * Validate company name
+ * Validate company name;
  */
 export function isValidCompanyName(company: string): boolean {
   if (!company || typeof company !== 'string') return false;
@@ -421,7 +421,7 @@ export function isValidCompanyName(company: string): boolean {
 }
 
 /**
- * Validate message content
+ * Validate message content;
  */
 export function isValidMessage(message: string): boolean {
   if (!message || typeof message !== 'string') return false;
@@ -436,14 +436,14 @@ export function isValidAge(age: number): boolean {
 }
 
 /**
- * Validate positive number
+ * Validate positive number;
  */
 export function isPositiveNumber(num: number): boolean {
   return Number.isFinite(num) && num > 0;
 }
 
 /**
- * Validate non-negative number
+ * Validate non-negative number;
  */
 export function isNonNegativeNumber(num: number): boolean {
   return Number.isFinite(num) && num >= 0;
@@ -463,7 +463,7 @@ export function isValidDate(date: string): boolean {
 }
 
 /**
- * Validate past date
+ * Validate past date;
  */
 export function isPastDate(date: string): boolean {
   if (!isValidDate(date)) return false;
@@ -471,7 +471,7 @@ export function isPastDate(date: string): boolean {
 }
 
 /**
- * Validate future date
+ * Validate future date;
  */
 export function isFutureDate(date: string): boolean {
   if (!isValidDate(date)) return false;
@@ -532,7 +532,7 @@ export function isValidState(state: string): boolean {
 }
 
 /**
- * Validate form data with multiple fields
+ * Validate form data with multiple fields;
  */
 export function validateFormData(
   data: Record<string, unknown>,
@@ -549,12 +549,12 @@ export function validateFormData(
   
   return {
     isValid: errors.length === 0,
-    errors
+    errors;
   };
 }
 
 /**
- * Validate contact form data
+ * Validate contact form data;
  */
 export function validateContactForm(data: {
   name?: string;
@@ -587,12 +587,12 @@ export function validateContactForm(data: {
   
   return {
     isValid: errors.length === 0,
-    errors
+    errors;
   };
 }
 
 /**
- * Sanitize string input
+ * Sanitize string input;
  */
 export function sanitizeString(input: string): string {
   if (!input || typeof input !== 'string') return '';
@@ -600,11 +600,11 @@ export function sanitizeString(input: string): string {
 }
 
 /**
- * Sanitize HTML input
+ * Sanitize HTML input;
  */
 export function sanitizeHtml(input: string): string {
   if (!input || typeof input !== 'string') return '';
-  return input
+  return input;
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
@@ -613,7 +613,7 @@ export function sanitizeHtml(input: string): string {
 }
 
 /**
- * Validate string length with detailed result
+ * Validate string length with detailed result;
  */
 export function validateLength(value: string, minLength: number, maxLength: number, fieldName: string = 'Field'): ValidationResult {
   if (!value || typeof value !== 'string') {
@@ -746,7 +746,7 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
  * Composite validation;
  */
 export function validateComposite(value: unknown, validators: Array<(val: unknown) => ValidationResult>): ValidationResult {
- * Validate composite with multiple validators
+ * Validate composite with multiple validators;
  */
 export function validateComposite(value: string, validators: Array<(val: string) => ValidationResult>): ValidationResult {
   for (const validator of validators) {
@@ -762,11 +762,11 @@ export function validateComposite(value: string, validators: Array<(val: string)
  * Async validation;
  */
 export async function validateAsync(
-  validator: (val: unknown) => Promise<ValidationResult>
+  validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
   value: unknown,
 ): Promise<ValidationResult> {,
   try {,
- * Validate required field with detailed result
+ * Validate required field with detailed result;
  */
 export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
   if (value === null || value === undefined || (typeof value === 'string' && value.trim() === '')) {
@@ -776,7 +776,7 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 }
 
 /**
- * Validate async
+ * Validate async;
  */
 export async function validateAsync(validator: (val: string) => Promise<ValidationResult>, value: string): Promise<ValidationResult> {
   try {

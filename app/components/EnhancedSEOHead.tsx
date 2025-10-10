@@ -20,7 +20,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   url = 'https://ziontechgroup.com',
   type = 'website',
   siteName = 'Zion Tech Group',
-  structuredData
+  structuredData;
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -51,7 +51,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -96,7 +96,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709" />
       
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"></script>
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>

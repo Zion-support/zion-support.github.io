@@ -59,9 +59,9 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"></ul>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                         <CheckCircle className="w-4 h-4 text-amber-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -74,19 +74,19 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         </section>
 
         {/* Applications Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Applications & Industries
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+                Applications & Industries;
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                From finance to healthcare, our AI Blockchain Solutions serve diverse industries
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
+                From finance to healthcare, our AI Blockchain Solutions serve diverse industries;
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {applications.map((application, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"></div>
                   <div className="text-4xl mb-4">{application.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{application.title}</h3>
                   <p className="text-gray-300">{application.description}</p>
@@ -97,20 +97,20 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 Why Choose Our AI Blockchain Solutions?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Experience the future of blockchain technology with our revolutionary AI solutions
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
+                Experience the future of blockchain technology with our revolutionary AI solutions;
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg mb-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"></div>
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg mb-4"></div>
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
@@ -121,22 +121,22 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-12"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
                 Ready to Build the Future?
               </h2>
-              <p className="text-xl text-amber-100 mb-8">
-                Join thousands of developers who are already using our AI Blockchain Solutions
+              <p className="text-xl text-amber-100 mb-8"></p>
+                Join thousands of developers who are already using our AI Blockchain Solutions;
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-amber-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  Get Started Now
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <button className="bg-white text-amber-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
+                  Get Started Now;
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-all duration-300">
-                  Schedule Demo
+                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-amber-600 transition-all duration-300"></button>
+                  Schedule Demo;
                 </button>
               </div>
             </div>

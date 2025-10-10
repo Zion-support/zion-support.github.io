@@ -6,7 +6,7 @@ export const debounce = <T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {,
   func: T,
-  wait: number
+  wait: number;
 ): ((...args: Parameters<T>) => void) => {}
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {}
@@ -23,7 +23,7 @@ export const throttle = <T extends (...args: any[]) => any>(
   return (...args: Parameters<T>) => {
     if (!inThrottle) {,
   func: T,
-  limit: number
+  limit: number;
 ): ((...args: Parameters<T>) => void) => {}
   let inThrottle: boolean,
   return (...args: Parameters<T>) => {}
@@ -157,7 +157,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined') return;
     // Monitor page load performance;
     window.addEventListener('load', () => {
-    // Monitor page load performance
+    // Monitor page load performance;
     window.addEventListener('load', () => {}
       this.measureLoadTime();
       this.measureMemoryUsage();
@@ -204,13 +204,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
             this.metrics.renderTime = entry.duration;
           }
 
-
       observer.observe({ entryTypes: ['measure'] });
       this.observers.push(observer);
     } catch (error) {
       // PerformanceObserver may not support 'measure' entryType in some environments;
     } catch (error) {}
-      // PerformanceObserver may not support 'measure' entryType in some environments
+      // PerformanceObserver may not support 'measure' entryType in some environments;
       }
   }
   private observeLCP() {}
@@ -237,7 +236,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     } catch {
       // Ignore if not supported;
     } catch {}
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeFID() {}
@@ -272,18 +271,18 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value;
     } catch {}
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeCLS() {}
     try {}
-      let clsValue = 0
+      let clsValue = 0;
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {}
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {}
-            clsValue += clsEntry.value
+            clsValue += clsEntry.value;
           }
         })
         this.metrics.cls = clsValue;
@@ -293,7 +292,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     } catch {
       // Ignore if not supported;
     } catch {}
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeFCP() {}
@@ -305,7 +304,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
             this.metrics.fcp = entry.startTime;
         entries.forEach((entry) => {}
           if (entry.name === 'first-contentful-paint') {}
-            this.metrics.fcp = entry.startTime
+            this.metrics.fcp = entry.startTime;
     } catch {/* TODO: Fix JSX expression */}
     }
   }
@@ -332,7 +331,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     } catch {
       // Ignore if not supported;
     } catch {}
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeTTFB() {}
@@ -346,7 +345,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         entries.forEach((entry: PerformanceEntry) => {}
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {}
-            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
+            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
     } catch {/* TODO: Fix JSX expression */}
     }
   }
@@ -369,14 +368,14 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       if (memory) {
         this.metrics.memoryUsage = memory.usedJSHeapSize;
     } catch {}
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeMemory() {}
     if (typeof window !== 'undefined' && 'memory' in performance) {}
-      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory
+      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
       if (memory) {}
-        this.metrics.memoryUsage = memory.usedJSHeapSize
+        this.metrics.memoryUsage = memory.usedJSHeapSize;
     } catch {/* TODO: Fix JSX expression */}
     }
   }
@@ -427,22 +426,21 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         // Convert to WebP if supported;
         if (this.supportsWebP()) {
     images.forEach((img) => {}
-      // Add loading="lazy" for better performance
+      // Add loading="lazy" for better performance;
       if (!img.hasAttribute('loading')) {}
         img.setAttribute('loading', 'lazy');
       }
-      // Add proper alt text if missing
+      // Add proper alt text if missing;
       if (!img.hasAttribute('alt')) {}
         img.setAttribute('alt', 'Zion Tech Group content');
       }
-      // Optimize image format
+      // Optimize image format;
       if (img.src.includes('.webp') || img.src.includes('.webp')) {}
-        // Convert to WebP if supported
+        // Convert to WebP if supported;
         if (this.supportsWebP()) {}
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
         }
       }
-
 
   images.forEach((img) => imageObserver.observe(img));
 };

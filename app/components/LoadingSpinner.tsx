@@ -9,7 +9,7 @@ interface LoadingSpinnerProps {
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   color = 'primary', 
-  text 
+  text ;
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -24,10 +24,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-2">
+    <div className="flex flex-col items-center justify-center space-y-2"></div>
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
       {text && (
-        <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
+        <p className={`text-sm ${colorClasses[color]} animate-pulse`}></p>
           {text}
         </p>
       )}

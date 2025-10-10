@@ -1,5 +1,5 @@
 // Accessibility utility functions
-
+;
 export interface AccessibilityOptions {
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
@@ -21,14 +21,14 @@ export interface AccessibilityIssue {
 }
 
 /**
- * Initialize accessibility features
+ * Initialize accessibility features;
  */
 export function initializeAccessibility(options: AccessibilityOptions = {}): void {
   const {
     enableKeyboardNavigation = true,
     enableScreenReader = true,
     enableHighContrast = false,
-    enableReducedMotion = false
+    enableReducedMotion = false;
   } = options;
 
   if (enableKeyboardNavigation) {
@@ -49,21 +49,21 @@ export function initializeAccessibility(options: AccessibilityOptions = {}): voi
 }
 
 /**
- * Setup keyboard navigation
+ * Setup keyboard navigation;
  */
 function setupKeyboardNavigation(): void {
   document.addEventListener('keydown', (event) => {
-    // Handle tab navigation
+    // Handle tab navigation;
     if (event.key === 'Tab') {
       handleTabNavigation(event);
     }
     
-    // Handle escape key
+    // Handle escape key;
     if (event.key === 'Escape') {
       handleEscapeKey(event);
     }
     
-    // Handle arrow keys for menu navigation
+    // Handle arrow keys for menu navigation;
     if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
       handleArrowNavigation(event);
     }
@@ -71,10 +71,10 @@ function setupKeyboardNavigation(): void {
 }
 
 /**
- * Setup screen reader support
+ * Setup screen reader support;
  */
 function setupScreenReaderSupport(): void {
-  // Add ARIA labels to interactive elements
+  // Add ARIA labels to interactive elements;
   const interactiveElements = document.querySelectorAll('button, input, select, textarea, a[href]');
   
   interactiveElements.forEach((element) => {
@@ -88,7 +88,7 @@ function setupScreenReaderSupport(): void {
 }
 
 /**
- * Setup high contrast mode
+ * Setup high contrast mode;
  */
 function setupHighContrastMode(): void {
   const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
@@ -107,7 +107,7 @@ function setupHighContrastMode(): void {
 }
 
 /**
- * Setup reduced motion
+ * Setup reduced motion;
  */
 function setupReducedMotion(): void {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -126,21 +126,21 @@ function setupReducedMotion(): void {
 }
 
 /**
- * Handle tab navigation
+ * Handle tab navigation;
  */
 function handleTabNavigation(event: KeyboardEvent): void {
   const focusableElements = getFocusableElements();
   const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
   
   if (event.shiftKey) {
-    // Shift + Tab - move backwards
+    // Shift + Tab - move backwards;
     if (currentIndex > 0) {
       focusableElements[currentIndex - 1].focus();
     } else {
       focusableElements[focusableElements.length - 1].focus();
     }
   } else {
-    // Tab - move forwards
+    // Tab - move forwards;
     if (currentIndex < focusableElements.length - 1) {
       focusableElements[currentIndex + 1].focus();
     } else {
@@ -152,10 +152,10 @@ function handleTabNavigation(event: KeyboardEvent): void {
 }
 
 /**
- * Handle escape key
+ * Handle escape key;
  */
 function handleEscapeKey(event: KeyboardEvent): void {
-  // Close any open modals or dropdowns
+  // Close any open modals or dropdowns;
   const openModals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
   openModals.forEach((modal) => {
     const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]');
@@ -166,7 +166,7 @@ function handleEscapeKey(event: KeyboardEvent): void {
 }
 
 /**
- * Handle arrow key navigation
+ * Handle arrow key navigation;
  */
 function handleArrowNavigation(event: KeyboardEvent): void {
   const menuItems = document.querySelectorAll('[role="menuitem"], [role="tab"]');
@@ -194,7 +194,7 @@ function handleArrowNavigation(event: KeyboardEvent): void {
 }
 
 /**
- * Get all focusable elements
+ * Get all focusable elements;
  */
 function getFocusableElements(): HTMLElement[] {
   const focusableSelectors = [
@@ -211,13 +211,13 @@ function getFocusableElements(): HTMLElement[] {
 }
 
 /**
- * Run accessibility audit
+ * Run accessibility audit;
  */
 export function runAccessibilityAudit(): AccessibilityAuditResult {
   const issues: AccessibilityIssue[] = [];
   let score = 100;
   
-  // Check for missing alt text on images
+  // Check for missing alt text on images;
   const images = document.querySelectorAll('img');
   images.forEach((img) => {
     if (!img.getAttribute('alt') && !img.getAttribute('aria-label')) {
@@ -231,7 +231,7 @@ export function runAccessibilityAudit(): AccessibilityAuditResult {
     }
   });
   
-  // Check for missing form labels
+  // Check for missing form labels;
   const inputs = document.querySelectorAll('input, select, textarea');
   inputs.forEach((input) => {
     const id = input.getAttribute('id');
@@ -250,7 +250,7 @@ export function runAccessibilityAudit(): AccessibilityAuditResult {
     }
   });
   
-  // Check for proper heading hierarchy
+  // Check for proper heading hierarchy;
   const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
   let lastLevel = 0;
   headings.forEach((heading) => {
@@ -267,7 +267,7 @@ export function runAccessibilityAudit(): AccessibilityAuditResult {
     lastLevel = level;
   });
   
-  // Check for sufficient color contrast
+  // Check for sufficient color contrast;
   const textElements = document.querySelectorAll('p, span, div, a, button');
   textElements.forEach((element) => {
     const styles = window.getComputedStyle(element);
@@ -293,21 +293,21 @@ export function runAccessibilityAudit(): AccessibilityAuditResult {
   return {
     score: Math.max(0, score),
     issues,
-    recommendations
+    recommendations;
   };
 }
 
 /**
- * Calculate color contrast ratio
+ * Calculate color contrast ratio;
  */
 function calculateContrast(color1: string, color2: string): number {
-  // Simplified contrast calculation
-  // In a real implementation, you'd convert colors to RGB and calculate luminance
-  return 4.5; // Placeholder
+  // Simplified contrast calculation;
+  // In a real implementation, you'd convert colors to RGB and calculate luminance;
+  return 4.5; // Placeholder;
 }
 
 /**
- * Generate accessibility recommendations
+ * Generate accessibility recommendations;
  */
 function generateRecommendations(issues: AccessibilityIssue[]): string[] {
   const recommendations: string[] = [];
@@ -331,7 +331,7 @@ function generateRecommendations(issues: AccessibilityIssue[]): string[] {
 }
 
 /**
- * Announce message to screen readers
+ * Announce message to screen readers;
  */
 export function announceToScreenReader(message: string): void {
   const announcement = document.createElement('div');
@@ -348,7 +348,7 @@ export function announceToScreenReader(message: string): void {
 }
 
 /**
- * Focus management utilities
+ * Focus management utilities;
  */
 export function trapFocus(element: HTMLElement): void {
   const focusableElements = getFocusableElements().filter(el => 

@@ -22,19 +22,19 @@ export interface ErrorReporterConfig {
 }
 const defaultConfig: ErrorReporterConfig = {,
 export interface ErrorReport {}
-  message: string
-  stack?: string
-  componentStack?: string
+  message: string;
+  stack?: string;
+  componentStack?: string;
   timestamp: string,
-    userAgent: string
-  url: string
+    userAgent: string;
+  url: string;
   severity: 'low' | 'medium' | 'high' | 'critical'
   context?: Record<string, unknown>;}</strin>
 }
 export interface ErrorReporterConfig {}
-  enableConsoleLogging: boolean
-  enableRemoteLogging: boolean
-  remoteEndpoint?: string
+  enableConsoleLogging: boolean;
+  enableRemoteLogging: boolean;
+  remoteEndpoint?: string;
   maxErrorsInMemory: number,
     captureContext: boolean;}
 }
@@ -52,8 +52,8 @@ export class ErrorReporter {
   private config: ErrorReporterConfig,
   private errorQueue: ErrorReport[] = [],
 export class ErrorReporter {}
-  private static instance: ErrorReporter
-  private config: ErrorReporterConfig
+  private static instance: ErrorReporter;
+  private config: ErrorReporterConfig;
   private errorQueue: ErrorReport[] = []
   private errorCount: Map<string, number> = new Map();}
   private constructor(config: Partial<ErrorReporterConfig> = {}) {}
@@ -87,7 +87,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    */
   reportError(error: Error),
     severity: ErrorReport['severity'] = 'medium'),
-    context?: Record<string, unknown>
+    context?: Record<string, unknown></string>
   ): void {
     const errorReport: ErrorReport = {
       message: error.message;
@@ -95,7 +95,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   reportError()
     error: Error,
     severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown>
+    context?: Record<string, unknown></string>
   ): void {}
     const errorReport: ErrorReport = {}
       message: error.message,
@@ -120,11 +120,11 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     }
     // Remote logging;
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
-    // Console logging
+    // Console logging;
     if (this.config.enableConsoleLogging) {}
       this.logToConsole(errorReport);}
     }
-    // Remote logging
+    // Remote logging;
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {}
       this.sendToRemote(errorReport);}
   reportError(erro,
@@ -212,7 +212,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
         method: 'POST'),
         headers: {,
   private async sendToRemote(report: ErrorReport): Promise<void> {}
-    if (!this.config.remoteEndpoint) return
+    if (!this.config.remoteEndpoint) return;
     try {}
       await fetch(this.config.remoteEndpoint, {)}
         method: 'POST',
@@ -223,7 +223,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     } catch (error) {
       // Silently fail to avoid infinite loop;
       if (this.config.enableConsoleLogging) {} catch (error) {}
-      // Silently fail to avoid infinite loop
+      // Silently fail to avoid infinite loop;
       if (this.config.enableConsoleLogging) {}
         logger.warn('Failed to send error to remote endpoint:', error);}
   private async sendToRemote(repor)
@@ -255,8 +255,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       totalErrors: this.errorQueue.length;
       uniqueErrors: this.errorCount.size;
   getErrorStats(): {}
-    totalErrors: number
-    uniqueErrors: number
+    totalErrors: number;
+    uniqueErrors: number;
     errorsByType: Record<string, number>;}
   } {}
     return {}
@@ -304,7 +304,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
 export const reportError = (
   error: Error,
   severity?: ErrorReport['severity'],
-  context?: Record<string, unknown>
+  context?: Record<string, unknown></string>
 ): void => {}
   ErrorReporter.getInstance().reportError(error, severity, context);}
 }
@@ -319,7 +319,7 @@ export const captureComponentError = (
   const report = ErrorReporter.getInstance(),
   report.reportError(error, 'high', {)
     componentName)
-  componentName: string
+  componentName: string;
 ): void => {}
   const report = ErrorReporter.getInstance()
   report.reportError(error, 'high', {)}

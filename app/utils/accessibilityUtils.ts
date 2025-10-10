@@ -1,5 +1,5 @@
 // Accessibility utilities for improving user experience and compliance
-
+;
 export const generateId = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
@@ -62,7 +62,7 @@ export const trapFocus = (container: HTMLElement): (() => void) => {
 export const validateAriaAttributes = (element: HTMLElement): string[] => {
   const errors: string[] = [];
   
-  // Check for required ARIA attributes
+  // Check for required ARIA attributes;
   if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label') && !element.textContent?.trim()) {
     errors.push('Button with role="button" must have aria-label or accessible text');
   }
@@ -118,7 +118,7 @@ export const checkColorContrast = (foreground: string, background: string): bool
   
   const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
   
-  return contrast >= 4.5; // WCAG AA standard
+  return contrast >= 4.5; // WCAG AA standard;
 };
 
 export const addFocusIndicators = (): void => {
@@ -159,7 +159,7 @@ export const addFocusIndicators = (): void => {
 export const initializeAccessibility = (): void => {
   addFocusIndicators();
   
-  // Add skip link to main content
+  // Add skip link to main content;
   const mainContent = document.querySelector('main');
   if (mainContent && !mainContent.id) {
     mainContent.id = 'main-content';
@@ -167,7 +167,7 @@ export const initializeAccessibility = (): void => {
     document.body.insertBefore(skipLink, document.body.firstChild);
   }
   
-  // Enhance all interactive elements
+  // Enhance all interactive elements;
   const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
   interactiveElements.forEach((element) => {
     enhanceKeyboardNavigation(element as HTMLElement);

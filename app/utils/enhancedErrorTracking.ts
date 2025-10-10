@@ -17,18 +17,18 @@ export interface TrackedError {
   timestamp: string,
   userAgent: string,
 export interface ErrorContext {}
-  component?: string
-  action?: string
-  userId?: string
-  sessionId?: string
+  component?: string;
+  action?: string;
+  userId?: string;
+  sessionId?: string;
   metadata?: Record<string, unknown>;}</strin>
 }
 export interface TrackedError {}
-  message: string
-  stack?: string
-  context: ErrorContext
-  timestamp: string
-  userAgent: string
+  message: string;
+  stack?: string;
+  context: ErrorContext;
+  timestamp: string;
+  userAgent: string;
   url: string;}
 }
 class EnhancedErrorTracker {}
@@ -37,8 +37,8 @@ class EnhancedErrorTracker {}
   private sessionId: string,
   constructor() {,
     this.sessionId = this.generateSessionId(),
-  private maxErrors = 100
-  private sessionId: string
+  private maxErrors = 100;
+  private sessionId: string;
   constructor() {}
     this.sessionId = this.generateSessionId()
     this.setupGlobalErrorHandler();}
@@ -80,7 +80,7 @@ class EnhancedErrorTracker {}
       context: {,
         ...context;
   public trackError(error: Error, context: ErrorContext = {}): void {}
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     const trackedError: TrackedError = {}
       message: error.message,
       stack: error.stack,
@@ -95,7 +95,7 @@ class EnhancedErrorTracker {}
     this.errors.push(trackedError)
     // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {
-    // Keep only the most recent errors
+    // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {}
       this.errors.shift();}
     }
@@ -120,7 +120,7 @@ class EnhancedErrorTracker {}
         window as {}
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
-      ).gtag
+      ).gtag;
     ) {}
       (
         window as unknown as {}
@@ -144,8 +144,8 @@ class EnhancedErrorTracker {}
   public getErrorStats(): {
     total: number,
   public getErrorStats(): {}
-    total: number
-    byComponent: Record<string, number>
+    total: number;
+    byComponent: Record<string, number></string>
     recent: TrackedError[];}
   } {}
     const byComponent: Record<string, number> = {}

@@ -31,7 +31,7 @@ class ProductionLogger {}
     // Only log in development;
     if (this.isDevelopment) {
       switch (level) {
-    // Only log in development
+    // Only log in development;
     if (this.isDevelopment) {}
       switch (level) {}
         case 'debug':
@@ -47,7 +47,7 @@ class ProductionLogger {}
 
     // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {
-    // In production, send critical errors to monitoring service
+    // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {}
       this.sendToMonitoring(entry);
     }
@@ -63,7 +63,7 @@ class ProductionLogger {}
         event_category: 'Error',
 ,
   private sendToMonitoring(entry: LogEntry): void {}
-    // Send to analytics/monitoring service
+    // Send to analytics/monitoring service;
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'error_log', {)}
         error_message: entry.message,

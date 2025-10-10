@@ -2,93 +2,102 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Function to fix merge conflict markers in a file
-function fixMergeConflicts(filePath) {
+// Function to clean up duplicate imports and 'use client' directives
+function cleanFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/\n/g, '');
-    content = content.replace(/
+    // Remove merge conflict markers
+    content = content.replace(/^<<<<<<<.*$/gm, '');
+    content = content.replace(/^=======.*$/gm, '');
+    content = content.replace(/^>>>>>>>.*$/gm, '');
     
-    // Remove any remaining merge conflict markers
-    content = content.replace(/<<<<<<< [^\n]+\n/g, '');
-    content = content.replace(/
+    // Remove duplicate 'use client' directives
+    const lines = content.split('\n');
+    const cleanedLines = [];
+    let hasUseClient = false;
+    let hasReactImport = false;
+    let hasReactImportWithUseState = false;
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      
+      // Handle 'use client' directive
+      if (line === "'use client';" || line === '"use client";') {
+        if (!hasUseClient) {
+          cleanedLines.push("'use client';");
+          hasUseClient = true;
+        }
+        continue;
+      }
+      
+      // Handle React imports
+      if (line.startsWith("import React")) {
+        if (line.includes('useState') && !hasReactImportWithUseState) {
+          cleanedLines.push(line);
+          hasReactImportWithUseState = true;
+        } else if (!line.includes('useState') && !hasReactImport) {
+          cleanedLines.push(line);
+          hasReactImport = true;
+        }
+        continue;
+      }
+      
+      // Skip empty lines that might be left from conflict resolution
+      if (line === '') {
+        continue;
+      }
+      
+      cleanedLines.push(lines[i]);
+    }
+    
+    // Write cleaned content back
+    const cleanedContent = cleanedLines.join('\n');
+    fs.writeFileSync(filePath, cleanedContent, 'utf8');
+    
+    console.log(`Cleaned: ${filePath}`);
     return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error cleaning ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let files = [];
-  
-  try {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files = files.concat(findFiles(fullPath, extensions));
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+// Files to clean
+const filesToClean = [
+  '/workspace/app/components/ContentNewsletterSignup.tsx',
+  '/workspace/app/components/DynamicContentShowcase.tsx',
+  '/workspace/app/consultation/page.tsx',
+  '/workspace/app/micro-saas/page.tsx',
+  '/workspace/app/partners/page.tsx'
+];
+
+console.log('Cleaning remaining files...');
+
+let cleanedCount = 0;
+for (const file of filesToClean) {
+  if (fs.existsSync(file)) {
+    if (cleanFile(file)) {
+      cleanedCount++;
     }
-  } catch (error) {
-    // Ignore permission errors
-  }
-  
-  return files;
-}
-
-// Main execution
-console.log('Fixing remaining merge conflict markers...');
-
-const srcDir = path.join(__dirname, 'src');
-const files = findFiles(srcDir);
-
-let fixedCount = 0;
-let errorCount = 0;
-
-for (const file of files) {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-      if (fixMergeConflicts(file)) {
-        fixedCount++;
-      } else {
-        errorCount++;
-      }
-    }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-    errorCount++;
+  } else {
+    console.log(`File not found: ${file}`);
   }
 }
 
-console.log(`\nFixed ${fixedCount} files with merge conflicts`);
-if (errorCount > 0) {
-  console.log(`Encountered errors in ${errorCount} files`);
-}
+console.log(`Cleaned ${cleanedCount} files`);
 
-// Also check for any remaining conflicts
+// Verify no more conflicts
+const { execSync } = require('child_process');
 try {
-  const result = execSync('git status --porcelain', { encoding: 'utf8' });
-  if (result.trim()) {
-    console.log('\nRemaining uncommitted changes:');
-    console.log(result);
+  const result = execSync('grep -r "^<<<<<<<\\|^=======\\|^>>>>>>>" /workspace/app --include="*.tsx" --include="*.ts" | wc -l', { encoding: 'utf8' });
+  const conflictCount = parseInt(result.trim());
+  if (conflictCount === 0) {
+    console.log('✅ All merge conflicts resolved!');
+  } else {
+    console.log(`⚠️  Still ${conflictCount} merge conflicts remaining`);
   }
 } catch (error) {
-  console.log('Could not check git status');
+  console.log('Could not verify conflict status');
 }
-
-console.log('\nDone!');

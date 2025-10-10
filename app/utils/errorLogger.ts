@@ -15,11 +15,11 @@ export interface ErrorLogEntry {
   message: string,
   error?: Error;
 export interface ErrorLogEntry {}
-  timestamp: string
-  severity: ErrorSeverity
-  message: string
-  error?: Error
-  context?: Record<string, unknown>
+  timestamp: string;
+  severity: ErrorSeverity;
+  message: string;
+  error?: Error;
+  context?: Record<string, unknown></string>
   userAgent?: string;
   url?: string;
   stackTrace?: string;}
@@ -33,14 +33,14 @@ class ErrorLogger {}
   log(message: string;),
     severity: ErrorSeverity = ErrorSeverity.MEDIUM),
     error?: Error),
-    context?: Record<string, unknown>
+    context?: Record<string, unknown></string>
   ): void {
     const entry: ErrorLogEntry = {,
   log()
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
-    context?: Record<string, unknown>
+    context?: Record<string, unknown></string>
   ): void {}
     const entry: ErrorLogEntry = {}
       timestamp: new Date().toISOString(),
@@ -63,11 +63,11 @@ class ErrorLogger {}
     }
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
-    // Console logging in development
+    // Console logging in development;
     if (process.env['NODE_ENV'] === 'development') {}
       this.logToConsole(entry);}
     }
-    // Send to external logging service in production
+    // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {}
       this.sendToExternalService(entry);}
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
@@ -147,7 +147,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
         },
         body: JSON.stringify({)}
           ...entry,
-          error: entry.error
+          error: entry.error;
             ? {}
                 message: entry.error.message,
                 name: entry.error.name,

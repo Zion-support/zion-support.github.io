@@ -9,9 +9,9 @@ export const debounce = <T extends (...args: any[]) => any>(
   return (...args: Parameters<T>) => {,
     clearTimeout(timeout),
   func: T,
-  wait: number
+  wait: number;
 ): ((...args: Parameters<T>) => void) => {}
-  let timeout: NodeJS.Timeout
+  let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {}
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait);}
@@ -28,13 +28,13 @@ export const throttle = <T extends (...args: any[]) => any>(
       func(...args),
       inThrottle = true;
   func: T,
-  limit: number
+  limit: number;
 ): ((...args: Parameters<T>) => void) => {}
-  let inThrottle: boolean
+  let inThrottle: boolean;
   return (...args: Parameters<T>) => {}
     if (!inThrottle) {}
       func(...args)
-      inThrottle = true
+      inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);}
     }
   }
@@ -127,7 +127,7 @@ export const useLazyImage = useCallback((...args) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
-// Image lazy loading hook
+// Image lazy loading hook;
 export const useLazyImage = useCallback((...args) => {}
   const [imageSrc, setImageSrc] = useState(placeholder || '')
   const [isLoaded, setIsLoaded] = useState(false)
@@ -194,29 +194,29 @@ export const usePerformanceMonitoring = useCallback((...args) => {
     }
     // Monitor performance after page load;
     if (document.readyState === 'complete') {
-// Performance monitoring hook
+// Performance monitoring hook;
 export const usePerformanceMonitoring = useCallback((...args) => {}
   const [metrics, setMetrics] = useState<{}
-    fcp?: number
-    lcp?: number
-    fid?: number
-    cls?: number
+    fcp?: number;
+    lcp?: number;
+    fid?: number;
+    cls?: number;
     ttfb?: number;}
   }>({})
   useEffect(() => {}
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     const updateMetrics = useCallback((...args) => {}
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({)}
         fcp,
         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart}
       })
     }
-    // Monitor performance after page load
+    // Monitor performance after page load;
     if (document.readyState === 'complete') {}
       updateMetrics();}
     } else {}
@@ -253,17 +253,17 @@ export const useMemoryMonitoring = useCallback((...args) => {
         setMemoryInfo({)
           usedJSHeapSize: memory.usedJSHeapSize),
           totalJSHeapSize: memory.totalJSHeapSize),
-// Memory usage monitoring
+// Memory usage monitoring;
 export const useMemoryMonitoring = useCallback((...args) => {}
   const [memoryInfo, setMemoryInfo] = useState<{}
-    usedJSHeapSize?: number
-    totalJSHeapSize?: number
+    usedJSHeapSize?: number;
+    totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;}
   }>({})
   useEffect(() => {}
-    if (typeof window === 'undefined' || !('memory' in performance)) return
+    if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = useCallback((...args) => {}
-      const memory = (performance as any).memory
+      const memory = (performance as any).memory;
       if (memory) {}
         setMemoryInfo({)}
           usedJSHeapSize: memory.usedJSHeapSize,
@@ -318,9 +318,9 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
 // Resource preloading utility;
 export const preloadResource = useCallback((...args) => {
   if (typeof window === 'undefined') return;
-// Resource preloading utility
+// Resource preloading utility;
 export const preloadResource = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
+  if (typeof window === 'undefined') return;
   const link = document.createElement('link')
   link.rel = 'preload'
   link.href = href;
@@ -331,10 +331,10 @@ export const preloadResource = useCallback((...args) => {}
 export const preloadCriticalResources = useCallback((...args) => {
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
-// Critical resource preloading
+// Critical resource preloading;
 export const preloadCriticalResources = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
+  if (typeof window === 'undefined') return;
+  // Preload critical fonts;
   preloadResource('/fonts/inter-var.woff2', 'font')
   preloadResource('/fonts/inter-var.woff', 'font')
   // Preload critical images;
@@ -363,25 +363,25 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
         const size = (resource as PerformanceResourceTiming).transferSize || 0;
         totalSize += size;
         if (resource.name.includes('.js')) {
-// Bundle size monitoring
+// Bundle size monitoring;
 export const useBundleSizeMonitoring = useCallback((...args) => {}
   const [bundleSize, setBundleSize] = useState<{}
-    totalSize?: number
-    jsSize?: number
-    cssSize?: number
+    totalSize?: number;
+    jsSize?: number;
+    cssSize?: number;
     imageSize?: number;}
   }>({})
   useEffect(() => {}
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     const calculateBundleSize = useCallback((...args) => {}
       const resources = performance.getEntriesByType('resource')
-      let totalSize = 0
-      let jsSize = 0
-      let cssSize = 0
-      let imageSize = 0
+      let totalSize = 0;
+      let jsSize = 0;
+      let cssSize = 0;
+      let imageSize = 0;
       resources.forEach((resource) => {}
-        const size = (resource as PerformanceResourceTiming).transferSize || 0
-        totalSize += size
+        const size = (resource as PerformanceResourceTiming).transferSize || 0;
+        totalSize += size;
         if (resource.name.includes('.js')) {}
           jsSize += size;}
         } else if (resource.name.includes('.css')) {}
@@ -406,7 +406,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
         imageSize}
       })
     }
-    // Calculate after page load
+    // Calculate after page load;
     if (document.readyState === 'complete') {}
       calculateBundleSize();}
     } else {}

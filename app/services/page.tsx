@@ -13,12 +13,12 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter;
 } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const services = [
-    // AI Services
+    // AI Services;
     {
       icon: Brain,
       title: 'AI Solutions',
@@ -26,7 +26,7 @@ const ServicesPage: React.FC = () => {
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
-      popular: true
+      popular: true;
     },
     {
       icon: Brain,
@@ -85,7 +85,7 @@ const ServicesPage: React.FC = () => {
       category: 'AI Services'
     },
     
-    // Cloud Services
+    // Cloud Services;
     {
       icon: Cloud,
       title: 'Cloud Services',
@@ -93,7 +93,7 @@ const ServicesPage: React.FC = () => {
       features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery', 'Multi-cloud'],
       price: 'Starting at $1,299/month',
       category: 'Cloud Services',
-      popular: true
+      popular: true;
     },
     {
       icon: Cloud,
@@ -120,7 +120,7 @@ const ServicesPage: React.FC = () => {
       category: 'Cloud Services'
     },
     
-    // Cybersecurity
+    // Cybersecurity;
     {
       icon: Shield,
       title: 'Cybersecurity',
@@ -128,7 +128,7 @@ const ServicesPage: React.FC = () => {
       features: ['Security Audits', 'Penetration Testing', 'Incident Response', 'Compliance', 'Threat Intelligence'],
       price: 'Starting at $799/month',
       category: 'Cybersecurity',
-      popular: true
+      popular: true;
     },
     {
       icon: Shield,
@@ -155,7 +155,7 @@ const ServicesPage: React.FC = () => {
       category: 'Cybersecurity'
     },
     
-    // Data Analytics
+    // Data Analytics;
     {
       icon: BarChart3,
       title: 'Data Analytics',
@@ -163,7 +163,7 @@ const ServicesPage: React.FC = () => {
       features: ['Business Intelligence', 'Real-time Analytics', 'Data Visualization', 'Reporting', 'Predictive Modeling'],
       price: 'Starting at $599/month',
       category: 'Data Analytics',
-      popular: true
+      popular: true;
     },
     {
       icon: BarChart3,
@@ -182,7 +182,7 @@ const ServicesPage: React.FC = () => {
       category: 'Data Analytics'
     },
     
-    // Mobile Development
+    // Mobile Development;
     {
       icon: Smartphone,
       title: 'Mobile Development',
@@ -190,7 +190,7 @@ const ServicesPage: React.FC = () => {
       features: ['Native Apps', 'Cross-platform', 'UI/UX Design', 'App Store Optimization', 'Push Notifications'],
       price: 'Starting at $1,999/month',
       category: 'Mobile Development',
-      popular: true
+      popular: true;
     },
     {
       icon: Smartphone,
@@ -201,7 +201,7 @@ const ServicesPage: React.FC = () => {
       category: 'Mobile Development'
     },
     
-    // Database Services
+    // Database Services;
     {
       icon: Database,
       title: 'Database Services',
@@ -209,7 +209,7 @@ const ServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Migration', 'Monitoring'],
       price: 'Starting at $399/month',
       category: 'Database Services',
-      popular: true
+      popular: true;
     },
     {
       icon: Database,
@@ -220,7 +220,7 @@ const ServicesPage: React.FC = () => {
       category: 'Database Services'
     },
     
-    // Automation
+    // Automation;
     {
       icon: Zap,
       title: 'Process Automation',
@@ -228,7 +228,7 @@ const ServicesPage: React.FC = () => {
       features: ['Workflow Automation', 'RPA Implementation', 'Integration', 'Monitoring', 'Optimization'],
       price: 'Starting at $599/month',
       category: 'Automation',
-      popular: true
+      popular: true;
     },
     {
       icon: Zap,
@@ -239,7 +239,7 @@ const ServicesPage: React.FC = () => {
       category: 'Automation'
     },
     
-    // Web Development
+    // Web Development;
     {
       icon: Globe,
       title: 'Web Development',
@@ -247,7 +247,7 @@ const ServicesPage: React.FC = () => {
       features: ['React/Next.js', 'Full-stack Development', 'API Development', 'Performance Optimization', 'SEO'],
       price: 'Starting at $1,299/month',
       category: 'Web Development',
-      popular: true
+      popular: true;
     },
     {
       icon: Globe,
@@ -258,7 +258,7 @@ const ServicesPage: React.FC = () => {
       category: 'Web Development'
     },
     
-    // IT Services
+    // IT Services;
     {
       icon: Database,
       title: 'IT Infrastructure',
@@ -310,36 +310,36 @@ const ServicesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
         <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+        <section className="relative py-20 px-4 overflow-hidden"></section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Services
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+              Our Services;
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Comprehensive AI and IT solutions designed to transform your business and drive growth.
             </p>
           </div>
         </section>
 
         {/* Search and Filter Section */}
-        <section className="py-8 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="flex flex-col md:flex-row gap-4 mb-6">
-                <div className="flex-1">
-                  <div className="relative">
+        <section className="py-8 px-4"></section>
+          <div className="max-w-6xl mx-auto"></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"></div>
+              <div className="flex flex-col md:flex-row gap-4 mb-6"></div>
+                <div className="flex-1"></div>
+                  <div className="relative"></div>
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
+                    <input;
                       type="text"
                       placeholder="Search services..."
                       value={searchTerm}
@@ -348,16 +348,16 @@ const ServicesPage: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="md:w-64">
-                  <div className="relative">
+                <div className="md:w-64"></div>
+                  <div className="relative"></div>
                     <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <select
+                    <select;
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none"
                     >
                       {categories.map((category) => (
-                        <option key={category} value={category} className="bg-gray-800">
+                        <option key={category} value={category} className="bg-gray-800"></option>
                           {category}
                         </option>
                       ))}
@@ -366,13 +366,13 @@ const ServicesPage: React.FC = () => {
                 </div>
               </div>
               
-              <div className="flex flex-wrap gap-2 justify-center">
+              <div className="flex flex-wrap gap-2 justify-center"></div>
                 {categories.slice(1).map((category) => (
-                  <button
+                  <button;
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                      selectedCategory === category
+                      selectedCategory === category;
                         ? 'bg-cyan-500 text-white'
                         : 'bg-white/10 text-gray-300 hover:bg-white/20'
                     }`}
@@ -386,71 +386,71 @@ const ServicesPage: React.FC = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex justify-between items-center mb-8">
-              <h2 className="text-3xl font-bold text-white">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="flex justify-between items-center mb-8"></div>
+              <h2 className="text-3xl font-bold text-white"></h2>
                 {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
               </h2>
-              <span className="text-gray-300">
-                {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found
+              <span className="text-gray-300"></span>
+                {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found;
               </span>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {filteredServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative"></div>
                   {service.popular && (
-                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Popular
+                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium"></div>
+                      Popular;
                     </div>
                   )}
                   
-                  <div className="flex items-start mb-6">
-                    <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
+                  <div className="flex items-start mb-6"></div>
+                    <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0"></div>
                       <service.icon className="w-8 h-8 text-cyan-400" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1"></div>
                       <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                      <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2">
+                      <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2"></span>
                         {service.category}
                       </span>
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-6 leading-relaxed"></p>
                     {service.description}
                   </p>
                   
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2"></ul>
                       {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                       {service.features.length > 4 && (
-                        <li className="text-gray-400 text-sm">
-                          +{service.features.length - 4} more features
+                        <li className="text-gray-400 text-sm"></li>
+                          +{service.features.length - 4} more features;
                         </li>
                       )}
                     </ul>
                   </div>
                   
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                     <div className="text-sm text-gray-300">Contact for custom pricing</div>
                   </div>
                   
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
-                      Get Quote
+                  <div className="flex flex-col sm:flex-row gap-3"></div>
+                    <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105"></button>
+                      Get Quote;
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
-                      Learn More
+                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300"></button>
+                      Learn More;
                     </button>
                   </div>
                 </div>
@@ -460,20 +460,20 @@ const ServicesPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Let's discuss your project and find the perfect solution for your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Free Consultation
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+                Get Free Consultation;
               </button>
-              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
-                View Portfolio
+              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300"></button>
+                View Portfolio;
               </button>
             </div>
           </div>

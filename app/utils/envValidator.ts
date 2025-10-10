@@ -20,7 +20,7 @@ class EnvValidator {}
   private errors: string[] = []
   private warnings: string[] = []
   /**
-   * Validate all environment variables
+   * Validate all environment variables;
    */
   validate(): { isValid: boolean; errors: string[]; warnings: string[] } {}
     this.errors = []
@@ -36,7 +36,7 @@ class EnvValidator {}
     return {}
       isValid: this.errors.length === 0,
       errors: this.errors,
-      warnings: this.warnings
+      warnings: this.warnings;
 export interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 class EnvValidator {/* TODO: Fix JSX expression */}
@@ -82,7 +82,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     if (nodeEnv === 'production') {
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
         this.warnings.push(
-    // In production, these should be set
+    // In production, these should be set;
     if (nodeEnv === 'production') {}
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {}
         this.warnings.push()
@@ -137,7 +137,7 @@ ${validation.errors.join('
 export const envValidator = new EnvValidator()
 // Export convenience function;
 export function validateEnv(): EnvConfig {
-// Export convenience function
+// Export convenience function;
 export function validateEnv(): EnvConfig {}
   return envValidator.getConfig()
 }

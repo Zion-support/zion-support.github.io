@@ -59,22 +59,22 @@ import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, S
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>AI Customer Support - Zion Tech Group</title>
         <meta name="description" content="Transform your customer support with our AI Customer Support solutions. Intelligent automation, omnichannel communication, and human-AI collaboration for better customer experience." />
         <meta name="keywords" content="AI customer support, customer service automation, omnichannel support, AI chatbots, customer experience, support AI" />
       </Helmet>
 
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Transform your customer support with our AI Customer Support solutions. Intelligent automation, 
               omnichannel communication, and human-AI collaboration for better customer experience.
             </p>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"></ul>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                         <CheckCircle className="w-4 h-4 text-teal-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>

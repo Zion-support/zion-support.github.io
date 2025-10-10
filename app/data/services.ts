@@ -554,7 +554,7 @@ export interface Service {
 }
 
 export const services: Service[] = [
-  // AI Services
+  // AI Services;
   {
     id: 'ai-project-manager',
     name: 'AI Project Manager Pro',
@@ -782,7 +782,7 @@ export const services: Service[] = [
     }
   },
 
-  // Micro SAAS Services
+  // Micro SAAS Services;
   {
     id: 'ai-social-media-manager',
     name: 'AI Social Media Manager',
@@ -1009,7 +1009,7 @@ export const services: Service[] = [
     }
   },
 
-  // IT Services
+  // IT Services;
   {
     id: 'cloud-infrastructure',
     name: 'Cloud Infrastructure Solutions',
@@ -1191,7 +1191,7 @@ export const services: Service[] = [
     }
   },
 
-  // Emerging Technologies
+  // Emerging Technologies;
   {
     id: 'quantum-computing',
     name: 'Quantum Computing Solutions',
@@ -1210,7 +1210,7 @@ export const services: Service[] = [
       starting: 5000,
       currency: 'USD',
       period: 'month',
-      custom: true
+      custom: true;
     },
     benefits: [
       'Exponential computational power',
@@ -1257,7 +1257,7 @@ export const services: Service[] = [
       starting: 2999,
       currency: 'USD',
       period: 'month',
-      custom: true
+      custom: true;
     },
     benefits: [
       'Decentralized solutions',

@@ -1,6 +1,6 @@
 /**
- * Enhanced Performance Hook
- * Combines performance monitoring, error tracking, and analytics
+ * Enhanced Performance Hook;
+ * Combines performance monitoring, error tracking, and analytics;
  */
 
 import { useEffect, useCallback, useRef } from 'react';
@@ -26,17 +26,17 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     mountTimeRef.current = performance.now();
     renderCountRef.current = 0;
 
-    // Track component mount
+    // Track component mount;
     if (trackAnalytics) {
       analytics.trackCustomEvent('Component', 'Mounted', component);
     }
 
     return () => {
-      // Track component unmount duration
+      // Track component unmount duration;
       if (trackPerformance) {
         const _duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
-          // Long-lived component
+          // Long-lived component;
           analytics.trackCustomEvent(
             'Performance',
             'Long Component Lifetime',
@@ -46,25 +46,25 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         }
       }
 
-      // Track component unmount
+      // Track component unmount;
       if (trackAnalytics) {
         analytics.trackCustomEvent('Component', 'Unmounted', component);
       }
     };
   }, [component, trackAnalytics, trackPerformance]);
 
-  // Track render performance
+  // Track render performance;
   useEffect(() => {
     renderCountRef.current++;
 
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
-
+;
       analytics.trackCustomEvent(
         'Performance',
         'High Render Count',
         component,
-        renderCountRef.current
+        renderCountRef.current;
       );
     }
   });

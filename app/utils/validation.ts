@@ -360,7 +360,7 @@ export function validateComposite(valu,
  * Async validation;
  */
 export async function validateAsync(
-  validator: (val: unknown) => Promise<ValidationResult>
+  validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
   value: unknown,
 ): Promise<ValidationResult> {,
   try {,

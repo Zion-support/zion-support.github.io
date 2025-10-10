@@ -17,32 +17,32 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData;
 }) => {
   useEffect(() => {
-    // Update page title
+    // Update page title;
     document.title = title;
-    // Update meta description
+    // Update meta description;
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords.join(', '));
-    // Update Open Graph tags
+    // Update Open Graph tags;
     updateMetaTag('og:title', title, 'property');
     updateMetaTag('og:description', description, 'property');
     updateMetaTag('og:image', ogImage, 'property');
     updateMetaTag('og:url', canonicalUrl, 'property');
-    // Update Twitter tags
+    // Update Twitter tags;
     updateMetaTag('twitter:title', title, 'name');
     updateMetaTag('twitter:description', description, 'name');
     updateMetaTag('twitter:image', ogImage, 'name');
-    // Update canonical URL
+    // Update canonical URL;
     updateCanonicalUrl(canonicalUrl);
-    // Add structured data
+    // Add structured data;
     if (structuredData) {
       addStructuredData(structuredData);
     }
-    // Add breadcrumb structured data
+    // Add breadcrumb structured data;
     addBreadcrumbStructuredData();
-    // Add organization structured data
+    // Add organization structured data;
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
@@ -68,7 +68,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     script.id = 'structured-data';
-    // Remove existing structured data
+    // Remove existing structured data;
     const existing = document.getElementById('structured-data');
     if (existing) {
       existing.remove();
@@ -92,7 +92,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data
+    // Remove existing breadcrumb data;
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {
       existing.remove();
@@ -135,7 +135,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
     script.id = 'organization-structured-data';
-    // Remove existing organization data
+    // Remove existing organization data;
     const existing = document.getElementById('organization-structured-data');
     if (existing) {
       existing.remove();
@@ -143,7 +143,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     document.head.appendChild(script);
   };
   return (
-    <Head>
+    <Head></Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />

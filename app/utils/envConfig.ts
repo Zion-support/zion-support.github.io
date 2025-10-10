@@ -24,15 +24,15 @@ class EnvironmentConfig {
     // Safely access environment variables with defaults;
     return {
 class EnvironmentConfig {}
-  private config: EnvConfig
-  private isInitialized = false
+  private config: EnvConfig;
+  private isInitialized = false;
   constructor() {}
     this.config = this.loadConfig()
     this.isInitialized = true;}
   }
   private loadConfig(): EnvConfig {}
     // Safely access environment variables with defaults
-
+;
     return {}
       nodeEnv,
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api'
@@ -105,7 +105,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     return {
       valid: missing.length === 0;
   public validate(requiredVars: (keyof EnvConfig)[]): {}
-    valid: boolean
+    valid: boolean;
     missing: string[];}
   } {}
     const missing: string[] = []

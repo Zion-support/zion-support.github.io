@@ -1,17 +1,17 @@
 /**
- * Accessibility (A11Y) Utilities
- * Provides helpers for improving web accessibility
+ * Accessibility (A11Y) Utilities;
+ * Provides helpers for improving web accessibility;
  */
 
 /**
- * Generate unique ID for aria-describedby and aria-labelledby
+ * Generate unique ID for aria-describedby and aria-labelledby;
  */
 export function generateId(prefix = 'a11y'): string {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
 
 /**
- * Announce message to screen readers
+ * Announce message to screen readers;
  */
 export function announceToScreenReader(
   message: string,
@@ -25,7 +25,7 @@ export function announceToScreenReader(
   
   document.body.appendChild(announcement);
   
-  // Remove announcement after it's been read
+  // Remove announcement after it's been read;
   setTimeout(() => {
     document.body.removeChild(announcement);
   }, 3000);
@@ -66,7 +66,7 @@ export function trapFocus(element: HTMLElement): () => void {
 }
 
 /**
- * Check if element is keyboard accessible
+ * Check if element is keyboard accessible;
  */
 export function isKeyboardAccessible(element: HTMLElement): boolean {
   const tabIndex = element.getAttribute('tabindex');
@@ -74,7 +74,7 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
 }
 
 /**
- * Add keyboard navigation support to custom interactive elements
+ * Add keyboard navigation support to custom interactive elements;
  */
 export function makeKeyboardAccessible(
   element: HTMLElement,
@@ -127,7 +127,7 @@ export function getContrastRatio(color1: string, color2: string): number {
 }
 
 /**
- * Check if contrast ratio meets WCAG standards
+ * Check if contrast ratio meets WCAG standards;
  */
 export function meetsContrastRequirements(
   color1: string,
@@ -140,7 +140,7 @@ export function meetsContrastRequirements(
 }
 
 /**
- * Skip to content link helper
+ * Skip to content link helper;
  */
 export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
   const skipLink = document.createElement('a');
@@ -168,21 +168,21 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
 }
 
 /**
- * Detect if user prefers reduced motion
+ * Detect if user prefers reduced motion;
  */
 export function prefersReducedMotion(): boolean {
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 /**
- * Detect if user prefers dark mode
+ * Detect if user prefers dark mode;
  */
 export function prefersDarkMode(): boolean {
   return window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
 /**
- * Get ARIA label for form validation error
+ * Get ARIA label for form validation error;
  */
 export function getAriaInvalid(hasError: boolean): Record<string, string> {
   return {
@@ -191,7 +191,7 @@ export function getAriaInvalid(hasError: boolean): Record<string, string> {
 }
 
 /**
- * Create accessible tooltip
+ * Create accessible tooltip;
  */
 export function createAccessibleTooltip(
   trigger: HTMLElement,

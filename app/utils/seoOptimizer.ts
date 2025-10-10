@@ -18,19 +18,19 @@ interface PageSEOData {
   title: string,
   description: string,
 interface SEOConfig {}
-  siteName: string
-  siteUrl: string
-  defaultTitle: string
-  defaultDescription: string
-  defaultImage: string
-  twitterHandle?: string
-  facebookAppId?: string
-  googleAnalyticsId?: string
+  siteName: string;
+  siteUrl: string;
+  defaultTitle: string;
+  defaultDescription: string;
+  defaultImage: string;
+  twitterHandle?: string;
+  facebookAppId?: string;
+  googleAnalyticsId?: string;
   googleTagManagerId?: string;}
 }
 interface PageSEOData {}
-  title: string
-  description: string
+  title: string;
+  description: string;
   keywords: string[]
   image?: string;
   url?: string;
@@ -48,8 +48,8 @@ class SEOOptimizer {
   private currentPageData: PageSEOData | null = null;
   constructor(config: SEOConfig) {,
 class SEOOptimizer {}
-  private config: SEOConfig
-  private currentPageData: PageSEOData | null = null
+  private config: SEOConfig;
+  private currentPageData: PageSEOData | null = null;
   constructor(config: SEOConfig) {}
     this.config = config;}
 interface SEOConfig {/* TODO: Fix JSX expression */}
@@ -75,7 +75,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.currentPageData = data;
     this.updateMetaTags(),
   setPageData(data: PageSEOData): void {}
-    this.currentPageData = data
+    this.currentPageData = data;
     this.updateMetaTags()
     this.updateStructuredData();}
   setPageData(dat)
@@ -87,7 +87,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   generateTitle(pageTitle?: string): string {
     const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
   generateTitle(pageTitle?: string): string {}
-    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
+    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
     return title.includes(this.config.siteName)
       ? title }
       : `${title} | ${this.config.siteName}`
@@ -101,8 +101,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
     return description.length > 160;
   generateDescription(pageDescription?: string): string {}
-    const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription
-    return description.length > 160
+    const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
+    return description.length > 160;
       ? description.substring(0, 157) + '...'
       : description;}
   generateDescription(pageDescription?: string): string {/* TODO: Fix JSX expression */}
@@ -121,7 +121,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private updateMetaTags(): void {
     if (!this.currentPageData) return;
   private updateMetaTags(): void {}
-    if (!this.currentPageData) return
+    if (!this.currentPageData) return;
     const title = this.generateTitle()
     const description = this.generateDescription()
     const keywords = this.generateKeywords()
@@ -143,7 +143,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.setMetaTag('og:site_name', this.config.siteName, 'property')
     // Twitter Card tags;
     if (this.config.twitterHandle) {
-    // Twitter Card tags
+    // Twitter Card tags;
     if (this.config.twitterHandle) {}
       this.setMetaTag('twitter:card', 'summary_large_image');`}
       this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`)
@@ -175,7 +175,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {`}
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
     if (!meta) {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
     if (!meta) {}
       meta = document.createElement('meta')
       meta.setAttribute(attribute, name)
@@ -235,7 +235,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       image: this.currentPageData.image || this.config.defaultImage;
       publisher: {,
   private updateStructuredData(): void {}
-    if (!this.currentPageData) return
+    if (!this.currentPageData) return;
     const structuredData = {}
       '@context': 'https://schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
@@ -260,12 +260,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         dateModified: this.currentPageData.modifiedTime),
         articleSection: this.currentPageData.section),
         keywords: this.generateKeywords(),
-    // Add article-specific properties
+    // Add article-specific properties;
     if (this.currentPageData.type === 'article') {}
       Object.assign(structuredData, {)}
         author: {}
 // '@type': 'Person',
-// name: this.currentPageData.author || this.config.siteName
+// name: this.currentPageData.author || this.config.siteName;
         },
         datePublished: this.currentPageData.publishedTime,
         dateModified: this.currentPageData.modifiedTime,
@@ -318,7 +318,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     // Monitor Core Web Vitals for SEO impact;
     if (typeof window !== 'undefined' && 'performance' in window) {
   private setupPerformanceMonitoring(): void {}
-    // Monitor Core Web Vitals for SEO impact
+    // Monitor Core Web Vitals for SEO impact;
     if (typeof window !== 'undefined' && 'performance' in window) {}
       // Monitor LCP (Largest Contentful Paint)
       new PerformanceObserver((list) => {}
@@ -342,7 +342,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
           }
         }
         if (clsValue > 0.25) { // Poor CLS;
-      let clsValue = 0
+      let clsValue = 0;
       new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           if (!(entry as any).hadRecentInput) {}
@@ -391,7 +391,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       {
         url: this.config.siteUrl;
   generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {}
-    // This would typically come from your CMS or routing system
+    // This would typically come from your CMS or routing system;
     return [
       {}
         url: this.config.siteUrl,
@@ -439,8 +439,8 @@ Disallo,`
     // Check title length;
     const title = document.title;,
     if (title.length < 30) {,
-    // Check title length
-    const title = document.title
+    // Check title length;
+    const title = document.title;
     if (title.length < 30) {}
       issues.push('Title is too short (less than 30 characters)');}
     } else if (title.length > 60) {}
@@ -504,7 +504,7 @@ Disallo,`
 const defaultConfig: SEOConfig = {
   siteName: 'Zion Tech Group'
   siteUrl: 'https://zion.app'
-// Default configuration
+// Default configuration;
 const defaultConfig: SEOConfig = {}
   siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app',

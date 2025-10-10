@@ -14,15 +14,15 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy;
   contentSecurityPolicy: [,
 export interface SecurityHeadersConfig {}
-  contentSecurityPolicy?: string
-  strictTransportSecurity?: string
-  xFrameOptions?: string
-  xContentTypeOptions?: string
-  referrerPolicy?: string
+  contentSecurityPolicy?: string;
+  strictTransportSecurity?: string;
+  xFrameOptions?: string;
+  xContentTypeOptions?: string;
+  referrerPolicy?: string;
   permissionsPolicy?: string;}
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {}
-  // Content Security Policy
+  // Content Security Policy;
   contentSecurityPolicy: [
     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
@@ -59,7 +59,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
  */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 export function getSecurityHeaders()
-  customConfig?: Partial<SecurityHeadersConfig>
+  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
 ): Record<string, string> {}
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const headers: Record<string, string> = {}
@@ -117,7 +117,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Array<{ key: string; value: string }> {
 export function getNextSecurityHeaders()
-  customConfig?: Partial<SecurityHeadersConfig>
+  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {}
   const headers = getSecurityHeaders(customConfig)
   return Object.entries(headers).map(([key, value]) => ({}

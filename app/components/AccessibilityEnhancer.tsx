@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Add keyboard navigation support
+    // Add keyboard navigation support;
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
@@ -17,7 +17,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       document.body.classList.remove('keyboard-navigation');
     };
 
-    // Add focus indicators
+    // Add focus indicators;
     const addFocusStyles = () => {
       const style = document.createElement('style');
       style.textContent = `
@@ -29,7 +29,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       document.head.appendChild(style);
     };
 
-    // Initialize accessibility features
+    // Initialize accessibility features;
     addFocusStyles();
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);

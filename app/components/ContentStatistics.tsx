@@ -9,14 +9,14 @@ const ContentStatistics: React.FC = () => {
     clients: 0,
     projects: 0,
     satisfaction: 0,
-    years: 0
+    years: 0;
   });
 
   const targetCounters = {
     clients: 500,
     projects: 1000,
     satisfaction: 99,
-    years: 10
+    years: 10;
   };
 
   const statistics = [
@@ -85,7 +85,7 @@ const ContentStatistics: React.FC = () => {
   ];
 
   useEffect(() => {
-    const duration = 2000; // 2 seconds
+    const duration = 2000; // 2 seconds;
     const steps = 60;
     const stepDuration = duration / steps;
 
@@ -113,55 +113,26 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Our Impact
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Numbers that speak for our success and client satisfaction.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-            <div className="text-gray-300">Projects Completed</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-            <div className="text-gray-300">Uptime Guarantee</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-            <div className="text-gray-300">Support Available</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
-            <div className="text-gray-300">Micro SaaS Tools</div>
-=======
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
-      <div className="container mx-auto px-4">
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20"></div>
+      <div className="container mx-auto px-4"></div>
         {/* Statistics Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
+        <div className="text-center mb-16"></div>
+          <h2 className="text-4xl font-bold text-white mb-4"></h2>
             Our <span className="text-cyan-400">Achievements</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             Numbers that speak for themselves - our track record of success and client satisfaction.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
           {statistics.map((stat, index) => (
-            <div
+            <div;
               key={index}
               className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 text-center hover:bg-white/10 transition-all duration-300"
-            >
+            ></div>
               <stat.icon className={`w-12 h-12 ${stat.color} mx-auto mb-4`} />
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+              <div className={`text-4xl font-bold ${stat.color} mb-2`}></div>
                 {stat.value}{stat.suffix}
               </div>
               <div className="text-white font-medium">{stat.label}</div>
@@ -170,20 +141,20 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         {/* Features Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
+        <div className="mb-16"></div>
+          <div className="text-center mb-12"></div>
             <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us?</h3>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300"></p>
               Our solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
-              <div
+              <div;
                 key={index}
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
+              ></div>
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>
                 <p className="text-gray-300 text-sm">{feature.description}</p>
@@ -193,29 +164,28 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-          <div className="text-center mb-8">
+        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
+          <div className="text-center mb-8"></div>
             <h3 className="text-3xl font-bold text-white mb-4">Key Benefits</h3>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300"></p>
               Discover why thousands of businesses trust our solutions.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center text-white">
+              <div key={index} className="flex items-center text-white"></div>
                 <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                 <span className="text-sm">{benefit}</span>
               </div>
             ))}
           </div>
 
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto">
+          <div className="text-center"></div>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto"></button>
               <span>Get Started Today</span>
               <ArrowRight className="w-5 h-5" />
             </button>
->>>>>>> origin/main
           </div>
         </div>
       </div>

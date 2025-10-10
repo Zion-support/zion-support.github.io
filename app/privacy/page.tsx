@@ -53,22 +53,22 @@ export default function PrivacyPage() {
     {
       title: 'Access',
       description: 'Request access to your personal data',
-      icon: Eye
+      icon: Eye;
     },
     {
       title: 'Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: CheckCircle
+      icon: CheckCircle;
     },
     {
       title: 'Erasure',
       description: 'Request deletion of your personal data',
-      icon: Lock
+      icon: Lock;
     },
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database
+      icon: Database;
     }
   ];
 
@@ -76,10 +76,10 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
         <div className="container mx-auto px-4 text-center"></div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
             Privacy Policy</h1>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
             Your privacy is important to us. Learn how we collect, use, and protect your information.
           </p>
           <div className="flex items-center justify-center text-sm text-blue-200"></div>
@@ -91,22 +91,22 @@ export default function PrivacyPage() {
 
       <div className="py-20"></div>
         <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-4xl mx-auto space-y-12"></div>
             {/* Introduction */}</div>
-            <section>
+            <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 leading-relaxed mb-4"></p>
                 At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed"></p>
                 By using our services, you agree to the collection and use of information in accordance with this policy.
               </p>
             </section>
 
             {/* Information We Collect */}
-            <section>
+            <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-3 gap-6"></div>
                 {dataTypes.map((type, index) => (</div>
                   <div key={index} className="bg-gray-50 rounded-lg p-6"></div>
                     <div className="flex items-center mb-4"></div>
@@ -114,7 +114,7 @@ export default function PrivacyPage() {
                       <h3 className="text-lg font-semibold text-gray-900">{type.category}</h3>
                     </div>
                     <p className="text-gray-700 mb-3">{type.description}</p>
-                    <ul className="text-sm text-gray-600 space-y-1">
+                    <ul className="text-sm text-gray-600 space-y-1"></ul>
                       {type.examples.map((example, idx) => (
                         <li key={idx}>• {example}</li>
                       ))}
@@ -125,9 +125,9 @@ export default function PrivacyPage() {
             </section>
 
             {/* How We Use Information */}
-            <section>
+            <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6"></div>
                 {purposes.map((purpose, index) => (</div>
                   <div key={index} className="flex items-start"></div>
                     <div className="flex-shrink-0 mr-4"></div>
@@ -143,17 +143,17 @@ export default function PrivacyPage() {
             </section>
 
             {/* Data Security */}
-            <section>
+            <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security</h2>
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
                 <div className="flex items-start"></div>
                   <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
                   <div></div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Security Measures</h3>
-                    <p className="text-gray-700 mb-4">
+                    <p className="text-gray-700 mb-4"></p>
                       We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
                     </p>
-                    <ul className="text-gray-700 space-y-2">
+                    <ul className="text-gray-700 space-y-2"></ul>
                       <li>• Encryption of data in transit and at rest</li>
                       <li>• Regular security audits and assessments</li>
                       <li>• Access controls and authentication systems</li>
@@ -165,9 +165,9 @@ export default function PrivacyPage() {
             </section>
 
             {/* Your Rights */}
-            <section>
+            <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6"></div>
                 {rights.map((right, index) => (</div>
                   <div key={index} className="bg-white border border-gray-200 rounded-lg p-6"></div>
                     <div className="flex items-center mb-3"></div>
@@ -181,9 +181,9 @@ export default function PrivacyPage() {
             </section>
 
             {/* Contact Information */}
-            <section className="bg-gray-50 rounded-lg p-8">
+            <section className="bg-gray-50 rounded-lg p-8"></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-6"></p>
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
               <div className="grid md:grid-cols-2 gap-6"></div>
@@ -207,13 +207,13 @@ export default function PrivacyPage() {
             </section>
 
             {/* Updates */}
-            <section>
+            <section></section>
               <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"></div>
                 <div className="flex items-start"></div>
                   <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
                   <div></div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Policy Updates</h3>
-                    <p className="text-gray-700">
+                    <p className="text-gray-700"></p>
                       We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
                     </p>
                   </div>

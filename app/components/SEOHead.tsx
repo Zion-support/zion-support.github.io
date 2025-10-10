@@ -20,7 +20,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData
+  structuredData;
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
@@ -53,7 +53,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -87,7 +87,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"></script>
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>

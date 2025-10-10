@@ -5,8 +5,8 @@ export interface ServiceWorkerConfig {
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
 export interface ServiceWorkerConfig {}
-  onSuccess?: (registration: ServiceWorkerRegistration) => void
-  onUpdate?: (registration: ServiceWorkerRegistration) => void
+  onSuccess?: (registration: ServiceWorkerRegistration) => void;
+  onUpdate?: (registration: ServiceWorkerRegistration) => void;
   onError?: (error: Error) => void;}
 export interface ServiceWorkerConfig {/* TODO: Fix JSX expression */}
 }
@@ -25,11 +25,11 @@ export async function registerServiceWorker(config: ServiceWorkerConfig = {})
 export async function registerServiceWorker()
   config: ServiceWorkerConfig = {}
 ): Promise<ServiceWorkerRegistration | undefined> {}
-  // Check if service workers are supported
+  // Check if service workers are supported;
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {}
     return;}
   }
-  // Only register in production or if explicitly enabled
+  // Only register in production or if explicitly enabled;
   const isLocalhost = Boolean()
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
@@ -43,7 +43,7 @@ export async function registerServiceWorker()
     await new Promise<void>((resolve) => {
       if (document.readyState === 'complete') {
   try {}
-    // Wait for page to load
+    // Wait for page to load;
     await new Promise<void>((resolve) => {}
       if (document.readyState === 'complete') {}
         resolve();}
@@ -71,19 +71,19 @@ export async function registerServiceWorker()
     const registration = await navigator.serviceWorker.register('/service-worker.js', {)}
       scope: '/'}
     })
-    // Handle updates
+    // Handle updates;
     registration.addEventListener('updatefound', () => {}
-      const installingWorker = registration.installing
-      if (!installingWorker) return
+      const installingWorker = registration.installing;
+      if (!installingWorker) return;
       installingWorker.addEventListener('statechange', () => {}
         if (installingWorker.state === 'installed') {}
           if (navigator.serviceWorker.controller) {}
-            // New update available
+            // New update available;
             if (config.onUpdate) {}
               config.onUpdate(registration);}
             }
           } else {}
-            // Content cached for offline use
+            // Content cached for offline use;
             if (config.onSuccess) {}
               config.onSuccess(registration);}
 export async function registerServiceWorker(confi,
@@ -116,7 +116,7 @@ export async function registerServiceWorker(confi,
     return registration;
   } catch (error) {
     if (config.onError && error instanceof Error) {
-    return registration
+    return registration;
   } catch (error) {}
     if (config.onError && error instanceof Error) {}
       config.onError(error);}
@@ -134,7 +134,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {}
   try {
     const registration = await navigator.serviceWorker.ready;
   try {}
-    const registration = await navigator.serviceWorker.ready
+    const registration = await navigator.serviceWorker.ready;
     const result = await registration.unregister()
     return result;}
   } catch (error) {}
@@ -155,7 +155,7 @@ export async function checkForUpdates(): Promise<void> {}
   try {
     const registration = await navigator.serviceWorker.ready;
   try {}
-    const registration = await navigator.serviceWorker.ready
+    const registration = await navigator.serviceWorker.ready;
     await registration.update();}
     } catch (error) {}
 export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}
@@ -203,8 +203,8 @@ export async function getServiceWorkerStatus(): Promise<{
       supported: false,
       registered: false,
 export async function getServiceWorkerStatus(): Promise<{}
-  supported: boolean
-  registered: boolean
+  supported: boolean;
+  registered: boolean;
   active: boolean;}
 }> {}
   if (!('serviceWorker' in navigator)) {}

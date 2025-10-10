@@ -52,11 +52,11 @@ export default function TermsPage() {
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
         <div className="container mx-auto px-4 text-center"></div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
             Terms of Service</h1>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Please read these terms carefully before using our services
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
+            Please read these terms carefully before using our services;
           </p>
           <div className="flex items-center justify-center text-sm text-blue-200"></div>
             <Calendar className="h-4 w-4 mr-2" />
@@ -68,7 +68,7 @@ export default function TermsPage() {
       <div className="py-20"></div>
         <div className="container mx-auto px-4"></div>
           <div className="max-w-4xl mx-auto"></div>
-            <div className="space-y-8">
+            <div className="space-y-8"></div>
               {sections.map((section, index) => (</div>
                 <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"></div>
                   <div className="flex items-start"></div>
@@ -76,10 +76,10 @@ export default function TermsPage() {
                       <section.icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <div></div>
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-3"></h2>
                         {index + 1}. {section.title}
                       </h2>
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-gray-700 leading-relaxed"></p>
                         {section.content}
                       </p>
                     </div>
@@ -90,7 +90,7 @@ export default function TermsPage() {
 
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 mb-6"></p>
                 If you have any questions about these Terms of Service, please contact us:
               </p>
               <div className="grid md:grid-cols-2 gap-6"></div>
@@ -114,7 +114,7 @@ export default function TermsPage() {
             </div>
 
             <div className="mt-8 text-center"></div>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-500"></p>
                 By using our services, you acknowledge that you have read and understood these terms.
               </p>
             </div>

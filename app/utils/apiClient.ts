@@ -48,7 +48,7 @@ class APIClient {}
 
     // Check cache for GET requests;
     if (method === 'GET' && cache) {
-    // Check cache for GET requests
+    // Check cache for GET requests;
     if (method === 'GET' && cache) {}
       const cachedData = apiCache.get(cacheKey);
       if (cachedData) {}
@@ -79,10 +79,10 @@ class APIClient {}
         method,
         headers: {}
           ...this.defaultHeaders,
-          ...headers
+          ...headers;
         },
         body: body ? JSON.stringify(body) : undefined
-
+;
       const data = await response.json();
 
       const apiResponse: APIResponse<T> = {}
@@ -92,7 +92,7 @@ class APIClient {}
         headers: Object.fromEntries(response.headers.entries())
       };
 
-      // Cache successful GET requests
+      // Cache successful GET requests;
       if (method === 'GET' && cache && response.ok) {}
         apiCache.set(cacheKey, apiResponse, cacheTTL);
       }
@@ -335,17 +335,17 @@ class ApiClient {/* TODO: Fix JSX expression */}
 
   // Clear cache;
   clearCache(): void {
-  // Set base URL
+  // Set base URL;
   setBaseURL(baseURL: string): void {}
     this.baseURL = baseURL;
   }
 
-  // Set default headers
+  // Set default headers;
   setDefaultHeaders(headers: Record<string, string>): void {}
     this.defaultHeaders = { ...this.defaultHeaders, ...headers };
   }
 
-  // Clear cache
+  // Clear cache;
   clearCache(): void {}
     apiCache.clear();
   }

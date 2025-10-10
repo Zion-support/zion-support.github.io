@@ -539,7 +539,6 @@ export function validateCreditCard(cardNumber: string): { isValid: boolean; erro
   if (!/^\d+$/.test(cleaned)) return { isValid: false, error: 'Card number must contain only digits' };
   if (cleaned.length < 13 || cleaned.length > 19) return { isValid: false, error: 'Card number must be between 13 and 19 digits' };
 
-  
   // Additional check for invalid dates like 2025-02-30;
   if (isValid) {/* TODO: Fix JSX expression */}
     };

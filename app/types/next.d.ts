@@ -1,32 +1,7 @@
-// Next.js specific type definitions
+// Next.js specific type definitions;
+import { NextRequest, NextResponse } from 'next/server'
 
-<<<<<<< HEAD
-const Next.dPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-<<<<<<< HEAD
-=======
-// Type definitions for Next.js compatibility in Vite
+// Type definitions for Next.js compatibility in Vite;
 export interface Metadata {
   title?: string;
   description?: string;
@@ -93,12 +68,14 @@ export interface MetadataRoute {
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
->>>>>>> origin/main
-=======
-import { NextRequest, NextResponse } from 'next/server'
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
 
-// Extend Next.js types
+// Custom Next.js types;
+export interface NextPageProps {
+  params: { [key: string]: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+// Extend Next.js types;
 declare module 'next' {
   interface NextApiRequest {
     user?: {
@@ -109,47 +86,29 @@ declare module 'next' {
   }
 }
 
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Next.d | Zion Tech Group</title>
-        <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
-      </Helmet>
-<<<<<<< HEAD
-=======
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
->>>>>>> origin/main
-=======
-// Custom Next.js types
-export interface NextPageProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d2d0
 
 export interface NextLayoutProps {
   children: React.ReactNode;
   params: { [key: string]: string };
 }
 
-// API route types
+// API route types;
 export interface ApiRouteHandler {
   (req: NextRequest): Promise<NextResponse>;
 }
 
-// Middleware types
+// Middleware types;
 export interface MiddlewareConfig {
   matcher: string[];
 }
 
-// Image optimization types
+// Image optimization types;
 export interface ImageProps {
   src: string;
   alt: string;
@@ -161,7 +120,7 @@ export interface ImageProps {
   blurDataURL?: string;
 }
 
-// Metadata types
+// Metadata types;
 export interface Metadata {
   title?: string;
   description?: string;
@@ -179,19 +138,19 @@ export interface Metadata {
   };
 }
 
-// Server components types
+// Server components types;
 export interface ServerComponentProps {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-// Client components types
+// Client components types;
 export interface ClientComponentProps {
   children?: React.ReactNode;
   className?: string;
 }
 
-// Route handlers
+// Route handlers;
 export interface RouteHandler {
   GET?: (req: NextRequest) => Promise<NextResponse>;
   POST?: (req: NextRequest) => Promise<NextResponse>;
@@ -200,30 +159,30 @@ export interface RouteHandler {
   PATCH?: (req: NextRequest) => Promise<NextResponse>;
 }
 
-// Dynamic route types
+// Dynamic route types;
 export interface DynamicRoute {
   params: { [key: string]: string };
 }
 
-// Static generation types
+// Static generation types;
 export interface StaticProps {
   props: { [key: string]: any };
   revalidate?: number;
   notFound?: boolean;
 }
 
-// ISR types
+// ISR types;
 export interface ISRConfig {
   revalidate: number;
   tags?: string[];
 }
 
-// Edge runtime types
+// Edge runtime types;
 export interface EdgeRuntime {
   runtime: 'edge';
 }
 
-// Node.js runtime types
+// Node.js runtime types;
 export interface NodeRuntime {
   runtime: 'nodejs';
 }

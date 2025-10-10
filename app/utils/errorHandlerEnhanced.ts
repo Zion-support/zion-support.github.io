@@ -1,7 +1,7 @@
 'use client';
 // Enhanced Error Handler;
 export class AppError extends Error {
-// Enhanced Error Handler
+// Enhanced Error Handler;
 export class AppError extends Error {}
   statusCode: number,
   isOperational: boolean,
@@ -23,7 +23,7 @@ export const errorHandler = (error: AppError | Error) => {}
   return {,
   .toISOString(),
     statusCode: appError.statusCode || 500
-
+;
   return {}
     message: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCode: appError.statusCode || 500;
@@ -50,7 +50,7 @@ export const errorHandler = (error: AppError | Error) => {
     stack: appError.stack,
     timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500
-
+;
   });
   return {/* TODO: Fix JSX expression */}
   };

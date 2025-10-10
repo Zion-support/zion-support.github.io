@@ -2,60 +2,6 @@
 import React from 'react';
 'use client';
 
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight } from 'lucide-react';
-
-const BlogPage: React.FC = () => {
-  const blogPosts = [
-    {
-      title: 'The Future of AI in Business',
-      excerpt: 'Exploring how artificial intelligence is transforming modern business operations and what to expect in the coming years.',
-      author: 'Zion Tech Team',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      category: 'AI'
-    },
-    {
-      title: 'Cloud Migration Best Practices',
-      excerpt: 'A comprehensive guide to successfully migrating your business to the cloud with minimal downtime and maximum efficiency.',
-      author: 'Sarah Johnson',
-      date: '2024-01-10',
-      readTime: '8 min read',
-      category: 'Cloud'
-    },
-    {
-      title: 'Cybersecurity Trends 2024',
-      excerpt: 'Stay ahead of the latest cybersecurity threats and learn about emerging security technologies and strategies.',
-      author: 'Mike Chen',
-      date: '2024-01-05',
-      readTime: '6 min read',
-      category: 'Security'
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Blog - Zion Tech Group | AI & IT Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and IT solutions from Zion Tech Group experts." />
-        <meta name="keywords" content="AI blog, cloud computing, cybersecurity, data analytics, mobile development, automation, tech insights" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Tech Insights & News
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Stay updated with the latest trends and insights in AI, cloud computing, and IT solutions.
-            </p>
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
@@ -100,10 +46,10 @@ const BlogPage: React.FC = () => {
   const categories = ['All Posts', 'AI', 'Cloud', 'Security', 'Development'];
 
   const filteredPosts = selectedCategory === 'All Posts' 
-    ? blogPosts 
+    ? blogPosts ;
     : blogPosts.filter(post => post.category === selectedCategory);
 
-  const searchResults = searchQuery 
+  const searchResults = searchQuery ;
     ? filteredPosts.filter(post => 
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
@@ -112,21 +58,21 @@ const BlogPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Blog - Zion Tech Group | AI and Technology Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, technology, and business transformation from Zion Tech Group experts." />
         <meta name="keywords" content="AI blog, technology insights, business transformation, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Our Blog
+        <section className="pt-20 pb-16 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
+                Our Blog;
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
                 Insights, trends, and expert perspectives on AI, technology, and business transformation.
               </p>
             </div>
@@ -134,12 +80,12 @@ const BlogPage: React.FC = () => {
         </section>
 
         {/* Search and Filter */}
-        <section className="py-8 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="relative flex-1">
+        <section className="py-8 px-4"></section>
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="flex flex-col md:flex-row gap-4 mb-8"></div>
+              <div className="relative flex-1"></div>
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search articles..."
                   value={searchQuery}
@@ -147,9 +93,9 @@ const BlogPage: React.FC = () => {
                   className="w-full pl-12 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
-              <div className="relative">
+              <div className="relative"></div>
                 <Filter className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <select
+                <select;
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="pl-12 pr-8 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
@@ -160,33 +106,20 @@ const BlogPage: React.FC = () => {
                 </select>
               </div>
             </div>
->>>>>>> origin/main
           </div>
         </section>
 
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-              {blogPosts.map((post, index) => (
-                <article key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="mb-4">
-                    <span className="inline-block bg-cyan-500/20 text-cyan-400 text-xs px-2 py-1 rounded-full mb-3">
-                      {post.category}
-                    </span>
-                    <h2 className="text-xl font-semibold text-white mb-3">{post.title}</h2>
-                    <p className="text-gray-300 mb-4">{post.excerpt}</p>
-                  </div>
-                  
-=======
+        <section className="py-16 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {searchResults.map((post) => (
-                <article key={post.id} className="cyber-card p-6">
-                  <div className="mb-4">
-                    <div className="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center">
+                <article key={post.id} className="cyber-card p-6"></article>
+                  <div className="mb-4"></div>
+                    <div className="w-full h-48 bg-gray-800 rounded-lg mb-4 flex items-center justify-center"></div>
                       <span className="text-2xl font-bold text-cyan-400">{post.title.charAt(0)}</span>
                     </div>
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
-                      <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full text-xs">
+                    <div className="flex items-center justify-between text-sm text-gray-400 mb-2"></div>
+                      <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full text-xs"></span>
                         {post.category}
                       </span>
                       <span>{post.readTime}</span>
@@ -196,14 +129,13 @@ const BlogPage: React.FC = () => {
                   <h2 className="text-xl font-semibold text-white mb-3">{post.title}</h2>
                   <p className="text-gray-300 mb-4">{post.excerpt}</p>
                   
->>>>>>> origin/main
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex items-center space-x-1">
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4"></div>
+                    <div className="flex items-center space-x-4"></div>
+                      <div className="flex items-center space-x-1"></div>
                         <User className="w-4 h-4" />
                         <span>{post.author}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
+                      <div className="flex items-center space-x-1"></div>
                         <Calendar className="w-4 h-4" />
                         <span>{post.date}</span>
                       </div>
@@ -211,28 +143,18 @@ const BlogPage: React.FC = () => {
                     <span>{post.readTime}</span>
                   </div>
                   
-<<<<<<< HEAD
-                  <Link
-                    to={`/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-=======
-                  <div className="flex items-center justify-between">
-                    <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                      Read More
+                  <div className="flex items-center justify-between"></div>
+                    <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"></button>
+                      Read More;
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
->>>>>>> origin/main
                 </article>
               ))}
             </div>
             
             {searchResults.length === 0 && (
-              <div className="text-center py-12">
+              <div className="text-center py-12"></div>
                 <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
               </div>
             )}
@@ -243,8 +165,4 @@ const BlogPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default BlogPage;
-=======
-export default BlogPage;
->>>>>>> origin/main

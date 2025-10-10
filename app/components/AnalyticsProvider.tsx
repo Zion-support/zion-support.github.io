@@ -21,7 +21,7 @@ export const useAnalytics = () => {
 
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Initialize Google Analytics
+    // Initialize Google Analytics;
     if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,
@@ -51,7 +51,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}></AnalyticsContext>
       {children}
     </AnalyticsContext.Provider>
   );

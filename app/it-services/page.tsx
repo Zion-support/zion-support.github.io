@@ -329,30 +329,30 @@ const ITServicesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud, security, DevOps, and infrastructure solutions for modern businesses." />
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, infrastructure, technology consulting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         {/* Hero Section */}</div>
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20"></section>
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center"></div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6"></h1>
                 Professional IT Services</h1>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Comprehensive technology solutions to power your business growth and digital transformation
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto"></p>
+                Comprehensive technology solutions to power your business growth and digital transformation;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                  Get Free Assessment
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"></button>
+                  Get Free Assessment;
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Our Portfolio
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"></button>
+                  View Our Portfolio;
                 </button>
               </div>
             </div>
@@ -360,14 +360,14 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Why Choose Our IT Services?
               </h2>
-              <p className="text-xl text-gray-600">
-                Expert solutions delivered by certified professionals with proven track records
+              <p className="text-xl text-gray-600"></p>
+                Expert solutions delivered by certified professionals with proven track records;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -405,18 +405,18 @@ const ITServicesPage: React.FC = () => {
 
         {/* Services by Category */}
         {categories.map(category => (
-          <section key={category} className="py-16 bg-gray-50">
+          <section key={category} className="py-16 bg-gray-50"></section>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Services
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
+                  {category} Services;
                 </h2>
-                <p className="text-xl text-gray-600">
-                  Professional {category.toLowerCase()} solutions tailored to your business needs
+                <p className="text-xl text-gray-600"></p>
+                  Professional {category.toLowerCase()} solutions tailored to your business needs;
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {itServices
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {itServices;
                   .filter(service => service.category === category)
                   .map((service, index) => (</div>
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
@@ -429,16 +429,16 @@ const ITServicesPage: React.FC = () => {
                           <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
-                        <div className="text-sm text-green-600 font-semibold">
+                        <div className="text-sm text-green-600 font-semibold"></div>
                           Save up to 40% vs market rates</div>
                         </div>
                       </div>
 
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                        <ul className="space-y-1">
+                        <ul className="space-y-1"></ul>
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
@@ -448,9 +448,9 @@ const ITServicesPage: React.FC = () => {
 
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2"></div>
                           {service.technologies.map((tech, techIndex) => (</div>
-                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded"></span>
                               {tech}
                             </span>
                           ))}
@@ -459,9 +459,9 @@ const ITServicesPage: React.FC = () => {
 
                       <div className="mb-6"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                        <ul className="space-y-1">
+                        <ul className="space-y-1"></ul>
                           {service.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
                             </li>
@@ -469,8 +469,8 @@ const ITServicesPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                        Get Quote
+                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"></button>
+                        Get Quote;
                       </button>
                     </div>
                   ))}
@@ -480,26 +480,26 @@ const ITServicesPage: React.FC = () => {
         ))}
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
               Ready to Transform Your IT Infrastructure?
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Contact our certified IT experts for a free consultation and custom solution design
+            <p className="text-xl mb-8 text-blue-100"></p>
+              Contact our certified IT experts for a free consultation and custom solution design;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <a 
+              <a ;
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-              >
-                📞 +1 302 464 0950
+              ></a>
+                📞 +1 302 464 0950;
               </a>
-              <a 
+              <a ;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com
+              ></a>
+                ✉️ kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="mt-8 text-sm text-blue-200"></div>

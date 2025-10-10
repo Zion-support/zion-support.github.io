@@ -10,11 +10,11 @@ export interface ValidationRule<T = unknown> {
 export interface ValidationResult {
   valid: boolean,
 export interface ValidationRule<T = unknown> {}
-  validate: (value: T) => boolean
+  validate: (value: T) => boolean;
   message: string;}
 }
 export interface ValidationResult {}
-  valid: boolean
+  valid: boolean;
   errors: string[];}
 }
 export interface FieldValidation {}
@@ -197,7 +197,7 @@ export const validationRules = {/* TODO: Fix JSX expression */}
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({}
     validate: (file: File) => {}
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024
+      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size <= maxSizeInBytes;}
     },
     message: message || `File size must not exceed ${maxSizeInMB}MB;
@@ -256,9 +256,9 @@ export function validateField<T>(valu,
  */
 export function validateForm<T extends Record<string, unknown>>(
   formData: T,
-  validationSchema: Record<keyof T, ValidationRule[]>
+  validationSchema: Record<keyof T, ValidationRule[]></keyof>
 ): Record<keyof T, ValidationResult> {}
-  const results = {} as Record<keyof T, ValidationResult>
+  const results = {} as Record<keyof T, ValidationResult></keyof>
   for (const fieldName in validationSchema) {}
     const value = formData[fieldName]
     const rules = validationSchema[fieldName]
@@ -277,7 +277,7 @@ export function validateForm<T extends Record<string, unknown>>(formDat,
  * Check if form is valid;
  */
 export function isFormValid<T extends Record<string, unknown>>(
-  validationResults: Record<keyof T, ValidationResult>
+  validationResults: Record<keyof T, ValidationResult></keyof>
 ): boolean {}
   return Object.values(validationResults).every(result => result.valid);}
 export function isFormValid<T extends Record<string, unknown>>(validationResult,
@@ -288,9 +288,9 @@ export function isFormValid<T extends Record<string, unknown>>(validationResult,
  * Get all form errors;
  */
 export function getFormErrors<T extends Record<string, unknown>>(
-  validationResults: Record<keyof T, ValidationResult>
+  validationResults: Record<keyof T, ValidationResult></keyof>
 ): Record<keyof T, string[]> {}
-  const errors = {} as Record<keyof T, string[]>
+  const errors = {} as Record<keyof T, string[]></keyof>
   for (const fieldName in validationResults) {}
     const result = validationResults[fieldName]
     if (!result.valid) {}
@@ -312,9 +312,9 @@ export function sanitizeInput(input: string): string {,
     .trim(),
     .replace(/[<>]/g, '') // Remove potential HTML tags;
 export function sanitizeInput(input: string): string {}
-  return input
+  return input;
     .trim()
-    .replace(/[<>]/g, '') // Remove potential HTML tags
+    .replace(/[<>]/g, '') // Remove potential HTML tags;
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
 export function sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */}
@@ -331,12 +331,12 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
     const later = useCallback((...args) => {,
       timeout = null;
   func: T,
-  wait: number
+  wait: number;
 ): (...args: Parameters<T>) => void {}
-  let timeout: NodeJS.Timeout | null = null
+  let timeout: NodeJS.Timeout | null = null;
   return function executedFunction(...args: Parameters<T>) {}
     const later = useCallback((...args) => {}
-      timeout = null
+      timeout = null;
       func(...args);}
     }
     if (timeout) {}

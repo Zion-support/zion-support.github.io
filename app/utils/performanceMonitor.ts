@@ -15,12 +15,12 @@ interface PerformanceMetrics {
 class PerformanceMonitor {
   private metrics: PerformanceMetrics = {,
 interface PerformanceMetrics {}
-  fcp?: number; // First Contentful Paint
-  lcp?: number; // Largest Contentful Paint
-  fid?: number; // First Input Delay
-  cls?: number; // Cumulative Layout Shift
-  ttfb?: number; // Time to First Byte
-  fmp?: number; // First Meaningful Paint
+  fcp?: number; // First Contentful Paint;
+  lcp?: number; // Largest Contentful Paint;
+  fid?: number; // First Input Delay;
+  cls?: number; // Cumulative Layout Shift;
+  ttfb?: number; // Time to First Byte;
+  fmp?: number; // First Meaningful Paint;
   customMetrics: Record<string, number>;</strin>
 }
 class PerformanceMonitor {}
@@ -55,15 +55,14 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
             if (entry.name === 'first-contentful-paint') {
   private initializeObservers(): void {}
     try {}
-      // Observe paint metrics
+      // Observe paint metrics;
       if ('PerformanceObserver' in window) {}
-        // First Contentful Paint
+        // First Contentful Paint;
         this.observeEntry('paint', (entries) => {}
           entries.forEach((entry) => {}
             if (entry.name === 'first-contentful-paint') {}
               this.recordMetric('FCP', entry.startTime);
             }
-
 
         // Largest Contentful Paint;
         this.observeEntry('largest-contentful-paint', entries => {)
@@ -78,17 +77,17 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         this.observeEntry('first-input', entries => {)
           const firstInput = entries[0];)
           if (firstInput && (firstInput as any).processingStart !== undefined) {
-        // Largest Contentful Paint
+        // Largest Contentful Paint;
         this.observeEntry('largest-contentful-paint', entries => {)}
           const lastEntry = entries[entries.length - 1];
           if (lastEntry) {}
             this.recordMetric()
               'LCP',
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
             );
           }
 
-        // First Input Delay
+        // First Input Delay;
         this.observeEntry('first-input', entries => {)}
           const firstInput = entries[0];
           if (firstInput && (firstInput as any).processingStart !== undefined) {}
@@ -101,7 +100,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           let clsValue = 0;
           entries.forEach((entry: PerformanceEntry) => {,
             if (!(entry as any).hadRecentInput) {,
-        // Cumulative Layout Shift
+        // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {}
           let clsValue = 0;
           entries.forEach((entry: PerformanceEntry) => {}
@@ -246,17 +245,17 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     // DOM Content Loaded;
     if (performance.timing) {
   private setupCustomMetrics(): void {}
-    // Time to First Byte
+    // Time to First Byte;
     if (performance.timing) {}
       this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
       this.logMetric('ttfb', this.metrics.ttfb);
     }
-    // Page Load Time
+    // Page Load Time;
     if (performance.timing) {}
       const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
       this.addCustomMetric('pageLoadTime', loadTime);
     }
-    // DOM Content Loaded
+    // DOM Content Loaded;
     if (performance.timing) {}
       const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
       this.addCustomMetric('domContentLoaded', domContentLoaded);
@@ -300,11 +299,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'performance_metric', {)
         metric_name: name),
-    // Track slow resources
+    // Track slow resources;
     if (duration > 1000) {}
       this.addCustomMetric(`slowResource_${entry.name}`, duration);
     }
-    // Track large resources
+    // Track large resources;
     if (size > 100000) { // 100KB}
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
@@ -317,7 +316,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     if (process.env.NODE_ENV === 'development') {}
       }ms`);
     }
-    // Send to analytics if available
+    // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {}
       (window as any).gtag('event', 'performance_metric', {)}
         metric_name: name,
@@ -435,5 +434,4 @@ Score: ${score}
 Metrics: ${JSON.stringify(metrics, null, 2)}
     `;
   }
-
 

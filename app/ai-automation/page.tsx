@@ -67,7 +67,7 @@ const AIAutomationPage: React.FC = () => {
 
   return (</div>
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>AI Automation - Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI Automation solutions. Intelligent process automation, workflow optimization, and smart decision-making for better efficiency." />
         <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation, RPA" />
@@ -75,9 +75,9 @@ const AIAutomationPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"></ul>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300"></li>
                         <CheckCircle className="w-4 h-4 text-teal-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -99,8 +99,8 @@ const AIAutomationPage: React.FC = () => {
 
                 Ready to Automate Your Business?
               </h2>
-              <p className="text-xl text-teal-100 mb-8">
-                Join thousands of businesses who are already using our AI Automation solution
+              <p className="text-xl text-teal-100 mb-8"></p>
+                Join thousands of businesses who are already using our AI Automation solution;
               </p>
               </div>
             </div>

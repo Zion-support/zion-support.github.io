@@ -2,149 +2,130 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Get list of files with TypeScript errors
-function getFilesWithErrors() {
-  try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
-    const lines = output.split('\n');
-    const files = new Set();
-    
-    lines.forEach(line => {
-      const match = line.match(/^([^(]+\.tsx)\([0-9]+,[0-9]+\):/);
-      if (match) {
-        files.add(match[1]);
-      }
-    });
-    
-    return Array.from(files);
-  } catch (error) {
-    console.log('Error getting files with errors:', error.message);
-    return [];
-  }
-}
-
-// Common JSX fixes
-function fixJSXContent(content) {
-  let fixed = content;
-  
-  // Fix missing closing tags - common patterns
-  const fixes = [
-    // Fix self-closing tags that should be closed
-    [/(<[^>]+[^/])>(\s*<)/g, '$1></$1>$2'],
-    
-    // Fix malformed JSX expressions
-    [/<([^>]+)>([^<]+)<\/\1>/g, '<$1>$2</$1>'],
-    
-    // Fix missing closing tags for common elements
-    [/<h1([^>]*)>([^<]+)<\/h1>/g, '<h1$1>$2</h1>'],
-    [/<h2([^>]*)>([^<]+)<\/h2>/g, '<h2$1>$2</h2>'],
-    [/<h3([^>]*)>([^<]+)<\/h3>/g, '<h3$1>$2</h3>'],
-    [/<p([^>]*)>([^<]+)<\/p>/g, '<p$1>$2</p>'],
-    [/<div([^>]*)>([^<]+)<\/div>/g, '<div$1>$2</div>'],
-    [/<span([^>]*)>([^<]+)<\/span>/g, '<span$1>$2</span>'],
-    
-    // Fix malformed JSX fragments
-    [/<>([^<]+)<\/>/g, '<>{$1}</>'],
-    
-    // Fix missing closing tags in complex structures
-    [/<section([^>]*)>([^<]+)<\/section>/g, '<section$1>$2</section>'],
-    [/<main([^>]*)>([^<]+)<\/main>/g, '<main$1>$2</main>'],
-    
-    // Fix malformed className attributes
-    [/className="([^"]*)"\s*>/g, 'className="$1">'],
-    
-    // Fix missing closing tags for lists
-    [/<ul([^>]*)>([^<]+)<\/ul>/g, '<ul$1>$2</ul>'],
-    [/<li([^>]*)>([^<]+)<\/li>/g, '<li$1>$2</li>'],
-    
-    // Fix malformed imports
-    [/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1 } from "$2";'],
-    
-    // Fix missing semicolons
-    [/export default ([^;]+)(?!;)/g, 'export default $1;'],
-    
-    // Fix malformed function declarations
-    [/const\s+([^=]+)\s*=\s*\(\)\s*=>\s*{/g, 'const $1 = () => {'],
-    
-    // Fix missing closing braces
-    [/}\s*$/g, '}\n'],
-    
-    // Fix malformed JSX expressions
-    [/{\s*([^}]+)\s*}/g, '{$1}'],
-    
-    // Fix missing closing tags for components
-    [/<([A-Z][a-zA-Z0-9]*)([^>]*)>([^<]+)<\/\1>/g, '<$1$2>$3</$1>'],
-  ];
-  
-  fixes.forEach(([pattern, replacement]) => {
-    fixed = fixed.replace(pattern, replacement);
-  });
-  
-  return fixed;
-}
-
-// Fix a single file
+// Function to fix common JSX and TypeScript errors
 function fixFile(filePath) {
   try {
-    console.log(`Fixing ${filePath}...`);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return false;
+    // Fix common issues
+    const originalContent = content;
+    
+    // Remove any remaining merge conflict markers
+    content = content.replace(/^<<<<<<<.*$/gm, '');
+    content = content.replace(/^=======.*$/gm, '');
+    content = content.replace(/^>>>>>>>.*$/gm, '');
+    
+    // Fix incomplete JSX fragments
+    content = content.replace(/<>$/gm, '<>');
+    content = content.replace(/^<\/>$/gm, '</>');
+    
+    // Fix incomplete JSX tags
+    content = content.replace(/<(\w+)([^>]*?)(?<!\/)>$/gm, '<$1$2></$1>');
+    
+    // Fix missing closing tags for common elements
+    const commonTags = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside'];
+    for (const tag of commonTags) {
+      // Find unclosed opening tags
+      const openTagRegex = new RegExp(`<${tag}([^>]*?)(?<!\/)>`, 'g');
+      const closeTagRegex = new RegExp(`<\/${tag}>`, 'g');
+      
+      const openMatches = content.match(openTagRegex) || [];
+      const closeMatches = content.match(closeTagRegex) || [];
+      
+      if (openMatches.length > closeMatches.length) {
+        // Add missing closing tags at the end
+        const missing = openMatches.length - closeMatches.length;
+        for (let i = 0; i < missing; i++) {
+          content += `\n</${tag}>`;
+        }
+      }
     }
     
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXContent(content);
+    // Fix JSX expressions that need parent elements
+    content = content.replace(/(\s*)(\w+)\s*=\s*{([^}]+)}/g, (match, indent, prop, value) => {
+      if (value.includes('&&') && !value.includes('return')) {
+        return `${indent}${prop}={${value}}`;
+      }
+      return match;
+    });
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed ${filePath}`);
-      return true;
-    } else {
-      console.log(`No changes needed for ${filePath}`);
-      return false;
+    // Fix missing semicolons
+    content = content.replace(/(\w+)\s*$/gm, (match) => {
+      if (match.trim() && !match.includes(';') && !match.includes('{') && !match.includes('}') && !match.includes('<') && !match.includes('>')) {
+        return match + ';';
+      }
+      return match;
+    });
+    
+    // Fix object property syntax
+    content = content.replace(/(\w+)\s*:\s*([^,}]+)(?=[,}])/g, (match, key, value) => {
+      if (value.includes('{') && value.includes('}')) {
+        return `${key}: ${value}`;
+      }
+      return match;
+    });
+    
+    // Clean up extra empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      modified = true;
     }
+    
+    return modified;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main function
-function main() {
-  console.log('Getting list of files with TypeScript errors...');
-  const files = getFilesWithErrors();
+// Function to find all problematic files
+function findProblematicFiles(dir) {
+  const files = [];
   
-  console.log(`Found ${files.length} files with errors`);
-  
-  let fixedCount = 0;
-  let errorCount = 0;
-  
-  files.forEach(file => {
-    if (fixFile(file)) {
-      fixedCount++;
-    } else {
-      errorCount++;
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+        files.push(fullPath);
+      }
     }
-  });
+  }
   
-  console.log(`\nFixed ${fixedCount} files`);
-  console.log(`Errors in ${errorCount} files`);
-  
-  // Run type check again to see if we fixed anything
-  console.log('\nRunning type check again...');
-  try {
-    execSync('pnpm run type-check', { stdio: 'inherit' });
-    console.log('Type check passed!');
-  } catch (error) {
-    console.log('Type check still has errors, but we made progress');
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+console.log('Fixing JSX and TypeScript errors...');
+
+const appDir = path.join(__dirname, 'app');
+const files = findProblematicFiles(appDir);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixFile(file)) {
+    fixedCount++;
   }
 }
 
-if (require.main === module) {
-  main();
-}
+console.log(`Fixed ${fixedCount} files`);
 
-module.exports = { fixJSXContent, fixFile };
+// Run type check to see remaining errors
+console.log('\nRunning type check...');
+const { execSync } = require('child_process');
+try {
+  execSync('pnpm run type-check', { stdio: 'inherit' });
+} catch (error) {
+  console.log('Type check completed with errors');
+}
