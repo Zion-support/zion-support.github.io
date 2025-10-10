@@ -136,6 +136,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
 
         </main>
       </div>
+    </div>
     </>
   );
 };
@@ -273,7 +274,6 @@ const AIWorkflowAutomationPage = () => {
         </main>
         <Footer />
       </div>
-    </div>
   );
 };
 
