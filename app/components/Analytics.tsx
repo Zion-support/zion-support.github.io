@@ -51,7 +51,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
-
+    });
   };
 
   const initializePerformanceMonitoring = () => {
@@ -172,7 +172,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined
-
+      });
     }
   };
 
