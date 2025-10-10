@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Code, Palette, Zap, Smartphone, Globe, CheckCircle, ArrowRight, Phone, Mail, Monitor } from 'lucide-react';
+import { Code, Palette, Zap, Smartphone, Globe, CheckCircle, ArrowRight, Phone, Monitor } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -121,9 +121,9 @@ const AIWebsiteBuilderPage: React.FC = () => {
         <meta name="description" content="Build professional websites in minutes with our AI-powered website builder. No coding required, mobile-first design, and instant deployment." />
         <meta name="keywords" content="AI website builder, website creation, no-code, web design, AI development" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -137,7 +137,7 @@ const AIWebsiteBuilderPage: React.FC = () => {
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Create stunning, professional websites in minutes with our AI-powered builder. 
+              Create stunning, professional websites in minutes with our AI-powered builder.
               No coding required, mobile-first design, and instant deployment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -244,8 +244,8 @@ const AIWebsiteBuilderPage: React.FC = () => {
                       ))}
                     </ul>
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                      plan.popular 
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700' 
+                      plan.popular
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}>
                       Get Started
@@ -282,7 +282,7 @@ const AIWebsiteBuilderPage: React.FC = () => {
           </section>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

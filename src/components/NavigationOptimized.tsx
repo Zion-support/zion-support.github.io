@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo, useCallback } from 'react';
-import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Menu, X, Brain } from 'lucide-react';
 import { serviceCategories } from '../data/services';
 
 const Navigation: React.FC = memo(() => {
@@ -45,8 +45,8 @@ const Navigation: React.FC = memo(() => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
+      isScrolled
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20'
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
@@ -67,7 +67,7 @@ const Navigation: React.FC = memo(() => {
             <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </a>
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <a href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About
             </a>
 
@@ -83,7 +83,7 @@ const Navigation: React.FC = memo(() => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6">
@@ -136,8 +136,8 @@ const Navigation: React.FC = memo(() => {
               )}
             </div>
 
-            <a 
-              href="/case-studies" 
+            <a
+              href="/case-studies"
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
@@ -280,7 +280,6 @@ const Navigation: React.FC = memo(() => {
       </div>
     </nav>
   );
-});
 
 Navigation.displayName = 'Navigation';
 export default Navigation;

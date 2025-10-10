@@ -7,7 +7,7 @@ interface PageLoaderProps {
   progress?: number;
 }
 
-export const PageLoader: React.FC<PageLoaderProps> = ({ 
+export const PageLoader: React.FC<PageLoaderProps> = ({
   message = "Loading...",
   showProgress = false,
   progress = 0
@@ -34,7 +34,7 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
         {/* Progress Bar */}
         {showProgress && (
           <div className="w-full bg-gray-700 rounded-full h-2 mb-4">
-            <div 
+            <div
               className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full transition-all duration-300 ease-out"
               style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
             ></div>

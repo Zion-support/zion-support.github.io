@@ -48,7 +48,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         });
         document.head.appendChild(link);
       }
-    });
+
   }, []);
 
   // Critical CSS inlining
@@ -84,7 +84,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         link.as = 'image';
         link.href = src;
         document.head.appendChild(link);
-      });
+
     };
 
     // Optimize images
@@ -95,12 +95,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         if (!img.hasAttribute('loading')) {
           img.setAttribute('loading', 'lazy');
         }
-        
+
         // Add decoding="async" for better performance
         if (!img.hasAttribute('decoding')) {
           img.setAttribute('decoding', 'async');
         }
-      });
+
     };
 
     // Enable service worker for caching
@@ -109,33 +109,33 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         navigator.serviceWorker.register('/sw.js')
           .then(registration => {
             if (process.env.NODE_ENV === 'development') {
-              console.log('Service Worker registered:', registration);
+
             }
           })
           .catch(error => {
             if (process.env.NODE_ENV === 'development') {
-              console.log('Service Worker registration failed:', error);
+
             }
-          });
+
       }
     };
 
     // Optimize scroll performance
     const optimizeScroll = () => {
       let ticking = false;
-      
+
       const updateScroll = () => {
         // Throttle scroll events
         if (!ticking) {
           requestAnimationFrame(() => {
             ticking = false;
-          });
+
           ticking = true;
         }
       };
 
       window.addEventListener('scroll', updateScroll, { passive: true });
-      
+
       return () => {
         window.removeEventListener('scroll', updateScroll);
       };
@@ -164,20 +164,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
           const logMetric = (metric: any) => {
             if (process.env.NODE_ENV === 'development') {
-              console.log(metric);
+
             }
             // Send to analytics in production
             if (process.env.NODE_ENV === 'production') {
               // Send to analytics service
             }
           };
-          
+
           getCLS(logMetric);
           getFID(logMetric);
           getFCP(logMetric);
           getLCP(logMetric);
           getTTFB(logMetric);
-        });
+
       }
     };
 
@@ -185,7 +185,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
   }, []);
 
   return <>{children}</>;
-});
 
 PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 

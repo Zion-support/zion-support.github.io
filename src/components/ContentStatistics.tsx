@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { TrendingUp, Users, Award, Clock, Star, Zap, Shield, Globe } from 'lucide-react';
+import { Users, Award, Clock, Star, Shield, Globe } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +11,6 @@ const ContentStatistics: React.FC = () => {
     satisfaction: 0,
     countries: 0,
     years: 0
-  });
 
   const stats = [
     {
@@ -123,7 +122,7 @@ const ContentStatistics: React.FC = () => {
             }));
           }
         }, stepDuration);
-      });
+
     }
   }, [isVisible, stats]);
 
@@ -148,18 +147,18 @@ const ContentStatistics: React.FC = () => {
                   <stat.icon className="w-8 h-8" />
                 </div>
               </div>
-              
+
               <div className={`text-4xl md:text-5xl font-bold ${stat.color} mb-2`}>
-                {stat.id === 'uptime' || stat.id === 'satisfaction' 
+                {stat.id === 'uptime' || stat.id === 'satisfaction'
                   ? `${counts[stat.id as keyof typeof counts]}${stat.suffix}`
                   : `${counts[stat.id as keyof typeof counts]}${stat.suffix}`
                 }
               </div>
-              
+
               <h3 className="text-lg font-semibold text-white mb-2">
                 {stat.label}
               </h3>
-              
+
               <p className="text-gray-400 text-sm">
                 {stat.description}
               </p>
@@ -172,26 +171,26 @@ const ContentStatistics: React.FC = () => {
           <h3 className="text-2xl font-bold text-white text-center mb-8 neon-text">
             Industry Recognition
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-3xl mb-2">🏆</div>
               <h4 className="font-semibold text-white mb-1">Best AI Company 2024</h4>
               <p className="text-gray-400 text-sm">Tech Innovation Awards</p>
             </div>
-            
+
             <div className="text-center">
               <div className="text-3xl mb-2">⭐</div>
               <h4 className="font-semibold text-white mb-1">5-Star Rating</h4>
               <p className="text-gray-400 text-sm">Client Reviews</p>
             </div>
-            
+
             <div className="text-center">
               <div className="text-3xl mb-2">🔒</div>
               <h4 className="font-semibold text-white mb-1">ISO 27001 Certified</h4>
               <p className="text-gray-400 text-sm">Security Standards</p>
             </div>
-            
+
             <div className="text-center">
               <div className="text-3xl mb-2">🚀</div>
               <h4 className="font-semibold text-white mb-1">Fastest Growing</h4>

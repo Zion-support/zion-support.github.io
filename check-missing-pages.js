@@ -5,97 +5,72 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Pages referenced in Footer component
-const footerPages = [
-  // AI Services
-  '/ai-workflow-automation', '/ai-customer-support', '/ai-data-analytics', '/ai-content-generation',
-  '/ai-healthcare', '/ai-fintech', '/ai-computer-vision', '/ai-ml-platform', '/ai-quantum-computing',
-  '/ai-drug-discovery-pro', '/ai-climate-solutions-pro', '/ai-space-technology-pro', '/ai-autonomous-systems',
-  '/ai-blockchain-solutions', '/ai-edge-computing', '/ai-cybersecurity',
-  
-  // IT Services
-  '/cloud-migration', '/cybersecurity', '/it-infrastructure', '/it-support', '/custom-development',
-  '/devops-cicd', '/database-management', '/network-design', '/ai-infrastructure-monitoring',
-  '/blockchain-integration-services', '/ai-api-management', '/smart-contract-security-audit',
-  '/healthcare-it', '/financial-it', '/edge-computing', '/5g-implementation',
-  
-  // Micro SAAS
-  '/ai-project-manager', '/ai-social-media-manager', '/ai-analytics-dashboard', '/ai-email-marketing',
-  '/ai-customer-support-bot', '/ai-content-studio', '/ai-financial-advisor', '/ai-workflow-automation',
-  '/ai-smart-calendar', '/ai-content-writer', '/ai-video-generator', '/ai-crm-assistant',
-  '/ai-quantum-financial-oracle', '/ai-neural-memory-assistant', '/ai-holographic-workspace', '/ai-3d-generation',
-  
-  // Emerging Technologies
-  '/ai-quantum-computing', '/ai-autonomous-systems', '/ai-blockchain-solutions', '/ai-edge-computing',
-  '/ar-vr-platform', '/smart-city-infrastructure', '/digital-transformation', '/innovation-labs',
-  '/ai-business-intelligence', '/robotics-integration', '/digital-twin-platform', '/ai-space-technology-pro',
-  
-  // Company
-  '/about', '/team', '/careers', '/case-studies', '/blog', '/pricing', '/news', '/partners', '/investors',
-  
-  // Support
-  '/contact', '/support', '/docs', '/api-docs', '/status', '/health', '/help', '/community', '/training',
-  
-  // Legal
-  '/privacy', '/terms', '/cookies', '/gdpr', '/security', '/compliance', '/data-protection', '/accessibility', '/sitemap'
-];
+// Read the footer component to extract all links
+const footerContent = fs.readFileSync('/workspace/app/components/Footer.tsx', 'utf8');
 
-// Get all existing pages
+// Extract all href values from the footer
+const hrefMatches = footerContent.match(/href:\s*'([^']+)'/g);
+const footerLinks = hrefMatches ? hrefMatches.map(match => match.match(/href:\s*'([^']+)'/)[1]) : [];
+
+// Read the navigation component to extract all links
+const navContent = fs.readFileSync('/workspace/app/components/Navigation.tsx', 'utf8');
+const navMatches = navContent.match(/to="([^"]+)"/g);
+const navLinks = navMatches ? navMatches.map(match => match.match(/to="([^"]+)"/)[1]) : [];
+
+// Combine all links
+const allLinks = [...new Set([...footerLinks, ...navLinks])];
+
+// Get all existing page files
 const appDir = '/workspace/app';
 const existingPages = [];
 
 function scanDirectory(dir) {
   const items = fs.readdirSync(dir);
-  
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      // Check if this directory has a page.tsx file
-      const pagePath = path.join(fullPath, 'page.tsx');
-      if (fs.existsSync(pagePath)) {
-        const relativePath = fullPath.replace(appDir, '');
-        existingPages.push(relativePath);
-      }
-      // Recursively scan subdirectories
       scanDirectory(fullPath);
+    } else if (item === 'page.tsx') {
+      // Extract the route from the path
+      const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || '/';
+      existingPages.push(route);
     }
   }
 }
 
 scanDirectory(appDir);
 
-// Find missing pages
-const missingPages = footerPages.filter(page => !existingPages.includes(page));
+// Check for missing pages
+const missingPages = [];
+const existingPagesSet = new Set(existingPages);
 
-console.log('=== MISSING PAGES ===');
-missingPages.forEach(page => {
-  console.log(`❌ ${page}`);
-});
+for (const link of allLinks) {
+  if (!existingPagesSet.has(link)) {
+    missingPages.push(link);
+  }
+}
 
-console.log(`\nTotal missing pages: ${missingPages.length}`);
-console.log(`Total existing pages: ${existingPages.length}`);
-console.log(`Total referenced pages: ${footerPages.length}`);
+console.log('=== MISSING PAGES ANALYSIS ===');
+console.log(`Total links found: ${allLinks.length}`);
+console.log(`Existing pages: ${existingPages.length}`);
+console.log(`Missing pages: ${missingPages.length}`);
+console.log('\n=== MISSING PAGES ===');
+missingPages.forEach(page => console.log(`- ${page}`));
 
-// Check for pages that exist but might have broken links
-console.log('\n=== POTENTIAL BROKEN LINKS ===');
-const existingPagePaths = existingPages.map(p => p.replace(/\\/g, '/'));
-const brokenLinks = footerPages.filter(page => {
-  // Check for exact match or similar patterns
-  const exactMatch = existingPagePaths.includes(page);
-  if (exactMatch) return false;
-  
-  // Check for similar patterns (e.g., /ai-ml-platform vs /ai-ml)
-  const similarMatch = existingPagePaths.some(existing => {
-    const pageBase = page.replace(/^\/+/, '').replace(/\/+$/, '');
-    const existingBase = existing.replace(/^\/+/, '').replace(/\/+$/, '');
-    return pageBase === existingBase || existingBase.includes(pageBase) || pageBase.includes(existingBase);
-  });
-  
-  return !similarMatch;
-});
+console.log('\n=== EXISTING PAGES ===');
+existingPages.sort().forEach(page => console.log(`✓ ${page}`));
 
-brokenLinks.forEach(link => {
-  console.log(`⚠️  ${link} - might be broken or needs redirect`);
-});
+// Write missing pages to a file
+fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
+  totalLinks: allLinks.length,
+  existingPages: existingPages.length,
+  missingPages: missingPages.length,
+  missingPagesList: missingPages,
+  allLinks: allLinks,
+  existingPagesList: existingPages
+}, null, 2));
+
+console.log('\n=== ANALYSIS COMPLETE ===');
+console.log('Results saved to missing-pages.json');

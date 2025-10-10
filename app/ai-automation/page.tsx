@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone, ArrowRight } from 'lucide-react';
+import { CheckCircle, Clock, Shield, Zap, Settings, Phone, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -117,10 +117,10 @@ const AIAutomationPage: React.FC = () => {
         <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-automation" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
+
         <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             {/* Hero Section */}
@@ -132,10 +132,10 @@ const AIAutomationPage: React.FC = () => {
                 Intelligent process automation with decision-making capabilities
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Transform your business operations with cutting-edge AI automation. Achieve 80% efficiency increase, 
+                Transform your business operations with cutting-edge AI automation. Achieve 80% efficiency increase,
                 60% time savings, and zero human error with our intelligent automation platform.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
@@ -211,7 +211,7 @@ const AIAutomationPage: React.FC = () => {
                         </div>
                       </div>
                     )}
-                    
+
                     <div className="text-center mb-8">
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                       <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -220,7 +220,7 @@ const AIAutomationPage: React.FC = () => {
                         <span className="text-gray-300 ml-1">{plan.period}</span>
                       </div>
                     </div>
-                    
+
                     <ul className="space-y-4 mb-8">
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
@@ -229,7 +229,7 @@ const AIAutomationPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                    
+
                     <a
                       href="/contact"
                       className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
@@ -276,7 +276,7 @@ const AIAutomationPage: React.FC = () => {
             </section>
           </div>
         </main>
-        
+
         <Footer />
       </div>
     </>

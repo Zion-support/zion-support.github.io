@@ -238,7 +238,7 @@ export class ErrorHandler {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(error)
-      });
+
     } catch (err) {
       }
   }
@@ -255,7 +255,7 @@ export class ErrorHandler {
           ...error,
           timestamp: error.timestamp.toISOString()
         })
-      });
+
     } catch (err) {
       }
   }
@@ -278,19 +278,12 @@ export class ErrorHandler {
       font-family: Arial, sans-serif;
     `;
     notification.innerHTML = `
-      <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display:flex;justify-content:space-between;align-items:center;">
         <div>
           <strong>${error.severity} Error</strong>
-          <p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p>
+          <p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>
         </div>
-        <button onclick="this.parentElement.parentElement.remove()" style="
-          background: none;
-          border: none;
-          color: white;
-          font-size: 18px;
-          cursor: pointer;
-          margin-left: 10px;
-        ">×</button>
+        <button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
       </div>
     `;
     document.body.appendChild(notification);
@@ -422,11 +415,11 @@ export class ErrorHandler {
       // Set up global error handler
       window.addEventListener('error', event => {
         this.handleError(event.error || new Error(event.message));
-      });
+
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {
         this.handleError(new Error(event.reason));
-      });
+
     }
   }
 }
@@ -447,7 +440,7 @@ export class ErrorBoundary extends React.Component<
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.errorHandler.handleError(error, errorInfo, {
       component: 'ErrorBoundary'
-    });
+
   }
   render() {
     if (this.state.hasError) {

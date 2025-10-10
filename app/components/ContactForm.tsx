@@ -23,12 +23,10 @@ const ContactForm: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
-  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -45,12 +43,11 @@ const ContactForm: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
-      });
-      
+
       // Reset form
       setFormData({
         name: '',
@@ -59,12 +56,12 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
+
     } catch (error) {
       setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again or contact us directly.'
-      });
+
     }
   };
 

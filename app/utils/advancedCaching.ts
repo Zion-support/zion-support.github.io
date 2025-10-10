@@ -28,12 +28,12 @@ class AdvancedCache<T = unknown> {
       storage: options.storage || 'memory',
       maxSize: options.maxSize || 100
     };
-    
+
     // Load from persistent storage if needed
     if (this.options.storage !== 'memory') {
       this.loadFromStorage();
     }
-    
+
     // Setup periodic cleanup
     this.setupCleanup();
   }
@@ -49,7 +49,7 @@ class AdvancedCache<T = unknown> {
 
   private loadFromStorage(): void {
     if (typeof window === 'undefined') return;
-    
+
     try {
       const storage = this.getStorage();
       const data = storage?.getItem(this.storageKey);
@@ -64,7 +64,7 @@ class AdvancedCache<T = unknown> {
 
   private saveToStorage(): void {
     if (typeof window === 'undefined' || this.options.storage === 'memory') return;
-    
+
     try {
       const storage = this.getStorage();
       const data = {
@@ -78,7 +78,7 @@ class AdvancedCache<T = unknown> {
 
   private getStorage(): Storage | null {
     if (typeof window === 'undefined') return null;
-    
+
     switch (this.options.storage) {
       case 'localStorage':
         return window.localStorage;
@@ -92,36 +92,35 @@ class AdvancedCache<T = unknown> {
   private cleanExpired(): void {
     const now = Date.now();
     const expiredKeys: string[] = [];
-    
+
     for (const [key, entry] of this.cache.entries()) {
       if (entry.expiry <= now) {
         expiredKeys.push(key);
       }
     }
-    
+
     expiredKeys.forEach(key => {
       this.cache.delete(key);
       const index = this.accessOrder.indexOf(key);
       if (index > -1) {
         this.accessOrder.splice(index, 1);
       }
-    });
-    
+
     if (expiredKeys.length > 0) {
       this.saveToStorage();
     }
-    
+
     // Update access statistics
     entry.hits++;
     entry.lastAccessed = now;
     this.updateAccessOrder(key);
-    
+
     return entry.value;
   }
 
   private evictLRU(): void {
     if (this.accessOrder.length === 0) return;
-    
+
     const lruKey = this.accessOrder[0];
     this.cache.delete(lruKey);
     this.accessOrder.shift();
@@ -138,7 +137,7 @@ class AdvancedCache<T = unknown> {
   set(key: string, value: T, customTTL?: number): void {
     const now = Date.now();
     const ttl = customTTL || this.options.ttl;
-    
+
     // Remove existing entry if it exists
     if (this.cache.has(key)) {
       this.cache.delete(key);
@@ -147,19 +146,19 @@ class AdvancedCache<T = unknown> {
         this.accessOrder.splice(index, 1);
       }
     }
-    
+
     // Check if we need to evict entries
     while (this.cache.size >= this.options.maxSize) {
       this.evictLRU();
     }
-    
+
     const entry: CacheEntry<T> = {
       value,
       expiry: now + ttl,
       hits: 0,
       lastAccessed: now
     };
-    
+
     this.cache.set(key, entry);
     this.updateAccessOrder(key);
     this.saveToStorage();
@@ -168,7 +167,7 @@ class AdvancedCache<T = unknown> {
   get(key: string): T | null {
     const entry = this.cache.get(key);
     if (!entry) return null;
-    
+
     const now = Date.now();
     if (entry.expiry <= now) {
       this.cache.delete(key);
@@ -179,19 +178,19 @@ class AdvancedCache<T = unknown> {
       this.saveToStorage();
       return null;
     }
-    
+
     // Update access statistics
     entry.hits++;
     entry.lastAccessed = now;
     this.updateAccessOrder(key);
-    
+
     return entry.value;
   }
 
   has(key: string): boolean {
     const entry = this.cache.get(key);
     if (!entry) return false;
-    
+
     const now = Date.now();
     if (entry.expiry <= now) {
       this.cache.delete(key);
@@ -202,7 +201,7 @@ class AdvancedCache<T = unknown> {
       this.saveToStorage();
       return false;
     }
-    
+
     return true;
   }
 
@@ -242,11 +241,11 @@ class AdvancedCache<T = unknown> {
     const entries = Array.from(this.cache.values());
     const totalHits = entries.reduce((sum, entry) => sum + entry.hits, 0);
     const hitRate = entries.length > 0 ? totalHits / entries.length : 0;
-    
+
     const timestamps = entries.map(entry => entry.lastAccessed);
     const oldestEntry = timestamps.length > 0 ? Math.min(...timestamps) : 0;
     const newestEntry = timestamps.length > 0 ? Math.max(...timestamps) : 0;
-    
+
     return {
       size: this.cache.size,
       maxSize: this.options.maxSize,
@@ -259,15 +258,14 @@ class AdvancedCache<T = unknown> {
 
 // Create singleton instances for different use cases
 export const memoryCache = new AdvancedCache({ storage: 'memory' });
-export const localStorageCache = new AdvancedCache({ 
+export const localStorageCache = new AdvancedCache({
   storage: 'localStorage',
   ttl: 30 * 60 * 1000, // 30 minutes
   maxSize: 50
-});
-export const sessionStorageCache = new AdvancedCache({ 
+
+export const sessionStorageCache = new AdvancedCache({
   storage: 'sessionStorage',
   ttl: 10 * 60 * 1000, // 10 minutes
   maxSize: 25
-});
 
 export default AdvancedCache;

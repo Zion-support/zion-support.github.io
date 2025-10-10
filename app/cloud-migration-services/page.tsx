@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Calendar, FileText, GitBranch, AlertCircle, CheckSquare, Timer, DollarSign, PieChart, Activity, Cloud, Server, Database, Lock, ArrowUp, ArrowDown, RefreshCw, Settings, Monitor } from 'lucide-react';
+import { CheckCircle, Star, Shield, Clock, TrendingUp, Globe, BarChart, Sparkles, Phone, Cloud, Server, Database, Lock, ArrowUp, RefreshCw, Settings } from 'lucide-react';
 
 const CloudMigrationServicesPage: React.FC = () => {
   const features = [
@@ -180,10 +180,10 @@ const CloudMigrationServicesPage: React.FC = () => {
             Cloud Migration Services
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Seamlessly migrate your infrastructure to the cloud with our expert team. Zero-downtime deployment, 
+            Seamlessly migrate your infrastructure to the cloud with our expert team. Zero-downtime deployment,
             security-first approach, and automated migration processes. Reduce costs by 40% while improving performance.
           </p>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {stats.map((stat, index) => (

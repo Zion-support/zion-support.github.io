@@ -1,11 +1,11 @@
 'use client';
 import React, { memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
-import { microSaasServices, aiServices, itServices, emergingTech } from '../data/services';
+import { Phone, Mail, MapPin, Clock, Award, Shield, ArrowRight, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, TrendingUp } from 'lucide-react';
+import { aiServices, itServices, emergingTech } from '../data/services';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
-  
+
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -64,9 +64,9 @@ const Footer: React.FC = memo(() => {
                 </div>
               </a>
             </div>
-            
+
             <p className="text-gray-300 text-sm leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
+              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems,
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
 
@@ -93,7 +93,7 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
@@ -104,7 +104,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <a 
+                <a
                   href="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -120,7 +120,7 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
@@ -131,7 +131,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <a 
+                <a
                   href="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -147,7 +147,7 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-3">
               {emergingTech.slice(0, 6).map((service, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
@@ -158,7 +158,7 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
               <li>
-                <a 
+                <a
                   href="/quantum-computing"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -211,7 +211,7 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
@@ -226,7 +226,7 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
+                  <a
                     href={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
@@ -299,7 +299,6 @@ const Footer: React.FC = memo(() => {
       </div>
     </footer>
   );
-});
 
 Footer.displayName = 'Footer';
 export default Footer;

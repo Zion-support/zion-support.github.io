@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { RefreshCw, Target, Users, BarChart, Cloud, Shield, Zap, ArrowRight, Phone, Mail, CheckCircle, TrendingUp } from 'lucide-react';
+import { RefreshCw, Target, Users, BarChart, Cloud, Shield, Zap, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
 const DigitalTransformationPage: React.FC = () => {
@@ -114,7 +114,7 @@ const DigitalTransformationPage: React.FC = () => {
             Digital <span className="text-cyan-400">Transformation</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your business with cutting-edge digital solutions. Our comprehensive approach helps you modernize operations, 
+            Transform your business with cutting-edge digital solutions. Our comprehensive approach helps you modernize operations,
             improve efficiency, and stay competitive in the digital age.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -264,7 +264,7 @@ const DigitalTransformationPage: React.FC = () => {
             <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8">
               <h3 className="text-2xl font-semibold text-white mb-4">Manufacturing Company</h3>
               <p className="text-gray-300 mb-4">
-                "Zion Tech Group helped us implement IoT sensors and predictive analytics, 
+                "Zion Tech Group helped us implement IoT sensors and predictive analytics,
                 reducing equipment downtime by 60% and increasing production efficiency by 40%."
               </p>
               <div className="text-cyan-400 font-semibold">- CEO, Tech Manufacturing Inc.</div>
@@ -272,7 +272,7 @@ const DigitalTransformationPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl p-8">
               <h3 className="text-2xl font-semibold text-white mb-4">Healthcare Provider</h3>
               <p className="text-gray-300 mb-4">
-                "Their digital transformation solution streamlined our patient management, 
+                "Their digital transformation solution streamlined our patient management,
                 reducing administrative overhead by 50% and improving patient satisfaction scores."
               </p>
               <div className="text-purple-400 font-semibold">- CTO, Regional Medical Center</div>

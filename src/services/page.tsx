@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Users, 
-  Zap, 
+import {
+  Brain,
+  Cloud,
+  Shield,
+  Code,
+  BarChart,
+  Users,
+  Zap,
   Star,
   TrendingUp,
   Award,
@@ -267,21 +267,21 @@ const ServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
+      <SEOOptimizer
         title="AI & IT Services - Zion Tech Group Solutions"
         description="Comprehensive AI and IT services including machine learning, cloud migration, cybersecurity, and digital transformation. Get 300% ROI with our proven solutions."
         keywords={["AI Services", "IT Services", "Cloud Migration", "Cybersecurity", "Digital Transformation", "Machine Learning"]}
         canonicalUrl="https://ziontechgroup.com/services"
       />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0">
           <div className="cyber-grid h-full"></div>
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
@@ -293,9 +293,9 @@ const ServicesPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive AI and IT solutions designed to transform your business. 
-              From machine learning to cloud migration, we deliver 
-              <span className="text-cyan-400 font-semibold"> measurable results</span> and 
+              Comprehensive AI and IT solutions designed to transform your business.
+              From machine learning to cloud migration, we deliver
+              <span className="text-cyan-400 font-semibold"> measurable results</span> and
               <span className="text-purple-400 font-semibold"> competitive advantage</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -327,7 +327,7 @@ const ServicesPage: React.FC = () => {
               Proven results and enterprise-grade solutions that drive real business value
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="cyber-card-advanced p-8 text-center group hover:scale-105 transition-all duration-300">
@@ -353,7 +353,7 @@ const ServicesPage: React.FC = () => {
               Comprehensive solutions across AI, IT, and emerging technologies
             </p>
           </div>
-          
+
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="quantum-card-advanced p-8">
@@ -366,7 +366,7 @@ const ServicesPage: React.FC = () => {
                     <p className="text-gray-300 text-lg">{category.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="cyber-card-advanced p-6 group hover:scale-105 transition-all duration-300">
@@ -408,7 +408,7 @@ const ServicesPage: React.FC = () => {
               A proven methodology that ensures successful project delivery and maximum ROI
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="text-center group">
@@ -436,7 +436,7 @@ const ServicesPage: React.FC = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Get started with a free consultation and discover how our services can deliver 
+            Get started with a free consultation and discover how our services can deliver
             measurable results for your organization
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

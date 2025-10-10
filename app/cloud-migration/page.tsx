@@ -1,10 +1,10 @@
 import React, { lazy } from 'react';
-import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock } from 'lucide-react';
+import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Server, Database } from 'lucide-react';
 
 const Navigation = lazy(() => import('../components/Navigation'));
 const Footer = lazy(() => import('../components/Footer'));
 
-const CloudMigrationPage: React.FC = React.memo(() => {
+const CloudMigrationPage: React.FC = () => {
   const features = [
     {
       icon: Cloud,
@@ -156,7 +156,7 @@ const CloudMigrationPage: React.FC = React.memo(() => {
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
+              Seamlessly migrate your infrastructure to the cloud with our expert migration services.
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -182,7 +182,7 @@ const CloudMigrationPage: React.FC = React.memo(() => {
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Cloud Migration</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Our cloud migration services cover every aspect of your infrastructure transition, 
+                  Our cloud migration services cover every aspect of your infrastructure transition,
                   from planning to optimization.
                 </p>
               </div>
@@ -260,7 +260,7 @@ const CloudMigrationPage: React.FC = React.memo(() => {
                 <div className="cyber-card p-8">
                   <h3 className="text-2xl font-bold text-white mb-6">Ready for Cloud Migration?</h3>
                   <p className="text-gray-300 mb-6">
-                    Get a free assessment of your current infrastructure and migration readiness. 
+                    Get a free assessment of your current infrastructure and migration readiness.
                     Our experts will provide a detailed migration plan and cost estimate.
                   </p>
                   <div className="space-y-4">
@@ -316,8 +316,8 @@ const CloudMigrationPage: React.FC = React.memo(() => {
                       ))}
                     </ul>
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
-                      plan.popular 
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}>
                       Get Started
@@ -350,7 +350,6 @@ const CloudMigrationPage: React.FC = React.memo(() => {
       <Footer />
     </div>
   );
-});
 
 CloudMigrationPage.displayName = 'CloudMigrationPage';
 

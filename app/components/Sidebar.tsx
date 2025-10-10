@@ -1,12 +1,12 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  ChevronDown, 
+import {
+  ChevronDown,
   ChevronRight,
-  Brain, 
-  Cloud, 
-  Code, 
+  Brain,
+  Cloud,
+  Code,
   Zap,
   Sparkles,
   Home,
@@ -44,8 +44,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
+    setExpandedSections(prev =>
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
@@ -146,7 +146,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     } else {
       document.body.style.overflow = 'unset';
     }
-    
+
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -157,11 +157,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
     <>
       {/* Backdrop */}
-      <div 
+      <div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
       />
-      
+
       {/* Sidebar */}
       <div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg:hidden">
         <div className="flex flex-col h-full">
@@ -229,7 +229,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         <ChevronRight className="w-4 h-4" />
                       )}
                     </button>
-                    
+
                     {expandedSections.includes(category.title) && (
                       <div className="ml-8 space-y-1 mt-2">
                         {category.services.map((service, serviceIndex) => (

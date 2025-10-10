@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Star, Zap, Cpu, Clock, Users, Shield, BarChart, ArrowRight, Phone, Mail } from 'lucide-react';
+import { CheckCircle, Zap, Cpu, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
 const EdgeComputingPage: React.FC = () => {
   const features = [
@@ -47,12 +47,12 @@ description: 'Comprehensive security measures designed specifically for edge com
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        
+
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Edge Computing
@@ -61,7 +61,7 @@ description: 'Comprehensive security measures designed specifically for edge com
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Bring computing power closer to your data sources with our advanced edge computing solutions. 
+            Bring computing power closer to your data sources with our advanced edge computing solutions.
             Achieve ultra-low latency, reduce bandwidth costs, and enable real-time processing at scale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -85,7 +85,7 @@ description: 'Comprehensive security measures designed specifically for edge com
               Comprehensive edge computing solution designed for modern applications and IoT deployments
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">

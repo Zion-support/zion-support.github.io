@@ -22,7 +22,6 @@ export const PerformanceOptimizer: React.FC = () => {
     codeSplit: false,
     serviceWorker: false,
     optimized: false
-  });
 
   const collectWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -41,7 +40,7 @@ export const PerformanceOptimizer: React.FC = () => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       vitals.lcp = lastEntry.startTime;
-      });
+
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // FID - First Input Delay
@@ -49,8 +48,8 @@ export const PerformanceOptimizer: React.FC = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         vitals.fid = entry.processingStart - entry.startTime;
-        });
-    });
+
+
     fidObserver.observe({ entryTypes: ['first-input'] });
 
     // CLS - Cumulative Layout Shift
@@ -62,7 +61,7 @@ export const PerformanceOptimizer: React.FC = () => {
         }
       }
       vitals.cls = clsValue;
-      });
+
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // FCP - First Contentful Paint
@@ -70,8 +69,8 @@ export const PerformanceOptimizer: React.FC = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         vitals.fcp = entry.startTime;
-        });
-    });
+
+
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // TTFB - Time to First Byte
@@ -79,8 +78,8 @@ export const PerformanceOptimizer: React.FC = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         vitals.ttfb = entry.responseStart - entry.requestStart;
-        });
-    });
+
+
     ttfbObserver.observe({ entryTypes: ['navigation'] });
 
     setOptimizationStatus(prev => ({ ...prev, preloaded: 1 }));
@@ -101,7 +100,6 @@ export const PerformanceOptimizer: React.FC = () => {
       link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'script';
       document.head.appendChild(link);
-    });
 
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
   }, []);
@@ -126,7 +124,7 @@ export const PerformanceOptimizer: React.FC = () => {
       link.rel = hint.rel;
       link.href = hint.href;
       document.head.appendChild(link);
-    });
+
   };
 
   const registerServiceWorker = async () => {
@@ -146,7 +144,7 @@ export const PerformanceOptimizer: React.FC = () => {
       setupCodeSplitting();
       addResourceHints();
       registerServiceWorker();
-      
+
       setOptimizationStatus(prev => ({ ...prev, optimized: true }));
     }
   }, [collectWebVitals, preloadCriticalResources]);

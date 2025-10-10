@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { TrendingUp, BarChart, Target, CheckCircle, Star, ArrowRight, Phone, Mail, DollarSign, Users, Clock, Zap } from 'lucide-react';
+import { TrendingUp, BarChart, Target, CheckCircle, DollarSign, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -50,7 +50,7 @@ const AIStockPortfolioManagerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -59,7 +59,7 @@ const AIStockPortfolioManagerPage: React.FC = () => {
               AI Stock Portfolio <span className="text-cyan-400">Manager</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Maximize your investment returns with AI-powered portfolio management. Get intelligent 
+              Maximize your investment returns with AI-powered portfolio management. Get intelligent
               recommendations, real-time monitoring, and automated optimization for your stock portfolio.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -81,7 +81,7 @@ const AIStockPortfolioManagerPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
             <p className="text-xl text-gray-300">Everything you need to manage your portfolio</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300">
@@ -101,7 +101,7 @@ const AIStockPortfolioManagerPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose AI Stock Portfolio Manager?</h2>
             <p className="text-xl text-gray-300">Proven results and cutting-edge technology</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -122,14 +122,14 @@ const AIStockPortfolioManagerPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Simple Pricing</h2>
             <p className="text-xl text-gray-300">Choose the plan that fits your needs</p>
           </div>
-          
+
           <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 text-center">
             <div className="mb-8">
               <h3 className="text-3xl font-bold text-white mb-2">AI Stock Portfolio Manager</h3>
               <div className="text-5xl font-bold text-cyan-400 mb-2">$79<span className="text-xl text-gray-300">/month</span></div>
               <p className="text-gray-300">Per portfolio, billed monthly</p>
             </div>
-            
+
             <ul className="space-y-4 mb-8 text-left max-w-md mx-auto">
               <li className="flex items-center text-gray-300">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -152,7 +152,7 @@ const AIStockPortfolioManagerPage: React.FC = () => {
                 24/7 support
               </li>
             </ul>
-            
+
             <a href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold">
               Get Started Today
             </a>

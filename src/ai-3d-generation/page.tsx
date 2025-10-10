@@ -59,10 +59,10 @@ const AI3DGenerationPage: React.FC = () => {
         keywords={['AI 3D generation', '3D models', '3D animation', 'VR AR content', '3D automation', 'AI 3D']}
         canonicalUrl="https://ziontechgroup.com/ai-3d-generation"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
+
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">

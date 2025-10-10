@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Code, 
-  Zap, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Shield, 
+import {
+  Brain,
+  Cloud,
+  Code,
+  Zap,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Shield,
   Target,
   Sparkles,
   Rocket,
@@ -40,9 +40,9 @@ interface ContentShowcaseProps {
   children?: React.ReactNode;
 }
 
-export default function ContentShowcase({ 
-  className = '', 
-  children 
+export default function ContentShowcase({
+  className = '',
+  children
 }: ContentShowcaseProps) {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -302,9 +302,9 @@ export default function ContentShowcase({
                     </span>
                   </div>
                 )}
-                
+
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -314,15 +314,15 @@ export default function ContentShowcase({
                       {service.category}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   <div className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -331,7 +331,7 @@ export default function ContentShowcase({
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="text-2xl font-bold text-white">{service.price}</div>
                     <Link
@@ -369,9 +369,9 @@ export default function ContentShowcase({
                     </span>
                   </div>
                 )}
-                
+
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -381,15 +381,15 @@ export default function ContentShowcase({
                       {service.category}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-400 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   <div className="grid grid-cols-2 gap-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -398,7 +398,7 @@ export default function ContentShowcase({
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="text-3xl font-bold text-white">{service.price}</div>
                     <Link
@@ -430,20 +430,20 @@ export default function ContentShowcase({
             {itServices.map((service, index) => (
               <div key={index} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-green-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
+
                 <div className="relative z-10">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform mb-4">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  
+
                   <h3 className="text-lg font-bold text-white mb-2 group-hover:text-green-400 transition-colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   <div className="space-y-2 mb-4">
                     {service.features.slice(0, 3).map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-xs text-gray-300">
@@ -452,7 +452,7 @@ export default function ContentShowcase({
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="text-lg font-bold text-white">{service.price}</div>
                     <Link
@@ -492,7 +492,7 @@ export default function ContentShowcase({
                   "{testimonials[currentTestimonial].content}"
                 </p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
                   {testimonials[currentTestimonial].avatar}
@@ -514,8 +514,8 @@ export default function ContentShowcase({
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial 
-                        ? 'bg-cyan-400 scale-125' 
+                      index === currentTestimonial
+                        ? 'bg-cyan-400 scale-125'
                         : 'bg-white/30 hover:bg-white/50'
                     }`}
                   />
@@ -552,7 +552,7 @@ export default function ContentShowcase({
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join hundreds of companies already using our AI solutions to achieve unprecedented growth and efficiency.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
@@ -562,7 +562,7 @@ export default function ContentShowcase({
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </Link>
-              
+
               <div className="flex items-center space-x-6 text-gray-300">
                 <div className="flex items-center">
                   <Phone className="w-4 h-4 text-cyan-400 mr-2" />

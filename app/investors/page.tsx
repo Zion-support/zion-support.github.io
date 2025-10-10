@@ -3,14 +3,14 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { 
-  TrendingUp, 
-  DollarSign, 
-  BarChart, 
-  Users, 
-  Award, 
-  Globe, 
-  CheckCircle, 
+import {
+  TrendingUp,
+  DollarSign,
+  BarChart,
+  Users,
+  Award,
+  Globe,
+  CheckCircle,
   ArrowRight,
   Star,
   Shield,
@@ -102,11 +102,11 @@ const InvestorsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Investors
@@ -128,7 +128,7 @@ const InvestorsPage: React.FC = () => {
               Strong financial performance and market position
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {metrics.map((metric, index) => (
               <div key={index} className="text-center">
@@ -155,7 +155,7 @@ const InvestorsPage: React.FC = () => {
               Backed by leading venture capital firms and strategic investors
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {investors.map((investor, index) => (
               <div
@@ -183,7 +183,7 @@ const InvestorsPage: React.FC = () => {
               Key factors that make Zion Tech Group an attractive investment opportunity
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {highlights.map((highlight, index) => (
               <div key={index} className="text-center">
@@ -207,7 +207,7 @@ const InvestorsPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Interested in investing in the future of AI? Contact our investor relations team
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Contact Investor Relations

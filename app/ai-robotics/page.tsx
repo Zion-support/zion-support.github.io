@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Settings, Brain, Zap, Shield, Target, ArrowRight, CheckCircle, Star, Users, Award, Lock, BarChart, Cpu, Eye, MessageSquare, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
+import { Settings, Brain, Zap, Shield, Target, ArrowRight, CheckCircle, Users, Eye, Building, Factory, Home, Stethoscope, Clock3, Compass, Navigation, Zap, Target, Shield, Users, CheckCircle, ArrowRight, Truck, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -158,7 +158,7 @@ const AIRoboticsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -171,7 +171,7 @@ const AIRoboticsPage: React.FC = () => {
               AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Robotics</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build intelligent robots that can see, learn, and adapt. Our AI-powered robotics solutions 
+              Build intelligent robots that can see, learn, and adapt. Our AI-powered robotics solutions
               combine advanced machine learning with precision engineering for autonomous operation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -208,7 +208,7 @@ const AIRoboticsPage: React.FC = () => {
               AI Robotics Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI robotics platform provides the intelligence and capabilities needed for 
+              Our AI robotics platform provides the intelligence and capabilities needed for
               autonomous operation in any environment.
             </p>
           </div>
@@ -284,8 +284,8 @@ const AIRoboticsPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-                plan.popular 
-                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' 
+                plan.popular
+                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20'
                   : 'border-gray-600/50'
               }`}>
                 {plan.popular && (

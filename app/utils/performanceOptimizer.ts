@@ -37,7 +37,7 @@ export const lazyLoad = (callback: () => void, options?: IntersectionObserverIni
         callback();
         observer.disconnect();
       }
-    });
+
   }, options);
 
   return observer;
@@ -49,7 +49,7 @@ export const preloadImage = (src: string): Promise<void> => {
     img.onload = () => resolve();
     img.onerror = reject;
     img.src = src;
-  });
+
 };
 
 export const preloadScript = (src: string): Promise<void> => {
@@ -59,7 +59,7 @@ export const preloadScript = (src: string): Promise<void> => {
     script.onload = () => resolve();
     script.onerror = reject;
     document.head.appendChild(script);
-  });
+
 };
 
 export const measurePerformance = (name: string, fn: () => void) => {
@@ -71,7 +71,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
   fn();
   const end = performance.now();
-  
+
   if (process.env.NODE_ENV === 'development') {
     }
 };
@@ -102,7 +102,7 @@ export const getDeviceInfo = () => {
     window.addEventListener('load', () => {
       this.measureLoadTime();
       this.measureMemoryUsage();
-    });
+
     // Monitor render performance
     this.measureRenderTime();
   }
@@ -137,8 +137,8 @@ export const getDeviceInfo = () => {
           if (entry.entryType === 'measure') {
             this.metrics.renderTime = entry.duration;
           }
-        });
-      });
+
+
       observer.observe({ entryTypes: ['measure'] });
       this.observers.push(observer);
     } catch (error) {
@@ -266,14 +266,13 @@ export const getDeviceInfo = () => {
         img.setAttribute('alt', 'Zion Tech Group content');
       }
       // Optimize image format
-      if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {
+      if (img.src.includes('.webp') || img.src.includes('.webp')) {
         // Convert to WebP if supported
         if (this.supportsWebP()) {
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
         }
       }
-    });
-  });
+
 
   images.forEach((img) => imageObserver.observe(img));
 };

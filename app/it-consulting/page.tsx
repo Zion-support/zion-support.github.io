@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Clock, Award, ArrowRight, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, Target, Users, Shield, Brain, Cloud, Database, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -71,10 +71,10 @@ const ITConsultingPage: React.FC = () => {
         <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." />
         <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
-        
+
         <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             {/* Hero Section */}
@@ -83,7 +83,7 @@ const ITConsultingPage: React.FC = () => {
                 IT Consulting Services
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Transform your business with expert IT consulting. We provide strategic guidance, 
+                Transform your business with expert IT consulting. We provide strategic guidance,
                 digital transformation, and technology solutions that drive growth and efficiency.
               </p>
             </div>
@@ -101,7 +101,7 @@ const ITConsultingPage: React.FC = () => {
                       <p className="text-gray-600">{service.description}</p>
                     </div>
                   </div>
-                  
+
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -180,7 +180,7 @@ const ITConsultingPage: React.FC = () => {
             </section>
           </div>
         </main>
-        
+
         <Footer />
       </div>
     </>

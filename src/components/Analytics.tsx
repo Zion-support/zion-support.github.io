@@ -24,19 +24,19 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     // Initialize analytics
     const initAnalytics = () => {
       // Google Analytics initialization would go here
-      console.log('Analytics initialized');
+
     };
 
     initAnalytics();
   }, []);
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    console.log('Event tracked:', eventName, properties);
+
     // Send to analytics service
   };
 
   const trackPageView = (pageName: string) => {
-    console.log('Page view tracked:', pageName);
+
     // Send to analytics service
   };
 

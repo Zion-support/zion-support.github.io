@@ -160,7 +160,7 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-//     }).catch(error => // console.error('Performance reporting error:', error));
+//     }).catch(error => // );
   }
     });
   }
@@ -236,7 +236,7 @@ export function initPerformanceMonitoring(): void {
  */
 export function generatePerformanceReport(): PerformanceReport {
   const metrics: PerformanceMetric[] = [];
-  
+
   return {
     metrics,
     timestamp: new Date().toISOString(),
@@ -296,7 +296,7 @@ export function generatePerformanceReport(): PerformanceReport {
   }
 
   if (process.env['NODE_ENV'] === 'development') {
-//     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//     // }ms`);
   }
 
   // Monitor Core Web Vitals
@@ -309,7 +309,7 @@ export function generatePerformanceReport(): PerformanceReport {
   if (typeof window !== 'undefined') {
     // Monitor long tasks
     monitorLongTasks();
-    
+
     // Monitor layout shifts
     monitorLayoutShifts();
 
@@ -327,7 +327,7 @@ export function markPerformance(name: string): void {
   } catch (error) {
 //     }
   } catch (error) {
-     
+
     // eslint-disable-next-line no-console
 //     }
 }
@@ -355,9 +355,9 @@ export function measurePerformance(name: string, startTime: number): number {
   }
 
   if (process.env['NODE_ENV'] === 'development') {
-     
+
     // eslint-disable-next-line no-console
-//     // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
+//     // }ms`);
   }
 
   return duration;
@@ -372,7 +372,7 @@ export function markPerformance(name: string): void {
   try {
     performance.mark(name);
   } catch (error) {
-     
+
     // eslint-disable-next-line no-console
 //     }
 }
@@ -396,7 +396,7 @@ export function measureBetween(
     const _measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
     return measure.duration;
   } catch (error) {
-     
+
     // eslint-disable-next-line no-console
 //     return 0;
   }
@@ -608,10 +608,10 @@ export function generatePerformanceReport(): PerformanceReport | null {
   const metrics: PerformanceMetric[] = [];
 
   // Add navigation timing metrics
-  
+
   const metrics: PerformanceMetric[] = [];
 //   const navigationTiming = getNavigationTiming();
-  
+
   if (navigationTiming) {
     Object.entries(navigationTiming).forEach(([name, value]) => {
       metrics.push({
@@ -683,7 +683,7 @@ export function generatePerformanceReport(): PerformanceReport {
     observer.observe({ entryTypes: ['longtask'] });
     return observer;
   } catch (error) {
-     
+
     // eslint-disable-next-line no-console
 //     return null;
   }
@@ -703,7 +703,7 @@ export function generatePerformanceReport(): PerformanceReport {
     observer.observe({ entryTypes: ['layout-shift'] });
     return observer;
   } catch (error) {
-     
+
     // eslint-disable-next-line no-console
 //     return null;
   }
@@ -827,7 +827,7 @@ export function getConnectionType(): string | null {
   const _connection = (navigator as any).connection;
   const _slowTypes = ['slow-2g', '2g'];
   return (
-    (connection.effectiveType && slowTypes.includes(connection.effectiveType)) || 
+    (connection.effectiveType && slowTypes.includes(connection.effectiveType)) ||
     connection.saveData === true
   const _connection = (navigator as any).connection;
 export function isSlowConnection(): boolean {
@@ -875,7 +875,7 @@ export function isSlowConnection(): boolean {
   const _connection = (navigator as Record<string, unknown>).connection as Record<string, unknown>;
   const _slowTypes = ['slow-2g', '2g'];
   return (
-    slowTypes.includes(connection.effectiveType as string) || 
+    slowTypes.includes(connection.effectiveType as string) ||
     connection.saveData === true
   );
 }

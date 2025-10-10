@@ -5,10 +5,10 @@ const SitemapPage: React.FC = () => {
   useEffect(() => {
     // Generate and display sitemap
     const sitemap = generateSitemap();
-    
+
     // Set content type for XML
     document.contentType = 'application/xml';
-    
+
     // Display sitemap
     const sitemapElement = document.getElementById('sitemap-content');
     if (sitemapElement) {

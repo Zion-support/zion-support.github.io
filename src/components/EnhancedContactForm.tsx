@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { 
-  Send, 
-  CheckCircle, 
-  AlertCircle, 
-  User, 
-  Mail, 
-  Phone, 
-  Building, 
+import {
+  Send,
+  CheckCircle,
+  AlertCircle,
+  User,
+  Mail,
+  Phone,
+  Building,
   MessageSquare,
   Loader2,
   ArrowRight
@@ -37,7 +37,6 @@ const EnhancedContactForm: React.FC = () => {
     message: '',
     budget: '',
     timeline: ''
-  });
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -122,7 +121,7 @@ const EnhancedContactForm: React.FC = () => {
 
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: '' }));
@@ -131,7 +130,7 @@ const EnhancedContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -142,7 +141,7 @@ const EnhancedContactForm: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       // In a real application, you would send the data to your backend
       setIsSubmitted(true);
     } catch (error) {
@@ -161,16 +160,16 @@ const EnhancedContactForm: React.FC = () => {
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-full blur opacity-30 animate-pulse"></div>
         </div>
-        
+
         <h2 className="text-3xl font-bold text-white mb-4">
           Thank You for Your Interest!
         </h2>
-        
+
         <p className="text-gray-300 mb-8 leading-relaxed">
-          We've received your message and our team will get back to you within 24 hours. 
+          We've received your message and our team will get back to you within 24 hours.
           We're excited to discuss how our AI solutions can transform your business.
         </p>
-        
+
         <div className="bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-lg p-6 mb-8">
           <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
           <div className="space-y-3 text-left">
@@ -188,7 +187,7 @@ const EnhancedContactForm: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <button
           onClick={() => {
             setIsSubmitted(false);
@@ -201,7 +200,7 @@ const EnhancedContactForm: React.FC = () => {
               message: '',
               budget: '',
               timeline: ''
-            });
+
           }}
           className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
         >
@@ -219,7 +218,7 @@ const EnhancedContactForm: React.FC = () => {
           Get Started Today
         </h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Ready to transform your business with AI? Let's discuss your project and 
+          Ready to transform your business with AI? Let's discuss your project and
           create a customized solution that delivers real results.
         </p>
       </div>

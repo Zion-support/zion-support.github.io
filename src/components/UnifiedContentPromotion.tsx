@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Code, 
-  Zap, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
-  Shield, 
+import {
+  Brain,
+  Cloud,
+  Code,
+  Zap,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Shield,
   Target,
   Sparkles,
   Rocket,
@@ -29,9 +29,9 @@ interface UnifiedContentPromotionProps {
   children?: React.ReactNode;
 }
 
-export default function UnifiedContentPromotion({ 
-  className = '', 
-  children 
+export default function UnifiedContentPromotion({
+  className = '',
+  children
 }: UnifiedContentPromotionProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -158,24 +158,24 @@ export default function UnifiedContentPromotion({
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Cyber Grid Pattern */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2300FFFF" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
+
         {/* Animated Circuit Lines */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent animate-pulse"></div>
           <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/30 to-transparent animate-pulse delay-1000"></div>
           <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-400/30 to-transparent animate-pulse delay-2000"></div>
         </div>
-        
+
         {/* Floating Quantum Particles */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/20 rounded-full blur-xl animate-pulse neon-glow"></div>
         <div className="absolute top-40 right-20 w-32 h-32 bg-purple-400/20 rounded-full blur-xl animate-pulse delay-1000 neon-glow"></div>
         <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-blue-400/20 rounded-full blur-xl animate-pulse delay-2000 neon-glow"></div>
         <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-pink-400/20 rounded-full blur-xl animate-pulse delay-3000 neon-glow"></div>
-        
+
         {/* Additional Floating Elements */}
         <div className="absolute top-1/3 left-1/3 w-16 h-16 bg-gradient-to-r from-cyan-400/10 to-purple-400/10 rounded-full blur-lg animate-bounce delay-500"></div>
         <div className="absolute top-2/3 right-1/4 w-12 h-12 bg-gradient-to-r from-pink-400/10 to-blue-400/10 rounded-full blur-lg animate-bounce delay-1500"></div>
-        
+
         {/* Scanning Lines Effect */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent animate-ping"></div>
@@ -220,7 +220,7 @@ export default function UnifiedContentPromotion({
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
             </Link>
-            
+
             <Link
               to="/demo"
               className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"
@@ -262,13 +262,13 @@ export default function UnifiedContentPromotion({
             {featuredServices.map((service, index) => (
               <div key={index} className={`group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
+
                 {service.popular && (
                   <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full neon-glow">
                     Popular
                   </div>
                 )}
-                
+
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
@@ -278,15 +278,15 @@ export default function UnifiedContentPromotion({
                       {service.category}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   <div className="space-y-2 mb-4">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -295,13 +295,13 @@ export default function UnifiedContentPromotion({
                       </div>
                     ))}
                   </div>
-                  
+
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <div className="text-2xl font-bold text-white">{service.price}</div>
                       <div className="text-xs text-cyan-400 font-medium">{service.trial}</div>
                     </div>
-                    
+
                     <Link
                       to={service.link}
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
@@ -327,8 +327,8 @@ export default function UnifiedContentPromotion({
               aria-controls={`slide-${index}`}
               aria-label={`Go to slide ${index + 1}`}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'bg-cyan-400 scale-125' 
+                index === currentSlide
+                  ? 'bg-cyan-400 scale-125'
                   : 'bg-white/30 hover:bg-white/50'
               }`}
             />

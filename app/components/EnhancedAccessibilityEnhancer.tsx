@@ -48,7 +48,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
               closeButton.click();
             }
           }
-        });
+
       }
 
       // Navigate dropdowns with arrow keys
@@ -58,7 +58,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
           event.preventDefault();
           const items = dropdown.querySelectorAll('[role="menuitem"]');
           const currentIndex = Array.from(items).indexOf(document.activeElement as Element);
-          
+
           if (event.key === 'ArrowDown') {
             const nextIndex = (currentIndex + 1) % items.length;
             (items[nextIndex] as HTMLElement).focus();
@@ -119,7 +119,6 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       if (!heading.id) {
         heading.id = `heading-${index}`;
       }
-    });
 
   }, [enableScreenReader]);
 
@@ -129,7 +128,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
 
     // Detect system high contrast preference
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
-    
+
     const handleContrastChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
@@ -139,7 +138,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     };
 
     prefersHighContrast.addEventListener('change', handleContrastChange);
-    
+
     // Initial check
     if (prefersHighContrast.matches) {
       document.body.classList.add('high-contrast');
@@ -159,12 +158,12 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         outline: 2px solid #3b82f6 !important;
         outline-offset: 2px !important;
       }
-      
+
       .focus-visible:focus {
         outline: 2px solid #3b82f6 !important;
         outline-offset: 2px !important;
       }
-      
+
       .focus-visible:focus:not(:focus-visible) {
         outline: none !important;
       }
@@ -216,14 +215,12 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       if (text && text.length > 0) {
         button.setAttribute('aria-label', text);
       }
-    });
 
     // Add ARIA labels to images
     const images = document.querySelectorAll('img:not([alt])');
     images.forEach((img) => {
       img.setAttribute('alt', '');
       img.setAttribute('aria-hidden', 'true');
-    });
 
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
@@ -235,14 +232,13 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
           label.id = `label-${input.id}`;
         }
       }
-    });
 
     // Add ARIA expanded to dropdowns
     const dropdowns = document.querySelectorAll('[data-dropdown]');
     dropdowns.forEach((dropdown) => {
       dropdown.setAttribute('aria-expanded', 'false');
       dropdown.setAttribute('aria-haspopup', 'true');
-    });
+
   }, [enableAriaLabels]);
 
   // Reduced motion support
@@ -250,7 +246,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     if (typeof window === 'undefined' || !enableReducedMotion) return;
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
+
     const handleMotionChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('reduce-motion');
@@ -260,7 +256,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     };
 
     prefersReducedMotion.addEventListener('change', handleMotionChange);
-    
+
     // Initial check
     if (prefersReducedMotion.matches) {
       document.body.classList.add('reduce-motion');
@@ -304,17 +300,14 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         z-index: 1000;
         transition: top 0.3s;
       `;
-      
+
       link.addEventListener('focus', () => {
         link.style.top = '6px';
-      });
-      
+
       link.addEventListener('blur', () => {
         link.style.top = '-40px';
-      });
-      
+
       skipLinksContainer.appendChild(link);
-    });
 
     document.body.insertBefore(skipLinksContainer, document.body.firstChild);
   }, [enableSkipLinks]);
@@ -333,17 +326,17 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         --bg-secondary: #1f2937;
         --accent: #60a5fa;
       }
-      
+
       .high-contrast * {
         color: var(--text-primary) !important;
         background-color: var(--bg-primary) !important;
       }
-      
+
       .high-contrast a {
         color: var(--accent) !important;
         text-decoration: underline !important;
       }
-      
+
       .high-contrast button {
         border: 2px solid var(--accent) !important;
         background-color: var(--bg-secondary) !important;
@@ -362,23 +355,23 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       html {
         font-size: 16px;
       }
-      
+
       @media (prefers-font-size: large) {
         html {
           font-size: 18px;
         }
       }
-      
+
       @media (prefers-font-size: x-large) {
         html {
           font-size: 20px;
         }
       }
-      
+
       .font-scale-large {
         font-size: 1.125rem;
       }
-      
+
       .font-scale-x-large {
         font-size: 1.25rem;
       }

@@ -5,9 +5,9 @@ interface NewestContent2025BannerProps {
   children?: React.ReactNode;
 }
 
-export default function NewestContent2025Banner({ 
-  className = '', 
-  children 
+export default function NewestContent2025Banner({
+  className = '',
+  children
 }: NewestContent2025BannerProps) {
   return (
     <div className={`newestcontent2025banner ${className}`}>

@@ -1,4 +1,3 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 import ErrorFallback from './ErrorFallback';
 
 interface Props {
@@ -21,7 +20,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+
     this.setState({ error, errorInfo });
   }
 

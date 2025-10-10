@@ -236,7 +236,7 @@ const AutonomousSystemsPage: React.FC = () => {
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      
+
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-green-600">{service.price}</span>
@@ -348,13 +348,13 @@ const AutonomousSystemsPage: React.FC = () => {
               Contact our autonomous systems experts for a free consultation and custom automation strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
               </a>
-              <a 
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >

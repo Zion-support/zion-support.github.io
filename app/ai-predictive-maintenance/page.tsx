@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Settings, BarChart, Zap, Shield, CheckCircle, Star, Users, Clock, DollarSign, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Target, MessageSquare, TrendingUp, AlertTriangle, Wrench, Database, Globe } from 'lucide-react';
+import { Settings, Zap, Shield, CheckCircle, Star, Users, ArrowRight, Phone, Mail, MapPin, Brain, Target, Database, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -144,7 +144,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -202,7 +202,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
               Comprehensive AI-powered predictive maintenance solution with real-time monitoring and intelligent insights.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
@@ -243,7 +243,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
               Proven results across multiple industries with significant cost savings and improved reliability.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
@@ -274,7 +274,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
               Transform your maintenance operations with measurable results and significant cost savings.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -307,7 +307,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
               Flexible pricing plans designed to meet your predictive maintenance needs at any scale.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-green-400/40 ring-2 ring-green-400/20' : 'border-gray-600/40'}`}>
@@ -318,7 +318,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
                   <div className="flex items-center justify-center space-x-2 mb-2">
@@ -329,7 +329,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
                     <span className="text-gray-400 line-through text-lg">{plan.originalPrice}</span>
                   )}
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
@@ -338,7 +338,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <a
                   href="#contact"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -366,7 +366,7 @@ const AIPredictiveMaintenancePage: React.FC = () => {
               See how AI Predictive Maintenance has transformed operations across various industries.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-green-400/20 rounded-xl p-6">
