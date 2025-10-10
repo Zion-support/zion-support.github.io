@@ -3,7 +3,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 
 const EnterprisePage: React.FC = () => {
@@ -89,138 +88,6 @@ const EnterprisePage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
-=======
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Shield, Users, Award, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Zap, Globe, Brain, Cloud, Code, Clock, Star, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
-
-const EnterprisePage: React.FC = () => {
-  const enterpriseFeatures = [
-    {
-      icon: Building,
-      title: 'Scalable Architecture',
-      description: 'Enterprise-grade infrastructure designed to handle massive workloads and scale seamlessly with your business growth.',
-      benefits: ['Auto-scaling', 'High availability', 'Load balancing', 'Global deployment']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Comprehensive security measures including encryption, access controls, and compliance with industry standards.',
-      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails']
-    },
-    {
-      icon: Users,
-      title: 'Multi-tenant Support',
-      description: 'Support for multiple organizations, departments, and user groups with isolated data and configurations.',
-      benefits: ['Tenant isolation', 'Custom branding', 'Role-based access', 'Data segregation']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Powerful analytics and reporting capabilities to drive data-driven decision making across your organization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Predictive analytics', 'Data visualization']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Integration',
-      description: 'Seamless integration with major cloud platforms and hybrid cloud environments.',
-      benefits: ['AWS integration', 'Azure support', 'Google Cloud', 'Hybrid solutions']
-    },
-    {
-      icon: Code,
-      title: 'API-First Design',
-      description: 'Comprehensive APIs for easy integration with existing systems and third-party applications.',
-      benefits: ['RESTful APIs', 'GraphQL support', 'Webhooks', 'SDK libraries']
-    }
-  ];
-
-  const industries = [
-    {
-      name: 'Financial Services',
-      icon: BarChart,
-      description: 'Banking, insurance, and fintech solutions with regulatory compliance.',
-      features: ['Regulatory compliance', 'Risk management', 'Fraud detection', 'Payment processing']
-    },
-    {
-      name: 'Healthcare',
-      icon: Heart,
-      description: 'HIPAA-compliant solutions for hospitals, clinics, and healthcare providers.',
-      features: ['HIPAA compliance', 'Patient management', 'Electronic health records', 'Telemedicine']
-    },
-    {
-      name: 'Manufacturing',
-      icon: Factory,
-      description: 'Industrial IoT, supply chain management, and production optimization.',
-      features: ['Industrial IoT', 'Supply chain', 'Quality control', 'Predictive maintenance']
-    },
-    {
-      name: 'Education',
-      icon: GraduationCap,
-      description: 'Learning management systems and educational technology solutions.',
-      features: ['LMS integration', 'Student management', 'Online learning', 'Assessment tools']
-    },
-    {
-      name: 'Government',
-      icon: Building,
-      description: 'Secure, compliant solutions for government agencies and public sector.',
-      features: ['Security clearance', 'Compliance', 'Citizen services', 'Data governance']
-    },
-    {
-      name: 'Retail',
-      icon: ShoppingCart,
-      description: 'E-commerce platforms, inventory management, and customer analytics.',
-      features: ['E-commerce', 'Inventory management', 'Customer analytics', 'Omnichannel']
-    }
-  ];
-
-  const pricingTiers = [
-    {
-      name: 'Starter',
-      price: '$10,000',
-      period: '/month',
-      description: 'Perfect for mid-size companies getting started with enterprise solutions',
-      features: [
-        'Up to 100 users',
-        'Basic security features',
-        'Standard support',
-        'Cloud hosting',
-        'API access',
-        'Basic analytics'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$25,000',
-      period: '/month',
-      description: 'Comprehensive solution for growing enterprises',
-      features: [
-        'Up to 500 users',
-        'Advanced security',
-        'Priority support',
-        'Hybrid cloud options',
-        'Custom integrations',
-        'Advanced analytics',
-        'Multi-tenant support'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Fully customized solution for large organizations',
-      features: [
-        'Unlimited users',
-        'Enterprise security',
-        'Dedicated support',
-        'On-premises options',
-        'Custom development',
-        'White-label options',
-        'SLA guarantee',
-        'Training & consulting'
-      ],
-      popular: false
-    }
->>>>>>> origin/main
   ];
 
   return (
@@ -228,12 +95,7 @@ const EnterprisePage: React.FC = () => {
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
-<<<<<<< HEAD
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
-=======
-        keywords={["enterprise solutions","enterprise software","large-scale solutions","enterprise integration","business solutions"]}
-        canonicalUrl="https://ziontechgroup.com/enterprise"
->>>>>>> origin/main
       />
       <Navigation />
       
@@ -249,7 +111,6 @@ const EnterprisePage: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-<<<<<<< HEAD
             Comprehensive enterprise-grade solutions designed for large-scale business operations. 
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
@@ -260,23 +121,11 @@ const EnterprisePage: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Case Studies
-=======
-            Comprehensive enterprise-grade solutions designed to scale with your business and drive digital transformation across your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Enterprise Quote
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo
->>>>>>> origin/main
             </button>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -295,9 +144,6 @@ const EnterprisePage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-=======
-      {/* Enterprise Features */}
->>>>>>> origin/main
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -310,11 +156,7 @@ const EnterprisePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {features.map((feature, index) => (
-=======
-            {enterpriseFeatures.map((feature, index) => (
->>>>>>> origin/main
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
@@ -335,7 +177,6 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Solutions Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -361,31 +202,6 @@ const EnterprisePage: React.FC = () => {
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {benefit}
-=======
-      {/* Industries */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored solutions for specific industries with deep domain expertise and compliance requirements.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                <industry.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">{industry.name}</h3>
-                <p className="text-gray-300 mb-4">{industry.description}</p>
-                <ul className="space-y-2">
-                  {industry.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
->>>>>>> origin/main
                     </li>
                   ))}
                 </ul>
@@ -395,7 +211,6 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -430,80 +245,10 @@ const EnterprisePage: React.FC = () => {
                 </button>
               </div>
             </div>
-=======
-      {/* Pricing */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your organization's needs.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index) => (
-              <div key={index} className={`bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${tier.popular ? 'border-purple-400 bg-purple-500/10' : 'border-white/10'} hover:bg-white/10 transition-all duration-300`}>
-                {tier.popular && (
-                  <div className="text-center mb-4">
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <div className="text-4xl font-bold text-purple-400 mb-2">
-                    {tier.price}
-                    <span className="text-lg text-gray-400">{tier.period}</span>
-                  </div>
-                  <p className="text-gray-300">{tier.description}</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  tier.popular 
-                    ? 'bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white' 
-                    : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
-                }`}>
-                  {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                </button>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Enterprise?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our enterprise solutions can help your organization achieve its digital transformation goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Enterprise Journey
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Enterprise Team
-            </button>
->>>>>>> origin/main
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -525,8 +270,6 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
-=======
->>>>>>> origin/main
       <Footer />
     </div>
   );

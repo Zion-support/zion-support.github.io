@@ -20,39 +20,6 @@ export default function handler(req, res) {
 
   let existing = [];
   try {
-<<<<<<< HEAD
-    const request = {
-      id: Date.now().toString(),
-      name,
-      email,
-      company,
-      phone,
-      message,
-      location,
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-    };
-
-    // In a real application, you would save this to a database
-    // For now, we'll just log it
-    console.log('Onsite request submitted:', request);
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      message: 'Onsite request submitted successfully',
-      requestId: request.id
-    }));
-  } catch (error) {
-    console.error('Onsite request error:', error);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to submit onsite request' }));
-  }
-}
-
-module.exports = withSentry(handler);
-=======
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
@@ -93,4 +60,3 @@ module.exports = withSentry(handler);
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
 }
->>>>>>> origin/main

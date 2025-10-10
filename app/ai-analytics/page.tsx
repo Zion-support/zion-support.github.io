@@ -1,19 +1,12 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 import { BarChart, TrendingUp, Users, Target, Zap, CheckCircle, ArrowRight, Star, Award, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Phone, Mail, MapPin, Eye, Sparkles, Globe, Shield } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-=======
-import React, { lazy } from 'react';
-import { CheckCircle, TrendingUp, Brain, BarChart } from 'lucide-react';
->>>>>>> origin/main
 
 const Navigation = lazy(() => import('../components/Navigation'));
 const Footer = lazy(() => import('../components/Footer'));
 
-const AIAnalyticsPage: React.FC = React.memo((props) => {
+const AIAnalyticsPage: React.FC = React.memo(() => {
   const features = [
     {
       icon: Brain,
@@ -34,38 +27,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']
     },
     {
-<<<<<<< HEAD
-=======
-      icon: TrendingUp;
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Get instant insights with real-time data processing and visualization',
-      benefits: ['Live dashboards', 'Instant updates', 'Real-time alerts']
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent insights and recommendations powered by advanced machine learning algorithms.',
-      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations']
-    },
-    {
-      icon: BarChart,
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
-    },
-    {
-      icon: Target,
-      title: 'Custom Dashboards',
-      description: 'Create personalized dashboards tailored to your business needs and KPIs',
-      benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views']
-    },
-    {
-      icon: Database,
-      title: 'Data Integration',
-      description: 'Seamlessly connect with 100+ data sources and platforms',
-      benefits: ['API integrations', 'Database connections', 'File uploads']
->>>>>>> origin/main
       icon: TrendingUp,
       title: 'Performance Tracking',
       description: 'Track KPIs and performance metrics with advanced analytics and benchmarking.',

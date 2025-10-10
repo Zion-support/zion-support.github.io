@@ -363,7 +363,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       {/* Basic Meta Tags */})
       <title>{seoData.title}</title>)
       {metaTags.map((tag, index) => (
-=======
   return (
     <Helmet></Helme>
       {/* Basic Meta Tags */}
