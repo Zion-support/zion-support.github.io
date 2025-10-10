@@ -29,7 +29,10 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ paymentIntent });
   } catch (err) {
-    console.error("Error:", err);
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error("Error:", err);
+    }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));

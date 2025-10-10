@@ -29,7 +29,10 @@ export default function handler(req, res) {
       if (!Array.isArray(existing)) existing = [];
     }
   } catch (error) {
-    console.error('Error reading existing requests:', error);
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error reading existing requests:', error);
+    }
     existing = [];
   }
 
@@ -57,7 +60,10 @@ export default function handler(req, res) {
       id: newRequest.id
     }));
   } catch (error) {
-    console.error('Error saving onsite request:', error);
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error saving onsite request:', error);
+    }
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
