@@ -84,8 +84,12 @@ import {
   Rocket,
   Sprout,
   Scale,
+<<<<<<< HEAD
   Mic,
   FlaskConical
+=======
+  DollarSign
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -752,6 +756,7 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4ed2
   const toggleServices = () => {
     setServicesOpen(!servicesOpen);
+<<<<<<< HEAD
   };
 =======
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
@@ -760,6 +765,8 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
   const toggleServices = () => {
     setServicesOpen(!servicesOpen);
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-f003
   };
 
 <<<<<<< HEAD
