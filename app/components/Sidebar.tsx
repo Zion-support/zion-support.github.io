@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -196,8 +195,6 @@ return (
               aria-label="Close sidebar"
             >,
               <X>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
             </button>
           </div>
 

@@ -41,7 +41,6 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
   ]
 
-
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
