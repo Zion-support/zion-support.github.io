@@ -34,27 +34,26 @@ import {
   ChevronRight,
   Phone,
   Mail,
-  MapPin;)
+  MapPin
 } from 'lucide-react';
-;
 const AboutPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
-        <title></titl>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
+      <Helmet>
+        <title>About Us - Zion Tech Group | Advanced AI and IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through advanced AI and IT solutions. Discover our team, values, and commitment to innovation." />
         <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
+        <section className="pt-20 pb-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About Zion Tech Group
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
               </p>
             </div>
@@ -62,21 +61,21 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Mission Section */}
-<section className="py-20 bg-slate-800/50"></section>
-          <div className="container mx-auto px-4"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
-              <div></div>
-                <h2 className="text-4xl font-bold text-white mb-6"></h>Our Mission</h2>
-                <p className="text-lg text-gray-300 mb-6"></p>
+        <section className="py-20 bg-slate-800/50">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
+                <p className="text-lg text-gray-300 mb-6">
                   To democratize advanced AI and technology solutions, making them accessible 
                   to businesses of all sizes while delivering unprecedented value and innovation.
                 </p>
-                <p className="text-lg text-gray-300 mb-8"></p>
+                <p className="text-lg text-gray-300 mb-8">
                   We believe that every organization deserves access to cutting-edge technology 
                   that can transform their operations, enhance their capabilities, and drive 
                   sustainable growth.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4"></div>
+                <div className="flex flex-col sm:flex-row gap-4">
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
