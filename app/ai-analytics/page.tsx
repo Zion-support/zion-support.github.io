@@ -15,23 +15,6 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
@@ -49,10 +32,10 @@ const AiAnalyticsPage: React.FC = () => {
       benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
     },
     {
-      icon: Eye,
-      title: 'Visual Analytics',
-      description: 'Transform complex data into intuitive visualizations and interactive charts.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
       icon: Shield,
@@ -100,7 +83,6 @@ const AiAnalyticsPage: React.FC = () => {
       title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     }
   ];
 
@@ -108,12 +90,8 @@ const AiAnalyticsPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
-        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
-=======
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation, real-time dashboards, predictive analytics" />
       </Helmet>
       
       <Navigation />

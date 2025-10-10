@@ -1,21 +1,8 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 import React, { useState } from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react';
-
-const SupportPage: React.FC = () => {
-<<<<<<< HEAD
-  const [searchTerm, setSearchTerm] = useState('');
-=======
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
 
 interface FAQ {
@@ -28,7 +15,6 @@ const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 
   const faqs: FAQ[] = [
     {
@@ -48,15 +34,6 @@ const SupportPage: React.FC = () => {
     },
     {
       question: 'Do you offer training for our team?',
-<<<<<<< HEAD
-      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.',
-      category: 'training'
-    },
-    {
-      question: 'What if we need custom modifications?',
-      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.',
-      category: 'customization'
-=======
       answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.',
       category: 'training'
     },
@@ -79,34 +56,15 @@ const SupportPage: React.FC = () => {
       question: 'Do you provide custom development?',
       answer: 'Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.',
       category: 'development'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     }
   ];
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
   const supportChannels = [
     {
       name: 'Phone Support',
       description: 'Speak directly with our technical experts',
       icon: Phone,
-<<<<<<< HEAD
-      title: 'Phone Support',
-      description: 'Speak directly with our technical experts',
-      contact: '(302) 464-0950',
-      availability: 'Mon-Fri: 9AM-6PM EST'
-    },
-    {
-      icon: Mail,
-      title: 'Email Support',
-      description: 'Get help via email with detailed responses',
-      contact: 'support@ziontechgroup.com',
-<<<<<<< HEAD
-      availability: '24/7'
-=======
       availability: '24/7 response within 24 hours'
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
       contact: '+1 (555) 123-4567',
       availability: '24/7 Available',
       color: 'text-blue-400'
@@ -118,19 +76,11 @@ const SupportPage: React.FC = () => {
       contact: 'support@ziontech.com',
       availability: 'Response within 2 hours',
       color: 'text-green-400'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     },
     {
       name: 'Live Chat',
       description: 'Instant help when you need it most',
       icon: MessageCircle,
-<<<<<<< HEAD
-      title: 'Live Chat',
-      description: 'Chat with our support team in real-time',
-      contact: 'Available on website',
-<<<<<<< HEAD
-      availability: 'Business hours'
-=======
       availability: 'Mon-Fri: 9AM-6PM EST'
     }
   ];
@@ -151,7 +101,6 @@ const SupportPage: React.FC = () => {
     {
       question: 'Do you offer training for your solutions?',
       answer: 'Yes! We provide comprehensive training programs to help your team get the most out of our AI and IT solutions.'
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
     }
   ];
 
@@ -159,7 +108,6 @@ const SupportPage: React.FC = () => {
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
   );
-=======
       contact: 'Available on website',
       availability: 'Mon-Fri 9AM-6PM EST',
       color: 'text-purple-400'
@@ -186,30 +134,10 @@ const SupportPage: React.FC = () => {
   const toggleFAQ = (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <title>Support | Zion Tech Group</title>
-        <meta name="description" content="Get help and support for our AI and IT solutions. Find answers to common questions and contact our support team." />
-        <meta name="keywords" content="support, help, FAQ, customer service, technical support, AI solutions" />
-      </Helmet>
-
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Support Center
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get help and support for our AI and IT solutions. We're here to help you succeed.
-=======
         <title>Support - Zion Tech Group | 24/7 Technical Support</title>
         <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
         <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk" />
@@ -224,7 +152,6 @@ const SupportPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Get the help you need, when you need it. Our expert support team is available 24/7 to assist with all your AI and IT solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
             </p>
 
             {/* Search Bar */}
@@ -257,43 +184,6 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Search Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-              <input
-                type="text"
-                placeholder="Search for help..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Support Channels */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Contact Support
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose your preferred way to get in touch with our support team.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <channel.icon className="h-8 w-8 text-purple-400 mr-3" />
-                    <h3 className="text-xl font-semibold text-white">{channel.title}</h3>
-                  </div>
-=======
         <title>Support | Zion Tech Group - Technical Support & Help Center</title>
         <meta name="description" content="Get expert technical support for your AI and IT solutions. Contact our support team, access knowledge base, and get help when you need it." />
         <meta name="keywords" content="technical support, help center, customer support, AI support, IT support, troubleshooting" />
@@ -321,8 +211,6 @@ const SupportPage: React.FC = () => {
                     <channel.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{channel.title}</h3>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
         {/* Support Channels */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -340,7 +228,6 @@ const SupportPage: React.FC = () => {
                     <channel.icon className="w-8 h-8" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{channel.name}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
                   <p className="text-gray-300 mb-4">{channel.description}</p>
                   <p className={`${channel.color} font-medium mb-2`}>{channel.contact}</p>
                   <p className="text-sm text-gray-400">{channel.availability}</p>
@@ -348,26 +235,6 @@ const SupportPage: React.FC = () => {
               ))}
             </div>
 
-<<<<<<< HEAD
-        {/* FAQ Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-<<<<<<< HEAD
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-gray-300">
-                Find answers to common questions about our services.
-              </p>
-            </div>
-            
-            <div className="space-y-6">
-              {filteredFaqs.map((faq, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300">{faq.answer}</p>
-=======
               <h2 className="text-3xl font-bold text-white mb-6">Frequently Asked Questions</h2>
               <p className="text-xl text-gray-300 mb-8">Find answers to common questions</p>
 
@@ -406,7 +273,6 @@ const SupportPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                     </div>
                   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
                 </div>
               ))}
             </div>
@@ -461,25 +327,6 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Still Need Help?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Can't find what you're looking for? Our support team is ready to help.
-            </p>
-            <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
-              Contact Support
-            </button>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-=======
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
               <div className="space-y-6">
@@ -489,7 +336,6 @@ const SupportPage: React.FC = () => {
                     <p className="text-gray-300">{faq.answer}</p>
                   </div>
                 ))}
-=======
         {/* Contact CTA */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -507,16 +353,11 @@ const SupportPage: React.FC = () => {
                   <Mail className="w-5 h-5" />
                   Email Support
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
               </div>
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     </>
   );
 };
