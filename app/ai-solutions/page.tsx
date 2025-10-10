@@ -179,7 +179,7 @@ const AISolutionsPage: React.FC = () => {
               >,
                 <div className="flex items-center justify-between mb-4">,
                   <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
-                  <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}<h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}<p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                  <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}<h3 className="text-xl font-bold text-white mb-3 neon-text">{service.title}</h3><p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="mb-4">
 <<<<<<< HEAD
 =======

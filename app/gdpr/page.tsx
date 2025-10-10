@@ -152,7 +152,7 @@ const GDPRPage: React.FC = () => {,
               <div key={index} className="cyber-card p-6">
                 <div className="flex items-center mb-4">
                   <right.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">{right.title}<p className="text-gray-300 mb-4">{right.description}</p>
+                  <h3 className="text-xl font-bold text-white">{right.title}</h3><p className="text-gray-300 mb-4">{right.description}</p>
                 <div>
 <<<<<<< HEAD
 =======
@@ -194,7 +194,7 @@ const GDPRPage: React.FC = () => {,
               {legalBases.map((basis, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-3">{basis.title}<p className="text-gray-300 mb-4 text-sm">{basis.description}</p>
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-3">{basis.title}</h3><p className="text-gray-300 mb-4 text-sm">{basis.description}</p>
                   <div>
 <<<<<<< HEAD
 =======

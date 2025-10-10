@@ -188,7 +188,7 @@ const DemoPage: React.FC = () => {,
               >
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div className="text-center">
-                  <div className="text-4xl mb-4">{demo.icon}<h3 className="text-xl font-bold text-white mb-2">{demo.title}<p className="text-gray-300 text-sm mb-4">{demo.description}</p>
+                  <div className="text-4xl mb-4">{demo.icon}<h3 className="text-xl font-bold text-white mb-2">{demo.title}</h3><p className="text-gray-300 text-sm mb-4">{demo.description}</p>
                   <div className="flex items-center justify-center text-cyan-400 text-sm mb-4">
 =======
                 <div className="text-center"></div>

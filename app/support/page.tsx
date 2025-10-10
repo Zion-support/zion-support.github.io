@@ -235,7 +235,7 @@ const SupportPage: React.FC = () => {,
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div className={`w-16 h-16 ${channel.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
                   <channel.icon className={`w-8 h-8 ${channel.color}`} />
-                <h3 className="text-xl font-bold text-white mb-2">{channel.title}<p className="text-gray-300 mb-4">{channel.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3><p className="text-gray-300 mb-4">{channel.description}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
 <<<<<<< HEAD
