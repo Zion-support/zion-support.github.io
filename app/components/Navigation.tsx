@@ -124,12 +124,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
-        { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true },
-        { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial analysis', icon: '⚛️', popular: true },
-        { name: 'AI 3D Generation Studio', path: '/ai-3d-generation', description: 'AI-powered 3D model generation', icon: '🎨', popular: true },
-        { name: 'AI Mobile App Builder', path: '/ai-mobile-app-builder', description: 'AI-powered mobile app development', icon: '📱', popular: true },
-        { name: 'AI Logo Designer Pro', path: '/ai-logo-designer', description: 'AI-powered logo design', icon: '🎨', popular: true }
+        { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration and satellite management', icon: '🚀', popular: true },
+        { name: 'AI Financial Crime Detection Pro', path: '/ai-financial-crime-detection-pro', description: 'Real-time fraud detection and security', icon: '🛡️', popular: true },
+        { name: 'AI Supply Chain Optimization Pro', path: '/ai-supply-chain-optimization-pro', description: 'Intelligent supply chain management', icon: '🚛', popular: true },
+        { name: 'AI Energy Grid Management Pro', path: '/ai-energy-grid-management-pro', description: 'Smart energy grid optimization', icon: '⚡', popular: false },
+        { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro', description: 'Precision agriculture solutions', icon: '🌱', popular: true },
+        { name: 'AI Legal Research Pro', path: '/ai-legal-research-pro', description: 'Advanced legal research and analysis', icon: '⚖️', popular: true }
       ]
     },
     {
@@ -164,12 +164,12 @@ const Navigation: React.FC = () => {
         { name: '24/7 IT Support & Monitoring', path: '/it-support', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
         { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
         { name: 'AI IT Operations (AIOps)', path: '/ai-ops', description: 'AI-powered IT operations', icon: '🤖', popular: true },
-        { name: 'Healthcare IT Solutions', path: '/healthcare-it', description: 'HIPAA-compliant healthcare IT', icon: '🏥', popular: true },
-        { name: 'Financial Services IT', path: '/financial-it', description: 'SOX-compliant financial IT', icon: '💳', popular: true },
-        { name: 'Edge Computing Solutions', path: '/edge-computing', description: 'Low-latency edge infrastructure', icon: '📡', popular: true },
-        { name: '5G Network Implementation', path: '/5g-implementation', description: 'High-speed 5G networks', icon: '📶', popular: false },
-        { name: 'IoT Platform Development', path: '/iot-platform', description: 'Comprehensive IoT solutions', icon: '🌐', popular: true },
-        { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: false }
+        { name: 'AI Infrastructure Monitoring Pro', path: '/ai-infrastructure-monitoring', description: 'AI-powered infrastructure monitoring', icon: '📊', popular: true },
+        { name: 'Blockchain Integration Services Pro', path: '/blockchain-integration-services', description: 'Comprehensive blockchain integration', icon: '⛓️', popular: true },
+        { name: 'AI API Management Pro', path: '/ai-api-management', description: 'Intelligent API management', icon: '🔗', popular: true },
+        { name: 'Smart Contract Security Audit Pro', path: '/smart-contract-security-audit', description: 'Comprehensive smart contract auditing', icon: '🔒', popular: true },
+        { name: 'Kubernetes Management Pro', path: '/kubernetes-management', description: 'Advanced Kubernetes management', icon: '☸️', popular: true },
+        { name: 'AI Data Lake Implementation', path: '/ai-data-lake-implementation', description: 'Comprehensive data lake implementation', icon: '🏞️', popular: true }
       ]
     },
     {
@@ -185,6 +185,10 @@ const Navigation: React.FC = () => {
         { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
         { name: 'AI Energy Management', path: '/ai-energy', description: 'Smart energy optimization', icon: '⚡', popular: true },
         { name: 'AI Music Composition', path: '/ai-music-composition', description: 'AI-powered music creation', icon: '🎵', popular: true },
+        { name: 'Edge Computing Solutions Pro', path: '/edge-computing-solutions-pro', description: 'Advanced edge computing infrastructure', icon: '📡', popular: true },
+        { name: '5G Network Implementation Pro', path: '/5g-network-implementation-pro', description: 'Complete 5G network infrastructure', icon: '📶', popular: true },
+        { name: 'AR/VR Solutions Pro', path: '/ar-vr-solutions-pro', description: 'Augmented and virtual reality solutions', icon: '🥽', popular: false },
+        { name: 'Quantum Computing Integration', path: '/quantum-computing-integration', description: 'Quantum computing integration', icon: '⚛️', popular: false },
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: false }
       ]

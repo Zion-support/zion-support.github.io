@@ -339,6 +339,426 @@ const AIServicesPage: React.FC = () => {
       ]
     },
     {
+      id: 21,
+      name: 'AI Space Technology Pro',
+      description: 'Revolutionary space exploration and satellite management with AI-powered mission planning and orbital mechanics',
+      icon: Rocket,
+      features: [
+        'Satellite Operations Management',
+        'Space Mission Planning',
+        'Astronomical Data Analysis',
+        'Orbital Mechanics Optimization',
+        'Space Weather Prediction',
+        'Satellite Constellation Management',
+        'Deep Space Navigation',
+        'Space Debris Tracking'
+      ],
+      category: 'Space Technology',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $5,500/mo',
+      capabilities: [
+        'Advanced space mission planning',
+        'Real-time satellite monitoring',
+        'Space weather prediction accuracy',
+        'Orbital optimization algorithms'
+      ]
+    },
+    {
+      id: 22,
+      name: 'AI Financial Crime Detection Pro',
+      description: 'Advanced financial security with real-time fraud detection, money laundering prevention, and regulatory compliance',
+      icon: Shield,
+      features: [
+        'Real-time Fraud Detection',
+        'Money Laundering Prevention',
+        'Transaction Pattern Analysis',
+        'Behavioral Anomaly Detection',
+        'Regulatory Compliance Monitoring',
+        'Risk Scoring Algorithms',
+        'Cross-border Transaction Analysis',
+        'Cryptocurrency Crime Detection'
+      ],
+      category: 'Financial Security',
+      popular: true,
+      rating: 4.8,
+      users: '1,200+',
+      color: 'from-red-500 to-orange-600',
+      pricing: 'Starting at $2,800/mo',
+      capabilities: [
+        '99.7% fraud detection accuracy',
+        'Real-time transaction monitoring',
+        'Automated compliance reporting',
+        'Advanced pattern recognition'
+      ]
+    },
+    {
+      id: 23,
+      name: 'AI Supply Chain Optimization Pro',
+      description: 'Intelligent supply chain management with demand forecasting, logistics optimization, and risk mitigation',
+      icon: Truck,
+      features: [
+        'Demand Forecasting',
+        'Inventory Optimization',
+        'Logistics Route Planning',
+        'Supplier Risk Assessment',
+        'Cost Optimization',
+        'Quality Control Automation',
+        'Sustainability Tracking',
+        'Crisis Management'
+      ],
+      category: 'Supply Chain AI',
+      popular: true,
+      rating: 4.7,
+      users: '1,800+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $3,200/mo',
+      capabilities: [
+        '30% cost reduction',
+        '25% inventory optimization',
+        'Real-time supply chain visibility',
+        'Predictive risk management'
+      ]
+    },
+    {
+      id: 24,
+      name: 'AI Energy Grid Management Pro',
+      description: 'Smart energy grid optimization with renewable energy integration, demand response, and carbon footprint tracking',
+      icon: Zap,
+      features: [
+        'Grid Optimization',
+        'Renewable Energy Integration',
+        'Demand Response Management',
+        'Energy Storage Optimization',
+        'Carbon Footprint Tracking',
+        'Predictive Maintenance',
+        'Load Balancing',
+        'Smart Meter Analytics'
+      ],
+      category: 'Energy AI',
+      popular: false,
+      rating: 4.8,
+      users: '400+',
+      color: 'from-yellow-500 to-amber-600',
+      pricing: 'Starting at $4,200/mo',
+      capabilities: [
+        '40% energy efficiency improvement',
+        'Real-time grid optimization',
+        'Renewable energy integration',
+        'Carbon footprint reduction'
+      ]
+    },
+    {
+      id: 25,
+      name: 'AI Agricultural Intelligence Pro',
+      description: 'Precision agriculture with AI-powered crop monitoring, yield prediction, and sustainable farming practices',
+      icon: Sprout,
+      features: [
+        'Precision Farming',
+        'Crop Health Monitoring',
+        'Yield Prediction',
+        'Soil Analysis',
+        'Pest and Disease Detection',
+        'Weather Integration',
+        'Irrigation Optimization',
+        'Sustainable Farming Practices'
+      ],
+      category: 'Agricultural AI',
+      popular: true,
+      rating: 4.6,
+      users: '2,100+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $2,500/mo',
+      capabilities: [
+        '20% yield improvement',
+        'Precision farming optimization',
+        'Real-time crop monitoring',
+        'Sustainable agriculture practices'
+      ]
+    },
+    {
+      id: 26,
+      name: 'AI Legal Research Pro',
+      description: 'Advanced legal research and case analysis with AI-powered document review and precedent finding',
+      icon: Scale,
+      features: [
+        'Legal Research Automation',
+        'Case Law Analysis',
+        'Document Review',
+        'Precedent Finding',
+        'Contract Analysis',
+        'Compliance Checking',
+        'Legal Writing Assistance',
+        'Regulatory Updates'
+      ],
+      category: 'Legal AI',
+      popular: true,
+      rating: 4.8,
+      users: '800+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $3,500/mo',
+      capabilities: [
+        '90% faster legal research',
+        'Automated document review',
+        'Precedent identification',
+        'Compliance monitoring'
+      ]
+    },
+    {
+      id: 27,
+      name: 'AI Real Estate Intelligence Pro',
+      description: 'AI-powered real estate analysis with market prediction, property valuation, and investment optimization',
+      icon: Home,
+      features: [
+        'Property Valuation',
+        'Market Analysis',
+        'Investment Recommendations',
+        'Risk Assessment',
+        'Trend Prediction',
+        'Portfolio Management',
+        'Neighborhood Analysis',
+        'Rental Yield Optimization'
+      ],
+      category: 'Real Estate AI',
+      popular: true,
+      rating: 4.7,
+      users: '1,500+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $1,800/mo',
+      capabilities: [
+        '95% valuation accuracy',
+        'Market trend prediction',
+        'Investment optimization',
+        'Risk assessment algorithms'
+      ]
+    },
+    {
+      id: 28,
+      name: 'AI Mental Health Assistant Pro',
+      description: 'AI-powered mental health support with mood tracking, wellness recommendations, and crisis intervention',
+      icon: Heart,
+      features: [
+        'Mood Tracking',
+        'Wellness Recommendations',
+        'Stress Analysis',
+        'Meditation Guidance',
+        'Progress Monitoring',
+        'Crisis Support',
+        'Therapy Session Analysis',
+        'Medication Adherence'
+      ],
+      category: 'Healthcare AI',
+      popular: true,
+      rating: 4.9,
+      users: '3,600+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        'Personalized mental health support',
+        'Early intervention detection',
+        'Wellness tracking',
+        'Crisis prevention'
+      ]
+    },
+    {
+      id: 29,
+      name: 'AI Sports Analytics Pro',
+      description: 'Advanced sports analytics with performance prediction, injury prevention, and tactical analysis',
+      icon: Target,
+      features: [
+        'Performance Analysis',
+        'Injury Prediction',
+        'Tactical Analysis',
+        'Player Development',
+        'Game Strategy',
+        'Recovery Optimization',
+        'Biomechanical Analysis',
+        'Team Chemistry Analysis'
+      ],
+      category: 'Sports AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,400+',
+      color: 'from-orange-500 to-red-600',
+      pricing: 'Starting at $2,200/mo',
+      capabilities: [
+        'Injury prevention accuracy',
+        'Performance optimization',
+        'Tactical insights',
+        'Player development tracking'
+      ]
+    },
+    {
+      id: 30,
+      name: 'AI Language Learning Pro',
+      description: 'AI-powered language learning with personalized curriculum, pronunciation analysis, and cultural context',
+      icon: Globe,
+      features: [
+        'Personalized Curriculum',
+        'Pronunciation Analysis',
+        'Conversation Practice',
+        'Progress Tracking',
+        'Cultural Context',
+        'Adaptive Learning',
+        'Speech Recognition',
+        'Grammar Correction'
+      ],
+      category: 'Education AI',
+      popular: true,
+      rating: 4.8,
+      users: '6,500+',
+      color: 'from-teal-500 to-cyan-600',
+      pricing: 'Starting at $129/mo',
+      capabilities: [
+        'Personalized learning paths',
+        'Pronunciation improvement',
+        'Cultural immersion',
+        'Adaptive difficulty'
+      ]
+    },
+    {
+      id: 31,
+      name: 'AI Personal Finance Pro',
+      description: 'AI-powered personal finance management with investment advice, budgeting, and financial planning',
+      icon: DollarSign,
+      features: [
+        'Budget Planning',
+        'Investment Advice',
+        'Expense Tracking',
+        'Goal Setting',
+        'Tax Optimization',
+        'Retirement Planning',
+        'Credit Score Analysis',
+        'Financial Education'
+      ],
+      category: 'Personal Finance AI',
+      popular: true,
+      rating: 4.8,
+      users: '5,200+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $149/mo',
+      capabilities: [
+        'Personalized financial advice',
+        'Automated budgeting',
+        'Investment optimization',
+        'Goal achievement tracking'
+      ]
+    },
+    {
+      id: 32,
+      name: 'AI Home Automation Pro',
+      description: 'Intelligent home automation with AI-powered energy management, security, and predictive maintenance',
+      icon: Home,
+      features: [
+        'Energy Management',
+        'Security Monitoring',
+        'Climate Control',
+        'Appliance Control',
+        'Predictive Maintenance',
+        'Voice Integration',
+        'Learning Preferences',
+        'Emergency Response'
+      ],
+      category: 'Smart Home AI',
+      popular: true,
+      rating: 4.7,
+      users: '3,800+',
+      color: 'from-purple-500 to-indigo-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        'Energy efficiency optimization',
+        'Predictive maintenance',
+        'Intelligent automation',
+        'Security enhancement'
+      ]
+    },
+    {
+      id: 33,
+      name: 'AI Pet Care Assistant Pro',
+      description: 'AI-powered pet care management with health monitoring, behavior analysis, and veterinary integration',
+      icon: Heart,
+      features: [
+        'Health Monitoring',
+        'Behavior Analysis',
+        'Feeding Schedules',
+        'Vet Reminders',
+        'Activity Tracking',
+        'Medical Records',
+        'Nutrition Planning',
+        'Emergency Alerts'
+      ],
+      category: 'Pet Care AI',
+      popular: true,
+      rating: 4.8,
+      users: '4,500+',
+      color: 'from-pink-500 to-purple-600',
+      pricing: 'Starting at $89/mo',
+      capabilities: [
+        'Health monitoring accuracy',
+        'Behavioral insights',
+        'Preventive care',
+        'Veterinary integration'
+      ]
+    },
+    {
+      id: 34,
+      name: 'AI Job Matching Pro',
+      description: 'AI-powered job matching and career development with skill assessment and interview preparation',
+      icon: Briefcase,
+      features: [
+        'Job Matching',
+        'Skill Assessment',
+        'Career Planning',
+        'Resume Optimization',
+        'Interview Prep',
+        'Salary Analysis',
+        'Network Building',
+        'Learning Recommendations'
+      ],
+      category: 'Career AI',
+      popular: true,
+      rating: 4.6,
+      users: '4,200+',
+      color: 'from-blue-500 to-purple-600',
+      pricing: 'Starting at $179/mo',
+      capabilities: [
+        'Job matching accuracy',
+        'Career path optimization',
+        'Skill gap analysis',
+        'Interview success rate'
+      ]
+    },
+    {
+      id: 35,
+      name: 'AI Personal Trainer Pro',
+      description: 'AI-powered personal training with workout optimization, form analysis, and nutrition guidance',
+      icon: Users,
+      features: [
+        'Workout Planning',
+        'Form Analysis',
+        'Progress Tracking',
+        'Nutrition Guidance',
+        'Injury Prevention',
+        'Goal Setting',
+        'Recovery Optimization',
+        'Motivation Coaching'
+      ],
+      category: 'Fitness AI',
+      popular: true,
+      rating: 4.7,
+      users: '5,800+',
+      color: 'from-green-500 to-teal-600',
+      pricing: 'Starting at $99/mo',
+      capabilities: [
+        'Personalized workout plans',
+        'Form correction accuracy',
+        'Progress optimization',
+        'Injury prevention'
+      ]
+    },
+    {
       id: 2,
       name: 'AI Workflow Automation Suite',
       description: 'Comprehensive business process automation with intelligent decision-making and self-optimizing workflows',
@@ -592,7 +1012,7 @@ const AIServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI'];
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Space Technology', 'Financial Security', 'Supply Chain AI', 'Energy AI', 'Agricultural AI', 'Legal AI', 'Real Estate AI', 'Sports AI', 'Education AI', 'Personal Finance AI', 'Smart Home AI', 'Pet Care AI', 'Career AI', 'Fitness AI'];
 
   if (!isLoaded) {
     return (

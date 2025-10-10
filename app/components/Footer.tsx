@@ -17,7 +17,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
         { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
         { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI Legal Research Pro', href: '/ai-legal-research-pro' }
+        { name: 'AI Legal Research Pro', href: '/ai-legal-research-pro' },
+        { name: 'AI Mental Health Assistant Pro', href: '/ai-mental-health-assistant-pro' },
+        { name: 'AI Sports Analytics Pro', href: '/ai-sports-analytics-pro' },
+        { name: 'AI Language Learning Pro', href: '/ai-language-learning-pro' },
+        { name: 'AI Personal Finance Pro', href: '/ai-personal-finance-pro' }
       ]
     },
     {
@@ -31,7 +35,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Load Testing Pro', href: '/ai-load-testing' },
         { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit' },
         { name: 'AI Content Delivery Network Pro', href: '/ai-content-delivery-network' },
-        { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure' }
+        { name: 'Kubernetes Management Pro', href: '/kubernetes-management' },
+        { name: 'AI Data Lake Implementation', href: '/ai-data-lake-implementation' },
+        { name: 'AI Threat Intelligence Pro', href: '/ai-threat-intelligence' },
+        { name: 'Edge Computing Solutions Pro', href: '/edge-computing-solutions-pro' },
+        { name: '5G Network Implementation Pro', href: '/5g-network-implementation-pro' }
       ]
     },
     {
@@ -44,24 +52,26 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Video Generator Pro', href: '/ai-video-generator' },
         { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager' },
         { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
-        { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant' },
-        { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer' },
-        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
-        { name: 'AI API Manager Pro', href: '/ai-api-manager' },
-        { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor' },
-        { name: 'AI Password Manager Pro', href: '/ai-password-manager' }
+        { name: 'AI Real Estate Intelligence Pro', href: '/ai-real-estate-intelligence-pro' },
+        { name: 'AI Travel Optimization Pro', href: '/ai-travel-optimization-pro' },
+        { name: 'AI Restaurant Management Pro', href: '/ai-restaurant-management-pro' },
+        { name: 'AI Pet Care Assistant Pro', href: '/ai-pet-care-assistant-pro' },
+        { name: 'AI Home Automation Pro', href: '/ai-home-automation-pro' },
+        { name: 'AI Personal Trainer Pro', href: '/ai-personal-trainer-pro' }
       ]
     },
     {
-      title: 'Specialized',
+      title: 'Emerging Technologies',
       icon: Zap,
       services: [
-        { name: 'Quantum Computing Solutions', href: '/quantum-computing' },
-        { name: 'Autonomous Systems', href: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', href: '/blockchain-web3' },
-        { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
-        { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
+        { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AR/VR Solutions Pro', href: '/ar-vr-solutions-pro' },
+        { name: 'Quantum Computing Integration', href: '/quantum-computing-integration' },
+        { name: 'IoT Platform Development Pro', href: '/iot-platform-development-pro' },
+        { name: 'Digital Transformation', href: '/digital-transformation' }
       ]
     }
   ];

@@ -527,10 +527,272 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.7,
       users: '2,600+',
       trial: '14-day free trial'
+    },
+
+    // New Innovative Micro SAAS Services
+    { 
+      name: 'AI Space Technology Pro', 
+      href: '/ai-space-technology-pro', 
+      icon: Rocket, 
+      category: 'Space Tech', 
+      price: '$5,500/mo',
+      description: 'Advanced space exploration and satellite management solutions with AI-powered mission planning',
+      features: ['Satellite Operations', 'Space Mission Planning', 'Astronomical Data Analysis', 'Orbital Mechanics', 'Space Weather Prediction', 'Satellite Constellation Management'],
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Financial Crime Detection Pro', 
+      href: '/ai-financial-crime-detection-pro', 
+      icon: Shield, 
+      category: 'Financial Security', 
+      price: '$2,800/mo',
+      description: 'Real-time fraud detection and financial security monitoring with advanced pattern recognition',
+      features: ['Real-time Fraud Detection', 'Risk Assessment', 'Compliance Monitoring', 'Transaction Analysis', 'Behavioral Analytics', 'Regulatory Reporting'],
+      popular: true,
+      rating: 4.8,
+      users: '1,200+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Supply Chain Optimization Pro', 
+      href: '/ai-supply-chain-optimization-pro', 
+      icon: Truck, 
+      category: 'Supply Chain', 
+      price: '$3,200/mo',
+      description: 'Intelligent supply chain management with demand forecasting and logistics optimization',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Logistics Automation', 'Supplier Management', 'Risk Assessment', 'Cost Optimization'],
+      popular: true,
+      rating: 4.7,
+      users: '1,800+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Energy Grid Management Pro', 
+      href: '/ai-energy-grid-management-pro', 
+      icon: Zap, 
+      category: 'Energy', 
+      price: '$4,200/mo',
+      description: 'Smart energy grid management with AI-powered optimization and renewable energy integration',
+      features: ['Grid Optimization', 'Renewable Energy Integration', 'Demand Response', 'Energy Storage Management', 'Predictive Maintenance', 'Carbon Footprint Tracking'],
+      popular: false,
+      rating: 4.8,
+      users: '400+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Agricultural Intelligence Pro', 
+      href: '/ai-agricultural-intelligence-pro', 
+      icon: Sprout, 
+      category: 'Agriculture', 
+      price: '$2,500/mo',
+      description: 'AI-powered agricultural solutions with precision farming and crop optimization',
+      features: ['Precision Farming', 'Crop Monitoring', 'Yield Prediction', 'Soil Analysis', 'Pest Detection', 'Weather Integration'],
+      popular: true,
+      rating: 4.6,
+      users: '2,100+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Legal Research Pro', 
+      href: '/ai-legal-research-pro', 
+      icon: Scale, 
+      category: 'Legal', 
+      price: '$3,500/mo',
+      description: 'Advanced legal research and case analysis with AI-powered document review',
+      features: ['Legal Research', 'Case Analysis', 'Document Review', 'Precedent Finding', 'Contract Analysis', 'Compliance Checking'],
+      popular: true,
+      rating: 4.8,
+      users: '800+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Real Estate Intelligence Pro', 
+      href: '/ai-real-estate-intelligence-pro', 
+      icon: Home, 
+      category: 'Real Estate', 
+      price: '$1,800/mo',
+      description: 'AI-powered real estate analysis with market prediction and property valuation',
+      features: ['Property Valuation', 'Market Analysis', 'Investment Recommendations', 'Risk Assessment', 'Trend Prediction', 'Portfolio Management'],
+      popular: true,
+      rating: 4.7,
+      users: '1,500+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Travel Optimization Pro', 
+      href: '/ai-travel-optimization-pro', 
+      icon: Plane, 
+      category: 'Travel', 
+      price: '$1,200/mo',
+      description: 'Intelligent travel planning and optimization with AI-powered recommendations',
+      features: ['Travel Planning', 'Route Optimization', 'Price Prediction', 'Personalized Recommendations', 'Risk Assessment', 'Booking Management'],
+      popular: true,
+      rating: 4.6,
+      users: '3,200+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Restaurant Management Pro', 
+      href: '/ai-restaurant-management-pro', 
+      icon: ChefHat, 
+      category: 'Food Service', 
+      price: '$1,500/mo',
+      description: 'Complete restaurant management solution with AI-powered operations optimization',
+      features: ['Inventory Management', 'Menu Optimization', 'Staff Scheduling', 'Customer Analytics', 'Waste Reduction', 'Revenue Optimization'],
+      popular: true,
+      rating: 4.5,
+      users: '2,800+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Event Management Pro', 
+      href: '/ai-event-management-pro', 
+      icon: Calendar, 
+      category: 'Events', 
+      price: '$1,000/mo',
+      description: 'AI-powered event planning and management with automated coordination',
+      features: ['Event Planning', 'Vendor Management', 'Attendee Analytics', 'Budget Optimization', 'Timeline Management', 'Feedback Analysis'],
+      popular: false,
+      rating: 4.6,
+      users: '1,200+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Pet Care Assistant Pro', 
+      href: '/ai-pet-care-assistant-pro', 
+      icon: Heart, 
+      category: 'Pet Care', 
+      price: '$89/mo',
+      description: 'AI-powered pet care management with health monitoring and behavior analysis',
+      features: ['Health Monitoring', 'Behavior Analysis', 'Feeding Schedules', 'Vet Reminders', 'Activity Tracking', 'Medical Records'],
+      popular: true,
+      rating: 4.8,
+      users: '4,500+',
+      trial: '7-day free trial'
+    },
+    { 
+      name: 'AI Home Automation Pro', 
+      href: '/ai-home-automation-pro', 
+      icon: Home, 
+      category: 'Smart Home', 
+      price: '$299/mo',
+      description: 'Intelligent home automation with AI-powered energy management and security',
+      features: ['Energy Management', 'Security Monitoring', 'Climate Control', 'Appliance Control', 'Predictive Maintenance', 'Voice Integration'],
+      popular: true,
+      rating: 4.7,
+      users: '3,800+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Personal Finance Pro', 
+      href: '/ai-personal-finance-pro', 
+      icon: DollarSign, 
+      category: 'Personal Finance', 
+      price: '$149/mo',
+      description: 'AI-powered personal finance management with investment advice and budgeting',
+      features: ['Budget Planning', 'Investment Advice', 'Expense Tracking', 'Goal Setting', 'Tax Optimization', 'Retirement Planning'],
+      popular: true,
+      rating: 4.8,
+      users: '5,200+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Learning Management Pro', 
+      href: '/ai-learning-management-pro', 
+      icon: GraduationCap, 
+      category: 'Education', 
+      price: '$399/mo',
+      description: 'AI-powered learning platform with personalized education and progress tracking',
+      features: ['Personalized Learning', 'Progress Tracking', 'Content Generation', 'Assessment Tools', 'Student Analytics', 'Adaptive Curriculum'],
+      popular: true,
+      rating: 4.7,
+      users: '2,900+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Mental Health Assistant Pro', 
+      href: '/ai-mental-health-assistant-pro', 
+      icon: Heart, 
+      category: 'Healthcare', 
+      price: '$199/mo',
+      description: 'AI-powered mental health support with mood tracking and wellness recommendations',
+      features: ['Mood Tracking', 'Wellness Recommendations', 'Stress Analysis', 'Meditation Guidance', 'Progress Monitoring', 'Crisis Support'],
+      popular: true,
+      rating: 4.9,
+      users: '3,600+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Sports Analytics Pro', 
+      href: '/ai-sports-analytics-pro', 
+      icon: Target, 
+      category: 'Sports', 
+      price: '$2,200/mo',
+      description: 'Advanced sports analytics with performance prediction and injury prevention',
+      features: ['Performance Analysis', 'Injury Prediction', 'Tactical Analysis', 'Player Development', 'Game Strategy', 'Recovery Optimization'],
+      popular: true,
+      rating: 4.8,
+      users: '1,400+',
+      trial: '21-day free trial'
+    },
+    { 
+      name: 'AI Wedding Planner Pro', 
+      href: '/ai-wedding-planner-pro', 
+      icon: Heart, 
+      category: 'Events', 
+      price: '$799/mo',
+      description: 'AI-powered wedding planning with vendor management and timeline optimization',
+      features: ['Vendor Management', 'Timeline Planning', 'Budget Optimization', 'Guest Management', 'Checklist Automation', 'Photo Organization'],
+      popular: true,
+      rating: 4.7,
+      users: '1,800+',
+      trial: '30-day free trial'
+    },
+    { 
+      name: 'AI Language Learning Pro', 
+      href: '/ai-language-learning-pro', 
+      icon: Globe, 
+      category: 'Education', 
+      price: '$129/mo',
+      description: 'AI-powered language learning with personalized curriculum and pronunciation analysis',
+      features: ['Personalized Curriculum', 'Pronunciation Analysis', 'Conversation Practice', 'Progress Tracking', 'Cultural Context', 'Adaptive Learning'],
+      popular: true,
+      rating: 4.8,
+      users: '6,500+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Job Matching Pro', 
+      href: '/ai-job-matching-pro', 
+      icon: Briefcase, 
+      category: 'Career', 
+      price: '$179/mo',
+      description: 'AI-powered job matching and career development with skill assessment',
+      features: ['Job Matching', 'Skill Assessment', 'Career Planning', 'Resume Optimization', 'Interview Prep', 'Salary Analysis'],
+      popular: true,
+      rating: 4.6,
+      users: '4,200+',
+      trial: '14-day free trial'
+    },
+    { 
+      name: 'AI Personal Trainer Pro', 
+      href: '/ai-personal-trainer-pro', 
+      icon: Users, 
+      category: 'Fitness', 
+      price: '$99/mo',
+      description: 'AI-powered personal training with workout optimization and form analysis',
+      features: ['Workout Planning', 'Form Analysis', 'Progress Tracking', 'Nutrition Guidance', 'Injury Prevention', 'Goal Setting'],
+      popular: true,
+      rating: 4.7,
+      users: '5,800+',
+      trial: '14-day free trial'
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Creative', 'Computer Vision', 'Manufacturing', 'Insurance', 'Testing', 'Education', 'Health', 'Analytics', 'Industrial', 'Language', 'Design'];
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Creative', 'Computer Vision', 'Manufacturing', 'Insurance', 'Testing', 'Education', 'Health', 'Analytics', 'Industrial', 'Language', 'Design', 'Space Tech', 'Financial Security', 'Supply Chain', 'Energy', 'Agriculture', 'Real Estate', 'Travel', 'Food Service', 'Events', 'Pet Care', 'Smart Home', 'Personal Finance', 'Sports', 'Career', 'Fitness'];
 
   if (!isLoaded) {
     return (
@@ -558,11 +820,11 @@ const MicroSAASPage: React.FC = () => {
 
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {microSAASServices.map((service) => (
             <div
               key={service.name}
-              className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 ${
+              className={`bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 lg:p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 ${
                 service.popular ? 'ring-2 ring-purple-500' : ''
               }`}
             >
@@ -584,38 +846,38 @@ const MicroSAASPage: React.FC = () => {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4">
                 {service.name}
               </h3>
 
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                 {service.description}
               </p>
 
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
-                <ul className="space-y-2">
+              <div className="mb-4 sm:mb-6">
+                <h4 className="text-sm sm:text-base lg:text-lg font-semibold text-white mb-2 sm:mb-3">Features:</h4>
+                <ul className="space-y-1 sm:space-y-2">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <li key={index} className="flex items-center text-xs sm:text-sm text-gray-300">
+                      <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="flex items-center justify-between mb-6">
-                <div className="text-2xl font-bold text-white">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
                   {service.price}
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-xs sm:text-sm text-gray-400">
                   {service.category}
                 </div>
               </div>
 
-              <div className="flex items-center justify-between mb-6 text-sm">
+              <div className="flex items-center justify-between mb-4 sm:mb-6 text-xs sm:text-sm">
                 <div className="flex items-center text-gray-400">
-                  <Users className="w-4 h-4 mr-1" />
+                  <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                   {service.users}
                 </div>
                 <div className="text-cyan-400 font-medium">
@@ -623,9 +885,9 @@ const MicroSAASPage: React.FC = () => {
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+              <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm sm:text-base">
                 Get Started
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2" />
               </button>
             </div>
           ))}
