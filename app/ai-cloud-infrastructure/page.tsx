@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiCloudInfrastructurePage: React.FC = () => {
@@ -95,7 +94,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -209,7 +207,6 @@ const PagePage: React.FC = () => {
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
                 </div>
               ))}
             </div>
@@ -229,22 +226,16 @@ const PagePage: React.FC = () => {
               Start Your Free Trial
             </button>
           </div>
-<<<<<<< HEAD
         </section>
       </main>
       
-=======
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
 export default AiCloudInfrastructurePage;
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce

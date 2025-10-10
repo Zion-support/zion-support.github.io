@@ -6,7 +6,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Analytics',
       description: 'Advanced AI technology to transform your business intelligence and data analysis'
@@ -25,7 +24,6 @@ const BusinessIntelligencePage: React.FC = () => {
       icon: Globe,
       title: 'Global Analytics',
       description: 'Worldwide business intelligence deployment and support'
-=======
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive data analysis and visualization tools for informed decision making'
@@ -44,7 +42,6 @@ const BusinessIntelligencePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Machine learning algorithms for predictive analytics and trend analysis'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     }
   ];
 
@@ -64,7 +61,6 @@ const BusinessIntelligencePage: React.FC = () => {
       <Helmet>
         <title>Business Intelligence | Zion Tech Group</title>
         <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
         <meta name="keywords" content="business intelligence, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>
 
@@ -80,7 +76,6 @@ const BusinessIntelligencePage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our business intelligence solutions deliver unmatched performance, security, and scalability.
           </p>
-=======
         <meta name="keywords" content="business intelligence, data analytics, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
 
@@ -94,10 +89,8 @@ const BusinessIntelligencePage: React.FC = () => {
             Transform your data into actionable insights with our advanced business intelligence solutions.
             Powered by cutting-edge AI technology and industry expertise.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
         </div>
 
-<<<<<<< HEAD
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
@@ -117,7 +110,6 @@ const BusinessIntelligencePage: React.FC = () => {
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
-=======
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -136,13 +128,11 @@ const BusinessIntelligencePage: React.FC = () => {
                 <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
               </div>
             ))}
           </div>
         </div>
 
-<<<<<<< HEAD
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?
@@ -162,7 +152,6 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </div>
-=======
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -207,7 +196,6 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     </div>
   );
 };

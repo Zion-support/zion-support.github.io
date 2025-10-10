@@ -3,16 +3,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 
 const AiContentStudioPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -113,7 +109,6 @@ const AiContentStudioPage: React.FC = () => {
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Join thousands of businesses already using our AI platform.
-=======
       title: 'AI Content Generation',
       description: 'Generate high-quality content using advanced AI algorithms',
       benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
@@ -183,18 +178,14 @@ const AiContentStudioPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">AI Content Studio Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced solutions designed for modern business needs
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Free Trial
             </button>
           </div>
-<<<<<<< HEAD
         </section>
       </main>
-      
-=======
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
@@ -258,14 +249,10 @@ const AiContentStudioPage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
 export default AiContentStudioPage;
-=======
 export default AIContentStudioPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce

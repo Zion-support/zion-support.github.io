@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiApiManagerPage: React.FC = () => {
@@ -34,7 +33,6 @@ const AiApiManagerPage: React.FC = () => {
     }
   ];
 
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -65,11 +63,9 @@ const PagePage: React.FC = () => {
     'Benefit 6'
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>AI API Manager - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered API management solution for modern businesses." />
         <meta name="keywords" content="AI API manager, artificial intelligence, API management, AI solutions, intelligent automation" />
@@ -99,7 +95,6 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
@@ -205,7 +200,6 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -262,8 +256,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AiApiManagerPage;
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce

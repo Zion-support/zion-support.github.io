@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiContentWriterPage: React.FC = () => {
@@ -47,7 +46,6 @@ const AiContentWriterPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const AIContentWriterPage: React.FC = () => {
@@ -190,7 +188,6 @@ const AIContentWriterPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -266,8 +263,5 @@ const AIContentWriterPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AiContentWriterPage;
-=======
 export default AIContentWriterPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce

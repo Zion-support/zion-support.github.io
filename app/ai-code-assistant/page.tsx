@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiCodeAssistantPage: React.FC = () => {
@@ -117,7 +116,6 @@ const AiCodeAssistantPage: React.FC = () => {
         </section>
       </main>
       
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -257,14 +255,10 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
 export default AiCodeAssistantPage;
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
