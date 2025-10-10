@@ -3,12 +3,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Cube, Zap, Eye, Palette, Download, ArrowRight, Sparkles } from 'lucide-react';
+import { CheckCircle, Box, Zap, Eye, Palette, Download, ArrowRight, Sparkles } from 'lucide-react';
 
 const AI3DGenerationPage: React.FC = () => {
   const features = [
     {
-      icon: Cube,
+      icon: Box,
       title: 'AI-Powered 3D Modeling',
       description: 'Generate complex 3D models from text descriptions using advanced AI algorithms.',
       benefits: ['Text-to-3D conversion', 'Real-time generation', 'High-quality output', 'Multiple formats']

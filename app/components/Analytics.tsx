@@ -158,3 +158,4 @@ declare global {
 }
 
 export default Analytics;
+export { Analytics as AnalyticsProvider };
