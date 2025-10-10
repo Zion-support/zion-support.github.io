@@ -199,7 +199,6 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -369,7 +368,6 @@ const DynamicContentShowcase: React.FC = () => {
               <div className="text-gray-300">
                 {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           </div>
         </div>

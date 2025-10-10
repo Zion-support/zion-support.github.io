@@ -80,7 +80,6 @@ const ContentCarousel: React.FC = () => {
   const currentSlideData = slides[currentSlide];
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -205,7 +204,6 @@ const ContentCarousel: React.FC = () => {
                   <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           </div>
 
@@ -237,7 +235,6 @@ const ContentCarousel: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -275,7 +272,6 @@ const ContentCarousel: React.FC = () => {
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
           </div>
         </div>
       </div>

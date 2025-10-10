@@ -160,7 +160,6 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -208,13 +207,11 @@ const ContentStatistics: React.FC = () => {
                 {stat.value}{stat.suffix}
               </div>
               <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           ))}
         </div>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <div className="mb-16">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Why We're the Right Choice</h3>
@@ -348,7 +345,6 @@ const ContentStatistics: React.FC = () => {
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
           </div>
         </div>
       </div>
