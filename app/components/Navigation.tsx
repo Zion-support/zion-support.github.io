@@ -118,17 +118,18 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-cyan-500/10',
       hoverColor: 'hover:bg-cyan-500/20',
       services: [
-        { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial predictions', icon: '⚛️', popular: true },
-        { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Advanced cognitive enhancement', icon: '🧠', popular: true },
-        { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: '3D workspace with holographic UI', icon: '🥽', popular: true },
         { name: 'AI Project Manager Pro', path: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
         { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
         { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
-{ name: 'AI Smart Calendar', path: '/ai-smart-calendar', description: 'Intelligent scheduling and time management', icon: '📅', popular: true },
+        { name: 'AI Smart Calendar', path: '/ai-smart-calendar', description: 'Intelligent scheduling and time management', icon: '📅', popular: true },
         { name: 'AI Content Writer', path: '/ai-content-writer', description: 'Advanced content generation', icon: '✍️', popular: true },
         { name: 'AI Video Generator', path: '/ai-video-generator', description: 'AI-powered video creation', icon: '🎥', popular: true },
-        { name: 'AI CRM Assistant', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management', icon: '👥', popular: true }
+        { name: 'AI CRM Assistant', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management', icon: '👥', popular: true },
+        { name: 'AI Task Automation', path: '/ai-task-automation', description: 'Automate repetitive tasks', icon: '⚡', popular: true },
+        { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant', description: 'Revolutionary meeting AI', icon: '🎤', popular: true },
+        { name: 'AI Focus Blocker', path: '/ai-focus-blocker', description: 'AI-powered focus enhancement', icon: '🎯', popular: true },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Advanced voice AI assistant', icon: '🗣️', popular: true }
 
 
 
@@ -150,14 +151,18 @@ const Navigation: React.FC = () => {
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
       services: [
-{ name: 'AI Quantum Computing Platform', path: '/ai-quantum-computing', description: 'Revolutionary quantum solutions', icon: '⚛️', popular: true },
-        { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Advanced AI with persistent memory', icon: '🧠', popular: true },
-        { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
+        { name: 'AI Analytics Platform', path: '/ai-analytics-platform', description: 'Advanced analytics solutions', icon: '📊', popular: true },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Comprehensive business automation', icon: '⚡', popular: true },
+        { name: 'AI Cybersecurity Platform', path: '/ai-cybersecurity', description: 'Next-generation security solutions', icon: '🛡️', popular: true },
+        { name: 'AI Customer Experience', path: '/ai-customer-experience', description: 'Comprehensive customer management', icon: '👥', popular: true },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'Advanced content creation', icon: '✍️', popular: true },
+        { name: 'AI Financial Intelligence', path: '/ai-financial-intelligence', description: 'Advanced financial analysis', icon: '💰', popular: true },
+        { name: 'AI Healthcare Diagnostics', path: '/ai-healthcare-diagnostics', description: 'Advanced medical AI', icon: '🏥', popular: false },
+        { name: 'AI Supply Chain Optimization', path: '/ai-supply-chain-optimization', description: 'Intelligent supply chain management', icon: '🚚', popular: false },
+        { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Revolutionary quantum solutions', icon: '⚛️', popular: true },
         { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'AI-powered climate monitoring', icon: '🌍', popular: true },
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Pharmaceutical AI research', icon: '💊', popular: false },
         { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true }
-
-
       ]
     },
     {
@@ -167,22 +172,18 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-500/10',
       hoverColor: 'hover:bg-blue-500/20',
       services: [
-
-
         { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
         { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
         { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
         { name: '24/7 IT Support & Monitoring', path: '/it-support', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
-
         { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
         { name: 'AI IT Operations (AIOps)', path: '/ai-ops', description: 'AI-powered IT operations', icon: '🤖', popular: true },
         { name: 'Healthcare IT Solutions', path: '/healthcare-it', description: 'HIPAA-compliant healthcare IT', icon: '🏥', popular: true },
         { name: 'Financial Services IT', path: '/financial-it', description: 'SOX-compliant financial IT', icon: '💳', popular: true },
         { name: 'Edge Computing Solutions', path: '/edge-computing', description: 'Low-latency edge infrastructure', icon: '📡', popular: true },
         { name: '5G Network Implementation', path: '/5g-implementation', description: 'High-speed 5G networks', icon: '📶', popular: false },
-{ name: 'IoT Platform Development', path: '/iot-platform', description: 'Comprehensive IoT solutions', icon: '🌐', popular: true },
+        { name: 'IoT Platform Development', path: '/iot-platform', description: 'Comprehensive IoT solutions', icon: '🌐', popular: true },
         { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: false }
-
       ]
     },
     {
@@ -192,7 +193,6 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
       services: [
-
         { name: 'Quantum Computing Solutions', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
         { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', description: 'AI-powered autonomous systems', icon: '🤖', popular: true },
         { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', description: 'AI-powered blockchain technology', icon: '⛓️', popular: true },
@@ -201,7 +201,6 @@ const Navigation: React.FC = () => {
         { name: 'AI Music Composition', path: '/ai-music-composition', description: 'AI-powered music creation', icon: '🎵', popular: true },
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: false }
-
       ]
     }
   ];
@@ -394,7 +393,7 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4 max-h-96 overflow-y-auto">
             <div className="space-y-4">
               <Link
                 to="/"
@@ -448,81 +447,62 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
               </Link>
 
               {/* Mobile Services */}
-              <div>
-
-              {/* Services Dropdown */}
-              <div className="relative group">
-
-                <button
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-1"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                >
+              <div className="space-y-2">
+                <div className="text-gray-300 font-medium py-2 flex items-center space-x-2">
                   <Settings className="w-4 h-4" />
                   <span>Services</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-
-                {/* Services Dropdown Menu */}
-                {servicesOpen && (
-                  <div
-                    className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"
-                    onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
-                  >
-                    <div className="p-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {serviceCategories.map((category, categoryIndex) => (
-                          <div key={categoryIndex} className="space-y-3">
-                            <div className="flex items-center space-x-2 mb-3">
-                              <category.icon className={`w-5 h-5 ${category.color}`} />
-                              <h3 className="text-white font-semibold text-sm">{category.title}</h3>
+                </div>
+                
+                {/* Mobile Services Grid */}
+                <div className="grid grid-cols-1 gap-4 pl-4">
+                  {serviceCategories.map((category, categoryIndex) => (
+                    <div key={categoryIndex} className="space-y-2">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <category.icon className={`w-4 h-4 ${category.color}`} />
+                        <h3 className="text-white font-semibold text-sm">{category.title}</h3>
+                      </div>
+                      <div className="space-y-1">
+                        {category.services.slice(0, 3).map((service, serviceIndex) => (
+                          <Link
+                            key={serviceIndex}
+                            to={service.path}
+                            className="block p-2 rounded-lg transition-all duration-200 hover:bg-cyan-500/10 group"
+                            onClick={closeAllMenus}
+                          >
+                            <div className="flex items-start space-x-2">
+                              <span className="text-sm">{service.icon}</span>
+                              <div className="flex-1 min-w-0">
+                                <div className="flex items-center space-x-1">
+                                  <span className="text-white text-xs font-medium group-hover:text-cyan-400 transition-colors">
+                                    {service.name}
+                                  </span>
+                                  {service.popular && (
+                                    <span className="px-1 py-0.5 bg-orange-500 text-white text-xs rounded-full">
+                                      Popular
+                                    </span>
+                                  )}
+                                </div>
+                                <p className="text-gray-400 text-xs mt-1 line-clamp-1">
+                                  {service.description}
+                                </p>
+                              </div>
                             </div>
-                            <div className="space-y-2">
-                              {category.services.slice(0, 4).map((service, serviceIndex) => (
-                                <Link
-                                  key={serviceIndex}
-                                  to={service.path}
-                                  className={`block p-2 rounded-lg transition-all duration-200 ${category.hoverColor} group`}
-                                  onClick={closeAllMenus}
-                                >
-                                  <div className="flex items-start space-x-2">
-                                    <span className="text-lg">{service.icon}</span>
-                                    <div className="flex-1 min-w-0">
-                                      <div className="flex items-center space-x-1">
-                                        <span className="text-white text-sm font-medium group-hover:text-cyan-400 transition-colors">
-                                          {service.name}
-                                        </span>
-                                        {service.popular && (
-                                          <span className="px-1.5 py-0.5 bg-orange-500 text-white text-xs rounded-full">
-                                            Popular
-                                          </span>
-                                        )}
-                                      </div>
-                                      <p className="text-gray-400 text-xs mt-1 line-clamp-2">
-                                        {service.description}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                            {category.services.length > 4 && (
-                              <Link
-                                to={`/services#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
-                                className="text-cyan-400 text-xs hover:text-cyan-300 transition-colors flex items-center space-x-1"
-                                onClick={closeAllMenus}
-                              >
-                                <span>View all {category.title}</span>
-                                <ArrowRight className="w-3 h-3" />
-                              </Link>
-                            )}
-                          </div>
+                          </Link>
                         ))}
                       </div>
+                      {category.services.length > 3 && (
+                        <Link
+                          to={`/services#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+                          className="text-cyan-400 text-xs hover:text-cyan-300 transition-colors flex items-center space-x-1 pl-6"
+                          onClick={closeAllMenus}
+                        >
+                          <span>View all {category.title}</span>
+                          <ArrowRight className="w-3 h-3" />
+                        </Link>
+                      )}
                     </div>
-                  </div>
-                )}
+                  ))}
+                </div>
               </div>
 
 <Link

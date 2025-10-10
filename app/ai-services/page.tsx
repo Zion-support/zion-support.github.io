@@ -61,6 +61,93 @@ const AIServicesPage: React.FC = () => {
       link: 'https://ziontechgroup.com/ai-analytics-platform'
     },
     {
+      id: 21,
+      name: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
+      icon: Brain,
+      features: [
+        'Quantum Risk Modeling',
+        'High-Frequency Trading',
+        'Portfolio Optimization',
+        'Market Prediction',
+        'Risk Assessment',
+        'Algorithmic Trading',
+        'Real-time Analysis',
+        'Quantum Computing Integration'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '300% faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+      ],
+      link: 'https://ziontechgroup.com/ai-quantum-financial-oracle'
+    },
+    {
+      id: 22,
+      name: 'AI Neural Memory Assistant',
+      description: 'Advanced AI system with persistent memory and contextual understanding for personalized assistance',
+      icon: Brain,
+      features: [
+        'Persistent Memory Storage',
+        'Contextual Understanding',
+        'Personalized Responses',
+        'Learning from Interactions',
+        'Multi-modal Memory',
+        'Emotional Intelligence',
+        'Long-term Relationship Building',
+        'Adaptive Personality'
+      ],
+      category: 'Advanced AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,200+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        'Personalized AI experience',
+        'Context-aware responses',
+        'Emotional intelligence',
+        'Long-term memory retention'
+      ],
+      link: 'https://ziontechgroup.com/ai-neural-memory-assistant'
+    },
+    {
+      id: 23,
+      name: 'AI Holographic Workspace',
+      description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
+      icon: Globe,
+      features: [
+        '3D Holographic Interface',
+        'Virtual Collaboration',
+        'AI-Powered Gestures',
+        'Spatial Computing',
+        'Mixed Reality Integration',
+        'Real-time Translation',
+        'Virtual Whiteboarding',
+        'Immersive Presentations'
+      ],
+      category: 'Immersive Technology',
+      popular: false,
+      rating: 4.7,
+      users: '400+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        'Immersive collaboration',
+        '3D data visualization',
+        'Virtual presence',
+        'Next-gen workspace'
+      ],
+      link: 'https://ziontechgroup.com/ai-holographic-workspace'
+    },
+    {
       id: 11,
       name: 'AI Quantum Computing Platform',
       description: 'Revolutionary quantum computing solutions for complex optimization problems, cryptography, and scientific simulations',
@@ -86,7 +173,124 @@ const AIServicesPage: React.FC = () => {
         'Unbreakable encryption',
         'Quantum advantage in ML',
         'Scientific breakthrough potential'
-      ]
+      ],
+      link: 'https://ziontechgroup.com/ai-quantum-computing'
+    },
+    {
+      id: 24,
+      name: 'AI Climate Solutions Pro',
+      description: 'Advanced climate modeling and environmental impact analysis with carbon footprint optimization and sustainability planning',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Carbon Footprint Analysis',
+        'Sustainability Planning',
+        'Environmental Impact Assessment',
+        'Renewable Energy Optimization',
+        'Emission Tracking',
+        'Green Technology Integration',
+        'Compliance Monitoring'
+      ],
+      category: 'Climate Tech',
+      popular: true,
+      rating: 4.8,
+      users: '400+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '50% carbon footprint reduction',
+        'Real-time environmental monitoring',
+        'Sustainability optimization',
+        'Climate risk assessment'
+      ],
+      link: 'https://ziontechgroup.com/ai-climate-solutions-pro'
+    },
+    {
+      id: 25,
+      name: 'AI Space Technology Pro',
+      description: 'Cutting-edge AI solutions for space exploration, satellite management, and space mission optimization',
+      icon: Rocket,
+      features: [
+        'Satellite Management',
+        'Mission Planning',
+        'Space Weather Prediction',
+        'Orbital Mechanics',
+        'Space Debris Tracking',
+        'Communication Optimization',
+        'Navigation Systems',
+        'Space Mission Analytics'
+      ],
+      category: 'Space Tech',
+      popular: false,
+      rating: 4.9,
+      users: '50+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Real-time space monitoring',
+        'Advanced orbital calculations',
+        'Space debris mitigation'
+      ],
+      link: 'https://ziontechgroup.com/ai-space-technology-pro'
+    },
+    {
+      id: 26,
+      name: 'AI Drug Discovery Pro',
+      description: 'Revolutionary AI-powered drug discovery platform with molecular modeling, clinical trial optimization, and personalized medicine',
+      icon: Stethoscope,
+      features: [
+        'Molecular Modeling',
+        'Drug Design',
+        'Clinical Trial Optimization',
+        'Personalized Medicine',
+        'Side Effect Prediction',
+        'Drug Interaction Analysis',
+        'Biomarker Discovery',
+        'Regulatory Compliance'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '70% faster drug discovery',
+        '90% accuracy in predictions',
+        'Personalized treatment plans',
+        'Reduced clinical trial costs'
+      ],
+      link: 'https://ziontechgroup.com/ai-drug-discovery-pro'
+    },
+    {
+      id: 27,
+      name: 'AI Fashion Design Studio',
+      description: 'AI-powered fashion design with trend analysis, virtual try-on, and sustainable fashion recommendations',
+      icon: FileText,
+      features: [
+        'Trend Analysis',
+        'Virtual Try-On',
+        'Sustainable Fashion AI',
+        'Color Palette Generation',
+        'Pattern Recognition',
+        'Size Optimization',
+        'Fashion Forecasting',
+        'Eco-friendly Materials'
+      ],
+      category: 'Fashion Tech',
+      popular: true,
+      rating: 4.6,
+      users: '1,500+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        'Trend prediction accuracy',
+        'Virtual fitting technology',
+        'Sustainable design optimization',
+        'Personalized fashion recommendations'
+      ],
+      link: 'https://ziontechgroup.com/ai-fashion-design'
     },
     {
       id: 12,
@@ -562,7 +766,124 @@ const AIServicesPage: React.FC = () => {
         'Faster diagnosis times',
         'Reduced medical errors',
         'Improved patient outcomes'
-      ]
+      ],
+      link: 'https://ziontechgroup.com/ai-healthcare-diagnostics'
+    },
+    {
+      id: 32,
+      name: 'AI Music Composition Suite',
+      description: 'AI-powered music creation with composition, arrangement, and production capabilities',
+      icon: FileText,
+      features: [
+        'AI Composition',
+        'Genre Adaptation',
+        'Lyric Generation',
+        'Instrument Arrangement',
+        'Mood-based Creation',
+        'Collaborative Composition',
+        'Mastering & Mixing',
+        'Copyright Protection'
+      ],
+      category: 'Creative AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,200+',
+      color: 'from-yellow-500 to-orange-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        'Professional-quality compositions',
+        'Multi-genre versatility',
+        'Collaborative AI creation',
+        'Copyright-safe generation'
+      ],
+      link: 'https://ziontechgroup.com/ai-music-composition'
+    },
+    {
+      id: 33,
+      name: 'AI Energy Management System',
+      description: 'Smart energy optimization with AI-powered grid management and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Smart Grid Management',
+        'Renewable Energy Optimization',
+        'Demand Response',
+        'Energy Storage AI',
+        'Carbon Footprint Tracking',
+        'Predictive Maintenance',
+        'Cost Optimization',
+        'Grid Stability'
+      ],
+      category: 'Energy Tech',
+      popular: false,
+      rating: 4.8,
+      users: '600+',
+      color: 'from-amber-500 to-yellow-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '30% energy cost reduction',
+        'Grid stability optimization',
+        'Renewable energy integration',
+        'Predictive energy management'
+      ],
+      link: 'https://ziontechgroup.com/ai-energy-management'
+    },
+    {
+      id: 34,
+      name: 'AI Autonomous Systems Platform',
+      description: 'AI-powered autonomous vehicle and drone management with real-time decision making',
+      icon: Settings,
+      features: [
+        'Autonomous Vehicle AI',
+        'Drone Fleet Management',
+        'Real-time Decision Making',
+        'Path Optimization',
+        'Collision Avoidance',
+        'Weather Adaptation',
+        'Fleet Coordination',
+        'Safety Monitoring'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.9,
+      users: '300+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time autonomous decisions',
+        'Fleet optimization',
+        'Weather-adaptive navigation'
+      ],
+      link: 'https://ziontechgroup.com/ai-autonomous-systems'
+    },
+    {
+      id: 35,
+      name: 'AI Blockchain Solutions',
+      description: 'AI-powered blockchain technology with smart contracts, DeFi optimization, and crypto analytics',
+      icon: Shield,
+      features: [
+        'Smart Contract AI',
+        'DeFi Optimization',
+        'Crypto Analytics',
+        'Blockchain Security',
+        'Token Economics',
+        'Yield Farming AI',
+        'Risk Assessment',
+        'Regulatory Compliance'
+      ],
+      category: 'Blockchain AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,800+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        'Automated DeFi strategies',
+        'Smart contract optimization',
+        'Crypto market analysis',
+        'Blockchain security enhancement'
+      ],
+      link: 'https://ziontechgroup.com/ai-blockchain-solutions'
     },
     {
       id: 10,
@@ -739,7 +1060,7 @@ const AIServicesPage: React.FC = () => {
 }
   ];
 
-const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Autonomous Systems', 'Space Technology', 'Environmental AI', 'Pharmaceutical AI'];
+const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Autonomous Systems', 'Space Technology', 'Environmental AI', 'Pharmaceutical AI', 'Quantum Finance', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Space Tech', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Blockchain AI', 'Cognitive AI'];
 
 
 

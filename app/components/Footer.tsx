@@ -10,14 +10,14 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
+        { name: 'AI Analytics Platform', href: '/ai-analytics-platform' },
         { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
-        { name: 'AI Customer Support', href: '/ai-customer-support' },
-        { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+        { name: 'AI Cybersecurity Platform', href: '/ai-cybersecurity' },
+        { name: 'AI Customer Experience', href: '/ai-customer-experience' },
         { name: 'AI Content Generation', href: '/ai-content-generation' },
-        { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
-        { name: 'AI Fintech Platform', href: '/ai-fintech' },
-        { name: 'AI Computer Vision', href: '/ai-computer-vision' },
-        { name: 'AI Machine Learning', href: '/ai-ml-platform' },
+        { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
+        { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },
+        { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain-optimization' },
         { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
         { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
@@ -57,7 +57,11 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
         { name: 'AI Content Writer', href: '/ai-content-writer' },
         { name: 'AI Video Generator', href: '/ai-video-generator' },
-        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' }
+        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' },
+        { name: 'AI Task Automation', href: '/ai-task-automation' },
+        { name: 'AI Meeting Assistant', href: '/ai-meeting-assistant' },
+        { name: 'AI Focus Blocker', href: '/ai-focus-blocker' },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant' }
       ]
     },
     {
@@ -174,14 +178,20 @@ const Footer: React.FC = memo(() => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="w-5 h-5" />
+              </a>
+              <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://instagram.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <Instagram className="w-5 h-5" />
               </a>
             </div>
           </div>
