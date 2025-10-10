@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp, Building2, Zap, ArrowRight } from 'lucide-react';
 
@@ -14,17 +13,14 @@ interface Partner {
   tier: 'strategic' | 'preferred' | 'certified';
 }
 
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 const PartnersPage: React.FC = () => {
   const partners = [
     {
       name: 'Microsoft',
-<<<<<<< HEAD
       logo: '/images/partners/microsoft.png',
       description: 'Strategic cloud and AI partnership for enterprise solutions',
       category: 'Technology',
@@ -70,7 +66,6 @@ const PartnersPage: React.FC = () => {
       category: 'Cloud',
       website: 'https://aws.amazon.com',
       tier: 'strategic'
-=======
       logo: '🔷',
       description: 'Cloud infrastructure and AI solutions',
       category: 'Technology Partner'
@@ -92,12 +87,10 @@ const PartnersPage: React.FC = () => {
       logo: '🔵',
       description: 'Enterprise AI and quantum computing',
       category: 'Enterprise Partner'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
     'Co-marketing opportunities',
@@ -301,7 +294,6 @@ const PartnersPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
     {
       icon: Handshake,
       title: 'Strategic Partnerships',
@@ -522,7 +514,6 @@ const PartnersPage: React.FC = () => {
       </main>
       
       <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </div>
   );
 };

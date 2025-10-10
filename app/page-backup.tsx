@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 'use client';
-<<<<<<< HEAD
 const PageBackupPage: React.FC = () => {
   const features = [
     {
@@ -83,7 +82,6 @@ const PageBackupPage: React.FC = () => {
 export default PageBackupPage;
   </button>
   </button>
-=======
 ;
 const PageBackupPage: React.FC = () => {;
   const features = [;
@@ -167,4 +165,3 @@ const PageBackupPage: React.FC = () => {;
 };
 ;
 export default PageBackupPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

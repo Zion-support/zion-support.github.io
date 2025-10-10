@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
-<<<<<<< HEAD
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
@@ -67,11 +66,11 @@ const FiveGImplementationPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started;
-  </
+                Get Started
+              </button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule Demo;
-  </
+                Schedule Demo
+              </button>
             </div>
           </div>
         </section>
@@ -80,11 +79,11 @@ const FiveGImplementationPage: React.FC = () => {
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced 5G Features;
-  </
+                Advanced 5G Features
+              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge 5G technology for the next generation of connectivity;
-  </
+                Cutting-edge 5G technology for the next generation of connectivity
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -99,16 +98,28 @@ const FiveGImplementationPage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
-;
-const FiveGImplementationPage: React.FC = () => {;
-  const features = [;
-    {;
-      icon: Wifi,;
-      title: '5G Network Design',;
-      description: 'Complete 5G network design and implementation with optimal coverage and performance.',;
-      benefits: ['Network planning', 'Coverage optimization', 'Performance tuning'];}
-    },;
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+const FiveGImplementationPage: React.FC = () => {
+  const features = [
+    {
+      icon: Wifi,
+      title: '5G Network Design',
+      description: 'Complete 5G network design and implementation with optimal coverage and performance.',
+      benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
+    },
     {;
       icon: Zap,;
       title: 'Ultra-Low Latency',;
@@ -198,7 +209,6 @@ const FiveGImplementationPage: React.FC = () => {;
                       {feature.benefits.map((benefit, idx) => (;}
                         <li key={idx} className="flex items-center text-sm text-gray-400">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                           {benefit}
                         </li>;
                       ))}
@@ -206,7 +216,6 @@ const FiveGImplementationPage: React.FC = () => {;
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -243,7 +252,6 @@ export default FiveGImplementationPage;
   </button>
   </button>
   </span>
-=======
             </div>;
           </div>;
         </section>;
@@ -274,4 +282,3 @@ export default FiveGImplementationPage;
 };
 ;
 export default FiveGImplementationPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

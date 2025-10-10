@@ -7,7 +7,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
-<<<<<<< HEAD
 const $1: React.FC = () => {;
   const webServices = [,;
     {,;
@@ -50,7 +49,6 @@ const $1: React.FC = () => {;
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],;}
       color: 'text-gray-400'}
   ];
-<<<<<<< HEAD
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -86,7 +84,6 @@ const $1: React.FC = () => {;
     }
   ];
   return(<React.Fragment>
-=======
 ;
   const technologies = [;
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },;
@@ -125,11 +122,9 @@ const $1: React.FC = () => {;
   ];
 ;
   return(<></>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
-=======
 
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [
@@ -220,7 +215,6 @@ const WebDevelopmentPage: React.FC = () => {
       <SEOOptimizer
         title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
         canonicalUrl="https://ziontechgroup.com/web-development"
       />
@@ -241,8 +235,6 @@ const WebDevelopmentPage: React.FC = () => {
         enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
-<<<<<<< HEAD
-<<<<<<< HEAD
       />
       <Analytics />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -254,7 +246,6 @@ const WebDevelopmentPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
               From frontend to backend, we deliver solutions that drive business growth.</p>
         <main className="container mx-auto px-4 py-16 pt-24">
-=======
       />;
       <Analytics />;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
@@ -266,7 +257,6 @@ const WebDevelopmentPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>;
               From frontend to backend, we deliver solutions that drive business growth.</p>;
         <main className="container mx-auto px-4 py-16 pt-24"></main>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {/* Hero Section */}
           <section className="text-center mb-16"></section>;
             <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">;
@@ -278,7 +268,6 @@ const WebDevelopmentPage: React.FC = () => {
             </p>;
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>;
               <a;
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
               <a
                 href="/contact"
@@ -286,7 +275,6 @@ const WebDevelopmentPage: React.FC = () => {
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>
               >
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>;
               <a;
                 href="/contact";
@@ -296,25 +284,20 @@ const WebDevelopmentPage: React.FC = () => {
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
               >Call +1 302 464 0950</a>;
               >;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 Start Your Project;
               </a>;
               <a;
-<<<<<<< HEAD
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-=======
                 href="tel:+13024640950";
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
               >;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 Call +1 302 464 0950;
               </a>;
             </div>,;
           </section>,;
 ,;
           {/* Services Grid */}
-<<<<<<< HEAD
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
@@ -336,7 +319,6 @@ const WebDevelopmentPage: React.FC = () => {
                       <service.icon className="w-8 h-8 text-white" />,
                     </div>,
                     <div>,</div>
-=======
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -379,13 +361,11 @@ const WebDevelopmentPage: React.FC = () => {
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
                       <div className={`font-semibold ${service.color}`}>{service.price}</div>
                     </div>
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</section>
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>
@@ -408,7 +388,6 @@ const WebDevelopmentPage: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center text-gray-300">
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0">{benefit}</ArrowRight>
                           </ArrowRight>
-=======
           <section className="mb-20"></section>;
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>;}
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>;
@@ -457,8 +436,6 @@ const WebDevelopmentPage: React.FC = () => {
                           <li key={benefitIndex} className="flex items-center text-gray-300">;
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}</ArrowRight>;
                           </ArrowRight>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
                   
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Features</h4>
@@ -481,20 +458,16 @@ const WebDevelopmentPage: React.FC = () => {
                             <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                             {benefit}
                           </li>
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
                         ))}
                       </ul>
                     </div>
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <a;
                     href="/contact"
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button">Get Started</a>
                   </a>
                 </div>
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button">
-=======
 ;
                   <a;
                     href="/contact";
@@ -504,18 +477,13 @@ const WebDevelopmentPage: React.FC = () => {
                 </div>;
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button";
                   >;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     Get Started;
                   </a>,;
                 </div>))}
-<<<<<<< HEAD
             </div>
           </section>
-=======
             </div>;
           </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
                   
                   <a
                     href="/contact"
@@ -528,7 +496,6 @@ const WebDevelopmentPage: React.FC = () => {
             </div>
           </section>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
           {/* Technologies */}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
@@ -542,19 +509,13 @@ const WebDevelopmentPage: React.FC = () => {
                   <p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
           </section>
-=======
             </div>;
           </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
             </div>
           </section>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
           {/* Process */}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
@@ -570,14 +531,10 @@ const WebDevelopmentPage: React.FC = () => {
                   <p className="text-gray-300">{step.description}</p>
                 </div>
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
           </section>
-=======
             </div>;
           </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {/* CTA Section */}
           <section className="text-center"></section>;
             <div className="cyber-card p-12 max-w-4xl mx-auto"></div>;
@@ -590,7 +547,6 @@ const WebDevelopmentPage: React.FC = () => {
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>;
                 <a;
-<<<<<<< HEAD
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
@@ -601,7 +557,6 @@ const WebDevelopmentPage: React.FC = () => {
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">Call +1 302 464 0950</a>
                 >
-=======
             <div className="cyber-card p-12 max-w-4xl mx-auto"></section>;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>;
               </p>;
@@ -614,15 +569,12 @@ const WebDevelopmentPage: React.FC = () => {
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
                 >Call +1 302 464 0950</a>;
                 >;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   Start Your Project;
                 </a>;
                 <a;
-<<<<<<< HEAD
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   Call +1 302 464 0950;
-=======
             </div>
           </section>
 
@@ -647,14 +599,12 @@ const WebDevelopmentPage: React.FC = () => {
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Call +1 302 464 0950
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
                 </a>
               </div>
             </div>
           </section>
         </main>
         <Footer />
-<<<<<<< HEAD
       </div>,
     </React.Fragment>);
 };
@@ -670,7 +620,6 @@ export default WebDevelopmentPage;
   </h4>
   </h3>
   </h2>
-=======
                   href="tel:+13024640950";
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
                 >;
@@ -686,12 +635,9 @@ export default WebDevelopmentPage;
 };
 ;
 export default WebDevelopmentPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
       </div>
     </>
   );
 };
 
 export default WebDevelopmentPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89

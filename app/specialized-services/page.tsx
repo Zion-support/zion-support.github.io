@@ -2,8 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -86,7 +84,6 @@ export default PagePage;
   </button>
   </button>
   </h2>
-=======
 ;
 const PagePage: React.FC = () => {;
   const features = [;
@@ -168,8 +165,6 @@ const PagePage: React.FC = () => {;
 };
 ;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -312,4 +307,3 @@ const SpecializedServicesPage: React.FC = () => {
 };
 
 export default SpecializedServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89

@@ -1,11 +1,8 @@
 'use client';
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -52,7 +49,6 @@ const ContactPage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
   const services = [
     'AI Solutions',
     'Cloud Computing',
@@ -109,7 +105,6 @@ const ContactPage: React.FC = () => {
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -272,12 +267,10 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
-<<<<<<< HEAD
                     <input
                       type="text"
                       id="name"
@@ -472,7 +465,6 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
                     <select
                       id="service"
                       name="service"
@@ -532,7 +524,6 @@ const ContactPage: React.FC = () => {
       </main>
       
       <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     </div>
   );
 };

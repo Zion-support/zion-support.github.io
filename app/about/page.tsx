@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {
   Brain,
@@ -14,8 +13,8 @@ import {
   Zap,
   Globe,
   CheckCircle,
-  ArrowRight,
-=======
+  ArrowRight
+} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {
@@ -24,14 +23,12 @@ import {
   Target,
   Award,
   Globe,
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
   Phone,
   Mail,
   MapPin
 } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
-<<<<<<< HEAD
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -62,27 +59,19 @@ const AboutPage: React.FC = () => {
     }
   ];
 
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
   return (
     <React.Fragment>
       <Helmet>
-<<<<<<< HEAD
         <title>About Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Discover our mission, values, and commitment to innovation." />
         <meta name="keywords" content="about us, Zion Tech Group, AI solutions, IT services, team, mission, values, innovation" />
       </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Our mission is to transform businesses through cutting-edge technology." />
-        <meta name="keywords" content="about us, company, AI solutions, IT services, technology, team, mission" />
-      </Helmet>
       
       <Navigation />
       
       <main className="pt-20">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -90,12 +79,9 @@ const AboutPage: React.FC = () => {
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
-=======
               We are a leading technology company specializing in AI solutions and IT services, 
               dedicated to transforming businesses through innovative technology.
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -116,7 +102,6 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -127,7 +112,6 @@ const AboutPage: React.FC = () => {
                   <div className="text-gray-300">{stat.label}</div>
                 </div>
               ))}
-=======
         {/* Mission Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -184,12 +168,10 @@ const AboutPage: React.FC = () => {
                   <p className="text-gray-300 text-sm">Industry recognition and awards</p>
                 </div>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Mission & Vision Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -234,7 +216,6 @@ const AboutPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
-=======
         {/* Values Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -250,7 +231,6 @@ const AboutPage: React.FC = () => {
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <Brain className="w-8 h-8 text-white" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Innovation</h3>
                 <p className="text-gray-300">
@@ -284,7 +264,6 @@ const AboutPage: React.FC = () => {
 
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Meet Our Team</h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
@@ -342,7 +321,6 @@ const AboutPage: React.FC = () => {
                   <Mail className="w-5 h-5" />
                   <span>Email Us</span>
                 </a>
-=======
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -376,11 +354,11 @@ const AboutPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4">Address</h3>
                 <p className="text-gray-300 mb-2">364 E Main St STE 1008</p>
                 <p className="text-sm text-gray-400">Middletown, DE 19709</p>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
               </div>
             </div>
           </div>
         </section>
+      </main>
       </div>
     </React.Fragment>
   );

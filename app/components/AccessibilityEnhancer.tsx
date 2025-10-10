@@ -87,13 +87,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableHighContrast]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   return <React.Fragment>{children}</React.Fragment>;
-=======
   return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-=======
   // Focus management
   useEffect(() => {
     if (enableFocusManagement) {
@@ -140,7 +135,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [announcePageChange]);
 
   return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
 };
 
 export default AccessibilityEnhancer;
