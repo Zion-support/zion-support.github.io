@@ -746,6 +746,7 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -880,6 +881,11 @@ const Navigation: React.FC = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 cyber-glow-advanced ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
+=======
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6164
     }`}>
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-aeba
 =======
@@ -918,6 +924,7 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
               <Zap className="w-5 h-5 text-white" />
             </div>
+<<<<<<< HEAD
             <span className="text-white cyber-text font-bold">
 <<<<<<< HEAD
 =======
@@ -928,6 +935,9 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
+=======
+            <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6164
               Zion Tech Group
 <<<<<<< HEAD
 =======

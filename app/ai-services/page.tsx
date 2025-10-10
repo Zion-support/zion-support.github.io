@@ -58,6 +58,7 @@ const AIServicesPage: React.FC = () => {
       ],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       category: 'Analytics',
 =======
       name: 'AI Drug Discovery Pro',
@@ -77,6 +78,9 @@ const AIServicesPage: React.FC = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+=======
+      icon: <Target className="w-8 h-8" />,
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6164
       category: 'Marketing',
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
       popular: true,
@@ -92,6 +96,7 @@ const AIServicesPage: React.FC = () => {
         'Automated campaign optimization',
         'Real-time performance tracking',
         'Predictive customer behavior'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -884,6 +889,11 @@ const AIServicesPage: React.FC = () => {
       bgColor: 'bg-purple-50'
     },
     {
+=======
+      ]
+    },
+    {
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6164
       id: 5,
       name: 'AI Document Processing',
       description: 'Intelligent document processing and data extraction with OCR and NLP',
@@ -892,10 +902,21 @@ const AIServicesPage: React.FC = () => {
       color: 'text-green-600',
       bgColor: 'bg-green-50',
       features: [
+<<<<<<< HEAD
         'OCR Processing',
         'Data Extraction',
         'Document Classification',
         'Automated Workflows'
+=======
+        'OCR Text Recognition',
+        'Document Classification',
+        'Data Extraction',
+        'Form Processing',
+        'Contract Analysis',
+        'Compliance Checking',
+        'Multi-Format Support',
+        'Batch Processing'
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6164
       ],
       category: 'AI Document Processing',
       popular: false,
@@ -1236,9 +1257,15 @@ const AIServicesPage: React.FC = () => {
     {
       id: 6,
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: 'AI Energy Grid Management Pro',
       description: 'Smart energy grid management with AI-powered optimization and monitoring',
       icon: Zap,
+=======
+      name: 'AI Image & Video Analysis',
+      description: 'Advanced computer vision platform for image and video content analysis',
+      price: '$1,199/month',
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6164
       features: [
         'Grid Load Balancing',
         'Energy Demand Prediction',
@@ -1622,6 +1649,145 @@ const AIServicesPage: React.FC = () => {
       id: 12,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      name: 'AI Research & Development',
+      description: 'Comprehensive AI R&D platform for custom model development and training',
+      price: '$4,999/month',
+      features: [
+        'Custom Model Development',
+        'Data Preprocessing',
+        'Model Training',
+        'Hyperparameter Optimization',
+        'Model Deployment',
+        'Performance Monitoring',
+        'A/B Testing',
+        'Research Collaboration'
+      ],
+      icon: <Brain className="w-8 h-8" />,
+      category: 'R&D',
+      popular: false,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-purple-500 to-indigo-600',
+      capabilities: [
+        'Custom model development',
+        'Advanced research tools',
+        'Collaborative workspace',
+        'Publication support'
+      ]
+    }
+  ];
+      title: 'AI-Powered Accessibility Assistant',
+      description: 'Intelligent accessibility support with adaptive interfaces and assistive technology.',
+      icon: '♿',
+      price: 'Starting at $1,800/month',
+      features: ['Adaptive interfaces', 'Voice control', 'Visual assistance', 'Mobility support', 'Communication aids'],
+      benefits: ['Improve accessibility', 'Enhance independence', 'Support inclusion'],
+      marketPrice: '$3,000-7,000/month',
+      category: 'Accessibility AI',
+      technologies: ['Accessibility APIs', 'Assistive Technology', 'Custom Accessibility Models', 'Mobile Apps', 'IoT Integration']
+    },
+    {
+      title: 'AI-Powered Environmental Monitoring',
+      description: 'Intelligent environmental monitoring with pollution detection and sustainability recommendations.',
+      icon: '🌱',
+      price: 'Starting at $2,000/month',
+      features: ['Pollution monitoring', 'Sustainability analysis', 'Environmental alerts', 'Carbon tracking', 'Green recommendations'],
+      benefits: ['Monitor environmental impact', 'Improve sustainability', 'Reduce carbon footprint'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Environmental AI',
+      technologies: ['Environmental Sensors', 'Pollution Detection', 'Custom Environmental Models', 'IoT Integration', 'Analytics']
+    },
+    {
+      title: 'AI-Powered Wildlife Conservation',
+      description: 'Intelligent wildlife monitoring and conservation with species identification and behavior analysis.',
+      icon: '🦁',
+      price: 'Starting at $3,500/month',
+      features: ['Species identification', 'Behavior analysis', 'Population monitoring', 'Threat detection', 'Conservation planning'],
+      benefits: ['Protect wildlife', 'Monitor populations', 'Prevent poaching'],
+      marketPrice: '$6,000-15,000/month',
+      category: 'Conservation AI',
+      technologies: ['Computer Vision', 'Wildlife Detection', 'Custom Conservation Models', 'Satellite Data', 'IoT Sensors']
+    },
+    {
+      title: 'AI-Powered Disaster Response',
+      description: 'Intelligent disaster prediction and response coordination with real-time monitoring.',
+      icon: '🚨',
+      price: 'Starting at $5,000/month',
+      features: ['Disaster prediction', 'Response coordination', 'Resource optimization', 'Evacuation planning', 'Damage assessment'],
+      benefits: ['Save lives', 'Reduce damage', 'Improve response time'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Emergency AI',
+      technologies: ['Disaster Prediction', 'Response Coordination', 'Custom Emergency Models', 'Satellite Data', 'IoT Sensors']
+    },
+    {
+      title: 'AI-Powered Urban Planning',
+      description: 'Intelligent urban planning with traffic optimization and infrastructure analysis.',
+      icon: '🏙️',
+      price: 'Starting at $4,500/month',
+      features: ['Traffic optimization', 'Infrastructure analysis', 'Population modeling', 'Resource planning', 'Sustainability analysis'],
+      benefits: ['Improve city efficiency', 'Reduce traffic congestion', 'Optimize resource use'],
+      marketPrice: '$7,500-18,000/month',
+      category: 'Urban AI',
+      technologies: ['Traffic Analysis', 'Infrastructure Modeling', 'Custom Urban Models', 'Satellite Data', 'IoT Integration']
+    },
+    {
+      title: 'AI-Powered Agriculture Optimization',
+      description: 'Intelligent agricultural optimization with crop monitoring and yield prediction.',
+      icon: '🌾',
+      price: 'Starting at $3,000/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Irrigation optimization', 'Soil analysis'],
+      benefits: ['Increase crop yields', 'Reduce resource use', 'Improve sustainability'],
+      marketPrice: '$5,000-12,000/month',
+      category: 'Agriculture AI',
+      technologies: ['Satellite Imagery', 'IoT Sensors', 'Custom Agriculture Models', 'Drone Data', 'Weather APIs']
+    },
+    {
+      title: 'AI-Powered Water Management',
+      description: 'Intelligent water resource management with quality monitoring and distribution optimization.',
+      icon: '💧',
+      price: 'Starting at $2,800/month',
+      features: ['Water quality monitoring', 'Distribution optimization', 'Leak detection', 'Usage analysis', 'Treatment optimization'],
+      benefits: ['Improve water quality', 'Reduce waste', 'Optimize distribution'],
+      marketPrice: '$4,500-11,000/month',
+      category: 'Water AI',
+      technologies: ['Water Quality Sensors', 'Distribution Networks', 'Custom Water Models', 'IoT Integration', 'Analytics']
+    },
+    {
+      title: 'AI-Powered Waste Management',
+      description: 'Intelligent waste management with collection optimization and recycling analysis.',
+      icon: '♻️',
+      price: 'Starting at $2,200/month',
+      features: ['Collection optimization', 'Recycling analysis', 'Waste sorting', 'Route planning', 'Sustainability tracking'],
+      benefits: ['Reduce waste', 'Improve recycling', 'Optimize collection'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Waste AI',
+      technologies: ['Waste Sensors', 'Route Optimization', 'Custom Waste Models', 'IoT Integration', 'Analytics']
+    },
+    {
+      title: 'AI-Powered Energy Grid Management',
+      description: 'Intelligent energy grid optimization with demand prediction and renewable integration.',
+      icon: '⚡',
+      price: 'Starting at $4,000/month',
+      features: ['Demand prediction', 'Grid optimization', 'Renewable integration', 'Load balancing', 'Outage prevention'],
+      benefits: ['Improve grid efficiency', 'Integrate renewables', 'Prevent outages'],
+      marketPrice: '$6,500-16,000/month',
+      category: 'Energy AI',
+      technologies: ['Grid Data', 'Demand Forecasting', 'Custom Energy Models', 'IoT Sensors', 'Renewable APIs']
+    },
+    {
+      title: 'AI-Powered Smart City Management',
+      description: 'Comprehensive smart city management with integrated AI services and citizen engagement.',
+      icon: '🏛️',
+      price: 'Starting at $8,000/month',
+      features: ['Integrated services', 'Citizen engagement', 'Resource optimization', 'Service delivery', 'Data analytics'],
+      benefits: ['Improve city services', 'Enhance citizen experience', 'Optimize resources'],
+      marketPrice: '$15,000-40,000/month',
+      category: 'Smart City AI',
+      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6164
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-aedf
       name: 'AI Climate Solutions Pro',
