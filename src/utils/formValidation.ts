@@ -95,13 +95,13 @@ export const _validationRules = {// TODO: Add content};;
 
    */
 
-  maxLength: (max: number, message?: string): ValidationRule;
+  maxLength: (max: number, message?: string): ValidationRule`;
 
           <string> => ({// TODO: Add content}
 
-};
+}``;
 
-  validate: (value: string) => value.length;
+  validate: (value: string) => value.length```;
 
           <= max,
     messag,
@@ -169,13 +169,13 @@ export const _validationRules = {// TODO: Add content};;
 
    */
 
-  numberRange: (min: number, max: number, message?: string): ValidationRule;
+  numberRange: (min: number, max: number, message?: string): ValidationRule`;
 
           <number> => ({// TODO: Add content}
 
-};
+}``;
 
-  validate: (value: number) => value >= min && value;
+  validate: (value: number) => value >= min && value```;
 
           <= max,
     messag,
@@ -248,7 +248,7 @@ export const _validationRules = {// TODO: Add content};;
 
           <React.Fragment>]/.test(value);
 
-const hasMinLength = value.length >= 8;;
+const hasMinLength = value.length >= 8;`;
 
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength},
 // message}),
@@ -256,11 +256,11 @@ const hasMinLength = value.length >= 8;;
    * Validate matching fields (e.g., password confirmation)
    */
 
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule;
+  matches: (otherFieldValue: string, fieldName: string): ValidationRule``;
 
           <string> => ({// TODO: Add content}
 
-};
+}```;
 
   validate: (value: string) => value === otherFieldValue,
     message: `Must match ${fieldName}
@@ -285,22 +285,22 @@ const hasMinLength = value.length >= 8;;
 
 }
 
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;;
+      const maxSizeInBytes = maxSizeInMB * 1024 * 1024`;``;
 
-      return file.size;
+      return file.size```;
 
           <= maxSizeInBytes},
     messag,
   e: message || `File size must not exceed ${maxSizeInMB}MB
   }),
   /**
-   * Validate file type;
+   * Validate file type``;
 
    */
 
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({// TODO: Add content}
 
-};
+}```;
 
   validate: (file: File) => allowedTypes.includes(file.type),
     message: message || `File type must be one of: ${allowedTypes.join(', ')}
@@ -501,15 +501,15 @@ export function debounce;
 
 }
 
-    const later = () => {/* TODO: Fix JSX expression */};;
+    const later = () => {/* TODO: Fix JSX expression */};`;
 
   O: Add content}
 
 }
 
-      timeout = null;
+      timeout = null``;
 
-      func(...args)};
+      func(...args)}```;
 
     if (timeout) {/* TODO: Fix JSX expression */}
 

@@ -1,5 +1,5 @@
 // #!/usr/bin/en,
-  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path) clas,;;
+  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require('path) clas,');
 
   s: IntegratedMonitor {/* TODO: Fix JSX expression */}
 
@@ -7,7 +7,7 @@
   l: = null, this.stat,
   s: = {/* TODO: Fix JSX expression */}
 
-  uptime: Date.now(})} ; asyn,
+  uptime: Date.now(})} '); asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
 
   t: this.browserMonitor.initialize(), this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this)) this.fixCycleInterva,
@@ -22,11 +22,11 @@
   Error:'}error) tr,
   y: { await this.browserMonitor.restart()} catch (restartError) {/* TODO: Fix JSX expression */}
 
-  monitor:'}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...); const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,;;
+  monitor: '}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...)'; const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,';';
 
   n: 'errorTime > cutoffTime}) if (recentErrors.length === 0) {/* TODO: Fix JSX expression */}
 
-  cycle: '`)error); this.stats.failedFixes++} asyn,
+  cycle: '`)error)'; this.stats.failedFixes++} asyn,
   c: generateIntegratedReport(recentErrors)fixesApplied) {/* TODO: Fix JSX expression */}
 
   fixesAppliedCount: 'fixesApplied.lengt}h} recentError,
@@ -35,21 +35,21 @@
   s: this.browserMonitor.stat,s,
   summary: {/* TODO: Fix JSX expression */}
 
-  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json); awai,;;
+  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json)'; awai,';
 
-  t: fs.writeFile(reportPath,JSON.stringify(report,null)2)); // // console.error removed for production
+  t: fs.writeFile(reportPath,JSON.stringify(report,null)2))'; // // console.error removed for production
 report: error), asyn,
   c: getStatus() {/* TODO: Fix JSX expression */}
 
   lastFixCycle: 'this.stats.lastFixCycl}e,
-  uptime: Date.now() - this.stats.uptim;e} ; asyn,
-  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,;;
+  uptime: Date.now() - this.stats.uptim';e} '`; asyn,
+  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'``; const browserHealth = await this.browserMonitor.performHealthCheck()```; const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,`;
 
-  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;;
+  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;
 
   r: ${fixerHealth ? ✅': '❌}); return overallHealth} catch (error) {/* TODO: Fix JSX expression */}
 
-  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;;
+  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;
 
   c: () => {/* TODO: Fix JSX expression */}
 
@@ -73,7 +73,7 @@ report: error), asyn,
 
   monitor: }error); await integratedMonitor.stop(); process.exit(1)}) module.export,
   s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}}  #!/usr/bin/en,
-  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path) clas,;;
+  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require('path) clas,');
 
   s: IntegratedMonitor {/* TODO: Fix JSX expression */}
 
@@ -81,7 +81,7 @@ report: error), asyn,
   l: = null, this.stat,
   s: = {/* TODO: Fix JSX expression */}
 
-  uptime: Date.now(})} ; asyn,
+  uptime: Date.now(})} '); asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
 
   t: this.browserMonitor.initialize(), this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this)) this.fixCycleInterva,
@@ -96,11 +96,11 @@ report: error), asyn,
   Error:'}error) tr,
   y: { await this.browserMonitor.restart()} catch (restartError) {/* TODO: Fix JSX expression */}
 
-  monitor:'}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...); const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,;;
+  monitor: '}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...)`'; const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,'``;'```;
 
   n: 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {/* TODO: Fix JSX expression */}
 
-  cycle: '`)error); this.stats.failedFixes++} asyn,
+  cycle: '`)error)'; this.stats.failedFixes++} asyn,
   c: generateIntegratedReport(recentErrors)fixesApplied) {/* TODO: Fix JSX expression */}
 
   fixesAppliedCount: 'fixesApplied.lengt}h} recentError,
@@ -109,21 +109,21 @@ report: error), asyn,
   s: this.browserMonitor.stat,s,
   summary: {/* TODO: Fix JSX expression */}
 
-  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json); awai,;;
+  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json)'; awai,';
 
-  t: fs.writeFile(reportPath,JSON.stringify(report,null)2)); // // console.error removed for production
+  t: fs.writeFile(reportPath,JSON.stringify(report,null)2))'; // // console.error removed for production
 report: error), asyn,
   c: getStatus() {/* TODO: Fix JSX expression */}
 
   lastFixCycle: 'this.stats.lastFixCycl}e,
-  uptime: Date.now() - this.stats.uptim;e} ; asyn,
-  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,;;
+  uptime: Date.now() - this.stats.uptim';e} '`; asyn,
+  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'``; const browserHealth = await this.browserMonitor.performHealthCheck()```; const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,`;
 
-  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;;
+  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;
 
   r: ${fixerHealth ? ✅': '❌}); return overallHealth} catch (error) {/* TODO: Fix JSX expression */}
 
-  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;;
+  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;
 
   c: () => {/* TODO: Fix JSX expression */}
 
@@ -147,7 +147,7 @@ report: error), asyn,
 
   monitor: }error); await integratedMonitor.stop(); process.exit(1)}) module.export,
   s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}} #!/usr/bin/en,
-  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path) clas,;;
+  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require('path) clas,');
 
   s: IntegratedMonitor {/* TODO: Fix JSX expression */}
 
@@ -155,7 +155,7 @@ report: error), asyn,
   l: = null, this.stat,
   s: = {/* TODO: Fix JSX expression */}
 
-  uptime: Date.now(})} ; asyn,
+  uptime: Date.now(})} '); asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
 
   t: this.browserMonitor.initialize(), this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this)) this.fixCycleInterva,
@@ -170,11 +170,11 @@ report: error), asyn,
   Error:'}error) tr,
   y: { await this.browserMonitor.restart()} catch (restartError) {/* TODO: Fix JSX expression */}
 
-  monitor:'}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...); const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,;;
+  monitor: '}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...)`'; const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,'``;'```;
 
   n: 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {/* TODO: Fix JSX expression */}
 
-  cycle: '`)error); this.stats.failedFixes++} asyn,
+  cycle: '`)error)'; this.stats.failedFixes++} asyn,
   c: generateIntegratedReport(recentErrors)fixesApplied) {/* TODO: Fix JSX expression */}
 
   fixesAppliedCount: 'fixesApplied.lengt}h} recentError,
@@ -183,21 +183,21 @@ report: error), asyn,
   s: this.browserMonitor.stat,s,
   summary: {/* TODO: Fix JSX expression */}
 
-  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json); awai,;;
+  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json)'; awai,';
 
-  t: fs.writeFile(reportPath,JSON.stringify(report,null)2)); // // console.error removed for production
+  t: fs.writeFile(reportPath,JSON.stringify(report,null)2))'; // // console.error removed for production
 report: error), asyn,
   c: getStatus() {/* TODO: Fix JSX expression */}
 
   lastFixCycle: 'this.stats.lastFixCycl}e,
-  uptime: Date.now() - this.stats.uptim;e} ; asyn,
-  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,;;
+  uptime: Date.now() - this.stats.uptim';e} '`; asyn,
+  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'``; const browserHealth = await this.browserMonitor.performHealthCheck()```; const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,`;
 
-  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;;
+  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;
 
   r: ${fixerHealth ? ✅': '❌}); return overallHealth} catch (error) {/* TODO: Fix JSX expression */}
 
-  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;;
+  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;
 
   c: () => {/* TODO: Fix JSX expression */}
 
@@ -221,7 +221,7 @@ report: error), asyn,
 
   monitor: }error); await integratedMonitor.stop(); process.exit(1)}) module.export,
   s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}} #!/usr/bin/en,
-  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path) clas,;;
+  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require('path) clas,');
 
   s: IntegratedMonitor {/* TODO: Fix JSX expression */}
 
@@ -229,7 +229,7 @@ report: error), asyn,
   l: = null, this.stat,
   s: = {/* TODO: Fix JSX expression */}
 
-  uptime: Date.now(})} ; asyn,
+  uptime: Date.now(})} '); asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
 
   t: this.browserMonitor.initialize(), this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this)) this.fixCycleInterva,
@@ -244,11 +244,11 @@ report: error), asyn,
   Error:'}error) tr,
   y: { await this.browserMonitor.restart()} catch (restartError) {/* TODO: Fix JSX expression */}
 
-  monitor:'}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...); const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,;;
+  monitor: '}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...)`'; const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,'``;'```;
 
   n: 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {/* TODO: Fix JSX expression */}
 
-  cycle: '`)error); this.stats.failedFixes++} asyn,
+  cycle: '`)error)'; this.stats.failedFixes++} asyn,
   c: generateIntegratedReport(recentErrors)fixesApplied) {/* TODO: Fix JSX expression */}
 
   fixesAppliedCount: 'fixesApplied.lengt}h} recentError,
@@ -257,21 +257,21 @@ report: error), asyn,
   s: this.browserMonitor.stat,s,
   summary: {/* TODO: Fix JSX expression */}
 
-  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json); awai,;;
+  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json)'; awai,';
 
-  t: fs.writeFile(reportPath,JSON.stringify(report,null)2)); // // console.error removed for production
+  t: fs.writeFile(reportPath,JSON.stringify(report,null)2))'; // // console.error removed for production
 report: error), asyn,
   c: getStatus() {/* TODO: Fix JSX expression */}
 
   lastFixCycle: 'this.stats.lastFixCycl}e,
-  uptime: Date.now() - this.stats.uptim;e} ; asyn,
-  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,;;
+  uptime: Date.now() - this.stats.uptim';e} '`; asyn,
+  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'``; const browserHealth = await this.browserMonitor.performHealthCheck()```; const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,`;
 
-  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;;
+  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;
 
   r: ${fixerHealth ? ✅': '❌}); return overallHealth} catch (error) {/* TODO: Fix JSX expression */}
 
-  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;;
+  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;
 
   c: () => {/* TODO: Fix JSX expression */}
 
@@ -295,7 +295,7 @@ report: error), asyn,
 
   monitor: }error); await integratedMonitor.stop(); process.exit(1)}) module.export,
   s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}} #!/usr/bin/en,
-  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path) clas,;;
+  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require('path) clas,');
 
   s: IntegratedMonitor {/* TODO: Fix JSX expression */}
 
@@ -303,7 +303,7 @@ report: error), asyn,
   l: = null, this.stat,
   s: = {/* TODO: Fix JSX expression */}
 
-  uptime: Date.now(})} ; asyn,
+  uptime: Date.now(})} '); asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
 
   t: this.browserMonitor.initialize(), this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this)) this.fixCycleInterva,
@@ -318,11 +318,11 @@ report: error), asyn,
   Error:'}error) tr,
   y: { await this.browserMonitor.restart()} catch (restartError) {/* TODO: Fix JSX expression */}
 
-  monitor:'}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...); const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,;;
+  monitor: '}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...)`'; const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,'``;'```;
 
   n: 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {/* TODO: Fix JSX expression */}
 
-  cycle: '`)error); this.stats.failedFixes++} asyn,
+  cycle: '`)error)'; this.stats.failedFixes++} asyn,
   c: generateIntegratedReport(recentErrors)fixesApplied) {/* TODO: Fix JSX expression */}
 
   fixesAppliedCount: 'fixesApplied.lengt}h} recentError,
@@ -331,21 +331,21 @@ report: error), asyn,
   s: this.browserMonitor.stat,s,
   summary: {/* TODO: Fix JSX expression */}
 
-  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json); awai,;;
+  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json)'; awai,';
 
-  t: fs.writeFile(reportPath,JSON.stringify(report,null)2)); // // console.error removed for production
+  t: fs.writeFile(reportPath,JSON.stringify(report,null)2))'; // // console.error removed for production
 report: error), asyn,
   c: getStatus() {/* TODO: Fix JSX expression */}
 
   lastFixCycle: 'this.stats.lastFixCycl}e,
-  uptime: Date.now() - this.stats.uptim;e} ; asyn,
-  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,;;
+  uptime: Date.now() - this.stats.uptim';e} '`; asyn,
+  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'``; const browserHealth = await this.browserMonitor.performHealthCheck()```; const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,`;
 
-  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;;
+  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;
 
   r: ${fixerHealth ? ✅': '❌}); return overallHealth} catch (error) {/* TODO: Fix JSX expression */}
 
-  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;;
+  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;
 
   c: () => {/* TODO: Fix JSX expression */}
 
@@ -369,7 +369,7 @@ report: error), asyn,
 
   monitor: }error); await integratedMonitor.stop(); process.exit(1)}) module.export,
   s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}} ursor/integrate-build-improve-and-re-verify-8f7d #!/usr/bin/en,
-  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path) clas,;;
+  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require('path) clas,');
 
   s: IntegratedMonitor {/* TODO: Fix JSX expression */}
 
@@ -377,7 +377,7 @@ report: error), asyn,
   l: = null, this.stat,
   s: = {/* TODO: Fix JSX expression */}
 
-  uptime: Date.now(})} ; asyn,
+  uptime: Date.now(})} '); asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
 
   t: this.browserMonitor.initialize(), this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this)) this.fixCycleInterva,
@@ -392,11 +392,11 @@ report: error), asyn,
   Error:'}error) tr,
   y: { await this.browserMonitor.restart()} catch (restartError) {/* TODO: Fix JSX expression */}
 
-  monitor:'}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...); const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,;;
+  monitor: '}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...)`'; const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,'``;'```;
 
   n: 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {/* TODO: Fix JSX expression */}
 
-  cycle: '`)error); this.stats.failedFixes++} asyn,
+  cycle: '`)error)'; this.stats.failedFixes++} asyn,
   c: generateIntegratedReport(recentErrors)fixesApplied) {/* TODO: Fix JSX expression */}
 
   fixesAppliedCount: 'fixesApplied.lengt}h} recentError,
@@ -405,21 +405,21 @@ report: error), asyn,
   s: this.browserMonitor.stat,s,
   summary: {/* TODO: Fix JSX expression */}
 
-  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json); awai,;;
+  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json)'; awai,';
 
-  t: fs.writeFile(reportPath,JSON.stringify(report,null)2)); // // console.error removed for production
+  t: fs.writeFile(reportPath,JSON.stringify(report,null)2))'; // // console.error removed for production
 report: error), asyn,
   c: getStatus() {/* TODO: Fix JSX expression */}
 
   lastFixCycle: 'this.stats.lastFixCycl}e,
-  uptime: Date.now() - this.stats.uptim;e} ; asyn,
-  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,;;
+  uptime: Date.now() - this.stats.uptim';e} '`; asyn,
+  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'``; const browserHealth = await this.browserMonitor.performHealthCheck()```; const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,`;
 
-  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;;
+  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;
 
   r: ${fixerHealth ? ✅': '❌}); return overallHealth} catch (error) {/* TODO: Fix JSX expression */}
 
-  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;;
+  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;
 
   c: () => {/* TODO: Fix JSX expression */}
 
@@ -443,7 +443,7 @@ report: error), asyn,
 
   monitor: }error); await integratedMonitor.stop(); process.exit(1)}) module.export,
   s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}} #!/usr/bin/en,
-  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path) clas,;;
+  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require('path) clas,');
 
   s: IntegratedMonitor {/* TODO: Fix JSX expression */}
 
@@ -451,7 +451,7 @@ report: error), asyn,
   l: = null, this.stat,
   s: = {/* TODO: Fix JSX expression */}
 
-  uptime: Date.now(})} ; asyn,
+  uptime: Date.now(})} '); asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
 
   t: this.browserMonitor.initialize(), this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this)) this.fixCycleInterva,
@@ -466,11 +466,11 @@ report: error), asyn,
   Error:'}error) tr,
   y: { await this.browserMonitor.restart()} catch (restartError) {/* TODO: Fix JSX expression */}
 
-  monitor:'}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...); const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,;;
+  monitor: '}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...)`'; const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,'``;'```;
 
   n: 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {/* TODO: Fix JSX expression */}
 
-  cycle: '`)error); this.stats.failedFixes++} asyn,
+  cycle: '`)error)'; this.stats.failedFixes++} asyn,
   c: generateIntegratedReport(recentErrors)fixesApplied) {/* TODO: Fix JSX expression */}
 
   fixesAppliedCount: 'fixesApplied.lengt}h} recentError,
@@ -479,21 +479,21 @@ report: error), asyn,
   s: this.browserMonitor.stat,s,
   summary: {/* TODO: Fix JSX expression */}
 
-  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json); awai,;;
+  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json)'; awai,';
 
-  t: fs.writeFile(reportPath,JSON.stringify(report,null)2)); // // console.error removed for production
+  t: fs.writeFile(reportPath,JSON.stringify(report,null)2))'; // // console.error removed for production
 report: error), asyn,
   c: getStatus() {/* TODO: Fix JSX expression */}
 
   lastFixCycle: 'this.stats.lastFixCycl}e,
-  uptime: Date.now() - this.stats.uptim;e} ; asyn,
-  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,;;
+  uptime: Date.now() - this.stats.uptim';e} '`; asyn,
+  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'``; const browserHealth = await this.browserMonitor.performHealthCheck()```; const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,`;
 
-  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;;
+  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;
 
   r: ${fixerHealth ? ✅': '❌}); return overallHealth} catch (error) {/* TODO: Fix JSX expression */}
 
-  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;;
+  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;
 
   c: () => {/* TODO: Fix JSX expression */}
 
@@ -517,7 +517,7 @@ report: error), asyn,
 
   monitor: }error); await integratedMonitor.stop(); process.exit(1)}) module.export,
   s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}} ursor/add-new-services-and-deploy-updates-0462 ursor/fix-syntax-push-and-merge-to-main-40de #!/usr/bin/en,
-  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path) clas,;;
+  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require('path) clas,');
 
   s: IntegratedMonitor {/* TODO: Fix JSX expression */}
 
@@ -525,7 +525,7 @@ report: error), asyn,
   l: = null, this.stat,
   s: = {/* TODO: Fix JSX expression */}
 
-  uptime: Date.now(})} ; asyn,
+  uptime: Date.now(})} '); asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
 
   t: this.browserMonitor.initialize(), this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this)) this.fixCycleInterva,
@@ -540,11 +540,11 @@ report: error), asyn,
   Error:'}error) tr,
   y: { await this.browserMonitor.restart()} catch (restartError) {/* TODO: Fix JSX expression */}
 
-  monitor:'}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...); const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,;;
+  monitor: '}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...)`'; const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,'``;'```;
 
   n: 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {/* TODO: Fix JSX expression */}
 
-  cycle: '`)error); this.stats.failedFixes++} asyn,
+  cycle: '`)error)'; this.stats.failedFixes++} asyn,
   c: generateIntegratedReport(recentErrors)fixesApplied) {/* TODO: Fix JSX expression */}
 
   fixesAppliedCount: 'fixesApplied.lengt}h} recentError,
@@ -553,21 +553,21 @@ report: error), asyn,
   s: this.browserMonitor.stat,s,
   summary: {/* TODO: Fix JSX expression */}
 
-  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json); awai,;;
+  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json)'; awai,';
 
-  t: fs.writeFile(reportPath,JSON.stringify(report,null)2)); // // console.error removed for production
+  t: fs.writeFile(reportPath,JSON.stringify(report,null)2))'; // // console.error removed for production
 report: error), asyn,
   c: getStatus() {/* TODO: Fix JSX expression */}
 
   lastFixCycle: 'this.stats.lastFixCycl}e,
-  uptime: Date.now() - this.stats.uptim;e} ; asyn,
-  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,;;
+  uptime: Date.now() - this.stats.uptim';e} '`; asyn,
+  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'``; const browserHealth = await this.browserMonitor.performHealthCheck()```; const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,`;
 
-  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;;
+  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;
 
   r: ${fixerHealth ? ✅': '❌}); return overallHealth} catch (error) {/* TODO: Fix JSX expression */}
 
-  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;;
+  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;
 
   c: () => {/* TODO: Fix JSX expression */}
 
@@ -591,7 +591,7 @@ report: error), asyn,
 
   monitor: }error); await integratedMonitor.stop(); process.exit(1)}) module.export,
   s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}} origin/cursor/integrate-build-improve-and-re-verify-c7b5 ursor/integrate-build-improve-and-re-verify-8f7d #!/usr/bin/en,
-  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path) clas,;;
+  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require('path) clas,');
 
   s: IntegratedMonitor {/* TODO: Fix JSX expression */}
 
@@ -599,7 +599,7 @@ report: error), asyn,
   l: = null, this.stat,
   s: = {/* TODO: Fix JSX expression */}
 
-  uptime: Date.now(})} ; asyn,
+  uptime: Date.now(})} '); asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
 
   t: this.browserMonitor.initialize(), this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this)) this.fixCycleInterva,
@@ -614,11 +614,11 @@ report: error), asyn,
   Error:'}error) tr,
   y: { await this.browserMonitor.restart()} catch (restartError) {/* TODO: Fix JSX expression */}
 
-  monitor:'}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...); const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,;;
+  monitor: '}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...)`'; const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,'``;'```;
 
   n: 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {/* TODO: Fix JSX expression */}
 
-  cycle: '`)error); this.stats.failedFixes++} asyn,
+  cycle: '`)error)'; this.stats.failedFixes++} asyn,
   c: generateIntegratedReport(recentErrors)fixesApplied) {/* TODO: Fix JSX expression */}
 
   fixesAppliedCount: 'fixesApplied.lengt}h} recentError,
@@ -627,21 +627,21 @@ report: error), asyn,
   s: this.browserMonitor.stat,s,
   summary: {/* TODO: Fix JSX expression */}
 
-  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json); awai,;;
+  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json)'; awai,';
 
-  t: fs.writeFile(reportPath,JSON.stringify(report,null)2)); // // console.error removed for production
+  t: fs.writeFile(reportPath,JSON.stringify(report,null)2))'; // // console.error removed for production
 report: error), asyn,
   c: getStatus() {/* TODO: Fix JSX expression */}
 
   lastFixCycle: 'this.stats.lastFixCycl}e,
-  uptime: Date.now() - this.stats.uptim;e} ; asyn,
-  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,;;
+  uptime: Date.now() - this.stats.uptim';e} '`; asyn,
+  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'``; const browserHealth = await this.browserMonitor.performHealthCheck()```; const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,`;
 
-  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;;
+  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;
 
   r: ${fixerHealth ? ✅': '❌}); return overallHealth} catch (error) {/* TODO: Fix JSX expression */}
 
-  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;;
+  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;
 
   c: () => {/* TODO: Fix JSX expression */}
 
@@ -665,7 +665,7 @@ report: error), asyn,
 
   monitor: }error); await integratedMonitor.stop(); process.exit(1)}) module.export,
   s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}} origin/cursor/integrate-build-improve-and-re-verify-c7b5 #!/usr/bin/en,
-  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path) clas,;;
+  v: node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require('path) clas,');
 
   s: IntegratedMonitor {/* TODO: Fix JSX expression */}
 
@@ -673,7 +673,7 @@ report: error), asyn,
   l: = null, this.stat,
   s: = {/* TODO: Fix JSX expression */}
 
-  uptime: Date.now(})} ; asyn,
+  uptime: Date.now(})} '); asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
 
   t: this.browserMonitor.initialize(), this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this)) this.fixCycleInterva,
@@ -688,11 +688,11 @@ report: error), asyn,
   Error:'}error) tr,
   y: { await this.browserMonitor.restart()} catch (restartError) {/* TODO: Fix JSX expression */}
 
-  monitor:'}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...); const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,;;
+  monitor: '}restartError); async runFixCycle() {try { 🔧 Starting integrated fix cycle...)`'; const recentErrors = this.browserMonitor.errorLog.filter(error => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) retur,'``;'```;
 
   n: 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {/* TODO: Fix JSX expression */}
 
-  cycle: '`)error); this.stats.failedFixes++} asyn,
+  cycle: '`)error)'; this.stats.failedFixes++} asyn,
   c: generateIntegratedReport(recentErrors)fixesApplied) {/* TODO: Fix JSX expression */}
 
   fixesAppliedCount: 'fixesApplied.lengt}h} recentError,
@@ -701,21 +701,21 @@ report: error), asyn,
   s: this.browserMonitor.stat,s,
   summary: {/* TODO: Fix JSX expression */}
 
-  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json); awai,;;
+  s: + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json)'; awai,';
 
-  t: fs.writeFile(reportPath,JSON.stringify(report,null)2)); // // console.error removed for production
+  t: fs.writeFile(reportPath,JSON.stringify(report,null)2))'; // // console.error removed for production
 report: error), asyn,
   c: getStatus() {/* TODO: Fix JSX expression */}
 
   lastFixCycle: 'this.stats.lastFixCycl}e,
-  uptime: Date.now() - this.stats.uptim;e} ; asyn,
-  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,;;
+  uptime: Date.now() - this.stats.uptim';e} '`; asyn,
+  c: performHealthCheck() {try { 🔍 Performing integrated health check...')'``; const browserHealth = await this.browserMonitor.performHealthCheck()```; const fixerHealth = this.errorFixer.fixesApplied.length > 0} const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); retur,`;
 
-  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;;
+  n: 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},Fixe,;
 
   r: ${fixerHealth ? ✅': '❌}); return overallHealth} catch (error) {/* TODO: Fix JSX expression */}
 
-  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;;
+  n: false; const integratedMonitor = new IntegratedMonitor()} process.on(SIGINT, )asyn,;
 
   c: () => {/* TODO: Fix JSX expression */}
 
@@ -737,56 +737,56 @@ report: error), asyn,
 
   n: }reason); await integratedMonitor.stop(); process.exit(1)}) integratedMonitor.start().catch(async (error) => {/* TODO: Fix JSX expression */}
 
-  monitor: '}error); await integratedMonitor.stop(); process.exit(1)}) module.export,
-  s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}} #!/usr/bin/"env": node; ' #!/usr/bin/"env": node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path')' "class": IntegratedMonitor {constructor() { this.browserMonitor = new BrowserErrorMonitor(); this."errorFixer": = new BrowserErrorFixer(); this."isRunning": = false; this."fixCycleInterval": = null} this."stats": = { "totalErrors": 0,"runtimeFixes": '0',"sourceCodeFixes": '0',"failedFixes": '0',"lastFixCycle": 'nul',l "uptime": Date.now(})} ; "async": initialize() {try { '🚀 Initializing Integrated Browser Error Monitor...')' "await": this.browserMonitor.initialize()} this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this))' this."fixCycleInterval": = setInterval(async () => { await this.runFixCycle()},10 * 60 * 1000); '✅ "Integrated": Monitor initialized successfully')' "return: true} catch (error) {// // console.error removed for production;;
+  monitor: '}error)'; await integratedMonitor.stop()'; process.exit(1)}) module.export,
+  s: '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}} #!/usr/bin/"env": node; ' #!/usr/bin/"env": node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path')' "class": IntegratedMonitor {constructor() { this.browserMonitor = new BrowserErrorMonitor(); this."errorFixer": = new BrowserErrorFixer(); this."isRunning": = false; this."fixCycleInterval": = null} this."stats": = { "totalErrors": 0,"runtimeFixes": '0',"sourceCodeFixes": '0',"failedFixes": '0',"lastFixCycle": 'nul',l "uptime": Date.now(})}; "async": initialize() {try { '🚀 Initializing Integrated Browser Error Monitor...')' "await": this.browserMonitor.initialize()} this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this))' this."fixCycleInterval": = setInterval(async () => { await this.runFixCycle()},10 * 60 * 1000); '✅ "Integrated": Monitor initialized successfully')' "return: true} catch (error) {// // console.error removed for production;
 
-error)' "return": false; "async": start() { if (this.isRunning) { '⚠️ Integrated Monitor is already running')' return; const initialized = await this.initialize(); "if": (!initialized) { throw new Error( 'Failed to initialize Integrated Monitor')' this."isRunning": = true; '🚀 "Integrated": Browser Error Monitor started')' "await": this.browserMonitor.start(); "await": this.runFixCycle()} "async": stop() { '❌ Failed to initialize Integrated "Monitor":'}error); return false; async start() {if (this.isRunning) { '⚠️ Integrated Monitor is already running'); return; const initialized = await this.initialize(); if (!initialized) { throw new Error(' 'Failed to initialize Integrated Monitor'); this.isRunning = true; '🚀 Integrated Browser Error Monitor started'); await this.browserMonitor.start(); await this.runFixCycle(); async stop() { this.isRunning = false; "if": (this.fixCycleInterval) { clearInterval(this.fixCycleInterval); "if": (this.browserMonitor) { await this.browserMonitor.stop(); '🛑 "Integrated": Browser Error Monitor stopped')' "async": restart() { '🔄 Restarting Integrated Browser Error Monitor...')' "await": this.stop(); "await": new Promise(resolve => { return setTimeout(resolve)2000))} } "await": this.start(); "async: handleBrowserMonitorError(error) {// // console.error removed for production;;
+error)' "return": false; "async": start() { if (this.isRunning) { '⚠️ Integrated Monitor is already running')' return; const initialized = await this.initialize(); "if": (!initialized) { throw new Error( 'Failed to initialize Integrated Monitor')' this."isRunning": = true; '🚀 "Integrated": Browser Error Monitor started')' "await": this.browserMonitor.start(); "await": this.runFixCycle()} "async": stop() { '❌ Failed to initialize Integrated "Monitor":'}error); return false; async start() {if (this.isRunning) { '⚠️ Integrated Monitor is already running'); return; const initialized = await this.initialize(); if (!initialized) { throw new Error(' 'Failed to initialize Integrated Monitor'); this.isRunning = true; '🚀 Integrated Browser Error Monitor started'); await this.browserMonitor.start(); await this.runFixCycle(); async stop() { this.isRunning = false; "if": (this.fixCycleInterval) { clearInterval(this.fixCycleInterval); "if": (this.browserMonitor) { await this.browserMonitor.stop(); '🛑 "Integrated": Browser Error Monitor stopped')' "async": restart() { '🔄 Restarting Integrated Browser Error Monitor...')' "await": this.stop(); "await": new Promise(resolve => { return setTimeout(resolve)2000))} } "await": this.start(); "async: handleBrowserMonitorError(error) {// // console.error removed for production;
 
 ' "try: { await this.browserMonitor.restart()} catch (restartError) {// // console.error removed for production
-restartError)' "async": runFixCycle() { try { '🔧 Starting integrated fix cycle...')' const recentErrors = this.browserMonitor.errorLog.filter((error) => { '❌ Failed to restart browser "monitor":'}restartError); async runFixCycle() {try { '🔧 Starting integrated fix cycle...'); const recentErrors = this.browserMonitor.errorLog.filter((error) => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) "return": 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {'✅ No recent errors to fix')' return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats."sourceCodeFixes": += fixesApplied.length; this.stats."lastFixCycle": = new Date().toISOString(); "await: this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;;
+restartError)' "async": runFixCycle() { try { '🔧 Starting integrated fix cycle...')' const recentErrors = this.browserMonitor.errorLog.filter((error) => { '❌ Failed to restart browser "monitor":'}restartError); async runFixCycle() {try { '🔧 Starting integrated fix cycle...'); const recentErrors = this.browserMonitor.errorLog.filter((error) => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) "return": 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {'✅ No recent errors to fix')' return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats."sourceCodeFixes": += fixesApplied.length; this.stats."lastFixCycle": = new Date().toISOString(); "await: this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;
 
-error) return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats.sourceCodeFixes += fixesApplied.length; this.stats.lastFixCycle = new Date().toISOString(); await this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;;
+error) return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats.sourceCodeFixes += fixesApplied.length; this.stats.lastFixCycle = new Date().toISOString(); await this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;
 
-error); this.stats.failedFixes++} "async": generateIntegratedReport(recentErrors)fixesApplied) { try { const report = { "timestamp": "new": Date().toISOString() "stats": { ...this.stat,s "uptime": Date.now() - this.stats.uptim,e "recentErrorsCount": 'recentErrors.lengt',h "fixesAppliedCount": 'fixesApplied.lengt'}h} "recentErrors": recentErrors.slice(-20)),"fixesApplied": fixesApplied.slice(-20)),"browserMonitorStats": this.browserMonitor.stat',s "summary": {"totalErrors": this.stats.totalError,s "runtimeFixes": 'this.stats.runtimeFixe',s "sourceCodeFixes": 'this.stats.sourceCodeFixe',s "failedFixes": 'this.stats.failedFixe',s "successRate": this.stats."totalErrors": > 0 ?} (((this.stats."runtimeFixes": + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json')'; "await": fs.writeFile(reportPath,JSON.stringify(report,null)2)); "async": getStatus() {/* TODO: Fix JSX expression */}";;
+error); this.stats.failedFixes++} "async": generateIntegratedReport(recentErrors)fixesApplied) { try { const report = { "timestamp": "new": Date().toISOString() "stats": { ...this.stat,s "uptime": Date.now() - this.stats.uptim,e "recentErrorsCount": 'recentErrors.lengt',h "fixesAppliedCount": 'fixesApplied.lengt'}h} "recentErrors": recentErrors.slice(-20)),"fixesApplied": fixesApplied.slice(-20)),"browserMonitorStats": this.browserMonitor.stat',s "summary": {"totalErrors": this.stats.totalError,s "runtimeFixes": 'this.stats.runtimeFixe',s "sourceCodeFixes": 'this.stats.sourceCodeFixe',s "failedFixes": 'this.stats.failedFixe',s "successRate": this.stats."totalErrors": > 0 ?} (((this.stats."runtimeFixes": + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json')'; "await": fs.writeFile(reportPath,JSON.stringify(report,null)2)); "async": getStatus() {/* TODO: Fix JSX expression */}";
 
-  g: fals',e "lastFixCycle": 'this.stats.lastFixCycl'}e "uptime": Date.now() - this.stats.uptim;e} ; "async": performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); "return": 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},"Fixer": ${fixerHealth ? ✅': '❌}`); return overallHealth} catch (error) {"return": false; const integratedMonitor = new IntegratedMonitor(); process.on( SIGINT} '}"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('SIGTERM''))"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('uncaughtException''))"async": (error) => { // // console.error removed for production;;
+  g: fals',e "lastFixCycle": 'this.stats.lastFixCycl'}e "uptime": Date.now() - this.stats.uptim;e}; "async": performHealthCheck() {try { 🔍 Performing integrated health check...')'`; const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ✅': '❌}`)`; "return": 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},"Fixer": ${fixerHealth ? ✅': '❌}`); return overallHealth} catch (error) {"return": false; const integratedMonitor = new IntegratedMonitor(); process.on( SIGINT} '}"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('SIGTERM''))"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('uncaughtException''))"async": (error) => { // // console.error removed for production;
 
 ' "await": integratedMonitor.stop()} process.exit(1)}) process.on(unhandledRejection'),"async": (reason)promise) => {' // // console.error removed for production
 "reason":'}reason)' "await": integratedMonitor.stop(); process.exit(1)}) integratedMonitor.start().catch("async": (error) => {// // console.error removed for production
 ' "await": integratedMonitor.stop()';); await integratedMonitor.stop(); process.exit(0) }) process.on('SIGTERM')async () => {' await integratedMonitor.stop()} process.exit(0)}) process.on('uncaughtException')async (error) => {' await integratedMonitor.stop()} process.exit(1)}) process.on(unhandledRejection',async (reason)promise) => {' // // console.error removed for production
 "reason":'}reason); await integratedMonitor.stop(); process.exit(1)}) integratedMonitor.start().catch(async (error) => {// // console.error removed for production
-'❌ Failed to start integrated "monitor":'}error); await integratedMonitor.stop(); process.exit(1)}) module."exports": '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}}'' #!/usr/bin/"env": node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path')' "class": IntegratedMonitor {constructor() { this.browserMonitor = new BrowserErrorMonitor(); this."errorFixer": = new BrowserErrorFixer(); this."isRunning": = false; this."fixCycleInterval": = null} this."stats": = { "totalErrors": 0,"runtimeFixes": '0',"sourceCodeFixes": '0',"failedFixes": '0',"lastFixCycle": 'nul',l "uptime": Date.now(})} ; "async": initialize() {try { '🚀 Initializing Integrated Browser Error Monitor...')' "await": this.browserMonitor.initialize()} this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this))' this."fixCycleInterval": = setInterval(async () => { await this.runFixCycle()},10 * 60 * 1000); '✅ "Integrated": Monitor initialized successfully')' "return: true} catch (error) {// // console.error removed for production;;
+'❌ Failed to start integrated "monitor":'}error); await integratedMonitor.stop(); process.exit(1)}) module."exports": '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}}'' #!/usr/bin/"env": node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path')' "class": IntegratedMonitor {constructor() { this.browserMonitor = new BrowserErrorMonitor(); this."errorFixer": = new BrowserErrorFixer(); this."isRunning": = false; this."fixCycleInterval": = null} this."stats": = { "totalErrors": 0,"runtimeFixes": '0',"sourceCodeFixes": '0',"failedFixes": '0',"lastFixCycle": 'nul',l "uptime": Date.now(})}; "async": initialize() {try { '🚀 Initializing Integrated Browser Error Monitor...')' "await": this.browserMonitor.initialize()} this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this))' this."fixCycleInterval": = setInterval(async () => { await this.runFixCycle()},10 * 60 * 1000); '✅ "Integrated": Monitor initialized successfully')' "return: true} catch (error) {// // console.error removed for production;
 
-error)' "return": false; "async": start() { if (this.isRunning) { '⚠️ Integrated Monitor is already running')' return; const initialized = await this.initialize(); "if": (!initialized) { throw new Error( 'Failed to initialize Integrated Monitor')' this."isRunning": = true; '🚀 "Integrated": Browser Error Monitor started')' "await": this.browserMonitor.start(); "await": this.runFixCycle()} "async": stop() { '❌ Failed to initialize Integrated "Monitor":'}error); return false; async start() {if (this.isRunning) { '⚠️ Integrated Monitor is already running'); return; const initialized = await this.initialize(); if (!initialized) { throw new Error(' 'Failed to initialize Integrated Monitor'); this.isRunning = true; '🚀 Integrated Browser Error Monitor started'); await this.browserMonitor.start(); await this.runFixCycle(); async stop() { this.isRunning = false; "if": (this.fixCycleInterval) { clearInterval(this.fixCycleInterval); "if": (this.browserMonitor) { await this.browserMonitor.stop(); '🛑 "Integrated": Browser Error Monitor stopped')' "async": restart() { '🔄 Restarting Integrated Browser Error Monitor...')' "await": this.stop(); "await": new Promise(resolve => { return setTimeout(resolve)2000))} } "await": this.start(); "async: handleBrowserMonitorError(error) {// // console.error removed for production;;
+error)' "return": false; "async": start() { if (this.isRunning) { '⚠️ Integrated Monitor is already running')' return; const initialized = await this.initialize(); "if": (!initialized) { throw new Error( 'Failed to initialize Integrated Monitor')' this."isRunning": = true; '🚀 "Integrated": Browser Error Monitor started')' "await": this.browserMonitor.start(); "await": this.runFixCycle()} "async": stop() { '❌ Failed to initialize Integrated "Monitor":'}error); return false; async start() {if (this.isRunning) { '⚠️ Integrated Monitor is already running'); return; const initialized = await this.initialize(); if (!initialized) { throw new Error(' 'Failed to initialize Integrated Monitor'); this.isRunning = true; '🚀 Integrated Browser Error Monitor started'); await this.browserMonitor.start(); await this.runFixCycle(); async stop() { this.isRunning = false; "if": (this.fixCycleInterval) { clearInterval(this.fixCycleInterval); "if": (this.browserMonitor) { await this.browserMonitor.stop(); '🛑 "Integrated": Browser Error Monitor stopped')' "async": restart() { '🔄 Restarting Integrated Browser Error Monitor...')' "await": this.stop(); "await": new Promise(resolve => { return setTimeout(resolve)2000))} } "await": this.start(); "async: handleBrowserMonitorError(error) {// // console.error removed for production;
 
 ' "try: { await this.browserMonitor.restart()} catch (restartError) {// // console.error removed for production
-restartError)' "async": runFixCycle() { try { '🔧 Starting integrated fix cycle...')' const recentErrors = this.browserMonitor.errorLog.filter((error) => { '❌ Failed to restart browser "monitor":'}restartError); async runFixCycle() {try { '🔧 Starting integrated fix cycle...'); const recentErrors = this.browserMonitor.errorLog.filter((error) => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) "return": 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {'✅ No recent errors to fix')' return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats."sourceCodeFixes": += fixesApplied.length; this.stats."lastFixCycle": = new Date().toISOString(); "await: this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;;
+restartError)' "async": runFixCycle() { try { '🔧 Starting integrated fix cycle...')' const recentErrors = this.browserMonitor.errorLog.filter((error) => { '❌ Failed to restart browser "monitor":'}restartError); async runFixCycle() {try { '🔧 Starting integrated fix cycle...'); const recentErrors = this.browserMonitor.errorLog.filter((error) => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) "return": 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {'✅ No recent errors to fix')' return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats."sourceCodeFixes": += fixesApplied.length; this.stats."lastFixCycle": = new Date().toISOString(); "await: this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;
 
-error) return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats.sourceCodeFixes += fixesApplied.length; this.stats.lastFixCycle = new Date().toISOString(); await this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;;
+error) return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats.sourceCodeFixes += fixesApplied.length; this.stats.lastFixCycle = new Date().toISOString(); await this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;
 
-error); this.stats.failedFixes++} "async": generateIntegratedReport(recentErrors)fixesApplied) { try { const report = { "timestamp": "new": Date().toISOString() "stats": { ...this.stat,s "uptime": Date.now() - this.stats.uptim,e "recentErrorsCount": 'recentErrors.lengt',h "fixesAppliedCount": 'fixesApplied.lengt'}h} "recentErrors": recentErrors.slice(-20)),"fixesApplied": fixesApplied.slice(-20)),"browserMonitorStats": this.browserMonitor.stat',s "summary": {"totalErrors": this.stats.totalError,s "runtimeFixes": 'this.stats.runtimeFixe',s "sourceCodeFixes": 'this.stats.sourceCodeFixe',s "failedFixes": 'this.stats.failedFixe',s "successRate": this.stats."totalErrors": > 0 ?} (((this.stats."runtimeFixes": + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json')'; "await": fs.writeFile(reportPath,JSON.stringify(report,null)2)); "async": getStatus() {/* TODO: Fix JSX expression */}";;
+error); this.stats.failedFixes++} "async": generateIntegratedReport(recentErrors)fixesApplied) { try { const report = { "timestamp": "new": Date().toISOString() "stats": { ...this.stat,s "uptime": Date.now() - this.stats.uptim,e "recentErrorsCount": 'recentErrors.lengt',h "fixesAppliedCount": 'fixesApplied.lengt'}h} "recentErrors": recentErrors.slice(-20)),"fixesApplied": fixesApplied.slice(-20)),"browserMonitorStats": this.browserMonitor.stat',s "summary": {"totalErrors": this.stats.totalError,s "runtimeFixes": 'this.stats.runtimeFixe',s "sourceCodeFixes": 'this.stats.sourceCodeFixe',s "failedFixes": 'this.stats.failedFixe',s "successRate": this.stats."totalErrors": > 0 ?} (((this.stats."runtimeFixes": + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json')'; "await": fs.writeFile(reportPath,JSON.stringify(report,null)2)); "async": getStatus() {/* TODO: Fix JSX expression */}";
 
-  g: fals',e "lastFixCycle": 'this.stats.lastFixCycl'}e "uptime": Date.now() - this.stats.uptim;e} ; "async": performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); "return": 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},"Fixer": ${fixerHealth ? ✅': '❌}`); return overallHealth} catch (error) {"return": false; const integratedMonitor = new IntegratedMonitor(); process.on( SIGINT} '}"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('SIGTERM''))"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('uncaughtException''))"async": (error) => { // // console.error removed for production;;
+  g: fals',e "lastFixCycle": 'this.stats.lastFixCycl'}e "uptime": Date.now() - this.stats.uptim;e}; "async": performHealthCheck() {try { 🔍 Performing integrated health check...')'`; const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ✅': '❌}`)`; "return": 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},"Fixer": ${fixerHealth ? ✅': '❌}`); return overallHealth} catch (error) {"return": false; const integratedMonitor = new IntegratedMonitor(); process.on( SIGINT} '}"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('SIGTERM''))"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('uncaughtException''))"async": (error) => { // // console.error removed for production;
 
 ' "await": integratedMonitor.stop()} process.exit(1)}) process.on(unhandledRejection'),"async": (reason)promise) => {' // // console.error removed for production
 "reason":'}reason)' "await": integratedMonitor.stop(); process.exit(1)}) integratedMonitor.start().catch("async": (error) => {// // console.error removed for production
 ' "await": integratedMonitor.stop()';); await integratedMonitor.stop(); process.exit(0) }) process.on('SIGTERM')async () => {' await integratedMonitor.stop()} process.exit(0)}) process.on('uncaughtException')async (error) => {' await integratedMonitor.stop()} process.exit(1)}) process.on(unhandledRejection',async (reason)promise) => {' // // console.error removed for production
 "reason":'}reason); await integratedMonitor.stop(); process.exit(1)}) integratedMonitor.start().catch(async (error) => {// // console.error removed for production
-'❌ Failed to start integrated "monitor":'}error); await integratedMonitor.stop(); process.exit(1)}) module."exports": '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}}'#!/usr/bin/"env": node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path')' "class": IntegratedMonitor {constructor() { this.browserMonitor = new BrowserErrorMonitor(); this."errorFixer": = new BrowserErrorFixer(); this."isRunning": = false; this."fixCycleInterval": = null} this."stats": = { "totalErrors": 0,"runtimeFixes": '0',"sourceCodeFixes": '0',"failedFixes": '0',"lastFixCycle": 'nul',l "uptime": Date.now(})} ; "async": initialize() {try { '🚀 Initializing Integrated Browser Error Monitor...')' "await": this.browserMonitor.initialize()} this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this))' this."fixCycleInterval": = setInterval(async () => { await this.runFixCycle()},10 * 60 * 1000); '✅ "Integrated": Monitor initialized successfully')' "return: true} catch (error) {// // console.error removed for production;;
+'❌ Failed to start integrated "monitor":'}error); await integratedMonitor.stop(); process.exit(1)}) module."exports": '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}}'#!/usr/bin/"env": node; const BrowserErrorMonitor = require( './browser-error-monitor')' const BrowserErrorFixer = require( './browser-error-fixer')' const fs = require( 'fs').promises' const path = require( 'path')' "class": IntegratedMonitor {constructor() { this.browserMonitor = new BrowserErrorMonitor(); this."errorFixer": = new BrowserErrorFixer(); this."isRunning": = false; this."fixCycleInterval": = null} this."stats": = { "totalErrors": 0,"runtimeFixes": '0',"sourceCodeFixes": '0',"failedFixes": '0',"lastFixCycle": 'nul',l "uptime": Date.now(})}; "async": initialize() {try { '🚀 Initializing Integrated Browser Error Monitor...')' "await": this.browserMonitor.initialize()} this.browserMonitor.on( 'error'}this.handleBrowserMonitorError.bind(this))' this."fixCycleInterval": = setInterval(async () => { await this.runFixCycle()},10 * 60 * 1000); '✅ "Integrated": Monitor initialized successfully')' "return: true} catch (error) {// // console.error removed for production;
 
-error)' "return": false; "async": start() { if (this.isRunning) { '⚠️ Integrated Monitor is already running')' return; const initialized = await this.initialize(); "if": (!initialized) { throw new Error( 'Failed to initialize Integrated Monitor')' this."isRunning": = true; '🚀 "Integrated": Browser Error Monitor started')' "await": this.browserMonitor.start(); "await": this.runFixCycle()} "async": stop() { '❌ Failed to initialize Integrated "Monitor":'}error); return false; async start() {if (this.isRunning) { '⚠️ Integrated Monitor is already running'); return; const initialized = await this.initialize(); if (!initialized) { throw new Error(' 'Failed to initialize Integrated Monitor'); this.isRunning = true; '🚀 Integrated Browser Error Monitor started'); await this.browserMonitor.start(); await this.runFixCycle(); async stop() { this.isRunning = false; "if": (this.fixCycleInterval) { clearInterval(this.fixCycleInterval); "if": (this.browserMonitor) { await this.browserMonitor.stop(); '🛑 "Integrated": Browser Error Monitor stopped')' "async": restart() { '🔄 Restarting Integrated Browser Error Monitor...')' "await": this.stop(); "await": new Promise(resolve => { return setTimeout(resolve)2000))} } "await": this.start(); "async: handleBrowserMonitorError(error) {// // console.error removed for production;;
+error)' "return": false; "async": start() { if (this.isRunning) { '⚠️ Integrated Monitor is already running')' return; const initialized = await this.initialize(); "if": (!initialized) { throw new Error( 'Failed to initialize Integrated Monitor')' this."isRunning": = true; '🚀 "Integrated": Browser Error Monitor started')' "await": this.browserMonitor.start(); "await": this.runFixCycle()} "async": stop() { '❌ Failed to initialize Integrated "Monitor":'}error); return false; async start() {if (this.isRunning) { '⚠️ Integrated Monitor is already running'); return; const initialized = await this.initialize(); if (!initialized) { throw new Error(' 'Failed to initialize Integrated Monitor'); this.isRunning = true; '🚀 Integrated Browser Error Monitor started'); await this.browserMonitor.start(); await this.runFixCycle(); async stop() { this.isRunning = false; "if": (this.fixCycleInterval) { clearInterval(this.fixCycleInterval); "if": (this.browserMonitor) { await this.browserMonitor.stop(); '🛑 "Integrated": Browser Error Monitor stopped')' "async": restart() { '🔄 Restarting Integrated Browser Error Monitor...')' "await": this.stop(); "await": new Promise(resolve => { return setTimeout(resolve)2000))} } "await": this.start(); "async: handleBrowserMonitorError(error) {// // console.error removed for production;
 
 ' "try: { await this.browserMonitor.restart()} catch (restartError) {// // console.error removed for production
-restartError)' "async": runFixCycle() { try { '🔧 Starting integrated fix cycle...')' const recentErrors = this.browserMonitor.errorLog.filter((error) => { '❌ Failed to restart browser "monitor":'}restartError); async runFixCycle() {try { '🔧 Starting integrated fix cycle...'); const recentErrors = this.browserMonitor.errorLog.filter((error) => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) "return": 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {'✅ No recent errors to fix')' return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats."sourceCodeFixes": += fixesApplied.length; this.stats."lastFixCycle": = new Date().toISOString(); "await: this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;;
+restartError)' "async": runFixCycle() { try { '🔧 Starting integrated fix cycle...')' const recentErrors = this.browserMonitor.errorLog.filter((error) => { '❌ Failed to restart browser "monitor":'}restartError); async runFixCycle() {try { '🔧 Starting integrated fix cycle...'); const recentErrors = this.browserMonitor.errorLog.filter((error) => { const errorTime = new Date(error.timestamp)} const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) "return": 'errorTime > cutoffTime'}) if (recentErrors.length === 0) {'✅ No recent errors to fix')' return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats."sourceCodeFixes": += fixesApplied.length; this.stats."lastFixCycle": = new Date().toISOString(); "await: this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;
 
-error) return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats.sourceCodeFixes += fixesApplied.length; this.stats.lastFixCycle = new Date().toISOString(); await this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;;
+error) return; const fixesApplied = await this.errorFixer.runFixCycle(recentErrors); this.stats.sourceCodeFixes += fixesApplied.length; this.stats.lastFixCycle = new Date().toISOString(); await this.generateIntegratedReport(recentErrors)fixesApplied); // // console.error removed for production;
 
-error); this.stats.failedFixes++} "async": generateIntegratedReport(recentErrors)fixesApplied) { try { const report = { "timestamp": "new": Date().toISOString() "stats": { ...this.stat,s "uptime": Date.now() - this.stats.uptim,e "recentErrorsCount": 'recentErrors.lengt',h "fixesAppliedCount": 'fixesApplied.lengt'}h} "recentErrors": recentErrors.slice(-20)),"fixesApplied": fixesApplied.slice(-20)),"browserMonitorStats": this.browserMonitor.stat',s "summary": {"totalErrors": this.stats.totalError,s "runtimeFixes": 'this.stats.runtimeFixe',s "sourceCodeFixes": 'this.stats.sourceCodeFixe',s "failedFixes": 'this.stats.failedFixe',s "successRate": this.stats."totalErrors": > 0 ?} (((this.stats."runtimeFixes": + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0} ; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json')'; "await": fs.writeFile(reportPath,JSON.stringify(report,null)2)); "async": getStatus() {/* TODO: Fix JSX expression */}";;
+error); this.stats.failedFixes++} "async": generateIntegratedReport(recentErrors)fixesApplied) { try { const report = { "timestamp": "new": Date().toISOString() "stats": { ...this.stat,s "uptime": Date.now() - this.stats.uptim,e "recentErrorsCount": 'recentErrors.lengt',h "fixesAppliedCount": 'fixesApplied.lengt'}h} "recentErrors": recentErrors.slice(-20)),"fixesApplied": fixesApplied.slice(-20)),"browserMonitorStats": this.browserMonitor.stat',s "summary": {"totalErrors": this.stats.totalError,s "runtimeFixes": 'this.stats.runtimeFixe',s "sourceCodeFixes": 'this.stats.sourceCodeFixe',s "failedFixes": 'this.stats.failedFixe',s "successRate": this.stats."totalErrors": > 0 ?} (((this.stats."runtimeFixes": + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 10}0}; const reportPath = path.join(this.browserMonitor.CONFIG.logDir)integrated-monitor-report.json')'; "await": fs.writeFile(reportPath,JSON.stringify(report,null)2)); "async": getStatus() {/* TODO: Fix JSX expression */}";
 
-  g: fals',e "lastFixCycle": 'this.stats.lastFixCycl'}e "uptime": Date.now() - this.stats.uptim;e} ; "async": performHealthCheck() {try { 🔍 Performing integrated health check...')'; const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ✅': '❌}`); "return": 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck(); const fixerHealth = this.errorFixer.fixesApplied.length > 0; const overallHealth = browserHealth && fixerHealth} ` : `❌},"Fixer": ${fixerHealth ? ✅': '❌}`); return overallHealth} catch (error) {"return": false; const integratedMonitor = new IntegratedMonitor(); process.on( SIGINT} '}"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('SIGTERM''))"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('uncaughtException''))"async": (error) => { // // console.error removed for production;;
+  g: fals',e "lastFixCycle": 'this.stats.lastFixCycl'}e "uptime": Date.now() - this.stats.uptim;e}; "async": performHealthCheck() {try { 🔍 Performing integrated health check...')'`; const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ✅': '❌}`)`; "return": 'overallHealth'} catch (error) {const browserHealth = await this.browserMonitor.performHealthCheck()``; const fixerHealth = this.errorFixer.fixesApplied.length > 0```; const overallHealth = browserHealth && fixerHealth} ` : `❌},"Fixer": ${fixerHealth ? ✅': '❌}`); return overallHealth} catch (error) {"return": false; const integratedMonitor = new IntegratedMonitor(); process.on( SIGINT} '}"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('SIGTERM''))"async": () => {' "await": integratedMonitor.stop()} process.exit(0)}) process.on('uncaughtException''))"async": (error) => { // // console.error removed for production;
 
 ' "await": integratedMonitor.stop()} process.exit(1)}) process.on(unhandledRejection'),"async": (reason)promise) => {' // // console.error removed for production
 "reason":'}reason)' "await": integratedMonitor.stop(); process.exit(1)}) integratedMonitor.start().catch("async": (error) => {// // console.error removed for production
 ' "await": integratedMonitor.stop()';); await integratedMonitor.stop(); process.exit(0) }) process.on('SIGTERM')async () => {' await integratedMonitor.stop()} process.exit(0)}) process.on('uncaughtException')async (error) => {' await integratedMonitor.stop()} process.exit(1)}) process.on(unhandledRejection',async (reason)promise) => {' // // console.error removed for production
 "reason":'}reason); await integratedMonitor.stop(); process.exit(1)}) integratedMonitor.start().catch(async (error) => {// // console.error removed for production
-'❌ Failed to start integrated "monitor":'}error); await integratedMonitor.stop(); process.exit(1)}) module."exports": '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}}' #!/usr/bin/"env": node;" /**; * "Integrated": Browser Error Monitor & Auto-Fixer; * "Combines": real-time browser monitoring with automatic source code fixes; *; * "This": "script": ; * 1. "Monitors": browser console errors in real-time; * 2. "Automatically": applies runtime fixes; * 3. "Triggers": source code fixes for persistent issues; * 4. "Provides": comprehensive reporting and analytics; * 5. "Integrates": with PM2 for process management; */; ' '❌ Failed to initialize Integrated,
+'❌ Failed to start integrated "monitor":'}error); await integratedMonitor.stop(); process.exit(1)}) module."exports": '= integratedMonitor'}}}}}}}}}}}}}}}}}}}}}}' #!/usr/bin/"env": node;" /**; * "Integrated": Browser Error Monitor & Auto-Fixer; * "Combines": real-time browser monitoring with automatic source code fixes; *; * "This": "script": ; * 1. "Monitors": browser console errors in real-time; * 2. "Automatically": applies runtime fixes; * 3. "Triggers": source code fixes for persistent issues; * 4. "Provides": comprehensive reporting and analytics`; * 5. "Integrates": with PM2 for process management``; */```; ' '❌ Failed to initialize Integrated,

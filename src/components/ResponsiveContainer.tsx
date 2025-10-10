@@ -238,9 +238,9 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */};;
 
   h: 1024 });
 
-  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */});;
+  const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})`;`">
 
-  h: 1280 });
+  h: 1280 })">
 
   return {/* TODO: Fix JSX expression */}
 
@@ -253,6 +253,6 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */};;
 //     isDesktop,
 //     isLargeDesktop,
     curren,
-  t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : sm}};
+  t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : sm}}">
 
-export default ResponsiveContainer;
+export default ResponsiveContainer"```;

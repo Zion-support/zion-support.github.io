@@ -810,7 +810,7 @@ const lastEntry = entries[entries.length - 1];;
     return Math.max(0, score)}
 
   /**
-   * Generate performance report;
+   * Generate performance report`;
 
    */
 
@@ -818,7 +818,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    const score = this.getPerformanceScore();;
+    const score = this.getPerformanceScore()``;```;
 
     return `Performance Score: ${score}}
 
@@ -881,7 +881,7 @@ const lastEntry = entries[entries.length - 1];;
 
     if (typeof window === undefined) return;
 
-    const criticalResources = [;;
+    const criticalResources = [
 
   // TOD,
   O: Add items;
@@ -909,11 +909,11 @@ const link = document.createElement(link);;
 
       link.as = resource.as;
 
-      if (resource.type) link.type = resource.type;
+      if (resource.type) link.type = resource.type';
 
-      if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
+      if (resource.crossorigin) link.crossOrigin = resource.crossorigin';
 
-      document.head.appendChild(link)});
+      document.head.appendChild(link)})';
 
     logger.info('Critical resource hints added', 'PerformanceOptimizer)}
 
@@ -1091,9 +1091,9 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 
 // Export singleton instance;
 
-export const performanceOptimizer = new PerformanceOptimizer();;
+export const performanceOptimizer = new PerformanceOptimizer()`;``;
 
-export default PerformanceOptimizer;"
+export default PerformanceOptimizer```;"
 
 
 

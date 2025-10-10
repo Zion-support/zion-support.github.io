@@ -64,7 +64,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
 
     // Track scroll depth;
 
-    let _maxScrollDepth = 0;;
+    let _maxScrollDepth = 0;
 
     window.addEventListener('scroll)
       this.throttle(() => {
@@ -72,7 +72,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
 
 ;
 
-const scrollDepth = Math.round(;;
+const scrollDepth = Math.round(;
 
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 
@@ -99,7 +99,7 @@ const scrollDepth = Math.round(;;
 
     document.addEventListener(click, event => {;
 
-const _element = event.target;);;
+const _element = event.target;);
 
       this.track('click, {)
         element: element.tagName;)
@@ -146,7 +146,7 @@ const _element = event.target;);;
 
     window.addEventListener(load, () => {;
 
-const _perfData = performance.getEntriesByType(navigation)[0];;
+const _perfData = performance.getEntriesByType(navigation)[0];
 
       if (perfData) {
         this.track('page_load_performance, {)
@@ -162,7 +162,7 @@ const _perfData = performance.getEntriesByType(navigation)[0];;
 
     // Track resource loading;
 
-    const observer = new PerformanceObserver(list => {);;
+    const observer = new PerformanceObserver(list => {);
 
       list.getEntries().forEach(entry => {)
         this.track('resource_load, {)
@@ -171,7 +171,7 @@ const _perfData = performance.getEntriesByType(navigation)[0];;
           size: entry.transferSize),
           type: entry.initiatorType),;
 
-const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */});;
+const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */});
 
         })})});
 
@@ -203,7 +203,7 @@ const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */
 
     // Track fetch errors;
 
-    const _originalFetch = window.fetch;;
+    const _originalFetch = window.fetch;
 
     window.fetch = (...args) => {
       return originalFetch(...args).catch(error => {)
@@ -219,7 +219,7 @@ const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */
   setupUserBehaviorTracking() {
     // Track time on page;
 
-    let _timeOnPage = 0;;
+    let _timeOnPage = 0;
 
     setInterval(() => {
       timeOnPage += 1000;
@@ -233,7 +233,7 @@ const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */
 
     // Track mouse movement patterns;
 
-    let _mouseMovements = 0;;
+    let _mouseMovements = 0;
 
     document.addEventListener('mousemove)
       this.throttle(() => {
@@ -253,7 +253,7 @@ const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */
 
     // Track keyboard activity;
 
-    let _keystrokes = 0;;
+    let _keystrokes = 0;
 
     document.addEventListener('keydown)
       this.throttle(() => {
@@ -296,7 +296,7 @@ const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */
 
 ;
 
-const event = {;;
+const event = {;
 
       event: eventName;
 
@@ -394,7 +394,7 @@ const event = {;;
 
 ;
 
-const _events = [...this.eventQueue];;
+const _events = [...this.eventQueue];
 
     this.eventQueue = [];
 
@@ -408,7 +408,7 @@ const _events = [...this.eventQueue];;
 
   async sendEvents(events) {;
 
-const payload = {;;
+const payload = {;
 
       events: events;
 
@@ -431,7 +431,7 @@ const payload = {;;
 
     // Send to multiple analytics services;
 
-    const _promises = [this.sendToGoogleAnalytics(payload), this.sendToCustomEndpoint(payload)];;
+    const _promises = [this.sendToGoogleAnalytics(payload), this.sendToCustomEndpoint(payload)];
 
     await Promise.allSettled(promises)}
 
@@ -449,7 +449,7 @@ const payload = {;;
   async sendToCustomEndpoint(payload) {
     try {;
 
-const response = await fetch(/api/analytics, {);;
+const response = await fetch(/api/analytics, {);
 
         method: 'POST)
         headers: {)
@@ -497,7 +497,7 @@ const response = await fetch(/api/analytics, {);;
 
   getPerformanceMetrics() {;
 
-const _navigation = performance.getEntriesByType(navigation)[0];;
+const _navigation = performance.getEntriesByType(navigation)[0];
 
     return {
       loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : 0;
@@ -560,7 +560,7 @@ const _navigation = performance.getEntriesByType(navigation)[0];;
 
 // Initialize analytics optimizer;
 
-const _analyticsOptimizer = new AnalyticsOptimizer();;
+const _analyticsOptimizer = new AnalyticsOptimizer();
 
 // Track initial page view;
 

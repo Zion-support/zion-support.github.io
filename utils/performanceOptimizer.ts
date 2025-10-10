@@ -3,7 +3,7 @@
 
  */
 
-export const performanceOptimizer = {;;
+export const performanceOptimizer = {
 
   init: () => {,
     if (typeof window !== 'undefined') {,
@@ -29,9 +29,9 @@ export const performanceOptimizer = {/* TODO: Fix JSX expression */};;
 
     return null}};
 
-export const lazyLoadImages = () => {;;
+export const lazyLoadImages = () => {
 
-  if (typeof window !== 'undefined) {;
+  if (typeof window !== 'undefined) {
 
 const _images = document.querySelectorAll('img[data-src]);;
 
@@ -53,7 +53,7 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};;
 
 };
 
-export const collectPerformanceMetrics = () => {;;
+export const collectPerformanceMetrics = () => {
 
   if (typeof window !== 'undefined' && 'performance' in window) {
     //     const perfData = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;

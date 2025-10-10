@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 /**
  * Data Transformation Utilities;
@@ -241,11 +241,11 @@ return chunks]
     }
 
 /**
- * Zip multiple arrays together;
+ * Zip multiple arrays together`;
 
  */
 export function zip<T></T>(...array)
-  s: T[][]): T[][] {/* TODO: Fix JSX expression */});
+  s: T[][]): T[][] {/* TODO: Fix JSX expression */})``;
 
 }
 
@@ -253,7 +253,7 @@ return result]
     }
 
 /**
- * Format bytes to human readable string;
+ * Format bytes to human readable string```;
 
  */
 export function formatBytes(byte)
@@ -282,7 +282,7 @@ export function formatCurrency(amoun)
     }
 
 /**
- * Format date;
+ * Format date`;
 
  */
 export function formatDate(dat,
@@ -290,26 +290,26 @@ export function formatDate(dat,
   option,
   s: Intl.DateTimeFormatOptions = {},
   locale = 'en-US)
-): string {/* TODO: Fix JSX expression */});
+): string {/* TODO: Fix JSX expression */})``;
 
 }
 
 /**
- * Format relative time;
+ * Format relative time```;
 
  */
 export function formatRelativeTime(dat)
   e: Date | string | number): string {/* TODO: Fix JSX expression */}
 
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago````;
 
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago````;
 
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;
+  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago````;
 
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
+  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago````;
 
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;
+  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago````;
 
   return `${years} year${years > 1 ? 's' : ''} ago;);
 
@@ -371,6 +371,6 @@ export default {/* TODO: Fix JSX expression */});
 
 };
 
-    return clonedObj;);
+    return clonedObj;)`;
 
-  return obj;);
+  return obj``;)```;

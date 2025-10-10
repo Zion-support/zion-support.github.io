@@ -3,7 +3,7 @@
 
 // // Update package.json with performance optimizations;
 
-// const packageJsonPath = /workspace/package.json;;
+// const packageJsonPath = /workspace/package.json;
 
 // Add performance optimization scripts;
 
@@ -22,9 +22,9 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 
 // // 2. Create performance optimization script;
 
-// const performanceScript = `import { execSync } from 'child_process;;;
+// const performanceScript = `import { execSync } from 'child_process';';
 
-// // Optimize images;
+// // Optimize images';
 
 // try {
     execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: pipe });
@@ -56,25 +56,51 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 
 //     }
 
-// ;
+// `;
 
-fs.writeFileSync(/workspace/scripts/performance-optimizer.js, performanceScript);
+fs.writeFileSync(/workspace/scripts/performance-optimizer.js, performanceScript)``;
 
-// // 3. Create accessibility improvements;
+// // 3. Create accessibility improvements```;
 
-// // const accessibilityScript = `import { execSync } from child_process;;
+// // const accessibilityScript = `import { execSync } from child_process;
 
-// // Check for accessibility issues;
+// // Check for accessibility issues`;
 
 // try {
-    // This would run accessibility tests in a real scenario;
+    // This would run accessibility tests in a real scenario``;
 
 //     } catch (error) {
-// // 3. Create accessibility improvements;
+// // 3. Create accessibility improvements```;
 
-// // const accessibilityScript = `import { execSync } from child_process;;
+// // const accessibilityScript = `import { execSync } from child_process``;
 
-// // Check for accessibility issues;
+// // Check for accessibility issues```;
+
+// try {/* TODO: Fix JSX expression */}
+
+//     } catch (error) {/* TODO: Fix JSX expression */}
+
+//     }
+
+// ``;
+
+fs.writeFileSync(/workspace/scripts/accessibility-improver.js, accessibilityScript)``;
+
+// // 4. Create SEO improvements```;
+
+// // const seoScript = `import { execSync } from child_process;
+
+// // Check for SEO issues`;
+
+// try {
+    // This would run SEO tests in a real scenario``;
+
+//     } catch (error) {
+// // 4. Create SEO improvements```;
+
+// // const seoScript = `import { execSync } from child_process``;
+
+// // Check for SEO issues```;
 
 // try {/* TODO: Fix JSX expression */}
 
@@ -84,89 +110,63 @@ fs.writeFileSync(/workspace/scripts/performance-optimizer.js, performanceScript)
 
 // `;
 
-fs.writeFileSync(/workspace/scripts/accessibility-improver.js, accessibilityScript);
+fs.writeFileSync(/workspace/scripts/seo-improver.js, seoScript)`;
 
-// // 4. Create SEO improvements;
+// // 5. Create comprehensive test suite``;
 
-// // const seoScript = `import { execSync } from child_process;;
+// // 5. Create comprehensive test suite```;
 
-// // Check for SEO issues;
-
-// try {
-    // This would run SEO tests in a real scenario;
-
-//     } catch (error) {
-// // 4. Create SEO improvements;
-
-// // const seoScript = `import { execSync } from child_process;;
-
-// // Check for SEO issues;
-
-// try {/* TODO: Fix JSX expression */}
-
-//     } catch (error) {/* TODO: Fix JSX expression */}
-
-//     }
-
-// `;
-
-fs.writeFileSync(/workspace/scripts/seo-improver.js, seoScript);
-
-// // 5. Create comprehensive test suite;
-
-// // 5. Create comprehensive test suite;
-
-// // const testSuite = `import { describe, it, expect } from '@jest/globals;;;
+// // const testSuite = `import { describe, it, expect } from '@jest/globals';';
 
 describe('Comprehensive Test Suite, () => {/* TODO: Fix JSX expression */}
 
     });
 
     it('should pass performance test, () => {
-//         const startTime = Date.now();;
+//         const startTime = Date.now();
 
         // Simulate some work;
 
-//         const endTime = Date.now();;
+//         const endTime = Date.now();
 
         expect(endTime - startTime).toBeLessThan(1000)});
 
     it('should pass accessibility test, () => {
         // Basic accessibility check;
 
-        expect(document).toBeDefined();
+        expect(document).toBeDefined()`;
 
     it('should pass performance test, () => {/* TODO: Fix JSX expression */}
 
-    });
+    })``;
 
     it('should pass accessibility test, () => {/* TODO: Fix JSX expression */}
 
-    })});`
-;
+    })})```;`
+`;
 
-fs.writeFileSync(/workspace/__tests__/comprehensive.test.js, testSuite);
+fs.writeFileSync(/workspace/__tests__/comprehensive.test.js, testSuite)``;
 
-// // 6. Create monitoring script;
+// // 6. Create monitoring script```;
 
-// // const monitoringScript = `import { execSync } from 'child_process;;;
+// // const monitoringScript = `import { execSync } from 'child_process';'`;
 
-// // Monitor performance;
+// // Monitor performance'``;
 
 // try {
 //     // // console.log removed for production
 rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB,
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB,
-        heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + ' MB,
-// // 6. Create monitoring script;
+        heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) ' ' + ' MB,
+// // 6. Create monitoring script```;
 
-// // const monitoringScript = `import { execSync } from child_process;;
+// // const monitoringScript = `import { execSync } from child_process`;
 
-// // Monitor performance;
+// // Monitor performance``;
 
 // try {/* TODO: Fix JSX expression */}
 
-    });
+    })```;
 
 //     } catch (error) {/* TODO: Fix JSX expression */}
 
@@ -180,7 +180,7 @@ fs.writeFileSync(/workspace/scripts/monitor.js, monitoringScript);
 
 // // 7. Update README with improvements;
 
-// const readmeContent = # Zion Tech Group - Advanced AI and IT Solutions Website;;
+// const readmeContent = # Zion Tech Group - Advanced AI and IT Solutions Website;
 
 ## Recent Improvements;
 
@@ -222,11 +222,11 @@ fs.writeFileSync(/workspace/scripts/monitor.js, monitoringScript);
 
 - ✅ Error tracking;
 
-- ✅ Code quality checks;
+- ✅ Code quality checks`;
 
-## Quick Start;
+## Quick Start``;
 
-## Quick Start;
+## Quick Start```;
 
 \`\`\bash;
 
@@ -244,56 +244,56 @@ pnpm build;
 
 # Run tests;
 
-pnpm test;
+pnpm test`;
 
-# Run performance audit;
+# Run performance audit``;
 
-pnpm perf: audit;
+pnpm perf: audit```;
 
 \`\`\
 
-## Available Scripts;
+## Available Scripts```;
 
-- \`pnpm dev\ - Start development server;
+- \`pnpm dev\ - Start development server```;
 
-- \`pnpm build\ - Build for production;
+- \`pnpm build\ - Build for production```;
 
-- \`pnpm test\ - Run tests;
+- \`pnpm test\ - Run tests```;
 
-- \`pnpm lint\ - Run linting;
+- \`pnpm lint\ - Run linting```;
 
-- \`pnpm optimize:all\ - Run all optimizations;
+- \`pnpm optimize:all\ - Run all optimizations```;
 
-- \`pnpm perf:audit\ - Run performance audit;
+- \`pnpm perf:audit\ - Run performance audit``;
 
 pnpm,
-  perf:audit;
+  perf:audit```;
 
 \`\`\
 
-## Available Scripts;
+## Available Scripts```;
 
-- \`pnpm dev\` - Start development server;
+- \`pnpm dev\` - Start development server```;
 
-- \`pnpm build\` - Build for production;
+- \`pnpm build\` - Build for production```;
 
-- \`pnpm test\` - Run tests;
+- \`pnpm test\` - Run tests```;
 
-- \`pnpm lint\` - Run linting;
-
-- \`pnpm,
-  optimize:all\` - Run all optimizations;
+- \`pnpm lint\` - Run linting```;
 
 - \`pnpm,
-  perf:audit\` - Run performance audit;`
+  optimize:all\` - Run all optimizations```;
+
+- \`pnpm,
+  perf:audit\` - Run performance audit```;`
 ;
 
 ,
-fs.writeFileSync(/workspace/README.md, readmeContent);
+fs.writeFileSync(/workspace/README.md, readmeContent)';
 
-// // 8. Create improvement summary;
+// // 8. Create improvement summary';
 
-const improvementSummary = {;;
+const improvementSummary = {
 
     timestamp: new Date().toISOString(),
     improvements: [,
@@ -312,10 +312,10 @@ const improvementSummary = {;;
         Monitor system performance
     ];
 
-const improvementSummary = {/* TODO: Fix JSX expression */};;
+const improvementSummary = {/* TODO: Fix JSX expression */}`;
 
-};
+}``;
 
-fs.writeFileSync(/workspace/improvements-summary.json, JSON.stringify(improvementSummary, null, 2));
+fs.writeFileSync(/workspace/improvements-summary.json, JSON.stringify(improvementSummary, null, 2))```;
 
 // // // // // // // // // // // // // // `

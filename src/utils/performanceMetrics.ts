@@ -184,7 +184,7 @@ export class PerformanceMetrics {// TODO: Add content}
       try {
         // Navigation timing
           for (const entry of list.getEntries()) {
-            if (entry.entryType === 'navigation) {;
+            if (entry.entryType === 'navigation) {
 
 const navEntry = entry as PerformanceNavigationTiming;;
 
@@ -250,7 +250,7 @@ const navEntry = entry as PerformanceNavigationTiming;;
 
         // Paint timing;
 
-const paintObserver = new PerformanceObserver(list => {;;
+const paintObserver = new PerformanceObserver(list => {
 
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
@@ -274,7 +274,7 @@ $4})}
 
         // Largest Contentful Paint;
 
-const lcpObserver = new PerformanceObserver(list => {;;
+const lcpObserver = new PerformanceObserver(list => {
 
 const entries = list.getEntries();;
 
@@ -299,7 +299,7 @@ $4})}
 
         // Layout Shift;
 
-const clsObserver = new PerformanceObserver(list => {;;
+const clsObserver = new PerformanceObserver(list => {
 
           for (const entry of list.getEntries()) {
                 metadata: {// TODO: Add content}
@@ -651,7 +651,7 @@ $4})});
   /**
    * Measure function execution time
    */
-  measureFunction<T>(name: string, fn: () => T): T {;
+  measureFunction<T>(name: string, fn: () => T): T {
 
 const startTime = performance.now();;
 
@@ -672,13 +672,13 @@ $4});
   /**
    * Measure async function execution time
    */
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {;
+  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
 
 const startTime = performance.now();;
 
-    const result = await fn();;
+    const result = await fn();`;
 
-    const endTime = performance.now();;
+    const endTime = performance.now()``;```;
 
     this.recordMetric({
       name: `async:${name}`,
@@ -737,13 +737,13 @@ $4});
 
     const result = fn();;
 
-    const endTime = performance.now();;
+    const endTime = performance.now()`;``;
 
     this.recordMetric({/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}```;
 
   name: `function:${name}`,
       value: endTime - startTime,
@@ -774,13 +774,13 @@ $4});
 
     const result = await fn();;
 
-    const endTime = performance.now();;
+    const endTime = performance.now()`;``;
 
     this.recordMetric({/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}```;
 
   name: `async:${name}`,
       value: endTime - startTime,
@@ -829,7 +829,7 @@ $4});
   /**
    * Calculate performance score (0-100)
    */
-  calculatePerformanceScore(): number {;
+  calculatePerformanceScore(): number {
 
 let score = 100;;
 
@@ -862,7 +862,7 @@ let score = 100;;
   /**
    * Get performance recommendations
    */
-  getRecommendations(): string[] {;
+  getRecommendations(): string[] {
 
 const recommendations: string[] = [];
 
@@ -1025,7 +1025,7 @@ const avgNetworkTime =;;
   /**
    * Generate performance report
    */
-  generateReport(): PerformanceReport {;
+  generateReport(): PerformanceReport {
 
 const loadMetrics = this.getMetricsByCategory('load);;
 
@@ -1187,6 +1187,6 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
     hadRecentInput: boolean
 }
 
-// Export singleton instance;
+// Export singleton instance`;
 
-export const performanceMetrics = PerformanceMetrics.getInstance();;
+export const performanceMetrics = PerformanceMetrics.getInstance()``;```;

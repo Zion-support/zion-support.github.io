@@ -13,15 +13,15 @@ import { resolve } from path;
 
 ;
 
-const _errors = [];;
+const _errors = [];
 
-const _warnings = [];;;
+const _warnings = []';';
 
-// // Check Node version;
+// // Check Node version';
 
-// const requiredNodeVersion = 18.0.0;;
+// const requiredNodeVersion = 18.0.0';
 
-// const currentNodeVersion = process.version.slice(1);;
+// const currentNodeVersion = process.version.slice(1)';
 
 if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */}
 
@@ -30,9 +30,9 @@ if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */}
 
 //   }
 
-// Check for required files;
+// Check for required files';
 
-const requiredFiles = [;;
+const requiredFiles = [';';
 
   'package.json,
   'next.config.js,
@@ -50,11 +50,11 @@ requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}
 
 // Check package.json for critical dependencies;
 
-try {;
+try {
 
-const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), utf-8));;
+const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), utf-8))`;
 
-  const _requiredDeps = ['next', 'react', react-dom];;
+  const _requiredDeps = ['next', 'react', react-dom]``;```;
 
   requiredDeps.forEach((dep) => {
     if (!packageJson.dependencies[dep]) {
@@ -72,9 +72,9 @@ try {/* TODO: Fix JSX expression */}
 
 // Check TypeScript configuration;
 
-try {;
+try {
 
-const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), utf-8));;
+const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), utf-8));
 
   if (!tsConfig.compilerOptions) {
     warnings.push('tsconfig.json missing compilerOptions)} else {
@@ -88,13 +88,13 @@ try {/* TODO: Fix JSX expression */}
 
 }
 
-// Check environment variables setup;
+// Check environment variables setup`;
 
 if (!existsSync(resolve(process.cwd(), '.env.example))) {
   warnings.push('.env.example file not found - consider adding environment variable documentation)} else {
 //   }
 
-// Report results;
+// Report results``;
 
 // if (errors.length > 0) {
 if (!existsSync(resolve(process.cwd(), '.env.example))) {/* TODO: Fix JSX expression */}
@@ -103,7 +103,7 @@ if (!existsSync(resolve(process.cwd(), '.env.example))) {/* TODO: Fix JSX expres
 
 //   }
 
-// Report results;
+// Report results```;
 
 // if (errors.length > 0) {/* TODO: Fix JSX expression */}
 

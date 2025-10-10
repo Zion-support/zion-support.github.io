@@ -1,4 +1,4 @@
-export const generateSitemap = useCallback((...args) => {;;
+export const generateSitemap = useCallback((...args) => {
 
 const baseUrl = https: //ziontechgroup.com,;;
 
@@ -8,7 +8,7 @@ export const generateSitemap = useCallback((...args) => {};;
 
   const baseUrl = https://ziontechgroup.com;;
 
-const staticPages = [;;
+const staticPages = [
 
     ',
     '/services,
@@ -50,12 +50,12 @@ const staticPages = [;;
     /productivity
   ];
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
+const sitemap = `<?xml version="1.0" encoding="UTF-8?>`;``;
 
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9>,
   ${staticPages.map(page =>),
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9>
-  ${staticPages.map(page =>);
+  ${staticPages.map(page =>)```;
 
   <url>}
 
@@ -78,7 +78,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;
 # Crawl-delay for better server performance;
 
 Crawl-delay: 1,
-# Disallow admin and private areas;
+# Disallow admin and private areas`;
 
 Disallow: /admin/,
 Disallow: /api/,
@@ -91,7 +91,7 @@ export interface SitemapEntry {/* TODO: Fix JSX expression */}
 
 }
 
-export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */};;
+export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}``;```;
 
   l: `${baseUrl}/,
       lastmo,
@@ -229,6 +229,6 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 
   ]}
 
-export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */};;
+export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}`';'``;
 
-};
+}'```;

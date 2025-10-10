@@ -813,7 +813,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
     price: $25,999,
     period: /month,
     description: Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.,
-    features: [;
+    features: [
 
       Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management,
       Help desk supportStrategic IT consulting],
@@ -947,7 +947,7 @@ export const,
     descriptio,
   n: Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.,
     feature,
-  s: [;
+  s: [
 
       Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management
       Help desk supportStrategic IT consulting
@@ -2688,12 +2688,10 @@ varian,
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  comprehensiveITServices: ComprehensiveITService[] = [;
+  comprehensiveITServices: ComprehensiveITService[] = [
 
   // Enterprise IT Infrastructure Services;
 
@@ -2871,7 +2869,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   n:
       Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.
     feature,
-  s: [;
+  s: [
 
       24/7 threat monitoring
       AI-powered threat detection
@@ -2923,7 +2921,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       AI threat detection
       Machine learning
@@ -2934,7 +2932,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       Penetration testing
     ]
     integration,
-  s: [;
+  s: [
 
       SIEM systems
       EDR platforms
@@ -2944,7 +2942,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       Compliance tools
     ]
     useCase,
-  s: [;
+  s: [
 
       Threat monitoring
       Incident response
@@ -3048,7 +3046,7 @@ varian,
   n:
       Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI-powered optimization.
     feature,
-  s: [;
+  s: [
 
       Data center infrastructure management
       Power and cooling optimization
@@ -3100,7 +3098,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       AI optimization
       Automation platforms
@@ -3111,7 +3109,7 @@ varian,
       Security tools
     ]
     integration,
-  s: [;
+  s: [
 
       Data center infrastructure
       Monitoring systems
@@ -3225,7 +3223,7 @@ varian,
   n:
       Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.
     feature,
-  s: [;
+  s: [
 
       SD-WAN implementation
       Network security management
@@ -3277,7 +3275,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       SD-WAN
       Network security
@@ -3288,7 +3286,7 @@ varian,
       Security analytics
     ]
     integration,
-  s: [;
+  s: [
 
       Network equipment
       Security tools
@@ -3298,7 +3296,7 @@ varian,
       Security platforms
     ]
     useCase,
-  s: [;
+  s: [
 
       Network optimization
       Security enhancement
@@ -3400,7 +3398,7 @@ varian,
   n:
       Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.
     feature,
-  s: [;
+  s: [
 
       Project planning and management
       Resource allocation
@@ -3452,7 +3450,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Project management tools
       Agile methodologies
@@ -3463,7 +3461,7 @@ varian,
       Reporting tools
     ]
     integration,
-  s: [;
+  s: [
 
       Project management platforms
       Communication tools
@@ -3564,7 +3562,7 @@ varian,
   n:
       Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.
     feature,
-  s: [;
+  s: [
 
       Comprehensive IT training
       Industry certifications
@@ -3616,7 +3614,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Learning management systems
       Virtual labs
@@ -3627,7 +3625,7 @@ varian,
       Mobile learning
     ]
     integration,
-  s: [;
+  s: [
 
       Learning platforms
       Certification bodies
@@ -3637,7 +3635,7 @@ varian,
       Progress tracking
     ]
     useCase,
-  s: [;
+  s: [
 
       Professional development
       Career advancement
@@ -3737,7 +3735,7 @@ varian,
   n:
       Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum-grade computing capabilities.
     feature,
-  s: [;
+  s: [
 
       Quantum computing resources
       Quantum-secured networking
@@ -3785,7 +3783,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Quantum computing
       Quantum networking
@@ -3797,7 +3795,7 @@ varian,
       Custom quantum hardware
     ]
     integration,
-  s: [;
+  s: [
 
       Enterprise systems
       Legacy applications
@@ -3806,7 +3804,7 @@ varian,
       Monitoring systems
     ]
     useCase,
-  s: [;
+  s: [
 
       High-performance computing
       Financial modeling
@@ -3906,7 +3904,7 @@ varian,
   n:
       Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.
     feature,
-  s: [;
+  s: [
 
       AI-powered deployment optimization
       Intelligent infrastructure scaling
@@ -3955,7 +3953,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       AI algorithms
       Machine learning
@@ -3968,7 +3966,7 @@ varian,
       Kubernetes
     ]
     integration,
-  s: [;
+  s: [
 
       GitHub
       GitLab
@@ -4018,7 +4016,7 @@ marketSize: $8 B DevOps market, AI segment growing 350% annually,
     period: /month,
     description: Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.,
     features:
-        features: [;
+        features: [
 
       Resource optimization
     ]
@@ -4074,7 +4072,7 @@ varian,
     descriptio,
   n: Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.
     feature,
-  s: [;
+  s: [
 
       Quantum encryption algorithms
       AI-powered threat detection
@@ -4103,7 +4101,7 @@ varian,
     category: Quantum Cybersecurity,
     realService: true;
 
-    technology: [;
+    technology: [
 
     popula,
   r: true;
@@ -4133,7 +4131,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Quantum encryption
       AI algorithms
@@ -4145,7 +4143,7 @@ varian,
       Custom quantum hardware
     ]
     integration,
-  s: [;
+  s: [
 
       SIEM systems
       Firewalls
@@ -4154,7 +4152,7 @@ varian,
       Compliance tools
     ]
     useCase,
-  s: [;
+  s: [
 
       Network security
       Endpoint protection
@@ -4335,12 +4333,10 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  comprehensiveITServices: ComprehensiveITService[] = [;
+  comprehensiveITServices: ComprehensiveITService[] = [
 
   // Enterprise IT Infrastructure Services;
 
@@ -4425,7 +4421,7 @@ export const,
 
   // Cloud Migration & Optimization Services;
 
-  {;
+  {
 
     id: cloud-migration-optimization;
 
@@ -4507,7 +4503,7 @@ export const,
 
   // Cybersecurity Operations Center;
 
-  {;
+  {
 
     id: cybersecurity-operations-center;
 
@@ -4589,7 +4585,7 @@ export const,
 
   // Data Center Management Services;
 
-  {;
+  {
 
     id: data-center-management;
 
@@ -4671,7 +4667,7 @@ export const,
 
   // Network Security & SD-WAN Services;
 
-  {;
+  {
 
     id: network-security-sdwan;
 
@@ -4753,7 +4749,7 @@ export const,
 
   // IT Project Management Services;
 
-  {;
+  {
 
     id: it-project-management;
 
@@ -4835,7 +4831,7 @@ export const,
 
   // IT Training & Certification Services;
 
-  {;
+  {
 
     id: it-training-certification;
 
@@ -4915,7 +4911,7 @@ export const,
 
     reviews: 89};
 
-  {;
+  {
 
     id: quantum-cloud-infrastructure;
 
@@ -4995,7 +4991,7 @@ export const,
 
     reviews: 32};
 
-  {;
+  {
 
     id: ai-powered-devops-automation;
 
@@ -5075,7 +5071,7 @@ export const,
 
     reviews: 245};
 
-  {;
+  {
 
     id: quantum-cybersecurity-suite;
 
@@ -5739,7 +5735,7 @@ export const,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Cloud computing
       Virtualization
@@ -5750,7 +5746,7 @@ export const,
       AI operations
     ]
     integration,
-  s: [;
+  s: [
 
       ERP systems
       CRM platforms
@@ -5892,7 +5888,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       AWS
       Azure
@@ -5904,7 +5900,7 @@ varian,
       Cloud native tools
     ]
     integration,
-  s: [;
+  s: [
 
       On-premises systems
       Legacy applications
@@ -5914,7 +5910,7 @@ varian,
       Backup systems
     ]
     useCase,
-  s: [;
+  s: [
 
       Cloud migration
       Application modernization
@@ -6036,7 +6032,7 @@ varian,
     category: Cybersecurity Operations,
     realService: true;
 
-    technology: [;
+    technology: [
 
     popula,
   r: true,
@@ -6055,7 +6051,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       AI threat detection
       Machine learning
@@ -6066,7 +6062,7 @@ varian,
       Penetration testing
     ]
     integration,
-  s: [;
+  s: [
 
       SIEM systems
       EDR platforms
@@ -6076,7 +6072,7 @@ varian,
       Compliance tools
     ]
     useCase,
-  s: [;
+  s: [
 
       Threat monitoring
       Incident response
@@ -6199,7 +6195,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       AI optimization
       Automation platforms
@@ -6210,7 +6206,7 @@ varian,
       Security tools
     ]
     integration,
-  s: [;
+  s: [
 
       Data center infrastructure
       Monitoring systems
@@ -6357,7 +6353,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       SD-WAN
       Network security
@@ -6368,7 +6364,7 @@ varian,
       Security analytics
     ]
     integration,
-  s: [;
+  s: [
 
       Network equipment
       Security tools
@@ -6378,7 +6374,7 @@ varian,
       Security platforms
     ]
     useCase,
-  s: [;
+  s: [
 
       Network optimization
       Security enhancement
@@ -6517,7 +6513,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Project management tools
       Agile methodologies
@@ -6528,7 +6524,7 @@ varian,
       Reporting tools
     ]
     integration,
-  s: [;
+  s: [
 
       Project management platforms
       Communication tools
@@ -6666,7 +6662,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Learning management systems
       Virtual labs
@@ -6677,7 +6673,7 @@ varian,
       Mobile learning
     ]
     integration,
-  s: [;
+  s: [
 
       Learning platforms
       Certification bodies
@@ -6687,7 +6683,7 @@ varian,
       Progress tracking
     ]
     useCase,
-  s: [;
+  s: [
 
       Professional development
       Career advancement
@@ -6819,7 +6815,7 @@ varian,
       AWS,
       Custom quantum hardware],
     integration,
-  s: [;
+  s: [
 
       Enterprise systems
       Legacy applications
@@ -6828,7 +6824,7 @@ varian,
       Monitoring systems
     ]
     useCase,
-  s: [;
+  s: [
 
       High-performance computing
       Financial modeling
@@ -6960,7 +6956,7 @@ varian,
       Docker,
       Kubernetes],
     integration,
-  s: [;
+  s: [
 
       GitHub
       GitLab
@@ -7095,7 +7091,7 @@ varian,
       AWS,
       Custom quantum hardware],
     integration,
-  s: [;
+  s: [
 
       SIEM systems
       Firewalls
@@ -7104,7 +7100,7 @@ varian,
       Compliance tools
     ]
     useCase,
-  s: [;
+  s: [
 
       Network security
       Endpoint protection
@@ -7324,9 +7320,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 156}
-
-;
+  s: 156};
 
 export interface ComprehensiveITService,
   id: string; nam,
@@ -7406,7 +7400,7 @@ export interface ComprehensiveITService,
   d: 'ai - powered - devops - automation, nam,
   e: 'AI - Powered DevOps Automation, taglin,
   e: 'Intelligent DevOps automation with AI - driven optimization, pric,
-  e: '$8, 999, // Cloud Migration & Optimization Services;  i,
+  e: '$8, 999, // Cloud Migration & Optimization Services';  i,
   d: 'cloud - migration - optimization, nam,
   e: 'Cloud Migration & Optimization Service, taglin,
   e: 'Seamless cloud migration with 50% cost reduction guarantee, pric,
@@ -7933,9 +7927,9 @@ export interface ComprehensiveITService,
   s: string[]; useCase,
   s: string[]; ro,
   i: string; competitor,
-  s: string[]; marketSiz,
-  e: string; growthRat,
-  e: string; varian,
+  s: string[]'; marketSiz,
+  e: string'; growthRat,
+  e: string'; varian,
   t: string, contactInf,
   o: mobil,
   e: string, emai,
@@ -8013,11 +8007,11 @@ export interface ComprehensiveITService,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services; {/* TODO: Fix JSX expression */}
+  s: number}'; export const,
+  comprehensiveITServices: ComprehensiveITService[] = ['; // Enterprise IT Infrastructure Services'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
   s://ziontechgroup.com } real_implementatio,
   n: true, implementation_detail,
@@ -8025,7 +8019,7 @@ export interface ComprehensiveITService,
   e: 2024 - 09 - 15 customer,
   s: 180, ratin,
   g: 4.9, review,
-  s: 156} export interface ComprehensiveITService {} ]; } ]; realImplementatio,
+  s: 156} export interface ComprehensiveITService {} ]'; } ]'; realImplementatio,
   n: true,
   implementationDetails:' 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support. launchDat,
   e: 2024-02-01 customer,
@@ -8372,118 +8366,118 @@ export interface ComprehensiveITService,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services; {/* TODO: Fix JSX expression */}
+  s: number}'; export const,
+  comprehensiveITServices: ComprehensiveITService[] = ['; // Enterprise IT Infrastructure Services'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.; launchDat,
   e: 2024-01-01; customer,
   s: 25; ratin,
-  g: 4.8; review,
-  s: 18}; // Cloud Migration & Optimization Services; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 18}'; // Cloud Migration & Optimization Services'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.; launchDat,
   e: 2024-02-01; customer,
   s: 18; ratin,
-  g: 4.7; review,
-  s: 12}; // Cybersecurity Operations Center; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 12}'; // Cybersecurity Operations Center'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.; launchDat,
   e: 2024-01-15; customer,
   s: 32; ratin,
-  g: 4.8; review,
-  s: 24}; // Data Center Management Services; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 24}'; // Data Center Management Services'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24/7 operations center and strategic consulting.; launchDat,
   e: 2024-01-20; customer,
   s: 15; ratin,
-  g: 4.7; review,
-  s: 11}; // Network Security & SD-WAN Services; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 11}'; // Network Security & SD-WAN Services'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Fully functional network security and SD-WAN management service with comprehensive security integration and network optimization capabilities. Includes 24/7 network support and monitoring.; launchDat,
   e: 2024-02-15; customer,
   s: 28; ratin,
-  g: 4.6; review,
-  s: 19}; // IT Project Management Services; {/* TODO: Fix JSX expression */}
+  g: 4.6'; review,
+  s: 19}'; // IT Project Management Services'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.; launchDat,
   e: 2024-01-10; customer,
   s: 45; ratin,
-  g: 4.7; review,
-  s: 32}; // IT Training & Certification Services; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 32}'; // IT Training & Certification Services'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24/7 support.; launchDat,
   e: 2024-01-05; customer,
-  s: 120; ratin,
-  g: 4.8; review,
-  s: 89}; {/* TODO: Fix JSX expression */}
+  s: 120'; ratin,
+  g: 4.8'; review,
+  s: 89}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.; launchDat,
   e: 2024-11-15; customer,
-  s: 45; ratin,
-  g: 4.9; review,
-  s: 32}; {/* TODO: Fix JSX expression */}
+  s: 45'; ratin,
+  g: 4.9'; review,
+  s: 32}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.; launchDat,
   e: 2024-10-01; customer,
-  s: 320; ratin,
-  g: 4.8; review,
-  s: 245}; {/* TODO: Fix JSX expression */}
+  s: 320'; ratin,
+  g: 4.8'; review,
+  s: 245}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.; launchDat,
   e: 2024-09-15; customer,
-  s: 180; ratin,
-  g: 4.9; review,
-  s: 156} ]} ]; websit,
+  s: 180'; ratin,
+  g: 4.9'; review,
+  s: 156} ]} ]'; websit,
   e: string}' 'Network infrastructure management',' 'Server and storage management',' 'Security monitoring and management',' '24 / 7 infrastructure monitoring',' 'Performance optimization',' 'Disaster recovery planning',' 'Compliance management',' 'IT asset management',' 'Help desk support',' Strategic IT consulting], popula,
   r: true, ico,
   n: '🏢', Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
@@ -8889,4 +8883,4 @@ export interface ComprehensiveITService,
   e: 2024 - 09 - 15 customer,
   s: 180, ratin,
   g: 4.9, review,
-  s: 156} ;
+  s: 156} ';

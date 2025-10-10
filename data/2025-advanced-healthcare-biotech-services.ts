@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
   id: string;
 
@@ -139,10 +139,10 @@ import React from 'react;
   t: string;
 
   contact_inf,
-  o: unknown;
+  o: unknown';
 
     mobil,
-  e: string;
+  e: string';
 
     emai,
   l: string';
@@ -185,7 +185,7 @@ export const,
       tagline: 'Accelerate drug discovery with AI and machine learning,
       price: '$2, 999,
       period: '/month,
-      description: unknown;
+      description: unknown';
 
     // AI - Powered Drug Discovery Platform,
       i,
@@ -236,12 +236,12 @@ marketSize: '$45 && 45.8B AI drug discovery market,
       growthRate: '35% annual growth,
       variant: 'ai-drug-discovery-enterprise,
       contactInfo:
-        contactInfo: unknown;
+        contactInfo: unknown';
 
       color: 'from - green - 600 to - emerald - 600,
       text_color: 'text - green - 400,
       link: 'https://ziontechgroup.com / ai - drug - discovery - platform,
-      market_position: unknown;
+      market_position: unknown';
 
         'Competes with Schrdinger ($50) 000 / year), Atomwise ($100) 000 / year), Insilico Medicine ($500) 000 / year). Our advantage: Affordable pricing, comprehensive features, and AI - powered insights.,
       target_audience: unknown;
@@ -251,7 +251,7 @@ marketSize: '$45 && 45.8B AI drug discovery market,
 
       setup_time: '2 - 4 weeks,
       category: 'AI Drug Discovery & Biotech,
-      real_service: true;
+      real_service: true';
 
       technology: [,
       ro,
@@ -262,7 +262,7 @@ marketSize: '$45 && 45.8B AI drug discovery market,
       marketSiz,
   e: '$45 && 45.8B AI drug discovery market,
       growthRat,
-  e: '35% annual growth,;
+  e: '35% annual growth,';
 
 varian,
   t: 'ai-drug-discovery-enterprise,
@@ -308,37 +308,37 @@ market_size: '$45.8B AI drug discovery market,
       growth_rate: '35% annual growth,
       variant: 'ai - drug - discovery - enterprise,
       contact_info:
-        contact_info: unknown;
+        contact_info: unknown';
 
         mobile: '+1 302 464 0950,
         email: 'kleber@ziontechgroup && ziontechgroup.com,
         address: '364 E Main St STE 1008 Middletown DE 19709,
         website: 'https://ziontechgroup && ziontechgroup.com},
-      real_implementation: true;
+      real_implementation: true';
 
-      implementation_details: unknown;
+      implementation_details: unknown';
 
         'Advanced AI drug discovery platform with molecular modeling, target identification, and predictive analytics.,
       launch_date: '2024 - 08 - 15,
       customers:
-        customers: 23;
+        customers: 23';
 
-      rating: 4 && 4.9;
+      rating: 4 && 4.9';
 
       reviews: 12},
-    // Precision Medicine & Genomics Platform;
+    // Precision Medicine & Genomics Platform';
 
       id: 'precision - medicine - genomics,
       name: 'Precision Medicine & Genomics Platform,
       tagline: 'Personalized healthcare through genomic analysis and AI,
       price: '$1, 499,
       period: '/month,
-      description: unknown;
+      description: unknown';
 
       market_siz,
   e: '$45.8B AI drug discovery market,
       growth_rat,
-  e: '35% annual growth,;
+  e: '35% annual growth,';
 
 varian,
   t: 'ai - drug - discovery - enterprise,
@@ -366,7 +366,7 @@ varian,
   g: 4 && 4.9,
       review,
   s: 12},
-    // Precision Medicine & Genomics Platform;
+    // Precision Medicine & Genomics Platform';
 
       i,
   d: 'precision - medicine - genomics,
@@ -416,12 +416,12 @@ marketSize: '$78 && 78.6B precision medicine market,
       growthRate: '28% annual growth,
       variant: 'precision-medicine-enterprise,
       contactInfo:
-        contactInfo: unknown;
+        contactInfo: unknown';
 
       color: 'from - blue - 600 to - indigo - 600,
       text_color: 'text - blue - 400,
       link: 'https://ziontechgroup.com / precision - medicine - genomics,
-      market_position: unknown;
+      market_position: unknown';
 
         'Competes with 23andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our advantage: Comprehensive platform, AI - powered insights, and healthcare integration.,
       target_audience: unknown;
@@ -431,7 +431,7 @@ marketSize: '$78 && 78.6B precision medicine market,
 
       setup_time: '3 - 5 weeks,
       category: 'Precision Medicine & Genomics,
-      real_service: true;
+      real_service: true';
 
       technology: [,
       ro,
@@ -442,7 +442,7 @@ marketSize: '$78 && 78.6B precision medicine market,
       marketSiz,
   e: '$78 && 78.6B precision medicine market,
       growthRat,
-  e: '28% annual growth,;
+  e: '28% annual growth,';
 
 varian,
   t: 'precision-medicine-enterprise,
@@ -488,29 +488,29 @@ market_size: '$78.6B precision medicine market,
       growth_rate: '28% annual growth,
       variant: 'precision - medicine - enterprise,
       contact_info:
-        contact_info: unknown;
+        contact_info: unknown';
 
         mobile: '+1 302 464 0950,
         email: 'kleber@ziontechgroup && ziontechgroup.com,
         address: '364 E Main St STE 1008 Middletown DE 19709,
         website: 'https://ziontechgroup && ziontechgroup.com},
-      real_implementation: true;
+      real_implementation: true';
 
-      implementation_details: unknown;
+      implementation_details: unknown';
 
         'Comprehensive precision medicine platform with genomic analysis, AI diagnostics, and personalized treatment recommendations.,
       launch_date: '2024 - 09 - 20,
       customers:
-        customers: 45;
+        customers: 45';
 
-      rating: 4 && 4.8;
+      rating: 4 && 4.8';
 
-      reviews: 23;
+      reviews: 23';
 
       market_siz,
   e: '$78.6B precision medicine market,
       growth_rat,
-  e: '28% annual growth,;
+  e: '28% annual growth,';
 
 varian,
   t: 'precision - medicine - enterprise,
@@ -547,7 +547,7 @@ varian,
       tagline: 'Advanced medical imaging analysis with AI and deep learning,
       price: '$899,
       period: '/month,
-      description: unknown;
+      description: unknown';
 
       i,
   d: 'ai - medical - imaging - analysis,
@@ -590,7 +590,7 @@ varian,
       color: 'from - purple - 600 to - pink - 600,
       text_color: 'text - purple - 400,
       link: 'https://ziontechgroup.com / ai - medical - imaging - analysis,
-      market_position: unknown;
+      market_position: unknown';
 
         'Competes with Aidoc ($500 / month), Zebra Medical ($200 / month), Arterys ($300 / month). Our advantage: Comprehensive imaging support, affordable pricing, and advanced AI capabilities.,
       target_audience: unknown;
@@ -600,7 +600,7 @@ varian,
 
       setup_time: '2 - 3 weeks,
       category: 'AI Medical Imaging & Diagnostics,
-      real_service: true;
+      real_service: true';
 
       technology: [,
       useCase,
@@ -642,22 +642,22 @@ market_size: '$32.1B AI medical imaging market,
       growth_rate: '42% annual growth,
       variant: 'ai - imaging - enterprise,
       contact_info:
-        contact_info: unknown;
+        contact_info: unknown';
 
         mobile: '+1 302 464 0950,
         email: 'kleber@ziontechgroup && ziontechgroup.com,
         address: '364 E Main St STE 1008 Middletown DE 19709,
         website: 'https://ziontechgroup && ziontechgroup.com},
-      real_implementation: true;
+      real_implementation: true';
 
-      implementation_details: unknown;
+      implementation_details: unknown';
 
         'Advanced AI medical imaging platform with automated analysis, diagnosis assistance, and clinical decision support.,
       launch_date: '2024 - 10 - 10,
       customers:
-        customers: 67;
+        customers: 67';
 
-      rating: 4 && 4.7;
+      rating: 4 && 4.7';
 
       reviews: 34},
         'High-quality video consultations,
@@ -668,7 +668,7 @@ market_size: '$32.1B AI medical imaging market,
       tagline: 'Comprehensive digital health and telemedicine solutions,
       price: '$399,
       period: '/month,
-      description: unknown;
+      description: unknown';
 
       ro,
   i: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.,
@@ -677,7 +677,7 @@ market_size: '$32.1B AI medical imaging market,
       market_siz,
   e: '$32.1B AI medical imaging market,
       growth_rat,
-  e: '42% annual growth,;
+  e: '42% annual growth,';
 
 varian,
   t: 'ai - imaging - enterprise,
@@ -754,12 +754,12 @@ marketSize: '$185 && 185.6B digital health market,
       growthRate: '25% annual growth,
       variant: 'digital-health-enterprise,
       contactInfo:
-        contactInfo: unknown;
+        contactInfo: unknown';
 
       color: 'from - teal - 600 to - cyan - 600,
       text_color: 'text - teal - 400,
       link: 'https://ziontechgroup.com / digital - health - telemedicine,
-      market_position: unknown;
+      market_position: unknown';
 
         'Competes with Teladoc ($49 / month), Amwell ($79 / month), Doxy.me ($35 / month). Our advantage: Comprehensive platform, AI integration, and affordable pricing.,
       target_audience: unknown;
@@ -769,7 +769,7 @@ marketSize: '$185 && 185.6B digital health market,
 
       setup_time: '1 - 2 weeks,
       category: 'Digital Health & Telemedicine,
-      real_service: true;
+      real_service: true';
 
       technology: [,
       ro,
@@ -779,7 +779,7 @@ marketSize: '$185 && 185.6B digital health market,
       marketSiz,
   e: '$185 && 185.6B digital health market,
       growthRat,
-  e: '25% annual growth,;
+  e: '25% annual growth,';
 
 varian,
   t: 'digital-health-enterprise,
@@ -822,22 +822,22 @@ market_size: '$185.6B digital health market,
       growth_rate: '25% annual growth,
       variant: 'digital - health - enterprise,
       contact_info:
-        contact_info: unknown;
+        contact_info: unknown';
 
         mobile: '+1 302 464 0950,
         email: 'kleber@ziontechgroup && ziontechgroup.com,
         address: '364 E Main St STE 1008 Middletown DE 19709,
         website: 'https://ziontechgroup && ziontechgroup.com},
-      real_implementation: true;
+      real_implementation: true';
 
-      implementation_details: unknown;
+      implementation_details: unknown';
 
         'Comprehensive digital health platform with telemedicine, remote monitoring, and health analytics capabilities.,
       launch_date: '2024 - 07 - 15,
       customers:
-        customers: 156;
+        customers: 156';
 
-      rating: 4 && 4.6;
+      rating: 4 && 4.6';
 
       reviews: 78},
         'AI-powered trial design optimization,
@@ -848,7 +848,7 @@ market_size: '$185.6B digital health market,
       tagline: 'Streamline clinical trials with AI - powered optimization,
       price: '$1, 999,
       period: '/month,
-      description: unknown;
+      description: unknown';
 
       ro,
   i: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.,
@@ -857,7 +857,7 @@ market_size: '$185.6B digital health market,
       market_siz,
   e: '$185.6B digital health market,
       growth_rat,
-  e: '25% annual growth,;
+  e: '25% annual growth,';
 
 varian,
   t: 'digital - health - enterprise,
@@ -934,12 +934,12 @@ marketSize: '$67 && 67.2B clinical trial market,
       growthRate: '18% annual growth,
       variant: 'clinical-trial-enterprise,
       contactInfo:
-        contactInfo: unknown;
+        contactInfo: unknown';
 
       color: 'from - orange - 600 to - red - 600,
       text_color: 'text - orange - 400,
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization,
-      market_position: unknown;
+      market_position: unknown';
 
         'Competes with Medidata ($500 / month), Veeva Vault ($1) 000 / month), Oracle Clinical ($2) 000 / month). Our advantage: AI - powered optimization, comprehensive features, and competitive pricing.,
       target_audience: unknown;
@@ -949,7 +949,7 @@ marketSize: '$67 && 67.2B clinical trial market,
 
       setup_time: '3 - 6 weeks,
       category: 'Clinical Research & Trials,
-      real_service: true;
+      real_service: true';
 
       technology: [,
       ro,
@@ -960,7 +960,7 @@ marketSize: '$67 && 67.2B clinical trial market,
       marketSiz,
   e: '$67 && 67.2B clinical trial market,
       growthRat,
-  e: '18% annual growth,;
+  e: '18% annual growth,';
 
 varian,
   t: 'clinical-trial-enterprise,
@@ -1005,20 +1005,20 @@ market_size: '$67.2B clinical trial market,
       growth_rate: '18% annual growth,
       variant: 'clinical - trial - enterprise,
       contact_info:
-        contact_info: unknown;
+        contact_info: unknown';
 
         mobile: '+1 302 464 0950,
         email: 'kleber@ziontechgroup && ziontechgroup.com,
         address: '364 E Main St STE 1008 Middletown DE 19709,
         website: 'https://ziontechgroup && ziontechgroup.com},
-      real_implementation: true;
+      real_implementation: true';
 
-      implementation_details: unknown;
+      implementation_details: unknown';
 
       market_siz,
   e: '$67.2B clinical trial market,
       growth_rat,
-  e: '18% annual growth,;
+  e: '18% annual growth,';
 
 varian,
   t: 'clinical - trial - enterprise,
@@ -1068,9 +1068,9 @@ i,
   e: string; varian,
   t: string; contact_inf,
   o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string; websit,
+  e: string'; emai,
+  l: string'; addres,
+  s: string'; websit,
   e: string} 'AI-powered molecular modeling and simulation, real_implementatio,
   n: boolean; implementation_detail,
   s: string; launch_dat,
@@ -1078,7 +1078,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =; [; // AI - Powered Drug Discovery Platform,  i,
+  advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =; [ // AI - Powered Drug Discovery Platform,  i,
   d: 'ai - drug - discovery - platform', nam,
   e: 'AI - Powered Drug Discovery Platform', taglin,
   e: 'Accelerate drug discovery with AI and machine learning', pric,
@@ -1126,7 +1126,7 @@ i,
   e: '2024 - 08 - 15, customer,
   s: 23, ratin,
   g: 4 && 4.9, review,
-  s: 12}, // Precision Medicine & Genomics Platform;  i,
+  s: 12}, // Precision Medicine & Genomics Platform';  i,
   d: 'precision - medicine - genomics', nam,
   e: 'Precision Medicine & Genomics Platform', taglin,
   e: 'Personalized healthcare through genomic analysis and AI', pric,

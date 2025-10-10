@@ -1,20 +1,20 @@
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react';
 
-'use client;
+'use client';
 
-import React, { memo } from 'react;
+import React, { memo } from 'react';
 
-import Navigation from '../../components/Navigation;
+import Navigation from '../../components/Navigation';
 
-import Footer from '../../components/Footer;
+import Footer from '../../components/Footer';
 
-import SEOOptimizer from '../../components/SEOOptimizer;
+import SEOOptimizer from '../../components/SEOOptimizer';
 
-;
+';
 
-const AIInvoiceGeneratorPage: React.FC = memo(() => {;
+const AIInvoiceGeneratorPage: React.FC = memo(() => {';
 
-const features = [;
+const features = [';
     {      ico,
     n: Brain,
       title: 'AI-Powered Invoice Generation,
@@ -47,7 +47,7 @@ const features = [;
 
 ;
 
-const pricingPlans = [;;
+const pricingPlans = [
 
       name: 'Starter,
       price: '$29,
@@ -88,9 +88,9 @@ namename: 'Enterprise,
         'Custom workflows,
         'SLA guarantee,
         'On-premise deployment
-      color: 'green;
+      color: 'green';
 
-const testimonials = [;
+const testimonials = [';
       name: 'Sarah Johnson,
       role: 'Freelance Designer',      company: 'Creative Studio,
       content: 'AI Invoice Generator has saved me 10+ hours per week. The AI understands my clients and creates perfect invoices every time.,
@@ -105,9 +105,9 @@ namename: 'Emily Rodriguez,
       role: 'Accountant,
       company: 'Finance Pro,
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.,
-      avatar: '👩‍💻;
+      avatar: '👩‍💻';
 
-const useCases = [;
+const useCases = [';
       title: 'Freelancers & Consultants,
       description: 'Streamline invoicing for project-based work with AI that understands your service offerings.,      icon: Briefcase,
       benefits: ['Project-based invoicing', 'Time tracking integration', 'Client management', 'Expense tracking]
@@ -286,12 +286,12 @@ const useCases = [;
 
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage;
 
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react'">
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async'">
 
-import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react;
+import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react">
 
-export default AIInvoiceGeneratorPage;
+export default AIInvoiceGeneratorPage'";

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom;
 
@@ -6,7 +6,7 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
 
 ;
 
-const Navigation: React.FC = () => {;
+const Navigation: React.FC = () => {
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -20,9 +20,9 @@ const [isOpen, setIsOpen] = useState(false);
 
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {;
+  useEffect(() => {
 
-const handleResize = () => {;;
+const handleResize = () => {
 
       if (window.innerWidth >= 1024) {
         setIsOpen(false)}
@@ -31,7 +31,7 @@ const handleResize = () => {;;
 
 ;
 
-const handleScroll = () => {;;;
+const handleScroll = () => {
 
       setIsScrolled(window.scrollY > 50)};
 
@@ -46,7 +46,7 @@ const handleScroll = () => {;;;
 
 ;
 
-const closeAllMenus = () => {;;
+const closeAllMenus = () => {
 
     setServicesOpen(false);
 
@@ -54,24 +54,24 @@ const closeAllMenus = () => {;;
 
     setItServicesOpen(false);
 
-    setMicroSaasOpen(false);
+    setMicroSaasOpen(false)';
 
-    setIsOpen(false)};
+    setIsOpen(false)}';
 
-;
+';
 
-const toggleMenu = () => {;;
+const toggleMenu = () => {
 
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen)';
 
     if (isOpen) {
       closeAllMenus()}
 
-  };
+  }';
 
-;
+';
 
-const serviceCategories = [;;
+const serviceCategories = [';';
 
     {
       title: 'Micro SAAS Solutions,
@@ -205,7 +205,7 @@ const serviceCategories = [;;
       ]
     }
 
-  ];
+  ]';
 
   return (
 
@@ -533,6 +533,6 @@ const serviceCategories = [;;
 
       </div>
     </nav>
-  )};
+  )}">
 
-export default Navigation;
+export default Navigation"```;

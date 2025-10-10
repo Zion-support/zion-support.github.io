@@ -1,25 +1,23 @@
-'use client;
+'use client';
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react';
 
 import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react;
 
-import { services, serviceCategories, contactInfo } from ../data/services;
+import { services, serviceCategories, contactInfo } from ../data/services';
 
 interface ServiceCardProps {
-  service: typeof services[0];
+  service: typeof services[0]';
 
-  index: number}
+  index: number}';
 
-;
+const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {;
+const [isHovered, setIsHovered] = useState(false)';
 
-const [isHovered, setIsHovered] = useState(false);
+';
 
-;
-
-const formatPrice = (pricing: typeof service.pricing) => {;;;
+const formatPrice = (pricing: typeof service.pricing) => {';';';
 
     if (pricing.custom) {
       return 'Custom Pricing}
@@ -28,7 +26,7 @@ const formatPrice = (pricing: typeof service.pricing) => {;;;
 
 ;
 
-const getCategoryIcon = (category: string) => {;;
+const getCategoryIcon = (category: string) => {
 
     switch (category) {
       case ai: return Brain;
@@ -43,9 +41,9 @@ const getCategoryIcon = (category: string) => {;;
 
   };
 
-;
+`;
 
-const CategoryIcon = getCategoryIcon(service.category);;
+const CategoryIcon = getCategoryIcon(service.category)``;```;
 
   return (
 
@@ -255,11 +253,11 @@ const [selectedCategory, setSelectedCategory] = useState<string>
 
   }, [selectedCategory]);
 
-;
+`;
 
-const popularServices = services.filter(service => service.popular);;
+const popularServices = services.filter(service => service.popular)`">">
 
-  const newServices = services.filter(service => service.new);;
+  const newServices = services.filter(service => service.new)">"```;
 
   return (
 
@@ -418,6 +416,6 @@ const popularServices = services.filter(service => service.popular);;
         </div>
       </div>
     </section>
-  )};
+  )}">
 
-export default EnhancedServicesShowcase;
+export default EnhancedServicesShowcase'"```;

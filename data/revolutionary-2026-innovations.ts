@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Revolutionary2026Innovation {;,
+export interface Revolutionary2026Innovation {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const revolutionary2026 Innovations: Revolutionary2026 Innovation[] = [,
     id: "2026-revolutionary-innovation", name: "2026 Revolutionary Innovation Platform",
     tagline: "Breakthrough innovations for 2026", price: '$399/month',
     description: 'Platform showcasing revolutionary innovations and breakthrough technologies for 2026.',
-    features: [;
+    features: [
       "Revolutionary innovations"
       "Breakthrough technologies"
       "Future capabilities"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Platform showcasing revolutionary innovations and breakthrough technologies for 2026.",
     feature,
-  s: [;"
+  s: ["
       "Revolutionary innovations""
       "Breakthrough technologies""
       "Future capabilities""

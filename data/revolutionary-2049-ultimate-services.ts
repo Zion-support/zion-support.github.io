@@ -1,4 +1,4 @@
-export const revolutionary2049UltimateServices = [;;
+export const revolutionary2049UltimateServices = [
 
   // Universal Consciousness Network Platform 2049;
 

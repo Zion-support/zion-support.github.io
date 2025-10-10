@@ -1,9 +1,7 @@
 import React, { useEffect } from react;
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode}
-
-;
+  children: React.ReactNode};
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   return (
@@ -14,7 +12,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 }(() => {
     // Add keyboard navigation support;
 
-const handleKeyDown = (event: KeyboardEvent) => {;
+const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {        document.body.classList.add('keyboard-navigation)}
 
     };
@@ -23,7 +21,7 @@ const handleKeyDown = (event: KeyboardEvent) => {;
 
     // Add focus indicators;
 
-const addFocusIndicators = () => {;;
+const addFocusIndicators = () => {
 
 const style = document.createElement('style);;
 
@@ -31,13 +29,11 @@ const style = document.createElement('style);;
         .keyboard-navigation *:focus {
           outline: 2 px solid #06 b6 d4 !important;
 
-          outline-offset: 2 px !important}
-
-      ;      document.head.appendChild(style)};
+          outline-offset: 2 px !important};      document.head.appendChild(style)};
 
     // Add ARIA labels to interactive elements;
 
-const enhanceAccessibility = () => {;;;
+const enhanceAccessibility = () => {
 
 const buttons = document.querySelectorAll(button:not([aria-label]));;
 
@@ -47,9 +43,7 @@ const buttons = document.querySelectorAll(button:not([aria-label]));;
 
         // Add role if missing
         if (!button.getAttribute('role)) {
-          button.setAttribute('role', 'button)}
-
-;
+          button.setAttribute('role', 'button)};
 
 const links = document.querySelectorAll(a:not([aria-label]));;
 
@@ -77,9 +71,9 @@ const images = document.querySelectorAll('img:not([alt]));;
 
       // Add ARIA labels to form inputs;
 
-const inputs = document.querySelectorAll(input:not([aria-label]));;
+const inputs = document.querySelectorAll(input:not([aria-label]))`;``;
 
-      inputs.forEach(input => {;
+      inputs.forEach(input => {```;
 
 const label = document.querySelector(`label[for="${input.getAttribute('id')}"]);;
 
@@ -112,18 +106,16 @@ const skipLink = document.createElement(a);;
 
   return <React.Fragment>{children}</React.Fragment>;
 
-import React, { useEffect, useState } from 'react;
+import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
-  highContrast: boolean;
+  highContrast: boolean';
 
-  reducedMotion: boolean;
+  reducedMotion: boolean';
 
   fontSize: 'small' | 'medium' | 'large;
 
-  focusVisible: boolean}
-
-;
+  focusVisible: boolean};
 
 const AccessibilityEnhancer: React.FC = () => {
 return (;
@@ -135,10 +127,10 @@ const [settings, setSettings] = useState<AccessibilitySettings>
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium,)
-    focusVisible: false});
+    focusVisible: false})';
 
   useEffect(() => {
-    // Check for user preferences;
+    // Check for user preferences';
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;;
 
@@ -151,7 +143,7 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
 
     // Apply accessibility settings;
 
-const root = document.documentElement;;
+const root = document.documentElement`;``;
 
         if (settings.highContrast) {
       root.classList.add('high-contrast)} else {
@@ -162,7 +154,7 @@ const root = document.documentElement;;
       root.classList.remove('reduced-motion)}
 
     /
-    root.classList.remove('font-small', 'font-medium', font-large);
+    root.classList.remove('font-small', 'font-medium', font-large)```;
 
     root.classList.add(`font-${settings.fontSize});
 
@@ -173,10 +165,10 @@ const root = document.documentElement;;
 
     // Add keyboard navigation support;
 
-const handleKeyDown = (e: KeyboardEvent) => {;;
+const handleKeyDown = (e: KeyboardEvent) => {
 
       // Skip to main content
-      if (e.key === 'Tab && e.shiftKey && e.target === document.body) {;
+      if (e.key === 'Tab && e.shiftKey && e.target === document.body) {
 
 const mainContent = document.querySelector('main, [role="main"]);;
 
@@ -187,7 +179,7 @@ const mainContent = document.querySelector('main, [role="main"]);;
       }
 
       // Escape key to close modals/dropdowns
-      if (e.key === 'Escape) {;
+      if (e.key === 'Escape) {
 
 const activeElement = document.activeElement as HTMLElement;;
 
@@ -203,7 +195,7 @@ const activeElement = document.activeElement as HTMLElement;;
       document.removeEventListener(keydown, handleKeyDown)}}, [settings]);
 
   // Add ARIA live region for announcements
-  useEffect(() => {;
+  useEffect(() => {
 
 const liveRegion = document.createElement('div);;
 
@@ -217,7 +209,7 @@ const liveRegion = document.createElement('div);;
 
     document.body.appendChild(liveRegion);
 
-    return () => {;
+    return () => {
 
 const existingLiveRegion = document.getElementById('live-region);;
 
@@ -226,15 +218,15 @@ const existingLiveRegion = document.getElementById('live-region);;
     }}, []);
 
   // Announce page changes
-  useEffect(() => {;
+  useEffect(() => {
 
-const announcePageChange = () => {;;
+const announcePageChange = () => {
 
-const liveRegion = document.getElementById(live-region);;
+const liveRegion = document.getElementById(live-region);`;
 
-      if (liveRegion) {;
+      if (liveRegion) {
 
-const pageTitle = document.title;;
+const pageTitle = document.title``;```;
 
         liveRegion.textContent = `Page loaded: ${pageTitle}}
 
@@ -242,9 +234,9 @@ const pageTitle = document.title;;
 
     // Announce after a short delay to ensure content is loaded;
 
-const timeoutId = setTimeout(announcePageChange, 1000);;
+const timeoutId = setTimeout(announcePageChange, 1000);`;
 
-    return () => clearTimeout(timeoutId)}, []);
+    return () => clearTimeout(timeoutId)}, [])``;
 
   /
   if (process.env.NODE_ENV === 'production) {
@@ -254,9 +246,8 @@ const timeoutId = setTimeout(announcePageChange, 1000);;
       <div className="mb-2 font-bold>Accessibility Settings<
       <div className="space-y-2>
         <label className="flex items-center space-x-2>
-          <input
-            type="checkbox
-            checked = { settings.highContrast };)
+          <input type="checkbox
+            checked = { settings.highContrast }>)
             onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked }))}
 
             className="rounded
@@ -264,9 +255,8 @@ const timeoutId = setTimeout(announcePageChange, 1000);;
           <span>High Contrast<
         <
         <label className="flex items-center space-x-2>
-          <input
-            type="checkbox
-            checked = { settings.reducedMotion };
+          <input type="checkbox
+            checked = { settings.reducedMotion }>
 
             onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked }))}
 
@@ -276,8 +266,7 @@ const timeoutId = setTimeout(announcePageChange, 1000);;
         <
         <div>
           <label className="block mb-1>Font Size:<
-          <select
-            value = { settings.fontSize };
+          <select value = { settings.fontSize }">
 
             onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any }))}
 
@@ -289,9 +278,8 @@ const timeoutId = setTimeout(announcePageChange, 1000);;
           <
         <
         <label className="flex items-center space-x-2>
-          <input
-            type="checkbox
-            checked = { settings.focusVisible };
+          <input type="checkbox
+            checked = { settings.focusVisible }>
 
             onChange={(e) => setSettings(prev => ({ ...prev, focusVisible: e.target.checked }))}
 
@@ -301,6 +289,6 @@ const timeoutId = setTimeout(announcePageChange, 1000);;
         </label>
       </div>
     </div>
-  )};
+  )}">
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer"```;

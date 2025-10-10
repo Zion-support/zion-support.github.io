@@ -1,4 +1,4 @@
-export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027,;;
+export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027,';';
 
     path: '/services/cutting-edge-ai-innovation-2027',
     description: 'Next-generation AI innovations for 2027',

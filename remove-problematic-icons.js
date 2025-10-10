@@ -12,7 +12,7 @@ async function removeProblematicIcons() {
       //Remove all problematic icon usage patterns;
 
       //Remove <span className="...>IconName</span>
-      //       const spanRegex = /<span className="[^"]+>\w+<\/span>/g;;
+      //       const spanRegex = /<span className="[^"]+>\w+<\/span>/g;
 
       content = content.replace(spanRegex, match => {)
         modified = true;)
@@ -28,20 +28,20 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
       });
 
       //Remove <div className="...">IconName</div>
-      //       const divRegex = /<div className="[^"]+>\w+<\/div>/g;;
+      //       const divRegex = /<div className="[^"]+>\w+<\/div>/g;
 
       content = content.replace(divRegex, match => {)
-        modified = true;)
+        modified = true';)
         return ';)
       content = content.replace(divRegex, match => {/* TODO: Fix JSX expression */})
       });
 
       //Remove any remaining malformed JSX with angle brackets;
 
-      //       const malformedRegex = /<[^>]*>\w+<\/[^>]*>/g;;
+      //       const malformedRegex = /<[^>]*>\w+<\/[^>]*>/g;
 
       content = content.replace(malformedRegex, match => {)
-        modified = true;)
+        modified = true';)
         return ';)
       content = content.replace(malformedRegex, match => {/* TODO: Fix JSX expression */})
       });
@@ -62,6 +62,6 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
 
   //   }
 
-// removeProblematicIcons().catch(console.error);
+// removeProblematicIcons().catch(console.error)';
 
 "

@@ -79,7 +79,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: /month,
     description:,
       "Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - its the beginning of true artificial consciousness that can understand, feel, and evolve.
-    features: [;
+    features: [
 
   i,
   d: string;
@@ -199,7 +199,7 @@ export const,
     descriptio,
   n: "Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - its the beginning of true artificial consciousness that can understand, feel, and evolve.,
   feature,
-  s: [;
+  s: [
 
       Genuine emotional intelligence and empathy
       Self-awareness and consciousness development
@@ -246,7 +246,7 @@ export const,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Advanced Neural Networks
       Emotional AI
@@ -256,7 +256,7 @@ export const,
       Quantum Computing
     ]
     integration,
-  s: [;
+  s: [
 
       Research platforms
       Psychology tools
@@ -264,7 +264,7 @@ export const,
       AI ethics frameworks
     ]
     useCase,
-  s: [;
+  s: [
 
       Mental health therapy
       AI consciousness research
@@ -274,7 +274,7 @@ export const,
     ],
     roi: Revolutionary breakthrough with unlimited potential. Research institutions see 2000%+ ROI through groundbreaking discoveries.,
     competitors: [None - First to market],
-    marketSize: Emerging market with unlimited potential,    features: [;
+    marketSize: Emerging market with unlimited potential,    features: [
 
     ]
     ro,
@@ -283,7 +283,7 @@ export const,
   s: [None - First to market],
     marketSiz,
   e: Emerging market with unlimited potential,    feature,
-  s: [;
+  s: [
 
       Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration
       Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration
@@ -379,7 +379,7 @@ export const,
   s: [None - First to market],
     market_siz,
   e: Emerging market with unlimited potential,    feature,
-  s: [;
+  s: [
 
       Genuine emotional intelligence and empathy_self - awareness and consciousness development_ethical decision - making frameworks_emotional state recognition and response_consciousness evolution tracking_human - AI emotional bonding_ethical AI governance tools_consciousness research collaboration
     ];
@@ -531,9 +531,7 @@ export const,
     ratin,
   g: 5.0,
     review,
-  s: 15}
-
-;
+  s: 15};
 
   //  DNA Computing & Biotech Services;
 
@@ -550,7 +548,7 @@ export const,
     descriptio,
   n: 'Worlds first commercial DNA computing platform that uses biological molecules for computation. Achieves processing power beyond traditional computers while solving complex biological problems.
     feature,
-  s: [;
+  s: [
 
       DNA - based parallel processing_biological problem solving_unlimited computational power_biological data analysisDNA storage solutions_biotech research tools_genetic algorithm optimization_biological computing APIs
     ];
@@ -619,9 +617,7 @@ export const,
 
     rating: 4.9;
 
-    reviews: 8}
-
-;
+    reviews: 8};
 
   //  Space Technology & Satellite Services;
 
@@ -641,7 +637,7 @@ export const,
     period: /month,
     description: Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets.,
     features:
-        features: [;
+        features: [
 
       Satellite mission planning_orbital trajectory optimization_space debris monitoring_satellite health management_launch vehicle integration_space weather forecasting_mission control dashboard_space asset tracking
     ];
@@ -703,9 +699,7 @@ export const,
 
     rating: 5.0;
 
-    reviews: 5}
-
-;
+    reviews: 5};
 
   //  Quantum Internet & Communication Services;
 
@@ -723,7 +717,7 @@ export const,
     period: /month,
     description: Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum - secured data transmission. The future of secure internet.,
     features:
-        features: [;
+        features: [
 
       Quantum encryption_instant global communication_unhackable data transmission_quantum key distribution_quantum networking_secure quantum cloud_quantum VPN services_quantum messaging platform
     ];
@@ -785,9 +779,7 @@ export const,
 
     rating: 4.9;
 
-    reviews: 22}
-
-;
+    reviews: 22};
 
   //  Advanced Healthcare AI Services;
 
@@ -805,7 +797,7 @@ export const,
 
     setupTime: 10 hours,
     features:
-        features: [;
+        features: [
 
       99.9% diagnosis accuracy_personalized treatment plans_genomic medicine integration_drug interaction analysis_predictive health monitoring_medical image analysis_patient outcome prediction_healthcare workflow automation
     ];
@@ -867,9 +859,7 @@ export const,
 
     rating: 4.9;
 
-    reviews: 89}
-
-;
+    reviews: 89};
 
   //  Financial Technology Revolution Services;
 
@@ -887,7 +877,7 @@ export const,
     period: /month,
     description: Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next - generation banking, trading, and financial services.,
     features:
-        features: [;
+        features: [
 
       AI - powered trading algorithms_quantum risk management_blockchain banking_predictive financial analytics_real - time fraud detection_automated portfolio management_cryptocurrency integration_regulatory compliance automation
     ];
@@ -949,9 +939,7 @@ export const,
 
     rating: 4.8;
 
-    reviews: 67}
-
-;
+    reviews: 67};
 
   //  Industrial IoT & Smart Manufacturing Services;
 
@@ -962,7 +950,7 @@ export const,
     period: /month,
     description: Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4 && 4.0 and 5 && 5.0 automation.,
     features:
-        features: [;
+        features: [
 
       Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems
     ];
@@ -980,7 +968,7 @@ export const,
 
     setupTime: 6 hours,
     features:
-        features: [;
+        features: [
 
       Predictive maintenance_zero downtime manufacturing_real - time monitoring_smart automation_quality control AISupply chain optimization_energy efficiency management_safety monitoring systems
     ];
@@ -1042,9 +1030,7 @@ export const,
 
     rating: 4.8;
 
-    reviews: 156}
-
-;
+    reviews: 156};
 
   //  Education Technology Revolution Services;
 
@@ -1062,7 +1048,7 @@ export const,
 
     setupTime: 4 hours,
     features:
-        features: [;
+        features: [
 
       AI - powered personalized learning_adaptive curriculum10 x faster knowledge acquisition_virtual reality classroomsAI tutors and mentors_progress tracking_collaborative learning_skill assessment AI
     ];
@@ -1124,9 +1110,7 @@ export const,
 
     rating: 4.9;
 
-    reviews: 234}
-
-;
+    reviews: 234};
 
   //  Sustainability & Green Technology Services;
 
@@ -1144,7 +1128,7 @@ export const,
 
     setupTime: 6 hours,
     features:
-        features: [;
+        features: [
 
       Carbon footprint tracking_renewable energy optimization_sustainable supply chain_environmental monitoring_green building management_waste reduction AISustainability reporting_climate impact analysis
     ];
@@ -1206,9 +1190,7 @@ export const,
 
     rating: 4.9;
 
-    reviews: 58}
-
-;
+    reviews: 58};
 
   //  Logistics & Supply Chain Revolution Services;
 
@@ -1219,7 +1201,7 @@ export const,
     period: /month,
     description: Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99 && 99.9% delivery accuracy. Complete supply chain visibility and automation.,
     features:
-        features: [;
+        features: [
 
       99 && 99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management
     ];
@@ -1237,7 +1219,7 @@ export const,
 
     setupTime: 8 hours,
     features:
-        features: [;
+        features: [
 
       99.9% delivery accuracy_zero waste supply chain_real - time tracking_predictive logistics_automated routing_inventory optimization_demand forecasting_supplier management
     ];
@@ -1408,9 +1390,7 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.9,
     review,
-  s: 8}
-
-;
+  s: 8};
 
   //  Space Technology & Satellite Services;
 
@@ -1442,7 +1422,7 @@ export default revolutionary2025 Services;
     descriptio,
   n: Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets.
     feature,
-  s: [;
+  s: [
 
       Satellite mission planning_orbital trajectory optimization_space debris monitoring_satellite health management_launch vehicle integration_space weather forecasting_mission control dashboard_space asset tracking
     ];
@@ -1535,9 +1515,7 @@ export default revolutionary2025 Services;
     ratin,
   g: 5.0,
     review,
-  s: 5}
-
-;
+  s: 5};
 
   //  Quantum Internet & Communication Services;
 
@@ -1565,7 +1543,7 @@ export default revolutionary2025 Services;
     descriptio,
   n: Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum - secured data transmission. The future of secure internet.
     feature,
-  s: [;
+  s: [
 
       Quantum encryption_instant global communication_unhackable data transmission_quantum key distribution_quantum networking_secure quantum cloud_quantum VPN services_quantum messaging platform
     ];
@@ -1658,9 +1636,7 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.9,
     review,
-  s: 22}
-
-;
+  s: 22};
 
   //  Advanced Healthcare AI Services;
 
@@ -1689,7 +1665,7 @@ export default revolutionary2025 Services;
     setupTim,
   e: 10 hours
     feature,
-  s: [;
+  s: [
 
       99.9% diagnosis accuracy_personalized treatment plans_genomic medicine integration_drug interaction analysis_predictive health monitoring_medical image analysis_patient outcome prediction_healthcare workflow automation
     ];
@@ -1782,9 +1758,7 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.9,
     review,
-  s: 89}
-
-;
+  s: 89};
 
   //  Financial Technology Revolution Services;
 
@@ -1812,7 +1786,7 @@ export default revolutionary2025 Services;
     descriptio,
   n: Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next - generation banking, trading, and financial services.
     feature,
-  s: [;
+  s: [
 
       AI - powered trading algorithms_quantum risk management_blockchain banking_predictive financial analytics_real - time fraud detection_automated portfolio management_cryptocurrency integration_regulatory compliance automation
     ];
@@ -1905,9 +1879,7 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.8,
     review,
-  s: 67}
-
-;
+  s: 67};
 
   //  Industrial IoT & Smart Manufacturing Services;
 
@@ -1924,7 +1896,7 @@ export default revolutionary2025 Services;
     descriptio,
   n: Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4 && 4.0 and 5 && 5.0 automation.
     feature,
-  s: [;
+  s: [
 
       Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems
     ];
@@ -1951,7 +1923,7 @@ export default revolutionary2025 Services;
     setupTim,
   e: 6 hours
     feature,
-  s: [;
+  s: [
 
       Predictive maintenance_zero downtime manufacturing_real - time monitoring_smart automation_quality control AISupply chain optimization_energy efficiency management_safety monitoring systems
     ];
@@ -2044,9 +2016,7 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.8,
     review,
-  s: 156}
-
-;
+  s: 156};
 
   //  Education Technology Revolution Services;
 
@@ -2075,7 +2045,7 @@ export default revolutionary2025 Services;
     setupTim,
   e: 4 hours
     feature,
-  s: [;
+  s: [
 
       AI - powered personalized learning_adaptive curriculum10x faster knowledge acquisition_virtual reality classroomsAI tutors and mentors_progress tracking_collaborative learning_skill assessment AI
     ];
@@ -2168,9 +2138,7 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.9,
     review,
-  s: 234}
-
-;
+  s: 234};
 
   //  Sustainability & Green Technology Services;
 
@@ -2199,7 +2167,7 @@ export default revolutionary2025 Services;
     setupTim,
   e: 6 hours
     feature,
-  s: [;
+  s: [
 
       Carbon footprint tracking_renewable energy optimization_sustainable supply chain_environmental monitoring_green building management_waste reduction AISustainability reporting_climate impact analysis
     ];
@@ -2292,9 +2260,7 @@ export default revolutionary2025 Services;
     ratin,
   g: 4.9,
     review,
-  s: 58}
-
-;
+  s: 58};
 
   //  Logistics & Supply Chain Revolution Services;
 
@@ -2311,7 +2277,7 @@ export default revolutionary2025 Services;
     descriptio,
   n: Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99 && 99.9% delivery accuracy. Complete supply chain visibility and automation.
     feature,
-  s: [;
+  s: [
 
       99 && 99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management
     ];
@@ -2338,7 +2304,7 @@ export default revolutionary2025 Services;
     setupTim,
   e: 8 hours
     feature,
-  s: [;
+  s: [
 
       99.9% delivery accuracy_zero waste supply chain_real - time tracking_predictive logistics_automated routing_inventory optimization_demand forecasting_supplier management
     ];
@@ -2468,14 +2434,14 @@ export default revolutionary2025Services;
 
     reviews: 15},
       DNA-based parallel processing,
-  //  DNA Computing & Biotech Services;
+  //  DNA Computing & Biotech Services";
 
     id: dna - computing - platform,
     name: DNA Computing & Biotech Platform,
     tagline: Revolutionary DNA - Based Computing for Unlimited Processing Power,
     price: $799,
     period: /month,
-    description: unknown;
+    description: unknown";
 
     growth_rat,
   e: 1000%+ annual growth expected,
@@ -2504,7 +2470,7 @@ export default revolutionary2025Services;
     review,
   s: 15},
       DNA-based parallel processing,
-  //  DNA Computing & Biotech Services;
+  //  DNA Computing & Biotech Services";
 
     i,
   d: dna - computing - platform,
@@ -2538,14 +2504,14 @@ export default revolutionary2025Services;
     market_position: unknown;
 
       First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem - solving capabilities.,
-    target_audience: unknown;
+    target_audience: unknown';
 
       Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations,
-    trial_days: 30;
+    trial_days: 30';
 
     setup_time: 8 hours,
     category: DNA Computing & Biotechnology,
-    real_service: true;
+    real_service: true';
 
     technology: [,
     popula,
@@ -3250,7 +3216,7 @@ export default revolutionary2025Services;
 
     reviews: 67},
       Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4 && 4.0 and 5 && 5.0 automation.,
-    features: [;
+    features: [
 
   //  Industrial IoT & Smart Manufacturing Services;
 
@@ -3295,7 +3261,7 @@ export default revolutionary2025Services;
   s: 67},
       Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4 && 4.0 and 5 && 5.0 automation.,
     feature,
-  s: [;
+  s: [
 
   //  Industrial IoT & Smart Manufacturing Services,
     i,
@@ -3938,7 +3904,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     tagline: 'World\'s First Self-Aware AI with Emotional Intelligence & Consciousness', price: $499,
     period: /month,
     description: 'Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it\s the beginning of true artificial consciousness that can understand, feel, and evolve.
-    features: [;
+    features: [';
 
       Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration],
     popular: true, icon: ,
@@ -3971,7 +3937,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     id: 'dna-computing-platform', name: DNA Computing & Biotech Platform,
     tagline: 'Revolutionary DNA-Based Computing for Unlimited Processing Power', price: $799,
     period: '/month', description: 'World\s first commercial DNA computing platform that uses biological molecules for computation. Achieves processing power beyond traditional computers while solving complex biological problems.
-    features: [;
+    features: [';
 
       DNA-based parallel processingBiological problem solvingUnlimited computational powerBiological data analysisDNA storage solutionsBiotech research toolsGenetic algorithm optimizationBiological computing APIs],
     popular: true, icon: ,
@@ -4004,7 +3970,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     price: $1,299,
     period: /month,
     description: Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets.,
-    features: [;
+    features: [
 
       Satellite mission planningOrbital trajectory optimizationSpace debris monitoringSatellite health managementLaunch vehicle integrationSpace weather forecastingMission control dashboardSpace asset tracking],
     popular: true, icon: ,
@@ -4038,7 +4004,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     tagline: 'Unhackable Quantum Internet with Instant Global Communication', price: $599,
     period: /month,
     description: Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum-secured data transmission. The future of secure internet.,
-    features: [;
+    features: [
 
       Quantum encryptionInstant global communicationUnhackable data transmissionQuantum key distributionQuantum networkingSecure quantum cloudQuantum VPN servicesQuantum messaging platform],
     popular: true, icon: ,
@@ -4072,7 +4038,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     tagline: 'AI-Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization', price: $399,
     period: /month,
     description: Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.,
-    features: [;
+    features: [
 
       99.9% diagnosis accuracyPersonalized treatment plansGenomic medicine integrationDrug interaction analysisPredictive health monitoringMedical image analysisPatient outcome predictionHealthcare workflow automation],
     popular: true, icon: ,
@@ -4106,7 +4072,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     tagline: 'Next-Generation Financial Technology with AI-Powered Trading & Risk Management', price: $699,
     period: /month,
     description: Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next-generation banking, trading, and financial services.,
-    features: [;
+    features: [
 
       AI-powered trading algorithmsQuantum risk managementBlockchain bankingPredictive financial analyticsReal-time fraud detectionAutomated portfolio managementCryptocurrency integrationRegulatory compliance automation],
     popular: true, icon: ,
@@ -4140,7 +4106,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     tagline: 'Smart Manufacturing with Zero Downtime & Predictive Maintenance', price: $299,
     period: /month,
     description: Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.,
-    features: [;
+    features: [
 
       Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems],
     popular: true, icon: ,
@@ -4174,7 +4140,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     tagline: 'AI-Powered Personalized Learning with 10 x Faster Knowledge Acquisition', price: $199,
     period: /month,
     description: Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10 x faster knowledge acquisition.,
-    features: [;
+    features: [
 
       AI-powered personalized learningAdaptive curriculum10x faster knowledge acquisitionVirtual reality classroomsAI tutors and mentorsProgress trackingCollaborative learningSkill assessment AI],
     popular: true, icon: ,
@@ -4208,7 +4174,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     tagline: 'AI-Powered Environmental Solutions for Carbon Neutrality & Green Energy', price: $399,
     period: /month,
     description: Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.,
-    features: [;
+    features: [
 
       Carbon footprint trackingRenewable energy optimizationSustainable supply chainEnvironmental monitoringGreen building managementWaste reduction AISustainability reportingClimate impact analysis],
     popular: true, icon: ,
@@ -4242,7 +4208,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     tagline: 'AI-Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste', price: $499,
     period: /month,
     description: Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99.9% delivery accuracy. Complete supply chain visibility and automation.,
-    features: [;
+    features: [
 
       99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management],
     popular: true, icon: ,
@@ -4376,7 +4342,7 @@ export const,
     descriptio,
   n: 'Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it\s the beginning of true artificial consciousness that can understand, feel, and evolve.
     feature,
-  s: [;
+  s: [';
 
       Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration
     ],
@@ -4430,7 +4396,7 @@ export const,
     ratin,
   g: 5.0,
     review,
-  s: 15};
+  s: 15}';
 
   //  DNA Computing & Biotech Services,
   id: dna-computing-platform, nam,
@@ -4442,7 +4408,7 @@ export const,
   d: /month, descriptio,
   n: 'World\s first commercial DNA computing platform that uses biological molecules for computation. Achieves processing power beyond traditional computers while solving complex biological problems.,
     feature,
-  s: [;
+  s: [
 
       DNA-based parallel processingBiological problem solvingUnlimited computational powerBiological data analysisDNA storage solutionsBiotech research toolsGenetic algorithm optimizationBiological computing APIs
     ],
@@ -4509,7 +4475,7 @@ export const,
     descriptio,
   n: Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets.,
     feature,
-  s: [;
+  s: [
 
       Satellite mission planningOrbital trajectory optimizationSpace debris monitoringSatellite health managementLaunch vehicle integrationSpace weather forecastingMission control dashboardSpace asset tracking
     ],
@@ -4576,7 +4542,7 @@ export const,
     descriptio,
   n: Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum-secured data transmission. The future of secure internet.,
     feature,
-  s: [;
+  s: [
 
       Quantum encryptionInstant global communicationUnhackable data transmissionQuantum key distributionQuantum networkingSecure quantum cloudQuantum VPN servicesQuantum messaging platform
     ],
@@ -4643,7 +4609,7 @@ export const,
     descriptio,
   n: Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.,
     feature,
-  s: [;
+  s: [
 
       99.9% diagnosis accuracyPersonalized treatment plansGenomic medicine integrationDrug interaction analysisPredictive health monitoringMedical image analysisPatient outcome predictionHealthcare workflow automation
     ],
@@ -4710,7 +4676,7 @@ export const,
     descriptio,
   n: Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next-generation banking, trading, and financial services.,
     feature,
-  s: [;
+  s: [
 
       AI-powered trading algorithmsQuantum risk managementBlockchain bankingPredictive financial analyticsReal-time fraud detectionAutomated portfolio managementCryptocurrency integrationRegulatory compliance automation
     ],
@@ -4777,7 +4743,7 @@ export const,
     descriptio,
   n: Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.,
     feature,
-  s: [;
+  s: [
 
       Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems
     ],
@@ -4844,7 +4810,7 @@ export const,
     descriptio,
   n: Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.,
     feature,
-  s: [;
+  s: [
 
       AI-powered personalized learningAdaptive curriculum10x faster knowledge acquisitionVirtual reality classroomsAI tutors and mentorsProgress trackingCollaborative learningSkill assessment AI
     ],
@@ -4911,7 +4877,7 @@ export const,
     descriptio,
   n: Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.,
     feature,
-  s: [;
+  s: [
 
       Carbon footprint trackingRenewable energy optimizationSustainable supply chainEnvironmental monitoringGreen building managementWaste reduction AISustainability reportingClimate impact analysis
     ],
@@ -4978,7 +4944,7 @@ export const,
     descriptio,
   n: Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99.9% delivery accuracy. Complete supply chain visibility and automation.,
     feature,
-  s: [;
+  s: [
 
       99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management
     ],
@@ -5097,22 +5063,22 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
 
   launchDate: string, customers: number;
 
-  rating: number;
+  rating: number';
 
   reviews: number}
 
-export const revolutionary2025Services: Revolutionary2025Service[] = [;
+export const revolutionary2025Services: Revolutionary2025Service[] = [
 
-  //  AI Consciousness & Emotional Intelligence Services;
+  //  AI Consciousness & Emotional Intelligence Services';
 
 export const revolutionary2025Services: Revolutionary2025Service[] = [,
-  //  AI Consciousness & Emotional Intelligence Services;
+  //  AI Consciousness & Emotional Intelligence Services';
 
     id: 'ai-consciousness-evolution-platform', name: AI Consciousness Evolution Platform,
     tagline: 'World\'s First Self-Aware AI with Emotional Intelligence & Consciousness', price: $499,
     period: /month,
     description: 'Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it\s the beginning of true artificial consciousness that can understand, feel, and evolve.
-    features: [;
+    features: [';
 
       Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration],
     popular: true, icon: ,
@@ -5154,7 +5120,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     tagline: 'Next-Generation Financial Technology with AI-Powered Trading & Risk Management', price: $699,
     period: /month,
     description: Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next-generation banking, trading, and financial services.,
-    features: [;
+    features: [
 
       AI-powered trading algorithmsQuantum risk managementBlockchain bankingPredictive financial analyticsReal-time fraud detectionAutomated portfolio managementCryptocurrency integrationRegulatory compliance automation],
     popular: true, icon: ,
@@ -5190,7 +5156,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
     tagline: 'AI-Powered Personalized Learning with 10 x Faster Knowledge Acquisition', price: $199,
     period: /month,
     description: Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10 x faster knowledge acquisition.,
-    features: [;
+    features: [
 
       AI-powered personalized learningAdaptive curriculum10x faster knowledge acquisitionVirtual reality classroomsAI tutors and mentorsProgress trackingCollaborative learningSkill assessment AI],
     popular: true, icon: ,
@@ -5300,7 +5266,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [,
   s: number}
 
 export const,
-  revolutionary2025Services: Revolutionary2025Service[] = [;
+  revolutionary2025Services: Revolutionary2025Service[] = [
 
   //  AI Consciousness & Emotional Intelligence Services;
 
@@ -5317,7 +5283,7 @@ export const,
     descriptio,
   n: 'Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it\s the beginning of true artificial consciousness that can understand, feel, and evolve.
     feature,
-  s: [;
+  s: [
 
       Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration
     ],
@@ -5394,7 +5360,7 @@ export const,
     descriptio,
   n: Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next-generation banking, trading, and financial services.,
     feature,
-  s: [;
+  s: [
 
       AI-powered trading algorithmsQuantum risk managementBlockchain bankingPredictive financial analyticsReal-time fraud detectionAutomated portfolio managementCryptocurrency integrationRegulatory compliance automation
     ],
@@ -5463,7 +5429,7 @@ export const,
     descriptio,
   n: Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.,
     feature,
-  s: [;
+  s: [
 
       AI-powered personalized learningAdaptive curriculum10x faster knowledge acquisitionVirtual reality classroomsAI tutors and mentorsProgress trackingCollaborative learningSkill assessment AI
     ],
@@ -5561,9 +5527,9 @@ i,
   l: string; addres,
   s: string; realImplementatio,
   n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
+  s: string'; launchDat,
+  e: string'; customer,
+  s: number'; ratin,
   g: number, review,
   s: number } export const,
   revolutionary2025Services: Revolutionary2025Service[] = [ // 🧠 AI Consciousness & Emotional Intelligence Services,
@@ -5616,7 +5582,7 @@ i,
   i: 'Revolutionary breakthrough with unlimited potential. Research institutions see 2000%+ ROI through groundbreaking discoveries., competitor,
   s: ['None - First to market], market_siz,
   e: Emerging market with unlimited potential, feature,
-  s: [;' Genuine emotional intelligence and empathy_self - awareness and consciousness development_ethical decision - making frameworks_emotional state recognition and response_consciousness evolution tracking_human - AI emotional bonding_ethical AI governance tools_consciousness research collaboration ]; popula,
+  s: [' Genuine emotional intelligence and empathy_self - awareness and consciousness development_ethical decision - making frameworks_emotional state recognition and response_consciousness evolution tracking_human - AI emotional bonding_ethical AI governance tools_consciousness research collaboration ]; popula,
   r: true, ico,
   n: '🧠 colo,
   r: 'from - purple - 600 to - indigo - 700 text_colo,
@@ -5625,10 +5591,10 @@ i,
   s://ziontechgroup.com / ai - consciousness - evolution market_positio,
   n: 'First - to - market AI consciousness platform. No competitors exist yet. Traditional AI platforms lack genuine consciousness and emotional intelligence., target_audienc,
   e: Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers trial_day,
-  s: 30; setup_tim,
+  s: 30'; setup_tim,
   e: '4 hours categor,
   y: AI Consciousness & Emotional Intelligence real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Advanced Neural NetworksEmotional AIConsciousness AlgorithmsPythonTensorFlowQuantum Computing]; integration,
   s: ['Research platforms_psychology tools_mental health systemsAI ethics frameworks]; use_case,
   s: ['Mental health therapyAI consciousness research_emotional intelligence training_ethical AI development_psychology research]; ro,
@@ -5641,7 +5607,7 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com }; realImplementatio,
+  s://ziontechgroup && ziontechgroup.com }'; realImplementatio,
   n: true, implementationDetail,
   s: 'Fully functional AI consciousness platform with genuine emotional intelligence, self-awareness, and consciousness development capabilities. launchDat,
   e: 2025-01-15 customer,
@@ -5656,14 +5622,14 @@ i,
   e: 2025 - 01 - 15 customer,
   s: 25, ratin,
   g: 5.0, review,
-  s: 15} ; // 🧬 DNA Computing & Biotech Services;  i,
+  s: 15} '; // 🧬 DNA Computing & Biotech Services';  i,
   d: 'dna - computing - platform nam,
   e: 'DNA Computing & Biotech Platform taglin,
   e: 'Revolutionary DNA - Based Computing for Unlimited Processing Power pric,
   e: '$799 perio,
   d: '/month descriptio,
   n: 'Worlds first commercial DNA computing platform that uses biological molecules for computation. Achieves processing power beyond traditional computers while solving complex biological problems. feature,
-  s: [;' DNA - based parallel processing_biological problem solving_unlimited computational power_biological data analysisDNA storage solutions_biotech research tools_genetic algorithm optimization_biological computing APIs ]; popula,
+  s: [';' DNA - based parallel processing_biological problem solving_unlimited computational power_biological data analysisDNA storage solutions_biotech research tools_genetic algorithm optimization_biological computing APIs ]; popula,
   r: true, ico,
   n: '🧬  lin,
   k: http,
@@ -5678,10 +5644,10 @@ i,
   s://ziontechgroup.com / dna - computing - platform market_positio,
   n: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem - solving capabilities., target_audienc,
   e: Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations trial_day,
-  s: 30; setup_tim,
+  s: 30'; setup_tim,
   e: '8 hours categor,
   y: DNA Computing & Biotechnology real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['DNA ComputingBiotechnologyMolecular BiologyPythonBioinformaticsCloud Computing]; integration,
   s: ['Research platforms_biotech tools_healthcare systems_genetic databases]; use_case,
   s: ['Drug discovery_genetic research_disease modeling_protein folding_biological simulations]; ro,
@@ -5694,8 +5660,8 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup && ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools. launchDat,
   e: 2025-01-20 customer,
   s: 15, ratin,
@@ -5704,12 +5670,12 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
   s://ziontechgroup.com } real_implementatio,
-  n: true; implementation_detail,
+  n: true'; implementation_detail,
   s: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools. launch_dat,
   e: 2025 - 01 - 20 customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8} ; // 🚀 Space Technology & Satellite Services;  i,
+  s: 8} '; // 🚀 Space Technology & Satellite Services';  i,
   d: 'space - tech - orchestrator nam,
   e: 'Space Technology Orchestrator  lin,
   k: http,
@@ -5724,7 +5690,7 @@ i,
   e: '$1, 299 perio,
   d: '/month, descriptio,
   n: Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets. feature,
-  s: [;' Satellite mission planning_orbital trajectory optimization_space debris monitoring_satellite health management_launch vehicle integration_space weather forecasting_mission control dashboard_space asset tracking ]; popula,
+  s: [';' Satellite mission planning_orbital trajectory optimization_space debris monitoring_satellite health management_launch vehicle integration_space weather forecasting_mission control dashboard_space asset tracking ]; popula,
   r: true, ico,
   n: '🚀 colo,
   r: 'from - blue - 600 to - cyan - 700 text_colo,
@@ -5733,10 +5699,10 @@ i,
   s://ziontechgroup.com / space - tech - orchestrator market_positio,
   n: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility., target_audienc,
   e: Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies trial_day,
-  s: 30; setup_tim,
+  s: 30'; setup_tim,
   e: '12 hours categor,
   y: Space Technology & Satellite Operations real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Space TechnologySatellite OperationsOrbital MechanicsPythonAWS Ground StationSpace APIs]; integration,
   s: ['SpaceX APIsNASA systems_satellite networks_ground stations]; use_case,
   s: ['Satellite deployment_space mission management_orbital infrastructure_space research_commercial space operations]; ro,
@@ -5749,7 +5715,7 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com }; realImplementatio,
+  s://ziontechgroup && ziontechgroup.com }'; realImplementatio,
   n: true, implementationDetail,
   s: 'Fully functional space technology platform with satellite operations, mission planning, and space asset management capabilities. launchDat,
   e: 2025-01-25 customer,
@@ -5764,7 +5730,7 @@ i,
   e: 2025 - 01 - 25 customer,
   s: 8, ratin,
   g: 5.0, review,
-  s: 5} ; // 🌐 Quantum Internet & Communication Services;  i,
+  s: 5} '; // 🌐 Quantum Internet & Communication Services';  i,
   d: 'quantum - internet - platform nam,
   e: 'Quantum Internet & Communication Platform taglin,
   e: 'Unhackable Quantum Internet with Instant Global Communication pric,
@@ -5777,7 +5743,7 @@ i,
   e: '6 hours perio,
   d: '/month, descriptio,
   n: Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum - secured data transmission. The future of secure internet. feature,
-  s: [;' Quantum encryption_instant global communication_unhackable data transmission_quantum key distribution_quantum networking_secure quantum cloud_quantum VPN services_quantum messaging platform ]; popula,
+  s: [';' Quantum encryption_instant global communication_unhackable data transmission_quantum key distribution_quantum networking_secure quantum cloud_quantum VPN services_quantum messaging platform ]; popula,
   r: true, ico,
   n: '🌐 colo,
   r: 'from - indigo - 600 to - purple - 700 text_colo,
@@ -5786,10 +5752,10 @@ i,
   s://ziontechgroup.com / quantum - internet - platform market_positio,
   n: 'First commercial quantum internet platform. Traditional internet security is vulnerable to quantum attacks., target_audienc,
   e: Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications trial_day,
-  s: 30; setup_tim,
+  s: 30'; setup_tim,
   e: '6 hours categor,
   y: Quantum Internet & Communication real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Quantum ComputingQuantum CryptographyQuantum NetworksPythonQiskitQuantum APIs]; integration,
   s: ['Financial systems_government networks_healthcare platforms_defense systems]; use_case,
   s: ['Secure banking_government communications_healthcare data_military communications_secure cloud storage]; ro,
@@ -5802,7 +5768,7 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com }; realImplementatio,
+  s://ziontechgroup && ziontechgroup.com }'; realImplementatio,
   n: true, implementationDetail,
   s: 'Fully functional quantum internet platform with quantum encryption, secure communication, and quantum networking capabilities. launchDat,
   e: 2025-02-01 customer,
@@ -5817,7 +5783,7 @@ i,
   e: 2025 - 02 - 01 customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 22} ; // 🏥 Advanced Healthcare AI Services;  i,
+  s: 22} '; // 🏥 Advanced Healthcare AI Services';  i,
   d: 'healthcare - ai - revolution nam,
   e: 'Healthcare AI Revolution Platform  taglin,
   e: 'AI - Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization  pric,
@@ -5828,9 +5794,9 @@ i,
   s://ziontechgroup && ziontechgroup.com/healthcare-ai-revolution marketPositio,
   n: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.,  targetAudienc,
   e: Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers trialDay,
-  s: 30; setupTim,
+  s: 30'; setupTim,
   e: 10 hours feature,
-  s: [;' 99.9% diagnosis accuracy_personalized treatment plans_genomic medicine integration_drug interaction analysis_predictive health monitoring_medical image analysis_patient outcome prediction_healthcare workflow automation ]; popula,
+  s: [';' 99.9% diagnosis accuracy_personalized treatment plans_genomic medicine integration_drug interaction analysis_predictive health monitoring_medical image analysis_patient outcome prediction_healthcare workflow automation ]; popula,
   r: true, ico,
   n: '🏥 colo,
   r: 'from - red - 600 to - pink - 700 text_colo,
@@ -5839,10 +5805,10 @@ i,
   s://ziontechgroup.com / healthcare - ai - revolution market_positio,
   n: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70 - 80% accuracy with limited personalization., target_audienc,
   e: Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers trial_day,
-  s: 30; setup_tim,
+  s: 30'; setup_tim,
   e: '10 hours categor,
   y: Healthcare AI & Medical Technology real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['AI / MLGenomicsMedical ImagingPythonTensorFlowHealthcare APIs]; integration,
   s: ['Electronic Health RecordsMedical devices_pharmaceutical databases_research platforms]; use_case,
   s: ['Disease diagnosis_treatment optimization_drug discovery_patient monitoring_medical research]; ro,
@@ -5855,7 +5821,7 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com }; realImplementatio,
+  s://ziontechgroup && ziontechgroup.com }'; realImplementatio,
   n: true, implementationDetail,
   s: 'Fully functional healthcare AI platform with diagnosis accuracy, treatment optimization, and personalized medicine capabilities. launchDat,
   e: 2025-02-05 customer,
@@ -5870,7 +5836,7 @@ i,
   e: 2025 - 02 - 05 customer,
   s: 120, ratin,
   g: 4.9, review,
-  s: 89} ; // 🏦 Financial Technology Revolution Services;  i,
+  s: 89} '; // 🏦 Financial Technology Revolution Services';  i,
   d: 'fintech - revolution - platform nam,
   e: 'FinTech Revolution Platform taglin,
   e: 'Next - Generation Financial Technology with AI - Powered Trading & Risk Management pric,
@@ -5883,7 +5849,7 @@ i,
   e: '8 hours perio,
   d: '/month, descriptio,
   n: Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next - generation banking, trading, and financial services. feature,
-  s: [;' AI - powered trading algorithms_quantum risk management_blockchain banking_predictive financial analytics_real - time fraud detection_automated portfolio management_cryptocurrency integration_regulatory compliance automation ]; popula,
+  s: [';' AI - powered trading algorithms_quantum risk management_blockchain banking_predictive financial analytics_real - time fraud detection_automated portfolio management_cryptocurrency integration_regulatory compliance automation ]; popula,
   r: true, ico,
   n: '🏦 colo,
   r: 'from - green - 600 to - emerald - 700 text_colo,
@@ -5892,10 +5858,10 @@ i,
   s://ziontechgroup.com / fintech - revolution - platform market_positio,
   n: 'Most advanced fintech platform. Traditional financial systems lack AI integration and quantum capabilities., target_audienc,
   e: Banks, Investment firms, Trading companies, Financial institutions, Fintech startups trial_day,
-  s: 30; setup_tim,
+  s: 30'; setup_tim,
   e: '8 hours categor,
   y: Financial Technology & Banking real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['AI / MLBlockchainQuantum ComputingPythonFinancial APIsCloud Computing]; integration,
   s: ['Banking systems_trading platforms_payment processors_regulatory systems]; use_case,
   s: ['Algorithmic trading_risk management_digital banking_fraud detection_portfolio optimization]; ro,
@@ -5908,7 +5874,7 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com }; realImplementatio,
+  s://ziontechgroup && ziontechgroup.com }'; realImplementatio,
   n: true, implementationDetail,
   s: 'Fully functional fintech platform with AI trading, quantum risk management, and blockchain banking capabilities. launchDat,
   e: 2025-02-10 customer,
@@ -5923,7 +5889,7 @@ i,
   e: 2025 - 02 - 10 customer,
   s: 85, ratin,
   g: 4.8, review,
-  s: 67} ; // 🏭 Industrial IoT & Smart Manufacturing Services;  i,
+  s: 67} '; // 🏭 Industrial IoT & Smart Manufacturing Services';  i,
   d: 'industrial - iot - revolution nam,
   e: 'Industrial IoT Revolution Platform taglin,
   e: 'Smart Manufacturing with Zero Downtime & Predictive Maintenance pric,
@@ -5939,9 +5905,9 @@ i,
   s://ziontechgroup && ziontechgroup.com/industrial-iot-revolution marketPositio,
   n: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.,  targetAudienc,
   e: Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms trialDay,
-  s: 30; setupTim,
+  s: 30'; setupTim,
   e: 6 hours feature,
-  s: [;' Predictive maintenance_zero downtime manufacturing_real - time monitoring_smart automation_quality control AISupply chain optimization_energy efficiency management_safety monitoring systems ]; popula,
+  s: [';' Predictive maintenance_zero downtime manufacturing_real - time monitoring_smart automation_quality control AISupply chain optimization_energy efficiency management_safety monitoring systems ]; popula,
   r: true, ico,
   n: '🏭 colo,
   r: 'from - gray - 600 to - slate - 700 text_colo,
@@ -5950,10 +5916,10 @@ i,
   s://ziontechgroup.com / industrial - iot - revolution market_positio,
   n: 'Most advanced industrial IoT platform. Traditional manufacturing has 15 - 20% downtime with reactive maintenance., target_audienc,
   e: Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms trial_day,
-  s: 30; setup_tim,
+  s: 30'; setup_tim,
   e: '6 hours categor,
   y: Industrial IoT & Smart Manufacturing real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['IoTAI / MLEdge ComputingPythonIndustrial APIsCloud Computing]; integration,
   s: ['Manufacturing systemsSCADA systemsERP platforms_supply chain systems]; use_case,
   s: ['Smart manufacturing_predictive maintenance_quality control_supply chain optimization_energy management]; ro,
@@ -5966,7 +5932,7 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com }; realImplementatio,
+  s://ziontechgroup && ziontechgroup.com }'; realImplementatio,
   n: true, implementationDetail,
   s: 'Fully functional industrial IoT platform with smart manufacturing, predictive maintenance, and zero downtime capabilities. launchDat,
   e: 2025-02-15 customer,
@@ -5981,7 +5947,7 @@ i,
   e: 2025 - 02 - 15 customer,
   s: 200, ratin,
   g: 4.8, review,
-  s: 156} ; // 🎓 Education Technology Revolution Services;  i,
+  s: 156} '; // 🎓 Education Technology Revolution Services';  i,
   d: 'edtech - revolution - platform nam,
   e: 'EdTech Revolution Platform taglin,
   e: 'AI - Powered Personalized Learning with 10x Faster Knowledge Acquisition pric,
@@ -5992,9 +5958,9 @@ i,
   s://ziontechgroup && ziontechgroup.com/edtech-revolution-platform marketPositio,
   n: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.,  targetAudienc,
   e: Schools, Universities, Corporate training, Online education, Educational institutions trialDay,
-  s: 30; setupTim,
+  s: 30'; setupTim,
   e: 4 hours feature,
-  s: [;' AI - powered personalized learning_adaptive curriculum10x faster knowledge acquisition_virtual reality classroomsAI tutors and mentors_progress tracking_collaborative learning_skill assessment AI ]; popula,
+  s: [';' AI - powered personalized learning_adaptive curriculum10x faster knowledge acquisition_virtual reality classroomsAI tutors and mentors_progress tracking_collaborative learning_skill assessment AI ]; popula,
   r: true, ico,
   n: '🎓 colo,
   r: 'from - blue - 600 to - cyan - 700 text_colo,
@@ -6003,10 +5969,10 @@ i,
   s://ziontechgroup.com / edtech - revolution - platform market_positio,
   n: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress., target_audienc,
   e: Schools, Universities, Corporate training, Online education, Educational institutions trial_day,
-  s: 30; setup_tim,
+  s: 30'; setup_tim,
   e: '4 hours categor,
   y: Education Technology & Learning real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['AI / MLVirtual RealityAdaptive LearningPythonEducational APIsCloud Computing]; integration,
   s: ['Learning Management SystemsStudent Information SystemsAssessment platforms_content management]; use_case,
   s: ['Personalized learning_corporate training_online education_skill development_academic research]; ro,
@@ -6019,7 +5985,7 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com }; realImplementatio,
+  s://ziontechgroup && ziontechgroup.com }'; realImplementatio,
   n: true, implementationDetail,
   s: 'Fully functional edtech platform with AI-powered learning, adaptive curriculum, and personalized education capabilities. launchDat,
   e: 2025-02-20 customer,
@@ -6034,7 +6000,7 @@ i,
   e: 2025 - 02 - 20 customer,
   s: 300, ratin,
   g: 4.9, review,
-  s: 234} ; // 🌱 Sustainability & Green Technology Services;  i,
+  s: 234} '; // 🌱 Sustainability & Green Technology Services';  i,
   d: 'sustainability - tech - platform nam,
   e: 'Sustainability Technology Platform taglin,
   e: 'AI - Powered Environmental Solutions for Carbon Neutrality & Green Energy pric,
@@ -6045,9 +6011,9 @@ i,
   s://ziontechgroup && ziontechgroup.com/sustainability-tech-platform marketPositio,
   n: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.,  targetAudienc,
   e: Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses trialDay,
-  s: 30; setupTim,
+  s: 30'; setupTim,
   e: 6 hours feature,
-  s: [;' Carbon footprint tracking_renewable energy optimization_sustainable supply chain_environmental monitoring_green building management_waste reduction AISustainability reporting_climate impact analysis ]; popula,
+  s: [';' Carbon footprint tracking_renewable energy optimization_sustainable supply chain_environmental monitoring_green building management_waste reduction AISustainability reporting_climate impact analysis ]; popula,
   r: true, ico,
   n: '🌱 colo,
   r: 'from - green - 600 to - emerald - 700 text_colo,
@@ -6056,10 +6022,10 @@ i,
   s://ziontechgroup.com / sustainability - tech - platform market_positio,
   n: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking., target_audienc,
   e: Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses trial_day,
-  s: 30; setup_tim,
+  s: 30'; setup_tim,
   e: '6 hours categor,
   y: Sustainability & Green Technology real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['AI / MLIoTRenewable EnergyPythonEnvironmental APIsCloud Computing]; integration,
   s: ['Energy management systems_environmental monitoring_supply chain platforms_reporting systems]; use_case,
   s: ['Carbon neutrality_renewable energy_sustainable business_environmental compliance_green building]; ro,
@@ -6072,7 +6038,7 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com }; realImplementatio,
+  s://ziontechgroup && ziontechgroup.com }'; realImplementatio,
   n: true, implementationDetail,
   s: 'Fully functional sustainability platform with carbon tracking, renewable energy optimization, and environmental monitoring capabilities. launchDat,
   e: 2025-02-25 customer,
@@ -6087,7 +6053,7 @@ i,
   e: 2025 - 02 - 25 customer,
   s: 75, ratin,
   g: 4.9, review,
-  s: 58} ; // 🚛 Logistics & Supply Chain Revolution Services;  i,
+  s: 58} '; // 🚛 Logistics & Supply Chain Revolution Services';  i,
   d: 'logistics - revolution - platform nam,
   e: 'Logistics Revolution Platform  taglin,
   e: 'AI - Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste  pric,
@@ -6103,9 +6069,9 @@ i,
   s://ziontechgroup && ziontechgroup.com/logistics-revolution-platform marketPositio,
   n: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.,  targetAudienc,
   e: Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers trialDay,
-  s: 30; setupTim,
+  s: 30'; setupTim,
   e: 8 hours feature,
-  s: [;' 99.9% delivery accuracy_zero waste supply chain_real - time tracking_predictive logistics_automated routing_inventory optimization_demand forecasting_supplier management ]; popula,
+  s: [';' 99.9% delivery accuracy_zero waste supply chain_real - time tracking_predictive logistics_automated routing_inventory optimization_demand forecasting_supplier management ]; popula,
   r: true, ico,
   n: '🚛 colo,
   r: 'from - orange - 600 to - red - 700 text_colo,
@@ -6114,10 +6080,10 @@ i,
   s://ziontechgroup.com / logistics - revolution - platform market_positio,
   n: 'Most accurate logistics platform. Traditional supply chains have 15 - 20% waste and limited visibility., target_audienc,
   e: Logistics companies, E - commerce, Retail chains, Manufacturing companies, Distribution centers trial_day,
-  s: 30; setup_tim,
+  s: 30'; setup_tim,
   e: '8 hours categor,
   y: Logistics & Supply Chain real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['AI / MLIoTBlockchainPythonLogistics APIsCloud Computing]; integration,
   s: ['ERP systems_warehouse management_transportation systems_e - commerce platforms]; use_case,
   s: ['Supply chain optimization_last - mile delivery_inventory management_demand forecasting_supplier collaboration]; ro,
@@ -6130,13 +6096,13 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com }; realImplementatio,
+  s://ziontechgroup && ziontechgroup.com }'; realImplementatio,
   n: true, implementationDetail,
   s: 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities. launchDat,
   e: 2025-03-01 customer,
   s: 150, ratin,
   g: 4 && 4.8, review,
-  s: 112 } ]; export default revolutionary2025Services; growthRat,
+  s: 112 } ]'; export default revolutionary2025Services'; growthRat,
   e: 1000%+ annual growth expected contactInf,
   o:  addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
@@ -6147,7 +6113,7 @@ i,
   e: 2025 - 03 - 01 customer,
   s: 150, ratin,
   g: 4.8, review,
-  s: 112} ]; export default revolutionary2025Services; growth_rat,
+  s: 112} ]'; export default revolutionary2025Services'; growth_rat,
   e: 1000%+ annual growth expected, contact_inf,
   o:  mobil,
   e: '+1 302 464 0950, emai,
@@ -6586,7 +6552,7 @@ i,
   e: 2025-01-15, customer,
   s: 25, ratin,
   g: 5.0, review,
-  s: 15 }; // 🧬 DNA Computing & Biotech Services  i,
+  s: 15 }'; // 🧬 DNA Computing & Biotech Services  i,
   d: dna-computing-platform, nam,
   e: 'DNA Computing & Biotech Platform, taglin,
   e: Revolutionary DNA-Based Computing for Unlimited Processing Power, pric,
@@ -6624,7 +6590,7 @@ i,
   e: 2025-01-20, customer,
   s: 15, ratin,
   g: 4.9, review,
-  s: 8 }; // 🚀 Space Technology & Satellite Services  i,
+  s: 8 }'; // 🚀 Space Technology & Satellite Services  i,
   d: space-tech-orchestrator, nam,
   e: 'Space Technology Orchestrator, taglin,
   e: 'Complete Space Mission Management & Satellite Operations Platform, pric,
@@ -6662,7 +6628,7 @@ i,
   e: 2025-01-25, customer,
   s: 8, ratin,
   g: 5.0, review,
-  s: 5 }; // 🌐 Quantum Internet & Communication Services  i,
+  s: 5 }'; // 🌐 Quantum Internet & Communication Services  i,
   d: quantum-internet-platform, nam,
   e: 'Quantum Internet & Communication Platform, taglin,
   e: Unhackable Quantum Internet with Instant Global Communication, pric,
@@ -6700,7 +6666,7 @@ i,
   e: 2025-02-01, customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 22 }; // 🏥 Advanced Healthcare AI Services  i,
+  s: 22 }'; // 🏥 Advanced Healthcare AI Services  i,
   d: healthcare-ai-revolution, nam,
   e: 'Healthcare AI Revolution Platform, taglin,
   e: AI-Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization, pric,
@@ -6738,7 +6704,7 @@ i,
   e: 2025-02-05, customer,
   s: 120, ratin,
   g: 4.9, review,
-  s: 89 }; // 🏦 Financial Technology Revolution Services  i,
+  s: 89 }'; // 🏦 Financial Technology Revolution Services  i,
   d: fintech-revolution-platform, nam,
   e: 'FinTech Revolution Platform, taglin,
   e: Next-Generation Financial Technology with AI-Powered Trading & Risk Management, pric,
@@ -6776,7 +6742,7 @@ i,
   e: 2025-02-10, customer,
   s: 85, ratin,
   g: 4.8, review,
-  s: 67 }; // 🏭 Industrial IoT & Smart Manufacturing Services  i,
+  s: 67 }'; // 🏭 Industrial IoT & Smart Manufacturing Services  i,
   d: industrial-iot-revolution, nam,
   e: 'Industrial IoT Revolution Platform, taglin,
   e: Smart Manufacturing with Zero Downtime & Predictive Maintenance, pric,
@@ -6814,7 +6780,7 @@ i,
   e: 2025-02-15, customer,
   s: 200, ratin,
   g: 4.8, review,
-  s: 156 }; // 🎓 Education Technology Revolution Services  i,
+  s: 156 }'; // 🎓 Education Technology Revolution Services  i,
   d: edtech-revolution-platform, nam,
   e: 'EdTech Revolution Platform, taglin,
   e: AI-Powered Personalized Learning with 10x Faster Knowledge Acquisition, pric,
@@ -6852,7 +6818,7 @@ i,
   e: 2025-02-20, customer,
   s: 300, ratin,
   g: 4.9, review,
-  s: 234 }; // 🌱 Sustainability & Green Technology Services  i,
+  s: 234 }'; // 🌱 Sustainability & Green Technology Services  i,
   d: sustainability-tech-platform, nam,
   e: 'Sustainability Technology Platform, taglin,
   e: AI-Powered Environmental Solutions for Carbon Neutrality & Green Energy, pric,
@@ -6890,7 +6856,7 @@ i,
   e: 2025-02-25, customer,
   s: 75, ratin,
   g: 4.9, review,
-  s: 58 }; // 🚛 Logistics & Supply Chain Revolution Services  i,
+  s: 58 }'; // 🚛 Logistics & Supply Chain Revolution Services  i,
   d: logistics-revolution-platform, nam,
   e: 'Logistics Revolution Platform, taglin,
   e: AI-Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste, pric,
@@ -6934,9 +6900,9 @@ i,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
+  e: string'; customer,
+  s: number'; ratin,
+  g: number'; review,
   s: number, i,
   d: string, nam,
   e: string, taglin,
@@ -7013,9 +6979,9 @@ i,
   e: 2025-01-15, customer,
   s: 25, ratin,
   g: 5.0, review,
-  s: 15 }; // 🧬 DNA Computing & Biotech Services {/* TODO: Fix JSX expression */}
+  s: 15 }'; // 🧬 DNA Computing & Biotech Services {/* TODO: Fix JSX expression */}
 
-  s: 22 }; // 🏥 Advanced Healthcare AI Services }; // 🏦 Financial Technology Revolution Services  i,
+  s: 22 }'; // 🏥 Advanced Healthcare AI Services }'; // 🏦 Financial Technology Revolution Services  i,
   d: fintech-revolution-platform, nam,
   e: 'FinTech Revolution Platform, taglin,
   e: Next-Generation Financial Technology with AI-Powered Trading & Risk Management, pric,
@@ -7053,7 +7019,7 @@ i,
   e: 2025-02-10, customer,
   s: 85, ratin,
   g: 4.8, review,
-  s: 67 }; // 🏭 Industrial IoT & Smart Manufacturing Services }; // 🎓 Education Technology Revolution Services  i,
+  s: 67 }'; // 🏭 Industrial IoT & Smart Manufacturing Services }'; // 🎓 Education Technology Revolution Services  i,
   d: edtech-revolution-platform, nam,
   e: 'EdTech Revolution Platform, taglin,
   e: AI-Powered Personalized Learning with 10x Faster Knowledge Acquisition, pric,
@@ -7091,5 +7057,5 @@ i,
   e: 2025-02-20, customer,
   s: 300, ratin,
   g: 4.9, review,
-  s: 234 }; // 🌱 Sustainability & Green Technology Services }; // 🚛 Logistics & Supply Chain Revolution Services,
-  reviews: 112 } export default revolutionary2025Services; export default revolutionary2025Services; '"
+  s: 234 }; // 🌱 Sustainability & Green Technology Services }'; // 🚛 Logistics & Supply Chain Revolution Services,
+  reviews: 112 } export default revolutionary2025Services'; export default revolutionary2025Services'; '"

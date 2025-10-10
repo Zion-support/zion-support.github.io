@@ -1,6 +1,6 @@
 // netlify/functions/autonomous-innovation-studio.js;
 
-exports.handler = async function () {;
+exports.handler = async function () {
 
 const { execSync } = require(child_process);
 
@@ -18,7 +18,7 @@ const { execSync } = require(child_process);
     return {statusCode: 200;
 
       body: JSON.stringify({ ok: true),
-        task: autonomous-innovation-studio })}} catch (e) {return {
+        task: autonomous-innovation-studio   })}} catch (e) {return {
       statusCode: 200;
 
       body: JSON.stringify({ ok: false),
@@ -48,15 +48,15 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
 
 // netlify/functions/autonomous-innovation-studio.js exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/autonomous-innovation-studio.cjs') { stdio: 'inherit'} shell: true});' execSync('node automation/git-sync.cjs || true') {stdio: 'inherit} shell: true}); return {statusCode: 200;
 
-        body: JSON.stringify({ok: true),
-        task: autonomous-innovation-studio }) }} catch (e) {return { statusCode: 200;
+        body: JSON.stringify({ ok: true),
+        task: autonomous-innovation-studio   }) }} catch (e) {return { statusCode: 200;
 
         body: JSON.stringify({ok: false),
-        error: String(e;),
-// netlify/functions/autonomous-innovation-studio.js exports.handler = async function() { const { execSync } = require(child_process); try {/* TODO: Fix JSX expression */}
+        error: String(e';),
+// netlify/functions/autonomous-innovation-studio.js exports.handler = async function() { const { execSync } = require(child_process)'; try {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
-  l: true});' execSync(node automation/git-sync.cjs || true) {/* TODO: Fix JSX expression */}
+  l: true})';' execSync(node automation/git-sync.cjs || true) {/* TODO: Fix JSX expression */}
 
   o: inherit} shel,
   l: true}); return {/* TODO: Fix JSX expression */}

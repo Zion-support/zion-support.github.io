@@ -1,17 +1,17 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
-import { glob } from 'glob;
+import { glob } from 'glob';
 
-// Function to process a file;
+// Function to process a file';
 
 function processFile(filePath) {
   try {
-    // Fix duplicate React imports;
+    // Fix duplicate React imports';
 
     if (content.includes("import React from 'react';\nimport React from 'react';)) {
-      content = content.replace(/import React from 'react';\nimport React from 'react;/g)
+      content = content.replace(/import React from 'react';\nimport React from 'react';/g)
         "import React from 'react';
 
       );
@@ -21,7 +21,7 @@ function processFile(filePath) {
     // Fix duplicate React imports with different spacing;
 
     if (content.includes("import React from 'react';\n\nimport React from 'react';)) {
-      content = content.replace(/import React from 'react';\n\nimport React from 'react;/g)
+      content = content.replace(/import React from 'react';\n\nimport React from 'react';/g)
         "import React from 'react';
 
       );
@@ -67,7 +67,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     if (content.includes("import { Metadata } from 'next';")) {/* TODO: Fix JSX expression */}
 
-      content = content.replace(/import { Metadata } from 'next';/g, "import React from 'react';);
+      content = content.replace(/import { Metadata } from 'next';/g, "import React from 'react'>)>
 
       modified = true}
 
@@ -81,10 +81,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-// Main execution;
+// Main execution>
 
 async function main() {
-  // Find all TypeScript/JavaScript files in app directory;
+  // Find all TypeScript/JavaScript files in app directory>
 
   files.forEach(file => {)
     if (processFile(file)) {

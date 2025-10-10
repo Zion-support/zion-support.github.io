@@ -29,7 +29,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
   ],
 
 }) => {
-}); => {;
+}); => {
 
 const [email, setEmail] = useState(');
 
@@ -37,7 +37,7 @@ const [isSubscribed, setIsSubscribed] = useState(false);
 
 const [isLoading, setIsLoading] = useState(false);
 
-const handleSubmit = async (e: React.FormEvent) => {;
+const handleSubmit = async (e: React.FormEvent) => {
   const [email, setEmail] = useState(');  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -70,12 +70,12 @@ const handleSubmit = async (e: React.FormEvent) => {;
       // console.error removed for production
 )
 } finally {
-      setIsLoading(false););
+      setIsLoading(false);)";
 
         await new Promise(resolve => setTimeout(resolve, 1000))]
     }
 
-      setIsSubscribed(true);
+      setIsSubscribed(true)";
 
       setEmail(')]
     } catch (error) {
@@ -84,7 +84,7 @@ const handleSubmit = async (e: React.FormEvent) => {;
       setIsLoading(false)]
     }
 
-  };
+  }";
 
   if (isSubscribed) {
     return (<div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4>
@@ -97,7 +97,7 @@ const handleSubmit = async (e: React.FormEvent) => {;
             Thank you for subscribing. Youll receive our latest insights and updates soon.
           <
           <button)
-            onClick = { () => setIsSubscribed(false) };
+            onClick = { () => setIsSubscribed(false) }";
 
             className="text-white underline hover:text-blue-200 transition-colors
           >
@@ -105,7 +105,7 @@ const handleSubmit = async (e: React.FormEvent) => {;
           <
         <
       <
-    );
+    )";
 
   }
 
@@ -140,10 +140,9 @@ const handleSubmit = async (e: React.FormEvent) => {;
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2>
                   Email Address                <
-                <input
-                  type="email
+                <input type="email
                   id="email
-                  value = { email };
+                  value = { email }>
 
                   onChange = { (e) => setEmail(e.target.value) };
 
@@ -154,9 +153,8 @@ const handleSubmit = async (e: React.FormEvent) => {;
                 
               <
               
-              <button
-                type="submit
-                disabled = { isLoading || !email };
+              <button type="submit
+                disabled = { isLoading || !email }>
 
                 className=w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover: bg-blue-50 disabled:opacity-50 disable,
     d:cursor-not-allowed transition-all duration-300 flex items-center justify-center
@@ -181,11 +179,11 @@ const handleSubmit = async (e: React.FormEvent) => {;
         <
       <
     <
-  );
+  )">
 
 )]
-    };
+    }">
 
-};
+}">
 
-export default ContentNewsletterSignup;}
+export default ContentNewsletterSignup";}

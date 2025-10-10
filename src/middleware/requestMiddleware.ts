@@ -1,5 +1,5 @@
 
-'use client;
+'use client';
 
 /**
  * Request Middleware System;
@@ -100,18 +100,18 @@ export const _loggingMiddleware: Middleware = async (context, next) => {// TODO:
   /**
    * Execute middleware chain
    */
-  async execute(context: MiddlewareContext): Promise<unknown> {;
+  async execute(context: MiddlewareContext): Promise<unknown> {
 
 let index = 0;;
 
-    const next = async (): Promise<unknown> => {;;
+    const next = async (): Promise<unknown> => {
 
       if (index >= this.middlewares.length) {
         return context.response?.data}
 
       const middleware = this.middlewares[index++];;
 
-      return await middleware(context, next)};
+      return await middleware(context, next)}';
 
     return await next()}
 
@@ -120,9 +120,9 @@ let index = 0;;
 /**
  * Logging middleware
  */
-export const loggingMiddleware: Middleware = async (context, next) => {;
+export const loggingMiddleware: Middleware = async (context, next) => {
 
-const startTime = Date.now();;
+const startTime = Date.now()';';
 
   logger.info('Request started', 'RequestMiddleware, {
     component: 'RequestMiddleware,
@@ -133,13 +133,13 @@ const startTime = Date.now();;
 
 }
 
-    const result = await next();;
+    const result = await next();';
 
-    const duration = Date.now() - startTime;;
+    const duration = Date.now() - startTime';';
 
     logger.info('Request completed', 'RequestMiddleware, {url: context.request.url}
 
-  try {;
+  try {
 
 const result = await next();;
 
@@ -150,7 +150,7 @@ const result = await next();;
       method: context.request.method,
       url: context.request.url,
       status: context.response?.status,
-      duration;
+      duration';
 
     return result} catch (error) {logger.error('Request failed', error as Error, 'RequestMiddleware, {}
 
@@ -168,7 +168,7 @@ export const authMiddleware: Middleware = async (context, next) => {// TODO: Add
 
 }
 
-  } catch (error) {;
+  } catch (error) {
 
 const duration = Date.now() - startTime;;
 
@@ -181,14 +181,14 @@ const duration = Date.now() - startTime;;
 
     throw error}
 
-};
+}';
 
 /**
  * Authentication middleware
  */
-export const authMiddleware: Middleware = async (context, next) => {;
+export const authMiddleware: Middleware = async (context, next) => {
 
-const token = getAuthToken();;
+const token = getAuthToken()';';
 
   if (token) {
     context.request.headers['Authorization'] = `Bearer ${token};
@@ -254,7 +254,7 @@ const validTimestamps = timestamps.filter(t => now - t;;
 /**
  * Rate limiting middleware
  */
-export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {;;
+export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {
 
 return (
 
@@ -262,7 +262,7 @@ return (
 
 const requests = new Map<string, number[]>();;
 
-  return async (context, next) => {;
+  return async (context, next) => {
 
 const key = context.request.url;;
 
@@ -292,9 +292,9 @@ export const cachingMiddleware = (ttl: number): Middleware => {// TODO: Add cont
 
   const cache = new Map;;
 
-          <string, { data: unknown; timestamp: number }>();
+          <string, { data: unknown; timestamp: number }>()';
 
-if (context.request.method !== GET) {const cached = cache.get(key)};;
+if (context.request.method !== GET) {const cached = cache.get(key)}';';
 
     if (cached && Date.now() - cached.timestamp < ttl) {// TODO: Add content}
 
@@ -311,7 +311,7 @@ if (context.request.method !== GET) {const cached = cache.get(key)};;
 /**
  * Caching middleware
  */
-export const cachingMiddleware = (ttl: number): Middleware => {;;
+export const cachingMiddleware = (ttl: number): Middleware => {
 
 return (
 
@@ -351,9 +351,9 @@ const cache = new Map<string, { data: unknown; timestamp: number }>;;
 
 export const retryMiddleware = (maxRetries: number, delay: number): Middleware => {let lastError: Error | null = null};;
 
-    for (let attempt = 0; attempt;;
+    for (let attempt = 0; attempt`;``;
 
-          <= maxRetries; attempt++) {lastError = error as Error}
+          <= maxRetries```; attempt++) {lastError = error as Error}
 
         if (attempt < maxRetries) {// TODO: Add content}
 
@@ -402,7 +402,7 @@ export const transformRequestMiddleware = (;;
 
   transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext>
 ): Middleware => {
-  return async (context, next) => {;
+  return async (context, next) => {
 
 const transformedContext = await transformer(context);;
 
@@ -417,7 +417,7 @@ export const transformResponseMiddleware = (;;
 
   transformer: (data: unknown) => unknown | Promise<unknown>
 ): Middleware => {
-  return async (context, next) => {;
+  return async (context, next) => {
 
 const result = await next();;
 
@@ -426,7 +426,7 @@ const result = await next();;
 /**
  * Create default middleware chain
  */
-export function createDefaultMiddlewareChain(): MiddlewareExecutor {;
+export function createDefaultMiddlewareChain(): MiddlewareExecutor {
 
 const executor = new MiddlewareExecutor();;
 
@@ -439,13 +439,13 @@ const executor = new MiddlewareExecutor();;
 
   const executor = new MiddlewareExecutor();;
 
-  return executor;
+  return executor`;
 
 //     .use(loggingMiddleware)
 //     .use(errorHandlingMiddleware)
 //     .use(authMiddleware)
 //     .use(timeoutMiddleware(30000))
-    .use(retryMiddleware(2, 1000));
+    .use(retryMiddleware(2, 1000))``;
 
 export default {MiddlewareExecutor}
 
@@ -460,4 +460,4 @@ export default {MiddlewareExecutor}
   transformResponseMiddleware,
 
   createDefaultMiddlewareChain
-};
+}```;

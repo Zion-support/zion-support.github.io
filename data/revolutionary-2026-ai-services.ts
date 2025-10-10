@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Revolutionary2026AiService {;,
+export interface Revolutionary2026AiService {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const revolutionary2026 AIServices: Revolutionary2026 AiService[] = [,
     id: "2026-revolutionary-ai", name: "2026 Revolutionary AI Platform",
     tagline: "Revolutionary AI for 2026", price: '$249/month',
     description: 'Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.',
-    features: [;
+    features: [
       "Revolutionary AI"
       "Transformative capabilities"
       "Advanced algorithms"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Revolutionary AI platform that transforms how businesses use artificial intelligence in 2026.",
     feature,
-  s: [;"
+  s: ["
       "Revolutionary AI""
       "Transformative capabilities""
       "Advanced algorithms""

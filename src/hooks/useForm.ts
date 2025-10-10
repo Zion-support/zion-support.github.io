@@ -8,7 +8,7 @@ use client
  * Provides form state management and validation;
 
  */
-// import { logger } from '../utils/logger;
+// import { logger } from '../utils/logger';
 
 import {// TODO: Add content}
 
@@ -155,14 +155,14 @@ const handleChange = useCallback();;
 
 }
 
-      const { name, value, type } = e.target;
+      const { name, value, type } = e.target';
 
-      const fieldName = name as keyof T;;
+      const fieldName = name as keyof T';';
 
-      // Handle checkbox inputs;
+      // Handle checkbox inputs';
 
 let,
-  fieldValue: unknown = value;
+  fieldValue: unknown = value';
 
       if (type === 'checkbox' && 'checked' in e.target) {/* TODO: Fix JSX expression */}
 

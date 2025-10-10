@@ -27,11 +27,9 @@ export interface ExtraService {id: string;
 
     address: string}
 
-export const extraServices: ExtraService[] = [;
+export const extraServices: ExtraService[] = [
 
-    address: string}
-
-;
+    address: string};
 
 export const extra_services: ExtraService[] = [
     id: cloud - migration - expert,
@@ -53,12 +51,10 @@ export interface ExtraService {/* TODO: Fix JSX expression */}
   s: string}
 
 export const,
-  extraServices: ExtraService[] = [;
+  extraServices: ExtraService[] = [
 
     addres,
-  s: string}
-
-;
+  s: string};
 
 export const,
   extra_services: ExtraService[] = [,
@@ -213,7 +209,7 @@ export const,
   s: string}
 
 export const,
-  extraServices: ExtraService[] = [;
+  extraServices: ExtraService[] = [
 
     i,
   d: cloud-migration-expert
@@ -226,7 +222,7 @@ export const,
     descriptio,
   n: Professional cloud migration services for businesses looking to modernize their infrastructure.
     feature,
-  s: [;
+  s: [
 
       AWS/Azure/GCP migration
       Performance optimization
@@ -269,7 +265,7 @@ export const,
     descriptio,
   n: Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.
     feature,
-  s: [;
+  s: [
 
       Vulnerability assessment
       Penetration testing
@@ -625,13 +621,13 @@ export interface ExtraService,
   s: string[]; lin,
   k: string; categor,
   y: string; real_implementatio,
-  n: boolean; contact_inf,
+  n: boolean'; contact_inf,
   o: mobil,
-  e: string; emai,
+  e: string'; emai,
   l: string} addres,
   s: string} export const,
   extraServices: ExtraService[] = [ addres,
-  s: string} ; export const,
+  s: string} '; export const,
   extra_services: ExtraService[] = [, i,
   d: 'cloud - migration - expert, nam,
   e: 'Cloud Migration Expert, taglin,
@@ -667,10 +663,10 @@ export interface ExtraService,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
-  n: boolean; contactInf,
+  n: boolean'; contactInf,
   o: mobil,
-  e: string; emai,
-  l: string; addres,
+  e: string'; emai,
+  l: string'; addres,
   s: string}} } addres,
   s: string} export const,
   extraServices: ExtraService[] = [  i,
@@ -699,7 +695,7 @@ export interface ExtraService,
   contactInfo:  mobil,
   e: '+1 302 464 0950 emai,
   l: 'kleber@ziontechgroup.com addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]'; mobil,
   e: +1 302 464 0950,
   emai,
   l: "kleber@ziontechgroup.com i,
@@ -715,7 +711,7 @@ export interface ExtraService,
   o:  mobil,
   e: '+1 302 464 0950, emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com, addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}}]; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709}}]"'; mobil,
   e: +1 302 464 0950,
   i,
   d: "cloud-migration-expert, nam,
@@ -744,7 +740,7 @@ export interface ExtraService,
   s: 364 E Main St STE 1008 Middletown DE 19709,
   emai,
   l: "kleber@ziontechgroup.com addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709 } } ]; ]; i,
+  s: "364 E Main St STE 1008 Middletown DE 19709 } } ]'"; ]'"; i,
   d: "cloud-migration-expert, nam,
   e: "Cloud Migration Expert, taglin,
   e: "Seamless cloud migration and optimization, pric,
@@ -772,10 +768,10 @@ export interface ExtraService,
   l: "kleber@ziontechgroup.com, mobil,
   e: '+1 302 464 0950, emai,
   l: 'kleber@ziontechgroup.com, addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}}; ]; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709}}"'; ]"'; mobil,
   e: +1 302 464 0950,
   emai,
   l: "kleber@ziontechgroup.com mobil,
   e: "+1 302 464 0950, emai,
   l: "kleber@ziontechgroup.com, addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]'; '"

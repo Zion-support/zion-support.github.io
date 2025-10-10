@@ -1,14 +1,14 @@
 // Code quality utilities and configurations;
 
-export const codeQualityUtils = {;;
+export const codeQualityUtils = {;
 
   // Type checking utilities;
 
   validateTypes: (value, expectedType) => {
-    //     const actualType = typeof value;;
+    //     const actualType = typeof value;
 
     if (actualType !== expectedType) {
-export const codeQualityUtils = {/* TODO: Fix JSX expression */};;
+export const codeQualityUtils = {/* TODO: Fix JSX expression */};
 
       throw new Error(`Expected ${expectedType}, got ${actualType}`)}
 
@@ -25,9 +25,9 @@ export const codeQualityUtils = {/* TODO: Fix JSX expression */};;
 
     if (typeof obj1 === 'object) {;
 
-const _keys1 = Object.keys(obj1);;
+const _keys1 = Object.keys(obj1);
 
-      const _keys2 = Object.keys(obj2);;
+      const _keys2 = Object.keys(obj2);
 
       if (keys1.length !== keys2.length) return false;
 
@@ -53,7 +53,7 @@ let timeout;
 
     return function executedFunction(...args) {;
 
-const later = () => {;;
+const later = () => {;
 
         clearTimeout(timeout);
 
@@ -93,10 +93,10 @@ let inThrottle;
 
   memoize: fn => {;
 
-const _cache = new Map();;
+const _cache = new Map();
 
     return function (...args) {
-      //       const key = JSON.stringify(args);;
+      //       const key = JSON.stringify(args);
 
       if (cache.has(key)) {,
         return cache.get(key);
@@ -106,7 +106,7 @@ const _cache = new Map();;
 
       }
 
-      //       const result = fn.apply(this, args);;
+      //       const result = fn.apply(this, args);
 
       cache.set(key, result);
 

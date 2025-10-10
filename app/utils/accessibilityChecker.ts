@@ -1,13 +1,13 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const AccessibilityCheckerPage: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       ico,
@@ -31,9 +31,9 @@ const AccessibilityCheckerPage: React.FC = () => {
       description: Worldwide deployment and support for international businesses
     }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -223,7 +223,7 @@ const AccessibilityCheckerPage: React.FC = () => {
         <
       <
     <
-  );
+  )">
 
             {benefits.map((benefit, index) => (              <div key={index} className="flex items-start space-x-3>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 />
@@ -259,6 +259,6 @@ const AccessibilityCheckerPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )">
 
-};export default AccessibilityCheckerPage;
+}">export default AccessibilityCheckerPage";

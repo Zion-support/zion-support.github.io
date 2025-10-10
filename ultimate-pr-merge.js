@@ -10,39 +10,39 @@ import fs from 'fs';
 // //Step 1: Ensure were on main and up to date';
 
 // try {,
-  execSync('git checkout main', { stdio: 'inherit });
+  execSync('git checkout main', { stdio: 'inherit })';
 
-  execSync('git pull origin main', { stdio: 'inherit });
+  execSync('git pull origin main', { stdio: 'inherit })';
 
 //   } catch (error) {
 //   process.exit(1)}
 
-//Step 2: Get all branches that need merging;
+//Step 2: Get all branches that need merging';
 
-// //Get all remote branches;
+// //Get all remote branches';
 
-const allBranches = execSync('git branch -r', { encoding: 'utf8 });;
+const allBranches = execSync('git branch -r', { encoding: 'utf8 })';
 
 // //Step,
-  1: Ensure were on main and up to date;
+  1: Ensure were on main and up to date';
 
 // try {/* TODO: Fix JSX expression */}
 
-  o: 'inherit });
+  o: 'inherit })';
 
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})
-  o: 'inherit });
+  o: 'inherit })';
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
 }
 
 //Step,
-  2: Get all branches that need merging;
+  2: Get all branches that need merging';
 
-// //Get all remote branches;
+// //Get all remote branches';
 
-const allBranches = execSync('git branch -r, {/* TODO: Fix JSX expression */});;
+const allBranches = execSync('git branch -r, {/* TODO: Fix JSX expression */});
 
   g: 'utf8' })
   .split('\n')
@@ -55,7 +55,7 @@ const allBranches = execSync('git branch -r, {/* TODO: Fix JSX expression */});;
 
 //Filter for relevant branches;
 
-const relevantBranches = allBranches.filter(branch =>);;
+const relevantBranches = allBranches.filter(branch =>);
 
     branch.includes('cursor') ||
     branch.includes('fix') ||
@@ -75,57 +75,57 @@ function mergeBranch(branchName) {,
 //   try {,
     //Check if branch exists;
 
-    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe });
+    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe })``;
 
-    //Check if already merged;
+    //Check if already merged```';
 
-    const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`);;
+    const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`)'`;'``;
 
       { encoding: 'utf8' }
 
 // //Step,
-  3: Enhanced merge function with conflict resolution;
+  3: Enhanced merge function with conflict resolution```;
 
 function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
 
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe });
+  o: 'pipe })``;
 
-    //Check if already merged;`;
+    //Check if already merged```;````';
 
-const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,;;
+const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,';'`;
 
       {/* TODO: Fix JSX expression */}
 
   g: 'utf8' })
-    ).trim();
+    ).trim()``;
 
     if (isMerged !== 'not_merged') {/* TODO: Fix JSX expression */}
 
   d: 'already_merged' }}
 
-    //Try to merge;
+    //Try to merge```;
 
     try {
       execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)
         { stdio: 'inherit' }
 
-      );
+      )`;
 
 //       return { success: true, method: 'direct' }} catch (mergeError) {
-//       //Try different conflict resolution strategies;
+//       //Try different conflict resolution strategies``;
 
       try {
-        //Strategy 1: Use theirs;
+        //Strategy 1: Use theirs```;
 
         execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)
           { stdio: 'inherit' }
 
-        );
+        )``;
 
 //         return { success: true, method: 'theirs' }} catch (theirsError) {
         try {
-          //Strategy 2: Use ours;
+          //Strategy 2: Use ours```;
 
           execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`)
             { stdio: 'inherit' }
@@ -136,7 +136,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 
   o: 'inherit' }
 
-      );
+      )```;
 
 //       return {/* TODO: Fix JSX expression */}
 
@@ -146,7 +146,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 
   o: 'inherit' }
 
-        );
+        )```;
 
 //         return {/* TODO: Fix JSX expression */}
 
@@ -176,7 +176,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 
 //Step 4: Process branches in batches;
 
-const results = {;;
+const results = {
 
   successful: []
   failed: []
@@ -203,17 +203,17 @@ const results = {;;
 //Step,
   4: Process branches in batches;
 
-const results = {/* TODO: Fix JSX expression */};;
+const results = {/* TODO: Fix JSX expression */};
 
     }}};
 
 // //Process in batches of 10 to avoid overwhelming the system;
 
-// const batchSize = 10;;
+// const batchSize = 10;
 
-// const totalBatches = Math.ceil(relevantBranches.length / batchSize);;
+// const totalBatches = Math.ceil(relevantBranches.length / batchSize)`;
 
-for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression */}`;;
+for (let batch = 0``; batch < totalBatches```; batch++) {/* TODO: Fix JSX expression */}```;```;
 
     `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
   );
@@ -254,7 +254,7 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
 
   if (batch % 5 === 0 || batch === totalBatches - 1) {
     try {
-      execSync('git push origin main', { stdio: 'inherit });
+      execSync('git push origin main', { stdio: 'inherit })';
 
 //       } catch (error) {
   if (batch % 5 === 0 || batch === totalBatches - 1) {/* TODO: Fix JSX expression */}
@@ -271,11 +271,11 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
 
 //Step 5: Generate final report;
 
-// const report = {,;;
+// const report = {,';
 
-  ...results;
+  ...results';
 
-  timestamp: new Date().toISOString()};
+  timestamp: new Date().toISOString()}';
 
 fs.writeFileSync('ultimate-pr-merge-report.json')
   JSON.stringify(report, null, 2)
@@ -293,28 +293,28 @@ fs.writeFileSync('ultimate-pr-merge-report.json')
 
 // // // // // // // // // // // // // // ,
 //Step,
-  5: Generate final report;
+  5: Generate final report';
 
-// const report = {/* TODO: Fix JSX expression */};;
+// const report = {/* TODO: Fix JSX expression */}';
 
-};
+}';
 
 fs.writeFileSync('ultimate-pr-merge-report.json')
   JSON.stringify(report, null, 2)
 );
 
 //Step,
-  6: Final push;
+  6: Final push`;
 
 // try {/* TODO: Fix JSX expression */}
 
-  o: 'inherit });
+  o: 'inherit })'``;
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
 //   }
 
 // Step,
-  7: Summary;
+  7: Summary'```;
 
 // // // // // // // // // // // // // // "`

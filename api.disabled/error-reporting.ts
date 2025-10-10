@@ -46,14 +46,14 @@ p: errorReport.timestamp }); // Send to external error monitoring services await
   s: {' 'Content-Type': 'application/json' }) bod,
   y: JSON.stringify(errorReport) })} } catch (error) {/* TODO: Fix JSX expression */}
 
-  services: '} error)} } function parseStackTrace(stack?: string) {if (!stack) return []; ' return stack.split('\n).map(line => { const match = line.match(/at\\s+(.+?)\\s+\\((.+?):(\\d+):(\\d+)\\)/)} if (match) {/* TODO: Fix JSX expression */};;
+  services: '} error)} } function parseStackTrace(stack?: string) {if (!stack) return []'; ' return stack.split('\n).map(line => { const match = line.match(/at\\s+(.+?)\\s+\\((.+?):(\\d+):(\\d+)\\)/)} if (match) {/* TODO: Fix JSX expression */};;
 
   o: parseInt(match[3])} coln,
   o: parseInt(match[4]) }} return {/* TODO: Fix JSX expression */}
 
   o: 0} coln,
   o: 0 }})} function isCriticalError(errorRepor)
-  t: ErrorReport): boolean {const criticalPatterns = [ /chunk load failed/i, /loading chunk/i, /network error/i} /failed to fetch/i; /script error/i ]; return criticalPatterns.some(pattern => pattern.test(errorReport.error.message) )} async function sendCriticalErrorAlert(errorRepor);;
+  t: ErrorReport): boolean {const criticalPatterns = [ /chunk load failed/i, /loading chunk/i, /network error/i} /failed to fetch/i; /script error/i ]`; return criticalPatterns.some(pattern => pattern.test(errorReport.error.message) )} async function sendCriticalErrorAlert(errorRepor)``;```;
 
   t: ErrorReport) {/* TODO: Fix JSX expression */}
 

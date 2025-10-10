@@ -980,7 +980,7 @@ export const,
   n:
         Advanced AI-powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.
       feature,
-  s: [;
+  s: [
 
         Automated picking
         Smart routing
@@ -1110,11 +1110,11 @@ varian,
   s: 112};
 
   ];    feature,
-  s: [;
+  s: [
 
       Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration
       Custom algorithmsCompliance tools
-  ];    features: [;
+  ];    features: [
 
       Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration,
       Custom algorithms_compliance tools],
@@ -1124,7 +1124,7 @@ varian,
     popular: false, icon: ];,
     popular: true, icon: 
   ];    feature,
-  s: [;
+  s: [
 
       Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration
       Custom algorithms_compliance tools
@@ -1649,11 +1649,9 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expr
 
   rating: number;
 
-  reviews: number}
+  reviews: number};
 
-;
-
-export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
+export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [
 
   {
     id: ai-powered-supply-chain-optimization;
@@ -1734,7 +1732,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 
     reviews: 98};
 
-  {;
+  {
 
     id: quantum-logistics-optimization-platform;
 
@@ -1813,7 +1811,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 
     reviews: 23};
 
-  {;
+  {
 
     id: iot-fleet-management-platform;
 
@@ -1892,7 +1890,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 
     reviews: 145};
 
-  {;
+  {
 
     id: blockchain-supply-chain-transparency;
 
@@ -1971,7 +1969,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 
     reviews: 56};
 
-  {;
+  {
 
     id: ai-powered-warehouse-automation;
 
@@ -2066,12 +2064,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [;
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [
 
   {/* TODO: Fix JSX expression */}
 
@@ -2586,15 +2582,15 @@ i,
   g: 4.8, review,
   s: 112}; ]; feature,
   s: [' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' Custom algorithmsCompliance tools ]; feature,
-  s: [;' 'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration'' 'Custom algorithms_compliance tools ],  popula,
+  s: [' 'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration'' 'Custom algorithms_compliance tools ],  popula,
   r: true, ico,
-  n: '📦];  popula,
+  n: '📦]';  popula,
   r: false, ico,
-  n: '⚛️];  popula,
+  n: '⚛️]';  popula,
   r: true, ico,
-  n: '🚛];  popula,
+  n: '🚛]';  popula,
   r: false, ico,
-  n: '⛓️];  popula,
+  n: '⛓️]';  popula,
   r: true, ico,
   n: '🏭']; } ];' 'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration'' 'Custom algorithmsCompliance tools ]; technolog,
   y: ['Machine Learning, Predictive Analytics, Supply Chain Management, Optimization Algorithms, AI/ML]; integration,
@@ -2737,7 +2733,7 @@ i,
   e: 2025-02-18, customer,
   s: 178, ratin,
   g: 4.8, review,
-  s: 112 } ];' import { ServiceVariant } from ../types/service-variants; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
+  s: 112 } ]';' import { ServiceVariant } from ../types/service-variants; export interface AdvancedLogisticsSupplyChainSolution2025 {/* TODO: Fix JSX expression */}
 
   s: string} websit,
   e: string} }; realImplementatio,
@@ -2746,60 +2742,60 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [; {/* TODO: Fix JSX expression */}
+  s: number}; export const,
+  advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [ {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.; launchDat,
   e: 2025-01-26; customer,
-  s: 156; ratin,
-  g: 4.8; review,
-  s: 98}; {/* TODO: Fix JSX expression */}
+  s: 156'; ratin,
+  g: 4.8'; review,
+  s: 98}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.; launchDat,
   e: 2025-02-02; customer,
-  s: 34; ratin,
-  g: 4.9; review,
-  s: 23}; {/* TODO: Fix JSX expression */}
+  s: 34'; ratin,
+  g: 4.9'; review,
+  s: 23}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.; launchDat,
   e: 2025-02-07; customer,
-  s: 234; ratin,
-  g: 4.7; review,
-  s: 145}; {/* TODO: Fix JSX expression */}
+  s: 234'; ratin,
+  g: 4.7'; review,
+  s: 145}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.; launchDat,
   e: 2025-02-12; customer,
-  s: 89; ratin,
-  g: 4.6; review,
-  s: 56}; {/* TODO: Fix JSX expression */}
+  s: 89'; ratin,
+  g: 4.6'; review,
+  s: 56}'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.; launchDat,
   e: 2025-02-18; customer,
-  s: 178; ratin,
-  g: 4.8; review,
-  s: 112} ];
+  s: 178'; ratin,
+  g: 4.8'; review,
+  s: 112} ]';

@@ -88,7 +88,7 @@ export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content}
   severityThreshold: ErrorSeverity.LOW
 };
 
-export const _errorMessages = {;;
+export const _errorMessages = {
 
   network: {
     offline: 'You are currently offline. Please check your internet connection.',
@@ -112,7 +112,7 @@ $4}
 
 };
 
-export class AppError extends Error {;
+export class AppError extends Error {
 
 constructor(
 

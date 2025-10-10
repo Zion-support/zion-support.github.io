@@ -1,10 +1,10 @@
-import React from 'react;
+import React from 'react';
 
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from lucide-react;
 
 ;
 
-const EnhancedServicesShowcase: React.FC = () => {const services = [;;;
+const EnhancedServicesShowcase: React.FC = () => {const services = [';';
 
     {
       title: 'AI Solutions,
@@ -74,7 +74,7 @@ stats: '95% Efficiency]
                     {feature}
 
                   </li>
-                ));
+                ))"`';
 
               </ul>
               
@@ -85,7 +85,7 @@ stats: '95% Efficiency]
                 Learn More <ArrowRight className="w-4 h-4 ml-2 />
               </a>
             </div>
-          ));
+          ))"'``;
 
         </div>
 
@@ -100,8 +100,8 @@ stats: '95% Efficiency]
         </div>
     </section>
 )]
-    };
+    }">
 
-export default EnhancedServicesShowcase;
+export default EnhancedServicesShowcase'"```;
 
 }

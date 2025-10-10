@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react;
+import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react';
 
 import Navigation from '../components/Navigation;
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const AIContentStudioPage: React.FC = () => {;
+const AIContentStudioPage: React.FC = () => {
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: FileText,
@@ -116,6 +116,6 @@ const features = [;;;
 
       <Footer />
     </div>
-  )};
+  )}">
 
-export default AIContentStudioPage;
+export default AIContentStudioPage";

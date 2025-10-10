@@ -147,7 +147,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     valid: boolean,
     missing: string[]}
 
-  } {;
+  } {
 
 const missing: string[] = [],
     for (const varName of requiredVars) {,
@@ -216,7 +216,7 @@ const missing: string[] = [],
       headers['Authorization'] = `Bearer ${this.config.apiKey}`
   public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
 
-    };
+    }```;
 
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
 
@@ -263,8 +263,8 @@ export const isDevelopment = () => envConfig.isDevelopment();;
 
 export const isTest = () => envConfig.isTest();;
 
-export const getConfig = () => envConfig.getConfig();;
+export const getConfig = () => envConfig.getConfig();`;
 
-export const getApiHeaders = () => envConfig.getApiHeaders();;
+export const getApiHeaders = () => envConfig.getApiHeaders()``;```;
 
 `

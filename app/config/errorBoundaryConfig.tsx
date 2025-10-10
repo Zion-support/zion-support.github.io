@@ -4,7 +4,7 @@
 /** * Default error messages
  */;
 
-const DEFAULT_ERROR_MESSAGES = {;;;
+const DEFAULT_ERROR_MESSAGES = {;
 
   default: 'Something went wrong. Please try again.,
   network: 'Network connection issue. Please check your internet connection.,
@@ -35,9 +35,9 @@ notFound: NotFoundFallback,]
 
 /**
  * Default error fallback component
- */;
+ */';
 
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }); {
+function DefaultErrorFallback({ error, resetError }: { error: Error'; resetError: () => void })'; {
   return (
 
     <div>
@@ -68,7 +68,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         {process.env['NODE_ENV'] === 'development && (
 
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto></pr>{error.stack}</pre>
-        );
+        )";
 
         <div>
           <button
@@ -79,7 +79,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             Try Again
           </button>
           <button
-            onClick={() =></button> (window.location.href = /);
+            onClick={() =></button> (window.location.href = /)";
 
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors
           >
@@ -93,9 +93,9 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
 
 /**
  * Network error fallback component
- */;
+ */">
 
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }); {
+function NetworkErrorFallback({ resetError }: { error: Error"> resetError: () => void })"; {
   return (
 
     <div>
@@ -136,7 +136,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
 
 /**
  * Not found error fallback component
- */;
+ */";
 
 function NotFoundFallback(): JSX.Element {
   return (
@@ -150,14 +150,14 @@ function NotFoundFallback(): JSX.Element {
         </p>
         <div>
           <button
-            onClick={() =></button> (window.location.href = /);
+            onClick={() =></button> (window.location.href = /)";
 
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors
           >
             Go Home
           </button>
           <button
-            onClick={() =></button> window.history.back();
+            onClick={() =></button> window.history.back()";
 
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors
           >
@@ -207,6 +207,6 @@ export function formatErrorForLogging(error: Error): Record<string, unknown></st
     type: getErrorType(error),
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown,
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown,;)
-};)
-export default getErrorBoundaryConfig;}
+    url: typeof window !== 'undefined' ? window.location.href : 'unknown,">)
+}">)
+export default getErrorBoundaryConfig";}

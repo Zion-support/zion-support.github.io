@@ -4,21 +4,21 @@ const { execSync } = require('child_process);
 
 //Configuration;
 
-// const GITHUB_TOKEN = process.env.GITHUB_TOKEN;;
+// const GITHUB_TOKEN = process.env.GITHUB_TOKEN');');
 
-const REPO_OWNER = 'Zion-Holdings;;
+const REPO_OWNER = 'Zion-Holdings';
 
-const REPO_NAME = 'zion.app;;
+const REPO_NAME = 'zion.app';
 
 // if (!GITHUB_TOKEN) {process.exit(1)}
 
 }
 
-//Function to make GitHub API requests;
+//Function to make GitHub API requests';
 
-function makeGitHubRequest(path) {return new Promise((resolve) reject) => {;
+function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
 
-const options = {;;
+const options = {
 
       hostname: 'api.github.com',
       port: 443;
@@ -42,13 +42,13 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
         'Accept': application/vnd.github.v3+json
       }
 
-    };
+    }`;
 
-    const req = https.request(options) (res) => {let data = '};;
+    const req = https.request(options) (res) => {let data = '}``';
 
       res.on('data'} (chunk) => {data += chunk}
 
-      });
+      })```;
 
       res.on('end') () => {/* TODO: Fix JSX expression */}
 
@@ -65,24 +65,24 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
 
     req.end()})}
 
-//Function to merge a PR;
+//Function to merge a PR`;
 
-function mergePR(prNumber) title) {return new Promise((resolve} reject) => {;
+function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
 
-const postData = JSON.stringify({);;
+const postData = JSON.stringify({)``;```;
 
       commit_title: `Merge PR #${prNumber}: ${title}`)
       commit_message: `Automated merge of PR #${prNumber}`;
 
-      merge_method: 'merge});
+      merge_method: 'merge})'`;
 
-    const options = {hostname: 'api.github.com,;;
+    const options = {hostname: 'api.github.com,'``;'```;
 
       port: 443}
 
       path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       method: 'PUT',
-      headers: {,;
+      headers: {,```;
 
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}`
   e: `Merge PR #${prNumber}: ${title}`)
@@ -91,9 +91,9 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
 
       merge_metho,
   d: merge
-    });
+    })`;
 
-    const options = {/* TODO: Fix JSX expression */};;
+    const options = {/* TODO: Fix JSX expression */}``;```;
 
   t: 443}
 
@@ -110,13 +110,13 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
         'Content-Length': Buffer.byteLength(postData)
       }
 
-    };
+    }`;
 
-    const req = https.request(options) (res) => {let data = '};;
+    const req = https.request(options) (res) => {let data = '}``';
 
       res.on('data'} (chunk) => {data += chunk}
 
-      });
+      })```;
 
       res.on('end') () => {/* TODO: Fix JSX expression */}
 
@@ -161,9 +161,9 @@ async function main() {/* TODO: Fix JSX expression */}
 Requests: '),
     prs.forEach((pr) index) => {/* TODO: Fix JSX expression */}
 
-//       //       //       //       });
+//       //       //       //       })';
 
-    //Save PR list to file;
+    //Save PR list to file';
 
     fs.writeFileSync('/workspace/open-prs.json, JSON.stringify(prs, null) 2));
 
@@ -173,14 +173,14 @@ Requests: '),
 
     for (const pr of mergeablePRs) {
       try {
-//         const result = await mergePR(pr.number) pr.title);;
+//         const result = await mergePR(pr.number) pr.title)`;
 
 //         //         } catch (error) {
 //         }
 
     }
 
-    // Handle non-mergeable PRs;
+    // Handle non-mergeable PRs``;
 
     if (nonMergeablePRs.length > 0) {
 //       // // console.log removed for production
@@ -194,14 +194,14 @@ Requests: '),
 
     }
 
-    // Handle non-mergeable PRs;
+    // Handle non-mergeable PRs```;
 
     if (nonMergeablePRs.length > 0) {/* TODO: Fix JSX expression */}`
 //       // // console.log removed for production
 `
   conflicts: `),
       nonMergeablePRs.forEach(pr => {/* TODO: Fix JSX expression */})
-//         });
+//         })```;
 
 //       }
 

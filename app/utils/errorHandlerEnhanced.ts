@@ -58,7 +58,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 
 }
 
-export const errorHandler = (error: AppError | Error) => {;;
+export const errorHandler = (error: AppError | Error) => {
 
 const isDevelopment = process.env.NODE_ENV === 'development;;
 

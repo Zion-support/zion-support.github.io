@@ -1,12 +1,12 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 const PagePage: React.FC = () => {
   return (
@@ -111,7 +111,7 @@ const PagePage: React.FC = () => {
     </>
   );
 
-  );  ));)
-};
+  )">  ))">)
+}">
 
-export default PagePage;
+export default PagePage";

@@ -7,7 +7,7 @@
 
  */
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -15,21 +15,21 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;;
+const __filename = fileURLToPath(import.meta.url);;
 
 // __dirname removed
 // console.log removed for production
 // Create accessibility improvements for the main HTML file;
 
-const indexPath = path.join(__dirname, ../dist/index.html);;
+const indexPath = path.join(__dirname, ../dist/index.html);
 
-if (fs.existsSync(indexPath)) {;
+if (fs.existsSync(indexPath)) {
 
-let indexContent = fs.readFileSync(indexPath, utf8);;
+let indexContent = fs.readFileSync(indexPath, utf8);
 
   // Add accessibility improvements;
 
-const accessibilityScript = ;;
+const accessibilityScript = ;
 
     <script></scrip>
       // Accessibility enhancements
@@ -38,9 +38,9 @@ const accessibilityScript = ;;
 
         // Skip to main content functionality;
 
-function addSkipLink() {;
+function addSkipLink() {
 
-const skipLink = document.createElement(a);;
+const skipLink = document.createElement(a);
 
           skipLink.href = #main-content;
 
@@ -61,15 +61,15 @@ const skipLink = document.createElement(a);;
 
             padding: 8 px;
 
-            text-decoration: none;
+            text-decoration: none';
 
-            z-index: 1000;
+            z-index: 1000';
 
-            border-radius: 4 px;
+            border-radius: 4 px';
 
-            transition: top 0.3 s;
+            transition: top 0.3 s';
 
-          \;
+          \';
 
           skipLink.addEventListener('focus, function() {
             this.style.top = 6 px});
@@ -81,9 +81,9 @@ const skipLink = document.createElement(a);;
 
         // High contrast mode toggle;
 
-function addHighContrastToggle() {;
+function addHighContrastToggle() {
 
-const toggle = document.createElement(button);;
+const toggle = document.createElement(button);
 
           toggle.textContent = High Contrast;
 
@@ -123,9 +123,9 @@ const toggle = document.createElement(button);;
 
         // Font size controls;
 
-function addFontSizeControls() {;
+function addFontSizeControls() {
 
-const controls = document.createElement(div);;
+const controls = document.createElement(div);
 
           controls.className = font-size-controls;
 
@@ -156,31 +156,31 @@ const controls = document.createElement(div);;
 
           ;
 
-const increaseBtn = document.createElement(button);;
+const increaseBtn = document.createElement(button);
 
           increaseBtn.textContent = A+;
 
-          increaseBtn.addEventListener(click, () => {;
+          increaseBtn.addEventListener(click, () => {
 
-const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);;
+const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
             document.documentElement.style.fontSize = (currentSize + 2) + px});
 
           ;
 
-const decreaseBtn = document.createElement(button);;
+const decreaseBtn = document.createElement(button);
 
           decreaseBtn.textContent = A-;
 
-          decreaseBtn.addEventListener(click, () => {;
+          decreaseBtn.addEventListener(click, () => {
 
-const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);;
+const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
             document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + px});
 
           ;
 
-const resetBtn = document.createElement(button);;
+const resetBtn = document.createElement(button);
 
           resetBtn.textContent = Reset;
 
@@ -200,20 +200,20 @@ const resetBtn = document.createElement(button);;
 function enhanceFocusManagement() {
           // Trap focus in modals
           document.addEventListener('keydown, function(e) {
-            if (e.key === Tab) {;
+            if (e.key === Tab) {
 
-const modal = document.querySelector('.modal:not([style*="display: none]));;
+const modal = document.querySelector('.modal:not([style*="display: none]));
 
-              if (modal) {;
+              if (modal) {
 
-const focusableElements = modal.querySelectorAll(;;
+const focusableElements = modal.querySelectorAll(;
 
                   'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
                 );
 
-                const firstElement = focusableElements[0];;
+                const firstElement = focusableElements[0];
 
-                const lastElement = focusableElements[focusableElements.length - 1];;
+                const lastElement = focusableElements[focusableElements.length - 1];
 
                 if (e.shiftKey) {
                   if (document.activeElement === firstElement) {
@@ -234,13 +234,13 @@ const focusableElements = modal.querySelectorAll(;;
             }
 
             // Close modals with Escape key
-            if (e.key === Escape) {;
+            if (e.key === Escape) {
 
-const modal = document.querySelector('.modal:not([style*="display: none]));;
+const modal = document.querySelector('.modal:not([style*="display: none]));
 
-              if (modal) {;
+              if (modal) {
 
-const closeBtn = modal.querySelector('[aria-label="Close], .close-btn);;
+const closeBtn = modal.querySelector('[aria-label="Close], .close-btn);
 
                 if (closeBtn) closeBtn.click()}
 
@@ -253,15 +253,15 @@ const closeBtn = modal.querySelector('[aria-label="Close], .close-btn);;
 function addAriaLabels() {
           // Add aria-labels to buttons without text;
 
-const iconButtons = document.querySelectorAll(button:not([aria-label]):not([aria-labelledby]));;
+const iconButtons = document.querySelectorAll(button:not([aria-label]):not([aria-labelledby]));
 
-          iconButtons.forEach(button => {;
+          iconButtons.forEach(button => {
 
-const icon = button.querySelector(svg, i);;
+const icon = button.querySelector(svg, i);
 
-            if (icon) {;
+            if (icon) {
 
-const iconName = icon.getAttribute(class) || icon.tagName.toLowerCase();;
+const iconName = icon.getAttribute(class) || icon.tagName.toLowerCase();
 
               button.setAttribute('aria-label', \`\${iconName} button\)}
 
@@ -269,7 +269,7 @@ const iconName = icon.getAttribute(class) || icon.tagName.toLowerCase();;
 
           // Add role="button to clickable divs;
 
-const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer]);;
+const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer]);
 
           clickableDivs.forEach(div => {
             if (!div.getAttribute('role)) {
@@ -281,7 +281,7 @@ const clickableDivs = document.querySelectorAll('div[onclick], div[class*="curso
 
           // Add aria-expanded to collapsible elements;
 
-const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse]);;
+const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse]);
 
           collapsibles.forEach(element => {
             if (!element.getAttribute('aria-expanded)) {
@@ -291,9 +291,9 @@ const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="co
 
         // Announce page changes to screen readers;
 
-function addLiveRegion() {;
+function addLiveRegion() {
 
-const liveRegion = document.createElement(div);;
+const liveRegion = document.createElement(div);
 
           liveRegion.setAttribute('aria-live', polite);
 
@@ -326,7 +326,7 @@ const liveRegion = document.createElement(div);;
 
           // Announce navigation changes;
 
-const originalPushState = history.pushState;;
+const originalPushState = history.pushState;
 
           history.pushState = function() {
             originalPushState.apply(history, arguments);
@@ -349,7 +349,7 @@ const originalPushState = history.pushState;;
 
         // Add high contrast styles;
 
-const highContrastStyles = \;;
+const highContrastStyles = \;
 
           .high-contrast {
             filter: contrast(150%) brightness(120%)}
@@ -365,14 +365,14 @@ const highContrastStyles = \;;
 
         ;
 
-const styleSheet = document.createElement(style);;
+const styleSheet = document.createElement(style);
 
-        styleSheet.textContent = highContrastStyles;
+        styleSheet.textContent = highContrastStyles`;
 
-        document.head.appendChild(styleSheet)})();
+        document.head.appendChild(styleSheet)})()``;
 
     </script>
-  ;
+  ```;
 
   // Insert accessibility script before closing body tag
   indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>);
@@ -384,7 +384,7 @@ const styleSheet = document.createElement(style);;
 
 // Create accessibility statement;
 
-const accessibilityStatement = # Accessibility Statement;;
+const accessibilityStatement = # Accessibility Statement;
 
 // 1. Generate accessibility report;
 
@@ -392,7 +392,7 @@ function generateAccessibilityReport() {
   // console.log removed for production
 ;
 
-const accessibilityReport = {;;
+const accessibilityReport = {
 
     timestamp: new Date().toISOString()
     version: '1.0.0,
@@ -400,9 +400,9 @@ const accessibilityReport = {;;
         summary: {
       totalIssues: 0;
 
-      criticalIssues: 0;
+      criticalIssues: 0';
 
-      warnings: 0;
+      warnings: 0';
 
       passed: 0},
     checks: [
@@ -456,7 +456,7 @@ const accessibilityReport = {;;
       "Maintain color contrast standards,
       "Keep ARIA labels up to date
     ]
-  };
+  }';
 
   fs.writeFileSync(
 
@@ -471,9 +471,9 @@ const accessibilityReport = {;;
 
 function generateAccessibilityChecklist() {
   // console.log removed for production
-;
+`;
 
-const checklist = {;;
+const checklist = {``;```;
 
     title: "Zion Tech Group Accessibility Checklist
     version: "1.0.0"

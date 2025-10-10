@@ -125,18 +125,18 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 
 ;
 
-const _sitemap = this.buildSitemapXML(pages);;
+const _sitemap = this.buildSitemapXML(pages);
 
     this.createSitemapFile(sitemap)}
 
   buildSitemapXML(pages) {
-    //     const baseUrl = this.seoConfig.siteUrl;;
+    //     const baseUrl = this.seoConfig.siteUrl;
 
-    //     const lastmod = new Date().toISOString().split(T)[0];;
+    //     const lastmod = new Date().toISOString().split(T)[0];
 
 ;
 
-let _xml = '<?xml version="1.0" encoding="UTF-8?>\n;;
+let _xml = '<?xml version="1.0" encoding="UTF-8?>\n;
 
     xml += '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9>\n;
 
@@ -179,7 +179,7 @@ let _xml = '<?xml version="1.0" encoding="UTF-8?>\n;;
 
   setupRobotsTxt() {;
 
-const robotsTxt = User-agent: *,;;
+const robotsTxt = User-agent: *,;
 
 Allow: /,
 ,
@@ -232,7 +232,7 @@ Disallow: /middleware/;
   setupCanonicalUrls() {
     // Add canonical URL;
 
-    const _canonical = document.createElement(link);;
+    const _canonical = document.createElement(link);
 
     canonical.rel = canonical;
 
@@ -471,7 +471,7 @@ Disallo,
 
   optimizeImages() {;
 
-const _images = document.querySelectorAll(img);;
+const _images = document.querySelectorAll(img);
 
     images.forEach(img => {)
       // Add loading="lazy for non-critical images;)
@@ -542,14 +542,14 @@ const _images = document.querySelectorAll(img);;
   optimizeFonts() {
     // Preload critical fonts;
 
-    const criticalFonts = [;;
+    const criticalFonts = [;
 
       https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
     ];
 
     criticalFonts.forEach(font => {);
 
-const _link = document.createElement(link);;
+const _link = document.createElement(link);
 
       link.rel = preload;
 
@@ -569,7 +569,7 @@ const _link = document.createElement(link);;
   optimizeCriticalCSS() {
     // Inline critical CSS for above-the-fold content;
 
-    const criticalCSS = ;;
+    const criticalCSS = ;
 
       body { font-family: Inter, sans-serif; margin: 0; padding: 0}
 
@@ -605,7 +605,7 @@ const _link = document.createElement(link);;
 
 ;
 
-const _style = document.createElement(style);;
+const _style = document.createElement(style);
 
     style.textContent = criticalCSS;
 
@@ -678,7 +678,7 @@ const _style = document.createElement(style);;
 
   updateMetaTag(name, content) {/* TODO: Fix JSX expression */}";
 
-const _meta = document.querySelector(`meta[name="${name}"]);;
+const _meta = document.querySelector(`meta[name="${name}"]);
 
     if (meta) {/* TODO: Fix JSX expression */}
 
@@ -690,7 +690,7 @@ const _meta = document.querySelector(`meta[name="${name}"]);;
 
   updateOGTag(property, content) {/* TODO: Fix JSX expression */}";
 
-const _meta = document.querySelector(`meta[property="${property}"]);;
+const _meta = document.querySelector(`meta[property="${property}"]);
 
     if (meta) {/* TODO: Fix JSX expression */}
 
@@ -702,7 +702,7 @@ const _meta = document.querySelector(`meta[property="${property}"]);;
 
   updateTwitterTag(name, content) {/* TODO: Fix JSX expression */}";
 
-const _meta = document.querySelector(`meta[name="${name}"]);;
+const _meta = document.querySelector(`meta[name="${name}"]);
 
     if (meta) {/* TODO: Fix JSX expression */}
 
@@ -714,7 +714,7 @@ const _meta = document.querySelector(`meta[name="${name}"]);;
 
   generateBreadcrumbs(items) {;
 
-const breadcrumbSchema = {;;
+const breadcrumbSchema = {;
 
       '@context': 'https: //schema.org,
       '@type': 'BreadcrumbList,
@@ -750,7 +750,7 @@ const breadcrumbSchema = {;;
 
 // Initialize SEO optimizer;
 
-// const seoOptimizer = new SEOOptimizer();;
+// const seoOptimizer = new SEOOptimizer();
 
 // Export for use in other modules;
 

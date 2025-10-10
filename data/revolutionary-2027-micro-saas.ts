@@ -1,4 +1,4 @@
-export const revolutionary2027MicroSaasServices = [{name: 'Revolutionary 2027 Micro-SaaS Platform,;;
+export const revolutionary2027MicroSaasServices = [{name: 'Revolutionary 2027 Micro-SaaS Platform,';';
 
     path: '/services/revolutionary-2027-micro-saas-platform',
     description: 'Next-generation 2027 micro-SaaS development and deployment',

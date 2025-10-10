@@ -1,10 +1,10 @@
-'use client;
+'use client';
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from 'react';
 
-import Link from 'next/link;
+import Link from 'next/link';
 
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react;
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
 
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react;
 
@@ -20,7 +20,7 @@ const [microSaasOpen, setMicroSaasOpen] = useState(false);
 
 const [isScrolled, setIsScrolled] = useState(false);
 
-const handleResize = () => {;
+const handleResize = () => {
     if (window.innerWidth >= 1024) {
       setIsOpen(false);
 
@@ -28,7 +28,7 @@ const handleResize = () => {;
 
   }
 
-const handleScroll = () => {;
+const handleScroll = () => {
     setIsScrolled(window.scrollY > 50);
 
   };
@@ -59,27 +59,27 @@ const Navigation: React.FC = () => {  const [isOpen, setIsOpen] = useState(false
 
   }, []);
 
-const closeAllMenus = () => {;;
+const closeAllMenus = () => {
 
     setServicesOpen(false);
 
-    setAiServicesOpen(false);
+    setAiServicesOpen(false)';
 
-    setItServicesOpen(false);
+    setItServicesOpen(false)';
 
-    setMicroSaasOpen(false);
+    setMicroSaasOpen(false)';
 
-    setIsOpen(false);
-
-  }
-
-const toggleMenu = () => {;;
-
-    setIsOpen(!isOpen);
+    setIsOpen(false)';
 
   }
 
-const aiServices = [;;
+const toggleMenu = () => {';
+
+    setIsOpen(!isOpen)';
+
+  }
+
+const aiServices = [';';
 
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing },
@@ -113,9 +113,9 @@ const aiServices = [;;
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI },
     { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI }
 
-  ];
+  ]';
 
-const itServices = [;;
+const itServices = [';';
 
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration },
@@ -147,9 +147,9 @@ const itServices = [;;
     { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services },
     { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions }
 
-  ];
+  ]';
 
-const microSaasServices = [;;
+const microSaasServices = [';';
 
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence },
@@ -184,9 +184,9 @@ const microSaasServices = [;;
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education },
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing }
 
-  ];
+  ]';
 
-const emergingTech = [;;
+const emergingTech = [';';
 
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions },
     { name: 'Robotics & Automation', href: '/robotics', icon: Brain, description: 'Intelligent Robotics },
@@ -198,7 +198,7 @@ const emergingTech = [;;
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions },
     { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI }
 
-  ];
+  ]';
 
   return (
 
@@ -612,8 +612,8 @@ const emergingTech = [;;
 
       </div>
       </nav>
-    );
+    )">
 
   }
 
-export default Navigation;
+export default Navigation"```;

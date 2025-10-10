@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
 import React, { useState, useEffect } from 'react;
 
-const UltimateBusinessIntelligence2025Banner = () => {;;;
+const UltimateBusinessIntelligence2025Banner = () => {
 
 import { Link } from react-router-dom;
 
-const _UltimateBusinessIntelligence2025Banner = () => {;;
+const _UltimateBusinessIntelligence2025Banner = () => {
 
-const [currentSlide, setCurrentSlide] = useState(0);
+const [currentSlide, setCurrentSlide] = useState(0)';
 
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true)';
 
-  const content = [;;;
+  const content = [';';';
 
     {
       id: 'ultimate-business-intelligence-revolution,
@@ -50,15 +50,15 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025]
 
   ];
 
-  useEffect(() => {;
+  useEffect(() => {
 
-const timer = setInterval(() => {;;
+const timer = setInterval(() => {
 
       setCurrentSlide((prev) => (prev + 1) % content.length)}, 5000);
 
     return () => clearInterval(timer)}, [content.length]);
 
-  const handleClose = () => {;;
+  const handleClose = () => {
 
     setIsVisible(false)};
 
@@ -193,11 +193,11 @@ const timer = setInterval(() => {;;
               <div className="text-3xl font-bold text-cyan-400 mb-2>{stat.value}</div>
               <div className="text-gray-300>{stat.label}</div>
     </section>
-  );
+  )';
 
-export default UltimateBusinessIntelligence2025Banner;
+export default UltimateBusinessIntelligence2025Banner';
 
-'use client;
+'use client';
 
 import React, { useState, useEffect } from 'react;
 
@@ -213,20 +213,20 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(true)';
 
-  const content = [;;
+  const content = [';
 
   // TOD,
-  O: Add items;
+  O: Add items';
 
-];
+]'`;
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}'">
 
   i,
   d: 'ultimate-business-intelligence-revolution,
@@ -236,7 +236,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       descriptio,
   n: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.,
       ur,
-  l: /blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough;
+  l: /blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough'">
 
       typ,
   e: 'Blog Post,
@@ -245,7 +245,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
 
   O: Add content}
 
-};
+}'">
 
   efficienc,
   y: '300%,
@@ -276,7 +276,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       descriptio,
   n: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.,
       ur,
-  l: /services/automation;
+  l: /services/automation'"``;
 
       typ,
   e: 'Service,
@@ -327,6 +327,6 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300>{stat.label}</div>
     </section>
-  )};
+  )}">
 
-export default UltimateBusinessIntelligence2025Banner;
+export default UltimateBusinessIntelligence2025Banner'"```;

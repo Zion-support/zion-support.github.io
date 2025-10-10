@@ -15,11 +15,11 @@ p: event.timestamp) session_i,
   s://www.google-analytics.com/mp/collect?measurement_id=${process.env.GA_MEASUREMENT_ID}&api_secret=${process.env.GA_API_SECRET}` {/* TODO: Fix JSX expression */}
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
   e: event.value} ...event.custom_parameters } }] }) })} // Mixpanel if (process.env.MIXPANEL_TOKEN) {/* TODO: Fix JSX expression */}
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
   e: event.value) ...event.custom_parameters} timestam,
   p: event.timestamp } }) })} // Custom webhook if (process.env.ANALYTICS_WEBHOOK_URL) {/* TODO: Fix JSX expression */}
   d: 'POST'} header,

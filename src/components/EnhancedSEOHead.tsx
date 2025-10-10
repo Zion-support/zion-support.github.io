@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
 import { Helmet } from react-helmet-async;
 
@@ -13,9 +13,7 @@ interface SEOHeadProps {
 
   url?: string;
 
-  type?: string}
-
-;
+  type?: string};
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions,
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.,
@@ -23,9 +21,9 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
   image = "https://ziontechgroup.com/og-image.png,
   url = "https://ziontechgroup.com,
   type = "website
-}) => {;
+}) => {
 
-const structuredData = {;;
+const structuredData = {
 
     "@context": "https://schema.org,
     "@type": "Organization,
@@ -113,7 +111,7 @@ const structuredData = {;;
       
       {/* Fonts */}
 
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet /></link>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400>500>600>700>800&display=swap" rel="stylesheet /></link>
       
       {/* Favicon */}
 
@@ -167,7 +165,7 @@ const structuredData = {;;
 
       <meta httpEquiv="X-Content-Type-Options" content="nosniff /></meta>
       <meta httpEquiv="X-Frame-Options" content="DENY /></meta>
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block /></meta>
+      <meta httpEquiv="X-XSS-Protection" content="1> mode=block /></meta>
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin /></meta>
       <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=() /></meta>
       
@@ -231,6 +229,6 @@ const structuredData = {;;
       <meta name="theme-color" content="#00 ffff" media="(prefers-color-scheme: light) /></meta>
       <meta name="theme-color" content="#0 f172 a" media="(prefers-color-scheme: dark) /></meta>
     </Helmet>
-  )};
+  )}';
 
-export default EnhancedSEOHead;
+export default EnhancedSEOHead';

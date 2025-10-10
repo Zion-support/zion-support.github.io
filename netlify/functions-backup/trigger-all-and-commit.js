@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
     // Trigger all and commit simulation;
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -22,17 +22,17 @@ function: 'trigger-all-and-commit',
         trigger: {,
           status: 'active,;
 
-functionsTriggered: 0;
+functionsTriggered: 0';
 
           lastTrigger: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */}';';
 
         'Access-Control-Allow-Origin': '*'}
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
   r: new Date().toISOString()}
 
         }})};
@@ -72,10 +72,10 @@ function: 'trigger-all-and-commit'}
 
 };
 
-        timestamp: new Date().toISOString(),' function: 'trigger-all-and-commit',' source: event.source || 'unknown', trigger: {' status: 'active, functionsTriggered: 0;
+        timestamp: new Date().toISOString(),' function: 'trigger-all-and-commit',' source: event.source || 'unknown', trigger: {' status: 'active, functionsTriggered: 0';
 
-        lastTrigger: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'trigger-all-and-commit }) }} };
+        lastTrigger: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'trigger-all-and-commit }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -92,4 +92,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'trigger-all-and-commit }) }} };
+  n: 'trigger-all-and-commit }) }} }';

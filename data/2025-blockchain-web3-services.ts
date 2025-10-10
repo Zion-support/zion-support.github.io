@@ -5,7 +5,7 @@ import React from react;
 
 export interface BlockchainWeb3Service;
 
-export interface BlockchainWeb3Service {;
+export interface BlockchainWeb3Service {
 
   id: string;
 
@@ -224,7 +224,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
 
     implementationDetails: Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.,
     roi: NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.,
-    useCases: [;
+    useCases: [
 
     realImplementatio,
   n: true,
@@ -233,7 +233,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     ro,
   i: NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.
     useCase,
-  s: [;
+  s: [
 
       NFT investment research
       Portfolio optimization
@@ -418,7 +418,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
 
     implementationDetails: Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.,
     roi: Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.,
-    useCases: [;
+    useCases: [
 
     realImplementatio,
   n: true,
@@ -427,7 +427,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     ro,
   i: Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.
     useCase,
-  s: [;
+  s: [
 
       Food safety tracking
       Pharmaceutical authenticity
@@ -586,7 +586,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
 
     implementationDetails: Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.,
     roi: Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.,
-    useCases: [;
+    useCases: [
 
     suppor,
   t: unknown,
@@ -623,7 +623,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     ro,
   i: Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.
     useCase,
-  s: [;
+  s: [
 
       Social networking
       Content creation and sharing
@@ -995,7 +995,7 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
 
 ];
 
-export interface BlockchainWeb3Service {;
+export interface BlockchainWeb3Service {
 
   id: string;
 
@@ -1061,11 +1061,9 @@ export interface BlockchainWeb3Service {;
 
   rating: number;
 
-  reviews: number}
+  reviews: number};
 
-;
-
-export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
+export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [
 
   {,
     id: decentralized-identity-management;
@@ -1139,7 +1137,7 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
 
     reviews: 850};
 
-  {;
+  {
 
     id: ai-powered-defi-yield-optimizer;
 
@@ -1212,7 +1210,7 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
 
     reviews: 6200};
 
-  {;
+  {
 
     id: nft-marketplace-intelligence-platform;
 
@@ -1285,7 +1283,7 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
 
     reviews: 2100};
 
-  {;
+  {
 
     id: blockchain-supply-chain-traceability;
 
@@ -1358,7 +1356,7 @@ export const blockchainWeb3 Services2025: BlockchainWeb3 Service[] = [;
 
     reviews: 680};
 
-  {;
+  {
 
     id: web3-social-media-platform;
 
@@ -1507,12 +1505,10 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
+  blockchainWeb3Services2025: BlockchainWeb3Service[] = [
 
   {/* TODO: Fix JSX expression */}
 
@@ -2189,7 +2185,7 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   e: 2024-01-01, customer,
   s: 25000, ratin,
   g: 4.6, review,
-  s: 18000};' ]; 'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance ]; integration,
+  s: 18000}';' ]; 'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance ]; integration,
   s: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms], suppor,
   t: 'Community support, developer documentation, custom development services, and enterprise solutions.', ' 'Community support, developer documentation, custom development services, and enterprise solutions., complianc,
   e: ['GDPR, CCPA, SOC 2 Type II, ISO 27001], lin,
@@ -2297,13 +2293,13 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   r: boolean; launchDat,
   e: string; customer,
   s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  blockchainWeb3Services2025: BlockchainWeb3Service[] = [; {/* TODO: Fix JSX expression */}
+  g: number'; review,
+  s: number} '; export const,
+  blockchainWeb3Services2025: BlockchainWeb3Service[] = ['; {/* TODO: Fix JSX expression */}
 
   s: 30} setupTim,
-  e: '1-2 days}; enterpris,
-  e: Custom pricing }; feature,
+  e: '1-2 days}'; enterpris,
+  e: Custom pricing }'; feature,
   s: [,' 'Self-sovereign identity managementZero-knowledge proof verificationMulti-chain identity supportDecentralized identifiers (DIDs)Verifiable credentialsPrivacy-preserving authenticationCross-platform identity portabilityAdvanced encryption standards';' Compliance with W3C standardsAPI for enterprise integration ]; benefit,
   s: [,' Eliminate identity theft and fraudReduce compliance costs by 60%Improve user privacy and controlEnable seamless cross-platform authenticationReduce data breach risks ]; targetAudienc,
   e: [,' 'Financial institutionsHealthcare providersGovernment agenciesEducational institutionsE-commerce platformsSocial media companies ]; marketPositio,
@@ -2312,11 +2308,11 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   s: ['Microsoft Entra ID, Okta, Auth0, Ping Identity, ForgeRock]; techStac,
   k: [Ethereum, Polygon, Solana, IPFS, React, Node.js, PostgreSQL, Redis]; realImplementatio,
   n: true; implementationDetail,
-  s: 'Production-ready decentralized identity platform with enterprise-grade security, mobile SDK, and comprehensive API. Includes admin dashboard and compliance tools.; ro,
-  i: Organizations achieve 400% ROI through reduced fraud, improved compliance, and enhanced user trust.; useCase,
+  s: 'Production-ready decentralized identity platform with enterprise-grade security, mobile SDK, and comprehensive API. Includes admin dashboard and compliance tools.'; ro,
+  i: Organizations achieve 400% ROI through reduced fraud, improved compliance, and enhanced user trust.'; useCase,
   s: [,' 'KYC/AML complianceHealthcare patient identityEducational credentialsProfessional certificationsFinancial services authenticationGovernment digital identity ]; integration,
   s: ['Salesforce, SAP, Oracle, Microsoft 365, Custom enterprise systems]; suppor,
-  t: '24/7 technical support, compliance consulting, custom development, and dedicated success manager.; complianc,
+  t: '24/7 technical support, compliance consulting, custom development, and dedicated success manager.'; complianc,
   e: ['GDPR, CCPA, HIPAA, SOC 2 Type II, ISO 27001, W3C DID standards]; lin,
   k: http,
   s://ziontechgroup.com/decentralized-identity-management; ico,
@@ -2324,13 +2320,13 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   r: from-indigo-500 to-purple-600; popula,
   r: true; launchDat,
   e: 2024-02-20; customer,
-  s: 1200; ratin,
-  g: 4.8; review,
-  s: 850}; {/* TODO: Fix JSX expression */}
+  s: 1200'; ratin,
+  g: 4.8'; review,
+  s: 850}'; {/* TODO: Fix JSX expression */}
 
   s: 14} setupTim,
-  e: '1-3 days}; enterpris,
-  e: Custom pricing }; feature,
+  e: '1-3 days}'; enterpris,
+  e: Custom pricing }'; feature,
   s: [,' 'AI-powered yield strategy optimizationMulti-chain protocol supportReal-time risk assessmentAutomated portfolio rebalancingGas fee optimizationImpermanent loss protectionAdvanced analytics dashboardMobile app for monitoring';' API for institutional clientsCustom strategy development ]; benefit,
   s: [,' Increase DeFi yields by 40-80%Reduce impermanent loss by 60%Optimize gas fees automaticallyMinimize risk through AI analysisAccess institutional-grade DeFi strategies ]; targetAudienc,
   e: [,' 'DeFi investors and tradersInstitutional investorsCrypto hedge fundsFamily officesRetail crypto investorsDeFi protocol developers ]; marketPositio,
@@ -2339,11 +2335,11 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   s: ['Yearn Finance, Harvest Finance, Beefy Finance, Convex Finance, Curve Finance]; techStac,
   k: [OpenAI GPT-4, TensorFlow, Solidity, React, Node.js, PostgreSQL, Redis]; realImplementatio,
   n: true; implementationDetail,
-  s: 'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.; ro,
-  i: Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.; useCase,
+  s: 'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.'; ro,
+  i: Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.'; useCase,
   s: [,' 'Yield farming optimizationLiquidity provision strategiesStaking optimizationCross-chain yield opportunitiesRisk-managed DeFi investingInstitutional DeFi access ]; integration,
   s: ['MetaMask, WalletConnect, Uniswap, Curve, Aave, Compound, Custom DeFi protocols]; suppor,
-  t: '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.; complianc,
+  t: '24/7 technical support, DeFi strategy consulting, custom development, and dedicated account manager.'; complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance]; lin,
   k: http,
   s://ziontechgroup.com/ai-powered-defi-yield-optimizer; ico,
@@ -2351,13 +2347,13 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   r: from-green-500 to-emerald-600; popula,
   r: true; launchDat,
   e: 2024-01-15; customer,
-  s: 8500; ratin,
-  g: 4.9; review,
-  s: 6200}; {/* TODO: Fix JSX expression */}
+  s: 8500'; ratin,
+  g: 4.9'; review,
+  s: 6200}'; {/* TODO: Fix JSX expression */}
 
   s: 7} setupTim,
-  e: 'Immediate}; enterpris,
-  e: Custom pricing }; feature,
+  e: 'Immediate}'; enterpris,
+  e: Custom pricing }'; feature,
   s: [,' 'AI-powered NFT valuation modelsReal-time market analyticsTrend prediction algorithmsPortfolio tracking and managementRarity scoring and analysisMarket sentiment analysisTrading signal generationMulti-chain NFT support';' Advanced filtering and searchAPI for developers ]; benefit,
   s: [,' Improve NFT investment returns by 200%Reduce investment risks through AI analysisIdentify undervalued NFT opportunitiesOptimize portfolio allocationAccess institutional-grade NFT analytics ]; targetAudienc,
   e: [,' 'NFT investors and collectorsDigital art galleriesGaming companiesBrands and marketersInvestment firmsContent creators ]; marketPositio,
@@ -2366,11 +2362,11 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   s: ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation]; techStac,
   k: [OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis, Web3.js]; realImplementatio,
   n: true; implementationDetail,
-  s: 'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.; ro,
-  i: NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.; useCase,
+  s: 'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'; ro,
+  i: NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'; useCase,
   s: [,' 'NFT investment researchPortfolio optimizationMarket trend analysisRarity and value assessmentTrading strategy developmentBrand NFT strategy ]; integration,
   s: ['OpenSea, Rarible, Foundation, Ethereum, Polygon, Solana, Custom NFT platforms]; suppor,
-  t: '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.; complianc,
+  t: '24/7 technical support, NFT strategy consulting, custom analytics, and dedicated success manager.'; complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance]; lin,
   k: http,
   s://ziontechgroup.com/nft-marketplace-intelligence-platform; ico,
@@ -2378,13 +2374,13 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   r: from-pink-500 to-rose-600; popula,
   r: true; launchDat,
   e: 2024-03-01; customer,
-  s: 3200; ratin,
-  g: 4.7; review,
-  s: 2100}; {/* TODO: Fix JSX expression */}
+  s: 3200'; ratin,
+  g: 4.7'; review,
+  s: 2100}'; {/* TODO: Fix JSX expression */}
 
   s: 30} setupTim,
-  e: '2-4 weeks}; enterpris,
-  e: Custom pricing }; feature,
+  e: '2-4 weeks}'; enterpris,
+  e: Custom pricing }'; feature,
   s: [,' 'End-to-end supply chain trackingReal-time transparency monitoringSmart contract automationIoT sensor integrationCompliance verificationSustainability certificationMulti-stakeholder accessAdvanced analytics dashboard';' Mobile app for field workersAPI for system integration ]; benefit,
   s: [,' Improve supply chain transparency by 100%Reduce compliance costs by 40%Enhance brand trust and reputationOptimize inventory managementEnable sustainable sourcing verification ]; targetAudienc,
   e: [,' 'Manufacturing companiesFood and beverage industryPharmaceutical companiesLuxury goods manufacturersRetail chainsLogistics companies ]; marketPositio,
@@ -2393,11 +2389,11 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   s: ['IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain]; techStac,
   k: [Hyperledger Fabric, Ethereum, Polygon, React, Node.js, PostgreSQL, IoT platforms]; realImplementatio,
   n: true; implementationDetail,
-  s: 'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.; ro,
-  i: Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.; useCase,
+  s: 'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.'; ro,
+  i: Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'; useCase,
   s: [,' 'Food safety trackingPharmaceutical authenticityLuxury goods verificationSustainable sourcing verificationCompliance monitoringQuality assurance ]; integration,
   s: ['SAP, Oracle, Microsoft Dynamics, Salesforce, Custom ERP systems, IoT platforms]; suppor,
-  t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.; complianc,
+  t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'; complianc,
   e: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards]; lin,
   k: http,
   s://ziontechgroup.com/blockchain-supply-chain-traceability; ico,
@@ -2405,13 +2401,13 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   r: from-blue-500 to-cyan-600; popula,
   r: true; launchDat,
   e: 2024-02-10; customer,
-  s: 950; ratin,
-  g: 4.8; review,
-  s: 680}; {/* TODO: Fix JSX expression */}
+  s: 950'; ratin,
+  g: 4.8'; review,
+  s: 680}'; {/* TODO: Fix JSX expression */}
 
   s: 0} setupTim,
-  e: 'Immediate}; enterpris,
-  e: Custom pricing }; feature,
+  e: 'Immediate}'; enterpris,
+  e: Custom pricing }'; feature,
   s: [,' 'Decentralized content ownershipToken-based reward systemPrivacy-first designContent monetizationDecentralized governanceCross-platform content portabilityAI-powered content discoveryNFT integration';' Mobile and web appsAPI for developers ]; benefit,
   s: [,' Users own and monetize their contentComplete privacy and data controlEarn rewards for quality contentCensorship-resistant platformTransparent and fair algorithms ]; targetAudienc,
   e: [,' 'Content creators and influencersSocial media usersBrands and marketersDevelopers and entrepreneursPrivacy-conscious individualsWeb3 enthusiasts ]; marketPositio,
@@ -2420,11 +2416,11 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   s: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube]; techStac,
   k: [IPFS, Ethereum, Polygon, React, Node.js, PostgreSQL, Redis]; realImplementatio,
   n: true; implementationDetail,
-  s: 'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.; ro,
-  i: Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.; useCase,
+  s: 'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.'; ro,
+  i: Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'; useCase,
   s: [,' 'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance ]; integration,
   s: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms]; suppor,
-  t: 'Community support, developer documentation, custom development services, and enterprise solutions.; complianc,
+  t: 'Community support, developer documentation, custom development services, and enterprise solutions.'; complianc,
   e: ['GDPR, CCPA, SOC 2 Type II, ISO 27001]; lin,
   k: http,
   s://ziontechgroup.com/web3-social-media-platform; ico,
@@ -2433,7 +2429,7 @@ OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis], 
   r: true; launchDat,
   e: 2024-01-01; customer,
   s: 25000; ratin,
-  g: 4.6; review,
-  s: 18000} ]; ratin,
+  g: 4.6'; review,
+  s: 18000} ]'; ratin,
   g: 4.6, review,
-  s: 18000} ]; '
+  s: 18000} ]'; '

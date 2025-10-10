@@ -1,88 +1,88 @@
-import React from 'react;
+import React from 'react';
 
 import fs from 'fs;
 
-import { glob } from glob;
+import { glob } from glob';
 
-//Comprehensive TypeScript/JSX fixes;
+//Comprehensive TypeScript/JSX fixes';
 
-const fixes = [;;;
+const fixes = [';';
 
-  //Fix object literal syntax issues;
+  //Fix object literal syntax issues';
 
   {
     pattern: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: '$1 = { $2 }, $3},
-  //Fix JSX syntax issues;
+  //Fix JSX syntax issues';
 
   {
-    pattern: /<br\s*\/?>/g;
+    pattern: /<br\s*\/?>/g';
 
     replacement: '<br />},
-  //Fix unescaped > in JSX;
+  //Fix unescaped > in JSX';
 
   {
     pattern: /{'>}/g,
     replacement: '{">"}},
-  //Fix JSX expressions with operators;
+  //Fix JSX expressions with operators';
 
   {
     pattern: /{([^}]*)\s*>\s*([^}]*)}/g,
     replacement: '{ $1 > $2 }},
-  //Fix object property syntax;
+  //Fix object property syntax';
 
   {
     pattern: /(\w+)\s*:\s*([^}]+)\s*(\w+)/g,
     replacement: '$1: $2, $3},
-  //Fix function parameter syntax;
+  //Fix function parameter syntax';
 
   {
     pattern: /(\w+)\s*=\s*([^)]+)\s*(\w+)/g,
     replacement: '$1 = $2, $3},
-  //Fix JSX closing tags;
+  //Fix JSX closing tags';
 
   {
-    pattern: /<(\w+)\s*([^>]*)\s*>\s*<\/\1>/g;
+    pattern: /<(\w+)\s*([^>]*)\s*>\s*<\/\1>/g';
 
     replacement: '<$1 $2 />},
-  //Fix missing commas in arrays;
+  //Fix missing commas in arrays';
 
   {
-    pattern: /(\w+)\s*(\w+)\s*(\w+)/g;
+    pattern: /(\w+)\s*(\w+)\s*(\w+)/g';
 
     replacement: '$1, $2, $3},
-  //Fix JSX attribute syntax;
+  //Fix JSX attribute syntax';
 
   {
     pattern: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: '$1={ $2 } $3},
-  //Fix template literal syntax;
+  //Fix template literal syntax';
 
   {
-    pattern: /`([^`]+)\s*>\s*([^`]+)/g;
+    pattern: /`([^`]+)\s*>\s*([^`]+)/g'```;
 
     replacement: '`$1 > $2`},
-  //Fix destructuring syntax;
+  //Fix destructuring syntax';
 
   {
     pattern: /{\s*(\w+)\s*:\s*(\w+)\s*}\s*=\s*(\w+)/g,
     replacement: '{ $1: $2 } = $3},
-  //Fix arrow function syntax;
+  //Fix arrow function syntax';
 
   {
     pattern: /(\w+)\s*=>\s*{([^}]+)}\s*(\w+)/g,
     replacement: '$1 => { $2 }, $3},
-  //Fix conditional rendering;
+  //Fix conditional rendering';
 
   {
     pattern: /{([^}]*)\s*&&\s*([^}]*)}/g,
     replacement: '{ $1 && $2 }},
-  //Fix ternary operators;
+  //Fix ternary operators';
 
   {
     pattern: /{([^}]*)\s*\?\s*([^}]*)\s*:\s*([^}]*)}/g,
     replacement: '{ $1 ? $2 : $3 }},
-  //Fix object method syntax;
+  //Fix object method syntax';
 
   {
     pattern: /(\w+)\s*\([^)]*\)\s*{\s*([^}]+)}\s*(\w+)/g,
@@ -90,10 +90,10 @@ const fixes = [;;;
   //Fix class property syntax;
 
   {
-    pattern: /(\w+)\s*=\s*([^;]+);\s*(\w+)/g;
+    pattern: /(\w+)\s*=\s*([^';]+)';\s*(\w+)/g';
 
-    replacement: '$1 = $2; $3},
-  //Fix import statements;
+    replacement: '$1 = $2'; $3},
+  //Fix import statements';
 
   {
     pattern: /import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)[']\s*(\w+)/g},
@@ -102,8 +102,8 @@ const fixes = [;;;
   {
     pattern: /export\s+(\w+)\s*(\w+)/g;
 
-    replacement: 'export $1; $2},
-  //Fix interface syntax;
+    replacement: 'export $1'; $2},
+  //Fix interface syntax';
 
   {
     pattern: /interface\s+(\w+)\s*{\s*([^}]+)}\s*(\w+)/g,
@@ -111,73 +111,73 @@ const fixes = [;;;
   //Fix type definitions;
 
   {
-    pattern: /type\s+(\w+)\s*=\s*([^;]+);\s*(\w+)/g;
+    pattern: /type\s+(\w+)\s*=\s*([^';]+)';\s*(\w+)/g';
 
-    replacement: 'type $1 = $2; $3},
-  //Fix React component syntax;
+    replacement: 'type $1 = $2'; $3},
+  //Fix React component syntax';
 
   {
     pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*(\w+)/g,
-    replacement: 'const $1 = () => { $2 }; $3},
-  //Fix JSX return statements;
+    replacement: 'const $1 = () => { $2 }'; $3},
+  //Fix JSX return statements';
 
   {
-    pattern: /return\s*\(\s*<([^>]+)>\s*([^<]+)\s*<\/\1>\s*\)\s*(\w+)/g;
+    pattern: /return\s*\(\s*<([^>]+)>\s*([^<]+)\s*<\/\1>\s*\)\s*(\w+)/g';
 
-    replacement: 'return (<$1> $2 </$1>); $3},
-  //Fix event handlers;
+    replacement: 'return (<$1> $2 </$1>)'; $3},
+  //Fix event handlers';
 
   {
     pattern: /onClick\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: 'onClick={ $1 } $2},
-  //Fix className attributes;
+  //Fix className attributes';
 
   {
     pattern: /className\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: 'className={ $1 } $2},
-  //Fix style attributes;
+  //Fix style attributes';
 
   {
     pattern: /style\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: 'style={ $1 } $2},
-  //Fix key attributes;
+  //Fix key attributes';
 
   {
     pattern: /key\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacement: 'key={ $1 } $2},
-  //Fix conditional attributes;
+  //Fix conditional attributes';
 
   {
     pattern: /{([^}]*)\s*&&\s*<([^>]+)>\s*([^<]+)\s*<\/\2>\s*}/g,
     replacement: '{ $1 && <$2> $3 </$2> }},
-  //Fix map functions;
+  //Fix map functions';
 
   {
-    pattern: /\.map\s*\(\s*\(([^)]+)\)\s*=>\s*<([^>]+)>\s*([^<]+)\s*<\/\2>\s*\)\s*(\w+)/g;
+    pattern: /\.map\s*\(\s*\(([^)]+)\)\s*=>\s*<([^>]+)>\s*([^<]+)\s*<\/\2>\s*\)\s*(\w+)/g';
 
     replacement: '.map(($1) => <$2> $3 </$2>) $4},
-  //Fix filter functions;
+  //Fix filter functions';
 
   {
-    pattern: /\.filter\s*\(\s*\(([^)]+)\)\s*=>\s*([^)]+)\s*\)\s*(\w+)/g;
+    pattern: /\.filter\s*\(\s*\(([^)]+)\)\s*=>\s*([^)]+)\s*\)\s*(\w+)/g';
 
     replacement: '.filter(($1) => $2) $3},
-  //Fix reduce functions;
+  //Fix reduce functions';
 
   {
     pattern: /\.reduce\s*\(\s*\(([^)]+)\)\s*=>\s*([^]+),\s*([^)]+)\s*\)\s*(\w+)/g,
     replacement: '.reduce(($1) => $2, $3) $4},
-  //Fix useState hooks;
+  //Fix useState hooks';
 
   {
     pattern: /const\s*\[\s*(\w+),\s*(\w+)\s*\]\s*=\s*useState\s*\(\s*([^)]+)\s*\)\s*(\w+)/g,
-    replacement: 'const [$1, $2] = useState($3); $4},
-  //Fix useEffect hooks;
+    replacement: 'const [$1, $2] = useState($3)'; $4},
+  //Fix useEffect hooks';
 
   {
     pattern: /useEffect\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
-    replacement: 'useEffect(() => { $1 }, [$2]); $3},
-  //Fix useCallback hooks;
+    replacement: 'useEffect(() => { $1 }, [$2])'; $3},
+  //Fix useCallback hooks';
 
   {
     pattern:
@@ -186,26 +186,26 @@ const fixes = [;;;
   n: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
   t: '$1 = { $2 }, $3},
-  //Fix JSX syntax issues;
+  //Fix JSX syntax issues';
 
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix unescaped > in JSX;
+  //Fix unescaped > in JSX';
 
   {/* TODO: Fix JSX expression */}
 
   n: /{'>}/g,
     replacemen,
   t: '{">"}},
-  //Fix JSX expressions with operators;
+  //Fix JSX expressions with operators';
 
   {/* TODO: Fix JSX expression */}
 
   n: /{([^}]*)\s*>\s*([^}]*)}/g,
     replacemen,
   t: '{ $1 > $2 }},
-  //Fix object property syntax;
+  //Fix object property syntax';
 
   {/* TODO: Fix JSX expression */}
 
@@ -217,69 +217,69 @@ const fixes = [;;;
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix JSX closing tags;
+  //Fix JSX closing tags';
 
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix missing commas in arrays;
+  //Fix missing commas in arrays';
 
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix JSX attribute syntax;
+  //Fix JSX attribute syntax';
 
   {/* TODO: Fix JSX expression */}
 
   n: /(\w+)\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
   t: '$1={ $2 } $3},
-  //Fix template literal syntax;
+  //Fix template literal syntax';
 
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix destructuring syntax;
+  //Fix destructuring syntax';
 
   {/* TODO: Fix JSX expression */}
 
   n: /{\s*(\w+)\s*:\s*(\w+)\s*}\s*=\s*(\w+)/g,
     replacemen,
   t: '{ $1: $2 } = $3},
-  //Fix arrow function syntax;
+  //Fix arrow function syntax';
 
   {/* TODO: Fix JSX expression */}
 
   n: /(\w+)\s*=>\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
   t: '$1 => { $2 }, $3},
-  //Fix conditional rendering;
+  //Fix conditional rendering';
 
   {/* TODO: Fix JSX expression */}
 
   n: /{([^}]*)\s*&&\s*([^}]*)}/g,
     replacemen,
   t: '{ $1 && $2 }},
-  //Fix ternary operators;
+  //Fix ternary operators';
 
   {/* TODO: Fix JSX expression */}
 
   n: /{([^}]*)\s*\?\s*([^}]*)\s*:\s*([^}]*)}/g,
     replacemen,
   t: '{ $1 ? $2 : $3 }},
-  //Fix object method syntax;
+  //Fix object method syntax';
 
   {/* TODO: Fix JSX expression */}
 
   n: /(\w+)\s*\([^)]*\)\s*{\s*([^}]+)}\s*(\w+)/g,
     replacemen,
   t: '$1() { $2 }, $3},
-  //Fix class property syntax;
+  //Fix class property syntax';
 
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix import statements;
+  //Fix import statements';
 
   {/* TODO: Fix JSX expression */}
 
@@ -296,52 +296,52 @@ const fixes = [;;;
   n: /interface\s+(\w+)\s*{\s*([^}]+)}\s*(\w+)/g,
     replacemen,
   t: 'interface $1 { $2 } $3},
-  //Fix type definitions;
+  //Fix type definitions';
 
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix React component syntax;
+  //Fix React component syntax';
 
   {/* TODO: Fix JSX expression */}
 
   n: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*(\w+)/g,
     replacemen,
-  t: 'const $1 = () => { $2 }; $3},
-  //Fix JSX return statements;
+  t: 'const $1 = () => { $2 }'; $3},
+  //Fix JSX return statements';
 
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix event handlers;
+  //Fix event handlers';
 
   {/* TODO: Fix JSX expression */}
 
   n: /onClick\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
   t: 'onClick={ $1 } $2},
-  //Fix className attributes;
+  //Fix className attributes';
 
   {/* TODO: Fix JSX expression */}
 
   n: /className\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
   t: 'className={ $1 } $2},
-  //Fix style attributes;
+  //Fix style attributes';
 
   {/* TODO: Fix JSX expression */}
 
   n: /style\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
   t: 'style={ $1 } $2},
-  //Fix key attributes;
+  //Fix key attributes';
 
   {/* TODO: Fix JSX expression */}
 
   n: /key\s*=\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
   t: 'key={ $1 } $2},
-  //Fix conditional attributes;
+  //Fix conditional attributes';
 
   {/* TODO: Fix JSX expression */}
 
@@ -358,24 +358,24 @@ const fixes = [;;;
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix reduce functions;
+  //Fix reduce functions';
 
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix useState hooks;
+  //Fix useState hooks';
 
   {/* TODO: Fix JSX expression */}
 
   },
-  //Fix useEffect hooks;
+  //Fix useEffect hooks';
 
   {/* TODO: Fix JSX expression */}
 
   n: /useEffect\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
-  t: 'useEffect(() => { $1 }, [$2]); $3},
-  //Fix useCallback hooks;
+  t: 'useEffect(() => { $1 }, [$2])'; $3},
+  //Fix useCallback hooks';
 
   {/* TODO: Fix JSX expression */}
 
@@ -397,7 +397,7 @@ const fixes = [;;;
 function fixFile(filePath) {
   try {
     fixes.forEach(fix => {)
-      //       const newContent = content.replace(fix.pattern, fix.replacement);;
+      //       const newContent = content.replace(fix.pattern, fix.replacement);
 
       if (newContent !== content) {
         content = newContent;
@@ -425,7 +425,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 async function main() {
   //Find all TypeScript/TSX files;
 
-  //   let fixedCount = 0;;
+  //   let fixedCount = 0;
 
   files.forEach(file => {)
     if (fixFile(file)) {
@@ -437,15 +437,15 @@ async function main() {/* TODO: Fix JSX expression */}
 
   //Find all TypeScript/TSX files;
 
-  //   let fixedCount = 0;;
+  //   let fixedCount = 0`';
 
   files.forEach(file => {/* TODO: Fix JSX expression */}
 
     })
-  });
+  })'``;
 
   //   }
 
-// main().catch(console.error);
+// main().catch(console.error)'```;
 
 "

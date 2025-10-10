@@ -1,16 +1,16 @@
-import { CheckCircle, ArrowRight } from 'lucide-react;
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
-;
+';
 
-const AICrmAssistantPage: React.FC = () => {const features = [;
+const AICrmAssistantPage: React.FC = () => {const features = [';
     {
       title: 'AI Customer Management,
       description: 'Intelligent customer relationship management with AI insights,
       benefits: ['Customer insights', 'Automated follow-ups', 'Lead scoring]
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       ico,
@@ -69,7 +69,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Increase sales by 30
 
   ];
 
-  const benefits = [;;
+  const benefits = [
 
     'Transform your business with AI technology,
     'Make data-driven decisions with confidence,
@@ -145,9 +145,9 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Increase sales by 30
                           {benefit}
 
                         </li>
-                      ));
+                      ))">
 
-                    </ul>);
+                    </ul>)">
 
                         </li>)                      ))}
 
@@ -155,7 +155,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Increase sales by 30
                   )}
 
                 </div>
-              ));
+              ))";
 
             </div>
           </div>
@@ -204,7 +204,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Increase sales by 30
                     </div>
                   </div>
                 </div>
-              ));
+              ))";
 
         <section className="py-20 px-4">          <div className="max-w-7xl mx-auto>
             <div className="text-center mb-16>

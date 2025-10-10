@@ -1,32 +1,32 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star } from 'lucide-react;
+import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star } from 'lucide-react';
 
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
 
 interface ConsultationType {
-  id: number;
+  id: number';
 
-  name: string;
+  name: string';
 
-  description: string;
+  description: string';
 
-  duration: string;
+  duration: string';
 
-  price: string;
+  price: string';
 
-  features: string[];
+  features: string[]';
 
-  popular?: boolean;
+  popular?: boolean';
 
 }
 
 const ConsultationPage: React.FC = () => {
-  const [selectedType, setSelectedType] = useState<number | null>(null);
+  const [selectedType, setSelectedType] = useState<number | null>(null)';
 
   const [formData, setFormData] = useState({
     name: ',
@@ -35,12 +35,12 @@ const ConsultationPage: React.FC = () => {
     company: ',
     message: ',
     consultationType: 
-  });
+  })';
 
   const consultationTypes: ConsultationType[] = [
     {
       id: 1,
-  const consultationServices = [;
+  const consultationServices = [';
     'AI Strategy & Implementation,
     'Cloud Migration Planning,
     'Cybersecurity Assessment,
@@ -119,12 +119,12 @@ const ConsultationPage: React.FC = () => {
 
   ];
 
-  const experts = [    {;
+  const experts = [    {
       name: 'Dr. Sarah Chen,
       role: 'AI & Machine Learning Consultant,
       experience: '15+ years,
       expertise: ['AI Strategy', 'Machine Learning', 'Data Science],
-      image: '/images/experts/sarah-chen.jpg});)
+      image: '/images/experts/sarah-chen.jpg})';)
 },
     {
       name: 'Michael Rodriguez,
@@ -142,7 +142,7 @@ const ConsultationPage: React.FC = () => {
 
   ];
 
-  const handleBooking = (typeId: string) => {;
+  const handleBooking = (typeId: string) => {
     setSelectedType(typeId);
 
     console.log(`Booking consultation: ${typeId});
@@ -158,16 +158,16 @@ const ConsultationPage: React.FC = () => {
       [name]: value
     }));
 
-  };
+  }';
 
-  const handleSubmit = (e: React.FormEvent) => {;;
+  const handleSubmit = (e: React.FormEvent) => {';
 
-    e.preventDefault();
+    e.preventDefault()';
 
     // Handle form submission
-    console.log('Form submitted:, formData);
+    console.log('Form submitted:, formData)');
 
-  };
+  }');
 
 const PagePage: React.FC = () => {
   return (
@@ -522,7 +522,7 @@ const PagePage: React.FC = () => {
                   Middletown, DE 19709
                 </p>
               </div>              </div>
-            ));
+            ))"`;
 
           </div>
         </div>
@@ -561,11 +561,11 @@ const PagePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )">
 
-};
+}">
 
-export default ConsultationPage;      <section className="py-16 px-4>
+export default ConsultationPage"``;      <section className="py-16 px-4>
         <div className="max-w-4xl mx-auto text-center>
           <h2 className="text-3xl font-bold text-white mb-6>Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8>
@@ -590,8 +590,8 @@ export default ConsultationPage;      <section className="py-16 px-4>
         <
       <
     <)
-  );
+  )">
 
-};
+}">
 
-export default PagePage;
+export default PagePage"```;

@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
 interface LinkProps {// TODO: Add content}
 
@@ -26,12 +26,12 @@ export const Link: React.FC;
 //   rel,
 //   onClick,
   aria-label: ariaLabel,
-//   ...props;)
+//   ...props';)
 }) => {if (onClick) {}
 
     }
 
-    // Handle internal navigation;
+    // Handle internal navigation';
 
     if (href.startsWith('/') && !href.startsWith(//)) {/* TODO: Fix JSX expression */}
 

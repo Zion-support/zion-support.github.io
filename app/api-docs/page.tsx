@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react;
+import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
 import Footer from '../components/Footer;
 
 import SEOOptimizer from ../components/SEOOptimizer;
 
-export default function APIDocsPage() {;
+export default function APIDocsPage() {
 
 const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
@@ -18,14 +18,14 @@ const [searchQuery, setSearchQuery] = useState();
 
 ;
 
-const copyToClipboard = (code: string, id: string) => {;
-    navigator.clipboard.writeText(code);    setCopiedCode(id);
+const copyToClipboard = (code: string, id: string) => {
+    navigator.clipboard.writeText(code);    setCopiedCode(id)';
 
-    setTimeout(() => setCopiedCode(null), 2000);
+    setTimeout(() => setCopiedCode(null), 2000)';
 
-;
+';
 
-const apiEndpoints = [;;
+const apiEndpoints = [';';
 
     {
       title: 'AI Services,
@@ -124,9 +124,9 @@ const apiEndpoints = [;;
 
   ];
 
-;
+`;
 
-const filteredEndpoints = apiEndpoints.map(category => ({;;
+const filteredEndpoints = apiEndpoints.map(category => ({``;
 
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
@@ -134,7 +134,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({;;
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(category => category.endpoints.length > 0);
+  })).filter(category => category.endpoints.length > 0)```;
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
       
@@ -226,7 +226,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({;;
                           <code className="text-purple-400 font-mono>{endpoint.path}</code>
                         </div>
                         <button
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex});
+                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex})"```;
 
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors
                         >
@@ -241,7 +241,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({;;
                             <React.Fragment>
                               <Copy className="w-4 h-4 />
                               Copy
-                            </React.Fragment>);
+                            </React.Fragment>)"``;
 
                         </button>
                       </div>
@@ -282,6 +282,6 @@ const filteredEndpoints = apiEndpoints.map(category => ({;;
       <
 
       <Footer />
-    </div>);
+    </div>)"```;
 
     </div>

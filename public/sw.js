@@ -1,8 +1,8 @@
 // Service Worker for Zion Tech Group;
 
-const CACHE_NAME = 'zion-tech-v1;;
+const CACHE_NAME = 'zion-tech-v1';
 
-const urlsToCache = [;;
+const urlsToCache = [
 
   '/',
   '/static/js/bundle.js',
@@ -61,11 +61,11 @@ self.addEventListener('message', (event) => {
 
 // Push event handler
 self.addEventListener('push', (event) => {
-  if (event.data) {;
+  if (event.data) {
 
-const data = event.data.json();;
+const data = event.data.json();
 
-    const options = {;;
+    const options = {
 
       body: data.body,
       icon: '/favicon.ico',

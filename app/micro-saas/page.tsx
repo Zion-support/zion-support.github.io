@@ -1,31 +1,31 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react;
 
 interface MicroSaasProduct {
   id: string;
 
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<any>';
 
-  title: string;
+  title: string';
 
-  description: string;
+  description: string';
 
-  features: string[];
+  features: string[]';
 
-  price: string;
+  price: string';
 
-  users: string;
+  users: string';
 
-  popular: boolean;
+  popular: boolean';
 
-  category: string;
+  category: string';
 
 }
 
@@ -44,7 +44,7 @@ const MicroSaasPage: React.FC = () => {
     },
       category: 'Analytics
     },
-      category: 'Analytics});)},
+      category: 'Analytics})';)},
     {
       id: '2,
       icon: '👥,
@@ -58,7 +58,7 @@ const MicroSaasPage: React.FC = () => {
     },
       category: 'CRM
     },
-      category: 'CRM});)},
+      category: 'CRM})';)},
     {
       id: '3,
       icon: '🔒,
@@ -72,7 +72,7 @@ const MicroSaasPage: React.FC = () => {
     },
       category: 'Security
     },
-      category: 'Security});)},
+      category: 'Security})';)},
     {
       id: '4,
       icon: '☁️,
@@ -110,10 +110,10 @@ const MicroSaasPage: React.FC = () => {
       category: 'Support
     }
 
-      category: 'Support});)
+      category: 'Support})';)
 }
 
-  ];
+  ]';
 
   const benefits = [    'No upfront costs or setup fees,;
     'Quick deployment in 24-48 hours,
@@ -127,7 +127,7 @@ const MicroSaasPage: React.FC = () => {
 
   const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', Support];;
 
-  const stats = [;;
+  const stats = [
 
     {
       icon: Users,
@@ -154,9 +154,9 @@ const MicroSaasPage: React.FC = () => {
       description: Always here when you need us
     }
 
-  ];
+  ]';
 
-  const features = [;;
+  const features = [';';
 
     {
       icon: Zap,
@@ -174,7 +174,7 @@ const MicroSaasPage: React.FC = () => {
       description: Frequent updates and new features based on user feedback and market needs
     }
 
-  ];
+  ]';
 
   return (
 
@@ -413,7 +413,7 @@ const MicroSaasPage: React.FC = () => {
         <
       <
     <)
-  );
+  )";
 
               <p></p>
                 Choose the micro SaaS solution that fits your business needs. 
@@ -439,8 +439,8 @@ const MicroSaasPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )">
 
-};
+}">
 
-export default MicroSaasPage;
+export default MicroSaasPage";

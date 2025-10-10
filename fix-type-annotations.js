@@ -4,19 +4,19 @@ import fs from 'fs';
 
 import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-;
+';
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url)';
 
 // __dirname removed
-// Function to fix malformed type annotations;
+// Function to fix malformed type annotations';
 
 function fixTypeAnnotations(content) {
-  // Fix malformed type annotations with comments inside;
+  // Fix malformed type annotations with comments inside';
 
-  content = content.replace(;
+  content = content.replace(';
 
 function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 
@@ -25,9 +25,9 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 
       return `{ ${body.trim()} }`}
 
-  );
+  )';
 
-  // Fix specific patterns weve seen;
+  // Fix specific patterns weve seen';
 
   content = content.replace(/\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g)
     { usedJSHeapSize: number }
@@ -62,9 +62,9 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
   // Fix variable name issues;
 
   content = content.replace()
-    /const _memory = \([^)]+\)\.memory;\s*memoryUsage = memory\?/g,;;
+    /const _memory = \([^)]+\)\.memory;\s*memoryUsage = memory\?/g,;
 
-    const _memory = (performance as {/* TODO: Fix JSX expression */});;
+    const _memory = (performance as {/* TODO: Fix JSX expression */});
 
   e: number } }).memory;\n          memoryUsage = _memory?.
   );
@@ -74,22 +74,22 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
 // Function to process a single file;
 
 function processFile(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, 'utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Apply fixes;
 
-    const originalContent = content;;
+    const originalContent = content;
 
-    content = fixTypeAnnotations(content);
+    content = fixTypeAnnotations(content)`;
 
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, 'utf8)``;
 
-      modified = true;
+      modified = true```;
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
@@ -103,21 +103,21 @@ return false}
 
 // Function to find all TypeScript/JavaScript files;
 
-function findSourceFiles(dir) {;
+function findSourceFiles(dir) {
 
-const files = [];;
+const files = [];
 
   ;
 
-function walkDir(currentPath) {;
+function walkDir(currentPath) {
 
-const items = fs.readdirSync(currentPath);;
+const items = fs.readdirSync(currentPath);
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(currentPath, item);;
+const fullPath = path.join(currentPath, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories;
@@ -154,17 +154,17 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 // console.log removed for production
 ;
 
-const srcDir = path.join(__dirname, 'src);;
+const srcDir = path.join(__dirname, 'src);
 
-const appDir = path.join(__dirname, 'app);;
+const appDir = path.join(__dirname, 'app)`;
 
-const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];;
+const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)]``;```;
 
 `
 // console.log removed for production
-;
+`;
 
-let processedCount = 0;;
+let processedCount = 0``;```;
 
 for (const file of files) {/* TODO: Fix JSX expression */}`
   d: ${file}`)}

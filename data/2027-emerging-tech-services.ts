@@ -32,7 +32,7 @@
     category: AI & Computing,
     price: $8,999/month,
     features:
-        features: [;
+        features: [
 
   i,
   d: string,
@@ -63,13 +63,13 @@
   e: string;
 
   competitiveAdvantag,
-  e: string;
+  e: string";
 
   implementationTim,
-  e: string;
+  e: string";
 
   ro,
-  i: string;
+  i: string";
 
   lin,
   k: string,
@@ -84,7 +84,7 @@
     pric,
   e: $8,999/month
     feature,
-  s: [;
+  s: [
 
       Brain-inspired architecture
       Spiking neural networks
@@ -94,7 +94,7 @@
       Adaptive algorithms
     ]
     benefit,
-  s: [;
+  s: [
 
       100x more energy efficient
       Real-time continuous learning
@@ -103,7 +103,7 @@
       Biological accuracy
     ]
     useCase,
-  s: [;
+  s: [
 
       Edge computing
       IoT devices
@@ -135,7 +135,7 @@
     category: Biotechnology,
     price: $15,999/month,
     features:
-        features: [;
+        features: [
 
     marketSiz,
   e: $14.2B by 2027
@@ -164,7 +164,7 @@
     pric,
   e: $15,999/month
     feature,
-  s: [;
+  s: [
 
       DNA design automation
       Genetic circuit engineering
@@ -174,7 +174,7 @@
       Lab automation integration
     ]
     benefit,
-  s: [;
+  s: [
 
       Faster biological design
       Reduced development costs
@@ -183,7 +183,7 @@
       Custom biological solutions
     ]
     useCase,
-  s: [;
+  s: [
 
       Pharmaceutical development
       Agricultural biotechnology
@@ -192,7 +192,7 @@
       Biofuel production
     ]
     targetAudienc,
-  e: [;
+  e: [
 
       Pharmaceutical companies
       Agricultural companies
@@ -212,7 +212,7 @@
   k: http,
   s://ziontechgroup.com/services/synthetic-biology-platform
     tag,
-  s: [;
+  s: [
 
       Synthetic Biology
       Biotechnology
@@ -380,7 +380,7 @@
     category: Quantum Technology,
     price: $9,999/month,
     features:
-        features: [;
+        features: [
 
     i,
   d: quantum-sensors-network
@@ -394,7 +394,7 @@
     pric,
   e: $9,999/month
     feature,
-  s: [;
+  s: [
 
       Quantum entanglement sensors
       Ultra-precise measurements
@@ -404,7 +404,7 @@
       Medical imaging capabilities
     ]
     benefit,
-  s: [;
+  s: [
 
       1000x more precise measurements
       Real-time monitoring
@@ -413,7 +413,7 @@
       Future-proof technology
     ]
     useCase,
-  s: [;
+  s: [
 
       Medical imaging
       Environmental monitoring
@@ -489,11 +489,11 @@
       Research applications,
       Gaming and entertainment,
       Communication aids],
-    target_audience: [;
+    target_audience: [
 
     tags: [
     target_audienc,
-  e: [;
+  e: [
 
     tag,
   s: [,
@@ -510,7 +510,7 @@
     category: Neural Technology,
     price: $19,999/month,
     features:
-        features: [;
+        features: [
 
     i,
   d: brain-computer-interface
@@ -524,7 +524,7 @@
     pric,
   e: $19,999/month
     feature,
-  s: [;
+  s: [
 
       Neural signal processing
       Thought-to-text conversion
@@ -534,7 +534,7 @@
       Real-time processing
     ]
     benefit,
-  s: [;
+  s: [
 
       Direct brain communication
       Assistive technology
@@ -543,7 +543,7 @@
       Research breakthroughs
     ]
     useCase,
-  s: [;
+  s: [
 
       Assistive technology
       Medical rehabilitation
@@ -687,11 +687,11 @@
       Agricultural automation,
       Service robots,
       Exploration robots],
-    target_audience: [;
+    target_audience: [
 
     tags: [
     target_audienc,
-  e: [;
+  e: [
 
     tag,
   s: [,
@@ -923,7 +923,7 @@
     category: Environmental Technology,
     price: $10,999/month,
     features:
-        features: [;
+        features: [
 
   i,
   d: string, nam,
@@ -961,7 +961,7 @@
     pric,
   e: $10,999/month
     feature,
-  s: [;
+  s: [
 
       Quantum climate simulation
       Weather prediction
@@ -971,7 +971,7 @@
       Data visualization
     ]
     benefit,
-  s: [;
+  s: [
 
       1000x faster modeling
       Improved accuracy
@@ -980,7 +980,7 @@
       Policy support
     ]
     useCase,
-  s: [;
+  s: [
 
       Climate research
       Weather forecasting
@@ -989,7 +989,7 @@
       Disaster preparedness
     ]
     targetAudienc,
-  e: [;
+  e: [
 
       Government agencies
       Research institutions
@@ -1105,11 +1105,9 @@ export interface Service {/* TODO: Fix JSX expression */}
   tag,
   s: string[]}
 
-}
+};
 
-;
-
-export const emergingTech2027Services: Service[] = [;
+export const emergingTech2027Services: Service[] = [
 
   {,
     id: quantum-machine-learning;
@@ -1151,7 +1149,7 @@ export const emergingTech2027Services: Service[] = [;
 
   };
 
-  {;
+  {
 
     id: neuromorphic-computing;
 
@@ -1192,7 +1190,7 @@ export const emergingTech2027Services: Service[] = [;
 
   };
 
-  {;
+  {
 
     id: synthetic-biology-platform;
 
@@ -1233,7 +1231,7 @@ export const emergingTech2027Services: Service[] = [;
 
   };
 
-  {;
+  {
 
     id: quantum-sensors-network;
 
@@ -1274,7 +1272,7 @@ export const emergingTech2027Services: Service[] = [;
 
   };
 
-  {;
+  {
 
     id: brain-computer-interface;
 
@@ -1315,7 +1313,7 @@ export const emergingTech2027Services: Service[] = [;
 
   };
 
-  {;
+  {
 
     id: quantum-internet-security;
 
@@ -1356,7 +1354,7 @@ export const emergingTech2027Services: Service[] = [;
 
   };
 
-  {;
+  {
 
     id: autonomous-robotics-platform;
 
@@ -1397,7 +1395,7 @@ export const emergingTech2027Services: Service[] = [;
 
   };
 
-  {;
+  {
 
     id: quantum-materials-discovery;
 
@@ -1438,7 +1436,7 @@ export const emergingTech2027Services: Service[] = [;
 
   };
 
-  {;
+  {
 
     id: quantum-financial-modeling;
 
@@ -1479,7 +1477,7 @@ export const emergingTech2027Services: Service[] = [;
 
   };
 
-  {;
+  {
 
     id: quantum-climate-modeling;
 
@@ -1519,7 +1517,7 @@ export const emergingTech2027Services: Service[] = [;
     tags: [Climate ModelingQuantum ComputingEnvironmentalWeatherResearch]}
 
 export const,
-  emergingTech2027Services: Service[] = [;
+  emergingTech2027Services: Service[] = [
 
   {/* TODO: Fix JSX expression */}
 
@@ -1626,9 +1624,9 @@ i,
   s: string[]; targetAudienc,
   e: string[]; marketSiz,
   e: string; competitiveAdvantag,
-  e: string; implementationTim,
-  e: string; ro,
-  i: string; lin,
+  e: string'"; implementationTim,
+  e: string'"; ro,
+  i: string'"; lin,
   k: string, i,
   d: 'neuromorphic-computing nam,
   e: 'Neuromorphic Computing Platform descriptio,
@@ -1863,8 +1861,8 @@ i,
   s: [Climate ModelingQuantum ComputingEnvironmentalWeatherResearch] export interface Service {} ]; } ]} ]; export interface Service {/* TODO: Fix JSX expression */}
 
   k: string} tag,
-  s: string[]} } ; export const,
-  emergingTech2027Services: Service[] = [; {/* TODO: Fix JSX expression */}
+  s: string[]} }; export const,
+  emergingTech2027Services: Service[] = [ {/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com/services/quantum-machine-learning} tag,
   s: [Quantum ComputingMachine LearningAIResearchOptimization]} }; {/* TODO: Fix JSX expression */}

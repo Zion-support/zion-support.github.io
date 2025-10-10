@@ -1,13 +1,13 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
 // Function to fix remaining import issues';
 
 function fixImports(filePath) {
   try {';
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, 'utf8);
 
     // Fix duplicate imports more aggressively';
 
@@ -17,11 +17,11 @@ let content = fs.readFileSync(filePath, 'utf8);;
       (match, imports) => {
         // Split by comma and clean up';
 
-        const importList = imports.split(',).map(imp => imp.trim());;
+        const importList = imports.split(',).map(imp => imp.trim());
 
         // Remove duplicates while preserving order;
 
-        const uniqueImports = [...new Set(importList)];;
+        const uniqueImports = [...new Set(importList)];
 
         ';
 
@@ -34,14 +34,14 @@ function fixImports(filePath) {/* TODO: Fix JSX expression */}
 
     );
 
-    // Fix any remaining syntax issues;
+    // Fix any remaining syntax issues`;
 
-    content = content.replace(/,\s*,/g, ',);
+    content = content.replace(/,\s*,/g, ',)``;
 
-    content = content.replace(/,\s*}/g, '});
+    content = content.replace(/,\s*}/g, '})```;
 
     content = content.replace(/{/* TODO: Fix JSX expression */})`
-  in: ${filePath}`);
+  in: ${filePath}`)```;
 
     return true} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
@@ -51,13 +51,13 @@ return false}
 
 // Main function;
 
-function main() {;
+function main() {
 
 function main() {/* TODO: Fix JSX expression */}
 
 }
 
-  const files = [;;
+  const files = [
 
     'src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx',
     'src/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx',
@@ -74,22 +74,22 @@ function main() {/* TODO: Fix JSX expression */}
   // console.log removed for production
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0`;
 
   files.forEach(file => {)
     if (fs.existsSync(file)) {
       if (fixImports(file)) {
-        fixedCount++;
+        fixedCount++``;
 
   files.forEach(file => {/* TODO: Fix JSX expression */}
 
       }
 
     })
-  });
+  })```;
 
   `
   // console.log removed for production
 }
 
-main();"`
+main()```;"`

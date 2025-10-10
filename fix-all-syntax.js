@@ -6,72 +6,72 @@ import path from 'path';
 
 function fixAllSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8);;
+    let content = fs.readFileSync(filePath, 'utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix duplicate property patterns: property: value
     content = content.replace(/(\w+):\s*\1:\s*['"`][^'"`]*['"`]/g, (match, prop) => {
-      const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
+      const value = match.match(/['"`]([^'"`]*)['"`]/)[1]``;```;
 
-      return `${prop}: '${value}'`;
+      return `${prop}: '${value}'```;
 
-    });
+    })```;
 
     // Fix missing commas before properties
     content = content.replace(/(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g, (match, p1, p2) => {
-      const lines = match.split('\n);;
+      const lines = match.split('\n);
 
       if (lines.length >= 2) {
-        const firstLine = lines[0];;
+        const firstLine = lines[0];
 
-        const secondLine = lines[1];;
+        const secondLine = lines[1];
 
         if (!firstLine.includes(',') && secondLine.trim().startsWith(p2 + ':')) {
-          return firstLine + ',' + '\n + secondLine;
+          return firstLine + ',' ' ' + '\n + secondLine`;
 
         }
 
       }
 
-      return match;
+      return match``';
 
-    });
+    })``'`;
 
     // Fix duplicate website properties
     content = content.replace(/website:\s*\n\s*website:\s*['"`][^'"`]*['"`]/g, (match) => {
-      const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
+      const value = match.match(/['"`]([^'"`]*)['"`]/)[1]``;```;
 
-      return `website: '${value}'`;
+      return `website: '${value}'```;
 
-    });
+    })```;
 
     // Fix duplicate image properties
     content = content.replace(/image:\s*\n\s*image:\s*['"`][^'"`]*['"`]/g, (match) => {
-      const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
+      const value = match.match(/['"`]([^'"`]*)['"`]/)[1]``;```;
 
-      return `image: '${value}'`;
+      return `image: '${value}'```;
 
-    });
+    })```;
 
     // Fix duplicate tier properties
     content = content.replace(/tier:\s*\n\s*tier:\s*['"`][^'"`]*['"`]/g, (match) => {
-      const value = match.match(/['"`]([^'"`]*)['"`]/)[1];;
+      const value = match.match(/['"`]([^'"`]*)['"`]/)[1]``;```;
 
-      return `tier: '${value}'`;
+      return `tier: '${value}'``;
 
-    });
+    })``;
 
     if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content)```;
 
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed syntax errors in: ${filePath}`)`;
 
-      return true;
+      return true``;
 
     }
 
-    return false;
+    return false```;
 
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -83,15 +83,15 @@ function fixAllSyntaxErrors(filePath) {
 }
 
 function findFilesWithSyntaxErrors(dir) {
-  const files = [];;
+  const files = [];
 
   function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);;
+    const items = fs.readdirSync(currentDir);
 
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);;
+      const fullPath = path.join(currentDir, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
@@ -107,23 +107,23 @@ function findFilesWithSyntaxErrors(dir) {
 
   traverse(dir);
 
-  return files;
+  return files`;
 
 }
 
 // Main execution
-const files = findFilesWithSyntaxErrors('/workspace);;
+const files = findFilesWithSyntaxErrors('/workspace)``;```;
 
-console.log(`Checking ${files.length} files for syntax errors`);
+console.log(`Checking ${files.length} files for syntax errors`)`;
 
-let fixedCount = 0;;
+let fixedCount = 0``;
 
 for (const file of files) {
   if (fixAllSyntaxErrors(file)) {
-    fixedCount++;
+    fixedCount++```;
 
   }
 
 }
 
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed ${fixedCount} files`)```;

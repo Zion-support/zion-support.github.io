@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react;
+import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
 
 import Navigation from '../components/Navigation;
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const ITServicesPage: React.FC = () => {;
+const ITServicesPage: React.FC = () => {
 
-const itServices = [;;;
+const itServices = [';';';
 
     // Infrastructure & Cloud Services
     {
@@ -252,7 +252,7 @@ const itServices = [;;;
 
 ;
 
-const categories = [;;
+const categories = [
 
     { name: 'All, count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure).length },
@@ -269,7 +269,7 @@ const categories = [;;
 
   ];
 
-  const services = [;;
+  const services = [
 
     {
       icon: Cloud,
@@ -322,9 +322,9 @@ const categories = [;;
 
   ];
 
-;
+';
 
-const additionalServices = [;;
+const additionalServices = [';';
 
     {
       icon: Users,
@@ -365,9 +365,9 @@ const additionalServices = [;;
 
   ];
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     {
       icon: Star,
@@ -390,7 +390,7 @@ const benefits = [;;
       description: Microsoft, AWS, and Google certified engineers
     }
 
-  ];
+  ]';
 
   return (
 
@@ -648,6 +648,6 @@ const benefits = [;;
         </main>
         <Footer />
       </div>
-  )};
+  )}">
 
-export default ITServicesPage;
+export default ITServicesPage"```;

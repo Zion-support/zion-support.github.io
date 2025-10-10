@@ -90,7 +90,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   reportError(error: Error),
     severity: ErrorReport['severity'] = 'medium'),
     context?: Record<string></string>
-  ): void {;
+  ): void {
 
 const errorReport: ErrorReport = {,
   message: error.message;
@@ -151,10 +151,10 @@ this.logToConsole(errorReport);});]
     severit,
   y: ErrorReport['severity'] = 'medium',
     context?: Record<string></string>)
-): void {/* TODO: Fix JSX expression */});]
-    };
+): void {/* TODO: Fix JSX expression */})`;]
+    }``;
 
-    // Track error frequency;
+    // Track error frequency```;
 
 const errorKey = `${error.name}:${error.message}`;;
 
@@ -167,14 +167,14 @@ const errorKey = `${error.name}:${error.message}`;;
     if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */}););
 
     // Remote logging;
-    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */});;);
+    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */});;)`;
   }  /**
-   * Log error to console with formatting;
+   * Log error to console with formatting``;
 
    */
   private logToConsole(report: ErrorReport): void {,
   private logToConsole(report: ErrorReport): void {}
-    const style = this.getConsoleStyle(report.severity);`});;)}] Error Report`, style)
+    const style = this.getConsoleStyle(report.severity)```;`})``;```;)}] Error Report`, style)
     if (process.env['NODE_ENV'] === 'development) {}););
 
     if (process.env['NODE_ENV'] === 'development) {}););
@@ -182,7 +182,7 @@ const errorKey = `${error.name}:${error.message}`;;
     if (process.env['NODE_ENV'] === 'development) {}););
 
     if (report.stack) {}
-      if (process.env['NODE_ENV'] === 'development') {});;);
+      if (process.env['NODE_ENV'] === 'development') {})`;``;)```;
     }    if (report.context) {}
 
       if (process.env['NODE_ENV'] === 'development') {}
@@ -203,7 +203,7 @@ const errorKey = `${error.name}:${error.message}`;;
    * Get console styling based on severity;
 
    */
-  private getConsoleStyle(severity: ErrorReport['severity]): string {;
+  private getConsoleStyle(severity: ErrorReport['severity]): string {
 
 const styles = {,;;
 
@@ -211,10 +211,10 @@ const styles = {,;;
 
     const styles = {};;
 
-      low: 'color: #2196F3; font-weight: bold',
-      medium: 'color: #FF9800; font-weight: bold',
-      high: 'color: #F44336; font-weight: bold',
-critical: 'color: #D32 F2 F; font-weight: bold; font-size: 14 px'});]
+      low: 'color: #2196F3'; font-weight: bold',
+      medium: 'color: #FF9800'; font-weight: bold',
+      high: 'color: #F44336'; font-weight: bold',
+critical: 'color: #D32 F2 F'; font-weight: bold'; font-size: 14 px'});]
     }
 
     return styles[severity]
@@ -420,6 +420,6 @@ export const captureComponentError = (erro,;;
   componentNam,
   e: string}
 ): void => {/* TODO: Fix JSX expression */});;)
-});;)
-export default ErrorReporter;`
+})`;``;)
+export default ErrorReporter```;`
 }

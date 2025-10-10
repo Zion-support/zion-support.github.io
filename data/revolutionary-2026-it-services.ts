@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Revolutionary2026ItService {;,
+export interface Revolutionary2026ItService {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const revolutionary2026 ITServices: Revolutionary2026 ItService[] = [,
     id: "2026-revolutionary-it", name: "2026 Revolutionary IT Platform",
     tagline: "Revolutionary IT for 2026", price: '$199/month',
     description: 'Revolutionary IT platform that transforms how businesses manage technology in 2026.',
-    features: [;
+    features: [
       "Revolutionary IT"
       "Transformative technology"
       "Advanced capabilities"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Revolutionary IT platform that transforms how businesses manage technology in 2026.",
     feature,
-  s: [;"
+  s: ["
       "Revolutionary IT""
       "Transformative technology""
       "Advanced capabilities""

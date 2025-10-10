@@ -1,29 +1,29 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import { Search, Calendar, User, ArrowRight, Tag, Clock } from 'lucide-react;
 
 interface BlogPost {
   id: number;  title: string;
 
-  excerpt: string;
+  excerpt: string';
 
-  content: string;
+  content: string';
 
-  author: string;
+  author: string';
 
-  date: string;
+  date: string';
 
-  category: string;
+  category: string';
 
-  readTime: string;
+  readTime: string';
 
-  tags: string[];
+  tags: string[]';
 
-  featured: boolean;
+  featured: boolean';
 
 }
 
@@ -107,7 +107,7 @@ const BlogPage: React.FC = () => {
 
   ];
 
-  const categories = [;
+  const categories = [
     { id: 'all', name: 'All Categories },
     { id: 'AI', name: 'Artificial Intelligence },
     { id: 'Quantum', name: 'Quantum Computing },
@@ -116,12 +116,12 @@ const BlogPage: React.FC = () => {
     { id: 'Autonomous Systems', name: 'Autonomous Systems },
     { id: 'Privacy', name: 'Data Privacy }
 
-  ];
+  ]';
 
-  const filteredPosts = blogPosts.filter(post => {;
-    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||';
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+                         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))';
 
     const matchesCategory = selectedCategory === 'all || post.category === selectedCategory;;
 
@@ -323,9 +323,9 @@ const BlogPage: React.FC = () => {
                 <p className="text-gray-300 mb-8>Try adjusting your search terms or browse all categories</p>
                 <button
                   onClick={() => {
-                    setSearchQuery(');
+                    setSearchQuery(')">
 
-                    setSelectedCategory('all);
+                    setSelectedCategory('all)";
 
                   }}
 
@@ -362,8 +362,8 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )">
 
-};
+}">
 
-export default BlogPage;
+export default BlogPage";

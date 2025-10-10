@@ -4,12 +4,12 @@ import fs from 'fs';
 
 function fixAllJSXIssues(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8);;
+    let content = fs.readFileSync(filePath, 'utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix all self-closing div tags that should contain content
-    const patterns = [;;
+    const patterns = [
 
       // Fix self-closing div tags with content after them
       {
@@ -77,7 +77,7 @@ function fixAllJSXIssues(filePath) {
     ];
 
     patterns.forEach(pattern => {
-      const newContent = content.replace(pattern.regex, pattern.replacement);;
+      const newContent = content.replace(pattern.regex, pattern.replacement);
 
       if (newContent !== content) {
         content = newContent;
@@ -91,13 +91,13 @@ function fixAllJSXIssues(filePath) {
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8);
 
-      console.log(`Fixed JSX issues in: ${filePath}`);
+      console.log(`Fixed JSX issues in: ${filePath}`)`;
 
-      return true;
+      return true``;
 
     }
 
-    return false;
+    return false```;
 
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -109,12 +109,12 @@ function fixAllJSXIssues(filePath) {
 }
 
 // Fix the main page file
-const filePath = '/workspace/app/page.tsx;;
+const filePath = '/workspace/app/page.tsx`';
 
 if (fixAllJSXIssues(filePath)) {
-  console.log('All JSX issues fixed successfully);
+  console.log('All JSX issues fixed successfully)`')`;
 
 } else {
-  console.log('No JSX issues found);
+  console.log('No JSX issues found)``')`;
 
 }

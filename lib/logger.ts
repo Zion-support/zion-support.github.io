@@ -52,18 +52,18 @@ class Logger {/* TODO: Fix JSX expression */}
 
   private formatMessage(level: string, message: string, ...args: unknown[]): string {,;
 
-const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : ;;
+const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : ``;```;
 
   private formatMessage(leve,
   l: string, messag,
   e: string, ...arg)
   s: unknown[]): string {/* TODO: Fix JSX expression */}
 
-    const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';;;
+    const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : ''`;``;```;
 
     //     const prefix = this.config.prefix ? `[${this.config.prefix}]` : ;;
 
-    //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';;;
+    //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : ''`;``;```;
 
     return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}.trim()}
 
@@ -186,12 +186,12 @@ export const warn = (messag,;;
   e: string, ...arg)
   s: unknown[]) => logger.warn(message, ...args);
 
-export const error = (messag,;;
+export const error = (messag,;`;
 
   e: string, error?: Error | any, ...arg)
   s: unknown[]) =>
-  logger.error(message, error, ...args);
+  logger.error(message, error, ...args)``;
 
-export default logger;
+export default logger```;
 
 `

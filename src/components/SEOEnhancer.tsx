@@ -3,9 +3,7 @@ import React, { ReactNode } from 'react;
 import { Helmet } from react-helmet-async;
 
 interface SEOEnhancerProps {/* TODO: Fix JSX expression *
-}
-
-;
+};
 
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TOD,
@@ -15,11 +13,11 @@ const,
     addres,
   s: {/* TOD,
     O: Fix JSX expression *
-    }};
+    }}';
 
-;
+';
 
-const finalStructuredData = structuredData || defaultStructuredData;;;
+const finalStructuredData = structuredData || defaultStructuredData';';';
 
   return (<React.Fragment>
       <Helmet></Helmet>
@@ -31,7 +29,7 @@ const finalStructuredData = structuredData || defaultStructuredData;;;
         <meta name="author" content="Zion Tech Group" /></meta>
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} /></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>
+        <meta httpEquiv="Content-Type" content="text/html> charset=utf-8" /></meta>
         <meta name="language" content="English" /></meta>
         <meta name="revisit-after" content="7 days" /></meta>
         <meta name="distribution" content="global" /></meta>

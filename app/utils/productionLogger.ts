@@ -22,7 +22,7 @@ class ProductionLogger {}
 
   private isProduction = process.env.NODE_ENV === 'production;
 
-  private log(level: LogLevel, message: string, data?: unknown, context?: string): void {;
+  private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
 
 const entry: LogEntry = {,
       level;
@@ -96,7 +96,7 @@ this.sendToMonitoring(entry)]
         error_message: entry.message,
         error_context: entry.context,
         error_timestamp: entry.timestamp,
-        event_category: 'Error});
+        event_category: 'Error})';
 
 }
 

@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface RealOperationalService {;,
+export interface RealOperationalService {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const realOperationalServices: RealOperationalService[] = [,
     id: "operational-intelligence", name: "Operational Intelligence Platform",
     tagline: "Real-time operational insights and optimization", price: '$99/month',
     description: 'Comprehensive operational intelligence platform for monitoring and optimizing business operations.',
-    features: [;
+    features: [
       "Real-time monitoring"
       "Performance analytics"
       "Operational insights"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Comprehensive operational intelligence platform for monitoring and optimizing business operations.",
     feature,
-  s: [;"
+  s: ["
       "Real-time monitoring""
       "Performance analytics""
       "Operational insights""

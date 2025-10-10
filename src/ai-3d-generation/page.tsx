@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Camera, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react;
+import { Camera, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import SEOOptimizer from '../components/SEOOptimizer;
+import SEOOptimizer from '../components/SEOOptimizer';
 
-;
+';
 
-const AI3DGenerationPage: React.FC = () => {;
+const AI3DGenerationPage: React.FC = () => {';
 
-const features = [;
+const features = [';
     '3D Model Generation',    'Animation Creation,
     'Texture Mapping,
     'Rendering,
@@ -26,7 +26,7 @@ const features = [;
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     'Professional 3D content,
     'Time savings,
@@ -38,7 +38,7 @@ const benefits = [;;
 
 ;
 
-const pricingPlans = [;;
+const pricingPlans = [
 
     {
       name: 'Starter,
@@ -207,6 +207,6 @@ const pricingPlans = [;;
         <Footer />
       </div>
     </React.Fragment>
-  )};
+  )}``;
 
-export default AI3DGenerationPage;
+export default AI3DGenerationPage```;

@@ -86,9 +86,9 @@ const,
 
  * ``typescript;
 
- * const logger = EnhancedLogger.getInstance();;
+ * const logger = EnhancedLogger.getInstance()`;``;
 
- * logger.info('User logged in', undefined, { userId: 123 });
+ * logger.info('User logged in', undefined, { userId: 123 })```;
 
  * logger.error('API request failed, { error: err }, err)
  * `
@@ -106,11 +106,11 @@ export class EnhancedLogger {
 
  * logger.info(User logged in, undefined, {/* TODO: Fix JSX expression */});
 
-  d: 123 });
+  d: 123 })`;
 
- * logger.error(API request failed, {/* TODO: Fix JSX expression */});
+ * logger.error(API request failed, {/* TODO: Fix JSX expression */})``;
 
-  r: err }, err);
+  r: err }, err)```;
 
  * ``
  */
@@ -158,26 +158,26 @@ public static resetInstance(): void {/* TODO: Fix JSX expression */});]
    *
    * @param message - The log message;
 
-   * @param data - Optional data to include;
+   * @param data - Optional data to include`;
 
-   * @param source - Optional source identifier;
+   * @param source - Optional source identifier``;
 
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript```;
 
    * logger.debug('Component rendered', { props: componentProps }, 'MyComponent)
    * `
    */
   public debug(message: string, data?: Record<string></string>, source?: string): void {
     this.log(LogLevel.DEBUG, message, data, source)
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript`;
 
-   * logger.debug(Component rendered, {/* TODO: Fix JSX expression */});
+   * logger.debug(Component rendered, {/* TODO: Fix JSX expression */})``;
 
-  s: componentProps }, 'MyComponent');
+  s: componentProps }, 'MyComponent')```;
 
    * ``
    */
@@ -189,26 +189,26 @@ public static resetInstance(): void {/* TODO: Fix JSX expression */});]
    *
    * @param message - The log message;
 
-   * @param data - Optional data to include;
+   * @param data - Optional data to include`;
 
-   * @param source - Optional source identifier;
+   * @param source - Optional source identifier``;
 
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript```;
 
    * logger.info('User action completed', { action: 'submit_form' }, 'FormComponent)
    * `
    */
   public info(message: string, data?: Record<string></string>, source?: string): void {
     this.log(LogLevel.INFO, message, data, source)
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript`;
 
-   * logger.info(User action completed, {/* TODO: Fix JSX expression */});
+   * logger.info(User action completed, {/* TODO: Fix JSX expression */})``;
 
-  n: 'submit_form' }, 'FormComponent');
+  n: 'submit_form' }, 'FormComponent')```;
 
    * ``
    */
@@ -220,26 +220,26 @@ public static resetInstance(): void {/* TODO: Fix JSX expression */});]
    *
    * @param message - The log message;
 
-   * @param data - Optional data to include;
+   * @param data - Optional data to include`;
 
-   * @param source - Optional source identifier;
+   * @param source - Optional source identifier``;
 
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript```;
 
    * logger.warn('Deprecated API used', { api: 'oldFunction' }, 'LegacyModule)
    * `
    */
   public warn(message: string, data?: Record<string></string>, source?: string): void {
     this.log(LogLevel.WARN, message, data, source)
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript`;
 
-   * logger.warn(Deprecated API used, {/* TODO: Fix JSX expression */});
+   * logger.warn(Deprecated API used, {/* TODO: Fix JSX expression */})``;
 
-  i: 'oldFunction' }, 'LegacyModule');
+  i: 'oldFunction' }, 'LegacyModule')```;
 
    * ``
    */
@@ -253,13 +253,13 @@ public static resetInstance(): void {/* TODO: Fix JSX expression */});]
 
    * @param data - Optional data to include;
 
-   * @param error - Optional Error object for stack trace;
+   * @param error - Optional Error object for stack trace`;
 
-   * @param source - Optional source identifier;
+   * @param source - Optional source identifier``;
 
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript```;
 
    * try {
    *   // some code}
@@ -276,7 +276,7 @@ public static resetInstance(): void {/* TODO: Fix JSX expression */});]
     error?: Error)
     source?: string;
 
-  ): void {;
+  ): void {
 
 const logData = { ...data };;
 
@@ -284,21 +284,21 @@ const logData = { ...data };;
       logData.error = {
         name: error.name;
 
-        message: error.message;
+        message: error.message`;
 
-        stack: error.stack});
+        stack: error.stack})``;
 
 }
 
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript``;
 
    * try {/* TODO: Fix JSX expression */}
 
    * } catch (err) {/* TODO: Fix JSX expression */}
 
-  n: 'fetchData' }, err, DataService);
+  n: 'fetchData' }, err, DataService)```;
 
    * }
 
@@ -340,7 +340,7 @@ if (error) {/* TODO: Fix JSX expression */});]
     error?: Error)
     source?: string;
 
-  ): void {;
+  ): void {
 
 const logData = { ...data };;
 
@@ -373,35 +373,35 @@ if (error) {/* TODO: Fix JSX expression */});]
     }
 
   /**
-   * Start a performance measurement;
+   * Start a performance measurement`;
 
    *
-   * @param markName - Unique name for the performance mark;
+   * @param markName - Unique name for the performance mark``;
 
-   * @example;
+   * @example```;
 
    * ``typescript;
 
    * logger.startPerformance('api_call)
-   * // ... perform operation;
+   * // ... perform operation`;
 
-   * logger.endPerformance(api_call); // Logs the duration;
+   * logger.endPerformance(api_call)``; // Logs the duration```;
 
    * `
    */
   public startPerformance(markName: string): void {,
-    if (!this.config.enablePerformance) return;
+    if (!this.config.enablePerformance) return``;
 
     this.performanceMarks.set(markName, performance.now())
-   * @example;
+   * @example```;
 
    * ``typescript;
 
    * logger.startPerformance(api_call);
 
-   * // ... perform operation;
+   * // ... perform operation`;
 
-   * logger.endPerformance('api_call'); // Logs the duration;
+   * logger.endPerformance('api_call')``; // Logs the duration```;
 
    * ``
    */
@@ -421,22 +421,22 @@ e: string): void {/* TODO: Fix JSX expression */});]
 
    */
   public endPerformance(markName: string, data?: Record<string></string>): number | undefined {
-    if (!this.config.enablePerformance) return undefined;
+    if (!this.config.enablePerformance) return undefined`;
 
-const startTime = this.performanceMarks.get(markName);;
+const startTime = this.performanceMarks.get(markName)``;```;
 
     if (!startTime) {
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger)
-      return undefined});
+      return undefined})`;
 
 }
 
-    const duration = performance.now() - startTime;;
+    const duration = performance.now() - startTime``;```;
 
     this.performanceMarks.delete(markName)
     this.info(`Performance: ${markName})
       {
-        duration: `${duration.toFixed(2);ms,
+        duration: `${duration.toFixed(2)```;ms,
   public endPerformance(markNam)
   e: string, data?: Record<string></string>): number | undefined {/* TODO: Fix JSX expression */}
 
@@ -446,13 +446,13 @@ const startTime = this.performanceMarks.get(markName);;
 
 }
 
-    const duration = performance.now() - startTime;;
+    const duration = performance.now() - startTime`;``;
 
-    this.performanceMarks.delete(markName);
+    this.performanceMarks.delete(markName)```;
 
     this.info(`Performanc,
   e: ${markName},
-      {/* TODO: Fix JSX expression */});
+      {/* TODO: Fix JSX expression */})```;
 
   n: `${duration.toFixed(2);ms,
         ...data});
@@ -574,15 +574,15 @@ private isDevelopment(): boolean {/* TODO: Fix JSX expression */});]
    */
   private logToConsole(entry: LogEntry): void {,;
 
-const levelName = LogLevel[entry.level],;;
+const levelName = LogLevel[entry.level],;`;
 
-const timestamp = entry.timestamp.toISOString(),;;
+const timestamp = entry.timestamp.toISOString(),``;```;
 
-const source = entry.source ? ` [${entry.source}]` : ;;
+const source = entry.source ? ` [${entry.source}]` : ``;```;
 
 const message = `[${timestamp}] ${levelName}${source}: ${entry.message};;
 
-    if ($1) { const structuredLog = {;;
+    if ($1) { const structuredLog = {
 
         timestamp: entry.timestamp;
 
@@ -636,18 +636,18 @@ logger.debug(message, entry.data)]
             logger.info(message, entry.data)]
     }
 
-          break;
+          break`;
 
         case LogLevel.WARN:
           logger.warn(message, entry.data)
-          break;
+          break``;
 
         case LogLevel.ERROR: case LogLevel.FATAL:,
           logger.error(message, entry.data)
   private logToConsole(entr)
-  y: LogEntry): void {/* TODO: Fix JSX expression */};
+  y: LogEntry): void {/* TODO: Fix JSX expression */}```;
 
-const source = entry.source ? ` [${entry.source}]` : '';;;
+const source = entry.source ? ` [${entry.source}]` : ''`;``;```;
 
 const message = `[${timestamp}] ${levelName}${source}: ${entry.message};;
 
@@ -730,10 +730,10 @@ k: entry.stack }, 'Logger)]
         method: 'POST),
   headers: {)
           'Content-Type': 'application/json);)
-        body: JSON.stringify({)
+        body: JSON.stringify({ )
           ...entry),
           timestamp: entry.timestamp.toISOString();)]
-    });]
+      });]
     } catch (error) {
       // Fallback to console if remote logging fails;
 
@@ -743,7 +743,7 @@ k: entry.stack }, 'Logger)]
   y: LogEntry): Promise<void></void> {/* TODO: Fix JSX expression */});]
     },
         bod,
-y: JSON.stringify({/* TODO: Fix JSX expression */});]
+y: JSON.stringify({ /* TODO: Fix JSX expression */  });]
     });]
     });]
     } catch (error) {/* TODO: Fix JSX expression */});]
@@ -753,16 +753,16 @@ y: JSON.stringify({/* TODO: Fix JSX expression */});]
   }
 
   /**
-   * Generate unique log ID;
+   * Generate unique log ID`;
 
    *
-   * @private;
+   * @private``;
 
-   * @returns Unique log identifier;
+   * @returns Unique log identifier```;
 
    */
   private generateLogId(): string {
-    return `log_${Date.now();_${Math.random().toString(36).substr(2, 9);
+    return `log_${Date.now()``;_${Math.random().toString(36).substr(2, 9)```;
 
   private generateLogId(): string {/* TODO: Fix JSX expression */}
 
@@ -795,14 +795,14 @@ private getUserId(): string | undefined {/* TODO: Fix JSX expression */});]
 
    */
   private getSessionId(): string | undefined {
-    if (typeof window === undefined) return undefined;
+    if (typeof window === undefined) return undefined`;
 
-    try {;
+    try {
 
-let sessionId = sessionStorage.getItem(sessionId);;
+let sessionId = sessionStorage.getItem(sessionId)``;```;
 
       if (!sessionId) {
-        sessionId = `session_${Date.now();_${Math.random().toString(36).substr(2, 9);
+        sessionId = `session_${Date.now()``;_${Math.random().toString(36).substr(2, 9)```;
 
         sessionStorage.setItem('sessionId, sessionId)
   private getSessionId(): string | undefined {/* TODO: Fix JSX expression */}
@@ -865,7 +865,7 @@ e: string): LogEntry[] {/* TODO: Fix JSX expression */});]
     byLevel: Record<string></string>
     bySource: Record<string></string>});
 
-} {;
+} {
 
 const byLevel: Record<string></string> = {}
 
@@ -973,10 +973,10 @@ export default EnhancedLogger;
 
 // Export singleton instance;
 
-export const logger = EnhancedLogger.getInstance();;
+export const logger = EnhancedLogger.getInstance()`;``;
 
 // Export default
-export default EnhancedLogger;
+export default EnhancedLogger```;
 
 "
 }

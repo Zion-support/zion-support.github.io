@@ -1,28 +1,28 @@
-'use client;
+'use client';
 
-import React, { useState, useCallback } from 'react;
+import React, { useState, useCallback } from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react;
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',    email: ',
     company: ',
     phone: ',
     service: ',
-    message: ';)
-})const [isSubmitting, setIsSubmitting] = useState(false);
+    message: '';)
+})const [isSubmitting, setIsSubmitting] = useState(false)';
 
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
 
-const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
+const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
 
     setFormData(prev => ({
       ...prev,
@@ -30,14 +30,14 @@ const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTe
 })))
 }, []);
 
-const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(prev => ({;
+const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value]
     });)]
     }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {;
-  const handleSubmit = useCallback (async (e: React.FormEvent) => {;
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+  const handleSubmit = useCallback (async (e: React.FormEvent) => {
     e.preventDefault();    setIsSubmitting(true);
 
     try {
@@ -53,7 +53,7 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(
         phone: ',
         service: ',
 message: ']
-    });]
+    })';]
     } catch (error) {
       setSubmitStatus('error)]
     } finally {
@@ -61,7 +61,7 @@ message: ']
     }
 
         message: ')
-      });
+      })';
 
     } catch (error) {
       setSubmitStatus('error);
@@ -95,7 +95,7 @@ message: ']
             <
           <
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed>
-  }, []);
+  }, [])'";
 
   return (
 
@@ -153,13 +153,12 @@ message: ']
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2></label>
                       Full Name *
                     <
-                    <input
-                      type="text
+                    <input type="text
                       id="name
                       name="name
-                      value = { formData.name };
+                      value = { formData.name }>
 
-                      onChange = { handleChange };
+                      onChange = { handleChange }>
 
                       className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent
@@ -168,13 +167,12 @@ message: ']
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2>
                       Email Address *                    <
-                    <input
-                      type="email
+                    <input type="email
                       id="email
                       name="email
-                      value = { formData.email };
+                      value = { formData.email }>
 
-                      onChange = { handleChange };
+                      onChange = { handleChange }>
 
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent
                     
@@ -186,13 +184,12 @@ message: ']
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2>
                       Company Name                    <
-                    <input
-                      type="text
+                    <input type="text
                       id="company
                       name="company
-                      value = { formData.company };
+                      value = { formData.company }>
 
-                      onChange = { handleChange };
+                      onChange = { handleChange }>
 
                       className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent
@@ -201,13 +198,12 @@ message: ']
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2>
                       Phone Number                    <
-                    <input
-                      type="tel
+                    <input type="tel
                       id="phone
                       name="phone
-                      value = { formData.phone };
+                      value = { formData.phone }>
 
-                      onChange = { handleChange };
+                      onChange = { handleChange }>
 
                       className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent
@@ -219,12 +215,11 @@ message: ']
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2></label>
                     Service Interest
                   <
-                  <select
-                    id="service
+                  <select id="service
                     name="service
-                    value = { formData.service };
+                    value = { formData.service }>
 
-                    onChange = { handleChange };
+                    onChange = { handleChange }>
 
                     className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent
@@ -285,13 +280,12 @@ message: ']
         <
       <
 
-      <Footer 
-    <
-  );
+      <Footer <
+  )">
 
 )]
-    };
+    }>
 
-};
+}">
 
-export default ContactPage;}
+export default ContactPage";}

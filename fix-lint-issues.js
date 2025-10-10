@@ -1,5 +1,5 @@
 #!/usr/bin
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -13,13 +13,13 @@ const __filename = fileURLToPath(import.meta.url);// __dirname removed;
 function fixUnusedVariables(content) {
   // Fix unused variables in destructuring assignments;
 
-  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {;
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^';]+)';/g, (match, vars, assignment) => {
 
-const fixedVars = vars.split(,).map(v => {);;
+const fixedVars = vars.split(,).map(v => {)';
 
-const trimmed = v.trim();;
+const trimmed = v.trim()';';
 
-      if (trimmed && !trimmed.startsWith('_') && !trimmed.includes(:)) {;
+      if (trimmed && !trimmed.startsWith('_') && !trimmed.includes(:)) {
 
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 
@@ -27,11 +27,11 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 
         return `_${trimmed}}
 
-      return trimmed}).join(', ');
+      return trimmed}).join(', ')```;
 
-    return `const { ${fixedVars} } = ${assignment};});
+    return `const { ${fixedVars} } = ${assignment}`;})``;
 
-  // Fix unused variables in function parameters;
+  // Fix unused variables in function parameters```;
 
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
@@ -40,9 +40,9 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 
         return `_${varName}}
 
-      return varName})});
+      return varName})})``;
 
-  // Fix arrow function parameters;
+  // Fix arrow function parameters```;
 
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
@@ -96,15 +96,15 @@ function fixAnyTypes(content) {/* TODO: Fix JSX expression *
 function fixJSXErrors(content) {/* TODO: Fix JSX expression *
     }
 
-    return match});
+    return match})`;
 
-  // Fix JSX expressions with multiple parent elements;
+  // Fix JSX expressions with multiple parent elements``;
 
   content = content.replace(/<React.Fragment>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {
   return (
 
   content = content.replace(/<React.Fragment>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>
-);
+)```;
 
 }/gs, (match) => {/* TODO: Fix JSX expression */}
 
@@ -115,22 +115,22 @@ function fixJSXErrors(content) {/* TODO: Fix JSX expression *
 /
 function removeUnusedImports(content) {
   /
-  const lines = content.split('\n);;
+  const lines = content.split('\n);
 
-  const usedImports = new Set();;
+  const usedImports = new Set();
 
   // Find all used identifiers;
 
-  const identifierRegex = /\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g;;
+  const identifierRegex = /\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g;
 
-  const body = lines.slice(1).join('\n); // Skip first line (imports);;
+  const body = lines.slice(1).join('\n); // Skip first line (imports);
 
 let match;
 
   while ((match = identifierRegex.exec(body)) !== null) {    usedImports.add(match[0])}
 
   /
-  const filteredLines = lines.filter(line => {);;;
+  const filteredLines = lines.filter(line => {);;
 
     if (line.trim().startsWith('import)) {
       /
@@ -139,9 +139,9 @@ function removeUnusedImports(content) {/* TODO: Fix JSX expression *
 
     // Filter import lines;
 
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */});;
+  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */});
 
-const importMatch = line.match(/import\s*{([^}]+)}/);;
+const importMatch = line.match(/import\s*{([^}]+)}/);
 
       if (importMatch) {/* TODO: Fix JSX expression */}
 
@@ -155,14 +155,14 @@ const importMatch = line.match(/import\s*{([^}]+)}/);;
 
 /
 function processFile(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     /
-    const originalContent = content;;
+    const originalContent = content;
 
     content = fixUnusedVariables(content);
 
@@ -190,21 +190,21 @@ return false}
 
 // Function to find all TypeScript/JavaScript files;
 
-function findSourceFiles(dir) {;
+function findSourceFiles(dir) {
 
-const files = [];;
+const files = [];
 
   ;
 
-function walkDir(currentPath) {;
+function walkDir(currentPath) {
 
-const items = fs.readdirSync(currentPath);;
+const items = fs.readdirSync(currentPath);
 
-        for (const item of items) {;
+        for (const item of items) {
 
-const fullPath = path.join(currentPath, item);;
+const fullPath = path.join(currentPath, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
         /
@@ -237,11 +237,11 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression *
 // console.log removed for production
 ;
 
-const srcDir = path.join(__dirname, 'src);;
+const srcDir = path.join(__dirname, 'src);
 
-const appDir = path.join(__dirname, 'app);;
+const appDir = path.join(__dirname, 'app);
 
-const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];;
+const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 
 // console.log removed for production
 ;
@@ -253,9 +253,9 @@ let processedCount = 0;for (const file of files) {/* TODO: Fix JSX expression */
 }
 
 // console.log removed for production
-// Also process root level files;
+// Also process root level files`;
 
-const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx];;
+const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx]``;```;
 
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}
 

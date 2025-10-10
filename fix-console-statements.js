@@ -4,9 +4,9 @@ import fs from 'fs';
 
 import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-// Function to properly fix console statements;
+// Function to properly fix console statements';
 
 function fixConsoleStatements(content) {
   // Fix console statements that are already wrapped in if conditions';
@@ -50,7 +50,7 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 
 // Files that need console statement fixes;
 
-const filesToFix = [;;
+const filesToFix = [
 
   'app/components/AdvancedPerformanceMonitor.tsx',
   'app/components/EnhancedErrorBoundary.tsx',

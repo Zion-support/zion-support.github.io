@@ -62,9 +62,7 @@ export const lazyLoad = (callback: () => void, options?: IntersectionObserverIni
 
     callback();
 
-    return}
-
-;
+    return};
 
 const observer = new IntersectionObserver((entries) => {};;
 
@@ -80,7 +78,7 @@ const observer = new IntersectionObserver((entries) => {};;
 
   return observer}
 
-export const preloadImage = (src: string): Promise<void> => {;;
+export const preloadImage = (src: string): Promise<void> => {
 
 return (
 
@@ -102,7 +100,7 @@ export const preloadImage = (src: string): Promise<void>;;
 
     img.src = src}
 
-export const preloadScript = (src: string): Promise<void> => {;;
+export const preloadScript = (src: string): Promise<void> => {
 
 return (
 
@@ -134,9 +132,7 @@ export const measurePerformance = (name: string, fn: () => void) => {};;
 
     fn();
 
-    return}
-
-;
+    return};
 
 const start = performance.now();;
 
@@ -154,9 +150,7 @@ export const getDeviceInfo = () => {};;
 
   if (typeof window === 'undefined) {}
 
-    return { isMobile: false, isTablet: false, isDesktop: true }}
-
-;
+    return { isMobile: false, isTablet: false, isDesktop: true }};
 
 const width = window.innerWidth;;
 
@@ -184,7 +178,7 @@ const width = window.innerWidth;;
 
   constructor(config?: Partial<OptimizationConfig>) {}
 
-'use client;
+'use client';
 
 /**
  * Performance optimization utilities for the Zion Tech Group website;
@@ -414,11 +408,11 @@ const lastEntry = entries[entries.length - 1];;
   }
 
   private observeCLS() {
-    try {;
+    try {
 
 let clsValue = 0;;
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -814,10 +808,10 @@ const images = document.querySelectorAll(img);;
   n: 'anonymous },
       {/* TODO: Fix JSX expression */}
 
-  s: style }];
+  s: style }]';
 
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
-    });
+    })';
 
     logger.info('Critical resource hints added', PerformanceOptimizer);
 
@@ -898,7 +892,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 }
 
 // Export singleton instance
-export const performanceOptimizer = new PerformanceOptimizer();;
+export const performanceOptimizer = new PerformanceOptimizer()`;``;
 
 export default PerformanceOptimizer
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
+export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig }```;

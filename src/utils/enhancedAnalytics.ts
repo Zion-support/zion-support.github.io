@@ -173,7 +173,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';
 
   timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent}
@@ -332,7 +332,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';
 
   pageTitle: pageTitle || document.title,
         referrer: document.referrer}
@@ -349,17 +349,17 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';
 
   categor,
   y: 'User Interaction,
 //       action,
 //       label,
-//       value;)
+//       value';)
     })}
 
   public trackError(erro,
-  r: Error, context?: Record;)
+  r: Error, context?: Record';)
           <string, unknown>): void {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -370,7 +370,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';
 
   categor,
   y: 'Error,
@@ -383,7 +383,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';
 
   stack: error.stack,
 
@@ -401,7 +401,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}'`;
 
   categor,
   y: 'Performance,
@@ -431,7 +431,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}'``;
 
   categor,
   y: 'Conversion,
@@ -443,7 +443,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}```;
 
   conversionId: `conv-${Date.now()}
 
@@ -461,7 +461,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   n: string,
     label?: string,
     value?: number,
-    metadata?: Record;
+    metadata?: Record';
 
           <string, unknown>
   ): void {// TODO: Add content}
@@ -487,9 +487,9 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
 }
 
-    if (this.queue.length === 0) return;
+    if (this.queue.length === 0) return';
 
-    // Check if online;
+    // Check if online';
 
     if (typeof navigator !== 'undefined && !navigator.onLine) {/* TODO: Fix JSX expression */}
 
@@ -582,7 +582,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}`;
 
   queueSize: this.queue.length,
       offlineQueueSize: this.offlineQueue.length,
@@ -595,6 +595,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
 }
 
-// Export singleton instance;
+// Export singleton instance``;
 
-export default analytics;
+export default analytics```;

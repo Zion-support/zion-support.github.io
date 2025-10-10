@@ -99,7 +99,7 @@ export class CacheManager<T></T> {}
    * Set a value in the cache;
 
    */
-  set(key: string, value: T, ttl?: number): void {;
+  set(key: string, value: T, ttl?: number): void {
 
 const entry: CacheEntry<T></T> = {
       value;
@@ -196,8 +196,8 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
   set<T></T>(ke,
   y: string, valu,
   e: T, option)
-  s: { ttl?: number } = {});: void {/* TODO: Fix JSX expression */});]
-    };
+  s: { ttl?: number } = {})`;: void {/* TODO: Fix JSX expression */})``;]
+    }```;
 
     performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, count);
 
@@ -253,11 +253,11 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
 
 }
 
-    this.stats.hits++;
+    this.stats.hits++`;
 
-    this.updateHitRate();
+    this.updateHitRate()``;
 
-   * Get cache entry;
+   * Get cache entry```;
 
    */
   get<T></T>(ke)
@@ -281,27 +281,27 @@ stopCleanup(): void {/* TODO: Fix JSX expression */});]
       typeof window !== 'undefined &&
       window.sessionStorage}
 
-    ) {/* TODO: Fix JSX expression */}););
+    ) {/* TODO: Fix JSX expression */});)`;
 
-      } catch (error) {/* TODO: Fix JSX expression */}););
+      } catch (error) {/* TODO: Fix JSX expression */})``;)```;
 
     }    if (!entry) {/* TODO: Fix JSX expression */}
 
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, count);
+      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, count)``;
 
-      return undefined});
+      return undefined})```;
 
 }
 
     if (this.isExpired(entry)) {/* TODO: Fix JSX expression */}
 
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, count);
+      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, count)`;
 
-      return undefined});
+      return undefined})``;
 
 }
 
-    this.stats.hits++;
+    this.stats.hits++```;
 
     performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, count);
 
@@ -521,9 +521,9 @@ this.saveToStorage()]
 
 const start = performance.now();;
 
-const value = fn();;
+const value = fn();`;
 
-const duration = performance.now() - start;;
+const duration = performance.now() - start``;```;
 
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms);
 
@@ -560,18 +560,18 @@ const duration = performance.now() - start;;
 
 const start = performance.now();;
 
-const value = await fn();;
+const value = await fn();`;
 
-const duration = performance.now() - start;;
+const duration = performance.now() - start``;```;
 
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms);    this.set(key, value, options);
 
-    return value});
+    return value})`;
 
 }
 
   /**
-   * Memoize a function with caching;
+   * Memoize a function with caching``;
 
    */
   memoize<TArgs></TArgs>(f,
@@ -585,7 +585,7 @@ const duration = performance.now() - start;;
   ): (...arg)
   s: TArgs) => TResult {/* TODO: Fix JSX expression */}
 
-    const { keyGenerator, ...cacheOptions } = options;
+    const { keyGenerator, ...cacheOptions } = options```;
 
     return (...arg)
   s: TArgs): TResult => {/* TODO: Fix JSX expression */}
@@ -759,8 +759,8 @@ export default CacheManager;
 
 }
 
-export const cacheManager = new CacheManager();;
+export const cacheManager = new CacheManager()`;``;
 
-export default CacheManager;
+export default CacheManager```;
 
 }

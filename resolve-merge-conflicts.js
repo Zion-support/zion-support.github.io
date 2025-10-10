@@ -10,7 +10,7 @@ import fs from 'fs';
 function resolveConflicts() {
   try {
     // console.log removed for production
-execSync('git merge cursor/analyze-improve-and-deploy-application-bc32 --no-commit', { stdio: 'pipe });
+execSync('git merge cursor/analyze-improve-and-deploy-application-bc32 --no-commit', { stdio: 'pipe })';
 
 function resolveConflicts() {/* TODO: Fix JSX expression */}
 
@@ -18,7 +18,7 @@ function resolveConflicts() {/* TODO: Fix JSX expression */}
 
   try {/* TODO: Fix JSX expression */}
 
-  o: 'pipe });
+  o: 'pipe })';
 
     // console.log removed for production
 return true} catch (error) {/* TODO: Fix JSX expression */}
@@ -27,7 +27,7 @@ return true} catch (error) {/* TODO: Fix JSX expression */}
 
     // Get list of conflicted files;
 
-    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n).filter(f => f);;
+    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n).filter(f => f);
 
     // console.log removed for production
 conflictedFiles.forEach(file => // console.log removed for production
@@ -38,18 +38,18 @@ conflictedFiles.forEach(file => // console.log removed for production
       if (fs.existsSync(file)) {
     // console.log removed for production
 `
-  files:`);`
+  files:`)```;`
     conflictedFiles.forEach(file => // console.log removed for production
-);
+)```;
 
     // Resolve conflicts by keeping the incoming version (theirs)
     conflictedFiles.forEach(file => {/* TODO: Fix JSX expression */})`
         // console.log removed for production
 try {/* TODO: Fix JSX expression */}`
           execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' });"`
+  o: 'pipe' })```;"`
           execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' });`
+  o: 'pipe' })```;`
           // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}`
           // console.log removed for production
@@ -65,7 +65,7 @@ try {/* TODO: Fix JSX expression */}`
 
 // Function to clean up console.log statements;
 
-function cleanConsoleLogs() {;
+function cleanConsoleLogs() {
 
 function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
 
@@ -74,7 +74,7 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
   // console.log removed for production
 ;
 
-const filesToClean = [;;
+const filesToClean = [
 
     'app/App.tsx',
     'app/components/Footer.tsx',
@@ -85,11 +85,11 @@ const filesToClean = [;;
 
   filesToClean.forEach(file => {)
     if (fs.existsSync(file)) {
-      try {;
+      try {
 
-let content = fs.readFileSync(file, 'utf8);;
+let content = fs.readFileSync(file, 'utf8);
 
-        const originalLength = content.length;;
+        const originalLength = content.length;
 
         // Remove console.log statements;
 
@@ -97,12 +97,12 @@ let content = fs.readFileSync(file, 'utf8);;
 
         content = content.replace(/^\s*console\.(warn|error|info|debug)\([^)]*\);\s*$/gm, ');
 
-        // Remove empty lines that might be left behind;
+        // Remove empty lines that might be left behind`;
 
-        content = content.replace(/\n\s*\n\s*\n/g, '\n\n);
+        content = content.replace(/\n\s*\n\s*\n/g, '\n\n)``;
 
         if (content.length !== originalLength) {
-          fs.writeFileSync(file, content);
+          fs.writeFileSync(file, content)```;
 
   filesToClean.forEach(file => {/* TODO: Fix JSX expression */})`
           // console.log removed for production
@@ -118,7 +118,7 @@ let content = fs.readFileSync(file, 'utf8);;
 
 // Function to optimize performance;
 
-function optimizePerformance() {;
+function optimizePerformance() {
 
 function optimizePerformance() {/* TODO: Fix JSX expression */}
 
@@ -127,14 +127,14 @@ function optimizePerformance() {/* TODO: Fix JSX expression */}
   // console.log removed for production
 // Update package.json scripts for better performance;
 
-  const packageJsonPath = 'package.json;;
+  const packageJsonPath = 'package.json';
 
   if (fs.existsSync(packageJsonPath)) {
-    try {;
+    try {
 
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8));;
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8));
 
-      // Add performance optimization scripts;
+      // Add performance optimization scripts`;
 
       packageJson.scripts = {
         ...packageJson.scripts,
@@ -145,9 +145,9 @@ const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8));;
         'type-check': tsc --noEmit
   if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
 
-      };
+      }``;
 
-      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))```;
 
       // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}`
@@ -163,12 +163,12 @@ async function main() {
   try {
     // Step 1: Resolve merge conflicts;
 
-    const hasConflicts = !resolveConflicts();;
+    const hasConflicts = !resolveConflicts();
 
     if (hasConflicts) {,
       // console.log removed for production
 try {,
-        execSync('git commit -m "Resolve merge conflicts and integrate improvements"', { stdio: 'pipe });
+        execSync('git commit -m "Resolve merge conflicts and integrate improvements"', { stdio: 'pipe })';
 
 async function main() {/* TODO: Fix JSX expression */}
 
@@ -185,70 +185,70 @@ async function main() {/* TODO: Fix JSX expression */}
 
     }
 
-    // Step 2: Clean up console.log statements;
+    // Step 2: Clean up console.log statements';
 
-    // Step 3: Optimize performance;
+    // Step 3: Optimize performance';
 
-    // Step 4: Run type check;
+    // Step 4: Run type check';
 
     // console.log removed for production
 try {,
       execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe });
 
     // Step,
-  2: Clean up console.log statements;
+  2: Clean up console.log statements';
 
     // Step,
-  3: Optimize performance;
+  3: Optimize performance';
 
     // Step,
-  4: Run type check;
+  4: Run type check';
 
     // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: 'pipe });
+  o: 'pipe })';
 
       // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}
 
     }
 
-    // Step 5: Run linting;
+    // Step 5: Run linting';
 
     // console.log removed for production
 try {,
-      execSync('npm run lint:fix', { stdio: 'pipe });
+      execSync('npm run lint:fix', { stdio: 'pipe })';
 
     // Step,
-  5: Run linting;
+  5: Run linting';
 
     // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: 'pipe });
+  o: 'pipe })';
 
       // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}
 
     }
 
-    // Step 6: Commit all changes;
+    // Step 6: Commit all changes';
 
     // Step,
-  6: Commit all changes;
+  6: Commit all changes';
 
     // console.log removed for production
 execSync('git add .', {/* TODO: Fix JSX expression */})
-  o: 'pipe' });"
+  o: 'pipe' })`;"
     execSync('git commit -m "Comprehensive,"
   improvements: resolve conflicts, clean console.logs, optimize performance"', {/* TODO: Fix JSX expression */})
-  o: 'pipe });
+  o: 'pipe })'``;
 
     // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-y:);
+y:)'```;
 
     // console.log removed for production
 // console.log removed for production

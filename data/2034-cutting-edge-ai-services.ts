@@ -457,9 +457,7 @@ lin,
 
 rating?: number,
 launch_date?: string,
-real_service?: boolean}
-
-;
+real_service?: boolean};
 
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   id: ai - emotional - support - agent,
@@ -595,7 +593,7 @@ export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 
 ;
 
-export type CuttingEdgeAIService = {;
+export type CuttingEdgeAIService = {
 
 	id: string;
 
@@ -635,7 +633,7 @@ export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 	launchDate?: string;,
 	realService?: boolean};
 
-export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
+export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
 	{,
 		id: ai-emotional-support-agent}
@@ -658,7 +656,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: ai-product-spec-writer}
 
@@ -679,7 +677,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: ai-creative-studio}
 
@@ -705,7 +703,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 
 ;
 
-export type CuttingEdgeAIService = {;
+export type CuttingEdgeAIService = {
 
 	id: string;
 
@@ -722,7 +720,7 @@ export type CuttingEdgeAIService = {;
 		| AI Healthcare,
 		| AI Neural Interfaces,
 export const,
-  cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
+  cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
 	{/* TODO: Fix JSX expression */}
 
@@ -853,7 +851,7 @@ export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 	launchDate?: string;,
 	realService?: boolean};
 
-export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
+export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
 	{,
 		id: ai-emotional-support-agent}
@@ -876,7 +874,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: ai-product-spec-writer}
 
@@ -897,7 +895,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: ai-creative-studio}
 
@@ -931,7 +929,7 @@ export type CuttingEdgeAIService =
   category: unknown;
 
 export const,
-  cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
+  cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
 	{/* TODO: Fix JSX expression */}
 
@@ -1274,9 +1272,7 @@ lin,
 
 rating?: number,
 launch_date?: string,
-real_service?: boolean}
-
-;
+real_service?: boolean};
 
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   id: ai - emotional - support - agent,
@@ -1536,7 +1532,7 @@ i,
 
   r: string, professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; use_cases?: string[]; lin,
-  k: string; rating?: number, launch_date?: string, real_service?: boolean} ; export const,
+  k: string; rating?: number, launch_date?: string, real_service?: boolean}; export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,  i,
   d: 'ai - emotional - support - agent nam,
   e: 'AI Emotional Support Agent, descriptio,
@@ -1584,13 +1580,13 @@ i,
   r: string, professional?: string} enterprise?: string }; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
   k: string; rating?: number; launchDate?: string; realService?: boolean}; export const,
-  cuttingEdgeAIServices: CuttingEdgeAIService[] = [; {/* TODO: Fix JSX expression */}
+  cuttingEdgeAIServices: CuttingEdgeAIService[] = [ {/* TODO: Fix JSX expression */}
 
   n: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.} categor,
-  y: 'AI Emotional Intelligence}; pricin,
+  y: 'AI Emotional Intelligence}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$99/mo }; feature,
+  r: '$99/mo }'; feature,
   s: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes]; integration,
   s: ['TwilioSlack]; useCase,
   s: ['Employee wellness24/7 support]; lin,
@@ -1599,10 +1595,10 @@ i,
   e: true}; {/* TODO: Fix JSX expression */}
 
   n: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.} categor,
-  y: 'AI Business Management}; pricin,
+  y: 'AI Business Management}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$79/mo }; feature,
+  r: '$79/mo }'; feature,
   s: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment]; integration,
   s: ['JiraLinear]; useCase,
   s: ['Faster planningBetter alignment]; lin,
@@ -1611,10 +1607,10 @@ i,
   e: true}; {/* TODO: Fix JSX expression */}
 
   n: 'Generate brand-consistent images and short-form videos with approvals and rights management.} categor,
-  y: 'AI Creativity}; pricin,
+  y: 'AI Creativity}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$149/mo }; feature,
+  r: '$149/mo }'; feature,
   s: ['Brand kitImage & video genReview & approvalsRights management]; integration,
   s: ['CanvaFigma]; useCase,
   s: ['Marketing velocityCost savings]; lin,
@@ -1628,13 +1624,13 @@ i,
   r: string, professional?: string} enterprise?: string }; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
   k: string; rating?: number; launchDate?: string; realService?: boolean}; export const,
-  cuttingEdgeAIServices: CuttingEdgeAIService[] = [; {/* TODO: Fix JSX expression */}
+  cuttingEdgeAIServices: CuttingEdgeAIService[] = [ {/* TODO: Fix JSX expression */}
 
   n: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.} categor,
-  y: 'AI Emotional Intelligence}; pricin,
+  y: 'AI Emotional Intelligence}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$99/mo }; feature,
+  r: '$99/mo }'; feature,
   s: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes]; integration,
   s: ['TwilioSlack]; useCase,
   s: ['Employee wellness24/7 support]; lin,
@@ -1643,10 +1639,10 @@ i,
   e: true}; {/* TODO: Fix JSX expression */}
 
   n: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.} categor,
-  y: 'AI Business Management}; pricin,
+  y: 'AI Business Management}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$79/mo }; feature,
+  r: '$79/mo }'; feature,
   s: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment]; integration,
   s: ['JiraLinear]; useCase,
   s: ['Faster planningBetter alignment]; lin,
@@ -1655,10 +1651,10 @@ i,
   e: true}; {/* TODO: Fix JSX expression */}
 
   n: 'Generate brand-consistent images and short-form videos with approvals and rights management.} categor,
-  y: 'AI Creativity}; pricin,
+  y: 'AI Creativity}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$149/mo }; feature,
+  r: '$149/mo }'; feature,
   s: ['Brand kitImage & video genReview & approvalsRights management]; integration,
   s: ['CanvaFigma]; useCase,
   s: ['Marketing velocityCost savings]; lin,
@@ -1719,7 +1715,7 @@ i,
 
   r: string, professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; use_cases?: string[]; lin,
-  k: string; rating?: number, launch_date?: string, real_service?: boolean} ; export const,
+  k: string; rating?: number, launch_date?: string, real_service?: boolean}; export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,  i,
   d: 'ai - emotional - support - agent nam,
   e: 'AI Emotional Support Agent, descriptio,

@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react;
+import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
 
 import Navigation from '../components/Navigation;
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const TeamPage: React.FC = () => {;
+const TeamPage: React.FC = () => {
 
-const teamMembers = [;;;
+const teamMembers = [';';';
 
     {
       name: 'Kleber Santos,
@@ -73,7 +73,7 @@ const teamMembers = [;;;
 
 ;
 
-const stats = [;;
+const stats = [
 
     { icon: Users, label: 'Team Members', value: '50+ },
     { icon: Award, label: 'Awards Won', value: '25+ },
@@ -82,9 +82,9 @@ const stats = [;;
 
   ];
 
-;
+';
 
-const values = [;;
+const values = [';';
 
     {
       title: 'Innovation,
@@ -270,6 +270,6 @@ const values = [;;
 
       <Footer />
     </div>
-  )};
+  )}">
 
-export default TeamPage;
+export default TeamPage"```;

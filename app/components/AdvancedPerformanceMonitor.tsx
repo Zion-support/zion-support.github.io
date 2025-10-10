@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useEffect, useState, useCallback } from react;
 
@@ -23,15 +23,13 @@ interface PerformanceMonitorProps {
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps></PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,;)
-}) => {;const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>({
+}) => {const [metrics, setMetrics] = useState<PerformanceMetrics></PerformanceMetrics>({
   memory: number | null}
 
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 
-  enableRealTimeMonitoring?: boolean}
-
-;
+  enableRealTimeMonitoring?: boolean};
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
@@ -51,7 +49,7 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
 
 const [isMonitoring, setIsMonitoring] = useState(false);
 
-const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {;
+const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
     setMetrics(prev => ({ ...prev, ...newMetrics }));    if (onMetricsUpdate) {
       onMetricsUpdate({ ...metrics, ...newMetrics });
 
@@ -59,7 +57,7 @@ const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
 
   }, [metrics, onMetricsUpdate]);
 
-const measurePerformance = useCallback(() => {;;;
+const measurePerformance = useCallback(() => {
 
     if (typeof window === undefined || !window.performance) return;
 
@@ -76,7 +74,7 @@ const fcpEntry = performance.getEntriesByName(first-contentful-paint)[0];;
 
 ;
 
-const measureWebVitals = useCallback(() => {;;
+const measureWebVitals = useCallback(() => {
 
     if (typeof window === 'undefined' || !(performance in window)) return;
 
@@ -94,9 +92,9 @@ const fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;;
 
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver in window) {
-      try {;
+      try {
 
-const lcpObserver = new PerformanceObserver(list => {;;
+const lcpObserver = new PerformanceObserver(list => {
 
 const entries = list.getEntries();;
 
@@ -115,9 +113,9 @@ const lastEntry = entries[entries.length - 1];;
 
     // Measure First Input Delay (FID)
     if ('PerformanceObserver in window) {
-      try {;
+      try {
 
-const fidObserver = new PerformanceObserver(list => {;;
+const fidObserver = new PerformanceObserver(list => {
 
 const entries = list.getEntries();;
 
@@ -144,11 +142,11 @@ fid: fidEntry.processingStart - fidEntry.startTime,]
 
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver in window) {
-      try {;
+      try {
 
 let clsValue = 0;;
 
-const clsObserver = new PerformanceObserver(list => {;;
+const clsObserver = new PerformanceObserver(list => {
 
 const entries = list.getEntries();;
 
@@ -173,7 +171,7 @@ observers.push(clsObserver)]
     }
 
     // Measure Time to First Byte (TTFB)
-    try {;
+    try {
 
 const navigationEntries = performance.getEntriesByType?.(navigation) || [];;
 
@@ -214,7 +212,7 @@ memory,]
 };)
 }, []);
 
-const measureResourceTiming = useCallback(() => {;
+const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance in window)) return;
 
 const resources = performance.getEntriesByType(resource);;
@@ -240,14 +238,14 @@ size: r.transferSize,]
 
 ;
 
-const measureCoreWebVitals = useCallback(() => {;;
+const measureCoreWebVitals = useCallback(() => {
 
     if (typeof window === undefined) return;
 
     // Use web-vitals library if available
     try {
       import('web-vitals)
-        .then(webVitals => {;
+        .then(webVitals => {
 
 const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
 
@@ -333,7 +331,7 @@ const navigationEntry = performance.getEntriesByType(navigation)[0] as Performan
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
 
-const startMonitoring = () => {;;
+const startMonitoring = () => {
 
       setIsMonitoring(true);
 
@@ -342,7 +340,7 @@ const startMonitoring = () => {;;
 
     // Monitor performance every 5 seconds;
 
-const interval = setInterval(() => {;;
+const interval = setInterval(() => {
 
       measureResourceTiming();)
 }, 5000);
@@ -370,7 +368,7 @@ const interval = setInterval(measurePerformance, 5000);;
 
       // Set up performance observer for real-time updates;
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint) {
@@ -415,14 +413,14 @@ const cleanup = startMonitoring();;
 
   }, [enableRealTimeMonitoring, measurePerformance, updateMetrics]);
 
-const getPerformanceScore = (metric: number | null, thresholds: { good: number; poor: number }): string => {;
-    if (metric === null) return 'N/A;
+const getPerformanceScore = (metric: number | null, thresholds: { good: number; poor: number }): string => {
+    if (metric === null) return 'N/A';
 
-    if (metric <= thresholds.good) return 'Good;
+    if (metric <= thresholds.good) return 'Good';
 
-    if (metric <= thresholds.poor) return 'Needs Improvement;
+    if (metric <= thresholds.poor) return 'Needs Improvement';
 
-    return 'Poor;  };
+    return 'Poor;  }';
 
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
@@ -464,12 +462,12 @@ const _recommendations = getPerformanceRecommendations();;
       <div>
         <h3 className='font-semibold text-sm mb-2></h>Performance Monitor</h3>
         <div>
-          <div></di>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0);ms` : 'N/A}</div>
-          <div></di>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0);ms` : 'N/A}</div>
-          <div></di>FID: {metrics.fid ? `${metrics.fid.toFixed(0);ms` : 'N/A}</div>
+          <div></di>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)```;ms` : 'N/A}</div>
+          <div></di>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)```;ms` : 'N/A}</div>
+          <div></di>FID: {metrics.fid ? `${metrics.fid.toFixed(0)```;ms` : 'N/A}</div>
           <div></di>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A}</div>
           <div>
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0);ms` : 'N/A}</div>
+            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)```;ms` : 'N/A}</div>
           <div>
             Memory:{' }
 
@@ -494,10 +492,10 @@ const _recommendations = getPerformanceRecommendations();;
         );
 
       </div>
-    ););
+    );)`;
 
-  return null;)
-export default AdvancedPerformanceMonitor;}
+  return null``;)
+export default AdvancedPerformanceMonitor```;}
 
       <div className="mt-4 pt-4 border-t border-white/10>
         <div className="flex items-center justify-between>
@@ -512,8 +510,8 @@ export default AdvancedPerformanceMonitor;}
         </div>
       </div>
     </div>
-  );
+  )">
 
 }
 
-export default AdvancedPerformanceMonitor;
+export default AdvancedPerformanceMonitor"```;

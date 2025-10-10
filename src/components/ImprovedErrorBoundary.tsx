@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 /**
  * Improved Error Boundary
@@ -30,7 +30,7 @@ interface State {
 
   errorCount: number}
 
-class ImprovedErrorBoundary extends Component<Props, State> {;
+class ImprovedErrorBoundary extends Component<Props, State> {
 
 constructor(props: Props) {
     super(props);
@@ -96,15 +96,13 @@ class ImprovedErrorBoundary extends Component;
 
   O: Add content}
 
-}
-
-;
+};
 
 constructor(props: Props) {// TODO: Add content}
 
 }
 
-class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
+class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
 constructor(props: ErrorBoundaryProps) {
     super(props);
@@ -317,7 +315,7 @@ p: Date.now(),
 
 }
 
-    window.location.reload()};
+    window.location.reload()}">
 
   handleGoHome = (): void => {/* TODO: Fix JSX expression */}
 
@@ -325,7 +323,7 @@ p: Date.now(),
 
 }
 
-    window.location.href = /};
+    window.location.href = /}">
 
   render(): ReactNode {/* TODO: Fix JSX expression */}
 
@@ -339,7 +337,7 @@ p: Date.now(),
 
 }
 
-      // Use custom fallback if provided;
+      // Use custom fallback if provided">
 
       if (this.props.fallback) {/* TODO: Fix JSX expression */}
 
@@ -349,7 +347,7 @@ p: Date.now(),
 
         return this.props.fallback}
 
-      // Default error UI;
+      // Default error UI";
 
       return (<div>Coming Soon</div>)
   )
@@ -472,7 +470,7 @@ p: Date.now(),
 
 }
 
-const styles = {;;
+const styles = {
 
   container: {
     minHeight: '100vh,
@@ -571,11 +569,9 @@ $4}
 
     return this.props.children}
 
-}
+};
 
-;
-
-const styles = {// TODO: Add content};;
+const styles = {// TODO: Add content}';';
 
 }
 
@@ -584,7 +580,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   minHeigh,
   t: '100vh,
@@ -606,7 +602,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   maxWidt,
   h: '600px,
@@ -627,7 +623,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   fontSiz,
   e: '48px,
@@ -639,7 +635,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   fontSiz,
   e: '24px,
@@ -655,7 +651,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   fontSiz,
   e: '16px,
@@ -671,7 +667,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   textAlig,
   n: 'left as const,
@@ -691,7 +687,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   curso,
   r: 'pointer,
@@ -706,7 +702,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   fontSiz,
   e: 14px
@@ -716,7 +712,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   marginBotto,
   m: '12px,
@@ -728,7 +724,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   backgroundColo,
   r: '#f5f5f5,
@@ -751,7 +747,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   displa,
   y: 'flex,
@@ -766,7 +762,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   paddin,
   g: '12px 24px,
@@ -792,7 +788,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   backgroundColo,
   r: #6c757d
@@ -802,7 +798,7 @@ const styles = {// TODO: Add content};;
 
   O: Add content}
 
-};
+}';
 
   marginTo,
   p: '24px,
@@ -812,4 +808,4 @@ const styles = {// TODO: Add content};;
   r: #999
   }
 
-};
+}';

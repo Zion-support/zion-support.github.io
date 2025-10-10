@@ -5,7 +5,7 @@ export type EnterpriseITSolution =
     starte,
   r: string, // e.g. $2, 999 / mo
 export type EnterpriseITSolution =
-export type EnterpriseITSolution = {;
+export type EnterpriseITSolution = {
 
 export type EnterpriseITSolution =
   id: string;
@@ -58,9 +58,7 @@ export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
 
   rating?: number,
       Policy-based access,
-      Micro-segmentation}
-
-;
+      Micro-segmentation};
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [,
     id: zero - trust - network - architecture,
@@ -1562,9 +1560,7 @@ real_service?: boolean;
 
 rating?: number;
 
-launch_date?: string}
-
-;
+launch_date?: string};
 
 export const enterpriseITSolutions: EnterpriseITSolution[] = [,
   id: zero - trust - network - architecture,
@@ -1917,7 +1913,7 @@ export const,
 ];
 
 },
-export const enterpriseITSolutions: EnterpriseITSolution[] = [;
+export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 	{
 		id: zero-trust-network-architecture,
@@ -2032,7 +2028,7 @@ export type EnterpriseITSolution = {
 	link: string, // canonical internal link under /services/*;
 
 export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [;
+  enterpriseITSolutions: EnterpriseITSolution[] = [
 
 	{/* TODO: Fix JSX expression */}
 
@@ -2244,7 +2240,7 @@ export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
 
 	launchDate?: string};
 
-export const enterpriseITSolutions: EnterpriseITSolution[] = [;
+export const enterpriseITSolutions: EnterpriseITSolution[] = [
 
 	{
 		id: zero-trust-network-architecture;
@@ -2271,7 +2267,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
 		launchDate: 2025-11-01};
 
-	{;
+	{
 
 		id: platform-engineering-foundation;
 
@@ -2295,7 +2291,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
 		rating: 4.8};
 
-	{;
+	{
 
 		id: enterprise-data-mesh;
 
@@ -2317,7 +2313,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: cloud-migration-accelerator;
 
@@ -2339,7 +2335,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: threat-detection-response;
 
@@ -2361,7 +2357,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: observability-platform-starter;
 
@@ -2383,7 +2379,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: cost-governance-suite;
 
@@ -2405,7 +2401,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: identity-governance-administration;
 
@@ -2428,7 +2424,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [;
 		realService: true;
 
 export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [;
+  enterpriseITSolutions: EnterpriseITSolution[] = [
 
 	{/* TODO: Fix JSX expression */}
 
@@ -2649,7 +2645,7 @@ export type EnterpriseITSolution = starte,
   r: string, // e.g. $2} 999 / mo professional?: string; enterprise?: string}; categor,
   y: ; feature,
   s: string[]; integrations?: string[]; use_cases?: string[]; lin,
-  k: string; // canonical internal link under /services/*; real_service?: boolean; rating?: number, ' 'Policy-based access',' Micro-segmentation} ; export const,
+  k: string; // canonical internal link under /services/*; real_service?: boolean; rating?: number, ' 'Policy-based access',' Micro-segmentation}; export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [,  i,
   d: 'zero - trust - network - architecture, nam,
   e: 'Zero Trust Network Architecture, taglin,
@@ -2711,7 +2707,7 @@ export type EnterpriseITSolution = starte,
   g: {/* TODO: Fix JSX expression */}
 
   r: $1}999/mo } feature,
-  s: [ }; export const,
+  s: [ }'; export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [  i,
   d: 'zero-trust-network-architecture, nam,
   e: 'Zero Trust Network Architecture, taglin,
@@ -3153,19 +3149,19 @@ export type EnterpriseITSolution = starte,
   e: '2025 - 11 - 01 } lin,
   k: http,
   s://ziontechgroup.com / services / platform - engineering - foundation real_servic,
-  e: true; ratin,
+  e: true'; ratin,
   g: 4.8} lin,
   k: http,
   s://ziontechgroup.com / services / sso - and - user - lifecycle - hub real_servic,
-  e: true}]; i,
-  d: string; nam,
+  e: true}]'; i,
+  d: string'; nam,
   e: string, tagline?: string, descriptio,
   n: string, categor,
   y: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | Cybersecurity, pricin,
   g: starte,
   r: string, // e.g. $2, 999 / mo professional?: string; enterprise?: string} feature,
   s: string[]; integrations?: string[], use_cases?: string[], lin,
-  k: string, // canonical internal link under /services/*; real_service?: boolean; rating?: number; launch_date?: string} ; export const,
+  k: string, // canonical internal link under /services/*; real_service?: boolean; rating?: number; launch_date?: string}; export const,
   enterpriseITSolutions: EnterpriseITSolution[] = [,  i,
   d: 'zero - trust - network - architecture nam,
   e: 'Zero Trust Network Architecture taglin,
@@ -3386,13 +3382,13 @@ export type EnterpriseITSolution = starte,
   r: string, // e.g. $2,999/mo professional?: string}; enterprise?: string}; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
   k: string, // canonical internal link under /services/*; realService?: boolean; rating?: number; launchDate?: string}; export const,
-  enterpriseITSolutions: EnterpriseITSolution[] = [; {/* TODO: Fix JSX expression */}
+  enterpriseITSolutions: EnterpriseITSolution[] = [ {/* TODO: Fix JSX expression */}
 
   y: 'Enterprise Security} pricin,
   g: {/* TODO: Fix JSX expression */}
 
   r: $4,999/mo} enterpris,
-  e: 'Custom }; feature,
+  e: 'Custom }'; feature,
   s: ['Policy-based accessMicro-segmentationDevice posture checksSSO & MFA integration]; integration,
   s: ['OktaAzure ADCloudflare Zero Trust]; useCase,
   s: ['Secure remote workLateral movement prevention]; lin,
@@ -3404,7 +3400,7 @@ export type EnterpriseITSolution = starte,
   y: 'DevOps & Automation} pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$3}499/mo }; feature,
+  r: '$3}499/mo }'; feature,
   s: ['Self-service templatesGolden pipelinesRBAC and policy packsCost guardrails]; integration,
   s: ['GitHubArgoCDBackstage]; useCase,
   s: ['Developer productivityStandardized delivery]; lin,
@@ -3416,7 +3412,7 @@ export type EnterpriseITSolution = starte,
   y: 'Data & Analytics} pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$5}999/mo }; feature,
+  r: '$5}999/mo }'; feature,
   s: ['Domain data productsCatalog & lineageAccess governanceQuality SLAs]; integration,
   s: ['SnowflakeDatabricksBigQuery]; useCase,
   s: ['Faster analyticsFederated governance]; lin,
@@ -3427,7 +3423,7 @@ export type EnterpriseITSolution = starte,
   y: 'Cloud Services} pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$2}999/mo }; feature,
+  r: '$2}999/mo }'; feature,
   s: ['Landing zonesInfra as CodeAutomated cutoversFinOps baselines]; integration,
   s: ['AWSAzureGCP]; useCase,
   s: ['Datacenter exitHybrid cloud enablement]; lin,
@@ -3438,7 +3434,7 @@ export type EnterpriseITSolution = starte,
   y: 'Cybersecurity} pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$3}999/mo }; feature,
+  r: '$3}999/mo }'; feature,
   s: ['Detections-as-codeSOAR playbooksAttack surface monitoringThreat intel]; integration,
   s: ['CrowdStrikeWizSnykCloudflare]; useCase,
   s: ['Compliance readinessBreaches prevention]; lin,
@@ -3449,7 +3445,7 @@ export type EnterpriseITSolution = starte,
   y: 'DevOps & Automation} pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$1}999/mo }; feature,
+  r: '$1}999/mo }'; feature,
   s: ['OpenTelemetry ingestSLO dashboardsBurn rate alertsIncident workflows]; integration,
   s: ['GrafanaDatadogPagerDuty]; useCase,
   s: ['MTTR reductionReliability governance]; lin,
@@ -3460,7 +3456,7 @@ export type EnterpriseITSolution = starte,
   y: 'Cloud Services} pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$2}499/mo }; feature,
+  r: '$2}499/mo }'; feature,
   s: ['Budget guardrailsAnomaly alertsForecastingShowback/chargeback]; integration,
   s: ['AWS CURAzure CostGCP Billing]; useCase,
   s: ['Cost optimizationBudget adherence]; lin,
@@ -3471,7 +3467,7 @@ export type EnterpriseITSolution = starte,
   y: 'Enterprise Security} pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$3}499/mo }; feature,
+  r: '$3}499/mo }'; feature,
   s: ['Lifecycle automationAccess reviewsRBAC & SoDProvisioning workflows]; integration,
   s: ['OktaAzure ADGoogle Workspace]; useCase,
   s: ['Audit readinessInsider risk reduction]; lin,

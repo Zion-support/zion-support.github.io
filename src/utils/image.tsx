@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useState, useCallback } from react;
 
@@ -50,19 +50,19 @@ export const Image: React.FC<ImageProps> = ({
   onLoad,
   onError,
   ...props
-}) => {;
+}) => {
 
 const [, setIsLoaded] = useState(false);
 
   const [hasError, setHasError] = useState(false);
 
-  const _handleLoad = useCallback(() => {;;
+  const _handleLoad = useCallback(() => {
 
     setIsLoaded(true);
 
     if (onLoad) onLoad()}, [onLoad]);
 
-  const handleError = useCallback(() => {;;
+  const handleError = useCallback(() => {
 
     setHasError(true);
 
@@ -78,7 +78,7 @@ const [, setIsLoaded] = useState(false);
       height: '100%,
       objectFit:     ,
 $4})
-  };
+  }';
 
   if (hasError) {
   return (
@@ -125,17 +125,17 @@ $4})
 
 export default Image;
 
-'use client;
+'use client';
 
-import React, { useState, useCallback } from 'react;
+import React, { useState, useCallback } from 'react';
 
 const,
   Image: React.FC = () => {interface ImageProps {}
 
   // TOD,
-  O: Add content};
+  O: Add content}';
 
-  src: string;,
+  src: string';,
     alt: string
   width?: number
   height?: number
@@ -195,15 +195,15 @@ quality = 75,
 
     if (onLoad) onLoad()}, [onLoad]);
 
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */};;
+  const handleError = useCallback(() => {/* TODO: Fix JSX expression */};`;
 
   O: Add content}
 
 }
 
-    setHasError(true);
+    setHasError(true)`">
 
-    if (onError) onError()}, [onError]);
+    if (onError) onError()}, [onError])">
 
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
@@ -217,7 +217,7 @@ quality = 75,
 
   O: Add content}
 
-};
+}">
 
   position: 'absolute,
       top: 0,
@@ -227,7 +227,7 @@ quality = 75,
       objectFit: cover
 
     })
-  };
+  }'"```;
 
   if (hasError) {/* TODO: Fix JSX expression */}
 
@@ -293,7 +293,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}}
   )
 }
 
-export default Image;"
+export default Image"```;"
 
 
 

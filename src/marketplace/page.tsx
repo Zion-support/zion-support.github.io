@@ -1,24 +1,24 @@
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react;
+import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
 
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
-const MarketplacePage: React.FC = () => {;
+const MarketplacePage: React.FC = () => {';
 
 const [activeCategory, setActiveCategory] = useState('products);
 
   const [searchTerm, setSearchTerm] = useState(');
 
-const categories = [;;
+const categories = [
 
     {
       id: 'products,
@@ -47,9 +47,9 @@ $4}
 
   ];
 
-;
+';
 
-const products = [;;
+const products = [';';
 
       id: 1,
       name: 'AI Project Manager Pro,
@@ -99,7 +99,7 @@ const products = [;;
       features: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring],
       vendor: QuantumSec,;
 
-const talent = [;;
+const talent = [
 
       name: 'Dr. Sarah Chen,
       title: 'AI Research Scientist,
@@ -127,9 +127,9 @@ const talent = [;;
       projects: 89,
       rate: '$180/hour,
       image: '👩‍🔬,
-      available: false;
+      available: false';
 
-const equipment = [;
+const equipment = [';
       name: 'AI Workstation Pro,
       description: 'High-performance workstation optimized for AI development and training',      category: 'Hardware,
       price: '$4,999,
@@ -147,9 +147,9 @@ const equipment = [;
     s: 15,
       image: '⚛️,
       features: ['100 qubits', '24/7 access', 'API integration', 'Expert support],
-      vendor: 'QuantumCloud,;
+      vendor: 'QuantumCloud,';
 
-const getCurrentItems = () => {;
+const getCurrentItems = () => {';
     switch (activeCategory) {      case 'products:
         return products;
 
@@ -170,7 +170,7 @@ const filteredItems = getCurrentItems().filter(item =>;
 
 ;
 
-const stats = [;;
+const stats = [
 
       value: '500+,
       label: 'Products Available,
@@ -184,9 +184,9 @@ valuevalue: '100+,
 iconicon: Star,
       value: '4.8,
       label: 'Average Rating,
-      color: 'text-yellow-400;
+      color: 'text-yellow-400';
 
-const benefits = [;
+const benefits = [';
       icon: CheckCircle,
       title: 'Verified Vendors,      description:       ,
 icon$5: Shield,
@@ -235,18 +235,17 @@ icon$5: Award,
                 <input
                   type="text
                   placeholder="Search marketplace...
-                  value = { searchTerm };
+                  value = { searchTerm }>
 
-                  onChange = { (e) => setSearchTerm(e.target.value) };
+                  onChange = { (e) => setSearchTerm(e.target.value) }``;
 
                   className=w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400
                 
               <button className=px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hove,
     r:bg-slate-700 transition-colors flex items-center>
                 
-              {categories.map((category) => (<button
-                  key = { category.id };)
-                  onClick = { () => setActiveCategory(category.id) };
+              {categories.map((category) => (<button key = { category.id }>)
+                  onClick = { () => setActiveCategory(category.id) }```;
 
                   className={flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeCategory === category.id
@@ -261,7 +260,7 @@ icon$5: Award,
           {/* Items Grid *
           <div className="mb-16>
             <h2 className="text-2xl font-bold text-white mb-8>
-              {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length});
+              {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})"``;
 
             <
             <div className=grid grid-cols-1 md: grid-cols-2 l,
@@ -400,13 +399,13 @@ icon$5: Award,
           <
                 href="tel: +13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center
                 <Phone className="w-4 h-4 mr-2 
-                (302) 464-0950;
+                (302) 464-0950">
 
                 href="mailto:kleber@ziontechgroup.com" className=border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center
                 <Mail className="w-4 h-4 mr-2 
 
-                Email Us;
+                Email Us">
 
       <Footer /><
-export default MarketplacePage;
+export default MarketplacePage'"```;

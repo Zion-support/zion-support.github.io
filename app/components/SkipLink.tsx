@@ -1,6 +1,6 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 const SkipLink: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const SkipLink: React.FC = () => {
         if (mainContent) {
           mainContent.focus();
 
-          mainContent.scrollIntoView({ behavior: smooth });
+          mainContent.scrollIntoView({ behavior: smooth })">
 
         }
 
@@ -25,8 +25,8 @@ const SkipLink: React.FC = () => {
     >
       Skip to main content
     </a>
-  );
+  )'">
 
-};
+}">
 
-export default SkipLink;
+export default SkipLink'";

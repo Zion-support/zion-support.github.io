@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react;
+import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 
-export default function PrivacyPage() {;
+export default function PrivacyPage() {
 
-const lastUpdated = January 1, 2024;;
+const lastUpdated = January 1, 2024';';
 
-;
+';
 
-const dataTypes = [;;
+const dataTypes = [';';
 
     {
       category: 'Personal Information,
@@ -41,7 +41,7 @@ const dataTypes = [;;
 
 ;
 
-const rights = [;;
+const rights = [
 
     {
       title: 'Right to Access,
@@ -76,9 +76,9 @@ const rights = [;;
 
   ];
 
-;
+';
 
-const securityMeasures = [;;
+const securityMeasures = [';';
 
     'SSL/TLS encryption for data transmission,
     'Regular security audits and penetration testing,

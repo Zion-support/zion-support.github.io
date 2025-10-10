@@ -14,7 +14,7 @@ export const _preloadCriticalResources = () => {// TODO: Add content};;
 
   // Preload critical fonts;
 
-const fontPreloads = [;;
+const fontPreloads = [
 
   // TOD,
   O: Add items;
@@ -31,9 +31,7 @@ const fontPreloads = [;;
 
   fontPreloads.forEach(href => {// TODO: Add content}
 
-}
-
-;
+};
 
 const link = document.createElement(link);;
 
@@ -48,7 +46,7 @@ const link = document.createElement(link);;
   )
   // Preload critical images;
 
-const criticalImages = [;;
+const criticalImages = [
 
   // TODO: Add items;
 
@@ -61,9 +59,7 @@ const criticalImages = [;;
 
   criticalImages.forEach(src => {// TODO: Add content}
 
-}
-
-;
+};
 
 const link = document.createElement(link);;
 
@@ -104,9 +100,7 @@ const routeResources = {/* TODO: Fix JSX expression */};;
 
     resources.forEach(resource => {// TODO: Add content}
 
-}
-
-;
+};
 
 const link = document.createElement(link);;
 
@@ -224,9 +218,7 @@ const scripts = document.querySelectorAll(script[data-defer]);;
 
   }
 
-}
-
-;
+};
 
 const loadAnalytics = () => {// TODO: Add content};;
 

@@ -1,16 +1,16 @@
-import React from 'react;
+import React from 'react';
 
 // Learn more: https://github.com/testing-library/jest-dom
 require(@testing-library/jest-dom);
 
-const React = require(react);;
+const React = require(react);
 
 const { TextEncoder, TextDecoder } = require(util);
 
 // Polyfills for Node.js environment
-global.TextEncoder = TextEncoder;
+global.TextEncoder = TextEncoder';
 
-global.TextDecoder = TextDecoder;
+global.TextDecoder = TextDecoder';
 
 // Mock files that use import.meta.env
 jest.mock('./src/utils/logger.ts, () => ({
@@ -41,11 +41,11 @@ jest.mock('./src/hooks/usePerformanceMonitoring.ts, () => ({
     report: {}}))}));
 
 // Mock React Router (this is a Vite project, not Next.js)
-jest.mock(react-router-dom, () => {;
+jest.mock(react-router-dom, () => {
 
-const actual = jest.requireActual(react-router-dom);;
+const actual = jest.requireActual(react-router-dom);
 
-  const React = require(react);;
+  const React = require(react);
 
   return {
     ...actual,
@@ -61,11 +61,11 @@ const actual = jest.requireActual(react-router-dom);;
     NavLink: ({ children, to, ...props }) => {
       return React.createElement('a, { href: to, ...props }, children)},
     BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {;
+    MemoryRouter: ({ children }) => {
 
 const { createMemoryRouter, RouterProvider } = actual;
 
-      const router = createMemoryRouter([;;
+      const router = createMemoryRouter([
 
         {
           path: '/,
@@ -90,7 +90,7 @@ Object.defineProperty(window, 'matchMedia, {
     dispatchEvent: jest.fn()}))});
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {;
+global.IntersectionObserver = class IntersectionObserver {
 
 constructor() {}
 
@@ -107,7 +107,7 @@ constructor() {}
 
 // Suppress console errors in tests;
 
-const originalError = console.error;;
+const originalError = console.error;
 
 beforeAll(() => {
   console.error = jest.fn((...args) => {

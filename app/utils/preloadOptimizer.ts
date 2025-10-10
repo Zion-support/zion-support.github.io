@@ -4,7 +4,7 @@
  * Optimizes resource loading for better performance;
 
  */
-export const preloadCriticalResources = useCallback((...args) => {;;
+export const preloadCriticalResources = useCallback((...args) => {
 
   if (typeof window === 'undefined) return;
 
@@ -14,7 +14,7 @@ export const preloadCriticalResources = useCallback((...args) => {};;
   if (typeof window === 'undefined') return
   // Preload critical fonts;
 
-const fontPreloads = [;;
+const fontPreloads = [
 
     https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
     https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap
@@ -35,7 +35,7 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};;
   })
   // Preload critical images;
 
-const criticalImages = [;;
+const criticalImages = [
 
     '/images/hero-bg.webp',
     '/images/logo.webp',
@@ -53,13 +53,13 @@ const link = document.createElement('link);;
     document.head.appendChild(link);
 
   })
-export const preloadRoute = useCallback((...args) => {;;
+export const preloadRoute = useCallback((...args) => {
 
   if (typeof window === 'undefined) return;
 
   // Preload route-specific resources;
 
-const routeResources = {;;
+const routeResources = {
 
 export const preloadRoute = useCallback((...args) => {};;
 
@@ -93,7 +93,7 @@ const link = document.createElement('link);;
 
 }
 
-export const optimizeImages = useCallback((...args) => {;;
+export const optimizeImages = useCallback((...args) => {
 
   if (typeof window === 'undefined) return;
 
@@ -107,7 +107,7 @@ const images = document.querySelectorAll('img[data-lazy]);;
   })
   // Add intersection observer for lazy loading;
 
-  if ($1) { const imageObserver = new IntersectionObserver((entries) => {;;
+  if ($1) { const imageObserver = new IntersectionObserver((entries) => {
 
       entries.forEach(entry => {)
         if ($1) { const img = entry.target as HTMLImageElement;;
@@ -180,7 +180,7 @@ const lazyImages = document.querySelectorAll('img[data-src]);;
 
 }
 
-export const optimizeThirdPartyScripts = useCallback((...args) => {;;
+export const optimizeThirdPartyScripts = useCallback((...args) => {
 
   if (typeof window === 'undefined) return;
 
@@ -224,7 +224,7 @@ const scripts = document.querySelectorAll('script[data-defer]);;
 
 }
 
-const loadAnalytics = useCallback((...args) => {;;
+const loadAnalytics = useCallback((...args) => {
 
   // Load Google Analytics after page load;
 

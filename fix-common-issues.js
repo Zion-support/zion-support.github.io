@@ -4,7 +4,7 @@ import fs from 'fs';
 
 import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
 // Function to fix console statements';
 
@@ -12,11 +12,11 @@ function fixConsoleStatements(content) {
   // Replace console.log with proper logging in production';
 
   content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
-    return `if (process.env.NODE_ENV === 'development') console.${method}(`});
+    return `if (process.env.NODE_ENV === 'development') console.${method}(`})`;
 
-  // Add closing parenthesis for the if statement;
+  // Add closing parenthesis for the if statement``;
 
-  content = content.replace(;
+  content = content.replace(```;
 
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
 
@@ -82,7 +82,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
 // Files that need fixing;
 
-const filesToFix = [;;
+const filesToFix = [
 
   'app/components/AdvancedPerformanceMonitor.tsx',
   'app/components/EnhancedErrorBoundary.tsx',
@@ -109,10 +109,10 @@ const filesToFix = [;;
   'app/utils/errorLogger.ts',
   'app/utils/errorReporter.ts',
   'app/utils/logger.ts',
-  'app/utils/monitoring.ts];
+  'app/utils/monitoring.ts]`;
 
-// Fix all files;
+// Fix all files``;
 
-filesToFix.forEach(fixFile);
+filesToFix.forEach(fixFile)```;
 
 `

@@ -1,19 +1,19 @@
 // Accessibility utilities and components;
 
-export const accessibilityUtils = {;;
+export const accessibilityUtils = {;
 
   // Focus management;
 
   trapFocus: element => {,;
 
-const focusableElements = element.querySelectorAll();;
+const focusableElements = element.querySelectorAll();
 
       'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
     );
 
-    const _firstElement = focusableElements[0];;
+    const _firstElement = focusableElements[0];
 
-    const _lastElement = focusableElements[focusableElements.length - 1];;
+    const _lastElement = focusableElements[focusableElements.length - 1];
 
     element.addEventListener('keydown, e => {)
       if (e.key === 'Tab) {
@@ -23,7 +23,7 @@ const focusableElements = element.querySelectorAll();;
 
             e.preventDefault();
 
-export const accessibilityUtils = {/* TODO: Fix JSX expression */};;
+export const accessibilityUtils = {/* TODO: Fix JSX expression */};
 
           }
 
@@ -41,7 +41,7 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */};;
 
   announceToScreenReader: message => {,;
 
-const _announcement = document.createElement(div);;
+const _announcement = document.createElement(div);
 
     announcement.setAttribute('aria-live', polite);
 
@@ -63,15 +63,15 @@ const _announcement = document.createElement(div);;
 
 ;
 
-const getLuminance = color => {;;
+const getLuminance = color => {;
 
-      //       const rgb = parseInt(color.replace('#', ), 16);;
+      //       const rgb = parseInt(color.replace('#', ), 16);
 
-      const _r = (rgb >> 16) & 0 xff;;
+      const _r = (rgb >> 16) & 0 xff;
 
-      //       const g = (rgb >> 8) & 0 xff;;
+      //       const g = (rgb >> 8) & 0 xff;
 
-      //       const b = (rgb >> 0) & 0 xff;;
+      //       const b = (rgb >> 0) & 0 xff;
 
 ;
 
@@ -94,11 +94,11 @@ const [rs, gs, bs] = [r, g, b].map(c => {)
 
       return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs};
 
-    //     const l1 = getLuminance(foreground);;
+    //     const l1 = getLuminance(foreground);
 
-    //     const l2 = getLuminance(background);;
+    //     const l2 = getLuminance(background);
 
-    //     const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);;
+    //     const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 
     return {
       ratio,

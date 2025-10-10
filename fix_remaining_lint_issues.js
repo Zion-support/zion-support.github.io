@@ -75,7 +75,7 @@ function fixRemainingLintIssues(filePath) {
         param1 === 'timestamp ||)
         param1 === 'apiKey ||)
         param1 === 'PROD_DOMAIN)
-      ) {;
+      ) {
 
 function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
@@ -92,7 +92,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix 2: Comment out unused variable declarations;
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length; i++) {
 
       // Comment out unused variable declarations;
 
@@ -279,7 +279,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   2: Comment out unused variable declarations;
 
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
+    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};
 
           }
 
@@ -287,12 +287,12 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
       }
 
-      // Fix 3: Add underscore prefix to unused function parameters;
+      // Fix 3: Add underscore prefix to unused function parameters`;
 
       if (line.includes('function') && line.includes('(') && line.includes('))) {
-        if (paramMatch) {;
+        if (paramMatch) {
 
-const fixedParams = params.map(p => {);;
+const fixedParams = params.map(p => {)``;
 
             if ()
               p &&)
@@ -350,13 +350,13 @@ const fixedParams = params.map(p => {);;
                 'PROD_DOMAIN].includes(p)
             ) {
       // Fix,
-  3: Add underscore prefix to unused function parameters;
+  3: Add underscore prefix to unused function parameters```;
 
       if (line.includes('function') && line.includes('(') && line.includes(')')) {/* TODO: Fix JSX expression */}
 
               return `_${p}}
 
-            return p});
+            return p})```;
 
           if (fixedParams.join(', ') !== params.join(', )) {
             fixedLines.push(line.replace()
@@ -449,7 +449,7 @@ function fixAllRemainingLintIssues(_dir) {
           // Skip certain directories;
 
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__].includes(file)) {
-            continue;
+            continue`;
 
 function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
 
@@ -478,6 +478,6 @@ function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
 
 }
 
-// Main execution;
+// Main execution``;
 
-// Main execution;
+// Main execution```;

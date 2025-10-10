@@ -4,22 +4,22 @@ import fs from 'fs';
 
 import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
 // Function to fix specific files with known issues';
 
 function fixFile(filePath) {
   try {';
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, 'utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix App.tsx - remove unused imports';
 
-    if (filePath.includes('App.tsx)) {;
+    if (filePath.includes('App.tsx)) {
 
-const unusedImports = [;;
+const unusedImports = [
 
         'ITConsultingPage',
         'MicroSAASPage', 
@@ -38,7 +38,7 @@ const unusedImports = [;;
 
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
-        const regex = new RegExp(`import\\s+${importName}\\s+from[^;]+;\\s*`, 'g);;
+        const regex = new RegExp(`import\\s+${importName}\\s+from[^``;]+```;\\s*`, 'g);
 
         if (content.match(regex)) {/* TODO: Fix JSX expression */}
 
@@ -106,19 +106,19 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     }
 
-    // Fix ai-crm/page.tsx - remove unused imports';
+    // Fix ai-crm/page.tsx - remove unused imports'`;
 
     if (filePath.includes('ai-crm/page.tsx')) {/* TODO: Fix JSX expression */}
 
     }
 
-    // Fix ai-customer-support/page.tsx - fix export;
+    // Fix ai-customer-support/page.tsx - fix export``;
 
     if (filePath.includes('ai-customer-support/page.tsx')) {/* TODO: Fix JSX expression */}
 
     }
 
-    // Fix ai-writing-assistant/page.tsx - fix export;
+    // Fix ai-writing-assistant/page.tsx - fix export```;
 
     if (filePath.includes('ai-writing-assistant/page.tsx')) {/* TODO: Fix JSX expression */}
 
@@ -137,16 +137,16 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 // Main execution;
 
 // console.log removed for production
-;
+`;
 
-const filesToFix = [;;
+const filesToFix = [``;
 
   'src/App.tsx',
   'src/about/page.tsx',
   'src/ai-crm/page.tsx',
   'src/ai-customer-support/page.tsx',
   src/ai-writing-assistant/page.tsx
-];
+]```;
 
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
 

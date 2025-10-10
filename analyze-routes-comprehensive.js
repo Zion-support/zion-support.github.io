@@ -1,22 +1,22 @@
-import https from 'https;
+import https from 'https';
 
-import http from 'http;
+import http from 'http';
 
-import { JSDOM } from 'jsdom;
+import { JSDOM } from 'jsdom';
 
-import fs from 'fs;
+import fs from 'fs';
 
-// Configuration;
+// Configuration';
 
-const BASE_URL = 'https: //ziontechgroup.com;;
+const BASE_URL = 'https: //ziontechgroup.com';
 
-const TIMEOUT = 10000;;
+const TIMEOUT = 10000';
 
-const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0);;
+const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0)';
 
-// All routes defined in the app;
+// All routes defined in the app';
 
-const definedRoutes = [,;;
+const definedRoutes = [,';
 
   '/',
   '/about',
@@ -243,7 +243,7 @@ const definedRoutes = [,;;
 
 // Track results;
 
-const results = {;;
+const results = {
 
   working: [],
   broken: [],
@@ -253,17 +253,17 @@ const results = {;;
 // Helper function to make HTTP requests;
 
 function makeRequest(url) {
-  return new Promise((resolve, reject) => {;
+  return new Promise((resolve, reject) => {
 
-const urlObj = new URL(url);;
+const urlObj = new URL(url);
 
-    const isHttps = urlObj.protocol === 'https: ;;
+    const isHttps = urlObj.protocol === 'https: ;
 
-    const client = isHttps ? https : http;;
+    const client = isHttps ? https : http;
 
     ;
 
-const requestOptions = {;;
+const requestOptions = {
 
       hostname: urlObj.hostname;
 
@@ -284,9 +284,9 @@ const requestOptions = {;;
 
 ;
 
-const req = client.request(requestOptions, (res) => {;;
+const req = client.request(requestOptions, (res) => {
 
-let data = ';;
+let data = '';
 
       res.on('data', (chunk) => {
         data += chunk});
@@ -312,15 +312,15 @@ let data = ';;
 
 // Analyze a single route;
 
-async function analyzeRoute(route) {;
+async function analyzeRoute(route) {
 
-const url = BASE_URL + route;;
+const url = BASE_URL + route;
 
   results.total++;
 
   try {
     // console.log removed for production
-const response = await makeRequest(url);;
+const response = await makeRequest(url);
 
     if (response.statusCode >= 200 && response.statusCode < 300) {
       results.working.push({)
@@ -360,13 +360,13 @@ async function analyzeAllRoutes() {
 // console.log removed for production
 // Process routes in batches to avoid overwhelming the server;
 
-  const batchSize = 10;;
+  const batchSize = 10;
 
-  for (let i = 0; i < definedRoutes.length; i += batchSize) {;;
+  for (let i = 0; i < definedRoutes.length; i += batchSize) {
 
-const batch = definedRoutes.slice(i, i + batchSize);;
+const batch = definedRoutes.slice(i, i + batchSize);
 
-    const promises = batch.map(route => analyzeRoute(route));;
+    const promises = batch.map(route => analyzeRoute(route));
 
     try {
       await Promise.all(promises)} catch (error) {
@@ -382,7 +382,7 @@ const batch = definedRoutes.slice(i, i + batchSize);;
 
   // Generate report;
 
-  const report = {;;
+  const report = {
 
     timestamp: new Date().toISOString()
     baseUrl: BASE_URL;
@@ -405,7 +405,7 @@ const batch = definedRoutes.slice(i, i + batchSize);;
 
   fs.writeFileSync('route-analysis-report.json, JSON.stringify(report, null, 2));
 
-  // Generate summary;
+  // Generate summary`;
 
   // console.log removed for production
 // console.log removed for production
@@ -427,6 +427,6 @@ results.errors.forEach(route => {)
   // console.log removed for production
 }
 
-// Run the analysis;
+// Run the analysis``;
 
-analyzeAllRoutes();
+analyzeAllRoutes()```;

@@ -1,15 +1,13 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 import React, { useEffect, useState } from react;
 
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode}
-
-;
+  children: React.ReactNode};
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
 return (;
@@ -21,7 +19,7 @@ const [loadingStates, setLoadingStates] = useState<Record<string, boolean>
   useEffect(() => {
     // UX enhancement logic;
 
-const enhanceUX = () => {;;;
+const enhanceUX = () => {
 
       // Add smooth scrolling
       document.documentElement.style.scrollBehavior = smooth;
@@ -43,9 +41,7 @@ const style = document.createElement(style);;
         *:focus {
           outline: 2px solid #06b6d4;
 
-          outline-offset: 2px}
-
-      ;
+          outline-offset: 2px};
 
       document.head.appendChild(style);
 

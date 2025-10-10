@@ -1,14 +1,14 @@
-import React, { Suspense, lazy, ComponentType } from 'react;
+import React, { Suspense, lazy, ComponentType } from 'react';
 
 interface LazyComponentProps {
-  fallback?: React.ReactNode;
+  fallback?: React.ReactNode';
 
   children: React.ReactNode}
 
 export default function LazyComponent({
   className = ',
   children
-}: LazyComponentProps) {;
+}: LazyComponentProps) {
 
 const DefaultFallback = () => (;;
 
@@ -305,7 +305,7 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};;
 
   // Preload critical fonts;
 
-const fontPreloads = [;;
+const fontPreloads = [
 
   // TOD,
   O: Add items;
@@ -337,7 +337,7 @@ const fontPreloads = [;;
 
   // Preload critical images;
 
-const imagePreloads = [;;
+const imagePreloads = [
 
   // TOD,
   O: Add items;
@@ -355,12 +355,12 @@ const imagePreloads = [;;
 
     const link = document.createElement(link);;
 
-    link.rel = preload;
+    link.rel = preload`;
 
-    link.as = image;
+    link.as = image`">
 
-    link.href = src;
+    link.href = src">
 
-    document.head.appendChild(link)})};
+    document.head.appendChild(link)})}">
 
-export default LazyComponent;
+export default LazyComponent"```;

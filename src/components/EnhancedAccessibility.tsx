@@ -121,11 +121,11 @@ const saveSettings = useCallback((newSetting);;
 
 }
 
-    setSettings(newSettings);
+    setSettings(newSettings)';
 
-    localStorage.setItem(accessibility-settings, JSON.stringify(newSettings))}, []);
+    localStorage.setItem(accessibility-settings, JSON.stringify(newSettings))}, [])';
 
-  // Apply high contrast mode;
+  // Apply high contrast mode';
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
@@ -383,11 +383,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-    const newSettings = {/* TODO: Fix JSX expression */};;
+    const newSettings = {/* TODO: Fix JSX expression */};`;
 
-  t: !settings.highContrast };
+  t: !settings.highContrast }``;
 
-    saveSettings(newSettings);
+    saveSettings(newSettings)```;
 
     announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'})};
 
@@ -397,11 +397,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-    const newSettings = {/* TODO: Fix JSX expression */};;
+    const newSettings = {/* TODO: Fix JSX expression */};`;
 
-  t: !settings.largeText };
+  t: !settings.largeText }``;
 
-    saveSettings(newSettings);
+    saveSettings(newSettings)```;
 
     announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'})};
 
@@ -411,11 +411,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-    const newSettings = {/* TODO: Fix JSX expression */};;
+    const newSettings = {/* TODO: Fix JSX expression */};`;
 
-  n: !settings.reducedMotion };
+  n: !settings.reducedMotion }``;
 
-    saveSettings(newSettings);
+    saveSettings(newSettings)```;
 
     announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'})};
 
@@ -425,11 +425,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-    const newSettings = {/* TODO: Fix JSX expression */};;
+    const newSettings = {/* TODO: Fix JSX expression */};`;
 
-  r: !settings.screenReader };
+  r: !settings.screenReader }``;
 
-    saveSettings(newSettings);
+    saveSettings(newSettings)```;
 
     announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'})};
 
@@ -439,11 +439,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-    const newSettings = {/* TODO: Fix JSX expression */};;
+    const newSettings = {/* TODO: Fix JSX expression */};`;
 
-  e: !settings.focusVisible };
+  e: !settings.focusVisible }``;
 
-    saveSettings(newSettings);
+    saveSettings(newSettings)```;
 
     announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'})};
 
@@ -457,11 +457,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */};;
 
     const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));;
 
-    const newSettings = {/* TODO: Fix JSX expression */};;
+    const newSettings = {/* TODO: Fix JSX expression */};`;
 
-  l: newZoom };
+  l: newZoom }``;
 
-    saveSettings(newSettings);
+    saveSettings(newSettings)```;
 
     announceToScreenReader(`Zoom level set to ${newZoom}%)};
 
@@ -473,11 +473,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-    const newSettings = {/* TODO: Fix JSX expression */};;
+    const newSettings = {/* TODO: Fix JSX expression */};`;
 
-  d: type };
+  d: type }``;
 
-    saveSettings(newSettings);
+    saveSettings(newSettings)```;
 
     announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type})};
 
@@ -502,7 +502,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */};;
 
     saveSettings(defaultSettings);
 
-    announceToScreenReader(Accessibility settings reset to default)};
+    announceToScreenReader(Accessibility settings reset to default)}`;
 
   if (!isVisible) {/* TODO: Fix JSX expression */}
 
@@ -622,12 +622,12 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */};;
 onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600,
   hover:bg-red-700 text-white rounded text-sm
         >
-          Reset Settings;
+          Reset Settings"``;
 
         </button></div><div className="mt-4 text-xs text-gray-400><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
-  )};
+  )}">
 
-export default EnhancedAccessibility;"
+export default EnhancedAccessibility"```;"
 
 
 

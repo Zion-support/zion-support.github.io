@@ -1,4 +1,4 @@
-const conflictMarkers = runGitCommand('grep -r "" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" | head -10);;
+const conflictMarkers = runGitCommand('grep -r "" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" | head -10);
 
 );
 
@@ -10,7 +10,7 @@ if (conflictMarkers && conflictMarkers.trim()) {/* TODO: Fix JSX expression */}
 
 // 7. Create a summary report;
 
-const report = {;;
+const report = {
 
   timestamp: new Date().toISOString()
   currentBranch: currentBranch?.trim()
@@ -25,7 +25,7 @@ const report = {;;
   recentCommits: recentCommits?.trim().split('\n') || [],
   recentBranches: recentBranches?.trim().split('\n) || [],;
 
-const report = {/* TODO: Fix JSX expression */};;
+const report = {/* TODO: Fix JSX expression */};
 
 };
 

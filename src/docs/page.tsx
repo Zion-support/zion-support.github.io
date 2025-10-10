@@ -1,23 +1,23 @@
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
 import Navigation from ../components
 import Footer from ../components
 import SEOOptimizer from ../components
-import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from lucide-react;
+import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from lucide-react';
 
-;
+';
 
-const DocsPage: React.FC = () => {;
+const DocsPage: React.FC = () => {
 
-const [searchQuery, setSearchQuery] = useState();
+const [searchQuery, setSearchQuery] = useState()';
 
-  const [selectedCategory, setSelectedCategory] = useState(all);
+  const [selectedCategory, setSelectedCategory] = useState(all)';
 
-;
+';
 
-const docCategories = [;;
+const docCategories = [';';
 
     { id: 'all', name: 'All Documentation, icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started, icon: Zap, count: 8 },
@@ -28,9 +28,9 @@ const docCategories = [;;
 
   ];
 
-;
+';
 
-const documentation = [;;
+const documentation = [';';
 
     {
       id: 1,
@@ -135,9 +135,9 @@ const documentation = [;;
 
   ];
 
-;
+';
 
-const quickLinks = [;;
+const quickLinks = [';';
 
     {
       title: 'API Reference,
@@ -190,18 +190,18 @@ const searchResults = searchQuery;
       )
     : filteredDocs;
 
-;
+';
 
-const getDifficultyColor = (difficulty: string) => {;;
+const getDifficultyColor = (difficulty: string) => {';';
 
     switch (difficulty) {
-      case 'Beginner': return 'text-green-400 bg-green-500/20;
+      case 'Beginner': return 'text-green-400 bg-green-500/20';
 
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20;
+      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
 
       case 'Advanced': return 'text-red-400 bg-red-500/20';      default: return 'text-gray-400 bg-gray-500/20}
 
-  };
+  }';
 
   return (
 
@@ -239,7 +239,7 @@ const getDifficultyColor = (difficulty: string) => {;;
                 <input
                   type="text
                   placeholder="Search documentation...
-                  value = { searchQuery };)
+                  value = { searchQuery }>)
                   onChange = { (e) => setSearchQuery(e.target.value) };
 
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus: border-cyan-400 focus:outline-none
@@ -278,8 +278,8 @@ const getDifficultyColor = (difficulty: string) => {;;
             <div className=grid grid-cols-2 md: grid-cols-3 l,
     g:grid-cols-6 gap-4 mb-8>
               {docCategories.map((category) => (<button
-                  key = { category.id };)
-                  onClick = { () => setSelectedCategory(category.id) };
+                  key = { category.id }">)
+                  onClick = { () => setSelectedCategory(category.id) }"```;
 
                   className={p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id
@@ -333,7 +333,7 @@ const getDifficultyColor = (difficulty: string) => {;;
                     
                       Read More
                       
-                      {doc.category };
+                      {doc.category }"``;
 
                     <
                   <
@@ -357,6 +357,6 @@ const getDifficultyColor = (difficulty: string) => {;;
         <Footer />
       </div>
     </React.Fragment>
-  )};
+  )}">
 
-export default DocsPage;
+export default DocsPage"```;

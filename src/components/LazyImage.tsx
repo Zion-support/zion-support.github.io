@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 interface LazyImageProps {/* TODO: Fix JSX expression */}
 
@@ -13,9 +13,7 @@ interface LazyImageProps {/* TODO: Fix JSX expression */}
 
   className?: string;
 
-  children?: React.ReactNode}
-
-;
+  children?: React.ReactNode};
 
 const,
   LazyImage: React.FC;
@@ -108,12 +106,12 @@ const,
 
     setHasError(true);
 
-    onError?.()};
+    onError?.()}';
 
   return (<div>Coming Soon</div>)
   )    
           <div><
-      ref={imgRef} className = { cn(relative overflow-hidden, className) };
+      ref={imgRef} className = { cn(relative overflow-hidden, className) }';
 
       style={{ width, height }}
 
@@ -121,7 +119,7 @@ const,
       {!isInView ? ()}
 
           <img><
-          src = { placeholder };
+          src = { placeholder }';
 
           alt="" className="w-full h-full object-cover"
           aria-hidden="true
@@ -151,6 +149,6 @@ const,
       )}
 
     </div>
-  )};
+  )}">
 
-export default LazyImage;
+export default LazyImage";

@@ -7,21 +7,21 @@ import path from path;
 ;
 
 function fixJsxFile(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix self-closing div tags that have content after them;
 
-const selfClosingDivPattern = /<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g;;
+const selfClosingDivPattern = /<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g;
 
-    const selfClosingDivReplacement = <div$1>;;
+    const selfClosingDivReplacement = <div$1>;
 
     ;
 
-const newContent = content.replace(selfClosingDivPattern, selfClosingDivReplacement);;
+const newContent = content.replace(selfClosingDivPattern, selfClosingDivReplacement);
 
     if (newContent !== content) {
       content = newContent;
@@ -33,9 +33,9 @@ const newContent = content.replace(selfClosingDivPattern, selfClosingDivReplacem
 
     // Fix mismatched section/div tags;
 
-const sectionDivPattern = /<section([^>]*)>[\s\S]*?<\/div>/g;;
+const sectionDivPattern = /<section([^>]*)>[\s\S]*?<\/div>/g;
 
-    const sectionDivReplacement = (match, sectionAttrs) => {;;
+    const sectionDivReplacement = (match, sectionAttrs) => {
 
 return (
 
@@ -46,7 +46,7 @@ return (
 
     ;
 
-const newContent2 = content.replace(sectionDivPattern, sectionDivReplacement);;
+const newContent2 = content.replace(sectionDivPattern, sectionDivReplacement);
 
     if (newContent2 !== content) {
       content = newContent2;
@@ -65,21 +65,19 @@ const newContent2 = content.replace(sectionDivPattern, sectionDivReplacement);;
     // console.error removed for production
 return false}
 
-}
+};
 
-;
+function findTsxFiles(dir) {
 
-function findTsxFiles(dir) {;
+const files = []';
 
-const files = [];;
+  const items = fs.readdirSync(dir)';
 
-  const items = fs.readdirSync(dir);;
+  for (const item of items) {
 
-  for (const item of items) {;
+const fullPath = path.join(dir, item)';
 
-const fullPath = path.join(dir, item);;
-
-    const stat = fs.statSync(fullPath);;
+    const stat = fs.statSync(fullPath)';';
 
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
       files.push(...findTsxFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.ts)) {
@@ -93,9 +91,9 @@ const fullPath = path.join(dir, item);;
 // console.log removed for production
 ;
 
-const tsxFiles = findTsxFiles(/workspace);;
+const tsxFiles = findTsxFiles(/workspace);
 
-let fixedCount = 0;;
+let fixedCount = 0;
 
 tsxFiles.forEach(file => {
   if (fixJsxFile(file)) {

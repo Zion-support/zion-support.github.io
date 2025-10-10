@@ -2,7 +2,7 @@
 
 exports.config = { schedule: 0 3 * * * };
 
-exports.handler = async function () {;
+exports.handler = async function () {
 
 const { execSync } = require(child_process);
 
@@ -34,7 +34,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     return {statusCode: 200;
 
       body: JSON.stringify({ ok: true),
-        task: ai-changelog-scheduler })}} catch (e) {return {
+        task: ai-changelog-scheduler   })}} catch (e) {return {
       statusCode: 200;
 
       body: JSON.stringify({ ok: false),
@@ -49,11 +49,11 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
 
 // netlify/functions/ai-changelog-scheduler.js exports.config = { schedule: '0 3 * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {' execSync('node automation/ai-changelog-generator.cjs || true') { stdio: 'inherit'} shell: true});' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(changelog): update AI changelog [ci skip]" || true) && (git push origin main || true)', {stdio: 'inherit} shell: true}); return {statusCode: 200;
 
-        body: JSON.stringify({ok: true),
-        task: ai-changelog-scheduler }) }} catch (e) {return { statusCode: 200;
+        body: JSON.stringify({ ok: true),
+        task: ai-changelog-scheduler   }) }} catch (e) {return { statusCode: 200';
 
-        body: JSON.stringify({ok: false),
-        error: String(e;)}) }} };
+        body: JSON.stringify({ ok: false),
+        error: String(e';)  }) }} }';
 
 // netlify/functions/ai-changelog-scheduler.js exports.config = {/* TODO: Fix JSX expression */}
 

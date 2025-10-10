@@ -1,14 +1,14 @@
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-// Get all blog files;
+// Get all blog files';
 
-const blogDir = path.join(__dirname, 'src', blog);;
+const blogDir = path.join(__dirname, 'src', blog);
 
-const blogFiles = [];;
+const blogFiles = [];
 
 ;
 
@@ -27,27 +27,27 @@ findBlogFiles(blogDir);
 ;
 
 function fixParsingErrors(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix missing closing parenthesis before closing brace;
 
-    const lines = content.split(\n);;
+    const lines = content.split(\n);
 
-    const newLines = [];;
+    const newLines = [];
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length; i++) {
 
-const line = lines[i];;
+const line = lines[i];
 
       // Check if this line ends with }; and the previous line doesnt have a closing parenthesis;
 
-      if (line.trim() === }; && i > 0) {;
+      if (line.trim() === }; && i > 0) {
 
-const prevLine = lines[i - 1];;
+const prevLine = lines[i - 1];
 
         // If previous line doesnt end with ) or );, add missing )
         if (!prevLine.trim().endsWith(')') && !prevLine.trim().endsWith(');)) {

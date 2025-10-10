@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react;
+import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
 
 import Navigation from '../components/Navigation;
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const PricingPage: React.FC = () => {;
+const PricingPage: React.FC = () => {
 
-const plans = [;;;
+const plans = [';';';
 
     {
       name: 'Starter,
@@ -85,9 +85,9 @@ const plans = [;;;
 
   ];
 
-;
+';
 
-const addOns = [;;
+const addOns = [';';
 
     {
       name: 'Additional AI Models,
@@ -116,9 +116,9 @@ const addOns = [;;
 
   ];
 
-;
+';
 
-const faqs = [;;
+const faqs = [';';
 
     {
       question: 'Can I change my plan at any time?,
@@ -147,9 +147,9 @@ const faqs = [;;
 
   ];
 
-;
+';
 
-const getColorClasses = (color: string) => {;;
+const getColorClasses = (color: string) => {';';
 
     switch (color) {
       case 'blue:
@@ -159,7 +159,7 @@ const getColorClasses = (color: string) => {;;
           border: 'border-blue-500,
           light: 'bg-blue-50,
           textLight: text-blue-600
-        };
+        }';
 
       case 'cyan:
         return {
@@ -168,7 +168,7 @@ const getColorClasses = (color: string) => {;;
           border: 'border-cyan-500,
           light: 'bg-cyan-50,
           textLight: text-cyan-600
-        };
+        }';
 
       case 'purple:
         return {
@@ -177,7 +177,7 @@ const getColorClasses = (color: string) => {;;
           border: 'border-purple-500,
           light: 'bg-purple-50,
           textLight: text-purple-600
-        };
+        }';
 
       default:
         return {
@@ -188,7 +188,7 @@ const getColorClasses = (color: string) => {;;
           textLight: text-gray-600
         }}
 
-  };
+  }';
 
   return (
 
@@ -216,9 +216,9 @@ const getColorClasses = (color: string) => {;;
             {plans.map((plan, index) => {
   return (
 
-;
+">
 
-const colors = getColorClasses(plan.color);;
+const colors = getColorClasses(plan.color)'">">
 
               return (
 
@@ -230,7 +230,7 @@ const colors = getColorClasses(plan.color);;
                   } overflow-hidden}
 
                 >
-);
+)'";
 
 }
 
@@ -388,6 +388,6 @@ const colors = getColorClasses(plan.color);;
 
       <Footer />
     </div>
-  )};
+  )}">
 
-export default PricingPage;
+export default PricingPage"```;

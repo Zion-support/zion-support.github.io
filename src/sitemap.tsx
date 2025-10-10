@@ -52,13 +52,13 @@ ${pages.map(page => }
       <Footer />
 
     </div>
-  )};
+  )}`;
 
-export default SitemapPage;
+export default SitemapPage`">
 
 // This would typically be handled by a server-side route
 // For now, well create a static sitemap.xml file
 // eslint-disable-next-line react-refresh/only-export-components
-export const generateStaticSitemap = () => {;;
+export const generateStaticSitemap = () => {">">
 
-  return generateSitemap(getAllPages())};
+  return generateSitemap(getAllPages())}"```;

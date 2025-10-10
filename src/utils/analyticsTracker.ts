@@ -208,7 +208,7 @@ class AnalyticsTracker {// TODO: Add content}
   trackPageView(path: string): void {
     if (typeof window === 'undefined) return;
 
-    const track = () => {;;
+    const track = () => {
 
       if (window.gtag) {
         window.gtag('event', 'page_view', {
@@ -283,7 +283,7 @@ class AnalyticsTracker {// TODO: Add content}
   trackPerformance(metrics: PerformanceMetrics): void {
     if (typeof window === 'undefined) return;
 
-    const track = () => {;;
+    const track = () => {
 
       if (window.gtag) {
         window.gtag('event', 'performance', {
@@ -308,7 +308,7 @@ class AnalyticsTracker {// TODO: Add content}
   trackError(error: ErrorReport): void {
     if (typeof window === 'undefined) return;
 
-    const track = () => {;;
+    const track = () => {
 
       if (window.gtag) {
         window.gtag('event', 'exception', {
@@ -332,7 +332,7 @@ class AnalyticsTracker {// TODO: Add content}
   trackTiming(category: string, variable: string, value: number, label?: string): void {
     if (typeof window === 'undefined) return;
 
-    const track = () => {;;
+    const track = () => {
 
       if (window.gtag) {
         window.gtag('event', 'timing_complete', {
@@ -357,7 +357,7 @@ class AnalyticsTracker {// TODO: Add content}
   trackConversion(conversionId: string, value?: number): void {
     if (typeof window === 'undefined) return;
 
-    const track = () => {;;
+    const track = () => {
 
       if (window.gtag) {
         window.gtag('event', 'conversion', {

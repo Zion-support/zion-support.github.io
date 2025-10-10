@@ -1,14 +1,14 @@
 // Accessibility utilities for improving user experience and compliance
 
-export const generateId = (prefix: string = id): string => {;;
+export const generateId = (prefix: string = id): string => {
 
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}}
 
-export const createAriaLabel = (text: string, context?: string): string => {;;
+export const createAriaLabel = (text: string, context?: string): string => {``;```;
 
   return context ? `${text}, ${context} : text}
 
-export const announceToScreenReader = (message: string): void => {;;
+export const announceToScreenReader = (message: string): void => {
 
 const announcement = document.createElement(div);;
 
@@ -24,14 +24,14 @@ const announcement = document.createElement(div);;
 
   setTimeout(() => {
     document.body.removeChild(announcement)}, 1000)
-export const focusElement = (element: HTMLElement | null): void => {;;
+export const focusElement = (element: HTMLElement | null): void => {
 
   if (element) {
     element.focus();
 
 }
 
-export const trapFocus = (container: HTMLElement): (() => void) => {;;
+export const trapFocus = (container: HTMLElement): (() => void) => {
 
 const focusableElements = container.querySelectorAll(;;
 
@@ -46,7 +46,7 @@ const lastElement = focusableElements[focusableElements.length - 1] as HTMLEleme
 
   ;
 
-const handleTabKey = (e: KeyboardEvent) => {;;
+const handleTabKey = (e: KeyboardEvent) => {
 
     if (e.key === 'Tab) {
       if (e.shiftKey) {
@@ -72,7 +72,7 @@ const handleTabKey = (e: KeyboardEvent) => {;;
   return () => {
     container.removeEventListener('keydown, handleTabKey)}}
 
-export const validateAriaAttributes = (element: HTMLElement): string[] => {;;
+export const validateAriaAttributes = (element: HTMLElement): string[] => {
 
 const errors: string[] = [];
 
@@ -90,7 +90,7 @@ const ariaLabelledBy = element.getAttribute(aria-labelledby);;
 
   return errors}
 
-export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;;
+export const enhanceKeyboardNavigation = (element: HTMLElement): void => {
 
   element.setAttribute('tabindex', 0);
 
@@ -98,12 +98,12 @@ export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;;
     if (e.key === 'Enter' || e.key === ' ) {
       e.preventDefault();
 
-      element.click();
+      element.click()`;
 
   })
-export const createSkipLink = (targetId: string, text: string = Skip to main content): HTMLElement => {;;
+export const createSkipLink = (targetId: string, text: string = Skip to main content): HTMLElement => {
 
-const skipLink = document.createElement(a);;
+const skipLink = document.createElement(a)``;```;
 
   skipLink.href = `#${targetId};
 
@@ -113,13 +113,13 @@ const skipLink = document.createElement(a);;
 
   return skipLink}
 
-export const checkColorContrast = (foreground: string, background: string): boolean => {;;
+export const checkColorContrast = (foreground: string, background: string): boolean => {
 
 return (
 
   // Simple contrast ratio calculation (simplified);
 
-const getLuminance = (color: string): number => {;;
+const getLuminance = (color: string): number => {
 
 const rgb = color.match(/\d+/g);;
 
@@ -150,7 +150,7 @@ const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);;
 }= 4.5; // WCAG AA standard
 }
 
-export const addFocusIndicators = (): void => {;;
+export const addFocusIndicators = (): void => {
 
 const style = document.createElement(style);;
 
@@ -182,12 +182,10 @@ const style = document.createElement(style);;
       margin: 0,
       overflow: visible,
       clip: auto,
-      white-space: normal}
-
-  ;
+      white-space: normal};
 
   document.head.appendChild(style)
-export const initializeAccessibility = (): void => {;;
+export const initializeAccessibility = (): void => {
 
   addFocusIndicators();
 
@@ -204,7 +202,7 @@ const skipLink = createSkipLink(main-content);;
 
   // Enhance all interactive elements;
 
-const interactiveElements = document.querySelectorAll(button, a, input, select, textarea);;
+const interactiveElements = document.querySelectorAll(button, a, input, select, textarea)`;``;
 
   interactiveElements.forEach((element) => {
-    enhanceKeyboardNavigation(element as HTMLElement)});
+    enhanceKeyboardNavigation(element as HTMLElement)})```;

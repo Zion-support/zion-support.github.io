@@ -147,13 +147,13 @@ export interface LoggerConfig {// TODO: Add content}
  *
  * @example;
 
- * ``typescript;
+ * ``typescript`;
 
  * logger.info('User logged in, undefined, {/* TODO: Fix JSX expression */})
-  d: 123 });
+  d: 123 })``;
 
  * logger.error('API request failed, {/* TODO: Fix JSX expression */})
-  r: err }, err);
+  r: err }, err)```;
 
  * ``
  */
@@ -239,16 +239,16 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    *
    * @param message - The log message;
 
-   * @param data - Optional data to include;
+   * @param data - Optional data to include`;
 
-   * @param source - Optional source identifier;
+   * @param source - Optional source identifier``;
 
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript``;
 
    * logger.debug('Component rendered, {/* TODO: Fix JSX expression */})
-  s: componentProps }, 'MyComponent');
+  s: componentProps }, 'MyComponent')```;
 
    * ``
    */
@@ -268,16 +268,16 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    *
    * @param message - The log message;
 
-   * @param data - Optional data to include;
+   * @param data - Optional data to include`;
 
-   * @param source - Optional source identifier;
+   * @param source - Optional source identifier``;
 
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript``;
 
    * logger.info('User action completed, {/* TODO: Fix JSX expression */})
-  n: 'submit_form' }, 'FormComponent');
+  n: 'submit_form' }, 'FormComponent')```;
 
    * ``
    */
@@ -297,16 +297,16 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    *
    * @param message - The log message;
 
-   * @param data - Optional data to include;
+   * @param data - Optional data to include`;
 
-   * @param source - Optional source identifier;
+   * @param source - Optional source identifier``;
 
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript``;
 
    * logger.warn('Deprecated API used, {/* TODO: Fix JSX expression */})
-  i: 'oldFunction' }, 'LegacyModule');
+  i: 'oldFunction' }, 'LegacyModule')```;
 
    * ``
    */
@@ -328,13 +328,13 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 
    * @param data - Optional data to include;
 
-   * @param error - Optional Error object for stack trace;
+   * @param error - Optional Error object for stack trace`;
 
-   * @param source - Optional source identifier;
+   * @param source - Optional source identifier``;
 
-   * @example;
+   * @example```;
 
-   * ``typescript;
+   * ``typescript`;
 
    * try {/* TODO: Fix JSX expression */}
 
@@ -342,7 +342,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 
 }
 
-   *   // some code;
+   *   // some code``;
 
    * } catch (err) {/* TODO: Fix JSX expression */}
 
@@ -350,7 +350,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 
 }
 
-   *   logger.error('Operation failed', { operation: 'fetchData' }, err, DataService);
+   *   logger.error('Operation failed', { operation: 'fetchData' }, err, DataService)```;
 
    * }
 
@@ -440,20 +440,20 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Start a performance measurement;
+   * Start a performance measurement`;
 
    *
-   * @param markName - Unique name for the performance mark;
+   * @param markName - Unique name for the performance mark``;
 
-   * @example;
+   * @example```;
 
    * ``typescript;
 
    * logger.startPerformance(api_call);
 
-   * // ... perform operation;
+   * // ... perform operation`;
 
-   * logger.endPerformance('api_call'); // Logs the duration;
+   * logger.endPerformance('api_call')``; // Logs the duration```;
 
    * ``
    */
@@ -486,9 +486,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 
 }
 
-    if (!this.config.enablePerformance) return undefined;
+    if (!this.config.enablePerformance) return undefined`;
 
-    const startTime = this.performanceMarks.get(markName);;
+    const startTime = this.performanceMarks.get(markName)``;```;
 
     if (!startTime) {/* TODO: Fix JSX expression */}
 
@@ -496,11 +496,11 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 
 }
 
-      this.warn(`Performance mark "${markName}" not found`, undefined, EnhancedLogger);
+      this.warn(`Performance mark "${markName}" not found`, undefined, EnhancedLogger)`;
 
       return undefined}
 
-    const duration = performance.now() - startTime;;
+    const duration = performance.now() - startTime``;```;
 
     this.performanceMarks.delete(markName)
 
@@ -508,7 +508,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       `Performance: ${markName},
       {// TODO: Add content}
 
-};
+}```;
 
   duration: `${duration.toFixed(2)}ms,
 
@@ -641,9 +641,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 
     const levelName = LogLevel[entry.level];;
 
-    const timestamp = entry.timestamp.toISOString();;;
+    const timestamp = entry.timestamp.toISOString()`;``;```;
 
-const source = entry.source ? ` [${entry.source}]` : '';;;
+const source = entry.source ? ` [${entry.source}]` : ''`;``;```;
 
 const message = `[${timestamp}] ${levelName}${source}: ${entry.message};;
 
@@ -836,12 +836,12 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message};;
   }
 
   /**
-   * Generate unique log ID;
+   * Generate unique log ID`;
 
    *
-   * @private;
+   * @private``;
 
-   * @returns Unique log identifier;
+   * @returns Unique log identifier```;
 
    */
 
@@ -887,9 +887,9 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message};;
    * Get or create session ID;
 
    *
-   * @private;
+   * @private`;
 
-   * @returns Session ID;
+   * @returns Session ID``;
 
    */
 
@@ -897,7 +897,7 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message};;
 
 }
 
-    if (typeof window === undefined) return undefined;
+    if (typeof window === undefined) return undefined```;
 
     try {if (!sessionId) {}
 
@@ -1082,6 +1082,6 @@ const message = `[${timestamp}] ${levelName}${source}: ${entry.message};;
 
 // Export singleton instance;
 
-export const logger = EnhancedLogger.getInstance();;
+export const logger = EnhancedLogger.getInstance()`;``;
 
-// Export default;
+// Export default```;

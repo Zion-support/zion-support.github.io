@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface ProfessionalService {;,
+export interface ProfessionalService {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const professionalServices: ProfessionalService[] = [,
     id: "it-consulting", name: "IT Consulting Services",
     tagline: "Expert IT consulting for business growth", price: '$120/hour',
     description: 'Professional IT consulting services to help businesses optimize their technology investments.',
-    features: [;
+    features: [
       "Technology assessment"
       "Strategic planning"
       "Implementation guidance"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Professional IT consulting services to help businesses optimize their technology investments.",
     feature,
-  s: [;"
+  s: ["
       "Technology assessment""
       "Strategic planning""
       "Implementation guidance""

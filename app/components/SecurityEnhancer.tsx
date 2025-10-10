@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useEffect } from react;
 
@@ -13,9 +13,7 @@ interface SecurityEnhancerProps {
 
   enableContentTypeSniffing?: boolean;
 
-}
-
-;
+};
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   enableCSP = true,
@@ -111,7 +109,7 @@ const permissionsMeta = document.createElement(meta);;
 
 const originalFetch = window.fetch;;
 
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;
+    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
 
 const headers = new Headers(init?.headers);;
 
@@ -126,9 +124,9 @@ const headers = new Headers(init?.headers);;
         credentials: 'same-origin
       })    };
 
-    // Input sanitization for forms;
+    // Input sanitization for forms';
 
-const sanitizeInput = (input: string): string => {;;
+const sanitizeInput = (input: string): string => {';';
 
       return input
         .replace(/[<>]/g, ') // Remove potential HTML tags
@@ -143,7 +141,7 @@ const sanitizeInput = (input: string): string => {;;
 const inputs = document.querySelectorAll(input, textarea, select);;
 
     inputs.forEach(input => {
-      input.addEventListener(input, (e) => {;
+      input.addEventListener(input, (e) => {
 
 const target = e.target as HTMLInputElement;;
 

@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 /**
  * API Caching Utility
@@ -152,7 +152,7 @@ export class ApiCache {// TODO: Add content}
     url: string,
     options: RequestInit = {},
     cacheConfig?: Partial<ApiCacheConfig>
-  ): Promise<T> {;
+  ): Promise<T> {
 
 const mergedConfig = { ...this.config, ...cacheConfig };;
 
@@ -161,7 +161,7 @@ const mergedConfig = { ...this.config, ...cacheConfig };;
       return this.cache.get(cacheKey) as T}
 
     // Check if theres a pending request
-    if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {;
+    if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {
 
 const pending = this.pendingRequests.get(cacheKey);;
 
@@ -188,7 +188,7 @@ const requestPromise = this.fetchWithRetry<T>(;;
         timestamp: Date.now()
       })}
 
-    try {;
+    try {
 
 const data = await requestPromise;;
 
@@ -210,7 +210,7 @@ const data = await requestPromise;;
     cacheConfig?: Partial;
 
           <ApiCacheConfig>
-  ): Promise<T> {;
+  ): Promise<T> {
 
 const mergedConfig = { ...this.config, ...cacheConfig };;
 
@@ -314,7 +314,7 @@ const requestPromise = this.fetchWithRetry;;
     retryDelay: number,
     attempt = 1
   ): Promise<T> {
-    try {;
+    try {
 
 const response = await fetch(url, options);;
 
@@ -398,9 +398,9 @@ const response = await fetch(url, options);;
 
 }
 
-          await this.delay(retryDelay * attempt); // Exponential backoff;
+          await this.delay(retryDelay * attempt)`; // Exponential backoff``;
 
-          return this.fetchWithRetry;
+          return this.fetchWithRetry```;
 
           <T>()
 // url,
@@ -507,11 +507,11 @@ const response = await fetch(url, options);;
   /**
    * Generate cache key from URL and options
    */
-  private getCacheKey(url: string, options: RequestInit): string {;
+  private getCacheKey(url: string, options: RequestInit): string {
 
-const method = options.method || GET;;
+const method = options.method || GET;`;
 
-    const body = options.body ? JSON.stringify(options.body) : ;;
+    const body = options.body ? JSON.stringify(options.body) : ``;```;
 
     return `${method}:${url}:${body}}
 
@@ -524,7 +524,7 @@ const method = options.method || GET;;
   /**
    * Clean up old pending requests
    */
-  private cleanupPendingRequests(): void {;
+  private cleanupPendingRequests(): void {
 
 const now = Date.now();;
 
@@ -587,7 +587,7 @@ const now = Date.now();;
   }
 
   /**
-   * Generate cache key from URL and options;
+   * Generate cache key from URL and options';
 
    */
 
@@ -595,9 +595,9 @@ const now = Date.now();;
 
 }
 
-    const method = options.method || GET;;
+    const method = options.method || GET';';
 
-    const body = options.body ? JSON.stringify(options.body) : '';;;
+    const body = options.body ? JSON.stringify(options.body) : ''`;``;```;
 
     return `${method}:${url}:${body}}
 
@@ -650,13 +650,13 @@ const now = Date.now();;
 /**
  * Default API cache instance
  */
-export const defaultApiCache = new ApiCache({;;
+export const defaultApiCache = new ApiCache({
 
   ttl: 5 * 60 * 1000, // 5 minutes
   maxRetries: 3,
   retryDelay: 1000,
   deduplicate: true
-});
+})`;
 
 /**
  * Cached fetch helper
@@ -672,9 +672,9 @@ export async function cachedFetch<T>(
 /**
  * Create a cached API client
  */
-export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {;
+export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {
 
-const cache = new ApiCache();;
+const cache = new ApiCache()``;```;
 
   return {
     get: <T>(path: string, options?: RequestInit) =>
@@ -762,13 +762,13 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
 
 }
 
-  const cache = new ApiCache();;
+  const cache = new ApiCache()`';'``;
 
   return {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}'```;
 
   get: 
 
@@ -874,4 +874,4 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
 
 }
 
-export default ApiCache;
+export default ApiCache'```;

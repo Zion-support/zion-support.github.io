@@ -676,16 +676,16 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}`;
 
   enable,
   d: process.env['NODE_ENV'] === 'production',
     reportInterva,
-  l: 60000, // Report every minute;)
+  l: 60000, // Report every minute``;)
   })
 }
 
-export default performanceReporter;`
+export default performanceReporter```;`
 
 
 

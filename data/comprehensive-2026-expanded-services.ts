@@ -105,14 +105,14 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
   e: string;
 
   customer,
-  s: number;
+  s: number";
 
   ratin,
   g: number,
   review,
   s: number}
 
-const contact =;;
+const contact = "'";"';
 
   mobil,
   e: "+1 302 464 0950,
@@ -120,7 +120,7 @@ const contact =;;
   l: "kleber@ziontechgroup.com,
   addres,
   s: "364 E Main St STE 1008 Middletown DE 19709
-};
+}';
 
 export const,
   comprehensiveExpandedServices: ComprehensiveService[] = [,
@@ -146,19 +146,19 @@ export const,
     ],
     category: 'AI & Machine Learning,
     subcategory: 'Customer Success,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/ai-autonomous-customer-success,
     icon: ',
     color: 'from-blue-600 to-indigo-700,
     textColor: 'text-blue-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Advanced AI capabilities with enterprise-grade automation,
     targetAudience: 'Customer success teams, SaaS companies,
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: '2-3 days,
     technology: ['Machine Learning', 'Predictive Analytics', 'Workflow Automation],
@@ -170,11 +170,11 @@ export const,
     growthRate: '22% CAGR,
     launchDate: '2025-01-15,
     customers:
-        customers: 85;
+        customers: 85';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 47;
+    reviews: 47';
 
     categor,
   y: 'AI & Machine Learning,
@@ -247,19 +247,19 @@ export const,
     ],
     category: 'AI & Machine Learning,
     subcategory: 'Sales Intelligence,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/ai-powered-sales-intelligence,
     icon: ',
     color: 'from-green-600 to-emerald-700,
     textColor: 'text-green-300,
-    popular: false;
+    popular: false';
 
     marketPosition: 'Comprehensive AI sales coaching with real-time insights,
     targetAudience: 'Sales teams, B2B companies,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: '1 week,
     technology: ['Natural Language Processing', 'Speech Recognition', 'Machine Learning],
@@ -271,11 +271,11 @@ export const,
     growthRate: '18% CAGR,
     launchDate: '2025-02-01,
     customers:
-        customers: 62;
+        customers: 62';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 38;
+    reviews: 38';
 
     categor,
   y: 'AI & Machine Learning,
@@ -348,19 +348,19 @@ export const,
     ],
     category: 'AI & Machine Learning,
     subcategory: 'Content Marketing,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/ai-content-personalization-engine,
     icon: ',
     color: 'from-purple-600 to-pink-700,
     textColor: 'text-purple-300,
-    popular: false;
+    popular: false';
 
     marketPosition: 'Advanced personalization with behavioral insights,
     targetAudience: 'Marketing teams, E-commerce companies,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: '1-2 weeks,
     technology: ['Machine Learning', 'Behavioral Analytics', 'Content Optimization],
@@ -372,12 +372,12 @@ export const,
     growthRate: '25% CAGR,
     launchDate: '2025-01-20,
     customers:
-        customers: 73;
+        customers: 73';
 
-    rating: 4.7;
+    rating: 4.7';
 
     reviews: 41},
-  // Cloud & Infrastructure Services;
+  // Cloud & Infrastructure Services';
 
     id: 'autonomous-cloud-cost-optimization,
     name: 'Autonomous Cloud Cost Optimization,
@@ -457,19 +457,19 @@ export const,
     ],
     category: 'Cloud & Infrastructure,
     subcategory: 'Cost Optimization,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/autonomous-cloud-cost-optimization,
     icon: ',
     color: 'from-yellow-600 to-orange-700,
     textColor: 'text-yellow-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Comprehensive FinOps automation with AI optimization,
     targetAudience: 'DevOps teams, Cloud architects, Finance teams,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: '2-3 weeks,
     technology: ['Machine Learning', 'Cloud APIs', 'Predictive Analytics],
@@ -481,11 +481,11 @@ export const,
     growthRate: '28% CAGR,
     launchDate: '2025-01-10,
     customers:
-        customers: 128;
+        customers: 128';
 
-    rating: 4.9;
+    rating: 4.9';
 
-reviews: 89;
+reviews: 89';
 
   },
     id: 'zero-trust-security-platform,
@@ -566,19 +566,19 @@ reviews: 89;
     ],
     category: 'Cloud & Infrastructure,
     subcategory: 'Security,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/zero-trust-security-platform,
     icon: ',
     color: 'from-red-600 to-pink-700,
     textColor: 'text-red-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Enterprise zero-trust with advanced threat detection,
     targetAudience: 'Security teams, Enterprise companies,
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: '3-4 weeks,
     technology: ['Zero Trust Architecture', 'Identity Management', 'Threat Detection],
@@ -590,11 +590,11 @@ reviews: 89;
     growthRate: '32% CAGR,
     launchDate: '2025-01-05,
     customers:
-        customers: 156;
+        customers: 156';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 112;
+    reviews: 112';
 
     categor,
   y: 'Cloud & Infrastructure,
@@ -667,19 +667,19 @@ reviews: 89;
     ],
     category: 'Cloud & Infrastructure,
     subcategory: 'Container Management,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/kubernetes-autonomous-operations,
     icon: ',
     color: 'from-blue-600 to-cyan-700,
     textColor: 'text-blue-300,
-    popular: false;
+    popular: false';
 
     marketPosition: 'Advanced Kubernetes automation with AI optimization,
     targetAudience: 'DevOps teams, Platform engineers,
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: '2-3 weeks,
     technology: ['Kubernetes', 'Machine Learning', 'Automation],
@@ -691,12 +691,12 @@ reviews: 89;
     growthRate: '35% CAGR,
     launchDate: '2025-02-15,
     customers:
-        customers: 94;
+        customers: 94';
 
-    rating: 4.7;
+    rating: 4.7';
 
     reviews: 67},
-  // Data & Analytics Services;
+  // Data & Analytics Services';
 
     id: 'real-time-data-pipeline-platform,
     name: 'Real-Time Data Pipeline Platform,
@@ -776,19 +776,19 @@ reviews: 89;
     ],
     category: 'Data & Analytics,
     subcategory: 'Streaming Analytics,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/real-time-data-pipeline-platform,
     icon: ',
     color: 'from-indigo-600 to-purple-700,
     textColor: 'text-indigo-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Enterprise-grade streaming with ML integration,
     targetAudience: 'Data engineers, Analytics teams,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: '3-4 weeks,
     technology: ['Apache Kafka', 'Apache Flink', 'Machine Learning],
@@ -800,11 +800,11 @@ reviews: 89;
     growthRate: '30% CAGR,
     launchDate: '2025-01-25,
     customers:
-        customers: 78;
+        customers: 78';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 56;
+    reviews: 56';
 
     categor,
   y: 'Data & Analytics,
@@ -877,19 +877,19 @@ reviews: 89;
     ],
     category: 'Data & Analytics,
     subcategory: 'Business Intelligence,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/ai-powered-business-intelligence,
     icon: ',
     color: 'from-emerald-600 to-teal-700,
     textColor: 'text-emerald-300,
-    popular: false;
+    popular: false';
 
     marketPosition: 'AI-first BI with automated insights,
     targetAudience: 'Business analysts, Data teams,
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: '1-2 weeks,
     technology: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics],
@@ -901,12 +901,12 @@ reviews: 89;
     growthRate: '20% CAGR,
     launchDate: '2025-02-10,
     customers:
-        customers: 112;
+        customers: 112';
 
-    rating: 4.6;
+    rating: 4.6';
 
     reviews: 78},
-  // Developer Tools & DevOps;
+  // Developer Tools & DevOps';
 
     id: 'ai-code-review-assistant,
     name: 'AI Code Review Assistant,
@@ -986,19 +986,19 @@ reviews: 89;
     ],
     category: 'Developer Tools & DevOps,
     subcategory: 'Code Quality,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/ai-code-review-assistant,
     icon: ',
     color: 'from-cyan-600 to-blue-700,
     textColor: 'text-cyan-300,
-    popular: false;
+    popular: false';
 
     marketPosition: 'AI-powered code review with security focus,
     targetAudience: 'Development teams, DevOps engineers,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: '1 week,
     technology: ['Machine Learning', 'Static Analysis', 'Security Scanning],
@@ -1010,11 +1010,11 @@ reviews: 89;
     growthRate: '22% CAGR,
     launchDate: '2025-02-20,
     customers:
-        customers: 156;
+        customers: 156';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 98;
+    reviews: 98';
 
     categor,
   y: 'Developer Tools & DevOps,
@@ -1087,19 +1087,19 @@ reviews: 89;
     ],
     category: 'Developer Tools & DevOps,
     subcategory: 'Deployment,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/autonomous-deployment-platform,
     icon: ',
     color: 'from-violet-600 to-purple-700,
     textColor: 'text-violet-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Intelligent deployment with autonomous management,
     targetAudience: 'DevOps teams, Platform engineers,
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: '2-3 weeks,
     technology: ['Machine Learning', 'CI/CD Automation', 'Monitoring],
@@ -1111,12 +1111,12 @@ reviews: 89;
     growthRate: '25% CAGR,
     launchDate: '2025-01-30,
     customers:
-        customers: 89;
+        customers: 89';
 
-    rating: 4.8;
+    rating: 4.8';
 
     reviews: 67},
-  // Industry-Specific Solutions;
+  // Industry-Specific Solutions';
 
     id: 'healthcare-ai-compliance-platform,
     name: 'Healthcare AI Compliance Platform,
@@ -1196,19 +1196,19 @@ reviews: 89;
     ],
     category: 'Industry Solutions,
     subcategory: 'Healthcare,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/healthcare-ai-compliance-platform,
     icon: ',
     color: 'from-green-600 to-emerald-700,
     textColor: 'text-green-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Comprehensive healthcare compliance with AI automation,
     targetAudience: 'Healthcare organizations, Health tech companies,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: '4-6 weeks,
     technology: ['AI Compliance', 'HIPAA Security', 'Data Protection],
@@ -1220,11 +1220,11 @@ reviews: 89;
     growthRate: '28% CAGR,
     launchDate: '2025-01-15,
     customers:
-        customers: 45;
+        customers: 45';
 
-    rating: 4.9;
+    rating: 4.9';
 
-reviews: 34;
+reviews: 34';
 
   },
     id: 'fintech-fraud-detection-ai,
@@ -1305,19 +1305,19 @@ reviews: 34;
     ],
     category: 'Industry Solutions,
     subcategory: 'FinTech,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/fintech-fraud-detection-ai,
     icon: ',
     color: 'from-blue-600 to-indigo-700,
     textColor: 'text-blue-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Advanced fraud detection with real-time processing,
     targetAudience: 'Banks, Payment processors, FinTech companies,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: '3-4 weeks,
     technology: ['Machine Learning', 'Real-time Processing', 'Behavioral Analytics],
@@ -1329,12 +1329,12 @@ reviews: 34;
     growthRate: '32% CAGR,
     launchDate: '2025-02-01,
     customers:
-        customers: 67;
+        customers: 67';
 
-    rating: 4.8;
+    rating: 4.8';
 
     reviews: 52},
-  // Micro SaaS Services;
+  // Micro SaaS Services';
 
     id: 'ai-email-automation-suite,
     name: 'AI Email Automation Suite,
@@ -1414,19 +1414,19 @@ reviews: 34;
     ],
     category: 'Micro SaaS,
     subcategory: 'Email Marketing,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/ai-email-automation-suite,
     icon: ',
     color: 'from-blue-600 to-cyan-700,
     textColor: 'text-blue-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'AI-first email marketing with advanced automation,
     targetAudience: 'Small businesses, Marketing agencies, E-commerce,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: '1-2 days,
     technology: ['AI/ML', 'Email Automation', 'Behavioral Analytics],
@@ -1438,11 +1438,11 @@ reviews: 34;
     growthRate: '15% CAGR,
     launchDate: '2025-01-20,
     customers:
-        customers: 234;
+        customers: 234';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 156;
+    reviews: 156';
 
     categor,
   y: 'Micro SaaS,
@@ -1515,19 +1515,19 @@ reviews: 34;
     ],
     category: 'Micro SaaS,
     subcategory: 'Inventory Management,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/smart-inventory-management,
     icon: ',
     color: 'from-green-600 to-emerald-700,
     textColor: 'text-green-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'AI-driven inventory optimization for SMBs,
     targetAudience: 'Retailers, E-commerce, Wholesalers,
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: '3-5 days,
     technology: ['Machine Learning', 'Predictive Analytics', 'IoT Integration],
@@ -1539,11 +1539,11 @@ reviews: 34;
     growthRate: '18% CAGR,
     launchDate: '2025-01-15,
     customers:
-        customers: 189;
+        customers: 189';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 134;
+    reviews: 134';
 
     categor,
   y: 'Micro SaaS,
@@ -1616,19 +1616,19 @@ reviews: 34;
     ],
     category: 'Micro SaaS,
     subcategory: 'Customer Support,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/ai-customer-support-chatbot,
     icon: ',
     color: 'from-purple-600 to-pink-700,
     textColor: 'text-purple-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Advanced AI chatbot with enterprise features,
     targetAudience: 'E-commerce, SaaS companies, Service businesses,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: '2-3 days,
     technology: ['NLP', 'Machine Learning', 'Conversational AI],
@@ -1640,11 +1640,11 @@ reviews: 34;
     growthRate: '25% CAGR,
     launchDate: '2025-01-10,
     customers:
-        customers: 312;
+        customers: 312';
 
-    rating: 4.6;
+    rating: 4.6';
 
-    reviews: 198;
+    reviews: 198';
 
     categor,
   y: 'Micro SaaS,
@@ -1717,19 +1717,19 @@ reviews: 34;
     ],
     category: 'Micro SaaS,
     subcategory: 'Social Media,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/automated-social-media-manager,
     icon: ',
     color: 'from-pink-600 to-rose-700,
     textColor: 'text-pink-300,
-    popular: false;
+    popular: false';
 
     marketPosition: 'AI-driven social media automation,
     targetAudience: 'Small businesses, Influencers, Marketing agencies,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: '1-2 days,
     technology: ['AI/ML', 'Social Media APIs', 'Content Analysis],
@@ -1741,12 +1741,12 @@ reviews: 34;
     growthRate: '20% CAGR,
     launchDate: '2025-02-01,
     customers:
-        customers: 167;
+        customers: 167';
 
-    rating: 4.5;
+    rating: 4.5';
 
     reviews: 112},
-  // IT Services;
+  // IT Services';
 
     id: 'managed-it-support-services,
     name: 'Managed IT Support Services,
@@ -1826,19 +1826,19 @@ reviews: 34;
     ],
     category: 'IT Services,
     subcategory: 'Managed Services,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/managed-it-support-services,
     icon: ',
     color: 'from-indigo-600 to-blue-700,
     textColor: 'text-indigo-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Comprehensive managed IT for SMBs,
     targetAudience: 'Small to medium businesses, Remote teams,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: '1-2 weeks,
     technology: ['IT Infrastructure', 'Cloud Computing', 'Cybersecurity],
@@ -1850,11 +1850,11 @@ reviews: 34;
     growthRate: '12% CAGR,
     launchDate: '2025-01-05,
     customers:
-        customers: 145;
+        customers: 145';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 98;
+    reviews: 98';
 
     categor,
   y: 'IT Services,
@@ -1927,19 +1927,19 @@ reviews: 34;
     ],
     category: 'IT Services,
     subcategory: 'Cybersecurity,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/cybersecurity-assessment-platform,
     icon: ',
     color: 'from-red-600 to-pink-700,
     textColor: 'text-red-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Automated security assessment for SMBs,
     targetAudience: 'Small businesses, Healthcare, Financial services,
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: '1 week,
     technology: ['Security Scanning', 'Compliance Automation', 'Risk Analysis],
@@ -1951,11 +1951,11 @@ reviews: 34;
     growthRate: '22% CAGR,
     launchDate: '2025-01-12,
     customers:
-        customers: 98;
+        customers: 98';
 
-    rating: 4.7;
+    rating: 4.7';
 
-    reviews: 67;
+    reviews: 67';
 
     categor,
   y: 'IT Services,
@@ -2028,19 +2028,19 @@ reviews: 34;
     ],
     category: 'IT Services,
     subcategory: 'Cloud Consulting,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/cloud-migration-consulting,
     icon: ',
     color: 'from-cyan-600 to-blue-700,
     textColor: 'text-cyan-300,
-    popular: false;
+    popular: false';
 
     marketPosition: 'Expert cloud migration with cost optimization,
     targetAudience: 'Enterprises, Mid-market companies,
-    trialDays: 45;
+    trialDays: 45';
 
     setupTime: '2-4 weeks,
     technology: ['Cloud Computing', 'DevOps', 'Infrastructure as Code],
@@ -2052,12 +2052,12 @@ reviews: 34;
     growthRate: '18% CAGR,
     launchDate: '2025-01-25,
     customers:
-        customers: 67;
+        customers: 67';
 
-    rating: 4.9;
+    rating: 4.9';
 
     reviews: 45},
-  // Advanced AI Services;
+  // Advanced AI Services';
 
     id: 'ai-document-processing-platform,
     name: 'AI Document Processing Platform,
@@ -2137,19 +2137,19 @@ reviews: 34;
     ],
     category: 'AI & Machine Learning,
     subcategory: 'Document Processing,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/ai-document-processing-platform,
     icon: ',
     color: 'from-teal-600 to-green-700,
     textColor: 'text-teal-300,
-    popular: true;
+    popular: true';
 
     marketPosition: 'Advanced document AI with high accuracy,
     targetAudience: 'Insurance, Legal, Healthcare, Finance,
-    trialDays: 21;
+    trialDays: 21';
 
     setupTime: '1-2 weeks,
     technology: ['OCR', 'NLP', 'Computer Vision', 'Machine Learning],
@@ -2161,11 +2161,11 @@ reviews: 34;
     growthRate: '28% CAGR,
     launchDate: '2025-01-18,
     customers:
-        customers: 156;
+        customers: 156';
 
-    rating: 4.8;
+    rating: 4.8';
 
-    reviews: 89;
+    reviews: 89';
 
     categor,
   y: 'AI & Machine Learning,
@@ -2238,19 +2238,19 @@ reviews: 34;
     ],
     category: 'AI & Machine Learning,
     subcategory: 'Predictive Analytics,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/ai-predictive-maintenance,
     icon: ',
     color: 'from-orange-600 to-red-700,
     textColor: 'text-orange-300,
-    popular: false;
+    popular: false';
 
     marketPosition: 'Advanced predictive maintenance with IoT integration,
     targetAudience: 'Manufacturing, Utilities, Transportation,
-    trialDays: 30;
+    trialDays: 30';
 
     setupTime: '3-4 weeks,
     technology: ['Machine Learning', 'IoT', 'Time Series Analysis],
@@ -2262,12 +2262,12 @@ reviews: 34;
     growthRate: '32% CAGR,
     launchDate: '2025-02-05,
     customers:
-        customers: 78;
+        customers: 78';
 
-    rating: 4.7;
+    rating: 4.7';
 
     reviews: 56},
-  // Emerging Technology Services;
+  // Emerging Technology Services';
 
     id: 'quantum-computing-simulation-platform,
     name: 'Quantum Computing Simulation Platform,
@@ -2347,19 +2347,19 @@ reviews: 34;
     ],
     category: 'Emerging Technology,
     subcategory: 'Quantum Computing,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/quantum-computing-simulation-platform,
     icon: ',
     color: 'from-purple-600 to-pink-700,
     textColor: 'text-purple-300,
-    popular: false;
+    popular: false';
 
     marketPosition: 'Leading quantum simulation platform for enterprise,
     targetAudience: 'Research institutions, Tech companies, Universities,
-    trialDays: 60;
+    trialDays: 60';
 
     setupTime: '4-6 weeks,
     technology: ['Quantum Simulation', 'Algorithm Optimization', 'High Performance Computing],
@@ -2371,11 +2371,11 @@ reviews: 34;
     growthRate: '45% CAGR,
     launchDate: '2025-03-01,
     customers:
-        customers: 23;
+        customers: 23';
 
-    rating: 4.9;
+    rating: 4.9';
 
-    reviews: 18;
+    reviews: 18';
 
     categor,
   y: 'Emerging Technology,
@@ -2448,19 +2448,19 @@ reviews: 34;
     ],
     category: 'Emerging Technology,
     subcategory: 'Blockchain,
-    realImplementation: true;
+    realImplementation: true';
 
-    contactInfo: contact;
+    contactInfo: contact';
 
     link: 'https://ziontechgroup.com/services/blockchain-enterprise-platform,
     icon: ',
     color: 'from-orange-600 to-red-700,
     textColor: 'text-orange-300,
-    popular: false;
+    popular: false';
 
     marketPosition: 'Enterprise blockchain with comprehensive tooling,
     targetAudience: 'Enterprises, Financial institutions, Supply chain companies,
-    trialDays: 45;
+    trialDays: 45';
 
     setupTime: '6-8 weeks,
     technology: ['Blockchain', 'Smart Contracts', 'Web3', 'DeFi],
@@ -2478,9 +2478,9 @@ reviews: 34;
 
     reviews: 28}
 
-];
+]';
 
-export const serviceCategories = [{name: Micro SaaS,;;
+export const serviceCategories = [{name: Micro SaaS,';';
 
     description: 'Affordable, specialized software solutions for small businesses,
     services: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS),
@@ -2572,9 +2572,9 @@ export const serviceCategories = [{name: Micro SaaS,;;
     review,
   s: 28}
 
-];
+]';
 
-export const serviceCategories = [{/* TODO: Fix JSX expression */};;
+export const serviceCategories = [{/* TODO: Fix JSX expression */}';';
 
   n: '}
 
@@ -2691,13 +2691,13 @@ export interface ComprehensiveService,
   e: string; growthRat,
   e: string; launchDat,
   e: string; customer,
-  s: number; ratin,
+  s: number"; ratin,
   g: number, review,
-  s: number} const contact = mobil,;;
+  s: number} const contact = mobil,"';"';
 
   e: "+1 302 464 0950", emai,
   l: "kleber@ziontechgroup.com", addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709 }; export const,
+  s: "364 E Main St STE 1008 Middletown DE 19709 }'; export const,
   comprehensiveExpandedServices: ComprehensiveService[] = [ // AI & Machine Learning Services,
   id: 'ai-autonomous-customer-success', nam,
   e: 'AI Autonomous Customer Success', taglin,
@@ -3434,7 +3434,7 @@ export interface ComprehensiveService,
   e: '2025-02-15, customer,
   s: 34, ratin,
   g: 4.7, review,
-  s: 28 } ]; export const serviceCategories = [  nam,;;
+  s: 28 } ]'; export const serviceCategories = [  nam,'";'";
 
   e: 'Micro SaaS', descriptio,
   n: 'Affordable, specialized software solutions for small businesses', service,
@@ -3475,4 +3475,4 @@ export interface ComprehensiveService,
   n: 'Cutting-edge technology solutions and platforms', service,
   s: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'), ico,
   n: '🚀', colo,
-  r: 'from-violet-600 to-purple-700' } ];'
+  r: 'from-violet-600 to-purple-700' } ]";'

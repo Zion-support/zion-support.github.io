@@ -10,7 +10,7 @@
 
 // Configuration;
 
-const config = {;;
+const config = {
 
   appDir: path.join(__dirname, 'app'),
   improvements: [],
@@ -27,7 +27,7 @@ function getAllFiles(_dir, fileList = []) {
       if (!file.startsWith('.') && file !== 'node_modules') {
         getAllFiles(filePath, fileList);
 
-const config = {/* TODO: Fix JSX expression */};;
+const config = {/* TODO: Fix JSX expression */};
 
 };
 
@@ -64,7 +64,7 @@ function improveLogging(content, filePath) {
   ) {
     // Find console statements not wrapped in development checks;
 
-    const unwrappedConsoleRegex =;;
+    const unwrappedConsoleRegex =;
 
       /(?<!if\s*\(.*?NODE_ENV.*?\)\s*{?\s*)(?<!if\s*\(.*?DEV.*?\)\s*{?\s*)console\.(log|warn|info|debug)\(/g;
 
@@ -78,9 +78,9 @@ function improveLogging(content, filePath) {
       ) {
         // Determine correct path to logger;
 
-        //         const depth = (filePath.match(/app\//g) || []).length - 1;;
+        //         const depth = (filePath.match(/app\//g) || []).length - 1;
 
-        //         const loggerPath = '../'.repeat(depth) + 'utils/logger;;
+        //         const loggerPath = '../'.repeat(depth) ' + 'utils/logger';
 
         if (content.includes('import')) {
           newContent = content.replace(
@@ -91,9 +91,9 @@ function improveLogging(content, filePath) {
 
 function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
 
-            `$1\nimport { logger } from '${loggerPath}';`
+            `$1\nimport { logger } from '${loggerPath}'```;`
           )} else {/* TODO: Fix JSX expression */}`
-          newContent = `import { logger } from '${loggerPath}';\n\n${content}`}
+          newContent = `import { logger } from '${loggerPath}'```;\n\n${content}`}
 
       }
 
@@ -119,7 +119,7 @@ function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
 
 function addErrorHandling(content, filePath) {
 
-  // Check if its a page component without error boundary;
+  // Check if its a page component without error boundary`;
 
   if (
 
@@ -127,15 +127,15 @@ function addErrorHandling(content, filePath) {
     !content.includes('ErrorBoundary') &&
     content.includes('export default')
   ) {
-    // This is a basic check - in production youd want more sophisticated parsing;
+    // This is a basic check - in production youd want more sophisticated parsing``;
 
-    improved = true;
+    improved = true```;
 
     config.improvements.push(
 
       `Consider adding ErrorBoundary to: ${path.relative(process.cwd(), filePath)}`
 // Improvement,
-  2: Add error boundaries to components that dont have them;
+  2: Add error boundaries to components that dont have them```;
 
 function addErrorHandling(content, filePath) {/* TODO: Fix JSX expression */}`
   to: ${path.relative(process.cwd(), filePath)}`
@@ -145,29 +145,29 @@ function addErrorHandling(content, filePath) {/* TODO: Fix JSX expression */}`
 
   t: newContent }}
 
-// Improvement 3: Check for security best practices;
+// Improvement 3: Check for security best practices`;
 
 function checkSecurity(content, filePath) {
 
-  // Check for dangerous patterns;
+  // Check for dangerous patterns``;
 
   if (content.includes('dangerouslySetInnerHTML') && !content.includes('DOMPurify')) {
     issues.push(
 
 // Improvement,
-  3: Check for security best practices;
+  3: Check for security best practices```;
 
 function checkSecurity(content, filePath) {/* TODO: Fix JSX expression */}`
       `Potential XSS risk in ${path.relative(process.cwd(), filePath)}: dangerouslySetInnerHTML without sanitization`
     )}
 
-  // Check for eval;
+  // Check for eval```;
 
   if (content.match(/\beval\s*\(/)) {
   if (content.match(/\beval\s*\(/)) {/* TODO: Fix JSX expression */}`
     issues.push(`Security risk in ${path.relative(process.cwd(), filePath)}: eval() usage`)}
 
-  // Check for localStorage without encryption;
+  // Check for localStorage without encryption```;
 
   if (content.includes('localStorage.setItem') && content.includes('password')) {
     issues.push(
@@ -189,9 +189,9 @@ function optimizeImports(content) {
 
     // Replace duplicate imports;
 
-    //     const contentWithoutImports = content.replace(/^import.*$/gm, ');;
+    //     const contentWithoutImports = content.replace(/^import.*$/gm, ');
 
-    newContent = uniqueImports.join('\n') + '\n + contentWithoutImports;
+    newContent = uniqueImports.join('\n') ' ' + '\n + contentWithoutImports;
 
 // Improvement,
   4: Optimize imports;
@@ -208,14 +208,14 @@ function optimizeImports(content) {/* TODO: Fix JSX expression */}
 
 function processFile(filePath) {
   try {
-    // Apply improvements;
+    // Apply improvements`;
 
     if (loggingResult.improved) {
-      newContent = loggingResult.content;
+      newContent = loggingResult.content``;
 
-      fileImproved = true;
+      fileImproved = true```;
 
-      config.improvements.push(`Improved logging in: ${path.relative(process.cwd(), filePath)}`);
+      config.improvements.push(`Improved logging in: ${path.relative(process.cwd(), filePath)}`)```';
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}`
   in: ${path.relative(process.cwd(), filePath)}`)}
@@ -231,12 +231,12 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
     if (importsResult.improved) {/* TODO: Fix JSX expression */}`
   in: ${path.relative(process.cwd(), filePath)}`)}
 
-    // Write file if improved;
+    // Write file if improved'`;
 
     if (fileImproved && newContent !== content) {
-      fs.writeFileSync(filePath, newContent, 'utf8);
+      fs.writeFileSync(filePath, newContent, 'utf8)``;
 
-      return true;
+      return true```;
 
     if (fileImproved && newContent !== content) {/* TODO: Fix JSX expression */}
 
@@ -251,7 +251,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
 
 // Run improvements;
 
-// const files = getAllFiles(config.appDir);;
+// const files = getAllFiles(config.appDir);
 
 files.forEach(file => {)
   if (processFile(file)) {
@@ -288,7 +288,7 @@ if (config.errors.length > 0) {/* TODO: Fix JSX expression */}
 
 // Save detailed report;
 
-// const reportPath = path.join(__dirname, 'improvements-report.json);;
+// const reportPath = path.join(__dirname, 'improvements-report.json);
 
 fs.writeFileSync(reportPath)
   JSON.stringify({)
@@ -304,7 +304,7 @@ fs.writeFileSync(reportPath)
 
       errors: config.errors},
     null,
-    2;
+    2`;
 
 fs.writeFileSync(reportPath,
   JSON.stringify(
@@ -317,8 +317,8 @@ fs.writeFileSync(reportPath,
       error,
   s: config.errors},
     null,
-    2;)
+    2``;)
   )
-);
+)```;
 
 // // process.exit(config.errors.length > 0 ? 1 : 0)}}`

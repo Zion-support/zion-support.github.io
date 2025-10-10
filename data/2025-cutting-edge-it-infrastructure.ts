@@ -1077,7 +1077,7 @@ marketSize: $25.3 B quantum computing market,
 
       reviews: 4};
 
-  ];    features: [;
+  ];    features: [
 
       Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration,
       Performance analytics24/7 network monitoring],
@@ -1102,7 +1102,7 @@ marketSize: '$397.4B cloud computing market', growthRate: 23% annual growth,
     variant: quantum-cloud-enterprise,
     contactInfo: unknown;
 
-  ];    features: [;
+  ];    features: [
 
       Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration,
       Performance analytics24 / 7 network monitoring],
@@ -1175,7 +1175,7 @@ variant: quantum-networking-enterprise,
     reviews: 4;
 
 ]
-export interface CuttingEdgeITInfrastructureService {;
+export interface CuttingEdgeITInfrastructureService {
 
   id: string;
 
@@ -1348,7 +1348,7 @@ varian,
   s: 4};
 
   ];    feature,
-  s: [;
+  s: [
 
       Quantum encryption protocolsAI-powered traffic optimizationAutonomous network managementZero-latency routingQuantum key distributionReal-time security monitoringGlobal network optimizationAPI for network integration
       Performance analytics24/7 network monitoring
@@ -1397,7 +1397,7 @@ varian,
   o: unknown;
 
   ];    feature,
-  s: [;
+  s: [
 
       Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration
       Performance analytics24 / 7 network monitoring
@@ -1553,12 +1553,10 @@ export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [
 
   // Quantum-Secure Cloud Infrastructure;
 
@@ -1642,7 +1640,7 @@ export const,
 
   // Edge Computing Orchestration Platform;
 
-  {;
+  {
 
     id: edge-computing-orchestration-platform;
 
@@ -1723,7 +1721,7 @@ export const,
 
   // Autonomous DevOps Platform;
 
-  {;
+  {
 
     id: autonomous-devops-platform;
 
@@ -1804,7 +1802,7 @@ export const,
 
   // Blockchain Infrastructure Platform;
 
-  {;
+  {
 
     id: blockchain-infrastructure-platform;
 
@@ -1885,7 +1883,7 @@ export const,
 
   // Quantum Networking Platform;
 
-  {;
+  {
 
     id: quantum-networking-platform;
 
@@ -2206,12 +2204,10 @@ export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [;
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [
 
   // Quantum-Secure Cloud Infrastructure;
 
@@ -2296,7 +2292,7 @@ export const,
 
   // Edge Computing Orchestration Platform;
 
-  {;
+  {
 
     id: edge-computing-orchestration-platform;
 
@@ -2378,7 +2374,7 @@ export const,
 
   // Autonomous DevOps Platform;
 
-  {;
+  {
 
     id: autonomous-devops-platform;
 
@@ -2460,7 +2456,7 @@ export const,
 
   // Blockchain Infrastructure Platform;
 
-  {;
+  {
 
     id: blockchain-infrastructure-platform;
 
@@ -2542,7 +2538,7 @@ export const,
 
   // Quantum Networking Platform;
 
-  {;
+  {
 
     id: quantum-networking-platform;
 
@@ -2867,7 +2863,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] =; [; // Quantum - Secure Cloud Infrastructure,  i,
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] =; [ // Quantum - Secure Cloud Infrastructure,  i,
   d: 'quantum - secure - cloud - infrastructure, nam,
   e: Quantum - Secure Cloud Infrastructure Platform, taglin,
   e:  ,' 'Next - generation cloud infrastructure with quantum encryption and zero - trust security, pric,
@@ -3174,8 +3170,8 @@ i,
   e: $397.4B cloud computing market, growthRat,
   e: '23% annual growth, varian,
   t: quantum-cloud-enterprise, contactInf,
-  o: ]; feature,
-  s: [;' 'Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration'' 'Performance analytics24 / 7 network monitoring ], popula,
+  o: ]'; feature,
+  s: [';' 'Quantum encryption protocolsAI - powered traffic optimization_autonomous network management_zero - latency routing_quantum key distribution_real - time security monitoring_global network optimizationAPI for network integration'' 'Performance analytics24 / 7 network monitoring ], popula,
   r: true, ico,
   n: '🌌, colo,
   r: from - indigo - 600 to - purple - 600, text_colo,
@@ -3241,7 +3237,7 @@ i,
   e: 2025 - 02 - 01, customer,
   s: 6, ratin,
   g: 4.9, review,
-  s: 4; ], ' import { ServiceVariant } from ../types/service-variants; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 4'; ], ' import { ServiceVariant } from ../types/service-variants; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
 
   s: string} websit,
   e: string} }; realImplementatio,
@@ -3250,63 +3246,63 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [; // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  s: number}; export const,
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [ // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Enterprise-grade cloud platform with quantum-resistant encryption, zero-trust architecture, and autonomous security management.; launchDat,
   e: 2025-01-10; customer,
   s: 8; ratin,
-  g: 4.9; review,
-  s: 5}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 5}'; // Edge Computing Orchestration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Global edge computing platform with AI optimization, real-time monitoring, and intelligent resource management across distributed locations.; launchDat,
   e: 2025-01-15; customer,
   s: 25; ratin,
-  g: 4.8; review,
-  s: 18}; // Autonomous DevOps Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 18}'; // Autonomous DevOps Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'AI-powered DevOps platform with autonomous automation, intelligent monitoring, and comprehensive development workflow management.; launchDat,
   e: 2025-01-20; customer,
   s: 38; ratin,
-  g: 4.7; review,
-  s: 25}; // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 25}'; // Blockchain Infrastructure Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Enterprise blockchain platform with AI-powered consensus, scalable infrastructure, and comprehensive business integration capabilities.; launchDat,
   e: 2025-01-25; customer,
   s: 15; ratin,
-  g: 4.8; review,
-  s: 12}; // Quantum Networking Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 12}'; // Quantum Networking Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.; launchDat,
   e: 2025-02-01; customer,
   s: 6; ratin,
   g: 4.9; review,
-  s: 4; ]} ]; } ]} ];' import { ServiceVariant } from ../types/service-variants; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
+  s: 4'; ]} ]'; } ]} ]';' import { ServiceVariant } from ../types/service-variants; export interface CuttingEdgeITInfrastructureService {/* TODO: Fix JSX expression */}
 
   s: string} websit,
   e: string} }; realImplementatio,
@@ -3315,60 +3311,60 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [; // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  s: number}; export const,
+  cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] = [ // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Enterprise-grade cloud platform with quantum-resistant encryption, zero-trust architecture, and autonomous security management.; launchDat,
   e: 2025-01-10; customer,
   s: 8; ratin,
-  g: 4.9; review,
-  s: 5}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 5}'; // Edge Computing Orchestration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Global edge computing platform with AI optimization, real-time monitoring, and intelligent resource management across distributed locations.; launchDat,
   e: 2025-01-15; customer,
   s: 25; ratin,
-  g: 4.8; review,
-  s: 18}; // Autonomous DevOps Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 18}'; // Autonomous DevOps Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'AI-powered DevOps platform with autonomous automation, intelligent monitoring, and comprehensive development workflow management.; launchDat,
   e: 2025-01-20; customer,
   s: 38; ratin,
-  g: 4.7; review,
-  s: 25}; // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 25}'; // Blockchain Infrastructure Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Enterprise blockchain platform with AI-powered consensus, scalable infrastructure, and comprehensive business integration capabilities.; launchDat,
   e: 2025-01-25; customer,
   s: 15; ratin,
-  g: 4.8; review,
-  s: 12}; // Quantum Networking Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 12}'; // Quantum Networking Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.; launchDat,
   e: 2025-02-01; customer,
-  s: 6; ratin,
-  g: 4.9; review,
-  s: 4} ];
+  s: 6'; ratin,
+  g: 4.9'; review,
+  s: 4} ]';

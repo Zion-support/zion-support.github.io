@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface NewOperationalService2025 {;,
+export interface NewOperationalService2025 {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const newOperationalServices2025: NewOperationalService2025[] = [,
     id: "smart-operations-center", name: "Smart Operations Center",
     tagline: "AI-powered operations management", price: '$119/month',
     description: 'Intelligent operations center that uses AI to optimize business processes and workflows.',
-    features: [;
+    features: [
       "AI process optimization"
       "Real-time monitoring"
       "Predictive analytics"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Intelligent operations center that uses AI to optimize business processes and workflows.",
     feature,
-  s: [;"
+  s: ["
       "AI process optimization""
       "Real-time monitoring""
       "Predictive analytics""

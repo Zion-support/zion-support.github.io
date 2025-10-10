@@ -4,7 +4,7 @@
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -94,4 +94,4 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-export default GlobalErrorBoundaryPage;
+export default GlobalErrorBoundaryPage";

@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from lucide-react;
+import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from lucide-react';
 
-;
+';
 
-const FiveGImplementationPage: React.FC = () => {const features = [;;;
+const FiveGImplementationPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -150,4 +150,4 @@ const FiveGImplementationPage: React.FC = () => {const features = [;;;
         </section>
       </div>
     </React.Fragment>)
-export default FiveGImplementationPage;
+export default FiveGImplementationPage'";

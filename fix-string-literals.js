@@ -8,40 +8,40 @@ import path from path;
 // Function to fix string literals and syntax errors;
 
 function fixStringLiterals(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix unterminated string literals;
 
-    const lines = content.split(\n);;
+    const lines = content.split(\n);
 
-    const newLines = [];;
+    const newLines = [];
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length; i++) {
 
-let line = lines[i];;
+let line = lines[i];
 
       // Fix unterminated double quotes;
 
-      if (line.includes('"') && !line.match(/"[^"]*/)) {;
+      if (line.includes('"') && !line.match(/"[^"]*/)) {
 
-const quoteCount = (line.match(//g) || []).length;;
+const quoteCount = (line.match(//g) || []).length;
 
         if (quoteCount % 2 === 1) {
-          line = line + ';
+          line = line ' ' + '';
 
           modified = true}
 
       }
 
-      // Fix unterminated single quotes;
+      // Fix unterminated single quotes';
 
-      if (line.includes("'") && !line.match(/'[^]*/)) {;
+      if (line.includes("'") && !line.match(/'[^]*/)) {
 
-const quoteCount = (line.match(//g) || []).length;;
+const quoteCount = (line.match(//g) || []).length;
 
         if (quoteCount % 2 === 1) {
           line = line + "';
@@ -52,18 +52,18 @@ const quoteCount = (line.match(//g) || []).length;;
 
       // Fix unterminated template literals;
 
-      if (line.includes('`') && !line.match(/`[^`]*/)) {;
+      if (line.includes('`') && !line.match(/`[^`]*/)) {
 
-const backtickCount = (line.match(//g) || []).length;;
+const backtickCount = (line.match(//g) || []).length;
 
         if (backtickCount % 2 === 1) {
-          line = line + ';
+          line = line ' ' + '';
 
           modified = true}
 
       }
 
-      // Fix incomplete imports;
+      // Fix incomplete imports';
 
       if (line.startsWith('import ') && !line.endsWith(';') && !line.includes('{') && !line.includes('()) {
         line = line + ;
@@ -184,22 +184,22 @@ return false}
 
 // Function to find all TypeScript/JavaScript files;
 
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {
 
-const files = [];;
+const files = [];
 
   ;
 
 function traverse(currentDir) {
-    try {;
+    try {
 
-const items = fs.readdirSync(currentDir);;
+const items = fs.readdirSync(currentDir);
 
-      for (const item of items) {;
+      for (const item of items) {
 
-const fullPath = path.join(currentDir, item);;
+const fullPath = path.join(currentDir, item);
 
-        const stat = fs.statSync(fullPath);;
+        const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories;
@@ -207,9 +207,9 @@ const fullPath = path.join(currentDir, item);;
           if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
             traverse(fullPath)}
 
-        } else if (stat.isFile()) {;
+        } else if (stat.isFile()) {
 
-const ext = path.extname(item);;
+const ext = path.extname(item);
 
           if (extensions.includes(ext)) {
             files.push(fullPath)}
@@ -229,16 +229,16 @@ const ext = path.extname(item);;
 
 // Main execution;
 
-const srcDir = path.join(process.cwd(), src);;
+const srcDir = path.join(process.cwd(), src);
 
-const files = findFiles(srcDir);;
+const files = findFiles(srcDir);
 
 // console.log removed for production
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0`;
 
-let errorCount = 0;;
+let errorCount = 0``;```;
 
 for (const file of files) {
   try {

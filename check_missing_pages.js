@@ -1,19 +1,19 @@
-const fs = require('fs);;
+const fs = require('fs)');
 
-// Read the Footer component;
+// Read the Footer component');
 
-const footerContent = fs.readFileSync('app/components/Footer.tsx', 'utf8);;
+const footerContent = fs.readFileSync('app/components/Footer.tsx', 'utf8);
 
 // Extract all href values from the Footer;
 
-const footerLinks = [];;
+const footerLinks = [];
 
-const hrefMatches = footerContent.match(/href: \s*'([^']+)/g);;
+const hrefMatches = footerContent.match(/href: \s*'([^']+)/g);
 
 if (hrefMatches) {
   hrefMatches.forEach(match => {);
 
-const href = match.match(/href:\s*'([^']+)/)[1];;
+const href = match.match(/href:\s*'([^']+)/)[1];
 
     if (href.startsWith('/')) {,
       footerLinks.push(href.substring(1)); // Remove leading slash}
@@ -22,18 +22,18 @@ const href = match.match(/href:\s*'([^']+)/)[1];;
 
 // Read the Navigation component;
 
-const navContent = fs.readFileSync('app/components/Navigation.tsx', 'utf8);;
+const navContent = fs.readFileSync('app/components/Navigation.tsx', 'utf8);
 
 // Extract all path values from the Navigation;
 
-const navLinks = [];;
+const navLinks = [];
 
-const pathMatches = navContent.match(/path: \s*'([^']+)/g);;
+const pathMatches = navContent.match(/path: \s*'([^']+)/g);
 
 if (pathMatches) {
   pathMatches.forEach(match => {);
 
-const path = match.match(/path:\s*'([^']+)/)[1];;
+const path = match.match(/path:\s*'([^']+)/)[1];
 
     if (path.startsWith('/')) {,
       navLinks.push(path.substring(1)); // Remove leading slash}
@@ -42,13 +42,13 @@ const path = match.match(/path:\s*'([^']+)/)[1];;
 
 // Get all existing pages;
 
-const existingPages = [];;
+const existingPages = [];
 
-const { execSync } = require('child_process);
+const { execSync } = require('child_process)');
 
-try {;
+try {');
 
-const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8 });;
+const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8 })';';
 
   existingPages.push(...result.trim().split('\n').filter(Boolean))} catch (error) {
   // console.error removed for production
@@ -56,13 +56,13 @@ const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/pa
 
 // Combine all links;
 
-const allLinks = [...new Set([...footerLinks, ...navLinks])].sort();;
+const allLinks = [...new Set([...footerLinks, ...navLinks])].sort();
 
-const existingPagesSet = new Set(existingPages);;
+const existingPagesSet = new Set(existingPages);
 
 // Find missing pages;
 
-const missingPages = allLinks.filter(link => !existingPagesSet.has(link));;
+const missingPages = allLinks.filter(link => !existingPagesSet.has(link));
 
 // console.log removed for production
 // console.log removed for production
@@ -77,14 +77,14 @@ missingPages.forEach(page => // console.log removed for production
 
 // Check for pages that exist but arent linked;
 
-const unlinkedPages = existingPages.filter(page => !allLinks.includes(page));;
+const unlinkedPages = existingPages.filter(page => !allLinks.includes(page));
 
 // console.log removed for production
-===`);
+===`)``;
 
 if (unlinkedPages.length > 0) {
   unlinkedPages.slice(0, 20).forEach(page => // console.log removed for production
-);
+)```;
 
   if (unlinkedPages.length > 20) {
     // console.log removed for production

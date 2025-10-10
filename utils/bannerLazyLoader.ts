@@ -43,7 +43,7 @@ export const lazyLoadBanner = (importF);;
  * Preload banner components for better performance;
 
  */
-export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {;;
+export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
 
 return (
 
@@ -70,11 +70,11 @@ export const preloadBanner = (importF);;
  * Banner loader with intersection observer;
 
  */
-export const createBannerLoader = () => {;;
+export const createBannerLoader = () => {
 
 const observer = new IntersectionObserver(;;
 
-        if (entry.isIntersecting) {;
+        if (entry.isIntersecting) {
 
 const _element = entry.target as HTMLElement;;
 
@@ -96,8 +96,8 @@ export const createBannerLoader = () => {/* TODO: Fix JSX expression */};;;
 
   n: '50px }
 
-  );
+  )';
 
   return {/* TODO: Fix JSX expression */}
 
-  }};
+  }}';

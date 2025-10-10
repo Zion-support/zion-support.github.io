@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import { 
   Brain, 
@@ -17,11 +17,11 @@ import {
   ArrowRight,
   Search,
 
-} from 'lucide-react;
+} from 'lucide-react';
 
-;
+';
 
-const ServicesPage: React.FC = () => {const services = [;
+const ServicesPage: React.FC = () => {const services = [';
     // AI Services
     {      ico,
     n: Brain,
@@ -800,9 +800,9 @@ const ServicesPage: React.FC = () => {const services = [;
       category: 'Micro SAAS
     }  ];
 
-;
+';
 
-const categories = [;;
+const categories = [';';
 
     'All,
     'AI Services,
@@ -829,7 +829,7 @@ const servicesPerPage = 12;;
 
 ;
 
-const filteredServices = services.filter(service => {;;
+const filteredServices = services.filter(service => {
 
 const matchesCategory = selectedCategory === 'All || service.category === selectedCategory;;
 
@@ -913,7 +913,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);;
                     <select
                       value={selectedCategory}
 
-                      onChange={(e) => setSelectedCategory(e.target.value);
+                      onChange={(e) => setSelectedCategory(e.target.value)";
 
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none
                     >
@@ -932,7 +932,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);;
                   <button
                     key={category}
 
-                    onClick={() => setSelectedCategory(category);
+                    onClick={() => setSelectedCategory(category)";
 
                     className={px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${                      selectedCategory === category
                         ? bg-cyan-500 text-white
@@ -976,7 +976,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);;
 
                         <li className="text-gray-400 text-sm>
                           +{service.features.length - 4} more features
-                        </li>);
+                        </li>)"';
 
                     </ul>
                   </div>
@@ -1016,7 +1016,7 @@ const currentServices = filteredServices.slice(startIndex, endIndex);;
                     <button
                       key={page}
 
-                      onClick={() => setCurrentPage(page);
+                      onClick={() => setCurrentPage(page)"';
 
                       className={px-4 py-2 rounded-lg transition-all duration-300 ${
                         currentPage === page
@@ -1063,4 +1063,4 @@ const currentServices = filteredServices.slice(startIndex, endIndex);;
         </section>
       </div>
     </React.Fragment>)
-export default ServicesPage;
+export default ServicesPage'";

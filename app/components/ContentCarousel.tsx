@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useState, useEffect } from 'react;
 
@@ -11,19 +11,19 @@ interface Slide {
 
   description: string;
 
-  features: string[];
+  features: string[]';
 
   stats?: {
-    value: string;
+    value: string';
 
-    label: string;
+    label: string';
 
-  }[];
+  }[]';
 
 }
 
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0)';
 
   const slides: Slide[] = [
     {
@@ -77,13 +77,13 @@ const ContentCarousel: React.FC = () => {
 
   ];
 
-  const nextSlide = () => {;;
+  const nextSlide = () => {
 
     setCurrentSlide((prev) => (prev + 1) % slides.length);
 
   };
 
-  const prevSlide = () => {;;
+  const prevSlide = () => {
 
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
@@ -94,9 +94,9 @@ const ContentCarousel: React.FC = () => {
 
     return () => clearInterval(timer);
 
-  }, []);
+  }, [])';
 
-  const currentSlideData = slides[currentSlide];;
+  const currentSlideData = slides[currentSlide]';';
 
   return (
 
@@ -267,8 +267,8 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )">
 
-};
+}">
 
-export default ContentCarousel;
+export default ContentCarousel";

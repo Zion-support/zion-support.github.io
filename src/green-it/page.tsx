@@ -1,22 +1,22 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react;
+import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
 
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
-const GreenITPage: React.FC = () => {;
+const GreenITPage: React.FC = () => {';
 
 const [activeTab, setActiveTab] = useState('solutions);
 
 ;
 
-const tabs = [;
+const tabs = [
     {      id: 'solutions,
       name: 'Green Solutions,
       icon: Leaf,
@@ -37,9 +37,9 @@ $4}
 
   ];
 
-;
+';
 
-const greenSolutions = [;;
+const greenSolutions = [';';
 
       title: 'Energy-Efficient Data Centers,
       description: 'Design and implement energy-efficient data centers with renewable energy integration,
@@ -99,9 +99,9 @@ titletitle: 'Environmental Monitoring,
         'Sustainability reporting,
         Environmental compliance
       impact: 'Achieve 100% environmental transparency,
-      pricing: 'Starting at $600/month;
+      pricing: 'Starting at $600/month';
 
-const benefits = [;
+const benefits = [';
       icon: TrendingUp,
       title: 'Cost Savings',      description: 'Reduce operational costs through energy efficiency and resource optimization,
       details: [
@@ -129,7 +129,7 @@ const benefits = [;
         'Investor confidence boost,
         'Talent attraction and retention;
 
-const certifications = [;
+const certifications = [
       name: 'ISO 14001:2015,
       description: 'Environmental Management Systems,      status:       ,
 namename: 'LEED Platinum,
@@ -137,9 +137,9 @@ namename: 'LEED Platinum,
       name: 'Carbon Trust Standard,
       description: 'Carbon Footprint Management,
       name: 'Green IT Certification,
-      description: Sustainable IT Practices,;
+      description: Sustainable IT Practices,';
 
-const stats = [;;
+const stats = [';';
 
       value: '60%,
       label: 'Carbon Footprint Reduction,
@@ -152,9 +152,9 @@ valuevalue: '50%,
       color:       ,
 valuevalue: '100%,
       label: 'Renewable Energy Options,
-      color: 'text-purple-400;
+      color: 'text-purple-400';
 
-const caseStudies = [;
+const caseStudies = [';
       company: 'TechCorp Manufacturing,
       industry: 'Manufacturing',      challenge: 'High energy consumption in data centers,
       solution: 'Implemented energy-efficient data center design with renewable energy integration,
@@ -214,8 +214,8 @@ const caseStudies = [;
           <div className="mb-12>
             <div className="flex flex-wrap justify-center gap-4 mb-8>
               {tabs.map((tab) => (<button
-                  key = { tab.id };)
-                  onClick = { () => setActiveTab(tab.id) };
+                  key = { tab.id }">)
+                  onClick = { () => setActiveTab(tab.id) }"```;
 
                   className={flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === tab.id
@@ -339,27 +339,27 @@ const caseStudies = [;
 
 export default GreenITPage;
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
 const GreenITPage: React.FC = () => {
   return (
 
     <div>Coming Soon</div>
-);
+)';
 
 }
 
-  )};
+  )}';
 
   const [activeTab, setActiveTab] = useState('solutions);
 
-const tabs = [;
+const tabs = [
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -396,7 +396,7 @@ const tabs = [;
   s: [
   /
   ,
-    O: Add items];
+    O: Add items]';
 
 /
 /
@@ -483,9 +483,9 @@ const tabs = [;
       impac,
   t: 'Achieve 100% environmental transparency,
       pricin,
-  g: 'Starting at $600/month;
+  g: 'Starting at $600/month';
 
-const benefits = [,;
+const benefits = [,';
       ico,
   n: TrendingUp,
       titl,
@@ -525,7 +525,7 @@ const benefits = [,;
         'Investor confidence boost,
         Talent attraction and retention;
 
-const certifications = [;;
+const certifications = [
 
       nam,
   e: ISO,
@@ -546,9 +546,9 @@ const certifications = [;;
       nam,
   e: 'Green IT Certification,
       descriptio,
-  n: Sustainable IT Practices,;
+  n: Sustainable IT Practices,';
 
-const stats = [;;
+const stats = ['`;'`">
 
       valu,
   e: '60%,
@@ -576,9 +576,9 @@ const stats = [;;
       labe,
   l: 'Renewable Energy Options,
       colo,
-  r: text-purple-400;
+  r: text-purple-400'">
 
-const caseStudies = [,;;
+const caseStudies = [,">'"```;
 
       compan,
   y: 'TechCorp Manufacturing,
@@ -657,7 +657,7 @@ const caseStudies = [,;;
               {tabs.map((tab) => ()}
 
           <button><
-                  key = { tab.id };
+                  key = { tab.id }">
 
                   onClick={() => setActiveTab(tab.id)}
 
@@ -666,7 +666,7 @@ const caseStudies = [,;;
   // TOD,
   O: Add content}
 
-                    activeTab === tab.id;`                      ? `${tab.bgColor} ${tab.color} border-2 border-current
+                    activeTab === tab.id"```;`                      ? `${tab.bgColor} ${tab.color} border-2 border-current
                       : bg-slate-800
   hover:bg-slate-700
                   }}
@@ -716,9 +716,8 @@ const caseStudies = [,;;
                       <div className={`text-lg font-bold ${solution.color}}><
                         {solution.pricing}
 
-                      <a
-                        href=
-Learn More;
+                      <a href=
+Learn More"`>
 
                         <ArrowRight className="w-4 h-4 ml-1 
 
@@ -727,7 +726,7 @@ Learn More;
 
           {activeTab === 'benefits && (}
 
-Benefits of Green IT;
+Benefits of Green IT">
 
               <div className="grid grid-cols-1,
   md: grid-cols-2 gap-8><)
@@ -747,7 +746,7 @@ Benefits of Green IT;
 
 {activeTab === 'certifications && (}
 
-                Our Certifications;
+                Our Certifications"```;
 
               <div className=grid grid-cols-1,
   md:grid-cols-2,
@@ -761,7 +760,7 @@ Benefits of Green IT;
                     <p className="text-gray-300 text-sm mb-3>{cert.description}<
                     <div className="text-green-400 text-sm font-medium>{cert.status}<
 {/* Case Studies *
-              Success Stories;
+              Success Stories"```;
 
             <div className="grid grid-cols-1,
   lg: grid-cols-2 gap-8><
@@ -792,20 +791,20 @@ Benefits of Green IT;
               assessment and discover how much you can save while protecting the planet.
 
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center>
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 Get Free Assessment;
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 Get Free Assessment"`;
 
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center
                 <Phone className="w-4 h-4 mr-2 
-                (302) 464-0950;
+                (302) 464-0950"`>
 
                 href="mailto:kleber@ziontechgroup.com" className=border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center
                 <Mail className="w-4 h-4 mr-2 
-                Email Us;
+                Email Us>
 
       <Footer 
 
     </div>
-  )};
+  )}">
 
-export default GreenItPage;
+export default GreenItPage"```;

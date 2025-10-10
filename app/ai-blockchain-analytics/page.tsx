@@ -1,16 +1,16 @@
-import { CheckCircle, ArrowRight } from 'lucide-react;
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
-;
+';
 
-const PagePage: React.FC = () => {const features = [;
+const PagePage: React.FC = () => {const features = [';
     {
       title: 'Feature 1,
       description: 'Description of feature 1,
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3]
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       ico,
@@ -68,7 +68,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Benefit 1,
 
   ];
 
-  const benefits = [;;
+  const benefits = [
 
     'Transform your business with AI technology,
     'Make data-driven decisions with confidence,
@@ -174,9 +174,9 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Benefit 1,
                           {benefit}
 
                         </li>
-                      ));
+                      ))">
 
-                    </ul>);
+                    </ul>)">
 
                         </li>)                      ))}
 
@@ -184,7 +184,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Benefit 1,
                   )}
 
                 </div>
-              ));
+              ))";
 
             </div>
           </div>
@@ -233,7 +233,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Benefit 1,
                     </div>
                   </div>
                 </div>
-              ));
+              ))";
 
         <section className="py-20 px-4">          <div className="max-w-7xl mx-auto>
             <div className="text-center mb-16>
@@ -281,10 +281,10 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Benefit 1,
 
           </div>}
 
-export default AiBlockchainAnalyticsPage;
+export default AiBlockchainAnalyticsPage">
 
         </div>
-export default AiBlockchainAnalyticsPage;        </div>
+export default AiBlockchainAnalyticsPage";        </div>
       </section>
 
       {/* Benefits Section */}
@@ -307,7 +307,7 @@ export default AiBlockchainAnalyticsPage;        </div>
                 </div>
                 <h3 className="text-lg font-semibold text-white>{benefit}</h3>
               </div>
-            ));
+            ))"';
 
           </div>
         </div>
@@ -334,13 +334,13 @@ export default AiBlockchainAnalyticsPage;        </div>
 
       <Footer />
     </div>
-  );
+  )">
 
 }
 
 export default PagePage
-export default PagePage;
+export default PagePage'">
 
-};
+}">
 
-export default PagePage;
+export default PagePage'";

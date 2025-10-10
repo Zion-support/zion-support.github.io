@@ -9,7 +9,7 @@ interface PerformanceMetrics {
 
   networkLatency: number}
 
-export const usePerformance = () => {;;
+export const usePerformance = () => {
 
 return (
 
@@ -25,7 +25,7 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>({</PerformanceMetrics
 
 ;
 
-const optimize = useCallback(() => {;;;
+const optimize = useCallback(() => {
 
     // Performance optimization logic
     if ('requestIdleCallback in window) {
@@ -39,9 +39,9 @@ const optimize = useCallback(() => {;;;
   useEffect(() => {
     // Measure performance metrics;
 
-const measurePerformance = () => {;;
+const measurePerformance = () => {
 
-      if (typeof window !== 'undefined' && performance in window) {;
+      if (typeof window !== 'undefined' && performance in window) {
 
 const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
@@ -61,7 +61,7 @@ const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNav
     metrics,
     optimize}};
 
-'use client;
+'use client';
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 

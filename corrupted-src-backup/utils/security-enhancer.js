@@ -62,7 +62,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   setMetaCSP(cspHeader) {
     // Set CSP via meta tag;
 
-    const _meta = document.createElement(meta);;
+    const _meta = document.createElement(meta);
 
     meta.httpEquiv = Content-Security-Policy;
 
@@ -74,7 +74,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     if (this.securityConfig.xssProtection) {
       // Add XSS protection header;
 
-      const _meta = document.createElement(meta);;
+      const _meta = document.createElement(meta);
 
       meta.httpEquiv = X-XSS-Protection;
 
@@ -88,7 +88,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     if (this.securityConfig.csrfProtection) {
       // Generate CSRF token;
 
-//       const token = this.generateCSRFToken();;
+//       const token = this.generateCSRFToken();
 
       this.setCSRFToken(token);
 
@@ -103,7 +103,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   generateCSRFToken() {
-//     const array = new Uint8 Array(32);;
+//     const array = new Uint8 Array(32);
 
     crypto.getRandomValues(array);
 
@@ -117,7 +117,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
     // Add token to meta tag;
 
-    const _meta = document.createElement(meta);;
+    const _meta = document.createElement(meta);
 
     meta.name = csrf-token;
 
@@ -127,14 +127,14 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   addCSRFTokenToForms() {;
 
-const _forms = document.querySelectorAll(form);;
+const _forms = document.querySelectorAll(form);
 
     forms.forEach(form => {)
-//       const token = sessionStorage.getItem(csrf_token);;
+//       const token = sessionStorage.getItem(csrf_token);
 
       if (token && !form.querySelector('input[name="csrf_token])) {;
 
-const _input = document.createElement(input);;
+const _input = document.createElement(input);
 
         input.type = hidden;
 
@@ -177,10 +177,10 @@ const _input = document.createElement(input);;
   addCSRFTokenToAJAX() {
     // Override fetch to include CSRF token;
 
-    const _originalFetch = window.fetch;;
+    const _originalFetch = window.fetch;
 
     window.fetch = (url, options = {}) => {
-//       const token = sessionStorage.getItem(csrf_token);;
+//       const token = sessionStorage.getItem(csrf_token);
 
       if (token) {
         options.headers = {
@@ -196,7 +196,7 @@ const _input = document.createElement(input);;
 
     // Override XMLHttpRequest to include CSRF token;
 
-    const _originalXHROpen = XMLHttpRequest.prototype.open;;
+    const _originalXHROpen = XMLHttpRequest.prototype.open;
 
     XMLHttpRequest.prototype.open = function (method, url, ...args) {/* TODO: Fix JSX expression */}
 
@@ -217,7 +217,7 @@ const _input = document.createElement(input);;
 
   setupFormValidation() {;
 
-const _forms = document.querySelectorAll(form);;
+const _forms = document.querySelectorAll(form);
 
     forms.forEach(form => {)
       form.addEventListener('submit, event => {)
@@ -236,9 +236,9 @@ const _forms = document.querySelectorAll(form);;
 
   validateForm(form) {;
 
-const _inputs = form.querySelectorAll(input, textarea, select);;
+const _inputs = form.querySelectorAll(input, textarea, select);
 
-    let _isValid = true;;
+    let _isValid = true;
 
     inputs.forEach(input => {)
       if (!this.validateInput(input)) {
@@ -289,7 +289,7 @@ const _inputs = form.querySelectorAll(input, textarea, select);;
   validateURL(url) {
     try {;
 
-const _urlObj = new URL(url);;
+const _urlObj = new URL(url);
 
       return this.securityConfig.trustedDomains.some(domain =>)
           urlObj.hostname === domain || urlObj.hostname.endsWith('. + domain)
@@ -306,14 +306,14 @@ const _urlObj = new URL(url);;
 
   validatePhone(phone) {/* TODO: Fix JSX expression */}
 
-    const _phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;;
+    const _phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
 
     return phoneRegex.test(phone.replace(/\s/g, '))}
 
   validatePassword(password) {
     // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character;
 
-    const passwordRegex =;;
+    const passwordRegex =;
 
   validatePassword(password) {/* TODO: Fix JSX expression */}
 
@@ -324,7 +324,7 @@ const _urlObj = new URL(url);;
   validateText(text) {
     // Check for XSS patterns;
 
-    const xssPatterns = [;;
+    const xssPatterns = [;
 
       /<script/i,
       /javascript: /i;
@@ -342,7 +342,7 @@ const _urlObj = new URL(url);;
 
     document.addEventListener(click, event => {);
 
-const _link = event.target.closest(a);;
+const _link = event.target.closest(a);
 
       if (link && link.href) {
         if (!this.validateURL(link.href)) {
@@ -364,11 +364,11 @@ const _link = event.target.closest(a);;
 
   setupFileUploadValidation() {;
 
-const _fileInputs = document.querySelectorAll('input[type="file]);;
+const _fileInputs = document.querySelectorAll('input[type="file]);
 
     fileInputs.forEach(input => {)
       input.addEventListener('change, event => {)
-//         const files = event.target.files;);;
+//         const files = event.target.files;);
 
         for (const file of files) {
           if (!this.validateFile(file)) {
@@ -386,7 +386,7 @@ const _fileInputs = document.querySelectorAll('input[type="file]);;
 
   validateFile(file) {;
 
-const allowedTypes = [;;
+const allowedTypes = [;
 
       'image/jpeg,
       'image/png,
@@ -397,7 +397,7 @@ const allowedTypes = [;;
 
 ;
 
-const maxSize = 10 * 1024 * 1024; // 10MB;;
+const maxSize = 10 * 1024 * 1024; // 10MB;
 
     return allowedTypes.includes(file.type) && file.size <= maxSize}
 
@@ -411,14 +411,14 @@ const maxSize = 10 * 1024 * 1024; // 10MB;;
   setupTextEncoding() {
     // Override innerHTML and textContent to encode by default;
 
-    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype);;
+    const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype);
 
       innerHTML
     );
 
     Object.defineProperty(Element.prototype, 'innerHTML, {)
       set: function (value) {,
-//         const encoded = this.encodeHTML(value);;
+//         const encoded = this.encodeHTML(value);
 
         originalInnerHTML.set.call(this, encoded)},
       get: originalInnerHTML.get})}
@@ -436,7 +436,7 @@ const maxSize = 10 * 1024 * 1024; // 10MB;;
   setupSecureHeaders() {
     // Add security headers via meta tags;
 
-    const headers = {;;
+    const headers = {;
 
       'X-Content-Type-Options': 'nosniff,
       'X-Frame-Options': 'DENY,
@@ -478,12 +478,12 @@ const maxSize = 10 * 1024 * 1024; // 10MB;;
     this.monitorDOMChanges()}
 
   monitorConsoleErrors() {
-//     const originalConsoleError = console.error;;
+//     const originalConsoleError = console.error;
 
 //     console.error = (...args) => {
       // Check for security-related errors;
 
-//       const message = args.join( );;
+//       const message = args.join( );
 
       if (this.isSecurityError(message)) {
   setupSecurityMonitoring() {/* TODO: Fix JSX expression */}
@@ -498,7 +498,7 @@ const maxSize = 10 * 1024 * 1024; // 10MB;;
 
   monitorNetworkRequests() {;
 
-const _originalFetch = window.fetch;;
+const _originalFetch = window.fetch;
 
     window.fetch = (url, options = {}) => {
       // Log suspicious requests;
@@ -514,7 +514,7 @@ const _originalFetch = window.fetch;;
 
   monitorDOMChanges() {;
 
-const observer = new MutationObserver(mutations => {);;
+const observer = new MutationObserver(mutations => {);
 
       mutations.forEach(mutation => {)
         if (mutation.type === 'childList) {
@@ -542,7 +542,7 @@ const observer = new MutationObserver(mutations => {);;
 
   isSuspiciousRequest(url) {;
 
-const suspiciousPatterns = [;;
+const suspiciousPatterns = [;
 
       /eval/i,
       /script/i,
@@ -557,9 +557,9 @@ const suspiciousPatterns = [;;
 
   checkForMaliciousContent(node) {;
 
-const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];;
+const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];
 
-//     const content = node.innerHTML || node.textContent || ;;
+//     const content = node.innerHTML || node.textContent || ;
 
     if (maliciousPatterns.some(pattern => pattern.test(content))) {
       this.reportSecurityEvent('malicious_content, {)
@@ -579,7 +579,7 @@ const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];;
 
   reportSecurityEvent(type, data) {;
 
-const event = {;;
+const event = {;
 
       type,
       data,
@@ -621,7 +621,7 @@ const event = {;;
 
   showSecurityWarning(message) {;
 
-const _warning = document.createElement(div);;
+const _warning = document.createElement(div);
 
     warning.className = security-warning;
 
@@ -744,7 +744,7 @@ const _warning = document.createElement(div);;
 
 // Initialize security enhancer;
 
-// const securityEnhancer = new SecurityEnhancer();;
+// const securityEnhancer = new SecurityEnhancer();
 
 // Export for use in other modules;
 

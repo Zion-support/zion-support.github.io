@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
     // Adaptive orchestration logic simulation;
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -24,13 +24,13 @@ function: 'adaptive-orchestrator',
           mode: 'adaptive',
           lastUpdate: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */};
 
         'Access-Control-Allow-Origin': '*'}
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
   e: new Date().toISOString()}
 
         }})};
@@ -71,7 +71,7 @@ function: 'adaptive-orchestrator'}
 };
 
         timestamp: new Date().toISOString(),' function: 'adaptive-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'active',' mode: 'adaptive'} lastUpdate: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'adaptive-orchestrator }) }} };
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'adaptive-orchestrator }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -89,4 +89,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'adaptive-orchestrator }) }} };
+  n: 'adaptive-orchestrator }) }} }';

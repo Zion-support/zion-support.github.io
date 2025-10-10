@@ -1,13 +1,13 @@
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
-import fs from 'fs;
+import fs from 'fs';
 
 // console.log removed for production
 try {
-  // Check current status;
+  // Check current status';
 
   // console.log removed for production
-const status = execSync('git status --porcelain', { encoding: utf8 });;
+const status = execSync('git status --porcelain', { encoding: utf8 });
 
   if (status.trim()) {
     // console.log removed for production
@@ -15,7 +15,7 @@ execSync('git add .', { stdio: inherit });
 
     execSync('git commit -m "Auto-commit before merge"', { stdio: 'inherit })}
 
-  // Switch to main branch;
+  // Switch to main branch';
 
   // console.log removed for production
 execSync('git checkout main', { stdio: inherit });
@@ -35,15 +35,15 @@ for (const pr of prs) {
       execSync(`git show-ref --verify --quiet refs/remotes/origin/${pr.branch})
         { stdio: 'pipe }
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
 import { execSync } from 'child_process;
 
 import fs from fs;
 
-//PR information from the JSON files;
+//PR information from the JSON files';
 
-const prs = [;;;
+const prs = [';
 
   {/* TODO: Fix JSX expression */}
 
@@ -56,29 +56,29 @@ const prs = [;;;
   },
   {/* TODO: Fix JSX expression */}
 
-  }];
+  }]';
 
-// //Ensure were on main branch;
+// //Ensure were on main branch';
 
 try {/* TODO: Fix JSX expression */}
 
-  o: inherit });
+  o: inherit })';
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
 }
 
-//Pull latest changes;
+//Pull latest changes'`;
 
 try {/* TODO: Fix JSX expression */}
 
-  o: inherit });
+  o: inherit })'``;
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 
 }
 
-//Process each PR;
+//Process each PR'```;
 
 for (const pr of prs) {/* TODO: Fix JSX expression */}
 
@@ -87,32 +87,32 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
 
   o: 'pipe }
 
-      );
+      )'``;
 
 //       } catch (error) {/* TODO: Fix JSX expression */}
 
     }
 
-    //Try to merge the branch;
+    //Try to merge the branch'```;
 
     try {
       execSync(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}")
         { stdio: 'inherit }
 
-      );
+      )';
 
 //       } catch (error) {
-//       //Try to resolve conflicts automatically;
+//       //Try to resolve conflicts automatically';
 
       try {
         execSync('git status --porcelain', { stdio: pipe });
 
-//         //If there are conflicts, try to resolve them;
+//         //If there are conflicts, try to resolve them`;
 
         if (status.includes('UU') || status.includes('AA)) {
-//           //Reset the merge;
+//           //Reset the merge``;
 
-          execSync('git merge --abort', { stdio: inherit });
+          execSync('git merge --abort', { stdio: inherit })```;
 
     try {/* TODO: Fix JSX expression */}
 
@@ -121,13 +121,13 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
 
   o: 'inherit }
 
-      );
+      )';
 
 //       } catch (error) {/* TODO: Fix JSX expression */}
 
-  o: pipe });
+  o: pipe })';
 
-//         //If there are conflicts, try to resolve them;
+//         //If there are conflicts, try to resolve them';
 
         if (status.includes('UU') || status.includes('AA)) {/* TODO: Fix JSX expression */}
 
@@ -145,19 +145,19 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
     // console.log removed for production
 // Check for conflicts;
 
-    const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });;
+    const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });
 
     if (conflictFiles.trim()) {
       // console.log removed for production
-// Auto-resolve conflicts by accepting our changes;
+// Auto-resolve conflicts by accepting our changes`;
 
-      const files = conflictFiles.trim().split(\n);;
+      const files = conflictFiles.trim().split(\n)``;```;
 
       for (const file of files) {
         if (file.trim()) {
           // console.log removed for production
 try {
-            execSync(`git checkout --ours "${file}"`, { stdio: inherit });
+            execSync(`git checkout --ours "${file}"`, { stdio: inherit })```;
 
             execSync(`git add "${file}"`, { stdio: 'inherit })} catch (e) {
             // console.log removed for production
@@ -167,7 +167,7 @@ try {
 
       }
 
-      // Complete the merge;
+      // Complete the merge';
 
       execSync('git commit -m "Resolve merge conflicts - accept website audit changes"', { stdio: inherit });
 
@@ -187,7 +187,7 @@ execSync('git push origin main', { stdio: inherit });
   // console.log removed for production
 execSync('git branch -d cursor/website-audit-and-update-with-deployment-1500', { stdio: inherit });
 
-  execSync('git push origin --delete cursor/website-audit-and-update-with-deployment-1500', { stdio: inherit });
+  execSync('git push origin --delete cursor/website-audit-and-update-with-deployment-1500', { stdio: inherit })`;
 
   // console.log removed for production
 } catch (error) {
@@ -200,11 +200,11 @@ process.exit(1)}
 
 }
 
-// Push changes;
+// Push changes``;
 
 try {/* TODO: Fix JSX expression */}
 
-  o: inherit });
+  o: inherit })```;
 
 //   } catch (error) {/* TODO: Fix JSX expression */}
 

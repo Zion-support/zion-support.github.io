@@ -1,10 +1,10 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import React, { memo, useState, useEffect } from 'react;
+import React, { memo, useState, useEffect } from 'react';
 
-import { Link, useLocation } from 'react-router-dom;
+import { Link, useLocation } from 'react-router-dom';
 
 import { 
   X, 
@@ -22,7 +22,7 @@ import {
   Phone,
   Mail,
   MapPin,
-  Clock;)
+  Clock';)
 } from 'lucide-react;
 
 ;
@@ -32,9 +32,9 @@ const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
 const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services]))
 const location = useLocation();;
 
-  useEffect(() => {;
+  useEffect(() => {
 
-const handleResize = () => {;
+const handleResize = () => {
       if (window.innerWidth >= 1024) {        setIsOpen(false););
 
     window.addEventListener('resize, handleResize);    return (<div>)
@@ -45,7 +45,7 @@ const handleResize = () => {;
 
   }, []);
 
-const toggleSection = (section: string) => {;;
+const toggleSection = (section: string) => {
 
 const newExpanded = new Set(expandedSections);;
 
@@ -56,7 +56,7 @@ const newExpanded = new Set(expandedSections);;
 
     setExpandedSections(newExpanded););
 
-const navigationSections = [;
+const navigationSections = [
     if (newExpanded.has(section)) {
       newExpanded.delete(section)]
     } else {
@@ -66,7 +66,7 @@ const navigationSections = [;
     setExpandedSections(newExpanded)]
     };
 
-  const navigationSections = [    {;
+  const navigationSections = [    {
       title: 'Main,
       items: [
         { nam,
@@ -204,9 +204,9 @@ const navigationSections = [;
 ]]
     }
 
-  ];
+  ]';
 
-const contactInfo = {;;
+const contactInfo = {';';
 
     phone: '(302) 464-0950,
     email: 'kleber@ziontechgroup.com,
@@ -217,7 +217,7 @@ hours: 'Mon-Fri 9AM-6PM EST]
   return (<>
       {/* Mobile Menu Button *
       <button)
-        onClick = { () => setIsOpen(true) };
+        onClick = { () => setIsOpen(true) }';
 
         className=lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hove,
     r:bg-slate-700
@@ -225,7 +225,7 @@ hours: 'Mon-Fri 9AM-6PM EST]
       {/* Mobile Menu Button */}
 
       <button
-        onClick={() =></button> setIsOpen(true);
+        onClick={() =></button> setIsOpen(true)';
 
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all
         aria-label="Open sidebar
@@ -236,7 +236,7 @@ hours: 'Mon-Fri 9AM-6PM EST]
       {/* Sidebar Overlay *
       {isOpen && (<div 
           className=fixed inset-0 bg-black)
-          onClick = { () => setIsOpen(false) };
+          onClick = { () => setIsOpen(false) }'";
 
       )}
 
@@ -257,7 +257,7 @@ hours: 'Mon-Fri 9AM-6PM EST]
               <
             <
             <button
-              onClick = { () => setIsOpen(false) };
+              onClick = { () => setIsOpen(false) }";
 
               className=lg: hidden text-gray-400 hove,
     r:text-white transition-colors
@@ -267,7 +267,7 @@ hours: 'Mon-Fri 9AM-6PM EST]
             <nav className="space-y-2 px-4>
               {navigationSections.map((section), sectionIndex) => (<div key={sectionIndex} className="space-y-1>
                   <button)
-                    onClick = { () => section.key && toggleSection(section.key) };
+                    onClick = { () => section.key && toggleSection(section.key) }";
 
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors
                   >
@@ -283,11 +283,10 @@ hours: 'Mon-Fri 9AM-6PM EST]
                   
                   {(!section.key || expandedSections.has(section.key)) && (<div className="ml-4 space-y-1>)
                       {section.items.map((item, itemIndex) => (<
-                        <Link
-                          key = { itemIndex };
+                        <Link key = { itemIndex }>
 
-                          to = { item.path };)
-                          onClick = { () => setIsOpen(false) };
+                          to = { item.path }">)
+                          onClick = { () => setIsOpen(false) }";
 
                           className={flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
                             location.pathname === item.path
@@ -336,11 +335,11 @@ hours: 'Mon-Fri 9AM-6PM EST]
     <
   );
 
-  ););
+  );)">
 
 Sidebar.displayName = 'Sidebar
-};
+}">
 
-Sidebar.displayName = 'Sidebar;
+Sidebar.displayName = 'Sidebar">
 
-export default Sidebar;
+export default Sidebar";

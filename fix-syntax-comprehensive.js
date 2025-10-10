@@ -8,7 +8,7 @@ import path from path;
 
 // List of files with syntax errors;
 
-const filesToFix = [;;
+const filesToFix = [
 
   '/workspace/src/about/page.tsx,
   '/workspace/src/ai-ab-testing/page.tsx,
@@ -35,40 +35,40 @@ const filesToFix = [;;
 // Function to fix syntax errors in a file;
 
 function fixSyntaxErrors(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix malformed imports;
 
-const importFixes = [;;
+const importFixes = [
 
       // Fix malformed import statements
       {
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
-        replacement: "import { $1 } from '$2';
+        replacement: "import { $1 } from '$2'";
 
       },
       // Fix missing commas in imports
       {
-        pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
-        replacement: "import { $1, $2 } from '$3';
+        pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)";\s*}/g,
+        replacement: "import { $1, $2 } from '$3'";
 
       },
       // Fix malformed import with semicolon
       {
-        pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
+        pattern: /import\s+{([^}]*)\s+from\s+'([^']*)";\s*}/g,
         replacement: "import { $1 } from '$2';
 
       }
 
     ];
 
-    for (const fix of importFixes) {;
+    for (const fix of importFixes) {
 
-const newContent = content.replace(fix.pattern, fix.replacement);;
+const newContent = content.replace(fix.pattern, fix.replacement);
 
       if (newContent !== content) {
         content = newContent;
@@ -79,7 +79,7 @@ const newContent = content.replace(fix.pattern, fix.replacement);;
 
     // Fix malformed function declarations;
 
-const functionFixes = [;;
+const functionFixes = [
 
       // Fix malformed function with missing return
       {
@@ -107,9 +107,9 @@ const functionFixes = [;;
 
     ];
 
-    for (const fix of functionFixes) {;
+    for (const fix of functionFixes) {
 
-const newContent = content.replace(fix.pattern, fix.replacement);;
+const newContent = content.replace(fix.pattern, fix.replacement);
 
       if (newContent !== content) {
         content = newContent;
@@ -120,7 +120,7 @@ const newContent = content.replace(fix.pattern, fix.replacement);;
 
     // Fix malformed object literals;
 
-const objectFixes = [;;
+const objectFixes = [
 
       // Fix malformed object with missing commas
       {
@@ -135,9 +135,9 @@ const objectFixes = [;;
 
     ];
 
-    for (const fix of objectFixes) {;
+    for (const fix of objectFixes) {
 
-const newContent = content.replace(fix.pattern, fix.replacement);;
+const newContent = content.replace(fix.pattern, fix.replacement);
 
       if (newContent !== content) {
         content = newContent;
@@ -146,9 +146,9 @@ const newContent = content.replace(fix.pattern, fix.replacement);;
 
     }
 
-    // Fix malformed JSX;
+    // Fix malformed JSX";
 
-const jsxFixes = [;;
+const jsxFixes = [";";
 
       // Fix malformed JSX attributes
       {
@@ -163,9 +163,9 @@ const jsxFixes = [;;
 
     ];
 
-    for (const fix of jsxFixes) {;
+    for (const fix of jsxFixes) {
 
-const newContent = content.replace(fix.pattern, fix.replacement);;
+const newContent = content.replace(fix.pattern, fix.replacement);
 
       if (newContent !== content) {
         content = newContent;
@@ -188,9 +188,9 @@ return false}
 
 // Main execution
 // console.log removed for production
-;
+';
 
-let fixedCount = 0;;
+let fixedCount = 0';';
 
 for (const file of filesToFix) {
   if (fixSyntaxErrors(file)) {

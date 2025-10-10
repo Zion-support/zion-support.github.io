@@ -1,17 +1,17 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import React from 'react;
+import React from 'react';
 
 import Navigation from ../components
 import Footer from ../components
 
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from lucide-react;
 
-const DeveloperToolsPage: React.FC = () => {;
+const DeveloperToolsPage: React.FC = () => {
 
-const _devTools = [;;;
+const _devTools = [';';
 
     {
       titl,
@@ -121,7 +121,7 @@ $4}
 
   )};
 
-  const _devTools = [;
+  const _devTools = [
   /
   O: Add items;
 
@@ -182,7 +182,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}">  titl,
   e: 'DevOps Automation,
       descriptio,
   n: 'Streamline development and deployment processes,
@@ -199,7 +199,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}">  titl,
   e: 'Code Review Assistant,
       descriptio,
   n: 'AI-powered code review and quality assurance,
@@ -216,7 +216,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}">  titl,
   e: 'Performance Profiler,
       descriptio,
   n: 'Advanced application performance monitoring and optimization,
@@ -230,7 +230,7 @@ $4}
   e: Starting at $179
     }
 
-  ];
+  ]";
 
   return (<div>Coming Soon<)
   )
@@ -497,6 +497,6 @@ $4}
       <Footer /><
 
     </div>
-  )};
+  )}``;
 
-export default DeveloperToolsPage;
+export default DeveloperToolsPage```;

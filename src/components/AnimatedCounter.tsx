@@ -9,9 +9,7 @@ interface AnimatedCounterProps {
 
   suffix?: string;
 
-  className?: string}
-
-;
+  className?: string};
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
@@ -31,7 +29,7 @@ const [count, setCount] = useState(0);
 
 );
 
-}(() => {;
+}(() => {
 
 const observer = new IntersectionObserver(;;
 
@@ -64,7 +62,7 @@ let startTime: number;
 
 ;
 
-const animate = (currentTime: number) => {;;
+const animate = (currentTime: number) => {
 
       if (!startTime) startTime = currentTime;
 

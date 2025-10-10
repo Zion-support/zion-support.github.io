@@ -43,7 +43,7 @@
   s: string}
 
 export const,
-  nextGenInnovations2025: NextGenInnovation2025[] = [;
+  nextGenInnovations2025: NextGenInnovation2025[] = [
 
     i,
   d: next-gen-ai-suite
@@ -56,7 +56,7 @@ export const,
     descriptio,
   n: Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.
     feature,
-  s: [;
+  s: [
 
       Next-gen AI models
       Advanced capabilities
@@ -201,8 +201,8 @@ i,
   e: string, descriptio,
   n: string; feature,
   s: string[]; lin,
-  k: string; categor,
-  y: string; addres,
+  k: string"; categor,
+  y: string"; addres,
   s: string} export const,
   nextGenInnovations2025: NextGenInnovation2025[] = [ i,
   d: 'next-gen-ai-suite nam,
@@ -217,7 +217,7 @@ i,
   contactInfo:  mobil,
   e: '+1 302 464 0950 emai,
   l: 'kleber@ziontechgroup.com addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]'"; mobil,
   e: +1 302 464 0950,
   emai,
   l: "kleber@ziontechgroup.com addres,
@@ -237,9 +237,9 @@ i,
   e: "+1 302 464 0950, mobil,
   e: '+1 302 464 0950, emai,
   l: 'kleber@ziontechgroup.com, addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}}; ]; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709}}"'; ]"'; mobil,
   e: "+1 302 464 0950, mobil,
   e: "+1 302 464 0950, mobil,
   e: "+1 302 464 0950, emai,
   l: "kleber@ziontechgroup.com, addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]]; ]], '"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]]'; ]], '"

@@ -5,9 +5,9 @@ import fs from fs;
 // Function to fix semicolons in arrays;
 
 function fixArraySemicolons(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
     // Fix semicolons after arrays in object properties;
 
@@ -33,13 +33,13 @@ return false}
 
 // Main function;
 
-function main() {;
+function main() {
 
 function main() {/* TODO: Fix JSX expression */}
 
 }
 
-  const files = [;;
+  const files = [
 
     'src/ai-ab-testing/page.tsx,
     'src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx,
@@ -57,7 +57,7 @@ function main() {/* TODO: Fix JSX expression */}
   // console.log removed for production
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0;
 
   files.forEach(file => {)
     if (fs.existsSync(file)) {

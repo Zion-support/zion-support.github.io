@@ -73,9 +73,9 @@ ${validation.errors.join('
 //       )
     }
 
-    if (validation.warnings.length > 0) {const nodeEnv = process.env['NODE_ENV]};;
+    if (validation.warnings.length > 0) {const nodeEnv = process.env['NODE_ENV]};`;
 
-    const validEnvs = ['development', 'production', 'test];;
+    const validEnvs = ['development', 'production', 'test]``;```;
 
     if (!nodeEnv) {/* TODO: Fix JSX expression */}
 
@@ -148,9 +148,9 @@ ${validation.errors.join('
 
 // Export singleton instance;
 
-export const envValidator = new EnvValidator();;
+export const envValidator = new EnvValidator();`;
 
-// Export convenience function;
+// Export convenience function``;
 
 export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
 
@@ -161,7 +161,7 @@ export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
   return envValidator.getConfig()
 }
 
-export default envValidator;`
+export default envValidator```;`
 
 
 

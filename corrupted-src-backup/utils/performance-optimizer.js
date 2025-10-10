@@ -77,12 +77,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
     if ('IntersectionObserver in window) {;
 
-const imageObserver = new IntersectionObserver(entries => {);;
+const imageObserver = new IntersectionObserver(entries => {);
 
         entries.forEach(entry => {)
           if (entry.isIntersecting) {;
 
-const _img = entry.target;;
+const _img = entry.target;
 
             if (img.dataset.src) {
               img.src = img.dataset.src;
@@ -144,7 +144,7 @@ const _img = entry.target;;
 
   preloadCriticalResources() {;
 
-const criticalResources = [;;
+const criticalResources = [;
 
       '/src/pages/Home.tsx',
       '/src/components/Header.tsx',
@@ -152,7 +152,7 @@ const criticalResources = [;;
 
     criticalResources.forEach(resource => {);
 
-const _link = document.createElement('link);;
+const _link = document.createElement('link);
 
       link.rel = 'preload;
 
@@ -165,16 +165,16 @@ const _link = document.createElement('link);;
   setupLazyLoading() {
     // Lazy load non-critical components;
 
-    const _lazyComponents = document.querySelectorAll('[data-lazy]);;
+    const _lazyComponents = document.querySelectorAll('[data-lazy]);
 
     if ('IntersectionObserver in window) {;
 
-const lazyObserver = new IntersectionObserver(entries => {);;
+const lazyObserver = new IntersectionObserver(entries => {);
 
         entries.forEach(entry => {)
           if (entry.isIntersecting) {;
 
-const _component = entry.target;;
+const _component = entry.target;
 
             this.loadLazyComponent(component);
 
@@ -201,14 +201,14 @@ const _component = entry.target;;
   optimizeFontLoading() {
     // Preload critical fonts;
 
-    const criticalFonts = [;;
+    const criticalFonts = [;
 
       https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap
     ];
 
     criticalFonts.forEach(font => {);
 
-const _link = document.createElement('link);;
+const _link = document.createElement('link);
 
       link.rel = 'preload;
 
@@ -228,7 +228,7 @@ const _link = document.createElement('link);;
   setupRouteBasedSplitting() {
     // Implement route-based code splitting;
 
-    const routes = {;;
+    const routes = {;
 
       '/': () => import('../pages/Home'),
       '/about': () => import('../pages/About'),
@@ -249,7 +249,7 @@ const _link = document.createElement('link);;
   setupComponentSplitting() {
     // Lazy load heavy components that are not already statically imported;
 
-    const heavyComponents = [;;
+    const heavyComponents = [;
 
       'Charts',
       'DataVisualization',
@@ -262,9 +262,9 @@ const _link = document.createElement('link);;
   preloadNextRoutes(routes) {
     // Preload likely next routes based on user behavior;
 
-//     const currentPath = window.location.pathname;;
+//     const currentPath = window.location.pathname;
 
-    const _likelyNextRoutes = this.getLikelyNextRoutes(currentPath);;
+    const _likelyNextRoutes = this.getLikelyNextRoutes(currentPath);
 
     likelyNextRoutes.forEach(route => {)
       if (routes[route]) {
@@ -289,13 +289,13 @@ const _link = document.createElement('link);;
   setupComponentLazyLoading(componentName) {
     // Set up lazy loading for specific components;
 
-    const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`);;
+    const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`);
 
     );
 
     if ('IntersectionObserver in window) {;
 
-const componentObserver = new IntersectionObserver(entries => {);;
+const componentObserver = new IntersectionObserver(entries => {);
 
         entries.forEach(entry => {)
           if (entry.isIntersecting) {
@@ -326,7 +326,7 @@ const componentObserver = new IntersectionObserver(entries => {);;
     try {
       // Only load components that are not already statically imported;
 
-      const staticallyImportedComponents = [;;
+      const staticallyImportedComponents = [;
 
         'ErrorBoundary',
         'SEO',
@@ -342,7 +342,7 @@ const componentObserver = new IntersectionObserver(entries => {);;
 
 `;
 
-const _component = await import(`../components/${componentName}.tsx`);;
+const _component = await import(`../components/${componentName}.tsx`);
 
       // Render component to element;
 
@@ -398,7 +398,7 @@ const _component = await import(`../components/${componentName}.tsx`);;
 
   optimizeImages() {;
 
-const _images = document.querySelectorAll('img);;
+const _images = document.querySelectorAll('img);
 
     images.forEach(img => {)
       if (!img.loading) {
@@ -416,7 +416,7 @@ const _images = document.querySelectorAll('img);;
 
   optimizeScripts() {;
 
-const _scripts = document.querySelectorAll('script[src]);;
+const _scripts = document.querySelectorAll('script[src]);
 
     scripts.forEach(script => {)
       if (!script.async && !script.defer) {
@@ -442,7 +442,7 @@ const _scripts = document.querySelectorAll('script[src]);;
 
     // For runtime, we can add critical styles to head;
 
-    const criticalCSS = `;;
+    const criticalCSS = `;
 
       body { font-family: Inter, sans-serif}
 
@@ -469,7 +469,7 @@ const _scripts = document.querySelectorAll('script[src]);;
 
 ;
 
-const _style = document.createElement('style);;
+const _style = document.createElement('style);
 
     style.textContent = criticalCSS;
 
@@ -477,7 +477,7 @@ const _style = document.createElement('style);;
 
   deferNonCriticalCSS() {;
 
-const nonCriticalCSS = document.querySelectorAll(;;
+const nonCriticalCSS = document.querySelectorAll(;
 
       'link[rel="stylesheet]:not([data-critical])
     );
@@ -503,7 +503,7 @@ const nonCriticalCSS = document.querySelectorAll(;;
   startPerformanceMonitoring() {
     if ('PerformanceObserver in window) {;
 
-const observer = new PerformanceObserver(list => {);;
+const observer = new PerformanceObserver(list => {);
 
         list.getEntries().forEach(entry => {)
           this.handlePerformanceEntry(entry)})});
@@ -546,7 +546,7 @@ const observer = new PerformanceObserver(list => {);;
 
 // Initialize performance optimizer;
 
-const _performanceOptimizer = new PerformanceOptimizer();;
+const _performanceOptimizer = new PerformanceOptimizer();
 
 // Export for use in other modules;
 

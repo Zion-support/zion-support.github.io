@@ -1,10 +1,10 @@
-import React from 'react;
+import React from 'react';
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
 import { execSync } from 'child_process;
 
@@ -12,36 +12,36 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;;
+const __filename = fileURLToPath(import.meta.url);;
 
 // __dirname removed
 // Function to fix merge conflicts in a file;
 
 function fixMergeConflicts(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
-    // Remove merge conflict markers and keep the HEAD version (first part);
+    // Remove merge conflict markers and keep the HEAD version (first part)';
 
-const conflictRegex = /\n([\s\S]*?)\n;;
+const conflictRegex = /\n([\s\S]*?)\n';
 
-    const originalContent = content;;
+    const originalContent = content';
 
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
-      modified = true;
+      modified = true';
 
-      return headContent.trim();
+      return headContent.trim()';
 
 function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
 
-    });
+    })';
 
-    // Remove any remaining conflict markers;
+    // Remove any remaining conflict markers';
 
-    content = content;
+    content = content';
 
       .replace(/[\s\S]*?)
       .replace(//g, ')
@@ -78,21 +78,21 @@ return false}
 
 // Function to find all TypeScript/React files;
 
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', .js]) {;
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', .js]) {
 
-const files = [];;
+const files = [];
 
   ;
 
-function traverse(currentDir) {;
+function traverse(currentDir) {
 
-const items = fs.readdirSync(currentDir);;
+const items = fs.readdirSync(currentDir);
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(currentDir, item);;
+const fullPath = path.join(currentDir, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
@@ -117,15 +117,15 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js]) {/* TODO: Fi
 // console.log removed for production
 ;
 
-const srcDir = path.join(__dirname, src);;
+const srcDir = path.join(__dirname, src);
 
-const files = findFiles(srcDir);;
+const files = findFiles(srcDir);
 
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0;
 
-let errorCount = 0;;
+let errorCount = 0;
 
 for (const file of files) {/* TODO: Fix JSX expression */}
 
@@ -140,11 +140,11 @@ errorCount++}
 
 // console.log removed for production
 
-  complete:`);
+  complete:`)```;
 
 // console.log removed for production
 
-  processed: ${files.length}`);
+  processed: ${files.length}`)```;
 
 // console.log removed for production
 
@@ -163,19 +163,19 @@ errorCount++}
 // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: inherit });
+  o: inherit })`;
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}
 
 }
 
-// Try building;
+// Try building``;
 
 // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: inherit });
+  o: inherit })```;
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}

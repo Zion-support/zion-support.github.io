@@ -174,9 +174,9 @@ class SEOOptimizer {// TODO: Add content}
   /**
    * Generate optimized description
    */
-  generateDescription(pageDescription?: string): string {;
+  generateDescription(pageDescription?: string): string {
 
-const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;;
+const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;`;
 
     return description.length > 160 
       ? description.substring(0, 157) + '...' 
@@ -186,12 +186,12 @@ const description = pageDescription || this.currentPageData?.description || this
    * Generate keywords string
    */
   generateKeywords(pageKeywords?: string[]): string {
-   * Generate optimized title;
+   * Generate optimized title``;
 
    */
   generateTitle(pageTitle?: string): string {return title.includes(this.config.siteName)}
 
-      ? title;
+      ? title```;
 
       : `${title} | ${this.config.siteName}`}
 
@@ -275,13 +275,13 @@ const description = pageDescription || this.currentPageData?.description || this
 
     this.setMetaTag('og:url', url, 'property);
 
-    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property);
+    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property)`;
 
-    this.setMetaTag('og:site_name', this.config.siteName, 'property);
+    this.setMetaTag('og:site_name', this.config.siteName, 'property)``;
 
     // Twitter Card tags
     if (this.config.twitterHandle) {
-      this.setMetaTag('twitter:card', 'summary_large_image);
+      this.setMetaTag('twitter:card', 'summary_large_image)```;
 
       this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`);
 
@@ -310,9 +310,9 @@ const description = pageDescription || this.currentPageData?.description || this
   g:type', this.currentPageData.type || 'website', 'property);
 
     this.setMetaTag('o)
-  g:site_name', this.config.siteName, 'property);
+  g:site_name', this.config.siteName, 'property)`;
 
-    // Twitter Card tags;
+    // Twitter Card tags``;
 
     if (this.config.twitterHandle) {/* TODO: Fix JSX expression */}
 
@@ -321,7 +321,7 @@ const description = pageDescription || this.currentPageData?.description || this
 }
 
       this.setMetaTag('twitte)
-  r:card', 'summary_large_image);
+  r:card', 'summary_large_image)```;
 
       this.setMetaTag('twitte)`
   r:site', `@${this.config.twitterHandle}`);
@@ -370,7 +370,7 @@ const description = pageDescription || this.currentPageData?.description || this
   private getRobotsContent(): string {
     if (!this.currentPageData) return 'index, follow;
 
-    const directives = [];;
+    const directives = [];';
 
     if (!this.currentPageData.noindex) {
       directives.push('noindex')}
@@ -384,9 +384,9 @@ const description = pageDescription || this.currentPageData?.description || this
   /**
    * Setup structured data
    */
-  private setupStructuredData(): void {;
+  private setupStructuredData(): void {
 
-const structuredData = {;;
+const structuredData = {
 
    * Get robots content;
 
@@ -398,7 +398,7 @@ const structuredData = {;;
 
     if (!this.currentPageData) return 'index, follow;
 
-    const directives = [];;
+    const directives = [];';
 
     if (!this.currentPageData.noindex) {/* TODO: Fix JSX expression */}
 
@@ -426,7 +426,7 @@ const structuredData = {;;
   }
 
   /**
-   * Setup structured data;
+   * Setup structured data`;
 
    */
 
@@ -434,7 +434,7 @@ const structuredData = {;;
 
 }
 
-    const structuredData = {/* TODO: Fix JSX expression */};;
+    const structuredData = {/* TODO: Fix JSX expression */}``;```;
 
   O: Add content}
 
@@ -458,9 +458,9 @@ const structuredData = {;;
    * Update structured data for current page
    */
   private updateStructuredData(): void {
-    if (!this.currentPageData) return;
+    if (!this.currentPageData) return`;
 
-    const structuredData = {;;
+    const structuredData = {``;```;
 
       potentialAction: {// TODO: Add content}
 
@@ -526,7 +526,7 @@ const structuredData = {;;
   /**
    * Add structured data to page
    */
-  private addStructuredData(data: unknown): void {;
+  private addStructuredData(data: unknown): void {
 
 const script = document.createElement('script);;
 
@@ -539,7 +539,7 @@ const script = document.createElement('script);;
   /**
    * Setup canonical URLs
    */
-  private setupCanonicalUrls(): void {;
+  private setupCanonicalUrls(): void {
 
 const canonical = document.createElement('link);;
 
@@ -556,7 +556,7 @@ const canonical = document.createElement('link);;
     // Monitor Core Web Vitals for SEO impact
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor LCP (Largest Contentful Paint)
-      new PerformanceObserver((list) => {;
+      new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -601,7 +601,7 @@ $4})}
   /**
    * Generate sitemap data
    */
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {
+  generateSitemapData(): Array<{ url: string`; lastmod: string``; changefreq: string```; priority: number }> {
     // This would typically come from your CMS or routing system
     return [
       {
@@ -630,7 +630,7 @@ Disallow: /static/`}
   /**
    * Check for SEO issues
    */
-  checkSEOIssues(): string[] {;
+  checkSEOIssues(): string[] {
 
 const issues: string[] = [];
 
@@ -651,9 +651,9 @@ const description = document.querySelector('meta[name="description"]')?.getAttri
       issues.push('Description is too short (less than 120 characters)')} else if (description.length > 160) {
       issues.push('Description is too long (more than 160 characters)')}
 
-    // Check for images without alt text;
+    // Check for images without alt text`;
 
-const images = document.querySelectorAll('img);;
+const images = document.querySelectorAll('img)``;```;
 
     images.forEach((img, index) => {
       if (!img.alt) {
@@ -674,7 +674,7 @@ const h1s = document.querySelectorAll('h1);;
   /**
    * Get SEO score
    */
-  getSEOScore(): number {;
+  getSEOScore(): number {
 
 const issues = this.checkSEOIssues();;
 
@@ -898,7 +898,7 @@ let clsValue = 0;;
 
 }
 
-    // This would typically come from your CMS or routing system;
+    // This would typically come from your CMS or routing system`;
 
     return [
   // TOD,
@@ -907,7 +907,7 @@ let clsValue = 0;;
 
   O: Add content}
 
-}';
+}'``;
 
   url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
@@ -920,7 +920,7 @@ let clsValue = 0;;
   }
 
   /**
-   * Generate robots.txt content;
+   * Generate robots.txt content```;
 
    */
 
@@ -930,7 +930,7 @@ let clsValue = 0;;
 
     return `User-agent: *,
 Allow: /,
-Sitemap: ${this.config.siteUrl}/sitemap.xml;
+Sitemap: ${this.config.siteUrl}/sitemap.xml```;
 
 // # Disallow admin and private areas,
   Disallo,
@@ -1003,9 +1003,9 @@ const description = document.querySelector('meta[name="description"]')?.getAttri
 
       issues.push('Description is too long (more than 160 characters)')}
 
-    // Check for images without alt text;
+    // Check for images without alt text`;
 
-const images = document.querySelectorAll('img);;
+const images = document.querySelectorAll('img)``;```;
 
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}
 
@@ -1096,6 +1096,6 @@ const,
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID};
 
-export const seoOptimizer = new SEOOptimizer(defaultConfig);;
+export const seoOptimizer = new SEOOptimizer(defaultConfig)`;``;
 
-export default seoOptimizer;
+export default seoOptimizer```;

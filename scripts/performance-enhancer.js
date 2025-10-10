@@ -7,18 +7,18 @@
 
  */
 
-import fs from 'fs/promises;
+import fs from 'fs/promises';
 
-import path from 'path;
+import path from 'path';
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
-import { fileURLToPath } from url;
+import { fileURLToPath } from url';
 
-// const __filename = fileURLToPath(import.meta.url);;;
+// const __filename = fileURLToPath(import.meta.url)';';
 
 // // __dirname removed
-class PerformanceEnhancer {;
+class PerformanceEnhancer {';
 
 constructor() {
     this.report = {
@@ -51,15 +51,15 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 
   o: pipe });
 
-//       const distPath = path.join(process.cwd(), dist);;
+//       const distPath = path.join(process.cwd(), dist);
 
-//       const files = await fs.readdir(distPath);;
+//       const files = await fs.readdir(distPath);
 
       ;
 
-let _totalSize = 0;;
+let _totalSize = 0;
 
-      const _fileSizes = {};;
+      const _fileSizes = {};
 
       for (const file of files) {/* TODO: Fix JSX expression */}
 
@@ -99,9 +99,9 @@ let _totalSize = 0;;
 
   async optimizeImages() {
 //     try {
-//       const publicPath = path.join(process.cwd(), public);;
+//       const publicPath = path.join(process.cwd(), public);
 
-//       const imagesPath = path.join(publicPath, images);;
+//       const imagesPath = path.join(publicPath, images);
 
       // Check if images directory exists;
 
@@ -113,13 +113,11 @@ let _totalSize = 0;;
 
       } catch {/* TODO: Fix JSX expression */}
 
-      }
+      };
 
-      ;
+const _images = await fs.readdir(imagesPath)`';
 
-const _images = await fs.readdir(imagesPath);;
-
-      let _optimizedCount = 0;;
+      let _optimizedCount = 0'``;'```;
 
       for (const image of images) {/* TODO: Fix JSX expression */}
 
@@ -146,9 +144,9 @@ const _images = await fs.readdir(imagesPath);;
 
   async optimizeCSS() {
 //     try {
-      // Generate critical CSS;
+      // Generate critical CSS`;
 
-      const criticalCSS = ;;
+      const criticalCSS = ``';`'``;
 
 /* Critical CSS for above-the-fold content */
 .min-h-screen { min-height: 100 vh}
@@ -210,9 +208,9 @@ const _images = await fs.readdir(imagesPath);;
 .rounded {/* TODO: Fix JSX expression */}
 
   s: 0.25rem}`
-;
+';
 
-//       const criticalCSSPath = path.join(process.cwd(), 'public', critical.css);;
+//       const criticalCSSPath = path.join(process.cwd(), 'public', critical.css);
 
       await fs.writeFile(criticalCSSPath, criticalCSS);
 
@@ -233,32 +231,32 @@ const _images = await fs.readdir(imagesPath);;
 //     try {
       // Generate performance monitoring script;
 
-      const performanceScript = ;;
+      const performanceScript = ;
 
-// Performance monitoring script;
+// Performance monitoring script';
 
 (function() {
-  use strict;
+  use strict';
 
-  // Monitor Core Web Vitals;
+  // Monitor Core Web Vitals';
 
   function observeWebVitals() {
     if ('PerformanceObserver in window) {
       // LCP;
 
-      new PerformanceObserver((list) => {;
+      new PerformanceObserver((list) => {
 
-const _entries = list.getEntries();;
+const _entries = list.getEntries();
 
-        const _lastEntry = entries[entries.length - 1];;
+        const _lastEntry = entries[entries.length - 1];
 
 //         }).observe({ entryTypes: [largest-contentful-paint] });
 
       // FID;
 
-      new PerformanceObserver((list) => {;
+      new PerformanceObserver((list) => {
 
-const _entries = list.getEntries();;
+const _entries = list.getEntries();
 
         entries.forEach((entry) => {
   async optimizeJavaScript() {/* TODO: Fix JSX expression */}
@@ -279,7 +277,7 @@ const _entries = list.getEntries();;
 
       // CLS;
 
-      let _clsValue = 0;;
+      let _clsValue = 0;
 
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 
@@ -292,11 +290,11 @@ const _entries = list.getEntries();;
 
   }
 
-  // Start monitoring when DOM is ready;
+  // Start monitoring when DOM is ready`;
 
   if (document.readyState === 'loading) {
     document.addEventListener('DOMContentLoaded, observeWebVitals)} else {
-    observeWebVitals();
+    observeWebVitals()``;
 
   if (document.readyState === 'loading) {/* TODO: Fix JSX expression */}
 
@@ -304,10 +302,10 @@ const _entries = list.getEntries();;
 
   }
 
-})();`
+})()```;`
 ;
 
-//       const performanceScriptPath = path.join(process.cwd(), 'public', performance-monitor.js);;
+//       const performanceScriptPath = path.join(process.cwd(), 'public', performance-monitor.js);
 
       await fs.writeFile(performanceScriptPath, performanceScript);
 
@@ -325,15 +323,15 @@ const _entries = list.getEntries();;
   }
 
   async generateServiceWorker() {
-//     try {;
+//     try {
 
-const serviceWorkerScript = ;;
+const serviceWorkerScript = ;
 
 // Service Worker for caching and offline support;
 
-// const CACHE_NAME = zion-app-v1;;
+// const CACHE_NAME = zion-app-v1';
 
-const urlsToCache = [;;
+const urlsToCache = [';';
 
   '/,
   '/static/css/main.css,
@@ -359,12 +357,12 @@ self.addEventListener('fetch, (event) => {
 
   async generateServiceWorker() {/* TODO: Fix JSX expression */}
 
-});
+})`;
 
 self.addEventListener('fetch, (event) => {/* TODO: Fix JSX expression */}
 
       })
-  )});
+  )})``;
 
 self.addEventListener('activate, (event) => {/* TODO: Fix JSX expression */}
 
@@ -372,10 +370,10 @@ self.addEventListener('activate, (event) => {/* TODO: Fix JSX expression */}
 
         })
       )})
-  )});`
+  )})```;`
 ;
 
-//       const serviceWorkerPath = path.join(process.cwd(), 'public', sw.js);;
+//       const serviceWorkerPath = path.join(process.cwd(), 'public', sw.js);
 
       await fs.writeFile(serviceWorkerPath, serviceWorkerScript);
 
@@ -396,16 +394,16 @@ self.addEventListener('activate, (event) => {/* TODO: Fix JSX expression */}
 //     try {
       // Check if vite.config.js exists;
 
-//       const viteConfigPath = path.join(process.cwd(), vite.config.js);;
+//       const viteConfigPath = path.join(process.cwd(), vite.config.js);
 
       try {
         await fs.access(viteConfigPath);
 
-        // Read current config;
+        // Read current config';
 
-        const _configContent = await fs.readFile(viteConfigPath, utf8);;
+        const _configContent = await fs.readFile(viteConfigPath, utf8)';
 
-        // Add optimization plugins if not present;
+        // Add optimization plugins if not present';
 
         if (!configContent.includes('rollup-plugin-visualizer)) {
           this.report.recommendations.push(Consider adding bundle analyzer to vite.config.js);
@@ -436,22 +434,22 @@ self.addEventListener('activate, (event) => {/* TODO: Fix JSX expression */}
   }
 
   async generateReport() {
-//     //     const reportPath = path.join(process.cwd(), performance-enhancement-report.json);;
+//     //     const reportPath = path.join(process.cwd(), performance-enhancement-report.json);
 
     await fs.writeFile(reportPath, JSON.stringify(this.report, null, 2));
 
     // Generate markdown report;
 
-//     const markdownReport = this.generateMarkdownReport();;
+//     const markdownReport = this.generateMarkdownReport();
 
-//     const markdownPath = path.join(process.cwd(), performance-enhancement-report.md);;
+//     const markdownPath = path.join(process.cwd(), performance-enhancement-report.md);
 
     await fs.writeFile(markdownPath, markdownReport);
 
 //     }
 
   generateMarkdownReport() {
-    return # Performance Enhancement Report;
+    return # Performance Enhancement Report`';
 
 Generated: ${this.report.timestamp}
 
@@ -463,21 +461,21 @@ Generated: ${this.report.timestamp}
 
   Generated: ${this.report.timestamp}
 
-## Summary;
+## Summary'``;
 
 This report contains the results of the performance enhancement process.
 
-## Optimizations Applied;
+## Optimizations Applied'```;
 
 ${this.report.optimizations.map(opt => )
   `- **${opt.type}**: ${opt.status} - ${opt.details})
 ).join('\n)}
 
-## Metrics;
+## Metrics```;
 
 - Bundle Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured}
 
-## Recommendations;
+## Recommendations```;
 
 ${/* TODO: Fix JSX expression */}
 
@@ -485,12 +483,12 @@ ${/* TODO: Fix JSX expression */}
 
 ).join('\n)}
 
-## Metrics;
+## Metrics```;
 
 - Bundle,
   Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured}
 
-## Recommendations;
+## Recommendations```;
 
 ${this.report.recommendations.map(rec => `- ${rec}`).join('\n)}
 
@@ -498,11 +496,11 @@ ${this.report.recommendations.map(rec => `- ${rec}`).join('\n)}
 
 1. Review the recommendations above;
 
-2. Implement additional optimizations as needed;
+2. Implement additional optimizations as needed`;
 
-3. Monitor performance metrics in production;
+3. Monitor performance metrics in production``;
 
-4. Regular performance audits;
+4. Regular performance audits```;
 
 ---
 *Generated by Performance Enhancer Script*`
@@ -512,8 +510,8 @@ ${this.report.recommendations.map(rec => `- ${rec}`).join('\n)}
 
 // Run the enhancer;
 
-const _enhancer = new PerformanceEnhancer();;
+const _enhancer = new PerformanceEnhancer()`;
 
-// enhancer.enhance().catch(console.error);
+// enhancer.enhance().catch(console.error)``;
 
-export default PerformanceEnhancer;`
+export default PerformanceEnhancer```;`

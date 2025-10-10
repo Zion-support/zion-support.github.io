@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useState, useEffect } from 'react;
 
@@ -14,7 +14,7 @@ const ContentStatistics: React.FC = () => {
     uptime: 0
   })
 
-  const targetCounters = {;;
+  const targetCounters = {';
 
     clients: 10000,
     projects: 5000,
@@ -22,9 +22,9 @@ const ContentStatistics: React.FC = () => {
     years: 15,
     countries: 50,
     uptime: 99
-  };
+  }';
 
-  const statistics = [;;;
+  const statistics = [';';';
 
     {
       icon: Users,
@@ -75,9 +75,9 @@ const ContentStatistics: React.FC = () => {
       description: Service reliability
     }
 
-  ];
+  ]';
 
-  const features = [;;
+  const features = [';';
 
     {
       icon: Brain,
@@ -106,7 +106,7 @@ const ContentStatistics: React.FC = () => {
 
   ];
 
-  const benefits = [;;
+  const benefits = [
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -118,7 +118,7 @@ const ContentStatistics: React.FC = () => {
     Proven track record of success
   ];
 
-  const achievements = [;;
+  const achievements = [
 
     {
       icon: Star,
@@ -148,7 +148,7 @@ const ContentStatistics: React.FC = () => {
 
     const stepDuration = duration / steps;;
 
-    const timers = Object.keys(targetCounters).map((key) => {;;
+    const timers = Object.keys(targetCounters).map((key) => {
 
       const target = targetCounters[key as keyof typeof targetCounters];;
 
@@ -175,7 +175,7 @@ const ContentStatistics: React.FC = () => {
     return () => {
       timers.forEach(timer => clearInterval(timer))    };
 
-  }, []);
+  }, [])';
 
   return (
 
@@ -316,8 +316,8 @@ const ContentStatistics: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )'">
 
-};
+}">
 
-export default ContentStatistics;
+export default ContentStatistics'"```;

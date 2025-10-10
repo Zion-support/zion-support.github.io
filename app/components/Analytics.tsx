@@ -1,6 +1,6 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 import React, { useEffect } from react;
 
@@ -11,9 +11,7 @@ interface AnalyticsProps {
 
   enableErrorTracking?: boolean;
 
-  enableUserBehaviorTracking?: boolean}
-
-;
+  enableUserBehaviorTracking?: boolean};
 
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
@@ -38,7 +36,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
 ;
 
-const initializeGoogleAnalytics = () => {;;;
+const initializeGoogleAnalytics = () => {
 
     // Load Google Analytics;
 
@@ -54,9 +52,9 @@ const script = document.createElement(script);;
     (window as any).dataLayer = (window as any).dataLayer || [];
 
 function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
+      (window as any).dataLayer.push(args)';
 
-    (window as any).gtag = gtag;
+    (window as any).gtag = gtag';
 
     gtag('js', new Date())    gtag('config', 'GA_MEASUREMENT_ID, {
       page_title: document.title,
@@ -64,12 +62,12 @@ function gtag(...args: any[]) {
       send_page_view: true
     });
 
-const initializePerformanceMonitoring = () => {;;
+const initializePerformanceMonitoring = () => {
 
     if ('PerformanceObserver in window) {
       // Monitor Core Web Vitals;
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint) {
@@ -87,7 +85,7 @@ const observer = new PerformanceObserver((list) => {;;
 
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift] })
       // Monitor page load time
-      window.addEventListener(load, () => {;
+      window.addEventListener(load, () => {
 
 const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
@@ -97,7 +95,7 @@ const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNav
 
 ;
 
-const initializeErrorTracking = () => {;;
+const initializeErrorTracking = () => {
 
     // Track JavaScript errors
     window.addEventListener('error, (event) => {
@@ -127,7 +125,7 @@ const initializeErrorTracking = () => {;;
 
 ;
 
-const initializeUserBehaviorTracking = () => {;;
+const initializeUserBehaviorTracking = () => {
 
     // Track page views
     trackEvent('page_view', 'page_view, {
@@ -140,7 +138,7 @@ const initializeUserBehaviorTracking = () => {;;
 
 let maxScroll = 0;;
 
-    window.addEventListener(scroll, () => {;
+    window.addEventListener(scroll, () => {
 
 const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);;
 
@@ -158,13 +156,13 @@ const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight -
 
 const startTime = Date.now();;
 
-    window.addEventListener('beforeunload, () => {;
+    window.addEventListener('beforeunload, () => {
 
 const timeOnPage = Math.round((Date.now() - startTime) / 1000);;
 
       trackEvent('engagement', 'time_on_page, timeOnPage)})
     // Track clicks on important elements
-    document.addEventListener(click, (event) => {;
+    document.addEventListener(click, (event) => {
 
 const target = event.target as HTMLElement;;
 
@@ -182,7 +180,7 @@ const tagName = target.tagName.toLowerCase();;
         })
     })
     // Track form submissions
-    document.addEventListener(submit, (event) => {;
+    document.addEventListener(submit, (event) => {
 
 const form = event.target as HTMLFormElement;;
 
@@ -192,7 +190,7 @@ const form = event.target as HTMLFormElement;;
         form_action: form.action
       })});
 
-const trackEvent = (category: string, action: string, value?: any) => {;;
+const trackEvent = (category: string, action: string, value?: any) => {
 
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event, action, {

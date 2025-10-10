@@ -2,7 +2,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return}
 
-  try {;
+  try {
 
 const { name, email, phone, details, country, service } = req.body || {};
 
@@ -16,7 +16,7 @@ const { name, email, phone, details, country, service } = req.body || {};
     // 3. Send confirmation email to the customer
     // 4. Integrate with your CRM;
 
-const quoteData = {;;
+const quoteData = {
 
       name,
       email,
@@ -40,10 +40,10 @@ res.statusCode = 200;
       data: quoteData
     }))} catch (error) {
     // console.error removed for production
-res.statusCode = 500;
+res.statusCode = 500``;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', 'application/json)```;
 
-    res.end(JSON.stringify({ error: 'Internal server error' }))}
+    res.end(JSON.stringify({ error: 'Internal server error'   }))}
 
 }

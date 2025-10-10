@@ -572,9 +572,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
 
     const startTime = performance.now();;
 
-    const result = fn();;
+    const result = fn();`;
 
-    const endTime = performance.now();;
+    const endTime = performance.now()``;```;
 
     this.recordMetric({})
       name: `function:${name}`,
@@ -608,9 +608,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
     const startTime = performance.now(),;;
 
-    const result = await fn(),;;
+    const result = await fn(),;`;
 
-    const endTime = performance.now(),;;
+    const endTime = performance.now(),``;```;
 
     this.recordMetric({`})
       name: `async:${name}`)
@@ -620,9 +620,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
 
     const startTime = performance.now();;
 
-    const result = await fn();;
+    const result = await fn();`;
 
-    const endTime = performance.now();;
+    const endTime = performance.now()``;```;
 
     this.recordMetric({`})
       name: `async:${name}`,
@@ -1004,8 +1004,8 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 
 // Export singleton instance;
 
-export const performanceMetrics = PerformanceMetrics.getInstance();;
+export const performanceMetrics = PerformanceMetrics.getInstance()`;``;
 
-export default PerformanceMetrics;
+export default PerformanceMetrics```;
 
 `

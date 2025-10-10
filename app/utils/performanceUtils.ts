@@ -9,7 +9,7 @@ constructor() {
     if (typeof window === 'undefined' || !(performance in window)) return;
 
     // Measure page load time
-    window.addEventListener(load, () => {;
+    window.addEventListener(load, () => {
 
 const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
@@ -35,9 +35,9 @@ const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNav
   private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
     if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
-    try {;
+    try {
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
         for (const entry of list.getEntries()) {
           if (entry.name === type) {
@@ -58,9 +58,9 @@ const observer = new PerformanceObserver((list) => {;;
   private observeLCP(): void {
     if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
-    try {;
+    try {
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -79,9 +79,9 @@ const lastEntry = entries[entries.length - 1];;
   private observeFID(): void {
     if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
-    try {;
+    try {
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
         for (const entry of list.getEntries()) {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime}
@@ -99,11 +99,11 @@ const observer = new PerformanceObserver((list) => {;;
   private observeCLS(): void {
     if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
-    try {;
+    try {
 
 let clsValue = 0;;
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
@@ -165,7 +165,7 @@ export const measureFunction = <T extends (...args: any[]) => any>(;;
 return ((...args: Parameters<T>
 );
 
-}) => {;
+}) => {
 
 const start = performance.now();;
 
@@ -222,7 +222,7 @@ let inThrottle: boolean;
 
   }) as T}
 
-export const lazyLoad = (callback: () => void): void => {;;
+export const lazyLoad = (callback: () => void): void => {
 
   if ('requestIdleCallback in window) {
     requestIdleCallback(callback)} else {
@@ -230,9 +230,9 @@ export const lazyLoad = (callback: () => void): void => {;;
 
 }
 
-export const preloadImage = (src: string): Promise<void> => {;;
+export const preloadImage = (src: string): Promise<void> => {
 
-  return new Promise((resolve, reject) => {;
+  return new Promise((resolve, reject) => {
 
 const img = new Image();;
 
@@ -241,6 +241,6 @@ const img = new Image();;
     img.onerror = reject;
 
     img.src = src})
-export const preloadImages = (srcs: string[]): Promise<void[]> => {;;
+export const preloadImages = (srcs: string[]): Promise<void[]> => {
 
   return Promise.all(srcs.map(preloadImage));

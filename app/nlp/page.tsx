@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React from react;
 
@@ -6,7 +6,7 @@ import React from react;
 
 ;
 
-const benefits = [;;;
+const benefits = [;
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -66,4 +66,4 @@ const benefits = [;;;
         </div>
       </section>
     </div>)
-export default PagePage;
+export default PagePage";

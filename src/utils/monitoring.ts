@@ -75,9 +75,9 @@ constructor() {
 
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
-      try {;
+      try {
 
-const lcpObserver = new PerformanceObserver((list) => {;;
+const lcpObserver = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -90,7 +90,7 @@ const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime
 
         // First Input Delay;
 
-const fidObserver = new PerformanceObserver((list) => {;;
+const fidObserver = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -105,7 +105,7 @@ const entries = list.getEntries();;
 
 let clsValue = 0;;
 
-        const clsObserver = new PerformanceObserver(list => {;;
+        const clsObserver = new PerformanceObserver(list => {
 
 const entries = list.getEntries();;
 
@@ -123,7 +123,7 @@ const entries = list.getEntries();;
 
         // First Contentful Paint;
 
-const fcpObserver = new PerformanceObserver(list => {;;
+const fcpObserver = new PerformanceObserver(list => {
 
 const entries = list.getEntries();;
 
@@ -142,9 +142,9 @@ const entries = list.getEntries();;
 
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {;
+      try {
 
-const longTaskObserver = new PerformanceObserver((list) => {;;
+const longTaskObserver = new PerformanceObserver((list) => {
 
           for (const entry of list.getEntries()) {
             // // console.warn removed for production
@@ -162,13 +162,13 @@ const longTaskObserver = new PerformanceObserver((list) => {;;
 
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
-      try {;
+      try {
 
-const resourceObserver = new PerformanceObserver((list) => {;;
+const resourceObserver = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
-          entries.forEach((entry: PerformanceEntry) => {;
+          entries.forEach((entry: PerformanceEntry) => {
 
 const resourceEntry = entry as PerformanceResourceTiming;;
 
@@ -215,7 +215,7 @@ const resourceEntry = entry as PerformanceResourceTiming;;
 
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];;
 
-    if (thresholds) {;
+    if (thresholds) {
 
 const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor;;
 
@@ -253,9 +253,9 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
   }
 
   public measureMemory(): void {
-    if ('memory in performance && performanceConfig.monitoring.enableMemoryMonitoring) {;
+    if ('memory in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
 
-const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;;
+const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number`; jsHeapSizeLimit: number } }).memory``;```;
 
       if (memory) {
         // // console.log removed for production
@@ -270,9 +270,9 @@ const memory = (performance as Performance & { memory?: { usedJSHeapSize: number
   }
 
   public measureNavigationTiming(): void {
-    if ('performance' in window && 'getEntriesByType in performance) {;
+    if ('performance' in window && 'getEntriesByType in performance) {
 
-const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;
+const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming``;```;
 
       if (navigation) {
         // // console.log removed for production
@@ -290,12 +290,10 @@ const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNa
 
   }
 
-}
+};
 
-;
+const monitoring = new MonitoringService()`;``;
 
-const monitoring = new MonitoringService();;
-
-export default monitoring;`
+export default monitoring```;`
 
 

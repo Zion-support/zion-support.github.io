@@ -333,11 +333,11 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
 
       }
 
-      if (nodeEnv === 'test') return 'test;
+      if (nodeEnv === 'test') return 'test';
 
-      if (nodeEnv === 'production') return 'production;
+      if (nodeEnv === 'production') return 'production';
 
-      if (nodeEnv === 'development') return 'development;
+      if (nodeEnv === 'development') return 'development';
 
     }
 
@@ -511,7 +511,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Check if feature is enabled;
+   * Check if feature is enabled';
 
    */
   isFeatureEnabled(featur)

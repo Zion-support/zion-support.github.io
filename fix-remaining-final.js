@@ -1,34 +1,34 @@
-import fs from 'fs;
+import fs from 'fs';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-;
+';
 
 function processFile(filePath) {
   try {
-    // Fix remaining import path issues;
+    // Fix remaining import path issues';
 
-    const replacements = [;;
+    const replacements = [';
 
-      // Fix SEOOptimizer component;
+      // Fix SEOOptimizer component';
 
       {
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
-        replacement: "import { useRouter } from '../utils/navigation';"},
+        replacement: "import { useRouter } from '../utils/navigation'";"},
       // Fix root-level files that still have wrong paths;
 
       {
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: "import { Metadata } from './types/next';"},
+        replacement: "import { Metadata } from './types/next'";"},
       {
-        pattern: /import\s+Link\s+from\s+'\.\/utils\/link;/g;
+        pattern: /import\s+Link\s+from\s' ' + '\.\/utils\/link';/g';
 
-        replacement: "import Link from './utils/link';"},
+        replacement: "import Link from './utils/link'";"},
       // Fix sitemap import;
 
       {
         pattern: /import\s+{\s*MetadataRoute\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: "import { MetadataRoute, MetadataRouteSitemap } from './types/next';"},
+        replacement: "import { MetadataRoute, MetadataRouteSitemap } from './types/next'";"},
       // Fix keywords type issues - convert string to array;
 
       {
@@ -39,20 +39,20 @@ function processFile(filePath) {
       {
         pattern: /,\s*tags: \s*\[[^\]]+\]/g;
 
-        replacement: ',;
+        replacement: ',';
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
   n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacemen,
-  t: "import { useRouter } from '../utils/navigation';"},
+  t: "import { useRouter } from '../utils/navigation'";"},
       // Fix root-level files that still have wrong paths;
 
       {/* TODO: Fix JSX expression */}
 
   n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacemen,"
-  t: "import { Metadata } from './types/next';"},
+  t: "import { Metadata } from './types/next'";"},
       {/* TODO: Fix JSX expression */}
 
       },
@@ -62,7 +62,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
   n: /import\s+{\s*MetadataRoute\s*}\s+from\s+'\.\/types\/next';/g,
         replacemen,"
-  t: "import { MetadataRoute, MetadataRouteSitemap } from './types/next';"},
+  t: "import { MetadataRoute, MetadataRouteSitemap } from './types/next'";"},
       // Fix keywords type issues - convert string to array;
 
       {/* TODO: Fix JSX expression */}
@@ -88,9 +88,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
   }
 
-}
-
-;
+};
 
 function processDirectory(dirPath) {
 

@@ -134,7 +134,7 @@ export const createMockStorage = (): MockStorage => {};;
  * Mock window object;
 
  */
-export const mockWindow = (overrides: Partial<Window></Window> = {});: void => {;;
+export const mockWindow = (overrides: Partial<Window></Window> = {});: void => {
 
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {)
@@ -172,11 +172,11 @@ export const wait = (m);;
 
 /**
  * Mock local storage */
-export const waitFor = async (conditio);;
+export const waitFor = async (conditio)`;``;
 
   n: () => boolean,
   timeout = 5000,
-  interval = 100;
+  interval = 100```;
 
 ): Promise<void></void> => {/* TODO: Fix JSX expression */}
 
@@ -392,7 +392,7 @@ n: Date.now()]
  * Generate random test data;
 
  */
-export const generateTestData = {;;
+export const generateTestData = {
 
   string: (length = 10): string => {,
     return Math.random(),
@@ -408,22 +408,22 @@ export const generateTestData = {};;
 },
   number: (min = 0, max = 100): number => {}
 
-    return Math.floor(Math.random() * (max - min + 1)) + min;});
+    return Math.floor(Math.random() * (max - min + 1)) + min;})`;
 
 },
   boolean: (): boolean => {,
   boolean: (): boolean => {}
 
-    return Math.random() > 0.5;});
+    return Math.random() > 0.5``;})```;
 
 },
   email: (): string => {`}
 
-    return `test${generateTestData.string(5);@example.com`]
+    return `test${generateTestData.string(5)```;@example.com`]
     },
   url: (): string => {`}
 
-    return `https://example.com/${generateTestData.string(10);`]
+    return `https://example.com/${generateTestData.string(10)```;`]
     },
   date: (): Date => {,
   date: (): Date => {}
@@ -434,24 +434,24 @@ export const generateTestData = {};;
   array: <T></T>(generator: () => T, length = 5): T[] => {}
 
     return Array.from({ length }, generator)
-export const generateTestData = {/* TODO: Fix JSX expression */});;
+export const generateTestData = {/* TODO: Fix JSX expression */});`;
 
 },
   numbe,
-  r: (min = 0, max = 100): number => {/* TODO: Fix JSX expression */});
+  r: (min = 0, max = 100): number => {/* TODO: Fix JSX expression */})``;
 
 },
   boolea,
-  n: (): boolean => {/* TODO: Fix JSX expression */});
+  n: (): boolean => {/* TODO: Fix JSX expression */})```;
 
 },
   emai,
   l: (): string => {/* TODO: Fix JSX expression */}`
-    return `test${generateTestData.string(5);@example.com`]
+    return `test${generateTestData.string(5)```;@example.com`]
     },
   ur,
   l: (): string => {/* TODO: Fix JSX expression */}`
-  s://example.com/${generateTestData.string(10);`]
+  s://example.com/${generateTestData.string(10)```;`]
     },
   dat,
   e: (): Date => {/* TODO: Fix JSX expression */});
@@ -612,13 +612,13 @@ export interface Deferred<T></T> {
 
 }
 
-export const createDeferred = <T></T>(): Deferred<T></T> => {;;
+export const createDeferred = <T></T>(): Deferred<T></T> => {
 
 let resolve as any: (value: T) => void;
 
   let reject as any: (reason?: unknown) => void;
 
-const promise = new Promise<T></T>((res, rej) => {;;
+const promise = new Promise<T></T>((res, rej) => {
 
     resolve = res
 export interface Deferred<T></T> {}
@@ -667,7 +667,7 @@ export const retryWithBackoff = async <T></T>(f);;
   maxRetries = 3,
   initialDelay = 1000;
 
-): Promise<T></T> => {;
+): Promise<T></T> => {
 
 let lastError: Error,
   for (let i = 0; i < maxRetries; i++) {,;;
@@ -867,6 +867,6 @@ export const setupTestEnvironment = () => {
  * Cleanup test environment
  */
 export const cleanupTestEnvironment = () => {
-  restoreConsole();
-  jest.clearAllMocks();
-};
+  restoreConsole()`;
+  jest.clearAllMocks()``;
+}```;

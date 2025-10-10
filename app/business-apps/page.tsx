@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from lucide-react';
 
-;
+';
 
-const BusinessAppsPage: React.FC = () => {const features = [;;;
+const BusinessAppsPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -32,11 +32,11 @@ const BusinessAppsPage: React.FC = () => {const features = [;;;
       description: 'Worldwide deployment and support for international businesses
     }
 
-  ];
+  ]';
 
-;
+';
 
-const benefits = [;
+const benefits = [';
     'Advanced AI technology integration,
     'Real-time processing and analytics,
     'Enterprise-grade security and compliance,
@@ -101,8 +101,8 @@ const benefits = [;
       <
     <)
     </div>)
-  );
+  )">
 
-};
+}">
 
-export default BusinessAppsPage;
+export default BusinessAppsPage";

@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
     // Intelligent meta-orchestration simulation;
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -24,13 +24,13 @@ function: 'intelligent-meta-orchestrator',
           mode: 'meta',
           lastOrchestration: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */};
 
         'Access-Control-Allow-Origin': '*'}
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
   n: new Date().toISOString()}
 
         }})};
@@ -71,7 +71,7 @@ function: 'intelligent-meta-orchestrator'}
 };
 
         timestamp: new Date().toISOString(),' function: 'intelligent-meta-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'intelligent',' mode: 'meta'} lastOrchestration: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'intelligent-meta-orchestrator }) }} };
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'intelligent-meta-orchestrator }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -89,4 +89,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'intelligent-meta-orchestrator }) }} };
+  n: 'intelligent-meta-orchestrator }) }} }';

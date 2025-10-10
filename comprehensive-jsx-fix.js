@@ -1,17 +1,17 @@
 #!/usr/bin
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
 function fixJSXSyntax(filePath) {
   try {
-    let content = fs.readFileSync(filePath, utf8);;
+    let content = fs.readFileSync(filePath, utf8)';
 
-    let modified = false;;
+    let modified = false';
 
     // Fix mismatched opening
-    const tagMismatches = [;;
+    const tagMismatches = [';';
 
       { open: '<>', close: <
       { ope,
@@ -54,7 +54,7 @@ function fixJSXSyntax(filePath) {
     });
 
     /
-    const commonPatterns = [;;
+    const commonPatterns = [
 
       { open: /<div[^>]*>\s*<Helmet>/g, close: </Helmet><
       { ope,
@@ -75,13 +75,13 @@ function fixJSXSyntax(filePath) {
     /
     content = content.replace(/(\w+):\s*([^,}]+)(?=[,}])
       if (value.includes('(') && !value.includes('))) {
-        return `${key}: ${value});
+        return `${key}: ${value})`;
 
       }
 
-      return match;
+      return match``;
 
-    });
+    })```;
 
     /
     content = content.replace(/(\w+)\s*=\s*\{([^}]+)\}\s*$
@@ -102,14 +102,14 @@ function fixJSXSyntax(filePath) {
 
       return match;
 
-    });
+    })`;
 
     /
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)[^>]*>\s*$
     
     /
     content = content.replace(/\}\s*\)\s*$
-    content = content.replace(/\}\s*\)\s*;?\s*$
+    content = content.replace(/\}\s*\)\s*``;?\s*$
     
     /
     content = content.replace(/(\w+):\s*([^,}]+)\s*(\w+):
@@ -117,15 +117,15 @@ function fixJSXSyntax(filePath) {
     /
     content = content.replace(/\n\s*\n\s*\n)
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content)```;
 
-      console.log(`Fixed JSX syntax in: ${filePath});
+      console.log(`Fixed JSX syntax in: ${filePath})`;
 
-      return true;
+      return true``;
 
     }
 
-    return false;
+    return false```;
 
   } catch (error) {
     console.error(`Error fixing ${filePath}:, error.message);
@@ -137,15 +137,15 @@ function fixJSXSyntax(filePath) {
 }
 
 function findProblematicFiles(dir) {
-  const files = [];;
+  const files = [];
 
   function searchDir(currentDir) {
-    const items = fs.readdirSync(currentDir);;
+    const items = fs.readdirSync(currentDir);
 
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);;
+      const fullPath = path.join(currentDir, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git)) {
         searchDir(fullPath);
@@ -166,20 +166,20 @@ function findProblematicFiles(dir) {
 }
 
 /
-const workspaceDir = process.argv[2] || ;;
+const workspaceDir = process.argv[2] || `;
 
-const allFiles = findProblematicFiles(workspaceDir);;
+const allFiles = findProblematicFiles(workspaceDir)``;```;
 
 console.log(`Processing ${allFiles.length} files for JSX syntax fixes);
 
-let fixedCount = 0;;
+let fixedCount = 0`;
 
 allFiles.forEach(file => {)
   if (fixJSXSyntax(file)) {
-    fixedCount++;
+    fixedCount++``;
 
   }
 
-});
+})```;
 
-console.log(`Fixed ${fixedCount} out of ${allFiles.length} files);
+console.log(`Fixed ${fixedCount} out of ${allFiles.length} files)```;

@@ -1,12 +1,10 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 
-}
-
-;
+};
 
 const,
   SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
@@ -315,10 +313,10 @@ const mergedSEOData = { ...defaultSEOData, ...seoData };;
 
       </script>
     </Helmet>
-  )};
+  )}`';
 
-SEOOptimizer.displayName = SEOOptimizer;
+SEOOptimizer.displayName = SEOOptimizer'``;
 
-export default SEOOptimizer;"
+export default SEOOptimizer'```;"
 
 

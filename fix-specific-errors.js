@@ -10,7 +10,7 @@ function processFile(filePath) {
   try {
     // Fix malformed closing tags;
 
-    if (content.includes(</div>})) {;
+    if (content.includes(</div>})) {
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
@@ -36,19 +36,19 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix unterminated regular expressions;
 
-    if (content.includes(const regex = /)) {;;
+    if (content.includes(const regex = /)) {
 
-      content = content.replace(/const regex = \/([^/]*)$/gm, const regex = /$1/;);;
+      content = content.replace(/const regex = \/([^/]*)$/gm, const regex = /$1/;);
 
       modified = true}
 
     // Fix malformed object properties;
 
-    if (content.includes(const config = {)) {;;
+    if (content.includes(const config = {)) {
 
       // Look for lines that might be missing colons;
 
-      for (let i = 0; i < lines.length; i++) {;;
+      for (let i = 0; i < lines.length; i++) {
 
         // Fix lines that look like property assignments but are missing colons;
 
@@ -73,13 +73,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix unterminated regular expressions;
 
-    if (content.includes(const regex = /)) {/* TODO: Fix JSX expression */};;
+    if (content.includes(const regex = /)) {/* TODO: Fix JSX expression */};
 
     }
 
     // Fix malformed object properties;
 
-    if (content.includes(const config = {/* TODO: Fix JSX expression */};;
+    if (content.includes(const config = {/* TODO: Fix JSX expression */};
 
         })
         newLines.push(line)}

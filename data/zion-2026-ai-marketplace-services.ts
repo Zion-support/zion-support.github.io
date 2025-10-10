@@ -50,21 +50,21 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     price:
         price: unknown;
 
-      monthly: 299;
+      monthly: 299';
 
-      yearly: 2999;
+      yearly: 2999';
 
-      enterprise: 9999;
+      enterprise: 9999';
 
       currency: 'USD,
   i,
-  d: string;
+  d: string';
 
   nam,
-  e: string;
+  e: string';
 
   descriptio,
-  n: string;
+  n: string';
 
   categor,
   y: 'AI Marketplace' | 'AI Integration' | 'AI Automation' | 'AI Analytics' | 'AI Development
@@ -215,11 +215,11 @@ export const,
     price:
         price: unknown;
 
-      monthly: 199;
+      monthly: 199';
 
-      yearly: 1999;
+      yearly: 1999';
 
-      enterprise: 7999;
+      enterprise: 7999';
 
       currency: 'USD,
     contactInf,
@@ -327,11 +327,11 @@ export const,
     price:
         price: unknown;
 
-      monthly: 149;
+      monthly: 149';
 
-      yearly: 1499;
+      yearly: 1499';
 
-      enterprise: 5999;
+      enterprise: 5999';
 
       currency: 'USD,
     contactInf,
@@ -439,11 +439,11 @@ export const,
     price:
         price: unknown;
 
-      monthly: 99;
+      monthly: 99';
 
-      yearly: 999;
+      yearly: 999';
 
-      enterprise: 3999;
+      enterprise: 3999';
 
       currency: 'USD,
     contactInf,
@@ -551,11 +551,11 @@ export const,
     price:
         price: unknown;
 
-      monthly: 399;
+      monthly: 399';
 
-      yearly: 3999;
+      yearly: 3999';
 
-      enterprise: 14999;
+      enterprise: 14999';
 
       currency: 'USD,
     contactInf,
@@ -672,9 +672,9 @@ export const,
 ];
 
 export type Zion2026AIMarketplaceService = i,
-  d: string; nam,
-  e: string; descriptio,
-  n: string; categor,
+  d: string'; nam,
+  e: string'; descriptio,
+  n: string'; categor,
   y: 'AI Marketplace' | 'AI Integration' | 'AI Automation' | 'AI Analytics' | 'AI Development pric,
   e: monthl,
   y: number; yearl,

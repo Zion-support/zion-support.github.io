@@ -1,8 +1,8 @@
 
 
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 // ErrorInfo interface removed as its not used in this hook;
 
@@ -144,7 +144,7 @@ const handleReactError = (erro,;;
 
       window.removeEventListener(unhandledrejection, handleUnhandledRejection);
 
-      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown }).__REACT_ERROR_HANDLER__}}, [reportError]);
+      delete (window as Window & { __REACT_ERROR_HANDLER__?: unknown }).__REACT_ERROR_HANDLER__}}, [reportError])`;
 
   return {/* TODO: Fix JSX expression */}
 
@@ -152,6 +152,6 @@ const handleReactError = (erro,;;
 
 }
 
-//     reportError}};
+//     reportError}}``;
 
-export default useErrorMonitoring;
+export default useErrorMonitoring```;

@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react';
 
-;
+';
 
-const BlockchainWeb3Page: React.FC = () => {const features = [;;;
+const BlockchainWeb3Page: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -36,7 +36,7 @@ const BlockchainWeb3Page: React.FC = () => {const features = [;;;
       benefits: [24
     }
 
-  ];
+  ]';
 
   return (
 
@@ -82,4 +82,4 @@ const BlockchainWeb3Page: React.FC = () => {const features = [;;;
         </div>
       </div>
     </React.Fragment>)
-export default BlockchainWeb3Page;
+export default BlockchainWeb3Page'";

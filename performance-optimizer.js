@@ -1,14 +1,14 @@
 //Performance optimizations;
 // //Optimize images;
-const optimizeImages = () => {;
+const optimizeImages = () => {
   //   //Add image optimization logic here};
 
 //Optimize CSS;
-const optimizeCSS = () => {;
+const optimizeCSS = () => {
   //   //Add CSS optimization logic here};
 
 //Optimize JavaScript;
-const optimizeJS = () => {;
+const optimizeJS = () => {
   //   //Add JS optimization logic here;
 const optimizeImages = () => {/* TODO: Fix JSX expression */};
 };

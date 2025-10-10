@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react;
+import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import SEOOptimizer from '../components/SEOOptimizer;
+import SEOOptimizer from '../components/SEOOptimizer';
 
-;
+';
 
-const AIFitnessCoachPage: React.FC = () => {;
+const AIFitnessCoachPage: React.FC = () => {';
 
-const features = [;
+const features = [';
     'Personalized Plans',    'Progress Tracking,
     'Nutrition Analysis,
     'Workout Videos,
@@ -26,7 +26,7 @@ const features = [;
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     'Better results,
     24
@@ -38,7 +38,7 @@ const benefits = [;;
 
 ;
 
-const pricingPlans = [;;
+const pricingPlans = [
 
     {
       name: 'Basic,
@@ -207,6 +207,6 @@ const pricingPlans = [;;
         <Footer />
       </div>
     </React.Fragment>
-  )};
+  )}``;
 
-export default AIFitnessCoachPage;
+export default AIFitnessCoachPage```;

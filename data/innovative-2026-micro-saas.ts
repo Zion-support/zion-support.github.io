@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Innovative2026MicroSaas {;,
+export interface Innovative2026MicroSaas {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const innovative2026 MicroSaasServices: Innovative2026 MicroSaas[] = [,
     id: "2026-micro-saas", name: "2026 Micro SAAS Platform",
     tagline: "Next-generation micro SAAS solutions", price: '$89/month',
     description: 'Innovative micro SAAS platform designed for 2026 with advanced features and capabilities.',
-    features: [;
+    features: [
       "Micro SAAS solutions"
       "Advanced features"
       "Scalable platform"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Innovative micro SAAS platform designed for 2026 with advanced features and capabilities.",
     feature,
-  s: [;"
+  s: ["
       "Micro SAAS solutions""
       "Advanced features""
       "Scalable platform""

@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
 // Function to fix critical syntax errors
 function fixCriticalSyntax(filePath) {
   try {
-    let content = fs.readFileSync(filePath, utf8);;
+    let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix duplicate return statements
     content = content.replace(/return\s*\(\s*\n\s*return\s*\(/g, return ();
@@ -62,9 +62,9 @@ function fixCriticalSyntax(filePath) {
     content = content.replace(/console\.error\([^)]*\);?\s*\n?/g, // console.error removed for production\n);
 
     // Fix unused variables
-    content = content.replace(/const\s+__dirname\s*=\s*[^;]+;?\s*\n?/g, // __dirname removed\n);
+    content = content.replace(/const\s+__dirname\s*=\s*[^;]' + '';?\s*\n?/g, // __dirname removed\n)';
 
-    content = content.replace(/const\s+withSentry\s*=\s*[^;]+;?\s*\n?/g, // withSentry removed\n);
+    content = content.replace(/const\s+withSentry\s*=\s*[^';]' + '';?\s*\n?/g, // withSentry removed\n)';
 
     if (content !== fs.readFileSync(filePath, 'utf8)) {
       fs.writeFileSync(filePath, content, utf8);
@@ -86,15 +86,15 @@ function fixCriticalSyntax(filePath) {
 
 // Function to find all TypeScript/JavaScript files in app directory
 function findAppFiles(dir) {
-  const files = [];;
+  const files = [];
 
   function searchDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);;
+    const items = fs.readdirSync(currentDir);
 
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);;
+      const fullPath = path.join(currentDir, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         searchDirectory(fullPath);
@@ -117,24 +117,24 @@ function findAppFiles(dir) {
 // Main execution
 console.log(Starting critical syntax fixes...);
 
-const appDir = path.join(process.cwd(), app);;
+const appDir = path.join(process.cwd(), app)`;
 
-const appFiles = findAppFiles(appDir);;
+const appFiles = findAppFiles(appDir)``;```;
 
-console.log(`Found ${appFiles.length} app files to check);
+console.log(`Found ${appFiles.length} app files to check)`;
 
-let fixedCount = 0;;
+let fixedCount = 0``;
 
 for (const file of appFiles) {
   if (fixCriticalSyntax(file)) {
-    fixedCount++;
+    fixedCount++```;
 
-    console.log(`Fixed syntax in: ${file});
+    console.log(`Fixed syntax in: ${file})```;
 
   }
 
 }
 
-console.log(`Fixed syntax in ${fixedCount} files);
+console.log(`Fixed syntax in ${fixedCount} files)``;
 
-console.log('Critical syntax fixes complete!);
+console.log('Critical syntax fixes complete!)``')`;

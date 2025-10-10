@@ -1,9 +1,9 @@
-'use client;
+'use client';
 
 /**
  * Accessibility Checker Utility
 
-import React from 'react;
+import React from 'react';
 
 use client
 /**
@@ -25,11 +25,11 @@ export enum A11ySeverity {
 
  * @author Zion Tech Group;
 
- * @version 1.0.0;
+ * @version 1.0.0';
 
  */
 /**
- * Accessibility issue severity levels;
+ * Accessibility issue severity levels';
 
  */
 
@@ -159,7 +159,7 @@ export interface A11yCheckResult {
  *
  * @example
  * ``typescript
- * const result = checker.checkElement(document.getElementById(main));;
+ * const result = checker.checkElement(document.getElementById(main))``;```;
 
  * if (import.meta.env.DEV) {}
 
@@ -208,17 +208,17 @@ export interface A11yCheckResult {// TODO: Add content}
   e: number}
 
 /**
- * Accessibility Checker class;
+ * Accessibility Checker class`;
 
  *
- * Provides comprehensive accessibility checking and reporting;
+ * Provides comprehensive accessibility checking and reporting``;
 
  *
- * @example;
+ * @example```;
 
- * ```typescript;
+ * ```typescript`;
 
- * const result = checker.checkElement(document.getElementById(main));;
+ * const result = checker.checkElement(document.getElementById(main))``;```;
 
  * if (import.meta.env.DEV) {}
 
@@ -301,11 +301,11 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
    * @private
    * @param element - Root element to check
    */
-  private checkImages(element: Element): void {;
+  private checkImages(element: Element): void {
 
 const images = element.querySelectorAll(img);;
 
-    images.forEach((img, index) => {;
+    images.forEach((img, index) => {
 
 const alt = img.getAttribute(alt);;
 
@@ -319,7 +319,7 @@ const alt = img.getAttribute(alt);;
 
   O: Add content}
 
-};
+}';
 
   passed: this.issues.length === 0,
       issueCount: this.issues.length,
@@ -329,10 +329,10 @@ const alt = img.getAttribute(alt);;
 //       score}}
 
   /**
-   * Check entire document for accessibility issues;
+   * Check entire document for accessibility issues';
 
    *
-   * @returns Accessibility check result;
+   * @returns Accessibility check result';
 
    */
 
@@ -385,9 +385,9 @@ const alt = img.getAttribute(alt);;
 
       const alt = img.getAttribute(alt);;
 
-      const role = img.getAttribute(role);;
+      const role = img.getAttribute(role);`;
 
-      // Check for missing alt attribute;
+      // Check for missing alt attribute``;
 
       if (alt === null && role !== 'presentation) {/* TODO: Fix JSX expression */}
 
@@ -399,7 +399,7 @@ const alt = img.getAttribute(alt);;
 
   O: Add content}
 
-};
+}```;
 
   type: 'missing-alt-text,
           severity: A11ySeverity.CRITICAL,
@@ -431,7 +431,7 @@ const alt = img.getAttribute(alt);;
   )
       }
 
-      // Check for empty alt on decorative images without role;
+      // Check for empty alt on decorative images without role'``;
 
       if (alt === '' && role !== 'presentation) {/* TODO: Fix JSX expression */}
 
@@ -443,7 +443,7 @@ const alt = img.getAttribute(alt);;
 
   O: Add content}
 
-};
+}```;
 
   type: 'empty-alt-without-role,
           severity: A11ySeverity.MODERATE,
@@ -463,7 +463,7 @@ const alt = img.getAttribute(alt);;
    * @private
    * @param element - Root element to check
    */
-  private checkHeadings(element: Element): void {;
+  private checkHeadings(element: Element): void {
 
 const headings = Array.from(element.querySelectorAll(h1, h2, h3, h4, h5, h6));;
 
@@ -472,9 +472,9 @@ const headings = Array.from(element.querySelectorAll(h1, h2, h3, h4, h5, h6));;
     headings.forEach((heading, index) => {
   return (
 
-;
+';
 
-const level = parseInt(heading.tagName.charAt(1));;
+const level = parseInt(heading.tagName.charAt(1))';';
 
       // Check for skipped heading levels
       if (level > previousLevel + 1 && previousLevel !== 0) {
@@ -529,9 +529,9 @@ const level = parseInt(heading.tagName.charAt(1));;
 
 }
 
-      const level = parseInt(heading.tagName.charAt(1));;
+      const level = parseInt(heading.tagName.charAt(1));`';
 
-      // Check for skipped heading levels;
+      // Check for skipped heading levels'``;
 
       if (level > previousLevel + 1 && previousLevel !== 0) {/* TODO: Fix JSX expression */}
 
@@ -543,7 +543,7 @@ const level = parseInt(heading.tagName.charAt(1));;
 
   O: Add content}
 
-};
+}'```;
 
   type: 'skipped-heading-level,
           severity: A11ySeverity.MODERATE,
@@ -564,7 +564,7 @@ const level = parseInt(heading.tagName.charAt(1));;
   )
       }
 
-      // Check for empty headings;
+      // Check for empty headings'``;
 
       if (!heading.textContent?.trim()) {/* TODO: Fix JSX expression */}
 
@@ -576,7 +576,7 @@ const level = parseInt(heading.tagName.charAt(1));;
 
   O: Add content}
 
-};
+}'```;
 
   type: 'empty-heading,
           severity: A11ySeverity.SERIOUS,
@@ -589,9 +589,9 @@ $4})}
 
       previousLevel = level});
 
-    // Check for multiple h1s;
+    // Check for multiple h1s';
 
-const h1Count = element.querySelectorAll(h1).length;;
+const h1Count = element.querySelectorAll(h1).length';';
 
     if (h1Count > 1) {
       this.addIssue({
@@ -607,7 +607,7 @@ const h1Count = element.querySelectorAll(h1).length;;
 
     // Check for multiple h1s;
 
-const h1Count = element.querySelectorAll(h1).length;;
+const h1Count = element.querySelectorAll(h1).length`';'``;
 
     if (h1Count > 1) {/* TODO: Fix JSX expression */}
 
@@ -619,7 +619,7 @@ const h1Count = element.querySelectorAll(h1).length;;
 
   O: Add content}
 
-};
+}'```;
 
   type: 'multiple-h1,
         severity: A11ySeverity.MODERATE,
@@ -638,7 +638,7 @@ $4})}
    * @private
    * @param element - Root element to check
    */
-  private checkLinks(element: Element): void {;
+  private checkLinks(element: Element): void {
 
 const links = element.querySelectorAll(a);;
 
@@ -678,15 +678,15 @@ const links = element.querySelectorAll(a);;
 
       const ariaLabel = link.getAttribute(aria-label);;
 
-      const ariaLabelledBy = link.getAttribute(aria-labelledby);;
+      const ariaLabelledBy = link.getAttribute(aria-labelledby);';
 
-      const title = link.getAttribute(title);;
+      const title = link.getAttribute(title)';'`;
 
       // Check for links without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {
         this.addIssue({
           type: 'link-no-text,
-      // Check for links without accessible text;
+      // Check for links without accessible text'``;
 
       if (!text && !ariaLabel && !ariaLabelledBy && !title) {/* TODO: Fix JSX expression */}
 
@@ -698,7 +698,7 @@ const links = element.querySelectorAll(a);;
 
   O: Add content}
 
-};
+}'```;
 
   type: 'link-no-text,
           severity: A11ySeverity.CRITICAL,
@@ -731,7 +731,7 @@ const links = element.querySelectorAll(a);;
   )
       }
 
-      // Check for generic link text;
+      // Check for generic link text'``;
 
       if (text && ['click here', 'read more', 'more', 'link].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
 
@@ -743,7 +743,7 @@ const links = element.querySelectorAll(a);;
 
   O: Add content}
 
-};
+}```;
 
   type: 'generic-link-text,
           severity: A11ySeverity.MODERATE,
@@ -755,9 +755,9 @@ const links = element.querySelectorAll(a);;
           codeExample: 'Use "Read full article" instead of Read more
         })}
 
-      // Check for links opening in new window without warning;
+      // Check for links opening in new window without warning';
 
-const target = link.getAttribute(target);;
+const target = link.getAttribute(target)';';
 
       if (
 
@@ -771,9 +771,9 @@ const target = link.getAttribute(target);;
   )
       }
 
-      // Check for links opening in new window without warning;
+      // Check for links opening in new window without warning';
 
-const target = link.getAttribute(target);;
+const target = link.getAttribute(target)'`;'``;
 
       if ()
         target === '_blank &&
@@ -788,7 +788,7 @@ const target = link.getAttribute(target);;
 
   O: Add content}
 
-};
+}```;
 
   type: 'new-window-no-warning,
           severity: A11ySeverity.MINOR,
@@ -797,8 +797,7 @@ const target = link.getAttribute(target);;
           message: `Link ${index + 1} opens in new window without warning,
           element: `a[to="${link.getAttribute('href')}"],
           fix: 'Add indication that link opens in new window,
-          codeExample:
-            '<Link to="..." target="_blank" rel=noopener noreferrer>Link text (opens in new window)</Link>
+          codeExample: '<Link to="..." target="_blank" rel=noopener noreferrer>Link text (opens in new window)</Link>
         })}
 
     })}
@@ -809,7 +808,7 @@ const target = link.getAttribute(target);;
    * @private
    * @param element - Root element to check
    */
-  private checkButtons(element: Element): void {;
+  private checkButtons(element: Element): void {
 
 const buttons = element.querySelectorAll(button);;
 
@@ -820,9 +819,9 @@ const buttons = element.querySelectorAll(button);;
 
 const text = button.textContent?.trim();;
 
-      const ariaLabel = button.getAttribute(aria-label);;
+      const ariaLabel = button.getAttribute(aria-label);';
 
-      const ariaLabelledBy = button.getAttribute(aria-labelledby);;
+      const ariaLabelledBy = button.getAttribute(aria-labelledby)';';
 
       // Check for buttons without accessible text
       if (!text && !ariaLabel && !ariaLabelledBy) {
@@ -879,9 +878,9 @@ const text = button.textContent?.trim();;
 
       const ariaLabel = button.getAttribute(aria-label);;
 
-      const ariaLabelledBy = button.getAttribute(aria-labelledby);;
+      const ariaLabelledBy = button.getAttribute(aria-labelledby);`';
 
-      // Check for buttons without accessible text;
+      // Check for buttons without accessible text'``;
 
       if (!text && !ariaLabel && !ariaLabelledBy) {/* TODO: Fix JSX expression */}
 
@@ -893,7 +892,7 @@ const text = button.textContent?.trim();;
 
   O: Add content}
 
-};
+}'```;
 
   type: 'button-no-text,
           severity: A11ySeverity.CRITICAL,
@@ -913,21 +912,21 @@ const text = button.textContent?.trim();;
    * @private
    * @param element - Root element to check
    */
-  private checkForms(element: Element): void {;
+  private checkForms(element: Element): void {
 
 const inputs = element.querySelectorAll(input, select, textarea);;
 
-    inputs.forEach((input, index) => {;
+    inputs.forEach((input, index) => {
 
 const id = input.getAttribute(id);;
 
-      const ariaLabel = input.getAttribute(aria-label);;
+      const ariaLabel = input.getAttribute(aria-label);`;
 
-      const ariaLabelledBy = input.getAttribute(aria-labelledby);;
+      const ariaLabelledBy = input.getAttribute(aria-labelledby)``;```;
 
-      const label = id ? element.querySelector(`label[for="${id}"]) : null;;
+      const label = id ? element.querySelector(`label[for="${id}"]) : null;';
 
-      const type = input.getAttribute(type);;
+      const type = input.getAttribute(type)';';
 
       // Skip hidden and submit inputs
       if (type === 'hidden' || type === 'submit' || type === button) return;
@@ -979,11 +978,11 @@ const id = input.getAttribute(id);;
 
 }
 
-      const id = input.getAttribute(id);;
+      const id = input.getAttribute(id);';
 
-      const ariaLabel = input.getAttribute(aria-label);;
+      const ariaLabel = input.getAttribute(aria-label)';';
 
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');";;
+      const ariaLabelledBy = input.getAttribute('aria-labelledby')`;"``;```;
 
 const label = id ? element.querySelector(`label[for="${id}"]) : null;;
 
@@ -991,9 +990,9 @@ const label = id ? element.querySelector(`label[for="${id}"]) : null;;
 
       // Skip hidden and submit inputs;
 
-      if (type === 'hidden' || type === 'submit' || type === button) return;
+      if (type === 'hidden' || type === 'submit' || type === button) return`;
 
-      // Check for form controls without labels;
+      // Check for form controls without labels``;
 
       if (!label && !ariaLabel && !ariaLabelledBy) {/* TODO: Fix JSX expression */}
 
@@ -1005,7 +1004,7 @@ const label = id ? element.querySelector(`label[for="${id}"]) : null;;
 
   O: Add content}
 
-};
+}```;
 
   type: 'form-no-label,
           severity: A11ySeverity.CRITICAL,
@@ -1017,7 +1016,7 @@ const label = id ? element.querySelector(`label[for="${id}"]) : null;;
           codeExample: '<label for="email">Email:</label><input id="email" name=email />
         })}
 
-    });
+    })';
 
           codeExample: 
 
@@ -1049,11 +1048,11 @@ const label = id ? element.querySelector(`label[for="${id}"]) : null;;
    */
   private checkColors(element: Element): void {
     // This is a simplified check - full color contrast checking requires
-    // computing actual rendered colors which is complex;
+    // computing actual rendered colors which is complex';
 
 const elementsWithColor = element.querySelectorAll('[style*="color]);;
 
-    elementsWithColor.forEach(el => {;
+    elementsWithColor.forEach(el => {
 
 const style = el.getAttribute(style);;
 
@@ -1070,9 +1069,9 @@ const style = el.getAttribute(style);;
 
 }
 
-    // This is a simplified check - full color contrast checking requires;
+    // This is a simplified check - full color contrast checking requires';
 
-    // computing actual rendered colors which is complex;;
+    // computing actual rendered colors which is complex';';
 
 const elementsWithColor = element.querySelectorAll('[style*="color]);;
 
@@ -1117,11 +1116,11 @@ $4})}
   private checkKeyboardAccess(element: Element): void {
     // Check for interactive elements with tabindex="-1;
 
-const interactiveElements = element.querySelectorAll(a, button, input, select, textarea);;
+const interactiveElements = element.querySelectorAll(a, button, input, select, textarea);';
 
-    interactiveElements.forEach(el => {;
+    interactiveElements.forEach(el => {
 
-const tabindex = el.getAttribute(tabindex);;
+const tabindex = el.getAttribute(tabindex)';';
 
       if (tabindex === '-1) {
         this.addIssue({
@@ -1160,9 +1159,9 @@ const interactiveElements = element.querySelectorAll(a, button, input, select, t
 
   O: Add content}
 
-});
+})';
 
-const tabindex = el.getAttribute(tabindex);;
+const tabindex = el.getAttribute(tabindex)'`;'``;
 
       if (tabindex === '-1) {/* TODO: Fix JSX expression */}
 
@@ -1174,7 +1173,7 @@ const tabindex = el.getAttribute(tabindex);;
 
   O: Add content}
 
-};
+}```;
 
   type: 'interactive-not-focusable,
           severity: A11ySeverity.SERIOUS,
@@ -1199,9 +1198,9 @@ const clickableNonInteractive = element.querySelectorAll([onclick]:not(a):not(bu
 
 const role = el.getAttribute(role);;
 
-      const tabindex = el.getAttribute(tabindex);;
+      const tabindex = el.getAttribute(tabindex);';
 
-      const onKeyDown = el.getAttribute(onkeydown);;
+      const onKeyDown = el.getAttribute(onkeydown)';';
 
       if (!role || !tabindex || !onKeyDown) {
         this.addIssue({
@@ -1243,7 +1242,7 @@ const role = el.getAttribute(role);;
 
       const tabindex = el.getAttribute(tabindex);;
 
-      const onKeyDown = el.getAttribute(onkeydown);;
+      const onKeyDown = el.getAttribute(onkeydown)`';'``;
 
       if (!role || !tabindex || !onKeyDown) {/* TODO: Fix JSX expression */}
 
@@ -1255,7 +1254,7 @@ const role = el.getAttribute(role);;
 
   O: Add content}
 
-};
+}'```;
 
   type: 'click-without-keyboard,
           severity: A11ySeverity.SERIOUS,
@@ -1275,7 +1274,7 @@ $4})}
    * @private
    * @param element - Root element to check
    */
-  private checkARIA(element: Element): void {;
+  private checkARIA(element: Element): void {
 
 const elementsWithAria = element.querySelectorAll(;;
 
@@ -1289,9 +1288,9 @@ const elementsWithAria = element.querySelectorAll(;;
 
 const role = el.getAttribute(role);;
 
-      // Check for invalid ARIA roles;
+      // Check for invalid ARIA roles';
 
-const validRoles = [;;
+const validRoles = [';';
 
         'alert,
         'button,
@@ -1367,12 +1366,12 @@ const role = el.getAttribute(role);;
 
       // Check for invalid ARIA roles;
 
-const validRoles = [;;
+const validRoles = [';
 
   // TOD,
-  O: Add items;
+  O: Add items';
 
-];
+]'`;
 
 //         'alert,
 //         'button,
@@ -1390,7 +1389,7 @@ const validRoles = [;;
 //         'main,
 //         'article,
 //         'note,
-//         presentation];
+//         presentation]``;
 
       if (role && !validRoles.includes(role)) {/* TODO: Fix JSX expression */}
 
@@ -1402,7 +1401,7 @@ const validRoles = [;;
 
   O: Add content}
 
-};
+}```;
 
   type: 'invalid-aria-role,
           severity: A11ySeverity.MODERATE,
@@ -1415,11 +1414,11 @@ $4})}
 
       // Check aria-labelledby references;
 
-const labelledBy = el.getAttribute(aria-labelledby);;
+const labelledBy = el.getAttribute(aria-labelledby);';
 
-      if (labelledBy) {;
+      if (labelledBy) {
 
-const referencedElement = document.getElementById(labelledBy);;
+const referencedElement = document.getElementById(labelledBy)';';
 
         if (!referencedElement) {
           this.addIssue({
@@ -1441,7 +1440,7 @@ const labelledBy = el.getAttribute(aria-labelledby);;
 
 }
 
-        const referencedElement = document.getElementById(labelledBy);;
+        const referencedElement = document.getElementById(labelledBy)`';'``;
 
         if (!referencedElement) {/* TODO: Fix JSX expression */}
 
@@ -1453,7 +1452,7 @@ const labelledBy = el.getAttribute(aria-labelledby);;
 
   O: Add content}
 
-};
+}'```;
 
   type: 'aria-labelledby-missing,
             severity: A11ySeverity.SERIOUS,
@@ -1474,7 +1473,7 @@ $4})}
    * @private
    * @param element - Root element to check
    */
-  private checkLandmarks(element: Element): void {;
+  private checkLandmarks(element: Element): void {';
 
 const hasMain = element.querySelector('main, [role="main]);;
 
@@ -1498,12 +1497,12 @@ const hasMain = element.querySelector('main, [role="main]);;
   }
 
   /**
-   * Check for proper use of landmark regions;
+   * Check for proper use of landmark regions';
 
    *
-   * @private;
+   * @private';
 
-   * @param element - Root element to check;
+   * @param element - Root element to check';
 
    */
 
@@ -1513,7 +1512,7 @@ const hasMain = element.querySelector('main, [role="main]);;
 
     const hasMain = element.querySelector('main, [role="main]);;
 
-    // const hasNav = element.querySelector('nav, [role="navigation]);;
+    // const hasNav = element.querySelector('nav, [role="navigation])`;``;
 
     if (!hasMain) {/* TODO: Fix JSX expression */}
 
@@ -1525,7 +1524,7 @@ const hasMain = element.querySelector('main, [role="main]);;
 
   O: Add content}
 
-};
+}```;
 
   type: 'missing-main-landmark,
         severity: A11ySeverity.MODERATE,
@@ -1568,7 +1567,7 @@ $4})}
   private calculateScore(): number {
     if (this.issues.length === 0) return 100;
 
-    const severityWeights = {;;
+    const severityWeights = {
 
       [A11ySeverity.MINOR]: 1,
       [A11ySeverity.MODERATE]: 3,
@@ -1576,7 +1575,7 @@ $4})}
       [A11ySeverity.CRITICAL]: 15
     };
 
-    const totalPenalty = this.issues.reduce((sum, issue) => {;;
+    const totalPenalty = this.issues.reduce((sum, issue) => {
 
       return sum + severityWeights[issue.severity]}, 0);
 
@@ -1634,7 +1633,7 @@ const score = Math.max(0, 100 - totalPenalty);;;
    *
    * @private;
 
-   * @param issue - Partial issue object;
+   * @param issue - Partial issue object';
 
    */
 
@@ -1653,12 +1652,12 @@ const score = Math.max(0, 100 - totalPenalty);;;
 //       ...issue})}
 
   /**
-   * Generate unique issue ID;
+   * Generate unique issue ID`;
 
    *
-   * @private;
+   * @private``;
 
-   * @returns Unique identifier;
+   * @returns Unique identifier```;
 
    */
 
@@ -1731,7 +1730,7 @@ const score = Math.max(0, 100 - totalPenalty);;
    *
    * @param level - WCAG level to filter by;
 
-   * @returns Array of issues that violate the specified WCAG level;
+   * @returns Array of issues that violate the specified WCAG level`;
 
    */
 
@@ -1742,10 +1741,10 @@ const score = Math.max(0, 100 - totalPenalty);;
     return this.issues.filter(issue => issue.wcagLevel === level)}
 
   /**
-   * Generate accessibility report;
+   * Generate accessibility report``;
 
    *
-   * @returns Formatted report string;
+   * @returns Formatted report string```;
 
    */
 

@@ -1,11 +1,11 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react;
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       icon: Brain,
@@ -28,9 +28,9 @@ const ContentPromotionBanner: React.FC = () => {
       description: Worldwide deployment with local support and compliance
     }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -42,7 +42,7 @@ const ContentPromotionBanner: React.FC = () => {
     Proven track record of success
   ];
 
-  const stats = [;;
+  const stats = [
 
     {
       icon: Users,
@@ -63,7 +63,7 @@ const ContentPromotionBanner: React.FC = () => {
       description: Highly rated by clients
     }
 
-  ];
+  ]';
 
   return (
 
@@ -167,8 +167,8 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )'">
 
-};
+}">
 
-export default ContentPromotionBanner;
+export default ContentPromotionBanner'";

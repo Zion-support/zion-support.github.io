@@ -12,11 +12,11 @@
     contact_info: unknown;
 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: 364 E Main St STE 1008 Middletown DE 19709
-export interface EmergingTechBreakthrough2029 {;
+export interface EmergingTechBreakthrough2029 {
 
 export interface EmergingTechBreakthrough2029;
 
-export interface EmergingTechBreakthrough2029 {;
+export interface EmergingTechBreakthrough2029 {
 
   id: string;
 
@@ -79,7 +79,7 @@ export const,
       descriptio,
   n: Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.
       feature,
-  s: [;
+  s: [
 
         Emerging tech breakthroughs
         Innovation platform
@@ -148,7 +148,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       Innovation platform,
       Future capabilities,
       Advanced features,
-export interface EmergingTechBreakthrough2029 {;
+export interface EmergingTechBreakthrough2029 {
 
       Expert insights
     ],
@@ -212,13 +212,13 @@ export interface EmergingTechBreakthrough2029 {;
   s: string[];
 
   lin,
-  k: string;
+  k: string";
 
   categor,
-  y: string;
+  y: string";
 
   realImplementatio,
-  n: boolean;
+  n: boolean";
 
   contactInf,
   o: {/* TODO: Fix JSX expression */}
@@ -374,7 +374,7 @@ export const,
 
 }
 
-export interface EmergingTechBreakthrough2029 {;
+export interface EmergingTechBreakthrough2029 {
 
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
     id: 2029-emerging-tech-breakthrough,
@@ -419,9 +419,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
 
 ]}
 
-  }
-
-;"
+  };"
 "Emerging tech breakthroughs" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights ]; lin,
   k: "/services / 2029 - emerging - tech - breakthrough, categor,
   y: Emerging Tech Breakthroughs 2029, real_implementatio,
@@ -447,9 +445,9 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950 emai,
   l: 'kleber@ziontechgroup.com addres,
   s: 364 E Main St STE 1008 Middletown DE 19709 } } real_implementatio,
-  n: boolean; contact_inf,
+  n: boolean'; contact_inf,
   o: mobil,
-  e: string; emai,
+  e: string'; emai,
   l: string, mobil,
   e: '+1 302 464 0950, emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com, addres,
@@ -461,9 +459,9 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   e: string; descriptio,
   n: string; feature,
   s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
+  k: string"; categor,
+  y: string"; realImplementatio,
+  n: boolean"'; contactInf,
   o: {/* TODO: Fix JSX expression */}
 
   l: string} addres,
@@ -477,7 +475,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   s: [ "Emerging tech breakthroughs", "Innovation platform", "Future capabilities", Advanced features, export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
 
   n: true} contactInf,
-  o: } } ]} } ]; "Emerging tech breakthroughs" "Innovation platform" Future capabilities export interface EmergingTechBreakthrough2029 {}; export const,
+  o: } } ]} } ]'; "Emerging tech breakthroughs" "Innovation platform" Future capabilities export interface EmergingTechBreakthrough2029 {}'; export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [  i,
   d: '2029-emerging-tech-breakthrough, nam,
   e: '2029 Emerging Tech Breakthrough Platform, taglin,
@@ -500,12 +498,12 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   n: string; feature,
   s: string[]; lin,
   k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
+  y: string'; realImplementatio,
+  n: boolean'; contactInf,
   o: {/* TODO: Fix JSX expression */}
 
   l: string} addres,
   s: string} } } export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
 
   l: "kleber@ziontechgroup.com} addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } } } ]} } ; '"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } } } ]} } '; '"

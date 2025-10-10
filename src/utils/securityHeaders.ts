@@ -54,7 +54,7 @@ export const,
 //     'upgrade-insecure-requests'].join('; '),
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurit,
-  y: 'max-age=63072000; includeSubDomains; preload',
+  y: 'max-age=63072000'; includeSubDomains'; preload',
   // Prevent clickjacking,
   xFrameOption,
   s: 'DENY',

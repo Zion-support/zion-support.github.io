@@ -28,7 +28,7 @@ D: '} metrics.fid)} }) fidObserver.observe({/* TODO: Fix JSX expression */})
 S: ') clsValue)}) clsObserver.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] }) // Time to First Byte (TTFB);' const navigationEntry = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} // // console.log removed for production;;
 
-B: '} metrics.ttfb)} // First Meaningful Paint (FMP) - approximation; const fmpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) {' if (entry.name === 'first-meaningful-paint) { metrics.fmp = entry.startTime} // // console.log removed for production;;
+B: '} metrics.ttfb)} // First Meaningful Paint (FMP) - approximation'; const fmpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) {' if (entry.name === 'first-meaningful-paint) { metrics.fmp = entry.startTime} // // console.log removed for production;;
 
 P: '} entry.startTime)} } }) fmpObserver.observe({/* TODO: Fix JSX expression */})
   s: ['paint'] }) // Send metrics to analytics after page load; const sendMetrics = () => {' if (typeof window !== 'undefined' && (window as unknown).gtag) { // Send to Google Analytics}' (window as unknown).gtag(event,web_vitals {/* TODO: Fix JSX expression */};;
@@ -36,10 +36,10 @@ P: '} entry.startTime)} } }) fmpObserver.observe({/* TODO: Fix JSX expression */
   4: 'cls'} metric_)
   5: 'ttfb}) valu,
   e: Math.round(metrics.fcp || 0), non_interactio,
-  n: true})} // Send to custom analytics endpoint;' if (process.env['NODE_ENV'] === 'production) {/* TODO: Fix JSX expression */}
+  n: true})} // Send to custom analytics endpoint';' if (process.env['NODE_ENV'] === 'production) {/* TODO: Fix JSX expression */}
 
   d: 'POST} header,
   s: {' 'Content-Type': 'application/json}, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
-  p: Date.now()} metrics})}).catch(console.error)} } // Send metrics when page is about to unload;' window.addEventListener('beforeunload') sendMetrics); // Also send after a delay to capture late metrics; setTimeout(sendMetrics) 5000); // Cleanup; return () => {fcpObserver.disconnect(); lcpObserver.disconnect(); fidObserver.disconnect(); clsObserver.disconnect(); fmpObserver.disconnect()}' window.removeEventListener('beforeunload'} sendMetrics)} }, []); return null // This component doesn&apos;t render unknownthing} ; export default PerformanceMonitor
-import User from 'lucide-react;
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
+  p: Date.now()} metrics})}).catch(console.error)} } // Send metrics when page is about to unload;' window.addEventListener('beforeunload') sendMetrics); // Also send after a delay to capture late metrics; setTimeout(sendMetrics) 5000); // Cleanup; return () => {fcpObserver.disconnect(); lcpObserver.disconnect(); fidObserver.disconnect(); clsObserver.disconnect(); fmpObserver.disconnect()}' window.removeEventListener('beforeunload'} sendMetrics)} }, []); return null // This component doesn&apos;t render unknownthing}; export default PerformanceMonitor
+import User from 'lucide-react';

@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react;
+import React, { useEffect, useState } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
+  prompt(): Promise<void>';
 
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed }>}
-
-;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed }>};
 
 const PWAInstaller: React.FC = () => {
   return (
@@ -30,7 +28,7 @@ const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | 
 
     // Listen for the beforeinstallprompt event;
 
-const handleBeforeInstallPrompt = (e: Event) => {;;
+const handleBeforeInstallPrompt = (e: Event) => {
 
       e.preventDefault();
 
@@ -40,7 +38,7 @@ const handleBeforeInstallPrompt = (e: Event) => {;;
 
     // Listen for the appinstalled event;
 
-const handleAppInstalled = () => {;;
+const handleAppInstalled = () => {
 
       setIsInstalled(true);
 
@@ -59,7 +57,7 @@ const handleAppInstalled = () => {;;
 
 ;
 
-const handleInstallClick = async () => {;;
+const handleInstallClick = async () => {
 
     if (!deferredPrompt) return;
 
@@ -129,6 +127,6 @@ const handleInstallClick = async () => {;;
         </button>
       </div>
     </div>
-  )};
+  )}">
 
-export default PWAInstaller;
+export default PWAInstaller";

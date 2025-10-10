@@ -1,16 +1,16 @@
-import React from 'react;
+import React from 'react';
 
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react;
+import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import React from react;
+import React from react';
 
-;
+';
 
-const SmartAnalyticsPage: React.FC = () => {;
+const SmartAnalyticsPage: React.FC = () => {';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: BarChart,
@@ -42,9 +42,9 @@ $4}
 
   ];
 
-;
+';
 
-const pricingPlans = [;;
+const pricingPlans = [';';
 
       name: 'Starter,
       price: '$299,
@@ -177,7 +177,7 @@ const pricingPlans = [;;
 
 import { Link } from react-router-dom;
 
-const SmartAnalyticsPage: React.FC = () => {;
+const SmartAnalyticsPage: React.FC = () => {
 
 const features = [];;;
 
@@ -185,7 +185,7 @@ const features = [];;;
 
     {// TODO: Add content}
 
-};
+}">
 
   ico,
   n: BarChart,
@@ -203,11 +203,11 @@ const features = [];;;
       benefit: 'Discover hidden opportunities,
 
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation'">
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer">
 
-;
+"';
 
 const PagePage: React.FC = () => {
   return (
@@ -229,7 +229,7 @@ const PagePage: React.FC = () => {
       </main>
       <Footer />
     </div>
-);
+)'">
 
 }
 
@@ -240,9 +240,9 @@ const PagePage: React.FC = () => {
 
     }
 
-  ];
+  ]'">
 
-  const pricingPlans = [;;
+  const pricingPlans = [">'";
 
       nam,
   e: 'Professional,
@@ -254,7 +254,7 @@ const PagePage: React.FC = () => {
 
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium></span>
-// Most Popular;
+// Most Popular"';
 
           </span>
                 )}
@@ -278,7 +278,7 @@ const PagePage: React.FC = () => {
   // TOD,
   O: Add content}
 
-//                     plan.popular;
+//                     plan.popular'">
 
                       ? bg-cyan-600 text-white,
   hover:bg-cyan-700
@@ -286,7 +286,7 @@ const PagePage: React.FC = () => {
   hover:bg-gray-700'
                   }}
 
-                  Get Started;
+                  Get Started";
 
         {/* CTA Section */}
 
@@ -298,7 +298,7 @@ const PagePage: React.FC = () => {
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors
               Get Free Demo
 
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors Get Free Demo;
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors Get Free Demo";
 
         {/* Contact Info */}
 
@@ -314,15 +314,15 @@ const PagePage: React.FC = () => {
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors>
                   kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400 />
-+1 (302) 464-0950;
++1 (302) 464-0950";
 
                 <Mail className="w-5 h-5 mr-2 text-cyan-400 />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors>
-                  kleber@ziontechgroup.com;
+                  kleber@ziontechgroup.com";
 
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400 />
 
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-  )};
+  )}">
 
-export default SmartAnalyticsPage;
+export default SmartAnalyticsPage";

@@ -1,23 +1,19 @@
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method not allowed });
+    return res.status(405).json({ error: 'Method not allowed })';
 
 export default async function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
 
-  r: 'Method not allowed' })}
-
-;
+  r: 'Method not allowed' })};
 
 const _state = readState();;
 
   if (!state.config.optIn || state.config.paused) {/* TODO: Fix JSX expression */}
 
-  r: 'Sync disabled for this instance' })}
-
-;
+  r: 'Sync disabled for this instance' })};
 
 const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/* TODO: Fix JSX expression */}
 
@@ -32,7 +28,7 @@ const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/*
 
   //   const version = nextVersionFor(state, txId);;
 
-  const event = {;;
+  const event = {
 
     eventId: uuidv4()
     type: 'token_transfer as const;
@@ -66,9 +62,9 @@ const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/*
   e: false };
 
   const,
-  headers: Record<string, string> = {};
+  headers: Record<string, string> = {}';
 
-  //   const sig = signPayload(body);;
+  //   const sig = signPayload(body)';';
 
   if (sig) headers['x-zion-signature] = sig;
 

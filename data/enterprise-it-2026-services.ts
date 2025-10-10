@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EnterpriseIt2026Service {;,
+export interface EnterpriseIt2026Service {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const enterpriseIT2026 Services: EnterpriseIt2026 Service[] = [,
     id: "2026-enterprise-it", name: "2026 Enterprise IT Solutions",
     tagline: "Future-ready enterprise IT", price: '$399/month',
     description: 'Comprehensive enterprise IT solutions designed for 2026 and beyond.',
-    features: [;
+    features: [
       "Enterprise architecture"
       "Future-ready solutions"
       "Scalable infrastructure"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Comprehensive enterprise IT solutions designed for 2026 and beyond.",
     feature,
-  s: [;"
+  s: ["
       "Enterprise architecture""
       "Future-ready solutions""
       "Scalable infrastructure""

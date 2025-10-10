@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
 export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
 
@@ -41,9 +41,9 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
 
   color: string;
 
-  popular: boolean;
+  popular: boolean';
 
-  launchDate: string;
+  launchDate: string';
 
   customers: number';
 
@@ -58,13 +58,13 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     description: 'Advanced multi-cloud platform that provides unified management, cost optimization, and seamless orchestration across AWS, Azure, Google Cloud, and other cloud providers.,
     category: 'Cloud Management,
     pricing:
-        pricing: unknown;
+        pricing: unknown';
 
       starter: '$399/month,
       professional: '$999/month,
       enterprise: '$2,999/month,
       currency: 'USD,
-      trialDays: 30;
+      trialDays: 30';
 
       setupTime: '1-2 weeks,
   keyFeature,
@@ -119,13 +119,13 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
   r: boolean;
 
   launchDat,
-  e: string;
+  e: string';
 
   customer,
-  s: number;
+  s: number';
 
   ratin,
-  g: number;
+  g: number';
 
   review,
   s: number}
@@ -228,9 +228,9 @@ export const,
 
     launchDate: '2024-12-01,
     customers:
-        customers: 110;
+        customers: 110';
 
-    rating: 4.8;
+    rating: 4.8';
 
     reviews: 167},
     id: 'intelligent-devops-automation-suite,
@@ -239,13 +239,13 @@ export const,
     description: 'Comprehensive DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment processes for maximum efficiency and reliability.,
     category: 'DevOps Automation,
     pricing:
-        pricing: unknown;
+        pricing: unknown';
 
       starter: '$299/month,
       professional: '$799/month,
       enterprise: '$2,499/month,
       currency: 'USD,
-      trialDays: 30;
+      trialDays: 30';
 
       setupTime: '1-2 weeks,
     integration,
@@ -367,9 +367,9 @@ export const,
 
     launchDate: '2024-12-01,
     customers:
-        customers: 95;
+        customers: 95';
 
-    rating: 4.7;
+    rating: 4.7';
 
     reviews: 145},
     id: 'enterprise-kubernetes-management-platform,
@@ -377,13 +377,13 @@ export const,
     tagline: 'Enterprise-grade Kubernetes management with advanced monitoring and automation,
     description: 'Comprehensive Kubernetes management platform that provides advanced monitoring, security, automation, and governance for enterprise containerized applications.,
     category: 'Kubernetes Management,
-    pricing: unknown;
+    pricing: unknown';
 
       starter: '$599/month,
       professional: '$1,499/month,
       enterprise: '$3,999/month,
       currency: 'USD,
-      trialDays: 30;
+      trialDays: 30';
 
       setupTime: '2-3 weeks,
     integration,
@@ -505,9 +505,9 @@ export const,
 
     launchDate: '2024-11-15,
     customers:
-        customers: 75;
+        customers: 75';
 
-    rating: 4.8;
+    rating: 4.8';
 
     reviews: 112},
     id: 'intelligent-infrastructure-monitoring,
@@ -516,13 +516,13 @@ export const,
     description: 'Advanced infrastructure monitoring platform that uses AI to predict issues, optimize performance, and provide real-time insights into your entire technology stack.,
     category: 'Infrastructure Monitoring,
     pricing:
-        pricing: unknown;
+        pricing: unknown';
 
       starter: '$199/month,
       professional: '$499/month,
       enterprise: '$1,499/month,
       currency: 'USD,
-      trialDays: 30;
+      trialDays: 30';
 
       setupTime: '1 week,
     integration,
@@ -644,9 +644,9 @@ export const,
 
     launchDate: '2024-12-01,
     customers:
-        customers: 160;
+        customers: 160';
 
-    rating: 4.8;
+    rating: 4.8';
 
     reviews: 234},
     id: 'cloud-security-posture-management,
@@ -654,13 +654,13 @@ export const,
     tagline: 'Comprehensive cloud security management with automated compliance and threat detection,
     description: 'Advanced cloud security platform that provides continuous monitoring, automated compliance checks, and proactive threat detection across all cloud environments.,
     category: 'Cloud Security,
-    pricing: unknown;
+    pricing: unknown';
 
       starter: '$499/month,
       professional: '$1,299/month,
       enterprise: '$3,499/month,
       currency: 'USD,
-      trialDays: 30;
+      trialDays: 30';
 
       setupTime: '2-3 weeks,
     integration,
@@ -782,11 +782,11 @@ export const,
 
     launchDate: '2024-11-01,
     customers:
-        customers: 85;
+        customers: 85';
 
-    rating: 4.9;
+    rating: 4.9';
 
-    reviews: 123;
+    reviews: 123';
 
     integration,
   s: ['AWS, Azure, GCP, Kubernetes, Docker, Security tools, SIEM systems, REST APIs],
@@ -844,9 +844,9 @@ export interface CloudDevOpsService,
   n: string; colo,
   r: string; popula,
   r: boolean; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
+  e: string'; customer,
+  s: number'; ratin,
+  g: number'; review,
   s: number} export const,
   advancedCloudDevOpsServices2025: CloudDevOpsService[] = [ i,
   d: 'multi-cloud-orchestration-platform', nam,
@@ -1023,4 +1023,4 @@ export interface CloudDevOpsService,
   e: '2024-11-01, customer,
   s: 85, ratin,
   g: 4.9, review,
-  s: 123 } ];
+  s: 123 } ]';

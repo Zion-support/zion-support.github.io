@@ -1,34 +1,34 @@
 #!/usr/bin/env node
 
-import https from 'https;
+import https from 'https';
 
-import http from 'http;
+import http from 'http';
 
-import { JSDOM } from 'jsdom;
+import { JSDOM } from 'jsdom';
 
-import fs from 'fs;
+import fs from 'fs';
 
-// Configuration;
+// Configuration';
 
-const BASE_URL = 'https: //ziontechgroup.com;;
+const BASE_URL = 'https: //ziontechgroup.com';
 
-const MAX_DEPTH = 3;;
+const MAX_DEPTH = 3';
 
-const TIMEOUT = 10000;;
+const TIMEOUT = 10000';
 
-const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0);;
+const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0);
 
 // Track visited URLs and results;
 
-const visitedUrls = new Set();;
+const visitedUrls = new Set();
 
-const brokenLinks = [];;
+const brokenLinks = [];
 
-const missingPages = [];;
+const missingPages = [];
 
-const workingLinks = [];;
+const workingLinks = [];
 
-const analysisResults = {;;
+const analysisResults = {
 
   totalLinks: 0;
 
@@ -38,22 +38,22 @@ const analysisResults = {;;
 
   missingPages: 0;
 
-  errors: []};
+  errors: []}';
 
-// Helper function to make HTTP requests;
+// Helper function to make HTTP requests';
 
 function makeRequest(url, options = {}) {
-  return new Promise((resolve, reject) => {;
+  return new Promise((resolve, reject) => {
 
-const urlObj = new URL(url);;
+const urlObj = new URL(url)';
 
-    const isHttps = urlObj.protocol === 'https: ;;
+    const isHttps = urlObj.protocol === 'https: ;
 
-    const client = isHttps ? https : http;;
+    const client = isHttps ? https : http;
 
     ;
 
-const requestOptions = {;;
+const requestOptions = {
 
       hostname: urlObj.hostname;
 
@@ -74,9 +74,9 @@ const requestOptions = {;;
 
 ;
 
-const req = client.request(requestOptions, (res) => {;;
+const req = client.request(requestOptions, (res) => {
 
-let data = ';;
+let data = '';
 
       res.on('data', (chunk) => {
         data += chunk});
@@ -102,28 +102,28 @@ let data = ';;
 
 // Extract links from HTML content;
 
-function extractLinks(html, baseUrl) {;
+function extractLinks(html, baseUrl) {
 
-const dom = new JSDOM(html);;
+const dom = new JSDOM(html);
 
-  const document = dom.window.document;;
+  const document = dom.window.document;
 
-  const links = [];;
+  const links = [];
 
   // Extract all anchor tags;
 
-  const anchorTags = document.querySelectorAll('a[href]);;
+  const anchorTags = document.querySelectorAll('a[href]);
 
   anchorTags.forEach(anchor => {);
 
-const href = anchor.getAttribute('href);;
+const href = anchor.getAttribute('href);
 
     if (href) {
-      try {;
+      try {
 
-const absoluteUrl = new URL(href, baseUrl).href;;
+const absoluteUrl = new URL(href, baseUrl).href;
 
-        const linkText = anchor.textContent.trim();;
+        const linkText = anchor.textContent.trim();
 
         links.push({)
           url: absoluteUrl),
@@ -138,16 +138,16 @@ const absoluteUrl = new URL(href, baseUrl).href;;
 
   // Extract form actions;
 
-  const forms = document.querySelectorAll('form[action]);;
+  const forms = document.querySelectorAll('form[action]);
 
   forms.forEach(form => {);
 
-const action = form.getAttribute('action);;
+const action = form.getAttribute('action);
 
     if (action) {
-      try {;
+      try {
 
-const absoluteUrl = new URL(action, baseUrl).href;;
+const absoluteUrl = new URL(action, baseUrl).href;
 
         links.push({)
           url: absoluteUrl),
@@ -165,11 +165,11 @@ const absoluteUrl = new URL(action, baseUrl).href;;
 // Check if URL is internal;
 
 function isInternalUrl(url, baseUrl) {
-  try {;
+  try {
 
-const urlObj = new URL(url);;
+const urlObj = new URL(url);
 
-    const baseObj = new URL(baseUrl);;
+    const baseObj = new URL(baseUrl);
 
     return urlObj.hostname === baseObj.hostname} catch {
     return false}
@@ -187,9 +187,9 @@ async function analyzeUrl(url, depth = 0) {
   // console.log removed for production
 `);
 
-  try {;
+  try {
 
-const response = await makeRequest(url);;
+const response = await makeRequest(url);
 
     analysisResults.totalLinks++;
 
@@ -203,9 +203,9 @@ const response = await makeRequest(url);;
 
       // Extract and analyze links from this page;
 
-      if (response.headers['content-type'] && response.headers['content-type'].includes('text/html)) {;
+      if (response.headers['content-type'] && response.headers['content-type'].includes('text/html)) {
 
-const links = extractLinks(response.body, url);;
+const links = extractLinks(response.body, url);
 
         for (const link of links) {
           if (isInternalUrl(link.url, BASE_URL)) {
@@ -220,11 +220,11 @@ const links = extractLinks(response.body, url);;
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'Page not found});
+        reason: 'Page not found})';
 
       analysisResults.brokenLinks++} else {
       brokenLinks.push({)
-        url: url;)
+        url: url';)
         statusCode: response.statusCode),
         depth: depth),
         reason: 'HTTP error});
@@ -261,7 +261,7 @@ try {
 
     // Generate report;
 
-    const report = {;;
+    const report = {
 
       timestamp: new Date().toISOString()
       baseUrl: BASE_URL;
@@ -272,15 +272,15 @@ try {
 
       brokenLinks: brokenLinks;
 
-      missingPages: missingPages;
+      missingPages: missingPages';
 
-      errors: analysisResults.errors};
+      errors: analysisResults.errors}';
 
-    // Save detailed report;
+    // Save detailed report'`;
 
-    fs.writeFileSync('website-analysis-report.json, JSON.stringify(report, null, 2));
+    fs.writeFileSync('website-analysis-report.json, JSON.stringify(report, null, 2))``;
 
-    // Generate summary report;
+    // Generate summary report```;
 
     // console.log removed for production
 // console.log removed for production
@@ -301,7 +301,7 @@ analysisResults.errors.forEach(error => {)
 
     // Generate recommendations;
 
-    const recommendations = [];;
+    const recommendations = [];
 
     if (brokenLinks.length > 0) {
       recommendations.push('Fix broken links by updating URLs or creating missing pages')}
@@ -326,7 +326,7 @@ recommendations.forEach((rec, index) => {
 
 analyzeWebsite();
 
-class WebsiteAnalyzer {;
+class WebsiteAnalyzer {
 
 constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -348,10 +348,10 @@ constructor(baseUrl) {
   async analyze() {
     // console.log removed for production
 // console.log removed for production
-);
+)`;
 
     try {
-      await this.crawlWebsite(this.baseUrl, 0);
+      await this.crawlWebsite(this.baseUrl, 0)``;
 
       this.generateReport()} catch (error) {
       // console.error removed for production
@@ -363,20 +363,20 @@ constructor(baseUrl) {
     if (depth > this.maxDepth || this.visitedUrls.has(url)) {
       return}
 
-    this.visitedUrls.add(url);
+    this.visitedUrls.add(url)```;
 
     // console.log removed for production
 `);
 
-    try {;
+    try {
 
-const content = await this.fetchPage(url);;
+const content = await this.fetchPage(url);
 
-      if (content) {;
+      if (content) {
 
-const dom = new JSDOM(content);;
+const dom = new JSDOM(content);
 
-        const document = dom.window.document;;
+        const document = dom.window.document;
 
         // Store page content
         this.pages.set(url, {
@@ -387,7 +387,7 @@ const dom = new JSDOM(content);;
 
         // Extract all links;
 
-const links = this.extractLinks(document, url);;
+const links = this.extractLinks(document, url);
 
         this.pages.get(url).links = links;
 
@@ -409,11 +409,11 @@ this.brokenLinks.push({ url, error: err.message })}
   }
 
   async fetchPage(url) {
-    return new Promise((resolve, reject) => {;
+    return new Promise((resolve, reject) => {
 
-const urlObj = new URL(url);;
+const urlObj = new URL(url);
 
-      const options = {;;
+      const options = {
 
         hostname: urlObj.hostname,
         port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
@@ -424,13 +424,13 @@ const urlObj = new URL(url);;
 
 ;
 
-const protocol = urlObj.protocol === 'https: ? https : http;;
+const protocol = urlObj.protocol === 'https: ? https : http;
 
       ;
 
-const req = protocol.request(options, (res) => {;;
+const req = protocol.request(options, (res) => {
 
-let data = ';;
+let data = '';
 
         res.on('data', (chunk) => {
           data += chunk});
@@ -446,19 +446,19 @@ let data = ';;
 
       req.end()})}
 
-  extractLinks(document, baseUrl) {;
+  extractLinks(document, baseUrl) {
 
-const links = [];;
+const links = [];
 
-    const linkElements = document.querySelectorAll('a[href]);;
+    const linkElements = document.querySelectorAll('a[href]);
 
-    linkElements.forEach(link => {;
+    linkElements.forEach(link => {
 
-const href = link.getAttribute('href);;
+const href = link.getAttribute('href);
 
-      if (href) {;
+      if (href) {
 
-const absoluteUrl = this.resolveUrl(href, baseUrl);;
+const absoluteUrl = this.resolveUrl(href, baseUrl);
 
         links.push({
           href: absoluteUrl,
@@ -478,11 +478,11 @@ const absoluteUrl = this.resolveUrl(href, baseUrl);;
   }
 
   isInternalLink(url) {
-    try {;
+    try {
 
-const urlObj = new URL(url);;
+const urlObj = new URL(url);
 
-      const baseUrlObj = new URL(this.baseUrl);;
+      const baseUrlObj = new URL(this.baseUrl);
 
       return urlObj.hostname === baseUrlObj.hostname} catch {
       return false}
@@ -513,7 +513,7 @@ this.pages.forEach((page, url) => {
     // Save detailed report
     // Save report to file;
 
-const report = {;;
+const report = {
 
       baseUrl: this.baseUrl,
       analyzedAt: new Date().toISOString(),
@@ -534,19 +534,19 @@ const report = {;;
 
 }
 
-// Run the analysis;
+// Run the analysis`;
 
-const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com);;
+const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com)``;
 
-analyzer.analyze().catch(console.error);
+analyzer.analyze().catch(console.error)```;
 
 // Main execution
-if (import.meta.url === `file://${process.argv[1]}`) {;
+if (import.meta.url === `file://${process.argv[1]}`) {
 
-const baseUrl = process.argv[2] || 'https://ziontechgroup.com;;
+const baseUrl = process.argv[2] || 'https://ziontechgroup.com`;
 
-  const analyzer = new WebsiteAnalyzer(baseUrl);;
+  const analyzer = new WebsiteAnalyzer(baseUrl)``;
 
   analyzer.analyze()}
 
-export default WebsiteAnalyzer;
+export default WebsiteAnalyzer```;

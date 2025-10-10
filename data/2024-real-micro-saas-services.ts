@@ -1,4 +1,4 @@
-export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024,;;
+export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024,';';
 
     path: '/services/real-micro-saas-platform-2024',
     description: 'Comprehensive micro-SaaS development and management platform',
@@ -69,7 +69,7 @@ export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */};;
 
 ];
 
-export const realMicroSaasCategories2024 = [;;
+export const realMicroSaasCategories2024 = [
 
   'Platform Development',
   'Analytics & Insights',

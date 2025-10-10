@@ -3,15 +3,15 @@ import React, { useState, useEffect, useRef } from 'react;
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from lucide-react;
 
 interface SearchResult {
-  id: string;
+  id: string';
 
-  title: string;
+  title: string';
 
-  description: string;
+  description: string';
 
-  url: string;
+  url: string';
 
-  category: string;
+  category: string';
 
   type: 'page' | 'service' | 'blog' | documentation;
 
@@ -22,9 +22,7 @@ interface SearchResult {
 interface SearchModalProps {
   isOpen: boolean;
 
-  onClose: () => void}
-
-;
+  onClose: () => void};
 
 const mockSearchResults: SearchResult[] = [
   {
@@ -80,9 +78,9 @@ const mockSearchResults: SearchResult[] = [
 
 ];
 
-;
+';
 
-const recentSearches = [;;
+const recentSearches = [';';
 
   'AI Analytics,
   'Workflow Automation,
@@ -91,7 +89,7 @@ const recentSearches = [;;
 
 ;
 
-const popularSearches = [;;
+const popularSearches = [
 
   'AI Services,
   'Quantum Computing,
@@ -124,9 +122,9 @@ const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLIn
 
   }, [isOpen]);
 
-  useEffect(() => {;
+  useEffect(() => {
 
-const handleKeyDown = (e: KeyboardEvent) => {;;
+const handleKeyDown = (e: KeyboardEvent) => {
 
       if (!isOpen) return;
 
@@ -152,7 +150,7 @@ const handleKeyDown = (e: KeyboardEvent) => {;;
 
 ;
 
-const searchResults = async (searchQuery: string) => {;;
+const searchResults = async (searchQuery: string) => {
 
     if (!searchQuery.trim()) {
       setResults([]);
@@ -179,7 +177,7 @@ const filteredResults = mockSearchResults.filter(result =>;;
 
     // Sort by popularity and relevance;
 
-const sortedResults = filteredResults.sort((a, b) => {;;
+const sortedResults = filteredResults.sort((a, b) => {
 
 const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;;
 
@@ -195,7 +193,7 @@ const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2
 
 ;
 
-const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;;
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
 return (
 
@@ -210,7 +208,7 @@ return (
 
 ;
 
-const handleResultClick = (result: SearchResult) => {;;
+const handleResultClick = (result: SearchResult) => {
 
     window.location.href = result.url;
 
@@ -218,7 +216,7 @@ const handleResultClick = (result: SearchResult) => {;;
 
 ;
 
-const handleSuggestionClick = (suggestion: string) => {;;
+const handleSuggestionClick = (suggestion: string) => {
 
     setQuery(suggestion);
 
@@ -226,7 +224,7 @@ const handleSuggestionClick = (suggestion: string) => {;;
 
 ;
 
-const getCategoryIcon = (category: string) => {;;
+const getCategoryIcon = (category: string) => {
 
     switch (category) {
       case 'AI Services:
@@ -249,9 +247,9 @@ const getCategoryIcon = (category: string) => {;;
 
   };
 
-;
+';
 
-const getTypeColor = (type: string) => {;;
+const getTypeColor = (type: string) => {
 
     switch (type) {
       case 'service:
@@ -449,6 +447,6 @@ const getTypeColor = (type: string) => {;;
         </div>
       </div>
     </div>
-  )};
+  )}">
 
-export default EnhancedSearchModal;
+export default EnhancedSearchModal"```';

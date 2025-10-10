@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
     // Broken image scanner runner simulation;
 
-    const result = {;;
+    const result = {;
 
       statusCode: 200;
 
@@ -24,7 +24,7 @@ function: 'broken-image-scanner-runner',
           scannerStatus: 'running',
           lastRun: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */};
 
         'Access-Control-Allow-Origin': '*'}
 

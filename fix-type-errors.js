@@ -1,10 +1,10 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
-// List of files that need type error fixes;
+// List of files that need type error fixes';
 
-const filesToFix = [;;
+const filesToFix = [';';
 
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
   '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
@@ -23,7 +23,7 @@ function processFile(filePath) {
       // Add Link import if not present;
 
       if (!content.includes("import { Link } from 'react-router-dom';")) {
-        content = content.replace(/import React from 'react;/);
+        content = content.replace(/import React from 'react';/)';
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
@@ -35,7 +35,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
       // Replace <a> tags with to prop to <Link> components;
 
-      content = content.replace(/<a\s+to=/g, '<Link to=);
+      content = content.replace(/<a\s+to=/g, '<Link to=)>
 
       content = content.replace(/<\/a>/g, '</Link>);
 

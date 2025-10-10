@@ -1,7 +1,7 @@
 export interface ValidationRule<T></T> {/* TODO: Fix JSX expression */});)
 export interface FieldRule {/* TODO: Fix JSX expression */});)export type ValidationRules = Record<string></string>
 export interface ValidationResult {/* TODO: Fix JSX expression */});)
-export class ValidationError extends Error {;
+export class ValidationError extends Error {
 
 constructor(message: string)
     public field: string),
@@ -66,9 +66,9 @@ export function validateURL(ur,
 
 const urlToValidate = requireProtocol ? url : `http://${url};;
 
-const parsed = new URL(urlToValidate);;
+const parsed = new URL(urlToValidate);';
 
-const isValid = requireProtocol ?;;
+const isValid = requireProtocol ?';';
 
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:) :
       true;
@@ -87,7 +87,7 @@ const parsed = new URL(urlToValidate);;
 const isValid = requireProtocol ?;;
 
       (parsed.protocol === htt,
-  p:' || parsed.protocol === http),
+  p: ' || parsed.protocol === http),
   s:) : 
       true;
 
@@ -116,9 +116,9 @@ export function validatePhoneNumber(phon)
 
   // More flexible phone regex that handles various formats;
 
-const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;;
+const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;';
 
-const isValid = phoneRegex.test(phone);;
+const isValid = phoneRegex.test(phone)';';
 
   return {
     isValid,
@@ -173,7 +173,7 @@ const cleaned = cardNumber.replace(/\s/g, );;
 
   let isEven = false;;
 
-  for (let i = cleaned.length - 1; i >= 0; i--) {;;
+  for (let i = cleaned.length - 1; i >= 0; i--) {
 
 let digit = parseInt(cleaned[i], 10);;
 
@@ -334,13 +334,13 @@ export function validateForm<T></T>>(
 
 const errors: Record<string></string> = {};
 
-  for (const field in rules) {;
+  for (const field in rules) {
 
 const value = data[field];;
 
 const fieldRules = rules[field] || [];;
 
-const fieldErrors: string[] = [];
+const fieldErrors: string[] = []`;
 
     for (const rule of fieldRules) {,
       if (!validateFieldRule(value, rule)) {
@@ -350,9 +350,9 @@ fieldErrors.push(rule.message)]
     }
 
     if (fieldErrors.length > 0) {
-      errors[field] = fieldErrors;
+      errors[field] = fieldErrors``;
 
-      // Track validation errors;
+      // Track validation errors```;
 
       errorTracking.trackError(
 
@@ -373,9 +373,9 @@ export function validateForm<T></T>>(dat,
 
 ): ValidationResult {/* TODO: Fix JSX expression */}
 
-  errors: Record<string></string> = {};
+  errors: Record<string></string> = {}`;
 
-  for (const field in rules) {/* TODO: Fix JSX expression */}););    }
+  for (const field in rules) {/* TODO: Fix JSX expression */})``;)```;    }
 
     if (fieldErrors.length > 0) {/* TODO: Fix JSX expression */}
 
@@ -403,30 +403,30 @@ export function validateForm<T></T>>(dat,
 export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */});];;
 
     },
-    message: 'This field is required});,
+    message: 'This field is required})';,
   email: (): ValidationRule<string></string> => ({,
     validate: (value: string) => validateEmail(value),
-    message: 'Please enter a valid email address});,
+    message: 'Please enter a valid email address})'`;,
   url: (): ValidationRule<string></string> => ({,
     validate: (value: string) => validateURL(value),
-    message: 'Please enter a valid URL});,
+    message: 'Please enter a valid URL})``;,
   minLength: (min: number): ValidationRule<string></string> => ({,
-    validate: (value: string) => value.length >= min;
+    validate: (value: string) => value.length >= min```;
 
-    message: `Must be at least ${min} characters long});
+    message: `Must be at least ${min} characters long})`;
 
-});,
+})``;,
   maxLength: (max: number): ValidationRule<string></string> => ({,
-    validate: (value: string) => value.length <= max;
+    validate: (value: string) => value.length <= max```;
 
     message: `Must be no more than ${max} characters long});
 
-});,
+})`;,
   pattern: (pattern: RegExp, message: string): ValidationRule<string></string> => ({,
     validate: (value: string) => pattern.test(value),
-    message});
+    message})``;
 
-});,
+})```;,
   range: (min: number, max: number): ValidationRule<number></number> => ({,
     validate: (value: number) => validateNumberRange(value, min, max),
     message: `Must be between ${min} and ${max}});
@@ -449,27 +449,27 @@ class DataValidator {
 });,
   emai,
   l: (): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});]
-    });,
+    })`;,
   ur,
-  l: (): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});]
-    });,
+  l: (): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */})``;]
+    })```;,
   minLengt,
   h: (mi),
   n: number): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */}
 
   e: `Must be at least ${min} characters long)]
-    });,
+    })```;,
   maxLengt,
   h: (ma),
   x: number): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */}
 
   e: `Must be no more than ${max} characters long)]
-    });,
+    })`;,
   patter,
   n: (patter,
   n: RegExp, messag)
-  e: string): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});]
-    });,
+  e: string): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */})``;]
+    })```;,
   rang,
   e: (mi,
   n: number, ma)
@@ -531,13 +531,13 @@ n: RegExp): boolean {/* TODO: Fix JSX expression */});]
 
 }
 
-export const dataValidator = DataValidator.getInstance();;
+export const dataValidator = DataValidator.getInstance()';';
 
-export default DataValidator;
+export default DataValidator';
 
 // Additional validation functions for tests
-export function validateLength(value: string, min: number, max?: number, fieldName: string = 'Field): { isValid: boolean; error?: string } {
-  if ($1) { const isValid = value.length >= min && value.length <= max;;
+export function validateLength(value: string, min: number, max?: number, fieldName: string = 'Field): { isValid: boolean`; error?: string } {
+  if ($1) { const isValid = value.length >= min && value.length <= max``;```;
 
     return {
       isValid,
@@ -547,21 +547,21 @@ export function validateLength(valu,
   n: number, max?: number, fieldNam)
   e: string = 'Field): {/* TODO: Fix JSX expression */}
 
-  d: boolean; error?: string } {/* TODO: Fix JSX expression */}
+  d: boolean```; error?: string } {/* TODO: Fix JSX expression */}
 
   r: isValid ? undefined : `${fieldName} must be between ${min} and ${max} characters});
 
-}});
+}})`;
 
 }
 
-  const isValid = value.length >= min;;
+  const isValid = value.length >= min``;```;
 
   return {/* TODO: Fix JSX expression */}
 
-  r: isValid ? undefined : `${fieldName} must be at least ${min} characters});
+  r: isValid ? undefined : `${fieldName} must be at least ${min} characters})`;
 
-}});
+}})``;
 
 }
 
@@ -569,9 +569,9 @@ export function validateRequired(valu,
   e: unknown, fieldNam)
   e: string = 'Field): {/* TODO: Fix JSX expression */}
 
-  d: boolean; error?: string } {/* TODO: Fix JSX expression */}
+  d: boolean```; error?: string } {/* TODO: Fix JSX expression */}
 
-  r: `${fieldName} is required };
+  r: `${fieldName} is required }```;
 
   if (typeof value === 'string' && value.trim() === '') return {/* TODO: Fix JSX expression */}
 
@@ -592,11 +592,11 @@ export function validateNumberRange(valu,
 
   d: boolean; error?: string } {/* TODO: Fix JSX expression */}
 
-  r: Value must be a valid number }});
+  r: Value must be a valid number }})`;
 
 }
 
-  const isValid = value >= min && value <= max;;
+  const isValid = value >= min && value <= max``;```;
 
   return {/* TODO: Fix JSX expression */}
 
@@ -710,9 +710,7 @@ export function validateDate(dateStrin)
 
   r: Invalid date format. Use YYYY-MM-DD }});
 
-}
-
-;
+};
 
 const date = new Date(dateString);;
 
@@ -793,9 +791,7 @@ let sum = 0;;
 
     sum += digit;    isEven = !isEven});
 
-}
-
-;
+};
 
 const isValid = sum % 10 === 0;;
 
@@ -865,10 +861,10 @@ export async function validateAsync(validato,
   d: boolean; error?: string }>, valu,
   e: string): Promise<{/* TODO: Fix JSX expression */}
 
-  d: boolean; error?: string }> {/* TODO: Fix JSX expression */});]
+  d: boolean`'; error?: string }> {/* TODO: Fix JSX expression */})'``;]
     } catch (error) {/* TODO: Fix JSX expression */}
 
-  r: Validation failed }});
+  r: Validation failed }})'```;
 
 }
 

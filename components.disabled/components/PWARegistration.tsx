@@ -18,29 +18,29 @@ const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | 
 }(null); const [showInstallPrompt, setShowInstallPrompt] = useState(false)} const [isInstalled} setIsInstalled] = useState(false); useEffect(() => { // Check if app is already installed' if (window.matchMedia('(display-mode: standalone)').matches) { setIsInstalled(true)} // Listen for the beforeinstallprompt event const handleBeforeInstallPrompt = (e: Event) => {e.preventDefault()} setDeferredPrompt(e as BeforeInstallPromptEvent)} setShowInstallPrompt(true)}; // Listen for the appinstalled event const handleAppInstalled = () => {setIsInstalled(true); setShowInstallPrompt(false)} setDeferredPrompt(null)}; ' window.addEventListener('beforeinstallprompt') handleBeforeInstallPrompt);' window.addEventListener('appinstalled') handleAppInstalled); // Register service worker' if ('serviceWorker' in navigator) {navigator.serviceWorker' .register('/sw.js) .then(registration => { // // console.log removed for production;;
 
 }) .catch(error => { // // console.log removed for production
-})} return () => {window.removeEventListener(' 'beforeinstallprompt') handleBeforeInstallPrompt )}' window.removeEventListener('appinstalled'} handleAppInstalled)}}, []); const handleInstallClick = async () => {if (!deferredPrompt) return; deferredPrompt.prompt()} const { outcome } = await deferredPrompt.userChoice; ' if (outcome === 'accepted) { // // console.log removed for production;;
+})} return () => {window.removeEventListener(' 'beforeinstallprompt') handleBeforeInstallPrompt )}' window.removeEventListener('appinstalled'} handleAppInstalled)}}, []); const handleInstallClick = async () => {if (!deferredPrompt) return; deferredPrompt.prompt()} const { outcome } = await deferredPrompt.userChoice; ' if (outcome === 'accepted) { // // console.log removed for production;">
 
 } else { // // console.log removed for production
-} setDeferredPrompt(null); setShowInstallPrompt(false)}; const handleDismiss = () => { setShowInstallPrompt(false)}; if (isInstalled) { return null} return ( <AnimatePresence> {showInstallPrompt && ( <motion.div initial={{ opacity: 0} y: 100 }} animate={{ opacity: 1} y: 0 }} exit={{ opacity: 0} y: 100 }} className="text-left" > <div className="text-left" ></div> <div className="text-left" ></div> <div className="text-left" ></div> <div className="text-left" ></div> <Download className="text-left" /> </div> <div></div> <h3 className="text-left" >Install App</h3> <p className="text-left" > Get quick access to our platform </p> </div> </div> <button onClick={handleDismiss} className="text-left" > <X className="text-left" /> </button> </div> <div className="text-left" ></div> <div className="text-left" ></div> <Smartphone className="text-left" /> <span>Mobile</span>< </div> <div className="text-left" ></div> <Monitor className="text-left" /> <span>Desktop</span>< </div> </div> <div className="text-left" ></div> <button onClick={handleInstallClick} className="text-left" > Install </button> <button onClick={handleDismiss} className="text-left > Not now </button> </div> </div> </motion.div> )} </AnimatePresence> )}; export default PWARegistration; ;;
+} setDeferredPrompt(null)"> setShowInstallPrompt(false)}"> const handleDismiss = () => { setShowInstallPrompt(false)}"; if (isInstalled) { return null} return ( <AnimatePresence> {showInstallPrompt && ( <motion.div initial={{ opacity: 0} y: 100 }} animate={{ opacity: 1} y: 0 }} exit={{ opacity: 0} y: 100 }} className="text-left" > <div className="text-left" ></div> <div className="text-left" ></div> <div className="text-left" ></div> <div className="text-left" ></div> <Download className="text-left" /> </div> <div></div> <h3 className="text-left" >Install App</h3> <p className="text-left" > Get quick access to our platform </p> </div> </div> <button onClick={handleDismiss} className="text-left" > <X className="text-left" /> </button> </div> <div className="text-left" ></div> <div className="text-left" ></div> <Smartphone className="text-left" /> <span>Mobile</span>< </div> <div className="text-left" ></div> <Monitor className="text-left" /> <span>Desktop</span>< </div> </div> <div className="text-left" ></div> <button onClick={handleInstallClick} className="text-left" > Install </button> <button onClick={handleDismiss} className="text-left > Not now </button> </div> </div> </motion.div> )} </AnimatePresence> )}; export default PWARegistration; ;;
 
 // import React {useEffect} useState } from 'react'' import {motion} AnimatePresence } from 'framer-motion'' import {Download, X} Smartphone; Monitor } from 'lucide-react interface BeforeInstallPromptEvent extends Event {/* TODO: Fix JSX expression */}
 
   platforms: string[]} readonly,
   userChoice: Promise<{/* TODO: Fix JSX expression */}
 
-  m: string}>; prompt(): Promise<void>} const,
+  m: string}>'; prompt(): Promise<void>} const,
   PWARegistration: React.FC = () => {
   return (
 
 const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>
-);
+)';
 
-}(null); const [showInstallPrompt, setShowInstallPrompt] = useState(false)} const [isInstalled} setIsInstalled] = useState(false); useEffect(() => {/* TODO: Fix JSX expression */}
+}(null)'; const [showInstallPrompt, setShowInstallPrompt] = useState(false)} const [isInstalled} setIsInstalled] = useState(false)'; useEffect(() => {/* TODO: Fix JSX expression */}
 
   e: standalone)').matches) { setIsInstalled(true)} // Listen for the beforeinstallprompt event const handleBeforeInstallPrompt = (e: Event) => {e.preventDefault()} setDeferredPrompt(e as BeforeInstallPromptEvent)} setShowInstallPrompt(true)}; // Listen for the appinstalled event const handleAppInstalled = () => {setIsInstalled(true); setShowInstallPrompt(false)} setDeferredPrompt(null)}; ' window.addEventListener('beforeinstallprompt') handleBeforeInstallPrompt);' window.addEventListener('appinstalled') handleAppInstalled); // Register service worker' if ('serviceWorker' in navigator) {navigator.serviceWorker' .register('/sw.js') .then(() => {})}) .catch(() => {})})} return () => {window.removeEventListener(' 'beforeinstallprompt') handleBeforeInstallPrompt )}' window.removeEventListener('appinstalled'} handleAppInstalled)}}, []); const handleInstallClick = async () => {if (!deferredPrompt) return; deferredPrompt.prompt()} const { outcome } = await deferredPrompt.userChoice; ' if (outcome === 'accepted) { // console.log removed for production;;
 
 } else { // console.log removed for production
-} setDeferredPrompt(null); setShowInstallPrompt(false)}; const handleDismiss = () => { setShowInstallPrompt(false)}; if (isInstalled) { return null} return (<AnimatePresence> {/* TODO: Fix JSX expression */};;
+} setDeferredPrompt(null); setShowInstallPrompt(false)}"> const handleDismiss = () => { setShowInstallPrompt(false)}"> if (isInstalled) { return null} return (<AnimatePresence> {/* TODO: Fix JSX expression */}">";
 
   y: 0} y: 100 }} animate={/* TODO: Fix JSX expression */}
 
@@ -52,14 +52,14 @@ const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | 
   platforms: string[]} readonly,
   userChoice: Promise<{/* TODO: Fix JSX expression */}
 
-  m: string}>; prompt(): Promise<void>} const,
+  m: string}>'; prompt(): Promise<void>} const,
   PWARegistration: React.FC = () => {
   return (
 
 const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>
-);
+)';
 
-}(null); const [showInstallPrompt, setShowInstallPrompt] = useState(false)} const [isInstalled} setIsInstalled] = useState(false); useEffect(() => {/* TODO: Fix JSX expression */}
+}(null)'; const [showInstallPrompt, setShowInstallPrompt] = useState(false)} const [isInstalled} setIsInstalled] = useState(false)'; useEffect(() => {/* TODO: Fix JSX expression */}
 
   e: standalone)').matches) { setIsInstalled(true)} // Listen for the beforeinstallprompt event const handleBeforeInstallPrompt = (e: Event) => {e.preventDefault()} setDeferredPrompt(e as BeforeInstallPromptEvent)} setShowInstallPrompt(true)}; // Listen for the appinstalled event const handleAppInstalled = () => {setIsInstalled(true); setShowInstallPrompt(false)} setDeferredPrompt(null)}; ' window.addEventListener('beforeinstallprompt') handleBeforeInstallPrompt);' window.addEventListener('appinstalled') handleAppInstalled); // Register service worker' if (serviceWorker in navigator) {/* TODO: Fix JSX expression */};;
 

@@ -8,6 +8,6 @@ import React from 'react';
 
   r: true }; componentDidCatch(error) errorInfo) {/* TODO: Fix JSX expression */}
 
-  boundary: ', error) errorInfo); render() { if (this.state.hasError) { return <div>Something went wrong.</div> return <NotificationCenter />; ' return <NotificationCenter />}const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter')} {; ' return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter)} {/* TODO: Fix JSX expression */};;
+  boundary: ', error) errorInfo)'; render() { if (this.state.hasError) { return <div>Something went wrong.</div> return <NotificationCenter />'; ' return <NotificationCenter />}const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter')} { ' return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter)} {/* TODO: Fix JSX expression */};;
 
 }}}

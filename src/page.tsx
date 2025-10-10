@@ -1,6 +1,6 @@
-'use client;
+'use client';
 
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react;
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 
 import { 
   Phone, 
@@ -106,21 +106,21 @@ import {
   Analytics, 
   Reporting, 
   Dashboard 
-} from 'lucide-react;
+} from 'lucide-react';
 
-import Navigation from './components/Navigation;
+import Navigation from './components/Navigation';
 
-import Footer from './components/Footer;
+import Footer from './components/Footer';
 
-import PerformanceOptimizer from './components/PerformanceOptimizer;
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
-import SEOOptimizer from './components/SEOOptimizer;
+import SEOOptimizer from './components/SEOOptimizer';
 
-import AccessibilityEnhancer from './components/AccessibilityEnhancer;
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-import Analytics from './components/Analytics;
+import Analytics from './components/Analytics';
 
-import SecurityEnhancer from './components/SecurityEnhancer;
+import SecurityEnhancer from './components/SecurityEnhancer';
 
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations;
 
@@ -130,15 +130,15 @@ const ContentPromotionBanner = lazy(() => import(./components/ContentPromotionBa
 
 const ContentCarousel = lazy(() => import(./components/ContentCarousel));;
 
-const DynamicContentShowcase = lazy(() => import(./components/DynamicContentShowcase));;
+const DynamicContentShowcase = lazy(() => import(./components/DynamicContentShowcase));';
 
-const ContentStatistics = lazy(() => import(./components/ContentStatistics));;
+const ContentStatistics = lazy(() => import(./components/ContentStatistics))';';
 
-const ContentNewsletterSignup = lazy(() => import(./components/ContentNewsletterSignup));;
+const ContentNewsletterSignup = lazy(() => import(./components/ContentNewsletterSignup))';';
 
-// Preload critical components;
+// Preload critical components';
 
-const preloadComponents = () => {;;
+const preloadComponents = () => {';';
 
   if (typeof window !== 'undefined) {
     setTimeout(() => {
@@ -162,7 +162,7 @@ ServiceCardSkeleton.displayName = ServiceCardSkeleton;
 
 ;
 
-const HomePage: React.FC = () => {;
+const HomePage: React.FC = () => {
 
 const [isLoaded, setIsLoaded] = useState(false);
 
@@ -182,7 +182,7 @@ const [isLoaded, setIsLoaded] = useState(false);
 
   // Analytics tracking for phone clicks - optimized;
 
-const handlePhoneClick = useCallback(() => {;;
+const handlePhoneClick = useCallback(() => {
 
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event', 'phone_click, {
@@ -192,9 +192,9 @@ const handlePhoneClick = useCallback(() => {;;
 
   }, []);
 
-  // Enhanced Micro SAAS Services with real functionality and pricing;
+  // Enhanced Micro SAAS Services with real functionality and pricing';
 
-const microSAASServices = [;;
+const microSAASServices = [';';
 
     {
       title: 'AI Project Manager Pro,
@@ -407,9 +407,9 @@ const microSAASServices = [;;
 
   ];
 
-  // Enhanced AI Services with real capabilities and market pricing;
+  // Enhanced AI Services with real capabilities and market pricing';
 
-const aiServices = [;;
+const aiServices = [';';
 
     {
       title: 'Machine Learning Solutions,
@@ -510,9 +510,9 @@ const aiServices = [;;
 
   ];
 
-  // Enhanced IT Services with comprehensive capabilities;
+  // Enhanced IT Services with comprehensive capabilities';
 
-const itServices = [;;
+const itServices = [';';
 
     {
       title: 'Cloud Migration & Management,
@@ -611,11 +611,11 @@ const itServices = [;;
       contact: +1 302 464 0950
     }
 
-  ];
+  ]';
 
-  // Specialized Services;
+  // Specialized Services">
 
-const specializedServices = [;;
+const specializedServices = ['">'">
 
     {
       title: 'AI-Powered Business Intelligence,
@@ -690,7 +690,7 @@ const specializedServices = [;;
       contact: +1 302 464 0950
     }
 
-  ];
+  ]'";
 
   return (
 
@@ -1212,6 +1212,6 @@ const specializedServices = [;;
 
       <Footer />
     </div>
-  )};
+  )}">
 
-export default HomePage;
+export default HomePage"```;

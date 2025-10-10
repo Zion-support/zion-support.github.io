@@ -14,7 +14,7 @@ interface State {
 
   errorInfo?: ErrorInfo}
 
-class GlobalErrorBoundary extends Component<Props, State> {;
+class GlobalErrorBoundary extends Component<Props, State> {
 
 constructor(props: Props) {
     super(props);

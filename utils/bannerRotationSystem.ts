@@ -94,7 +94,7 @@ export const recordBannerImpression = (;;
 
   if (typeof window === undefined) return;
 
-  try {;
+  try {
 
 const _impressions = getStoredImpressions();;
 
@@ -140,7 +140,7 @@ export const getBannerImpressionCount = (bannerI,;;
  * Check if banner should be shown based on impression limits;
 
  */
-export const shouldShowBanner = (banner: BannerConfig): boolean => {;;
+export const shouldShowBanner = (banner: BannerConfig): boolean => {
 
 return (
 
@@ -165,7 +165,7 @@ export const shouldShowBanner = (banne);;
  * Calculate banner score for rotation;
 
  */
-export const calculateBannerScore = (banner: BannerConfig): number => {;;
+export const calculateBannerScore = (banner: BannerConfig): number => {
 
 const _impressions = getStoredImpressions();;
 
@@ -240,7 +240,7 @@ export const selectBannersForRotation = (allBanner,;;
  * Get banner analytics;
 
  */
-export const getBannerAnalytics = (bannerId?: string) => {;;
+export const getBannerAnalytics = (bannerId?: string) => {
 
 const _impressions = getStoredImpressions();;
 
@@ -310,8 +310,8 @@ export const clearOldImpressions = (daysToKee);;
  * Reset all banner data;
 
  */
-export const resetBannerData = (): void => {/* TODO: Fix JSX expression */};;
+export const resetBannerData = (): void => {/* TODO: Fix JSX expression */}`;``;
 
-};
+}```;
 
 `

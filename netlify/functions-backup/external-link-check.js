@@ -1,9 +1,9 @@
 exports.handler = async function (event, context) {try {
 //     // External link check logic;
 
-    const timestamp = new Date().toISOString()};;
+    const timestamp = new Date().toISOString()};
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -35,9 +35,9 @@ error}
 
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 
-    const timestamp = new Date().toISOString()};;
+    const timestamp = new Date().toISOString()};
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */};
 
   s: 3}
 

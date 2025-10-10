@@ -6,24 +6,24 @@
  */
 import React from 'react';
 
-import { performanceConfig } from '../../performance.config;
+import { performanceConfig } from '../../performance.config';
 
 export interface PerformanceMetrics {
-  lcp?: number;
+  lcp?: number';
 
-  fid?: number;
+  fid?: number';
 
-  cls?: number;
+  cls?: number';
 
-  fcp?: number;
+  fcp?: number';
 
-  ttfb?: number;
+  ttfb?: number';
 
   inp?: number}
 
 export interface ErrorReport {
   message: string,
-  stack?: string;
+  stack?: string';
 
   component?: string';
 
@@ -58,7 +58,7 @@ constructor() {
       try {
         // Largest Contentful Paint;
 
-const lcpObserver = new PerformanceObserver((list) => {;;
+const lcpObserver = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -70,7 +70,7 @@ const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // First Input Delay;
 
-const fidObserver = new PerformanceObserver((list) => {;;
+const fidObserver = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -85,7 +85,7 @@ const entries = list.getEntries();;
 
 let clsValue = 0;;
 
-const clsObserver = new PerformanceObserver(list => {;;
+const clsObserver = new PerformanceObserver(list => {
 
 const entries = list.getEntries();;
 
@@ -101,7 +101,7 @@ const entries = list.getEntries();;
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint;
 
-const fcpObserver = new PerformanceObserver(list => {;;
+const fcpObserver = new PerformanceObserver(list => {
 
 const entries = list.getEntries();;
 
@@ -118,9 +118,9 @@ const entries = list.getEntries();;
 
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {;
+      try {
 
-const longTaskObserver = new PerformanceObserver((list) => {;;
+const longTaskObserver = new PerformanceObserver((list) => {
 
           for (const entry of list.getEntries()) {
     // Keep HEAD version
@@ -136,9 +136,9 @@ const longTaskObserver = new PerformanceObserver((list) => {;;
 
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
-      try {;
+      try {
 
-const resourceObserver = new PerformanceObserver((list) => {;;
+const resourceObserver = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -237,8 +237,8 @@ const entries = list.getEntries();;
 
 }
 
-// Singleton instance;
+// Singleton instance`;
 
-const monitoring = new MonitoringService();;
+const monitoring = new MonitoringService()``;```;
 
 export default monitoring

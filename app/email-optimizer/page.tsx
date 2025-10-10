@@ -1,19 +1,19 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
 import Footer from '../components/Footer;
 
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react';
 
 const PagePage: React.FC = () => {
-return (;
+return (';
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: Brain,
@@ -56,7 +56,7 @@ const features = [;;;
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -78,12 +78,12 @@ const benefits = [;;
       </Helmet>
 
                 <h3 className="text-xl font-semibold text-white mb-3>
-);
+)";
 
 }{feature.title}</h3>
                 <p className="text-gray-300>{feature.description}</p>
               </div>
-            ));
+            ))";
 
           </div>        </section>
 
@@ -144,7 +144,7 @@ const benefits = [;;
 
                 </ul>
               </div>
-            ));
+            ))";
 
           </div>        </section>
 
@@ -178,8 +178,8 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-export default PagePage;
+export default PagePage">
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react">
 
-;
+'";

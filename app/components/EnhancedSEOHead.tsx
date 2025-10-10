@@ -1,6 +1,6 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 import { Helmet } from react-helmet-async;
 
@@ -25,9 +25,9 @@ interface EnhancedSEOHeadProps {
 
   modifiedTime?: string;
 
-  section?: string;
+  section?: string';
 
-  tags?: string[];
+  tags?: string[]';
 
 }
 
@@ -162,8 +162,8 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
 
       </script>
     </Helmet>
-  );
+  )`;
 
-};
+}``;
 
-export default EnhancedSEOHead;
+export default EnhancedSEOHead```;

@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
     // Marketing and features promotion simulation;
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -27,13 +27,13 @@ timestamp: new Date().toISOString()
 
           lastPromo: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */};
 
         'Access-Control-Allow-Origin': '*'}
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
   o: new Date().toISOString()}
 
         }})};
@@ -73,10 +73,10 @@ function: 'marketing-and-features-promo'}
 
 };
 
-        timestamp: new Date().toISOString(),' function: 'marketing-and-features-promo',' source: event.source || 'unknown', promotion: {' status: 'active, marketing: 0, features: 0;
+        timestamp: new Date().toISOString(),' function: 'marketing-and-features-promo',' source: event.source || 'unknown', promotion: {' status: 'active, marketing: 0, features: 0';
 
-        lastPromo: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'marketing-and-features-promo }) }} };
+        lastPromo: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'marketing-and-features-promo }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -93,4 +93,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'marketing-and-features-promo }) }} };
+  n: 'marketing-and-features-promo }) }} }';

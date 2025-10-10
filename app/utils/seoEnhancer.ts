@@ -7,7 +7,7 @@ use client
  */
 // Generate meta tags;
 
-export const generateMetaTags = (data: {;;
+export const generateMetaTags = (data: {
 
 // Generate meta tags
 export const generateMetaTags = (data: {};;
@@ -34,7 +34,7 @@ export const generateMetaTags = (data: {};;
 
 }) => {}
 
-  const tags = [;;
+  const tags = [
 
     { name: 'title, content: data.title },
     { name: 'description, content: data.description },
@@ -47,7 +47,7 @@ export const generateMetaTags = (data: {};;
     {}
 
       property: 'og:description,
-      content: data.ogDescription || data.description;
+      content: data.ogDescription || data.description';
 
     },
     { property: 'og:image', content: data.ogImage || '/og-image.webp },
@@ -61,7 +61,7 @@ export const generateMetaTags = (data: {};;
     {}
 
       name: 'twitter:description,
-      content: data.twitterDescription || data.description;
+      content: data.twitterDescription || data.description';
 
     },
     {}
@@ -153,13 +153,13 @@ interface SEOConfig {}
 
   modifiedTime?: string;
 
-  section?: string;
+  section?: string';
 
-  tags?: string[];}
+  tags?: string[]';}
 
 }
 
-// Default SEO config;
+// Default SEO config';
 
 const defaultSEOConfig: SEOConfig = {
   title: 'Zion Holdings,
@@ -187,10 +187,10 @@ const defaultSEOConfig: SEOConfig = {}
 
 // Generate structured data;
 
-export const generateStructuredData = (data: {;;
+export const generateStructuredData = (data: {';
 
 // Generate structured data
-export const generateStructuredData = (data: {};;
+export const generateStructuredData = (data: {}';';
 
 // type: 'Organization' | 'WebSite' | 'Article' | Service;
 
@@ -204,7 +204,7 @@ export const generateStructuredData = (data: {};;
 // [key: string]: unknown;
 
 }) => {
-  const baseStructure = {;;
+  const baseStructure = {
 
     '@context': 'https: //schema.org}) => {}
 
@@ -387,11 +387,11 @@ export class SEOEnhancer {}
   // Update structured data
   updateStructuredData(data: Record<string, unknown>) {}
 
-    const script = document.createElement(script);;
+    const script = document.createElement(script)';';
 
     script.type = application/ld+json
     script.textContent = JSON.stringify(data)
-    // Remove existing structured data;
+    // Remove existing structured data';
 
     const existingScript = document.querySelector('script[type="application/ld+json]);;
 
@@ -567,11 +567,11 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
 
     twitterTags.forEach(({ name, content }) => {/* TODO: Fix JSX expression */}
 
-    });
+    })';
 
   }
 
-  // Update structured data;
+  // Update structured data';
 
   updateStructuredData(dat)
   a: Record<string, unknown>) {/* TODO: Fix JSX expression */}
@@ -581,7 +581,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
     document.head.appendChild(script)
   }
 
-  // Update robots meta tag;
+  // Update robots meta tag';
 
   updateRobots(robots: string) {,
     this.updateMetaTag('robots, robots);}
@@ -639,7 +639,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Update author
   updateAuthor(author: string) {}
 
-    this.updateMetaTag('author, author);}
+    this.updateMetaTag('author, author)`;}
 
   }
 
@@ -647,7 +647,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   private updateMetaTag(nameOrProperty: string, content: string) {}
 
     if (typeof document === 'undefined) return
-    let meta = document.querySelector(});;
+    let meta = document.querySelector(})``;```;
 
       `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}]
     ) as HTMLMetaElement
@@ -669,7 +669,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
 
   }
 
-  // Update language;
+  // Update language`;
 
   updateLanguage(languag)
   e: string) {/* TODO: Fix JSX expression */}
@@ -678,14 +678,14 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
 
   }
 
-  // Update author;
+  // Update author``;
 
   updateAuthor(autho)
   r: string) {/* TODO: Fix JSX expression */}
 
   }
 
-  // Helper method to update meta tags;
+  // Helper method to update meta tags```;
 
   private updateMetaTag(nameOrPropert,
   y: string, conten)
@@ -709,7 +709,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
 
   // Generate sitemap;
 
-  generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>)
+  generateSitemap(pages: Array<{ url: string`; lastmod: string``; changefreq: string```; priority: string }>)
   ) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
 
@@ -719,7 +719,7 @@ ${pages;
   .map(,
   // Generate sitemap
   generateSitemap()
-    pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>
+    pages: Array<{ url: string`; lastmod: string``; changefreq: string```; priority: string }>
   ) {}
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
@@ -746,12 +746,12 @@ ${pages}
   // Generate robots.txt;
 
   generateRobotsTxt(disallowPaths: string[] = []) {,
-    const robots = User-agent: *,;;
+    const robots = User-agent: *,;`;
 
   // Generate robots.txt
   generateRobotsTxt(disallowPaths: string[] = []) {}
 
-    const robots = User-agent: *;;
+    const robots = User-agent: *``;```;
 
 Allow: /}
 
@@ -815,7 +815,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml
 
 // Generate structured data with type-specific properties;
 
-export const generateAdvancedStructuredData = (data: {;;
+export const generateAdvancedStructuredData = (data: {
 
 // Generate structured data with type-specific properties
 export const generateAdvancedStructuredData = (data: {};;
@@ -832,7 +832,7 @@ export const generateAdvancedStructuredData = (data: {};;
 // [key: string]: unknown;
 
 }) => {
-  const baseStructure = {;;
+  const baseStructure = {
 
     '@context': 'https: //schema.org}) => {}
 
@@ -873,7 +873,7 @@ export const generateAdvancedStructuredData = (data: {};;
         telephone: '+1-555-0123,
         contactType: 'customer service}
 
-  // Generate sitemap;
+  // Generate sitemap';
 
   generateSitemap(page,
   s: Array<{/* TODO: Fix JSX expression */}
@@ -890,13 +890,13 @@ export const generateAdvancedStructuredData = (data: {};;
   .join('
 ')}
 
-</urlset>;
+</urlset>`;
 
-    return sitemap;
+    return sitemap``;
 
   }
 
-  // Generate robots.txt;
+  // Generate robots.txt```;
 
   generateRobotsTxt(disallowPath)
   s: string[] = []) {/* TODO: Fix JSX expression */}
@@ -957,14 +957,14 @@ Sitema,
 
 // Generate structured data with type-specific properties;
 
-export const generateAdvancedStructuredData = (dat,;;
+export const generateAdvancedStructuredData = (dat,;`;
 
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
 
-  };
+  }``;
 
-  // Add type-specific properties;
+  // Add type-specific properties```;
 
   if (data.type === 'Organization) {/* TODO: Fix JSX expression */}
 
@@ -1050,7 +1050,7 @@ export const generateAdvancedStructuredData = (dat,;;
 
 // Generate sitemap data;
 
-export const generateSitemapData = useCallback((...args) => {;;
+export const generateSitemapData = useCallback((...args) => {
 
   return {
     urlset: {
@@ -1081,9 +1081,9 @@ export const generateSitemapData = useCallback((...args) => {};;
 
 }
 
-// Generate robots.txt content;
+// Generate robots.txt content`;
 
-export const generateRobotsTxt = useCallback((...args) => {};;
+export const generateRobotsTxt = useCallback((...args) => {}``;```;
 
   const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join(\n);;
 
@@ -1096,7 +1096,7 @@ Sitemap: ${sitemapUrl}
 
 // SEO validation;
 
-export const validateSEOData = (data: {// title: string; description: string; url: string}) => {;;
+export const validateSEOData = (data: {// title: string; description: string; url: string}) => {
 
   if (data.type === 'Article) {/* TODO: Fix JSX expression */}
 
@@ -1135,9 +1135,9 @@ export const generateSitemapData = (page,;;
 
 };
 
-// Generate robots.txt content;
+// Generate robots.txt content`;
 
-export const generateRobotsTxt = (sitemapUr,;;
+export const generateRobotsTxt = (sitemapUr,``;```;
 
   l: string, disallowPath)
   s: string[] = []) => {/* TODO: Fix JSX expression */}
@@ -1155,7 +1155,7 @@ Sitema,
 };
 
 // SEO validation
-export const validateSEOData = (data: { title: string; description: string; url: string }) => {;;
+export const validateSEOData = (data: { title: string; description: string; url: string }) => {
 
   const issues: string[] = [];
 
@@ -1207,7 +1207,7 @@ export const validateSEOData = (data: {// title: string; description: string; ur
 
 // Generate breadcrumb data;
 
-export const generateBreadcrumbData = useCallback((...args) => {;;
+export const generateBreadcrumbData = useCallback((...args) => {
 
   return {
     '@context': 'https: //schema.org,
@@ -1234,7 +1234,7 @@ export const generateBreadcrumbData = useCallback((...args) => {};;
 
 // Initialize SEO enhancements;
 
-export const initializeSEOEnhancements = useCallback((...args) => {;;
+export const initializeSEOEnhancements = useCallback((...args) => {
 
   if (typeof document === undefined) return;
 
@@ -1248,7 +1248,7 @@ export const initializeSEOEnhancements = useCallback((...args) => {;;
     url: 'https://zion.app),
     logo: 'https://zion.app/logo.webp),
 // Initialize SEO enhancements
-export const initializeSEOEnhancements = useCallback((...args) => {};;
+export const initializeSEOEnhancements = useCallback((...args) => {}';';
 
   if (typeof document === 'undefined) return
   // Add structured data for organization
@@ -1319,10 +1319,10 @@ export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */};
 
   script.type = application/ld+json;
 
-  script.textContent = JSON.stringify(organizationData);
+  script.textContent = JSON.stringify(organizationData)`;
 
-  document.head.appendChild(script);
+  document.head.appendChild(script)``;
 
-};
+}```;
 
 "

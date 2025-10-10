@@ -61,7 +61,7 @@ const $1: React.FC = () => {const webServices = [,
 
 ;
 
-const technologies = [;;
+const technologies = [
 
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -71,7 +71,7 @@ const technologies = [;;
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
   ];;
 
-const process = [;;
+const process = [
 
     {
       ste,
@@ -125,8 +125,7 @@ const process = [;;
               <a
                 href="
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-              >Start Your Project<a
-      <SEOOptimizer;        title="Web Development Services - Zion Tech Group"
+              >Start Your Project<a <SEOOptimizer>        title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
 
@@ -220,7 +219,7 @@ const process = [;;
                     <div><
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}<
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">)
-              Our Web Development Services;)
+              Our Web Development Services```;)
             <
 )
             <div className="grid grid-cols-1 md:grid-cols-2 l,
@@ -446,7 +445,7 @@ const process = [;;
 };
       </div>
     </>
-  );
-};
+  )`;
+}``;
 
-export default WebDevelopmentPage;
+export default WebDevelopmentPage```;

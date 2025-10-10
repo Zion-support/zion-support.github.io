@@ -235,7 +235,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   retryFailedRequest(errorInfo) {
     // Implement retry logic for failed requests;
 
-    //     const retryCount = (errorInfo.retryCount || 0) + 1;;
+    //     const retryCount = (errorInfo.retryCount || 0) + 1;
 
     errorInfo.retryCount = retryCount;
 
@@ -293,7 +293,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
 
   loadFallbackImage(src) {/* TODO: Fix JSX expression */}`;
 
-const _img = document.querySelector(`img[src="${src}"]`);;
+const _img = document.querySelector(`img[src="${src}"]`);
 
     if (img) {/* TODO: Fix JSX expression */}
 
@@ -304,7 +304,7 @@ const _img = document.querySelector(`img[src="${src}"]`);;
   loadFallbackScript(src) {
     // Load from CDN or local fallback;
 
-    const _script = document.createElement('script);;
+    const _script = document.createElement('script);
 
     script.src = src.replace('cdn.example.com', 'fallback.example.com);
 
@@ -322,7 +322,7 @@ const _img = document.querySelector(`img[src="${src}"]`);;
   loadFallbackStylesheet(src) {
     // Load fallback stylesheet;
 
-    const _link = document.createElement('link);;
+    const _link = document.createElement('link);
 
     link.rel = 'stylesheet;
 
@@ -388,7 +388,7 @@ const _img = document.querySelector(`img[src="${src}"]`);;
   showOfflineMessage() {
     // Show offline message to user;
 
-    const _offlineMessage = document.createElement('div);;
+    const _offlineMessage = document.createElement('div);
 
     offlineMessage.className = 'offline-message;
 
@@ -430,7 +430,7 @@ const _img = document.querySelector(`img[src="${src}"]`);;
 
   showCriticalErrorModal(errorInfo) {;
 
-const _modal = document.createElement('div);;
+const _modal = document.createElement('div);
 
     modal.className = 'error-modal;
 
@@ -493,7 +493,7 @@ const _modal = document.createElement('div);;
 
   showErrorToast(errorInfo) {;
 
-const _toast = document.createElement('div);;
+const _toast = document.createElement('div);
 
     toast.className = 'error-toast;
 
@@ -584,7 +584,7 @@ const _toast = document.createElement('div);;
 
   handleNetworkStatusChange(status) {;
 
-const _message = status === 'online' ? 'Connection restored' : 'Connection lost;;
+const _message = status === 'online' ? 'Connection restored' : 'Connection lost;
 
     this.showErrorToast({)
       message)
@@ -645,7 +645,7 @@ const _message = status === 'online' ? 'Connection restored' : 'Connection lost;
 
 // Initialize error handler;
 
-// const errorHandler = new AdvancedErrorHandler();;
+// const errorHandler = new AdvancedErrorHandler();
 
 // Export for use in other modules;
 

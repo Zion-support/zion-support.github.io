@@ -1,14 +1,14 @@
-import React from 'react;
+import React from 'react';
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
-import fs from 'fs;
+import fs from 'fs';
 
-import { glob } from 'glob;
+import { glob } from 'glob';
 
-// Files to process;
+// Files to process';
 
-const filePatterns = [;;
+const filePatterns = [';';
 
   'app/**/*.{ts,tsx}',
   'src/**/*.{ts,tsx}',
@@ -18,7 +18,7 @@ const filePatterns = [;;
 
 // Files to exclude;
 
-const excludePatterns = [;;
+const excludePatterns = [
 
   '**/node_modules/**',
   '**/dist/**',
@@ -37,34 +37,34 @@ const excludePatterns = [;;
 
 ;
 
-let totalFiles = 0;;
+let totalFiles = 0;
 
-let processedFiles = 0;;
+let processedFiles = 0;
 
-let fixedFiles = 0;;
+let fixedFiles = 0;
 
 ;
 
-function fixReactMemo(content) {;
+function fixReactMemo(content) {
 
-let newContent = content;;
+let newContent = content;
 
-  let fixed = false;;
+  let fixed = false;
 
   // Fix React.memo syntax issues;
 
   // Pattern 1: const Component: React.FC = React.memo(() => {,;
 
-const pattern1 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;;
+const pattern1 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;
 
   if (pattern1.test(newContent)) {,
     newContent = newContent.replace(pattern1, 'const $1: React.FC = () => {);
 
     fixed = true}
 
-  // Pattern 2: const Component = React.memo(() => {,;;
+  // Pattern 2: const Component = React.memo(() => {,;
 
-const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;;
+const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;
 
   if (pattern2.test(newContent)) {,
     newContent = newContent.replace(pattern2, 'const $1 = () => {);
@@ -73,16 +73,16 @@ const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g;;
 
   // Pattern 3: const Component: React.FC = React.memo((props) => {,;
 
-const pattern3 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,;;
+const pattern3 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,;
 
   if (pattern3.test(newContent)) {,
     newContent = newContent.replace(pattern3, 'const $1: React.FC = () => {);
 
     fixed = true}
 
-  // Pattern 4: const Component = React.memo((props) => {,;;
+  // Pattern 4: const Component = React.memo((props) => {,;
 
-const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,;;
+const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,;
 
   if (pattern4.test(newContent)) {,
     newContent = newContent.replace(pattern4, 'const $1 = () => {);
@@ -93,7 +93,7 @@ const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,;;
 
   // Pattern: }); at the end of component;
 
-  const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"]+['"];\s*\}\);/g;;
+  const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"]+['"];\s*\}\);/g;
 
   if (closingPattern.test(newContent)) {
     newContent = newContent.replace(closingPattern, '$1.displayName = \'$1\';);
@@ -102,23 +102,21 @@ const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,;;
 
   // Alternative closing pattern;
 
-  const closingPattern2 = /^\s*\}\);\s*$/gm;;
+  const closingPattern2 = /^\s*\}\);\s*$/gm;
 
   if (closingPattern2.test(newContent)) {
     newContent = newContent.replace(closingPattern2, ');
 
     fixed = true}
 
-  return { content: newContent, fixed }}
-
-;
+  return { content: newContent, fixed }};
 
 function processFile(filePath) {
-  try {;
+  try {
 
-const content = fs.readFileSync(filePath, 'utf8);;
+const content = fs.readFileSync(filePath, 'utf8);
 
-    const result = fixReactMemo(content);;
+    const result = fixReactMemo(content);
 
     if (result.fixed) {
       fs.writeFileSync(filePath, result.content, 'utf8);
@@ -136,11 +134,11 @@ async function main() {
   // console.log removed for production
 // Get all files to process;
 
-  const allFiles = [];;
+  const allFiles = [];
 
-  for (const pattern of filePatterns) {;
+  for (const pattern of filePatterns) {
 
-const files = await glob(pattern, {);;
+const files = await glob(pattern, {);
 
       ignore: excludePatterns),
       cwd: process.cwd()});
@@ -149,7 +147,7 @@ const files = await glob(pattern, {);;
 
   // Remove duplicates;
 
-  const uniqueFiles = [...new Set(allFiles)];;
+  const uniqueFiles = [...new Set(allFiles)];
 
   totalFiles = uniqueFiles.length;
 
@@ -167,4 +165,4 @@ const files = await glob(pattern, {);;
 if (import.meta.url === `file://${process.argv[1]}`) {
   main()}
 
-export { processFile, fixReactMemo };
+export { processFile, fixReactMemo }```;

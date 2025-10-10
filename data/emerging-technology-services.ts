@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EmergingTechnologyService {;,
+export interface EmergingTechnologyService {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [,
     id: "blockchain-platform", name: "Blockchain Development Platform",
     tagline: "Build and deploy blockchain applications", price: '$179/month',
     description: 'Comprehensive blockchain development platform for creating decentralized applications.',
-    features: [;
+    features: [
       "Smart contract development"
       "DApp deployment"
       "Blockchain integration"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Comprehensive blockchain development platform for creating decentralized applications.",
     feature,
-  s: [;"
+  s: ["
       "Smart contract development""
       "DApp deployment""
       "Blockchain integration""

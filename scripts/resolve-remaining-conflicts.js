@@ -1,41 +1,41 @@
 #!/usr/bin/env node;
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
-import fs from fs;
+import fs from fs';
 
 // console.log removed for production
-// Function to resolve merge conflicts in a file;
+// Function to resolve merge conflicts in a file';
 
 function resolveMergeConflicts(filePath) {
-  try {;
+  try {';
 
-const content = fs.readFileSync(filePath, utf8);;
+const content = fs.readFileSync(filePath, utf8)';
 
-    // Check if file has merge conflicts;
+    // Check if file has merge conflicts';
 
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
       // console.log removed for production
 // Advanced conflict resolution strategy;
 
-      let resolvedContent = content;;
+      let resolvedContent = content;
 
         // Handle standard merge conflicts - prefer incoming changes;
 
-        .replace(/[\s\S]*?[\s\S]*?          const parts = match.split();;
+        .replace(/[\s\S]*?[\s\S]*?          const parts = match.split();
 
-          if (parts.length > 1) {;
+          if (parts.length > 1) {
 
-const incoming = parts[1].replace(/            return incoming;);;
+const incoming = parts[1].replace(/            return incoming;);
 
           })
           return match;)
         })
         // Handle other conflict patterns;
 
-        .replace(/          if (parts.length > 1) {;
+        .replace(/          if (parts.length > 1) {
 
-const incoming = parts[1].replace(/            return incoming;);;
+const incoming = parts[1].replace(/            return incoming;);
 
           })
           return match;)
@@ -57,7 +57,7 @@ return false}
 
 // List of files with conflicts;
 
-const conflictedFiles = [;;
+const conflictedFiles = [
 
   'App.tsx,
   'app/ai-services/page.tsx,
@@ -71,7 +71,7 @@ async function main() {
   // console.log removed for production
 // Resolve conflicts in each file;
 
-  let resolvedCount = 0;;
+  let resolvedCount = 0;
 
   for (const file of conflictedFiles) {
     if (resolveMergeConflicts(file)) {
@@ -110,7 +110,7 @@ try {
   // console.log removed for production
 try {,;
 
-const status = execSync('git status', { encoding: utf8, cwd: process.cwd() });;
+const status = execSync('git status', { encoding: utf8, cwd: process.cwd() });
 
     // console.log removed for production
 } catch (error) {

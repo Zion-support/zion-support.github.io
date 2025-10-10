@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
     // Auto-scheduling simulation;
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -25,13 +25,13 @@ function: 'auto-scheduler',
 
           lastSchedule: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */};
 
         'Access-Control-Allow-Origin': '*'}
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
   e: new Date().toISOString()}
 
         }})};
@@ -71,10 +71,10 @@ function: 'auto-scheduler'}
 
 };
 
-        timestamp: new Date().toISOString(),' function: 'auto-scheduler',' source: event.source || 'unknown', scheduling: {' status: 'active, tasksScheduled: 0;
+        timestamp: new Date().toISOString(),' function: 'auto-scheduler',' source: event.source || 'unknown', scheduling: {' status: 'active, tasksScheduled: 0';
 
-        lastSchedule: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'auto-scheduler }) }} };
+        lastSchedule: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'auto-scheduler }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -91,4 +91,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'auto-scheduler }) }} };
+  n: 'auto-scheduler }) }} }';

@@ -36,17 +36,13 @@ interface SEOProps {// TODO: Add content}
 
   section?: string;
 
-  tags?: string[]}
-
-;
+  tags?: string[]};
 
 const EnhancedSEO: React.FC;
 
           <SEOProps> = ({// TODO: Add content}
 
-}
-
-;
+};
 
 const EnhancedSEO: React.FC<SEOProps> = ({
 
@@ -142,9 +138,9 @@ let metaDescription = document.querySelector('meta[name="description]);;
           <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>
           <link rel="dns-prefetch" href="// www.googletagmanager.com /></link>
           </Helmet>
-  )};
+  )}``;
 
-export default EnhancedSEO;"
+export default EnhancedSEO```;"
 
 
 

@@ -3,22 +3,22 @@
  * Combines performance monitoring, error tracking, and analytics
  */
 
-import { useEffect, useCallback, useRef } from 'react;
+import { useEffect, useCallback, useRef } from 'react';
 
-import { errorTracker } from '../utils/enhancedErrorTracking;
+import { errorTracker } from '../utils/enhancedErrorTracking';
 
-import { analytics } from ../utils/enhancedAnalytics;
+import { analytics } from ../utils/enhancedAnalytics';
 
 export interface UseEnhancedPerformanceOptions {
-  component?: string;
+  component?: string';
 
-  trackErrors?: boolean;
+  trackErrors?: boolean';
 
-  trackPerformance?: boolean;
+  trackPerformance?: boolean';
 
   trackAnalytics?: boolean}
 
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {;
+export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {';
 
 const {
     component = 'Unknown,
@@ -104,31 +104,31 @@ const trackUserAction = useCallback(;;
 
 const measureOperation = useCallback(;;
 
-    (operationName: string) => {;
+    (operationName: string) => {
 
 const _markName = `${component}-${operationName};;
 
-const _startTime = performance.now();;
+const _startTime = performance.now();`;
 
       return {
-        end: () => {;
+        end: () => {
 
-const _duration = performance.now() - startTime;;
+const _duration = performance.now() - startTime``;```;
 
           if (trackPerformance) {
             analytics.trackPerformance(
 
               `${component}-${operationName},
               duration,
-              duration > 1000 ? 'slow' : fast);
+              duration > 1000 ? 'slow' : fast)`;
 
           return duration}}},
     [component, trackPerformance]
-  );
+  )``;
 
   return {
     trackError,
     trackUserAction,
     measureOperation}}
 
-export default useEnhancedPerformance;
+export default useEnhancedPerformance```;

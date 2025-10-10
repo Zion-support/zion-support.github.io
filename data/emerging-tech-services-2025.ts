@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EmergingTechService2025 {;,
+export interface EmergingTechService2025 {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const emergingTechServices2025: EmergingTechService2025[] = [,
     id: "metaverse-platform", name: "Metaverse Development Platform",
     tagline: "Create immersive virtual experiences", price: '$249/month',
     description: 'Advanced metaverse development platform for building virtual worlds and experiences.',
-    features: [;
+    features: [
       "3 D world building"
       "Avatar customization"
       "Virtual commerce"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Advanced metaverse development platform for building virtual worlds and experiences.",
     feature,
-  s: [;"
+  s: ["
       "3D world building""
       "Avatar customization""
       "Virtual commerce""

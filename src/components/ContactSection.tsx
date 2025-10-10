@@ -1,6 +1,6 @@
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-export default function ContactSection() {;
+export default function ContactSection() {';
 
 const [formData, setFormData] = useState({
     name: ',
@@ -12,7 +12,7 @@ const [formData, setFormData] = useState({
 
 ;
 
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
 
     setFormData({
       ...formData,
@@ -21,7 +21,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
 
 ;
 
-const handleSubmit = (e: React.FormEvent) => {;;
+const handleSubmit = (e: React.FormEvent) => {
 
     e.preventDefault();
 
@@ -29,9 +29,9 @@ const handleSubmit = (e: React.FormEvent) => {;;
     // console.log removed for production
 };
 
-;
+';
 
-const contactInfo = [;;
+const contactInfo = [';';
 
     {
       icon: (
@@ -70,9 +70,9 @@ const contactInfo = [;;
 
   ];
 
-;
+';
 
-const services = [;;
+const services = [';';
 
     'AI & Machine Learning,
     'Cloud Solutions,

@@ -1,18 +1,18 @@
 #!/usr/bin/env node;
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
-import { readFileSync, writeFileSync } from fs;
+import { readFileSync, writeFileSync } from fs';
 
 // console.log removed for production
-;
+';
 
 function resolveConflicts(filePath) {
-  try {;
+  try {';
 
-const content = readFileSync(filePath, utf8);;
+const content = readFileSync(filePath, utf8)';
 
-    // Check if file has conflict markers;
+    // Check if file has conflict markers';
 
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>)) {
       return false; // No conflicts}
@@ -20,15 +20,15 @@ const content = readFileSync(filePath, utf8);;
     // console.log removed for production
 // Split by conflict markers and keep the incoming version (after );
 
-const lines = content.split(\n);;
+const lines = content.split(\n);
 
-    const resolvedLines = [];;
+    const resolvedLines = [];
 
-    let skipUntilNextMarker = false;;
+    let skipUntilNextMarker = false;
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length; i++) {
 
-const line = lines[i];;
+const line = lines[i];
 
       if (line.includes(')) {
         skipUntilNextMarker = true;
@@ -57,9 +57,7 @@ return true} catch (error) {
     // console.log removed for production
 return false}
 
-}
-
-;
+};
 
 function mergeBranch(branchName) {
   try {
@@ -73,7 +71,7 @@ return true} catch (error) {
     // console.log removed for production
 // Check for conflicts;
 
-    const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });;
+    const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });
 
     if (conflictFiles.trim()) {
       // console.log removed for production
@@ -81,9 +79,9 @@ return true} catch (error) {
 
       ;
 
-const files = conflictFiles.trim().split(\n);;
+const files = conflictFiles.trim().split(\n);
 
-      let resolvedCount = 0;;
+      let resolvedCount = 0;
 
       for (const file of files) {
         if (file.trim()) {
@@ -95,11 +93,11 @@ const files = conflictFiles.trim().split(\n);;
       }
 
       // console.log removed for production
-// Add all resolved files;
+// Add all resolved files`;
 
-      execSync('git add .', { stdio: inherit });
+      execSync('git add .', { stdio: inherit })``;
 
-      // Commit the resolution;
+      // Commit the resolution```;
 
       execSync(`git commit -m "feat: Resolve merge conflicts from ${branchName}"`, { stdio: inherit });
 
@@ -115,7 +113,7 @@ return false}
 try {
   // List of branches to merge (most recent first);
 
-const branchesToMerge = [;;
+const branchesToMerge = [
 
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fcae,
     'origin/cursor/enhance-app-with-new-services-and-futuristic-design-fd44,
@@ -126,15 +124,15 @@ const branchesToMerge = [;;
 
 ;
 
-let mergedCount = 0;;
+let mergedCount = 0`;
 
-  let failedCount = 0;;
+  let failedCount = 0``;
 
   for (const branch of branchesToMerge) {
     try {
-      // Check if branch has unique commits;
+      // Check if branch has unique commits```;
 
-      const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: utf8 });;
+      const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: utf8 });
 
       if (!uniqueCommits.trim()) {
         // console.log removed for production
@@ -142,7 +140,7 @@ continue}
 
       // console.log removed for production
 // console.log removed for production
-.slice(0, 2).join(\n));
+.slice(0, 2).join(\n))`;
 
       if (mergeBranch(branch)) {
         mergedCount++} else {
@@ -157,10 +155,10 @@ failedCount++}
   // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-// Push all changes;
+// Push all changes``;
 
   // console.log removed for production
-execSync('git push origin main', { stdio: inherit });
+execSync('git push origin main', { stdio: inherit })```;
 
   // console.log removed for production
 } catch (error) {

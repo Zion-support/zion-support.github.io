@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { createContext, useContext, useEffect } from 'react;
 
@@ -11,21 +11,21 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);;
 
-export const useAnalytics = () => {;;;
+export const useAnalytics = () => {
 
-  const context = useContext(AnalyticsContext);;;
+  const context = useContext(AnalyticsContext);;';
 
   if (!context) {
-    throw new Error(useAnalytics must be used within an AnalyticsProvider);
+    throw new Error(useAnalytics must be used within an AnalyticsProvider)';
 
   }
 
-  return context;
+  return context';
 
-};
+}';
 
 interface AnalyticsProviderProps {
-  children: ReactNode;
+  children: ReactNode';
 
 }
 
@@ -43,7 +43,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   }, []);
 
-  const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {;;
+  const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
 
     if (typeof window === undefined) return;
 
@@ -66,7 +66,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   };
 
-  const trackPageView = (pageName: string, pagePath: string) => {;;
+  const trackPageView = (pageName: string, pagePath: string) => {
 
     if (typeof window === undefined) return;
 

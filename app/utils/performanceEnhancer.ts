@@ -75,11 +75,11 @@ export const throttle = <T></T> unknown>(fun,;;
 };
 
 // Performance monitoring utilities
-export class PerformanceMonitor {/* TODO: Fix JSX expression */}););
+export class PerformanceMonitor {/* TODO: Fix JSX expression */});)`;
 
-    return PerformanceMonitor.instance});}
+    return PerformanceMonitor.instance})``;}
 
-  // Track component render time;
+  // Track component render time```;
 
   trackRender(componentNam,
   e: string, renderTim)
@@ -96,12 +96,12 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}););
 
 }
 
-  // Track memory usage;
+  // Track memory usage`;
 
   trackMemory(componentNam)
   e: string) {/* TODO: Fix JSX expression */}
 
-  e: number } });.memory;
+  e: number } })``;.memory```;
 
       if (memory) {/* TODO: Fix JSX expression */}
 
@@ -141,7 +141,7 @@ this.metrics.set(`${componentName}_memory, memory.usedJSHeapSize)]
 
   startLongTaskMonitoring() {/* TODO: Fix JSX expression */}););
 
-const observer = new PerformanceObserver((list) => {;
+const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {        if (entry.duration > 50) { // Tasks longer than 50ms;
 
   // Get performance metrics
@@ -189,7 +189,7 @@ return Object.fromEntries(this.metrics)]
 }
 
 // React hook for performance monitoring
-export const usePerformanceMonitor = (componentName: string) => {;;
+export const usePerformanceMonitor = (componentName: string) => {
 
 // React hook for performance monitoring
 export const usePerformanceMonitor = (componentName: string) => {};;
@@ -249,10 +249,10 @@ this.observers.push(observer)]
 
 export const usePerformanceMonitor = (componentNam);;
 
-  e: string) => {/* TODO: Fix JSX expression */});]
-    }});
+  e: string) => {/* TODO: Fix JSX expression */})`;]
+    }})``;
 
-}, [componentName, monitor]);
+}, [componentName, monitor])```;
 
   return {/* TODO: Fix JSX expression */}
 
@@ -264,7 +264,7 @@ monitor.trackRender(`${componentName}_function, duration)]
 };
 
 // Image lazy loading utility
-export const lazyLoadImages = () => {;;
+export const lazyLoadImages = () => {
 
 // Image lazy loading utility
 export const lazyLoadImages = () => {};;
@@ -298,7 +298,7 @@ export const preloadCriticalResources = () => {};;
 
   if (typeof window === undefined) return;
 
-const criticalResources = [;;
+const criticalResources = [
 
     '/fonts/inter-var.woff2,
     /css/critical.css];
@@ -323,13 +323,13 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */});
     document.head.appendChild(link););
 
 };// Optimize scroll performance
-export const optimizeScrollPerformance = () => {;;
+export const optimizeScrollPerformance = () => {
 
   if (typeof window === undefined) return;
 
   let ticking = false;;
 
-const updateScrollPosition = () => {;;
+const updateScrollPosition = () => {
 
     // Update scroll position indicators;
 
@@ -342,9 +342,9 @@ export const optimizeScrollPerformance = () => {};;
 
 const updateScrollPosition = () => {};;
 
-    // Update scroll position indicators;
+    // Update scroll position indicators`;
 
-const scrollTop = window.pageYOffset || document.documentElement.scrollTop;;
+const scrollTop = window.pageYOffset || document.documentElement.scrollTop``;```;
 
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px);
 
@@ -449,8 +449,8 @@ const fid = fidEntry.processingStart - entry.startTime;;
 
     return () => observer.disconnect(););
 
-  window.addEventListener('scroll, requestTick, { passive: true });// Optimize scroll performance
-export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */};;
+  window.addEventListener('scroll, requestTick, { passive: true })`;// Optimize scroll performance
+export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}``;```;
 
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px);
 
@@ -526,7 +526,7 @@ const cleanupFID = trackFID();;
 };
 
 // Memory usage monitoring
-export const getMemoryUsage = () => {;;
+export const getMemoryUsage = () => {
 
   if (typeof window === 'undefined' || !('memory in performance)) {
     return null});
@@ -549,7 +549,7 @@ export const getMemoryUsage = () => {;;
 };
 
 // Performance metrics collection
-export const collectPerformanceMetrics = () => {;;
+export const collectPerformanceMetrics = () => {
 
   if (typeof window === undefined) return null;
 
@@ -622,7 +622,7 @@ const paint = performance.getEntriesByType(paint);;
 };
 
 // Initialize performance enhancements
-export const initializePerformanceEnhancements = () => {;;
+export const initializePerformanceEnhancements = () => {
 
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {};;
@@ -674,6 +674,6 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */})
 };
 
 // Initialize performance enhancements
-export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}););;
+export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */});)`;``;
 
-};}
+}```;}

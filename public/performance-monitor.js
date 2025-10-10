@@ -10,19 +10,19 @@
     if ('PerformanceObserver' in window) {
       // LCP;
 
-      new PerformanceObserver((list) => {;
+      new PerformanceObserver((list) => {
 
-const _entries = list.getEntries();;
+const _entries = list.getEntries();
 
-        const _lastEntry = entries[entries.length - 1];;
+        const _lastEntry = entries[entries.length - 1];
 
 //         }).observe({ entryTypes: ['largest-contentful-paint] });
 
       // FID;
 
-      new PerformanceObserver((list) => {;
+      new PerformanceObserver((list) => {
 
-const _entries = list.getEntries();;
+const _entries = list.getEntries();
 
         entries.forEach((entry) => {
 (function() {/* TODO: Fix JSX expression */}
@@ -43,7 +43,7 @@ const _entries = list.getEntries();;
 
       // CLS;
 
-      let _clsValue = 0;;
+      let _clsValue = 0;
 
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 

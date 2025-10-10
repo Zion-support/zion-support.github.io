@@ -107,14 +107,14 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   e: message || `Must be at least ${min} characters)
   }),
   /**
-   * Validate maximum length;
+   * Validate maximum length``;
 
    */
   maxLength: (max: number, message?: string): ValidationRule<string> => ({}
 
     validate: (value: string) => value.length <= max,}
 
-    message: message || Must be no more than ${max} characters;
+    message: message || Must be no more than ${max} characters```;
 
   maxLengt,
   h: (ma)
@@ -167,7 +167,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
       }
 
     },
-    message;
+    message`;
 
   ur,
   l: (message = 'Please enter a valid URL): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
@@ -177,10 +177,10 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
       }
 
     },
-    message;)
+    message``;)
   }),
   /**
-   * Validate number range;
+   * Validate number range```;
 
    */
   numberRange: (min: number, max: number, message?: string): ValidationRule<number> => ({}
@@ -289,12 +289,12 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
 
     validate: (file: File) => {}
 
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;;
+      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;`;
 
-      return file.size <= maxSizeInBytes;}
+      return file.size <= maxSizeInBytes``';}
 
     },
-    message: message || File size must not exceed ${maxSizeInMB}MB;
+    message: message || File size must not exceed ${maxSizeInMB}MB`'``;
 
   fileSiz,
   e: (maxSizeInM)
@@ -305,7 +305,7 @@ export const validationRules = {/* TODO: Fix JSX expression */};;
   e: message || `File size must not exceed ${maxSizeInMB}MB)
   }),
   /**
-   * Validate file type;
+   * Validate file type'```;
 
    */
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({}
@@ -532,15 +532,15 @@ export function debounce<T extends (...arg)
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
 
-    };
+    }`;
 
     if (timeout) {/* TODO: Fix JSX expression */}
 
     }
 
-    timeout = setTimeout(later, wait);
+    timeout = setTimeout(later, wait)``;
 
-  };
+  }```;
 
 }
 

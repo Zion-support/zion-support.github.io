@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Music, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react;
+import { Music, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import SEOOptimizer from '../components/SEOOptimizer;
+import SEOOptimizer from '../components/SEOOptimizer';
 
-;
+';
 
-const AIMusicCompositionPage: React.FC = () => {;
+const AIMusicCompositionPage: React.FC = () => {';
 
-const features = [;
+const features = [';
     'AI Composition',    'Multiple Genres,
     'Custom Length,
     'Royalty-free,
@@ -26,7 +26,7 @@ const features = [;
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     'Unlimited music,
     'No copyright issues,
@@ -38,7 +38,7 @@ const benefits = [;;
 
 ;
 
-const pricingPlans = [;;
+const pricingPlans = [
 
     {
       name: 'Starter,
@@ -207,6 +207,6 @@ const pricingPlans = [;;
         <Footer />
       </div>
     </React.Fragment>
-  )};
+  )}``;
 
-export default AIMusicCompositionPage;
+export default AIMusicCompositionPage```;

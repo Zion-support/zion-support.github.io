@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
 export interface InnovativeITService2024 {id: string;
 
@@ -66,9 +66,9 @@ export interface InnovativeITService2024 {id: string;
 
     website: string}
 
-};
+}';
 
-  realImplementation: boolean;
+  realImplementation: boolean';
 
   implementationDetails: string';
 
@@ -103,11 +103,11 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     link: "https://ziontechgroup.com/autonomous-devops,
     marketPosition: "Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.,
     targetAudience: "DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providerstups,
-    trialDays: 14;
+    trialDays: 14"';
 
     setupTime: "2 hours,
     category: "DevOps & Infrastructure,
-    realService: true;
+    realService: true'";
 
     technology: ["React", "Node.js", "Python", "Kubernetes", "Docker", "AWS", "Azure", "GCP],
     integrations: ["GitHub", "GitLab", "Jenkins", "CircleCI", "AWS CodePipeline", "Azure DevOps],
@@ -118,13 +118,13 @@ marketSize: '$8.2B market,
     growthRate: '20.1% annual growth,
     variant: 'ai-futuristic,
     contactInfo:
-        contactInfo: unknown;
+        contactInfo: unknown';
 
       mobile: '+1 302 464 0950,
       email: 'kleber@ziontechgroup.com,
       address: "364 E Main St STE 1008 Middletown DE 19709,
       website: "https://ziontechgroup.com},
-    realImplementation: true;
+    realImplementation: true'";
 
     implementationDetails: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.,
     launchDate: '2024-01-15,
@@ -145,13 +145,13 @@ export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
 };
 
   realImplementatio,
-  n: boolean;
+  n: boolean'";
 
   implementationDetail,
-  s: string;
+  s: string'";
 
   launchDat,
-  e: string;
+  e: string'";
 
   review,
   s: number}
@@ -222,7 +222,7 @@ export const,
     marketSiz,
   e: "$8.2B market,
     growthRat,
-  e: "20.1% annual growth,;
+  e: "20.1% annual growth,'";
 
 varian,
   t: "ai-futuristic,
@@ -288,9 +288,9 @@ export interface InnovativeITService2024,
   l: string; addres,
   s: string, websit,
   e: string }; realImplementatio,
-  n: boolean; implementationDetail,
-  s: string; launchDat,
-  e: string; review,
+  n: boolean'"; implementationDetail,
+  s: string'"; launchDat,
+  e: string'"; review,
   s: number} export const,
   innovativeITServices2024: InnovativeITService2024[] = [ i,
   d: "autonomous-devops-platform", nam,
@@ -335,4 +335,4 @@ export interface InnovativeITService2024,
   e: "2024-01-15, customer,
   s: 950, ratin,
   g: 4.8, review,
-  s: 520 } ];"
+  s: 520 } ]'";"

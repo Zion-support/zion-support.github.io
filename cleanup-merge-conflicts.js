@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
-// Function to clean merge conflict markers from a file;
+// Function to clean merge conflict markers from a file';
 
 function cleanMergeConflicts(filePath) {
-  try {;
+  try {';
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, 'utf8);
 
-    let originalContent = content;;
+    let originalContent = content;
 
     // Remove merge conflict markers and keep the HEAD version
     content = content.replace(/\n?/g, ');
@@ -69,19 +69,19 @@ return false}
 
 // Function to recursively find and clean files;
 
-function cleanDirectory(dirPath) {;
+function cleanDirectory(dirPath) {
 
-let cleanedCount = 0;;
+let cleanedCount = 0;
 
-  try {;
+  try {
 
-const items = fs.readdirSync(dirPath);;
+const items = fs.readdirSync(dirPath);
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(dirPath, item);;
+const fullPath = path.join(dirPath, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
         // Skip node_modules and other directories we don't want to process
@@ -91,7 +91,7 @@ const fullPath = path.join(dirPath, item);;
         cleanedCount += cleanDirectory(fullPath)} else if (stat.isFile()) {
         // Only process certain file types;
 
-const ext = path.extname(item);;
+const ext = path.extname(item);
 
         if (['.ts', '.tsx', '.js', '.jsx', '.json', '.md'].includes(ext)) {
           if (cleanMergeConflicts(fullPath)) {
@@ -111,12 +111,12 @@ const ext = path.extname(item);;
 
 // Main execution
 // console.log removed for production
-const cleanedCount = cleanDirectory('/workspace);;
+const cleanedCount = cleanDirectory('/workspace);
 
 // console.log removed for production
 // Also clean specific problematic files;
 
-const criticalFiles = [;;
+const criticalFiles = [
 
   '/workspace/App.tsx',
   '/workspace/jest.setup.js',

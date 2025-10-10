@@ -1,7 +1,7 @@
 
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 /**
  * Jest setup file for testing environment;
@@ -34,7 +34,7 @@ console.error = (...args) => {// TODO: Add content}
 const originalConsoleError = console.error;;
 
 // eslint-disable-next-line no-console
-console.error = (...args) => {;
+console.error = (...args) => {
 
 const message = args[0]?.toString?.() || args[0]?.message || ;;
 
@@ -119,7 +119,7 @@ console.warn = (...args) => {// TODO: Add content}
 }
 
 // eslint-disable-next-line no-console
-console.warn = (...args) => {;
+console.warn = (...args) => {
 
 const message = args[0]?.toString?.() || ;;
 
@@ -140,7 +140,7 @@ delete (window as unknown as Record;
 };
 
 // eslint-disable-next-line no-console
-console.info = (...args) => {;
+console.info = (...args) => {
 
 const message = args[0]?.toString?.() || ;;
 

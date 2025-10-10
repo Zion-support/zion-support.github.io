@@ -3,9 +3,7 @@ import React, { Component, type ErrorInfo, type ReactNode } from react;
 interface ErrorFallbackProps {
   error: Error;
 
-  resetError: () => void}
-
-;
+  resetError: () => void};
 
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   return (
@@ -68,7 +66,7 @@ interface AppErrorBoundaryState {
 
   error: Error | undefined}
 
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {;
+export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
 
 constructor(props: AppErrorBoundaryProps) {
     super(props);

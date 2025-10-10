@@ -157,7 +157,7 @@ export function isProduction(): boolean {/* TODO: Fix JSX expression */}
 
   return config.app.environment === 'production;
 
- * Check if running in development;
+ * Check if running in development`;
 
 export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
 
@@ -165,6 +165,6 @@ export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
 
 }
 
-  return config.app.environment === 'development;
+  return config.app.environment === 'development``;
 
-export default config;
+export default config```;

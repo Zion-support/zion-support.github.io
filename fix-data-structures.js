@@ -4,7 +4,7 @@ import React from 'react';
 
 import fs from 'fs';
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
 // Fix data structure syntax errors';
 
@@ -14,13 +14,13 @@ function fixDataStructures(filePath) {
 
 ';
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, 'utf8);
 
-  let modified = false;;
+  let modified = false;
 
   // Fix malformed object literals - pattern: {} followed by properties;
 
-const objectPattern = /\{\}\s*(\w+):/g;;
+const objectPattern = /\{\}\s*(\w+):/g;
 
   if (objectPattern.test(content)) {
     content = content.replace(objectPattern, '{\n      $1:);
@@ -29,7 +29,7 @@ const objectPattern = /\{\}\s*(\w+):/g;;
 
   // Fix missing opening braces in arrays;
 
-const arrayPattern = /\[\s*\{\}\s*(\w+):/g;;
+const arrayPattern = /\[\s*\{\}\s*(\w+):/g;
 
   if (arrayPattern.test(content)) {
     content = content.replace(arrayPattern, '[\n    {\n      $1:);
@@ -38,7 +38,7 @@ const arrayPattern = /\[\s*\{\}\s*(\w+):/g;;
 
   // Fix missing closing braces in object literals;
 
-const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;;
+const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;
 
   content = content.replace(missingClosePattern, (match, key, value) => {
     if (!match.includes('}') && !match.includes(',')) {
@@ -48,7 +48,7 @@ const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;;
 
   // Fix missing commas in object properties;
 
-const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;;
+const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;
 
   if (missingCommaPattern.test(content)) {
     content = content.replace(missingCommaPattern, '$1: $2,\n      $3:);
@@ -57,7 +57,7 @@ const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;;
 
   // Fix missing closing braces in arrays;
 
-const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;;
+const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;
 
   if (arrayClosePattern.test(content)) {
     content = content.replace(arrayClosePattern, '$1: $2\n    });
@@ -66,7 +66,7 @@ const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;;
 
   // Fix function declarations missing opening brace;
 
-const funcPattern = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g;;
+const funcPattern = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g;
 
   if (funcPattern.test(content)) {
     content = content.replace(funcPattern, 'const $1: React.FC = () => {);
@@ -84,15 +84,15 @@ return true}
 // Get all TypeScript files with errors;
 
 function getFilesWithErrors() {
-  try {;
+  try {
 
-const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8 });;
+const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8 })';
 
-    const files = new Set();;
+    const files = new Set()';';
 
-    output.split('\n).forEach(line => {;
+    output.split('\n).forEach(line => {
 
-const match = line.match(/^([^(]+)\((\d+),(\d+)\):/);;
+const match = line.match(/^([^(]+)\((\d+),(\d+)\):/);
 
       if (match) {
         files.add(match[1])}
@@ -110,24 +110,24 @@ function main() {
   // console.log removed for production
 ;
 
-const files = getFilesWithErrors();;
+const files = getFilesWithErrors();
 
   // console.log removed for production
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0;
 
   files.forEach(file => {
     if (fixDataStructures(file)) {
       fixedCount++}
 
-  })';
+  })'`;
 
   // console.log removed for production
 // Run type check again
   // console.log removed for production
 try {
-    execSync('pnpm run type-check', { stdio: 'inherit });
+    execSync('pnpm run type-check', { stdio: 'inherit })'``;
 
     // console.log removed for production
 } catch (error) {
@@ -136,4 +136,4 @@ try {
 
 }
 
-main();
+main()'```;

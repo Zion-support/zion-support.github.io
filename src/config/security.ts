@@ -129,7 +129,7 @@ export const validationPatterns = {/* TODO: Fix JSX expression */};;
 
   O: Add content}
 
-};
+}';
 
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
@@ -137,7 +137,7 @@ export const validationPatterns = {/* TODO: Fix JSX expression */};;
   alphanumeric: /^[a-zA-Z0-9]+$/,
   noSpecialChars: /^[a-zA-Z0-9\s]+$/
 
- * Sanitize user input;
+ * Sanitize user input';
 
 export function sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */}
@@ -146,7 +146,7 @@ export function sanitizeInput(inpu)
 
 }
 
-  return input;
+  return input';
 
 //     .replace(/[
           

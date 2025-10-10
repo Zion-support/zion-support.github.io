@@ -99,7 +99,7 @@ export class SecurityManager {// TODO: Add content}
 
 }
 
-    const array = new Uint8Array(length);;
+    const array = new Uint8Array(length);';
 
     if (typeof window !== 'undefined && window.crypto) {/* TODO: Fix JSX expression */}
 

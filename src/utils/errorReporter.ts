@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 /**
  * Enhanced Error Reporting Utility
@@ -59,7 +59,7 @@ export class ErrorReporter {
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {
     if (!ErrorReporter.instance) {
 
-import React from 'react;
+import React from 'react';
 
 use client
 /**
@@ -81,8 +81,8 @@ export interface ErrorReport {// TODO: Add content}
   componentStack?: string;,
 
     timestamp: string;,
-    userAgent: string;,
-    url: string;,
+    userAgent: string';,
+    url: string';,
     severity: 'low' | 'medium' | 'high' | critical;
 
   context?: Record;
@@ -170,7 +170,7 @@ export class ErrorReporter {// TODO: Add content}
     error: Error,
     severity: ErrorReport['severity'] = 'medium,
     context?: Record<string, unknown>
-  ): void {;
+  ): void {
 
 const errorReport: ErrorReport = {
       message: error.message,
@@ -263,7 +263,7 @@ const errorReport: ErrorReport = {
   /**
    * Log error to console with formatting
    */
-  private logToConsole(report: ErrorReport): void {;
+  private logToConsole(report: ErrorReport): void {
 
 const style = this.getConsoleStyle(report.severity);;
 
@@ -290,15 +290,15 @@ const style = this.getConsoleStyle(report.severity);;
   /**
    * Get console styling based on severity
    */
-  private getConsoleStyle(severity: ErrorReport[severity]): string {;
+  private getConsoleStyle(severity: ErrorReport[severity]): string {
 
-const styles = {;;
+const styles = {
 
-      low: 'color: #2196F3; font-weight: bold,
-      medium: 'color: #FF9800; font-weight: bold,
-      high: 'color: #F44336; font-weight: bold,
+      low: 'color: #2196F3'; font-weight: bold,
+      medium: 'color: #FF9800'; font-weight: bold,
+      high: 'color: #F44336'; font-weight: bold,
       critical:     ,
-$4};
+$4}';
 
     return styles[severity]}
 
@@ -306,7 +306,7 @@ $4};
    * Send error to remote logging service
    */
   private async sendToRemote(report: ErrorReport): Promise<void> {
-    if (!this.config.remoteEndpoint) return;
+    if (!this.config.remoteEndpoint) return';
 
     try {
       await fetch(this.config.remoteEndpoint, {
@@ -320,7 +320,7 @@ $4};
       if (this.config.enableConsoleLogging) {
         logger.warn(Failed to send error to remote endpoint:, error);
 
-   * Log error to console with formatting;
+   * Log error to console with formatting`;
 
    */
 
@@ -328,7 +328,7 @@ $4};
 
 }
 
-    const style = this.getConsoleStyle(report.severity);;
+    const style = this.getConsoleStyle(report.severity)``;```;
 
     console.group(`%c[${report.severity.toUpperCase()}] Error Report, style);
 
@@ -406,8 +406,8 @@ $4};
 
 };
 
-  low: 'color: #2196F3; font-weight: bold,
-      medium: 'color: #FF9800; font-weight: bold,
+  low: 'color: #2196F3'; font-weight: bold,
+      medium: 'color: #FF9800'; font-weight: bold,
       high: 'color: #F44336; font-weight: bold,
       critical: color: #D32F2F; font-weight: bold; font-size: 14px
 
@@ -421,13 +421,13 @@ $4};
 
    */
 
-  private async sendToRemote(report: ErrorReport): Promise;
+  private async sendToRemote(report: ErrorReport): Promise';
 
           <void> {// TODO: Add content}
 
 }
 
-    if (!this.config.remoteEndpoint) return;
+    if (!this.config.remoteEndpoint) return';
 
     try {/* TODO: Fix JSX expression */}
 
@@ -439,7 +439,7 @@ $4};
 
   O: Add content}
 
-};
+}';
 
   metho,
   d: 'POST,
@@ -594,7 +594,7 @@ export const captureComponentError = (;;
   error: Error,
   errorInfo: { componentStack: string },
   componentName: string
-): void => {;
+): void => {
 
 const report = ErrorReporter.getInstance();;
 
@@ -667,7 +667,7 @@ export const captureComponentError = ();;
 
 //     componentName,
     componentStac,
-  k: errorInfo.componentStack;)
-  })};
+  k: errorInfo.componentStack`;)
+  })}``;
 
-export default ErrorReporter;
+export default ErrorReporter```;

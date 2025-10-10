@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
-import { execSync } from child_process;
+import { execSync } from child_process';
 
-// Get all TypeScript/JavaScript files that need fixing;
+// Get all TypeScript/JavaScript files that need fixing';
 
-const filesToFix = [;;;
+const filesToFix = [';';
 
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,
   '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx,
@@ -31,7 +31,7 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
 
   // Fix unused variables by prefixing with underscore;
 
-  const unusedVarPatterns = [;;
+  const unusedVarPatterns = [
 
     // Unused imports;
 
@@ -42,16 +42,16 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
 
 ;
 
-const unusedImports = importList.filter(imp => {);;
+const unusedImports = importList.filter(imp => {);
 
           return !content.includes(varName) || content.split(varName).length <= 2});
 
         if (unusedImports.length >
 );
 
-} 0) {;
+} 0) {
 
-const fixedImports = importList;;;
+const fixedImports = importList;;
 
             .map(imp => {)
               if (unusedImports.includes(imp)) {
@@ -73,15 +73,15 @@ const fixedImports = importList;;;
           return match.replace(imports, fixedImports)}
 
         return match}},
-    // Unused variable declarations;
+    // Unused variable declarations`;
 
     {
-      pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g;
+      pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g``;
 
       fix: (match, varName) => {
   return (
 
-        if (varName.startsWith(_)) return match;
+        if (varName.startsWith(_)) return match```;
 
         if (matches && matches.length <= 1) {
     {/* TODO: Fix JSX expression */}
@@ -95,11 +95,11 @@ const fixedImports = importList;;;
       pattern: /function\s+[^(]*\(([^)]+)\)/g;
 
       fix: (match, params) =>
-);
+)`;
 
-} {;
+} {
 
-const fixedParams = paramList;;
+const fixedParams = paramList``;```;
 
           .map(param => {)
             if (!paramName.startsWith('_') && !paramName.includes('=)) {
@@ -132,11 +132,11 @@ const fixedParams = paramList;;
 
 }
 
-// Fix all files;
+// Fix all files`;
 
-filesToFix.forEach(fixUnusedVariables);
+filesToFix.forEach(fixUnusedVariables)``;
 
-// Run linter to check results;
+// Run linter to check results```;
 
 try {
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit })} catch (error) {

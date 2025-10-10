@@ -1,21 +1,21 @@
-import React from 'react;
+import React from 'react';
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-// const __filename = fileURLToPath(import.meta.url);;
+// const __filename = fileURLToPath(import.meta.url)';
 
 // // __dirname removed
-//Function to aggressively fix corrupted syntax;
+//Function to aggressively fix corrupted syntax';
 
 function fixCorruptedSyntax(text) {
 
-  //Fix import statements that got completely corrupted;
+  //Fix import statements that got completely corrupted';
 
   fixed = fixed.replace(
 
@@ -23,7 +23,7 @@ function fixCorruptedSyntax(text) {
     (match, imports) => {
       //Clean up the imports by removing extra commas and spaces;
 
-      const cleanImports = imports;;
+      const cleanImports = imports;
 
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
@@ -43,9 +43,9 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(
 
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
-    (match, imports, module) => {;
+    (match, imports, module) => {
 
-const cleanImports = imports;;
+const cleanImports = imports;
 
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
@@ -294,9 +294,9 @@ const cleanImports = imports;;
 
 function processFile(filePath) {
   try {
-    //     const content = fs.readFileSync(filePath, 'utf8);;
+    //     const content = fs.readFileSync(filePath, 'utf8);
 
-    //     const fixedContent = fixCorruptedSyntax(content);;
+    //     const fixedContent = fixCorruptedSyntax(content);
 
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8);
@@ -318,10 +318,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 function processDirectory(dirPath) {
 
   try {
-    //     const items = fs.readdirSync(dirPath);;
+    //     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
-      //       const fullPath = path.join(dirPath, item);;
+      //       const fullPath = path.join(dirPath, item);
 
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories;
@@ -352,11 +352,11 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 
   return processedCount}
 
-//Main execution;
+//Main execution`;
 
-// let processedCount = processDirectory('./src);;
+// let processedCount = processDirectory('./src)``;
 
-processedCount += processDirectory('./utils);
+processedCount += processDirectory('./utils)```;
 
 // 
 }}}}}}}}}}}}}"`

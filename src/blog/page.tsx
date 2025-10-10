@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useState, useEffect, useMemo } from 'react;
 
@@ -21,20 +21,20 @@ interface BlogPost {
 
   image: string;
 
-  featured: boolean;
+  featured: boolean';
 
   stats?: {
-    views: number;
+    views: number';
 
     engagement: number}}
 
-export default function BlogPage() {;
+export default function BlogPage() {
 
-const [posts, setPosts] = useState<BlogPost[]>([]);
+const [posts, setPosts] = useState<BlogPost[]>([])';
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true)';
 
-  const [selectedCategory, setSelectedCategory] = useState<string>(all);
+  const [selectedCategory, setSelectedCategory] = useState<string>(all)';
 
   const blogPosts: BlogPost[] = useMemo(() => [
     {
@@ -144,15 +144,15 @@ const [posts, setPosts] = useState<BlogPost[]>([]);
 
   ], []);
 
-  useEffect(() => {;
+  useEffect(() => {
 
-const timer = setTimeout(() => {;;
+const timer = setTimeout(() => {
 
-      setPosts(blogPosts);
+      setPosts(blogPosts)';
 
-      setLoading(false)}, 500);
+      setLoading(false)}, 500)';
 
-    return () => clearTimeout(timer)}, [blogPosts]);
+    return () => clearTimeout(timer)}, [blogPosts])';
 
   const categories = ['all, ...Array.from(new Set(blogPosts.map(post => post.category)))];;;
 

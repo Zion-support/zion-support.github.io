@@ -1,6 +1,6 @@
 
 export type InnovativeMicroSaas =
-export type InnovativeMicroSaas = {;
+export type InnovativeMicroSaas = {
 
   id: string;
 
@@ -571,9 +571,7 @@ lin,
 
 real_service?: boolean,
 rating?: number,
-launch_date?: string}
-
-;
+launch_date?: string};
 
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   id: podcast - transcription - seo - suite,
@@ -765,7 +763,7 @@ export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
 
 ;
 
-export type InnovativeMicroSaas = {;
+export type InnovativeMicroSaas = {
 
 	id: string;
 
@@ -808,7 +806,7 @@ export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
 	rating?: number;,
 	launchDate?: string};
 
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 	{,
 		id: podcast-transcription-seo-suite;
@@ -836,7 +834,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 
 		launchDate: 2025-12-01};
 
-	{;
+	{
 
 		id: local-seo-reviews-booster}
 
@@ -858,7 +856,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: smart-invoice-reconciliation}
 
@@ -879,7 +877,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: candidate-screening-copilot}
 
@@ -904,7 +902,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 
 ;
 
-export type InnovativeMicroSaas = {;
+export type InnovativeMicroSaas = {
 
 	id: string;
 
@@ -924,7 +922,7 @@ export type InnovativeMicroSaas = {;
 		| Human Resources,
 		| Supply Chain Management,
 export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 	{/* TODO: Fix JSX expression */}
 
@@ -1094,7 +1092,7 @@ export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
 	rating?: number;,
 	launchDate?: string};
 
-export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 	{,
 		id: podcast-transcription-seo-suite;
@@ -1122,7 +1120,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 
 		launchDate: 2025-12-01};
 
-	{;
+	{
 
 		id: local-seo-reviews-booster}
 
@@ -1144,7 +1142,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: smart-invoice-reconciliation}
 
@@ -1165,7 +1163,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 
 		realService: true};
 
-	{;
+	{
 
 		id: candidate-screening-copilot}
 
@@ -1199,7 +1197,7 @@ export type InnovativeMicroSaas =
   category: unknown;
 
 export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 	{/* TODO: Fix JSX expression */}
 
@@ -1650,9 +1648,7 @@ lin,
 
 real_service?: boolean,
 rating?: number,
-launch_date?: string}
-
-;
+launch_date?: string};
 
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   id: podcast - transcription - seo - suite,
@@ -1999,7 +1995,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
 
   r: string, professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; use_cases?: string[]; lin,
-  k: string; real_service?: boolean, rating?: number, launch_date?: string} ; export const,
+  k: string; real_service?: boolean, rating?: number, launch_date?: string}; export const,
   innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,  i,
   d: 'podcast - transcription - seo - suite nam,
   e: 'Podcast Transcription & SEO Suite taglin,
@@ -2063,13 +2059,13 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   r: string, professional?: string} enterprise?: string }; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
   k: string; realService?: boolean; rating?: number; launchDate?: string}; export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [; {/* TODO: Fix JSX expression */}
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [ {/* TODO: Fix JSX expression */}
 
   n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.} categor,
-  y: 'Content Marketing}; pricin,
+  y: 'Content Marketing}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$39/mo }; feature,
+  r: '$39/mo }'; feature,
   s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards]; integration,
   s: ['YouTubeSpotifyWordPress]; useCase,
   s: ['Content repurposingSEO growth]; lin,
@@ -2080,10 +2076,10 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   e: 2025-12-01 }; {/* TODO: Fix JSX expression */}
 
   n: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.} categor,
-  y: 'Marketing Automation}; pricin,
+  y: 'Marketing Automation}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$29/mo }; feature,
+  r: '$29/mo }'; feature,
   s: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards]; integration,
   s: ['Google Business ProfileYelp]; useCase,
   s: ['Local rankingReputation management]; lin,
@@ -2092,10 +2088,10 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   e: true}; {/* TODO: Fix JSX expression */}
 
   n: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.} categor,
-  y: 'Financial Technology}; pricin,
+  y: 'Financial Technology}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$59/mo }; feature,
+  r: '$59/mo }'; feature,
   s: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP]; integration,
   s: ['QuickBooksXeroStripe]; useCase,
   s: ['Accounting automationFinance ops]; lin,
@@ -2104,10 +2100,10 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   e: true}; {/* TODO: Fix JSX expression */}
 
   n: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.} categor,
-  y: 'Human Resources}; pricin,
+  y: 'Human Resources}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$69/mo }; feature,
+  r: '$69/mo }'; feature,
   s: ['Resume parsingJD matchingQuestion setsATS sync]; integration,
   s: ['GreenhouseLever]; useCase,
   s: ['Faster hiringBias reduction]; lin,
@@ -2121,13 +2117,13 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   r: string, professional?: string} enterprise?: string }; feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
   k: string; realService?: boolean; rating?: number; launchDate?: string}; export const,
-  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [; {/* TODO: Fix JSX expression */}
+  innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [ {/* TODO: Fix JSX expression */}
 
   n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.} categor,
-  y: 'Content Marketing}; pricin,
+  y: 'Content Marketing}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$39/mo }; feature,
+  r: '$39/mo }'; feature,
   s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards]; integration,
   s: ['YouTubeSpotifyWordPress]; useCase,
   s: ['Content repurposingSEO growth]; lin,
@@ -2138,10 +2134,10 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   e: 2025-12-01 }; {/* TODO: Fix JSX expression */}
 
   n: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.} categor,
-  y: 'Marketing Automation}; pricin,
+  y: 'Marketing Automation}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$29/mo }; feature,
+  r: '$29/mo }'; feature,
   s: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards]; integration,
   s: ['Google Business ProfileYelp]; useCase,
   s: ['Local rankingReputation management]; lin,
@@ -2150,10 +2146,10 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   e: true}; {/* TODO: Fix JSX expression */}
 
   n: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.} categor,
-  y: 'Financial Technology}; pricin,
+  y: 'Financial Technology}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$59/mo }; feature,
+  r: '$59/mo }'; feature,
   s: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP]; integration,
   s: ['QuickBooksXeroStripe]; useCase,
   s: ['Accounting automationFinance ops]; lin,
@@ -2162,10 +2158,10 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   e: true}; {/* TODO: Fix JSX expression */}
 
   n: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.} categor,
-  y: 'Human Resources}; pricin,
+  y: 'Human Resources}'; pricin,
   g: {/* TODO: Fix JSX expression */}
 
-  r: '$69/mo }; feature,
+  r: '$69/mo }'; feature,
   s: ['Resume parsingJD matchingQuestion setsATS sync]; integration,
   s: ['GreenhouseLever]; useCase,
   s: ['Faster hiringBias reduction]; lin,
@@ -2247,7 +2243,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
 
   r: string, professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; use_cases?: string[]; lin,
-  k: string; real_service?: boolean, rating?: number, launch_date?: string} ; export const,
+  k: string; real_service?: boolean, rating?: number, launch_date?: string}; export const,
   innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,  i,
   d: 'podcast - transcription - seo - suite nam,
   e: 'Podcast Transcription & SEO Suite taglin,

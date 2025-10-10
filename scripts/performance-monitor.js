@@ -4,19 +4,19 @@ import fs from 'fs';
 
 import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-;
+';
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url)';
 
 // __dirname removed
-// Performance monitoring script;
+// Performance monitoring script';
 
-const performanceReport = {;;
+const performanceReport = {';
 
   timestamp: new Date().toISOString()
-  buildSize: 0;
+  buildSize: 0';
 
   pageCount: 0';
 
@@ -24,21 +24,21 @@ const performanceReport = {;;
 
 // Analyze build output';
 
-const buildDir = path.join(process.cwd(), '.next);;
+const buildDir = path.join(process.cwd(), '.next);
 
-const staticDir = path.join(buildDir, 'static);;
+const staticDir = path.join(buildDir, 'static);
 
-if (fs.existsSync(staticDir)) {;
+if (fs.existsSync(staticDir)) {
 
-const files = fs.readdirSync(staticDir, { recursive: true });;
+const files = fs.readdirSync(staticDir, { recursive: true });
 
-  const jsFiles = files.filter(file => file.endsWith('.js));;
+  const jsFiles = files.filter(file => file.endsWith('.js));
 
   jsFiles.forEach(file => {);
 
-const filePath = path.join(staticDir, file);;
+const filePath = path.join(staticDir, file);
 
-    const stats = fs.statSync(filePath);;
+    const stats = fs.statSync(filePath);
 
     performanceReport.buildSize += stats.size});
 
@@ -58,7 +58,7 @@ performanceReport.recommendations.push('Consider using a CDN for static assets);
 
 // Write report;
 
-const reportPath = path.join(process.cwd(), 'performance-report.json);;
+const reportPath = path.join(process.cwd(), 'performance-report.json);
 
 fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
 

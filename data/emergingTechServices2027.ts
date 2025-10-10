@@ -616,11 +616,11 @@ export const,
     description: "Advanced neuromorphic computing platform that mimics the human brains neural architecture, enabling ultra-efficient AI processing, real-time learning, and cognitive computing capabilities for next-generation applications.,
     category: Advanced AI,
     subcategory: Neuromorphic Computing,
-    pricing: unknown;
+    pricing: unknown";
 
-      monthly: 12000;
+      monthly: 12000";
 
-      yearly: 120000;
+      yearly: 120000";
 
       custom: Neuromorphic computing solutions,
       currency: $,

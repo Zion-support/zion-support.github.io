@@ -23,7 +23,7 @@ if ('serviceWorker' in navigator) {
 }
 
         // Handle updates
-        registration.addEventListener('updatefound, () => {;
+        registration.addEventListener('updatefound, () => {
 
 const newWorker = registration.installing;;
 
@@ -45,9 +45,7 @@ const newWorker = registration.installing;;
           // console.log removed for production
 }
 
-      })})}
-
-;
+      })})};
 
 const root = document.getElementById('root);;
 

@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useEffect, useState } from react;
 
@@ -13,9 +13,7 @@ interface PerformanceOptimizerProps {
 
   enableResourceHints?: boolean;
 
-  enableServiceWorker?: boolean}
-
-;
+  enableServiceWorker?: boolean};
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
@@ -24,7 +22,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableCodeSplitting = true,
   enableResourceHints = true,
   enableServiceWorker = true
-}) => {;
+}) => {
 
 const [optimizationStatus, setOptimizationStatus] = useState({
     imagesOptimized: 0,
@@ -58,7 +56,7 @@ const [optimizationStatus, setOptimizationStatus] = useState({
 
 ;
 
-const optimizeImages = () => {;;;
+const optimizeImages = () => {
 
 const images = document.querySelectorAll(img);;
 
@@ -88,14 +86,14 @@ const images = document.querySelectorAll(img);;
 
 ;
 
-const setupLazyLoading = () => {;;
+const setupLazyLoading = () => {
 
-    if (IntersectionObserver in window) {;
+    if (IntersectionObserver in window) {
 
-const observer = new IntersectionObserver((entries) => {;;
+const observer = new IntersectionObserver((entries) => {
 
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {;
+          if (entry.isIntersecting) {
 
 const img = entry.target as HTMLImageElement;;
 
@@ -123,14 +121,14 @@ const lazyImages = document.querySelectorAll(img[data-src]);;
 
   };
 
-;
+';
 
-const preloadCriticalResources = () => {;;
+const preloadCriticalResources = () => {
 
-const criticalResources = [;;
+const criticalResources = [';';
 
       {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap,
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400';500';600';700&display=swap,
         as: 'style,
         type: text/css
       },
@@ -142,7 +140,7 @@ const criticalResources = [;;
 
     ];
 
-    criticalResources.forEach((resource) => {;
+    criticalResources.forEach((resource) => {
 
 const link = document.createElement(link);;
 
@@ -161,16 +159,16 @@ const link = document.createElement(link);;
 
 ;
 
-const setupCodeSplitting = () => {;;
+const setupCodeSplitting = () => {
 
     // This would be handled by Next.js dynamic imports
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }))};
 
-;
+';
 
-const addResourceHints = () => {;;
+const addResourceHints = () => {
 
-const hints = [;;;
+const hints = [';';
 
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com },
@@ -181,7 +179,7 @@ const hints = [;;;
 
     ];
 
-    hints.forEach((hint) => {;
+    hints.forEach((hint) => {
 
 const link = document.createElement(link);;
 
@@ -196,12 +194,12 @@ const link = document.createElement(link);;
 
     setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }))};
 
-;
+';
 
-const registerServiceWorker = async () => {;;
+const registerServiceWorker = async () => {';';
 
     if ('serviceWorker in navigator) {
-      try {;
+      try {
 
 const registration = await navigator.serviceWorker.register(/sw.js);;
 
@@ -215,9 +213,9 @@ const registration = await navigator.serviceWorker.register(/sw.js);;
 
   // Performance monitoring
   useEffect(() => {
-    if (typeof window !== 'undefined' && performance in window) {;
+    if (typeof window !== 'undefined' && performance in window) {
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint) {
@@ -233,7 +231,7 @@ const observer = new PerformanceObserver((list) => {;;
 
         }
 
-      });
+      })';
 
       observer.observe({ entryTypes: ['largest-contentful-paint] })}
 

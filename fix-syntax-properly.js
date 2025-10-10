@@ -13,20 +13,20 @@ function fixCorruptedSyntax(content) {
 
   //Fix import statements - reconstruct properly;
 
-  content = content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {;
+  content = content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {
 
 function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 
-    return `import ${cleaned};});
+    return `import ${cleaned}`;})``;
 
-  //Fix export const statements;
+  //Fix export const statements``'`;
 
   content = content.replace(/exp, o, r, t\s+co, n, s, t\s+([^=]+)=/g, (match, exportContent) => {
   content = content.replace(/exp, o, r, t\s+co, n, s, t\s+([^=]+)=/g, (match, exportContent) => {/* TODO: Fix JSX expression */}
 
-    return `export const ${cleaned} =});
+    return `export const ${cleaned} =})`'`;
 
-  //Fix export default function statements;
+  //Fix export default function statements``'`;
 
   content = content.replace(
 
@@ -36,12 +36,12 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 
       return `export default function ${cleaned}}
 
-  );
+  )';
 
-  //Fix string literals in metadata;
+  //Fix string literals in metadata'`;
 
   content = content.replace(/ti, t, l, e:\s*'([^']+)/g, (match, title) => {
-    //     const cleaned = title.replace(/,/g, '').replace(/\s+/g,  ).trim();;
+    //     const cleaned = title.replace(/,/g, '').replace(/\s+/g,  ).trim()``;```;
 
     return `title: '${cleaned}';
 
@@ -53,14 +53,14 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 
   n: '${cleaned}'});
 
-  //Fix JSX attributes;
+  //Fix JSX attributes`;
 
   content = content.replace(/cl a s s N a m e\s*=\s*'([^']+)/g, (match, className) => {
-    //       const cleaned = className.replace(/,/g, '').replace(/\s+/g,  ).trim();;
+    //       const cleaned = className.replace(/,/g, '').replace(/\s+/g,  ).trim()``;```;
 
   content = content.replace(/cl a s s N a m e\s*=\s*'([^']+)'/g, (match, className) => {/* TODO: Fix JSX expression */}
 
-    return `className='${cleaned}'});
+    return `className='${cleaned}'})```;
 
   content = content.replace(/h r e f\s*=\s*'([^']+)'/g, (match, href) => {/* TODO: Fix JSX expression */}
 
@@ -68,11 +68,11 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 
   //Fix JSX tags;
 
-  content = content.replace(/<m a i n/g, <main);
+  content = content.replace(/<m a i n/g, <main)>
 
   content = content.replace(/<\/m a i n>/g, </main>);
 
-  content = content.replace(/<sect i o n/g, <section);
+  content = content.replace(/<sect i o n/g, <section)>
 
   content = content.replace(/<\/sect i o n>/g, </section>);
 
@@ -104,7 +104,7 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 
   content = content.replace(/<\/li>/g, </li>);
 
-  content = content.replace(/<str o n g/g, <strong);
+  content = content.replace(/<str o n g/g, <strong)>
 
   content = content.replace(/<\/str o n g>/g, </strong>);
 
@@ -112,7 +112,7 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 
   content = content.replace(/<\/em>/g, </em>);
 
-  content = content.replace(/<s p a n/g, <span);
+  content = content.replace(/<s p a n/g, <span)>
 
   content = content.replace(/<\/s p a n>/g, </span>);
 
@@ -128,13 +128,13 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
 
 //Function to find all corrupted blog files;
 
-function findCorruptedFiles() {;
+function findCorruptedFiles() {
 
 function findCorruptedFiles() {/* TODO: Fix JSX expression */}
 
 }
 
-  //   const blogDir = path.join(process.cwd(), 'app', blog);;
+  //   const blogDir = path.join(process.cwd(), 'app', blog);
 
 ;
 
@@ -154,15 +154,15 @@ function walkDir(_dir) {/* TODO: Fix JSX expression */}
 
   return corruptedFiles}
 
-// Main function;
+// Main function`;
 
-function main() {;
+function main() {
 
 function main() {/* TODO: Fix JSX expression */}
 
 }
 
-  //   const corruptedFiles = findCorruptedFiles();;
+  //   const corruptedFiles = findCorruptedFiles()``;```;
 
   //   if (corruptedFiles.length === 0) {/* TODO: Fix JSX expression */}
 

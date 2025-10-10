@@ -1,20 +1,20 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react;
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
-const ITConsultingPage: React.FC = () => {;
+const ITConsultingPage: React.FC = () => {';
 
-const consultingServices = [;
+const consultingServices = [';
     {
       titl,
     e: 'Digital Transformation,
@@ -49,7 +49,7 @@ const consultingServices = [;
             <div className="text-center mb-16><
               <h1 className="text-4xl,
   md:text-6xl font-bold text-gray-900 mb-6><
-                IT Consulting Services;
+                IT Consulting Services";
 
               <
               <p className="text-xl text-gray-600 max-w-3xl mx-auto><
@@ -138,6 +138,6 @@ const consultingServices = [;
       <
 
     </React.Fragment>
-  )};
+  )}">
 
-export default ITConsultingPage;
+export default ITConsultingPage";

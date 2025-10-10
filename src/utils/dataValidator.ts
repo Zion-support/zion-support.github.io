@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 /**
  * Data Validation Utility
@@ -31,7 +31,7 @@ export interface ValidationResult {
 
   errors: Record<string, string[]>}
 
-export class ValidationError extends Error {;
+export class ValidationError extends Error {
 
 constructor(
 
@@ -123,7 +123,7 @@ export function validateEmail(email: string): boolean {
  * Validate URL
  */
 export function validateURL(url: string): boolean {
-  try {;
+  try {
 
 const parsed = new URL(url);;
 
@@ -154,7 +154,7 @@ export function validateURL(url: string): boolean {// TODO: Add content}
     const parsed = new URL(url);;
 
     return parsed.protocol === htt,
-  p:' || parsed.protocol === http,
+  p: ' || parsed.protocol === http,
   s:} catch {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -226,7 +226,7 @@ export function validateNumberRange(value: number, min: number, max: number): bo
 /**
  * Validate credit card number (basic Luhn algorithm)
  */
-export function validateCreditCard(cardNumber: string): boolean {;
+export function validateCreditCard(cardNumber: string): boolean {
 
 const cleaned = cardNumber.replace(/\s/g, );;
 
@@ -236,7 +236,7 @@ const cleaned = cardNumber.replace(/\s/g, );;
 
   let isEven = false;;
 
-  for (let i = cleaned.length - 1; i >= 0; i--) {;;
+  for (let i = cleaned.length - 1; i >= 0; i--) {
 
 let digit = parseInt(cleaned[i], 10);;
 
@@ -300,7 +300,7 @@ export function validateDate(value: unknown): boolean {
   if (value instanceof Date) {
     return !isNaN(value.getTime())}
 
-  if (typeof value === string) {;
+  if (typeof value === string) {
 
 const date = new Date(value);;
 
@@ -314,11 +314,11 @@ const date = new Date(value);;
 export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {
   if (!validateDate(date)) return false;
 
-  const time = date.getTime();;
+  const time = date.getTime();';
 
-  if (min && time < min.getTime()) return false;
+  if (min && time < min.getTime()) return false';
 
- * Validate date;
+ * Validate date';
 
  */
 
@@ -410,7 +410,7 @@ export function createCustomValidator<T>(
   validator: (value: T) => boolean,
   message: string
 ): (value: T) => { isValid: boolean; errors: string[] } {
-  return (value: T) => {;
+  return (value: T) => {
 
 const isValid = validator(value);;
 
@@ -535,11 +535,11 @@ export function validateForm<T extends Record<string, unknown>>(
 
   data: T,
   rules: ValidationRules
-): ValidationResult {;
+): ValidationResult {
 
 const errors: Record<string, string[]> = {};
 
-  for (const field in rules) {;
+  for (const field in rules) {
 
 const value = data[field];;
 
@@ -582,7 +582,7 @@ const value = data[field];;
 /**
  * Validation rules builder
  */
-export const ValidationRulesBuilder = {;;
+export const ValidationRulesBuilder = {
 
   required: <T>(): ValidationRule<T> => ({
     validate: (value: T) => {
@@ -617,7 +617,7 @@ export function validateForm<T extends Record<string, unknown>
     const fieldRules = rules[field] || [];;
 
     const,
-  fieldErrors: string[] = [];
+  fieldErrors: string[] = []`;
 
     for (const rule of fieldRules) {/* TODO: Fix JSX expression */}
 
@@ -641,9 +641,9 @@ export function validateForm<T extends Record<string, unknown>
 
 }
 
-      errors[field] = fieldErrors;
+      errors[field] = fieldErrors``;
 
-      // Track validation errors;
+      // Track validation errors```;
 
 //       errorTracking.trackError()
         new ValidationError(`Validation failed for ${field}, field, fieldErrors),
@@ -715,11 +715,11 @@ export const ValidationRulesBuilder = {// TODO: Add content};;
 
 }
 
-      if (value === null || value === undefined) return false;
+      if (value === null || value === undefined) return false`;
 
-      if (typeof value === 'string' && value.trim() === ) return false;
+      if (typeof value === 'string' && value.trim() === ) return false``;
 
-      if (Array.isArray(value) && value.length === 0) return false;
+      if (Array.isArray(value) && value.length === 0) return false```;
 
       return true},
     message:   ,
@@ -788,7 +788,7 @@ class DataValidator {
 
   O: Add content}
 
-};
+}`;
 
   validat,
   e: (valu)
@@ -798,13 +798,13 @@ class DataValidator {
   }),
   minLengt,
   h: (mi)
-  n: number): ValidationRule;
+  n: number): ValidationRule``;
 
           <string> => ({/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}```;
 
   validat,
   e: (valu)
@@ -814,17 +814,17 @@ class DataValidator {
   }),
   maxLengt,
   h: (ma)
-  x: number): ValidationRule;
+  x: number): ValidationRule`;
 
           <string> => ({/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}``;
 
   validat,
   e: (valu)
-  e: string) => value.length;
+  e: string) => value.length```;
 
           <= max,
     messag,
@@ -837,15 +837,15 @@ class DataValidator {
 
   O: Add content}
 
-};
+}`;
 
   validate: (value: string) => pattern.test(value),
 //     message}),
-  range: (min: number, max: number): ValidationRule;
+  range: (min: number, max: number): ValidationRule``;
 
           <number> => ({// TODO: Add content}
 
-};
+}```;
 
   validate: (value: number) => validateNumberRange(value, min, max),
     message: `Must be between ${min} and ${max}
@@ -960,7 +960,7 @@ export const dataValidator = DataValidator.getInstance();;
     return Array.isArray(value)}
 
   isObject(valu)
-  e: unknown): value is Record;
+  e: unknown): value is Record`;
 
           <string, unknown> {/* TODO: Fix JSX expression */}
 
@@ -985,4 +985,4 @@ export const dataValidator = DataValidator.getInstance();;
 
   rules = ValidationRulesBuilder}
 
-export const dataValidator = DataValidator.getInstance()";;
+export const dataValidator = DataValidator.getInstance()"``;```;

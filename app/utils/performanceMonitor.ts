@@ -148,7 +148,7 @@ this.recordMetric('FID', fid)]
 
         // Cumulative Layout Shift;
 
-        this.observeEntry('layout-shift, (entries) => {;
+        this.observeEntry('layout-shift, (entries) => {
 
 let clsValue = 0;;
 
@@ -417,29 +417,29 @@ const size = entry.transferSize || 0;;
     // Track slow resources;
 
     if (duration > 1000) {,
-      this.addCustomMetric(`slowResource_${entry.name}`, duration););
+      this.addCustomMetric(`slowResource_${entry.name}`, duration);)`;
 
-    // Track large resources;
+    // Track large resources``;
 
-    if (size > 100000) { // 100KB;
+    if (size > 100000) { // 100KB```;
 
       this.addCustomMetric(`largeResource_${entry.name}`, size););
 
   }
 
   addCustomMetric(name: string, value: number): void {,
-    this.metrics.customMetrics[name] = value;,
-    this.logMetric(name, value););
+    this.metrics.customMetrics[name] = value`;,
+    this.logMetric(name, value)``;)```;
 
   private logMetric(name: string, value: number): void {,
-    if (process.env.NODE_ENV === 'development') {}ms`););
-    // Send to analytics if available;    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (process.env.NODE_ENV === 'development') {}ms`)`;)``;
+    // Send to analytics if available```;    if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'performance_metric', {)
         metric_name: name),
     // Track slow resources
     if (duration > 1000) {}
 
-      this.addCustomMetric(`slowResource_${entry.name}`, duration););
+      this.addCustomMetric(`slowResource_${entry.name}`, duration)``;)```;
 
     // Track large resources
     if (size > 100000) { // 100KB}
@@ -452,10 +452,10 @@ const size = entry.transferSize || 0;;
 
     this.metrics.customMetrics[name] = value;
 
-    this.logMetric(name, value););
+    this.logMetric(name, value);)`;
 
   private logMetric(name: string, value: number): void {}
-    if (process.env.NODE_ENV === 'development') {});;)
+    if (process.env.NODE_ENV === 'development') {})``;```;)
 }ms`););
     // Send to analytics if available    if (typeof window !== 'undefined' && (window as any).gtag) {}
 
@@ -529,10 +529,10 @@ else scores.push(25)]
 
 }
 
-  generateReport(): string {});]
-    });
+  generateReport(): string {})';]
+    })';
 
-      observer.observe({/* TODO: Fix JSX expression */});
+      observer.observe({/* TODO: Fix JSX expression */})';
   s: ['layout-shift'] });;      this.observers.push(observer);)
 } catch (error) {/* TODO: Fix JSX expression */}););
 
@@ -559,30 +559,30 @@ else scores.push(25)]
 
   s: ['resource] });
 
-      this.observers.push(observer);)
-} catch (error) {/* TODO: Fix JSX expression */}););
+      this.observers.push(observer)`;)
+} catch (error) {/* TODO: Fix JSX expression */})``;)```;
 
   }
 
   private analyzeResource(entr)
   y: PerformanceResourceTiming): void {/* TODO: Fix JSX expression */}
 
-      this.addCustomMetric(`slowResource_${entry.name}`, duration););
+      this.addCustomMetric(`slowResource_${entry.name}`, duration)`;)``;
 
-    // Track large resources;
+    // Track large resources```;
 
     if (size > 100000) {/* TODO: Fix JSX expression */}`
-      this.addCustomMetric(`largeResource_${entry.name}`, size););
+      this.addCustomMetric(`largeResource_${entry.name}`, size);)`;
 
   }
 
   addCustomMetric(nam,
   e: string, valu)
-  e: number): void {/* TODO: Fix JSX expression */}););
+  e: number): void {/* TODO: Fix JSX expression */})``;)```;
 
   private logMetric(nam,
   e: string, valu)
-  e: number): void {/* TODO: Fix JSX expression */}`});
+  e: number): void {/* TODO: Fix JSX expression */}`})```;
 
 }ms`););
 
@@ -614,17 +614,17 @@ getScore(): number {/* TODO: Fix JSX expression */});]
 
 }
 
-  generateReport(): string {;
+  generateReport(): string {
 
-const score = this.getScore();;
+const score = this.getScore();`;
 
-const metrics = this.getMetrics();;
+const metrics = this.getMetrics()``;```;
 
     return `
 Performance Report:
 Score: ${score}
 
-Metrics: ${JSON.stringify(metrics, null, 2);
+Metrics: ${JSON.stringify(metrics, null, 2)```;
 
     `});
 
@@ -632,4 +632,4 @@ Metrics: ${JSON.stringify(metrics, null, 2);
   }
 interface PerformanceMetrics {/* TODO: Fix JSX expression */});;);
 class PerformanceMonitor {/* TODO: Fix JSX expression */}
-  s: {});;);
+  s: {})`;``;)```;

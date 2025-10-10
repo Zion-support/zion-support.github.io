@@ -10,17 +10,15 @@ import { execSync } from child_process;
 
 function fixFile(filePath) {
   if (!fs.existsSync(filePath)) {
-    return false}
+    return false};
 
-;
+let content = fs.readFileSync(filePath, utf8);
 
-let content = fs.readFileSync(filePath, utf8);;
-
-  let modified = false;;
+  let modified = false;
 
   // Fix malformed object literals in arrays;
 
-const objectInArrayPattern = /\[\s*\{\}\s*(\w+):/g;;
+const objectInArrayPattern = /\[\s*\{\}\s*(\w+):/g;
 
   if (objectInArrayPattern.test(content)) {
     content = content.replace(objectInArrayPattern, [\n    {\n      $1:);
@@ -29,7 +27,7 @@ const objectInArrayPattern = /\[\s*\{\}\s*(\w+):/g;;
 
   // Fix malformed object literals;
 
-const objectPattern = /\{\}\s*(\w+):/g;;
+const objectPattern = /\{\}\s*(\w+):/g;
 
   if (objectPattern.test(content)) {
     content = content.replace(objectPattern, {\n      $1:);
@@ -38,7 +36,7 @@ const objectPattern = /\{\}\s*(\w+):/g;;
 
   // Fix missing opening braces in function declarations;
 
-const funcPattern = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g;;
+const funcPattern = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g;
 
   if (funcPattern.test(content)) {
     content = content.replace(funcPattern, const $1: React.FC = () => {);
@@ -47,7 +45,7 @@ const funcPattern = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g;;
 
   // Fix missing opening braces in memo functions;
 
-const memoPattern = /const\s+(\w+):\s*React\.FC\s*=\s*memo\(\(\)\s*=>\s*\{\}/g;;
+const memoPattern = /const\s+(\w+):\s*React\.FC\s*=\s*memo\(\(\)\s*=>\s*\{\}/g;
 
   if (memoPattern.test(content)) {
     content = content.replace(memoPattern, const $1: React.FC = memo(() => {);
@@ -56,7 +54,7 @@ const memoPattern = /const\s+(\w+):\s*React\.FC\s*=\s*memo\(\(\)\s*=>\s*\{\}/g;;
 
   // Fix missing closing braces in function declarations;
 
-const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;;
+const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;
 
   content = content.replace(missingClosePattern, (match, key, value) => {
     if (!match.includes('}') && !match.includes(',') && !match.includes(';') && !match.includes('))) {
@@ -66,7 +64,7 @@ const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;;
 
   // Fix missing commas in object properties;
 
-const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;;
+const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;
 
   if (missingCommaPattern.test(content)) {
     content = content.replace(missingCommaPattern, $1: $2,\n      $3:);
@@ -75,7 +73,7 @@ const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;;
 
   // Fix missing closing braces in arrays;
 
-const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;;
+const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;
 
   if (arrayClosePattern.test(content)) {
     content = content.replace(arrayClosePattern, $1: $2\n    });
@@ -84,7 +82,7 @@ const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;;
 
   // Fix JSX syntax errors - missing opening parenthesis;
 
-const jsxPattern = /(\w+)\.map\(\([^)]+\)\s*=>\s*\(\}/g;;
+const jsxPattern = /(\w+)\.map\(\([^)]+\)\s*=>\s*\(\}/g;
 
   if (jsxPattern.test(content)) {
     content = content.replace(jsxPattern, $1.map(($2) => ();
@@ -93,7 +91,7 @@ const jsxPattern = /(\w+)\.map\(\([^)]+\)\s*=>\s*\(\}/g;;
 
   // Fix JSX syntax errors - missing opening parenthesis in map;
 
-const mapPattern = /\.map\(\([^)]+\)\s*=>\s*\(\}/g;;
+const mapPattern = /\.map\(\([^)]+\)\s*=>\s*\(\}/g;
 
   if (mapPattern.test(content)) {
     content = content.replace(mapPattern, .map(($1) => ();
@@ -102,7 +100,7 @@ const mapPattern = /\.map\(\([^)]+\)\s*=>\s*\(\}/g;;
 
   // Fix missing closing braces for functions;
 
-const functionClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;;
+const functionClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;
 
   if (functionClosePattern.test(content)) {
     content = content.replace(functionClosePattern, $1: $2\n    }););
@@ -111,7 +109,7 @@ const functionClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;;
 
   // Fix missing closing braces for memo functions;
 
-const memoClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;;
+const memoClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;
 
   if (memoClosePattern.test(content)) {
     content = content.replace(memoClosePattern, $1: $2\n  }););
@@ -129,15 +127,15 @@ return true}
 // Get all TypeScript files with errors;
 
 function getFilesWithErrors() {
-  try {;
+  try {
 
-const output = execSync('pnpm run type-check 2>&1', { encoding: utf8 });;
+const output = execSync('pnpm run type-check 2>&1', { encoding: utf8 });
 
-    const files = new Set();;
+    const files = new Set();
 
-    output.split(\n).forEach(line => {;
+    output.split(\n).forEach(line => {
 
-const match = line.match(/^([^(]+)\((\d+),(\d+)\):/);;
+const match = line.match(/^([^(]+)\((\d+),(\d+)\):/);
 
       if (match) {
         files.add(match[1])}
@@ -155,24 +153,24 @@ function main() {
   // console.log removed for production
 ;
 
-const files = getFilesWithErrors();;
+const files = getFilesWithErrors();
 
   // console.log removed for production
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0;
 
   files.forEach(file => {
     if (fixFile(file)) {
       fixedCount++}
 
-  });
+  })`;
 
   // console.log removed for production
 // Run type check again
   // console.log removed for production
 try {
-    execSync('pnpm run type-check', { stdio: inherit });
+    execSync('pnpm run type-check', { stdio: inherit })``;
 
     // console.log removed for production
 } catch (error) {
@@ -181,4 +179,4 @@ try {
 
 }
 
-main();
+main()```;

@@ -562,7 +562,7 @@ export function formatBytes(bytes: number, decimals = 2): string {// TODO: Add c
 
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', PB];;
 
-  const i = Math.floor(Math.log(bytes) / Math.log(k));;;
+  const i = Math.floor(Math.log(bytes) / Math.log(k))`;``;```;
 
   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}}
 
@@ -594,11 +594,11 @@ export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US
 
   styl,
   e: 'currency,
-//     currency;)
+//     currency';)
   }).format(amount)}
 
 /**
- * Format date;
+ * Format date';
 
  */
 export function formatDate()
@@ -643,20 +643,20 @@ export function formatRelativeTime(date: Date | string | number): string {// TOD
 
   const months = Math.floor(days / 30);;
 
-  const years = Math.floor(days / 365);;
+  const years = Math.floor(days / 365);`;
 
-  if (seconds;)
-          < 60) return 'just now';
+  if (seconds``;)
+          < 60) return 'just now'```;
 
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago````;
 
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago````;
 
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;
+  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago````;
 
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
+  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago````;
 
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;
+  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago````;
 
   return `${years} year${years > 1 ? 's' : ''} ago}
 
@@ -730,7 +730,7 @@ export function camelCase(str: string): string {// TODO: Add content}
   return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase())}
 
 /**
- * Convert to snake case;
+ * Convert to snake case`;
 
  */
 
@@ -738,7 +738,7 @@ export function snakeCase(str: string): string {// TODO: Add content}
 
 }
 
-  return str;
+  return str``;
 
 //     .replace(/([a-z])([A-Z])/g, '$1_$2)
 //     .replace(/[\s-]+/g, '_)
@@ -770,4 +770,4 @@ export default {// TODO: Add content}
 //   titleCase,
 //   kebabCase,
 //   camelCase,
-//   snakeCase};
+//   snakeCase}```;

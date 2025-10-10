@@ -4,11 +4,11 @@ import fs from 'fs';
 
 import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-;
+';
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url)';';
 
 // __dirname removed
 // Function to fix malformed comment blocks';
@@ -21,10 +21,10 @@ function fixCommentBlocks(content) {
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
     (match, method, body) => {';
 
-const fixedBody = body.split('\n).map(line => {);;
+const fixedBody = body.split('\n).map(line => {);
 
         if (line.trim() && !line.trim().startsWith('//')) {
-          return '//  + line.trim();
+          return '//  + line.trim()';
 
 function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
 
@@ -44,12 +44,12 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
   content = content.replace(
 
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
-    (match, body) => {;
+    (match, body) => {
 
-const fixedBody = body.split('\n).map(line => {);;
+const fixedBody = body.split('\n).map(line => {);
 
         if (line.trim() && !line.trim().startsWith('//')) {
-          return '//  + line.trim();
+          return '//  + line.trim()';
 
   content = content.replace()
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
@@ -68,14 +68,14 @@ const fixedBody = body.split('\n).map(line => {);;
   content = content.replace(
 
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
-    (match, method, body) => {;
+    (match, method, body) => {
 
-const lines = body.split('\n);;
+const lines = body.split('\n);
 
-      const fixedLines = lines.map(line => {);;
+      const fixedLines = lines.map(line => {)`;
 
         if (line.trim() && !line.trim().startsWith('//')) {
-          return '//  + line.trim();
+          return '//  + line.trim()``;
 
   content = content.replace()
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
@@ -83,7 +83,7 @@ const lines = body.split('\n);;
 
         }
 
-        return line});`
+        return line})```';`
       return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`}
 
   );
@@ -93,22 +93,22 @@ const lines = body.split('\n);;
 // Function to process a single file;
 
 function processFile(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, 'utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Apply fixes;
 
-    const originalContent = content;;
+    const originalContent = content;
 
-    content = fixCommentBlocks(content);
+    content = fixCommentBlocks(content)`;
 
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, 'utf8)``;
 
-      modified = true;
+      modified = true```;
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
@@ -122,21 +122,21 @@ return false}
 
 // Function to find all TypeScript/JavaScript files;
 
-function findSourceFiles(dir) {;
+function findSourceFiles(dir) {
 
-const files = [];;
+const files = [];
 
   ;
 
-function walkDir(currentPath) {;
+function walkDir(currentPath) {
 
-const items = fs.readdirSync(currentPath);;
+const items = fs.readdirSync(currentPath);
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(currentPath, item);;
+const fullPath = path.join(currentPath, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories;
@@ -173,17 +173,17 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 // console.log removed for production
 ;
 
-const srcDir = path.join(__dirname, 'src);;
+const srcDir = path.join(__dirname, 'src);
 
-const appDir = path.join(__dirname, 'app);;
+const appDir = path.join(__dirname, 'app)`;
 
-const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];;
+const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)]``;```;
 
 `
 // console.log removed for production
-;
+`;
 
-let processedCount = 0;;
+let processedCount = 0``;```;
 
 for (const file of files) {/* TODO: Fix JSX expression */}`
   d: ${file}`)}

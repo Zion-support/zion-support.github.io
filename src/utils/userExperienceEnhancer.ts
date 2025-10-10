@@ -107,7 +107,7 @@ class UserExperienceEnhancer {
             block:           ,
 $4})}
 
-      })});
+      })})';
 
     // Add smooth scrolling to window
     window.scrollTo = new Proxy(window.scrollTo, {
@@ -146,7 +146,7 @@ const links = document.querySelectorAll(a[data-loading]);;
       link.addEventListener('click, () => {
         this.showLinkLoadingState(link as HTMLAnchorElement)})})}
 
-  private showLoadingState(button: HTMLButtonElement): void {;
+  private showLoadingState(button: HTMLButtonElement): void {
 
 const originalText = button.textContent;;
 
@@ -191,7 +191,7 @@ const spinner = button.querySelector(.spinner);;
 
     this.loadingStates.set(button.id || 'button, false)}
 
-  private showFormLoadingState(form: HTMLFormElement): void {;
+  private showFormLoadingState(form: HTMLFormElement): void {
 
 const submitButton = form.querySelector('button[type="submit]) as HTMLButtonElement;;
 
@@ -205,7 +205,7 @@ const inputs = form.querySelectorAll(input, textarea, select, button);;
     inputs.forEach(input => {
       (input as HTMLElement).setAttribute('disabled', 'true)})}
 
-  private showLinkLoadingState(link: HTMLAnchorElement): void {;
+  private showLinkLoadingState(link: HTMLAnchorElement): void {
 
 const originalText = link.textContent;;
 
@@ -267,7 +267,7 @@ const errorBoundary = document.createElement(div);;
 
     document.body.appendChild(errorBoundary)}
 
-  private showErrorMessage(message: string): void {;
+  private showErrorMessage(message: string): void {
 
 const errorDiv = document.createElement(div);;
 
@@ -296,9 +296,9 @@ const errorDiv = document.createElement(div);;
     // Track user satisfaction
     this.trackUserSatisfaction()}
 
-  private trackPageView(): void {;
+  private trackPageView(): void {
 
-const pageData = {;;
+const pageData = {
 
       url: window.location.href,
       title: document.title,
@@ -311,11 +311,11 @@ const pageData = {;;
 
   private trackUserInteractions(): void {
     // Track clicks
-    document.addEventListener(click, (event) => {;
+    document.addEventListener(click, (event) => {
 
 const target = event.target as HTMLElement;;
 
-      const interactionData = {;;
+      const interactionData = {
 
         type: 'click,
         element: target.tagName,
@@ -328,11 +328,11 @@ const target = event.target as HTMLElement;;
       this.sendAnalytics(user_interaction, interactionData)});
 
     // Track form submissions
-    document.addEventListener(submit, (event) => {;
+    document.addEventListener(submit, (event) => {
 
-const form = event.target as HTMLFormElement;;
+const form = event.target as HTMLFormElement;';
 
-      const formData = {;;
+      const formData = {';';
 
         type: 'form_submit,
         formId: form.id,
@@ -343,12 +343,12 @@ const form = event.target as HTMLFormElement;;
       this.sendAnalytics(form_submit, formData)});
 
     // Track scroll depth
-    window.addEventListener(scroll, () => {;
+    window.addEventListener(scroll, () => {
 
-const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);;
+const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)';';
 
       if (scrollDepth > maxScrollDepth) {
-        maxScrollDepth = scrollDepth;
+        maxScrollDepth = scrollDepth';
 
         this.sendAnalytics('scroll_depth, { depth: maxScrollDepth, timestamp: Date.now() })}
 
@@ -356,13 +356,13 @@ const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - w
 
   private trackPerformanceMetrics(): void {
     if ('performance in window) {
-      window.addEventListener(load, () => {;
+      window.addEventListener(load, () => {
 
 const perfData = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
         ;
 
-const metrics = {;;
+const metrics = {
 
           pageLoadTime: perfData.loadEventEnd - perfData.navigationStart,
           domContentLoaded: perfData.domContentLoadedEventEnd - perfData.navigationStart,
@@ -392,7 +392,7 @@ let satisfactionScore = 100;;
 
 let lastInteractionTime = Date.now();;
 
-    document.addEventListener(click, () => {;
+    document.addEventListener(click, () => {
 
 const interactionTime = Date.now() - lastInteractionTime;;
 
@@ -412,9 +412,9 @@ const interactionTime = Date.now() - lastInteractionTime;;
 
   }
 
-  private reportError(error: Error, type: string): void {;
+  private reportError(error: Error, type: string): void {
 
-const errorData = {;;
+const errorData = {
 
       message: error.message,
       stack: error.stack,
@@ -457,9 +457,9 @@ $4})}
     // Add install prompt
     this.setupInstallPrompt()}
 
-  private addPWAMetaTags(): void {;
+  private addPWAMetaTags(): void {
 
-const metaTags = [;;
+const metaTags = [
 
       { name: 'mobile-web-app-capable', content: 'yes },
       { name: 'apple-mobile-web-app-capable', content: 'yes },
@@ -472,13 +472,13 @@ const metaTags = [;;
 
     ];
 
-    metaTags.forEach(tag => {;
+    metaTags.forEach(tag => {
 
-const meta = document.createElement(meta);;
+const meta = document.createElement(meta);';
 
-      meta.setAttribute(name, tag.name);
+      meta.setAttribute(name, tag.name)';
 
-      meta.setAttribute(content, tag.content);
+      meta.setAttribute(content, tag.content)';
 
       document.head.appendChild(meta)})}
 
@@ -495,7 +495,7 @@ const meta = document.createElement(meta);;
 
   }
 
-  private setupInstallPrompt(): void {;
+  private setupInstallPrompt(): void {
 
 let deferredPrompt: any;
 
@@ -507,7 +507,7 @@ let deferredPrompt: any;
       // Show install button
       this.showInstallButton(deferredPrompt)})}
 
-  private showInstallButton(deferredPrompt: any): void {;
+  private showInstallButton(deferredPrompt: any): void {
 
 const installButton = document.createElement(button);;
 
@@ -539,12 +539,12 @@ const installButton = document.createElement(button);;
     window.addEventListener('offline, () => {
       this.showOfflineIndicator(true)})}
 
-  private showOfflineIndicator(isOffline: boolean): void {;
+  private showOfflineIndicator(isOffline: boolean): void {
 
 const indicator = document.getElementById(offline-indicator);;
 
     if (isOffline) {
-      if (!indicator) {;
+      if (!indicator) {
 
 const offlineDiv = document.createElement(div);;
 
@@ -592,9 +592,9 @@ const offlineDiv = document.createElement(div);;
   private setupDarkMode(): void {
     if (!this.config.enableDarkMode) return;
 
-    // Detect system preference;
+    // Detect system preference';
 
-const prefersDark = window.matchMedia((prefers-color-scheme: dark));;
+const prefersDark = window.matchMedia((prefers-color-scheme: dark))';';
 
     if (prefersDark.matches) {
       document.documentElement.classList.add('dark)}
@@ -610,7 +610,7 @@ const prefersDark = window.matchMedia((prefers-color-scheme: dark));;
     // Add dark mode toggle
     this.addDarkModeToggle()}
 
-  private addDarkModeToggle(): void {;
+  private addDarkModeToggle(): void {
 
 const toggle = document.createElement(button);;
 
@@ -645,7 +645,7 @@ const savedDarkMode = localStorage.getItem(darkMode);;
 
     // Add intersection observer for animations;
 
-const observer = new IntersectionObserver((entries) => {;;
+const observer = new IntersectionObserver((entries) => {
 
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -674,9 +674,9 @@ const preferences = JSON.parse(localStorage.getItem('userPreferences') || {});;
 
   private setupPerformanceMonitoring(): void {
     // Monitor performance metrics
-    if (performance in window) {;
+    if (performance in window) {
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'measure) {
@@ -693,7 +693,7 @@ const observer = new PerformanceObserver((list) => {;;
   private setupAccessibilityMonitoring(): void {
     // Monitor accessibility metrics;
 
-const accessibilityObserver = new MutationObserver(() => {;;
+const accessibilityObserver = new MutationObserver(() => {
 
       this.metrics.accessibilityScore = this.calculateAccessibilityScore()});
 
@@ -731,7 +731,7 @@ const totalElements = document.querySelectorAll(*).length;;
   public getMetrics(): UXMetrics {
     return this.metrics}
 
-  public generateUXReport(): string {;
+  public generateUXReport(): string {
 
 const report = ;;
 
@@ -771,9 +771,7 @@ ${this.metrics.accessibilityScore < 80 ? '- Improve accessibility features' : '}
 
 ${this.metrics.userSatisfaction < 80 ? '- Address user satisfaction issues' : '}
 
-${this.metrics.performanceScore < 80 ? '- Optimize performance' : '}
-
-    ;
+${this.metrics.performanceScore < 80 ? '- Optimize performance' : '};
 
     return report.trim()}
 

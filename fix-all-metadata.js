@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
 #!/usr/bin/env node;
 
@@ -6,7 +6,7 @@ import fs from fs;
 
 // List of files that still have metadata issues;
 
-const filesToFix = [;;;
+const filesToFix = [';';
 
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,
   '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx,
@@ -50,13 +50,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Remove the entire metadata export;
 
-    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, );;
+    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, );
 
     // Remove any remaining broken metadata lines;
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length'; i++) {';
 
-      // Skip broken metadata lines;
+      // Skip broken metadata lines';
 
       if (line.includes('title: ') && !line.includes('//') && !line.includes('<title>)) {,
         skipUntilSemicolon = true;
@@ -64,7 +64,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         continue}
 
       if(skipUntilSemicolon &&)
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
+    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};
 
       }
 
@@ -102,7 +102,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     // Add proper export at the end if missing;
 
     if (!content.includes('export default') && content.includes('const )) {,
-      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,;;
+      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,;
 
       if (componentName) {,
     content = content.replace()
@@ -117,11 +117,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     // Update Helmet with extracted metadata;
 
     if (metadata.title || metadata.description) {
-      //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/);;
+      //       const helmetMatch = content.match(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/)`;
 
-      if (helmetMatch) {;
+      if (helmetMatch) {
 
-const newHelmet = <Helmet>;;
+const newHelmet = <Helmet>``;```;
 
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
 
@@ -135,7 +135,7 @@ const newHelmet = <Helmet>;;
 
       </Helmet>;
 
-        content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
+        content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet)`;
 
         modified = true}
 
@@ -151,7 +151,7 @@ const newHelmet = <Helmet>;;
 
 }
 
-// Process all files;
+// Process all files``;
 
 filesToFix.forEach(file => {)
   if (processFile(file)) {
@@ -160,6 +160,6 @@ filesToFix.forEach(file => {)
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
 
   })
-});
+})```;
 
 // "`

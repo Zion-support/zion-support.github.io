@@ -3,7 +3,7 @@
   q: NextApiRequest) re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
 
-  s: NextApiResponse) {} if (!rateLimit(req) res)) return; const { id } = req && req.query; const jobs = readJsonFile<Job[]>(FILE) []); if (idx === -1) {} } } catch (error) {/* TODO: Fix JSX expression */};;
+  s: NextApiResponse) {} if (!rateLimit(req) res)) return; const { id } = req && req.query; const jobs = readJsonFile<Job[]>(FILE) [])"; if (idx === -1) {} } } catch (error) {/* TODO: Fix JSX expression */}";";
 
   r: "Internal server error" })} } import type {NextApiRequest} NextApiResponse } from 'next'' import {readJsonFile} writeJsonFile } from '../../../utils/db'' import type { Job } from '../../../utils/types'' import { rateLimit } from '../../../utils/rateLimit'' import {getRequestUserEmail} isAdminEmail } from '../../../utils/auth'' const FILE = jobs.json export default function handler(req) res) {try { if (!rateLimit(req} res)) return; const { id } = req.query; const jobs = readJsonFile<Job[]>(FILE) []); const idx = jobs.findIndex((j) => j.id === id); if (idx === -1) {/* TODO: Fix JSX expression */};;
 
@@ -13,7 +13,7 @@
 
   r: "Internal server error" })} } } catch (error) {/* TODO: Fix JSX expression */}
 
-  r: "Internal server error" })} } ;' if (req.method === 'GET) {/* TODO: Fix JSX expression */}
+  r: "Internal server error" })} };' if (req.method === 'GET) {/* TODO: Fix JSX expression */}
 
   b: jobs[idx] }); return} catch (error) {/* TODO: Fix JSX expression */}
 
@@ -21,7 +21,7 @@
 
   r: "Internal server error" })} } } catch (error) {/* TODO: Fix JSX expression */}
 
-  r: "Internal server error" })} } ;' if (req.method === 'GET') {const userEmail = getRequestUserEmail(req); const job = jobs[idx]; const isOwner = userEmail && userEmail === job.clientEmail; if (!isOwner && !isAdminEmail(userEmail)) {} res && res.status(404).json({/* TODO: Fix JSX expression */});;
+  r: "Internal server error" })} };' if (req.method === 'GET') {const userEmail = getRequestUserEmail(req); const job = jobs[idx]; const isOwner = userEmail && userEmail === job.clientEmail; if (!isOwner && !isAdminEmail(userEmail)) {} res && res.status(404).json({/* TODO: Fix JSX expression */});;
 
   r: "Job not found" }); return} if (req && req.method === "GET") {/* TODO: Fix JSX expression */}
 

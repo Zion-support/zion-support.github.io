@@ -9,7 +9,7 @@ const [searchTerm, setSearchTerm] = useState(');
 
 ;
 
-const itServices = [;
+const itServices = [
     // IT Infrastructure Services    {
       id: 'it-infrastructure-design,
       name: 'IT Infrastructure Design & Implementation,
@@ -333,9 +333,9 @@ caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all au
 
   ];
 
-;
+';
 
-const categories = [;;
+const categories = [';';
 
     { id: 'all', name: 'All IT Services, icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure, icon: Server },
@@ -353,7 +353,7 @@ const categories = [;;
 
 ;
 
-const filteredServices = itServices.filter(service => {;;
+const filteredServices = itServices.filter(service => {
 
 const matchesCategory = selectedCategory === all || service.category === selectedCategory;;
 
@@ -424,7 +424,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
               <select
                 value={selectedCategory}
 
-                onChange={(e) =></select> setSelectedCategory(e.target.value);
+                onChange={(e) =></select> setSelectedCategory(e.target.value)"';
 
                 className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20
               >
@@ -434,7 +434,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                     {category.name}
 
                   </option>
-                ));
+                ))"';
 
               </select>
             </div>
@@ -447,7 +447,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
               <button
                 key={category.id}
 
-                onClick={() =></button> setSelectedCategory(category.id);
+                onClick={() =></button> setSelectedCategory(category.id)'">
 
                 className={px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
@@ -459,7 +459,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                 {category.name}
 
               </button>
-            ));
+            ))";
 
           </div>
         </div>
@@ -495,7 +495,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0 />
                           <span>{feature}</span>
                         </li>
-                      ));
+                      ))";
 
                     </ul>
                   </div>
@@ -509,7 +509,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 />
                           <span>{benefit}</span>
                         </li>
-                      ));
+                      ))";
 
                     </ul>
                   </div>
@@ -556,7 +556,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
                   </a>
                 </div>
               </div>
-            ));
+            ))";
 
           </div>
         </div>
@@ -593,6 +593,6 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
       </section>
     </div>
 )]
-    };
+    }">
 
-export default ITConsultingPage;
+export default ITConsultingPage";

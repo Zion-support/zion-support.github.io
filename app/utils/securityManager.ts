@@ -103,7 +103,7 @@ const parsed = new URL(url),;;
    */
   generateSecureToken(length: number = 32): string {,;
 
-const array = new Uint8Array(length),;;
+const array = new Uint8Array(length),;';
 
     if (typeof window !== 'undefined && window.crypto) {,
       window.crypto.getRandomValues(array);

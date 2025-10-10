@@ -68,7 +68,7 @@ export interface InnovativeAIService {id: string;
     description: unknown;
 
       Enterprise - grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99.99% safety record.,
-    features: [;
+    features: [
 
   id: string;
 
@@ -2653,7 +2653,7 @@ variant: quantum-robotics,
     price: $2,999,
     period: /month,
     description: Next-generation quantum-resistant cybersecurity platform with AI-powered threat detection, quantum encryption, and advanced security analytics.,
-    features: [;
+    features: [
 
       Quantum-resistant encryptionAI threat detectionReal-time monitoringIncident responseVulnerability assessmentCompliance toolsSecurity analyticsThreat intelligence,
       Automated responseIntegration APIs],
@@ -2696,7 +2696,7 @@ variant: quantum-cyberpunk,
     price: $4,999,
     period: /month,
     description: Revolutionary quantum-secured internet infrastructure with quantum key distribution, quantum networks, and ultra-secure communications.,
-    features: [;
+    features: [
 
       Quantum key distributionQuantum networksUltra-secure communicationsQuantum routingNetwork monitoringSecurity analyticsCompliance toolsPerformance optimization,
       Integration APIs24/7 support],
@@ -2740,7 +2740,7 @@ variant: quantum-entanglement,
     price: $3,499,
     period: /month,
     description: Advanced quantum AI logistics platform for supply chain optimization, route planning, and inventory management with unprecedented efficiency.,
-    features: [;
+    features: [
 
       Quantum AI optimizationSupply chain analyticsRoute optimizationInventory managementDemand forecastingReal-time trackingPerformance analyticsIntegration APIs,
       Mobile applications24/7 support],
@@ -2846,7 +2846,7 @@ varian,
     descriptio,
   n: Next-generation quantum-resistant cybersecurity platform with AI-powered threat detection, quantum encryption, and advanced security analytics.,
     feature,
-  s: [;
+  s: [
 
       Quantum-resistant encryptionAI threat detectionReal-time monitoringIncident responseVulnerability assessmentCompliance toolsSecurity analyticsThreat intelligence
       Automated responseIntegration APIs
@@ -2924,7 +2924,7 @@ varian,
     descriptio,
   n: Revolutionary quantum-secured internet infrastructure with quantum key distribution, quantum networks, and ultra-secure communications.,
     feature,
-  s: [;
+  s: [
 
       Quantum key distributionQuantum networksUltra-secure communicationsQuantum routingNetwork monitoringSecurity analyticsCompliance toolsPerformance optimization
       Integration APIs24/7 support
@@ -3003,7 +3003,7 @@ varian,
     descriptio,
   n: Advanced quantum AI logistics platform for supply chain optimization, route planning, and inventory management with unprecedented efficiency.,
     feature,
-  s: [;
+  s: [
 
       Quantum AI optimizationSupply chain analyticsRoute optimizationInventory managementDemand forecastingReal-time trackingPerformance analyticsIntegration APIs
       Mobile applications24/7 support
@@ -3115,7 +3115,7 @@ export interface InnovativeAIService,
   e: '$4, 999, perio,
   d: /month, descriptio,
   n:  ,' Enterprise - grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99.99% safety record., feature,
-  s: [; i,
+  s: [ i,
   d: string; nam,
   e: string; taglin,
   e: string; pric,
@@ -3546,7 +3546,7 @@ export interface InnovativeAIService,
   s: '364 E Main St STE 1008 Middletown DE 19709,  websit,
   e: http,
   s://ziontechgroup.com } real_implementatio,
-  n: true; implementation_detail,
+  n: true'; implementation_detail,
   s: 'Quantum AI logistics platform with supply chain optimization and real - time analytics capabilities. launch_dat,
   e: 2024 - 08 - 01 customer,
   s: 67, ratin,
@@ -3595,9 +3595,9 @@ export interface InnovativeAIService,
   e: string} }; realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
-  e: string; customer,
-  s: number; ratin,
-  g: number; review,
+  e: string'; customer,
+  s: number'; ratin,
+  g: number'; review,
   s: number} export const,
   innovativeAIServices: InnovativeAIService[] = [  i,
   d: quantum-ai-brain-computer-interface, nam,
@@ -3872,7 +3872,7 @@ export interface InnovativeAIService,
   e: 2024-09-15, customer,
   s: 28, ratin,
   g: 4.7, review,
-  s: 15 };  i,
+  s: 15 }';  i,
   d: quantum-cybersecurity-platform, nam,
   e: 'Quantum Cybersecurity Platform, taglin,
   e: 'Quantum-resistant security with AI threat detection, pric,
@@ -3911,7 +3911,7 @@ export interface InnovativeAIService,
   e: 2024-10-01, customer,
   s: 95, ratin,
   g: 4.8, review,
-  s: 48 };  i,
+  s: 48 }';  i,
   d: quantum-internet-security, nam,
   e: 'Quantum Internet Security Platform, taglin,
   e: 'Quantum-secured internet infrastructure, pric,
@@ -3950,7 +3950,7 @@ export interface InnovativeAIService,
   e: 2024-11-15, customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 6 };  i,
+  s: 6 }';  i,
   d: quantum-logistics-platform, nam,
   e: 'Quantum Logistics Platform, taglin,
   e: 'Quantum AI-powered supply chain optimization, pric,
@@ -3989,4 +3989,4 @@ export interface InnovativeAIService,
   e: 2024-08-01, customer,
   s: 67, ratin,
   g: 4.7, review,
-  s: 34 } ]; ]} ]; '
+  s: 34 } ]'; ]} ]'; '

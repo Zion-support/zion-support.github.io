@@ -1,6 +1,6 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
 import { Helmet } from 'react-helmet-async;
 
@@ -14,20 +14,20 @@ return (;
 const [openItems, setOpenItems] = useState<number[]>
 );
 
-}([]);
+}([])';
 
-;
+';
 
-const toggleItem = (index: number) => {;;
+const toggleItem = (index: number) => {
 
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
-        : [...prev, index]);
+        : [...prev, index])';
 
-;
+';
 
-const faqs = [;;;
+const faqs = [';';
 
     {
       questio,
@@ -61,7 +61,7 @@ const faqs = [;;;
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.
     }
 
-  ];
+  ]"';
 
   return (<div>
         <title>Frequently Asked Questions - Zion Tech Group<
@@ -79,6 +79,6 @@ const faqs = [;;;
               services, and how we can help transform your business.
             <
           <
-};
+}">
 
-export default FAQPage;
+export default FAQPage'";

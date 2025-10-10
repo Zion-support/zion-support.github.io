@@ -8,29 +8,29 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url);
 
 // __dirname removed
 // console.log removed for production
 // Comprehensive syntax fixes;
 
-const fixes = [;;
+const fixes = [
 
   // Fix semicolons in object properties;
 
-  { pattern: /color: 'text-\w+-\d+'\};/g, replacement: "color: 'text-\\w+-\\d+' },
-  // Fix semicolons in JSX attributes;
+  { pattern: /color: 'text-\w+-\d' + '\}';/g, replacement: "color: 'text-\\w+-\\d' ' + ' },
+  // Fix semicolons in JSX attributes';
 
-  { pattern: /className=\{`[^`]+`\};/g, replacement: (match) => match.replace(';', ') },
+  { pattern: /className=\{`[^`]+`\}';/g, replacement: (match) => match.replace(';', ') },
   // Fix semicolons in JSX props;
 
   { pattern: /keywords=\{[^}]+\}\};/g, replacement: (match) => match.replace('};', '}) },
   // Fix missing commas in arrays;
 
   { pattern: /}\s*;\s*$/gm, replacement: '} },
-  // Fix stray semicolons;
+  // Fix stray semicolons';
 
-  { pattern: /;\s*$/gm, replacement: ' },
+  { pattern: /';\s*$/gm, replacement: ' },
   // Fix console statements;
 
   { pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g, replacement:  }];
@@ -38,25 +38,25 @@ const fixes = [;;
 ;
 
 function fixFile(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     fixes.forEach(fix => {);
 
-const newContent = content.replace(fix.pattern, fix.replacement);;
+const newContent = content.replace(fix.pattern, fix.replacement);
 
       if (newContent !== content) {
         content = newContent;
 
         modified = true}
 
-    });
+    })';
 
     if (modified) {
-      fs.writeFileSync(filePath, content);
+      fs.writeFileSync(filePath, content)';
 
       // console.log removed for production
 return true}
@@ -67,21 +67,21 @@ return false}
 
 }
 
-// Find all TypeScript/JavaScript files;
+// Find all TypeScript/JavaScript files';
 
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {;
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', .jsx]) {
 
-let files = [];;
+let files = [];
 
-  try {;
+  try {
 
-const items = fs.readdirSync(dir);;
+const items = fs.readdirSync(dir);
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(dir, item);;
+const fullPath = path.join(dir, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
         if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic].includes(item)) {
@@ -99,15 +99,15 @@ const fullPath = path.join(dir, item);;
 
 // Main fix process;
 
-const files = findFiles(./app);;
+const files = findFiles(./app)`";
 
-let fixedCount = 0;;
+let fixedCount = 0"``;
 
 // console.log removed for production
 files.forEach(file => {)
   if (fixFile(file)) {
     fixedCount++}
 
-});
+})"```;
 
 // console.log removed for production

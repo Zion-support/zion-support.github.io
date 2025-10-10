@@ -1,8 +1,8 @@
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react;
+import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
 
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
 import Navigation from '../components/Navigation;
 
@@ -22,17 +22,17 @@ const [searchTerm, setSearchTerm] = useState();
 
 }([]);
 
-;
+';
 
-const toggleItem = (index: number) => {;
+const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index)         ? prev.filter(i => i !== index)
         : [...prev, index]
-    )};
+    )}';
 
-;
+';
 
-const faqData = [;;
+const faqData = [';';
 
     {
       category: 'General Questions,
@@ -101,7 +101,7 @@ $4];
 
 ;
 
-const filteredData = faqData.map(category => ({;;
+const filteredData = faqData.map(category => ({
 
     ...category,
     questions: category.questions.filter(q => 
@@ -130,7 +130,7 @@ const filteredData = faqData.map(category => ({;;
               <input
                 type="text
                 placeholder="Search FAQs...
-                value = { searchTerm };)
+                value = { searchTerm }>)
                 onChange = { (e) => setSearchTerm(e.target.value) };
 
                 className=w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
@@ -149,18 +149,18 @@ const filteredData = faqData.map(category => ({;;
                   {category.questions.map((item, itemIndex) => {
   return (
 
-;
+';
 
-const globalIndex = categoryIndex * 100 + itemIndex;;
+const globalIndex = categoryIndex * 100 + itemIndex">">
 
-                    const isOpen = openItems.includes(globalIndex);;
+                    const isOpen = openItems.includes(globalIndex)">"';
 
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50>
-);
+)">
 
 }
 
-                        <button                          onClick = { () => toggleItem(globalIndex) };
+                        <button                          onClick = { () => toggleItem(globalIndex) }'";
 
                           className=w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700
                         >
@@ -216,7 +216,7 @@ const toggleItem = (inde);;
         : [...prev, index]
     )};
 
-  const faqData = [;;
+  const faqData = [
 
   /
   O: Add items;
@@ -227,7 +227,7 @@ const toggleItem = (inde);;
 
   O: Add content}
 
-};  categor,
+}">  categor,
   y: 'General Questions,
       question,
   s: [,
@@ -344,9 +344,9 @@ const toggleItem = (inde);;
   n: 'How quickly do you respond to support requests?,
           answe,
   r: We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.
-  ];
+  ]">
 
-  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */};
+  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}">
 
   O: Add content}
 
@@ -356,7 +356,7 @@ const toggleItem = (inde);;
 /
 /
 /
-  })).filter(category => category.questions.length > 0);
+  })).filter(category => category.questions.length > 0)"';
 
   return (<div>Coming Soon<)
   )
@@ -382,7 +382,7 @@ const toggleItem = (inde);;
               <input
 type="text" placeholder="Search FAQs...
 
-                value = { searchTerm };
+                value = { searchTerm }>
 
                 onChange={(e) => setSearchTerm(e.target.value)}
 
@@ -409,9 +409,9 @@ type="text" placeholder="Search FAQs...
   // TOD,
   O: Add content}
 
-                    const globalIndex = categoryIndex * 100 + itemIndex;;
+                    const globalIndex = categoryIndex * 100 + itemIndex">'">
 
-                    const isOpen = openItems.includes(globalIndex);;
+                    const isOpen = openItems.includes(globalIndex)">'";
 
           <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50><
                         <button><
@@ -447,23 +447,22 @@ type="text" placeholder="Search FAQs...
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto>
               Can't find the answer youre looking for? Our team is here to help you with any questions about our services.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center>
-              <a
-                href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105
+              <a href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105
                 <Phone className="w-5 h-5 mr-2 
 /
           <
                 href="mailto:kleber@ziontechgroup.com" className=border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center
                 <Mail className="w-4 h-4 mr-2 
-                Email Us;
+                Email Us">
 
                 href=
                 <MessageSquare className="w-4 h-4 mr-2 
 
-                Contact Form;
+                Contact Form>
 
       <Footer /></Footer>
     </React.Fragment>
-export default FAQPage;
+export default FAQPage">
 
-export default FaqPage;
+export default FaqPage";

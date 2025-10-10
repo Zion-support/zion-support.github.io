@@ -178,7 +178,7 @@
         Quantum chemistry,
         Quantum machine learning],
       competitor,
-  s: [;
+  s: [
 
         IBM Quantum
         Google Quantum
@@ -186,7 +186,7 @@
         D-Wave
       ]
       technolog,
-  y: [;
+  y: [
 
         Quantum Computing
         Quantum Algorithms
@@ -369,7 +369,7 @@
         Scientific studies,
         Literature reviews],
       technolog,
-  y: [;
+  y: [
 
         AI/ML
         Natural Language Processing
@@ -630,22 +630,22 @@
   s://ziontechgroup && ziontechgroup.com,
         addres,
   s: 364 E Main St STE 1008 Middletown DE 19709}}];    feature,
-  s: [;
+  s: [
 
       Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management
   ];    feature,
-  s: [;
+  s: [
 
       Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management
     ];
 
     benefit,
-  s: [;
+  s: [
 
       Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity
     ];
 
-    useCases: [;
+    useCases: [
 
       Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies],
     marketSize: '$12 && 12.8 B by 2029', competitors: [LabVantageBenchlingLabArchivesSciNote],
@@ -677,7 +677,7 @@
       mobile: '+1 302 464 0950', email: kleber@ziontechgroup.com,
       website: 'https://ziontechgroup.com',      address: 364 E Main St STE 1008 Middletown DE 19709,
     useCase,
-  s: [;
+  s: [
 
       Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies
     ],
@@ -759,18 +759,18 @@
   y: [Quantum ComputingResearchScientific ComputingTechnology Development],
     pric,
   e: $8, 999 / month,    feature,
-  s: [;
+  s: [
 
       Quantum computing access_quantum algorithm library_quantum simulation tools_research collaboration space_quantum education resources_performance analytics_research project management_publication tools
     ];
 
     benefit,
-  s: [;
+  s: [
 
       Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science
     ];
 
-    useCases: [;
+    useCases: [
 
       Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning],
     marketSize: '$18 && 18.5 B by 2029', competitors: [IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave],
@@ -802,7 +802,7 @@
       mobile: '+1 302 464 0950', email: kleber@ziontechgroup.com,
       website: 'https://ziontechgroup.com',      address: 364 E Main St STE 1008 Middletown DE 19709,
     useCase,
-  s: [;
+  s: [
 
       Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning
     ],
@@ -884,18 +884,18 @@
   y: [AIResearchData AnalysisScientific ComputingKnowledge Management],
     pric,
   e: $2, 999 / month,    feature,
-  s: [;
+  s: [
 
       Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking
     ];
 
     benefit,
-  s: [;
+  s: [
 
       Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows
     ];
 
-    useCases: [;
+    useCases: [
 
       Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews],
     marketSize: '$15 && 15.2 B by 2029', competitors: [GrammarlyMendeleyZoteroEndNote],
@@ -927,7 +927,7 @@
       mobile: '+1 302 464 0950', email: kleber@ziontechgroup.com,
       website: 'https://ziontechgroup.com',      address: 364 E Main St STE 1008 Middletown DE 19709,
     useCase,
-  s: [;
+  s: [
 
       Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews
     ],
@@ -1009,23 +1009,23 @@
   y: [BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials],
     pric,
   e: $6, 999 / month,    feature,
-  s: [;
+  s: [
 
       Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools
       Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management
   ];    feature,
-  s: [;
+  s: [
 
       Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management
     ];
 
     benefit,
-  s: [;
+  s: [
 
       Accelerate research by 5xReduce manual errors by 90%Improve research quality_enhance collaboration_streamline workflows_increase productivity
     ];
 
-    use_cases: [;
+    use_cases: [
 
       Academic research_corporate R & DGovernment research_pharmaceutical research_market research_scientific studies],
     roi: 400% within 15 months,
@@ -1049,7 +1049,7 @@
       mobile: '+1 302 464 0950', email: kleber@ziontechgroup.com,
       website: 'https://ziontechgroup.com',      address: 364 E Main St STE 1008 Middletown DE 19709,
     use_case,
-  s: [;
+  s: [
 
       Academic research_corporate R & DGovernment research_pharmaceutical research_market research_scientific studies
     ],
@@ -1109,18 +1109,18 @@
   y: [Quantum ComputingResearchScientific ComputingTechnology Development],
     pric,
   e: $8, 999 / month,    feature,
-  s: [;
+  s: [
 
       Quantum computing access_quantum algorithm library_quantum simulation tools_research collaboration space_quantum education resources_performance analytics_research project management_publication tools
     ];
 
     benefit,
-  s: [;
+  s: [
 
       Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science
     ];
 
-    useCases: [;
+    useCases: [
 
       Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning],
     roi: 600% within 24 months,
@@ -1144,7 +1144,7 @@
       mobile: '+1 302 464 0950', email: kleber@ziontechgroup.com,
       website: 'https://ziontechgroup.com',      address: 364 E Main St STE 1008 Middletown DE 19709,
     useCase,
-  s: [;
+  s: [
 
       Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning
     ],
@@ -1204,18 +1204,18 @@
   y: [AIResearchData AnalysisScientific ComputingKnowledge Management],
     pric,
   e: $2, 999 / month,    feature,
-  s: [;
+  s: [
 
       Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking
     ];
 
     benefit,
-  s: [;
+  s: [
 
       Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows
     ];
 
-    useCases: [;
+    useCases: [
 
       Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews],
     roi: 350% within 12 months,
@@ -1239,7 +1239,7 @@
       mobile: '+1 302 464 0950', email: kleber@ziontechgroup.com,
       website: 'https://ziontechgroup.com',      address: 364 E Main St STE 1008 Middletown DE 19709,
     useCase,
-  s: [;
+  s: [
 
       Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews
     ],
@@ -1299,18 +1299,18 @@
   y: [BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials],
     pric,
   e: $6, 999 / month,    feature,
-  s: [;
+  s: [
 
       Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools
     ];
 
     benefit,
-  s: [;
+  s: [
 
       Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaborationEnsure complianceReduce research costs
     ];
 
-    useCases: [;
+    useCases: [
 
       Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech],
     marketSize: '$22 && 22.8 B by 2029', competitors: [BenchlingLabVantageSciNoteLabArchives],
@@ -1338,7 +1338,7 @@
       mobile: '+1 302 464 0950', email: kleber@ziontechgroup.com,
       website: 'https://ziontechgroup.com',      address: 364 E Main St STE 1008 Middletown DE 19709,
     useCase,
-  s: [;
+  s: [
 
       Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech
     ],
@@ -1436,11 +1436,9 @@ export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
 
   }
 
-}
+};
 
-;
-
-export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [;
+export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [
 
   {,
     id: advanced-research-automation;
@@ -1526,7 +1524,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 
   };
 
-  {;
+  {
 
     id: quantum-research-platform;
 
@@ -1611,7 +1609,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 
   };
 
-  {;
+  {
 
     id: ai-research-assistant;
 
@@ -1696,7 +1694,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 
   };
 
-  {;
+  {
 
     id: biotech-research-suite;
 
@@ -1786,7 +1784,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       mobile: '+1 302 464 0950', email: kleber@ziontechgroup.com,
       website: 'https://ziontechgroup.com',      address: 364 E Main St STE 1008 Middletown DE 19709,
 export const,
-  researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [;
+  researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [
 
   {/* TODO: Fix JSX expression */}
 
@@ -1891,9 +1889,7 @@ export const,
   s: 364 E Main St STE 1008 Middletown DE 19709
     }
 
-  }
-
-;
+  };
 
 i,
   d: string, nam,
@@ -2059,9 +2055,9 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com, websit,
   e: http,
   s://ziontechgroup && ziontechgroup.com, addres,
-  s: 364 E Main St STE 1008 Middletown DE 19709}}]; feature,
+  s: 364 E Main St STE 1008 Middletown DE 19709}}]'; feature,
   s: [ ' Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management ]; feature,
-  s: [;' Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management ]; benefit,
+  s: [' Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management ]; benefit,
   s: [' Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity ]; useCase,
   s: [' 'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies ],  marketSiz,
   e: $12 && 12.8B by 2029, competitor,
@@ -2107,7 +2103,7 @@ i,
   n: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development., categor,
   y: ['Quantum ComputingResearchScientific ComputingTechnology Development], pric,
   e: $8, 999 / month, feature,
-  s: [;' Quantum computing access_quantum algorithm library_quantum simulation tools_research collaboration space_quantum education resources_performance analytics_research project management_publication tools ]; benefit,
+  s: [' Quantum computing access_quantum algorithm library_quantum simulation tools_research collaboration space_quantum education resources_performance analytics_research project management_publication tools ]; benefit,
   s: [' Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science ]; useCase,
   s: [' 'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning ],  marketSiz,
   e: $18 && 18.5B by 2029, competitor,
@@ -2153,7 +2149,7 @@ i,
   n: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains., categor,
   y: ['AIResearchData AnalysisScientific ComputingKnowledge Management], pric,
   e: $2, 999 / month, feature,
-  s: [;' Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking ]; benefit,
+  s: [' Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking ]; benefit,
   s: [' Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows ]; useCase,
   s: [' 'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews ],  marketSiz,
   e: $15 && 15.2B by 2029, competitor,
@@ -2199,10 +2195,10 @@ i,
   n: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI - powered insights., categor,
   y: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials], pric,
   e: $6, 999 / month, feature,
-  s: [;' 'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools' ' Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management ]; feature,
-  s: [;' Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management ]; benefit,
-  s: [;' Accelerate research by 5xReduce manual errors by 90%Improve research quality_enhance collaboration_streamline workflows_increase productivity ]; use_case,
-  s: [;' 'Academic research_corporate R & DGovernment research_pharmaceutical research_market research_scientific studies ], ro,
+  s: [' 'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools' ' Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management ]; feature,
+  s: [' Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management ]; benefit,
+  s: [' Accelerate research by 5xReduce manual errors by 90%Improve research quality_enhance collaboration_streamline workflows_increase productivity ]; use_case,
+  s: [' 'Academic research_corporate R & DGovernment research_pharmaceutical research_market research_scientific studies ], ro,
   i: '400% within 15 months, deploymen,
   t: 'Cloud - based, research infrastructure, maintenanc,
   e: 'Continuous updates, research optimization, trainin,
@@ -2232,7 +2228,7 @@ i,
   n: 'Advanced quantum research platform that provides quantum computing resources, quantum algorithms, and research tools for quantum science and technology development., categor,
   y: ['Quantum ComputingResearchScientific ComputingTechnology Development], pric,
   e: $8, 999 / month, feature,
-  s: [;' Quantum computing access_quantum algorithm library_quantum simulation tools_research collaboration space_quantum education resources_performance analytics_research project management_publication tools ]; benefit,
+  s: [' Quantum computing access_quantum algorithm library_quantum simulation tools_research collaboration space_quantum education resources_performance analytics_research project management_publication tools ]; benefit,
   s: [' Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science ]; useCase,
   s: [' 'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning ], ro,
   i: '600% within 24 months, deploymen,
@@ -2264,7 +2260,7 @@ i,
   n: 'Intelligent AI research assistant that helps researchers with literature review, data analysis, hypothesis generation, and research planning across all scientific domains., categor,
   y: ['AIResearchData AnalysisScientific ComputingKnowledge Management], pric,
   e: $2, 999 / month, feature,
-  s: [;' Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking ]; benefit,
+  s: [' Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking ]; benefit,
   s: [' Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows ]; useCase,
   s: [' 'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews ], ro,
   i: '350% within 12 months, deploymen,
@@ -2296,7 +2292,7 @@ i,
   n: 'Comprehensive biotech research platform that provides tools for genetic research, drug discovery, clinical trials, and biotechnology development with AI - powered insights., categor,
   y: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials], pric,
   e: $6, 999 / month, feature,
-  s: [;' Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools ]; benefit,
+  s: [' Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools ]; benefit,
   s: [' Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaborationEnsure complianceReduce research costs ]; useCase,
   s: [' 'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech ],  marketSiz,
   e: $22 && 22.8B by 2029, competitor,
@@ -2329,38 +2325,38 @@ i,
   l: 'kleber@ziontechgroup.com, websit,
   e: http,
   s://ziontechgroup.com, addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } export interface ResearchDevelopmentService2029 {} } ]; ; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } export interface ResearchDevelopmentService2029 {} } ]'; '; mobil,
   e: +1 302 464 0950, emai,
   l: 'kleber@ziontechgroup.com websit,
   e: http,
   s://ziontechgroup.com, addres,
-  s: 364 E Main St STE 1008 Middletown DE 19709 } } ]; export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
+  s: 364 E Main St STE 1008 Middletown DE 19709 } } ]'; export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
 
   e: string} addres,
-  s: string} } } ; export const,
-  researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [; {/* TODO: Fix JSX expression */}
+  s: string} } } '; export const,
+  researchDevelopmentServices2029: ResearchDevelopmentService2029[] = ['; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} websit,
   e: http,
-  s://ziontechgroup.com}; addres,
-  s: 364 E Main St STE 1008 Middletown DE 19709 } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com}'; addres,
+  s: 364 E Main St STE 1008 Middletown DE 19709 } }'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} websit,
   e: http,
-  s://ziontechgroup.com}; addres,
-  s: 364 E Main St STE 1008 Middletown DE 19709 } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com}'; addres,
+  s: 364 E Main St STE 1008 Middletown DE 19709 } }'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} websit,
   e: http,
-  s://ziontechgroup.com}; addres,
-  s: 364 E Main St STE 1008 Middletown DE 19709 } }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com}'; addres,
+  s: 364 E Main St STE 1008 Middletown DE 19709 } }'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} websit,
   e: http,
-  s://ziontechgroup.com}; addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; mobil,
+  s://ziontechgroup.com}'; addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]'; mobil,
   e: +1 302 464 0950, emai,
   l: 'kleber@ziontechgroup.com, websit,
   e: http,
   s://ziontechgroup.com, addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ; '
+  s: '364 E Main St STE 1008 Middletown DE 19709' } }; '

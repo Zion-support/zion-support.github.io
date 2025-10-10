@@ -1,8 +1,8 @@
 
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
 import Footer from '../components/Footer;
 
@@ -49,7 +49,7 @@ import Footer from '../components/Footer;
 
         <section className="mb-16></section>
           <h2 className=text-3xl font-bold text-white mb-8 text-center neon-text></h2>
-// Key Features;
+// Key Features";
 
           </h2>
           <div className=grid grid-cols-1,
@@ -59,7 +59,7 @@ import Footer from '../components/Footer;
               <div className="text-4xl mb-4></div>
               <h3 className="text-xl font-bold text-white mb-4>Smart Responses</h3>
               <p className=text-gray-300></p>
-// AI-powered email responses that understand context and tone, automatically generating;
+// AI-powered email responses that understand context and tone, automatically generating";
 
 //                 professional replies based on your communication style.
               
@@ -77,7 +77,7 @@ import Footer from '../components/Footer;
               <div className="text-4xl mb-4></div>
               <h3 className="text-xl font-bold text-white mb-4>Intelligent Scheduling</h3>
               <p className=text-gray-300></p>
-// Automatically schedule meetings, set reminders, and manage your calendar based on;
+// Automatically schedule meetings, set reminders, and manage your calendar based on";
 
 //                 email content and your availability preferences.
               
@@ -95,7 +95,7 @@ import Footer from '../components/Footer;
               <div className="text-4xl mb-4></div>
               <h3 className="text-xl font-bold text-white mb-4>Priority Sorting</h3>
               <p className=text-gray-300></p>
-// AI analyzes email importance and urgency, automatically organizing your inbox;
+// AI analyzes email importance and urgency, automatically organizing your inbox";
 
 //                 with smart priority levels and categorization.
               
@@ -113,7 +113,7 @@ import Footer from '../components/Footer;
               <div className="text-4xl mb-4></div>
               <h3 className="text-xl font-bold text-white mb-4>Auto Follow-ups</h3>
               <p className=text-gray-300></p>
-                Automated follow-up sequences for sales, customer service, and project management;
+                Automated follow-up sequences for sales, customer service, and project management";
 
 // with personalized timing and content.
               
@@ -131,7 +131,7 @@ import Footer from '../components/Footer;
               <div className="text-4xl mb-4></div>
               <h3 className="text-xl font-bold text-white mb-4>Analytics Dashboard</h3>
               <p className=text-gray-300></p>
-// Track email performance, response times, and engagement metrics with detailed;
+// Track email performance, response times, and engagement metrics with detailed";
 
 //                 analytics and insights.
               
@@ -149,7 +149,7 @@ import Footer from '../components/Footer;
               <div className="text-4xl mb-4></div>
               <h3 className="text-xl font-bold text-white mb-4>Enterprise Security</h3>
               <p className=text-gray-300></p>
-// Bank-level encryption and security protocols ensure your email data remains;
+// Bank-level encryption and security protocols ensure your email data remains";
 
 //                 private and protected at all times.
               
@@ -169,7 +169,7 @@ import Footer from '../components/Footer;
 
         <section className="mb-16></section>
           <h2 className=text-3xl font-bold text-white mb-8 text-center neon-text></h2>
-// Pricing Plans;
+// Pricing Plans";
 
           </h2>
           <div className=grid grid-cols-1,
@@ -240,7 +240,7 @@ import Footer from '../components/Footer;
           
           </h2>
           <p className=text-lg text-gray-300 mb-8 max-w-2xl mx-auto></p>
-// Contact us today to schedule a free demo and see how our AI Email Assistant;
+// Contact us today to schedule a free demo and see how our AI Email Assistant"';
 
 //             can revolutionize your business communication.
           
@@ -260,7 +260,7 @@ import Footer from '../components/Footer;
 
 // >,
  Cal,
-  l: (302) 464-0950;
+  l: (302) 464-0950';
 
           </a>
 
@@ -268,7 +268,7 @@ import Footer from '../components/Footer;
               href="mailto:kleber@ziontechgroup.com" className=border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300
 
 // >
-//                Email Us;
+//                Email Us';
 
           </a>
           </div>
@@ -277,6 +277,6 @@ import Footer from '../components/Footer;
       <Footer /></Footer>
 
     </div>
-  )};
+  )}';
 
-export default PagePage;
+export default PagePage';

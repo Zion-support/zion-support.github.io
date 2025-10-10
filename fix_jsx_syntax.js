@@ -38,7 +38,7 @@ async function main() {/* TODO: Fix JSX expression */}
       //2. Fix onClick prop,
   placement: <button>\nonClick={...} -> <button\nonClick={...}
 
-      const onClickFix = content.replace();;
+      const onClickFix = content.replace();
 
         /<(\w+)>\s*\n\s*onClick=\{([^}]+)\}/g,
         <$1\nonClick={$2}
@@ -52,7 +52,7 @@ async function main() {/* TODO: Fix JSX expression */}
       //3. Fix className prop,
   placement: <div>\nclassName={...} -> <div\nclassName={...}
 
-      const classNameFix = content.replace();;;
+      const classNameFix = content.replace();;
 
         /<(\w+)>\s*\n\s*className=\{([^}]+)\}/g,
         <$1\nclassName={$2}
@@ -71,7 +71,7 @@ async function main() {/* TODO: Fix JSX expression */}
       }
 
       //5. Fix template literal syntax: ${> -> ${,
-      //       const templateFix = content.replace(/\$\{>/g, ${);;
+      //       const templateFix = content.replace(/\$\{>/g, ${);
 
       if (templateFix !== content) {
         content = templateFix;
@@ -80,15 +80,14 @@ async function main() {/* TODO: Fix JSX expression */}
 
       //6. Fix unclosed input tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button;
 
-      const inputFix = content.replace(;;
+      const inputFix = content.replace(;
 
         /<input([^>]*?)\n\s*\n\s*<button/g;
 
-        <input$1\n/>\n\n<button
-      );
+        <input$1\n/>\n\n<button )>
 
       if (inputFix !== content) {,
-        content = inputFix;
+        content = inputFix>
 
         modified = true}
 
@@ -99,13 +98,12 @@ async function main() {/* TODO: Fix JSX expression */}
       }
 
       //6. Fix unclosed input,
-  tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button></button>;
+  tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button></button>';
 
-const inputFix = content.replace();;
+const inputFix = content.replace()';
 
         /<input([^>]*?)\n\s*\n\s*<button/g,
-        <input$1\n/>\n\n<button
-      );
+        <input$1\n/>\n\n<button )>
 
       if (inputFix !== content) {/* TODO: Fix JSX expression */}
 
@@ -113,7 +111,7 @@ const inputFix = content.replace();;
 
       //7. Fix unclosed br,
   tags: <br> -> <br /></br>
-      //       const brFix = content.replace(/<br>/g, <br />);;
+      //       const brFix = content.replace(/<br>/g, <br />)';
 
       if (brFix !== content) {/* TODO: Fix JSX expression */}
 
@@ -127,8 +125,8 @@ const inputFix = content.replace();;
 
       //       }
 
-  });
+  })';
 
   //   }
 
-// main().catch(console.error);
+// main().catch(console.error)';

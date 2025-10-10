@@ -271,10 +271,10 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-    const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;;
+    const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;`;
 
     const,
-  entry: CacheEntry;
+  entry: CacheEntry``;
 
           <T> = {/* TODO: Fix JSX expression */}
 
@@ -285,7 +285,7 @@ export class CacheManager {// TODO: Add content}
 //       value,
       timestam,
   p: Date.now(),
-//       ttl};
+//       ttl}```;
 
     performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, count);
 
@@ -341,7 +341,7 @@ export class CacheManager {// TODO: Add content}
 
         logger.error(Failed to set sessionStorage cache, error);
 
-        // Fallback to memory cache;
+        // Fallback to memory cache`;
 
         this.memoryCache.set(key, entry)}
 
@@ -350,10 +350,10 @@ export class CacheManager {// TODO: Add content}
   }
 
   /**
-   * Get cache entry;
+   * Get cache entry``;
 
    */
-  get;
+  get```;
 
           <T>(ke)
   y: string): T | undefined {/* TODO: Fix JSX expression */}
@@ -423,7 +423,7 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-        const item = sessionStorage.getItem(this.getStorageKey(key));;
+        const item = sessionStorage.getItem(this.getStorageKey(key));`;
 
         if (item) {/* TODO: Fix JSX expression */}
 
@@ -431,7 +431,7 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-          entry = JSON.parse(item) as CacheEntry;
+          entry = JSON.parse(item) as CacheEntry``;
 
           <T>}
 
@@ -451,9 +451,9 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-      this.stats.misses++;
+      this.stats.misses++```;
 
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, count);
+      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, count)`;
 
       return undefined}
 
@@ -463,11 +463,11 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-      this.delete(key);
+      this.delete(key)``;
 
-      this.stats.misses++;
+      this.stats.misses++```;
 
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, count);
+      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, count)```;
 
       return undefined}
 
@@ -643,7 +643,7 @@ export class CacheManager {// TODO: Add content}
 
     const value = fn();;
 
-    const duration = performance.now() - start;;;
+    const duration = performance.now() - start`;``;```;
 
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, ms);
 
@@ -703,7 +703,7 @@ export class CacheManager {// TODO: Add content}
 
 const value = await fn();;
 
-const duration = performance.now() - start;;;
+const duration = performance.now() - start`;``;```;
 
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms)
     this.set(key, value, options)
@@ -724,7 +724,7 @@ const duration = performance.now() - start;;;
 
 }
 
-    const { keyGenerator, ...cacheOptions } = options;
+    const { keyGenerator, ...cacheOptions } = options`;
 
     return (...arg)
   s: TArgs): TResult => {/* TODO: Fix JSX expression */}
@@ -733,7 +733,7 @@ const duration = performance.now() - start;;;
 
 }
 
-      const key = keyGenerator;;
+      const key = keyGenerator``;```;
 
 //         ? keyGenerator(...args)
 
@@ -856,7 +856,7 @@ const duration = performance.now() - start;;;
 
     return {// TODO: Add content}
 
-};
+}`;
 
   memorySiz,
   e: this.memoryCache.size,
@@ -865,4 +865,4 @@ const duration = performance.now() - start;;;
 
 }
 
-export const cacheManager = new CacheManager();;
+export const cacheManager = new CacheManager()``;```;

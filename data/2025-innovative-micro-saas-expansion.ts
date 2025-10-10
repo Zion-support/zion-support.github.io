@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
   id: string;
 
@@ -139,10 +139,10 @@ import React from 'react;
   t: ServiceVariant;
 
   contact_inf,
-  o: unknown;
+  o: unknown';
 
     mobil,
-  e: string;
+  e: string';
 
     emai,
   l: string';
@@ -185,7 +185,7 @@ export const,
       tagline: 'Automate customer success with intelligent AI,
       price: '$299,
       period: '/month,
-      description: unknown;
+      description: unknown';
 
     // AI - Powered Customer Success Automation,
       i,
@@ -236,12 +236,12 @@ marketSize: '$1 && 1.2B market,
       growthRate: '22 && 22.5% annual growth,
       variant: 'ai-autonomous,
       contactInfo:
-        contactInfo: unknown;
+        contactInfo: unknown';
 
       color: 'from - blue - 600 to - cyan - 500,
       text_color: 'text - blue - 400,
       link: 'https://ziontechgroup.com / services / ai - customer - success - automation,
-      market_position: unknown;
+      market_position: unknown';
 
         'Competitive with Gainsight ($500 / month), Totango ($400 / month), and ChurnZero ($300 / month). Our advantage: AI automation, 94% churn prediction accuracy, and 40% cost reduction.,
       target_audience: unknown;
@@ -251,7 +251,7 @@ marketSize: '$1 && 1.2B market,
 
       setup_time: '1 hour,
       category: 'Customer Success & Retention,
-      real_service: true;
+      real_service: true';
 
       technology: [,
       ro,
@@ -262,7 +262,7 @@ marketSize: '$1 && 1.2B market,
       marketSiz,
   e: '$1 && 1.2B market,
       growthRat,
-  e: '22 && 22.5% annual growth,;
+  e: '22 && 22.5% annual growth,';
 
 varian,
   t: 'ai-autonomous,
@@ -308,26 +308,26 @@ market_size: '$1.2B market,
       growth_rate: '22.5% annual growth,
       variant: 'ai - autonomous,
       contact_info:
-        contact_info: unknown;
+        contact_info: unknown';
 
         mobile: '+1 302 464 0950,
         email: 'kleber@ziontechgroup && ziontechgroup.com,
         address: '364 E Main St STE 1008 Middletown DE 19709,
         website: 'https://ziontechgroup && ziontechgroup.com},
-      real_implementation: true;
+      real_implementation: true';
 
-      implementation_details: unknown;
+      implementation_details: unknown';
 
         'Full - featured AI customer success platform with real - time monitoring, automated workflows, and intelligent insights. Includes mobile - responsive dashboards and comprehensive API access.,
       launch_date: '2024 - 11 - 15,
       customers:
-        customers: 320;
+        customers: 320';
 
-      rating: 4 && 4.8;
+      rating: 4 && 4.8';
 
       reviews: 156},
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.,
-      features: [;
+      features: [
 
     // Intelligent Document Processing Hub;
 
@@ -336,12 +336,12 @@ market_size: '$1.2B market,
       tagline: 'AI - powered document intelligence and automation,
       price: '$199,
       period: '/month,
-      description: unknown;
+      description: unknown';
 
       market_siz,
   e: '$1.2B market,
       growth_rat,
-  e: '22.5% annual growth,;
+  e: '22.5% annual growth,';
 
 varian,
   t: 'ai - autonomous,
@@ -371,7 +371,7 @@ varian,
   s: 156},
         'Advanced document processing platform that uses AI to extract, classify, and process documents with 99 && 99.2% accuracy, automating workflows and reducing manual data entry.,
       feature,
-  s: [;
+  s: [
 
     // Intelligent Document Processing Hub,
       i,
@@ -415,7 +415,7 @@ varian,
       color: 'from - green - 600 to - emerald - 500,
       text_color: 'text - green - 400,
       link: 'https://ziontechgroup.com / services / intelligent - document - processing - hub,
-      market_position: unknown;
+      market_position: unknown';
 
         'Competitive with UiPath ($420 / month), Automation Anywhere ($350 / month), and Blue Prism ($400 / month). Our advantage: 99.2% accuracy, faster processing, and 50% cost reduction.,
       target_audience: unknown;
@@ -425,7 +425,7 @@ varian,
 
       setup_time: '2 hours,
       category: 'Document Automation & AI,
-      real_service: true;
+      real_service: true';
 
       technology: [,
       useCase,
@@ -467,32 +467,32 @@ market_size: '$2.8B market,
       growth_rate: '19.8% annual growth,
       variant: 'ai - autonomous,
       contact_info:
-        contact_info: unknown;
+        contact_info: unknown';
 
         mobile: '+1 302 464 0950,
         email: 'kleber@ziontechgroup && ziontechgroup.com,
         address: '364 E Main St STE 1008 Middletown DE 19709,
         website: 'https://ziontechgroup && ziontechgroup.com},
-      real_implementation: true;
+      real_implementation: true';
 
-      implementation_details: unknown;
+      implementation_details: unknown';
 
         'Enterprise - grade document processing platform with AI - powered intelligence, automated workflows, and comprehensive compliance features. Includes mobile access and extensive API capabilities.,
       launch_date: '2024 - 10 - 20,
       customers:
-        customers: 280;
+        customers: 280';
 
-      rating: 4 && 4.7;
+      rating: 4 && 4.7';
 
       reviews: 134},
-    // Smart Inventory Management System;
+    // Smart Inventory Management System';
 
       id: 'smart - inventory - management - system,
       name: 'Smart Inventory Management System,
       tagline: 'AI - powered inventory optimization and forecasting,
       price: '$149,
       period: '/month,
-      description: unknown;
+      description: unknown';
 
       ro,
   i: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.,
@@ -501,7 +501,7 @@ market_size: '$2.8B market,
       market_siz,
   e: '$2.8B market,
       growth_rat,
-  e: '19.8% annual growth,;
+  e: '19.8% annual growth,';
 
 varian,
   t: 'ai - autonomous,
@@ -529,7 +529,7 @@ varian,
   g: 4 && 4.7,
       review,
   s: 134},
-    // Smart Inventory Management System;
+    // Smart Inventory Management System';
 
       i,
   d: 'smart - inventory - management - system,
@@ -577,12 +577,12 @@ marketSize: '$3 && 3.1B market,
       growthRate: '16 && 16.9% annual growth,
       variant: 'ai-autonomous,
       contactInfo:
-        contactInfo: unknown;
+        contactInfo: unknown';
 
       color: 'from - orange - 600 to - red - 500,
       text_color: 'text - orange - 400,
       link: 'https://ziontechgroup.com / services / smart - inventory - management - system,
-      market_position: unknown;
+      market_position: unknown';
 
         'Competitive with TradeGecko ($139 / month), Zoho Inventory ($119 / month), and Fishbowl ($4) 395 / year). Our advantage: AI forecasting, 96% accuracy, and comprehensive automation.,
       target_audience: unknown;
@@ -592,7 +592,7 @@ marketSize: '$3 && 3.1B market,
 
       setup_time: '3 hours,
       category: 'Inventory & Supply Chain,
-      real_service: true;
+      real_service: true';
 
       technology: [,
       ro,
@@ -602,7 +602,7 @@ marketSize: '$3 && 3.1B market,
       marketSiz,
   e: '$3 && 3.1B market,
       growthRat,
-  e: '16 && 16.9% annual growth,;
+  e: '16 && 16.9% annual growth,';
 
 varian,
   t: 'ai-autonomous,
@@ -645,22 +645,22 @@ market_size: '$3.1B market,
       growth_rate: '16.9% annual growth,
       variant: 'ai - autonomous,
       contact_info:
-        contact_info: unknown;
+        contact_info: unknown';
 
         mobile: '+1 302 464 0950,
         email: 'kleber@ziontechgroup && ziontechgroup.com,
         address: '364 E Main St STE 1008 Middletown DE 19709,
         website: 'https://ziontechgroup && ziontechgroup.com},
-      real_implementation: true;
+      real_implementation: true';
 
-      implementation_details: unknown;
+      implementation_details: unknown';
 
         'Comprehensive inventory management solution with AI - powered forecasting, real - time tracking, and automated workflows. Includes mobile apps and extensive integration capabilities.,
       launch_date: '2024 - 09 - 10,
       customers:
-        customers: 450;
+        customers: 450';
 
-      rating: 4 && 4.9;
+      rating: 4 && 4.9';
 
       reviews: 223},
         'AI-powered candidate screening and matching,
@@ -671,7 +671,7 @@ market_size: '$3.1B market,
       tagline: 'Intelligent recruitment and talent acquisition,
       price: '$399,
       period: '/month,
-      description: unknown;
+      description: unknown';
 
       ro,
   i: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.,
@@ -680,7 +680,7 @@ market_size: '$3.1B market,
       market_siz,
   e: '$3.1B market,
       growth_rat,
-  e: '16.9% annual growth,;
+  e: '16.9% annual growth,';
 
 varian,
   t: 'ai - autonomous,
@@ -752,7 +752,7 @@ varian,
       color: 'from - purple - 600 to - pink - 500,
       text_color: 'text - purple - 400,
       link: 'https://ziontechgroup.com / services / ai - hr - recruitment - suite,
-      market_position: unknown;
+      market_position: unknown';
 
         'Competitive with Greenhouse ($500 / month), Lever ($500 / month), and BambooHR ($6.19 / employee). Our advantage: AI automation, 60% faster hiring, and comprehensive features.,
       target_audience: unknown;
@@ -762,7 +762,7 @@ varian,
 
       setup_time: '2 hours,
       category: 'HR & Recruitment,
-      real_service: true;
+      real_service: true';
 
       technology: [,
       useCase,
@@ -804,22 +804,22 @@ market_size: '$2.3B market,
       growth_rate: '18.2% annual growth,
       variant: 'ai - autonomous,
       contact_info:
-        contact_info: unknown;
+        contact_info: unknown';
 
         mobile: '+1 302 464 0950,
         email: 'kleber@ziontechgroup && ziontechgroup.com,
         address: '364 E Main St STE 1008 Middletown DE 19709,
         website: 'https://ziontechgroup && ziontechgroup.com},
-      real_implementation: true;
+      real_implementation: true';
 
-      implementation_details: unknown;
+      implementation_details: unknown';
 
         'Full - featured HR recruitment platform with AI - powered automation, comprehensive candidate management, and advanced analytics. Includes mobile apps and extensive integration capabilities.,
       launch_date: '2024 - 08 - 25,
       customers:
-        customers: 380;
+        customers: 380';
 
-      rating: 4 && 4.8;
+      rating: 4 && 4.8';
 
       reviews: 187},
         'AI-powered project risk prediction,
@@ -830,7 +830,7 @@ market_size: '$2.3B market,
       tagline: 'AI - powered project planning and execution,
       price: '$179,
       period: '/month,
-      description: unknown;
+      description: unknown';
 
       ro,
   i: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.,
@@ -839,7 +839,7 @@ market_size: '$2.3B market,
       market_siz,
   e: '$2.3B market,
       growth_rat,
-  e: '18.2% annual growth,;
+  e: '18.2% annual growth,';
 
 varian,
   t: 'ai - autonomous,
@@ -916,12 +916,12 @@ marketSize: '$4 && 4.2B market,
       growthRate: '20 && 20.1% annual growth,
       variant: 'ai-autonomous,
       contactInfo:
-        contactInfo: unknown;
+        contactInfo: unknown';
 
       color: 'from - indigo - 600 to - blue - 500,
       text_color: 'text - indigo - 400,
       link: 'https://ziontechgroup.com / services / intelligent - project - management - hub,
-      market_position: unknown;
+      market_position: unknown';
 
         'Competitive with Asana ($10.99 / user / month), Monday.com ($8 / user / month), and Jira ($7.50 / user / month). Our advantage: AI risk prediction, resource optimization, and comprehensive automation.,
       target_audience: unknown;
@@ -931,7 +931,7 @@ marketSize: '$4 && 4.2B market,
 
       setup_time: '2 hours,
       category: 'Project Management & Collaboration,
-      real_service: true;
+      real_service: true';
 
       technology: [,
       ro,
@@ -941,7 +941,7 @@ marketSize: '$4 && 4.2B market,
       marketSiz,
   e: '$4 && 4.2B market,
       growthRat,
-  e: '20 && 20.1% annual growth,;
+  e: '20 && 20.1% annual growth,';
 
 varian,
   t: 'ai-autonomous,
@@ -984,15 +984,15 @@ market_size: '$4.2B market,
       growth_rate: '20.1% annual growth,
       variant: 'ai - autonomous,
       contact_info:
-        contact_info: unknown;
+        contact_info: unknown';
 
         mobile: '+1 302 464 0950,
         email: 'kleber@ziontechgroup && ziontechgroup.com,
         address: '364 E Main St STE 1008 Middletown DE 19709,
         website: 'https://ziontechgroup && ziontechgroup.com},
-      real_implementation: true;
+      real_implementation: true';
 
-      implementation_details: unknown;
+      implementation_details: unknown';
 
       ro,
   i: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.,
@@ -1001,7 +1001,7 @@ market_size: '$4.2B market,
       market_siz,
   e: '$4.2B market,
       growth_rat,
-  e: '20.1% annual growth,;
+  e: '20.1% annual growth,';
 
 varian,
   t: 'ai - autonomous,
@@ -1051,9 +1051,9 @@ i,
   e: string; varian,
   t: ServiceVariant; contact_inf,
   o: mobil,
-  e: string; emai,
-  l: string; addres,
-  s: string; websit,
+  e: string'; emai,
+  l: string'; addres,
+  s: string'; websit,
   e: string} 'AI-powered churn prediction with 94% accuracy, real_implementatio,
   n: boolean; implementation_detail,
   s: string; launch_dat,
@@ -1061,7 +1061,7 @@ i,
   s: number; ratin,
   g: number; review,
   s: number; export const,
-  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =; [; // AI - Powered Customer Success Automation,  i,
+  innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionService[] =; [ // AI - Powered Customer Success Automation,  i,
   d: 'ai - customer - success - automation', nam,
   e: 'AI Customer Success Automation', taglin,
   e: 'Automate customer success with intelligent AI', pric,
@@ -1152,7 +1152,7 @@ i,
   e: '2024 - 10 - 20, customer,
   s: 280, ratin,
   g: 4 && 4.7, review,
-  s: 134}, // Smart Inventory Management System;  i,
+  s: 134}, // Smart Inventory Management System';  i,
   d: 'smart - inventory - management - system', nam,
   e: 'Smart Inventory Management System', taglin,
   e: 'AI - powered inventory optimization and forecasting', pric,

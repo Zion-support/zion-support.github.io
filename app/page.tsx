@@ -1,12 +1,12 @@
-'use client;
+'use client';
 
-import React, { useState, useEffect, Suspense, memo } from 'react;
+import React, { useState, useEffect, Suspense, memo } from 'react';
 
-import { Navigation } from './components/Navigation;
+import { Navigation } from './components/Navigation';
 
-import { Footer } from './components/Footer;
+import { Footer } from './components/Footer';
 
-import { ContentPromotionBanner } from './components/ContentPromotionBanner;
+import { ContentPromotionBanner } from './components/ContentPromotionBanner';
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -30,20 +30,20 @@ const HomePage: React.FC = () => {
 
     return () => clearTimeout(timer);
 
-  }, []);
+  }, [])">
 
-  const handlePhoneClick = () => {;;
+  const handlePhoneClick = () => {">
 
     // Analytics tracking
     if (typeof window !== 'undefined && window.gtag) {
       window.gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: header_phone
-      });
+      })">
 
     }
 
-  };
+  }'";
 
   return (
 
@@ -1360,14 +1360,14 @@ const HomePage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
+  )">
 
       </main>      {/* Footer */}
 
       <Footer />
     </div>
-  );
+  )">
 
-};
+}">
 
-export default HomePage;
+export default HomePage";

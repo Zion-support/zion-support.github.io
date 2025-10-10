@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { ArrowLeft, TrendingUp, CheckCircle } from lucide-react;
+import { ArrowLeft, TrendingUp, CheckCircle } from lucide-react';
 
-const CaseStudiesPage: React.FC = () => {;
+const CaseStudiesPage: React.FC = () => {';
 
-const caseStudies = [;;;
+const caseStudies = [';';';
 
     {
       i,
@@ -78,7 +78,7 @@ const caseStudies = [;;;
       description: Optimized manufacturing processes using AI for predictive maintenance and automated quality control.
     }
 
-  ];
+  ]';
 
   return (
 
@@ -217,6 +217,6 @@ const caseStudies = [;;;
         </section>
       </div>
     </React.Fragment>
-  )};
+  )}">
 
-export default CaseStudiesPage;
+export default CaseStudiesPage";

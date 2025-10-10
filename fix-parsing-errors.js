@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
-import { glob } from glob;
+import { glob } from glob';
 
-// Function to fix emoji characters in JSX;
+// Function to fix emoji characters in JSX';
 
-function fixEmojis(content) {;
+function fixEmojis(content) {';
 
-const emojiMap = {;;;
+const emojiMap = {';';
 
     '🎧': 'headphones,
     '📈': 'trending-up,
@@ -66,7 +66,7 @@ const emojiMap = {;;;
 
 ;
 
-let fixed = content;;
+let fixed = content;
 
   for (const [emoji, replacement] of Object.entries(emojiMap)) {
     fixed = fixed.replace(new RegExp(emoji, 'g), replacement)}
@@ -75,9 +75,9 @@ let fixed = content;;
 
 // Function to fix common JSX parsing issues;
 
-function fixJSXIssues(content) {;
+function fixJSXIssues(content) {
 
-let fixed = content;;
+let fixed = content;
 
   // Fix unclosed JSX elements by checking for common patterns
   // This is a basic fix - more sophisticated parsing would be needed for complex cases
@@ -93,17 +93,17 @@ let fixed = content;;
 
 // Function to check and fix JSX structure;
 
-function fixJSXStructure(content) {;
+function fixJSXStructure(content) {
 
-const lines = content.split(\n);;
+const lines = content.split(\n);
 
-  let fixed = content;;
+  let fixed = content;
 
   // Count opening and closing div tags;
 
-const openDivs = (content.match(/<div/g) || []).length;;
+const openDivs = (content.match(/<div/g) || []).length;
 
-  const closeDivs = (content.match(/<\/div>/g) || []).length;;
+  const closeDivs = (content.match(/<\/div>/g) || []).length;
 
   if (openDivs > closeDivs) {
     // console.log removed for production
@@ -113,9 +113,9 @@ const openDivs = (content.match(/<div/g) || []).length;;
   return fixed}
 
 // Main function to process files
-async function processFiles() {;
+async function processFiles() {
 
-const patterns = [;;
+const patterns = [
 
     'app/**/*.tsx,
     'app/**/*.ts,
@@ -124,13 +124,13 @@ const patterns = [;;
 
   ;
 
-let processedCount = 0;;
+let processedCount = 0;
 
-  let errorCount = 0;;
+  let errorCount = 0;
 
-  for (const pattern of patterns) {;
+  for (const pattern of patterns) {
 
-const files = await glob(pattern, {;;
+const files = await glob(pattern, {
 
       ignore: [
         'node_modules/**,
@@ -142,11 +142,11 @@ const files = await glob(pattern, {;;
     });
 
     for (const file of files) {
-      try {;
+      try {
 
-const content = fs.readFileSync(file, utf8);;
+const content = fs.readFileSync(file, utf8);
 
-        let fixed = content;;
+        let fixed = content;
 
         // Apply fixes
         fixed = fixJSXIssues(fixed);

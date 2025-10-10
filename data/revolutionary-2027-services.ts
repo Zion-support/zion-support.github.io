@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface Revolutionary2027Service {;,
+export interface Revolutionary2027Service {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const revolutionary2027 Services: Revolutionary2027 Service[] = [,
     id: "2027-revolutionary-service", name: "2027 Revolutionary Service Platform",
     tagline: "Revolutionary services for 2027", price: '$299/month',
     description: 'Revolutionary service platform that transforms how businesses operate in 2027.',
-    features: [;
+    features: [
       "Revolutionary services"
       "Transformative capabilities"
       "Advanced technology"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Revolutionary service platform that transforms how businesses operate in 2027.",
     feature,
-  s: [;"
+  s: ["
       "Revolutionary services""
       "Transformative capabilities""
       "Advanced technology""

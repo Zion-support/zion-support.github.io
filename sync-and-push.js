@@ -8,9 +8,7 @@ function runCommand(command) {/* TODO: Fix JSX expression */}
 
   r: error.stderr }}
 
-}
-
-;
+};
 
 function main() {/* TODO: Fix JSX expression */}
 
@@ -21,7 +19,7 @@ try {
     // First, fetch the latest changes;
 
     // console.log removed for production
-const fetchResult = runCommand('git fetch origin);;
+const fetchResult = runCommand('git fetch origin);
 
     if (fetchResult.error) {
       // console.log removed for production
@@ -35,13 +33,13 @@ return false;
 // Try to pull with rebase to integrate changes;
 
     // console.log removed for production
-const pullResult = runCommand('git pull --rebase origin main);;
+const pullResult = runCommand('git pull --rebase origin main);
 
     if (pullResult.error) {
       // console.log removed for production
 // Try merge instead;
 
-      const mergeResult = runCommand('git pull origin main);;
+      const mergeResult = runCommand('git pull origin main);
 
       if (mergeResult.error) {
         // console.log removed for production
@@ -59,7 +57,7 @@ return false;
     // Now push the changes;
 
     // console.log removed for production
-const pushResult = runCommand('git push origin main);;
+const pushResult = runCommand('git push origin main);
 
     if (pushResult.error) {/* TODO: Fix JSX expression */}
 
@@ -72,7 +70,7 @@ const pushResult = runCommand('git push origin main);;
 // console.log removed for production
 status:);
 
-    const statusResult = runCommand('git status);;
+    const statusResult = runCommand('git status);
 
     // console.log removed for production
 // console.log removed for production

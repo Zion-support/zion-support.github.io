@@ -6,7 +6,7 @@ import { glob } from glob;
 
 // Function to fix remaining syntax errors
 function fixRemainingSyntax(content) {
-  let fixed = content;;
+  let fixed = content;
 
   // Fix common syntax errors
   fixed = fixed
@@ -48,18 +48,18 @@ function fixRemainingSyntax(content) {
 async function processFiles() {
   console.log(Starting remaining syntax fixes...);
 
-  const patterns = [;;
+  const patterns = [
 
     'app/**/*.tsx,
     app/**/*.ts
   ];
 
-  let processedCount = 0;;
+  let processedCount = 0;
 
-  let errorCount = 0;;
+  let errorCount = 0;
 
   for (const pattern of patterns) {
-    const files = await glob(pattern, {;;
+    const files = await glob(pattern, {
 
       ignore: [
         'node_modules/**,
@@ -74,29 +74,29 @@ async function processFiles() {
 
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file, utf8);;
+        const content = fs.readFileSync(file, utf8)`;
 
         // Check if file has syntax issues
-        if (content.includes(';)) || 
+        if (content.includes('``;)) || 
             content.includes(',)) ||
-            content.includes(',;) ||
+            content.includes(',```;) ||
             content.includes('Property assignment expected) ||
             content.includes('Declaration or statement expected)) {
           
           console.log(`Processing syntax errors in: ${file});
 
-          let fixed = fixRemainingSyntax(content);;
+          let fixed = fixRemainingSyntax(content)`;
 
-          fs.writeFileSync(file, fixed);
+          fs.writeFileSync(file, fixed)``;
 
-          processedCount++;
+          processedCount++```;
 
         }
 
       } catch (error) {
-        console.error(`Error processing ${file}:, error.message);
+        console.error(`Error processing ${file}:, error.message)``;
 
-        errorCount++;
+        errorCount++```;
 
       }
 
@@ -104,13 +104,13 @@ async function processFiles() {
 
   }
 
-  console.log(`\nRemaining syntax fixes complete!);
+  console.log(`\nRemaining syntax fixes complete!)```;
 
-  console.log(`Files processed: ${processedCount});
+  console.log(`Files processed: ${processedCount})```;
 
-  console.log(`Errors encountered: ${errorCount});
+  console.log(`Errors encountered: ${errorCount})``;
 
 }
 
 // Run the script
-processFiles().catch(console.error);
+processFiles().catch(console.error)```;

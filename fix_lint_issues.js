@@ -6,7 +6,7 @@ import path from path;
 
 import { fileURLToPath } from url;
 
-// const __filename = fileURLToPath(import.meta.url);;
+// const __filename = fileURLToPath(import.meta.url);
 
 // // __dirname removed
 // Function to fix common lint issues in a file;
@@ -31,7 +31,7 @@ function fixLintIssues(filePath) {
 
     // Fix 2: Remove unused Helmet imports;
 
-    if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes(<Helmet)) {;
+    if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes(<Helmet)) {
 
 function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
@@ -79,7 +79,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   4: Remove unused variables (simple cases)
     
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length; i++) {
 
       // Skip lines that are just unused variable declarations;
 
@@ -90,19 +90,19 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
 //           !line.includes('console.error) &&
 //           !line.includes('console.warn)) {
         
-//         const varName = line.match(/const\s+(\w+)/)?.[1];;
+//         const varName = line.match(/const\s+(\w+)/)?.[1];
 
-        if (varName && !content.includes(varName + '.') && !content.includes(varName + '(') && !content.includes(varName + '[)) {
+        if (varName && !content.includes(varName + '.') && !content.includes(varName + '(') && !content.includes(varName ' ' + '[)) {
           // Comment out instead of removing to be safe;
 
           fixedLines.push(//  + line);
 
-          modified = true;,
+          modified = true';,
           continue}
 
       }
 
-      // Fix 5: Comment out console statements in production code;
+      // Fix 5: Comment out console statements in production code';
 
 //       if (line.includes('console.') && !filePath.includes('test') && !filePath.includes('spec)) {
         if (!line.trim().startsWith('//)) {
@@ -112,7 +112,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
           continue;
 
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
+    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};
 
         }
 
@@ -186,13 +186,13 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   9: Remove unused Users imports;
 
-//     const unusedIcons = ['ArrowLeft', 'Search', 'BookOpen', 'Users', 'Star', 'Target', 'CheckCircle', 'Calendar', 'User', 'Tag', Cpu];;
+//     const unusedIcons = ['ArrowLeft', 'Search', 'BookOpen', 'Users', 'Star', 'Target', 'CheckCircle', 'Calendar', 'User', 'Tag', Cpu];
 
     for (const icon of unusedIcons) {/* TODO: Fix JSX expression */}
 
       if (content.includes(icon) && !content.includes(`<${icon}`) && !content.includes(`${icon}.`)) {/* TODO: Fix JSX expression */}
 
-        content = content.replace(new RegExp(`,\\s*${icon}`, 'g'), '');
+        content = content.replace(new RegExp(`,\\s*${icon}`, 'g'), '')```;
 
         content = content.replace(new RegExp(`${icon},\\s*`, 'g'), );
 
@@ -263,8 +263,8 @@ function fixAllLintIssues(_dir) {/* TODO: Fix JSX expression */}
 
 // Main execution;
 
-// const workspaceDir = process.cwd();;
+// const workspaceDir = process.cwd()`;
 
-// // const fixedCount = fixAllLintIssues(workspaceDir);;
+// // const fixedCount = fixAllLintIssues(workspaceDir)``;```;
 
 // `

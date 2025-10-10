@@ -6,13 +6,13 @@ import path from path;
 
 // Function to fix specific critical files;
 
-function fixCriticalFiles() {;
+function fixCriticalFiles() {
 
-const criticalFiles = [;;
+const criticalFiles = [
 
     {
       path: '/workspace/src/metadata.ts,
-      content: export const metadata = {;;
+      content: export const metadata = {';';
 
   title: 'Zion Tech Group - Advanced AI and IT Solutions,
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.,
@@ -34,11 +34,11 @@ interface ImportMetaEnv {
 
   readonly VITE_APP_URL: string;
 
-  readonly VITE_APP_API_URL: string;
+  readonly VITE_APP_API_URL: string`';
 
-  readonly DEV: boolean;
+  readonly DEV: boolean'``;
 
-  readonly PROD: boolean;
+  readonly PROD: boolean'```;
 
   readonly MODE: string}
 
@@ -90,11 +90,11 @@ export default function RootLayout({
 
 }
 
-// Function to clean up other problematic files;
+// Function to clean up other problematic files';
 
-function cleanProblematicFiles() {;
+function cleanProblematicFiles() {
 
-const problematicFiles = [;;
+const problematicFiles = [';';
 
     '/workspace/src/page-minimal-metadata.ts,
     '/workspace/src/page-minimal.tsx,
@@ -111,16 +111,16 @@ const problematicFiles = [;;
   for (const filePath of problematicFiles) {
     try {
       if (fs.existsSync(filePath)) {
-        // Create minimal valid content for each file type;
+        // Create minimal valid content for each file type`;
 
-let content = ;;
+let content = ``;```;
 
         if (filePath.endsWith('.tsx)) {
-          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`} else if (filePath.endsWith('.ts)) {
-          content = `// TypeScript file placeholder\nexport {};`} else if (filePath.endsWith('.js)) {
+          content = `import React from 'react'``;\n\nexport default function Component() {\n  return <div>Component placeholder</div>```;\n}`} else if (filePath.endsWith('.ts)) {
+          content = `// TypeScript file placeholder\nexport {}```;`} else if (filePath.endsWith('.js)) {
           content = `// JavaScript file placeholder\nexport {};}
 
-        fs.writeFileSync(filePath, content, utf8);
+        fs.writeFileSync(filePath, content, utf8)`;
 
         // console.log removed for production
 }
@@ -135,9 +135,9 @@ let content = ;;
 
 // Main execution
 // console.log removed for production
-fixCriticalFiles();
+fixCriticalFiles()``;
 
 // console.log removed for production
-cleanProblematicFiles();
+cleanProblematicFiles()```;
 
 // console.log removed for production

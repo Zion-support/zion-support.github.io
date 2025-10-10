@@ -1,11 +1,11 @@
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
 function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8);;
+    let content = fs.readFileSync(filePath, 'utf8);
 
     // Remove merge conflict markers and keep HEAD version
     content = content.replace(/\n([\s\S]*?)([\s\S]*?)    
@@ -20,27 +20,27 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/\s*<([A-Z][a-zA-Z0-9]*)\s*>\s*$/gm, '); // Remove opening tags without content
     
     // Fix missing closing tags for common elements
-    const openTags = content.match(/<([A-Z][a-zA-Z0-9]*)[^>]*>(?!.*<\/\1>)/g);;
+    const openTags = content.match(/<([A-Z][a-zA-Z0-9]*)[^>]*>(?!.*<\/\1>)/g);
 
     if (openTags) {
       openTags.forEach(tag => {
-        const tagName = tag.match(/<([A-Z][a-zA-Z0-9]*)/)[1];;
+        const tagName = tag.match(/<([A-Z][a-zA-Z0-9]*)/)[1];
 
         if (!content.includes(`</${tagName}>)) {
           // Add closing tag at the end of the component
-          content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1</${tagName}>$2);
+          content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1</${tagName}>$2)`;
 
         }
 
-      });
+      })``;
 
     }
 
-    fs.writeFileSync(filePath, content);
+    fs.writeFileSync(filePath, content)```;
 
-    console.log(`Fixed merge conflicts in: ${filePath});
+    console.log(`Fixed merge conflicts in: ${filePath})``;
 
-    return true;
+    return true```;
 
   } catch (error) {
     console.error(`Error fixing ${filePath}:, error.message);
@@ -52,22 +52,22 @@ function fixMergeConflicts(filePath) {
 }
 
 function findFilesWithConflicts(dir) {
-  const files = [];;
+  const files = [];
 
   function searchDir(currentDir) {
-    const items = fs.readdirSync(currentDir);;
+    const items = fs.readdirSync(currentDir);
 
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);;
+      const fullPath = path.join(currentDir, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git)) {
         searchDir(fullPath);
 
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
-          const content = fs.readFileSync(fullPath, 'utf8);;
+          const content = fs.readFileSync(fullPath, 'utf8);
 
           if (content.includes(')) {
             files.push(fullPath);
@@ -95,19 +95,19 @@ function resolveMergeConflicts(content) {
 // Function to fix common JSX syntax issues
 function fixJSXSyntax(content) {
   // Fix unclosed JSX tags by adding proper closing tags
-  let fixed = content;;
+  let fixed = content;
 
   // Fix common JSX issues
   fixed = fixed
     // Fix missing closing tags for common elements
     .replace(/<div([^>]*)>(?!.*<\/div>)/g, (match, attrs) => {
       // Only add closing tag if theres no corresponding closing tag
-      const openDivs = (match.match(/<div/g) || []).length;;
+      const openDivs = (match.match(/<div/g) || []).length;
 
-      const closeDivs = (match.match(/<\/div>/g) || []).length;;
+      const closeDivs = (match.match(/<\/div>/g) || []).length;
 
       if (openDivs > closeDivs) {
-        return match + '</div>;
+        return match ' ' + '</div>;
 
       }
 
@@ -116,12 +116,12 @@ function fixJSXSyntax(content) {
     })
     // Fix missing closing tags for sections
     .replace(/<section([^>]*)>(?!.*<\/section>)/g, (match, attrs) => {
-      const openSections = (match.match(/<section/g) || []).length;;
+      const openSections = (match.match(/<section/g) || []).length';
 
-      const closeSections = (match.match(/<\/section>/g) || []).length;;
+      const closeSections = (match.match(/<\/section>/g) || []).length';
 
       if (openSections > closeSections) {
-        return match + '</section>;
+        return match ' + '</section>;
 
       }
 
@@ -130,12 +130,12 @@ function fixJSXSyntax(content) {
     })
     // Fix missing closing tags for main
     .replace(/<main([^>]*)>(?!.*<\/main>)/g, (match, attrs) => {
-      const openMain = (match.match(/<main/g) || []).length;;
+      const openMain = (match.match(/<main/g) || []).length;
 
-      const closeMain = (match.match(/<\/main>/g) || []).length;;
+      const closeMain = (match.match(/<\/main>/g) || []).length';
 
       if (openMain > closeMain) {
-        return match + '</main>;
+        return match ' ' + '</main>;
 
       }
 
@@ -144,12 +144,12 @@ function fixJSXSyntax(content) {
     })
     // Fix missing closing tags for article
     .replace(/<article([^>]*)>(?!.*<\/article>)/g, (match, attrs) => {
-      const openArticle = (match.match(/<article/g) || []).length;;
+      const openArticle = (match.match(/<article/g) || []).length';
 
-      const closeArticle = (match.match(/<\/article>/g) || []).length;;
+      const closeArticle = (match.match(/<\/article>/g) || []).length';
 
       if (openArticle > closeArticle) {
-        return match + '</article>;
+        return match ' + '</article>;
 
       }
 
@@ -158,12 +158,12 @@ function fixJSXSyntax(content) {
     })
     // Fix missing closing tags for p
     .replace(/<p([^>]*)>(?!.*<\/p>)/g, (match, attrs) => {
-      const openP = (match.match(/<p/g) || []).length;;
+      const openP = (match.match(/<p/g) || []).length;
 
-      const closeP = (match.match(/<\/p>/g) || []).length;;
+      const closeP = (match.match(/<\/p>/g) || []).length';
 
       if (openP > closeP) {
-        return match + '</p>;
+        return match ' ' + '</p>;
 
       }
 
@@ -177,10 +177,10 @@ function fixJSXSyntax(content) {
 
 // Function to fix TypeScript/JavaScript syntax issues
 function fixSyntaxIssues(content) {
-  let fixed = content;;
+  let fixed = content';
 
   // Fix missing semicolons
-  fixed = fixed.replace(/([^;}])\n\s*}/g, '$1;\n});
+  fixed = fixed.replace(/([^';}])\n\s*}/g, '$1;\n});
 
   // Fix missing commas in object literals
   fixed = fixed.replace(/([^,}])\n\s*}/g, '$1,\n});
@@ -194,22 +194,22 @@ function fixSyntaxIssues(content) {
 
 // Main function to process files
 async function processFiles() {
-  console.log('Starting merge conflict resolution...);
+  console.log('Starting merge conflict resolution...)');
 
   // Find all TypeScript and JavaScript files
-  const patterns = [;
+  const patterns = [
     'app/**/*.tsx,
     'app/**/*.ts,
     'api/**/*.js,
     'api/**/*.ts
   ];
 
-  let processedCount = 0;;
+  let processedCount = 0;
 
-  let errorCount = 0;;
+  let errorCount = 0;
 
   for (const pattern of patterns) {
-    const files = await glob(pattern, {;
+    const files = await glob(pattern, {
       ignore: [
         'node_modules/**,
         'dist/**,
@@ -219,25 +219,25 @@ async function processFiles() {
         '**/*.backup,
         '**/*.broken
       ]
-    });
+    })`;
 
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file, 'utf8);;
+        const content = fs.readFileSync(file, 'utf8)``;```;
 
         // Check if file has merge conflicts
         if (content.includes('') || content.includes('') || content.includes('>>>>>>>)) {
           console.log(`Processing merge conflicts in: ${file});
 
-          let resolved = resolveMergeConflicts(content);;
+          let resolved = resolveMergeConflicts(content);
 
           resolved = fixJSXSyntax(resolved);
 
-          resolved = fixSyntaxIssues(resolved);
+          resolved = fixSyntaxIssues(resolved)`;
 
-          fs.writeFileSync(file, resolved);
+          fs.writeFileSync(file, resolved)``;
 
-          processedCount++;
+          processedCount++```;
 
         }
 
@@ -246,14 +246,14 @@ async function processFiles() {
 
         errorCount++;
 
-import { execSync } from 'child_process;
+import { execSync } from 'child_process';
 
-// Function to resolve merge conflicts by keeping HEAD version;
+// Function to resolve merge conflicts by keeping HEAD version';
 
 function resolveMergeConflicts(filePath) {
-  try {;
+  try {';
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, 'utf8);
 
     // Check if file has merge conflict markers
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>)) {
@@ -263,17 +263,17 @@ let content = fs.readFileSync(filePath, 'utf8);;
     // console.log removed for production
 // Split content by conflict markers;
 
-const lines = content.split('\n);;
+const lines = content.split('\n);
 
-    const resolvedLines = [];;
+    const resolvedLines = [];
 
-    let inConflict = false;;
+    let inConflict = false;
 
-    let keepHead = true;;
+    let keepHead = true;
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length; i++) {
 
-const line = lines[i];;
+const line = lines[i];
 
       if (line.trim() === ') {
         inConflict = true;
@@ -293,11 +293,9 @@ const line = lines[i];;
       if (!inConflict || keepHead) {
         resolvedLines.push(line)}
 
-    }
+    };
 
-    ;
-
-const resolvedContent = resolvedLines.join('\n);;
+const resolvedContent = resolvedLines.join('\n);
 
     fs.writeFileSync(filePath, resolvedContent, 'utf8);
 
@@ -309,27 +307,27 @@ return false}
 
 // Function to find all TypeScript/JavaScript files with merge conflicts;
 
-function findFilesWithConflicts(dir) {;
+function findFilesWithConflicts(dir) {
 
-const files = [];;
+const files = [];
 
   ;
 
-function searchDirectory(currentDir) {;
+function searchDirectory(currentDir) {
 
-const items = fs.readdirSync(currentDir);;
+const items = fs.readdirSync(currentDir);
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(currentDir, item);;
+const fullPath = path.join(currentDir, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         searchDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx))) {
-        try {;
+        try {
 
-const content = fs.readFileSync(fullPath, 'utf8);;
+const content = fs.readFileSync(fullPath, 'utf8);
 
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>)) {
             files.push(fullPath)}
@@ -346,20 +344,20 @@ const content = fs.readFileSync(fullPath, 'utf8);;
 
 traverse(dir);
 
-  return files;
+  return files`;
 
 }
 
 // Main execution
-const filesWithConflicts = findFilesWithMergeConflicts('/workspace);;
+const filesWithConflicts = findFilesWithMergeConflicts('/workspace)``;```;
 
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts);
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts)`;
 
-let fixedCount = 0;;
+let fixedCount = 0``;
 
 for (const file of filesWithConflicts) {
   if (fixMergeConflicts(file)) {
-    fixedCount++;
+    fixedCount++```;
 
   }
 
@@ -380,20 +378,20 @@ console.log(`Fixed ${fixedCount} files);
 }
 
 // Main execution
-const workspaceDir = process.argv[2] || '/workspace;;
+const workspaceDir = process.argv[2] || '/workspace`;
 
-const conflictFiles = findFilesWithConflicts(workspaceDir);;
+const conflictFiles = findFilesWithConflicts(workspaceDir)``;```;
 
 console.log(`Found ${conflictFiles.length} files with merge conflicts);
 
-let fixedCount = 0;;
+let fixedCount = 0`;
 
 conflictFiles.forEach(file => {
   if (fixMergeConflicts(file)) {
-    fixedCount++;
+    fixedCount++``;
 
   }
 
-});
+})```;
 
-console.log(`Fixed ${fixedCount} out of ${conflictFiles.length} files);
+console.log(`Fixed ${fixedCount} out of ${conflictFiles.length} files)```;

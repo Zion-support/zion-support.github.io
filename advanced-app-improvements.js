@@ -1,31 +1,32 @@
 #!/usr/bin/env node
 // Advanced app improvements script
 
-// Create advanced monitoring system;
-function createAdvancedMonitoring() {;
-const monitoringFiles = {;
-    'monitoring/health-check.js': `// Advanced health check system`
+// Create advanced monitoring system
+function createAdvancedMonitoring() {
+  const monitoringFiles = {
+    'monitoring/health-check.js': `// Advanced health check system
 module.exports = {
-  healthCheck: () => ({ status: 'ok' })'
-};`,`
-    'monitoring/performance-monitor.js': `// Performance monitoring`
+  healthCheck: () => ({ status: 'ok' })
+};`,
+    'monitoring/performance-monitor.js': `// Performance monitoring
 module.exports = {
-  monitor: () => ({ performance: 'good' })'
-};``
+  monitor: () => ({ performance: 'good' })
+};`
   };
-  return monitoringFiles}
+  return monitoringFiles;
+}
 
-// Create advanced caching system;
-function createAdvancedCaching() {;
-const cachingFiles = {;
-    'caching/cache-manager.js': `// Advanced cache manager`
+// Create advanced caching system
+function createAdvancedCaching() {
+  const cachingFiles = {
+    'caching/cache-manager.js': `// Advanced cache manager
 module.exports = {
-  cacheManager: () => ({ status: 'ready' })'
-};`,`
-    'caching/redis-client.js': `// Redis client`
+  cacheManager: () => ({ status: 'ready' })
+}`;`,
+    'caching/redis-client.js': `// Redis client
 module.exports = {
   client: () => ({ connected: true })
-};``
+}`;`
   };
   return cachingFiles;
 }
@@ -34,13 +35,17 @@ module.exports = {
 function main() {
   const monitoring = createAdvancedMonitoring();
   const caching = createAdvancedCaching();
+  
+  // Use the monitoring and caching systems
+  console.log('Advanced monitoring system created: ', Object.keys(monitoring))';
+  console.log('Advanced caching system created: ', Object.keys(caching));
 }
 
 if (require.main === module) {
-  main();
+  main()`';
 }
 
 module.exports = {
   createAdvancedMonitoring,
   createAdvancedCaching
-};
+}'``;

@@ -1,8 +1,8 @@
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-;
+';
 
-const PagePage: React.FC = () => {const features = [;
+const PagePage: React.FC = () => {const features = [';
     {
       icon: Brain,
       title: 'AI-Powered Intelligence,
@@ -43,7 +43,7 @@ const PagePage: React.FC = () => {const features = [;
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -135,6 +135,6 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-  );};
+  )">}">
 
-export default PagePage;
+export default PagePage";

@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Loader2 } from 'lucide-react;
+import { Loader2 } from 'lucide-react';
 
 export const PageLoader: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ export const PageLoader: React.FC = () => {
         <p className="text-gray-300>Please wait while we load the page</p>
       </div>
     </div>
-  );
+  )"';
 
 }
 
@@ -29,7 +29,7 @@ export const ComponentLoader: React.FC = () => {
         <span>Loading component...</span>
       </div>
     </div>
-  );
+  )"';
 
 }
 
@@ -41,7 +41,7 @@ export const ServiceCardSkeleton: React.FC = () => {
       <div className="h-3 bg-slate-700 rounded mb-2></div>
       <div className="h-3 bg-slate-700 rounded mb-4></div>
       <div $2></div>
-  );
+  )"';
 
 }
 
@@ -53,6 +53,6 @@ export const ContentSkeleton: React.FC = () => {
       <div className="h-4 bg-slate-700 rounded mb-2></div>
       <div className="h-4 bg-slate-700 rounded mb-2></div>
       <div $2></div>
-  );
+  )">
 
-};
+}'";

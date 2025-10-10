@@ -31,7 +31,7 @@ export const _generateSitemap = (url);;
 
   const currentDate = new Date().toISOString().split('T)[0];;
 
-  const sitemap = `;;
+  const sitemap = ```;```;
 
           <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
@@ -41,7 +41,7 @@ ${urls}
 
 }
 
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;;
+    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}```;```;
 
     return `  
           
@@ -206,7 +206,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */};
     {/* TODO: Fix JSX expression */}
 
   q: 'weekly' },
-    // Micro SAAS;
+    // Micro SAAS`;
 
     {/* TODO: Fix JSX expression */}
 
@@ -235,7 +235,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */};
     {/* TODO: Fix JSX expression */}
 
   q: 'weekly' },
-    // Specialized Solutions;
+    // Specialized Solutions``;
 
     {/* TODO: Fix JSX expression */}
 
@@ -255,7 +255,7 @@ export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */};
     {/* TODO: Fix JSX expression */}
 
   q: 'monthly' },
-    // Legal pages;
+    // Legal pages```;
 
     {/* TODO: Fix JSX expression */}
 

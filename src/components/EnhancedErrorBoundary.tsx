@@ -12,7 +12,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}
 
-    };
+    }```;
 
     this.maxRetries = props.maxRetries || 3}
 
@@ -69,7 +69,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
     };
 
-    // Log to console in development;
+    // Log to console in development`;
 
     if (process.env.NODE_ENV === 'development) {/* TODO: Fix JSX expression */}
 
@@ -85,11 +85,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
     }
 
-  };
+  }``;
 
   private getUserId = (): string | null => {/* TODO: Fix JSX expression */}
 
-  };
+  }```;
 
   private getSessionId = (): string => {/* TODO: Fix JSX expression */}
 
@@ -147,20 +147,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
       if (this.props.fallback) {/* TODO: Fix JSX expression */}
 
-      }
+      }">
 
-;
+const { retryCount, error, errorId } = this.state">
 
-const { retryCount, error, errorId } = this.state;
-
-      const canRetry = retryCount < this.maxRetries;;
+      const canRetry = retryCount < this.maxRetries">";
 
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
             <div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-gray-900 mb-4></h1>
-              Oops! Something went wrong;
+              Oops! Something went wrong";
 
             </h1>
             <p className="text-gray-600 mb-6></p>
@@ -184,7 +182,7 @@ const { retryCount, error, errorId } = this.state;
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,
   hover:bg-indigo-700 transition-colors
               >
-                Try Again;
+                Try Again"`;
 
               </button>
               <button></button>
@@ -193,7 +191,7 @@ const { retryCount, error, errorId } = this.state;
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,
   hover:bg-gray-300 transition-colors
               >
-                Go Home;
+                Go Home"``;
 
               </button>
             </div>
@@ -211,7 +209,7 @@ const { retryCount, error, errorId } = this.state;
                   className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded,
   hover:bg-gray-300
                 >
-                  Copy Error Details;
+                  Copy Error Details">
 
                 </button>
 
@@ -226,6 +224,6 @@ const { retryCount, error, errorId } = this.state;
 
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary"```;
 
 "

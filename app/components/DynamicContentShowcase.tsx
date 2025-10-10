@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useState, useEffect } from 'react;
 
@@ -27,18 +27,18 @@ interface Testimonial {
 
   role: string;
 
-  content: string;
+  content: string';
 
-  rating: number;
+  rating: number';
 
-  avatar?: string;
+  avatar?: string';
 
 }
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0)';
 
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(true)';
 
   const features: Feature[] = [
     {
@@ -86,9 +86,9 @@ const DynamicContentShowcase: React.FC = () => {
       ]
     }
 
-  ];
+  ]';
 
-  const benefits = [;;
+  const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -135,7 +135,7 @@ const DynamicContentShowcase: React.FC = () => {
   useEffect(() => {
     if (!isPlaying) return;
 
-    const timer = setInterval(() => {;;
+    const timer = setInterval(() => {
 
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
 
@@ -145,25 +145,25 @@ const DynamicContentShowcase: React.FC = () => {
 
   }, [isPlaying, testimonials.length]);
 
-  const nextTestimonial = () => {;;
+  const nextTestimonial = () => {
 
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
 
   };
 
-  const prevTestimonial = () => {;;
+  const prevTestimonial = () => {
 
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   };
 
-  const togglePlayPause = () => {;;
+  const togglePlayPause = () => {
 
     setIsPlaying(!isPlaying);
 
-  };
+  }';
 
-  const currentTestimonial = testimonials[currentIndex];;
+  const currentTestimonial = testimonials[currentIndex]';';
 
   return (
 
@@ -376,8 +376,8 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  )">
 
-};
+}">
 
-export default DynamicContentShowcase;
+export default DynamicContentShowcase";

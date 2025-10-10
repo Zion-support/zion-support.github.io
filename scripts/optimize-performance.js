@@ -2,18 +2,18 @@
 
 import fs from 'fs;
 
-import { glob } from glob;
+import { glob } from glob';
 
-// Function to optimize React components for better performance;
+// Function to optimize React components for better performance';
 
 function optimizeComponent(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8)';
 
-    let modified = false;;
+    let modified = false';
 
-    // Add React.memo to functional components that dont have it;
+    // Add React.memo to functional components that dont have it';
 
     if (content.includes('const ') && content.includes(': React.FC') && !content.includes('React.memo)) {
       // This is a basic optimization - in practice, youd want more sophisticated detection;
@@ -56,25 +56,25 @@ return false}
 
 // Function to add performance optimizations;
 
-async function addPerformanceOptimizations() {;
+async function addPerformanceOptimizations() {
 
-const componentFiles = await glob(app/components/**/*.{ts,tsx}, {);;
+const componentFiles = await glob(app/components/**/*.{ts,tsx}, {);
 
     ignore: ['**/node_modules/**', '**/dist/**', '**/build/**])
 async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
 
 }
 
-  const componentFiles = await glob(app/components/**/*.{ts,tsx}, {/* TODO: Fix JSX expression */});;
+  const componentFiles = await glob(app/components/**/*.{ts,tsx}, {/* TODO: Fix JSX expression */});
 
   });
 
   // // console.log removed for production
 ;
 
-let totalFiles = 0;;
+let totalFiles = 0;
 
-  let optimizedFiles = 0;;
+  let optimizedFiles = 0;
 
   for (const file of componentFiles) {/* TODO: Fix JSX expression */}
 
@@ -93,29 +93,29 @@ function createPerformanceMonitor() {
   
   // // console.log removed for production
 
-  Summary:`);
+  Summary:`)```;
 
   // // console.log removed for production
 
-  analyzed: ${totalFiles}`);
+  analyzed: ${totalFiles}`)`;
 
   // // console.log removed for production
 
   opportunities: ${optimizedFiles})}
 
-// Function to create a performance monitoring component;
+// Function to create a performance monitoring component``;
 
 function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
 
-};
+}```;
 
-const performanceMonitorContent = `import React, { useEffect, useState } from 'react;;;
+const performanceMonitorContent = `import React, { useEffect, useState } from 'react`;``;
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 
 }
 
-export default PerformanceMonitor;`
+export default PerformanceMonitor```;`
 `;
 
   fs.writeFileSync(app/components/PerformanceMonitor.tsx, performanceMonitorContent);
@@ -123,31 +123,31 @@ export default PerformanceMonitor;`
   // // console.log removed for production
 }
 
-// Function to optimize images;
+// Function to optimize images`;
 
-function createImageOptimization() {;
+function createImageOptimization() {`'`;
 
 function createImageOptimization() {/* TODO: Fix JSX expression */}
 
-};
+}``'`;
 
-const imageOptimizationContent = `import React from react;;
+const imageOptimizationContent = `import React from react';
 
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 
 }
 
-;
+'`;
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({,
-  src;
+  src'``;
 
   alt,
   width,
   height,
   className = ',
   priority = false}) => {
-  return (<img;
+  return (<img```;
 
       src={src}
 
@@ -161,11 +161,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
       decoding="async)
       style={{})
         width: width ? \`\${width}px\` : 'auto)
-        height: height ? \`\${height}px\` : auto;
+        height: height ? \`\${height}px\` : auto``;
 
 const,
   OptimizedImage: React.FC<OptimizedImageProps>
-);
+)```;
 
 } = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -191,9 +191,9 @@ const,
       }}
 
     /></img>
-  )};
+  )}``;
 
-export default OptimizedImage;`
+export default OptimizedImage```;`
 ;
 
   fs.writeFileSync(app/components/OptimizedImage.tsx, imageOptimizationContent);
@@ -209,11 +209,11 @@ async function main() {/* TODO: Fix JSX expression */}
 }
 
   // // console.log removed for production
-await addPerformanceOptimizations();
+await addPerformanceOptimizations()`;
 
-  createPerformanceMonitor();
+  createPerformanceMonitor()``;
 
-  createImageOptimization();
+  createImageOptimization()```;
 
   // // console.log removed for production
 }

@@ -1,10 +1,10 @@
 
 async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */}
 
-  s://api.github.com/repos/${owner}/${repo}/contents/automation_logs`;
+  s://api.github.com/repos/${owner}/${repo}/contents/automation_logs```;
 
     const,
-  headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };`
+  headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' }```;`
     if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
 
     ;
@@ -63,11 +63,11 @@ const _r = await fetch(f.download_url, { headers });;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
 //   const dir = path.join(process.cwd(), 'automation_logs);;
 
-  try {;
+  try {
 
 const _files = fs.readdirSync(dir).filter((f) => f.endsWith('.json)).sort().reverse();;
 
-    const logs = files.slice(0, 50).map((f) => {;;
+    const logs = files.slice(0, 50).map((f) => {
 
       try {
 //         const raw = fs.readFileSync(path.join(dir, f), 'utf8);;
@@ -85,14 +85,14 @@ export default async function handler(re,
 
   e: f }}
 
-    });
+    })`;
 
     return res.status(200).json({ logs })} catch {
     // fall through to GitHub} catch {/* TODO: Fix JSX expression */}
 
   }
 
-//   const remote = await fetchFromGitHub();;
+//   const remote = await fetchFromGitHub()``;```;
 
   return res.status(200).json({/* TODO: Fix JSX expression */})
   s: remote })}`

@@ -2,7 +2,7 @@ import React from react;
 
 ;
 
-const SAMPLE_QUERIES = [;;;
+const SAMPLE_QUERIES = [;
 
   'React developers under $50/hr,
   'Part-time DevOps jobs in LATAM,
@@ -35,10 +35,10 @@ export default function handler(re,
 
 ;
 
-const suggestions = SAMPLE_QUERIES.filter(s =>);;
+const suggestions = SAMPLE_QUERIES.filter(s =>)';';
 
       s.toLowerCase().includes(query.toLowerCase())
-    ).slice(0, 5);
+    ).slice(0, 5)';
 
     return res.status(200).json({ suggestions })} catch (error) {/* TODO: Fix JSX expression */}
 

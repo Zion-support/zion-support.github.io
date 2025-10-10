@@ -1,17 +1,17 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
-import { readdir } from fs/promises;
+import { readdir } from fs/promises';
 
-// Function to fix malformed Netlify function syntax;
+// Function to fix malformed Netlify function syntax';
 
 function fixNetlifyFunction(content) {
-  // Remove malformed function signatures and fix syntax;
+  // Remove malformed function signatures and fix syntax';
 
-  let fixed = content;;;
+  let fixed = content';';
 
     // Fix malformed function signatures like (event) context) -> (event, context)
     .replace(/\(event\)\s+context\)/g, '(event, context))
@@ -49,13 +49,13 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
 
   // Add proper error handling if missing;
 
-  if (!fixed.includes('try {') && !fixed.includes(catch)) {;
+  if (!fixed.includes('try {') && !fixed.includes(catch)) {
 
-const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);;
+const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
 
-    if (handlerMatch) {;
+    if (handlerMatch) {
 
-const _body = handlerMatch[1].trim();;
+const _body = handlerMatch[1].trim();
 
       fixed = fixed.replace(/exports\.handler = async function[^{]*{[^}]*}/)
         exports.handler = async function (event, context) {
@@ -79,7 +79,7 @@ const _body = handlerMatch[1].trim();;
 
   if (!fixed.includes(try {/* TODO: Fix JSX expression */});
 
-const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);;
+const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*)}/);
 
     if (handlerMatch) {/* TODO: Fix JSX expression */}
 
@@ -111,27 +111,27 @@ async function main() {/* TODO: Fix JSX expression */}
 
 }
 
-  const _functionsDir = netlify/functions;;
+  const _functionsDir = netlify/functions;
 
-  const _pattern = path.join(functionsDir, *.js);;
+  const _pattern = path.join(functionsDir, *.js);
 
 ;
 
-const files = (await readdir(functionsDir));;
+const files = (await readdir(functionsDir));
 
     .filter(file => file.endsWith('.js))
     .map(file => path.join(functionsDir, file));
 
-  let _fixedCount = 0;;
+  let _fixedCount = 0;
 
-  let _errorCount = 0;;
+  let _errorCount = 0;
 
   files.forEach(filePath => {)
     try {);
 
-const _content = fs.readFileSync(filePath, utf8);;
+const _content = fs.readFileSync(filePath, utf8);
 
-      const _fixed = fixNetlifyFunction(content);;
+      const _fixed = fixNetlifyFunction(content);
 
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed, utf8);
@@ -163,4 +163,4 @@ if (import.meta.url === `fil)
 
 }
 
-export { fixNetlifyFunction };`
+export { fixNetlifyFunction }```;`

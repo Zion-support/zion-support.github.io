@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
 // Function to fix the blog page specifically
 function fixBlogPage(content) {
-  let fixed = content;;;
+  let fixed = content';';
 
   // Fix malformed JSX elements
   fixed = fixed
@@ -35,9 +35,9 @@ function fixBlogPage(content) {
 
 // Read and fix the blog page
 try {
-  const content = fs.readFileSync('app/blog/page.tsx', utf8);;
+  const content = fs.readFileSync('app/blog/page.tsx', utf8);
 
-  const fixed = fixBlogPage(content);;
+  const fixed = fixBlogPage(content);
 
   fs.writeFileSync(app/blog/page.tsx, fixed);
 

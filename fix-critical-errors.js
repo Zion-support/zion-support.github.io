@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -8,19 +8,19 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;;
+const __filename = fileURLToPath(import.meta.url);';
 
 // __dirname removed
-// Function to fix critical parsing errors;
+// Function to fix critical parsing errors';
 
 function fixCriticalErrors(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8)';
 
-    let modified = false;;
+    let modified = false';
 
-    // Fix merge conflict markers;
+    // Fix merge conflict markers';
 
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
       // console.log removed for production
@@ -28,17 +28,17 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
 
   in: ${filePath});
 
-      const lines = content.split(\n);;
+      const lines = content.split(\n);
 
-      const result = [];;
+      const result = [];
 
-      let inConflict = false;;
+      let inConflict = false;
 
-      let keepCurrent = true;;
+      let keepCurrent = true;
 
-      for (let i = 0; i < lines.length; i++) {;;
+      for (let i = 0; i < lines.length; i++) {
 
-const line = lines[i];;
+const line = lines[i];
 
         if (line.startsWith('<<<<<<<)) {
           inConflict = true;
@@ -66,7 +66,7 @@ const line = lines[i];;
 
     // Fix common syntax errors;
 
-    content = content.replace(/export\s+return/g, export const rateLimitingMiddleware =);;
+    content = content.replace(/export\s+return/g, export const rateLimitingMiddleware =);
 
     content = content.replace(/}\s*;\s*$/gm, });
 
@@ -76,7 +76,7 @@ const line = lines[i];;
 
     content = content.replace(/<div[^>]*>\s*$/gm, <div>);
 
-      for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
+      for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};
 
         } else if (line.startsWith(')) {/* TODO: Fix JSX expression */}
 
@@ -102,7 +102,7 @@ const line = lines[i];;
 
       content = content.replace(/catch\s*{\s*}/g, catch (error) {/* TODO: Fix JSX expression */}
 
-  r:", error)})}
+  r: ", error)})}
 
     if (filePath.includes('middleware)) {/* TODO: Fix JSX expression */}
 
@@ -121,21 +121,21 @@ return false}
 
 // Function to find all files that need fixing;
 
-function findFilesToFix(dir) {;
+function findFilesToFix(dir) {
 
-const files = [];;
+const files = [];
 
   ;
 
-function walkDir(currentPath) {;
+function walkDir(currentPath) {
 
-const items = fs.readdirSync(currentPath);;
+const items = fs.readdirSync(currentPath);
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(currentPath, item);;
+const fullPath = path.join(currentPath, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         walkDir(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx))) {
@@ -157,17 +157,17 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
 
 // Main execution;
 
-const srcDir = path.join(__dirname, src);;
+const srcDir = path.join(__dirname, src);
 
 // console.log removed for production
 ;
 
-const filesToFix = findFilesToFix(srcDir);;;
+const filesToFix = findFilesToFix(srcDir);;
 
 // console.log removed for production
-;
+";
 
-let fixedCount = 0;;
+let fixedCount = 0";";
 
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
 

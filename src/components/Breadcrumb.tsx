@@ -9,11 +9,9 @@ interface BreadcrumbItem {
 
   href: string;
 
-  current?: boolean}
+  current?: boolean};
 
-;
-
-const Breadcrumb: React.FC = () => {;
+const Breadcrumb: React.FC = () => {
 
 const location = useLocation();;
 
@@ -37,7 +35,7 @@ let currentPath = ';;
       const isLast = index === pathSegments.length - 1;;
 
             /
-      const name = segment;;
+      const name = segment;';
 
         .split('-)
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -57,11 +55,9 @@ const breadcrumbs = generateBreadcrumbs();;
   // Dont show breadcrumb on home page;
 
   if (location.pathname === '/) {
-    return null}
+    return null};
 
-;
-
-const structuredData = {;;
+const structuredData = {
 
     "@context": "https: //schema.org,
     "@type": "BreadcrumbList,
@@ -92,9 +88,9 @@ const structuredData = {;;
                     {item.name}
 
                   <)
-                ) : (<Link;
+                ) : (<Link`;
 
-                    to = { item.href };
+                    to = { item.href }``;
 
                     className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 flex items-center,
                   >,
@@ -112,13 +108,13 @@ const structuredData = {;;
       <
       
       {/* Structured Data *
-      <script;
+      <script>
 
         type=application
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
 
       /><
     
-  )};
+  )}">
 
-export default Breadcrumb;
+export default Breadcrumb"```;

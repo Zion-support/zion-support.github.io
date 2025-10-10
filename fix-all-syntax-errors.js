@@ -6,7 +6,7 @@ import { glob } from glob;
 
 // Function to fix all remaining syntax errors
 function fixAllSyntaxErrors(content) {
-  let fixed = content;;
+  let fixed = content;
 
   // Fix common syntax errors
   fixed = fixed
@@ -23,7 +23,7 @@ function fixAllSyntaxErrors(content) {
     .replace(/<([^>]+)><\/\1>/g, '<$1>)
     // Fix malformed JSX closing tags
     .replace(/<\/[^>]+><\/[^>]+>/g, (match) => {
-      const tags = match.match(/<\/([^>]+)>/g);;
+      const tags = match.match(/<\/([^>]+)>/g);
 
       if (tags && tags.length > 1) {
         return tags[tags.length - 1]; // Keep only the last closing tag
@@ -65,18 +65,18 @@ function fixAllSyntaxErrors(content) {
 async function processFiles() {
   console.log(Starting comprehensive syntax error fixes...);
 
-  const patterns = [;;
+  const patterns = [
 
     'app/**/*.tsx,
     app/**/*.ts
   ];
 
-  let processedCount = 0;;
+  let processedCount = 0;
 
-  let errorCount = 0;;
+  let errorCount = 0;
 
   for (const pattern of patterns) {
-    const files = await glob(pattern, {;;
+    const files = await glob(pattern, {
 
       ignore: [
         'node_modules/**,
@@ -91,12 +91,12 @@ async function processFiles() {
 
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file, utf8);;
+        const content = fs.readFileSync(file, utf8)`;
 
         // Check if file has syntax issues
-        if (content.includes(';)) || 
+        if (content.includes('``;)) || 
             content.includes(',)) ||
-            content.includes(',;) ||
+            content.includes(',```;) ||
             content.includes('Property assignment expected) ||
             content.includes('Declaration or statement expected) ||
             content.includes('Unexpected ")") ||
@@ -105,18 +105,18 @@ async function processFiles() {
           
           console.log(`Processing syntax errors in: ${file});
 
-          let fixed = fixAllSyntaxErrors(content);;
+          let fixed = fixAllSyntaxErrors(content)`;
 
-          fs.writeFileSync(file, fixed);
+          fs.writeFileSync(file, fixed)``;
 
-          processedCount++;
+          processedCount++```;
 
         }
 
       } catch (error) {
-        console.error(`Error processing ${file}:, error.message);
+        console.error(`Error processing ${file}:, error.message)``;
 
-        errorCount++;
+        errorCount++```;
 
       }
 
@@ -124,13 +124,13 @@ async function processFiles() {
 
   }
 
-  console.log(`\nComprehensive syntax fixes complete!);
+  console.log(`\nComprehensive syntax fixes complete!)```;
 
-  console.log(`Files processed: ${processedCount});
+  console.log(`Files processed: ${processedCount})```;
 
-  console.log(`Errors encountered: ${errorCount});
+  console.log(`Errors encountered: ${errorCount})``;
 
 }
 
 // Run the script
-processFiles().catch(console.error);
+processFiles().catch(console.error)```;

@@ -29,9 +29,7 @@ interface PerformanceMonitorProps {// TODO: Add content}
 
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 
-}
-
-;
+};
 
 const EnhancedPerformanceMonitor: React.FC;
 
@@ -565,7 +563,7 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
 
       window.removeEventListener(beforeunload, handleBeforeUnload)}}, [measureWebVitals, reportMetrics, reportInterval]);
 
-  // Toggle visibility for debugging;
+  // Toggle visibility for debugging';
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
@@ -573,7 +571,7 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
 
 }
 
-    const handleKeyPress = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */};;
+    const handleKeyPress = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}';';
 
   O: Add content}
 
@@ -626,7 +624,7 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
           <span>Performance,
   Score:</span>
           <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400}>
-            {performanceScore}/100;
+            {performanceScore}/100";
 
           </span>
         </div>
@@ -677,10 +675,10 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
 
       </div>
       <div className="mt-2 text-gray-400 text-xs></div>
-// Press Ctrl+Shift+P to toggle;
+// Press Ctrl+Shift+P to toggle">
 
           </div>
     </div>
-  )};
+  )}">
 
-export default EnhancedPerformanceMonitor;
+export default EnhancedPerformanceMonitor";

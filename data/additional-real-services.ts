@@ -27,11 +27,9 @@ export interface AdditionalRealService {id: string;
 
     address: string}
 
-export const additionalEnhancedServices: AdditionalRealService[] = [;
+export const additionalEnhancedServices: AdditionalRealService[] = [
 
-    address: string}
-
-;
+    address: string};
 
 export const additionalEnhancedServices: AdditionalRealService[] = [
     id: ai - automation - suite,
@@ -53,12 +51,10 @@ export interface AdditionalRealService {/* TODO: Fix JSX expression */}
   s: string}
 
 export const,
-  additionalEnhancedServices: AdditionalRealService[] = [;
+  additionalEnhancedServices: AdditionalRealService[] = [
 
     addres,
-  s: string}
-
-;
+  s: string};
 
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [,
@@ -213,7 +209,7 @@ export const,
   s: string}
 
 export const,
-  additionalEnhancedServices: AdditionalRealService[] = [;
+  additionalEnhancedServices: AdditionalRealService[] = [
 
     i,
   d: ai-automation-suite
@@ -226,7 +222,7 @@ export const,
     descriptio,
   n: Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.
     feature,
-  s: [;
+  s: [
 
       Workflow automation
       AI decision making
@@ -269,7 +265,7 @@ export const,
     descriptio,
   n: Scalable data warehouse solution with advanced analytics and business intelligence capabilities.
     feature,
-  s: [;
+  s: [
 
       Data integration
       Real-time processing
@@ -1583,7 +1579,7 @@ varian,
       Connection pool tuning,
       Capacity forecasting
     ],
-    popular: true;
+    popular: true';
 
     icon: ,
     color: from-purple-600 to-indigo-700,
@@ -1591,11 +1587,11 @@ varian,
     link: https://ziontechgroup.com/database-performance-monitor,
     marketPosition: Modern alternative with AI-first insights and simple pricing.,
     targetAudience: DBAs, platform, backend teams,
-    trialDays: 14;
+    trialDays: 14';
 
     setupTime: 30 minutes,
     category: Observability,
-    realService: true;
+    realService: true';
 
     technology: ['PostgreSQL', 'MySQL', OpenTelemetry],
     integrations: ['Grafana', 'Datadog', New Relic],
@@ -8317,7 +8313,7 @@ export interface AdditionalRealService,
   l: string} addres,
   s: string} export const,
   additionalEnhancedServices: AdditionalRealService[] = [ addres,
-  s: string} ; export const,
+  s: string}; export const,
   additionalEnhancedServices: AdditionalRealService[] = [, i,
   d: 'ai - automation - suite, nam,
   e: 'AI Automation Suite, taglin,
@@ -8353,10 +8349,10 @@ export interface AdditionalRealService,
   s: string[]; lin,
   k: string; categor,
   y: string; realImplementatio,
-  n: boolean; contactInf,
+  n: boolean'; contactInf,
   o: mobil,
-  e: string; emai,
-  l: string; addres,
+  e: string'; emai,
+  l: string'; addres,
   s: string}} } addres,
   s: string} export const,
   additionalEnhancedServices: AdditionalRealService[] = [  i,
@@ -8385,7 +8381,7 @@ export interface AdditionalRealService,
   contactInfo:  mobil,
   e: '+1 302 464 0950 emai,
   l: 'kleber@ziontechgroup.com addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]'; mobil,
   e: +1 302 464 0950,
   emai,
   l: "kleber@ziontechgroup.com i,
@@ -8401,7 +8397,7 @@ export interface AdditionalRealService,
   o:  mobil,
   e: '+1 302 464 0950, emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com, addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}}]; mobil,
+  s: '364 E Main St STE 1008 Middletown DE 19709}}]"'; mobil,
   e: +1 302 464 0950,
   i,
   d: "ai-automation-suite, nam,
@@ -8430,7 +8426,7 @@ export interface AdditionalRealService,
   s: 364 E Main St STE 1008 Middletown DE 19709,
   emai,
   l: "kleber@ziontechgroup.com addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709 } } ]; ]; i,
+  s: "364 E Main St STE 1008 Middletown DE 19709 } } ]'"; ]'"; i,
   d: "ai-automation-suite, nam,
   e: "AI Automation Suite, taglin,
   e: "Intelligent automation for modern businesses, pric,

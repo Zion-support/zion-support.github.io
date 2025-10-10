@@ -3,7 +3,7 @@
 import fs from 'fs';
 ;
 function fixMainPage() {
-  try {;
+  try {
 let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
     
     // Fix self-closing div tags that have content after them

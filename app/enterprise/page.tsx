@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
 import SEOOptimizer from '../components/SEOOptimizer;
 
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from lucide-react;
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from lucide-react';
 
-;
+';
 
-const EnterprisePage: React.FC = () => {const features = [;;;
+const EnterprisePage: React.FC = () => {const features = [';';';
 
     {
       icon: Shield,
@@ -55,7 +55,7 @@ benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'D
 
 ;
 
-const solutions = [;;
+const solutions = [
 
     {
       title: 'Enterprise Resource Planning,
@@ -86,7 +86,7 @@ benefits: ['Process automation', 'Task management', 'Approval workflows', 'Docum
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     'Reduce operational costs by 30%,
     'Improve productivity by 50%,
@@ -100,7 +100,7 @@ const benefits = [;;
 
 ;
 
-const stats = [;;
+const stats = [
 
     { number: '500+', label: 'Enterprise Clients, icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee, icon: Shield },
@@ -161,7 +161,7 @@ const stats = [;;
                 <div className="text-3xl font-bold text-white mb-2></di>{stat.number}</div>
                 <div className="text-gray-300 text-sm></di>{stat.label}</div>
               </div>
-            ));
+            ))";
 
           </div>
         </div>
@@ -193,11 +193,11 @@ const stats = [;;
                       {benefit}
 
                     </li>
-                  ));
+                  ))">
 
                 </ul>
               </div>
-            ));
+            ))"';
 
           </div>
         </div>
@@ -212,11 +212,11 @@ const stats = [;;
           </div>
           
                     </li>
-                  ));
+                  ))">
 
                 </ul>
               </div>
-            ));
+            ))"';
 
           </div>
         </div>
@@ -257,6 +257,6 @@ const stats = [;;
       <Footer />
     </div>
 )]
-    };
+    }">
 
-export default EnterprisePage;
+export default EnterprisePage'";

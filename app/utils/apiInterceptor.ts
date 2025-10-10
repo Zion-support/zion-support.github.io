@@ -334,7 +334,7 @@ const data = await this.parseResponse<T>(finalResponse);;
   d: PATCH, body });
 
   /**
-   * Prepare request configuration;
+   * Prepare request configuration`;
 
    */
   private prepareRequest(confi)
@@ -349,17 +349,17 @@ const data = await this.parseResponse<T>(finalResponse);;
   e: config.cache ?? this.config.enableCaching}}
 
   /**
-   * Build full URL with query parameters;
+   * Build full URL with query parameters``;
 
    */
   private buildURL(confi)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */};
+  g: RequestConfig): string {/* TODO: Fix JSX expression */}```;
 
-let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url};;
+let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;``;
 
     if (config.params) {/* TODO: Fix JSX expression */}
 
-      });
+      })```;
 
       url += `?${params.toString()}}
 
@@ -379,7 +379,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
     return headers}
 
   /**
-   * Create abort signal for timeout;
+   * Create abort signal for timeout`;
 
    */
   private createAbortSignal(timeou)
@@ -388,7 +388,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
   }
 
   /**
-   * Parse response based on content type;
+   * Parse response based on content type``;
 
    */
   private async parseResponse<T>(respons)
@@ -403,7 +403,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
     return (await response.blob()) as T}
 
   /**
-   * Get cache key for request;
+   * Get cache key for request```;
 
    */
   private getCacheKey(confi)
@@ -489,6 +489,6 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 }
 
 // Export singleton instance
-export const apiInterceptor = APIInterceptor.getInstance();;
+export const apiInterceptor = APIInterceptor.getInstance()`;``;
 
-export default APIInterceptor;
+export default APIInterceptor```;

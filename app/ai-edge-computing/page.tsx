@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import Navigation from ../components
 import Footer from ../components
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react';
 
-;
+';
 
-const AiEdgeComputingPage: React.FC = () => {const features = [;;;
+const AiEdgeComputingPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -42,7 +42,7 @@ const AiEdgeComputingPage: React.FC = () => {const features = [;;;
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     'Increase efficiency by up to 50%,
     'Reduce costs by 30% with automation,
@@ -113,4 +113,4 @@ const benefits = [;;
       </div>
       <Footer />
     </React.Fragment>)
-export default AiEdgeComputingPage;
+export default AiEdgeComputingPage";

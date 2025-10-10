@@ -97,7 +97,7 @@
   k: "/services/2029-practical-business-solution, categor,
   y: Practical Business Solutions 2029,
   realImplementatio,
-  n: true;
+  n: true";
 
     contactInf,
   o: unknown,
@@ -238,7 +238,7 @@ export const,
       descriptio,
   n: Practical business solution platform that provides real-world solutions for 2029.
       feature,
-  s: [;
+  s: [
 
         Practical solutions
         Business applications
@@ -256,7 +256,7 @@ export const,
 
     }
 
-  ];    features: [;
+  ];    features: [
 
   real_implementation: boolean;
 
@@ -268,15 +268,15 @@ export const,
 
         mobile: +1 302 464 0950,
         email: kleber@ziontechgroup && ziontechgroup.com,
-        address: 364 E Main St STE 1008 Middletown DE 19709}}];    features: [,
+        address: 364 E Main St STE 1008 Middletown DE 19709}}]";    features: [,
       Practical solutions,
       Business applications,
       Real-world use cases,
       Easy integration,
       Affordable pricing
-  };
+  }";
 
-    ];
+    ]";
 
     link: "/services/2029-practical-business-solution", category: Practical Business Solutions 2029,
     realImplementation: true;
@@ -325,7 +325,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       Real-world use cases,
       Easy integration,
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup && ziontechgroup.com",      address: 364 E Main St STE 1008 Middletown DE 19709
-  ];    features: [;
+  ];    features: [
 
       Practical solutions
       Business applications
@@ -364,7 +364,7 @@ export interface PracticalBusinessSolution2029 {,
     }
 
   ];    feature,
-  s: [;
+  s: [
 
   real_implementatio,
   n: boolean;
@@ -397,7 +397,7 @@ export interface PracticalBusinessSolution2029 {,
   k: "/services/2029-practical-business-solution, categor,
   y: Practical Business Solutions 2029,
   realImplementatio,
-  n: true;
+  n: true";
 
     contactInf,
   o: unknown,
@@ -423,13 +423,13 @@ export interface PracticalBusinessSolution2029 {,
   s: string[];
 
   lin,
-  k: string;
+  k: string";
 
   categor,
-  y: string;
+  y: string";
 
   realImplementatio,
-  n: boolean;
+  n: boolean";
 
   contactInf,
   o: {/* TODO: Fix JSX expression */}
@@ -465,8 +465,8 @@ export const,
   e: "+1 302 464 0950, emai,
   l: "kleber@ziontechgroup && ziontechgroup.com,      addres,
   s: 364 E Main St STE 1008 Middletown DE 19709
-  ];    feature,
-  s: [;
+  ]";    feature,
+  s: [";
 
       "Practical solutions
       "Business applications
@@ -539,7 +539,7 @@ export const,
         email: kleber@ziontechgroup.com,
         address: 364 E Main St STE 1008 Middletown DE 19709}};
 
-  ];    features: [
+  ]";    features: [
       Practical solutions
       Business applications
       Real-world use cases
@@ -556,9 +556,9 @@ export const,
         emai,
   l: kleber@ziontechgroup.com,
         addres,
-  s: 364 E Main St STE 1008 Middletown DE 19709}};
+  s: 364 E Main St STE 1008 Middletown DE 19709}}";
 
-  ];    feature,
+  ]";    feature,
   s: [,
       "Practical solutions
       "Business applications
@@ -689,7 +689,7 @@ export const,
     contact_info: unknown;
 
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: 364 E Main St STE 1008 Middletown DE 19709
-export interface PracticalBusinessSolution2029 {;
+export interface PracticalBusinessSolution2029 {
 
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [,
     id: ai-powered-ecommerce-optimization-2029,
@@ -739,7 +739,7 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
 
   }
 
-];"
+]";"
 "Practical solutions" "Business applications" "Real-world use cases" "Easy integration", "Affordable pricing ]; lin,
   k: "/services/2029-practical-business-solution, categor,
   y: Practical Business Solutions 2029,
@@ -803,15 +803,15 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   contactInfo:  mobil,
   e: '+1 302 464 0950 emai,
   l: 'kleber@ziontechgroup.com addres,
-  s: 364 E Main St STE 1008 Middletown DE 19709 } } ]; feature,
+  s: 364 E Main St STE 1008 Middletown DE 19709 } } ]'; feature,
   s: [ real_implementatio,
-  n: boolean; contact_inf,
+  n: boolean'"; contact_inf,
   o: mobil,
-  e: string; emai,
+  e: string'"; emai,
   l: string, mobil,
   e: '+1 302 464 0950, emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com, addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}}]; feature,
+  s: '364 E Main St STE 1008 Middletown DE 19709}}]"; feature,
   s: [ "Practical solutions" "Business applications" "Real-world use cases" "Easy integration", "Affordable pricing }; ]; lin,
   k: "/services/2029-practical-business-solution, categor,
   y: Practical Business Solutions 2029,
@@ -828,9 +828,9 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   e: string, descriptio,
   n: string; feature,
   s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
+  k: string"; categor,
+  y: string"; realImplementatio,
+  n: boolean"; contactInf,
   o: {/* TODO: Fix JSX expression */}
 
   l: string} addres,
@@ -844,8 +844,8 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   s: [ "Practical solutions", "Business applications", "Real-world use cases", "Easy integration, mobil,
   e: "+1 302 464 0950, emai,
   l: "kleber@ziontechgroup && ziontechgroup.com, addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709 ]; feature,
-  s: [; "Practical solutions" "Business applications" "Real - world use cases" "Easy integration" "Affordable pricing ], lin,
+  s: "364 E Main St STE 1008 Middletown DE 19709 ]"; feature,
+  s: ["'; "Practical solutions" "Business applications" "Real - world use cases" "Easy integration" "Affordable pricing ], lin,
   k: "/services / 2029 - practical - business - solution, categor,
   y: Practical Business Solutions 2029, real_implementatio,
   n: true, contact_inf,
@@ -855,7 +855,7 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   s: 364 E Main St STE 1008 Middletown DE 19709 export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
 
   n: true} contactInf,
-  o: } } ]; export interface PracticalBusinessSolution2029 {}; export const,
+  o: } } ]'; export interface PracticalBusinessSolution2029 {}'"; export const,
   practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] = [  i,
   d: '2029-practical-business-solution, nam,
   e: '2029 Practical Business Solution Platform, taglin,
@@ -869,7 +869,7 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   o:  mobil,
   e: '+1 302 464 0950, emai,
   l: 'kleber@ziontechgroup.com, addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}}; ]; feature,
+  s: '364 E Main St STE 1008 Middletown DE 19709}}"; ]"; feature,
   s: [ "Practical solutions" "Business applications" "Real-world use cases" Easy integration i,
   d: string; nam,
   e: string; taglin,
@@ -894,13 +894,13 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   e: string, descriptio,
   n: string; feature,
   s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
+  k: string"; categor,
+  y: string"; realImplementatio,
+  n: boolean"'; contactInf,
   o: {/* TODO: Fix JSX expression */}
 
   l: string} addres,
-  s: string} } } "Affordable pricing ]; lin,
+  s: string} } } "Affordable pricing ]'; lin,
   k: "/services / 2029 - practical - business - solution, categor,
   y: Practical Business Solutions 2029, real_implementatio,
   n: true, contact_inf,
@@ -910,4 +910,4 @@ export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
   s: "364 E Main St STE 1008 Middletown DE 19709 export interface PracticalBusinessSolution2029 {/* TODO: Fix JSX expression */}
 
   l: "kleber@ziontechgroup.com} addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]} } ]; '"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]} } ]'; '"

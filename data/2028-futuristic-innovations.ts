@@ -27,9 +27,8 @@ export interface FuturisticInnovation2028 {/* TODO: Fix JSX expression */}
   }
 }
     address: string}
-export const futuristic2028Services: FuturisticInnovation2028[] = [;
-    address: string}
-;
+export const futuristic2028Services: FuturisticInnovation2028[] = [
+    address: string};
 export const futuristic2028Services: FuturisticInnovation2028[] = [
     id: '2028 - futuristic - innovation',
     name: '2028 Futuristic Innovation Platform',
@@ -39,10 +38,9 @@ export const futuristic2028Services: FuturisticInnovation2028[] = [
     addres,
   s: string}
 export const,
-  futuristic2028Services: FuturisticInnovation2028[] = [;
+  futuristic2028Services: FuturisticInnovation2028[] = [
     addres,
-  s: string}
-;
+  s: string};
 export const,
   futuristic2028Services: FuturisticInnovation2028[] = [,
     i,
@@ -106,7 +104,7 @@ export const futuristic2028 Services: FuturisticInnovation2028[] = [,
     id: "2028-futuristic-innovation", name: "2028 Futuristic Innovation Platform",
     tagline: "Futuristic innovations for 2028", price: '$399/month',
     description: 'Futuristic innovation platform that showcases breakthrough technologies for 2028.',
-    features: [;
+    features: [
       "Futuristic innovations"
       "Breakthrough technologies"
       "Future capabilities"
@@ -207,7 +205,7 @@ export const,
     descriptio,"
   n: "Futuristic innovation platform that showcases breakthrough technologies for 2028.",
     feature,
-  s: [;"
+  s: ["
       "Futuristic innovations""
       "Breakthrough technologies""
       "Future capabilities""
@@ -320,7 +318,7 @@ export interface FuturisticInnovation2028 export interface FuturisticInnovation2
   s: string} } } addres,
   s: string} export const,
   futuristic2028Services: FuturisticInnovation2028[] = [ addres,
-  s: string} ; export const,
+  s: string}; export const,
   futuristic2028Services: FuturisticInnovation2028[] = [, i,
   d: '2028 - futuristic - innovation',' nam,
   e: '2028 Futuristic Innovation Platform',' taglin,

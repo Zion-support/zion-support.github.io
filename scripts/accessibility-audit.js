@@ -1,4 +1,4 @@
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -6,13 +6,13 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;;
+const __filename = fileURLToPath(import.meta.url)';';
 
 // __dirname removed
 // console.log removed for production
-// Accessibility checklist;
+// Accessibility checklist';
 
-const accessibilityChecklist = {;;;
+const accessibilityChecklist = {';';
 
   semanticHTML: {,
     description: 'Use semantic HTML elements,
@@ -87,15 +87,15 @@ function auditHTMLFiles() {
   // console.log removed for production
 ;
 
-const distDir = path.join(__dirname, ../dist);;
+const distDir = path.join(__dirname, ../dist);
 
-  const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith(.html));;
+  const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith(.html));
 
   htmlFiles.forEach(file => {);
 
-const filePath = path.join(distDir, file);;
+const filePath = path.join(distDir, file);
 
-    const content = fs.readFileSync(filePath, utf8);;
+    const content = fs.readFileSync(filePath, utf8);
 
     // console.log removed for production
 // Check for semantic HTML;
@@ -112,7 +112,7 @@ const filePath = path.join(distDir, file);;
 
     // Check for alt attributes;
 
-    const imgTags = content.match(/<img[^>]*>/g) || [];;
+    const imgTags = content.match(/<img[^>]*>/g) || [];
 
     imgTags.forEach(img => {)
       if (!img.includes('alt=)) {
@@ -123,7 +123,7 @@ const filePath = path.join(distDir, file);;
 
     // Check for heading hierarchy;
 
-    const headings = content.match(/<h[1-6][^>]*>/g) || [];;
+    const headings = content.match(/<h[1-6][^>]*>/g) || [];
 
     if (headings.length === 0) {
       // console.log removed for production
@@ -143,15 +143,15 @@ function auditCSSFiles() {
   // console.log removed for production
 ;
 
-const distDir = path.join(__dirname, ../dist);;
+const distDir = path.join(__dirname, ../dist);
 
-  const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith(.css));;
+  const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith(.css));
 
   cssFiles.forEach(file => {);
 
-const filePath = path.join(distDir, file);;
+const filePath = path.join(distDir, file);
 
-    const content = fs.readFileSync(filePath, utf8);;
+    const content = fs.readFileSync(filePath, utf8);
 
     // console.log removed for production
 // Check for focus styles;
@@ -180,7 +180,7 @@ function generateAccessibilityReport() {
   // console.log removed for production
 ;
 
-const report = {;;
+const report = {
 
     timestamp: new Date().toISOString()
     checklist: accessibilityChecklist;
@@ -222,7 +222,7 @@ function generateAccessibilityImprovements() {
   // console.log removed for production
 ;
 
-const improvements = ;;
+const improvements = ;
 
 // Accessibility improvements to implement;
 
@@ -234,16 +234,16 @@ const improvements = ;;
 
 // 2. Implement focus management;
 
-const trapFocus = (element) => {;;
+const trapFocus = (element) => {
 
-const focusableElements = element.querySelectorAll(;;
+const focusableElements = element.querySelectorAll(;
 
     'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
   );
 
-  const firstElement = focusableElements[0];;
+  const firstElement = focusableElements[0];
 
-  const lastElement = focusableElements[focusableElements.length - 1];;
+  const lastElement = focusableElements[focusableElements.length - 1];
 
   element.addEventListener('keydown, (e) => {
     if (e.key === 'Tab) {
@@ -272,20 +272,20 @@ const focusableElements = element.querySelectorAll(;;
 
 </div>
 
-// 4. Ensure proper heading hierarchy;
+// 4. Ensure proper heading hierarchy">
 
 <h1>Main Page Title</h1>
   <h2>Section Title</h2>
     <h3>Subsection Title</h3>
 
-// 5. Add skip links;
+// 5. Add skip links";
 
 <a href="#main-content" className="skip-link>
-  Skip to main content;
+  Skip to main content">
 
 </a>
 
-// 6. Use semantic HTML;
+// 6. Use semantic HTML";
 
 <main>
   <nav aria-label="Main navigation>

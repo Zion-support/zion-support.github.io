@@ -1,24 +1,24 @@
-import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react;
+import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
 
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
-const HelpPage: React.FC = () => {;
+const HelpPage: React.FC = () => {';
 
 const [searchTerm, setSearchTerm] = useState(');
 
   const [activeCategory, setActiveCategory] = useState('getting-started);
 
-const categories = [;;
+const categories = [
 
     {
       id: 'getting-started,
@@ -46,9 +46,9 @@ $4}
 
   ];
 
-;
+';
 
-const helpArticles = {;;
+const helpArticles = {';';
 
     'getting-started: [
         title: 'How to Get Started with AI Services,
@@ -108,9 +108,9 @@ titletitle: 'Security Best Practices,
         description: 'Set up monitoring and logging for your AI services and applications]
   };
 
-;
+';
 
-const resources = [;;
+const resources = [';';
 
       title: 'Video Tutorials,
       description: 'Step-by-step video guides for all our services,
@@ -125,9 +125,9 @@ titletitle: 'API Reference,
 titletitle: 'Download Center,
       description: 'SDKs, tools, and resources for developers,
       icon: Download,
-      count: '25+ downloads;
+      count: '25+ downloads';
 
-const supportChannels = [;
+const supportChannels = [';
       title: 'Live Chat,
       description: 'Get instant help from our support team',      color: 'text-cyan-400,
       availability: 24
@@ -145,9 +145,9 @@ titletitle: 'Phone Support,
 titletitle: 'Community Forum,
       description: 'Connect with other users and share knowledge,
       icon: Users,
-      responseTime: 'Community driven;
+      responseTime: 'Community driven';
 
-const faqs = [;
+const faqs = [';
       question: 'How quickly can I get started with your AI services?,
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.      questio,
     n: 'Do you offer training for our team?,
@@ -159,7 +159,7 @@ questionquestion: 'Can I integrate your services with my existing systems?,
 questionquestion: 'Is there a free trial available?,
       answer: Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.;
 
-const getCurrentArticles = () => {;;
+const getCurrentArticles = () => {
 
 return (
 
@@ -177,7 +177,7 @@ const filteredArticles = getCurrentArticles().filter(article =>;
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         <div className="container mx-auto px-4 py-16 pt-24>
-);
+)"';
 
 }
 
@@ -199,8 +199,8 @@ const filteredArticles = getCurrentArticles().filter(article =>;
               <input
                 type="text
                 placeholder="Search help articles...
-                value = { searchTerm };)
-                onChange = { (e) => setSearchTerm(e.target.value) };
+                value = { searchTerm }>)
+                onChange = { (e) => setSearchTerm(e.target.value) }';
 
                 className=w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -209,8 +209,8 @@ const filteredArticles = getCurrentArticles().filter(article =>;
           <div className="mb-12>
             <div className="flex flex-wrap justify-center gap-4 mb-8>
               {categories.map((category) => (<button
-                  key = { category.id };)
-                  onClick = { () => setActiveCategory(category.id) };
+                  key = { category.id }">)
+                  onClick = { () => setActiveCategory(category.id) }'";
 
                   className={flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeCategory === category.id
@@ -323,13 +323,13 @@ const filteredArticles = getCurrentArticles().filter(article =>;
 
   const [activeCategory, setActiveCategory] = useState(getting-started);
 
-const categories = [;;
+const categories = [
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};  i,
+}">  i,
   d: 'getting-started,
       nam,
   e: 'Getting Started,
@@ -363,15 +363,15 @@ const categories = [;;
   r: bg-purple-500
     }
 
-  ];
+  ]'">
 
-  const helpArticles = {/* TODO: Fix JSX expression */};
+  const helpArticles = {/* TODO: Fix JSX expression */}'">
 
   O: Add content}
 
 }
 
-    'getting-started: [;  titl,
+    'getting-started: ["`;  titl,
   e: 'Setting Up Your First Dashboard,
         descriptio,
   n: 'Step-by-step instructions for creating and customizing your analytics dashboard,
@@ -431,17 +431,17 @@ const categories = [;;
           <
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center
                 <Phone className="w-4 h-4 mr-2 
-                (302) 464-0950;
+                (302) 464-0950"'`>
 
                 href="mailto:kleber@ziontechgroup.com" className=border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hove,
     r:text-slate-900 transition-all duration-300 inline-flex items-center
                 <Mail className="w-4 h-4 mr-2 
 
-                Email Us;
+                Email Us>
 
       <Footer /></Footer>
     </React.Fragment>
-export default HelpPage;
+export default HelpPage">
 
       <Footer /></Footer>
-    </React.Fragment>export default HelpPage;
+    </React.Fragment>export default HelpPage'"```;

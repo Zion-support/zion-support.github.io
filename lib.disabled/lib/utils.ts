@@ -31,7 +31,7 @@ export function debounce<T extends (...args: unknown[]) => any>(
 
   wait: number;
 
-): (...args: Parameters<T>) => void {;
+): (...args: Parameters<T>) => void {
 
 let timeout: NodeJS.Timeout;
 
@@ -46,7 +46,7 @@ export function throttle<T extends (...args: unknown[]) => any>(
 
   limit: number;
 
-): (...args: Parameters<T>) => void {;
+): (...args: Parameters<T>) => void {
 
 let inThrottle: boolean;
 
@@ -56,7 +56,7 @@ let inThrottle: boolean;
 
       inThrottle = true;
 
-      setTimeout(() => (inThrottle = false), limit);
+      setTimeout(() => (inThrottle = false), limit)`;
 
 export function formatEmail(emai)
   l: string): string {/* TODO: Fix JSX expression */}
@@ -67,7 +67,7 @@ export function debounce<T extends (...arg)
   s: unknown[]) => any>(fun,
   c: T,
   wai,
-  t: number;)
+  t: number``;)
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
 
@@ -77,7 +77,7 @@ export function throttle<T extends (...arg)
   s: unknown[]) => any>(fun,
   c: T,
   limi,
-  t: number;)
+  t: number```;)
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
 

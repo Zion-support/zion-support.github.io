@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface InnovativeMicroSaasV3 {;,
+export interface InnovativeMicroSaasV3 {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [,
     id: "ai-customer-support", name: "AI Customer Support Platform",
     tagline: "24/7 intelligent customer support automation", price: '$59/month',
     description: 'Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.',
-    features: [;
+    features: [
       "AI chatbot integration"
       "Multi-language support"
       "Ticket management"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Advanced AI-powered customer support platform that provides instant responses and escalates complex issues.",
     feature,
-  s: [;"
+  s: ["
       "AI chatbot integration""
       "Multi-language support""
       "Ticket management""

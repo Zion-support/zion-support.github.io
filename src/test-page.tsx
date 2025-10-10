@@ -1,19 +1,19 @@
 
 
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield } from 'lucide-react;
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-const testPagetsx: React.FC = () => {;
+const testPagetsx: React.FC = () => {
 
-const _features = [];;;
+const _features = []';';';
 
   return (
 
@@ -46,18 +46,18 @@ const _features = [];;;
         <section className="py-20 px-4"></section>
           <div className="max-w-6xl mx-auto text-center"></div>
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent></h1>
-              testtsx;
+              testtsx";
 
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto></p>
-              Advanced testtsx solutions powered by AI and cutting-edge technology;
+              Advanced testtsx solutions powered by AI and cutting-edge technology";
 
             </p>
             <div className="flex flex-col,
   sm:flex-row gap-4 justify-center"></div>
               <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,
   hover:bg-cyan-600 transition-colors></a>
-                Get Started;
+                Get Started";
 
               </a>
               <a href="/demo" className=border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
@@ -109,7 +109,7 @@ const _features = [];;;
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>
             <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,
   hover:bg-cyan-600 transition-colors></a>
-              Contact Us;
+              Contact Us">
 
             </a>
           </div>
@@ -118,6 +118,6 @@ const _features = [];;;
 
       <Footer />
     </div>
-  )};
+  )}">
 
-export default testPagetsx;
+export default testPagetsx";

@@ -9,33 +9,33 @@ import React from react;
   d: "string}config?: unknown) => void} } } const,
   PerformanceMonitor: React.FC = () => {/* TODO: Fix JSX expression */}
 
-  P: '}entry.startTime)} } } }); try {/* TODO: Fix JSX expression */},
+  P: '}entry.startTime)} } } })"'; try {/* TODO: Fix JSX expression */},
   s:
-        s: ["largest-contentful-paint] })} catch () {}const fidObserver = new (window as any).PerformanceObserver((lis);;
+        s: ["largest-contentful-paint] })} catch () {}const fidObserver = new (window as any).PerformanceObserver((lis)';';
 
   t: unknown) => {/* TODO: Fix JSX expression */}
 
   D: '}entry.processingStart - entry.startTime)} } } }); try {/* TODO: Fix JSX expression */},
   s:
-        s: ["first-input"] })} catch () {}let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((lis,);;
+        s: ["first-input"] })} catch () {}let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((lis,);';
 
-  t: unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof console !== "undefined") {/* TODO: Fix JSX expression */};;
+  t: unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof console !== "undefined") {/* TODO: Fix JSX expression */}';';
 
-  S: '}clsValue)} }); try {/* TODO: Fix JSX expression */},
+  S: '}clsValue)} })'; try {/* TODO: Fix JSX expression */},
   s:
-        s: ["layout-shift"] })} catch () {}return () => {observer.disconnect(); fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as any).processingStart - entry.startTime; metrics.fid = fid} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
+        s: ["layout-shift"] })} catch () {}return () => {observer.disconnect()'; fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as any).processingStart - entry.startTime'; metrics.fid = fid} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
 
-  D: '}fid)} } }); try {/* TODO: Fix JSX expression */},
+  D: '}fid)} } })'; try {/* TODO: Fix JSX expression */},
   s:
-        s: ["first-input"] })} catch () {}let clsValue = 0; const clsObserver = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { if (!(entry as any).hadRecentInput) { clsValue += (entry as any).value} } metrics.cls = clsValue; if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
+        s: ["first-input"] })} catch () {}let clsValue = 0'; const clsObserver = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { if (!(entry as any).hadRecentInput) { clsValue += (entry as any).value} } metrics.cls = clsValue'; if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
 
-  S: '}clsValue)} }); try {/* TODO: Fix JSX expression */},
+  S: '}clsValue)} })'; try {/* TODO: Fix JSX expression */},
   s:
         s: ["layout-shift"] })} catch () {}const fcpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { if (entry.name === "first-contentful-paint") { metrics.fcp = entry.startTime} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
 
-  P: '}metrics.fcp)} } } }); try {/* TODO: Fix JSX expression */},
+  P: '}metrics.fcp)} } } })'; try {/* TODO: Fix JSX expression */},
   s:
-        s: ["paint"] })} catch () {}const navigationEntry = performance.getEntriesByType("navigation")[0] as any; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
+        s: ["paint"] })} catch () {}const navigationEntry = performance.getEntriesByType("navigation")[0] as any'; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
 
   B: }metrics.ttfb)} } const sendMetrics = () => {/* TODO: Fix JSX expression */},;;
 
@@ -50,7 +50,7 @@ import React from react;
 
   P:}entry.startTime)} } } }); try { observer.observe({ "entryTypes": ['largest-contentful-paint'] })} catch () {}const fidObserver = new (window as) any).PerformanceObserver(("list": unknown) => {/* TODO: Fix JSX expression */};;
 
-  D: '}entry.processingStart - entry.startTime)} } } }); try { fidObserver.observe({ "entryTypes": ['first-input'] })} catch () {}let clsValue = 0; const clsObserver = new (window as) any).PerformanceObserver(("list": unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof _console !== undefined) {_// console.log removed for production;;
+  D: '}entry.processingStart - entry.startTime)} } } })'; try { fidObserver.observe({ "entryTypes": ['first-input'] })} catch () {}let clsValue = 0; const clsObserver = new (window as) any).PerformanceObserver(("list": unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof _console !== undefined) {_// console.log removed for production;;
 
 } }); try { clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch () {}return () => {observer.disconnect(); fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as) any).processingStart - entry.startTime; metrics.fid = fid} if (process.env['NODE_ENV'] === development) { _// console.log removed for production;;
 
@@ -71,33 +71,33 @@ import React from react;
   d: "string}config?: unknown) => void} } } const,
   PerformanceMonitor: React.FC = () => {/* TODO: Fix JSX expression */}
 
-  P: '}entry.startTime)} } } }); try {/* TODO: Fix JSX expression */},
+  P: '}entry.startTime)} } } })"'; try {/* TODO: Fix JSX expression */},
   s:
-        s: ["largest-contentful-paint] })} catch (e) {} const fidObserver = new (window as any).PerformanceObserver((lis);;
+        s: ["largest-contentful-paint] })} catch (e) {} const fidObserver = new (window as any).PerformanceObserver((lis)';';
 
   t: unknown) => {/* TODO: Fix JSX expression */}
 
   D: '}entry.processingStart - entry.startTime)} } } }); try {/* TODO: Fix JSX expression */},
   s:
-        s: ["first-input"] })} catch (e) {} let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((lis,);;
+        s: ["first-input"] })} catch (e) {} let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((lis,);';
 
-  t: unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof console !== "undefined") {/* TODO: Fix JSX expression */};;
+  t: unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof console !== "undefined") {/* TODO: Fix JSX expression */}';';
 
-  S: '}clsValue)} }); try {/* TODO: Fix JSX expression */},
+  S: '}clsValue)} })'; try {/* TODO: Fix JSX expression */},
   s:
-        s: ["layout-shift"] })} catch (e) {} return () => {observer.disconnect(); fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as any).processingStart - entry.startTime; metrics.fid = fid} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
+        s: ["layout-shift"] })} catch (e) {} return () => {observer.disconnect()'; fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as any).processingStart - entry.startTime'; metrics.fid = fid} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
 
-  D: '}fid)} } }); try {/* TODO: Fix JSX expression */},
+  D: '}fid)} } })'; try {/* TODO: Fix JSX expression */},
   s:
-        s: ["first-input"] })} catch (e) {} let clsValue = 0; const clsObserver = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { if (!(entry as any).hadRecentInput) { clsValue += (entry as any).value} } metrics.cls = clsValue; if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
+        s: ["first-input"] })} catch (e) {} let clsValue = 0'; const clsObserver = new PerformanceObserver((list) => { for (const entry of list.getEntries()) { if (!(entry as any).hadRecentInput) { clsValue += (entry as any).value} } metrics.cls = clsValue'; if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
 
-  S: '}clsValue)} }); try {/* TODO: Fix JSX expression */},
+  S: '}clsValue)} })'; try {/* TODO: Fix JSX expression */},
   s:
         s: ["layout-shift"] })} catch (e) {} const fcpObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { if (entry.name === "first-contentful-paint") { metrics.fcp = entry.startTime} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
 
-  P: '}metrics.fcp)} } } }); try {/* TODO: Fix JSX expression */},
+  P: '}metrics.fcp)} } } })'; try {/* TODO: Fix JSX expression */},
   s:
-        s: ["paint"] })} catch (e) {} const navigationEntry = performance.getEntriesByType("navigation")[0] as any; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
+        s: ["paint"] })} catch (e) {} const navigationEntry = performance.getEntriesByType("navigation")[0] as any'; if (navigationEntry) {metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart} if (process.env['NODE_ENV'] === "development") {/* TODO: Fix JSX expression */};;
 
   B: }metrics.ttfb)} } const sendMetrics = () => {/* TODO: Fix JSX expression */},;;
 
@@ -112,7 +112,7 @@ import React from react;
 
   P:}entry.startTime)} } } }); try { observer.observe({ "entryTypes": ['largest-contentful-paint'] })} catch (e) {} const fidObserver = new (window as) any).PerformanceObserver(("list": unknown) => {/* TODO: Fix JSX expression */};;
 
-  D: '}entry.processingStart - entry.startTime)} } } }); try { fidObserver.observe({ "entryTypes": ['first-input'] })} catch (e) {} let clsValue = 0; const clsObserver = new (window as) any).PerformanceObserver(("list": unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof _console !== undefined) {_// // console.log removed for production;;
+  D: '}entry.processingStart - entry.startTime)} } } })'; try { fidObserver.observe({ "entryTypes": ['first-input'] })} catch (e) {} let clsValue = 0; const clsObserver = new (window as) any).PerformanceObserver(("list": unknown) => {for (const entry of list.getEntries()) { const entryAny = entry as any} if (!entryAny.hadRecentInput) { clsValue += entryAny.value} } if (typeof _console !== undefined) {_// // console.log removed for production;;
 
 } }); try { clsObserver.observe({ "entryTypes": ['layout-shift'] })} catch (e) {} return () => {observer.disconnect(); fidObserver.disconnect()} clsObserver.disconnect()}} const fidObserver = new PerformanceObserver((list) => {for (const entry of list.getEntries()) { const fid = (entry as) any).processingStart - entry.startTime; metrics.fid = fid} if (process.env['NODE_ENV'] === development) { _// // console.log removed for production;;
 

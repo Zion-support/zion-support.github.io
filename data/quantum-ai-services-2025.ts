@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface QuantumAiService2025 {;,
+export interface QuantumAiService2025 {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const quantumAIServices2025: QuantumAiService2025[] = [,
     id: "quantum-ai-hybrid", name: "Quantum AI Hybrid Platform",
     tagline: "Combining quantum computing with artificial intelligence", price: '$299/month',
     description: 'Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.',
-    features: [;
+    features: [
       "Quantum AI algorithms"
       "Hybrid processing"
       "Advanced simulations"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
     feature,
-  s: [;"
+  s: ["
       "Quantum AI algorithms""
       "Hybrid processing""
       "Advanced simulations""

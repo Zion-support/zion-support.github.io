@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
 const TeamPage: React.FC = () => {  return (<div>
         <title>Our Team - Zion Tech Group<
@@ -35,18 +35,17 @@ const TeamPage: React.FC = () => {  return (<div>
           <
         <
         
-        <Footer 
-      <
+        <Footer <
     <)
-  );
+  )'>
 
 )]
-    };
+    }'">
 
-};
+}>
 
-export default TeamPage;
+export default TeamPage">
 
 }
 
-  );)
+  )'";)

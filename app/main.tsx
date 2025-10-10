@@ -1,12 +1,12 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 import { Helmet } from react-helmet-async;
 
 ;
 
-const MainPage: React.FC = () => {const features = [;;;
+const MainPage: React.FC = () => {const features = [';';
 
     {
       ico,
@@ -32,9 +32,9 @@ const MainPage: React.FC = () => {const features = [;;;
 
   ];
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -150,4 +150,4 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-export default MainPage;
+export default MainPage";

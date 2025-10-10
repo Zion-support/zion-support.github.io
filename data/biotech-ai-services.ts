@@ -1399,7 +1399,7 @@ export const biotechAIServices: BiotechAIService[] = [,
     price: $3,999,
     period: '/month', description: Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.,
     features:
-        features: [;
+        features: [
 
       AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard,
       API for research integrationMulti-omics data analysis],
@@ -1540,7 +1540,7 @@ export const,
   d: /month, descriptio,
   n: Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.,
     feature,
-  s: [;
+  s: [
 
       AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard
       API for research integrationMulti-omics data analysis
@@ -1663,7 +1663,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   n:
       Advanced AI-powered genetic engineering platform that enables precise gene editing, synthetic biology, and genetic optimization. Create new organisms and optimize existing ones.
     feature,
-  s: [;
+  s: [
 
       AI gene editing algorithms
       Synthetic biology design
@@ -1713,10 +1713,10 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Laboratory systems
       DNA sequencing
@@ -1775,10 +1775,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Laboratory systems
       Protein databases
@@ -1837,10 +1837,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Clinical trial systems
       Patient databases
@@ -1899,10 +1899,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Laboratory systems
       Clinical databases
@@ -1961,10 +1961,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Healthcare systems
       Genomic databases
@@ -2023,10 +2023,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Drug databases
       Clinical databases
@@ -2085,10 +2085,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Laboratory systems
       Research databases
@@ -2147,10 +2147,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Manufacturing systems
       Laboratory systems
@@ -2288,11 +2288,9 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
 
   rating: number;
 
-  reviews: number}
+  reviews: number};
 
-;
-
-export const biotechAIServices: BiotechAIService[] = [;
+export const biotechAIServices: BiotechAIService[] = [
 
   {
     id: ai-drug-discovery-platform;
@@ -2386,12 +2384,10 @@ export const biotechAIServices: BiotechAIService[] = [;
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  biotechAIServices: BiotechAIService[] = [;
+  biotechAIServices: BiotechAIService[] = [
 
   {/* TODO: Fix JSX expression */}
 
@@ -2427,9 +2423,7 @@ export const,
     review,
   s: 45}
 
-]}
-
-;
+]};
 
 export interface BiotechAIService,
   id: string; nam,
@@ -2872,7 +2866,7 @@ export interface BiotechAIService,
   e: 2024 - 03 - 10 customer,
   s: 90, ratin,
   g: 4.9, review,
-  s: 45} export interface BiotechAIService {} ]; } ]; realImplementatio,
+  s: 45} export interface BiotechAIService {} ]'; } ]'; realImplementatio,
   n: true,
   implementationDetails:' 'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance. launchDat,
   e: 2024-01-15 customer,
@@ -3049,12 +3043,12 @@ export interface BiotechAIService,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  biotechAIServices: BiotechAIService[] = [; {/* TODO: Fix JSX expression */}
+  g: number'; review,
+  s: number} '; export const,
+  biotechAIServices: BiotechAIService[] = ['; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
   s://ziontechgroup.com } real_implementatio,
   n: true, implementation_detail,
@@ -3062,4 +3056,4 @@ export interface BiotechAIService,
   e: 2024 - 03 - 10 customer,
   s: 90, ratin,
   g: 4.9, review,
-  s: 45} ]} ;
+  s: 45} ]} ';

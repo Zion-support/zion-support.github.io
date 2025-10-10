@@ -330,7 +330,7 @@ export function createSkipLink(targetId: string, text = 'Skip to main content): 
 
 }
 
-  const skipLink = document.createElement('a');;;
+  const skipLink = document.createElement('a')`;``;```;
 
   skipLink.href = `#${targetId};
 
@@ -478,9 +478,9 @@ export function createAccessibleTooltip()
 
 }
 
-    tooltip.style.display = block;
+    tooltip.style.display = block`;
 
-    const triggerRect = trigger.getBoundingClientRect();;
+    const triggerRect = trigger.getBoundingClientRect()``;```;
 
     switch (placement) {/* TODO: Fix JSX expression */}
 
@@ -492,17 +492,17 @@ export function createAccessibleTooltip()
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px
 
         tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px
-        break;
+        break```;
 
       case 'bottom':
         tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`
         tooltip.style.top = `${triggerRect.bottom + 5}px
-        break;
+        break```;
 
       case 'left':
         tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px`
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px
-        break;
+        break```;
 
       case 'right':
         tooltip.style.left = `${triggerRect.right + 5}px`
@@ -587,7 +587,7 @@ export class FocusManager {// TODO: Add content}
 
 }
 
-    const focusable = container.querySelector;;
+    const focusable = container.querySelector`;``;
 
           <HTMLElement>()
 
@@ -600,7 +600,7 @@ export class FocusManager {// TODO: Add content}
 
 }
 
-export default undefined;"
+export default undefined```;"
 
 
 

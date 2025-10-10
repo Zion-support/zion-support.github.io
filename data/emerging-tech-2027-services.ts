@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EmergingTech2027Service {;,
+export interface EmergingTech2027Service {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const emergingTech2027 Services: EmergingTech2027 Service[] = [,
     id: "2027-emerging-tech", name: "2027 Emerging Tech Platform",
     tagline: "Emerging tech for 2027", price: '$349/month',
     description: 'Advanced platform showcasing emerging technologies and innovations for 2027.',
-    features: [;
+    features: [
       "Emerging technologies"
       "Innovation platform"
       "Future capabilities"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Advanced platform showcasing emerging technologies and innovations for 2027.",
     feature,
-  s: [;"
+  s: ["
       "Emerging technologies""
       "Innovation platform""
       "Future capabilities""

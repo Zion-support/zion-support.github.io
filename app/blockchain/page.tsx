@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from lucide-react;
+import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from lucide-react';
 
-;
+';
 
-const BlockchainPage: React.FC = () => {const blockchainServices = [;;;
+const BlockchainPage: React.FC = () => {const blockchainServices = [';';';
 
     {
       titl,
@@ -383,13 +383,13 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
         <
       <
     <
-  );
+  )">
 
               </a>            </div>
           </div>
         </section>
       </div>
     </>
-);
+)">
 
-};export default BlockchainPage;
+}">export default BlockchainPage";

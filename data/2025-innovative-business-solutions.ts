@@ -111,7 +111,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [,
     price: $3,200,
     period: /month,
     description: Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.,
-    features: [;
+    features: [
 
       AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems,
       Advanced analytics and reportingCustom business intelligence workflows],
@@ -270,7 +270,7 @@ export const,
     descriptio,
   n: Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.,
     feature,
-  s: [;
+  s: [
 
       AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems
       Advanced analytics and reportingCustom business intelligence workflows
@@ -400,7 +400,7 @@ varian,
   n:
       Advanced AI-powered sales platform that provides intelligent lead scoring, sales forecasting, and performance optimization to help sales teams increase conversion rates and accelerate revenue growth.
     feature,
-  s: [;
+  s: [
 
       AI-powered lead scoring and qualification
       Sales forecasting and prediction
@@ -436,7 +436,7 @@ varian,
   n:
       Leading AI-powered sales intelligence platform with intelligent optimization, forecasting, and comprehensive sales analytics.
     targetAudienc,
-  e: [;
+  e: [
 
       Sales teams
       Sales managers
@@ -455,7 +455,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Artificial Intelligence
       Machine Learning
@@ -466,7 +466,7 @@ varian,
       React
     ]
     integration,
-  s: [;
+  s: [
 
       CRM systems
       Sales tools
@@ -567,7 +567,7 @@ varian,
   n:
       Advanced AI-powered customer service platform that automates customer support, provides intelligent responses, and optimizes customer experience to improve satisfaction and reduce support costs.
     feature,
-  s: [;
+  s: [
 
       AI-powered customer support automation
       Intelligent chatbot and virtual assistants
@@ -603,7 +603,7 @@ varian,
   n:
       Advanced AI-powered customer service platform with intelligent automation, support optimization, and comprehensive customer experience management.
     targetAudienc,
-  e: [;
+  e: [
 
       Customer service teams
       Support managers
@@ -622,7 +622,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Artificial Intelligence
       Machine Learning
@@ -633,7 +633,7 @@ varian,
       React
     ]
     integration,
-  s: [;
+  s: [
 
       Help desk systems
       CRM platforms
@@ -734,7 +734,7 @@ varian,
   n:
       Advanced AI-powered HR platform that automates recruitment, optimizes workforce management, and provides intelligent insights to improve employee engagement and organizational performance.
     feature,
-  s: [;
+  s: [
 
       AI-powered recruitment and candidate screening
       Workforce planning and optimization
@@ -770,7 +770,7 @@ varian,
   n:
       Advanced AI-powered HR management platform with intelligent automation, workforce optimization, and comprehensive HR analytics.
     targetAudienc,
-  e: [;
+  e: [
 
       HR teams
       HR managers
@@ -789,7 +789,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Artificial Intelligence
       Machine Learning
@@ -800,7 +800,7 @@ varian,
       React
     ]
     integration,
-  s: [;
+  s: [
 
       HRIS systems
       ATS platforms
@@ -901,7 +901,7 @@ varian,
   n:
       Advanced AI-powered financial platform that provides intelligent financial analysis, risk assessment, and optimization to help organizations make better financial decisions and improve profitability.
     feature,
-  s: [;
+  s: [
 
       AI-powered financial analysis
       Risk assessment and management
@@ -937,7 +937,7 @@ varian,
   n:
       Leading AI-powered financial analytics platform with intelligent analysis, risk management, and comprehensive financial optimization.
     targetAudienc,
-  e: [;
+  e: [
 
       Finance teams
       CFOs
@@ -956,7 +956,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Artificial Intelligence
       Machine Learning
@@ -967,7 +967,7 @@ varian,
       React
     ]
     integration,
-  s: [;
+  s: [
 
       ERP systems
       Accounting software
@@ -1068,7 +1068,7 @@ varian,
   n:
       Advanced AI-powered project management platform that provides intelligent planning, resource optimization, and performance monitoring to help teams deliver projects on time and within budget.
     feature,
-  s: [;
+  s: [
 
       AI-powered project planning and scheduling
       Resource optimization and allocation
@@ -1104,7 +1104,7 @@ varian,
   n:
       Advanced AI-powered project management platform with intelligent planning, optimization, and comprehensive project analytics.
     targetAudienc,
-  e: [;
+  e: [
 
       Project managers
       Project teams
@@ -1123,7 +1123,7 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Artificial Intelligence
       Machine Learning
@@ -1134,7 +1134,7 @@ varian,
       React
     ]
     integration,
-  s: [;
+  s: [
 
       Project management tools
       Collaboration platforms
@@ -1271,9 +1271,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
 
   rating: number;
 
-  reviews: number}
-
-;
+  reviews: number};
 
     realImplementation: true;
 
@@ -1314,9 +1312,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
     realImplementatio,
   n: true,
@@ -1353,7 +1349,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   n:
       Leading AI-powered sales intelligence platform with intelligent optimization, forecasting, and comprehensive sales analytics.
     targetAudienc,
-  e: [;
+  e: [
 
       Sales teams
       Sales managers
@@ -1372,7 +1368,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Artificial Intelligence
       Machine Learning
@@ -1383,7 +1379,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       React
     ]
     integration,
-  s: [;
+  s: [
 
       CRM systems
       Sales tools
@@ -1424,7 +1420,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   n:
       Advanced AI-powered customer service platform with intelligent automation, support optimization, and comprehensive customer experience management.
     targetAudienc,
-  e: [;
+  e: [
 
       Customer service teams
       Support managers
@@ -1443,7 +1439,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Artificial Intelligence
       Machine Learning
@@ -1454,7 +1450,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       React
     ]
     integration,
-  s: [;
+  s: [
 
       Help desk systems
       CRM platforms
@@ -1495,7 +1491,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   n:
       Advanced AI-powered HR management platform with intelligent automation, workforce optimization, and comprehensive HR analytics.
     targetAudienc,
-  e: [;
+  e: [
 
       HR teams
       HR managers
@@ -1514,7 +1510,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Artificial Intelligence
       Machine Learning
@@ -1525,7 +1521,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       React
     ]
     integration,
-  s: [;
+  s: [
 
       HRIS systems
       ATS platforms
@@ -1566,7 +1562,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   n:
       Leading AI-powered financial analytics platform with intelligent analysis, risk management, and comprehensive financial optimization.
     targetAudienc,
-  e: [;
+  e: [
 
       Finance teams
       CFOs
@@ -1585,7 +1581,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Artificial Intelligence
       Machine Learning
@@ -1596,7 +1592,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       React
     ]
     integration,
-  s: [;
+  s: [
 
       ERP systems
       Accounting software
@@ -1637,7 +1633,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   n:
       Advanced AI-powered project management platform with intelligent planning, optimization, and comprehensive project analytics.
     targetAudienc,
-  e: [;
+  e: [
 
       Project managers
       Project teams
@@ -1656,7 +1652,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Artificial Intelligence
       Machine Learning
@@ -1667,7 +1663,7 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       React
     ]
     integration,
-  s: [;
+  s: [
 
       Project management tools
       Collaboration platforms
@@ -1678,12 +1674,10 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
       Communication tools
     ]
     useCase,
-  s: [}
-
-;
+  s: [};
 
 export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
+  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
 
   // AI Business Intelligence Suite;
 
@@ -1909,10 +1903,10 @@ i,
   e: 2025 - 05 - 01 customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 26; ], addres,
+  s: 26'; ], addres,
   s: '364 E Main St STE 1008 Middletown DE 19709, websit,
   e: http,
-  s://ziontechgroup.com } ]} ]; realImplementatio,
+  s://ziontechgroup.com } ]} ]'; realImplementatio,
   n: true,
   implementationDetails:' 'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration. launchDat,
   e: 2025-02-15 customer,
@@ -2124,7 +2118,7 @@ i,
   e: 2025-05-01 customer,
   s: 38, ratin,
   g: 4.7,
-  reviews: 26 } ];' import { ServiceVariant } from ../types/service-variants; export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
+  reviews: 26 } ]';' import { ServiceVariant } from ../types/service-variants; export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
 
   s: string} websit,
   e: string} }; realImplementatio,
@@ -2133,7 +2127,7 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; realImplementatio,
+  s: number}; realImplementatio,
   n: true,
   implementationDetails:' 'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration. launchDat,
   e: 2025-02-15 customer,
@@ -2219,8 +2213,8 @@ i,
   e: true,
   technology: [' 'Artificial Intelligence'' 'Machine Learning'' 'Project Management'' 'Resource Optimization'' 'Python'' 'TensorFlow'' React ] integration,
   s: [' 'Project management tools'' 'Collaboration platforms'' 'Time tracking tools'' 'Resource management systems'' Communication tools ] useCase,
-  s: [ } ; export const,
-  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [; // AI Business Intelligence Suite; {/* TODO: Fix JSX expression */}
+  s: [ }; export const,
+  innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [ // AI Business Intelligence Suite; {/* TODO: Fix JSX expression */}
 
   s: 364 E Main St STE 1008 Middletown DE 19709} export const,
   innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [ // AI Business Intelligence Suite  addres,
@@ -2233,4 +2227,4 @@ i,
   e: 2025 - 05 - 01 customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 26} ];
+  s: 26} ]';

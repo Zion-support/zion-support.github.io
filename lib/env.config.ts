@@ -117,25 +117,25 @@ const _value = this.getEnvVar(key);;
 
       LOG_LEVEL: (this.getEnvVar('LOG_LEVEL', 'INFO') as any) || 'INFO,
 
-      // Build Configuration;
+      // Build Configuration`;
 
       BUILD_ID: this.getEnvVar('BUILD_ID),
       VERSION: this.getEnvVar('VERSION', '1.0.0)}}
 
-  private validate(): void {;
+  private validate(): void {
 
-const errors: string[] = [];
+const errors: string[] = []``;
 
 ,
-    // Validate NODE_ENV;
+    // Validate NODE_ENV```;
 
     if (!['development', 'production', 'test].includes(this.config.NODE_ENV)) {
       errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV})}
 
-    // Validate URLs;
+    // Validate URLs```;
 
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
-      errors.push(`Invalid APP_URL: ${this.config.APP_URL});
+      errors.push(`Invalid APP_URL: ${this.config.APP_URL})`;
 
   private getNumberEnvVar(ke,
   y: string, defaultValu)
@@ -151,7 +151,7 @@ const errors: string[] = [];
 
   NODE_ENV: ${this.config.NODE_ENV})}
 
-    // Validate URLs;
+    // Validate URLs``;
 
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {/* TODO: Fix JSX expression */}
 
@@ -161,13 +161,13 @@ const errors: string[] = [];
 
   API_BASE_URL: ${this.config.API_BASE_URL})}
 
-    // Validate timeout;
+    // Validate timeout```;
 
     if (this.config.API_TIMEOUT < 0) {
       errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT})}
 
     if (errors.length > 0) {
-      //       // In production, we might want to throw, but in development just warn;
+      //       // In production, we might want to throw, but in development just warn```;
 
       if (this.config.NODE_ENV === 'production) {
         throw new Error(`Environment validation failed: ${errors.join(', ')});
@@ -251,10 +251,10 @@ const errors: string[] = [];
 
 export const env = EnvironmentConfig.getInstance();;
 
-// Export typed config;
+// Export typed config`;
 
-export type { EnvConfig };
+export type { EnvConfig }``;
 
-export default env;
+export default env```;
 
 `

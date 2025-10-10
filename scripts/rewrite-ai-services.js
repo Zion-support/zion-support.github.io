@@ -10,7 +10,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 ;
-const AIServicesPage: React.FC = () => {;
+const AIServicesPage: React.FC = () => {
 const aiServices = [,
     {,      title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making',
@@ -127,7 +127,7 @@ const aiServices = [,
 
         title="AI Services - Zion Tech Group"
         description="Advanced AI services including machine learning, natural language processing, computer vision, and automation solutions for enterprise applications."
-        keywords = { ['AI services', 'machine learning', 'NLP', 'computer vision', 'automation', 'artificial intelligence] };
+        keywords = { ['AI services', 'machine learning', 'NLP', 'computer vision', 'automation', 'artificial intelligence] }`;
 
         canonicalUrl="https: //ziontechgroup.com)
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">)
@@ -136,11 +136,11 @@ const aiServices = [,
           {/* Hero Section *
           <section className="text-center mb-16">
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch">
-              AI Services;
+              AI Services``;
 
             <
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect">
-              Advanced Artificial Intelligence Solutions;
+              Advanced Artificial Intelligence Solutions```;
 
             <
             <p className="text-base sm:text-lg m,
@@ -179,7 +179,7 @@ const aiServices = [,
                   
                   <div className="text-center"><
                     <div className={\`text-lg font-bold mb-2 neon-text \${service.color}\`}>{service.price}<
-                    <a;
+                    <a```;
 
                       href="
                       className={\`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 \${service.color} border border-current hover: bg-current hove,
@@ -217,14 +217,14 @@ const aiServices = [,
                   Get Free Consultation;
 
                 <
-                <a;
+                <a`;
 
                   href="tel:+13024640950"
                   className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
     r:text-slate-900 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" 
-                  +1 302 464 0950;
+                  +1 302 464 0950>
 
                 <
               <
@@ -234,9 +234,9 @@ const aiServices = [,
 
         <Footer />
       </div>,
-    </React.Fragment>)};
+    </React.Fragment>)}``;
 
-export default AIServicesPage;`;
+export default AIServicesPage```;```;
 
-fs.writeFileSync('./app/ai-services/page.tsx', content);
+fs.writeFileSync('./app/ai-services/page.tsx', content)```;
 // console.log removed for production

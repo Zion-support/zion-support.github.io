@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useEffect, useState } from 'react;
 
@@ -42,7 +42,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
   }, []);
 
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {;;
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
 
     const root = document.documentElement;;
 
@@ -93,17 +93,17 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
   };
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {;;
+  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
 
-    const newSettings = { ...settings, [key]: value };;
+    const newSettings = { ...settings, [key]: value };';
 
-    setSettings(newSettings);
+    setSettings(newSettings)';
 
-    applyAccessibilitySettings(newSettings);
+    applyAccessibilitySettings(newSettings)';
 
-    localStorage.setItem(accessibility-settings, JSON.stringify(newSettings));
+    localStorage.setItem(accessibility-settings, JSON.stringify(newSettings))';
 
-  };
+  }';
 
   return (
 
@@ -324,14 +324,14 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         .focus-visible *:focus-visible {
           outline: 2px solid #3b82f6 !important;
 
-          outline-offset: 2px !important;
+          outline-offset: 2px !important">
 
         }
 
       }</style>
     </>
-  );
+  )">
 
-};
+}">
 
-export default EnhancedAccessibility;
+export default EnhancedAccessibility";

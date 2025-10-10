@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react;
 
@@ -16,22 +16,22 @@ interface Props {
 interface State {
   hasError: boolean;
 
-  error: Error | null;
+  error: Error | null';
 
-  errorInfo: ErrorInfo | null;
+  errorInfo: ErrorInfo | null';
 
 }
 
-class ErrorBoundary extends Component<Props, State> {;
+class ErrorBoundary extends Component<Props, State> {
 
 constructor(props: Props) {
-    super(props);
+    super(props)';
 
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null
-    };
+    }';
 
   }
 
@@ -40,7 +40,7 @@ constructor(props: Props) {
       hasError: true,
       error,
       errorInfo: null
-    };
+    }';
 
   }
 
@@ -72,7 +72,7 @@ constructor(props: Props) {
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag;
 
-const errorData = {;;
+const errorData = {
 
       message: error.message,
       stack: error.stack,
@@ -200,14 +200,14 @@ const errorData = {;;
             </div>
           </div>
         </div>
-      );
+      )">
 
     }
 
-    return this.props.children;
+    return this.props.children">
 
   }
 
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary";

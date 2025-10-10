@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -8,22 +8,22 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url);
 
 // __dirname removed
 // Get all TypeScript files in the app directory;
 
-function getAllTsxFiles(dir) {;
+function getAllTsxFiles(dir) {
 
-const files = [];;
+const files = [];
 
-  const items = fs.readdirSync(dir);;
+  const items = fs.readdirSync(dir)';
 
-  for (const item of items) {;
+  for (const item of items) {
 
-const fullPath = path.join(dir, item);;;
+const fullPath = path.join(dir, item)';';
 
-    const stat = fs.statSync(fullPath);;;
+    const stat = fs.statSync(fullPath)';';
 
     if (stat.isDirectory()) {
       files.push(...getAllTsxFiles(fullPath))} else if (item.endsWith('.tsx)) {
@@ -31,16 +31,14 @@ const fullPath = path.join(dir, item);;;
 
   }
 
-  return files}
-
-;
+  return files};
 
 function fixTsxFile(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix 1: Remove all </undefined>tags</undefined>
     if (content.includes('</undefined>)) {
@@ -56,7 +54,7 @@ let content = fs.readFileSync(filePath, utf8);;
 
     // Fix 3: Fix malformed JSX with missing opening tags;
 
-const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g;;
+const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g;
 
     content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) => {
   return (
@@ -73,7 +71,7 @@ const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g;;
 
     // Fix 4: Fix self-closing tags that should have content;
 
-const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;;
+const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;
 
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
   return (
@@ -90,7 +88,7 @@ const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;;
 
     // Fix 5: Fix malformed className attributes;
 
-const malformedClassPattern = /className="([^"]*)([^>]*)><\/undefined>/g;;
+const malformedClassPattern = /className="([^"]*)([^>]*)><\/undefined>/g;
 
     content = content.replace(malformedClassPattern, (match, className, rest) => {
       modified = true;
@@ -99,7 +97,7 @@ const malformedClassPattern = /className="([^"]*)([^>]*)><\/undefined>/g;;
 
     // Fix 6: Fix malformed closing tags;
 
-const malformedClosingPattern = /<\/undefined><\/undefined>/g;;
+const malformedClosingPattern = /<\/undefined><\/undefined>/g;
 
     content = content.replace(malformedClosingPattern, );
 
@@ -108,7 +106,7 @@ const malformedClosingPattern = /<\/undefined><\/undefined>/g;;
 
     // Fix 7: Fix malformed self-closing tags;
 
-const malformedSelfClosingPattern = /\/><\/undefined>/g;;
+const malformedSelfClosingPattern = /\/><\/undefined>/g;
 
     content = content.replace(malformedSelfClosingPattern, />);
 
@@ -117,7 +115,7 @@ const malformedSelfClosingPattern = /\/><\/undefined>/g;;
 
     // Fix 8: Fix JSX elements with missing content between tags;
 
-const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g;;
+const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g;
 
     content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) => {
   return (
@@ -134,7 +132,7 @@ const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g;;
 
     // Fix 9: Fix malformed return statements;
 
-const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner><div/g;;
+const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner><div/g;
 
     content = content.replace(malformedReturnPattern, return (\n    <div);
 
@@ -143,7 +141,7 @@ const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner><div/g;;
 
     // Fix 10: Fix malformed conditional returns;
 
-const malformedConditionalPattern = /return\s*<LoadingSpinner\s*></div>/g;;
+const malformedConditionalPattern = /return\s*<LoadingSpinner\s*></div>/g;
 
     content = content.replace(malformedConditionalPattern, 'return <LoadingSpinner />');</LoadingSpinner>if</LoadingSpinner> (content.includes('<LoadingSpinner >)) {</LoadingSpinner>modified</LoadingSpinner> = true}
 
@@ -164,18 +162,18 @@ return false}
 // console.log removed for production
 ;
 
-const appDir = path.join(__dirname, app);;
+const appDir = path.join(__dirname, app);
 
-const tsxFiles = getAllTsxFiles(appDir);;
+const tsxFiles = getAllTsxFiles(appDir);
 
-;
+`;
 
-let fixedCount = 0;;
+let fixedCount = 0``;
 
 tsxFiles.forEach(filePath => {
   if (fixTsxFile(filePath)) {
     fixedCount++}
 
-});
+})```;
 
 // console.log removed for production

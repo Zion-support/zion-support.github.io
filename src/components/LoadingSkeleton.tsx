@@ -39,7 +39,7 @@ const,
       {/* Component content */}
 
     </div>)
-  )};
+  )}";
 
           <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px rounded /></div>
 );
@@ -79,7 +79,7 @@ export const,
     role="status"
     aria-label="Loading image"
   ><span className="sr-only>Loading image...</span></div>)
-);
+)";
 
 export const,
   ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
@@ -141,6 +141,6 @@ export const,
     ))}
 
   </div>
-);
+)``;
 
-export default Skeleton;
+export default Skeleton```;

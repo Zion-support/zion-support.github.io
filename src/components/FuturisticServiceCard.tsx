@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { useState } from 'react;
 
@@ -6,9 +6,7 @@ import { ArrowRight, Star, Zap, CheckCircle } from lucide-react;
 
 interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
 
-}
-
-;
+};
 
 const,
   FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
@@ -36,11 +34,11 @@ const,
 
     }
 
-  };
+  }';
 
-;
+';
 
-const currentColor = colorClasses[color];;;
+const currentColor = colorClasses[color]';';';
 
   return (<div></div>
       className={/* TODO: Fix JSX expression */}
@@ -124,7 +122,7 @@ const currentColor = colorClasses[color];;;
 
           {/* TODO: Fix JSX expression */}
 
-              +{features.length - 4} more features;
+              +{features.length - 4} more features`">
 
             </li>
           )}
@@ -141,7 +139,7 @@ const currentColor = colorClasses[color];;;
           } flex items-center justify-center group}
 
         >
-          Get Started;
+          Get Started"```;
 
           <ArrowRight className="w-4 h-4 ml-2 group-hove,
   r:translate-x-1 transition-transform /></ArrowRight>
@@ -164,6 +162,6 @@ const currentColor = colorClasses[color];;;
 
       ></div>
     </div>
-  )};
+  )}">
 
-export default FuturisticServiceCard;"`
+export default FuturisticServiceCard"```;"`

@@ -17,9 +17,7 @@ interface ImageOptimizerProps {
 
   onLoad?: () => void;
 
-  onError?: () => void}
-
-;
+  onError?: () => void};
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   src;
@@ -73,7 +71,7 @@ const observer = new IntersectionObserver(;;
 
 ;
 
-const handleLoad = () => {;;
+const handleLoad = () => {
 
     setIsLoaded(true);
 
@@ -81,7 +79,7 @@ const handleLoad = () => {;;
 
 ;
 
-const handleError = () => {;;
+const handleError = () => {
 
     setHasError(true);
 
@@ -89,7 +87,7 @@ const handleError = () => {;;
 
 ;
 
-const generatePlaceholder = () => {;;
+const generatePlaceholder = () => {
 
 return (
 
@@ -116,10 +114,10 @@ const svg = ;;
     ;
 
     ,
-    return `data:image/svg+xml;base64,${btoa(svg)}};
+    return `data:image/svg+xml`;base64,${btoa(svg)}}``';
 
   if (hasError) {
-    return(<div;
+    return(<div`'``;
 
         className={`bg-slate-800 flex items-center justify-center ${className}}
 
@@ -133,7 +131,7 @@ const svg = ;;
       </div>)
     )}
 
-  return(<div;
+  return(<div`">
 
       ref={imgRef}
 
@@ -144,7 +142,7 @@ const svg = ;;
     >
       {/* Placeholder */})
       {!isLoaded && ()
-        <img;)
+        <img'";)
       {/* Placeholder */}
 
       {!isLoaded && (</div>
@@ -162,7 +160,7 @@ const svg = ;;
 
       {isInView && (
 
-        <img;
+        <img'"`;
 
           src={src}
 
@@ -187,6 +185,6 @@ const svg = ;;
       )}
 
     </div>
-  )};
+  )}``;
 
-export default ImageOptimizer;
+export default ImageOptimizer```;

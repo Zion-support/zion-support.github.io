@@ -9,9 +9,7 @@ interface PerformanceMetrics {
 
   fcp: number | null;
 
-  ttfb: number | null}
-
-;
+  ttfb: number | null};
 
 const PerformanceMonitor: React.FC = () => {
   return (
@@ -33,11 +31,11 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
 
     // Web Vitals measurement;
 
-const measureWebVitals = () => {;;
+const measureWebVitals = () => {
 
       // LCP - Largest Contentful Paint;
 
-const lcpObserver = new PerformanceObserver((list) => {;;
+const lcpObserver = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -49,7 +47,7 @@ const entries = list.getEntries();;
 
       // FID - First Input Delay;
 
-const fidObserver = new PerformanceObserver((list) => {;;
+const fidObserver = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -65,7 +63,7 @@ const entries = list.getEntries();;
 
 let clsValue = 0;;
 
-      const clsObserver = new PerformanceObserver((list) => {;;
+      const clsObserver = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -81,7 +79,7 @@ const entries = list.getEntries();;
 
       // FCP - First Contentful Paint;
 
-const fcpObserver = new PerformanceObserver((list) => {;;
+const fcpObserver = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -119,9 +117,9 @@ const cleanup = measureWebVitals();;
 
     // Send metrics to analytics (if available);
 
-const sendToAnalytics = (metrics: PerformanceMetrics) => {;;
+const sendToAnalytics = (metrics: PerformanceMetrics) => {
 
-      if (typeof window !== 'undefined' && gtag in window) {;
+      if (typeof window !== 'undefined' && gtag in window) {
 
 const gtag = (window as any).gtag;;
 
@@ -149,14 +147,14 @@ const gtag = (window as any).gtag;;
 
     // Send metrics after a delay to allow all measurements to complete;
 
-const timeoutId = setTimeout(() => {;;
+const timeoutId = setTimeout(() => {
 
-      sendToAnalytics(metrics)}, 5000);
+      sendToAnalytics(metrics)}, 5000)';
 
     return () => {
-      cleanup?.();
+      cleanup?.()';
 
-      clearTimeout(timeoutId)}}, [metrics]);
+      clearTimeout(timeoutId)}}, [metrics])';
 
   // Dont render anything in production
   if (process.env.NODE_ENV === 'production) {
@@ -172,6 +170,6 @@ const timeoutId = setTimeout(() => {;;
       <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...}</div>
       <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...}</div>
     </div>
-  )};
+  )}">
 
-export default PerformanceMonitor;
+export default PerformanceMonitor"```;

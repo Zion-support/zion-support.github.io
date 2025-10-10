@@ -3,7 +3,7 @@ import {
   GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
   Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
   Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon} from lucide-react
-export const microSAASServices = [;;
+export const microSAASServices = [
 
   // Productivity & Management Tools;
 
@@ -299,7 +299,7 @@ export const microSAASServices = [;;
     freeTrial: '7 days'}
 
 ]
-export const aiServices = [;;
+export const aiServices = [
 
   {
     title: 'Machine Learning Solutions',
@@ -439,7 +439,7 @@ export const aiServices = [;;
     freeTrial: '30 days'}
 
 ]
-export const itServices = [;;
+export const itServices = [
 
   {
     title: 'Cloud Migration Services',
@@ -545,7 +545,7 @@ export const itServices = [;;
     freeTrial: '30 days'}
 
 ]
-export const specializedServices = [;;
+export const specializedServices = [
 
   {
     title: 'Quantum Computing Solutions',
@@ -1423,7 +1423,7 @@ export const services: Service[] = [
   }
 
 ]
-export const serviceCategories = [;;
+export const serviceCategories = [
 
   {
     id: 'ai',
@@ -1459,7 +1459,7 @@ export const serviceCategories = [;;
   }
 
 ]
-export const contactInfo = {;;
+export const contactInfo = {
 
   phone: '+1 (302) 464-0950',
   email: 'kleber@ziontechgroup.com',

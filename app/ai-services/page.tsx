@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp, Target, FileText, Search, Phone } from 'lucide-react;
+import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp, Target, FileText, Search, Phone } from 'lucide-react';
 
 import Navigation from ../components
 import Footer from ../components
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react';
 
-;
+';
 
-const AIServicesPagePage: React.FC = () => {const features = [;;;
+const AIServicesPagePage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -44,7 +44,7 @@ const AIServicesPagePage: React.FC = () => {const features = [;;;
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     'Increase efficiency by up to 50%,
     'Reduce costs by 30% with automation,
@@ -115,4 +115,4 @@ const benefits = [;;
       </div>
       <Footer />
     </React.Fragment>)
-export default AIServicesPagePage;
+export default AIServicesPagePage";

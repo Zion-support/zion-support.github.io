@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
     // OG image update simulation;
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -25,13 +25,13 @@ function: 'og-image-update-runner',
 
           lastUpdate: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */};
 
         'Access-Control-Allow-Origin': '*'}
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
   e: new Date().toISOString()}
 
         }})};
@@ -71,10 +71,10 @@ function: 'og-image-update-runner'}
 
 };
 
-        timestamp: new Date().toISOString(),' function: 'og-image-update-runner',' source: event.source || 'unknown', update: {' status: 'active, imagesUpdated: 0;
+        timestamp: new Date().toISOString(),' function: 'og-image-update-runner',' source: event.source || 'unknown', update: {' status: 'active, imagesUpdated: 0';
 
-        lastUpdate: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'og-image-update-runner }) }} };
+        lastUpdate: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'og-image-update-runner }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -91,4 +91,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'og-image-update-runner }) }} };
+  n: 'og-image-update-runner }) }} }';

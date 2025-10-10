@@ -672,7 +672,7 @@
       HPE,
       Custom hardware],
     complianc,
-  e: [;
+  e: [
 
     competitiveAdvantag,
   e: Only fully autonomous AI-powered data center platform
@@ -691,7 +691,7 @@
   k: true;
 
     integration,
-  s: [;
+  s: [
 
       VMware
       Microsoft Hyper-V
@@ -921,11 +921,9 @@ export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   websit,
   e: string}
 
-}
+};
 
-;
-
-export const enterprise2034Services: EnterpriseService2034[] = [;
+export const enterprise2034Services: EnterpriseService2034[] = [
 
   {
     id: quantum-zero-trust-architecture;
@@ -949,7 +947,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     useCases: [,
       Financial institutionsHealthcare organizationsGovernment agenciesDefense contractorsTechnology companiesCritical infrastructure,
 export const,
-  enterprise2034Services: EnterpriseService2034[] = [;
+  enterprise2034Services: EnterpriseService2034[] = [
 
   {/* TODO: Fix JSX expression */}
 
@@ -993,7 +991,7 @@ export const,
 
     website: https://ziontechgroup.com/quantum-zero-trust-architecture};
 
-  {;
+  {
 
     id: ai-autonomous-devops-platform;
 
@@ -1107,7 +1105,7 @@ export const,
 
     website: https://ziontechgroup.com/ai-autonomous-devops-platform};
 
-  {;
+  {
 
     id: quantum-edge-computing-orchestrator;
 
@@ -1221,7 +1219,7 @@ export const,
 
     website: https://ziontechgroup.com/quantum-edge-computing-orchestrator};
 
-  {;
+  {
 
     id: ai-powered-it-operations-center;
 
@@ -1335,7 +1333,7 @@ export const,
 
     website: https://ziontechgroup.com/ai-powered-it-operations-center};
 
-  {;
+  {
 
     id: quantum-blockchain-infrastructure;
 
@@ -1449,7 +1447,7 @@ export const,
 
     website: https://ziontechgroup.com/quantum-blockchain-infrastructure};
 
-  {;
+  {
 
     id: ai-autonomous-data-center;
 
@@ -1583,9 +1581,7 @@ export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
   websit,
   e: string}
 
-}
-
-;
+};
 
 export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
 
@@ -1593,7 +1589,7 @@ export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
 
 ];
 
-export const enterprise2034Services: EnterpriseService2034[] = [;
+export const enterprise2034Services: EnterpriseService2034[] = [
 
   {
     id: quantum-zero-trust-architecture;
@@ -1617,7 +1613,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     useCases: [,
       Financial institutionsHealthcare organizationsGovernment agenciesDefense contractorsTechnology companiesCritical infrastructure,
 export const,
-  enterprise2034Services: EnterpriseService2034[] = [;
+  enterprise2034Services: EnterpriseService2034[] = [
 
   {/* TODO: Fix JSX expression */}
 
@@ -1661,7 +1657,7 @@ export const,
 
     website: https://ziontechgroup.com/quantum-zero-trust-architecture};
 
-  {;
+  {
 
     id: ai-autonomous-devops-platform;
 
@@ -1775,7 +1771,7 @@ export const,
 
     website: https://ziontechgroup.com/ai-autonomous-devops-platform};
 
-  {;
+  {
 
     id: quantum-edge-computing-orchestrator;
 
@@ -1889,7 +1885,7 @@ export const,
 
     website: https://ziontechgroup.com/quantum-edge-computing-orchestrator};
 
-  {;
+  {
 
     id: ai-powered-it-operations-center;
 
@@ -2003,7 +1999,7 @@ export const,
 
     website: https://ziontechgroup.com/ai-powered-it-operations-center};
 
-  {;
+  {
 
     id: quantum-blockchain-infrastructure;
 
@@ -2117,7 +2113,7 @@ export const,
 
     website: https://ziontechgroup.com/quantum-blockchain-infrastructure};
 
-  {;
+  {
 
     id: ai-autonomous-data-center;
 
@@ -2293,9 +2289,7 @@ export const,
     websit,
   e: http,
   s://ziontechgroup.com / ai - autonomous - data - center
-  }
-
-;
+  };
 
 i,
   d: string, nam,
@@ -2515,8 +2509,8 @@ i,
   i: '350 - 550% within 24 months suppor,
   t: '24 / 7 data center specialists documentatio,
   n: Comprehensive data center management guides ap,
-  i: true; sd,
-  k: true; integration,
+  i: true'; sd,
+  k: true'; integration,
   s: ['VMwareMicrosoft Hyper - VDell EMCCiscoHPECustom hardware]; complianc,
   e: ['Data center standards_energy efficiency_security compliance]; securit,
   y: ['AI - powered security_physical security_access controls], scalabilit,
@@ -2524,40 +2518,40 @@ i,
   e: '99 && 99.999% data center platform availability contac,
   t: '+1 302 464 0950, websit,
   e: http,
-  s://ziontechgroup && ziontechgroup.com/ai-autonomous-data-center } ];  uptim,
+  s://ziontechgroup && ziontechgroup.com/ai-autonomous-data-center } ]';  uptim,
   e: '99.999% data center platform availability  contac,
   t: '+1 302 464 0950  websit,
   e: http,
-  s://ziontechgroup.com/ai-autonomous-data-center } ]; export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/ai-autonomous-data-center } ]'; export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
 
   t: string} websit,
-  e: string} } ; export const,
-  enterprise2034Services: EnterpriseService2034[] = [; {/* TODO: Fix JSX expression */}
+  e: string} } '; export const,
+  enterprise2034Services: EnterpriseService2034[] = ['; {/* TODO: Fix JSX expression */}
 
   e: '99.999% security platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/quantum-zero-trust-architecture }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/quantum-zero-trust-architecture }'; {/* TODO: Fix JSX expression */}
 
   e: '99.99% DevOps platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/ai-autonomous-devops-platform }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/ai-autonomous-devops-platform }'; {/* TODO: Fix JSX expression */}
 
   e: '99.99% edge platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/quantum-edge-computing-orchestrator }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/quantum-edge-computing-orchestrator }'; {/* TODO: Fix JSX expression */}
 
   e: '99.99% operations platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/ai-powered-it-operations-center }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/ai-powered-it-operations-center }'; {/* TODO: Fix JSX expression */}
 
   e: '99.99% blockchain platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/quantum-blockchain-infrastructure }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/quantum-blockchain-infrastructure }'; {/* TODO: Fix JSX expression */}
 
   t: '+1 302 464 0950} websit,
   e: http,
@@ -2567,38 +2561,38 @@ i,
   s://ziontechgroup.com / ai - autonomous - data - center } export interface EnterpriseService2034 {/* TODO: Fix JSX expression */}
 
   t: string} websit,
-  e: string} } ; export interface EnterpriseService2034 {} ]; export const,
-  enterprise2034Services: EnterpriseService2034[] = [; {/* TODO: Fix JSX expression */}
+  e: string} }'; export interface EnterpriseService2034 {} ]'; export const,
+  enterprise2034Services: EnterpriseService2034[] = ['; {/* TODO: Fix JSX expression */}
 
   e: '99.999% security platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/quantum-zero-trust-architecture }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/quantum-zero-trust-architecture }'; {/* TODO: Fix JSX expression */}
 
   e: '99.99% DevOps platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/ai-autonomous-devops-platform }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/ai-autonomous-devops-platform }'; {/* TODO: Fix JSX expression */}
 
   e: '99.99% edge platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/quantum-edge-computing-orchestrator }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/quantum-edge-computing-orchestrator }'; {/* TODO: Fix JSX expression */}
 
   e: '99.99% operations platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/ai-powered-it-operations-center }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/ai-powered-it-operations-center }'; {/* TODO: Fix JSX expression */}
 
   e: '99.99% blockchain platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/quantum-blockchain-infrastructure }; {/* TODO: Fix JSX expression */}
+  s://ziontechgroup.com/quantum-blockchain-infrastructure }'; {/* TODO: Fix JSX expression */}
 
   e: '99.999% data center platform availability} contac,
-  t: '+1 302 464 0950}; websit,
+  t: '+1 302 464 0950}'; websit,
   e: http,
-  s://ziontechgroup.com/ai-autonomous-data-center } ]} ]} ]; contac,
+  s://ziontechgroup.com/ai-autonomous-data-center } ]} ]} ]'; contac,
   t: '+1 302 464 0950, websit,
   e: http,
-  s://ziontechgroup.com / ai - autonomous - data - center' } ; '
+  s://ziontechgroup.com / ai - autonomous - data - center' }; '

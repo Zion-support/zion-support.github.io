@@ -10,23 +10,23 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url);
 
 // __dirname removed
 // Function to fix merge conflicts and syntax errors;
 
 function fixFile(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Remove merge conflict markers and keep the HEAD version;
 
-    const conflictRegex = /\n([\s\S]*?)\n;;
+    const conflictRegex = /\n([\s\S]*?)\n;
 
-    const originalContent = content;;
+    const originalContent = content;
 
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
       modified = true;
@@ -83,9 +83,9 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/'use client';\s*'use client';/g, "'use client';)
       // Fix duplicate React imports;
 
-      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {;
+      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {
 
-const lines = match.split(\n);;
+const lines = match.split(\n);
 
         return lines[0] + ;
 
@@ -104,30 +104,30 @@ const lines = match.split(\n);;
 
     // Additional specific fixes for common patterns;
 
-    const lines = content.split(\n);;
+    const lines = content.split(\n);
 
-    const cleanedLines = [];;
+    const cleanedLines = [];
 
-    let inJSX = false;;
+    let inJSX = false;
 
-    let braceCount = 0;;
+    let braceCount = 0;
 
-    let bracketCount = 0;;
+    let bracketCount = 0;
 
-    let parenCount = 0;;
+    let parenCount = 0;
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length; i++) {
 
-let line = lines[i];;
+let line = lines[i];
 
-      const trimmed = line.trim();;
+      const trimmed = line.trim();
 
       // Track JSX state;
 
       if (trimmed.includes('<') && !trimmed.includes('</)) {
         inJSX = true;
 
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
+    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};
 
       }
 
@@ -185,7 +185,7 @@ let line = lines[i];;
       // Fix missing closing braces;
 
       if (braceCount > 0 && i === lines.length - 1) {
-        for (let j = 0; j < braceCount; j++) {;;
+        for (let j = 0; j < braceCount; j++) {
 
       if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
 
@@ -196,7 +196,7 @@ let line = lines[i];;
       // Fix missing closing brackets;
 
       if (bracketCount > 0 && i === lines.length - 1) {
-        for (let j = 0; j < bracketCount; j++) {;;
+        for (let j = 0; j < bracketCount; j++) {
 
           line += \n];
 
@@ -209,7 +209,7 @@ let line = lines[i];;
       // Fix missing closing parentheses;
 
       if (parenCount > 0 && i === lines.length - 1) {
-        for (let j = 0; j < parenCount; j++) {;;
+        for (let j = 0; j < parenCount; j++) {
 
           line += \n);
 
@@ -252,21 +252,21 @@ return false}
 
 // Function to find all TypeScript/React files;
 
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', .js]) {;
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', .js]) {
 
-const files = [];;
+const files = [];
 
   ;
 
-function traverse(currentDir) {;
+function traverse(currentDir) {
 
-const items = fs.readdirSync(currentDir);;
+const items = fs.readdirSync(currentDir);
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(currentDir, item);;
+const fullPath = path.join(currentDir, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
@@ -291,15 +291,15 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js]) {/* TODO: Fi
 // console.log removed for production
 ;
 
-const srcDir = path.join(__dirname, src);;
+const srcDir = path.join(__dirname, src);
 
-const files = findFiles(srcDir);;
+const files = findFiles(srcDir);
 
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0;
 
-let errorCount = 0;;
+let errorCount = 0;
 
 for (const file of files) {/* TODO: Fix JSX expression */}
 
@@ -314,11 +314,11 @@ errorCount++}
 
 // console.log removed for production
 
-  complete:`);
+  complete:`)```;
 
 // console.log removed for production
 
-  processed: ${files.length}`);
+  processed: ${files.length}`)```;
 
 // console.log removed for production
 
@@ -326,18 +326,18 @@ errorCount++}
 
 // console.log removed for production
 
-  s: ${errorCount});
+  s: ${errorCount})`;
 
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production
 // console.log removed for production
-// Run linting to check for remaining issues;
+// Run linting to check for remaining issues``;
 
 // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: inherit });
+  o: inherit })```;
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}

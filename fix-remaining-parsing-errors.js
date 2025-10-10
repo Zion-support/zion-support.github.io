@@ -1,12 +1,12 @@
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
-import { fileURLToPath } from url;
+import { fileURLToPath } from url';
 
-// Files with parsing errors;
+// Files with parsing errors';
 
-const filesWithErrors = [;;;
+const filesWithErrors = [';';
 
   'src/blog/ai-2026-autonomous-agent-factories/page.tsx,
   'src/blog/ai-2026-autonomous-business-intelligence-breakthrough/page.tsx,
@@ -28,15 +28,15 @@ const filesWithErrors = [;;;
 ;
 
 function fixParsingError(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Check if file ends with ); but is missing the closing brace;
 
-    if (content.trim().endsWith(');') && !content.trim().endsWith(};)) {;
+    if (content.trim().endsWith(');') && !content.trim().endsWith(};)) {
 
 function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
 
@@ -61,7 +61,7 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
 
 filesWithErrors.forEach(file => {);
 
-const fullPath = path.join(__dirname, file);;
+const fullPath = path.join(__dirname, file);
 
   if (fs.existsSync(fullPath)) {
     fixParsingError(fullPath)}

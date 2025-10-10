@@ -7,10 +7,10 @@ exports.handler = async function (event) context) {// // console.log removed for
     body: JSON.stringify({)
       message: 'Test function working correctly)
       timestamp: new Date().toISOString()
-      event: event;
+      event: event';
 
       context: {,
-        awsRequestId: context.awsRequestId;
+        awsRequestId: context.awsRequestId';
 
         functionName: context.functionName}
 

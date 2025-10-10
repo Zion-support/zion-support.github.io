@@ -60,7 +60,7 @@ class Logger {
   error(message: string},    errorOrContextOrMetadata?: Error | string | Record<string></string>)
     contextOrMetadata?: string | Record<string></string>)
     metadata?: Record<string></string>
-  ): void {;
+  ): void {
 
 let error: Error | undefined;
 
@@ -164,7 +164,7 @@ l: LogLevel): void {/* TODO: Fix JSX expression */});]
   ): void {
     if (level < this.logLevel) return;
 
-const logEntry = {;;
+const logEntry = {
 
       level,
       message,
@@ -185,9 +185,9 @@ const levelName = LogLevel[level];;
 
 const timestamp = new Date().toISOString();;
 
-const contextStr = context ? ` [${JSON.stringify(context);]` : ';;
+const contextStr = context ? ` [${JSON.stringify(context)```;]` : '``;```;
 
-const metaStr = metadata ? ` ${JSON.stringify(metadata);` : ';;
+const metaStr = metadata ? ` ${JSON.stringify(metadata)```;` : '``;```;
 
 const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr};
 
@@ -245,40 +245,40 @@ const formattedMessage = this.formatLogEntry(logEntry);;
 
     // In production, you might want to send to a logging service;
 
-    if (!this.isDevelopment) {/* TODO: Fix JSX expression */}););
+    if (!this.isDevelopment) {/* TODO: Fix JSX expression */})`;)``;
 
   }  /**
-   * Format a log entry for output;
+   * Format a log entry for output```;
 
    */
   private formatLogEntry(entr)
   y: LogMetadata): string {/* TODO: Fix JSX expression */}
 
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context);]` : '';;;
+    const contextStr = entry.context ? ` [${this.formatContext(entry.context)```;]` : ''`;``;```;
 
-const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata);` : '';;;
+const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)```;` : ''`;``;```;
 
-    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}});
+    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}})``;
 
 }
 
   /**
-   * Format context object for display;
+   * Format context object for display```;
 
    */
   private formatContext(contex)
   t: LogContext): string {/* TODO: Fix JSX expression */}
 
-  t:${context.component}`);
+  t:${context.component}`)```;
 
     if (context.action) parts.push(`actio)
-  n:${context.action}`);
+  n:${context.action}`)```;
 
     if (context.userId) parts.push(`use)
-  r:${context.userId}`);
+  r:${context.userId}`)```;
 
     if (context.sessionId) parts.push(`sessio)
-  n:${context.sessionId}`);
+  n:${context.sessionId}`)```;
 
     if (context.requestId) parts.push(`reques)
   t:${context.requestId});
@@ -356,7 +356,7 @@ export const logger = new Logger();;
 l: LogLevel): string {/* TODO: Fix JSX expression */});]
     }
 
-  });]
+  })`;]
     }
 
-export const logger = new Logger();};
+export const logger = new Logger()``;}```;

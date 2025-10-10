@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Music, Mic, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react;
+import { Music, Mic, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import SEOOptimizer from '../components/SEOOptimizer;
+import SEOOptimizer from '../components/SEOOptimizer';
 
-;
+';
 
-const AIVoiceCloningPage: React.FC = () => {;
+const AIVoiceCloningPage: React.FC = () => {';
 
-const features = [;
+const features = [';
     'Voice Cloning',    'Text-to-Speech,
     'Emotion Control,
     'Multi-language Support,
@@ -26,7 +26,7 @@ const features = [;
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     'Natural voice quality,
     'Cost-effective solution,
@@ -38,7 +38,7 @@ const benefits = [;;
 
 ;
 
-const pricingPlans = [;;
+const pricingPlans = [
 
     {
       name: 'Starter,
@@ -207,6 +207,6 @@ const pricingPlans = [;;
         <Footer />
       </div>
     </React.Fragment>
-  )};
+  )}``;
 
-export default AIVoiceCloningPage;
+export default AIVoiceCloningPage```;

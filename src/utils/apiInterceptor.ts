@@ -415,7 +415,7 @@ const data = await this.parseResponse;;
           <T>({ ...config, url, method: 'GET })}
 
   /**
-   * POST request;
+   * POST request';
 
    */
   async post<T = unknown>()
@@ -423,7 +423,7 @@ const data = await this.parseResponse;;
   l: string,
     body?: unknown,
     confi,
-  g: Partial;
+  g: Partial';
 
           <RequestConfig> = {}
 
@@ -431,12 +431,12 @@ const data = await this.parseResponse;;
 
 }
 
-    return this.request;
+    return this.request';
 
           <T>({ ...config, url, method: 'POST, body })}
 
   /**
-   * PUT request;
+   * PUT request';
 
    */
   async put<T = unknown>()
@@ -444,7 +444,7 @@ const data = await this.parseResponse;;
   l: string,
     body?: unknown,
     confi,
-  g: Partial;
+  g: Partial';
 
           <RequestConfig> = {}
 
@@ -452,19 +452,19 @@ const data = await this.parseResponse;;
 
 }
 
-    return this.request;
+    return this.request';
 
           <T>({ ...config, url, method: 'PUT, body })}
 
   /**
-   * DELETE request;
+   * DELETE request';
 
    */
   async delete<T = unknown>()
     ur,
   l: string,
     confi,
-  g: Partial;
+  g: Partial';
 
           <RequestConfig> = {}
 
@@ -472,12 +472,12 @@ const data = await this.parseResponse;;
 
 }
 
-    return this.request;
+    return this.request';
 
           <T>({ ...config, url, method: 'DELETE })}
 
   /**
-   * PATCH request;
+   * PATCH request';
 
    */
   async patch<T = unknown>()
@@ -485,7 +485,7 @@ const data = await this.parseResponse;;
   l: string,
     body?: unknown,
     confi,
-  g: Partial;
+  g: Partial';
 
           <RequestConfig> = {}
 
@@ -493,12 +493,12 @@ const data = await this.parseResponse;;
 
 }
 
-    return this.request;
+    return this.request';
 
           <T>({ ...config, url, method: 'PATCH, body })}
 
   /**
-   * Prepare request configuration;
+   * Prepare request configuration`';
 
    */
 
@@ -528,7 +528,7 @@ const data = await this.parseResponse;;
       cache: config.cache ?? this.config.enableCaching}}
 
   /**
-   * Build full URL with query parameters;
+   * Build full URL with query parameters'``;
 
    */
 
@@ -536,7 +536,7 @@ const data = await this.parseResponse;;
 
 }
 
-;
+'```;
 
 let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url};;
 
@@ -546,7 +546,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
 
-      const params = new URLSearchParams();;
+      const params = new URLSearchParams()`;``;
 
       Object.entries(config.params).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
 
@@ -554,7 +554,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
 
-        params.append(key, String(value))});
+        params.append(key, String(value))})```;
 
       url += `?${params.toString()}}
 
@@ -644,7 +644,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
 
-    const url = this.buildURL(config);;;
+    const url = this.buildURL(config)`;``;```;
 
     return `${config.method}:${url}}
 
@@ -809,6 +809,6 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
 
-// Export singleton instance;
+// Export singleton instance`;
 
-export const apiInterceptor = APIInterceptor.getInstance();;
+export const apiInterceptor = APIInterceptor.getInstance()``;```;

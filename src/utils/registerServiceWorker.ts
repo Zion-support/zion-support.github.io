@@ -81,13 +81,13 @@ export async function registerServiceWorker()
 
     });
 
-    const registration = await navigator.serviceWorker.register('/service-worker.js, {;;
+    const registration = await navigator.serviceWorker.register('/service-worker.js, {
 
       scope:     ,
 $4});
 
     // Handle updates
-    registration.addEventListener('updatefound, () => {;
+    registration.addEventListener('updatefound, () => {
 
 const installingWorker = registration.installing;;
 
@@ -238,7 +238,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {
   if (!('serviceWorker' in navigator)) {
     return false}
 
-  try {;
+  try {
 
 const registration = await navigator.serviceWorker.ready;;
 
@@ -290,7 +290,7 @@ export async function checkForUpdates(): Promise<void> {
   if (!('serviceWorker' in navigator)) {
     return}
 
-  try {;
+  try {
 
 const registration = await navigator.serviceWorker.ready;;
 
@@ -334,7 +334,7 @@ export async function getServiceWorkerStatus(): Promise<{
       active: false
     }}
 
-  try {;
+  try {
 
 const registration = await navigator.serviceWorker.getRegistration();;
 

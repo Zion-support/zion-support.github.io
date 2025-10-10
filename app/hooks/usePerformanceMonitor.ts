@@ -1,8 +1,8 @@
 import { useEffect, useCallback } from react;
 
-export const usePerformanceMonitor = () => {;;;
+export const usePerformanceMonitor = () => {
 
-  const measurePerformance = useCallback(() => {;;;
+  const measurePerformance = useCallback(() => {
 
     // Measure page load time
     if (typeof window !== 'undefined' && 'performance in window) {
@@ -27,9 +27,9 @@ export const usePerformanceMonitor = () => {;;;
 
     }
 
-  }, []);
+  }, [])';
 
-  const measureResourceTiming = useCallback(() => {;;
+  const measureResourceTiming = useCallback(() => {';';
 
     if (typeof window !== 'undefined' && 'performance in window) {
       const resources = performance.getEntriesByType(resource);;
@@ -54,14 +54,14 @@ export const usePerformanceMonitor = () => {;;;
 
     }
 
-  }, []);
+  }, [])';
 
-  const measureMemoryUsage = useCallback(() => {;;
+  const measureMemoryUsage = useCallback(() => {';';
 
     if (typeof window !== 'undefined' && 'performance in window && (performance as any).memory) {
       const memory = (performance as any).memory;;
 
-      const memoryUsage = {;;
+      const memoryUsage = {
 
         used: Math.round(memory.usedJSHeapSize / 1024 / 1024),
         total: Math.round(memory.totalJSHeapSize / 1024 / 1024),
@@ -85,15 +85,15 @@ export const usePerformanceMonitor = () => {;;;
   }, []);
 
   useEffect(() => {
-    const handleLoad = () => {;;
+    const handleLoad = () => {
 
       measurePerformance();
 
-      measureResourceTiming();
+      measureResourceTiming()';
 
-      measureMemoryUsage();
+      measureMemoryUsage()';
 
-    };
+    }';
 
     if (document.readyState === 'complete) {
       handleLoad();

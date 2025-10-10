@@ -1,8 +1,8 @@
 import React from react;
 
-export default function AboutSection() {;
+export default function AboutSection() {
 
-const stats = [;;;
+const stats = [;
 
     { number: '500+', label: 'Projects Completed },
     { number: '50+', label: 'Happy Clients },
@@ -11,9 +11,9 @@ const stats = [;;;
 
   ];
 
-;
+';
 
-const values = [;;
+const values = [';';
 
     {
       title: 'Innovation First,
@@ -46,7 +46,7 @@ const values = [;;
       )
     }
 
-  ];
+  ]';
 
   return (
 

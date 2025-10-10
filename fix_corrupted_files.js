@@ -1,26 +1,26 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from 'url';
 
-// const __filename = fileURLToPath(import.meta.url);;
+// const __filename = fileURLToPath(import.meta.url)';
 
 // // __dirname removed
-//Function to fix corrupted text by removing erroneous commas;
+//Function to fix corrupted text by removing erroneous commas';
 
 function fixCorruptedText(text) {
-  //Pattern to match commas that are incorrectly placed in the middle of words;
+  //Pattern to match commas that are incorrectly placed in the middle of words';
 
-  //This looks for commas that are followed by a space and then a lowercase letter;
+  //This looks for commas that are followed by a space and then a lowercase letter';
 
-  //or commas that are in the middle of identifiers;
+  //or commas that are in the middle of identifiers';
 
-  //Fix common patterns of corruption;
+  //Fix common patterns of corruption';
 
-  //Remove commas that are incorrectly placed in the middle of words;
+  //Remove commas that are incorrectly placed in the middle of words';
 
   fixed = fixed.replace(/([a-zA-Z]),\s*([a-zA-Z])/g, '$1$2);
 
@@ -229,9 +229,9 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
 
 function processFile(filePath) {
   try {
-    //     const content = fs.readFileSync(filePath, 'utf8);;
+    //     const content = fs.readFileSync(filePath, 'utf8);
 
-    //     const fixedContent = fixCorruptedText(content);;
+    //     const fixedContent = fixCorruptedText(content);
 
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8);
@@ -252,10 +252,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 function processDirectory(dirPath) {
   try {
-    //     const items = fs.readdirSync(dirPath);;
+    //     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
-      //       const fullPath = path.join(dirPath, item);;
+      //       const fullPath = path.join(dirPath, item);
 
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories;
@@ -288,7 +288,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 
 //Main execution;
 
-// // const processedCount = processDirectory('./src);;
+// // const processedCount = processDirectory('./src);
 
 // 
 "

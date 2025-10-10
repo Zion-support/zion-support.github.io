@@ -73,7 +73,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig}
 
 }
 
-export default AccessibilityEnhancer;`
+export default AccessibilityEnhancer```;`
 
 
 

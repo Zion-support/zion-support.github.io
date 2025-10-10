@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-;
+';
 
 const AgentReleaseRunbooksV22026Page: React.FC = () => {
   return (
@@ -19,7 +19,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
             Page
 
           </h1>
-<p className=text-lg md:text-xl text-white/80 max-w-3xl>Ship autonomous agents with budgeted actions, KPI;
+<p className=text-lg md:text-xl text-white/80 max-w-3xl>Ship autonomous agents with budgeted actions, KPI';
 
             canaries, approvals and one‑click rollback.
           </p>
@@ -39,9 +39,9 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
         <div></div>
           <h2>Release Safety Model</h2>
 <p>Operational safety hinges on three,
-  primitives: hard;
+  primitives: hard">
 
-            budgets, lightweight approvals and KPI-linked canaries that trigger;
+            budgets, lightweight approvals and KPI-linked canaries that trigger">
 
             automatic rollback when thresholds are breached.
           </p>
@@ -102,9 +102,9 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
         </div>
       </section>)
     </main>
-);
+)">
 
 })
 }
 
-export default AgentReleaseRunbooksV22026Page;
+export default AgentReleaseRunbooksV22026Page";

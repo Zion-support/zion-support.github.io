@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from react;
 
@@ -37,7 +37,7 @@ interface ErrorReport {
 
   errorUrl: string | null}
 
-class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
+class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
 constructor(props: ErrorBoundaryProps) {
     super(props);
@@ -77,7 +77,7 @@ constructor(props: ErrorBoundaryProps) {
   }
 
   private reportError = async (error: Error, errorInfo: ErrorInfo) => {
-    try {;
+    try {
 
 const errorReport: ErrorReport = {
         errorId: this.state.errorId,

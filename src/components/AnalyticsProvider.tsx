@@ -5,9 +5,7 @@ interface AnalyticsContextType {
 
   page: (name: string, properties?: Record<string, any>) => void;
 
-  identify: (userId: string, traits?: Record<string, any>) => void}
-
-;
+  identify: (userId: string, traits?: Record<string, any>) => void};
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);;;
 
@@ -51,7 +49,7 @@ const script = document.createElement(script);;
 
 ;
 
-const track = (event: string, properties?: Record<string, any>) => {;;
+const track = (event: string, properties?: Record<string, any>) => {
 
     if (typeof window !== 'undefined && window.gtag) {
       window.gtag('event, event, properties)}
@@ -65,7 +63,7 @@ const track = (event: string, properties?: Record<string, any>) => {;;
 
 ;
 
-const page = (name: string, properties?: Record<string, any>) => {;;
+const page = (name: string, properties?: Record<string, any>) => {
 
     if (typeof window !== 'undefined && window.gtag) {
       window.gtag('config, trackingId, {
@@ -82,7 +80,7 @@ const page = (name: string, properties?: Record<string, any>) => {;;
 
 ;
 
-const identify = (userId: string, traits?: Record<string, any>) => {;;
+const identify = (userId: string, traits?: Record<string, any>) => {
 
     if (typeof window !== 'undefined && window.gtag) {
       window.gtag('config, trackingId, {
@@ -111,19 +109,19 @@ const value: AnalyticsContextType = {
     </AnalyticsContext.Provider>
   )};
 
-export const useAnalytics = (): AnalyticsContextType => {;;
+export const useAnalytics = (): AnalyticsContextType => {
 
-const context = useContext(AnalyticsContext);;
+const context = useContext(AnalyticsContext);`;
 
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider)}
 
-  return context};
+  return context}``;
 
 // Declare global gtag function
 declare global {
   interface Window {
-    dataLayer: any[];
+    dataLayer: any[]```;
 
     gtag: (...args: any[]) => void}
 

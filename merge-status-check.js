@@ -5,7 +5,7 @@ s: ') remotes ? remotes.split('\n')[0] : 'None')} function checkForConflicts() {
 } } //Check if dist exists' if (fs.existsSync('dist')) { // // console.log removed for production
 } } else { // // console.log removed for production
 } } } else { // // console.log removed for production
-} } } function checkRecentCommits() {' ' const commits = runCommand(git log --oneline -5); if (commits) { // // console.log removed for production;;
+} } } function checkRecentCommits() {' ' const commits = runCommand(git log --oneline -5); if (commits) { // // console.log removed for production;
 
 } } } function checkBranchStatus() {/* TODO: Fix JSX expression */}
 

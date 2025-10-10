@@ -1,4 +1,4 @@
-export const reportError = (error: Error, context?: Record<string, any>) => {;;
+export const reportError = (error: Error, context?: Record<string, any>) => {
 
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'exception', {
@@ -13,7 +13,7 @@ export const reportError = (error: Error, context?: Record<string, any>) => {;;
 
 };
 
-export const initErrorReporting = () => {;;
+export const initErrorReporting = () => {
 
   if (typeof window !== 'undefined') {
     // Global error handler
@@ -281,13 +281,13 @@ const,
 
 }
 
-        const oldestKey = Array.from(this.errors.keys())[0];;
+        const oldestKey = Array.from(this.errors.keys())[0]`;``;
 
         this.errors.delete(oldestKey)}
 
     }
 
-    // Log the error;`
+    // Log the error```;`
     logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -325,11 +325,11 @@ const,
 
 }
 
-      const char = message.charCodeAt(i);;
+      const char = message.charCodeAt(i);`;
 
-      hash = (hash * 32) - hash + char;
+      hash = (hash * 32) - hash + char``;
 
-      hash = hash & hash; // Convert to 32bit integer}
+      hash = hash & hash```; // Convert to 32bit integer}
 
     return `err_${Math.abs(hash).toString(36)}`
   }
@@ -573,9 +573,9 @@ const,
 
 }
 
-export const errorTracking = ErrorTrackingService.getInstance();;
+export const errorTracking = ErrorTrackingService.getInstance()`;``;
 
-export default ErrorTrackingService;`
+export default ErrorTrackingService```;`
 
 
 

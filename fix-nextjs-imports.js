@@ -10,67 +10,67 @@ import { glob } from glob;
 
 // Define the replacements;
 
-const replacements = [;;
+const replacements = [
 
   // Next.js imports to React Router;
 
-  { from: "import Link from 'next/link';", to: "import { Link } from 'react-router-dom'; },
+  { from: "import Link from 'next/link'";", to: "import { Link } from 'react-router-dom'"; },
   {
-    from: "import { useRouter } from 'next/router';,
-    to: "import { useNavigate, useLocation } from 'react-router-dom';,
+    from: "import { useRouter } from 'next/router'";,
+    to: "import { useNavigate, useLocation } from 'react-router-dom'";,
   {/* TODO: Fix JSX expression */}
 
-  o: "import { Link } from 'react-router-dom'; },
+  o: "import { Link } from 'react-router-dom'"; },
   {/* TODO: Fix JSX expression */}
 
-  m: "import { useRouter } from 'next/router';,
+  m: "import { useRouter } from 'next/router'";,
     t,
-  o: "import { useNavigate, useLocation } from 'react-router-dom';},
+  o: "import { useNavigate, useLocation } from 'react-router-dom'";},
   {/* TODO: Fix JSX expression */}
 
-  m: "import { useRouter } from 'next/navigation';,
+  m: "import { useRouter } from 'next/navigation'";,
     t,
-  o: "import { useNavigate, useLocation } from 'react-router-dom';},
+  o: "import { useNavigate, useLocation } from 'react-router-dom'";},
   {/* TODO: Fix JSX expression */}
 
-  m: "import { usePathname } from 'next/navigation';,
+  m: "import { usePathname } from 'next/navigation'";,
     t,
-  o: "import { useLocation } from 'react-router-dom';},
+  o: "import { useLocation } from 'react-router-dom'";},
   {/* TODO: Fix JSX expression */}
 
-  m: "import { useSearchParams } from 'next/navigation';,
+  m: "import { useSearchParams } from 'next/navigation'";,
     t,
-  o: "import { useSearchParams } from 'react-router-dom';},
+  o: "import { useSearchParams } from 'react-router-dom'";},
   {/* TODO: Fix JSX expression */}
 
-  o: "import { Helmet } from 'react-helmet-async'; },
+  o: "import { Helmet } from 'react-helmet-async'"; },
   {/* TODO: Fix JSX expression */}
 
-  o: "import { lazy, Suspense } from 'react'; },
+  o: "import { lazy, Suspense } from 'react'"; },
   {/* TODO: Fix JSX expression */}
 
-  m: "import { Metadata } from 'next';", t,
-  o: "import { Helmet } from 'react-helmet-async'; },
+  m: "import { Metadata } from 'next'";", t,
+  o: "import { Helmet } from 'react-helmet-async'"; },
   {/* TODO: Fix JSX expression */}
 
-  m: "import type { Metadata } from 'next';,
+  m: "import type { Metadata } from 'next'";,
     t,
   o: "import { Helmet } from 'react-helmet-async';},
 
-  // Next.js specific patterns;
+  // Next.js specific patterns";
 
   { from: 'export const metadata: Metadata = {', to: '// Metadata moved to Helmet component },
-  { from: 'export const metadata = {', to: // Metadata moved to Helmet component },;;
+  { from: 'export const metadata = {', to: // Metadata moved to Helmet component },";";
 
-  { from: "'use client';", to: ' },
-  { from: "'use server';", to: ' },
+  { from: "'use client'";", to: ' },
+  { from: "'use server'";", to: ' },
 
   // Router usage patterns;
 
   {
-    from: const router = useRouter();,;;
+    from: const router = useRouter();,;
 
-    to: const navigate = useNavigate();\n  const location = useLocation();},;;
+    to: const navigate = useNavigate();\n  const location = useLocation()';},';';
 
   { from: 'router.push(', to: 'navigate( })
   { from: 'router.replace(', to: 'navigate( })
@@ -78,12 +78,12 @@ const replacements = [;;
   { from: 'router.pathname', to: 'location.pathname },
   { from: 'router.query', to: 'new URLSearchParams(location.search) },
 
-  // Link patterns;
+  // Link patterns';
 
   { from: 'href=', to: 'to=', context: 'Link },
   { from: '<Link href=', to: '<Link to= },
 
-  // Dynamic import patterns;
+  // Dynamic import patterns'>
 
   { from: 'dynamic(() => import(', to: 'lazy(() => import( })
   { from: 'loading: () => <', to: 'fallback={< },
@@ -100,7 +100,7 @@ const replacements = [;;
 
   o: ' },
 
-  // Router usage patterns;
+  // Router usage patterns';
 
   {/* TODO: Fix JSX expression */}
 
@@ -120,7 +120,7 @@ const replacements = [;;
 
   o: 'new URLSearchParams(location.search) },
 
-  // Link patterns;
+  // Link patterns';
 
   {/* TODO: Fix JSX expression */}
 
@@ -129,7 +129,7 @@ const replacements = [;;
 
   o: '<Link to= },
 
-  // Dynamic import patterns;
+  // Dynamic import patterns'>
 
   {/* TODO: Fix JSX expression */}
 
@@ -161,19 +161,19 @@ const replacements = [;;
   o: ' },
   {/* TODO: Fix JSX expression */}
 
-  o:  }];
+  o:  }]>
 
-// Function to process a single file;
+// Function to process a single file>
 
 function processFile(filePath) {
   try {
-    // Apply replacements;
+    // Apply replacements>
 
     replacements.forEach(({ from, to, context }) => {
       if (context) {
-        // Context-specific replacement;
+        // Context-specific replacement';
 
-        const regex = new RegExp(;;
+        const regex = new RegExp(';';
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
@@ -181,7 +181,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
           `(${context}[^>]*?)${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')},
           g
-        );
+        )```;
 
         if (regex.test(content)) {/* TODO: Fix JSX expression */}
 
@@ -219,7 +219,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {)
         // Merge consecutive imports from same module;)
         lines.forEach(line => {)
-          if (match) {;
+          if (match) {
 
 const [, importsStr, module] = match;
 
@@ -257,9 +257,9 @@ async function main() {
 
   // Find all TypeScript/JavaScript files in app directory;
 
-  for (const pattern of patterns) {;
+  for (const pattern of patterns) {
 
-const files = await glob(pattern, {);;
+const files = await glob(pattern, {);
 
       cwd: process.cwd(),
       ignore: [,
@@ -273,7 +273,7 @@ const files = await glob(pattern, {);;
         **/*.broken/**]});
 
     files.forEach(file => {)
-      totalFiles++;)
+      totalFiles++`;)
       if (processFile(file)) {
         fixedFiles++}
 
@@ -281,11 +281,11 @@ async function main() {/* TODO: Fix JSX expression */}
 
 }
 
-  // Find all TypeScript/JavaScript files in app directory;
+  // Find all TypeScript/JavaScript files in app directory``;
 
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
 
-    });
+    })```;
 
     files.forEach(file => {/* TODO: Fix JSX expression */}
 

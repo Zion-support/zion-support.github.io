@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -8,28 +8,28 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;;
+const __filename = fileURLToPath(import.meta.url);;
 
 // __dirname removed
 // Get all files with errors;
 
-const getAllFilesWithErrors = () => {;;;
+const getAllFilesWithErrors = () => {
 
-const srcDir = path.join(__dirname, src);;
+const srcDir = path.join(__dirname, src);
 
-  const files = [];;
+  const files = [];
 
-  ;
+  ';
 
-const scanDirectory = (dir) => {;;
+const scanDirectory = (dir) => {
 
-const items = fs.readdirSync(dir);;
+const items = fs.readdirSync(dir)';
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(dir, item);;
+const fullPath = path.join(dir, item)';
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath)';';
 
       if (stat.isDirectory()) {
         scanDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts)) {
@@ -45,35 +45,35 @@ const fullPath = path.join(dir, item);;
 
 // Fix all remaining syntax errors;
 
-const fixRemainingErrors = () => {;;
+const fixRemainingErrors = () => {
 
-const files = getAllFilesWithErrors();;
+const files = getAllFilesWithErrors();
 
-  let fixedCount = 0;;
+  let fixedCount = 0;
 
   for (const filePath of files) {
-    try {;
+    try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-      let modified = false;;
+      let modified = false;
 
       // Fix component names with spaces or special characters;
 
-      const componentNameMatch = content.match(/const\s+([A-Za-z0-9\s\-]+)Page: \s*React\.FC/);;
+      const componentNameMatch = content.match(/const\s+([A-Za-z0-9\s\-]+)Page: \s*React\.FC/);
 
       if (componentNameMatch) {,;
 
-const oldName = componentNameMatch[1];,;;
+const oldName = componentNameMatch[1];,;
 
-const newName = oldName;;
+const newName = oldName;
 
           .replace(/\s+/g, ')
           .replace(/\-/g, ')
           .replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
 
         if (oldName !== newName) {
-          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC);
+          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC)```;
 
           content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page);
 
@@ -109,7 +109,7 @@ const newName = oldName;;
         fs.writeFileSync(filePath, content);
 
         // console.log removed for production
-});
+})`;
 
         fixedCount++}
 
@@ -120,6 +120,6 @@ const newName = oldName;;
   }
 
   // console.log removed for production
-};
+}``;
 
-fixRemainingErrors();
+fixRemainingErrors()```;

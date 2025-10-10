@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from 'fs';
 
 import path from 'path;
 
@@ -8,7 +8,7 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url);
 
 // __dirname removed
 // Function to fix JSX tags that were incorrectly prefixed with underscores;
@@ -16,31 +16,31 @@ const __filename = fileURLToPath(import.meta.url);;
 function fixJSXTags(content) {
   // Fix JSX opening tags;
 
-  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {;
+  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {
 
 function fixJSXTags(content) {/* TODO: Fix JSX expression */}
 
-    return `<${tagName.substring(1)}; // Remove the underscore});
+    return `<${tagName.substring(1)}; // Remove the underscore})`;
 
-  // Fix JSX closing tags;
+  // Fix JSX closing tags``;
 
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {
   return (
 
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>
-);
+)```;
 
 }/g, (match, tagName) => {/* TODO: Fix JSX expression */}
 
-    return `</${tagName.substring(1)}>; // Remove the underscore});
+    return `</${tagName.substring(1)}>; // Remove the underscore})`;
 
-  // Fix self-closing JSX tags;
+  // Fix self-closing JSX tags``;
 
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {
   return (
 
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>
-);
+)```;
 
 }/g, (match, tagName) => {/* TODO: Fix JSX expression */}
 
@@ -63,11 +63,11 @@ function fixDestructuringVariables(content) {
 
   // Fix destructuring assignments;
 
-  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {;
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^';]+)';/g, (match, vars, assignment) => {
 
-const fixedVars = vars.split(,).map(v => {);;
+const fixedVars = vars.split(,).map(v => {)';
 
-const trimmed = v.trim();;
+const trimmed = v.trim()';';
 
       if (trimmed.startsWith('_) && trimmed.length > 1) {
         return trimmed.substring(1);
@@ -84,11 +84,11 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
 
   // Fix destructuring assignments;
 
-  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^`;]+)``;/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
 
       }
 
-      return trimmed}).join(', ');
+      return trimmed}).join(', ')```;
 
     return `const { ${fixedVars} } = ${assignment};});
 
@@ -97,15 +97,15 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
 // Function to process a single file;
 
 function processFile(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Apply fixes;
 
-    const originalContent = content;;
+    const originalContent = content;
 
     content = fixJSXTags(content);
 
@@ -129,21 +129,21 @@ return false}
 
 // Function to find all TypeScript/JavaScript files;
 
-function findSourceFiles(dir) {;
+function findSourceFiles(dir) {
 
-const files = [];;
+const files = [];
 
   ;
 
-function walkDir(currentPath) {;
+function walkDir(currentPath) {
 
-const items = fs.readdirSync(currentPath);;
+const items = fs.readdirSync(currentPath);
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(currentPath, item);;
+const fullPath = path.join(currentPath, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories;
@@ -180,16 +180,16 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 // console.log removed for production
 ;
 
-const srcDir = path.join(__dirname, src);;
+const srcDir = path.join(__dirname, src);
 
-const appDir = path.join(__dirname, app);;
+const appDir = path.join(__dirname, app);
 
-const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];;
+const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 
 // console.log removed for production
 ;
 
-let processedCount = 0;;
+let processedCount = 0;
 
 for (const file of files) {/* TODO: Fix JSX expression */}
 
@@ -198,9 +198,9 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 }
 
 // console.log removed for production
-// Also process root level files;
+// Also process root level files`;
 
-const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', layout.tsx];;
+const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', layout.tsx]``;```;
 
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}
 

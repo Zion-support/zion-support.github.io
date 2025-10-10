@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8);;
+    let content = fs.readFileSync(filePath, 'utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Check if file has merge conflicts
     if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>)) {
@@ -20,16 +20,16 @@ function fixMergeConflicts(filePath) {
     console.log(`Fixing merge conflicts in: ${filePath});
 
     // Split content by merge conflict markers
-    const lines = content.split('\n);;
+    const lines = content.split('\n);
 
-    const result = [];;
+    const result = [];
 
-    let inConflict = false;;
+    let inConflict = false;
 
-    let conflictType = ';;
+    let conflictType = ';
 
-    for (let i = 0; i < lines.length; i++) {;
-      const line = lines[i];;
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i]';
 
       if (line.startsWith('<<<<<<<)) {
         inConflict = true;
@@ -68,16 +68,16 @@ function fixMergeConflicts(filePath) {
       // Skip the other branch content (after =======)
     }
 
-    const newContent = result.join('\n);;
+    const newContent = result.join('\n);
 
     if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent, 'utf8);
+      fs.writeFileSync(filePath, newContent, 'utf8)`;
 
-      modified = true;
+      modified = true``;
 
     }
 
-    return modified;
+    return modified```;
 
   } catch (error) {
     console.error(`Error processing ${filePath}:, error.message);
@@ -90,22 +90,22 @@ function fixMergeConflicts(filePath) {
 
 // Function to find all files with merge conflicts
 function findFilesWithMergeConflicts(dir) {
-  const files = [];;
+  const files = [];
 
   function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);;
+    const items = fs.readdirSync(currentDir);
 
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);;
+      const fullPath = path.join(currentDir, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist' && item !== 'build) {
         scanDirectory(fullPath);
 
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.json))) {
         try {
-          const content = fs.readFileSync(fullPath, 'utf8);;
+          const content = fs.readFileSync(fullPath, 'utf8);
 
           if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>)) {
             files.push(fullPath);
@@ -129,36 +129,36 @@ function findFilesWithMergeConflicts(dir) {
 }
 
 // Main execution
-console.log('Starting comprehensive merge conflict resolution...);
+console.log('Starting comprehensive merge conflict resolution...)')`;
 
-const filesWithConflicts = findFilesWithMergeConflicts('/workspace);;
+const filesWithConflicts = findFilesWithMergeConflicts('/workspace)``;```;
 
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts);
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts)`;
 
-let fixedCount = 0;;
+let fixedCount = 0``;
 
 for (const file of filesWithConflicts) {
   if (fixMergeConflicts(file)) {
-    fixedCount++;
+    fixedCount++```;
 
   }
 
 }
 
-console.log(`Fixed merge conflicts in ${fixedCount} files);
+console.log(`Fixed merge conflicts in ${fixedCount} files)`;
 
 // Check remaining conflicts
-const remainingConflicts = findFilesWithMergeConflicts('/workspace);;
+const remainingConflicts = findFilesWithMergeConflicts('/workspace)``;```;
 
-console.log(`Remaining files with conflicts: ${remainingConflicts.length});
+console.log(`Remaining files with conflicts: ${remainingConflicts.length})``;
 
 if (remainingConflicts.length > 0) {
-  console.log('Files that still need manual attention:);
+  console.log('Files that still need manual attention:)```;
 
-  remainingConflicts.slice(0, 10).forEach(file => console.log(`  - ${file}));
+  remainingConflicts.slice(0, 10).forEach(file => console.log(`  - ${file}))```');
 
   if (remainingConflicts.length > 10) {
-    console.log(`  ... and ${remainingConflicts.length - 10} more files);
+    console.log(`  ... and ${remainingConflicts.length - 10} more files)``')`;
 
   }
 

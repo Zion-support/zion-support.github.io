@@ -248,7 +248,7 @@ const component = error.context.component || 'Unknown;;
 
       total: this.errors.length,
       byComponent,
-      recent: this.errors.slice(-10);
+      recent: this.errors.slice(-10)`;
 
     }
 
@@ -257,7 +257,7 @@ const component = error.context.component || 'Unknown;;
 }
 
 // Export singleton instance
-export const errorTracker = new EnhancedErrorTracker();;
+export const errorTracker = new EnhancedErrorTracker()``;```;
 
 export default errorTracker
 export interface ErrorContext {/* TODO: Fix JSX expression */}
@@ -355,8 +355,8 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
 }
 
 // Export singleton instance
-export const errorTracker = new EnhancedErrorTracker();;
+export const errorTracker = new EnhancedErrorTracker()`;``;
 
-export default errorTracker;
+export default errorTracker```;
 
 `

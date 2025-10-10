@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react;
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 
-import Navigation from './components/Navigation;
+import Navigation from './components/Navigation';
 
-import Footer from './components/Footer;
+import Footer from './components/Footer';
 
-import PerformanceOptimizer from './components/PerformanceOptimizer;
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
-import SEOOptimizer from './components/SEOOptimizer;
+import SEOOptimizer from './components/SEOOptimizer';
 
-import AccessibilityEnhancer from './components/AccessibilityEnhancer;
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 import { Phone, Mail, MapPin, Clock } from 'lucide-react;
 
@@ -20,15 +20,15 @@ const ContentPromotionBanner = lazy(() => import(./components/ContentPromotionBa
 
 const ContentCarousel = lazy(() => import(./components/ContentCarousel));;
 
-const DynamicContentShowcase = lazy(() => import(./components/DynamicContentShowcase));;
+const DynamicContentShowcase = lazy(() => import(./components/DynamicContentShowcase));';
 
-const ContentStatistics = lazy(() => import(./components/ContentStatistics));;
+const ContentStatistics = lazy(() => import(./components/ContentStatistics))';';
 
-const ContentNewsletterSignup = lazy(() => import(./components/ContentNewsletterSignup));;
+const ContentNewsletterSignup = lazy(() => import(./components/ContentNewsletterSignup))';';
 
-// Preload critical components;
+// Preload critical components';
 
-const preloadComponents = () => {;;
+const preloadComponents = () => {';';
 
   if (typeof window !== 'undefined) {
     // Preload critical components after initial render
@@ -74,19 +74,19 @@ const HomePage: React.FC = () => {
   }, []);
 
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {;;
+  const handlePhoneClick = useCallback(() => {
 
     if (typeof window !== 'undefined' && 'gtag in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag">">
 
       gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: main_phone_number
-      });
+      })">
 
     }
 
-  }, []);
+  }, [])'";
 
   return (
 
@@ -1368,8 +1368,8 @@ const HomePage: React.FC = () => {
       <Footer />
     </div>
     </>
-  );
+  )">
 
-};
+}">
 
-export default HomePage;
+export default HomePage";

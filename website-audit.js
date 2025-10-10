@@ -1,18 +1,18 @@
 #!/usr/bin/env node;
 
-import https from 'https;
+import https from 'https';
 
-import http from 'http;
+import http from 'http';
 
-import { URL } from 'url;
+import { URL } from 'url';
 
-import fs from fs;
+import fs from fs';
 
-// List of all routes from App.tsx;
+// List of all routes from App.tsx';
 
-const routes = [;;;
+const routes = [';';
 
-  // Main Pages;
+  // Main Pages';
 
   '/,
   '/about,
@@ -123,9 +123,9 @@ const routes = [;;;
 
 ;
 
-const baseUrl = https: //ziontechgroup.com;;
+const baseUrl = https: //ziontechgroup.com;
 
-const results = {;;
+const results = {
 
   working: []
   broken: [],
@@ -135,15 +135,15 @@ const results = {;;
 ;
 
 function checkUrl(url) {
-  return new Promise((resolve) => {;
+  return new Promise((resolve) => {
 
-const parsedUrl = new URL(url);;
+const parsedUrl = new URL(url);
 
-    const client = parsedUrl.protocol === https:  ? https : http;;
+    const client = parsedUrl.protocol === https:  ? https : http;
 
     ;
 
-const options = {;;
+const options = {
 
       hostname: parsedUrl.hostname;
 
@@ -152,7 +152,7 @@ const options = {;;
 
       method: 'HEAD,
       timeout:
-        timeout: 10000;
+        timeout: 10000';
 
       headers: {,
         'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)}
@@ -161,7 +161,7 @@ const options = {;;
 
 ;
 
-const req = client.request(options, (res) => {;;
+const req = client.request(options, (res) => {
 
       resolve({)
         url)
@@ -188,17 +188,17 @@ const req = client.request(options, (res) => {;;
 async function auditWebsite() {
   // console.log removed for production
 // console.log removed for production
-for (let i = 0; i < routes.length; i++) {;;
+for (let i = 0; i < routes.length; i++) {
 
-const route = routes[i];;
+const route = routes[i];
 
-    const fullUrl = baseUrl + route;;
+    const fullUrl = baseUrl + route;
 
     process.stdout.write(`[${i + 1}/${routes.length}] Testing ${route}... );
 
     ;
 
-const result = await checkUrl(fullUrl);;
+const result = await checkUrl(fullUrl);
 
     if (result.error) {
       results.errors.push({ url: fullUrl, error: result.error });
@@ -262,7 +262,7 @@ results.errors.forEach(item => {)
     // console.log removed for production
 results.missing.forEach(item => {),;
 
-const route = item.url.replace(baseUrl, );;
+const route = item.url.replace(baseUrl, );
 
       // console.log removed for production
 })}
@@ -280,11 +280,11 @@ results.errors.forEach(item => {),
 })}
 
   // console.log removed for production
-// Save results to file;
+// Save results to file`';
 
-  fs.writeFileSync(audit-results.json, JSON.stringify(results, null, 2));
+  fs.writeFileSync(audit-results.json, JSON.stringify(results, null, 2))'``;
 
   // console.log removed for production
 }
 
-auditWebsite().catch(console.error);
+auditWebsite().catch(console.error)'```;

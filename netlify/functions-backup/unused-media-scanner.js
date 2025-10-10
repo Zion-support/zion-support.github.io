@@ -2,7 +2,7 @@ exports.handler = async function (event, context) {
   try {
     // Unused media scanning simulation;
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -54,7 +54,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
       })
     }}
 

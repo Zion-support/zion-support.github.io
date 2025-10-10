@@ -1,10 +1,10 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react;
 
@@ -13,21 +13,21 @@ interface CaseStudy {
 
   title: string;
 
-  client: string;
+  client: string';
 
-  industry: string;
+  industry: string';
 
-  challenge: string;
+  challenge: string';
 
-  solution: string;
+  solution: string';
 
-  results: string[];
+  results: string[]';
 
-  image: string;
+  image: string';
 
-  duration: string;
+  duration: string';
 
-  team: string;
+  team: string';
 
 }
 
@@ -87,7 +87,7 @@ const CaseStudiesPage: React.FC = () => {
       team: '5 specialists
       image: '/images/case-studies/ecommerce-ai.jpg
     },
-      team: '8 specialists});)},
+      team: '8 specialists})';)},
     {
       id: 2,
       title: 'Cloud Migration for Financial Services,
@@ -106,7 +106,7 @@ const CaseStudiesPage: React.FC = () => {
       duration: '6 months,
       team: '12 specialists
     },
-      team: '12 specialists});)},
+      team: '12 specialists})';)},
     {
       id: '3,
       title: 'Cybersecurity Enhancement for Healthcare,
@@ -122,7 +122,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/cybersecurity-healthcare.jpg,
       duration: '4 months,
-      team: '10 specialists});)
+      team: '10 specialists})';)
 },
     {
       id: '4,
@@ -139,7 +139,7 @@ const CaseStudiesPage: React.FC = () => {
       ],
       image: '/images/case-studies/ml-predictive-analytics.jpg,
       duration: '5 months,
-      team: '6 specialists});)
+      team: '6 specialists})';)
 },
     {
       id: '5,
@@ -174,13 +174,13 @@ const CaseStudiesPage: React.FC = () => {
       duration: '7 months,
       team: '11 specialists    }
 
-  ];
+  ]';
 
-  const stats = [;
+  const stats = [';
     { label: 'Projects Completed', value: '150+, icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%, icon: TrendingUp },
     { label: 'Team Members', value: '50+, icon: Users },
-    { label: 'Industry Awards', value: '25+, icon: Award }  ];
+    { label: 'Industry Awards', value: '25+, icon: Award }  ]';
 
   return (
 
@@ -334,9 +334,9 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )`;
 
-  );  ));)
-};
+  )`">  ))">)
+}">
 
-export default CaseStudiesPage;
+export default CaseStudiesPage"```;

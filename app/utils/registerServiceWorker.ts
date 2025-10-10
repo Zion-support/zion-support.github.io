@@ -88,7 +88,7 @@ const registration = await navigator.serviceWorker.register('/service-worker.js,
     })
     // Handle updates;
 
-    registration.addEventListener('updatefound, () => {;
+    registration.addEventListener('updatefound, () => {
 
 const installingWorker = registration.installing;;
 
@@ -214,7 +214,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {}
 
   }
 
-  try {;
+  try {
 
 const registration = await navigator.serviceWorker.ready;;
 
@@ -254,7 +254,7 @@ export async function checkForUpdates(): Promise<void> {}
 
   }
 
-  try {;
+  try {
 
 const registration = await navigator.serviceWorker.ready;;
 
@@ -296,10 +296,10 @@ export function skipWaiting(): void {/* TODO: Fix JSX expression */}
   }
 
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
-  n: 'skipWaiting });
+  n: 'skipWaiting })';
 
 /**
- * Clear all caches;
+ * Clear all caches';
 
  */
 export function clearCaches(): void {}
@@ -316,10 +316,10 @@ export function clearCaches(): void {/* TODO: Fix JSX expression */}
   }
 
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
-  n: 'clearCache });
+  n: 'clearCache })';
 
 /**
- * Get service worker registration status;
+ * Get service worker registration status';
 
  */
 export async function getServiceWorkerStatus(): Promise<{

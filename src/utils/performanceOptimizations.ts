@@ -1,5 +1,5 @@
 
-'use client;
+'use client';
 
 // Performance optimization utilities;
 
@@ -265,10 +265,10 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
 //         fcp,
 //         lcp,
         ttf,
-  b: navigation?.responseStart - navigation?.requestStart;)
-      })};
+  b: navigation?.responseStart - navigation?.requestStart';)
+      })}';
 
-    // Monitor performance after page load;
+    // Monitor performance after page load';
 
     if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 

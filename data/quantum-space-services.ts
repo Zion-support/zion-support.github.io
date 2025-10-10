@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface QuantumSpaceService {;,
+export interface QuantumSpaceService {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const quantumSpaceServices: QuantumSpaceService[] = [,
     id: "quantum-computing-platform", name: "Quantum Computing Platform",
     tagline: "Next-generation quantum computing solutions", price: '$199/month',
     description: 'Advanced quantum computing platform for complex calculations and simulations.',
-    features: [;
+    features: [
       "Quantum algorithms"
       "Simulation tools"
       "API access"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Advanced quantum computing platform for complex calculations and simulations.",
     feature,
-  s: [;"
+  s: ["
       "Quantum algorithms""
       "Simulation tools""
       "API access""

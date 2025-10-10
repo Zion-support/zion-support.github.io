@@ -7,9 +7,7 @@ interface PerformanceMetrics {
 
   memoryUsage: number;
 
-  fps: number}
-
-;
+  fps: number};
 
 const PerformanceDashboard: React.FC = () => {
   return (
@@ -27,9 +25,9 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
 
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {;
+  useEffect(() => {
 
-const updateMetrics = () => {;;
+const updateMetrics = () => {
 
 const navigation = performance.getEntriesByType(;;
 
@@ -96,6 +94,6 @@ const interval = setInterval(updateMetrics, 1000);;;
       )}
 
     </div>
-  )};
+  )}">
 
-export default PerformanceDashboard;
+export default PerformanceDashboard";

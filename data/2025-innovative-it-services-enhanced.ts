@@ -237,7 +237,7 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [,
     price: $1,999,
     period: /month,
     description: Revolutionary quantum-enhanced cloud infrastructure that provides unprecedented computing power, security, and scalability. Combines quantum computing with traditional cloud services for breakthrough performance.,
-    features: [;
+    features: [
 
       Quantum-enhanced computing powerUnbreakable quantum encryptionAutomatic scaling and optimizationQuantum machine learning accelerationReal-time performance monitoringMulti-cloud orchestrationAdvanced security protocolsCost optimization algorithms,
       Global edge computing networkQuantum-safe data storage],
@@ -281,7 +281,7 @@ variant: quantum-cloud-enterprise,
     tagline: 'Advanced cybersecurity with zero trust architecture and AI threat detection', price: $799,
     period: /month,
     description: Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and AI-powered threat detection. Protects organizations from modern cyber threats with advanced security protocols.,
-    features: [;
+    features: [
 
       Zero trust architecture implementationContinuous identity verificationMicro-segmentationAI-powered threat detectionReal-time security monitoringAdvanced authentication methodsCompliance reportingIncident response automation,
       Security analytics dashboardIntegration with existing systems],
@@ -324,7 +324,7 @@ variant: zero-trust-enterprise,
     tagline: 'Optimize edge computing with intelligent orchestration and automation', price: $599,
     period: /month,
     description: Advanced edge computing orchestration platform that optimizes distributed computing resources, reduces latency, and improves performance for IoT applications and edge computing workloads.,
-    features: [;
+    features: [
 
       Intelligent edge orchestrationAutomatic resource optimizationLatency reduction algorithmsIoT device managementEdge analytics processingLoad balancing automationPerformance monitoringCost optimization,
       Multi-edge coordinationReal-time analytics],
@@ -368,7 +368,7 @@ variant: edge-computing-enterprise,
     price: $1,299,
     period: /month,
     description: Comprehensive enterprise blockchain platform that enables secure, transparent, and efficient business processes. Supports smart contracts, digital assets, and decentralized applications for enterprise use cases.,
-    features: [;
+    features: [
 
       Enterprise blockchain infrastructureSmart contract developmentDigital asset managementConsensus mechanismsSecurity and compliancePerformance optimizationIntegration APIsMonitoring and analytics,
       Multi-chain supportDeveloper tools],
@@ -411,7 +411,7 @@ variant: blockchain-enterprise,
     price: $30,000,
     period: /month,
     description: Advanced DevOps platform that uses AI to automate software development, testing, deployment, and monitoring, continuously learning and optimizing your development processes.,
-    features: [;
+    features: [
 
       AI-powered code reviewAutomated testing optimizationIntelligent deployment strategiesPerformance monitoringSecurity scanningCost optimizationTeam collaboration toolsCI/CD automation,
       Infrastructure as codeReal-time analytics],
@@ -452,7 +452,7 @@ variant: ai-devops-enterprise,
     price: $2,499,
     period: '/month', description: Revolutionary quantum networking platform that provides unbreakable communication channels using quantum entanglement and quantum key distribution. Perfect for organizations requiring absolute security.,
     features:
-        features: [;
+        features: [
 
       Quantum key distributionQuantum entanglement networksUnbreakable encryptionGlobal quantum networkReal-time quantum communicationSecurity monitoringPerformance analyticsIntegration APIs,
       Compliance reporting24/7 quantum support],
@@ -495,7 +495,7 @@ variant: quantum-networking-enterprise,
     tagline: 'Self-managing IT infrastructure with AI-powered automation', price: $899,
     period: /month,
     description: Advanced autonomous IT operations platform that uses AI to manage, monitor, and optimize IT infrastructure automatically. Reduces manual intervention and improves system reliability.,
-    features: [;
+    features: [
 
       AI-powered infrastructure managementAutomated problem resolutionPredictive maintenanceSelf-healing systemsPerformance optimizationResource managementSecurity automationCompliance monitoring,
       Analytics and reportingIntegration with existing tools],
@@ -539,7 +539,7 @@ variant: autonomous-it-enterprise,
     price: $3,999,
     period: /month,
     description: Revolutionary quantum-enhanced data center platform that provides unprecedented computing power, energy efficiency, and security. Combines quantum computing with traditional data center operations.,
-    features: [;
+    features: [
 
       Quantum computing integrationAdvanced cooling systemsEnergy optimization algorithmsQuantum security protocolsHigh-performance networkingAutomated managementScalability managementPerformance monitoring,
       Cost optimizationGlobal data center network],
@@ -583,7 +583,7 @@ variant: quantum-datacenter-enterprise,
     price: $1,599,
     period: /month,
     description: Advanced quantum cybersecurity platform that combines quantum encryption with AI-powered threat detection. Provides unbreakable security for enterprise networks, applications, and data.,
-    features: [;
+    features: [
 
       Quantum encryption algorithmsAI threat detectionReal-time monitoringAutomated incident responseVulnerability assessmentCompliance reportingMulti-cloud securityZero-trust architecture,
       Threat intelligenceSecurity analytics],
@@ -627,7 +627,7 @@ variant: quantum-security-enterprise,
     price: $1,299,
     period: /month,
     description: Advanced cloud migration platform that uses quantum computing to optimize migration strategies, reduce downtime, and ensure seamless transitions to cloud environments.,
-    features: [;
+    features: [
 
       Quantum migration optimizationZero-downtime migrationPerformance optimizationCost analysis and optimizationSecurity assessmentCompliance validationMigration automationPerformance monitoring,
       Rollback capabilitiesIntegration support],
@@ -670,7 +670,7 @@ variant: quantum-migration-enterprise,
     tagline: 'Build scalable applications for the cloud era', price: $599,
     period: /month,
     description: Comprehensive platform for developing, deploying, and managing cloud-native applications with microservices architecture and container orchestration.,
-    features: [;
+    features: [
 
       Microservices development frameworkContainer orchestration with KubernetesCI/CD pipeline automationService mesh implementationAuto-scaling capabilitiesMulti-cloud deploymentPerformance monitoringSecurity and compliance,
       API managementExpert consultation],
@@ -711,7 +711,7 @@ variant: cloud-cost-enterprise,
     tagline: 'Secure your network with zero-trust principles', price: $799,
     period: /month,
     description: Advanced zero-trust security platform that implements comprehensive security controls, identity verification, and continuous monitoring.,
-    features: [;
+    features: [
 
       Identity and access managementMulti-factor authenticationNetwork segmentationContinuous monitoringThreat detectionCompliance reportingAPI securityDevice management,
       Risk assessment24/7 security monitoring],
@@ -752,7 +752,7 @@ variant: zero-trust-enterprise,
     tagline: 'Orchestrate computing at the edge of your network', price: $649,
     period: /month,
     description: Advanced edge computing platform that manages distributed computing resources, optimizes performance, and reduces latency for edge applications.,
-    features: [;
+    features: [
 
       Edge node managementDistributed computing orchestrationLatency optimizationLoad balancingReal-time processingEdge analyticsMulti-location deploymentPerformance monitoring,
       API for integrationsExpert consultation],
@@ -793,7 +793,7 @@ variant: edge-computing-enterprise,
     tagline: 'Manage and secure your APIs with enterprise-grade tools', price: $449,
     period: /month,
     description: Comprehensive API management platform that provides gateway functionality, security, monitoring, and developer portal capabilities.,
-    features: [;
+    features: [
 
       API gateway functionalityRate limiting and throttlingAuthentication and authorizationAPI versioningDeveloper portalPerformance monitoringAnalytics and reportingDocumentation generation,
       API testing toolsMulti-cloud support],
@@ -834,7 +834,7 @@ variant: api-management-enterprise,
     tagline: 'Build robust data pipelines with intelligent automation', price: $549,
     period: /month,
     description: Advanced data pipeline platform that automates data extraction, transformation, and loading processes with real-time processing capabilities.,
-    features: [;
+    features: [
 
       Data extraction toolsTransformation workflowsReal-time processingData quality monitoringError handling and recoveryPerformance optimizationMulti-source integrationScheduling and orchestration,
       Monitoring and alertingAPI for custom integrations],
@@ -875,7 +875,7 @@ variant: data-pipeline-enterprise,
     tagline: 'Manage infrastructure with code and automation', price: $399,
     period: /month,
     description: Comprehensive infrastructure as code platform that provides tools for defining, deploying, and managing infrastructure using declarative configuration files.,
-    features: [;
+    features: [
 
       Infrastructure definitionMulti-cloud supportVersion control integrationAutomated deploymentState managementPolicy enforcementCost optimizationSecurity scanning,
       Compliance reportingTeam collaboration tools],
@@ -916,7 +916,7 @@ variant: iac-enterprise,
     tagline: 'Optimize your database performance with intelligent insights', price: $499,
     period: /month,
     description: Advanced database performance optimization platform that provides real-time monitoring, query optimization, and performance tuning recommendations.,
-    features: [;
+    features: [
 
       Real-time performance monitoringQuery optimizationIndex recommendationsPerformance tuningCapacity planningPerformance analyticsMulti-database supportAutomated optimization,
       Performance alertsExpert consultation],
@@ -957,7 +957,7 @@ variant: database-optimization-enterprise,
     tagline: 'Monitor and analyze your network with intelligent insights', price: $449,
     period: /month,
     description: Comprehensive network monitoring platform that provides real-time visibility, performance analytics, and intelligent troubleshooting capabilities.,
-    features: [;
+    features: [
 
       Real-time network monitoringPerformance analyticsTraffic analysisAnomaly detectionNetwork mappingPerformance optimizationMulti-vendor supportAPI for integrations,
       Custom dashboards24/7 monitoring],
@@ -998,7 +998,7 @@ variant: network-monitoring-enterprise,
     tagline: 'Discover and manage your IT assets with intelligent automation', price: $349,
     period: /month,
     description: Advanced IT asset management platform that automatically discovers, tracks, and manages IT assets across your organization.,
-    features: [;
+    features: [
 
       Automatic asset discoveryAsset lifecycle managementLicense trackingCompliance reportingCost optimizationPerformance analyticsMulti-platform supportAPI for integrations,
       Custom workflowsExpert consultation],
@@ -1040,7 +1040,7 @@ variant: itam-enterprise,
     price: $85,000,
     period: /month,
     description: Next-generation cloud infrastructure platform built with quantum-resistant cryptography, ensuring your data remains secure even when quantum computers become mainstream.,
-    features: [;
+    features: [
 
       Quantum-resistant encryption algorithmsPost-quantum cryptography standardsHybrid classical-quantum securityZero-trust architectureMulti-cloud orchestrationAutomated security complianceReal-time threat detectionQuantum key distribution,
       Disaster recovery automationPerformance optimization],
@@ -1082,7 +1082,7 @@ variant: quantum-cloud-enterprise,
     price: $45,000,
     period: /month,
     description: Revolutionary IT operations platform that uses AI and automation to monitor, maintain, and optimize your entire IT infrastructure without human intervention.,
-    features: [;
+    features: [
 
       AI-powered infrastructure monitoringAutomated incident responseSelf-healing systemsPredictive maintenancePerformance optimizationCost optimizationSecurity automationCompliance monitoring,
       Real-time analyticsMobile app management],
@@ -1124,7 +1124,7 @@ variant: autonomous-it-enterprise,
     price: $55,000,
     period: /month,
     description: Advanced edge computing platform that orchestrates distributed computing resources, enabling real-time processing and low-latency applications across global networks.,
-    features: [;
+    features: [
 
       Global edge network orchestrationReal-time resource allocationLow-latency application deploymentEdge AI processingNetwork optimizationSecurity at the edgeMulti-cloud edge integrationIoT device management,
       Performance monitoringCost optimization],
@@ -1166,7 +1166,7 @@ variant: edge-orchestration-enterprise,
     price: $40,000,
     period: /month,
     description: Comprehensive blockchain platform that provides enterprise-grade infrastructure for building, deploying, and managing blockchain applications with advanced security and scalability.,
-    features: [;
+    features: [
 
       Multi-blockchain supportSmart contract developmentEnterprise security featuresScalability solutionsInteroperability protocolsGovernance toolsAnalytics and monitoringAPI management,
       Developer toolsCompliance features],
@@ -1201,7 +1201,7 @@ variant: blockchain-enterprise,
 
     reviews: 52;
 
-export interface InnovativeITService2025 {;
+export interface InnovativeITService2025 {
 
   id: string;
 
@@ -1344,7 +1344,7 @@ export const,
     descriptio,
   n: Revolutionary quantum-enhanced cloud infrastructure that provides unprecedented computing power, security, and scalability. Combines quantum computing with traditional cloud services for breakthrough performance.,
     feature,
-  s: [;
+  s: [
 
       Quantum-enhanced computing powerUnbreakable quantum encryptionAutomatic scaling and optimizationQuantum machine learning accelerationReal-time performance monitoringMulti-cloud orchestrationAdvanced security protocolsCost optimization algorithms
       Global edge computing networkQuantum-safe data storage
@@ -1423,7 +1423,7 @@ varian,
     descriptio,
   n: Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and AI-powered threat detection. Protects organizations from modern cyber threats with advanced security protocols.,
     feature,
-  s: [;
+  s: [
 
       Zero trust architecture implementationContinuous identity verificationMicro-segmentationAI-powered threat detectionReal-time security monitoringAdvanced authentication methodsCompliance reportingIncident response automation
       Security analytics dashboardIntegration with existing systems
@@ -1499,7 +1499,7 @@ varian,
     descriptio,
   n: Advanced edge computing orchestration platform that optimizes distributed computing resources, reduces latency, and improves performance for IoT applications and edge computing workloads.,
     feature,
-  s: [;
+  s: [
 
       Intelligent edge orchestrationAutomatic resource optimizationLatency reduction algorithmsIoT device managementEdge analytics processingLoad balancing automationPerformance monitoringCost optimization
       Multi-edge coordinationReal-time analytics
@@ -1576,7 +1576,7 @@ varian,
     descriptio,
   n: Comprehensive enterprise blockchain platform that enables secure, transparent, and efficient business processes. Supports smart contracts, digital assets, and decentralized applications for enterprise use cases.,
     feature,
-  s: [;
+  s: [
 
       Enterprise blockchain infrastructureSmart contract developmentDigital asset managementConsensus mechanismsSecurity and compliancePerformance optimizationIntegration APIsMonitoring and analytics
       Multi-chain supportDeveloper tools
@@ -1652,7 +1652,7 @@ varian,
     descriptio,
   n: Advanced DevOps platform that uses AI to automate software development, testing, deployment, and monitoring, continuously learning and optimizing your development processes.,
     feature,
-  s: [;
+  s: [
 
       AI-powered code reviewAutomated testing optimizationIntelligent deployment strategiesPerformance monitoringSecurity scanningCost optimizationTeam collaboration toolsCI/CD automation
       Infrastructure as codeReal-time analytics
@@ -1726,7 +1726,7 @@ varian,
   d: /month, descriptio,
   n: Revolutionary quantum networking platform that provides unbreakable communication channels using quantum entanglement and quantum key distribution. Perfect for organizations requiring absolute security.,
     feature,
-  s: [;
+  s: [
 
       Quantum key distributionQuantum entanglement networksUnbreakable encryptionGlobal quantum networkReal-time quantum communicationSecurity monitoringPerformance analyticsIntegration APIs
       Compliance reporting24/7 quantum support
@@ -1802,7 +1802,7 @@ varian,
     descriptio,
   n: Advanced autonomous IT operations platform that uses AI to manage, monitor, and optimize IT infrastructure automatically. Reduces manual intervention and improves system reliability.,
     feature,
-  s: [;
+  s: [
 
       AI-powered infrastructure managementAutomated problem resolutionPredictive maintenanceSelf-healing systemsPerformance optimizationResource managementSecurity automationCompliance monitoring
       Analytics and reportingIntegration with existing tools
@@ -1879,7 +1879,7 @@ varian,
     descriptio,
   n: Revolutionary quantum-enhanced data center platform that provides unprecedented computing power, energy efficiency, and security. Combines quantum computing with traditional data center operations.,
     feature,
-  s: [;
+  s: [
 
       Quantum computing integrationAdvanced cooling systemsEnergy optimization algorithmsQuantum security protocolsHigh-performance networkingAutomated managementScalability managementPerformance monitoring
       Cost optimizationGlobal data center network
@@ -1956,7 +1956,7 @@ varian,
     descriptio,
   n: Advanced quantum cybersecurity platform that combines quantum encryption with AI-powered threat detection. Provides unbreakable security for enterprise networks, applications, and data.,
     feature,
-  s: [;
+  s: [
 
       Quantum encryption algorithmsAI threat detectionReal-time monitoringAutomated incident responseVulnerability assessmentCompliance reportingMulti-cloud securityZero-trust architecture
       Threat intelligenceSecurity analytics
@@ -2033,7 +2033,7 @@ varian,
     descriptio,
   n: Advanced cloud migration platform that uses quantum computing to optimize migration strategies, reduce downtime, and ensure seamless transitions to cloud environments.,
     feature,
-  s: [;
+  s: [
 
       Quantum migration optimizationZero-downtime migrationPerformance optimizationCost analysis and optimizationSecurity assessmentCompliance validationMigration automationPerformance monitoring
       Rollback capabilitiesIntegration support
@@ -2109,7 +2109,7 @@ varian,
     descriptio,
   n: Comprehensive platform for developing, deploying, and managing cloud-native applications with microservices architecture and container orchestration.,
     feature,
-  s: [;
+  s: [
 
       Microservices development frameworkContainer orchestration with KubernetesCI/CD pipeline automationService mesh implementationAuto-scaling capabilitiesMulti-cloud deploymentPerformance monitoringSecurity and compliance
       API managementExpert consultation
@@ -2184,7 +2184,7 @@ varian,
     descriptio,
   n: Advanced zero-trust security platform that implements comprehensive security controls, identity verification, and continuous monitoring.,
     feature,
-  s: [;
+  s: [
 
       Identity and access managementMulti-factor authenticationNetwork segmentationContinuous monitoringThreat detectionCompliance reportingAPI securityDevice management
       Risk assessment24/7 security monitoring
@@ -2259,7 +2259,7 @@ varian,
     descriptio,
   n: Advanced edge computing platform that manages distributed computing resources, optimizes performance, and reduces latency for edge applications.,
     feature,
-  s: [;
+  s: [
 
       Edge node managementDistributed computing orchestrationLatency optimizationLoad balancingReal-time processingEdge analyticsMulti-location deploymentPerformance monitoring
       API for integrationsExpert consultation
@@ -2334,7 +2334,7 @@ varian,
     descriptio,
   n: Comprehensive API management platform that provides gateway functionality, security, monitoring, and developer portal capabilities.,
     feature,
-  s: [;
+  s: [
 
       API gateway functionalityRate limiting and throttlingAuthentication and authorizationAPI versioningDeveloper portalPerformance monitoringAnalytics and reportingDocumentation generation
       API testing toolsMulti-cloud support
@@ -2409,7 +2409,7 @@ varian,
     descriptio,
   n: Advanced data pipeline platform that automates data extraction, transformation, and loading processes with real-time processing capabilities.,
     feature,
-  s: [;
+  s: [
 
       Data extraction toolsTransformation workflowsReal-time processingData quality monitoringError handling and recoveryPerformance optimizationMulti-source integrationScheduling and orchestration
       Monitoring and alertingAPI for custom integrations
@@ -2484,7 +2484,7 @@ varian,
     descriptio,
   n: Comprehensive infrastructure as code platform that provides tools for defining, deploying, and managing infrastructure using declarative configuration files.,
     feature,
-  s: [;
+  s: [
 
       Infrastructure definitionMulti-cloud supportVersion control integrationAutomated deploymentState managementPolicy enforcementCost optimizationSecurity scanning
       Compliance reportingTeam collaboration tools
@@ -2559,7 +2559,7 @@ varian,
     descriptio,
   n: Advanced database performance optimization platform that provides real-time monitoring, query optimization, and performance tuning recommendations.,
     feature,
-  s: [;
+  s: [
 
       Real-time performance monitoringQuery optimizationIndex recommendationsPerformance tuningCapacity planningPerformance analyticsMulti-database supportAutomated optimization
       Performance alertsExpert consultation
@@ -2634,7 +2634,7 @@ varian,
     descriptio,
   n: Comprehensive network monitoring platform that provides real-time visibility, performance analytics, and intelligent troubleshooting capabilities.,
     feature,
-  s: [;
+  s: [
 
       Real-time network monitoringPerformance analyticsTraffic analysisAnomaly detectionNetwork mappingPerformance optimizationMulti-vendor supportAPI for integrations
       Custom dashboards24/7 monitoring
@@ -2709,7 +2709,7 @@ varian,
     descriptio,
   n: Advanced IT asset management platform that automatically discovers, tracks, and manages IT assets across your organization.,
     feature,
-  s: [;
+  s: [
 
       Automatic asset discoveryAsset lifecycle managementLicense trackingCompliance reportingCost optimizationPerformance analyticsMulti-platform supportAPI for integrations
       Custom workflowsExpert consultation
@@ -2785,7 +2785,7 @@ varian,
     descriptio,
   n: Next-generation cloud infrastructure platform built with quantum-resistant cryptography, ensuring your data remains secure even when quantum computers become mainstream.,
     feature,
-  s: [;
+  s: [
 
       Quantum-resistant encryption algorithmsPost-quantum cryptography standardsHybrid classical-quantum securityZero-trust architectureMulti-cloud orchestrationAutomated security complianceReal-time threat detectionQuantum key distribution
       Disaster recovery automationPerformance optimization
@@ -2861,7 +2861,7 @@ varian,
     descriptio,
   n: Revolutionary IT operations platform that uses AI and automation to monitor, maintain, and optimize your entire IT infrastructure without human intervention.,
     feature,
-  s: [;
+  s: [
 
       AI-powered infrastructure monitoringAutomated incident responseSelf-healing systemsPredictive maintenancePerformance optimizationCost optimizationSecurity automationCompliance monitoring
       Real-time analyticsMobile app management
@@ -2937,7 +2937,7 @@ varian,
     descriptio,
   n: Advanced edge computing platform that orchestrates distributed computing resources, enabling real-time processing and low-latency applications across global networks.,
     feature,
-  s: [;
+  s: [
 
       Global edge network orchestrationReal-time resource allocationLow-latency application deploymentEdge AI processingNetwork optimizationSecurity at the edgeMulti-cloud edge integrationIoT device management
       Performance monitoringCost optimization
@@ -3013,7 +3013,7 @@ varian,
     descriptio,
   n: Comprehensive blockchain platform that provides enterprise-grade infrastructure for building, deploying, and managing blockchain applications with advanced security and scalability.,
     feature,
-  s: [;
+  s: [
 
       Multi-blockchain supportSmart contract developmentEnterprise security featuresScalability solutionsInteroperability protocolsGovernance toolsAnalytics and monitoringAPI management
       Developer toolsCompliance features
@@ -3101,12 +3101,10 @@ export interface InnovativeITService2025 {/* TODO: Fix JSX expression */}
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  innovativeITServicesEnhanced2025: InnovativeITService[] = [;
+  innovativeITServicesEnhanced2025: InnovativeITService[] = [
 
   // Quantum Cloud Infrastructure Platform;
 
@@ -3191,7 +3189,7 @@ export const,
 
   // Zero Trust Security Platform;
 
-  {;
+  {
 
     id: zero-trust-security-platform;
 
@@ -3273,7 +3271,7 @@ export const,
 
   // Edge Computing Orchestration Platform;
 
-  {;
+  {
 
     id: edge-computing-orchestration;
 
@@ -3355,7 +3353,7 @@ export const,
 
   // Blockchain Enterprise Platform;
 
-  {;
+  {
 
     id: blockchain-enterprise-platform;
 
@@ -3437,7 +3435,7 @@ export const,
 
   // AI-Powered DevOps Platform;
 
-  {;
+  {
 
     id: ai-powered-devops-platform;
 
@@ -3519,7 +3517,7 @@ export const,
 
   // Quantum Networking Platform;
 
-  {;
+  {
 
     id: quantum-networking;
 
@@ -3601,7 +3599,7 @@ export const,
 
   // Autonomous IT Operations Platform;
 
-  {;
+  {
 
     id: autonomous-it-operations;
 
@@ -3683,7 +3681,7 @@ export const,
 
   // Quantum Data Center Platform;
 
-  {;
+  {
 
     id: quantum-data-center;
 
@@ -3765,7 +3763,7 @@ export const,
 
   // Quantum Cybersecurity Platform;
 
-  {;
+  {
 
     id: quantum-cybersecurity;
 
@@ -3847,7 +3845,7 @@ export const,
 
   // Quantum Cloud Migration Platform;
 
-  {;
+  {
 
     id: quantum-cloud-migration;
 
@@ -3929,7 +3927,7 @@ export const,
 
   // Cloud-Native Application Development Platform;
 
-  {;
+  {
 
     id: cloud-native-app-development-platform;
 
@@ -4011,7 +4009,7 @@ export const,
 
   // Zero-Trust Security Architecture Platform;
 
-  {;
+  {
 
     id: zero-trust-security-architecture;
 
@@ -4093,7 +4091,7 @@ export const,
 
   // Edge Computing Orchestration Platform;
 
-  {;
+  {
 
     id: edge-computing-orchestration-platform;
 
@@ -4175,7 +4173,7 @@ export const,
 
   // API Gateway and Management Platform;
 
-  {;
+  {
 
     id: api-gateway-management-platform;
 
@@ -4257,7 +4255,7 @@ export const,
 
   // Data Pipeline and ETL Platform;
 
-  {;
+  {
 
     id: data-pipeline-etl-platform;
 
@@ -4339,7 +4337,7 @@ export const,
 
   // Infrastructure as Code Platform;
 
-  {;
+  {
 
     id: infrastructure-as-code-platform;
 
@@ -4421,7 +4419,7 @@ export const,
 
   // Database Performance Optimization Platform;
 
-  {;
+  {
 
     id: database-performance-optimization-platform;
 
@@ -4503,7 +4501,7 @@ export const,
 
   // Network Monitoring and Analytics Platform;
 
-  {;
+  {
 
     id: network-monitoring-analytics-platform;
 
@@ -4585,7 +4583,7 @@ export const,
 
   // IT Asset Management and Discovery Platform;
 
-  {;
+  {
 
     id: it-asset-management-discovery-platform;
 
@@ -4667,7 +4665,7 @@ export const,
 
   // Quantum-Secure Cloud Infrastructure;
 
-  {;
+  {
 
     id: quantum-secure-cloud-infrastructure;
 
@@ -4749,7 +4747,7 @@ export const,
 
   // Autonomous IT Operations Center;
 
-  {;
+  {
 
     id: autonomous-it-operations-center;
 
@@ -4831,7 +4829,7 @@ export const,
 
   // Edge Computing Orchestration Platform;
 
-  {;
+  {
 
     id: edge-computing-orchestration-platform;
 
@@ -4913,7 +4911,7 @@ export const,
 
   // Blockchain Infrastructure Platform;
 
-  {;
+  {
 
     id: blockchain-infrastructure-platform;
 
@@ -5012,7 +5010,7 @@ export const,
     launchDate: 2024-09-01,
     customers: 123;
 
-export interface InnovativeITService2025 {;
+export interface InnovativeITService2025 {
 
   id: string;
 
@@ -6083,12 +6081,10 @@ export interface InnovativeITService2025 {/* TODO: Fix JSX expression */}
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  innovativeITServicesEnhanced2025: InnovativeITService[] = [;
+  innovativeITServicesEnhanced2025: InnovativeITService[] = [
 
   // Quantum Cloud Infrastructure Platform;
 
@@ -6173,7 +6169,7 @@ export const,
 
   // Zero Trust Security Platform;
 
-  {;
+  {
 
     id: zero-trust-security-platform;
 
@@ -6255,7 +6251,7 @@ export const,
 
   // Edge Computing Orchestration Platform;
 
-  {;
+  {
 
     id: edge-computing-orchestration;
 
@@ -6337,7 +6333,7 @@ export const,
 
   // Blockchain Enterprise Platform;
 
-  {;
+  {
 
     id: blockchain-enterprise-platform;
 
@@ -6419,7 +6415,7 @@ export const,
 
   // AI-Powered DevOps Platform;
 
-  {;
+  {
 
     id: ai-powered-devops-platform;
 
@@ -6501,7 +6497,7 @@ export const,
 
   // Quantum Networking Platform;
 
-  {;
+  {
 
     id: quantum-networking;
 
@@ -6583,7 +6579,7 @@ export const,
 
   // Autonomous IT Operations Platform;
 
-  {;
+  {
 
     id: autonomous-it-operations;
 
@@ -6665,7 +6661,7 @@ export const,
 
   // Quantum Data Center Platform;
 
-  {;
+  {
 
     id: quantum-data-center;
 
@@ -6747,7 +6743,7 @@ export const,
 
   // Quantum Cybersecurity Platform;
 
-  {;
+  {
 
     id: quantum-cybersecurity;
 
@@ -6829,7 +6825,7 @@ export const,
 
   // Quantum Cloud Migration Platform;
 
-  {;
+  {
 
     id: quantum-cloud-migration;
 
@@ -6911,7 +6907,7 @@ export const,
 
   // Cloud-Native Application Development Platform;
 
-  {;
+  {
 
     id: cloud-native-app-development-platform;
 
@@ -6993,7 +6989,7 @@ export const,
 
   // Zero-Trust Security Architecture Platform;
 
-  {;
+  {
 
     id: zero-trust-security-architecture;
 
@@ -7075,7 +7071,7 @@ export const,
 
   // Edge Computing Orchestration Platform;
 
-  {;
+  {
 
     id: edge-computing-orchestration-platform;
 
@@ -7157,7 +7153,7 @@ export const,
 
   // API Gateway and Management Platform;
 
-  {;
+  {
 
     id: api-gateway-management-platform;
 
@@ -7239,7 +7235,7 @@ export const,
 
   // Data Pipeline and ETL Platform;
 
-  {;
+  {
 
     id: data-pipeline-etl-platform;
 
@@ -7321,7 +7317,7 @@ export const,
 
   // Infrastructure as Code Platform;
 
-  {;
+  {
 
     id: infrastructure-as-code-platform;
 
@@ -7403,7 +7399,7 @@ export const,
 
   // Database Performance Optimization Platform;
 
-  {;
+  {
 
     id: database-performance-optimization-platform;
 
@@ -7485,7 +7481,7 @@ export const,
 
   // Network Monitoring and Analytics Platform;
 
-  {;
+  {
 
     id: network-monitoring-analytics-platform;
 
@@ -7567,7 +7563,7 @@ export const,
 
   // IT Asset Management and Discovery Platform;
 
-  {;
+  {
 
     id: it-asset-management-discovery-platform;
 
@@ -7649,7 +7645,7 @@ export const,
 
   // Quantum-Secure Cloud Infrastructure;
 
-  {;
+  {
 
     id: quantum-secure-cloud-infrastructure;
 
@@ -7731,7 +7727,7 @@ export const,
 
   // Autonomous IT Operations Center;
 
-  {;
+  {
 
     id: autonomous-it-operations-center;
 
@@ -7813,7 +7809,7 @@ export const,
 
   // Edge Computing Orchestration Platform;
 
-  {;
+  {
 
     id: edge-computing-orchestration-platform;
 
@@ -7895,7 +7891,7 @@ export const,
 
   // Blockchain Infrastructure Platform;
 
-  {;
+  {
 
     id: blockchain-infrastructure-platform;
 
@@ -8966,7 +8962,7 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709,  websit,
   e: http,
   s://ziontechgroup.com } real_implementatio,
-  n: true; implementation_detail,
+  n: true'; implementation_detail,
   s: 'Cloud - based blockchain platform with multi - chain support and enterprise features. launch_dat,
   e: 2024 - 09 - 01 customer,
   s: 123, ratin,
@@ -9049,7 +9045,7 @@ i,
   e: 2024-12-01, customer,
   s: 23, ratin,
   g: 4.9, review,
-  s: 15 }; // Zero Trust Security Platform  i,
+  s: 15 }'; // Zero Trust Security Platform  i,
   d: zero-trust-security-platform, nam,
   e: 'Zero Trust Security Platform, taglin,
   e: Advanced cybersecurity with zero trust architecture and AI threat detection, pric,
@@ -9087,7 +9083,7 @@ i,
   e: 2024-11-15, customer,
   s: 67, ratin,
   g: 4.8, review,
-  s: 42 }; // Edge Computing Orchestration Platform  i,
+  s: 42 }'; // Edge Computing Orchestration Platform  i,
   d: edge-computing-orchestration, nam,
   e: 'Edge Computing Orchestration Platform, taglin,
   e: Optimize edge computing with intelligent orchestration and automation, pric,
@@ -9125,7 +9121,7 @@ i,
   e: 2024-10-20, customer,
   s: 89, ratin,
   g: 4.7, review,
-  s: 56 }; // Blockchain Enterprise Platform  i,
+  s: 56 }'; // Blockchain Enterprise Platform  i,
   d: blockchain-enterprise-platform, nam,
   e: 'Blockchain Enterprise Platform, taglin,
   e: 'Enterprise-grade blockchain solutions for business transformation, pric,
@@ -9163,7 +9159,7 @@ i,
   e: 2024-09-15, customer,
   s: 45, ratin,
   g: 4.8, review,
-  s: 31 }; // AI-Powered DevOps Platform  i,
+  s: 31 }'; // AI-Powered DevOps Platform  i,
   d: ai-powered-devops-platform, nam,
   e: 'AI-Powered DevOps Platform, taglin,
   e: 'Intelligent DevOps automation that learns and improves over time, pric,
@@ -9201,7 +9197,7 @@ i,
   e: 2024-08-15, customer,
   s: 234, ratin,
   g: 4.9, review,
-  s: 167 }; // Quantum Networking Platform  i,
+  s: 167 }'; // Quantum Networking Platform  i,
   d: quantum-networking, nam,
   e: 'Quantum Networking Platform, taglin,
   e: 'Unbreakable communication with quantum networking technology, pric,
@@ -9239,7 +9235,7 @@ i,
   e: 2024-07-30, customer,
   s: 18, ratin,
   g: 4.9, review,
-  s: 12 }; // Autonomous IT Operations Platform  i,
+  s: 12 }'; // Autonomous IT Operations Platform  i,
   d: autonomous-it-operations, nam,
   e: 'Autonomous IT Operations Platform, taglin,
   e: Self-managing IT infrastructure with AI-powered automation, pric,
@@ -9277,7 +9273,7 @@ i,
   e: 2024-06-20, customer,
   s: 78, ratin,
   g: 4.8, review,
-  s: 52 }; // Quantum Data Center Platform  i,
+  s: 52 }'; // Quantum Data Center Platform  i,
   d: quantum-data-center, nam,
   e: 'Quantum Data Center Platform, taglin,
   e: 'Next-generation data centers powered by quantum technology, pric,
@@ -9315,7 +9311,7 @@ i,
   e: 2024-05-15, customer,
   s: 12, ratin,
   g: 4.9, review,
-  s: 8 }; // Quantum Cybersecurity Platform  i,
+  s: 8 }'; // Quantum Cybersecurity Platform  i,
   d: quantum-cybersecurity, nam,
   e: 'Quantum Cybersecurity Platform, taglin,
   e: 'Unbreakable security with quantum encryption and AI threat detection, pric,
@@ -9353,7 +9349,7 @@ i,
   e: 2024-04-25, customer,
   s: 34, ratin,
   g: 4.9, review,
-  s: 23 }; // Quantum Cloud Migration Platform  i,
+  s: 23 }'; // Quantum Cloud Migration Platform  i,
   d: quantum-cloud-migration, nam,
   e: 'Quantum Cloud Migration Platform, taglin,
   e: 'Seamless cloud migration with quantum-enhanced optimization, pric,
@@ -9391,7 +9387,7 @@ i,
   e: 2024-03-30, customer,
   s: 56, ratin,
   g: 4.8, review,
-  s: 38 }; // Cloud-Native Application Development Platform  i,
+  s: 38 }'; // Cloud-Native Application Development Platform  i,
   d: cloud-native-app-development-platform, nam,
   e: 'Cloud-Native Application Development Platform, taglin,
   e: Build scalable applications for the cloud era, pric,
@@ -9429,7 +9425,7 @@ i,
   e: 2024-12-01, customer,
   s: 41, ratin,
   g: 4.8, review,
-  s: 33 }; // Zero-Trust Security Architecture Platform  i,
+  s: 33 }'; // Zero-Trust Security Architecture Platform  i,
   d: zero-trust-security-architecture, nam,
   e: 'Zero-Trust Security Architecture Platform, taglin,
   e: Secure your network with zero-trust principles, pric,
@@ -9467,7 +9463,7 @@ i,
   e: 2024-11-15, customer,
   s: 26, ratin,
   g: 4.9, review,
-  s: 21 }; // Edge Computing Orchestration Platform  i,
+  s: 21 }'; // Edge Computing Orchestration Platform  i,
   d: edge-computing-orchestration-platform, nam,
   e: 'Edge Computing Orchestration Platform, taglin,
   e: Orchestrate computing at the edge of your network, pric,
@@ -9505,7 +9501,7 @@ i,
   e: 2024-10-15, customer,
   s: 34, ratin,
   g: 4.7, review,
-  s: 28 }; // API Gateway and Management Platform  i,
+  s: 28 }'; // API Gateway and Management Platform  i,
   d: api-gateway-management-platform, nam,
   e: 'API Gateway and Management Platform, taglin,
   e: Manage and secure your APIs with enterprise-grade tools, pric,
@@ -9543,7 +9539,7 @@ i,
   e: 2024-09-15, customer,
   s: 48, ratin,
   g: 4.6, review,
-  s: 39 }; // Data Pipeline and ETL Platform  i,
+  s: 39 }'; // Data Pipeline and ETL Platform  i,
   d: data-pipeline-etl-platform, nam,
   e: 'Data Pipeline and ETL Platform, taglin,
   e: Build robust data pipelines with intelligent automation, pric,
@@ -9581,7 +9577,7 @@ i,
   e: 2024-08-15, customer,
   s: 36, ratin,
   g: 4.7, review,
-  s: 29 }; // Infrastructure as Code Platform  i,
+  s: 29 }'; // Infrastructure as Code Platform  i,
   d: infrastructure-as-code-platform, nam,
   e: 'Infrastructure as Code Platform, taglin,
   e: Manage infrastructure with code and automation, pric,
@@ -9619,7 +9615,7 @@ i,
   e: 2024-07-15, customer,
   s: 42, ratin,
   g: 4.8, review,
-  s: 35 }; // Database Performance Optimization Platform  i,
+  s: 35 }'; // Database Performance Optimization Platform  i,
   d: database-performance-optimization-platform, nam,
   e: 'Database Performance Optimization Platform, taglin,
   e: Optimize your database performance with intelligent insights, pric,
@@ -9657,7 +9653,7 @@ i,
   e: 2024-06-15, customer,
   s: 38, ratin,
   g: 4.7, review,
-  s: 31 }; // Network Monitoring and Analytics Platform  i,
+  s: 31 }'; // Network Monitoring and Analytics Platform  i,
   d: network-monitoring-analytics-platform, nam,
   e: 'Network Monitoring and Analytics Platform, taglin,
   e: Monitor and analyze your network with intelligent insights, pric,
@@ -9695,7 +9691,7 @@ i,
   e: 2024-05-15, customer,
   s: 45, ratin,
   g: 4.6, review,
-  s: 37 }; // IT Asset Management and Discovery Platform  i,
+  s: 37 }'; // IT Asset Management and Discovery Platform  i,
   d: it-asset-management-discovery-platform, nam,
   e: 'IT Asset Management and Discovery Platform, taglin,
   e: Discover and manage your IT assets with intelligent automation, pric,
@@ -9733,7 +9729,7 @@ i,
   e: 2024-04-15, customer,
   s: 52, ratin,
   g: 4.8, review,
-  s: 43 }; // Quantum-Secure Cloud Infrastructure  i,
+  s: 43 }'; // Quantum-Secure Cloud Infrastructure  i,
   d: quantum-secure-cloud-infrastructure, nam,
   e: 'Quantum-Secure Cloud Infrastructure, taglin,
   e: 'Future-proof cloud infrastructure with quantum-resistant encryption, pric,
@@ -9771,7 +9767,7 @@ i,
   e: 2024-12-01, customer,
   s: 18, ratin,
   g: 4.9, review,
-  s: 12 }; // Autonomous IT Operations Center  i,
+  s: 12 }'; // Autonomous IT Operations Center  i,
   d: autonomous-it-operations-center, nam,
   e: 'Autonomous IT Operations Center, taglin,
   e: 'Self-healing IT infrastructure that manages itself 24/7, pric,
@@ -9809,7 +9805,7 @@ i,
   e: 2024-11-01, customer,
   s: 67, ratin,
   g: 4.8, review,
-  s: 45 }; // Edge Computing Orchestration Platform  i,
+  s: 45 }'; // Edge Computing Orchestration Platform  i,
   d: edge-computing-orchestration-platform, nam,
   e: 'Edge Computing Orchestration Platform, taglin,
   e: 'Orchestrate edge computing resources across global networks, pric,
@@ -9847,7 +9843,7 @@ i,
   e: 2024-10-15, customer,
   s: 89, ratin,
   g: 4.7, review,
-  s: 56 }; // Blockchain Infrastructure Platform  i,
+  s: 56 }'; // Blockchain Infrastructure Platform  i,
   d: blockchain-infrastructure-platform, nam,
   e: 'Blockchain Infrastructure Platform, taglin,
   e: 'Enterprise-grade blockchain infrastructure for modern applications, pric,
@@ -9894,269 +9890,269 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  innovativeITServicesEnhanced2025: InnovativeITService[] = [; // Quantum Cloud Infrastructure Platform; {/* TODO: Fix JSX expression */}
+  s: number}; export const,
+  innovativeITServicesEnhanced2025: InnovativeITService[] = [ // Quantum Cloud Infrastructure Platform; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum-enhanced cloud infrastructure with advanced algorithms, quantum encryption, and comprehensive cloud management tools.; launchDat,
   e: 2024-12-01; customer,
   s: 23; ratin,
-  g: 4.9; review,
-  s: 15}; // Zero Trust Security Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 15}'; // Zero Trust Security Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Zero trust security platform with advanced authentication, continuous monitoring, and AI-powered threat detection.; launchDat,
   e: 2024-11-15; customer,
   s: 67; ratin,
-  g: 4.8; review,
-  s: 42}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 42}'; // Edge Computing Orchestration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Edge computing orchestration platform with intelligent resource management, automated optimization, and comprehensive monitoring tools.; launchDat,
   e: 2024-10-20; customer,
   s: 89; ratin,
-  g: 4.7; review,
-  s: 56}; // Blockchain Enterprise Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 56}'; // Blockchain Enterprise Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Enterprise blockchain platform with smart contract capabilities, digital asset management, and comprehensive business integration tools.; launchDat,
   e: 2024-09-15; customer,
   s: 45; ratin,
-  g: 4.8; review,
-  s: 31}; // AI-Powered DevOps Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 31}'; // AI-Powered DevOps Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-based DevOps platform with AI-driven automation and optimization.; launchDat,
   e: 2024-08-15; customer,
   s: 234; ratin,
-  g: 4.9; review,
-  s: 167}; // Quantum Networking Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 167}'; // Quantum Networking Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum networking platform with quantum key distribution, entanglement networks, and unbreakable security protocols.; launchDat,
   e: 2024-07-30; customer,
   s: 18; ratin,
-  g: 4.9; review,
-  s: 12}; // Autonomous IT Operations Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 12}'; // Autonomous IT Operations Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Autonomous IT operations platform with AI-powered automation, predictive maintenance, and self-healing capabilities.; launchDat,
   e: 2024-06-20; customer,
   s: 78; ratin,
-  g: 4.8; review,
-  s: 52}; // Quantum Data Center Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 52}'; // Quantum Data Center Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum-enhanced data center platform with advanced computing capabilities, energy optimization, and comprehensive management tools.; launchDat,
   e: 2024-05-15; customer,
   s: 12; ratin,
-  g: 4.9; review,
-  s: 8}; // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 8}'; // Quantum Cybersecurity Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum cybersecurity platform with unbreakable encryption, AI threat detection, and comprehensive security management tools.; launchDat,
   e: 2024-04-25; customer,
   s: 34; ratin,
-  g: 4.9; review,
-  s: 23}; // Quantum Cloud Migration Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 23}'; // Quantum Cloud Migration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum cloud migration platform with optimization algorithms, automated migration, and comprehensive cloud transition tools.; launchDat,
   e: 2024-03-30; customer,
   s: 56; ratin,
-  g: 4.8; review,
-  s: 38}; // Cloud-Native Application Development Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 38}'; // Cloud-Native Application Development Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-native application development platform with microservices architecture and container orchestration.; launchDat,
   e: 2024-12-01; customer,
   s: 41; ratin,
-  g: 4.8; review,
-  s: 33}; // Zero-Trust Security Architecture Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 33}'; // Zero-Trust Security Architecture Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Zero-trust security platform with comprehensive identity management and continuous monitoring capabilities.; launchDat,
   e: 2024-11-15; customer,
   s: 26; ratin,
-  g: 4.9; review,
-  s: 21}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 21}'; // Edge Computing Orchestration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Edge computing orchestration platform with distributed computing management and real-time optimization.; launchDat,
   e: 2024-10-15; customer,
   s: 34; ratin,
-  g: 4.7; review,
-  s: 28}; // API Gateway and Management Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 28}'; // API Gateway and Management Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'API gateway and management platform with comprehensive security and developer tools.; launchDat,
   e: 2024-09-15; customer,
   s: 48; ratin,
-  g: 4.6; review,
-  s: 39}; // Data Pipeline and ETL Platform; {/* TODO: Fix JSX expression */}
+  g: 4.6'; review,
+  s: 39}'; // Data Pipeline and ETL Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Data pipeline and ETL platform with real-time processing and comprehensive monitoring capabilities.; launchDat,
   e: 2024-08-15; customer,
   s: 36; ratin,
-  g: 4.7; review,
-  s: 29}; // Infrastructure as Code Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 29}'; // Infrastructure as Code Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Infrastructure as code platform with multi-cloud support and comprehensive automation tools.; launchDat,
   e: 2024-07-15; customer,
   s: 42; ratin,
-  g: 4.8; review,
-  s: 35}; // Database Performance Optimization Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 35}'; // Database Performance Optimization Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Database performance optimization platform with real-time monitoring and intelligent tuning recommendations.; launchDat,
   e: 2024-06-15; customer,
   s: 38; ratin,
-  g: 4.7; review,
-  s: 31}; // Network Monitoring and Analytics Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 31}'; // Network Monitoring and Analytics Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Network monitoring and analytics platform with AI-powered insights and comprehensive visibility.; launchDat,
   e: 2024-05-15; customer,
   s: 45; ratin,
-  g: 4.6; review,
-  s: 37}; // IT Asset Management and Discovery Platform; {/* TODO: Fix JSX expression */}
+  g: 4.6'; review,
+  s: 37}'; // IT Asset Management and Discovery Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'IT asset management and discovery platform with automated discovery and comprehensive lifecycle management.; launchDat,
   e: 2024-04-15; customer,
   s: 52; ratin,
-  g: 4.8; review,
-  s: 43}; // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 43}'; // Quantum-Secure Cloud Infrastructure'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-native infrastructure with quantum-resistant security and multi-cloud orchestration.; launchDat,
   e: 2024-12-01; customer,
   s: 18; ratin,
-  g: 4.9; review,
-  s: 12}; // Autonomous IT Operations Center; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 12}'; // Autonomous IT Operations Center'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-based IT operations platform with AI-driven automation and monitoring.; launchDat,
   e: 2024-11-01; customer,
   s: 67; ratin,
-  g: 4.8; review,
-  s: 45}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 45}'; // Edge Computing Orchestration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-native edge orchestration platform with global network optimization.; launchDat,
   e: 2024-10-15; customer,
   s: 89; ratin,
-  g: 4.7; review,
-  s: 56}; // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 56}'; // Blockchain Infrastructure Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-based blockchain platform with multi-chain support and enterprise features.; launchDat,
   e: 2024-09-01; customer,
   s: 123; ratin,
-  g: 4.8; review,
-  s: 52} ]; ratin,
-  g: 4.8, ]; mobil,
+  g: 4.8'; review,
+  s: 52} ]'; ratin,
+  g: 4.8, ]'; mobil,
   e: '+1 302 464 0950 emai,
   l: 'kleber@ziontechgroup.com addres,
   s: '364 E Main St STE 1008 Middletown DE 19709 websit,
   e: http,
   s://ziontechgroup.com } review,
-  s: 52; realImplementatio,
-  n: true; implementationDetail,
+  s: 52'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-based blockchain platform with multi-chain support and enterprise features. launchDat,
   e: 2024-09-01 customer,
   s: 123, ' import { ServiceVariant } from ../types/service-variants; export interface InnovativeITService2025 {/* TODO: Fix JSX expression */}
@@ -10168,258 +10164,258 @@ i,
   e: string; customer,
   s: number; ratin,
   g: number; review,
-  s: number} ; export const,
-  innovativeITServicesEnhanced2025: InnovativeITService[] = [; // Quantum Cloud Infrastructure Platform; {/* TODO: Fix JSX expression */}
+  s: number}; export const,
+  innovativeITServicesEnhanced2025: InnovativeITService[] = [ // Quantum Cloud Infrastructure Platform; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum-enhanced cloud infrastructure with advanced algorithms, quantum encryption, and comprehensive cloud management tools.; launchDat,
   e: 2024-12-01; customer,
   s: 23; ratin,
-  g: 4.9; review,
-  s: 15}; // Zero Trust Security Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 15}'; // Zero Trust Security Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Zero trust security platform with advanced authentication, continuous monitoring, and AI-powered threat detection.; launchDat,
   e: 2024-11-15; customer,
   s: 67; ratin,
-  g: 4.8; review,
-  s: 42}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 42}'; // Edge Computing Orchestration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Edge computing orchestration platform with intelligent resource management, automated optimization, and comprehensive monitoring tools.; launchDat,
   e: 2024-10-20; customer,
   s: 89; ratin,
-  g: 4.7; review,
-  s: 56}; // Blockchain Enterprise Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 56}'; // Blockchain Enterprise Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Enterprise blockchain platform with smart contract capabilities, digital asset management, and comprehensive business integration tools.; launchDat,
   e: 2024-09-15; customer,
   s: 45; ratin,
-  g: 4.8; review,
-  s: 31}; // AI-Powered DevOps Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 31}'; // AI-Powered DevOps Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-based DevOps platform with AI-driven automation and optimization.; launchDat,
   e: 2024-08-15; customer,
   s: 234; ratin,
-  g: 4.9; review,
-  s: 167}; // Quantum Networking Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 167}'; // Quantum Networking Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum networking platform with quantum key distribution, entanglement networks, and unbreakable security protocols.; launchDat,
   e: 2024-07-30; customer,
   s: 18; ratin,
-  g: 4.9; review,
-  s: 12}; // Autonomous IT Operations Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 12}'; // Autonomous IT Operations Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Autonomous IT operations platform with AI-powered automation, predictive maintenance, and self-healing capabilities.; launchDat,
   e: 2024-06-20; customer,
   s: 78; ratin,
-  g: 4.8; review,
-  s: 52}; // Quantum Data Center Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 52}'; // Quantum Data Center Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum-enhanced data center platform with advanced computing capabilities, energy optimization, and comprehensive management tools.; launchDat,
   e: 2024-05-15; customer,
   s: 12; ratin,
-  g: 4.9; review,
-  s: 8}; // Quantum Cybersecurity Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 8}'; // Quantum Cybersecurity Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum cybersecurity platform with unbreakable encryption, AI threat detection, and comprehensive security management tools.; launchDat,
   e: 2024-04-25; customer,
   s: 34; ratin,
-  g: 4.9; review,
-  s: 23}; // Quantum Cloud Migration Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 23}'; // Quantum Cloud Migration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Quantum cloud migration platform with optimization algorithms, automated migration, and comprehensive cloud transition tools.; launchDat,
   e: 2024-03-30; customer,
   s: 56; ratin,
-  g: 4.8; review,
-  s: 38}; // Cloud-Native Application Development Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 38}'; // Cloud-Native Application Development Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-native application development platform with microservices architecture and container orchestration.; launchDat,
   e: 2024-12-01; customer,
   s: 41; ratin,
-  g: 4.8; review,
-  s: 33}; // Zero-Trust Security Architecture Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 33}'; // Zero-Trust Security Architecture Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Zero-trust security platform with comprehensive identity management and continuous monitoring capabilities.; launchDat,
   e: 2024-11-15; customer,
   s: 26; ratin,
-  g: 4.9; review,
-  s: 21}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 21}'; // Edge Computing Orchestration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Edge computing orchestration platform with distributed computing management and real-time optimization.; launchDat,
   e: 2024-10-15; customer,
   s: 34; ratin,
-  g: 4.7; review,
-  s: 28}; // API Gateway and Management Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 28}'; // API Gateway and Management Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'API gateway and management platform with comprehensive security and developer tools.; launchDat,
   e: 2024-09-15; customer,
   s: 48; ratin,
-  g: 4.6; review,
-  s: 39}; // Data Pipeline and ETL Platform; {/* TODO: Fix JSX expression */}
+  g: 4.6'; review,
+  s: 39}'; // Data Pipeline and ETL Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Data pipeline and ETL platform with real-time processing and comprehensive monitoring capabilities.; launchDat,
   e: 2024-08-15; customer,
   s: 36; ratin,
-  g: 4.7; review,
-  s: 29}; // Infrastructure as Code Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 29}'; // Infrastructure as Code Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Infrastructure as code platform with multi-cloud support and comprehensive automation tools.; launchDat,
   e: 2024-07-15; customer,
   s: 42; ratin,
-  g: 4.8; review,
-  s: 35}; // Database Performance Optimization Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 35}'; // Database Performance Optimization Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Database performance optimization platform with real-time monitoring and intelligent tuning recommendations.; launchDat,
   e: 2024-06-15; customer,
   s: 38; ratin,
-  g: 4.7; review,
-  s: 31}; // Network Monitoring and Analytics Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 31}'; // Network Monitoring and Analytics Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Network monitoring and analytics platform with AI-powered insights and comprehensive visibility.; launchDat,
   e: 2024-05-15; customer,
   s: 45; ratin,
-  g: 4.6; review,
-  s: 37}; // IT Asset Management and Discovery Platform; {/* TODO: Fix JSX expression */}
+  g: 4.6'; review,
+  s: 37}'; // IT Asset Management and Discovery Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'IT asset management and discovery platform with automated discovery and comprehensive lifecycle management.; launchDat,
   e: 2024-04-15; customer,
   s: 52; ratin,
-  g: 4.8; review,
-  s: 43}; // Quantum-Secure Cloud Infrastructure; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 43}'; // Quantum-Secure Cloud Infrastructure'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-native infrastructure with quantum-resistant security and multi-cloud orchestration.; launchDat,
   e: 2024-12-01; customer,
   s: 18; ratin,
-  g: 4.9; review,
-  s: 12}; // Autonomous IT Operations Center; {/* TODO: Fix JSX expression */}
+  g: 4.9'; review,
+  s: 12}'; // Autonomous IT Operations Center'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-based IT operations platform with AI-driven automation and monitoring.; launchDat,
   e: 2024-11-01; customer,
   s: 67; ratin,
-  g: 4.8; review,
-  s: 45}; // Edge Computing Orchestration Platform; {/* TODO: Fix JSX expression */}
+  g: 4.8'; review,
+  s: 45}'; // Edge Computing Orchestration Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-native edge orchestration platform with global network optimization.; launchDat,
   e: 2024-10-15; customer,
   s: 89; ratin,
-  g: 4.7; review,
-  s: 56}; // Blockchain Infrastructure Platform; {/* TODO: Fix JSX expression */}
+  g: 4.7'; review,
+  s: 56}'; // Blockchain Infrastructure Platform'; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
-  s://ziontechgroup.com }; realImplementatio,
-  n: true; implementationDetail,
+  s://ziontechgroup.com }'; realImplementatio,
+  n: true'; implementationDetail,
   s: 'Cloud-based blockchain platform with multi-chain support and enterprise features.; launchDat,
   e: 2024-09-01; customer,
-  s: 123; ratin,
-  g: 4.8; review,
-  s: 52} ]; '
+  s: 123'; ratin,
+  g: 4.8'; review,
+  s: 52} ]'; '

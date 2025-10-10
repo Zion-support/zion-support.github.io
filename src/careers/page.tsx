@@ -1,18 +1,18 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react;
+import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
 
 import Navigation from '../components/Navigation;
 
-import Footer from ../components/Footer;
+import Footer from ../components/Footer';
 
-;
+';
 
-const CareersPage: React.FC = () => {;
+const CareersPage: React.FC = () => {
 
-const openPositions = [;;;
+const openPositions = [';';';
 
     {
       id: 'senior-ai-engineer,
@@ -121,7 +121,7 @@ const openPositions = [;;;
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     {
       icon: Heart,
@@ -146,9 +146,9 @@ const benefits = [;;
 
   ];
 
-;
+';
 
-const culture = [;;
+const culture = [';';
 
     'Innovation-driven environment where creativity is encouraged,
     'Collaborative team culture with diverse perspectives,
@@ -388,6 +388,6 @@ const culture = [;;
 
       <Footer />
     </div>
-  )};
+  )}">
 
-export default CareersPage;
+export default CareersPage";

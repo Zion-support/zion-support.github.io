@@ -1,4 +1,4 @@
-export const revolutionary2048FuturisticServices = [;;
+export const revolutionary2048FuturisticServices = [
 
   // Quantum Consciousness Transfer Platform 2048;
 

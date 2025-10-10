@@ -1,6 +1,6 @@
 
 
-'use client;
+'use client';
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 

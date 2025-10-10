@@ -271,8 +271,8 @@ export const isProduction = () => envConfig.isProduction();;
 
 export const isDevelopment = () => envConfig.isDevelopment();;
 
-export const isTest = () => envConfig.isTest();;
+export const isTest = () => envConfig.isTest();`;
 
-export const getConfig = () => envConfig.getConfig();;
+export const getConfig = () => envConfig.getConfig()``;```;
 
-export const getApiHeaders = () => envConfig.getApiHeaders()`;;
+export const getApiHeaders = () => envConfig.getApiHeaders()```;```;

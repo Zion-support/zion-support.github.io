@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
     // Repository radar simulation;
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -27,13 +27,13 @@ timestamp: new Date().toISOString()
 
           lastScan: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */};
 
         'Access-Control-Allow-Origin': '*'}
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
   n: new Date().toISOString()}
 
         }})};
@@ -73,10 +73,10 @@ function: 'repo-radar-runner'}
 
 };
 
-        timestamp: new Date().toISOString(),' function: 'repo-radar-runner',' source: event.source || 'unknown', radar: {' status: 'scanning, repositories: 0, signals: 0;
+        timestamp: new Date().toISOString(),' function: 'repo-radar-runner',' source: event.source || 'unknown', radar: {' status: 'scanning, repositories: 0, signals: 0';
 
-        lastScan: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'repo-radar-runner }) }} };
+        lastScan: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'repo-radar-runner }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -93,4 +93,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'repo-radar-runner }) }} };
+  n: 'repo-radar-runner }) }} }';

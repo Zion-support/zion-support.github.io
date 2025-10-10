@@ -1,20 +1,20 @@
-'use client;
+'use client';
 
-import React, { memo } from 'react;
+import React, { memo } from 'react';
 
 import { Link } from 'react-router-dom;
 
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from lucide-react;
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from lucide-react';
 
-;
+';
 
-const Footer: React.FC = memo(() => {;
+const Footer: React.FC = memo(() => {
 
-const currentYear = new Date().getFullYear();;
+const currentYear = new Date().getFullYear()';';
 
-  ;
+  ';
 
-const microSaasServices = [;;;
+const microSaasServices = [';';';
 
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊, popular: true },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱, popular: true },
@@ -27,9 +27,9 @@ const microSaasServices = [;;;
 
   ];
 
-;
+';
 
-const aiServices = [;;
+const aiServices = [';';
 
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation },
@@ -56,9 +56,9 @@ const aiServices = [;;
 
   ];
 
-;
+';
 
-const itServices = [;;
+const itServices = [';';
 
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure },
@@ -79,9 +79,9 @@ const itServices = [;;
 
   ];
 
-;
+';
 
-const emergingTech = [;;
+const emergingTech = [';';
 
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics },
@@ -98,9 +98,9 @@ const emergingTech = [;;
 
   ];
 
-;
+';
 
-const companyLinks = [;;
+const companyLinks = [';';
 
     { name: 'About Us', url: '/about },
     { name: 'Our Team', url: '/team },
@@ -110,9 +110,9 @@ const companyLinks = [;;
 
   ];
 
-;
+';
 
-const supportLinks = [;;
+const supportLinks = [';';
 
     { name: 'Documentation', url: '/docs },
     { name: 'API Reference', url: '/api-docs },
@@ -123,9 +123,9 @@ const supportLinks = [;;
 
   ];
 
-;
+';
 
-const socialLinks = [;;
+const socialLinks = [';';
 
     { name: 'Facebook', url: 'https://facebook.com/ziontechgroup, icon: Facebook },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup, icon: Twitter },
@@ -136,9 +136,9 @@ const socialLinks = [;;
 
   ];
 
-;
+';
 
-const contactInfo = {;;
+const contactInfo = {';';
 
     phone: '+1 (302) 464-0950,
     email: 'kleber@ziontechgroup.com,
@@ -146,16 +146,16 @@ const contactInfo = {;;
     hours: Mon-Fri: 9AM-6PM EST
   };
 
-;
+';
 
-const achievements = [;;
+const achievements = [';';
 
     { icon: Award, text: '50+ Successful Projects },
     { icon: Users, text: '100+ Happy Clients },
     { icon: TrendingUp, text: '300% Average ROI },
     { icon: Shield, text: '99.9% Uptime Guarantee }
 
-  ];
+  ]';
 
   return (
 
@@ -470,8 +470,8 @@ const achievements = [;;
         </div>
       </div>
     </footer>
-  )});
+  )})'">
 
-Footer.displayName = Footer;
+Footer.displayName = Footer">
 
-export default Footer;
+export default Footer'";

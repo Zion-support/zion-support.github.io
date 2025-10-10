@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
@@ -65,7 +65,7 @@ $4}}
 
   }
 
-  componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {;
+  componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
 
 const { resetKeys, resetOnPropsChange } = this.props;
 
@@ -103,7 +103,7 @@ const { resetKeys, resetOnPropsChange } = this.props;
   return (
 
     // Report to error monitoring service
-    if (typeof window !== 'undefined' && gtag in window) {;
+    if (typeof window !== 'undefined' && gtag in window) {
 
 const gtag = (;;
 
@@ -319,7 +319,7 @@ ErrorFallback.displayName = ErrorFallback;
   focus:ring-gray-500,
   focus:ring-offset-2 transition-colors
 // >
-//             Reload Page;
+//             Reload Page`;
 
           </button>
         </div>
@@ -332,6 +332,6 @@ ErrorFallback.displayName = ErrorFallback;
       </div>
     </div>
 //   )
-);
+)``;
 
-ErrorFallback.displayName = ErrorFallback;
+ErrorFallback.displayName = ErrorFallback```;

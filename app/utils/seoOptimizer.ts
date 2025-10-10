@@ -209,7 +209,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.setMetaTag('keywords', keywords)
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName)
     this.setMetaTag('robots', this.getRobotsContent())
-    // Open Graph tags;
+    // Open Graph tags`;
 
     this.setMetaTag('og:title', title, 'property')
     this.setMetaTag('og:description', description, 'property')
@@ -217,13 +217,13 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.setMetaTag('og:url', url, 'property')
     this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property')
     this.setMetaTag('og:site_name', this.config.siteName, 'property')
-    // Twitter Card tags;
+    // Twitter Card tags``;
 
     if (this.config.twitterHandle) {
     // Twitter Card tags
     if (this.config.twitterHandle) {}
 
-      this.setMetaTag('twitter:card', 'summary_large_image');`}
+      this.setMetaTag('twitter:card', 'summary_large_image')```;`}
 
       this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`)
       this.setMetaTag('twitter:title', title)
@@ -231,7 +231,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       this.setMetaTag('twitter:image', image)
     }
 
-    // Additional meta tags;
+    // Additional meta tags```;
 
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0')
     this.setMetaTag('theme-color', '#1e40af')
@@ -254,28 +254,28 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0);
 
-    this.setMetaTag('theme-color', '#1e40af);
+    this.setMetaTag('theme-color', '#1e40af)`;
 
-    this.setMetaTag('msapplication-TileColor', '#1e40af);
+    this.setMetaTag('msapplication-TileColor', '#1e40af)``;
 
   }
 
   /**
-   * Set meta tag;
+   * Set meta tag```;
 
    */
   private setMetaTag(name: string, content: string, attribute: string = 'name'): void {`}
 
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;;
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement``;```;
 
     if (!meta) {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;;
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement`;``;
 
     if (!meta) {}
 
       meta = document.createElement('meta')
       meta.setAttribute(attribute, name)
-      document.head.appendChild(meta);}
+      document.head.appendChild(meta)```;}
 
   private setMetaTag(nam,
   e: string, conten,
@@ -308,11 +308,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 
     if (!this.currentPageData.nofollow) {}
 
-      directives.push('follow');}
+      directives.push('follow')`;}
 
     } else {}
 
-      directives.push('nofollow');}
+      directives.push('nofollow')``;}
 
   private getRobotsContent(): string {/* TODO: Fix JSX expression */}
 
@@ -328,7 +328,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Setup structured data;
+   * Setup structured data```;
 
    */
   private setupStructuredData(): void {}
@@ -352,7 +352,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
 
-    const structuredData = {;;
+    const structuredData = {
 
       '@context': 'https: //schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
@@ -603,7 +603,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       {
         url: this.config.siteUrl;
 
-  generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string; priority: number }> {}
+  generateSitemapData(): Array<{ url: string; lastmod: string`; changefreq: string``; priority: number }> {}
 
     // This would typically come from your CMS or routing system
     return [
@@ -624,7 +624,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Generate robots.txt content;
+   * Generate robots.txt content```;
 
    */
   generateRobotsTxt(): string {
@@ -634,9 +634,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     return `User-agent: *
 Allow: /}
 
-Sitemap: ${this.config.siteUrl}/sitemap.xml;
+Sitemap: ${this.config.siteUrl}/sitemap.xml``;
 
-# Disallow admin and private areas;
+# Disallow admin and private areas```;
 
 Disallow: /admin/,
 Disallow: /private/,
@@ -645,7 +645,7 @@ Disallow: /_next/,
 Disallow: /static/`,
   generateRobotsTxt(): string {/* TODO: Fix JSX expression */}
 
-  p: ${this.config.siteUrl}/sitemap.xml;
+  p: ${this.config.siteUrl}/sitemap.xml```;
 
 # Disallow admin and private areas,
   Disallow: /admin/
@@ -703,9 +703,9 @@ Disallo,`
 
     }
 
-    // Check for images without alt text;
+    // Check for images without alt text`;
 
-    const images = document.querySelectorAll('img);;
+    const images = document.querySelectorAll('img)``;```;
 
     images.forEach((img, index) => {}
 
@@ -744,9 +744,9 @@ Disallo,`
 
     }
 
-    // Check for images without alt text;
+    // Check for images without alt text`;
 
-    const images = document.querySelectorAll('img);;
+    const images = document.querySelectorAll('img)``;```;
 
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
         issues.push(`Image ${index + 1} is missing alt text`);
@@ -824,6 +824,6 @@ const,
 
 };
 
-export const seoOptimizer = new SEOOptimizer(defaultConfig);;
+export const seoOptimizer = new SEOOptimizer(defaultConfig)`;``;
 
-export default seoOptimizer;"`
+export default seoOptimizer```;"`

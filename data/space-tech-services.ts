@@ -1551,7 +1551,7 @@ export const spaceTechServices: SpaceTechService[] = [,
     price: $5,999,
     period: /month,
     description: Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.,
-    features: [;
+    features: [
 
       Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard,
       Regulatory compliance toolsMulti-satellite operations],
@@ -1693,7 +1693,7 @@ export const,
     descriptio,
   n: Comprehensive space mission management platform that enables commercial space companies to plan, execute, and monitor space missions like NASA. Manage satellite operations, launch vehicles, and ground stations.,
     feature,
-  s: [;
+  s: [
 
       Satellite mission planningOrbital mechanics calculationsReal-time satellite trackingSpace weather monitoringLaunch vehicle integrationGround station managementSpace debris trackingMission analytics dashboard
       Regulatory compliance toolsMulti-satellite operations
@@ -1816,7 +1816,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   n:
       Advanced satellite constellation management system that optimizes large networks of satellites for maximum coverage, efficiency, and performance. Manage thousands of satellites like SpaceX and OneWeb.
     feature,
-  s: [;
+  s: [
 
       Multi-satellite coordination
       Coverage optimization
@@ -1866,10 +1866,10 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Satellite networks
       Ground stations
@@ -1928,10 +1928,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Satellite networks
       Tracking systems
@@ -1990,10 +1990,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Solar observatories
       Satellite networks
@@ -2052,10 +2052,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Launch vehicles
       Ground stations
@@ -2114,10 +2114,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Ground stations
       Satellite networks
@@ -2176,10 +2176,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Satellite networks
       Research databases
@@ -2238,10 +2238,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Payment systems
       Blockchain networks
@@ -2300,10 +2300,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Educational platforms
       VR systems
@@ -2441,11 +2441,9 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
 
   rating: number;
 
-  reviews: number}
+  reviews: number};
 
-;
-
-export const spaceTechServices: SpaceTechService[] = [;
+export const spaceTechServices: SpaceTechService[] = [
 
   {
     id: space-mission-management-platform;
@@ -2539,12 +2537,10 @@ export const spaceTechServices: SpaceTechService[] = [;
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  spaceTechServices: SpaceTechService[] = [;
+  spaceTechServices: SpaceTechService[] = [
 
   {/* TODO: Fix JSX expression */}
 
@@ -2580,9 +2576,7 @@ export const,
     review,
   s: 250}
 
-]}
-
-;
+]};
 
 export interface SpaceTechService,
   id: string; nam,
@@ -3060,7 +3054,7 @@ export interface SpaceTechService,
   e: 2024 - 03 - 10 customer,
   s: 500, ratin,
   g: 4.9, review,
-  s: 250} export interface SpaceTechService {} ]; } ]; realImplementatio,
+  s: 250} export interface SpaceTechService {} ]'; } ]'; realImplementatio,
   n: true,
   implementationDetails:' 'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance. launchDat,
   e: 2024-01-15 customer,
@@ -3237,12 +3231,12 @@ export interface SpaceTechService,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  spaceTechServices: SpaceTechService[] = [; {/* TODO: Fix JSX expression */}
+  g: number'; review,
+  s: number} '; export const,
+  spaceTechServices: SpaceTechService[] = ['; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
   s://ziontechgroup.com } real_implementatio,
   n: true, implementation_detail,
@@ -3250,4 +3244,4 @@ export interface SpaceTechService,
   e: 2024 - 03 - 10 customer,
   s: 500, ratin,
   g: 4.9, review,
-  s: 250} ]} ;
+  s: 250} ]} ';

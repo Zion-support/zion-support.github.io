@@ -1,41 +1,56 @@
 import fs from 'fs';
-// Read the current App.tsx;
+
+// Define missing pages
+const missingPages = [
+  'ai-services',
+  'it-services',
+  'micro-saas',
+  'blockchain',
+  'quantum-computing',
+  'autonomous-systems'
+];
+
+// Generate import statement for a page
+function generateImportStatement(page) {
+  return `const ${page.charAt(0).toUpperCase() + page.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase())}Page = React.lazy(() => import('./app/${page}/page'));`;
+}
+
+// Generate route statement for a page
+function generateRouteStatement(page) {
+  return `                              <Route path="/${page}" element={<${page.charAt(0).toUpperCase() + page.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase())}Page />} />`;
+}
+
+// Read the current App.tsx
 const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
-// Generate all import statements';
 
-const importStatements = missingPages.map(generateImportStatement).join('\n);;
+// Generate all import statements
+const importStatements = missingPages.map(generateImportStatement).join('\n');
 
-// Generate all route statements;
+// Generate all route statements
+const routeStatements = missingPages.map(generateRouteStatement).join('\n');
 
-const routeStatements = missingPages.map(generateRouteStatement).join('\n);;
+// Find the position to insert the imports (after the existing imports)
+const importInsertionPoint = appContent.lastIndexOf('// Blog Pages');
 
-// Find the position to insert the imports (after the existing imports)';
+const beforeImports = appContent.substring(0, importInsertionPoint);
 
-const importInsertionPoint = appContent.lastIndexOf('// Blog Pages);;
+const afterImports = appContent.substring(importInsertionPoint);
 
-const beforeImports = appContent.substring(0, importInsertionPoint);;
+// Insert the new imports
+const newImports = beforeImports + '\n// Missing Pages\n' + importStatements + '\n\n' + afterImports;
 
-const afterImports = appContent.substring(importInsertionPoint);;
+// Find the position to insert the routes (before the 404 route)
+const routeInsertionPoint = newImports.lastIndexOf('            {/* 404 Page */}');
 
-// Insert the new imports';
+const beforeRoutes = newImports.substring(0, routeInsertionPoint);
 
-const newImports = beforeImports + '\n// Missing Pages\n' + importStatements + '\n\n + afterImports;;
+const afterRoutes = newImports.substring(routeInsertionPoint);
 
-// Find the position to insert the routes (before the 404 route);
+// Insert the new routes
+const newAppContent = beforeRoutes + '\n            {/* Missing Pages */}\n' + routeStatements + '\n            \n' + afterRoutes;
 
-const routeInsertionPoint = newImports.lastIndexOf('            {/* 404 Page */});;
-
-const beforeRoutes = newImports.substring(0, routeInsertionPoint);;
-
-const afterRoutes = newImports.substring(routeInsertionPoint);;
-
-// Insert the new routes;
-
-const newAppContent = beforeRoutes + '\n            {/* Missing Pages */}\n' + routeStatements + '\n            \n + afterRoutes;;
-
-// Write the updated App.tsx;
-
-fs.writeFileSync('/workspace/src/App.tsx, newAppContent);
+// Write the updated App.tsx
+fs.writeFileSync('/workspace/src/App.tsx', newAppContent);
 
 // console.log removed for production
 // console.log removed for production

@@ -1,15 +1,15 @@
-'use client;
+'use client';
 
-import React, { useEffect } from 'react;
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
+  enableKeyboardNavigation?: boolean';
 
-  enableScreenReaderSupport?: boolean;
+  enableScreenReaderSupport?: boolean';
 
-  enableHighContrast?: boolean;
+  enableHighContrast?: boolean';
 
-  enableFocusManagement?: boolean;
+  enableFocusManagement?: boolean';
 
 }
 
@@ -22,7 +22,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Keyboard navigation enhancements
     if (enableKeyboardNavigation && typeof window !== 'undefined) {
-      const handleKeyDown = (event: KeyboardEvent) => {;;
+      const handleKeyDown = (event: KeyboardEvent) => {
 
         // Skip to main content
         if (event.key === 'Tab && event.shiftKey && event.target === document.body) {
@@ -58,7 +58,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableFocusManagement && typeof window !== 'undefined) {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1]);;
 
-      const trapFocus = (container: HTMLElement) => {;;
+      const trapFocus = (container: HTMLElement) => {
 
         const focusableContent = container.querySelectorAll(focusableElements);;
 
@@ -66,7 +66,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
         const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;;
 
-        const handleTabKey = (e: KeyboardEvent) => {;;
+        const handleTabKey = (e: KeyboardEvent) => {
 
           if (e.key !== Tab) return;
 
@@ -92,11 +92,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
         container.addEventListener(keydown, handleTabKey);
 
-        firstFocusableElement?.focus();
+        firstFocusableElement?.focus()';
 
-        return () => container.removeEventListener(keydown, handleTabKey);
+        return () => container.removeEventListener(keydown, handleTabKey)';
 
-      };
+      }';
 
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]);;
@@ -119,7 +119,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.appendChild(liveRegion);
 
       // Announce page changes
-      const announcePageChange = (message: string) => {;;
+      const announcePageChange = (message: string) => {
 
         const liveRegion = document.getElementById(live-region);;
 
@@ -164,7 +164,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableHighContrast && typeof window !== 'undefined) {
       const prefersHighContrast = window.matchMedia((prefers-contrast: high));;
 
-      const updateHighContrast = (e: MediaQueryListEvent) => {;;
+      const updateHighContrast = (e: MediaQueryListEvent) => {
 
         if (e.matches) {
           document.documentElement.classList.add(high-contrast);

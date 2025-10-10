@@ -20,9 +20,9 @@ export const getPageLoadTime = (): number | null => {/* TODO: Fix JSX expression
 
   return null};
 
-export const optimizeImages = () => {;;
+export const optimizeImages = () => {
 
-  if (typeof window !== 'undefined) {;
+  if (typeof window !== 'undefined) {
 
 const _images = document.querySelectorAll('img);;
 

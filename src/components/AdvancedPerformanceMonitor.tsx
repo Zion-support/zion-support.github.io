@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 
@@ -27,9 +27,7 @@ interface PerformanceMonitorProps {// TODO: Add content}
 
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 
-}
-
-;
+};
 
 const AdvancedPerformanceMonitor: React.FC;
 
@@ -579,7 +577,7 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
         {_recommendations.length > 0 && ()}
 
           <div className='mt-2></div>
-            <h4 className=font-semibold text-xs text-red-600>;
+            <h4 className=font-semibold text-xs text-red-600>`;
 
   Recommendation,
   s:
@@ -597,6 +595,6 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
       </div>
     )}
 
-  return null};
+  return null}``;
 
-export default AdvancedPerformanceMonitor;
+export default AdvancedPerformanceMonitor```;

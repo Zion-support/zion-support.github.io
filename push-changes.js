@@ -8,9 +8,7 @@ function runCommand(command) {/* TODO: Fix JSX expression */}
 
   r: error.stderr }}
 
-}
-
-;
+};
 
 function main() {/* TODO: Fix JSX expression */}
 
@@ -21,14 +19,14 @@ try {
     // Push with force-with-lease;
 
     // console.log removed for production
-const pushResult = runCommand('git push --force-with-lease origin main);;
+const pushResult = runCommand('git push --force-with-lease origin main);
 
     if (pushResult.error) {
       // console.log removed for production
 // Try regular push as fallback;
 
       // console.log removed for production
-const fallbackResult = runCommand('git push origin main);;
+const fallbackResult = runCommand('git push origin main);
 
       if (fallbackResult.error) {
         // console.log removed for production
@@ -47,7 +45,7 @@ return false;
 // console.log removed for production
 status:);
 
-    const statusResult = runCommand('git status);;
+    const statusResult = runCommand('git status);
 
     // console.log removed for production
 // console.log removed for production

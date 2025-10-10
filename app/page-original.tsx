@@ -1,28 +1,28 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react;
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 
-import { Phone, Mail, MapPin, Clock } from 'lucide-react;
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 
-import Navigation from './components/Navigation;
+import Navigation from './components/Navigation';
 
-import Footer from './components/Footer;
+import Footer from './components/Footer';
 
-import PerformanceOptimizer from './components/PerformanceOptimizer;
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 
-import SEOOptimizer from './components/SEOOptimizer;
+import SEOOptimizer from './components/SEOOptimizer';
 
-import AccessibilityEnhancer from './components/AccessibilityEnhancer;
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-import Analytics from './components/Analytics;
+import Analytics from './components/Analytics';
 
-import SecurityEnhancer from './components/SecurityEnhancer;
+import SecurityEnhancer from './components/SecurityEnhancer';
 
-// Dynamically import heavy components for better performance;
+// Dynamically import heavy components for better performance';
 
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner));;
 
@@ -36,7 +36,7 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
 
 // Preload critical components;
 
-const preloadComponents = () => {  if (typeof window !== 'undefined) {;
+const preloadComponents = () => {  if (typeof window !== 'undefined) {
     /
     setTimeout (() => {
       import(./components
@@ -55,7 +55,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (<div className="bg-white round
   <)
 ));
 
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton;const HomePage: React.FC = memo(() => {;
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton;const HomePage: React.FC = memo(() => {
 
 const [isLoaded, setIsLoaded] = useState(false);
 
@@ -75,19 +75,19 @@ const timer = setTimeout(() => setIsVisible(true), 100);;
     </div>)
   );
 
-  }, []);
+  }, [])">
 
   /
-  const handlePhoneClick = useCallback (() => {;
+  const handlePhoneClick = useCallback (() => {">
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: 'main_phone_number)
-      });
+      })">
 
     }
 
-  }, []);
+  }, [])";
 
   return (<>
       
@@ -101,28 +101,28 @@ const timer = setTimeout(() => setIsVisible(true), 100);;
         {/* Hero Section *    return () => clearTimeout(timer);)
 }, []);
 
-  // Analytics tracking for phone clicks - optimized;
+  // Analytics tracking for phone clicks - optimized';
 
-const handlePhoneClick = useCallback(() => {;;
+const handlePhoneClick = useCallback(() => {';';
 
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: 'main_phone_number;)
 }););    return () => clearTimeout(timer)]
-    }, []);
+    }, [])';
 
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {;;
+  const handlePhoneClick = useCallback(() => {'">'">
 
     if (typeof window !== 'undefined' && 'gtag in window) {
       (window as any).gtag('event', 'phone_click, {
         event_category: 'engagement,
         event_label: 'main_phone_number]
-    });]
+    })">]
     }
 
-  }, []);
+  }, [])'";
 
   return (
 
@@ -289,9 +289,9 @@ addressCountry: 'US]
             {/* CTA Buttons *
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center><
             <div>
-              <a                href=te,
+              <a href=te,
     l:+13024640950
-                onClick = { handlePhoneClick };
+                onClick = { handlePhoneClick }">
 
                 className="cyber-button w-full sm: w-auto text-center)
                 aria-label="Call us at (302) 464-0950
@@ -1615,10 +1615,9 @@ addressCountry: 'US]
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2>
 
                     <
-                    <textarea
-                      id="message
+                    <textarea id="message
                       name="message
-                      rows = { 4 };
+                      rows = { 4 }>
 
                       className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: border-cyan-500 focus:ring-1 focu,
     s:ring-cyan-500 transition-colors
@@ -1638,17 +1637,16 @@ addressCountry: 'US]
         <
       <
       {/* Footer *
-      <Footer 
+      <Footer <
     <
-    <
-  );
+  )">
 
-});
+})>
 
 HomePage.displayName = 'HomePage
-HomePage.displayName = 'HomePage;
+HomePage.displayName = 'HomePage>
 
-export default HomePage;
+export default HomePage">
 
-      import('./components/ContentCarousel);)
-}, 100););
+      import('./components/ContentCarousel)>)
+}, 100)">)";

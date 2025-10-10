@@ -10,7 +10,7 @@ import { glob } from glob;
 
 // Performance optimization patterns;
 
-const optimizations = {;;
+const optimizations = {
 
   // Remove unused CSS classes;
 
@@ -32,9 +32,9 @@ const optimizations = {;;
   // Minify inline styles;
 
   minifyInlineStyles: (content) => {,
-    return content.replace(/style="([^"]*)/g, (match, styles) => {;
+    return content.replace(/style="([^"]*)/g, (match, styles) => {
 
-const minified = styles;;
+const minified = styles;
 
         .replace(/\s+/g, ' )
         .replace(/;\s*/g, ';)
@@ -83,9 +83,9 @@ const minified = styles;;
 
     // Add preload hints for critical resources;
 
-    if (content.includes(<head>)) {;
+    if (content.includes(<head>)) {
 
-const preloadHints = ;;
+const preloadHints = ;
 
     <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script crossorigin>,
     <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script crossorigin>,
@@ -102,7 +102,7 @@ const preloadHints = ;;
 
 // Files to process;
 
-const filePatterns = [;;
+const filePatterns = [
 
   'app/**/*.{ts,tsx,js,jsx},
   'src/**/*.{ts,tsx,js,jsx},
@@ -117,7 +117,7 @@ const filePatterns = [;;
 
 // Files to exclude;
 
-const excludePatterns = [;;
+const excludePatterns = [
 
   '**/node_modules/**,
   '**/.next/**,
@@ -135,28 +135,28 @@ const excludePatterns = [;;
 
 ;
 
-let totalFiles = 0;;
+let totalFiles = 0;
 
-let processedFiles = 0;;
+let processedFiles = 0;
 
-let optimizationsApplied = 0;;
+let optimizationsApplied = 0;
 
 ;
 
 function processFile(filePath) {
-  try {;
+  try {
 
-const content = fs.readFileSync(filePath, utf8);;
+const content = fs.readFileSync(filePath, utf8);
 
-    let newContent = content;;
+    let newContent = content;
 
-    let fileOptimizations = 0;;
+    let fileOptimizations = 0;
 
     // Apply optimizations;
 
-    Object.entries(optimizations).forEach(([name, optimizer]) => {;
+    Object.entries(optimizations).forEach(([name, optimizer]) => {
 
-const before = newContent;;
+const before = newContent;
 
       newContent = optimizer(newContent);
 
@@ -181,11 +181,11 @@ async function main() {
   // console.log removed for production
 // Get all files to process;
 
-  const allFiles = [];;
+  const allFiles = [];
 
-  for (const pattern of filePatterns) {;
+  for (const pattern of filePatterns) {
 
-const files = await glob(pattern, {);;
+const files = await glob(pattern, {);
 
       ignore: excludePatterns),
       cwd: process.cwd()});
@@ -194,14 +194,14 @@ const files = await glob(pattern, {);;
 
   // Remove duplicates;
 
-  const uniqueFiles = [...new Set(allFiles)];;
+  const uniqueFiles = [...new Set(allFiles)];
 
-  totalFiles = uniqueFiles.length;
+  totalFiles = uniqueFiles.length`;
 
   // console.log removed for production
-// Process each file;
+// Process each file``;
 
-  uniqueFiles.forEach(processFile);
+  uniqueFiles.forEach(processFile)```;
 
   // console.log removed for production
 // console.log removed for production
@@ -212,4 +212,4 @@ const files = await glob(pattern, {);;
 if (import.meta.url === `file://${process.argv[1]}) {
   main()}
 
-export { processFile, optimizations };
+export { processFile, optimizations }```;

@@ -1,6 +1,6 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 use client
 import React, { useState, useCallback } from react;
@@ -25,9 +25,9 @@ interface ImageProps {}
 
   className?: string;
 
-  priority?: boolean;
+  priority?: boolean';
 
-  _quality?: number;
+  _quality?: number';
 
   _placeholder?: 'blur | empty
   _blurDataURL?: string;
@@ -116,7 +116,7 @@ export const Image: React.FC<ImageProps> = ({,
   if (hasError) {
     return(<div}
 
-'use client;
+'use client';
 
 import React, { useState, useCallback } from react;
 
@@ -159,7 +159,7 @@ export const,
     )
   }
 
-  return(<img;
+  return(<img`;
 
   return (<img></img>
       src={src}
@@ -195,13 +195,13 @@ export default Image</img>
   )
 }
 
-export default Image;
+export default Image`">
 
     />)
-  );
+  )">
 
-};
+}">
 
-export default Image;
+export default Image"```;
 
 "

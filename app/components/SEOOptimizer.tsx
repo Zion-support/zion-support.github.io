@@ -1,6 +1,6 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 import { Helmet } from react-helmet-async;
 
@@ -17,11 +17,11 @@ interface SEOOptimizerProps {
 
   ogImage?: string;
 
-  ogType?: string;
+  ogType?: string';
 
   twitterCard?: string}
 
-;
+';
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
@@ -32,7 +32,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ogImage = '/images/og-image.jpg,
   ogType = 'website,
   twitterCard = summary_large_image
-}) => {;
+}) => {
 
 const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;;
 
@@ -76,8 +76,8 @@ const fullDescription = description || 'Leading provider of AI-powered enterpris
       <meta name="author" content="Zion Tech Group />
       <meta name="viewport" content="width=device-width, initial-scale=1.0 />
     </Helmet>
-  );
+  )`;
 
-};
+}``;
 
-export default SEOOptimizer;
+export default SEOOptimizer```;

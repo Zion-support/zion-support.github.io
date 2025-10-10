@@ -1,12 +1,12 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 ;
 
-const PageBackupPage: React.FC = () => {const features = [;;
+const PageBackupPage: React.FC = () => {const features = [
 
     {
       icon: Brain,
@@ -31,9 +31,9 @@ const PageBackupPage: React.FC = () => {const features = [;;
 
   ];
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     'Advanced AI technology integration,
     'Real-time processing and analytics,
@@ -90,4 +90,4 @@ const benefits = [;;
         </div>
       </section>
     </div>)
-export default PageBackupPage;
+export default PageBackupPage";

@@ -125,7 +125,7 @@ let canonical = document.querySelector('link[rel="canonical]) as HTMLLinkElement
 
 ;
 
-const ogTags = [;;
+const ogTags = [
 
       { property: 'og:title, content: this.config.ogTitle || this.config.title },
       { property: 'og:description, content: this.config.ogDescription || this.config.description },
@@ -143,7 +143,7 @@ const ogTags = [;;
 
 ;
 
-const twitterTags = [;;
+const twitterTags = [
 
       { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image },
       { name: 'twitter:title, content: this.config.twitterTitle || this.config.title },
@@ -153,12 +153,12 @@ const twitterTags = [;;
       twitterTags.push({ name: twitter:image, content: this.config.twitterImage });
 
     twitterTags.forEach(tag => {
-      this.updateMetaTag(tag.name, tag.content)});
+      this.updateMetaTag(tag.name, tag.content)})`;
 
   private updateMetaTagByProperty(property: string, content: string): void {
-    if (typeof document === undefined) return;
+    if (typeof document === undefined) return``;
 
-;
+```;
 
 let meta = document.querySelector(`meta[property="${property}"]) as HTMLMetaElement;;
 
@@ -187,16 +187,16 @@ const meta = document.createElement(meta);;
 }
 
 // Utility functions
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {;;
+export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
 
-return (;
+return (';
 
-const cleanContent = content.replace(/<[^>]*>/g, ).trim();;
+const cleanContent = content.replace(/<[^>]*>/g, ).trim()';';
 
   if (cleanContent.length <= maxLength) {
     return cleanContent}
 
-  return cleanContent.substring(0, maxLength - 3) + '...}})
+  return cleanContent.substring(0, maxLength - 3) ' ' + '...}})
 export const addStructuredData = (data: any): void =>;;
 
 );
@@ -208,8 +208,8 @@ export const addStructuredData = (data: any): void =>;;
 
 const script = document.createElement(script);;
 
-  script.type = application/ld+json;
+  script.type = application/ld+json`;
 
-  script.textContent = createStructuredData(data);
+  script.textContent = createStructuredData(data)``';
 
-  document.head.appendChild(script);
+  document.head.appendChild(script)``'`;

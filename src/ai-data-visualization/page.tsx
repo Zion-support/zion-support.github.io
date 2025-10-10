@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import React from 'react;
+import React from 'react';
 
 import Navigation from ../components
 import Footer from ../components
@@ -184,14 +184,14 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <a href=te,
   l: +13024640950" className=cyber-button><)
                 📞 Cal)
-  l: (302) 464-0950;
+  l: (302) 464-0950';
 
               <
               <a href=
   hove,
     r:bg-white,
   hover:text-indigo-600 transition-all duration-300><
-                Get Free Demo;
+                Get Free Demo';
 
               <
             <

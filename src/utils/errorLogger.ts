@@ -149,7 +149,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 
     if (entry.error) {/* TODO: Fix JSX expression */}
 
-  r:', entry.error)}
+  r: ', entry.error)}
 
     }
 
@@ -173,11 +173,11 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   }
 
   /**
-   * Send error to external logging service;
+   * Send error to external logging service';
 
    */
 
-  private async sendToExternalService(entry: ErrorLogEntry): Promise;
+  private async sendToExternalService(entry: ErrorLogEntry): Promise';
 
           <void> {// TODO: Add content}
 
@@ -202,7 +202,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};
+}';
 
   metho,
   d: 'POST',
@@ -314,11 +314,11 @@ export const logWarning = (messag);;
 
   e: string, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export const logInfo = (messag);;
+export const logInfo = (messag)`;``;
 
   e: string, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export default errorLogger;`
+export default errorLogger```;`
 
 
 

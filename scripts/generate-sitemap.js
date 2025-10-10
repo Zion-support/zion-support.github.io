@@ -1,18 +1,18 @@
-const fs = require(fs);;
+const fs = require(fs);
 
-const path = require(path);;
+const path = require(path);
 
 // Generate sitemap for the website;
 
-const generateSitemap = () => {;;
+const generateSitemap = () => {
 
 return (
 
 ;
 
-const baseUrl = https://ziontechgroup.com;;
+const baseUrl = https://ziontechgroup.com;
 
-  const pages = [;;
+  const pages = [
 
     ',
     '/about,
@@ -32,12 +32,12 @@ const baseUrl = https://ziontechgroup.com;;
 
 ;
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
+const sitemap = `<?xml version="1.0" encoding="UTF-8?>``;
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9>
 ${pages.map(page =>   <url>
     <loc>
-);
+)```;
 
 }${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString().split('T)[0]}</lastmod>
@@ -49,11 +49,11 @@ ${pages.map(page =>   <url>
 
 ;
 
-const sitemapPath = path.join(__dirname, '..', 'public', sitemap.xml);;
+const sitemapPath = path.join(__dirname, '..', 'public', sitemap.xml);
 
-  fs.writeFileSync(sitemapPath, sitemap);
+  fs.writeFileSync(sitemapPath, sitemap)`;
 
   // console.log removed for production
-};
+}``;
 
-generateSitemap();
+generateSitemap()```;

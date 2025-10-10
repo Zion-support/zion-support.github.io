@@ -1,12 +1,12 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
-import React, { useState, useCallback } from 'react;
+import React, { useState, useCallback } from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import {
   Phone,
@@ -14,7 +14,7 @@ import {
   MapPin,
   Clock,
   Send,
-  CheckCircle;)
+  CheckCircle';)
 } from 'lucide-react;
 
 ;
@@ -26,14 +26,14 @@ phone: ',
     service: ',
     budget: ',
     timeline: ',
-    message: ';)
-});
+    message: '';)
+})';
 
-const [isSubmitting, setIsSubmitting] = useState(false);
+const [isSubmitting, setIsSubmitting] = useState(false)';
 
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
 
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
 
 const { name, value } = e.target;
 
@@ -60,13 +60,13 @@ const handleSubmit = async (e: React.FormEvent) => {    message: '];
 
     setIsSubmitting(true);
 
-    setSubmitStatus(idle);
+    setSubmitStatus(idle)';
 
     try {
       /
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000))';
 
-      setSubmitStatus(success);
+      setSubmitStatus(success)';
 
       setFormData({
         name: ',
@@ -77,7 +77,7 @@ const handleSubmit = async (e: React.FormEvent) => {    message: '];
         budget: ',
         timeline: ',
 message: ']
-    });]
+    })';]
     } catch (error) {
       setSubmitStatus('error)]
     } finally {
@@ -85,7 +85,7 @@ message: ']
     }
 
         message: ')
-      });
+      })';
 
     } catch (error) {
       setSubmitStatus('error);
@@ -97,7 +97,7 @@ message: ']
 
   };
 
-const services = [;;
+const services = [
 
     'AI Solutions,
     'Cloud Computing,
@@ -112,7 +112,7 @@ const services = [;;
 
 ;
 
-const contactInfo = [;;
+const contactInfo = [
 
     {
       icon: Phone,
@@ -140,7 +140,7 @@ const contactInfo = [;;
       description: Eastern Time
     }
 
-  ];
+  ]';
 
   return (
 
@@ -287,4 +287,4 @@ const contactInfo = [;;
 <
 
 )]
-    };export default ContactPage;
+    }">export default ContactPage";

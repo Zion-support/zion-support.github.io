@@ -1,16 +1,16 @@
-import React from 'react;
+import React from 'react';
 
-#!/usr/bin/env node;
+#!/usr/bin/env node';
 
-import fs from 'fs;
+import fs from 'fs';
 
-// // Read the file;
+// // Read the file';
 
-// const content = fs.readFileSync('src/hooks/usePerformance.ts', utf8);;
+// const content = fs.readFileSync('src/hooks/usePerformance.ts', utf8);
 
 // Fix the duplicate analytics definitions and syntax errors;
 
-const fixedContent = /**;;
+const fixedContent = /**;
 
  * Performance Monitoring Hook;
 
@@ -23,16 +23,16 @@ import { analytics } from ../utils/analytics;
  * Hook for monitoring page load performance;
 
  */
-export const usePageLoadPerformance = () => {;;
+export const usePageLoadPerformance = () => {
 
-  useEffect(() => {;
+  useEffect(() => {
 
-const trackPageLoad = () => {;;;
+const trackPageLoad = () => {
 
       if (typeof window !== 'undefined && window.performance) {
-        if (navigation) {;
+        if (navigation) {
 
-const metrics = {;;
+const metrics = {
 
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart;
 
@@ -49,7 +49,7 @@ const metrics = {;;
               metrics.firstPaint = entry.startTime} else if (entry.name === 'first-contentful-paint) {
               metrics.firstContentfulPaint = entry.startTime;
 
-export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
+export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};
 
           };
 
@@ -80,11 +80,11 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
 
     // Track page load on navigation;
 
-    const handleNavigation = () => {;;
+    const handleNavigation = () => {
 
       setTimeout(trackPageLoad, 100);
 
-    const handleNavigation = () => {/* TODO: Fix JSX expression */};;
+    const handleNavigation = () => {/* TODO: Fix JSX expression */};
 
     };
 
@@ -98,7 +98,7 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
  * Hook for monitoring component performance;
 
  */
-export const useComponentPerformance = (componentName: string) => {;;
+export const useComponentPerformance = (componentName: string) => {
 
   useEffect(() => {
     startTime.current = performance.now();
@@ -106,12 +106,12 @@ export const useComponentPerformance = (componentName: string) => {;;
     renderCount.current += 1;
 
     return () => {
-//       const endTime = performance.now();;
+//       const endTime = performance.now();
 
-//       const renderTime = endTime - startTime.current;;
+//       const renderTime = endTime - startTime.current;
 
       ,
-export const useComponentPerformance = (componentNam);;
+export const useComponentPerformance = (componentNam);
 
   e: string) => {/* TODO: Fix JSX expression */}
 
@@ -130,25 +130,25 @@ export const useComponentPerformance = (componentNam);;
  * Hook for monitoring user interactions;
 
  */
-export const useInteractionPerformance = () => {/* TODO: Fix JSX expression */};;
+export const useInteractionPerformance = () => {/* TODO: Fix JSX expression */};
 
   }, []);
 
 ;
 
-const trackClick = useCallback((element: string) => {,;;
+const trackClick = useCallback((element: string) => {,;
 
     return () => {,
-//       const duration = performance.now() - startTime;;
+//       const duration = performance.now() - startTime;
 
       trackInteraction(click, element, duration)}}, [trackInteraction]);
 
 ;
 
-const trackHover = useCallback((element: string) => {,;;
+const trackHover = useCallback((element: string) => {,;
 
     return () => {,
-//       const duration = performance.now() - startTime;;
+//       const duration = performance.now() - startTime;
 
       trackInteraction(hover, element, duration)}}, [trackInteraction]);
 
@@ -157,7 +157,7 @@ const trackHover = useCallback((element: string) => {,;;
     trackClick,
     trackHover;
 
-  const trackClick = useCallback((elemen);;
+  const trackClick = useCallback((elemen);
 
   t: string) => {/* TODO: Fix JSX expression */}
 
@@ -165,7 +165,7 @@ const trackHover = useCallback((element: string) => {,;;
 
 ;
 
-const trackHover = useCallback((elemen);;
+const trackHover = useCallback((elemen);
 
   t: string) => {/* TODO: Fix JSX expression */}
 
@@ -179,15 +179,15 @@ const trackHover = useCallback((elemen);;
  * Hook for monitoring memory usage;
 
  */
-export const useMemoryMonitoring = () => {;;
+export const useMemoryMonitoring = () => {
 
-  useEffect(() => {;
+  useEffect(() => {
 
-const checkMemory = () => {;;
+const checkMemory = () => {
 
-      if (memory in performance) {;
+      if (memory in performance) {
 
-const metrics = {;;
+const metrics = {
 
           used: memory.usedJSHeapSize;
 
@@ -195,7 +195,7 @@ const metrics = {;;
 
           limit: memory.jsHeapSizeLimit;
 
-export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};;
+export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};
 
         };
 
@@ -209,7 +209,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};;
 
     // Check memory every 30 seconds;
 
-//     const interval = setInterval(checkMemory, 30000);;
+//     const interval = setInterval(checkMemory, 30000);
 
     // Initial check;
 
@@ -219,16 +219,16 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};;
  * Hook for monitoring network performance;
 
  */
-export const useNetworkPerformance = () => {;;
+export const useNetworkPerformance = () => {
 
-  useEffect(() => {;
+  useEffect(() => {
 
-const trackNetworkTiming = () => {;;
+const trackNetworkTiming = () => {
 
       if (typeof window !== 'undefined && window.performance) {
-        if (navigation) {;
+        if (navigation) {
 
-const networkMetrics = {;;
+const networkMetrics = {
 
             dns: navigation.domainLookupEnd - navigation.domainLookupStart;
 
@@ -238,11 +238,11 @@ const networkMetrics = {;;
 
             response: navigation.responseEnd - navigation.responseStart;
 
-            dom: navigation.domContentLoadedEventEnd - navigation.responseEnd;
+            dom: navigation.domContentLoadedEventEnd - navigation.responseEnd`;
 
-export const useNetworkPerformance = () => {/* TODO: Fix JSX expression */};;
+export const useNetworkPerformance = () => {/* TODO: Fix JSX expression */}``;
 
-          };
+          }```;
 
           Object.entries(networkMetrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
 
@@ -271,7 +271,7 @@ export const useNetworkPerformance = () => {/* TODO: Fix JSX expression */};;
  * Hook for monitoring scroll performance;
 
  */
-export const useScrollPerformance = () => {/* TODO: Fix JSX expression */};;
+export const useScrollPerformance = () => {/* TODO: Fix JSX expression */};
 
       }
 
@@ -279,7 +279,7 @@ export const useScrollPerformance = () => {/* TODO: Fix JSX expression */};;
 
 ;
 
-const handleScrollEnd = () => {/* TODO: Fix JSX expression */};;
+const handleScrollEnd = () => {/* TODO: Fix JSX expression */};
 
       }
 
@@ -289,7 +289,7 @@ const handleScrollEnd = () => {/* TODO: Fix JSX expression */};;
 
 let scrollTimeout: NodeJS.Timeout;
 
-    const handleScroll = () => {,;;
+    const handleScroll = () => {,;
 
       clearTimeout(scrollTimeout);
 
@@ -298,7 +298,7 @@ let scrollTimeout: NodeJS.Timeout;
     let,
   scrollTimeout: NodeJS.Timeout;
 
-    const handleScroll = () => {/* TODO: Fix JSX expression */};;
+    const handleScroll = () => {/* TODO: Fix JSX expression */};
 
     };
 
@@ -313,21 +313,21 @@ let scrollTimeout: NodeJS.Timeout;
  * Comprehensive performance monitoring hook;
 
  */
-export const usePerformanceMonitoring = () => {;;
+export const usePerformanceMonitoring = () => {
 
   return {
     trackCustomMetric: (name: string, value: number, unit: string = 'ms) => {,
-      analytics.trackPerformance(name, value, unit);
+      analytics.trackPerformance(name, value, unit)`;
 
-export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
+export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}``;
 
     }
 
-  }};`
-;
+  }}```;`
+`;
 
-// Write the fixed content;
+// Write the fixed content``;
 
-fs.writeFileSync(src/hooks/usePerformance.ts, fixedContent);
+fs.writeFileSync(src/hooks/usePerformance.ts, fixedContent)```;
 
 // `

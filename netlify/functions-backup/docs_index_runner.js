@@ -1,7 +1,7 @@
 exports.handler = async function (event, context) {try {
 //     // Basic implementation - replace with actual logic;
 
-    const timestamp = new Date().toISOString()};;
+    const timestamp = new Date().toISOString()};
 
     return {
       statusCode: 200;
@@ -27,7 +27,7 @@ error}
 
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 
-    const timestamp = new Date().toISOString()};;
+    const timestamp = new Date().toISOString()};
 
     return {/* TODO: Fix JSX expression */}
 

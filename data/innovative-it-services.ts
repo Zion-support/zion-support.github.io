@@ -938,7 +938,7 @@ export const innovativeITServices: InnovativeITService[] = [,
     tagline: 'Next-generation cybersecurity with zero trust architecture', price: $599,
     period: /month,
     description: Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.,
-    features: [;
+    features: [
 
       Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management,
       Compliance reportingReal-time monitoring],
@@ -1076,7 +1076,7 @@ export const,
     descriptio,
   n: Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.,
     feature,
-  s: [;
+  s: [
 
       Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management
       Compliance reportingReal-time monitoring
@@ -1202,7 +1202,7 @@ reviews: 400;
   n:
       Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.
     feature,
-  s: [;
+  s: [
 
       Distributed edge nodes
       Real-time data processing
@@ -1231,7 +1231,7 @@ reviews: 400;
     category: IT & Edge Computing,
     realService: true;
 
-    technology: [;
+    technology: [
 
     popula,
   r: true;
@@ -1262,7 +1262,7 @@ reviews: 400;
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
       Edge Computing
       IoT
@@ -1275,7 +1275,7 @@ reviews: 400;
       AWS
     ]
     integration,
-  s: [;
+  s: [
 
       AWS IoT
       Azure IoT
@@ -1287,7 +1287,7 @@ reviews: 400;
       REST API
     ]
     useCase,
-  s: [;
+  s: [
 
       IoT applications
       Real-time analytics
@@ -1299,7 +1299,7 @@ reviews: 400;
     ro,
   i: Average customer sees 300% ROI within 8 months through reduced latency and improved performance.
     competitor,
-  s: [;
+  s: [
 
       AWS Greengrass
       Azure IoT Edge
@@ -1334,10 +1334,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Jupyter Notebooks
       Python
@@ -1349,7 +1349,7 @@ varian,
       SDK
     ]
     useCase,
-  s: [;
+  s: [
 
       Drug discovery
       Financial modeling
@@ -1361,7 +1361,7 @@ varian,
     ro,
   i: Average customer sees 500% ROI within 18 months through breakthrough discoveries and optimizations.
     competitor,
-  s: [;
+  s: [
 
       IBM Quantum
       AWS Braket
@@ -1383,9 +1383,9 @@ marketSize: $8B quantum computing market,
     category: IT & Blockchain,
     realService: true;
 
-    technology: [;
+    technology: [
 
-    integrations: [;
+    integrations: [
 
     marketSiz,
   e: $8B quantum computing market
@@ -1412,10 +1412,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       Ethereum
       Hyperledger
@@ -1428,7 +1428,7 @@ varian,
       Google Cloud
     ]
     useCase,
-  s: [;
+  s: [
 
       Supply chain tracking
       Digital identity
@@ -1440,7 +1440,7 @@ varian,
     ro,
   i: Average customer sees 350% ROI within 12 months through improved efficiency and transparency.
     competitor,
-  s: [;
+  s: [
 
       Hyperledger Fabric
       Ethereum Enterprise
@@ -1462,9 +1462,9 @@ marketSize: $19B blockchain market,
     category: IT & DevOps,
     realService: true;
 
-    technology: [;
+    technology: [
 
-    integrations: [;
+    integrations: [
 
     marketSiz,
   e: $19B blockchain market
@@ -1491,10 +1491,10 @@ varian,
   e: true;
 
     technolog,
-  y: [;
+  y: [
 
     integration,
-  s: [;
+  s: [
 
       GitHub
       GitLab
@@ -1507,7 +1507,7 @@ varian,
       Jira
     ]
     useCase,
-  s: [;
+  s: [
 
       Software development
       Deployment automation
@@ -1643,11 +1643,9 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
 
   rating: number;
 
-  reviews: number}
+  reviews: number};
 
-;
-
-export const innovativeITServices: InnovativeITService[] = [;
+export const innovativeITServices: InnovativeITService[] = [
 
   {
     id: zero-trust-security-platform;
@@ -1741,12 +1739,10 @@ export const innovativeITServices: InnovativeITService[] = [;
   g: number;
 
   review,
-  s: number}
-
-;
+  s: number};
 
 export const,
-  innovativeITServices: InnovativeITService[] = [;
+  innovativeITServices: InnovativeITService[] = [
 
   {/* TODO: Fix JSX expression */}
 
@@ -1782,9 +1778,7 @@ export const,
     review,
   s: 1250}
 
-]}
-
-;
+]};
 
 export interface InnovativeITService,
   id: string; nam,
@@ -2097,7 +2091,7 @@ export interface InnovativeITService,
   e: 2024 - 01 - 20 customer,
   s: 2500, ratin,
   g: 4.7, review,
-  s: 1250} export interface InnovativeITService {} ]; } ]; realImplementatio,
+  s: 1250} export interface InnovativeITService {} ]'; } ]'; realImplementatio,
   n: true,
   implementationDetails:' 'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls. launchDat,
   e: 2024-01-01 customer,
@@ -2208,12 +2202,12 @@ export interface InnovativeITService,
   s: string; launchDat,
   e: string; customer,
   s: number; ratin,
-  g: number; review,
-  s: number} ; export const,
-  innovativeITServices: InnovativeITService[] = [; {/* TODO: Fix JSX expression */}
+  g: number'; review,
+  s: number} '; export const,
+  innovativeITServices: InnovativeITService[] = ['; {/* TODO: Fix JSX expression */}
 
   l: 'kleber@ziontechgroup.com} addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}; websit,
+  s: '364 E Main St STE 1008 Middletown DE 19709}'; websit,
   e: http,
   s://ziontechgroup.com } real_implementatio,
   n: true, implementation_detail,
@@ -2221,4 +2215,4 @@ export interface InnovativeITService,
   e: 2024 - 01 - 20 customer,
   s: 2500, ratin,
   g: 4.7, review,
-  s: 1250} ]} ;
+  s: 1250} ]} ';

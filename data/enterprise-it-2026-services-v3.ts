@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EnterpriseIt2026ServiceV3 {;,
+export interface EnterpriseIt2026ServiceV3 {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const enterpriseIT2026 ServicesV3: EnterpriseIt2026 ServiceV3[] = [,
     id: "2026-enterprise-it-v3", name: "2026 Enterprise IT Solutions V3",
     tagline: "Third generation enterprise IT", price: '$499/month',
     description: 'Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.',
-    features: [;
+    features: [
       "Third generation IT"
       "Enhanced solutions"
       "Advanced infrastructure"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.",
     feature,
-  s: [;"
+  s: ["
       "Third generation IT""
       "Enhanced solutions""
       "Advanced infrastructure""

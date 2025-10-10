@@ -42,7 +42,7 @@ class SecurityEnhancer {private config: SecurityConfig}
   private setupContentSecurityPolicy(): void {
     if (!this.config.enableContentSecurityPolicy) return;
 
-const csp = [;;
+const csp = [
 
       "default-src 'self',
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net,
@@ -83,7 +83,7 @@ const token = this.generateCSRFToken();;
     this.addCSRFTokenToForms(token)
   }
 
-  private generateCSRFToken(): string {;
+  private generateCSRFToken(): string {
 
 const array = new Uint8Array(32);;
 
@@ -91,11 +91,11 @@ const array = new Uint8Array(32);;
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(')
   }
 
-  private addCSRFTokenToForms(token: string): void {;
+  private addCSRFTokenToForms(token: string): void {
 
 const forms = document.querySelectorAll(form);;
 
-    forms.forEach(form => {;
+    forms.forEach(form => {
 
 const input = document.createElement(input);;
 
@@ -113,9 +113,9 @@ const input = document.createElement(input);;
     this.monitorNetworkRequests()
   }
 
-  private monitorConsoleAccess(): void {;
+  private monitorConsoleAccess(): void {
 
-const originalConsole = {;;
+const originalConsole = {
 
       log: console.log.bind(console),
       warn: console.warn.bind(console),
@@ -126,14 +126,14 @@ const originalConsole = {;;
     // Override console methods to detect debugging
     Object.assign(console, originalConsole)}
 
-  private monitorDOMManipulation(): void {;
+  private monitorDOMManipulation(): void {
 
-const observer = new MutationObserver((mutations) => {;;
+const observer = new MutationObserver((mutations) => {
 
       mutations.forEach((mutation) => {
         if (mutation.type === 'childList) {
           mutation.addedNodes.forEach((node) => {
-            if (node.nodeType === Node.ELEMENT_NODE) {;
+            if (node.nodeType === Node.ELEMENT_NODE) {
 
 const element = node as Element;;
 
@@ -155,13 +155,13 @@ const element = node as Element;;
     this.eventListeners.push(() => observer.disconnect())
   }
 
-  private monitorNetworkRequests(): void {;
+  private monitorNetworkRequests(): void {
 
 const originalFetch = window.fetch;;
 
-    window.fetch = async (input, init) => {;
+    window.fetch = async (input, init) => {
 
-const url = typeof input === string ? input : input instanceof Request ? input.url : input.toString();;
+const url = typeof input === string ? input : input instanceof Request ? input.url : input.toString()`;``;
 
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
@@ -180,4 +180,4 @@ const url = typeof input === string ? input : input instanceof Request ? input.u
 
 }
 
-export default SecurityEnhancer;
+export default SecurityEnhancer```;

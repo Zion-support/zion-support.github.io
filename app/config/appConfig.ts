@@ -25,8 +25,7 @@ export interface AppConfig {
   security: {
     enableCSP: boolean,
     enableHSTS: boolean,
-    enableXSSProtection: boolean}}
-;
+    enableXSSProtection: boolean}};
 const config: AppConfig = {
   app: {
     name: 'Zion Tech Group',
@@ -62,7 +61,7 @@ export function getConfig<T = unknown>(keyPath: string): T {let value: unknown =
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key]} else {
-      throw new Error(`Configuration key "${keyPath}" not found`);
+      throw new Error(`Configuration key "${keyPath}" not found`)``;
   }
 
   return value as T}
@@ -91,4 +90,4 @@ export function isProduction(): boolean {
 export function isDevelopment(): boolean {
   return config.app.environment === 'development'}
 
-export default config;
+export default config```;

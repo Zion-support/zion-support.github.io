@@ -5,9 +5,9 @@ import fs from 'fs';
 // console.log removed for production
 ';
 
-const filePath = './app/ai-services/page.tsx;;
+const filePath = './app/ai-services/page.tsx';
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, 'utf8);
 
 // Fix all the syntax errors by removing extra closing braces;
 

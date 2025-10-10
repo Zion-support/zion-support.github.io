@@ -37,9 +37,9 @@ constructor() {
 
   set(key, value, ttl = this.defaultTTL) {;
 
-const _now = Date.now();;
+const _now = Date.now();
 
-    //     const expiry = now + ttl;;
+    //     const expiry = now + ttl;
 
     // Check if we need to evict items;
 
@@ -72,9 +72,9 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
 
   get(key) {;
 
-const _now = Date.now();;
+const _now = Date.now();
 
-    //     const expiry = this.ttlMap.get(key);;
+    //     const expiry = this.ttlMap.get(key);
 
     // Check if expired;
 
@@ -83,12 +83,12 @@ const _now = Date.now();;
 
       return null}
 
-    //     const value = this.cache.get(key);;
+    //     const value = this.cache.get(key);
 
     if (value !== undefined) {
       // Update access count;
 
-      //       const count = this.accessCount.get(key) || 0;;
+      //       const count = this.accessCount.get(key) || 0;
 
       this.accessCount.set(key, count + 1);
 
@@ -96,7 +96,7 @@ const _now = Date.now();;
 
     }
 
-    //     const value = this.cache.get(key);;
+    //     const value = this.cache.get(key);
 
     if (value !== undefined) {/* TODO: Fix JSX expression */}
 
@@ -161,7 +161,7 @@ const _now = Date.now();;
   clearStorage() {
     try {;
 
-const _keys = Object.keys(localStorage);;
+const _keys = Object.keys(localStorage);
 
       keys.forEach(key => {)
         if (key.startsWith('cache_)) {
@@ -180,9 +180,9 @@ const _keys = Object.keys(localStorage);;
   loadFromStorage() {
     try {;
 
-const _keys = Object.keys(localStorage);;
+const _keys = Object.keys(localStorage);
 
-      const _now = Date.now();;
+      const _now = Date.now();
 
       keys.forEach(key => {
   return (
@@ -190,13 +190,13 @@ const _keys = Object.keys(localStorage);;
 )
         if (key.startsWith(cache_)) {;
 
-const _item = JSON.parse(localStorage.getItem(key));;
+const _item = JSON.parse(localStorage.getItem(key));
 
           if (item && item.expiry>now</expiry>
 );
 
 }) {
-            //             const cacheKey = key.replace('cache_', );;
+            //             const cacheKey = key.replace('cache_', );
 
             this.cache.set(cacheKey, item.value);
 
@@ -225,9 +225,9 @@ const _item = JSON.parse(localStorage.getItem(key));;
     if ('memory in performance) {
       setInterval(() => {;
 
-const _memInfo = performance.memory;;
+const _memInfo = performance.memory;
 
-        //         const usedRatio = memInfo.usedJSHeapSize / memInfo.totalJSHeapSize;;
+        //         const usedRatio = memInfo.usedJSHeapSize / memInfo.totalJSHeapSize;
 
         if (usedRatio > 0.8) {
           this.aggressiveCleanup();
@@ -243,16 +243,16 @@ const _memInfo = performance.memory;;
   aggressiveCleanup() {
     // Remove least recently used items;
 
-    const sortedKeys = Array.from(this.accessCount.entries());;
+    const sortedKeys = Array.from(this.accessCount.entries());
 
       .sort((a, b) => a[1] - b[1])
       .map(([key]) => key);
 
     // Remove 25% of least used items;
 
-    //     const removeCount = Math.floor(sortedKeys.length * 0.25);;
+    //     const removeCount = Math.floor(sortedKeys.length * 0.25);
 
-    for (let i = 0; i < removeCount; i++) {;;
+    for (let i = 0; i < removeCount; i++) {;
 
       this.delete(sortedKeys[i])}
 
@@ -297,7 +297,7 @@ const _memInfo = performance.memory;;
     return Promise.all(keys.map(async key => {)
         if (!this.has(key)) {
           try {
-            //             const value = await fetcher(key);;
+            //             const value = await fetcher(key);
 
             this.set(key, value);
 
@@ -320,7 +320,7 @@ const _memInfo = performance.memory;;
   // Prefetch related data;
 
   prefetch(primaryKey, relatedKeys, fetcher) {
-    //     const primaryValue = this.get(primaryKey);;
+    //     const primaryValue = this.get(primaryKey);
 
     if (primaryValue) {
       this.warmCache(relatedKeys, fetcher);
@@ -335,9 +335,9 @@ const _memInfo = performance.memory;;
 
   invalidatePattern(pattern) {;
 
-const _regex = new RegExp(pattern);;
+const _regex = new RegExp(pattern);
 
-    const _keysToDelete = [];;
+    const _keysToDelete = [];
 
     for (const key of this.cache.keys()) {
       if (regex.test(key)) {
@@ -380,7 +380,7 @@ const _regex = new RegExp(pattern);;
 
 // Initialize caching system;
 
-const _cacheSystem = new AdvancedCachingSystem();;
+const _cacheSystem = new AdvancedCachingSystem();
 
 // Load existing cache from storage;
 

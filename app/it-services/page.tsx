@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react;
+import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
 
-;
+';
 
-const ItServicesPage: React.FC = () => {const itServices = [;
+const ItServicesPage: React.FC = () => {const itServices = [';
     {
       titl,
     e: 'Cloud Infrastructure Management,
@@ -354,7 +354,7 @@ const ItServicesPage: React.FC = () => {const itServices = [;
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications },
     { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation }
 
-  ];
+  ]';
 
   return (
 
@@ -585,6 +585,6 @@ const ItServicesPage: React.FC = () => {const itServices = [;
         </section>
       </div>
     </React.Fragment>)
-  );};
+  )'">}">
 
-export default ItServicesPage;
+export default ItServicesPage'";

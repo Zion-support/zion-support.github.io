@@ -50,7 +50,7 @@ export const waitFor = async ();;
 
     await wait(interval)}
 
-  const startTime = Date.now();;
+  const startTime = Date.now()``;```;
 
   while (!condition()) {/* TODO: Fix JSX expression */}
 
@@ -334,9 +334,9 @@ measure: (name: string, startMark?: string, endMark?: string) => {entries.push({
 
  */
 
-export const generateTestData = {// TODO: Add content};;
+export const generateTestData = {// TODO: Add content}`;``;
 
-};
+}```;
 
   strin,
   g: (length = 10): string => {/* TODO: Fix JSX expression */}
@@ -654,9 +654,9 @@ export const measureExecutionTime = async;;
 
   const result = await fn();;
 
-  const duration = performance.now() - start;;
+  const duration = performance.now() - start;`;
 
-  return { result, duration }};
+  return { result, duration }}``;
 
 export default {/* TODO: Fix JSX expression */}
 
@@ -676,4 +676,4 @@ export default {/* TODO: Fix JSX expression */}
 //   ConsoleSpy,
 //   createDeferred,
 //   retryWithBackoff,
-//   measureExecutionTime};
+//   measureExecutionTime}```;

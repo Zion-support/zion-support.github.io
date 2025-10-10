@@ -2,14 +2,14 @@
 
 import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
 // Function to fix duplicate imports in a file';
 
 function fixDuplicateImports(filePath) {
   try {';
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, 'utf8);
 
     // Fix duplicate imports in lucide-react imports';
 
@@ -19,11 +19,11 @@ let content = fs.readFileSync(filePath, 'utf8);;
       (match, imports) => {
         // Split by comma and clean up';
 
-        const importList = imports.split(',).map(imp => imp.trim());;
+        const importList = imports.split(',).map(imp => imp.trim());
 
         // Remove duplicates while preserving order;
 
-        const uniqueImports = [...new Set(importList)];;
+        const uniqueImports = [...new Set(importList)];
 
         ';
 
@@ -36,14 +36,14 @@ function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
 
     );
 
-    // Fix any remaining syntax issues with extra commas;
+    // Fix any remaining syntax issues with extra commas`;
 
-    content = content.replace(/,\s*,/g, ',);
+    content = content.replace(/,\s*,/g, ',)``;
 
-    content = content.replace(/,\s*}/g, '});
+    content = content.replace(/,\s*}/g, '})```;
 
     content = content.replace(/{/* TODO: Fix JSX expression */})`
-  in: ${filePath}`);
+  in: ${filePath}`)```;
 
     return true} catch (error) {/* TODO: Fix JSX expression */}`
     // console.error removed for production
@@ -53,13 +53,13 @@ return false}
 
 // Main function;
 
-function main() {;
+function main() {
 
 function main() {/* TODO: Fix JSX expression */}
 
 }
 
-  const files = [;;
+  const files = [
 
     'src/api/page.tsx',
     'src/about/page.tsx',
@@ -81,22 +81,22 @@ function main() {/* TODO: Fix JSX expression */}
   // console.log removed for production
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0`;
 
   files.forEach(file => {)
     if (fs.existsSync(file)) {
       if (fixDuplicateImports(file)) {
-        fixedCount++;
+        fixedCount++``;
 
   files.forEach(file => {/* TODO: Fix JSX expression */}
 
       }
 
     })
-  });
+  })```;
 
   `
   // console.log removed for production
 }
 
-main();"`
+main()```;"`

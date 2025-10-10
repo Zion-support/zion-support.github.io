@@ -1,19 +1,19 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react;
+import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
 
 import Navigation from ../components
 import Footer from ../components
-;
+';
 
-const DemoPage: React.FC = () => {const demos = [;
+const DemoPage: React.FC = () => {const demos = [';
 
 const DemoPage: React.FC = () => {
-  const demos = [    {;
+  const demos = [    {';
       title: 'AI Analytics Dashboard,
       description: 'See how our AI analytics can transform your business intelligence,
       duration: '5 min,
@@ -41,7 +41,7 @@ const DemoPage: React.FC = () => {
 
   ];
 
-  const testimonials = [    {;
+  const testimonials = [    {
       name: 'Sarah Johnson,
       company: 'TechCorp Inc.,
       role: 'CTO,
@@ -63,9 +63,9 @@ const DemoPage: React.FC = () => {
       rating: 5
     }
 
-  ];
+  ]';
 
-  const selectedDemoData = demos.find(demo => demo.id === selectedDemo);;
+  const selectedDemoData = demos.find(demo => demo.id === selectedDemo)';';
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
       
@@ -112,8 +112,8 @@ const DemoPage: React.FC = () => {
           <div className=grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-6>
             {demos.map((demo) => (<button
-                key = { demo.id };)
-                onClick = { () => setSelectedDemo(demo.id) };
+                key = { demo.id }">)
+                onClick = { () => setSelectedDemo(demo.id) }"';
 
                 className={p-6 rounded-xl border transition-all duration-300 text-left ${
                   selectedDemo === demo.id
@@ -239,6 +239,6 @@ const DemoPage: React.FC = () => {
       <Footer 
     <
     </React.Fragment>)
-  );};
+  )'">}">
 
-export default DemoPage;
+export default DemoPage'";

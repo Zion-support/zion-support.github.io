@@ -1,16 +1,16 @@
-import { CheckCircle, ArrowRight } from 'lucide-react;
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
-;
+';
 
-const PagePage: React.FC = () => {const features = [;
+const PagePage: React.FC = () => {const features = [';
     {
       title: 'Feature 1,
       description: 'Description of feature 1,
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3]
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       ico,
@@ -47,7 +47,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
 
   ];
 
-  const benefits = [;;
+  const benefits = [
 
     'Transform your business with AI technology,
     'Make data-driven decisions with confidence,
@@ -123,9 +123,9 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
                           {benefit}
 
                         </li>
-                      ));
+                      ))">
 
-                    </ul>);
+                    </ul>)">
 
                         </li>)                      ))}
 
@@ -133,7 +133,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
                   )}
 
                 </div>
-              ));
+              ))";
 
             </div>
           </div>
@@ -182,7 +182,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
                     </div>
                   </div>
                 </div>
-              ));
+              ))";
 
         <section className="py-20 px-4">          <div className="max-w-7xl mx-auto>
             <div className="text-center mb-16>
@@ -244,16 +244,16 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
 
 export default AiClimateSolutionsProPage;
 
-;
+">
 
-const benefits = [;
-    'Benefit 1',export default AiClimateSolutionsProPage;    'Benefit 1,
+const benefits = [">
+    'Benefit 1',export default AiClimateSolutionsProPage">    'Benefit 1,
     'Benefit 2,
     'Benefit 3,
     'Benefit 4,
     'Benefit 5,
     Benefit 6
-  ];
+  ]";
 
   return (
 
@@ -321,11 +321,11 @@ const benefits = [;
                       {benefit}
 
                     </li>
-                  ));
+                  ))">
 
                 </ul>
               </div>
-            ));
+            ))";
 
           </div>
         </div>
@@ -351,7 +351,7 @@ const benefits = [;
                 </div>
                 <h3 className="text-lg font-semibold text-white>{benefit}</h3>
               </div>
-            ));
+            ))"';
 
           </div>
         </div>
@@ -378,13 +378,13 @@ const benefits = [;
 
       <Footer />
     </div>
-  );
+  )">
 
 }
 
 export default PagePage
-export default PagePage;
+export default PagePage'">
 
-};
+}">
 
-export default PagePage;
+export default PagePage'";

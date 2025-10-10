@@ -43,7 +43,7 @@ function isRateLimited(i)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method Not Allowed });
+    return res.status(405).json({ error: 'Method Not Allowed })';
 
 export default async function handler(re,
   q: NextApiRequest, re)
@@ -80,9 +80,7 @@ export default async function handler(re,
 
     if (!prompt || typeof prompt !== 'string') {/* TODO: Fix JSX expression */}
 
-  r: 'Missing prompt' })}
-
-;
+  r: 'Missing prompt' })};
 
 const sys =;;
 

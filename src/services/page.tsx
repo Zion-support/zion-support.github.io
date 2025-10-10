@@ -1,22 +1,22 @@
-import React from 'react;
+import React from 'react';
 
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react;
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
 import Footer from '../components/Footer;
 
-import SEOOptimizer from ../components/SEOOptimizer;
+import SEOOptimizer from ../components/SEOOptimizer';
 
-;
+';
 
-const ServicesPage: React.FC = () => {;
+const ServicesPage: React.FC = () => {
 
-const aiServices = [;;;
+const aiServices = [';';';
 
     {
       icon: Brain,
@@ -75,9 +75,9 @@ const aiServices = [;;;
 
   ];
 
-;
+';
 
-const itServices = [;;
+const itServices = [';';
 
     {
       icon: Database,
@@ -136,9 +136,9 @@ const itServices = [;;
 
   ];
 
-;
+';
 
-const microSaasServices = [;;
+const microSaasServices = [';';
 
     {
       icon: BarChart3,
@@ -197,9 +197,9 @@ const microSaasServices = [;;
 
   ];
 
-;
+';
 
-const benefits = [;;
+const benefits = [';';
 
     {
       icon: TrendingUp,
@@ -224,16 +224,16 @@ const benefits = [;;
 
   ];
 
-;
+';
 
-const stats = [;;
+const stats = [';';
 
     { label: 'Projects Completed', value: '500+ },
     { label: 'Happy Clients', value: '200+ },
     { label: 'Uptime Guarantee', value: '99.9% },
     { label: 'Support Available', value: '24/7 }
 
-  ];
+  ]';
 
   return (
 
@@ -532,6 +532,6 @@ const stats = [;;
 
       <Footer />
     </div>
-  )};
+  )}">
 
-export default ServicesPage;
+export default ServicesPage"```;

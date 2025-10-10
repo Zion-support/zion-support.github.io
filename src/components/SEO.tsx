@@ -128,7 +128,7 @@ export const,
 
   // Generate structured data;
 
-const generateStructuredData = () => {/* TODO: Fix JSX expression */};;
+const generateStructuredData = () => {/* TODO: Fix JSX expression */}';';
 
   O: Add content}
 
@@ -143,7 +143,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */};;
       return structuredData}
 
     const,
-  baseStructuredData: Record;
+  baseStructuredData: Record';
 
           <string, unknown> = {/* TODO: Fix JSX expression */}
 
@@ -195,11 +195,11 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */};;
 
       baseStructuredData.dateModified = modifiedDate}
 
-    return baseStructuredData};
+    return baseStructuredData}`;
 
-  return null};
+  return null}``;
 
-export default SEO;`
+export default SEO```;`
 
 
 

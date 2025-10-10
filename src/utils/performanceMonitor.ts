@@ -47,9 +47,9 @@ class PerformanceMonitor {
     this.observeCLS()}
 
   private observePaint(name: string, metric: keyof PerformanceMetrics): void {
-    try {;
+    try {
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -69,9 +69,9 @@ const entries = list.getEntries();;
   }
 
   private observeLCP(): void {
-    try {;
+    try {
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -91,9 +91,9 @@ const entries = list.getEntries();;
   }
 
   private observeFID(): void {
-    try {;
+    try {
 
-const observer = new PerformanceObserver((list) => {;;
+const observer = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -109,11 +109,11 @@ const entries = list.getEntries();;
   }
 
   private observeCLS(): void {
-    try {;
+    try {
 
 let clsValue = 0;;
 
-      const observer = new PerformanceObserver((list) => {;;
+      const observer = new PerformanceObserver((list) => {
 
 const entries = list.getEntries();;
 
@@ -189,15 +189,15 @@ if (typeof window !== 'undefined') {
     setTimeout(() => {
       performanceMonitor.reportMetrics()}, 5000)})}
 
-export const measureWebVitals = () => {;;
+export const measureWebVitals = () => {
 
   performanceMonitor.init()};
 
-export const getPerformanceMetrics = () => {;;
+export const getPerformanceMetrics = () => {
 
   return performanceMonitor.getMetrics()};
 
-export const addCustomMetric = (name: string, value: number) => {;;
+export const addCustomMetric = (name: string, value: number) => {
 
   performanceMonitor.addCustomMetric(name, value)};
 

@@ -1,6 +1,6 @@
 
 
-'use client;
+'use client';
 
 // PerformanceMetrics interface removed as its not used in this hook;
 

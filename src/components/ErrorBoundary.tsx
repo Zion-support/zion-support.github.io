@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react;
 
-import { AlertTriangle, RefreshCw, Home, Mail } from lucide-react;
+import { AlertTriangle, RefreshCw, Home, Mail } from lucide-react';
 
 interface Props {/* TODO: Fix JSX expression */}
 
@@ -25,14 +25,14 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
 
-    });
+    })';
 
-    // Log error to monitoring service;
+    // Log error to monitoring service';
 
     // // console.error removed for production
-error:, error, errorInfo);
+error:, error, errorInfo)';
 
-    // You can also log to external services here;
+    // You can also log to external services here';
 
     if (typeof window !== 'undefined' && gtag in window) {/* TODO: Fix JSX expression */}
 
@@ -86,7 +86,7 @@ error:, error, errorInfo);
   hover:bg-cyan-700 transition-colors flex items-center justify-center gap-2
               >
                 <RefreshCw className=w-4 h-4 /></RefreshCw>
-                Try Again;
+                Try Again">
 
               </button>
               
@@ -97,7 +97,7 @@ error:, error, errorInfo);
   hover:bg-gray-700 transition-colors flex items-center justify-center gap-2
               >
                 <RefreshCw className=w-4 h-4 /></RefreshCw>
-                Reload Page;
+                Reload Page";
 
               </button>
               

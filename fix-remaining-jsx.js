@@ -1,28 +1,28 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from 'fs';
 
 ';
 
 function fixRemainingJsx() {
   try {';
 
-let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8);;
+let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8);
 
     // Fix all remaining self-closing div tags that have content after them;
 
-const lines = content.split('\n);;
+const lines = content.split('\n);
 
-    const fixedLines = [];;
+    const fixedLines = [];
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length; i++) {
 
-let line = lines[i];;
+let line = lines[i];
 
       // Check if this is a self-closing div followed by content
-      if (line.includes('<div') && line.includes('/>) && i + 1 < lines.length) {;
+      if (line.includes('<div') && line.includes('/>) && i + 1 < lines.length) {
 
-const nextLine = lines[i + 1];;
+const nextLine = lines[i + 1];
 
         // If next line starts with whitespace and has content, fix the div
         if (nextLine.trim() && (nextLine.includes('<') || nextLine.includes('{') || nextLine.includes('}'))) {

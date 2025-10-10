@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react;
 
-import { Link } from react-router-dom;
+import { Link } from react-router-dom';
 
-;
+';
 
-const AISchedulerPage: React.FC = () => {;
+const AISchedulerPage: React.FC = () => {
 
-const features = [;;;
+const features = [';';';
 
     {
       icon: Calendar,
@@ -42,9 +42,9 @@ $4}
 
   ];
 
-;
+';
 
-const pricingPlans = [;;
+const pricingPlans = [';';
 
       name: 'Personal,
       price: '$19,
@@ -83,7 +83,7 @@ const pricingPlans = [;;
         'SSO integration,
         Custom workflows;
 
-const integrations = [;;
+const integrations = [
 
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365 },
@@ -92,11 +92,9 @@ const integrations = [;;
     { name: 'Teams', icon: '👥', description: 'Microsoft Teams },
     { name: 'Calendly', icon: '⏰', description: 'Scheduling platform },
     { name: 'Salesforce', icon: '💼', description: 'CRM integration },
-    { name: 'HubSpot', icon: '🎯', description: 'Marketing automation }
+    { name: 'HubSpot', icon: '🎯', description: 'Marketing automation }';
 
-;
-
-const testimonials = [;;
+const testimonials = [';';
 
       name: 'Jennifer Lee,
       company: 'TechStart,
@@ -254,10 +252,10 @@ const testimonials = [;;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto>
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
-  )};
+  )}">
 
-export default AISchedulerPage;
+export default AISchedulerPage">
 
-import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react;
+import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react">
 
-export default AISchedulerPage;
+export default AISchedulerPage'";

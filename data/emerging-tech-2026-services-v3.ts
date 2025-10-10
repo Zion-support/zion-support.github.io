@@ -11,7 +11,7 @@
   contactInfo: unknown;
     mobile: string;
     email: string;
-export interface EmergingTech2026ServiceV3 {;,
+export interface EmergingTech2026ServiceV3 {,
     address: string}
   i,
   d: string;
@@ -81,7 +81,7 @@ export const emergingTech2026 ServicesV3: EmergingTech2026 ServiceV3[] = [,
     id: "2026-emerging-tech-v3", name: "2026 Emerging Tech Platform V3",
     tagline: "Third generation emerging tech", price: '$399/month',
     description: 'Third generation of the 2026 emerging tech platform with enhanced capabilities and features.',
-    features: [;
+    features: [
       "Third generation tech"
       "Enhanced capabilities"
       "Advanced features"
@@ -136,7 +136,7 @@ export const,
     descriptio,"
   n: "Third generation of the 2026 emerging tech platform with enhanced capabilities and features.",
     feature,
-  s: [;"
+  s: ["
       "Third generation tech""
       "Enhanced capabilities""
       "Advanced features""

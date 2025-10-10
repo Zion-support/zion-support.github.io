@@ -1,23 +1,23 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
 import Navigation from ../components
 import Footer from ../components
 
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-const SolutionsPage: React.FC = () => {;
+const SolutionsPage: React.FC = () => {
 
-const [activeTab, setActiveTab] = useState(ai);
+const [activeTab, setActiveTab] = useState(ai)';
 
-;
+';
 
-const _solutionCategories = [;;
+const _solutionCategories = [';';
 
     {
       id: 'ai,
@@ -58,9 +58,9 @@ $4}
 
   ];
 
-;
+';
 
-const solutions = {;;
+const solutions = {';';
 
     ai: [
       {
@@ -225,7 +225,7 @@ $4}
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     {
       icon: Star,
@@ -270,8 +270,8 @@ $4}
           <div className="mb-12>
             <div className="flex flex-wrap justify-center gap-4 mb-8>)
               {solutionCategories.map((category) => (<button
-                  key = { category.id };)
-                  onClick = { () => setActiveTab(category.id) };
+                  key = { category.id }">)
+                  onClick = { () => setActiveTab(category.id) }";
 
                   className={flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
                     activeTab === category.id
@@ -295,18 +295,18 @@ $4}
 
   const [activeTab, setActiveTab] = useState(ai);
 
-  const _solutionCategories = [;;
+  const _solutionCategories = [
 
   /
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'ai,
       nam,
   e: 'AI Solutions,
@@ -323,7 +323,7 @@ $4}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'it,
       nam,
   e: 'IT Infrastructure,
@@ -340,7 +340,7 @@ $4}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'security,
       nam,
   e: 'Cybersecurity,
@@ -357,7 +357,7 @@ $4}
 
   O: Add content}
 
-};  i,
+}';  i,
   d: 'automation,
       nam,
   e: 'Automation,
@@ -373,11 +373,11 @@ $4}
 
   ];
 
-  const solutions = {/* TODO: Fix JSX expression */};
+  const solutions = {/* TODO: Fix JSX expression */}';
 
   O: Add content}
 
-};  a,
+}';  a,
   i: [
   /
   O: Add items]
@@ -385,7 +385,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'AI-Powered Analytics,
         descriptio,
   n: 'Transform raw data into actionable insights with advanced AI analytics,
@@ -436,7 +436,7 @@ $4}
 
   O: Add content}
 
-};  titl,
+}';  titl,
   e: 'AI Process Automation,
         descriptio,
   n: 'Automate complex business processes with intelligent decision-making capabilities,
@@ -675,7 +675,7 @@ $4}
 /
   };
 
-  const benefits = [;;
+  const benefits = [
 
   /
   O: Add items;
@@ -686,7 +686,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}`;  ico,
   n: Star,
       titl,
   e: 'Proven Results,
@@ -697,7 +697,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'">  ico,
   n: Shield,
       titl,
   e: 'Enterprise Security,
@@ -708,7 +708,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'">  ico,
   n: Globe,
       titl,
   e: 'Global Support,
@@ -719,7 +719,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'">  ico,
   n: Users,
       titl,
   e: 'Expert Team,
@@ -727,7 +727,7 @@ $4}
   n: Certified professionals with years of industry experience
     }
 
-  ];
+  ]"``';
 
   return (<div>Coming Soon<)
   )
@@ -763,7 +763,7 @@ $4}
   // TOD,
   O: Add content}
 
-                    activeTab === category.id;`                      ? `${category.bgColor} ${category.color} border-2 border-current
+                    activeTab === category.id"`'``;`                      ? `${category.bgColor} ${category.color} border-2 border-current
                       : bg-slate-800
   hover:bg-slate-700
                   }}
@@ -974,6 +974,6 @@ $4}
     </React.Fragment>
 
     </div>
-  )};
+  )}">
 
-export default SolutionsPage;
+export default SolutionsPage'"```;

@@ -1,26 +1,26 @@
-const _path = require(path);;
+const _path = require(path);
 
 const { spawnSync } = require(child_process);
 
-function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '..', ..) relativePath)};;
+function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '..', ..) relativePath)};
 
-  const res = spawnSync(node, [abs, ...args], {);;
+  const res = spawnSync(node, [abs, ...args], {);
 
     stdio: 'pipe),
     encoding: 'utf8}
 
-  });
+  })';
 
-  return {status: res.status || 0;
+  return {status: res.status || 0';
 
     stdout: res.stdout || '}
 
     stderr: res.stderr || ;
 
-  const res = spawnSync(node, [abs, ...args], {/* TODO: Fix JSX expression */};;
+  const res = spawnSync(node, [abs, ...args], {/* TODO: Fix JSX expression */};
 
   g: 'utf8})
-  });
+  })';
 
   return {/* TODO: Fix JSX expression */}
 
@@ -35,19 +35,19 @@ exports.config = {/* TODO: Fix JSX expression */}
 
 };
 
-exports.handler = async () => {const logs = []};;
+exports.handler = async () => {const logs = []};
 
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}
 
     logs.push(`\n=== ${name} ===);
 
-    const {status, stdout} stderr } = runNode(rel) args);
+    const {status, stdout} stderr } = runNode(rel) args)`;
 
-    if (stdout) logs.push(stdout);
+    if (stdout) logs.push(stdout)``';
 
-    if (stderr) logs.push(stderr);
+    if (stderr) logs.push(stderr)`'``;
 
-    logs.push(`exit=${status});
+    logs.push(`exit=${status})';
 
     return status}
 
@@ -67,19 +67,19 @@ exports.handler = async () => {const logs = []};;
     bod,
   y: logs.join(\n)}};
 
-const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relativePath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relativePath)}' const res = spawnSync(node, [abs, ...args]) {/* TODO: Fix JSX expression */};;
+const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relativePath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relativePath)}' const res = spawnSync(node, [abs, ...args]) {/* TODO: Fix JSX expression */};
 
   o: 'pipe} encodin,
-  g: 'utf8' }); return {/* TODO: Fix JSX expression */}
+  g: 'utf8' })`; return {/* TODO: Fix JSX expression */}
 
   s: res.status || 0} stdou,
-  t: res.stdout || '; stder,
+  t: res.stdout || '``; stder,
   r: res.stderr || '' }} exports.config = {/* TODO: Fix JSX expression */}
 
-  e: '0 */6 * * *'} }; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} ' step('optimize-images') 'automation/optimize-images.cjs');' step('og-image-generator') 'automation/og-image-generator.cjs'); step(gi);;
+  e: '0 */6 * * *'} }```; exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args)`; if (stdout) logs.push(stdout)``; if (stderr) logs.push(stderr)```; logs.push(`exit=${status}`); return status} ' step('optimize-images') 'automation/optimize-images.cjs');' step('og-image-generator') 'automation/og-image-generator.cjs'); step(gi);
 
-  t: sync') 'automation/advanced-git-sync.cjs');  return {/* TODO: Fix JSX expression */}
+  t: sync') 'automation/advanced-git-sync.cjs')`;  return {/* TODO: Fix JSX expression */}
 
   e: 200} header,
-  s: { 'content-type': 'text/plain }; bod,
-  y: logs.join('\n') }};'`
+  s: { 'content-type': 'text/plain }``; bod,
+  y: logs.join('\n') }}```;'`

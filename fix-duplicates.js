@@ -12,37 +12,37 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url);
 
 // __dirname removed
 // Function to fix duplicate function declarations;
 
 function fixDuplicateDeclarations(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let originalContent = content;;
+    let originalContent = content;
 
     // Fix duplicate function declarations;
 
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name}: React.FC = () => {});
+      return `const ${name}: React.FC = () => {})`;
 
-    // Fix duplicate const declarations;
+    // Fix duplicate const declarations``;
 
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?}```;\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
       return `const ${name} = () => {});
 
     // Fix missing closing braces in simple cases;
 
-    content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {;
+    content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {
 
-const lines = body.split(\n);;
+const lines = body.split(\n);
 
-      let openBraces = 0;;
+      let openBraces = 0;
 
-      let closeBraces = 0;;
+      let closeBraces = 0;
 
       for (const line of lines) {
         openBraces += (line.match(/{/g) || []).length;
@@ -57,13 +57,13 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix duplicate const declarations;
 
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?}`;\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
 
       return const ${name} = () => {/* TODO: Fix JSX expression */}
 
-    });
+    })``;
 
-    // Fix missing closing braces in simple cases;
+    // Fix missing closing braces in simple cases```;
 
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
 
@@ -108,22 +108,22 @@ return false}
 
 // Function to find all TypeScript/JavaScript files;
 
-function findFiles(dir) {;
+function findFiles(dir) {
 
-const files = [];;
+const files = [];
 
   ;
 
 function walkDir(currentPath) {
-    try {;
+    try {
 
-const items = fs.readdirSync(currentPath);;
+const items = fs.readdirSync(currentPath);
 
-      for (const item of items) {;
+      for (const item of items) {
 
-const fullPath = path.join(currentPath, item);;
+const fullPath = path.join(currentPath, item);
 
-        const stat = fs.statSync(fullPath);;
+        const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
           if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
@@ -155,14 +155,14 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
 // Main execution;
 
 // console.log removed for production
-const srcDir = path.join(__dirname, src);;
+const srcDir = path.join(__dirname, src);
 
-const files = findFiles(srcDir);;
+const files = findFiles(srcDir);
 
 // console.log removed for production
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0`;
 
 for (const file of files) {/* TODO: Fix JSX expression */}
 
@@ -171,12 +171,12 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 }
 
 // console.log removed for production
-// Run linting to check results;
+// Run linting to check results``;
 
 // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: pipe });
+  o: pipe })```;
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}

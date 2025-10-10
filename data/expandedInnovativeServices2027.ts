@@ -2489,7 +2489,7 @@ export const,
 
 // Export all expanded services;
 
-export const ALL_EXPANDED_SERVICES_2027 = [;;
+export const ALL_EXPANDED_SERVICES_2027 = [
 
   ...advancedCybersecurityServices,
   ...advancedDataAnalyticsServices,
@@ -2502,7 +2502,7 @@ export const ALL_EXPANDED_SERVICES_2027 = [;;
 
 // Service categories for filtering;
 
-export const EXPANDED_SERVICE_CATEGORIES = [;;
+export const EXPANDED_SERVICE_CATEGORIES = [
 
   'All',
   'Cybersecurity',

@@ -1,14 +1,14 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react;
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from lucide-react';
 
-;
+';
 
-const EnhancedLoadingSkeletonPage: React.FC = () => {const features = [;;;
+const EnhancedLoadingSkeletonPage: React.FC = () => {const features = [';';';
 
     {
       icon: Brain,
@@ -31,4 +31,4 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {const features = [;;;
       description: Worldwide deployment and support for international businesses
     }
 
-  ];
+  ]';

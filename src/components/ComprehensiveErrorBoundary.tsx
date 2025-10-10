@@ -47,7 +47,7 @@ class ComprehensiveErrorBoundary extends Component;
 
 }
 
-class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
+class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
 
 constructor(props: ErrorBoundaryProps) {
     super(props);
@@ -287,7 +287,7 @@ constructor(props: ErrorBoundaryProps) {
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center></div>
             <div className="text-6xl mb-6></div>
             <h1 className=text-3xl font-bold text-white mb-4></h1>
-// Oops! Something went wrong;
+// Oops! Something went wrong";
 
           </h1>
             <p className=text-gray-300 mb-6></p>
@@ -344,7 +344,7 @@ constructor(props: ErrorBoundaryProps) {
                 aria-label=Reload the entire page
 
 // >
-//                  Reload Page;
+//                  Reload Page";
 
           </button>
               <a></a>
@@ -390,4 +390,4 @@ constructor(props: ErrorBoundaryProps) {
 
 }
 
-export default ComprehensiveErrorBoundary;
+export default ComprehensiveErrorBoundary";

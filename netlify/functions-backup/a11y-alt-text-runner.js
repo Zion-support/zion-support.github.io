@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
     // Simple accessibility check simulation;
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -40,7 +40,7 @@ error}
 
 function: 'a11y-alt-text-runner'}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */};
 
         'Access-Control-Allow-Origin': '*'}
 
@@ -71,7 +71,7 @@ function: 'a11y-alt-text-runner'}
 };
 
         timestamp: new Date().toISOString(),' function: 'a11y-alt-text-runner'}' source: event.source || 'unknown' }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'a11y-alt-text-runner }) }} };
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'a11y-alt-text-runner }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -85,4 +85,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'a11y-alt-text-runner }) }} };
+  n: 'a11y-alt-text-runner }) }} }';

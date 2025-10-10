@@ -1,8 +1,8 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import React, { memo, useMemo } from 'react;
+import React, { memo, useMemo } from 'react';
 
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | xl;
@@ -28,7 +28,7 @@ variant = 'spinner,
     className = ',
     color = 'blue,
     fullScreen = false,;)
-}); => {;
+}); => {
 
 const sizeClasses = useMemo(;
 
@@ -41,9 +41,9 @@ const sizeClasses = useMemo(;
       []
     );
 
-;
+';
 
-const textSizeClasses = useMemo(;;
+const textSizeClasses = useMemo(';';
 
       () => ({
         xs: 'text-xs,
@@ -55,9 +55,9 @@ const textSizeClasses = useMemo(;;
       []
     );
 
-;
+';
 
-const colorClasses = useMemo(;;
+const colorClasses = useMemo(';';
 
       () => ({
         blue: 'border-blue-600 bg-blue-600,
@@ -69,9 +69,9 @@ const colorClasses = useMemo(;;
       []
     );
 
-;
+';
 
-const renderSpinner = useMemo(() => {;;
+const renderSpinner = useMemo(() => {';';
 
 return (
 
@@ -89,8 +89,8 @@ switch (variant) {
                   style={{ animationDelay: `${i * 0.1}s }}
 
                 />
-              ));</div>
-          );
+              ))``;</div>
+          )```;
 
         case 'pulse:
           return (
@@ -101,7 +101,7 @@ switch (variant) {
               role=status
               aria-label=Loading
             />
-          );
+          )``;
 
         case 'skeleton:
           return (</div>
@@ -109,7 +109,7 @@ switch (variant) {
               <div>
               <div>
               <div>
-          );
+          )```;
 
         case 'bars:
           return (
@@ -127,8 +127,8 @@ switch (variant) {
     }}
 
                 />
-              ));</div>
-          );
+              ))``;</div>
+          )```;
 
         case 'spinner:
         default:
@@ -140,11 +140,11 @@ switch (variant) {
               role=status
               aria-label=Loading
             />
-          ););
+          )`;)``;
 
-    }, [size, variant, color, sizeClasses, colorClasses]);
+    }, [size, variant, color, sizeClasses, colorClasses])```;
 
-const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className};)}, [fullScreen, className]);;
+const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)}, [fullScreen, className])``;```;
 
     return (</div>
       <div>
@@ -165,8 +165,8 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
 );
 
 OptimizedLoadingSpinner.displayName = OptimizedLoadingSpinner
-export default OptimizedLoadingSpinner;
+export default OptimizedLoadingSpinner`;
 
 }
 
-  fullScreen?: boolean;);
+  fullScreen?: boolean``;)```;

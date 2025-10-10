@@ -2,189 +2,166 @@
 
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to recursively find all files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-        results = results.concat(findFiles(filePath, extensions));
-      }
-    } else {
-      const ext = path.extname(file);
-      if (extensions.includes(ext)) {
-        results.push(filePath);
-      }
-    }
+// Function to fix unterminated string literals more comprehensively
+function fixUnterminatedStrings(content) {
+  // Fix import statements with missing closing quotes
+  content = content.replace(/import\s+([^'"]*)\s+from\s+'([^']*);/g, (match, imports, path) => {
+    return `import ${imports} from '${path}';`;
   });
   
-  return results;
+  content = content.replace(/import\s+([^'"]*)\s+from\s+"([^"]*);/g, (match, imports, path) => {
+    return `import ${imports} from "${path}";`;
+  });
+  
+  // Fix require statements
+  content = content.replace(/require\s*\(\s*'([^']*);/g, (match, path) => {
+    return `require('${path}');`;
+  });
+  
+  content = content.replace(/require\s*\(\s*"([^"]*);/g, (match, path) => {
+    return `require("${path}");`;
+  });
+  
+  // Fix string literals in object properties
+  content = content.replace(/(\w+):\s*'([^']*);/g, (match, key, value) => {
+    return `${key}: '${value}';`;
+  });
+  
+  content = content.replace(/(\w+):\s*"([^"]*);/g, (match, key, value) => {
+    return `${key}: "${value}";`;
+  });
+  
+  // Fix JSX attributes
+  content = content.replace(/className="([^"]*);/g, (match, className) => {
+    return `className="${className}">`;
+  });
+  
+  content = content.replace(/path="([^"]*);/g, (match, path) => {
+    return `path="${path}">`;
+  });
+  
+  // Fix template literals
+  content = content.replace(/`([^`]*);/g, (match, template) => {
+    return `\`${template}\`;`;
+  });
+  
+  // Fix common patterns in React components
+  content = content.replace(/'use client;/g, "'use client';");
+  content = content.replace(/import React from 'react;/g, "import React from 'react';");
+  content = content.replace(/import { ([^}]+) } from '([^']*);/g, "import { $1 } from '$2';");
+  content = content.replace(/import ([^'"]+) from '([^']*);/g, "import $1 from '$2';");
+  
+  // Fix JSX closing tags
+  content = content.replace(/<(\w+)\s+([^>]*);/g, (match, tag, attrs) => {
+    return `<${tag} ${attrs}>`;
+  });
+  
+  // Fix export statements
+  content = content.replace(/export default ([^';]*);/g, (match, exportName) => {
+    return `export default ${exportName};`;
+  });
+  
+  // Fix function declarations
+  content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*{;/g, (match, funcName) => {
+    return match.replace('{;', '{');
+  });
+  
+  // Fix arrow functions
+  content = content.replace(/=>\s*{;/g, '=> {');
+  
+  // Fix object literals
+  content = content.replace(/{\s*;/g, '{');
+  content = content.replace(/}\s*;/g, '};');
+  
+  // Fix array literals
+  content = content.replace(/\[\s*;/g, '[');
+  content = content.replace(/\]\s*;/g, '];');
+  
+  // Fix common JSX patterns
+  content = content.replace(/<(\w+)\s+([^>]*);/g, (match, tag, attrs) => {
+    return `<${tag} ${attrs}>`;
+  });
+  
+  // Fix string concatenation
+  content = content.replace(/'([^']*)\s*\+\s*'([^']*);/g, (match, str1, str2) => {
+    return `'${str1}' + '${str2}';`;
+  });
+  
+  // Fix console statements
+  content = content.replace(/console\.log\s*\(\s*'([^']*);/g, (match, message) => {
+    return `console.log('${message}');`;
+  });
+  
+  // Fix JSON.stringify
+  content = content.replace(/JSON\.stringify\s*\(\s*{\s*([^}]*)\s*}\s*\)/g, (match, obj) => {
+    return `JSON.stringify({ ${obj} })`;
+  });
+  
+  return content;
 }
 
-// Function to fix all syntax issues
-function fixAllSyntaxIssues(filePath) {
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    let fixed = false;
+    const content = fs.readFileSync(filePath, 'utf8');
+    let fixedContent = content;
     
-    // Fix missing function declaration before state hooks
-    if (content.includes('import React, { useState') && content.includes('const [') && !content.includes(': React.FC = () => {')) {
-      const fileName = path.basename(filePath, path.extname(filePath));
-      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-      
-      // Find the line with useState and add function declaration before it
-      const lines = content.split('\n');
-      let newLines = [];
-      let foundImport = false;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('import React, { useState') && !foundImport) {
-          newLines.push(line);
-          newLines.push('');
-          newLines.push(`const ${componentName}: React.FC = () => {`);
-          foundImport = true;
-        } else if (line.includes('const [') && !foundImport) {
-          newLines.push(`const ${componentName}: React.FC = () => {`);
-          newLines.push(line);
-          foundImport = true;
-        } else {
-          newLines.push(line);
-        }
-      }
-      
-      content = newLines.join('\n');
-      fixed = true;
-    }
+    // Apply fixes
+    fixedContent = fixUnterminatedStrings(fixedContent);
     
-    // Fix missing export default
-    if (content.includes('import React') && !content.includes('export default')) {
-      const fileName = path.basename(filePath, path.extname(filePath));
-      const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-      
-      content += '\n\nexport default ' + componentName + ';';
-      fixed = true;
-    }
-    
-    // Fix missing closing brace before export
-    if (content.includes('};\n\nexport default') && !content.includes('const ')) {
-      const lines = content.split('\n');
-      let newLines = [];
-      let inComponent = false;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('import React from \'react\';')) {
-          newLines.push(line);
-          newLines.push('');
-          newLines.push('const ComponentName: React.FC = () => {');
-          inComponent = true;
-        } else if (line.includes('export default')) {
-          if (inComponent) {
-            newLines.push('};');
-            newLines.push('');
-          }
-          newLines.push(line);
-        } else {
-          newLines.push(line);
-        }
-      }
-      
-      content = newLines.join('\n');
-      fixed = true;
-    }
-    
-    // Fix malformed gtag calls
-    if (content.includes('event_category:') && !content.includes('window.gtag(')) {
-      content = content.replace(
-        /if \(typeof window !== 'undefined' && 'gtag' in window\) \{\s*event_category:/g,
-        "if (typeof window !== 'undefined' && 'gtag' in window) {\n      window.gtag('event', 'phone_click', {\n        event_category:"
-      );
-      fixed = true;
-    }
-    
-    // Fix missing closing parenthesis in gtag calls
-    if (content.includes('event_category:') && !content.includes('});')) {
-      content = content.replace(
-        /(\s+event_label: '[^']+')\s*\);/g,
-        '$1\n      });'
-      );
-      fixed = true;
-    }
-    
-    // Fix duplicate component definitions
-    const componentMatches = content.match(/const \w+: React\.FC = \(\) => \{/g);
-    if (componentMatches && componentMatches.length > 1) {
-      const lines = content.split('\n');
-      let newLines = [];
-      let foundFirstComponent = false;
-      
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        
-        if (line.includes('const ') && line.includes(': React.FC = () => {')) {
-          if (foundFirstComponent) {
-            continue; // Skip duplicate component definitions
-          } else {
-            foundFirstComponent = true;
-            newLines.push(line);
-          }
-        } else {
-          newLines.push(line);
-        }
-      }
-      
-      content = newLines.join('\n');
-      fixed = true;
-    }
-    
-    if (fixed && content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✓ Fixed syntax issues in: ${filePath}`);
+    // Only write if content changed
+    if (fixedContent !== content) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main execution
-console.log('🔍 Searching for files with syntax issues...');
-
-const srcDir = path.join(__dirname, 'src');
-const files = findFiles(srcDir);
-
-console.log(`Found ${files.length} files to check`);
-
-let fixedCount = 0;
-
-files.forEach(file => {
-  try {
-    if (fixAllSyntaxIssues(file)) {
-      fixedCount++;
-    }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-  }
-});
-
-console.log(`\n📊 Summary:`);
-console.log(`Files fixed: ${fixedCount}`);
-
-if (fixedCount > 0) {
-  console.log('\n✅ All syntax issues have been resolved!');
-} else {
-  console.log('\n✅ No syntax issues found.');
+// Main function
+function main() {
+  const patterns = [
+    '**/*.tsx',
+    '**/*.ts',
+    '**/*.jsx',
+    '**/*.js'
+  ];
+  
+  let totalFixed = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, {
+      ignore: [
+        'node_modules/**',
+        'dist/**',
+        '.next/**',
+        'out/**',
+        '**/backup*/**',
+        '**/disabled*/**',
+        '**/corrupted*/**',
+        '**/broken*/**'
+      ]
+    });
+    
+    files.forEach(file => {
+      if (processFile(file)) {
+        totalFixed++;
+      }
+    });
+  });
+  
+  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixUnterminatedStrings, processFile };

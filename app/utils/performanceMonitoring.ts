@@ -131,15 +131,15 @@ this.recordWebVital('FCP', entry.startTime);});]
       this.observers.push(paintObserver)
       // Observe LCP;
 
-const lcpObserver = new PerformanceObserver((list) => {;;
+const lcpObserver = new PerformanceObserver((list) => {
 
       // Observe LCP;
 
 const lcpObserver = new PerformanceObserver((list) => {};;
 
-        const entries = list.getEntries();;
+        const entries = list.getEntries();';
 
-const lastEntry = entries[entries.length - 1];;
+const lastEntry = entries[entries.length - 1]';';
 
         if (lastEntry) {}
 
@@ -155,7 +155,7 @@ this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number
 
       let clsValue = 0;;
 
-const clsObserver = new PerformanceObserver((list) => {;;
+const clsObserver = new PerformanceObserver((list) => {
 
       // Observe CLS;
 
@@ -165,9 +165,9 @@ const clsObserver = new PerformanceObserver((list) => {};;
 
         list.getEntries().forEach((entry) => {}
 
-          if (!(entry as PerformanceEntry & { hadRecentInput: boolean });.hadRecentInput) {}
+          if (!(entry as PerformanceEntry & { hadRecentInput: boolean })';.hadRecentInput) {}
 
-            clsValue += (entry as PerformanceEntry & { value: number });.value;
+            clsValue += (entry as PerformanceEntry & { value: number })';.value';
 
 this.recordWebVital('CLS', clsValue)]
     }
@@ -180,11 +180,11 @@ this.recordWebVital('CLS', clsValue)]
       this.observers.push(clsObserver)
       // Observe FID;
 
-const fidObserver = new PerformanceObserver((list) => {;;
+const fidObserver = new PerformanceObserver((list) => {
 
-      // Observe FID;
+      // Observe FID';
 
-const fidObserver = new PerformanceObserver((list) => {};;
+const fidObserver = new PerformanceObserver((list) => {}';';
 
         list.getEntries().forEach((entry) => {}
 
@@ -197,25 +197,25 @@ const fidObserver = new PerformanceObserver((list) => {};;
       this.observers.push(fidObserver)
       // Observe navigation timing for TTFB;
 
-const navObserver = new PerformanceObserver((list) => {;;
+const navObserver = new PerformanceObserver((list) => {
 
-        list.getEntries().forEach((entry) => {;
+        list.getEntries().forEach((entry) => {
 
 const navEntry = entry as PerformanceNavigationTiming;;
 
       // Observe navigation timing for TTFB;
 
-const navObserver = new PerformanceObserver((list) => {};;
+const navObserver = new PerformanceObserver((list) => {};';
 
         list.getEntries().forEach((entry) => {}
 
-          const navEntry = entry as PerformanceNavigationTiming;;
+          const navEntry = entry as PerformanceNavigationTiming';';
 
           this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);});]
     });]
     });
 
-      navObserver.observe({ type: 'navigation, buffered: true });
+      navObserver.observe({ type: 'navigation, buffered: true })';
 
       this.observers.push(navObserver)]
     } catch (error) {}
@@ -325,10 +325,10 @@ timestamp: Date.now();)]
     this.sendToAnalytics(metric)
   private recordWebVital(nam,
   e: keyof WebVitals, valu)
-e: number): void {/* TODO: Fix JSX expression */});]
-    };
+e: number): void {/* TODO: Fix JSX expression */})`;]
+    }``;
 
-    this.webVitals[name] = metric;
+    this.webVitals[name] = metric```;
 
     logger.info(`Web)`
   Vital: ${name}`, 'PerformanceMonitoring, { value, rating });
@@ -406,13 +406,13 @@ timestamp: Date.now();)]
     }
 
     this.customMetrics.push(metric)
-    // Maintain max metrics limit;
+    // Maintain max metrics limit`;
 
     if (this.customMetrics.length > this.maxMetrics) {
     // Maintain max metrics limit
     if (this.customMetrics.length > this.maxMetrics) {}
 
-this.customMetrics.shift();});]
+this.customMetrics.shift()``;})```;]
     }
 
     logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring, { value, unit });
@@ -423,11 +423,11 @@ this.customMetrics.shift();});]
 t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */});]
     };
 
-    this.customMetrics.push(metric);
+    this.customMetrics.push(metric)`;
 
-    // Maintain max metrics limit;
+    // Maintain max metrics limit``;
 
-    if (this.customMetrics.length > this.maxMetrics) {/* TODO: Fix JSX expression */});]
+    if (this.customMetrics.length > this.maxMetrics) {/* TODO: Fix JSX expression */})```;]
     }`
     logger.debug(`Custom)`
 Metric: ${name}`, 'PerformanceMonitoring', { value, unit });]
@@ -441,7 +441,7 @@ Metric: ${name}`, 'PerformanceMonitoring', { value, unit });]
     try {,
       if (typeof window !== 'undefined' && 'fetch' in window) {,
         await fetch('/api/analytics/performance', {)
-          method: 'POST});
+          method: 'POST})';
 
           headers: { 'Content-Type': 'application/json });
 
@@ -594,9 +594,9 @@ const result = fn(),;;
 
     const start = performance.now();;
 
-const result = fn();;
+const result = fn()`;``;
 
-const duration = performance.now() - start;`};;
+const duration = performance.now() - start```;`}``;```;
 
     this.recordCustomMetric(`fn_${name}`, duration, 'ms')
     return result});
@@ -617,9 +617,9 @@ const result = await fn(),;;
 
     const start = performance.now();;
 
-const result = await fn();;
+const result = await fn()`;``;
 
-const duration = performance.now() - start;`};;
+const duration = performance.now() - start```;`}``;```;
 
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
     return result});
@@ -670,23 +670,23 @@ const measure = performance.getEntriesByName(name, 'measure)[0];;
     if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {/* TODO: Fix JSX expression */});;);
     if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {/* TODO: Fix JSX expression */});;);
     if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {/* TODO: Fix JSX expression */});;);
-    return {/* TODO: Fix JSX expression */});;)
-}});
+    return {/* TODO: Fix JSX expression */});`;)
+}})``;
 }  /**
-   * Measure function execution time;
+   * Measure function execution time```;
 
    */
   measureFunction<T></T>(nam,
   e: string, f)
   n: () => T): T {/* TODO: Fix JSX expression */}`
-    this.recordCustomMetric(`fn_${name}`, duration, 'ms);
+    this.recordCustomMetric(`fn_${name}`, duration, 'ms)`;
 
-    return result});
+    return result})``;
 
 }
 
   /**
-   * Measure async function execution time;
+   * Measure async function execution time```;
 
    */
   async measureAsyncFunction<T></T>(nam,
@@ -787,7 +787,7 @@ rating?: 'good' | 'needs-improvement' | 'poor';});]
 
 const simpleMetrics = new Map<string></string>();;
 
-export const recordMetric = useCallback((...args) => {;;
+export const recordMetric = useCallback((...args) => {
 
   // Record in our simple metrics store for testing
 export const recordMetric = useCallback((...args) => {};;
@@ -1029,9 +1029,9 @@ export const getRecommendations = (): string[] => {/* TODO: Fix JSX expression *
   if (metrics.LCP && metrics.LCP.rating !== 'good') {/* TODO: Fix JSX expression */});;);
   if (metrics.FID && metrics.FID.rating !== 'good') {/* TODO: Fix JSX expression */});;);
   if (metrics.CLS && metrics.CLS.rating !== 'good') {/* TODO: Fix JSX expression */});;);
-  if (metrics.TTFB && metrics.TTFB.rating !== 'good') {/* TODO: Fix JSX expression */});;);
-  return recommendations});};
+  if (metrics.TTFB && metrics.TTFB.rating !== 'good') {/* TODO: Fix JSX expression */});;)`;
+  return recommendations})``;}```;
 
 `
 }
-  timestamp: number;});;)
+  timestamp: number`;})``;```;)

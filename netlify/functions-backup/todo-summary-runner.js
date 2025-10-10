@@ -1,7 +1,7 @@
 exports.handler = async function (event, context) {
   try {
     //     // Todo summary simulation;
-    const result = {;
+    const result = {
       statusCode: 200;
       headers: {,
         'Content-Type': 'application/json','
@@ -35,6 +35,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     return result} catch (error) {/* TODO: Fix JSX expression */}
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
       })}}
 };

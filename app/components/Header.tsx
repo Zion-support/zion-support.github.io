@@ -1,6 +1,6 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 import Navigation from ./Navigation;
 
@@ -11,7 +11,7 @@ const Header: React.FC = () => {
 
     <React.Fragment>
       <Navigation />
-);
+)';
 
 }
 
@@ -19,4 +19,4 @@ const Header: React.FC = () => {
 
       <div className=h-16 lg:h-20 />
     </React.Fragment>)
-export default Header;
+export default Header';

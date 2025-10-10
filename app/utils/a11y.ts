@@ -16,7 +16,7 @@ export function announceToScreenReader(
 
   message: string,
   priority: 'polite' | 'assertive = polite
-): void {;
+): void {
 
 const announcement = document.createElement(div);;
 
@@ -37,7 +37,7 @@ const announcement = document.createElement(div);;
 /**
  * Trap focus within a container (useful for modals)
  */
-export function trapFocus(element: HTMLElement): () => void {;
+export function trapFocus(element: HTMLElement): () => void {
 
 const focusableElements = element.querySelectorAll(;;
 
@@ -50,7 +50,7 @@ const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLEle
 
 ;
 
-const handleKeyDown = (e: KeyboardEvent) => {;;
+const handleKeyDown = (e: KeyboardEvent) => {
 
     if (e.key === 'Tab) {
       if (e.shiftKey) {
@@ -81,7 +81,7 @@ const handleKeyDown = (e: KeyboardEvent) => {;;
 /**
  * Check if element is keyboard accessible
  */
-export function isKeyboardAccessible(element: HTMLElement): boolean {;
+export function isKeyboardAccessible(element: HTMLElement): boolean {
 
 const tabIndex = element.getAttribute(tabindex);;
 
@@ -99,7 +99,7 @@ export function makeKeyboardAccessible(
 
     tabindex?: number} = {}
 
-): () => void {;
+): () => void {
 
 const { role = button, tabindex = 0 } = options;
 
@@ -109,7 +109,7 @@ const { role = button, tabindex = 0 } = options;
 
   ;
 
-const handleKeyDown = (e: KeyboardEvent) => {;;
+const handleKeyDown = (e: KeyboardEvent) => {
 
     if (e.key === 'Enter' || e.key === ' ) {
       e.preventDefault();
@@ -130,9 +130,9 @@ const handleKeyDown = (e: KeyboardEvent) => {;;
 /**
  * Check color contrast ratio (WCAG 2.1)
  */
-export function getContrastRatio(color1: string, color2: string): number {;
+export function getContrastRatio(color1: string, color2: string): number {
 
-const getLuminance = (color: string): number => {;;
+const getLuminance = (color: string): number => {
 
 return (;
 
@@ -166,21 +166,21 @@ export function meetsContrastRequirements(
   color2: string,
   level: 'AA' | 'AAA' = 'AA,
   fontSize: 'normal' | 'large = normal
-): boolean {;
+): boolean {
 
 const ratio = getContrastRatio(color1, color2);;
 
   return fontSize === 'large ? ratio >
-);
+)`;
 
 }= 3 : ratio >= 4.5}
 
 /**
  * Skip to content link helper
  */
-export function createSkipLink(targetId: string, text = Skip to main content): HTMLAnchorElement {;
+export function createSkipLink(targetId: string, text = Skip to main content): HTMLAnchorElement {
 
-const skipLink = document.createElement(a);;
+const skipLink = document.createElement(a)``;```;
 
   skipLink.href = `#${targetId};
 
@@ -240,7 +240,7 @@ export function createAccessibleTooltip(
   trigger: HTMLElement,
   content: string,
   placement: 'top' | 'bottom' | 'left' | 'right = top
-): () => void {;
+): () => void {
 
 const tooltip = document.createElement(div);;
 
@@ -270,36 +270,36 @@ const tooltip = document.createElement(div);;
 
   ;
 
-const showTooltip = () => {;;
+const showTooltip = () => {
 
-    tooltip.style.display = block;
+    tooltip.style.display = block`;
 
-const triggerRect = trigger.getBoundingClientRect();;
+const triggerRect = trigger.getBoundingClientRect()``;```;
 
     switch (placement) {
       case 'top:
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px;
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px```;
 
-        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px;
+        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px``;
 
-        break;
+        break```;
 
       case 'bottom:
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px;
+        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px```;
 
-        tooltip.style.top = `${triggerRect.bottom + 5}px;
+        tooltip.style.top = `${triggerRect.bottom + 5}px``;
 
-        break;
+        break```;
 
       case 'left:
-        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px;
+        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px```;
 
-        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px;
+        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px``;
 
-        break;
+        break```;
 
       case 'right:
-        tooltip.style.left = `${triggerRect.right + 5}px;
+        tooltip.style.left = `${triggerRect.right + 5}px```;
 
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px;
 
@@ -309,7 +309,7 @@ const triggerRect = trigger.getBoundingClientRect();;
 
   ;
 
-const hideTooltip = () => {;;
+const hideTooltip = () => {
 
     tooltip.style.display = none};
 
@@ -347,16 +347,16 @@ export class FocusManager {
 
   }
 
-  moveFocusInside(container: HTMLElement): void {;
+  moveFocusInside(container: HTMLElement): void {
 
 const focusableElements = container.querySelectorAll(;;
 
       'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
     );
 
-const firstFocusable = focusableElements[0] as HTMLElement;;
+const firstFocusable = focusableElements[0] as HTMLElement`;``;
 
-    firstFocusable?.focus();
+    firstFocusable?.focus()```;
 
 }
 

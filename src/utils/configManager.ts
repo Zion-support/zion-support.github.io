@@ -1,4 +1,4 @@
-'use client;
+'use client';
 
 /**
  * Configuration Manager
@@ -101,7 +101,7 @@ $4},
     enableNetwork: false
   }
 
-};
+}';
 
 const developmentConfig: Partial<AppConfig> = {
   environment: 'development,
@@ -116,9 +116,9 @@ const developmentConfig: Partial<AppConfig> = {
 
 use client
 /**
- * Configuration Manager;
+ * Configuration Manager';
 
- * Centralized configuration management with environment-based settings;
+ * Centralized configuration management with environment-based settings';
 
  */
 export type Environment = 'development' | 'staging' | 'production' | test;
@@ -224,7 +224,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   environment: 'development,
   api: {// TODO: Add content}
 
-};
+}';
 
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com,
     timeout: 30000,
@@ -266,24 +266,24 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   },
   logging: {// TODO: Add content}
 
-};
+}';
 
   level: 'info,
     enableConsole: true,
     enableNetwork: false}
 
-};
+}';
 
-const developmentConfig: Partial;
+const developmentConfig: Partial';
 
           <AppConfig> = {// TODO: Add content}
 
-};
+}';
 
   environment: 'development,
   api: {// TODO: Add content}
 
-};
+}';
 
   baseURL: 'http://localhost:3000/api,
     timeout: 30000,
@@ -291,7 +291,7 @@ const developmentConfig: Partial;
     enableCaching: false},
   features: {// TODO: Add content}
 
-};
+}';
 
   enableAnalytics: false,
     enableErrorReporting: true,
@@ -306,7 +306,7 @@ const developmentConfig: Partial;
     enableNetwork: false
   }
 
-};
+}';
 
 const stagingConfig: Partial<AppConfig> = {
   environment: 'staging,
@@ -321,24 +321,24 @@ const stagingConfig: Partial<AppConfig> = {
     enablePWA: false},
   logging: {// TODO: Add content}
 
-};
+}';
 
   level: 'debug,
     enableConsole: true,
     enableNetwork: false}
 
-};
+}';
 
-const stagingConfig: Partial;
+const stagingConfig: Partial';
 
           <AppConfig> = {// TODO: Add content}
 
-};
+}';
 
   environment: 'staging,
   api: {// TODO: Add content}
 
-};
+}';
 
   baseURL: 'https://staging-api.ziontech.com,
     timeout: 30000,
@@ -346,7 +346,7 @@ const stagingConfig: Partial;
     enableCaching: true},
   features: {// TODO: Add content}
 
-};
+}';
 
   enableAnalytics: true,
     enableErrorReporting: true,
@@ -361,7 +361,7 @@ const stagingConfig: Partial;
     enableNetwork: true
   }
 
-};
+}';
 
 const productionConfig: Partial<AppConfig> = {
   environment: 'production,
@@ -376,24 +376,24 @@ const productionConfig: Partial<AppConfig> = {
     enablePWA: true},
   logging: {// TODO: Add content}
 
-};
+}';
 
   level: 'info,
     enableConsole: true,
     enableNetwork: true}
 
-};
+}';
 
-const productionConfig: Partial;
+const productionConfig: Partial';
 
           <AppConfig> = {// TODO: Add content}
 
-};
+}';
 
   environment: 'production,
   api: {// TODO: Add content}
 
-};
+}';
 
   baseURL: 'https://api.ziontech.com,
     timeout: 30000,
@@ -401,7 +401,7 @@ const productionConfig: Partial;
     enableCaching: true},
   features: {// TODO: Add content}
 
-};
+}';
 
   enableAnalytics: true,
     enableErrorReporting: true,
@@ -422,7 +422,7 @@ const productionConfig: Partial;
     maxRequestsPerMinute: 60
   }
 
-};
+}';
 
 const testConfig: Partial<AppConfig> = {
   environment: 'test,
@@ -437,7 +437,7 @@ const testConfig: Partial<AppConfig> = {
     enablePWA: true},
   logging: {// TODO: Add content}
 
-};
+}';
 
   level: 'error,
     enableConsole: false,
@@ -451,18 +451,18 @@ const testConfig: Partial<AppConfig> = {
     enableRateLimiting: true,
     maxRequestsPerMinute: 60}
 
-};
+}';
 
-const testConfig: Partial;
+const testConfig: Partial';
 
           <AppConfig> = {// TODO: Add content}
 
-};
+}';
 
   environment: 'test,
   api: {// TODO: Add content}
 
-};
+}';
 
   baseURL: 'http://localhost:3000/api,
     timeout: 5000,
@@ -470,7 +470,7 @@ const testConfig: Partial;
     enableCaching: false},
   features: {// TODO: Add content}
 
-};
+}';
 
   enableAnalytics: false,
     enableErrorReporting: false,
@@ -494,10 +494,10 @@ export class ConfigManager {
 
   private environment: Environment;
 
-  private overrides: Partial<AppConfig> = {};
+  private overrides: Partial<AppConfig> = {}';
 
   constructor() {
-    this.environment = this.detectEnvironment();
+    this.environment = this.detectEnvironment()';
 
     this.config = this.loadConfig()}
 
@@ -506,7 +506,7 @@ export class ConfigManager {
     enablePWA: false},
   logging: {// TODO: Add content}
 
-};
+}';
 
   level: 'error,
     enableConsole: false,
@@ -534,7 +534,7 @@ export class ConfigManager {// TODO: Add content}
 
 }
 
-    this.environment = this.detectEnvironment();
+    this.environment = this.detectEnvironment()';
 
     this.config = this.loadConfig()}
 
@@ -558,9 +558,9 @@ export class ConfigManager {// TODO: Add content}
    * Detect current environment
    */
   private detectEnvironment(): Environment {
-    if (typeof process !== undefined) {;
+    if (typeof process !== undefined) {
 
-const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT;;
+const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT';';
 
       if (nextEnv) {
         return nextEnv as Environment}
@@ -637,17 +637,17 @@ const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT;;
   /**
    * Deep merge two config objects
    */
-  private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {;
+  private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
 
 const result = { ...base } as AppConfig;;
 
     (Object.keys(override) as Array<keyof AppConfig>).forEach(
 
-      <K extends keyof AppConfig>(key: K) => {;
+      <K extends keyof AppConfig>(key: K) => {
 
 const value = override[key];;
 
-        if (value !== undefined) {;
+        if (value !== undefined) {
 
 const baseValue = result[key];;
 
@@ -759,7 +759,7 @@ const baseValue = result[key];;
     nestedKeyOrValue: NK | AppConfig[K],
     value?: AppConfig[K][NK]
   ): void {
-    if (value !== undefined && typeof nestedKeyOrValue === string) {;
+    if (value !== undefined && typeof nestedKeyOrValue === string) {
 
 const currentValue = this.config[key];;
 
@@ -910,7 +910,7 @@ const defaultValue = this.getDefaultForKey(key);;
   /**
    * Get default value for a config key
    */
-  private getDefaultForKey<K extends keyof AppConfig>(key: K): AppConfig[K] {;
+  private getDefaultForKey<K extends keyof AppConfig>(key: K): AppConfig[K] {
 
 const defaultValues: AppConfig = {
       environment: 'development,
@@ -922,10 +922,10 @@ const defaultValues: AppConfig = {
       },
       features: {
         enableAnalytics: false,
-   * Get default value for a config key;
+   * Get default value for a config key';
 
    */
-  private getDefaultForKey;
+  private getDefaultForKey';
 
           <K extends keyof AppConfig>(ke)
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */}
@@ -939,7 +939,7 @@ const defaultValues: AppConfig = {
 
   O: Add content}
 
-};
+}';
 
   environmen,
   t: 'development,
@@ -948,7 +948,7 @@ const defaultValues: AppConfig = {
 
   O: Add content}
 
-};
+}';
 
   baseURL: ',
         timeout: 30000,
@@ -956,7 +956,7 @@ const defaultValues: AppConfig = {
         enableCaching: true},
       features: {// TODO: Add content}
 
-};
+}';
 
   enableAnalytics: false,
         enableErrorReporting: true,
@@ -988,7 +988,7 @@ $4},
         enableNetwork: false
       }
 
-    };
+    }';
 
     return defaultValues[key]}
 
@@ -1089,7 +1089,7 @@ $4},
       },
       logging: {// TODO: Add content}
 
-};
+}';
 
   level: 'info,
         enableConsole: true,
@@ -1101,7 +1101,7 @@ $4},
   }
 
   /**
-   * Get full configuration;
+   * Get full configuration';
 
    */
 
@@ -1112,7 +1112,7 @@ $4},
     return { ...this.config }}
 
   /**
-   * Get environment;
+   * Get environment';
 
    */
 
@@ -1123,7 +1123,7 @@ $4},
     return this.environment}
 
   /**
-   * Check if feature is enabled;
+   * Check if feature is enabled';
 
    */
 
@@ -1263,7 +1263,7 @@ $4},
   /**
    * Validate configuration
    */
-  validate(): { valid: boolean; errors: string[] } {;
+  validate(): { valid: boolean; errors: string[] } {
 
 const errors: string[] = [];
 

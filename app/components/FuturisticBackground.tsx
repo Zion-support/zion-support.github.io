@@ -1,16 +1,16 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import Navigation from ../components
 import Footer from ../components
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from lucide-react';
 
-;
+';
 
-const FuturisticBackgroundPage: React.FC = () => {const features = [;;;
+const FuturisticBackgroundPage: React.FC = () => {const features = [';';';
 
     {
       ico,
@@ -76,4 +76,4 @@ const FuturisticBackgroundPage: React.FC = () => {const features = [;;;
       </div>
       <Footer />
     </React.Fragment>)
-export default FuturisticBackgroundPage;
+export default FuturisticBackgroundPage";

@@ -1,24 +1,24 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import Navigation from ../components
 import Footer from ../components
-import { CheckCircle, ArrowRight } from 'lucide-react;
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
-;
+';
 
-const PagePage: React.FC = () => {const features = [;
+const PagePage: React.FC = () => {const features = [';
     {
       title: 'Feature 1,
       description: 'Description of feature 1,
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3]
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react;
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-  const features = [;;;
+  const features = [';';';
 
     {
       ico,
@@ -55,7 +55,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
 
   ];
 
-  const benefits = [;;
+  const benefits = [
 
     'Transform your business with AI technology,
     'Make data-driven decisions with confidence,
@@ -136,11 +136,11 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
                           {benefit}
 
                         </li>
-                      ));
+                      ))">
 
-                    </ul>);
+                    </ul>)">
 
-                </div>              ));
+                </div>              ))";
 
             </div>
           </div>
@@ -172,11 +172,11 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
                 <ul className="space-y-2>)
                   {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-sm text-gray-400>
                       
-                    </li>                  ));
+                    </li>                  ))">
 
                 </ul>
               </div>
-            ));
+            ))";
 
           </div>
         </div>
@@ -204,13 +204,12 @@ import { CheckCircle, ArrowRight } from 'lucide-react';    'Reduce costs by 30% 
           <
         <
       <
-      <Footer 
-    <
-  );
+      <Footer <
+  )>
 
-};
+}">
 
-export default AiCloudInfrastructurePage;
+export default AiCloudInfrastructurePage";
 
               </div>            </div>
           </div>
@@ -238,7 +237,7 @@ export default AiCloudInfrastructurePage;
                 </div>
                 <h3 className="text-lg font-semibold text-white>{benefit}</h3>
               </div>
-            ));
+            ))";
 
           </div>        </section>
 
@@ -263,11 +262,11 @@ export default AiCloudInfrastructurePage;
 
       <Footer />
     </div>
-  );
+  )">
 
-};
+}">
 
     </div>)
 export default PagePage
 export default AiCloudInfrastructurePage
-export default PagePage;
+export default PagePage";

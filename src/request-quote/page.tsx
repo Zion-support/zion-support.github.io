@@ -1,17 +1,17 @@
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
 import Navigation from ../components
 import Footer from ../components
 
-'use client;
+'use client';
 
-import React, { useState } from 'react;
+import React, { useState } from 'react';
 
-const RequestQuotePage: React.FC = () => {;
+const RequestQuotePage: React.FC = () => {';
 
 const [formData, setFormData] = useState({
     name: ',
@@ -30,9 +30,9 @@ $4});
 
 const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false)';
 
-const _serviceTypes = [;;
+const _serviceTypes = [';';
 
     'AI Services,
     'IT Infrastructure,
@@ -47,7 +47,7 @@ const _serviceTypes = [;;
 
 ;
 
-const projectSizes = [;;
+const projectSizes = [
 
     'Small (1-10 employees),
     'Medium (11-100 employees),
@@ -57,7 +57,7 @@ const projectSizes = [;;
 
 ;
 
-const timelines = [;;
+const timelines = [
 
     'ASAP,
     '1-3 months,
@@ -69,7 +69,7 @@ const timelines = [;;
 
 ;
 
-const budgetRanges = [;;
+const budgetRanges = [
 
     'Under $10,000,
     '$10,000 - $50,000,
@@ -81,7 +81,7 @@ const budgetRanges = [;;
 
 ;
 
-const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
 
 const { name, value } = e.target;
 
@@ -92,7 +92,7 @@ const { name, value } = e.target;
 
 ;
 
-const handleSubmit = async (e: React.FormEvent) => {;;
+const handleSubmit = async (e: React.FormEvent) => {
 
     e.preventDefault();
 
@@ -107,7 +107,7 @@ const handleSubmit = async (e: React.FormEvent) => {;;
 
 ;
 
-const benefits = [;;
+const benefits = [
 
     {
       icon: Calculator,
@@ -132,9 +132,9 @@ $4}
 
   ];
 
-;
+';
 
-const whyChooseUs = [;;
+const whyChooseUs = [';';
 
     {
       icon: Users,
@@ -245,12 +245,11 @@ $4}
                       <label className="block text-sm font-medium text-gray-300 mb-2>
                         Full Name *
                       <
-                      <input
-                        type="text
+                      <input type="text
                         name="name
-                        value = { formData.name };
+                        value = { formData.name }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
                         className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -261,12 +260,11 @@ $4}
                       <label className="block text-sm font-medium text-gray-300 mb-2>
                         Email Address *
                       <
-                      <input
-                        type="email
+                      <input type="email
                         name="email
-                        value = { formData.email };
+                        value = { formData.email }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
                         className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400
                         placeholder="Enter your email
@@ -280,12 +278,11 @@ $4}
                       <label className="block text-sm font-medium text-gray-300 mb-2>
                         Company Name
                       <
-                      <input
-                        type="text
+                      <input type="text
                         name="company
-                        value = { formData.company };
+                        value = { formData.company }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
                         className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -296,12 +293,11 @@ $4}
                       <label className="block text-sm font-medium text-gray-300 mb-2>
                         Phone Number
                       <
-                      <input
-                        type="tel
+                      <input type="tel
                         name="phone
-                        value = { formData.phone };
+                        value = { formData.phone }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
                         className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -315,11 +311,10 @@ $4}
                     <label className="block text-sm font-medium text-gray-300 mb-2>
                       Service Type *
                     <
-                    <select
-                      name="serviceType
-                      value = { formData.serviceType };
+                    <select name="serviceType
+                      value = { formData.serviceType }>
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }>
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -336,11 +331,10 @@ $4}
                       <label className="block text-sm font-medium text-gray-300 mb-2>
                         Project Size
                       <
-                      <select
-                        name="projectSize
-                        value = { formData.projectSize };
+                      <select name="projectSize
+                        value = { formData.projectSize }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
                         className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -355,11 +349,10 @@ $4}
                       <label className="block text-sm font-medium text-gray-300 mb-2>
 
                       <
-                      <select
-                        name="timeline
-                        value = { formData.timeline };
+                      <select name="timeline
+                        value = { formData.timeline }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
                         className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -376,11 +369,10 @@ $4}
                     <label className="block text-sm font-medium text-gray-300 mb-2>
                       Budget Range
                     <
-                    <select
-                      name="budget
-                      value = { formData.budget };
+                    <select name="budget
+                      value = { formData.budget }>
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }>
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -396,13 +388,12 @@ $4}
                     <label className="block text-sm font-medium text-gray-300 mb-2>
                       Project Description *
                     <
-                    <textarea
-                      name="description
-                      value = { formData.description };
+                    <textarea name="description
+                      value = { formData.description }>
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }>
 
-                      rows = { 4 };
+                      rows = { 4 }>
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -414,13 +405,12 @@ $4}
                     <label className="block text-sm font-medium text-gray-300 mb-2>
                       Specific Requirements
                     <
-                    <textarea
-                      name="requirements
-                      value = { formData.requirements };
+                    <textarea name="requirements
+                      value = { formData.requirements }'>
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }>
 
-                      rows = { 3 };
+                      rows = { 3 }'>
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -430,7 +420,7 @@ $4}
 
                   <button
                     type="submit
-                    disabled = { isSubmitting };
+                    disabled = { isSubmitting }'>
 
                     className=w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
     d:cursor-not-allowed
@@ -549,7 +539,7 @@ $4}
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const _serviceTypes = [;;
+  const _serviceTypes = [
 
   /
   O: Add items;
@@ -567,7 +557,7 @@ $4}
 /
   ];
 
-  const projectSizes = [;;
+  const projectSizes = [
 
   /
   O: Add items;
@@ -580,7 +570,7 @@ $4}
 /
   ];
 
-  const timelines = [;;
+  const timelines = [
 
   /
   O: Add items;
@@ -595,7 +585,7 @@ $4}
 /
   ];
 
-  const budgetRanges = [;;
+  const budgetRanges = [
 
   /
   O: Add items;
@@ -643,18 +633,18 @@ $4}
 
     setIsSubmitted(true)};
 
-  const benefits = [;;
+  const benefits = [
 
   /
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};  ico,
+}';  ico,
   n: Calculator,
       titl,
   e: 'Free Quote,
@@ -665,7 +655,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}';  ico,
   n: Clock,
       titl,
   e: 'Quick Response,
@@ -676,7 +666,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}';  ico,
   n: CheckCircle,
       titl,
   e: 'Transparent Pricing,
@@ -687,7 +677,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}';  ico,
   n: Star,
       titl,
   e: 'Expert Consultation,
@@ -697,18 +687,18 @@ $4}
 
   ];
 
-  const whyChooseUs = [;;
+  const whyChooseUs = [
 
   /
-  O: Add items;
+  O: Add items';
 
-];
+]';
 
     {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
-};  ico,
+}';  ico,
   n: Users,
       titl,
   e: '50+ Successful Projects,
@@ -719,7 +709,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'">  ico,
   n: Award,
       titl,
   e: '300% Average ROI,
@@ -730,7 +720,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'">  ico,
   n: Clock,
       titl,
   e: 24
@@ -741,7 +731,7 @@ $4}
 
   O: Add content}
 
-};  ico,
+}'">  ico,
   n: Star,
       titl,
   e: '99.9% Uptime,
@@ -749,7 +739,7 @@ $4}
   n: Reliable, high-performance solutions
     }
 
-  ];
+  ]";
 
   if (isSubmitted) {/* TODO: Fix JSX expression */}
 
@@ -779,7 +769,7 @@ $4}
           
           </h1>
               <p className="text-xl text-gray-300 mb-8></p>
-                Thank you for your interest in our services. Weve received your quote request;
+                Thank you for your interest in our services. Weve received your quote request";
 
 // and will get back to you within 24 hours with a detailed proposal.
               
@@ -832,11 +822,10 @@ $4}
 
           <
 
-                      <input
-type="text" name="name
-                        value = { formData.name };
+                      <input type="text" name="name
+                        value = { formData.name }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
 /
 className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
@@ -851,11 +840,10 @@ className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-w
 
           <
 
-                      <input
-type="email" name="email
-                        value = { formData.email };
+                      <input type="email" name="email
+                        value = { formData.email }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
 /
 className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
@@ -872,11 +860,10 @@ className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-w
 /
           <
 
-                      <input
-type="text" name="company
-                        value = { formData.company };
+                      <input type="text" name="company
+                        value = { formData.company }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
                         className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -889,11 +876,10 @@ type="text" name="company
 /
           <
 
-                      <input
-type="tel" name="phone
-                        value = { formData.phone };
+                      <input type="tel" name="phone
+                        value = { formData.phone }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
                         className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -909,10 +895,9 @@ type="tel" name="phone
 
           <
 
-                    <select
-                      name="serviceType value = { formData.serviceType };
+                    <select name="serviceType value = { formData.serviceType }>
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }>
 
 /
 className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
@@ -936,10 +921,9 @@ className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-w
 /
           <
 
-                      <select
-                        name="projectSize value = { formData.projectSize };
+                      <select name="projectSize value = { formData.projectSize }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
                         className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -960,10 +944,9 @@ className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-w
                       <label className="block text-sm font-medium text-gray-300 mb-2>
 /
           <
-                      <select
-                        name="timeline value = { formData.timeline };
+                      <select name="timeline value = { formData.timeline }>
 
-                        onChange = { handleInputChange };
+                        onChange = { handleInputChange }>
 
                         className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -985,10 +968,9 @@ className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-w
 /
           <
 
-                    <select
-                      name="budget value = { formData.budget };
+                    <select name="budget value = { formData.budget }>
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }>
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -1010,13 +992,12 @@ className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-w
 
           <
 
-                    <textarea
-                      name="description value = { formData.description };
+                    <textarea name="description value = { formData.description }>
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }>
 
 /
-                      rows = { 4 };
+                      rows = { 4 }>
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -1029,12 +1010,11 @@ className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-w
 /
           <
 
-                    <textarea
-                      name="requirements value = { formData.requirements };
+                    <textarea name="requirements value = { formData.requirements }'>
 
-                      onChange = { handleInputChange };
+                      onChange = { handleInputChange }>
 
-                      rows = { 3 };
+                      rows = { 3 }'>
 
                       className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focu,
     s:ring-cyan-400
@@ -1044,7 +1024,7 @@ className=w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-w
           <
 
                   <button
-type="submit disabled = { isSubmitting };
+type="submit disabled = { isSubmitting }>
 
                     className=w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover: scale-105 disabled:opacity-50 disable,
     d:cursor-not-allowed
@@ -1116,6 +1096,6 @@ type="submit disabled = { isSubmitting };
       <
 
     </div>
-  )};
+  )}">
 
-export default RequestQuotePage;
+export default RequestQuotePage'";

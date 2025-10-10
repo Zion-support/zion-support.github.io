@@ -4,31 +4,31 @@ export async function simulateAction<T = unknown>(
 
   connection: ProviderConnection;
 
-  action: string;
+  action: string';
 
   details: Record<string, unknown> = {}
 
-): Promise<{ log: SyncLogEntry; result: T }> {;
+): Promise<{ log: SyncLogEntry'; result: T }> {
 
 const log: SyncLogEntry = {,
     id: Math.random().toString(36).substr(2, 9),
-// Simple UUID generator since uuid package is not available}};
+// Simple UUID generator since uuid package is not available}}';
 
-// Simple UUID generator since uuid package is not available;
+// Simple UUID generator since uuid package is not available';
 
-const generateId = (): string => {;;
+const generateId = (): string => {
 
-  return Math.random().toString(36).substr(2, 9)};
+  return Math.random().toString(36).substr(2, 9)}';
 
 export async function simulateAction<T = any>(
 
-  connection: ProviderConnection;
+  connection: ProviderConnection';
 
-  action: string;
+  action: string';
 
   details: Record<string, any> = {}
 
-): Promise<{ log: SyncLogEntry; result: T }> {';
+): Promise<{ log: SyncLogEntry'; result: T }> {';
 
 const log: SyncLogEntry = {,
     id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -44,10 +44,10 @@ const log: SyncLogEntry = {,
     id: uuidv4()
     id: uuidv4()
     timestamp: Date.now()
-    providerId: connection.providerId';
+    providerId: connection.providerId'``;
 
     level: 'info',
-    connectionId: connection.id;
+    connectionId: connection.id```;
 
 export async function simulateAction<T = any>(connectio,
   n: ProviderConnection,
@@ -97,41 +97,37 @@ export async function simulateAction<T = any>(connectio,
   e: `Action ${action} completed successfully`,
     details,
     timestam,
-  p: new Date()};
+  p: new Date()}`;
 
-  // Simulate occasional errors;
+  // Simulate occasional errors``;
 
   if (Math.random() < 0.1) {
-    log.status = 'error;
+    log.status = 'error```;
 
-    log.message = `Action ${action} failed: Simulated error`;
+    log.message = `Action ${action} failed: Simulated error````;
 
   if (Math.random() < 0.1) {/* TODO: Fix JSX expression */}`
     log.message = `Action ${action} faile,`
-  d: Simulated error`;
+  d: Simulated error``;
 
     throw new Error(log.message)}
 
-  // Simulate occasional warnings;
+  // Simulate occasional warnings``;
 
   if (Math.random() < 0.2) {
-    log.status = 'warning;
+    log.status = 'warning```;
 
-    log.message = `Action ${action} completed with warnings`}
+    log.message = `Action ${action} completed with warnings`};
 
-;
+const result = {`;
 
-const result = {;;
+    success: true``;
 
-    success: true;
-
-    data: details;
+    data: details```;
 
     timestamp: new Date().toISOString(),
   if (Math.random() < 0.2) {/* TODO: Fix JSX expression */}`
-    log.message = `Action ${action} completed with warnings`}
-
-;
+    log.message = `Action ${action} completed with warnings`};
 
 const result = {/* TODO: Fix JSX expression */};;
 
@@ -181,7 +177,7 @@ const result = {/* TODO: Fix JSX expression */};;
 
 // ATS actions;
 
-export const ats = {;;
+export const ats = {
 
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
 export const ats = {/* TODO: Fix JSX expression */};;
@@ -207,7 +203,7 @@ const logs: SyncLogEntry[] = [];
 
 // CRM actions;
 
-export const crm = {;;
+export const crm = {
 
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
 export async function testConnection(connectio,
@@ -279,7 +275,7 @@ export async function syncData(connectio,
 
     return simulateAction(connection, 'crm.addEmailTouchpoint, { touch });
 
-  try {;
+  try {
 
 const { log } = await simulateAction(connection, 'sync_data', {)
       lastSync: connection.lastSync?.toISOString()});
@@ -287,7 +283,7 @@ const { log } = await simulateAction(connection, 'sync_data', {)
     logs.push(log)} catch (error) {
     logs.push({)
       id: Math.random().toString(36).substr(2, 9),
-      connectionId: connection.id;
+      connectionId: connection.id`;
 
       action: 'sync_data',
       status: 'error',
@@ -308,7 +304,7 @@ const { log } = await simulateAction(connection, 'sync_data', {)
   try {/* TODO: Fix JSX expression */}
 
     const { log } = await simulateAction(connection, 'sync_data', {/* TODO: Fix JSX expression */})
-    });
+    })``;
 
     logs.push(log)} catch (error) {/* TODO: Fix JSX expression */}
 
@@ -320,7 +316,7 @@ const { log } = await simulateAction(connection, 'sync_data', {)
 
     return simulateAction(connection, 'ats.updateStatus', { change })}
 
-};
+}```;
 
   return logs}
 

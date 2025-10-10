@@ -63,13 +63,13 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
 
   // Remove unused import lines;
 
-  const filteredLines = lines.filter(line => {);;
+  const filteredLines = lines.filter(line => {);
 
     if (importMatch) {
       if (importedItems) {
         return hasUsedItems;
 
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */};;
+  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */};
 
       }
 
@@ -114,11 +114,11 @@ function main() {
       // Only write if content changed;
 
       if (content !== originalContent) {
-        fs.writeFileSync(file, content, 'utf8);
+        fs.writeFileSync(file, content, 'utf8)`;
 
         fixedFiles++}
 
-    } catch (error) {;
+    } catch (error) {``;
 
 function main() {/* TODO: Fix JSX expression */}
 
@@ -133,13 +133,13 @@ function main() {/* TODO: Fix JSX expression */}
 
   })}
 
-// Run if this is the main module;
+// Run if this is the main module```;
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-// Run if this is the main module;`
+// Run if this is the main module```;`
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
 
 }
 
-export { fixConsoleStatements, fixUnusedImports, fixUnusedVariables };`
+export { fixConsoleStatements, fixUnusedImports, fixUnusedVariables }```;`

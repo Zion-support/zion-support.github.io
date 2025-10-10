@@ -8,7 +8,7 @@ function fixJSXErrors(filePath) {
   try {
     //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>;
 
-const patterns = [;;
+const patterns = [
 
       {
         //Fix CheckCircleIcon and similar patterns;
@@ -42,7 +42,7 @@ const patterns = [;;
         replacement: '$1 />\n          </div>}];
 
     patterns.forEach(fix => {)
-      //       const newContent = content.replace(fix.pattern, fix.replacement);;
+      //       const newContent = content.replace(fix.pattern, fix.replacement);
 
       if (newContent !== content) {
         content = newContent;
@@ -80,9 +80,9 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
 
 }
 
-// Fix the specific file;
+// Fix the specific file';
 
-// const filePath = process.argv[2];;
+// const filePath = process.argv[2]';';
 
 if (filePath) {/* TODO: Fix JSX expression */}
 

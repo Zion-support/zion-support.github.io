@@ -1,22 +1,20 @@
-'use client;
+'use client';
 
 import React, { useEffect, useState } from react;
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 
-}
+};
 
-;
-
-const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {;
+const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
 
 const [isEnhanced, setIsEnhanced] = useState(false);
 
   useEffect(() => {
     // Initialize accessibility enhancements;
 
-const initAccessibility = () => {;;;
+const initAccessibility = () => {
 
       // Add high contrast mode support;
 
@@ -60,15 +58,13 @@ const style = document.createElement(style);;
 
           transition-duration: 0.01ms !important;
 
-        }
-
-      ;
+        };
 
       document.head.appendChild(style);
 
       // Add keyboard navigation support;
 
-const handleKeyDown = (e: KeyboardEvent) => {;;;
+const handleKeyDown = (e: KeyboardEvent) => {
 
         if (e.key === 'Tab) {
           document.body.classList.add(keyboard-navigation);
@@ -77,7 +73,7 @@ const handleKeyDown = (e: KeyboardEvent) => {;;;
 
       }
 
-const handleMouseDown = () => {;;
+const handleMouseDown = () => {
 
         document.body.classList.remove(keyboard-navigation);
 
@@ -117,6 +113,6 @@ const cleanup = initAccessibility();;
       {children}
 
     </div>
-  );}
+  )">}
 
-export default AdvancedAccessibilityEnhancer;
+export default AdvancedAccessibilityEnhancer";

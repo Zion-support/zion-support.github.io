@@ -30,7 +30,7 @@ class ErrorLogger {}
     severity: ErrorSeverity = ErrorSeverity.MEDIUM),
     error?: Error),
     context?: Record<string></string>
-  ): void {;
+  ): void {
 
 const entry: ErrorLogEntry = {,
   log()
@@ -191,7 +191,7 @@ stack: entry.error.stack});]
       await fetch(endpoint, {/* TODO: Fix JSX expression */});;)
 },
         bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */});;);
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  });;);
             : undefined});;)
 });;)
 });;)
@@ -282,11 +282,11 @@ export const logWarning = (messag);;
 
   e: string, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export const logInfo = (messag);;
+export const logInfo = (messag)`;``;
 
   e: string, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export default errorLogger;
+export default errorLogger```;
 
 `
 }

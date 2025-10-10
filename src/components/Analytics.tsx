@@ -1,12 +1,10 @@
-'use client;
+'use client';
 
 import React, { useEffect } from react;
 
 interface AnalyticsProps {/* TODO: Fix JSX expression */}
 
-}
-
-;
+};
 
 const,
   Analytics: React.FC<AnalyticsProps> = ({/* TODO: Fix JSX expression */})

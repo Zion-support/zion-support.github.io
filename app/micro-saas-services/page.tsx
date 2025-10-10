@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 
 // Real Micro SAAS Services for Zion Tech Group;
 
@@ -37,9 +37,9 @@ export interface MicroSaasService {
   technicalSpecs: {
     languages: string[];
 
-    frameworks: string[];
+    frameworks: string[]';
 
-    databases: string[];
+    databases: string[]';
 
     cloudProviders: string[]}';
 
@@ -894,7 +894,7 @@ export const microSaasServices: MicroSaasService[] = [
 ];
 
 // Service categories for filtering and organization
-export const serviceCategories = [;;
+export const serviceCategories = [
 
   'All',
   'Productivity',
@@ -911,7 +911,7 @@ export const serviceCategories = [;;
 ];
 
 // Pricing tiers for comparison
-export const pricingTiers = {;;
+export const pricingTiers = {
 
   starter: {,
     name: 'Starter',
@@ -932,7 +932,7 @@ export const pricingTiers = {;;
 };
 
 // Contact information
-export const contactInfo = {;;
+export const contactInfo = {
 
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',

@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-import path from 'path;
+import path from 'path';
 
 // console.log removed for production
 // Function to fix function names';
@@ -10,34 +10,34 @@ import path from 'path;
 function fixFunctionNames(filePath) {
   try {';
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, 'utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix function names with hyphens;
 
-    const fileName = path.basename(filePath, path.extname(filePath));;
+    const fileName = path.basename(filePath, path.extname(filePath));
 
-    const validFunctionName = fileName.replace(/[^a-zA-Z0-9 _$]/g, '_);;
+    const validFunctionName = fileName.replace(/[^a-zA-Z0-9 _$]/g, '_);
 
     // Replace invalid function names;
 
-    const lines = content.split('\n);;
+    const lines = content.split('\n);
 
-    const newLines = [];;
+    const newLines = [];
 
-    for (let i = 0; i < lines.length; i++) {;;
+    for (let i = 0; i < lines.length; i++) {
 
-let line = lines[i];;
+let line = lines[i];
 
       // Fix function declarations with hyphens;
 
       if (line.includes('function ') && line.includes('(')) {
-        line = line.replace(/function\s+[^(]+/, `function ${validFunctionName}`);
+        line = line.replace(/function\s+[^(]+/, `function ${validFunctionName}`)``;
 
         modified = true}
 
-      // Fix export default function declarations;
+      // Fix export default function declarations```;
 
       if (line.includes('export default function ') && line.includes('(')) {
         line = line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`);
@@ -62,22 +62,22 @@ return false}
 
 // Function to find all TypeScript/JavaScript files;
 
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx]) {;
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx]) {
 
-const files = [];;
+const files = [];
 
   ;
 
 function traverse(currentDir) {
-    try {;
+    try {
 
-const items = fs.readdirSync(currentDir);;
+const items = fs.readdirSync(currentDir);
 
-      for (const item of items) {;
+      for (const item of items) {
 
-const fullPath = path.join(currentDir, item);;
+const fullPath = path.join(currentDir, item);
 
-        const stat = fs.statSync(fullPath);;
+        const stat = fs.statSync(fullPath);
 
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories;
@@ -85,9 +85,9 @@ const fullPath = path.join(currentDir, item);;
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
             traverse(fullPath)}
 
-        } else if (stat.isFile()) {;
+        } else if (stat.isFile()) {
 
-const ext = path.extname(item);;
+const ext = path.extname(item);
 
           if (extensions.includes(ext)) {
             files.push(fullPath)}
@@ -107,16 +107,16 @@ const ext = path.extname(item);;
 
 // Main execution;
 
-const srcDir = path.join(process.cwd(), 'src);;
+const srcDir = path.join(process.cwd(), 'src);
 
-const files = findFiles(srcDir);;
+const files = findFiles(srcDir);
 
 // console.log removed for production
 ;
 
-let fixedCount = 0;;
+let fixedCount = 0`;
 
-let errorCount = 0;;
+let errorCount = 0``;```;
 
 for (const file of files) {
   try {

@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 
-'use client;
+'use client';
 
 export type ToastType = 'success' | 'error' | 'warning' | info;
 
@@ -95,7 +95,7 @@ const,
 
   };
 
-  const getIcon = () => {/* TODO: Fix JSX expression */};;
+  const getIcon = () => {/* TODO: Fix JSX expression */};';
 
   O: Add content}
 
@@ -151,7 +151,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
   // TOD,
   O: Add content}
 
-          setIsVisible(false);
+          setIsVisible(false)"`;
 
           if (onClose) onClose()}}
 
@@ -171,9 +171,9 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           
           </button>
     </div>
-  )};
+  )}``;
 
-export default Toast;"
+export default Toast```';"
 
 
 

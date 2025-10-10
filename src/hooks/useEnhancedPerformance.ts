@@ -170,11 +170,9 @@ const measureOperation = useCallback();;
 
   O: Add content}
 
-}
+}`;
 
-;
-
-const duration = performance.now() - startTime;;
+const duration = performance.now() - startTime``;```;
 
 analytics.trackPerformance(
 
@@ -182,12 +180,12 @@ analytics.trackPerformance(
 
 //               duration,
               duration > 1000 ? 'slow : fast
-          return duration;
+          return duration``;
 
 [component, trackPerformance]
     trackError,
     trackUserAction,
-    measureOperation;)
+    measureOperation```;)
 
 
 

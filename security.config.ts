@@ -3,7 +3,7 @@
  * Comprehensive security settings and best practices;
  */
 
-export const securityConfig = {;
+export const securityConfig = {
   // Content Security Policy;
   csp: {,
     directives: {,

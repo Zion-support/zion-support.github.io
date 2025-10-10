@@ -76,7 +76,7 @@ varian,
   t: holographic - matrix,
     contact_inf,
   o: contact,    feature,
-  s: [;
+  s: [
 
       Prompt / output policy engine_jailbreak and injection detectionPII redaction and audit trail_hallucination and grounding score_dashboards and CI quality gates
     ];
@@ -117,7 +117,7 @@ varian,
     period: /month,
     description: Unified cron orchestration with jitter control, retries, DLQs and per-job SLAs. Works with Netlify, Vercel, AWS, and GCP.,
     features:
-        features: [;
+        features: [
 
       Human-readable schedulesIdempotency keys and dedupeMulti-cloud triggersJitter and backoff tuningDLQ with webhooks and alerts
     ];
@@ -162,7 +162,7 @@ market_size: $3.5 B+ AI safety & governance,
     period: /month,
     description: Unified cron orchestration with jitter control, retries, DLQs and per - job SLAs. Works with Netlify, Vercel, AWS, and GCP.,
     features:
-        features: [;
+        features: [
 
       Human - readable schedules_idempotency keys and dedupe_multi - cloud triggers_jitter and backoff tuningDLQ with webhooks and alerts
     ];
@@ -231,7 +231,7 @@ reviews: 19;
     period: /month,
     description: Centralize DSAR intake, identity verification, finding / erasure across systems with audit - ready evidence and SLAs.,
     features:
-        features: [;
+        features: [
 
       Identity verification and consent_connectors for common SaaSData discovery and redactionSLA timers and reminders_evidence reports and exports
     ];
@@ -286,7 +286,7 @@ market_size: $4 B privacy tech,
     period: /month,
     description: Upload schemas, generate contract suites, run per - PR checks with diffs and breaking - change alerts.,
     features:
-        features: [;
+        features: [
 
       Schema diff and breaking checksPR status and GitHub app_examples and mock server_multi - env test runners_slack notifications
     ];
@@ -347,7 +347,7 @@ variant: ai - futuristic,
     period: /month,
     description: Connect your cloud accounts and get daily optimizations, reserved instance suggestions and budget alerts with explainable savings.,
     features:
-        features: [;
+        features: [
 
       Cost explorer with tags_anomaly detection and alerts_rightsizing recommendations_savings plan / RI advisor_forecasting and budgets
     ];
@@ -414,7 +414,7 @@ variant: quantum - holographic,
     period: /month,
     description: Warmup flows, seed list testing, reputation signals and playbooks to protect sender score across ESPs.,
     features:
-        features: [;
+        features: [
 
       Smart warmup schedules_seed list and spam tests_domain / reputation dashboard_blocklist monitoring_deliverability playbooks
     ];
@@ -494,7 +494,7 @@ market_size: $2 B email tooling,
     period: /month,
     description: End - to - end starter kits for semantic search with ingestion, chunking, hybrid retrieval and evaluation harness.,
     features:
-        features: [;
+        features: [
 
       Ingestion pipeline templates_hybrid retrieval patterns_evaluation notebooks_dashboards and alerts_deploy buttons
     ];
@@ -544,7 +544,7 @@ roi: Ship search MVPs in days, not months,
     period: /month,
     description: Continuously scan API endpoints and specs for risks, auth gaps and changes with pull-request recommendations.,
     features:
-        features: [;
+        features: [
 
       Shadow API discoveryAuth and RBAC checksSchema drift and diffsSecret/key exposure checksPR suggestions and tickets
     ];
@@ -577,7 +577,7 @@ roi: Ship search MVPs in days, not months,
     period: /month,
     description: Continuously scan API endpoints and specs for risks, auth gaps and changes with pull - request recommendations.,
     features:
-        features: [;
+        features: [
 
       Shadow API discovery_auth and RBAC checks_schema drift and diffs_secret / key exposure checksPR suggestions and tickets
     ];
@@ -637,7 +637,7 @@ variant: quantum - cyberpunk,
     period: /month,
     description: Define SLOs with templates and get error budget burn alerts, fast triage and weekly reports for services and SLIs.,
     features:
-        features: [;
+        features: [
 
       SLO templates and calculator_burn - rate alerts and paging_integration with traces / metrics_weekly reports and anomalies_on - call quality insights
     ];
@@ -693,7 +693,7 @@ market_size: $15 B observability,
     period: /month,
     description: Low - latency edge personalization with audience models, content variants and A / B testing for higher conversion.,
     features:
-        features: [;
+        features: [
 
       Audience / intent models_content and layout variants_edge rules and fallbacks_easy A / B testing_privacy - safe analytics
     ];
@@ -734,7 +734,7 @@ market_size: $15 B observability,
     period: /month,
     description: Plug-and-play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals.,
     features:
-        features: [;
+        features: [
 
       SAML/OIDC templatesSCIM provisioning flowsIdP compatibility matrixCompliance and security guidesDemo tenants and sandboxes
     ];
@@ -779,7 +779,7 @@ market_size: $9 B personalization,
     period: /month,
     description: Plug - and - play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals.,
     features:
-        features: [;
+        features: [
 
       SAML / OIDC templatesSCIM provisioning flowsIdP compatibility matrix_compliance and security guides_demo tenants and sandboxes
     ];
@@ -837,7 +837,7 @@ roi: Shorten sales cycles by 2040%,
     period: /month,
     description: Ops runbooks, IaC modules, monitoring and SLOs for HA Postgres clusters with tested failover procedures.,
     features:
-        features: [;
+        features: [
 
       HA topology templates_automated backups and PITRFailover runbooks_performance tuning profilesSLOs and weekly reports
     ];
@@ -891,7 +891,7 @@ roi: Reduce downtime risk and improve throughput by 2040%,
     period: /month,
     description: Multi-channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings.,
     features:
-        features: [;
+        features: [
 
       Persona and ICP modelsMulti-channel sequencesGuardrails and blocklist checksCRM sync and dedupeA/B tests and analytics
     ];
@@ -924,7 +924,7 @@ roi: Reduce downtime risk and improve throughput by 2040%,
     period: /month,
     description: Multi - channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings.,
     features:
-        features: [;
+        features: [
 
       Persona and ICP models_multi - channel sequences_guardrails and blocklist checksCRM sync and dedupe_a / B tests and analytics
     ];
@@ -980,7 +980,7 @@ market_size: $5 B sales tech,
     period: /month,
     description: Agent - based discovery for hardware, software and services with vulnerability signals and change alerts.,
     features:
-        features: [;
+        features: [
 
       Network and host discovery_software and service inventory_vuln and exposure signals_change detection_ticketing and webhooks
     ];
@@ -1036,7 +1036,7 @@ market_size: $7 B ITAM,
     period: /month,
     description: Ship flags, gradual rollouts, kill switches and experiments with edge - evaluated rules and SDKs.,
     features:
-        features: [;
+        features: [
 
       Edge - evaluated rules_targeting by attributes_kill switches and rollouts_a / B test metrics_audit logs and approvals
     ];
@@ -1077,7 +1077,7 @@ market_size: $7 B ITAM,
     period: /month,
     description: Manage datasets, training runs, cost, evals and rollouts for fine-tuned models across vendors.,
     features:
-        features: [;
+        features: [
 
       Dataset/version registryTraining run trackingCost/performance dashboardsEval suites and red-teamingCanary and rollout controls
     ];
@@ -1117,7 +1117,7 @@ color: from-purple-600 to-fuchsia-700,
     period: /month,
     description: Manage datasets, training runs, cost, evals and rollouts for fine - tuned models across vendors.,
     features:
-        features: [;
+        features: [
 
       Dataset / version registry_training run tracking_cost / performance dashboards_eval suites and red - teaming_canary and rollout controls
     ];
@@ -1158,7 +1158,7 @@ color: from-purple-600 to-fuchsia-700,
     period: /month,
     description: Measure real-user and synthetic performance, pinpoint regressions and export fixes as PRs.,
     features:
-        features: [;
+        features: [
 
       RUM + synthetic testsCore Web Vitals dashboardsPerformance budgetsPR suggestions and diffsAlerting and reports
     ];
@@ -1196,7 +1196,7 @@ setupTime: 1 day,
     period: /month,
     description: Measure real - user and synthetic performance, pinpoint regressions and export fixes as PRs.,
     features:
-        features: [;
+        features: [
 
       RUM + synthetic tests_core Web Vitals dashboards_performance budgetsPR suggestions and diffs_alerting and reports
     ];
@@ -1255,7 +1255,7 @@ variant: quantum - holographic,
     period: /month,
     description: Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.,
     features:
-        features: [;
+        features: [
 
       Model and dataset registry_risk and policy mappingsPII / PHI tagging and checks_change approvals and trails_reports and exports
     ];
@@ -1395,7 +1395,7 @@ market_size: $3 B AI governance,
     descriptio,
   n: Unified cron orchestration with jitter control, retries, DLQs and per-job SLAs. Works with Netlify, Vercel, AWS, and GCP.
     feature,
-  s: [;
+  s: [
 
       Human-readable schedulesIdempotency keys and dedupeMulti-cloud triggersJitter and backoff tuningDLQ with webhooks and alerts
     ];
@@ -1465,7 +1465,7 @@ varian,
     descriptio,
   n: Unified cron orchestration with jitter control, retries, DLQs and per - job SLAs. Works with Netlify, Vercel, AWS, and GCP.
     feature,
-  s: [;
+  s: [
 
       Human - readable schedules_idempotency keys and dedupe_multi - cloud triggers_jitter and backoff tuningDLQ with webhooks and alerts
     ];
@@ -1569,7 +1569,7 @@ varian,
     descriptio,
   n: Centralize DSAR intake, identity verification, finding / erasure across systems with audit - ready evidence and SLAs.
     feature,
-  s: [;
+  s: [
 
       Identity verification and consent_connectors for common SaaSData discovery and redactionSLA timers and reminders_evidence reports and exports
     ];
@@ -1653,7 +1653,7 @@ varian,
     descriptio,
   n: Upload schemas, generate contract suites, run per - PR checks with diffs and breaking - change alerts.
     feature,
-  s: [;
+  s: [
 
       Schema diff and breaking checksPR status and GitHub app_examples and mock server_multi - env test runners_slack notifications
     ];
@@ -1742,7 +1742,7 @@ varian,
     descriptio,
   n: Connect your cloud accounts and get daily optimizations, reserved instance suggestions and budget alerts with explainable savings.
     feature,
-  s: [;
+  s: [
 
       Cost explorer with tags_anomaly detection and alerts_rightsizing recommendations_savings plan / RI advisor_forecasting and budgets
     ];
@@ -1841,7 +1841,7 @@ varian,
     descriptio,
   n: Warmup flows, seed list testing, reputation signals and playbooks to protect sender score across ESPs.
     feature,
-  s: [;
+  s: [
 
       Smart warmup schedules_seed list and spam tests_domain / reputation dashboard_blocklist monitoring_deliverability playbooks
     ];
@@ -1969,7 +1969,7 @@ varian,
     descriptio,
   n: End - to - end starter kits for semantic search with ingestion, chunking, hybrid retrieval and evaluation harness.
     feature,
-  s: [;
+  s: [
 
       Ingestion pipeline templates_hybrid retrieval patterns_evaluation notebooks_dashboards and alerts_deploy buttons
     ];
@@ -2049,7 +2049,7 @@ varian,
     descriptio,
   n: Continuously scan API endpoints and specs for risks, auth gaps and changes with pull-request recommendations.
     feature,
-  s: [;
+  s: [
 
       Shadow API discoveryAuth and RBAC checksSchema drift and diffsSecret/key exposure checksPR suggestions and tickets
     ];
@@ -2101,7 +2101,7 @@ varian,
     descriptio,
   n: Continuously scan API endpoints and specs for risks, auth gaps and changes with pull - request recommendations.
     feature,
-  s: [;
+  s: [
 
       Shadow API discovery_auth and RBAC checks_schema drift and diffs_secret / key exposure checksPR suggestions and tickets
     ];
@@ -2192,7 +2192,7 @@ varian,
     descriptio,
   n: Define SLOs with templates and get error budget burn alerts, fast triage and weekly reports for services and SLIs.
     feature,
-  s: [;
+  s: [
 
       SLO templates and calculator_burn - rate alerts and paging_integration with traces / metrics_weekly reports and anomalies_on - call quality insights
     ];
@@ -2277,7 +2277,7 @@ varian,
     descriptio,
   n: Low - latency edge personalization with audience models, content variants and A / B testing for higher conversion.
     feature,
-  s: [;
+  s: [
 
       Audience / intent models_content and layout variants_edge rules and fallbacks_easy A / B testing_privacy - safe analytics
     ];
@@ -2340,7 +2340,7 @@ varian,
     descriptio,
   n: Plug-and-play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals.
     feature,
-  s: [;
+  s: [
 
       SAML/OIDC templatesSCIM provisioning flowsIdP compatibility matrixCompliance and security guidesDemo tenants and sandboxes
     ];
@@ -2410,7 +2410,7 @@ varian,
     descriptio,
   n: Plug - and - play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals.
     feature,
-  s: [;
+  s: [
 
       SAML / OIDC templatesSCIM provisioning flowsIdP compatibility matrix_compliance and security guides_demo tenants and sandboxes
     ];
@@ -2497,7 +2497,7 @@ varian,
     descriptio,
   n: Ops runbooks, IaC modules, monitoring and SLOs for HA Postgres clusters with tested failover procedures.
     feature,
-  s: [;
+  s: [
 
       HA topology templates_automated backups and PITRFailover runbooks_performance tuning profilesSLOs and weekly reports
     ];
@@ -2580,7 +2580,7 @@ varian,
     descriptio,
   n: Multi-channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings.
     feature,
-  s: [;
+  s: [
 
       Persona and ICP modelsMulti-channel sequencesGuardrails and blocklist checksCRM sync and dedupeA/B tests and analytics
     ];
@@ -2632,7 +2632,7 @@ varian,
     descriptio,
   n: Multi - channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings.
     feature,
-  s: [;
+  s: [
 
       Persona and ICP models_multi - channel sequences_guardrails and blocklist checksCRM sync and dedupe_a / B tests and analytics
     ];
@@ -2717,7 +2717,7 @@ varian,
     descriptio,
   n: Agent - based discovery for hardware, software and services with vulnerability signals and change alerts.
     feature,
-  s: [;
+  s: [
 
       Network and host discovery_software and service inventory_vuln and exposure signals_change detection_ticketing and webhooks
     ];
@@ -2802,7 +2802,7 @@ varian,
     descriptio,
   n: Ship flags, gradual rollouts, kill switches and experiments with edge - evaluated rules and SDKs.
     feature,
-  s: [;
+  s: [
 
       Edge - evaluated rules_targeting by attributes_kill switches and rollouts_a / B test metrics_audit logs and approvals
     ];
@@ -2865,7 +2865,7 @@ varian,
     descriptio,
   n: Manage datasets, training runs, cost, evals and rollouts for fine-tuned models across vendors.
     feature,
-  s: [;
+  s: [
 
       Dataset/version registryTraining run trackingCost/performance dashboardsEval suites and red-teamingCanary and rollout controls
     ];
@@ -2927,7 +2927,7 @@ varian,
     descriptio,
   n: Manage datasets, training runs, cost, evals and rollouts for fine - tuned models across vendors.
     feature,
-  s: [;
+  s: [
 
       Dataset / version registry_training run tracking_cost / performance dashboards_eval suites and red - teaming_canary and rollout controls
     ];
@@ -2990,7 +2990,7 @@ varian,
     descriptio,
   n: Measure real-user and synthetic performance, pinpoint regressions and export fixes as PRs.
     feature,
-  s: [;
+  s: [
 
       RUM + synthetic testsCore Web Vitals dashboardsPerformance budgetsPR suggestions and diffsAlerting and reports
     ];
@@ -3051,7 +3051,7 @@ varian,
     descriptio,
   n: Measure real - user and synthetic performance, pinpoint regressions and export fixes as PRs.
     feature,
-  s: [;
+  s: [
 
       RUM + synthetic tests_core Web Vitals dashboards_performance budgetsPR suggestions and diffs_alerting and reports
     ];
@@ -3139,7 +3139,7 @@ varian,
     descriptio,
   n: Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.
     feature,
-  s: [;
+  s: [
 
       Model and dataset registry_risk and policy mappingsPII / PHI tagging and checks_change approvals and trails_reports and exports
     ];
@@ -5220,7 +5220,7 @@ variant: ai - futuristic,
     tagline: Detect jailbreaks, PII leaks and drift with real-time dashboards,
     price: '$129', period: /month,
     description: Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.,
-    features: [;
+    features: [
 
       Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates],
     popular: true, icon: ,
@@ -5249,7 +5249,7 @@ variant: holographic-matrix, contactInfo: contact;
     tagline: Reliable schedules, retries and dead-lettering across clouds,
     price: '$59', period: /month,
     description: Unified cron orchestration with jitter control, retries, DLQs and per-job SLAs. Works with Netlify, Vercel, AWS, and GCP.,
-    features: [;
+    features: [
 
       Human-readable schedulesIdempotency keys and dedupeMulti-cloud triggersJitter and backoff tuningDLQ with webhooks and alerts],
     popular: true, icon: ,
@@ -5278,7 +5278,7 @@ variant: quantum-matrix, contactInfo: contact;
     tagline: 'Automate data subject access requests across SaaS systems', price: $199,
     period: /month,
     description: Centralize DSAR intake, identity verification, finding/erasure across systems with audit-ready evidence and SLAs.,
-    features: [;
+    features: [
 
       Identity verification and consentConnectors for common SaaSData discovery and redactionSLA timers and remindersEvidence reports and exports],
     popular: true, icon: ,
@@ -5305,7 +5305,7 @@ variant: quantum-matrix, contactInfo: contact;
     tagline: 'OpenAPI/GraphQL contract tests with cloud runners', price: $79,
     period: /month,
     description: Upload schemas, generate contract suites, run per-PR checks with diffs and breaking-change alerts.,
-    features: [;
+    features: [
 
       Schema diff and breaking checksPR status and GitHub appExamples and mock serverMulti-env test runnersSlack notifications],
     popular: false, icon: ,
@@ -5334,7 +5334,7 @@ variant: ai-futuristic, contactInfo: contact;
     tagline: Automated cost insights, rightsizing and anomaly alerts,
     price: '$99', period: /month,
     description: Connect your cloud accounts and get daily optimizations, reserved instance suggestions and budget alerts with explainable savings.,
-    features: [;
+    features: [
 
       Cost explorer with tagsAnomaly detection and alertsRightsizing recommendationsSavings plan/RI advisorForecasting and budgets],
     popular: true, icon: ,
@@ -5361,7 +5361,7 @@ variant: ai-futuristic, contactInfo: contact;
     tagline: Automated warmup, inbox placement tests and reputation alerts,
     price: '$59', period: /month,
     description: Warmup flows, seed list testing, reputation signals and playbooks to protect sender score across ESPs.,
-    features: [;
+    features: [
 
       Smart warmup schedulesSeed list and spam testsDomain/reputation dashboardBlocklist monitoringDeliverability playbooks],
     popular: false, icon: ,
@@ -5388,7 +5388,7 @@ variant: ai-futuristic, contactInfo: contact;
     tagline: 'Blueprints for Pinecone/Weaviate/PGVector with evals & dashboards', price: $89,
     period: /month,
     description: End-to-end starter kits for semantic search with ingestion, chunking, hybrid retrieval and evaluation harness.,
-    features: [;
+    features: [
 
       Ingestion pipeline templatesHybrid retrieval patternsEvaluation notebooksDashboards and alertsDeploy buttons],
     popular: true, icon: ,
@@ -5414,7 +5414,7 @@ variant: ai-futuristic, contactInfo: contact;
     tagline: Discover shadow APIs, auth gaps and drift with actionable fixes,
     price: '$149', period: /month,
     description: Continuously scan API endpoints and specs for risks, auth gaps and changes with pull-request recommendations.,
-    features: [;
+    features: [
 
       Shadow API discoveryAuth and RBAC checksSchema drift and diffsSecret/key exposure checksPR suggestions and tickets],
     popular: true, icon: ,
@@ -5443,7 +5443,7 @@ variant: quantum-cyberpunk, contactInfo: contact;
     tagline: Error budgets, burn rates and policy-based alerts as-a-service,
     price: '$79', period: /month,
     description: Define SLOs with templates and get error budget burn alerts, fast triage and weekly reports for services and SLIs.,
-    features: [;
+    features: [
 
       SLO templates and calculatorBurn-rate alerts and pagingIntegration with traces/metricsWeekly reports and anomaliesOn-call quality insights],
     popular: false, icon: ,
@@ -5472,7 +5472,7 @@ variant: quantum-matrix, contactInfo: contact;
     tagline: 'On-site experiences tailored by intent and persona', price: $129,
     period: /month,
     description: Low-latency edge personalization with audience models, content variants and A/B testing for higher conversion.,
-    features: [;
+    features: [
 
       Audience/intent modelsContent and layout variantsEdge rules and fallbacksEasy A/B testingPrivacy-safe analytics],
     popular: true, icon: ,
@@ -5501,7 +5501,7 @@ variant: ai-futuristic, contactInfo: contact;
     tagline: Enterprise authentication and provisioning in weeks, not months,
     price: '$149', period: /month,
     description: Plug-and-play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals.,
-    features: [;
+    features: [
 
       SAML/OIDC templatesSCIM provisioning flowsIdP compatibility matrixCompliance and security guidesDemo tenants and sandboxes],
     popular: true, icon: ,
@@ -5528,7 +5528,7 @@ variant: holographic-matrix, contactInfo: contact;
     tagline: 'Production-grade Postgres with automated backups and failover', price: $179,
     period: /month,
     description: Ops runbooks, IaC modules, monitoring and SLOs for HA Postgres clusters with tested failover procedures.,
-    features: [;
+    features: [
 
       HA topology templatesAutomated backups and PITRFailover runbooksPerformance tuning profilesSLOs and weekly reports],
     popular: false, icon: ,
@@ -5555,7 +5555,7 @@ variant: quantum-matrix, contactInfo: contact;
     tagline: Personalized, compliant, on-brand sales emails at scale,
     price: '$69', period: /month,
     description: Multi-channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings.,
-    features: [;
+    features: [
 
       Persona and ICP modelsMulti-channel sequencesGuardrails and blocklist checksCRM sync and dedupeA/B tests and analytics],
     popular: true, icon: ,
@@ -5584,7 +5584,7 @@ variant: ai-futuristic, contactInfo: contact;
     tagline: 'Continuous inventory and risk visibility across networks', price: $119,
     period: /month,
     description: Agent-based discovery for hardware, software and services with vulnerability signals and change alerts.,
-    features: [;
+    features: [
 
       Network and host discoverySoftware and service inventoryVuln and exposure signalsChange detectionTicketing and webhooks],
     popular: false, icon: ,
@@ -5613,7 +5613,7 @@ variant: quantum-holographic, contactInfo: contact;
     tagline: 'Zero-latency feature rollout and A/B at the edge', price: $99,
     period: /month,
     description: Ship flags, gradual rollouts, kill switches and experiments with edge-evaluated rules and SDKs.,
-    features: [;
+    features: [
 
       Edge-evaluated rulesTargeting by attributesKill switches and rolloutsA/B test metricsAudit logs and approvals],
     popular: true, icon: ,
@@ -5642,7 +5642,7 @@ variant: quantum-matrix, contactInfo: contact;
     tagline: Datasets, runs, evals and deployment for fine-tuned models,
     price: '$149', period: /month,
     description: Manage datasets, training runs, cost, evals and rollouts for fine-tuned models across vendors.,
-    features: [;
+    features: [
 
       Dataset/version registryTraining run trackingCost/performance dashboardsEval suites and red-teamingCanary and rollout controls],
     popular: true, icon: ,
@@ -5671,7 +5671,7 @@ variant: holographic-matrix, contactInfo: contact;
     tagline: LCP/INP tracking, synthetic journeys and Core Web Vitals fixes,
     price: '$79', period: /month,
     description: Measure real-user and synthetic performance, pinpoint regressions and export fixes as PRs.,
-    features: [;
+    features: [
 
       RUM + synthetic testsCore Web Vitals dashboardsPerformance budgetsPR suggestions and diffsAlerting and reports],
     popular: false, icon: ,
@@ -5701,7 +5701,7 @@ variant: quantum-holographic, contactInfo: contact;
     tagline: Track models, datasets, policies and approvals for AI features,
     price: '$129', period: /month,
     description: Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.,
-    features: [;
+    features: [
 
       Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trailsReports and exports],
     popular: true, icon: ,
@@ -5796,7 +5796,7 @@ varian,
     descriptio,
   n: Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.,
     feature,
-  s: [;
+  s: [
 
       Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates
     ],
@@ -5855,7 +5855,7 @@ varian,
     descriptio,
   n: Unified cron orchestration with jitter control, retries, DLQs and per-job SLAs. Works with Netlify, Vercel, AWS, and GCP.,
     feature,
-  s: [;
+  s: [
 
       Human-readable schedulesIdempotency keys and dedupeMulti-cloud triggersJitter and backoff tuningDLQ with webhooks and alerts
     ],
@@ -5914,7 +5914,7 @@ varian,
     descriptio,
   n: Centralize DSAR intake, identity verification, finding/erasure across systems with audit-ready evidence and SLAs.,
     feature,
-  s: [;
+  s: [
 
       Identity verification and consentConnectors for common SaaSData discovery and redactionSLA timers and remindersEvidence reports and exports
     ],
@@ -5972,7 +5972,7 @@ varian,
     descriptio,
   n: Upload schemas, generate contract suites, run per-PR checks with diffs and breaking-change alerts.,
     feature,
-  s: [;
+  s: [
 
       Schema diff and breaking checksPR status and GitHub appExamples and mock serverMulti-env test runnersSlack notifications
     ],
@@ -6031,7 +6031,7 @@ varian,
     descriptio,
   n: Connect your cloud accounts and get daily optimizations, reserved instance suggestions and budget alerts with explainable savings.,
     feature,
-  s: [;
+  s: [
 
       Cost explorer with tagsAnomaly detection and alertsRightsizing recommendationsSavings plan/RI advisorForecasting and budgets
     ],
@@ -6089,7 +6089,7 @@ varian,
     descriptio,
   n: Warmup flows, seed list testing, reputation signals and playbooks to protect sender score across ESPs.,
     feature,
-  s: [;
+  s: [
 
       Smart warmup schedulesSeed list and spam testsDomain/reputation dashboardBlocklist monitoringDeliverability playbooks
     ],
@@ -6147,7 +6147,7 @@ varian,
     descriptio,
   n: End-to-end starter kits for semantic search with ingestion, chunking, hybrid retrieval and evaluation harness.,
     feature,
-  s: [;
+  s: [
 
       Ingestion pipeline templatesHybrid retrieval patternsEvaluation notebooksDashboards and alertsDeploy buttons
     ],
@@ -6205,7 +6205,7 @@ varian,
     descriptio,
   n: Continuously scan API endpoints and specs for risks, auth gaps and changes with pull-request recommendations.,
     feature,
-  s: [;
+  s: [
 
       Shadow API discoveryAuth and RBAC checksSchema drift and diffsSecret/key exposure checksPR suggestions and tickets
     ],
@@ -6264,7 +6264,7 @@ varian,
     descriptio,
   n: Define SLOs with templates and get error budget burn alerts, fast triage and weekly reports for services and SLIs.,
     feature,
-  s: [;
+  s: [
 
       SLO templates and calculatorBurn-rate alerts and pagingIntegration with traces/metricsWeekly reports and anomaliesOn-call quality insights
     ],
@@ -6323,7 +6323,7 @@ varian,
     descriptio,
   n: Low-latency edge personalization with audience models, content variants and A/B testing for higher conversion.,
     feature,
-  s: [;
+  s: [
 
       Audience/intent modelsContent and layout variantsEdge rules and fallbacksEasy A/B testingPrivacy-safe analytics
     ],
@@ -6382,7 +6382,7 @@ varian,
     descriptio,
   n: Plug-and-play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals.,
     feature,
-  s: [;
+  s: [
 
       SAML/OIDC templatesSCIM provisioning flowsIdP compatibility matrixCompliance and security guidesDemo tenants and sandboxes
     ],
@@ -6440,7 +6440,7 @@ varian,
     descriptio,
   n: Ops runbooks, IaC modules, monitoring and SLOs for HA Postgres clusters with tested failover procedures.,
     feature,
-  s: [;
+  s: [
 
       HA topology templatesAutomated backups and PITRFailover runbooksPerformance tuning profilesSLOs and weekly reports
     ],
@@ -6498,7 +6498,7 @@ varian,
     descriptio,
   n: Multi-channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings.,
     feature,
-  s: [;
+  s: [
 
       Persona and ICP modelsMulti-channel sequencesGuardrails and blocklist checksCRM sync and dedupeA/B tests and analytics
     ],
@@ -6557,7 +6557,7 @@ varian,
     descriptio,
   n: Agent-based discovery for hardware, software and services with vulnerability signals and change alerts.,
     feature,
-  s: [;
+  s: [
 
       Network and host discoverySoftware and service inventoryVuln and exposure signalsChange detectionTicketing and webhooks
     ],
@@ -6616,7 +6616,7 @@ varian,
     descriptio,
   n: Ship flags, gradual rollouts, kill switches and experiments with edge-evaluated rules and SDKs.,
     feature,
-  s: [;
+  s: [
 
       Edge-evaluated rulesTargeting by attributesKill switches and rolloutsA/B test metricsAudit logs and approvals
     ],
@@ -6675,7 +6675,7 @@ varian,
     descriptio,
   n: Manage datasets, training runs, cost, evals and rollouts for fine-tuned models across vendors.,
     feature,
-  s: [;
+  s: [
 
       Dataset/version registryTraining run trackingCost/performance dashboardsEval suites and red-teamingCanary and rollout controls
     ],
@@ -6734,7 +6734,7 @@ varian,
     descriptio,
   n: Measure real-user and synthetic performance, pinpoint regressions and export fixes as PRs.,
     feature,
-  s: [;
+  s: [
 
       RUM + synthetic testsCore Web Vitals dashboardsPerformance budgetsPR suggestions and diffsAlerting and reports
     ],
@@ -6794,7 +6794,7 @@ varian,
     descriptio,
   n: Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.,
     feature,
-  s: [;
+  s: [
 
       Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trailsReports and exports
     ],
@@ -7081,7 +7081,7 @@ review,
     growthRate: 200% annual growth,;
 
 variant: holographic-matrix,
-    contactInfo: contact,    features: [;
+    contactInfo: contact,    features: [
 
       Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates
     ];
@@ -7173,7 +7173,7 @@ varian,
   t: holographic-matrix,
     contactInf,
   o: contact,    feature,
-  s: [;
+  s: [
 
       Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates
     ];
@@ -9123,7 +9123,7 @@ review,
   e: '200% annual growth, varian,
   t: holographic - matrix, contact_inf,
   o: contact, feature,
-  s: [;' Prompt / output policy engine_jailbreak and injection detectionPII redaction and audit trail_hallucination and grounding score_dashboards and CI quality gates ]; popula,
+  s: [';' Prompt / output policy engine_jailbreak and injection detectionPII redaction and audit trail_hallucination and grounding score_dashboards and CI quality gates ]; popula,
   r: true; ico,
   n: '🛡️ colo,
   r: 'from - rose - 600 to - red - 700 text_colo,
@@ -9132,10 +9132,10 @@ review,
   s://ziontechgroup.com / services / llm - safety - observability - suite market_positio,
   n: 'Comparable to Lakera / Guardrails AI at a lower entry price with built - in observability. target_audienc,
   e: Teams shipping AI copilots and assistants trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '30 minutes  categor,
   y: AI & Data real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['TypeScriptOpenAIAnthropicOpenTelemetry]; integration,
   s: ['SlackPagerDutyDatadogGitHub Actions]; use_case,
   s: ['Prevent unsafe outputs_compliance readiness_model regression detection]; ro,
@@ -9158,10 +9158,10 @@ review,
   s://ziontechgroup && ziontechgroup.com/services/serverless-cron-orchestrator marketPositio,
   n: 'Simpler than DIY EventBridge/Cloud Scheduler with portable configs. targetAudienc,
   e: Platform and automation teams trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '2 hours categor,
   y: Developer Tools realServic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Node && Node.jsCRONCloud Functions]; market_siz,
   e: '$3.5B+ AI safety & governance growth_rat,
   e: '200% annual growth varian,
@@ -9179,7 +9179,7 @@ review,
   e: '$59 perio,
   d: '/month, descriptio,
   n: Unified cron orchestration with jitter control, retries, DLQs and per - job SLAs. Works with Netlify, Vercel, AWS, and GCP. feature,
-  s: [;' Human - readable schedules_idempotency keys and dedupe_multi - cloud triggers_jitter and backoff tuningDLQ with webhooks and alerts ]; popula,
+  s: [';' Human - readable schedules_idempotency keys and dedupe_multi - cloud triggers_jitter and backoff tuningDLQ with webhooks and alerts ]; popula,
   r: true; ico,
   n: '⏱️ colo,
   r: 'from - cyan - 600 to - blue - 700 text_colo,
@@ -9188,10 +9188,10 @@ review,
   s://ziontechgroup.com / services / serverless - cron - orchestrator market_positio,
   n: 'Simpler than DIY EventBridge / Cloud Scheduler with portable configs. target_audienc,
   e: Platform and automation teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '2 hours categor,
   y: Developer Tools real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Node.jsCRONCloud Functions]; integration,
   s: ['NetlifyVercelAWSGCP]; use_case,
   s: ['Scheduled syncs_data pipelines_maintenance tasks]; ro,
@@ -9217,14 +9217,14 @@ review,
   s://ziontechgroup && ziontechgroup.com/services/gdpr-dsar-automation-pro marketPositio,
   n: 'Pragmatic and affordable alternative to full privacy vaults for SMBs.,  targetAudienc,
   e: Legal, privacy and security teams trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '1-3 days categor,
   y: Enterprise IT realServic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['TypeScriptNode && TypeScriptNode.jsPostgreSQL], perio,
   d: '/month, descriptio,
   n: Centralize DSAR intake, identity verification, finding / erasure across systems with audit - ready evidence and SLAs. feature,
-  s: [;' Identity verification and consent_connectors for common SaaSData discovery and redactionSLA timers and reminders_evidence reports and exports ]; popula,
+  s: [';' Identity verification and consent_connectors for common SaaSData discovery and redactionSLA timers and reminders_evidence reports and exports ]; popula,
   r: true, ico,
   n: '🔐 colo,
   r: 'from - emerald - 600 to - green - 700 text_colo,
@@ -9233,10 +9233,10 @@ review,
   s://ziontechgroup.com / services / gdpr - dsar - automation - pro market_positio,
   n: 'Pragmatic and affordable alternative to full privacy vaults for SMBs., target_audienc,
   e: Legal, privacy and security teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 - 3 days categor,
   y: Enterprise IT real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['TypeScriptNode.jsPostgreSQL]; integration,
   s: ['Google WorkspaceSalesforceHubSpotZendesk]; use_case,
   s: ['Right to access_right to erase_compliance evidence]; ro,
@@ -9260,7 +9260,7 @@ review,
   e: '$79  perio,
   d: '/month, descriptio,
   n: Upload schemas, generate contract suites, run per - PR checks with diffs and breaking - change alerts. feature,
-  s: [;' Schema diff and breaking checksPR status and GitHub app_examples and mock server_multi - env test runners_slack notifications ]; popula,
+  s: [';' Schema diff and breaking checksPR status and GitHub app_examples and mock server_multi - env test runners_slack notifications ]; popula,
   r: false; ico,
   n: '📜 colo,
   r: 'from - indigo - 600 to - violet - 700 text_colo,
@@ -9269,10 +9269,10 @@ review,
   s://ziontechgroup.com / services / api - contract - testing - hub market_positio,
   n: 'Cheaper and simpler than bespoke CI pipelines with OpenAPI diffs. target_audienc,
   e: Backend and platform teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 hour categor,
   y: Developer Tools real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Node.jsOpenAPIGraphQL];  integration,
   s: ['GitHubGitLabCircleCI]; use_case,
   s: ['Prevent breaking changes_improve API reliability]; ro,
@@ -9298,7 +9298,7 @@ review,
   e: '$99 perio,
   d: '/month descriptio,
   n: Connect your cloud accounts and get daily optimizations, reserved instance suggestions and budget alerts with explainable savings. feature,
-  s: [;' Cost explorer with tags_anomaly detection and alerts_rightsizing recommendations_savings plan / RI advisor_forecasting and budgets ]; popula,
+  s: [';' Cost explorer with tags_anomaly detection and alerts_rightsizing recommendations_savings plan / RI advisor_forecasting and budgets ]; popula,
   r: true, ico,
   n: '💸  lin,
   k: http,
@@ -9313,10 +9313,10 @@ review,
   s://ziontechgroup.com / services / cloud - cost - finops - copilot market_positio,
   n: 'Accessible alternative to enterprise FinOps tools for SMBs., target_audienc,
   e: FinOps, platform and CTOs trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 day categor,
   y: Cloud & FinOps real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['AWSGCPAzureBigQuery]; integration,
   s: ['SlackEmailPagerDuty]; use_case,
   s: ['Cost reduction_budget control_capacity planning]; ro,
@@ -9342,17 +9342,17 @@ review,
   e: '$59 perio,
   d: '/month descriptio,
   n: Warmup flows, seed list testing, reputation signals and playbooks to protect sender score across ESPs. feature,
-  s: [;' Smart warmup schedules_seed list and spam tests_domain / reputation dashboard_blocklist monitoring_deliverability playbooks ]; popula,
+  s: [';' Smart warmup schedules_seed list and spam tests_domain / reputation dashboard_blocklist monitoring_deliverability playbooks ]; popula,
   r: false, ico,
   n: '📧  lin,
   k: http,
   s://ziontechgroup && ziontechgroup.com/services/email-deliverability-warmup-monitor marketPositio,
   n: 'Practical alternative to costly consulting retainers.,  targetAudienc,
   e: Growth, marketing and ops teams trialDay,
-  s: 7; setupTim,
+  s: 7'; setupTim,
   e: '2 hours categor,
   y: Quality & Monitoring realServic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['IMAPSMTPNode && IMAPSMTPNode.js], colo,
   r: 'from - sky - 600 to - blue - 700 text_colo,
   r: 'text - sky - 300 lin,
@@ -9360,10 +9360,10 @@ review,
   s://ziontechgroup.com / services / email - deliverability - warmup - monitor market_positio,
   n: 'Practical alternative to costly consulting retainers., target_audienc,
   e: Growth, marketing and ops teams trial_day,
-  s: 7; setup_tim,
+  s: 7'; setup_tim,
   e: '2 hours categor,
   y: Quality & Monitoring real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['IMAPSMTPNode.js]; integration,
   s: ['SendGridMailgunPostmark]; use_case,
   s: ['Protect sender score_warm new domains_monitor inbox placement]; ro,
@@ -9389,16 +9389,16 @@ review,
   s://ziontechgroup && ziontechgroup.com/services/vector-search-starter-pro,  marketPositio,
   n: 'Faster than bespoke experiments, production-minded templates. targetAudienc,
   e: Product and data teams trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '1 day categor,
   y: AI & Data realServic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Next && Next.jsPineconeWeaviatePGVector]; integration,
   s: ['S3GCSSlack], useCase,
   s: ['Semantic searchKnowledge basesRetrieval augmentation] perio,
   d: '/month, descriptio,
   n: End - to - end starter kits for semantic search with ingestion, chunking, hybrid retrieval and evaluation harness. feature,
-  s: [;' Ingestion pipeline templates_hybrid retrieval patterns_evaluation notebooks_dashboards and alerts_deploy buttons ]; popula,
+  s: [';' Ingestion pipeline templates_hybrid retrieval patterns_evaluation notebooks_dashboards and alerts_deploy buttons ]; popula,
   r: true, ico,
   n: '🔎 colo,
   r: 'from - fuchsia - 600 to - pink - 700 text_colo,
@@ -9407,10 +9407,10 @@ review,
   s://ziontechgroup.com / services / vector - search - starter - pro, market_positio,
   n: 'Faster than bespoke experiments, production - minded templates. target_audienc,
   e: Product and data teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 day categor,
   y: AI & Data real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Next.jsPineconeWeaviatePGVector]; integration,
   s: ['S3GCSSlack], use_case,
   s: ['Semantic search_knowledge bases_retrieval augmentation], ro,
@@ -9419,8 +9419,8 @@ review,
   e: '$5B vector DBs growth_rat,
   e: '40% CAGR varian,
   t: quantum - holographic contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Scaffold generators and eval harness. launch_dat,
   e: 2025 - 02 - 12 customer,
   s: 31, ratin,
@@ -9441,10 +9441,10 @@ review,
   s://ziontechgroup && ziontechgroup.com/services/api-security-attack-surface-scanner marketPositio,
   n: 'Complements WAFs with deeper spec and behavior analysis. targetAudienc,
   e: Security and platform teams trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '1 day categor,
   y: Security realServic,
-  e: true; technolog,
+  e: true'; technolog,
   y: [Node && Node.jsOpenAPIeBPF (optional)], ratin,
   g: 4.7, review,
   s: 16}  i,
@@ -9454,7 +9454,7 @@ review,
   e: '$149 perio,
   d: '/month, descriptio,
   n: Continuously scan API endpoints and specs for risks, auth gaps and changes with pull - request recommendations. feature,
-  s: [;' Shadow API discovery_auth and RBAC checks_schema drift and diffs_secret / key exposure checksPR suggestions and tickets ]; popula,
+  s: [';' Shadow API discovery_auth and RBAC checks_schema drift and diffs_secret / key exposure checksPR suggestions and tickets ]; popula,
   r: true; ico,
   n: '🧰 colo,
   r: 'from - red - 600 to - rose - 700 text_colo,
@@ -9463,10 +9463,10 @@ review,
   s://ziontechgroup.com / services / api - security - attack - surface - scanner market_positio,
   n: 'Complements WAFs with deeper spec and behavior analysis. target_audienc,
   e: Security and platform teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 day categor,
   y: Security real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Node.jsOpenAPIeBPF (optional)]; integration,
   s: ['CloudflareFastlyGitHub]; use_case,
   s: ['Reduce API risk_enforce auth_detect drift]; ro,
@@ -9493,7 +9493,7 @@ review,
   e: '$79 perio,
   d: '/month descriptio,
   n: Define SLOs with templates and get error budget burn alerts, fast triage and weekly reports for services and SLIs. feature,
-  s: [;' SLO templates and calculator_burn - rate alerts and paging_integration with traces / metrics_weekly reports and anomalies_on - call quality insights ]; popula,
+  s: [';' SLO templates and calculator_burn - rate alerts and paging_integration with traces / metrics_weekly reports and anomalies_on - call quality insights ]; popula,
   r: false; ico,
   n: '📈  colo,
   r: 'from - lime - 600 to - green - 700 text_colo,
@@ -9502,10 +9502,10 @@ review,
   s://ziontechgroup.com / services / reliability - slo - guard market_positio,
   n: 'Opinionated SLOs without heavy APM lock - in. target_audienc,
   e: SRE and platform teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 day categor,
   y: Observability real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['OpenTelemetryPrometheusNode.js];  integration,
   s: ['GrafanaDatadogPagerDuty]; use_case,
   s: ['Define SLOsAlert on burn_improve reliability]; ro,
@@ -9529,7 +9529,7 @@ review,
   e: '$129  perio,
   d: '/month, descriptio,
   n: Low - latency edge personalization with audience models, content variants and A / B testing for higher conversion. feature,
-  s: [;' Audience / intent models_content and layout variants_edge rules and fallbacks_easy A / B testing_privacy - safe analytics ]; popula,
+  s: [';' Audience / intent models_content and layout variants_edge rules and fallbacks_easy A / B testing_privacy - safe analytics ]; popula,
   r: true; ico,
   n: '🎯 colo,
   r: 'from - purple - 600 to - fuchsia - 700 text_colo,
@@ -9538,10 +9538,10 @@ review,
   s://ziontechgroup.com / services / ai - website - personalization - pro market_positio,
   n: 'Accessible alternative to enterprise personalization tools. target_audienc,
   e: Growth and product teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 day categor,
   y: AI & Data real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Next.js_edge functions];  integration,
   s: ['SegmentRudderStackGoogle Analytics]; use_case,
   s: ['Increase conversion_tailor content_experiment fast]; ro,
@@ -9564,10 +9564,10 @@ review,
   s://ziontechgroup && ziontechgroup.com/services/sso-scim-starter-kit marketPositio,
   n: 'Accelerates enterprise readiness with proven patterns. targetAudienc,
   e: SaaS product teams trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '1 week categor,
   y: Enterprise IT realServic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Node && Node.jsNext.jsIdP SDKs]; market_siz,
   e: '$9B personalization growth_rat,
   e: '21% CAGR varian,
@@ -9585,7 +9585,7 @@ review,
   e: '$149 perio,
   d: '/month, descriptio,
   n: Plug - and - play SSO and user provisioning blueprints with guides, SDKs and test suites for faster enterprise deals. feature,
-  s: [;' SAML / OIDC templatesSCIM provisioning flowsIdP compatibility matrix_compliance and security guides_demo tenants and sandboxes ]; popula,
+  s: [';' SAML / OIDC templatesSCIM provisioning flowsIdP compatibility matrix_compliance and security guides_demo tenants and sandboxes ]; popula,
   r: true; ico,
   n: '🔐 colo,
   r: 'from - slate - 600 to - gray - 700 text_colo,
@@ -9594,10 +9594,10 @@ review,
   s://ziontechgroup.com / services / sso - scim - starter - kit market_positio,
   n: 'Accelerates enterprise readiness with proven patterns. target_audienc,
   e: SaaS product teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 week categor,
   y: Enterprise IT real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Node.js_next.jsIdP SDKs]; integration,
   s: ['OktaAuth0WorkOS]; use_case,
   s: ['Close enterprise deals_reduce integration time]; ro,
@@ -9606,8 +9606,8 @@ review,
   e: '$12B identity growth_rat,
   e: '18% CAGR varian,
   t: holographic - matrix contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'Reference implementations and test harnesses. launch_dat,
   e: 2025 - 01 - 30 customer,
   s: 19, ratin,
@@ -9621,7 +9621,7 @@ review,
   e: '$179 perio,
   d: '/month descriptio,
   n: Ops runbooks, IaC modules, monitoring and SLOs for HA Postgres clusters with tested failover procedures. feature,
-  s: [;' HA topology templates_automated backups and PITRFailover runbooks_performance tuning profilesSLOs and weekly reports ]; popula,
+  s: [';' HA topology templates_automated backups and PITRFailover runbooks_performance tuning profilesSLOs and weekly reports ]; popula,
   r: false; ico,
   n: '🗄️  colo,
   r: 'from - cyan - 700 to - teal - 700 text_colo,
@@ -9630,10 +9630,10 @@ review,
   s://ziontechgroup.com / services / managed - postgres - ha - pro market_positio,
   n: 'Hands - on managed approach without vendor lock - in. target_audienc,
   e: Data and platform teams trial_day,
-  s: 7; setup_tim,
+  s: 7'; setup_tim,
   e: '1 - 2 weeks  categor,
   y: Enterprise IT real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['PostgreSQLPatroniPgBouncer]; integration,
   s: ['GrafanaPrometheusPagerDuty]; use_case,
   s: ['HA databases_disaster recovery_performance tuning]; ro,
@@ -9642,8 +9642,8 @@ review,
   e: '$10B managed DBs growth_rat,
   e: '24% CAGR varian,
   t: quantum - matrix contact_inf,
-  o: contact; real_implementatio,
-  n: true; implementation_detail,
+  o: contact'; real_implementatio,
+  n: true'; implementation_detail,
   s: 'IaC blueprints and managed ops playbooks. launch_dat,
   e: 2025 - 03 - 04 customer,
   s: 8, ratin,
@@ -9664,10 +9664,10 @@ review,
   s://ziontechgroup && ziontechgroup.com/services/ai-sales-email-copilot marketPositio,
   n: 'Better deliverability and safety than DIY automations. targetAudienc,
   e: Sales and growth teams trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '3 hours categor,
   y: Micro SaaS realServic,
-  e: true; technolog,
+  e: true'; technolog,
   y: [Next && Next.jsLLM APIs], ratin,
   g: 4.6, review,
   s: 5}  i,
@@ -9677,7 +9677,7 @@ review,
   e: '$69 perio,
   d: '/month, descriptio,
   n: Multi - channel sequences, inbox rotation, safety guardrails and CRM syncing to generate more qualified meetings. feature,
-  s: [;' Persona and ICP models_multi - channel sequences_guardrails and blocklist checksCRM sync and dedupe_a / B tests and analytics ]; popula,
+  s: [';' Persona and ICP models_multi - channel sequences_guardrails and blocklist checksCRM sync and dedupe_a / B tests and analytics ]; popula,
   r: true; ico,
   n: '📬 colo,
   r: 'from - pink - 600 to - rose - 700 text_colo,
@@ -9686,10 +9686,10 @@ review,
   s://ziontechgroup.com / services / ai - sales - email - copilot market_positio,
   n: 'Better deliverability and safety than DIY automations. target_audienc,
   e: Sales and growth teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '3 hours categor,
   y: Micro SaaS real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Next.jsLLM APIs]; integration,
   s: ['HubSpotSalesforceOutreach]; use_case,
   s: ['Outbound emails_lead nurturing_meeting booking], ro,
@@ -9713,7 +9713,7 @@ review,
   e: '$119  perio,
   d: '/month, descriptio,
   n: Agent - based discovery for hardware, software and services with vulnerability signals and change alerts. feature,
-  s: [;' Network and host discovery_software and service inventory_vuln and exposure signals_change detection_ticketing and webhooks ]; popula,
+  s: [';' Network and host discovery_software and service inventory_vuln and exposure signals_change detection_ticketing and webhooks ]; popula,
   r: false; ico,
   n: '🛰️ colo,
   r: 'from - slate - 700 to - gray - 700 text_colo,
@@ -9722,10 +9722,10 @@ review,
   s://ziontechgroup.com / services / it - asset - discovery - agent - pro market_positio,
   n: 'Practical alternative to heavyweight CMDB tooling. target_audienc,
   e: IT and security teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 - 2 days  categor,
   y: Enterprise IT real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['GoeBPFSQLite]; integration,
   s: ['JiraServiceNow]; use_case,
   s: ['Asset inventory_risk visibility_change tracking]; ro,
@@ -9749,7 +9749,7 @@ review,
   e: '$99  perio,
   d: '/month, descriptio,
   n: Ship flags, gradual rollouts, kill switches and experiments with edge - evaluated rules and SDKs. feature,
-  s: [;' Edge - evaluated rules_targeting by attributes_kill switches and rollouts_a / B test metrics_audit logs and approvals ]; popula,
+  s: [';' Edge - evaluated rules_targeting by attributes_kill switches and rollouts_a / B test metrics_audit logs and approvals ]; popula,
   r: true; ico,
   n: '🏁 colo,
   r: 'from - blue - 600 to - indigo - 700 text_colo,
@@ -9758,10 +9758,10 @@ review,
   s://ziontechgroup.com / services / edge - feature - flags - pro market_positio,
   n: 'Lightweight alternative to enterprise flag platforms with edge latency. target_audienc,
   e: Product and platform teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 day  categor,
   y: Developer Tools real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Edge FunctionsTypeScript]; integration,
   s: ['VercelNetlifyCloudflare]; use_case,
   s: ['Gradual rollouts_kill switches_experiments]; ro,
@@ -9784,7 +9784,7 @@ review,
   s://ziontechgroup && ziontechgroup.com/services/llm-finetune-ops-manager marketPositio,
   n: 'Brings product rigor to fine-tuning with guardrails and metrics. targetAudienc,
   e: AI product and research teams trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '2 days market_siz,
   e: '$3B feature mgmt growth_rat,
   e: '24% CAGR varian,
@@ -9802,7 +9802,7 @@ review,
   e: '$149 perio,
   d: '/month, descriptio,
   n: Manage datasets, training runs, cost, evals and rollouts for fine - tuned models across vendors. feature,
-  s: [;' Dataset / version registry_training run tracking_cost / performance dashboards_eval suites and red - teaming_canary and rollout controls ]; popula,
+  s: [';' Dataset / version registry_training run tracking_cost / performance dashboards_eval suites and red - teaming_canary and rollout controls ]; popula,
   r: true; ico,
   n: '🧪 colo,
   r: 'from - purple - 600 to - fuchsia - 700 text_colo,
@@ -9811,10 +9811,10 @@ review,
   s://ziontechgroup.com / services / llm - finetune - ops - manager market_positio,
   n: 'Brings product rigor to fine - tuning with guardrails and metrics. target_audienc,
   e: AI product and research teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '2 days categor,
   y: AI & Data real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['OpenAIHugging FaceWeights & Biases]; integration,
   s: ['GitHubLangfusePromptfoo]; use_case,
   s: ['Improve response quality_reduce cost / latency_governance]; ro,
@@ -9837,7 +9837,7 @@ review,
   s://ziontechgroup && ziontechgroup.com/services/browser-performance-monitor-pro,  marketPositio,
   n: 'Opinionated budgets and PRs, not just charts. targetAudienc,
   e: Frontend and platform teams trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '1 day market_siz,
   e: '$4B model ops growth_rat,
   e: '35% CAGR varian,
@@ -9855,7 +9855,7 @@ review,
   e: '$79 perio,
   d: '/month, descriptio,
   n: Measure real - user and synthetic performance, pinpoint regressions and export fixes as PRs. feature,
-  s: [;' RUM + synthetic tests_core Web Vitals dashboards_performance budgetsPR suggestions and diffs_alerting and reports ]; popula,
+  s: [';' RUM + synthetic tests_core Web Vitals dashboards_performance budgetsPR suggestions and diffs_alerting and reports ]; popula,
   r: false, ico,
   n: '📈 colo,
   r: 'from - emerald - 600 to - teal - 700 text_colo,
@@ -9864,10 +9864,10 @@ review,
   s://ziontechgroup.com / services / browser - performance - monitor - pro, market_positio,
   n: 'Opinionated budgets and PRs, not just charts. target_audienc,
   e: Frontend and platform teams trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '1 day categor,
   y: Quality & Monitoring real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['Lighthouse CIWeb VitalsPlaywright]; integration,
   s: ['GitHubSlackNetlify]; use_case,
   s: ['Prevent perf regressions_improve CWV scores]; ro,
@@ -9893,7 +9893,7 @@ review,
   e: '$129 perio,
   d: '/month descriptio,
   n: Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance. feature,
-  s: [;' Model and dataset registry_risk and policy mappingsPII / PHI tagging and checks_change approvals and trails_reports and exports ]; popula,
+  s: [';' Model and dataset registry_risk and policy mappingsPII / PHI tagging and checks_change approvals and trails_reports and exports ]; popula,
   r: true, ico,
   n: '📚  lin,
   k: http,
@@ -9908,17 +9908,17 @@ review,
   s://ziontechgroup.com / services / ai - governance - registry market_positio,
   n: 'Practical governance for teams shipping AI quickly., target_audienc,
   e: Product, security and compliance trial_day,
-  s: 14; setup_tim,
+  s: 14'; setup_tim,
   e: '2 days categor,
   y: AI & Data real_servic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['TypeScriptPostgreSQL]; integration,
   s: ['GitHubJiraSlack]; use_case,
   s: ['Audit readiness_asset ownership_policy enforcement]; ro,
   i: 'Reduce compliance cycle time by 50% competitor,
   s: [Model governance suites], ratin,
   g: 4 && 4.6, review,
-  s: 6 } ]; realImplementatio,
+  s: 6 } ]'; realImplementatio,
   n: true,
   implementationDetails:  market_siz,
   e: '$3B AI governance growth_rat,
@@ -9930,7 +9930,7 @@ review,
   e: 2025 - 03 - 07 customer,
   s: 10, ratin,
   g: 4.6, review,
-  s: 6} ]; real_implementatio,
+  s: 6} ]'; real_implementatio,
   n: true, implementation_detail,
   s:  , ' 'Inline middleware, policy DSL, exporters and dashboards., launch_dat,
   e: 2025 - 03 - 10, customer,
@@ -10120,7 +10120,7 @@ review,
   r: 'text - fuchsia - 300, lin,
   k: http,
   s://ziontechgroup.com / services / vector - search - starter - pro, market_positio,
-  n: ;' 'Faster than bespoke experiments, production - minded templates., target_audienc,
+  n: '';' 'Faster than bespoke experiments, production - minded templates., target_audienc,
   e: Product and data teams, trial_day,
   s: 14, setup_tim,
   e: '1 day, categor,
@@ -10548,7 +10548,7 @@ review,
   e: 2025-03-10, customer,
   s: 25, ratin,
   g: 4.8, review,
-  s: 11 };  i,
+  s: 11 }';  i,
   d: serverless-cron-orchestrator, nam,
   e: 'Serverless Cron Orchestrator, taglin,
   e: 'Reliable schedules, retries and dead-lettering across clouds, pric,
@@ -10582,7 +10582,7 @@ review,
   e: 2025-02-20, customer,
   s: 40, ratin,
   g: 4.7, review,
-  s: 19 };  i,
+  s: 19 }';  i,
   d: gdpr-dsar-automation-pro, nam,
   e: 'GDPR/CCPA DSAR Automation Pro, taglin,
   e: Automate data subject access requests across SaaS systems, pric,
@@ -10616,7 +10616,7 @@ review,
   e: 2025-01-28, customer,
   s: 18, ratin,
   g: 4.7, review,
-  s: 13 };  i,
+  s: 13 }';  i,
   d: api-contract-testing-hub, nam,
   e: 'API Contract Testing Hub, taglin,
   e: OpenAPI/GraphQL contract tests with cloud runners, pric,
@@ -10650,7 +10650,7 @@ review,
   e: 2025-03-12, customer,
   s: 22, ratin,
   g: 4.6, review,
-  s: 10 };  i,
+  s: 10 }';  i,
   d: cloud-cost-finops-copilot, nam,
   e: 'Cloud Cost FinOps Copilot, taglin,
   e: 'Automated cost insights, rightsizing and anomaly alerts, pric,
@@ -10684,7 +10684,7 @@ review,
   e: 2025-02-05, customer,
   s: 33, ratin,
   g: 4.7, review,
-  s: 14 };  i,
+  s: 14 }';  i,
   d: email-deliverability-warmup-monitor, nam,
   e: 'Email Deliverability Warmup & Monitor, taglin,
   e: 'Automated warmup, inbox placement tests and reputation alerts, pric,
@@ -10718,7 +10718,7 @@ review,
   e: 2025-03-02, customer,
   s: 28, ratin,
   g: 4.6, review,
-  s: 12 };  i,
+  s: 12 }';  i,
   d: vector-search-starter-pro, nam,
   e: 'Vector Search Starter Pro, taglin,
   e: Blueprints for Pinecone/Weaviate/PGVector with evals & dashboards, pric,
@@ -10752,7 +10752,7 @@ review,
   e: 2025-02-12, customer,
   s: 31, ratin,
   g: 4.7, review,
-  s: 16 };  i,
+  s: 16 }';  i,
   d: api-security-attack-surface-scanner, nam,
   e: 'API Security Attack Surface Scanner, taglin,
   e: 'Discover shadow APIs, auth gaps and drift with actionable fixes, pric,
@@ -10786,7 +10786,7 @@ review,
   e: 2025-03-06, customer,
   s: 14, ratin,
   g: 4.7, review,
-  s: 8 };  i,
+  s: 8 }';  i,
   d: reliability-slo-guard, nam,
   e: 'Reliability SLO Guard, taglin,
   e: 'Error budgets, burn rates and policy-based alerts as-a-service, pric,
@@ -10820,7 +10820,7 @@ review,
   e: 2025-02-18, customer,
   s: 20, ratin,
   g: 4.6, review,
-  s: 9 };  i,
+  s: 9 }';  i,
   d: ai-website-personalization-pro, nam,
   e: 'AI Website Personalization Pro, taglin,
   e: On-site experiences tailored by intent and persona, pric,
@@ -10854,7 +10854,7 @@ review,
   e: 2025-02-25, customer,
   s: 27, ratin,
   g: 4.7, review,
-  s: 13 };  i,
+  s: 13 }';  i,
   d: sso-scim-starter-kit, nam,
   e: 'SSO + SCIM Starter Kit, taglin,
   e: 'Enterprise authentication and provisioning in weeks, not months, pric,
@@ -10888,7 +10888,7 @@ review,
   e: 2025-01-30, customer,
   s: 19, ratin,
   g: 4.8, review,
-  s: 9 };  i,
+  s: 9 }';  i,
   d: managed-postgres-ha-pro, nam,
   e: 'Managed Postgres HA Pro, taglin,
   e: Production-grade Postgres with automated backups and failover, pric,
@@ -10922,7 +10922,7 @@ review,
   e: 2025-03-04, customer,
   s: 8, ratin,
   g: 4.6, review,
-  s: 5 };  i,
+  s: 5 }';  i,
   d: ai-sales-email-copilot, nam,
   e: 'AI Sales Email Copilot, taglin,
   e: 'Personalized, compliant, on-brand sales emails at scale, pric,
@@ -10956,7 +10956,7 @@ review,
   e: 2025-02-16, customer,
   s: 42, ratin,
   g: 4.7, review,
-  s: 21 };  i,
+  s: 21 }';  i,
   d: it-asset-discovery-agent-pro, nam,
   e: 'IT Asset Discovery Agent Pro, taglin,
   e: Continuous inventory and risk visibility across networks, pric,
@@ -10990,7 +10990,7 @@ review,
   e: 2025-01-22, customer,
   s: 12, ratin,
   g: 4.5, review,
-  s: 6 };  i,
+  s: 6 }';  i,
   d: edge-feature-flags-pro, nam,
   e: 'Edge Feature Flags Pro, taglin,
   e: Zero-latency feature rollout and A/B at the edge, pric,
@@ -11024,7 +11024,7 @@ review,
   e: 2025-03-14, customer,
   s: 17, ratin,
   g: 4.6, review,
-  s: 7 };  i,
+  s: 7 }';  i,
   d: llm-finetune-ops-manager, nam,
   e: 'LLM Fine-tune Ops Manager, taglin,
   e: 'Datasets, runs, evals and deployment for fine-tuned models, pric,
@@ -11058,7 +11058,7 @@ review,
   e: 2025-03-13, customer,
   s: 9, ratin,
   g: 4.7, review,
-  s: 6 };  i,
+  s: 6 }';  i,
   d: browser-performance-monitor-pro, nam,
   e: 'Browser Performance Monitor Pro, taglin,
   e: 'LCP/INP tracking, synthetic journeys and Core Web Vitals fixes, pric,
@@ -11092,7 +11092,7 @@ review,
   e: 2025-03-11, customer,
   s: 13, ratin,
   g: 4.5, review,
-  s: 5 };  i,
+  s: 5 }';  i,
   d: ai-governance-registry, nam,
   e: 'AI Governance Registry, taglin,
   e: 'Track models, datasets, policies and approvals for AI features, pric,
@@ -11218,10 +11218,10 @@ review,
   s://ziontechgroup.com/services/llm-safety-observability-suite marketPositio,
   n: 'Comparable to Lakera/Guardrails AI at a lower entry price with built-in observability. targetAudienc,
   e: Teams shipping AI copilots and assistants trialDay,
-  s: 14; setupTim,
+  s: 14'; setupTim,
   e: '30 minutes categor,
   y: AI & Data realServic,
-  e: true; technolog,
+  e: true'; technolog,
   y: ['TypeScriptOpenAIAnthropicOpenTelemetry]; integration,
   s: ['SlackPagerDutyDatadogGitHub Actions]; useCase,
   s: ['Prevent unsafe outputsCompliance readinessModel regression detection]; ro,
@@ -11815,5 +11815,5 @@ review,
   e: 2025-03-07, customer,
   s: 10, ratin,
   g: 4.6, review,
-  s: 6}; ]; review,
-  s: 6 } ]; ];
+  s: 6}; ]'; review,
+  s: 6 } ]'; ]';

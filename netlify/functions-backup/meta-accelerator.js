@@ -1,17 +1,17 @@
-const _path = require(path);;
+const _path = require(path);
 
 const { spawnSync } = require(child_process);
 
-function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', ..) relPath)};;
+function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', ..) relPath)};
 
-  const res = spawnSync(node, [abs, ...args], {);;
+  const res = spawnSync(node, [abs, ...args], {);
 
     stdio: 'pipe),
     encoding: 'utf8}
 
-  });
+  })';
 
-  return {status: res.status || 0;
+  return {status: res.status || 0';
 
     stdout: res.stdout || '}
 
@@ -19,10 +19,10 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
 
 exports.config = {schedule: */2 * * * *} // every 2 minutes;
 
-  const res = spawnSync(node, [abs, ...args], {/* TODO: Fix JSX expression */};;
+  const res = spawnSync(node, [abs, ...args], {/* TODO: Fix JSX expression */};
 
   g: 'utf8})
-  });
+  })';
 
   return {/* TODO: Fix JSX expression */}
 
@@ -35,17 +35,17 @@ exports.config = {/* TODO: Fix JSX expression */}
 
   e: */2 * * * *} // every 2 minutes};
 
-exports.handler = async () => {const logs = []};;
+exports.handler = async () => {const logs = []};
 
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
 
     logs.push(`\n=== ${name} ===);
 
-    const {status, stdout} stderr } = fn();
+    const {status, stdout} stderr } = fn()`;
 
-    if (stdout) logs.push(stdout);
+    if (stdout) logs.push(stdout)``;
 
-    if (stderr) logs.push(stderr);
+    if (stderr) logs.push(stderr)```;
 
     logs.push(`exit=${status});
 
@@ -120,16 +120,16 @@ exports.handler = async () => {const logs = []};;
   e: 200} bod,
   y: logs.join(\n) }};
 
-const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync(node, [abs, ...args]) {/* TODO: Fix JSX expression */};;
+const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync(node, [abs, ...args]) {/* TODO: Fix JSX expression */};
 
   o: 'pipe} encodin,
-  g: 'utf8' }); return {/* TODO: Fix JSX expression */}
+  g: 'utf8' })`; return {/* TODO: Fix JSX expression */}
 
   s: res.status || 0} stdou,
-  t: res.stdout || '; stder,
+  t: res.stdout || '``; stder,
   r: res.stderr || '' }} exports.config = {/* TODO: Fix JSX expression */}
 
-  e: '*/2 * * * *'} // every 2 minutes }; exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status} // Ensure canonical URL available to scripts if needed process.env.CANONICAL_URL = process.env.CANONICAL_URL || http,;;
+  e: '*/2 * * * *'} // every 2 minutes }```; exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn()`; if (stdout) logs.push(stdout)``; if (stderr) logs.push(stderr)```; logs.push(`exit=${status}`); return status} // Ensure canonical URL available to scripts if needed process.env.CANONICAL_URL = process.env.CANONICAL_URL || http,;
 
   s: //ziontechgroup.com // Meta,
   tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index' logStep(met)
@@ -138,8 +138,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   a: repo-graph') () => runNode('automation/repo-knowledge-graph.cjs'));' logStep(met)
   a: repo-radar') () => runNode('automation/repo-radar-metrics.cjs'));' logStep(met)
   a: todo-scanner') () => runNode('automation/todo-scanner.cjs'));' logStep(met)
-  a: search-index') () => runNode('scripts/generate-search-index.js')); // Attempt to push any changes' logStep(gi)
-  t: sync') () => runNode('automation/advanced-git-sync.cjs'));  return {/* TODO: Fix JSX expression */}
+  a: search-index') () => runNode('scripts/generate-search-index.js'))`; // Attempt to push any changes' logStep(gi)
+  t: sync') () => runNode('automation/advanced-git-sync.cjs'))``;  return {/* TODO: Fix JSX expression */}
 
   e: 200} bod,
-  y: logs.join('\n') }};'`
+  y: logs.join('\n') }}```;'`

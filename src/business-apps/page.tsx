@@ -1,12 +1,12 @@
-import React from 'react;
+import React from 'react';
 
-import { Link } from 'react-router-dom;
+import { Link } from 'react-router-dom';
 
-import Navigation from '../components/Navigation;
+import Navigation from '../components/Navigation';
 
-import Footer from '../components/Footer;
+import Footer from '../components/Footer';
 
-import { CheckCircle, Star } from 'lucide-react;
+import { CheckCircle, Star } from 'lucide-react';
 
 const BusinessAppsPage: React.FC = () => {
   return (
@@ -25,7 +25,7 @@ const BusinessAppsPage: React.FC = () => {
             This page is under development. Please check back soon for updates.
           </p>
         </section>
-);
+)"';
 
 }
 
@@ -117,4 +117,4 @@ className=bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounde
       <Footer /></Footer>
 </div>)}
 
-export default BusinessAppsPage;
+export default BusinessAppsPage';

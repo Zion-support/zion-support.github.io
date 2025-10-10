@@ -1,6 +1,6 @@
 
 // // Monitor performance;
-// try {;
+// try {
 const _memUsage = process.memoryUsage();
 //     // // console.log removed for production
 rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB','

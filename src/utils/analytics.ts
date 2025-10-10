@@ -1,4 +1,4 @@
-export const trackEvent = (eventName: string, properties?: Record<string, any>) => {;;
+export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
 
 return (
 
@@ -10,7 +10,7 @@ return (
 
 };
 
-export const trackPageView = (pagePath: string, pageTitle?: string) => {;;
+export const trackPageView = (pagePath: string, pageTitle?: string) => {
 
   if (typeof window !== 'undefined && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID, {
@@ -19,7 +19,7 @@ export const trackPageView = (pagePath: string, pageTitle?: string) => {;;
 
 };
 
-export const initAnalytics = (measurementId: string) => {;;
+export const initAnalytics = (measurementId: string) => {
 
   if (typeof window !== 'undefined) {
     // Load Google Analytics script;
@@ -40,16 +40,16 @@ const script = document.createElement(script);;
 
     window.gtag = gtag;
 
-    gtag(js, new Date());
+    gtag(js, new Date())`;
 
     gtag('config, measurementId)}
 
-};
+}``;
 
 // Declare global types
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
+    gtag: (...args: any[]) => void```;
 
     dataLayer: any[]}
 

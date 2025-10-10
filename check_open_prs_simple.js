@@ -1,4 +1,4 @@
-  return new Promise((resolve, reject) => {;
+  return new Promise((resolve, reject) => {
 const options = {
       hostname: 'api.github.com'
       path: path;

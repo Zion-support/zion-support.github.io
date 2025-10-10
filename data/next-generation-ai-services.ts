@@ -2,7 +2,7 @@ import React from react;
 
 export interface NextGenerationAIService;
 
-export interface NextGenerationAIService {;
+export interface NextGenerationAIService {
 
   id: string;
 
@@ -2130,4 +2130,4 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   e: 2024-03-15, customer,
   s: 220, ratin,
   g: 4.7, review,
-  s: 125 } ];
+  s: 125 } ]';

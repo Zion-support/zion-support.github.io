@@ -1,8 +1,8 @@
 import React from react;
 
-export default function ServicesSection() {;
+export default function ServicesSection() {
 
-const services = [;;;
+const services = [;
 
     {
       title: 'AI & Machine Learning,

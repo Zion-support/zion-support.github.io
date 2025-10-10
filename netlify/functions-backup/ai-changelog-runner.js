@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 
     // AI changelog generation simulation;
 
-    const result = {;;
+    const result = {
 
       statusCode: 200;
 
@@ -25,13 +25,13 @@ function: 'ai-changelog-runner',
 
           lastGenerated: new Date().toISOString()}
 
-    const result = {/* TODO: Fix JSX expression */};;
+    const result = {/* TODO: Fix JSX expression */};
 
         'Access-Control-Allow-Origin': '*'}
 
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({ /* TODO: Fix JSX expression */  })
   d: new Date().toISOString()}
 
         }})};
@@ -71,10 +71,10 @@ function: 'ai-changelog-runner'}
 
 };
 
-        timestamp: new Date().toISOString(),' function: 'ai-changelog-runner',' source: event.source || 'unknown', changelog: {' status: 'generated, entries: 0;
+        timestamp: new Date().toISOString(),' function: 'ai-changelog-runner',' source: event.source || 'unknown', changelog: {' status: 'generated, entries: 0';
 
-        lastGenerated: new Date().toISOString() } }) }; return result} catch (error) {' // // console.error removed for production
-error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'ai-changelog-runner }) }} };
+        lastGenerated: new Date().toISOString() } }) }'; return result} catch (error) {' // // console.error removed for production
+error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'ai-changelog-runner }) }} }';
 
         timestam,
   p: new Date().toISOString(),' functio,
@@ -91,4 +91,4 @@ error} return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}
 
   r: 'Internal server error'} messag)
   e: error.message)' functio,
-  n: 'ai-changelog-runner }) }} };
+  n: 'ai-changelog-runner }) }} }';

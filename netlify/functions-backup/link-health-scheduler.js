@@ -4,4 +4,4 @@ cons,
   r: = async () => {/* TODO: Fix JSX expression */}
 
   e: 20)0} bod,
-  y: JSON.stringify({ logs })} } }' ' '
+  y: JSON.stringify({ logs   })} } }' ' '

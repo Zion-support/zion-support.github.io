@@ -1,10 +1,10 @@
-import * as fs from 'fs;
+import * as fs from 'fs';
 
-import * as path from 'path;
+import * as path from 'path';
 
-import type { IntegrationsState } from './types;
+import type { IntegrationsState } from './types';
 
-;
+';
 
 const DATA_DIR = path.resolve(process.cwd(), 'data', integrations);;
 
@@ -21,7 +21,7 @@ function ensureDataDir(): void {/* TODO: Fix JSX expression */}
 export function readState(): IntegrationsState {
   ensureDataDir();
 
-  if (!fs.existsSync(STATE_FILE)) {;
+  if (!fs.existsSync(STATE_FILE)) {
 
 const initial: IntegrationsState = {,
       connections: [],
@@ -36,7 +36,7 @@ const initial: IntegrationsState = {,
 export function readState(): IntegrationsState {
   ensureDataDir();
 
-  try {;
+  try {
 
 const raw = fs.readFileSync(STATE_FILE, utf8);;
 
@@ -73,7 +73,7 @@ const raw = fs.readFileSync(STATE_FILE, utf8);;
 //     const raw = fs.readFileSync(STATE_FILE, "utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
-    return {;
+    return {
 
 const initial: IntegrationsState = {,;
 
@@ -136,13 +136,13 @@ export class FileStore {/* TODO: Fix JSX expression */}
 
   }
 
-  async readFile(filePath: string): Promise<string> {;
+  async readFile(filePath: string): Promise<string> {
 
 const fullPath = path.join(this.basePath, filePath);;
 
     return fs.promises.readFile(fullPath, this.encoding)}
 
-  async writeFile(filePath: string, content: string): Promise<void> {;
+  async writeFile(filePath: string, content: string): Promise<void> {
 
 const fullPath = path.join(this.basePath, filePath);;
 
@@ -157,7 +157,7 @@ const fullPath = path.join(this.basePath, filePath);;
   async exists(filePath: string): Promise<boolean> {,
 //     const fullPath = path.join(this.basePath, filePath);;
 
-  async exists(filePath: string): Promise<boolean> {;
+  async exists(filePath: string): Promise<boolean> {
 
 const fullPath = path.join(this.basePath, filePath);;
 
@@ -181,13 +181,13 @@ const fullPath = path.join(this.basePath, filePath);;
 
     return files;
 
-  async deleteFile(filePath: string): Promise<void> {;
+  async deleteFile(filePath: string): Promise<void> {
 
 const fullPath = path.join(this.basePath, filePath);;
 
     await fs.promises.unlink(fullPath)}
 
-  async listFiles(dirPath: string = ): Promise<string[]> {;
+  async listFiles(dirPath: string = ): Promise<string[]> {
 
 const fullPath = path.join(this.basePath, dirPath);;
 
@@ -206,13 +206,13 @@ const fullPath = path.join(this.basePath, dirPath);;
   async deleteDirectory(dirPath: string): Promise<void> {,
 //     const fullPath = path.join(this.basePath, dirPath);;
 
-  async createDirectory(dirPath: string): Promise<void> {;
+  async createDirectory(dirPath: string): Promise<void> {
 
 const fullPath = path.join(this.basePath, dirPath);;
 
     await fs.promises.mkdir(fullPath, { recursive: true })}
 
-  async deleteDirectory(dirPath: string): Promise<void> {;
+  async deleteDirectory(dirPath: string): Promise<void> {
 
 const fullPath = path.join(this.basePath, dirPath);;
 

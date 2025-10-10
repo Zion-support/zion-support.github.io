@@ -8,17 +8,17 @@ import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);;
+const __filename = fileURLToPath(import.meta.url);
 
 // __dirname removed
 // Function to fix lint warnings in a file;
 
 function fixLintWarnings(filePath) {
-  try {;
+  try {
 
-let content = fs.readFileSync(filePath, utf8);;
+let content = fs.readFileSync(filePath, utf8);
 
-    let modified = false;;
+    let modified = false;
 
     // Fix unused variables by prefixing with underscore;
 
@@ -27,7 +27,7 @@ let content = fs.readFileSync(filePath, utf8);;
 
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
 
-      return `const _${varName} = });
+      return `const _${varName} = })```;
 
     content = content.replace(/let (\w+) = /g, (match, varName) => {/* TODO: Fix JSX expression */}
 
@@ -61,9 +61,9 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     // Fix specific patterns;
 
     if (filePath.includes('main.tsx)) {
-      content = content.replace(/const registration = /g, const _registration = );;
+      content = content.replace(/const registration = /g, const _registration = );
 
-      content = content.replace(/const registrationError = /g, const _registrationError = );;
+      content = content.replace(/const registrationError = /g, const _registrationError = );
 
     if (filePath.includes('main.tsx)) {/* TODO: Fix JSX expression */}
 
@@ -106,21 +106,21 @@ return false}
 
 // Function to find all files that need lint fixing;
 
-function findFilesToFix(dir) {;
+function findFilesToFix(dir) {
 
-const files = [];;
+const files = [];
 
   ;
 
-function walkDir(currentPath) {;
+function walkDir(currentPath) {
 
-const items = fs.readdirSync(currentPath);;
+const items = fs.readdirSync(currentPath);
 
-    for (const item of items) {;
+    for (const item of items) {
 
-const fullPath = path.join(currentPath, item);;
+const fullPath = path.join(currentPath, item);
 
-      const stat = fs.statSync(fullPath);;
+      const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         walkDir(fullPath)} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx))) {
@@ -142,17 +142,17 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
 
 // Main execution;
 
-const srcDir = path.join(__dirname, src);;
+const srcDir = path.join(__dirname, src);
 
 // console.log removed for production
 ;
 
-const filesToFix = findFilesToFix(srcDir);;;
+const filesToFix = findFilesToFix(srcDir);;
 
 // console.log removed for production
-;
+`;
 
-let fixedCount = 0;;
+let fixedCount = 0``;```;
 
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
 

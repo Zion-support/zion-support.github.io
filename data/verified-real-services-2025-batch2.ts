@@ -14,9 +14,8 @@ export interface VerifiedRealService2025Batch2 {id: string;
     address: string}
   };
     address: string}
-export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
-    address: string}
-;
+export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
+    address: string};
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     id: 'ai - quality - assurance',
     name: 'AI Quality Assurance Platform',
@@ -31,10 +30,9 @@ export interface VerifiedRealService2025Batch2 {/* TODO: Fix JSX expression */}
     addres,
   s: string}
 export const,
-  verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [;
+  verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     addres,
-  s: string}
-;
+  s: string};
 export const,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [,
     i,
@@ -98,7 +96,7 @@ export const verifiedRealServices2025 Batch2: VerifiedRealService2025 Batch2[] =
     id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
     tagline: "Automated testing and quality control", price: '$79/month',
     description: 'AI-powered quality assurance platform that automates testing and ensures software quality.',
-    features: [;
+    features: [
       "Automated testing"
       "AI defect detection"
       "Performance monitoring"
@@ -199,7 +197,7 @@ export const,
     descriptio,"
   n: "AI-powered quality assurance platform that automates testing and ensures software quality.",
     feature,
-  s: [;"
+  s: ["
       "Automated testing""
       "AI defect detection""
       "Performance monitoring""
@@ -320,7 +318,7 @@ export interface VerifiedRealService2025Batch2,
   s: string}; addres,
   s: string} export const,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [ addres,
-  s: string} ; export const,
+  s: string}; export const,
   verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [, i,
   d: 'ai - quality - assurance',' nam,
   e: 'AI Quality Assurance Platform',' taglin,

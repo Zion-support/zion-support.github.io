@@ -1,18 +1,18 @@
-'use client;
+'use client';
 
-import React from 'react;
+import React from 'react';
 
 import Navigation from ../components
 import Footer from ../components
 import SEOOptimizer from ../components
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from lucide-react;
 
-const AIWorkflowAutomationPage: React.FC = () => {;
+const AIWorkflowAutomationPage: React.FC = () => {
 
-const features = [;;;
+const features = [';
 
     {
-      icon: Zap;
+      icon: Zap';
 
       titl,
     e: 'Intelligent Process Automation,
@@ -56,7 +56,7 @@ const,
 
   ];
 
-  const pricing = [;;
+  const pricing = [
 
     {/* TODO: Fix JSX expression *
     },
@@ -67,7 +67,7 @@ const,
 
   ];
 
-  const stats = [;;
+  const stats = [
 
     {/* TODO: Fix JSX expression *
   ,
@@ -82,9 +82,9 @@ const,
   ,
     l: 'Processing }
 
-  ];
+  ]';
 
-  const useCases = [;;
+  const useCases = [';';
 
     {
       title: 'Customer Onboarding,
@@ -103,10 +103,10 @@ const,
       description: 'Streamline new hire processes with automated document collection, system access, and training assignments.,
       icon: Settings}
 
-  ];
+  ]';
 
   return(<React.Fragment>
-      <SEOOptimizer;
+      <SEOOptimizer';
 
         title="AI Workflow Automation Platform - Zion Tech Group
         description="Automate business processes with AI-powered workflows. 90% time savings, 500+ integrations, and intelligent decision making. No coding required.
@@ -120,7 +120,7 @@ const,
           <section className="container mx-auto px-4 py-16 text-center>
             <div className="max-w-4xl mx-auto>
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text>
-                AI Workflow Automation Platform;
+                AI Workflow Automation Platform";
 
         canonicalUrl=https://ziontechgroup.com
       
@@ -134,7 +134,7 @@ const,
               <
               <p className=text-xl m,
     d:text-2xl text-cyan-400 mb-8>
-                Automate any business process with intelligent workflows;
+                Automate any business process with intelligent workflows";
 
               <
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto>,
@@ -142,11 +142,10 @@ const,
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
               <
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16>
-                <a;
+                <a";
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16><
-                <a
-                  href="tel:+13024640950
+                <a href="tel:+13024640950
     {/* TOD,
     O: Fix JSX expression *
     },
@@ -157,7 +156,7 @@ const,
     {/* TODO: Fix JSX expression *
     }
 
-  ];
+  ]>
 
   return (<React.Fragment>
       <SEOOptimizer></SEOOptimizer>
@@ -175,12 +174,12 @@ const,
             <div className="max-w-4xl mx-auto><
               <h1 className="text-4xl,
   md:text-6xl font-bold text-white mb-6 neon-text><
-                AI Workflow Automation Platform;
+                AI Workflow Automation Platform";
 
               <
               <p className="text-xl,
   md:text-2xl text-cyan-400 mb-8><
-                Automate any business process with intelligent workflows;
+                Automate any business process with intelligent workflows";
 
               <
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto><
@@ -197,7 +196,7 @@ const,
                   <Phone className="w-5 h-5 /><)
                   <span>Call (302) 464-0950<
                 <
-                <a;
+                <a";
 
                   href=mailt,
     o:kleber@ziontechgroup.com,
@@ -251,7 +250,7 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg><
       
         <div className="max-w-7xl mx-auto>
-);
+)";
 
 }
 
@@ -265,7 +264,7 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
               adapts, and optimizes your processes continuously.
             <
             <div className="flex flex-col sm: flex-row gap-4 justify-center>
-              <a;
+              <a";
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center><
               <a
@@ -275,12 +274,12 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
                 <Zap className="w-4 h-4 /></Za><
                 <<<<span>Get</span></span></<<span>Started</span></span><
               <
-              <a;
+              <a";
 
                 href=
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300
               >
-                Learn More;
+                Learn More";
 
               <
             <
@@ -288,7 +287,7 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
           {/* Features Section *
           <section className="mb-16>
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text>
-              Key Features;
+              Key Features"';
 
             <
             <div className=grid grid-cols-1 md:grid-cols-2 l,
@@ -322,7 +321,7 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
           {/* Use Cases Section *
           <section className="container mx-auto px-4 py-16>
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text>
-              Automate Any Business Process;
+              Automate Any Business Process"';
 
             <
             <div className=grid grid-cols-1 m,
@@ -348,7 +347,7 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
           {/* Pricing Section *
           <section className="mb-16>
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text>
-              Pricing Plans;
+              Pricing Plans'";
 
             <
             <div className=grid grid-cols-1 m,
@@ -363,7 +362,7 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
                   {index === 1 && (<
                     <div className="text-center mb-4><
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold>
-                        Most Popular;
+                        Most Popular"``;
 
                       <
                     <
@@ -381,13 +380,13 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
                     ))}
 
                   <
-                  <a;
+                  <a"```;
 
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan}
 
                     className="cyber-button w-full text-center block
                   >
-                    Get Started;
+                    Get Started";
 
                   <
                 <
@@ -403,23 +402,23 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
               Contact us today to learn how AI workflow automation can transform your business processes.
             <
             <div className="flex flex-col sm: flex-row gap-4 justify-center>
-              <a;
+              <a";
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center><
               <a
                 href="tel:+13024640950
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors
               >
-                Call (302) 464-0950;
+                Call (302) 464-0950">
 
               <
-              <a;
+              <a"`;
 
                 href="mailto:kleber@ziontechgroup.com
                 className=bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hove,
     r:text-purple-600 transition-colors
               >
-                Email Us;
+                Email Us``;
 
               </a>
             </div>
@@ -427,4 +426,4 @@ return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple
         </main>
         <Footer />
       </div>,
-    </div>)};
+    </div>)}```;

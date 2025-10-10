@@ -4,10 +4,10 @@ exports.handler = async function (event, context) {
     const _timestamp = new Date().toISOString();
     return {
       statusCode: 200;
-      body: JSON.stringify({)
+      body: JSON.stringify({ )
         message: 'ultrafast_orchestrator function executed successfully'),'
         timestamp: timestamp),;
-function: 'ultrafast_orchestrator'})'
+function: 'ultrafast_orchestrator'  })'
     }} catch (error) {
 
     return {

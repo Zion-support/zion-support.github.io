@@ -1,4 +1,4 @@
-export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026,;;
+export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026,';';
 
     path: '/services/metaverse-development-platform-2026',
     description: 'Complete metaverse development and deployment solution',
@@ -69,7 +69,7 @@ export const metaverseDigitalRealityServices2026 = [{/* TODO: Fix JSX expression
 
 ];
 
-export const metaverseDigitalCategories2026 = [;;
+export const metaverseDigitalCategories2026 = [
 
   'Metaverse Development',
   'Virtual Reality',
