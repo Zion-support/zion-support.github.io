@@ -193,25 +193,6 @@ const Navigation: React.FC = () => {
                         <Zap className="w-4 h-4 mr-2" />
                         Micro SAAS
                       </h3>
-<<<<<<< HEAD
-                      <div className="space-y-3">
-                        {['Productivity', 'Content', 'Marketing', 'Business', 'Finance'].map(category => (
-                          <div key={category}>
-                            <h4 className="text-xs font-medium text-purple-400 mb-2 uppercase tracking-wide">{category}</h4>
-                            <div className="space-y-1">
-                              {microSAASServices.filter(service => service.category === category).slice(0, 2).map((service) => (
-                                <Link key={service.name}
-                                  to={service.href}
-                                  className="flex items-center space-x-2 text-xs text-gray-300 hover:text-cyan-400 transition-colors"
-                                  onClick={closeAllMenus}
-                                >
-                                  <service.icon className="w-3 h-3" />
-                                  <span>{service.name}</span>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-=======
                       <div className="space-y-2">
                         {microSAASServices.slice(0, 6).map((service) => (
                           <Link key={service.name}
@@ -222,7 +203,6 @@ const Navigation: React.FC = () => {
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                         ))}
                       </div>
                     </div>
@@ -232,11 +212,7 @@ const Navigation: React.FC = () => {
                         AI Services
                       </h3>
                       <div className="space-y-2">
-<<<<<<< HEAD
-                        {aiServices.slice(0, 8).map((service) => (
-=======
                         {aiServices.slice(0, 6).map((service) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                           <Link key={service.name}
                             to={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
@@ -254,11 +230,7 @@ const Navigation: React.FC = () => {
                         IT Services
                       </h3>
                       <div className="space-y-2">
-<<<<<<< HEAD
-                        {itServices.slice(0, 8).map((service) => (
-=======
                         {itServices.slice(0, 6).map((service) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                           <Link
                             key={service.name}
                             to={service.href}
@@ -268,7 +240,6 @@ const Navigation: React.FC = () => {
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </Link>
-<<<<<<< HEAD
                         ))}
                       </div>
                     </div>
@@ -278,7 +249,7 @@ const Navigation: React.FC = () => {
                         Specialized
                       </h3>
                       <div className="space-y-2">
-                        {specializedServices.slice(0, 8).map((service) => (
+                        {specializedServices.slice(0, 6).map((service) => (
                           <Link
                             key={service.name}
                             to={service.href}
@@ -288,8 +259,6 @@ const Navigation: React.FC = () => {
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </Link>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                         ))}
                       </div>
                     </div>
@@ -305,18 +274,13 @@ const Navigation: React.FC = () => {
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                       <Link
-<<<<<<< HEAD
-                        to="/specialized-services"
-=======
                         to="/services"
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                         className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
                         <span>Specialized Solutions</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-<<<<<<< HEAD
                       <Link
                         to="/pricing"
                         className="flex items-center justify-center space-x-2 text-green-400 hover:text-white transition-colors"
@@ -325,8 +289,6 @@ const Navigation: React.FC = () => {
                         <span>View Pricing</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                     </div>
                   </div>
                 </div>
@@ -345,12 +307,9 @@ const Navigation: React.FC = () => {
             <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
               Pricing
             </Link>
-<<<<<<< HEAD
             <Link to="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
               Enterprise
             </Link>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </Link>
@@ -413,16 +372,11 @@ const Navigation: React.FC = () => {
                         {aiServices.slice(0, 4).map((service) => (
                           <Link key={service.name}
                             to={service.href}
-<<<<<<< HEAD
-                            className="block text-sm text-gray-300 hover:text-purple-400 transition-colors"
-=======
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                             onClick={closeAllMenus}
                           >
                             {service.name}
                           </Link>
-<<<<<<< HEAD
                         ))}
                       </div>
                     </div>
@@ -451,8 +405,6 @@ const Navigation: React.FC = () => {
                           >
                             {service.name}
                           </Link>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                         ))}
                       </div>
                     </div>
@@ -476,13 +428,8 @@ const Navigation: React.FC = () => {
                 Enterprise
               </Link>
               <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-<<<<<<< HEAD
                 Contact
               </Link>
-=======
-                  Contact
-                </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
               
               <div className="pt-4 border-t border-gray-700">
                 <a
