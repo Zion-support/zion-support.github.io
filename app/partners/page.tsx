@@ -4,13 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
-<<<<<<< HEAD
-import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
 
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 interface Partner {
@@ -21,50 +14,10 @@ interface Partner {
   website?: string;
   tier: 'strategic' | 'preferred' | 'certified';
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
     {
       name: 'Microsoft',
-<<<<<<< HEAD
-      logo: '/images/partners/microsoft.png',
-      description: 'Strategic cloud and AI partnership for enterprise solutions',
-      category: 'Technology',
-      website: 'https://microsoft.com',
-      tier: 'strategic'
-    },
-    {
-      name: 'Amazon Web Services',
-      logo: '/images/partners/aws.png',
-      description: 'Preferred cloud infrastructure and AI services partner',
-      category: 'Cloud',
-      website: 'https://aws.amazon.com',
-      tier: 'strategic'
-    },
-    {
-      name: 'Google Cloud',
-<<<<<<< HEAD
-logo: '/api/placeholder/200/100',
-      description: 'Advanced cloud computing and AI platform solutions',
-      category: 'Cloud & AI'
-=======
-      logo: '/images/partners/google-cloud.png',
-      description: 'Certified partner for machine learning and data analytics',
-      category: 'Cloud',
-      website: 'https://cloud.google.com',
-      tier: 'preferred'
-    },
-    {
-      name: 'Salesforce',
-      logo: '/images/partners/salesforce.png',
-      description: 'Strategic CRM and business automation solutions',
-      category: 'CRM',
-      website: 'https://salesforce.com',
-      tier: 'strategic'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     },
     {
       name: 'IBM',
@@ -81,7 +34,6 @@ logo: '/api/placeholder/200/100',
       category: 'Database',
       website: 'https://oracle.com',
       tier: 'certified'
-=======
       description: 'Cloud infrastructure and AI solutions',
       category: 'Cloud Partner'
     },
@@ -103,78 +55,11 @@ logo: '/api/placeholder/200/100',
     }
   ];
   const benefits = [
-<<<<<<< HEAD
-    'Access to cutting-edge technology',
-    'Joint go-to-market opportunities',
-<<<<<<< HEAD
-    'Technical support and training',
-    'Co-innovation projects',
-    'Global reach and scalability',
-    'Certified expertise and solutions'
-      logo: '/images/partners/google-cloud.png',
-      description: 'Advanced AI and machine learning platform with global reach',
-      category: 'Cloud & AI',
-      website: 'https://cloud.google.com',
-      tier: 'strategic'
-    },
-    {
-      name: 'IBM',
-      logo: '/images/partners/ibm.png',
-      description: 'Enterprise AI solutions and hybrid cloud platform',
-      category: 'Enterprise AI',
-      website: 'https://ibm.com',
-      tier: 'preferred'
-    },
-    {
-      name: 'Salesforce',
-      logo: '/images/partners/salesforce.png',
-      description: 'Customer relationship management and business automation',
-      category: 'CRM & Automation',
-      website: 'https://salesforce.com',
-      tier: 'preferred'
-    },
-    {
-      name: 'Oracle',
-      logo: '/images/partners/oracle.png',
-      description: 'Database solutions and enterprise applications',
-      category: 'Database & Enterprise',
-      website: 'https://oracle.com',
-      tier: 'preferred'
-    },
-    {
-      name: 'ServiceNow',
-      logo: '/images/partners/servicenow.png',
-      description: 'IT service management and workflow automation',
-      category: 'IT Management',
-      website: 'https://servicenow.com',
-      tier: 'certified'
-    },
-    {
-      name: 'Splunk',
-      logo: '/images/partners/splunk.png',
-      description: 'Data analytics and security monitoring platform',
-      category: 'Analytics & Security',
-      website: 'https://splunk.com',
-      tier: 'certified'
-    }
-  ];
-  const benefits = [
-    'Access to cutting-edge technology platforms',
-    'Joint go-to-market strategies',
-    'Co-marketing opportunities',
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     'Technical training and certification',
     'Co-marketing and co-selling programs',
     'Dedicated partner success manager',
     'Priority support and resources'
   ];
-<<<<<<< HEAD
-  const partnershipTiers = [
-=======
-
-  const tiers = [
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     {
       name: 'Strategic Partners',
       description: 'Our most important technology and business partners',
@@ -194,21 +79,6 @@ logo: '/api/placeholder/200/100',
       color: 'from-green-400 to-teal-500'
     }
   ];
-<<<<<<< HEAD
-  const getTierInfo = (tier: string) => {
-    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2];
-  };
-  return (
-    <React.Fragment>
-=======
-    'Co-innovation projects',
-    'Global reach and scalability',
-    'Certified expertise and solutions'
-  ];
-
-  return (
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
       <Helmet>
         <title>Partners | Zion Tech Group</title>
         <meta name="description" content="Our strategic partners and ecosystem that help us deliver world-class AI and IT solutions." />
@@ -288,7 +158,6 @@ logo: '/api/placeholder/200/100',
                   </div>
                   <h3 className={`text-2xl font-bold ${tier.color} mb-4`}>{tier.name}</h3>
                   <p className="text-gray-300">{tier.description}</p>
-=======
 
   const stats = [
     { icon: <Building2 className="w-8 h-8 text-blue-500" />, value: '50+', label: 'Partners' },
@@ -350,17 +219,6 @@ logo: '/api/placeholder/200/100',
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </section>
-{/* Partners Grid */}
-        <section className="py-16 px-4">
-=======
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Technology Partners</h2>
@@ -416,30 +274,6 @@ logo: '/api/placeholder/200/100',
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{benefit}</span>
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center text-gray-300">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                    {benefit}
-=======
-        </div>
-      </section>
-
-      {/* Partner Tiers */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Partner Tiers</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {tiers.map((tier, index) => (
-                <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
-                  <div className="flex justify-center mb-4">
-                    {tier.icon}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{tier.name}</h3>
                   <p className="text-gray-600 mb-6">{tier.description}</p>
@@ -448,77 +282,13 @@ logo: '/api/placeholder/200/100',
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Partners Grid */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Our Partners</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {partners.map((partner, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mr-4">
-                      <div className="w-12 h-12 bg-gray-200 rounded"></div>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900">{partner.name}</h3>
-                      <span className={`px-2 py-1 text-xs rounded-full ${
-                        partner.tier === 'strategic' ? 'bg-yellow-100 text-yellow-800' :
-                        partner.tier === 'preferred' ? 'bg-blue-100 text-blue-800' :
-                        'bg-green-100 text-green-800'
-                      }`}>
-                        {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
-                      </span>
-                    </div>
-                  </div>
-                  <p className="text-gray-600 mb-4">{partner.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{partner.category}</span>
-                    {partner.website && (
-                      <a
-                        href={partner.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800 flex items-center"
-                      >
-                        Visit <ExternalLink className="w-4 h-4 ml-1" />
-                      </a>
-                    )}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-{/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Become Our Partner;
-  </
-            <p className="text-xl text-gray-300 mb-8">
-              Join our ecosystem and help shape the future of AI and IT solutions.
-            </p>
-            <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
-              Partner With Us;
-  </
-          </div>
-        </section>
-      </main>
-=======
-        </section>
-      </main>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
       <Footer />
     </React.Fragment>
-=======
         </div>
       </section>
 
@@ -568,20 +338,3 @@ logo: '/api/placeholder/200/100',
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
-<<<<<<< HEAD
-export default PartnersPage;
-  </button>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </section>
-  </h1>
-=======
-
-export default PartnersPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
