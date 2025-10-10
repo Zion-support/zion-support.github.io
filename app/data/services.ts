@@ -1,18 +1,10 @@
 import {
-<<<<<<< HEAD
     Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,;
   GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,;
   Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,;
   Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon
   }
-} from 'lucide-react';
-=======
-  Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
-  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
-  Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
-  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const microSAASServices = [
+} from 'lucide-react';export const microSAASServices = [
 ];
   // Productivity & Management Tools;
   {
@@ -284,13 +276,8 @@ export const microSAASServices = [
     category: 'Marketing',
     rating: 4.8,
     users: '18,000+',
-<<<<<<< HEAD
   }
-    freeTrial: '7 days'}
-=======
-    freeTrial: '7 days'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-]
+    freeTrial: '7 days'}]
 export const aiServices = [
 [
       {
@@ -306,15 +293,9 @@ export const aiServices = [
     category: 'AI Development'
     rating: 4.9,
     users: '500+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'AI Cybersecurity Shield Pro',
+  {    title: 'AI Cybersecurity Shield Pro',
     description: 'Advanced AI-powered security solutions with real-time threat detection, behavioral analysis, and automated response.',;
     icon: Shield,
     price: '$2,200/month',;
@@ -326,15 +307,9 @@ export const aiServices = [
     category: 'Security'
     rating: 4.8,
     users: '300+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'AI Healthcare Assistant Pro',
+  {    title: 'AI Healthcare Assistant Pro',
     description: 'Revolutionary healthcare AI with diagnostic assistance, patient monitoring, and treatment optimization.',;
     icon: Stethoscope,
     price: '$3,500/month',;
@@ -346,15 +321,9 @@ export const aiServices = [
     category: 'Healthcare'
     rating: 4.9,
     users: '200+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'AI Financial Advisor Pro',
+  {    title: 'AI Financial Advisor Pro',
     description: 'Intelligent financial planning with portfolio optimization, risk assessment, and automated trading.',;
     icon: DollarSign,
     price: '$1,800/month',;
@@ -366,15 +335,9 @@ export const aiServices = [
     category: 'Finance'
     rating: 4.7,
     users: '400+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'AI Supply Chain Optimizer',
+  {    title: 'AI Supply Chain Optimizer',
     description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',;
     icon: Truck,
     price: '$2,500/month',;
@@ -386,15 +349,9 @@ export const aiServices = [
     category: 'Logistics'
     rating: 4.8,
     users: '250+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'AI Legal Assistant Pro',
+  {    title: 'AI Legal Assistant Pro',
     description: 'Advanced legal AI with contract analysis, case research, and document automation.',;
     icon: FileText,
     price: '$2,000/month',;
@@ -406,15 +363,9 @@ export const aiServices = [
     category: 'Legal'
     rating: 4.6,
     users: '150+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'AI Manufacturing Intelligence',
+  {    title: 'AI Manufacturing Intelligence',
     description: 'Smart manufacturing with predictive maintenance, quality control, and production optimization.',;
     icon: Factory,
     price: '$3,000/month',;
@@ -426,15 +377,9 @@ export const aiServices = [
     category: 'Manufacturing'
     rating: 4.9,
     users: '180+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'AI Education Platform Pro',
+  {    title: 'AI Education Platform Pro',
     description: 'Personalized learning with adaptive curriculum, student analytics, and automated assessment.',;
     icon: GraduationCap,
     price: '$1,200/month',;
@@ -446,13 +391,8 @@ export const aiServices = [
     category: 'Education'
     rating: 4.7,
     users: '600+',
-<<<<<<< HEAD
   }
-    freeTrial: '30 days'}
-=======
-    freeTrial: '30 days'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-]
+    freeTrial: '30 days'}]
 export const itServices = [
 [
       {
@@ -468,15 +408,9 @@ export const itServices = [
     category: 'Cloud Services'
     rating: 4.8,
     users: '600+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'Enterprise IT Infrastructure',
+  {    title: 'Enterprise IT Infrastructure',
     description: 'Complete enterprise IT infrastructure with high availability, scalability, and security. Built for Fortune 500 companies.',;
     icon: Building,
     price: '$5,000/month',;
@@ -488,15 +422,9 @@ export const itServices = [
     category: 'Infrastructure'
     rating: 4.9,
     users: '100+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'DevOps & CI/CD Automation',
+  {    title: 'DevOps & CI/CD Automation',
     description: 'Complete DevOps transformation with automated CI/CD pipelines, infrastructure as code, and monitoring.',;
     icon: SettingsIcon,
     price: '$2,500/month',;
@@ -508,15 +436,9 @@ export const itServices = [
     category: 'DevOps'
     rating: 4.8,
     users: '400+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'Database Management & Optimization',
+  {    title: 'Database Management & Optimization',
     description: 'Advanced database services with performance tuning, backup strategies, and high availability setup.',;
     icon: Database,
     price: '$1,800/month',;
@@ -528,15 +450,9 @@ export const itServices = [
     category: 'Database'
     rating: 4.7,
     users: '350+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'Network Security & Firewall',
+  {    title: 'Network Security & Firewall',
     description: 'Advanced network security with next-generation firewalls, intrusion detection, and threat prevention.',;
     icon: LockIcon,
     price: '$1,500/month',;
@@ -548,15 +464,9 @@ export const itServices = [
     category: 'Security'
     rating: 4.9,
     users: '500+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'IT Consulting & Strategy',
+  {    title: 'IT Consulting & Strategy',
     description: 'Strategic IT consulting with digital transformation, technology roadmaps, and implementation planning.',;
     icon: Building,
     price: '$3,000/month',;
@@ -568,13 +478,8 @@ export const itServices = [
     category: 'Consulting'
     rating: 4.8,
     users: '200+',
-<<<<<<< HEAD
   }
-    freeTrial: '30 days'}
-=======
-    freeTrial: '30 days'};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-]
+    freeTrial: '30 days'}]
 export const specializedServices = [
 [
       {
@@ -590,15 +495,9 @@ export const specializedServices = [
     category: 'Quantum'
     rating: 4.9,
     users: '50+',
-<<<<<<< HEAD
   }
     freeTrial: '60 days'},;
-  {
-=======
-    freeTrial: '60 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'Autonomous Systems',
+  {    title: 'Autonomous Systems',
     description: 'Advanced autonomous systems with robotics, drones, and self-driving technology. Build the future of automation.',;
     icon: SettingsIcon,
     price: '$4,000/month',;
@@ -610,15 +509,9 @@ export const specializedServices = [
     category: 'Autonomous'
     rating: 4.8,
     users: '100+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'Blockchain & Web3',
+  {    title: 'Blockchain & Web3',
     description: 'Comprehensive blockchain solutions with smart contracts, DeFi, and Web3 development. Build the decentralized future.',;
     icon: LockIcon,
     price: '$2,500/month',;
@@ -630,15 +523,9 @@ export const specializedServices = [
     category: 'Blockchain'
     rating: 4.7,
     users: '300+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'},;
-  {
-=======
-    freeTrial: '30 days'},
-      {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    title: 'IoT & Edge Computing',
+  {    title: 'IoT & Edge Computing',
     description: 'Comprehensive IoT solutions with edge computing, sensor networks, and real-time processing. Connect and optimize everything.',;
     icon: Globe,
     price: '$1,800/month',;
@@ -650,21 +537,11 @@ export const specializedServices = [
     category: 'IoT'
     rating: 4.8,
     users: '400+',
-<<<<<<< HEAD
   }
     freeTrial: '30 days'}
 ]
 export interface Service {
-    id: string,
-=======
-    freeTrial: '30 days'};
-]
-export interface Service {
-}
-}
-  id: string,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  name: string,
+    id: string,  name: string,
   category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech',
   subcategory: string,
   description: string,
@@ -691,15 +568,10 @@ export interface Service {
   marketPrice?: {
     min: number,
     max: number,
-<<<<<<< HEAD
     currency: string,
   }
   }
-}
-=======
-    currency: string}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const services: Service[] = [
+}export const services: Service[] = [
   // AI Services,
   {
     id: 'ai-project-manager',
@@ -925,16 +797,9 @@ export const services: Service[] = [
     min: 500,
       max: 2000,
       currency: 'USD'
-<<<<<<< HEAD
   }
     },
-  // Micro SAAS Services;
-=======
-    };
-  },
-  // Micro SAAS Services
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {
+  // Micro SAAS Services;  {
     id: 'ai-social-media-manager',
     name: 'AI Social Media Manager',
     category: 'micro-saas',
@@ -1157,16 +1022,9 @@ export const services: Service[] = [
     min: 20,
       max: 80,
       currency: 'USD'
-<<<<<<< HEAD
   }
     },
-  // IT Services;
-=======
-    };
-  },
-  // IT Services
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {
+  // IT Services;  {
     id: 'cloud-infrastructure',
     name: 'Cloud Infrastructure Solutions',
     category: 'it',
@@ -1344,16 +1202,9 @@ export const services: Service[] = [
     min: 300,
       max: 1200,
       currency: 'USD'
-<<<<<<< HEAD
   }
     },
-  // Emerging Technologies;
-=======
-    };
-  },
-  // Emerging Technologies
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {
+  // Emerging Technologies;  {
     id: 'quantum-computing',
     name: 'Quantum Computing Solutions',
     category: 'emerging-tech',
@@ -1490,15 +1341,9 @@ export const services: Service[] = [
     min: 800,
       max: 2500,
       currency: 'USD'
-<<<<<<< HEAD
   }
     }
-  }
-=======
-    };
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-]
+  }]
 export const serviceCategories = [
 [
       {
@@ -1532,21 +1377,11 @@ export const serviceCategories = [
     icon: '🚀',
     color: 'text-pink-400',
     bgColor: 'bg-pink-500/10'
-<<<<<<< HEAD
   }
   }
 ]
 export const contactInfo = {
-    phone: '+1 (302) 464-0950',
-=======
-  };
-]
-export const contactInfo = {
-};
-};
-  phone: '+1 (302) 464-0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  email: 'kleber@ziontechgroup.com',
+    phone: '+1 (302) 464-0950',  email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',;
   website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST'

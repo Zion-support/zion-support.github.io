@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
@@ -25,17 +24,6 @@ const preloadComponents = () => {
     }, 100)
   }
 }
-=======
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
@@ -50,19 +38,10 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
 ))
-<<<<<<< HEAD
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-=======
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  useEffect(() => {
+  const [isVisible, setIsVisible] = useState(false)  useEffect(() => {
     preloadComponents()
     setIsLoaded(true)
     // Trigger visibility animation
@@ -75,7 +54,6 @@ const HomePage: React.FC = () => {
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
       gtag('event', 'phone_click', {
         event_category: 'engagement',
-<<<<<<< HEAD
         event_label: 'main_phone_number'
       })
     }
@@ -1467,13 +1445,6 @@ description: 'Custom API development, third-party integrations, and microservice
     { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available' },
     { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' }
   ]
-
-=======
-        event_label: 'header_phone'
-      });
-    }
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -1528,39 +1499,26 @@ description: 'Custom API development, third-party integrations, and microservice
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
-<<<<<<< HEAD
         <a
-          href="#main-content"
-=======
-        <a href="#main-content"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          href="#main-content"          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
           Skip to main content
         </a>
         {/* Content Promotion Banner */}
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
           <ContentPromotionBanner />
         </Suspense>
-<<<<<<< HEAD
         
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main">
           {/* Hero Section */}
           <section
-className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
-=======
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
-          {/* Hero Section */}
-          <section className={`text-center mb-16 transition-all duration-1000 ${
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              isLoaded && isVisible 
+className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${              isLoaded && isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
             }`}
-<<<<<<< HEAD
             aria-labelledby="hero-heading"
           >
           <div className="max-w-6xl mx-auto">
@@ -1568,14 +1526,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced glow"
                 data-text="Zion Tech Group"
-              >
-=======
-            aria-labelledby="hero-heading">
-            <div className="max-w-6xl mx-auto">
-              <h1 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                Zion Tech Group
+              >                Zion Tech Group
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow glow" role="doc-subtitle">
                 Advanced AI and IT Solutions
@@ -1585,7 +1536,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
                 startups, and enterprises worldwide with proven results and 24/7 expert support.
               </p>
-<<<<<<< HEAD
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
                 <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -1863,25 +1813,12 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   📧 Email Us
                 </a>
                 <a 
-                  href="/contact"
-=======
-              {/* CTA Buttons */}
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <a href="tel:+13024640950"
-                    onClick={handlePhoneClick}
-                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                  aria-label="Call us at (302) 464-0950">
-                  Call (302) 464-0950
-                </a>
-                <a href="#contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                  href="/contact"                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
                   Get Free Consultation
                 </a>
               </div>
             </div>
-<<<<<<< HEAD
-          </section>
+<<<<<<< HEAD          </section>
         </main>
         
         <Footer />

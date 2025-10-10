@@ -1,5 +1,4 @@
 import { MetadataRoute } from 'next';
-<<<<<<< HEAD
 =======
 ;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
@@ -74,7 +73,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
   },
   ]
 }
-=======
-      priority: 0.5}]
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

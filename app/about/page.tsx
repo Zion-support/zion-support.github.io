@@ -24,13 +24,8 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const AboutPage: React.FC = () => {
+import Footer from '../components/Footer'const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -48,7 +43,6 @@ const AboutPage: React.FC = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 About Zion Tech Group
               </h1>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Leading the future of technology with innovative AI and IT solutions that transform businesses worldwide.
               </p>
@@ -77,47 +71,7 @@ const AboutPage: React.FC = () => {
                       <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                       <p className="text-gray-300">Fostering innovation through collaboration</p>
                     </div>
-                  </div>
-=======
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Mission Section */}
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-                <p className="text-lg text-gray-300 mb-6">
-                  To democratize advanced AI and technology solutions, making them accessible 
-                  to businesses of all sizes while delivering unprecedented value and innovation.
-                </p>
-                <p className="text-lg text-gray-300 mb-8">
-                  We believe that every organization deserves access to cutting-edge technology 
-                  that can transform their operations, enhance their capabilities, and drive 
-                  sustainable growth.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    <span>Get in Touch</span>
-                  </a>
-                  <a
-                    href="/services"
-                    className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <Settings className="w-5 h-5" />
-                    <span>Our Services</span>
-                  </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                </div>
+                  </div>                </div>
                 <div className="bg-slate-800/50 rounded-lg p-8">
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center">
@@ -152,7 +106,6 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
 
             {/* Values Section */}
             <div className="mb-16">
@@ -190,21 +143,7 @@ const AboutPage: React.FC = () => {
                     from initial consultation to ongoing support.
                   </p>
                 </div>
-              </div>
-=======
-          </div>
-        </section>
-
-        {/* Values Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                These principles guide everything we do and shape our approach to delivering exceptional solutions.
-              </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </div>
+              </div>            </div>
 
             {/* Team Section */}
             <div className="mb-16">
@@ -276,12 +215,6 @@ const AboutPage: React.FC = () => {
       
       <Footer />
     </>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-
 export default AboutPage

@@ -1,17 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 {
-    icon: Brain,
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-    {
-      icon: Brain,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      title: 'AI-Powered Solutions',
+    icon: Brain,      title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
   },
     {
@@ -27,16 +19,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     {
     icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses'  }
-  }]
-=======
-      description: 'Worldwide deployment and support for international businesses'
-    };
-  ];
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const benefits = [
+  }]const benefits = [
 ];
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -46,7 +30,6 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -55,22 +38,7 @@ return (
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-            </div>
-=======
-  ];
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <title>Page | Zion Tech Group<
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." 
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" 
-      <
-            <
-          <
-        <
-      <
-              </div>
-            ))
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          </div>
+            </div>          </div>
         </div>
       </section>
               </div>
@@ -78,7 +46,6 @@ return (
           </div>
         </div>
       </section>
-<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -98,35 +65,13 @@ return (
                 Call Now
               </button>
               <button>
-                <Mail>
-=======
-      {/* CTA Section *
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            <
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            <
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hove,
-    r:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" 
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                Email Us
+                <Mail>                Email Us
               </button>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </div>
   )
 }
 export default PagePage
-=======
-    </div>)
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

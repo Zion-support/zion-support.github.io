@@ -1,17 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 }
-  ]
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'};
-  ];
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const benefits = [
+  ]const benefits = [
 ];
 'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -21,7 +13,6 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -34,15 +25,3 @@ return (
       </section>
 }
 export default PWAInstallerPage
-=======
-  ];
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <title>PWAInstaller | Zion Tech Group<
-        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." 
-        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" 
-      <
-        <
-      <
-};
-export default PWAInstallerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

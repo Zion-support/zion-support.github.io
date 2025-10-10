@@ -1,17 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
-=======
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Users, Mail, DollarSign, Globe, Eye, Code, Search, Filter, ExternalLink } from 'lucide-react';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
-const MicroSaasPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'const MicroSaasPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('all');
 
@@ -22,76 +15,7 @@ const MicroSaasPage: React.FC = () => {
       description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
       features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content scheduling'],
       price: '$29/month',
-      icon: Zap
-=======
-import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
-interface MicroSaasProduct {
-}
-}
-  id: string;
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  users: string;
-  popular: boolean;
-  category: string;
-};
-const MicroSaasPage: React.FC = () => {
-};
-  const microSaasProducts: MicroSaasProduct[] = [
-    {
-      id: '1',
-      icon: '📊',
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence and predictive analytics for small to medium businesses',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration'],
-      price: '$99/month',
-      users: 'Up to 50 users',
-      popular: true,
-      category: 'Analytics'
-    },
-    },
-      category: 'Analytics'});;)
-},
-    {
-      id: '2',
-      icon: '👥',
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
-      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields'],
-      price: '$149/month',
-      users: 'Up to 100 users',
-      popular: false,
-      category: 'CRM'
-    },
-    },
-    {
-      id: '3',
-      icon: '🔒',
-      title: 'Security Monitoring Suite',
-      description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses',
-      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring', 'Incident response'],
-      price: '$199/month',
-      users: 'Up to 200 users',
-      popular: false,
-      category: 'Security'
-    },
-    },
-    {
-      id: '4',
-      icon: '☁️',
-      title: 'Cloud Infrastructure Manager',
-      description: 'Automated cloud resource management and cost optimization for multi-cloud environments',
-      features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support', 'Backup management'],
-      price: '$299/month',
-      users: 'Unlimited users',
-      popular: false,
-      category: 'Infrastructure'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-=======
+      icon: Zap=======
       title: 'Zion AI Content Studio Pro',
       description: 'Advanced AI-powered content creation platform with GPT-4 integration, brand voice training, and multi-channel publishing.',
       features: ['GPT-4 & Claude Integration', 'Brand Voice AI Training', 'Multi-language Support (50+ languages)', 'SEO Optimization Engine', 'Content Calendar & Scheduling', 'Plagiarism Detection', 'A/B Testing Tools', 'Social Media Auto-Posting'],
@@ -171,24 +95,11 @@ const MicroSaasPage: React.FC = () => {
     },
     {
 <<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Security Monitor',
       description: 'Advanced security monitoring and threat detection for your applications.',
       features: ['Real-time monitoring', 'Threat detection', 'Automated alerts', 'Compliance reporting'],
       price: '$39/month',
-      icon: Shield
-=======
-      title: 'Zion Social Scheduler AI',
-      description: 'Intelligent social media management with AI content optimization, optimal posting times, and engagement analytics.',
-      features: ['AI Content Optimization', 'Optimal Posting Time Detection', 'Multi-platform Publishing', 'Engagement Analytics', 'Hashtag Research', 'Competitor Analysis', 'Content Calendar', 'Team Collaboration'],
-      price: '$59/month',
-      marketPrice: '$120-400/month',
-      benefits: ['Increase engagement by 200%', 'Optimal posting times', 'Content optimization', 'Multi-platform management'],
-      icon: Globe,
-      category: 'social',
-      link: 'https://ziontechgroup.com/zion-social-scheduler-ai'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
-    },
+      icon: Shield    },
     {
       title: 'Zion AI Video Editor Pro',
       description: 'AI-powered video editing platform with automatic editing, voice synthesis, and multi-format export.',
@@ -232,6 +143,226 @@ const MicroSaasPage: React.FC = () => {
       icon: Users,
       category: 'analytics',
       link: 'https://ziontechgroup.com/zion-ai-customer-insights'
+=======
+      title: 'Zion Analytics Pro',
+      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling.',
+      features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
+      price: '$89/month',
+      marketPrice: '$150-500/month',
+      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
+      icon: Star,
+      category: 'Analytics',
+      popular: true
+    },
+    {
+      title: 'Zion Chat AI',
+      description: 'Next-generation AI customer support platform with advanced NLP, sentiment analysis, and multi-channel support.',
+      features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing', 'Live Agent Handoff', 'Multi-language Support'],
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation'],
+      icon: Zap,
+      category: 'Customer Service',
+      popular: true
+    },
+    {
+      title: 'Zion Security Shield',
+      description: 'Enterprise-grade cybersecurity monitoring and threat detection with automated incident response.',
+      features: ['Real-time Threat Detection', 'Automated Incident Response', 'Compliance Monitoring', 'Vulnerability Scanning', 'Security Analytics', '24/7 SOC Support'],
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      benefits: ['Proactive threat protection', 'Reduced security incidents', 'Compliance assurance', 'Expert security team'],
+      icon: Shield,
+      category: 'Security',
+      popular: true
+    },
+    {
+      title: 'Zion Content Studio',
+      description: 'AI-powered content creation platform for blogs, social media, marketing materials, and multimedia content.',
+      features: ['AI Content Generation', 'Multi-platform Publishing', 'SEO Optimization', 'Brand Voice Training', 'Content Calendar', 'Performance Analytics'],
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
+      icon: Clock,
+      category: 'Content',
+      popular: false
+    },
+    {
+      title: 'Zion CRM Intelligence',
+      description: 'AI-enhanced customer relationship management with predictive analytics and automated workflows.',
+      features: ['AI Lead Scoring', 'Predictive Analytics', 'Automated Workflows', 'Customer Segmentation', 'Sales Forecasting', 'Integration Hub'],
+      price: '$129/month',
+      marketPrice: '$200-600/month',
+      benefits: ['Increase sales by 35%', 'Better lead qualification', 'Automated follow-ups', 'Data-driven insights'],
+      icon: Star,
+      category: 'CRM',
+      popular: false
+    },
+    {
+      title: 'Zion Lead Magnet',
+      description: 'Advanced lead generation and qualification platform with AI-powered prospect scoring and nurturing.',
+      features: ['AI-powered Lead Scoring', 'Multi-channel Lead Capture', 'Automated Lead Nurturing', 'CRM Integration', 'Advanced Analytics', 'A/B Testing'],
+      price: '$99/month',
+      marketPrice: '$200-600/month',
+      benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization'],
+      icon: Zap,
+      category: 'Marketing',
+      popular: true
+    },
+    {
+      title: 'Zion Project Master',
+      description: 'AI-powered project management with intelligent resource allocation and automated reporting.',
+      features: ['AI Resource Allocation', 'Predictive Timeline Management', 'Risk Assessment', 'Team Collaboration', 'Progress Tracking', 'Automated Reporting'],
+      price: '$69/month',
+      marketPrice: '$120-350/month',
+      benefits: ['Improved project success rate', 'Better resource utilization', 'Reduced project delays', 'Automated reporting'],
+      icon: Clock,
+      category: 'Project Management',
+      popular: false
+    },
+    {
+      title: 'Zion Email Automation',
+      description: 'Intelligent email marketing platform with AI-powered personalization and automated campaigns.',
+      features: ['AI Personalization', 'Automated Campaigns', 'A/B Testing', 'Advanced Segmentation', 'Deliverability Optimization', 'Performance Analytics'],
+      price: '$59/month',
+      marketPrice: '$100-300/month',
+      benefits: ['Increase open rates by 40%', 'Automated campaigns', 'Better personalization', 'ROI optimization'],
+      icon: Zap,
+      category: 'Marketing',
+      popular: false
+    },
+    {
+      title: 'Zion Invoice Genius',
+      description: 'AI-powered invoice generation and management with automated billing and payment tracking.',
+      features: ['AI-powered Invoice Generation', 'Automated Recurring Billing', 'Multi-currency Support', 'Payment Tracking', 'Tax Calculation', 'Client Portal'],
+      price: '$49/month',
+      marketPrice: '$100-300/month',
+      benefits: ['Save 90% invoice creation time', 'Reduce payment delays', 'Automated follow-ups', 'Professional invoices'],
+      icon: Shield,
+      category: 'Finance',
+      popular: true
+    },
+    {
+      title: 'Zion Workflow Automation',
+      description: 'Intelligent business process automation with AI-powered workflow optimization and monitoring.',
+      features: ['Process Mining', 'Workflow Optimization', 'Task Automation', 'Exception Handling', 'Performance Monitoring', 'Custom Integrations'],
+      price: '$89/month',
+      marketPrice: '$150-500/month',
+      benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation'],
+      icon: Clock,
+      category: 'Automation',
+      popular: false
+    },
+    {
+      title: 'Zion Social Scheduler',
+      description: 'AI-powered social media management with content optimization and automated posting.',
+      features: ['AI Content Optimization', 'Multi-platform Scheduling', 'Hashtag Research', 'Engagement Analytics', 'Competitor Analysis', 'Content Calendar'],
+      price: '$39/month',
+      marketPrice: '$80-200/month',
+      benefits: ['Increase engagement by 60%', 'Automated posting', 'Better content strategy', 'Time savings'],
+      icon: Star,
+      category: 'Social Media',
+      popular: false
+    },
+    {
+      title: 'Zion AI Video Editor',
+      description: 'AI-powered video editing platform with automated editing, effects, and optimization.',
+      features: ['AI Auto-editing', 'Smart Cut Detection', 'Automated Subtitles', 'Color Correction', 'Audio Enhancement', 'Multi-format Export'],
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Save 70% editing time', 'Professional quality', 'Automated features', 'Easy to use'],
+      icon: Zap,
+      category: 'Video',
+      popular: false
+    },
+    {
+      title: 'Zion AI Translator Pro',
+      description: 'Advanced AI translation platform with context-aware translations and real-time language processing.',
+      features: ['100+ Languages', 'Context-aware Translation', 'Real-time Processing', 'Document Translation', 'Voice Translation', 'API Integration'],
+      price: '$59/month',
+      marketPrice: '$100-300/month',
+      benefits: ['Accurate translations', 'Real-time processing', 'Multiple formats', 'API integration'],
+      icon: Shield,
+      category: 'Translation',
+      popular: false
+    },
+    {
+      title: 'Zion AI Code Reviewer',
+      description: 'Intelligent code review platform with automated bug detection and security analysis.',
+      features: ['Automated Code Review', 'Security Vulnerability Detection', 'Performance Analysis', 'Code Quality Metrics', 'Best Practice Suggestions', 'Team Collaboration'],
+      price: '$99/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Reduce bugs by 50%', 'Improve code quality', 'Security enhancement', 'Team learning'],
+      icon: Clock,
+      category: 'Development',
+      popular: false
+    },
+    {
+      title: 'Zion Customer Insights Pro',
+      description: 'AI-powered customer analytics platform with sentiment analysis and behavioral insights.',
+      features: ['Sentiment Analysis', 'Behavioral Tracking', 'Customer Segmentation', 'Churn Prediction', 'Lifetime Value Analysis', 'Real-time Dashboards'],
+      price: '$119/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Better customer understanding', 'Churn prevention', 'Personalized experiences', 'Data-driven decisions'],
+      icon: Star,
+      category: 'Analytics',
+      popular: false
+    },
+    {
+      title: 'Zion AI Email Assistant',
+      description: 'Smart email management with AI-powered sorting, drafting, and response suggestions.',
+      features: ['Smart Email Sorting', 'AI Draft Suggestions', 'Priority Classification', 'Auto-responses', 'Email Analytics', 'Calendar Integration'],
+      price: '$39/month',
+      marketPrice: '$80-200/month',
+      benefits: ['Save 2 hours daily', 'Better email organization', 'Faster responses', 'Reduced email stress'],
+      icon: Zap,
+      category: 'Productivity',
+      popular: false
+    },
+    {
+      title: 'Zion AI Meeting Assistant',
+      description: 'Intelligent meeting management with automated transcription, action items, and follow-ups.',
+      features: ['Automated Transcription', 'Action Item Extraction', 'Meeting Summaries', 'Calendar Integration', 'Follow-up Automation', 'Team Collaboration'],
+      price: '$69/month',
+      marketPrice: '$120-350/month',
+      benefits: ['Better meeting efficiency', 'Automated follow-ups', 'Improved accountability', 'Time savings'],
+      icon: Shield,
+      category: 'Productivity',
+      popular: false
+    },
+    {
+      title: 'Zion AI SEO Optimizer',
+      description: 'AI-powered SEO optimization platform with keyword research and content optimization.',
+      features: ['Keyword Research', 'Content Optimization', 'Competitor Analysis', 'Rank Tracking', 'Technical SEO Audit', 'Performance Monitoring'],
+      price: '$79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Increase organic traffic', 'Better search rankings', 'Automated optimization', 'Competitive advantage'],
+      icon: Clock,
+      category: 'SEO',
+      popular: false
+    },
+    {
+      title: 'Zion AI Data Cleaner',
+      description: 'Intelligent data cleaning and validation platform with automated data quality management.',
+      features: ['Automated Data Cleaning', 'Duplicate Detection', 'Data Validation', 'Format Standardization', 'Quality Scoring', 'Error Reporting'],
+      price: '$59/month',
+      marketPrice: '$100-300/month',
+      benefits: ['Improve data quality', 'Reduce errors', 'Automated cleaning', 'Better analytics'],
+      icon: Star,
+      category: 'Data',
+      popular: false
+    },
+    {
+      title: 'Zion AI Contract Analyzer',
+      description: 'AI-powered contract analysis and risk assessment with automated legal document processing.',
+      features: ['Contract Analysis', 'Risk Assessment', 'Clause Extraction', 'Compliance Checking', 'Automated Summaries', 'Legal Database Integration'],
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Faster contract review', 'Risk reduction', 'Compliance assurance', 'Time savings'],
+      icon: Zap,
+      category: 'Legal',
+      popular: false
+>>>>>>> cursor/website-audit-and-update-with-deployment-9351
     }
   ]
 
@@ -347,16 +478,14 @@ const MicroSaasPage: React.FC = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">{tool.title}</h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{tool.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">{tool.title}</h3>                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{tool.description}</p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <ul className="space-y-1">
                       {tool.features.slice(0, 4).map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />                          {feature}
                         </li>
                       ))}
                     </ul>
@@ -391,8 +520,7 @@ const MicroSaasPage: React.FC = () => {
                       className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
                       Get Started
-                    </a>
-                  </div>
+                    </a>                  </div>
                 </div>
               ))}
             </div>
@@ -418,109 +546,12 @@ const MicroSaasPage: React.FC = () => {
                 Choose from our ready-made solutions or let us build a custom micro SaaS tool for your specific needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                   Browse Solutions
                 </button>
                 <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">
                   Custom Development
-                </button>
-=======
-      id: '6',
-      icon: MessageSquare,
-      title: 'Customer Support Chatbot',
-      description: 'Intelligent chatbot solution for 24/7 customer support and lead generation',
-      features: ['Natural language processing', 'Multi-channel support', 'Knowledge base', 'Analytics', 'Custom training'],
-      price: '$129/month',
-      users: 'Unlimited conversations',
-      popular: false,
-      category: 'Support'
-    };
-    };
-  ];
-  const benefits = [
-];
-    'No upfront costs or setup fees',
-    'Quick deployment in 24-48 hours',
-    'Scalable solutions that grow with you',
-    'Regular updates and new features',
-    '24/7 technical support',
-    'Easy integration with existing tools',
-    'Free trial for all products',
-    'Cancel anytime, no long-term contracts'
-  ];
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
-  const stats = [
-[
-        {
-      icon: Users,
-      value: '10,000+',
-      label: 'Active Users',
-      description: 'Growing community of satisfied customers'
-    },
-        {
-      icon: TrendingUp,
-      value: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable service you can count on'
-    },
-        {
-      icon: Star,
-      value: '4.8/5',
-      label: 'Rating',
-      description: 'Highly rated by our customers'
-    },
-        {
-      icon: Zap,
-      value: '24/7',
-      label: 'Support',
-      description: 'Always here when you need us'
-    };
-  ];
-  return (
-    <>
-      <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
-        <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more." />
-        <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software" />
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Choose the micro SaaS solution that fits your business needs. 
-                Start with a free trial and scale as you grow.
-              <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                  <Zap className="w-5 h-5" />
-                  Start Free Trial
-                </Link>
-                <Link to="/pricing"
-                  className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  View All Plans
-                <
-              <
-            <
-          <
-        <
-      <
-    <)
-  );
-                Choose the micro SaaS solution that fits your business needs. 
-                Start with a free trial and scale as you grow.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 transform hover:scale-105">
-                  <Zap className="w-5 h-5" />
-                  Start Free Trial
-                </Link>
-                <Link to="/pricing"
-                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300">
-                  View All Plans
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-=======
+                </button>=======
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
@@ -542,7 +573,6 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
 
       <Footer />
     </>
@@ -550,9 +580,3 @@ const MicroSaasPage: React.FC = () => {
 }
 
 export default MicroSaasPage
-=======
-    </>
-  );
-};
-export default MicroSaasPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

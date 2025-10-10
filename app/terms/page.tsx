@@ -1,22 +1,11 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024'
   const sections = [
-    {
-=======
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-export default function TermsPage() {;
-const lastUpdated = 'January 1, 2024';
-  ;
-const sections = [
-[
-        {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      title: 'Acceptance of Terms',
+    {      title: 'Acceptance of Terms',
       icon: CheckCircle,
       content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
     },
@@ -30,7 +19,6 @@ const sections = [
       icon: Server,
       content: 'We strive to maintain 99.9% uptime for our services, but we do not guarantee uninterrupted access and reserve the right to perform maintenance.'
     },
-<<<<<<< HEAD
     {
       title: 'User Accounts',
       icon: User,
@@ -39,38 +27,19 @@ const sections = [
     {
       title: 'Data Protection',
       icon: Shield,
-      content: 'We implement industry-standard security measures to protect your data and comply with applicable data protection regulations.'
-=======
-        {
-      title: 'Limitation of Liability',
-      icon: Shield,
-      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.']
-    },
-        {
-      title: 'Privacy Policy',
-      icon: Lock,
-      content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.']
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    },
+      content: 'We implement industry-standard security measures to protect your data and comply with applicable data protection regulations.'    },
         {
       title: 'Intellectual Property',
       icon: Lock,
       content: 'All content, trademarks, and intellectual property on our website and services are owned by Zion Tech Group or our licensors.'
     },
-<<<<<<< HEAD
     {
-      title: 'Limitation of Liability',
-=======
-        {
-      title: 'Termination',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      icon: AlertTriangle,
+      title: 'Limitation of Liability',      icon: AlertTriangle,
       content: 'In no event shall Zion Tech Group be liable for any indirect, incidental, special, consequential, or punitive damages.'
     },
         {
       title: 'Governing Law',
       icon: Scale,
-<<<<<<< HEAD
       content: 'These terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States.'
     }
   ]
@@ -136,53 +105,13 @@ const sections = [
                 <div className="flex items-start">
                   <div className="flex-shrink-0 mr-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                      <section.icon className="w-6 h-6 text-white" />
-=======
-content: 'These terms shall be governed by and construed in accordance with the laws of the United States.']
-    };
-  ];
-  return (
-    <div>
-      <div>
-        <div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
-            Terms of Service</h1>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
-            Please read these terms carefully before using our services
-          </p>
-          <div>
-            <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated};
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div>
-            <div className="space-y-8"></div>
-              {sections.map((section, index) => (</div>
-                <div>
-                  <div>
-                    <div>
-                      <section .icon className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3"></h2>
-                        {index + 1}. {section.title};
-                      </h2>
-                      <p className="text-gray-700 leading-relaxed"></p>
-                        {section.content};
-                      </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-                    </div>
+                      <section.icon className="w-6 h-6 text-white" />                    </div>
                   </div>
                   <div className="flex-1">
                     <h2 className="text-2xl font-bold text-white mb-4">{section.title}</h2>
                     <p className="text-gray-300 leading-relaxed text-lg">{section.content}</p>
                   </div>
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -190,17 +119,7 @@ content: 'These terms shall be governed by and construed in accordance with the 
           {/* Additional Terms */}
           <div className="cyber-card-enhanced p-8 mb-16">
             <h2 className="text-2xl font-bold text-white mb-6">Additional Terms</h2>
-            <div className="space-y-6">
-=======
-              ));
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>Contact Information</h3>
-              <p className="text-gray-700 mb-6"></p>
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-              <div>
+            <div className="space-y-6">              <div>
                 <h3 className="text-lg font-semibold text-white mb-3">Service Modifications</h3>
                 <p className="text-gray-300">
                   We reserve the right to modify or discontinue our services at any time without notice. 
@@ -257,7 +176,6 @@ content: 'These terms shall be governed by and construed in accordance with the 
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
           </div>
 
           {/* Related Links */}
@@ -296,25 +214,12 @@ content: 'These terms shall be governed by and construed in accordance with the 
                   <div className="text-gray-300 text-sm">Get in touch with our team</div>
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
-              </a>
-=======
-            <div>
-              <p className="text-sm text-gray-500"></p>
-                By using our services, you acknowledge that you have read and understood these terms.
-              </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </div>
+              </a>            </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </>
   )
 }
 
 export default TermsPage
-=======
-    </div>
-)]
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

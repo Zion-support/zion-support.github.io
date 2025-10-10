@@ -1,20 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react'
 const BackupRecoveryPage: React.FC = () => {
-  const features = [
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react';
-;
-const BackupRecoveryPage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+  const features = [    {
 icon: Shield,
       title: 'Secure Backup Solutions',
       description: 'Advanced encryption and secure storage for your critical business data'
@@ -31,54 +20,28 @@ icon: Shield,
     },
     {
       icon: Globe,
-<<<<<<< HEAD
       title: 'Global Redundancy',
       description: 'Worldwide backup storage with multiple redundancy layers'
     }
   ]
   const benefits = [
 'Advanced data protection and encryption',
-    'Real-time backup monitoring and alerts',
-=======
-      title: 'Cloud Integration',
-      description: 'Seamless cloud backup and recovery across multiple platforms'
-    };
-  ];
-;
-const benefits = [
-];
-    'Automated backup scheduling',
-    'Real-time data protection',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    'Enterprise-grade security and compliance',
+    'Real-time backup monitoring and alerts',    'Enterprise-grade security and compliance',
     'Scalable and flexible backup solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
-  ]
-=======
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+  ]  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Backup & Recovery | Zion Tech Group</title>
         <meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />
 <meta name="keywords" content="backup recovery, data protection, IT services, Zion Tech Group, disaster recovery" />
       </Helmet>
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-=======
-      {/* Hero Section */};
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            Backup & Recovery
+          <h1 className="text-5xl font-bold text-white mb-6">            Backup & Recovery
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced backup and recovery solutions. 
@@ -86,12 +49,7 @@ const benefits = [
           </p>
 </div>
       </section>
-<<<<<<< HEAD
-      {/* Features Section */}
-=======
-      {/* Features Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-16 px-4">
+      {/* Features Section */}      <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -112,12 +70,7 @@ const benefits = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Benefits Section */}
-=======
-      {/* Benefits Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-16 px-4 bg-white/5">
+      {/* Benefits Section */}      <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
@@ -137,12 +90,7 @@ const benefits = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* CTA Section */}
-=======
-      {/* CTA Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-16 px-4">
+      {/* CTA Section */}      <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
             Ready to Get Started?

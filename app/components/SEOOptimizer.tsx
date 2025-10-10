@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOOptimizerProps {
-<<<<<<< HEAD
   title: string;
   description: string
   keywords?: string[]
@@ -48,16 +47,3 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }
 
 export default SEOOptimizer
-=======
-  title: string
-}
-  description: string;
-  keywords: string[];
-  canonicalUrl?: string;
-  structuredData?: any;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string};
-;
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

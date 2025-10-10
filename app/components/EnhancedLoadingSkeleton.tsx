@@ -1,20 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const EnhancedLoadingSkeletonPage: React.FC = () => {
-    const features = [
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const EnhancedLoadingSkeletonPage: React.FC = () => {
-const features = [
-];
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+    const features = [    {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -35,8 +24,4 @@ const features = [
       description: 'Worldwide deployment and support for international businesses'
   }
     }
-<<<<<<< HEAD
   ]
-=======
-];;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

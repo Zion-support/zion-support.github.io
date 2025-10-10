@@ -7,65 +7,24 @@ interface LoadingSpinnerProps {
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   color = 'primary', 
-<<<<<<< HEAD
   text 
-}) => {
-=======
-  text ;)
-}) => {;
-const sizeClasses = {
+}) => {  const sizeClasses = {
 };
 };
 };
 }
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12';);
-const colorClasses = {
-};
-};
-};
-}
-    primary: 'text-indigo-600',
-    secondary: 'text-gray-600',
-    white: 'text-white';);
-  text?: string]
-    };
-const LoadingSpinner: React.FC<LoadingSpinnerProps></LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  color = 'primary', 
-  text ]
-    }); => {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  const sizeClasses = {
-};
-};
-};
-}
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-<<<<<<< HEAD
     lg: 'w-12 h-12'
-  }
-=======
-    lg: 'w-12 h-12']
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  const colorClasses = {
+  }  const colorClasses = {
 };
 };
 };
 }
     primary: 'text-indigo-600',
     secondary: 'text-gray-600',
-<<<<<<< HEAD
     white: 'text-white'
-  }
-=======
-    white: 'text-white']
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+  }  return (
     <div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
       {text && (
@@ -74,13 +33,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps></LoadingSpinnerProps> = ({
         </p>
       )}
     </div>
-<<<<<<< HEAD
   )
 }
 export default LoadingSpinner
-=======
-)]
-    };
-export default LoadingSpinner;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

@@ -18,7 +18,6 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 ;
-<<<<<<< HEAD
 const HomePage: React.FC = () => {
     const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
@@ -38,14 +37,7 @@ const HomePage: React.FC = () => {
       })
     }
   }, [])
-  const features = [
-=======
-const PageBackupPage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+  const features = [    {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
@@ -64,7 +56,6 @@ const features = [
       benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
     },
     {
-<<<<<<< HEAD
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions designed specifically for your business requirements.',
@@ -313,55 +304,7 @@ const HomePage: React.FC = memo(() => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               We help businesses leverage cutting-edge technology to drive growth, 
-              improve efficiency, and stay ahead of the competition.
-=======
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    };
-  ];
-;
-const benefits = [
-];
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-  return (
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page backup solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page backup solutions deliver unmatched performance, security, and scalability.
-            </p>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-              </div>
-            ))
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page backup needs and get a customized solution.
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            </p>
+              improve efficiency, and stay ahead of the competition.            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             </section>
 

@@ -1,20 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const FuturisticHeroPage: React.FC = () => {
-const features = [
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const FuturisticHeroPage: React.FC = () => {
-const features = [
-];
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    {
+const features = [    {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -32,16 +21,8 @@ const features = [
     {
     icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses'  }
-  }]
-=======
-      description: 'Worldwide deployment and support for international businesses'
-    }
-];;
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const benefits = [
+  }]const benefits = [
 ];
 'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -51,16 +32,9 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
   ]
 return (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-=======
-  ];
-  return (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>            {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
                 <p className="text-gray-300 text-lg">{benefit}</p>

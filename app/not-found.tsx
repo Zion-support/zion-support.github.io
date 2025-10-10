@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import Link from 'next/link'
-import { Home, ArrowLeft, RefreshCw } from 'lucide-react'
-=======
-import Link from 'next/link';
-import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export default function NotFound() {
+import { Home, ArrowLeft, RefreshCw } from 'lucide-react'export default function NotFound() {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
       <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center"></div>
@@ -20,19 +14,10 @@ export default function NotFound() {
         <p>
           Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
         </p>
-<<<<<<< HEAD
         <div className="flex flex-col sm: flex-row gap-3"></div>
           <Link>
             <Home>
-            Go Home,
-=======
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/"
-            className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors">
-            <Home className="w-4 h-4 mr-2" />
-            Go Home
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-          </Link>
+            Go Home,          </Link>
           <button
   }
             onClick={() => window.history.back()}

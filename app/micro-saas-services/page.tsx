@@ -1,14 +1,7 @@
 // Real Micro SAAS Services for Zion Tech Group
 // Comprehensive list of innovative, real-world micro SAAS solutions
 export interface MicroSaasService {
-<<<<<<< HEAD
-    id: string,
-=======
-}
-}
-  id: string,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  title: string,
+    id: string,  title: string,
   description: string,
   shortDescription: string,
   icon: string,
@@ -42,15 +35,10 @@ export interface MicroSaasService {
     monthly: number,
     yearly: number,
     enterprise: number,
-<<<<<<< HEAD
     features: string[]
   }
   }
-}
-=======
-    features: string[]}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-export const microSaasServices: MicroSaasService[] = [
+}export const microSaasServices: MicroSaasService[] = [
   // AI-Powered Productivity Tools,
   {
     ,
@@ -195,17 +183,10 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 490,
       enterprise: 149,
       features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access']
-<<<<<<< HEAD
   }
     },
 
-  // AI Content & Marketing Tools
-=======
-    };
-  },
-  // AI Content & Marketing Tools;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {
+  // AI Content & Marketing Tools  {
     id: 'ai-content-writer-pro',
     title: 'AI Content Writer Pro',
     description: 'Advanced AI content creation platform that generates high-quality, SEO-optimized content for blogs, social media, marketing materials, and more. Uses GPT-4 and custom models trained on your brand voice.',
@@ -347,17 +328,10 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 890,
       enterprise: 249,
       features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access']
-<<<<<<< HEAD
   }
     },
 
-  // AI Business & Finance Tools
-=======
-    };
-  },
-  // AI Business & Finance Tools;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {
+  // AI Business & Finance Tools  {
     id: 'ai-crm-intelligence',
     title: 'AI CRM Intelligence',
     description: 'Next-generation CRM powered by AI that predicts customer behavior, automates sales processes, and provides intelligent insights. Features lead scoring, automated follow-ups, and predictive analytics.',
@@ -500,17 +474,10 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 1990,
       enterprise: 599,
       features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support']
-<<<<<<< HEAD
   }
     },
 
-  // AI Customer Service Tools
-=======
-    };
-  },
-  // AI Customer Service Tools;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {
+  // AI Customer Service Tools  {
     id: 'ai-customer-support-bot',
     title: 'AI Customer Support Bot',
     description: 'Intelligent customer support chatbot that provides 24/7 assistance with natural language understanding, sentiment analysis, and seamless human handoff. Reduces support costs by 70% while improving customer satisfaction.',
@@ -580,17 +547,10 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 590,
       enterprise: 199,
       features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access']
-<<<<<<< HEAD
   }
     },
 
-  // AI Development Tools
-=======
-    };
-  },
-  // AI Development Tools;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {
+  // AI Development Tools  {
     id: 'ai-code-review-assistant',
     title: 'AI Code Review Assistant',
     description: 'Intelligent code review platform that uses AI to analyze code quality, detect bugs, suggest improvements, and ensure best practices. Integrates with popular development tools and provides detailed feedback.',
@@ -660,17 +620,10 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 790,
       enterprise: 249,
       features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access']
-<<<<<<< HEAD
   }
     },
 
-  // AI Healthcare Tools
-=======
-    };
-  },
-  // AI Healthcare Tools;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {
+  // AI Healthcare Tools  {
     id: 'ai-healthcare-assistant',
     title: 'AI Healthcare Assistant',
     description: 'Comprehensive AI-powered healthcare platform that provides symptom analysis, medication reminders, health monitoring, and telemedicine capabilities. HIPAA compliant with advanced privacy protection.',
@@ -740,17 +693,10 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 1490,
       enterprise: 499,
       features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support']
-<<<<<<< HEAD
   }
     },
 
-  // AI E-commerce Tools
-=======
-    };
-  },
-  // AI E-commerce Tools;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {
+  // AI E-commerce Tools  {
     id: 'ai-ecommerce-optimizer',
     title: 'AI E-commerce Optimizer',
     description: 'Advanced AI platform for e-commerce optimization that provides personalized product recommendations, dynamic pricing, inventory management, and customer behavior analysis to maximize sales and revenue.',
@@ -820,17 +766,10 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 1190,
       enterprise: 399,
       features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support']
-<<<<<<< HEAD
   }
     },
 
-  // AI Education Tools
-=======
-    };
-  },
-  // AI Education Tools;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  {
+  // AI Education Tools  {
     id: 'ai-education-platform',
     title: 'AI Education Platform',
     description: 'Comprehensive AI-powered educational platform that provides personalized learning experiences, automated assessment, intelligent tutoring, and adaptive curriculum based on individual learning patterns.',
@@ -900,17 +839,10 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 890,
       enterprise: 299,
       features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard']
-<<<<<<< HEAD
   }
     }
   }
-]
-=======
-    };
-  };
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-// Service categories for filtering and organization
+]// Service categories for filtering and organization
 export const serviceCategories = [
 ];
   'All',
@@ -925,20 +857,10 @@ export const serviceCategories = [
   'AI & ML',
   'Analytics',
   'Automation'
-<<<<<<< HEAD
 ]
 // Pricing tiers for comparison
 export const pricingTiers = {
-    starter: {,
-=======
-];
-// Pricing tiers for comparison
-export const pricingTiers = {
-};
-};
-  starter: {,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    name: 'Starter',
+    starter: {,    name: 'Starter',
     price: '$29-99/month',
     features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics']
   },
@@ -953,23 +875,12 @@ export const pricingTiers = {
     name: 'Enterprise',
     price: '$299-999/month',
     features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees']
-<<<<<<< HEAD
   }
   }
 }
 // Contact information
 export const contactInfo = {
-    phone: '+1 302 464 0950',
-=======
-  };
-};
-// Contact information
-export const contactInfo = {
-};
-};
-  phone: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  email: 'kleber@ziontechgroup.com',
+    phone: '+1 302 464 0950',  email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
   hours: '24/7 Support Available',

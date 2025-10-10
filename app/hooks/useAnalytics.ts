@@ -1,6 +1,5 @@
 import { useCallback } from 'react';
 interface AnalyticsEvent {
-<<<<<<< HEAD
     event_category: string,
   event_label: string,
   value?: number
@@ -13,19 +12,7 @@ export const useAnalytics = (;
     $3
   )
   }
-    if (typeof window !== 'undefined' && 'gtag' in window) {}
-=======
-}
-}
-  event_category: string,
-  event_label: string,
-  value?: number};
-export const useAnalytics = () => {
-const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {
-};
-    if (typeof window !== 'undefined' && 'gtag' in window) {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', eventName, parameters);
+    if (typeof window !== 'undefined' && 'gtag' in window) {}      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', eventName, parameters);
     }
   }, []);
 const trackPageView = useCallback((pagePath: string, pageTitle: string) => {
@@ -46,7 +33,6 @@ const trackConversion = useCallback((conversionId: string, value?: number) => {
       })
     }
   }, []);
-<<<<<<< HEAD
 return {
     trackEvent,;
     trackPageView,;
@@ -54,9 +40,3 @@ return {
   }
   }
 }
-=======
-  return {
-    trackEvent,
-    trackPageView,
-    trackConversion}};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

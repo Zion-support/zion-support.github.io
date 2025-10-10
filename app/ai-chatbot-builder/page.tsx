@@ -88,7 +88,6 @@ return (
   }
                         <li>
                           <CheckCircle>
-
                           {benefit}
                         </li>
                       ))}

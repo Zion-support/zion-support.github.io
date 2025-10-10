@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React, { useEffect, useState } from 'react'
 interface AccessibilityEnhancerProps {
@@ -46,75 +45,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
   const changeFontSize = (size: string) => {
     setFontSize(size),
     document.documentElement.setAttribute('data-font-size', size)
-  }
-=======
-'use client';
-import React, { useEffect, useState } from 'react';
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode
-}
-};
-;
-const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {;
-const [isEnhanced, setIsEnhanced] = useState(false);
-  useEffect(() => {
-    // Initialize accessibility enhancements;
-const initAccessibility = () => {
-}
-      // Add high contrast mode support;
-const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-      if (prefersHighContrast) {
-        document.documentElement.classList.add('high-contrast');
-      }
-      // Add reduced motion support;
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (prefersReducedMotion) {
-        document.documentElement.classList.add('reduced-motion');
-      }
-      // Add focus indicators;
-const style = document.createElement('style');
-      style.textContent = `
-        .focus-visible {
-          outline: 2px solid #3b82f6;
-          outline-offset: 2px;
-        }
-        .high-contrast {
-          filter: contrast(150%);
-        }
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-      `;
-      document.head.appendChild(style);
-      // Add keyboard navigation support;
-const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
-        }
-      };
-const handleMouseDown = () => {
-}
-        document.body.classList.remove('keyboard-navigation');
-      };
-      document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('mousedown', handleMouseDown);
-      setIsEnhanced(true);
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
-        document.head.removeChild(style);
-      }
-    };
-const cleanup = initAccessibility();
-    return cleanup;
-  }, []);
-  if (!isEnhanced) {
-    return <>{children}</>;
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
+  }  return (
     <div className="accessibility-enhanced">
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }}>
         <button
@@ -150,7 +81,6 @@ const cleanup = initAccessibility();
       </div>
       {children}
     </div>
-<<<<<<< HEAD
   )
 }
 export default AdvancedAccessibilityEnhancer
@@ -158,8 +88,3 @@ export default AdvancedAccessibilityEnhancer
   </button>
   </button>
   </AccessibilityEnhancerProps>
-=======
-  );
-};
-export default AdvancedAccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7

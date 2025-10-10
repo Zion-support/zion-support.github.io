@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react'
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const SkipLink: React.FC = () => {
+import React from 'react'const SkipLink: React.FC = () => {
   return (
     <a
       href="#main-content"
@@ -12,13 +7,7 @@ const SkipLink: React.FC = () => {
     >
       Skip to main content
     </a>
-<<<<<<< HEAD
   )
 }
 
 export default SkipLink
-=======
-  );
-};
-export default SkipLink;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
