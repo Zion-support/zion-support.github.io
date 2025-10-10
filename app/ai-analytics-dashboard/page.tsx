@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -163,7 +162,6 @@ return (
 }
 export default AiAnalyticsDashboardPage;
 
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -481,4 +479,3 @@ const AIAnalyticsDashboard: React.FC = () => {
 };
 
 export default AIAnalyticsDashboard;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8

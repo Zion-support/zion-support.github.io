@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -99,7 +98,6 @@ return (
                         <li>
                           <CheckCircle>
 
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -353,7 +351,6 @@ const AIChatbotBuilder: React.FC = () => {
                       {useCase.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
                           {benefit}
                         </li>
                       ))}
@@ -419,7 +416,6 @@ const AIChatbotBuilder: React.FC = () => {
 }
 export default AiChatbotBuilderPage;
 
-=======
                   </div>
                 </div>
               </div>
@@ -537,4 +533,3 @@ export default AiChatbotBuilderPage;
 };
 
 export default AIChatbotBuilder;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8

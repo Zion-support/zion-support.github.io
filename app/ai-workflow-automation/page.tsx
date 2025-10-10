@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -99,7 +98,6 @@ return (
                         <li>
                           <CheckCircle>
 
-=======
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -260,7 +258,6 @@ const AIWorkflowAutomation: React.FC = () => {
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
                           {benefit}
                         </li>
                       ))}
@@ -315,7 +312,6 @@ const AIWorkflowAutomation: React.FC = () => {
                 <button>
                   Learn More
                 </button>
-=======
                   </div>
                 ))}
               </div>
@@ -354,7 +350,6 @@ const AIWorkflowAutomation: React.FC = () => {
                     </a>
                   </div>
                 ))}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
               </div>
             </div>
           </div>
@@ -367,6 +362,4 @@ const AIWorkflowAutomation: React.FC = () => {
 export default AiWorkflowAutomationPage;
 
 <<<<<<< HEAD
-=======
 export default AIWorkflowAutomation;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
