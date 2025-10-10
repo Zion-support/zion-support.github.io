@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
 const GlobalErrorPage: React.FC = () => {
   const features = [
@@ -31,7 +31,7 @@ const GlobalErrorPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+  ]
 
   return (
     <>
@@ -109,7 +109,7 @@ const GlobalErrorPage: React.FC = () => {
             <p className="text-xl text-blue-100 mb-8">
               Contact us today to learn more about our services.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">
               Contact Us
             </button>
           </div>
@@ -118,7 +118,7 @@ const GlobalErrorPage: React.FC = () => {
       
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default GlobalErrorPage;
+export default GlobalErrorPage

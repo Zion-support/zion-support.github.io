@@ -1,28 +1,28 @@
-'use client';
+'use client'
 
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
+import React, { useState, useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react'
 
 interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  image: string;
-  featured: boolean;
+  id: string
+  title: string
+  excerpt: string
+  content: string
+  author: string
+  date: string
+  readTime: string
+  category: string
+  tags: string[]
+  image: string
+  featured: boolean
 }
 
 const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([])
 
   // Sample blog posts data
   const blogPosts: BlogPost[] = [
@@ -104,30 +104,30 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/scalable-web.jpg',
       featured: false
     }
-  ];
+  ]
 
-  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Technology', 'Development'];
+  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Digital Transformation', 'Technology', 'Development']
 
   useEffect(() => {
-    let filtered = blogPosts;
+    let filtered = blogPosts
 
     if (searchTerm) {
       filtered = filtered.filter(post =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+      )
     }
 
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(post => post.category === selectedCategory);
+      filtered = filtered.filter(post => post.category === selectedCategory)
     }
 
-    setFilteredPosts(filtered);
-  }, [searchTerm, selectedCategory]);
+    setFilteredPosts(filtered)
+  }, [searchTerm, selectedCategory])
 
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.slice(0, 3);
+  const featuredPosts = blogPosts.filter(post => post.featured)
+  const recentPosts = blogPosts.slice(0, 3)
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -165,8 +165,9 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Posts */}
-      {featuredPosts.length > 0 && (
+      {/* Featured Posts */},
+    {
+      featuredPosts.length > 0 && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Featured Articles</h2>
@@ -207,9 +208,9 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
-      )}
-
-      {/* Category Filter */}
+      )},
+    {
+      /* Category Filter */}
       <section className="py-8 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
@@ -301,7 +302,7 @@ const BlogPage: React.FC = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-colors duration-200">
+              <button className="px-6 py-3 bg-blue-600 hover: bg-blue-700 rounded-lg font-medium transition-colors duration-200">
                 Subscribe
               </button>
             </div>
@@ -309,7 +310,7 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default BlogPage;
+export default BlogPage

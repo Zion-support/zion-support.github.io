@@ -1,6 +1,6 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import {
   Brain,
   Cloud,
@@ -14,13 +14,13 @@ import {
   ArrowRight,
   Search,
   Filter
-} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const ServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
 
   const services = [
     {
@@ -77,16 +77,16 @@ const ServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
       price: 'Starting at $1,000/month'
     }
-  ];
+  ]
 
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database'];
+  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database']
 
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -190,7 +190,7 @@ const ServicesPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Get Quote
                 </button>
-                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Contact Us
                 </button>
               </div>
@@ -201,7 +201,7 @@ const ServicesPage: React.FC = () => {
       
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default ServicesPage;
+export default ServicesPage

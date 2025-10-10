@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react'
 
 const MedicalRecordsManagerPage: React.FC = () => {
   const features = [
@@ -35,7 +35,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
       title: 'Advanced Security',
       description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
     }
-  ];
+  ]
 
   return (
     <>
@@ -75,7 +75,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default MedicalRecordsManagerPage;
+export default MedicalRecordsManagerPage

@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 const EnhancedSEOHead: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const EnhancedSEOHead: React.FC = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Canonical URL */}
-      <link rel="canonical" href="https://ziontechgroup.com" />
+      <link rel="canonical" href="https:// ziontechgroup.com" />
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
@@ -95,7 +95,7 @@ const EnhancedSEOHead: React.FC = () => {
         })}
       </script>
     </Helmet>
-  );
-};
+  )
+}
 
-export default EnhancedSEOHead;
+export default EnhancedSEOHead

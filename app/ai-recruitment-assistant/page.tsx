@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react'
 
 const AIRecruitmentAssistantPage: React.FC = () => {
   const features = [
@@ -35,7 +35,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
       title: 'Automated Screening',
       description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
     }
-  ];
+  ]
 
   return (
     <>
@@ -75,7 +75,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIRecruitmentAssistantPage;
+export default AIRecruitmentAssistantPage

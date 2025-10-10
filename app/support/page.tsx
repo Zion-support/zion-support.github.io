@@ -1,19 +1,19 @@
-'use client';
+'use client'
 
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react'
 
 interface FAQ {
-  question: string;
-  answer: string;
-  category: string;
+  question: string
+  answer: string
+  category: string
 }
 
 const SupportPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null)
 
   const faqs: FAQ[] = [
     {
@@ -46,16 +46,16 @@ const SupportPage: React.FC = () => {
       answer: 'We implement automated daily backups with 30-day retention, plus real-time replication across multiple data centers. All backups are encrypted and tested regularly to ensure data integrity.',
       category: 'Data Management'
     }
-  ];
+  ]
 
-  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management'];
+  const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Service Level', 'Data Management']
 
   const filteredFAQs = faqs.filter(faq => {
     const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
+                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
 
   const supportChannels = [
     {
@@ -79,7 +79,7 @@ const SupportPage: React.FC = () => {
       contact: 'Available on website',
       availability: 'Business hours'
     }
-  ];
+  ]
 
   const resources = [
     {
@@ -100,7 +100,7 @@ const SupportPage: React.FC = () => {
       description: 'Connect with other users and experts',
       link: '/community'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -259,7 +259,7 @@ const SupportPage: React.FC = () => {
               <button className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
                 Contact Support
               </button>
-              <button className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
+              <button className="border border-white text-white hover: bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
                 Schedule Call
               </button>
             </div>
@@ -267,7 +267,7 @@ const SupportPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default SupportPage;
+export default SupportPage

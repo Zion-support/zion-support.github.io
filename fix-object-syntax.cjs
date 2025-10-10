@@ -1,23 +1,34 @@
 const fs = require('fs');
 const path = require('path');
 
-function fixSyntaxErrorsInFile(filePath) {
+function fixObjectSyntaxInFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix common syntax issues
+    // Fix object syntax issues
     const fixes = [
-      // Fix object properties with semicolons
-      { pattern: /(\w+):\s*([^,}]+),;/g, replacement: '$1: $2,' },
-      // Fix array elements with semicolons
-      { pattern: /(\w+),\s*;/g, replacement: '$1,' },
-      // Fix JSX attributes with semicolons
+      // Fix missing commas in object properties
+      { pattern: /(\w+):\s*([^,}]+)\s*}\s*}/g, replacement: '$1: $2\n    },\n  }' },
+      // Fix missing commas in array elements
+      { pattern: /(\w+)\s*}\s*]/g, replacement: '$1\n    }\n  ]' },
+      // Fix semicolons after closing braces in objects
+      { pattern: /\}\s*;\s*}/g, replacement: '},\n  }' },
+      { pattern: /\}\s*;\s*]/g, replacement: '}\n  ]' },
+      // Fix semicolons in object properties
+      { pattern: /(\w+):\s*([^,}]+);\s*}/g, replacement: '$1: $2\n    }' },
+      // Fix semicolons in array elements
+      { pattern: /(\w+);\s*]/g, replacement: '$1\n  ]' },
+      // Fix missing commas between object properties
+      { pattern: /}\s*{\s*/g, replacement: '},\n    {\n      ' },
+      // Fix missing commas between array elements
+      { pattern: /]\s*\[\s*/g, replacement: '],\n    [\n      ' },
+      // Fix semicolons in JSX attributes
       { pattern: /(\w+)="([^"]*)"\s*;/g, replacement: '$1="$2"' },
       { pattern: /(\w+)=\{([^}]*)\}\s*;/g, replacement: '$1={$2}' },
-      // Fix function calls with semicolons
+      // Fix semicolons in function calls
       { pattern: /(\w+)\(([^)]*)\)\s*;/g, replacement: '$1($2)' },
-      // Fix JSX elements with semicolons
+      // Fix semicolons in JSX elements
       { pattern: /<(\w+);/g, replacement: '<$1' },
       { pattern: /<\/(\w+)>;/g, replacement: '</$1>' },
       // Fix standalone semicolons
@@ -35,25 +46,6 @@ function fixSyntaxErrorsInFile(filePath) {
       // Fix semicolons in JSX fragments
       { pattern: /<>\s*;/g, replacement: '<>' },
       { pattern: /;\s*<\/>/g, replacement: '</>' },
-      // Fix semicolons in object destructuring
-      { pattern: /\{\s*(\w+):\s*(\w+)\s*\}\s*;/g, replacement: '{ $1: $2 }' },
-      // Fix semicolons in array destructuring
-      { pattern: /\[\s*(\w+)\s*\]\s*;/g, replacement: '[$1]' },
-      // Fix semicolons in template literals
-      { pattern: /`([^`]+)`\s*;/g, replacement: '`$1`' },
-      // Fix semicolons in string literals
-      { pattern: /"([^"]+)"\s*;/g, replacement: '"$1"' },
-      { pattern: /'([^']+)'\s*;/g, replacement: "'$1'" },
-      // Fix semicolons in function parameters
-      { pattern: /\(\s*(\w+):\s*([^,)]+)\s*\)\s*;/g, replacement: '($1: $2)' },
-      // Fix semicolons in type annotations
-      { pattern: /:\s*([^=,;]+)\s*;/g, replacement: ': $1' },
-      // Fix semicolons in imports
-      { pattern: /import\s+([^;]+)\s*;/g, replacement: 'import $1' },
-      // Fix semicolons in exports
-      { pattern: /export\s+([^;]+)\s*;/g, replacement: 'export $1' },
-      // Fix semicolons in variable declarations
-      { pattern: /(const|let|var)\s+(\w+)\s*=\s*([^;]+)\s*;/g, replacement: '$1 $2 = $3' },
     ];
 
     fixes.forEach(fix => {
@@ -66,7 +58,7 @@ function fixSyntaxErrorsInFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed object syntax in: ${filePath}`);
       return true;
     }
     return false;
@@ -102,13 +94,13 @@ function findTsxFiles(dir) {
 const appDir = path.join(__dirname, 'app');
 const files = findTsxFiles(appDir);
 
-console.log(`Found ${files.length} TypeScript files to process for syntax errors...`);
+console.log(`Found ${files.length} TypeScript files to process for object syntax...`);
 
 let fixedCount = 0;
 files.forEach(file => {
-  if (fixSyntaxErrorsInFile(file)) {
+  if (fixObjectSyntaxInFile(file)) {
     fixedCount++;
   }
 });
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
+console.log(`Fixed object syntax in ${fixedCount} files.`);

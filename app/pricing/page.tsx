@@ -1,9 +1,9 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react'
 
 const PricingPage: React.FC = () => {
   const plans = [
@@ -54,7 +54,7 @@ const PricingPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
 
   return (
     <>
@@ -65,7 +65,7 @@ const PricingPage: React.FC = () => {
         <meta property="og:title" content="Pricing - Zion Tech Group" />
         <meta property="og:description" content="Transparent pricing for AI and IT solutions" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/pricing" />
+        <meta property="og:url" content="https:// ziontechgroup.com/pricing" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -211,7 +211,7 @@ const PricingPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default PricingPage;
+export default PricingPage

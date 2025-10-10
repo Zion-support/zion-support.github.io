@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
+import React from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 
 const ContentPromotionBanner: React.FC = () => {
   const features = [
@@ -25,7 +25,7 @@ const ContentPromotionBanner: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment with local support and compliance'
     }
-  ];
+  ]
 
   const benefits = [
     'Advanced AI technology integration',
@@ -36,7 +36,7 @@ const ContentPromotionBanner: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
 
   const stats = [
     {
@@ -57,7 +57,7 @@ const ContentPromotionBanner: React.FC = () => {
       label: 'Rating',
       description: 'Highly rated by clients'
     }
-  ];
+  ]
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -134,14 +134,14 @@ const ContentPromotionBanner: React.FC = () => {
               <Zap className="w-5 h-5" />
               Start Free Trial
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white/10 transition-colors duration-200">
               Schedule Demo
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContentPromotionBanner;
+export default ContentPromotionBanner

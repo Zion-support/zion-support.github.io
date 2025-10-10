@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react'
 
 const ItServicesPage: React.FC = () => {
   const itServices = [
@@ -20,7 +20,7 @@ const ItServicesPage: React.FC = () => {
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
     { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' }
-  ];
+  ]
 
   return (
     <>
@@ -58,7 +58,7 @@ const ItServicesPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />
                   </div>
                 </Link>
               ))}
@@ -67,7 +67,7 @@ const ItServicesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ItServicesPage;
+export default ItServicesPage

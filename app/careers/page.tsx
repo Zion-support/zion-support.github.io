@@ -1,22 +1,22 @@
-'use client';
+'use client'
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, GraduationCap, Zap } from 'lucide-react'
 
 interface JobPosition {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  experience: string;
-  description: string;
-  requirements: string[];
-  benefits: string[];
-  posted: string;
-  featured: boolean;
+  id: string
+  title: string
+  department: string
+  location: string
+  type: string
+  experience: string
+  description: string
+  requirements: string[]
+  benefits: string[]
+  posted: string
+  featured: boolean
 }
 
 const CareersPage: React.FC = () => {
@@ -117,7 +117,7 @@ const CareersPage: React.FC = () => {
       posted: '1 week ago',
       featured: false
     }
-  ];
+  ]
 
   const companyValues = [
     {
@@ -140,7 +140,7 @@ const CareersPage: React.FC = () => {
       title: 'Innovation',
       description: 'We embrace innovation and continuously push the boundaries of what\'s possible with technology.'
     }
-  ];
+  ]
 
   const benefits = [
     'Competitive salary and equity participation',
@@ -153,7 +153,7 @@ const CareersPage: React.FC = () => {
     'Team building events and company retreats',
     'Mentorship and career growth opportunities',
     'Wellness programs and gym memberships'
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -330,7 +330,7 @@ const CareersPage: React.FC = () => {
               <button className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
                 Submit Resume
               </button>
-              <button className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
+              <button className="border border-white text-white hover: bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200">
                 Contact Us
               </button>
             </div>
@@ -338,7 +338,7 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default CareersPage;
+export default CareersPage

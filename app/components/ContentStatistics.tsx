@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react'
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
@@ -11,7 +11,7 @@ const ContentStatistics: React.FC = () => {
     years: 0,
     countries: 0,
     uptime: 0
-  });
+  })
 
   const targetCounters = {
     clients: 10000,
@@ -20,7 +20,7 @@ const ContentStatistics: React.FC = () => {
     years: 15,
     countries: 50,
     uptime: 99
-  };
+  }
 
   const statistics = [
     {
@@ -71,7 +71,7 @@ const ContentStatistics: React.FC = () => {
       color: 'text-red-400',
       description: 'Service reliability'
     }
-  ];
+  ]
 
   const features = [
     {
@@ -98,7 +98,7 @@ const ContentStatistics: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses',
       stats: ['50+ Countries', '15+ Languages', '24/7 Support']
     }
-  ];
+  ]
 
   const benefits = [
     'Advanced AI technology integration',
@@ -109,7 +109,7 @@ const ContentStatistics: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
 
   const achievements = [
     {
@@ -130,34 +130,34 @@ const ContentStatistics: React.FC = () => {
       description: 'Year-over-year business growth',
       value: '300%'
     }
-  ];
+  ]
 
   useEffect(() => {
-    const duration = 3000; // 3 seconds
-    const steps = 60;
-    const stepDuration = duration / steps;
+    const duration = 3000 // 3 seconds
+    const steps = 60
+    const stepDuration = duration / steps
 
     const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
-      let current = 0;
+      const target = targetCounters[key as keyof typeof targetCounters]
+      const increment = target / steps
+      let current = 0
 
       return setInterval(() => {
-        current += increment;
+        current += increment
         if (current >= target) {
           current = target;
         }
         setCounters(prev => ({
           ...prev,
           [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
+        }))
+      }, stepDuration)
+    })
 
     return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
+      timers.forEach(timer => clearInterval(timer))
+    }
+  }, [])
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -180,7 +180,9 @@ const ContentStatistics: React.FC = () => {
                 <stat.icon className="w-8 h-8 text-slate-900" />
               </div>
               <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                {stat.value}{stat.suffix}
+                {stat.value},
+    {
+      stat.suffix}
               </div>
               <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
@@ -278,7 +280,7 @@ const ContentStatistics: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContentStatistics;
+export default ContentStatistics

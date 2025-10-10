@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import {
   Users,
   Award,
@@ -23,9 +23,9 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const AboutPage: React.FC = () => {
   const stats = [
@@ -33,7 +33,7 @@ const AboutPage: React.FC = () => {
     { number: '99.9%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Support Available' },
     { number: '50+', label: 'Expert Team Members' }
-  ];
+  ]
 
   const values = [
     {
@@ -56,7 +56,7 @@ const AboutPage: React.FC = () => {
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
     }
-  ];
+  ]
 
   const team = [
     {
@@ -83,7 +83,7 @@ const AboutPage: React.FC = () => {
       image: '/team/david.jpg',
       bio: 'Full-stack developer with 10+ years experience'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -234,7 +234,7 @@ const AboutPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Get Started
                 </button>
-                <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
               </div>
@@ -245,7 +245,7 @@ const AboutPage: React.FC = () => {
       
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage

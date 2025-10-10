@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Play, ArrowRight, CheckCircle } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Play, ArrowRight, CheckCircle } from 'lucide-react'
 
 const DemoPage: React.FC = () => {
   const demos = [
@@ -23,7 +23,7 @@ const DemoPage: React.FC = () => {
       duration: '4 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
-  ];
+  ]
 
   return (
     <>
@@ -93,7 +93,7 @@ const DemoPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default DemoPage;
+export default DemoPage
