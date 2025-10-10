@@ -1,268 +1,157 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import { useAnalytics } from './EnhancedAnalytics';
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 
-interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  largeText: boolean;
-  focusVisible: boolean;
+interface EnhancedAccessibilityProps {
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
 }
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    reducedMotion: false,
-    largeText: false,
-    focusVisible: false
-  });
-<<<<<<< HEAD
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true
+}) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('normal');
 
-  const { trackEvent } = useAnalytics();
-
+  // High contrast mode
   useEffect(() => {
-    // Add ARIA landmarks
-    const addLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
+    if (enableHighContrast) {
+      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+      setIsHighContrast(prefersHighContrast);
+      
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      const handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
+      
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    }
+  }, [enableHighContrast]);
 
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-    };
-
-    // Enhance focus management
-    const enhanceFocusManagement = () => {
-      // Add focus-visible polyfill
-      const style = document.createElement('style');
-      style.textContent = `
-        .focus-visible:focus {
-          outline: 2px solid #3b82f6;
-          outline-offset: 2px;
-        }
-      `;
-      document.head.appendChild(style);
-
-      // Add focus trap for modals
-      const modals = document.querySelectorAll('[role="dialog"]');
-      modals.forEach(modal => {
-        const focusableElements = modal.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-        if (firstElement && lastElement) {
-          const handleTabKey = (e: KeyboardEvent) => {
-            if (e.key === 'Tab') {
-              if (e.shiftKey) {
-                if (document.activeElement === firstElement) {
-                  lastElement.focus();
-                  e.preventDefault();
-                }
-              } else {
-                if (document.activeElement === lastElement) {
-                  firstElement.focus();
-                  e.preventDefault();
-                }
-              }
-            }
-          };
-
-          modal.addEventListener('keydown', handleTabKey);
-        }
-      });
-    };
-
-    // Add keyboard navigation
-    const addKeyboardNavigation = () => {
+  // Keyboard navigation
+  useEffect(() => {
+    if (enableKeyboardNavigation) {
       const handleKeyDown = (e: KeyboardEvent) => {
         // Skip to main content
-        if (e.key === 'Tab' && e.ctrlKey) {
-          const main = document.querySelector('main');
-          if (main) {
-            main.focus();
-            main.scrollIntoView();
+        if (e.key === 'Tab' && e.shiftKey && document.activeElement === document.body) {
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+          if (skipLink) {
+            skipLink.focus();
             e.preventDefault();
           }
-        }
-
-        // Escape key handling
-        if (e.key === 'Escape') {
-          const modals = document.querySelectorAll('[role="dialog"]');
-          modals.forEach(modal => {
-            if (modal.getAttribute('aria-hidden') === 'false') {
-              const closeButton = modal.querySelector('[aria-label="Close"]') as HTMLElement;
-              if (closeButton) {
-                closeButton.click();
-              }
-            }
-          });
         }
       };
 
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
-    };
+    }
+  }, [enableKeyboardNavigation]);
 
-=======
-
+  // Focus management
   useEffect(() => {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-    // Check for user preferences
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-<<<<<<< HEAD
-    setSettings({
-      highContrast: prefersHighContrast,
-      reducedMotion: prefersReducedMotion,
-      largeText: false,
-      focusVisible: true
-    });
-
-    // Apply initial settings
-    applyAccessibilitySettings({
-      highContrast: prefersHighContrast,
-      reducedMotion: prefersReducedMotion,
-      largeText: false,
-      focusVisible: true
-    });
-
-    // Set up media query listeners
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
-      applyAccessibilitySettings({ ...settings, reducedMotion: e.matches });
-    };
-
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-=======
-    setSettings(prev => ({
-      ...prev,
-      highContrast: prefersHighContrast,
-      reducedMotion: prefersReducedMotion
-    }));
-
-    // Apply accessibility styles
-    const applyAccessibilityStyles = () => {
-      const root = document.documentElement;
+    if (enableFocusManagement) {
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
-      if (settings.highContrast) {
-        root.classList.add('high-contrast');
-      } else {
-        root.classList.remove('high-contrast');
-      }
+      const trapFocus = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          const modal = document.querySelector('[role="dialog"]');
+          if (modal) {
+            const focusableContent = modal.querySelectorAll(focusableElements);
+            const firstFocusableElement = focusableContent[0] as HTMLElement;
+            const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
-      if (settings.reducedMotion) {
-        root.classList.add('reduced-motion');
-      } else {
-        root.classList.remove('reduced-motion');
-      }
+            if (e.shiftKey) {
+              if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastFocusableElement) {
+                firstFocusableElement.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        }
+      };
 
-      root.classList.add(`font-size-${settings.fontSize}`);
-    };
+      document.addEventListener('keydown', trapFocus);
+      return () => document.removeEventListener('keydown', trapFocus);
+    }
+  }, [enableFocusManagement]);
 
-    applyAccessibilityStyles();
+  // Screen reader announcements
+  useEffect(() => {
+    if (enableScreenReaderSupport) {
+      const announceToScreenReader = (message: string) => {
+        const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live', 'polite');
+        announcement.setAttribute('aria-atomic', 'true');
+        announcement.className = 'sr-only';
+        announcement.textContent = message;
+        document.body.appendChild(announcement);
+        
+        setTimeout(() => {
+          document.body.removeChild(announcement);
+        }, 1000);
+      };
 
-    // Listen for preference changes
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      // Announce page changes
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.type === 'childList') {
+            const addedNodes = Array.from(mutation.addedNodes);
+            const hasNewContent = addedNodes.some(node => 
+              node.nodeType === Node.ELEMENT_NODE && 
+              (node as Element).querySelector('[role="main"]')
+            );
+            
+            if (hasNewContent) {
+              announceToScreenReader('Page content updated');
+            }
+          }
+        });
+      });
 
-    const handleHighContrastChange = (e: MediaQueryListEvent) => {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-      setSettings(prev => ({ ...prev, highContrast: e.matches }));
-    };
+      observer.observe(document.body, { childList: true, subtree: true });
+      return () => observer.disconnect();
+    }
+  }, [enableScreenReaderSupport]);
 
-    const handleReducedMotionChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
-    };
-
-<<<<<<< HEAD
-    // Initialize accessibility features
-    addLandmarks();
-    enhanceFocusManagement();
-    const cleanup = addKeyboardNavigation();
-
-    // Track accessibility usage
-    trackEvent('accessibility', 'features_initialized', {
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    });
-
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange);
-      contrastQuery.removeEventListener('change', handleContrastChange);
-      cleanup();
-    };
-  }, []);
-
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+  // Apply accessibility styles
+  useEffect(() => {
     const root = document.documentElement;
     
-    // Apply high contrast
-    if (newSettings.highContrast) {
+    if (isHighContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Apply reduced motion
-    if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Apply large text
-    if (newSettings.largeText) {
+    if (fontSize === 'large') {
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
     }
+  }, [isHighContrast, fontSize]);
 
-    // Apply focus visible
-    if (newSettings.focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
-  };
-
-  // Apply settings when they change
-  useEffect(() => {
-    applyAccessibilitySettings(settings);
-  }, [settings]);
-=======
-    highContrastQuery.addEventListener('change', handleHighContrastChange);
-    reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
-
-    return () => {
-      highContrastQuery.removeEventListener('change', handleHighContrastChange);
-      reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
-    };
-  }, [settings.highContrast, settings.reducedMotion, settings.fontSize]);
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-
-  return <>{children}</>;
+  return (
+    <div 
+      className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${fontSize === 'large' ? 'large-text' : ''}`}
+      style={{
+        '--contrast-ratio': isHighContrast ? '7:1' : '4.5:1'
+      } as React.CSSProperties}
+    >
+      {children}
+    </div>
+  );
 };
+
+EnhancedAccessibility.displayName = 'EnhancedAccessibility';
 
 export default EnhancedAccessibility;

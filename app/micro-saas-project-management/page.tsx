@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Shield, Brain, Zap, Lock, Clock, ArrowRight, Phone, Mail, MapPin, Target, TrendingUp, Settings, FileText, MessageCircle, DollarSign, Globe, Smartphone, Database, Cloud, Code, BarChart3, PieChart, Activity, AlertCircle, CheckSquare, Plus, Edit, Trash2, Eye, Download, Share2, Filter, Search, Bell, BellOff, Star as StarIcon, Heart, ThumbsUp, ThumbsDown, MessageSquare, Send, Paperclip, Image, Video, File, Folder, FolderOpen, Tag, Tags, Flag, Bookmark, Archive, Trash, RefreshCw, RotateCcw, Save, Upload, Download as DownloadIcon, ExternalLink, Link, Copy, Share, MoreHorizontal, MoreVertical, Settings as SettingsIcon, User, UserPlus, UserMinus, UserCheck, UserX, Crown, Award, Medal, Trophy, Gift, Sparkles, Rocket, Zap as ZapIcon, Lightning, Fire, Water, Wind, Earth, Sun, Moon, Planet, Galaxy, Atom, Dna, Cpu, HardDrive, MemoryStick, Wifi, Bluetooth, Battery, Plug, Power, Energy, Electric, Nuclear, Quantum, Hologram, Matrix, Cyber, Neural, Ai, Robot, Bot, Android, Ios, Windows, Linux, Mac, Chrome, Firefox, Safari, Edge, Opera, Brave, Tor, Vpn, Security, Privacy, Encryption, Decryption, Key, Lock as LockIcon, Unlock, Eye as EyeIcon, EyeOff, Shield as ShieldIcon, Sword, Armor, Castle, Fortress, Wall, Gate, Door, Window, Roof, Floor, Ceiling, Wall as WallIcon, Brick, Stone, Wood, Metal, Glass, Plastic, Rubber, Fabric, Leather, Fur, Silk, Cotton, Wool, Linen, Hemp, Bamboo, Cork, Paper, Cardboard, Foam, Sponge, Gel, Liquid, Gas, Solid, Plasma, Crystal, Diamond, Gold, Silver, Bronze, Copper, Iron, Steel, Aluminum, Titanium, Platinum, Palladium, Rhodium, Iridium, Osmium, Ruthenium, Rhenium, Tungsten, Molybdenum, Chromium, Vanadium, Manganese, Cobalt, Nickel, Zinc, Cadmium, Mercury, Lead, Tin, Antimony, Bismuth, Polonium, Astatine, Radon, Francium, Radium, Actinium, Thorium, Protactinium, Uranium, Neptunium, Plutonium, Americium, Curium, Berkelium, Californium, Einsteinium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meitnerium, Darmstadtium, Roentgenium, Copernicium, Nihonium, Flerovium, Moscovium, Livermorium, Tennessine, Oganesson } from 'lucide-react';
+import { CheckCircle, Star, Users, Calendar, BarChart, Zap, Shield, Clock, ArrowRight, Phone, Mail, MapPin, Brain, Target, TrendingUp, Settings, FileText, MessageCircle, DollarSign, Globe, Smartphone, Lock, Database, Cloud, Code, BarChart3, PieChart, Activity, AlertCircle, CheckSquare, Plus, Edit, Trash2, Eye, Download, Share2, Filter, Search, Bell, BellOff, Star as StarIcon, Heart, ThumbsUp, ThumbsDown, MessageSquare, Send, Paperclip, Image, Video, File, Folder, FolderOpen, Tag, Tags, Flag, Bookmark, Archive, Trash, RefreshCw, RotateCcw, Save, Upload, Download as DownloadIcon, ExternalLink, Link, Copy, Share, MoreHorizontal, MoreVertical, Settings as SettingsIcon, User, UserPlus, UserMinus, UserCheck, UserX, Crown, Award, Medal, Trophy, Gift, Sparkles, Rocket, Zap as ZapIcon, Lightning, Fire, Water, Wind, Earth, Sun, Moon, Planet, Galaxy, Atom, Dna, Cpu, HardDrive, MemoryStick, Wifi, Bluetooth, Battery, Plug, Power, Energy, Electric, Nuclear, Quantum, Hologram, Matrix, Cyber, Neural, Ai, Robot, Bot, Android, Ios, Windows, Linux, Mac, Chrome, Firefox, Safari, Edge, Opera, Brave, Tor, Vpn, Security, Privacy, Encryption, Decryption, Key, Lock as LockIcon, Unlock, Eye as EyeIcon, EyeOff, Shield as ShieldIcon, Sword, Armor, Castle, Fortress, Wall, Gate, Door, Window, Roof, Floor, Ceiling, Wall as WallIcon, Brick, Stone, Wood, Metal, Glass, Plastic, Rubber, Fabric, Leather, Fur, Silk, Cotton, Wool, Linen, Hemp, Bamboo, Cork, Paper, Cardboard, Foam, Sponge, Gel, Liquid, Gas, Solid, Plasma, Crystal, Diamond, Gold, Silver, Bronze, Copper, Iron, Steel, Aluminum, Titanium, Platinum, Palladium, Rhodium, Iridium, Osmium, Ruthenium, Rhenium, Tungsten, Molybdenum, Chromium, Vanadium, Manganese, Cobalt, Nickel, Zinc, Cadmium, Mercury, Lead, Tin, Antimony, Bismuth, Polonium, Astatine, Radon, Francium, Radium, Actinium, Thorium, Protactinium, Uranium, Neptunium, Plutonium, Americium, Curium, Berkelium, Californium, Einsteinium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meitnerium, Darmstadtium, Roentgenium, Copernicium, Nihonium, Flerovium, Moscovium, Livermorium, Tennessine, Oganesson } from 'lucide-react';
 
-const AiCybersecuritySuite: React.FC = () => {
+const MicroSaasProjectManagement: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -12,92 +12,92 @@ const AiCybersecuritySuite: React.FC = () => {
 
   const features = [
     {
-      icon: Brain,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms that detect and prevent cyber threats in real-time with 99.9% accuracy.',
-      benefits: ['Real-time detection', 'Behavioral analysis', 'Anomaly detection', 'Predictive security']
+      icon: Target,
+      title: 'Smart Project Planning',
+      description: 'AI-powered project planning with intelligent task breakdown, resource allocation, and timeline optimization.',
+      benefits: ['Automated task prioritization', 'Resource conflict detection', 'Timeline optimization', 'Risk assessment']
     },
     {
-      icon: Shield,
-      title: 'Zero Trust Architecture',
-      description: 'Comprehensive zero trust security model that verifies every user and device before granting access.',
-      benefits: ['Identity verification', 'Device validation', 'Network segmentation', 'Continuous monitoring']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Response',
-      description: 'AI-powered incident response that automatically contains threats and initiates recovery procedures.',
-      benefits: ['Auto-containment', 'Incident response', 'Recovery automation', 'Threat hunting']
-    },
-    {
-      icon: Lock,
-      title: 'Advanced Encryption',
-      description: 'End-to-end encryption with quantum-resistant algorithms and key management systems.',
-      benefits: ['Quantum-resistant encryption', 'Key management', 'Data protection', 'Compliance ready']
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Real-time collaboration tools with instant messaging, file sharing, and video conferencing integration.',
+      benefits: ['Real-time chat', 'File sharing', 'Video calls', 'Screen sharing']
     },
     {
       icon: BarChart3,
-      title: 'Security Analytics',
-      description: 'Comprehensive security dashboard with AI-powered insights and threat intelligence.',
-      benefits: ['Threat intelligence', 'Risk assessment', 'Compliance reporting', 'Security metrics']
+      title: 'Advanced Analytics',
+      description: 'Comprehensive project analytics with custom dashboards, performance metrics, and predictive insights.',
+      benefits: ['Custom dashboards', 'Performance tracking', 'Predictive analytics', 'ROI calculations']
+    },
+    {
+      icon: Zap,
+      title: 'Automation Engine',
+      description: 'Powerful automation workflows that handle repetitive tasks and streamline project management processes.',
+      benefits: ['Workflow automation', 'Task automation', 'Notification automation', 'Report generation']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption, SSO integration, and compliance management.',
+      benefits: ['End-to-end encryption', 'SSO integration', 'GDPR compliance', 'SOC 2 Type II']
     },
     {
       icon: Globe,
-      title: 'Global Threat Intelligence',
-      description: 'Real-time threat intelligence from global sources with AI-powered correlation and analysis.',
-      benefits: ['Global threat feeds', 'AI correlation', 'Threat hunting', 'Intelligence sharing']
+      title: 'Global Accessibility',
+      description: 'Access your projects from anywhere with our cloud-based platform and mobile applications.',
+      benefits: ['Cloud-based access', 'Mobile apps', 'Offline mode', 'Multi-language support']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Essential',
-      price: '$2,500',
+      name: 'Starter',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small teams and startups',
       features: [
-        'Up to 100 endpoints',
-        'Basic AI detection',
-        'Email security',
-        'Standard support',
-        'Basic reporting',
-        '24/7 monitoring'
+        'Up to 5 team members',
+        'Unlimited projects',
+        'Basic task management',
+        'File storage (10GB)',
+        'Email support',
+        'Basic analytics'
       ],
       popular: false,
       cta: 'Start Free Trial'
     },
     {
       name: 'Professional',
-      price: '$5,000',
+      price: '$79',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 500 endpoints',
-        'Advanced AI features',
-        'Full security suite',
+        'Up to 25 team members',
+        'Advanced project templates',
+        'Time tracking & reporting',
+        'File storage (100GB)',
         'Priority support',
         'Advanced analytics',
-        'Compliance management',
-        'Incident response',
-        'Threat hunting'
+        'API access',
+        'Custom integrations'
       ],
       popular: true,
       cta: 'Start Free Trial'
     },
     {
       name: 'Enterprise',
-      price: '$10,000',
+      price: '$199',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited endpoints',
-        'Custom AI models',
+        'Unlimited team members',
+        'Custom project workflows',
+        'Advanced security features',
+        'Unlimited file storage',
+        '24/7 phone support',
+        'Custom analytics',
         'White-label options',
-        'Dedicated support',
-        'Custom development',
-        'Advanced compliance',
-        'Training & onboarding',
-        'SLA guarantee'
+        'Dedicated account manager'
       ],
       popular: false,
       cta: 'Contact Sales'
@@ -106,38 +106,38 @@ const AiCybersecuritySuite: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'James Wilson',
-      role: 'CISO',
-      company: 'Financial Services Inc.',
-      content: 'The AI threat detection has prevented 15 major security incidents in the past year. Our security posture has improved dramatically with 99.9% threat detection accuracy.',
+      name: 'Sarah Johnson',
+      role: 'Project Manager',
+      company: 'TechCorp Inc.',
+      content: 'Zion Tech Group\'s project management platform has revolutionized how we handle complex projects. The AI-powered insights have improved our delivery time by 40%.',
       rating: 5,
-      avatar: 'JW'
+      avatar: 'SJ'
     },
     {
-      name: 'Maria Garcia',
-      role: 'Security Director',
-      company: 'Healthcare Systems',
-      content: 'The zero trust architecture helped us achieve HIPAA compliance while improving security. We can now monitor and control access across all systems seamlessly.',
+      name: 'Michael Chen',
+      role: 'CTO',
+      company: 'StartupXYZ',
+      content: 'The automation features have saved us countless hours. Our team productivity has increased by 60% since implementing this solution.',
       rating: 5,
-      avatar: 'MG'
+      avatar: 'MC'
     },
     {
-      name: 'David Thompson',
-      role: 'IT Security Manager',
-      company: 'Manufacturing Corp',
-      content: 'The automated response system has reduced our incident response time from hours to minutes. The AI containment has prevented data breaches effectively.',
+      name: 'Emily Rodriguez',
+      role: 'Operations Director',
+      company: 'Global Solutions',
+      content: 'The analytics and reporting capabilities are outstanding. We can now make data-driven decisions that have improved our project success rate to 95%.',
       rating: 5,
-      avatar: 'DT'
+      avatar: 'ER'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Cybersecurity Suite | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered cybersecurity suite with threat detection, zero trust architecture, and automated response. Protect your business with 99.9% accuracy." />
-        <meta name="keywords" content="AI cybersecurity, threat detection, zero trust, security automation, cyber defense, threat intelligence" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-cybersecurity-suite" />
+        <title>AI-Powered Project Management Platform | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary project management platform with AI-powered insights, team collaboration, and advanced analytics. Start your free trial today!" />
+        <meta name="keywords" content="project management, AI project management, team collaboration, project analytics, task management, project planning" />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas-project-management" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
@@ -153,16 +153,16 @@ const AiCybersecuritySuite: React.FC = () => {
               <div className="mb-8">
                 <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-8 animate-fade-in">
                   <Brain className="w-4 h-4 mr-2 animate-spin" />
-                  AI-Powered Cybersecurity
+                  AI-Powered Project Management
                 </div>
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight animate-slide-up">
-                  Advanced AI
+                  Transform Your
                   <span className="block bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
-                    Cybersecurity Suite
+                    Project Management
                   </span>
                 </h1>
                 <p className="text-gray-300 mb-8 text-center leading-relaxed text-lg max-w-4xl mx-auto animate-fade-in delay-200">
-                  Comprehensive AI-powered cybersecurity platform with 99.9% threat detection accuracy, zero trust architecture, and automated incident response. Protect your business from advanced cyber threats.
+                  Revolutionary AI-powered project management platform that automates workflows, optimizes resources, and delivers 40% faster project completion. Trusted by 500+ companies worldwide.
                 </p>
               </div>
               
@@ -192,24 +192,24 @@ const AiCybersecuritySuite: React.FC = () => {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in delay-500">
                 <div className="text-center group">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:scale-110 transition-transform duration-300">99.9%</div>
-                  <div className="text-gray-300 text-sm font-medium">Threat Detection</div>
-                  <div className="text-cyan-400 text-xs mt-1">AI Accuracy</div>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:scale-110 transition-transform duration-300">40%</div>
+                  <div className="text-gray-300 text-sm font-medium">Faster Delivery</div>
+                  <div className="text-cyan-400 text-xs mt-1">AI Optimization</div>
                 </div>
                 <div className="text-center group">
-                  <div className="text-4xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">15</div>
-                  <div className="text-gray-300 text-sm font-medium">Major Incidents</div>
-                  <div className="text-purple-400 text-xs mt-1">Prevented</div>
+                  <div className="text-4xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
+                  <div className="text-gray-300 text-sm font-medium">Companies</div>
+                  <div className="text-purple-400 text-xs mt-1">Trust Our Platform</div>
                 </div>
                 <div className="text-center group">
-                  <div className="text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
-                  <div className="text-gray-300 text-sm font-medium">Monitoring</div>
-                  <div className="text-green-400 text-xs mt-1">AI Protection</div>
+                  <div className="text-4xl font-bold text-green-400 mb-2 group-hover:scale-110 transition-transform duration-300">95%</div>
+                  <div className="text-gray-300 text-sm font-medium">Success Rate</div>
+                  <div className="text-green-400 text-xs mt-1">Project Completion</div>
                 </div>
                 <div className="text-center group">
-                  <div className="text-4xl font-bold text-orange-400 mb-2 group-hover:scale-110 transition-transform duration-300">500+</div>
-                  <div className="text-gray-300 text-sm font-medium">Enterprises</div>
-                  <div className="text-orange-400 text-xs mt-1">Protected</div>
+                  <div className="text-4xl font-bold text-orange-400 mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
+                  <div className="text-gray-300 text-sm font-medium">Support</div>
+                  <div className="text-orange-400 text-xs mt-1">Always Available</div>
                 </div>
               </div>
             </div>
@@ -221,10 +221,10 @@ const AiCybersecuritySuite: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Comprehensive Security Features
+                Powerful Features
               </h2>
               <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-                Everything you need to protect your business from advanced cyber threats.
+                Everything you need to manage projects efficiently with AI-powered insights and automation.
               </p>
             </div>
             
@@ -255,10 +255,10 @@ const AiCybersecuritySuite: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Security Suite Pricing
+                Simple, Transparent Pricing
               </h2>
               <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-                Choose the plan that fits your security needs. All plans include a 14-day free trial.
+                Choose the plan that fits your team size and requirements. All plans include a 14-day free trial.
               </p>
             </div>
             
@@ -316,10 +316,10 @@ const AiCybersecuritySuite: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Security Success Stories
+                What Our Clients Say
               </h2>
               <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-                See how organizations are protecting their assets with our AI-powered cybersecurity platform.
+                Don't just take our word for it. Here's what our satisfied clients have to say about our platform.
               </p>
             </div>
             
@@ -353,10 +353,10 @@ const AiCybersecuritySuite: React.FC = () => {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Ready to Secure Your Business?
+              Ready to Transform Your Project Management?
             </h2>
             <p className="text-gray-300 text-lg mb-8 max-w-3xl mx-auto">
-              Join 500+ enterprises that have already fortified their security with our AI-powered cybersecurity platform.
+              Join 500+ companies that have already transformed their project management with our AI-powered platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -381,4 +381,4 @@ const AiCybersecuritySuite: React.FC = () => {
   );
 };
 
-export default AiCybersecuritySuite;
+export default MicroSaasProjectManagement;
