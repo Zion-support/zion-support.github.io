@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import { useCallback } from 'react';
-=======
-'use client'
-import { useCallback } from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-6ca0
 
 /**
  * Accessibility (A11Y) Utilities
@@ -15,11 +10,7 @@ import { useCallback } from 'react'
  * Generate unique ID for aria-describedby and aria-labelledby
  */
 export function generateId(prefix = 'a11y'): string {
-<<<<<<< HEAD
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
-=======
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ca0
 }
 
 /**
@@ -29,327 +20,227 @@ export function announceToScreenReader(
   message: string,
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
-  if (typeof document === 'undefined') return
-  
-  const announcement = document.createElement('div')
-  announcement.setAttribute('role', 'status')
-  announcement.setAttribute('aria-live', priority)
-  announcement.setAttribute('aria-atomic', 'true')
-  announcement.style.position = 'absolute'
-  announcement.style.left = '-10000px'
-  announcement.style.width = '1px'
-  announcement.style.height = '1px'
-  announcement.style.overflow = 'hidden'
-  
-  document.body.appendChild(announcement)
-  
-  // Set message after a slight delay to ensure screen readers pick it up
-  setTimeout(() => {
-<<<<<<< HEAD
-    announcement.textContent = message;
-  }, 100);
-  // Remove announcement after it's been read
+  if (typeof window === 'undefined') return;
+
+  const announcement = document.createElement('div');
+  announcement.setAttribute('aria-live', priority);
+  announcement.setAttribute('aria-atomic', 'true');
+  announcement.className = 'sr-only';
+  announcement.textContent = message;
+
+  document.body.appendChild(announcement);
+
+  // Remove after announcement
   setTimeout(() => {
     document.body.removeChild(announcement);
-  }, 3000);
-=======
-    announcement.textContent = message
-  }, 100)
-  
-  // Remove announcement after it's been read
-  setTimeout(() => {
-    document.body.removeChild(announcement)
-  }, 3000)
->>>>>>> cursor/fix-errors-and-merge-to-main-6ca0
+  }, 1000);
 }
 
 /**
- * Trap focus within a container (useful for modals)
+ * Focus management utilities
  */
-export function trapFocus(element: HTMLElement): () => void {
-  const focusableElements = element.querySelectorAll<HTMLElement>(
-    'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
-  )
-  
-  const firstFocusable = focusableElements[0]
-  const lastFocusable = focusableElements[focusableElements.length - 1]
-<<<<<<< HEAD
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key !== 'Tab') return;
-    if (e.shiftKey) {
-      // Shift + Tab
-      if (document.activeElement === firstFocusable) {
-        e.preventDefault();
-        lastFocusable?.focus();
-=======
-  
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key !== 'Tab') return
-    
-    if (e.shiftKey) {
-      // Shift + Tab
-      if (document.activeElement === firstFocusable) {
-        e.preventDefault()
-        lastFocusable?.focus()
->>>>>>> cursor/fix-errors-and-merge-to-main-6ca0
-      }
-    } else {
-      // Tab
-      if (document.activeElement === lastFocusable) {
-<<<<<<< HEAD
-        e.preventDefault();
-        firstFocusable?.focus();
+export function focusElement(element: HTMLElement | null): void {
+  if (element) {
+    element.focus();
+  }
+}
+
+export function trapFocus(container: HTMLElement): () => void {
+  const focusableElements = container.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  ) as NodeListOf<HTMLElement>;
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  const handleTabKey = (e: KeyboardEvent) => {
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          lastElement.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          firstElement.focus();
+          e.preventDefault();
+        }
       }
     }
-  }, [firstFocusable, lastFocusable]);
-  
-  element.addEventListener('keydown', handleKeyDown);
-  // Focus first element
-  firstFocusable?.focus();
-  // Return cleanup function
-  return () => {
-    element.removeEventListener('keydown', handleKeyDown);
   };
-=======
-        e.preventDefault()
-        firstFocusable?.focus()
-      }
-    }
-  }, [firstFocusable, lastFocusable])
-  
-  element.addEventListener('keydown', handleKeyDown)
-  
-  // Focus first element
-  firstFocusable?.focus()
-  
+
+  container.addEventListener('keydown', handleTabKey);
+
   // Return cleanup function
   return () => {
-    element.removeEventListener('keydown', handleKeyDown)
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-6ca0
+    container.removeEventListener('keydown', handleTabKey);
+  };
 }
 
 /**
- * Check if element is keyboard accessible
+ * Skip link functionality
  */
-export function isKeyboardAccessible(element: HTMLElement): boolean {
-  const tabindex = element.getAttribute('tabindex')
-  const role = element.getAttribute('role')
-  const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes(
-    element.tagName.toLowerCase()
-  )
+export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLElement {
+  const skipLink = document.createElement('a');
+  skipLink.href = `#${targetId}`;
+  skipLink.textContent = text;
+  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
   
-  return (
-    isInteractive ||
-    (tabindex !== null && tabindex !== '-1') ||
-    (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
-  )
+  return skipLink;
 }
 
 /**
- * Add keyboard navigation support to custom interactive elements
+ * ARIA attributes helpers
  */
-export function makeKeyboardAccessible(
-  element: HTMLElement,
-  onClick: (e: Event) => void,
-  options: {
-    role?: string
-    tabindex?: number
-  } = {}
-): () => void {
-  const { role = 'button', tabindex = 0 } = options
-  
-  element.setAttribute('role', role)
-  element.setAttribute('tabindex', tabindex.toString())
-  
-  const handleKeyDown = useCallback((e: KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault()
-      onClick(e)
-    }
-  }, [onClick])
-  
-  element.addEventListener('click', onClick)
-  element.addEventListener('keydown', handleKeyDown)
-  
-  return () => {
-    element.removeEventListener('click', onClick)
-    element.removeEventListener('keydown', handleKeyDown)
-  }
+export function getAriaLabel(element: HTMLElement): string | null {
+  return element.getAttribute('aria-label') || 
+         element.getAttribute('aria-labelledby') || 
+         element.textContent?.trim() || 
+         null;
+}
+
+export function setAriaExpanded(element: HTMLElement, expanded: boolean): void {
+  element.setAttribute('aria-expanded', expanded.toString());
+}
+
+export function setAriaSelected(element: HTMLElement, selected: boolean): void {
+  element.setAttribute('aria-selected', selected.toString());
+}
+
+export function setAriaPressed(element: HTMLElement, pressed: boolean): void {
+  element.setAttribute('aria-pressed', pressed.toString());
 }
 
 /**
- * Check color contrast ratio (WCAG 2.1)
+ * Color contrast utilities
  */
 export function getContrastRatio(color1: string, color2: string): number {
   const getLuminance = (color: string): number => {
-    // Simple RGB to luminance conversion
-    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
-    const [r, g, b] = rgb.map(val => {
-      const normalized = val / 255
-      return normalized <= 0.03928
-        ? normalized / 12.92
-        : Math.pow((normalized + 0.055) / 1.055, 2.4)
-    })
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b
-  }
+    const rgb = hexToRgb(color);
+    if (!rgb) return 0;
+    
+    const { r, g, b } = rgb;
+    const [rs, gs, bs] = [r, g, b].map(c => {
+      c = c / 255;
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+    
+    return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+  };
+
+  const l1 = getLuminance(color1);
+  const l2 = getLuminance(color2);
+  const lighter = Math.max(l1, l2);
+  const darker = Math.min(l1, l2);
   
-  const lum1 = getLuminance(color1)
-  const lum2 = getLuminance(color2)
-  const brightest = Math.max(lum1, lum2)
-  const darkest = Math.min(lum1, lum2)
-  
-  return (brightest + 0.05) / (darkest + 0.05)
+  return (lighter + 0.05) / (darker + 0.05);
+}
+
+function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16)
+  } : null;
 }
 
 /**
- * Check if contrast ratio meets WCAG standards
+ * Keyboard navigation helpers
  */
-export function meetsContrastRequirements(
-  color1: string,
-  color2: string,
-  level: 'AA' | 'AAA' = 'AA',
-  fontSize: 'normal' | 'large' = 'normal'
-): boolean {
-  const ratio = getContrastRatio(color1, color2)
-  
-  if (level === 'AAA') {
-    return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7
-  }
-  
-  return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5
+export function isKeyboardNavigation(event: KeyboardEvent): boolean {
+  return event.key === 'Tab' || 
+         event.key === 'Enter' || 
+         event.key === ' ' || 
+         event.key === 'Escape' ||
+         event.key.startsWith('Arrow');
 }
 
-/**
- * Get accessible color suggestions based on contrast requirements
- */
-export function getAccessibleColor(
-  backgroundColor: string,
-  preferredColor: string,
-  level: 'AA' | 'AAA' = 'AA',
-  fontSize: 'normal' | 'large' = 'normal'
-): string {
-  const colors = [
-    '#000000', // Black
-    '#FFFFFF', // White
-    '#333333', // Dark gray
-    '#666666', // Medium gray
-    '#999999', // Light gray
-    '#CCCCCC', // Very light gray
-  ]
-  
-  for (const color of colors) {
-    if (meetsContrastRequirements(backgroundColor, color, level, fontSize)) {
-      return color
-    }
-  }
-  
-  return preferredColor // Fallback to preferred color
-}
-
-/**
- * Add skip link for keyboard navigation
- */
-export function addSkipLink(targetId: string, text = 'Skip to main content'): void {
-  if (typeof document === 'undefined') return
-  
-  const skipLink = document.createElement('a')
-  skipLink.href = `#${targetId}`
-  skipLink.textContent = text
-  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded'
-  
-  document.body.insertBefore(skipLink, document.body.firstChild)
-}
-
-/**
- * Check if user prefers reduced motion
- */
-export function prefersReducedMotion(): boolean {
-  if (typeof window === 'undefined') return false
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches
-}
-
-/**
- * Get accessible focus styles
- */
-export function getFocusStyles(): string {
-  return 'focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-}
-
-/**
- * Validate ARIA attributes
- */
-export function validateAriaAttributes(element: HTMLElement): string[] {
-  const errors: string[] = []
-  
-  // Check for required ARIA attributes
-  const hasAriaLabel = element.hasAttribute('aria-label')
-  const hasAriaLabelledBy = element.hasAttribute('aria-labelledby')
-  const hasAriaDescribedBy = element.hasAttribute('aria-describedby')
-  
-  if (!hasAriaLabel && !hasAriaLabelledBy && !element.textContent?.trim()) {
-    errors.push('Element needs accessible name (aria-label, aria-labelledby, or visible text)')
-  }
-  
-  // Check for invalid ARIA attributes
-  const ariaAttributes = Array.from(element.attributes)
-    .filter(attr => attr.name.startsWith('aria-'))
-    .map(attr => attr.name)
-  
-  const validAriaAttributes = [
-    'aria-label', 'aria-labelledby', 'aria-describedby', 'aria-expanded',
-    'aria-hidden', 'aria-selected', 'aria-checked', 'aria-disabled',
-    'aria-required', 'aria-invalid', 'aria-live', 'aria-atomic',
-    'aria-busy', 'aria-controls', 'aria-current', 'aria-flowto',
-    'aria-owns', 'aria-posinset', 'aria-setsize', 'aria-sort',
-    'aria-valuemin', 'aria-valuemax', 'aria-valuenow', 'aria-valuetext',
-    'aria-orientation', 'aria-multiline', 'aria-multiselectable',
-    'aria-readonly', 'aria-level', 'aria-haspopup', 'aria-modal',
-    'aria-pressed', 'aria-sort', 'aria-valuemin', 'aria-valuemax',
-    'aria-valuenow', 'aria-valuetext'
-  ]
-  
-  for (const attr of ariaAttributes) {
-    if (!validAriaAttributes.includes(attr)) {
-      errors.push(`Invalid ARIA attribute: ${attr}`)
-    }
-  }
-  
-  return errors
-}
-
-/**
- * Make element focusable with proper tab order
- */
-export function makeFocusable(
-  element: HTMLElement,
-  tabIndex: number = 0
+export function handleKeyboardNavigation(
+  event: KeyboardEvent,
+  onEnter?: () => void,
+  onEscape?: () => void,
+  onArrowUp?: () => void,
+  onArrowDown?: () => void,
+  onArrowLeft?: () => void,
+  onArrowRight?: () => void
 ): void {
-  element.setAttribute('tabindex', tabIndex.toString())
-  
-  if (!element.hasAttribute('role')) {
-    element.setAttribute('role', 'button')
+  switch (event.key) {
+    case 'Enter':
+    case ' ':
+      onEnter?.();
+      break;
+    case 'Escape':
+      onEscape?.();
+      break;
+    case 'ArrowUp':
+      onArrowUp?.();
+      break;
+    case 'ArrowDown':
+      onArrowDown?.();
+      break;
+    case 'ArrowLeft':
+      onArrowLeft?.();
+      break;
+    case 'ArrowRight':
+      onArrowRight?.();
+      break;
   }
 }
 
 /**
- * Remove focus from element
+ * Screen reader detection
  */
-export function removeFocus(element: HTMLElement): void {
-  element.setAttribute('tabindex', '-1')
-  element.blur()
+export function isScreenReaderActive(): boolean {
+  if (typeof window === 'undefined') return false;
+  
+  // Check for common screen reader indicators
+  const hasAriaLive = document.querySelector('[aria-live]') !== null;
+  const hasScreenReaderClass = document.querySelector('.sr-only') !== null;
+  const hasAriaHidden = document.querySelector('[aria-hidden="true"]') !== null;
+  
+  return hasAriaLive || hasScreenReaderClass || hasAriaHidden;
 }
 
 /**
- * Get screen reader only text class
+ * React hook for accessibility
  */
-export function getScreenReaderOnlyClass(): string {
-  return 'sr-only'
+export function useAccessibility() {
+  const announce = useCallback((message: string, priority: 'polite' | 'assertive' = 'polite') => {
+    announceToScreenReader(message, priority);
+  }, []);
+
+  const focusElement = useCallback((element: HTMLElement | null) => {
+    if (element) {
+      element.focus();
+    }
+  }, []);
+
+  const generateId = useCallback((prefix = 'a11y') => {
+    return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+  }, []);
+
+  return {
+    announce,
+    focusElement,
+    generateId,
+    isScreenReaderActive: isScreenReaderActive()
+  };
 }
 
-/**
- * Get visually hidden class
- */
-export function getVisuallyHiddenClass(): string {
-  return 'sr-only focus:not-sr-only'
-}
+export default {
+  generateId,
+  announceToScreenReader,
+  focusElement,
+  trapFocus,
+  createSkipLink,
+  getAriaLabel,
+  setAriaExpanded,
+  setAriaSelected,
+  setAriaPressed,
+  getContrastRatio,
+  isKeyboardNavigation,
+  handleKeyboardNavigation,
+  isScreenReaderActive,
+  useAccessibility
+};
