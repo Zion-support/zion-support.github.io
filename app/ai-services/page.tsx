@@ -102,6 +102,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
         'A/B Testing Automation',
         'Cross-Platform Integration'
       ],
+<<<<<<< HEAD
       icon: <Target className="w-8 h-8" />,
       category: 'Marketing',
       popular: true,
@@ -362,6 +363,11 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
           popular: false
         }
       ]
+=======
+      icon: Target,
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
     },
     {
       id: 5,
@@ -369,6 +375,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
       description: 'Intelligent document processing and data extraction with OCR and NLP',
       price: '$799/month',
       features: [
+<<<<<<< HEAD
         'OCR Text Recognition',
         'Document Classification',
         'Data Extraction',
@@ -377,6 +384,16 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
         'Compliance Checking',
         'Multi-Format Support',
         'Batch Processing'
+=======
+        'Big Data Processing',
+        'Real-time Analytics',
+        'Predictive Modeling',
+        'Custom Dashboard Creation',
+        'Data Visualization',
+        'Automated Insights',
+        'Multi-Format Data Support',
+        'Advanced Security & Compliance'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
       ],
       icon: <FileText className="w-8 h-8" />,
       category: 'Document Processing',
@@ -393,6 +410,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
     },
     {
       id: 6,
+<<<<<<< HEAD
       name: 'AI Image & Video Analysis',
       description: 'Advanced computer vision platform for image and video content analysis',
       price: '$1,199/month',
@@ -910,6 +928,24 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+=======
+      name: 'AI Workflow Automation',
+      description: 'Intelligent business process automation with self-optimizing workflows',
+      price: '$1,899/month',
+      features: [
+        'Visual Workflow Builder',
+        'Smart Process Optimization',
+        'Error Detection & Correction',
+        'Cost Reduction Analysis',
+        'Scalable Architecture',
+        'Integration Management',
+        'Performance Monitoring',
+        'Custom Rule Engine'
+      ],
+      icon: Zap,
+      color: 'text-yellow-600',
+      bgColor: 'bg-yellow-50'
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
     }
   ];
 
@@ -930,6 +966,7 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16">
@@ -962,9 +999,25 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
               <h3 className="font-bold text-white mb-3 text-lg">Enterprise Security</h3>
               <p className="text-sm text-gray-300 leading-relaxed">Bank-level security with SOC 2 compliance and end-to-end encryption</p>
             </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your business with our comprehensive suite of AI-powered services. 
+              From analytics to automation, we provide cutting-edge solutions tailored to your needs.
+            </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category, index) => (
@@ -998,6 +1051,19 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                     <Star className="w-4 h-4 fill-current" />
                     <span className="ml-1 text-sm font-medium">{service.rating}</span>
 =======
+=======
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {aiServices.map((service) => (
+            <div key={service.id} className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
+              {service.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
               )}
               
               <div className="p-8">
@@ -1028,7 +1094,22 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                   </div>
                   <div className="text-3xl font-bold text-gray-900 mb-2">
                     {service.price}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-a74d
+=======
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    {service.popular && (
+                      <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    )}
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">4.8</span>
+                    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
                   </div>
                 </div>
               </div>
@@ -1105,8 +1186,14 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                       </div>
                     </div>
                   ))}
+<<<<<<< HEAD
                 </div>
             )}
+=======
+                </ul>
+<<<<<<< HEAD
+              </div>
+>>>>>>> 0cc94a9107be4e149f624d711393a8900b821eec
 
               {/* Features */}
               <div className="mb-6">
@@ -1146,11 +1233,23 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
                 <button className="px-4 py-2 border border-gray-600 text-gray-300 rounded-lg hover:border-cyan-500 hover:text-cyan-400 transition-colors">
                   <ExternalLink className="w-4 h-4" />
                 </button>
+=======
+                
+                <div className="space-y-3">
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 group-hover:shadow-lg">
+                    Get Started
+                  </button>
+                  <button className="w-full border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+                    Learn More
+                  </button>
+                </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
               </div>
             </div>
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12 cyber-card">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
@@ -1174,6 +1273,24 @@ import { CheckCircle, Star, ArrowRight, Zap, Shield, Clock, Users, TrendingUp, G
             >
               Get Free Consultation
             </a>
+=======
+      {/* CTA Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses already using our AI services to drive growth and efficiency.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+              Start Free Trial
+            </button>
+            <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-300">
+              Schedule Demo
+            </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
           </div>
           
           <div className="mt-8 text-sm text-gray-400">

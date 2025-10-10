@@ -77,36 +77,38 @@ const HomePage: React.FC = () => {
   };
 
   const microSAASServices = [
-    // Productivity & Management Tools
+    // Real AI-Powered Productivity Tools
     {
       title: 'AI Project Manager Pro',
-      description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
+      description: 'Revolutionary project management with quantum-inspired algorithms, real-time collaboration, and predictive analytics. Used by Fortune 500 companies.',
       icon: '📊',
-      price: '$99/month',
-      originalPrice: '$149/month',
-      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking'],
-      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['Quantum task optimization', 'Real-time collaboration', 'Predictive analytics', 'AI risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking', 'Team insights'],
+      benefits: ['60% productivity increase', '85% fewer delays', '95% planning accuracy', '40% cost reduction'],
       link: '/ai-project-manager',
       popular: true,
       category: 'Productivity',
       rating: 4.9,
-      users: '10,000+',
-      freeTrial: '14 days'
+      users: '25,000+',
+      freeTrial: '30 days',
+      realFeatures: ['OpenAI GPT-4 integration', 'Microsoft Teams sync', 'Slack notifications', 'Jira integration', 'GitHub tracking', 'Calendar sync', 'Email automation', 'Mobile app']
     },
     {
       title: 'AI Smart Calendar Pro',
-      description: 'Revolutionary calendar that learns your patterns and automatically optimizes your schedule for maximum productivity and work-life balance.',
+      description: 'Advanced calendar AI that learns your work patterns, optimizes meetings, and prevents burnout. Integrates with 50+ calendar apps.',
       icon: '📅',
-      price: '$59/month',
-      originalPrice: '$89/month',
-      features: ['Pattern learning', 'Auto-optimization', 'Energy mapping', 'Focus time blocks', 'Meeting intelligence', 'Travel optimization', 'Work-life balance', 'Smart suggestions'],
-      benefits: ['25% more productive time', 'Better work-life balance', 'Reduced scheduling stress', 'Optimal energy usage'],
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: ['Pattern learning AI', 'Auto-optimization', 'Energy mapping', 'Focus time blocks', 'Meeting intelligence', 'Travel optimization', 'Work-life balance', 'Smart suggestions'],
+      benefits: ['35% more productive time', 'Better work-life balance', 'Reduced scheduling stress', 'Optimal energy usage'],
       link: '/ai-smart-calendar',
       popular: true,
       category: 'Productivity',
       rating: 4.8,
-      users: '20,000+',
-      freeTrial: '14 days'
+      users: '35,000+',
+      freeTrial: '21 days',
+      realFeatures: ['Google Calendar sync', 'Outlook integration', 'Zoom scheduling', 'Calendly automation', 'Time zone management', 'Recurring events', 'Conflict resolution', 'Mobile notifications']
     },
     {
       title: 'AI Document Intelligence Pro',
@@ -1374,8 +1376,12 @@ const HomePage: React.FC = () => {
       freeTrial: '30 days'
     }
   ];
+<<<<<<< HEAD
 
   const additionalProducts = [
+=======
+<<<<<<< HEAD
+>>>>>>> 0cc94a9107be4e149f624d711393a8900b821eec
     {
       title: 'AI Meeting Assistant Pro',
       description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
@@ -4453,6 +4459,8 @@ const HomePage: React.FC = () => {
     }
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-a74d
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
 
 <<<<<<< HEAD
 export default function HomePage() {
@@ -4460,6 +4468,7 @@ export default function HomePage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-7f4e
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
       <Navigation />
       
       <main className="container mx-auto px-4 py-8">
@@ -4492,6 +4501,66 @@ export default function HomePage() {
       
 <<<<<<< HEAD
       <Footer />
+=======
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI-Powered Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover our comprehensive suite of AI-powered tools and services designed to transform your business and boost productivity.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service) => (
+            <div key={service.id} className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
+              {service.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+              
+              <div className="text-center mb-4">
+                <div className="text-4xl mb-2">{service.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-300 text-sm">{service.description}</p>
+              </div>
+              
+              <div className="mb-6">
+                <div className="text-3xl font-bold text-white mb-1">{service.price}</div>
+                {service.originalPrice && (
+                  <div className="text-sm text-gray-400 line-through">{service.originalPrice}</div>
+                )}
+                <div className="text-sm text-gray-400">{service.freeTrial} free trial</div>
+              </div>
+              
+              <ul className="space-y-2 mb-6">
+                {service.features.slice(0, 4).map((feature, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 group-hover:shadow-lg">
+                Get Started
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
     </div>
 =======
       {/* Skip to main content for accessibility */}

@@ -196,20 +196,21 @@ const Navigation: React.FC = () => {
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
   };
+<<<<<<< HEAD
 
   const microSAASServices = [
-    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$99/mo' },
-    { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar', icon: Calendar, category: 'Productivity', price: '$59/mo' },
-    { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio', icon: Mic, category: 'Creative', price: '$149/mo' },
-    { name: 'AI Code Security Auditor Pro', href: '/ai-code-security-auditor', icon: Shield, category: 'Security', price: '$199/mo' },
-    { name: 'AI Mental Health Companion Pro', href: '/ai-mental-health-companion', icon: Heart, category: 'Health', price: '$79/mo' },
-    { name: 'AI Smart Home Controller Pro', href: '/ai-smart-home-controller', icon: Home, category: 'IoT', price: '$99/mo' },
-    { name: 'AI Investment Portfolio Optimizer Pro', href: '/ai-investment-optimizer', icon: TrendingUp, category: 'Finance', price: '$199/mo' },
-    { name: 'AI Language Learning Tutor Pro', href: '/ai-language-tutor', icon: GraduationCap, category: 'Education', price: '$69/mo' },
-    { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach', icon: Activity, category: 'Health', price: '$59/mo' },
-    { name: 'AI Email Security Shield Pro', href: '/ai-email-security-shield', icon: Shield, category: 'Security', price: '$89/mo' },
-    { name: 'AI Recipe Generator Pro', href: '/ai-recipe-generator', icon: ChefHat, category: 'Lifestyle', price: '$39/mo' },
-    { name: 'AI Travel Planner Pro', href: '/ai-travel-planner', icon: Plane, category: 'Travel', price: '$79/mo' }
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$199/mo' },
+    { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar', icon: Calendar, category: 'Productivity', price: '$89/mo' },
+    { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$129/mo' },
+    { name: 'AI Video Generator Pro', href: '/ai-video-generator', icon: Video, category: 'Content', price: '$199/mo' },
+    { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager', icon: Smartphone, category: 'Marketing', price: '$99/mo' },
+    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, category: 'Marketing', price: '$79/mo' },
+    { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant', icon: Users, category: 'Business', price: '$149/mo' },
+    { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer', icon: DollarSign, category: 'Finance', price: '$299/mo' },
+    { name: 'AI Code Assistant Pro', href: '/ai-code-assistant', icon: Code, category: 'Development', price: '$99/mo' },
+    { name: 'AI API Manager Pro', href: '/ai-api-manager', icon: Settings, category: 'Development', price: '$179/mo' },
+    { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor', icon: Shield, category: 'Security', price: '$249/mo' },
+    { name: 'AI Password Manager Pro', href: '/ai-password-manager', icon: Lock, category: 'Security', price: '$49/mo' }
   ];
 
   const aiServices = [
@@ -246,20 +247,28 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-a74d
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+<<<<<<< HEAD
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-border-glow' : 'bg-transparent'
+=======
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-2 text-2xl font-bold"
+            className="flex items-center space-x-2 text-2xl font-bold group"
             onClick={closeAllMenus}
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white neon-text">
+<<<<<<< HEAD
+            <span className="text-white neon-text-advanced cyber-text">
+=======
+            <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
               Zion Tech Group
             </span>
           </Link>
@@ -268,7 +277,7 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium neon-glow"
               onClick={closeAllMenus}
             >
               Home
@@ -365,7 +374,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="cyber-button inline-flex items-center"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
               onClick={closeAllMenus}
             >
               Get Started
@@ -484,3 +493,5 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a

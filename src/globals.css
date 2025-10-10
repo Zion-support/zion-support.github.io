@@ -27,6 +27,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './styles/futuristic.css';
+
 /* Futuristic Design System */
 :root {
   --neon-cyan: #00ffff;

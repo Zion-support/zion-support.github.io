@@ -627,6 +627,7 @@ export default function MicroSaasPage() {
     }
   ];
 
+<<<<<<< HEAD
   const benefits = [
     {
       icon: TrendingUp,
@@ -744,44 +745,29 @@ export default function MicroSaasPage() {
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
               Powerful AI-driven tools for modern businesses
+=======
+  const categories = ['All', 'Productivity', 'Creative', 'Security', 'Health', 'IoT', 'Finance', 'Education'];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <ScrollToTop />
+      
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Micro SAAS Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Powerful, affordable AI-driven tools for modern businesses. 
+              Choose from our comprehensive suite of specialized applications designed to boost productivity and efficiency.
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
             </p>
-            <p className="text-base sm:text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              Choose from 50+ ready-to-use micro SAAS applications designed to streamline your business operations. 
-              Each tool is powered by cutting-edge AI technology and comes with comprehensive support.
-            </p>
-            
-            {/* Search and Filter */}
-            <div className="max-w-4xl mx-auto mb-12">
-              <div className="relative mb-8">
-                <input
-                  type="text"
-                  placeholder="Search micro SAAS tools..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-6 py-4 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 backdrop-blur-sm"
-                />
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-cyan-400">
-                  🔍
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap justify-center gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                      selectedCategory === category
-                        ? 'bg-cyan-400 text-slate-900 font-semibold'
-                        : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Services Grid */}
@@ -968,9 +954,306 @@ export default function MicroSaasPage() {
           </div>
         </section>
       </main>
+=======
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                activeTab === category.toLowerCase()
+                  ? 'bg-blue-600 text-white shadow-lg'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              }`}
+              onClick={() => setActiveTab(category.toLowerCase())}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {microSaasServices
+            .filter(service => activeTab === 'all' || service.category.toLowerCase() === activeTab)
+            .map((service) => (
+            <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 group">
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-4xl">{service.icon}</div>
+                {service.popular && (
+                  <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    Popular
+                  </span>
+                )}
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              
+              <div className="mb-6">
+                <div className="text-3xl font-bold text-white mb-1">${service.pricing.monthly}</div>
+                <div className="text-sm text-gray-400">per month</div>
+              </div>
+              
+              <ul className="space-y-2 mb-6">
+                {service.features.slice(0, 4).map((feature, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 group-hover:shadow-lg">
+                Get Started
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
 
       <Footer />
-      <ScrollToTop />
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      {/* Benefits */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Why Choose Our Micro SAAS Solutions?
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Proven results and enterprise-grade solutions that deliver measurable business value
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <benefit.icon className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SAAS Services */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Our Micro SAAS Solutions
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Comprehensive micro SAAS solutions designed to solve real business challenges
+            </p>
+          </div>
+          <div className="space-y-16">
+            {microSaasServices.map((category, categoryIndex) => (
+              <div key={categoryIndex}>
+                <div className="flex items-center space-x-3 mb-8">
+                  <category.icon className={`w-8 h-8 ${category.color}`} />
+                  <h3 className="text-2xl font-bold text-white">{category.category}</h3>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {category.services.map((service, serviceIndex) => (
+                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 relative">
+                      {service.popular && (
+                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                          Popular
+                        </div>
+                      )}
+                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
+                      <p className="text-gray-300 mb-4">{service.description}</p>
+                      <div className="space-y-3 mb-6">
+                        <h5 className="text-sm font-semibold text-cyan-400">Key Features:</h5>
+                        <ul className="space-y-1">
+                          {service.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="space-y-2 mb-6">
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-gray-400">Pricing:</span>
+                          <span className="text-sm font-medium text-white">{service.pricing}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-gray-400">Trial:</span>
+                          <span className="text-sm font-medium text-cyan-400">{service.trial}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-gray-400">Expected ROI:</span>
+                          <span className="text-sm font-medium text-green-400">{service.roi}</span>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <a
+                          href={service.link}
+                          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all block text-center"
+                        >
+                          Learn More
+                        </a>
+                        <a
+                          href="/contact"
+                          className="w-full border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-slate-900 transition-all block text-center"
+                        >
+                          Start Free Trial
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your business needs. All plans include free trials and no setup fees.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index) => (
+              <div key={index} className={`bg-slate-800/50 rounded-lg p-8 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-bold px-4 py-1 rounded-full">
+                    Most Popular
+                  </div>
+                )}
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-300 mb-4">{tier.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    <span className="text-gray-400 ml-1">{tier.period}</span>
+                  </div>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-2 text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/contact"
+                  className={`w-full py-3 px-4 rounded-lg font-medium transition-all block text-center ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                  }`}
+                >
+                  {tier.cta}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              What Our Customers Say
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Real results from real customers who have transformed their businesses with our solutions
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-lg">
+                      {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-cyan-400">{testimonial.role}, {testimonial.company}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            Join thousands of businesses that have already transformed their operations with our micro SAAS solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+            >
+              <MessageSquare className="w-5 h-5 mr-2" />
+              Start Free Trial
+            </a>
+            <a
+              href="/consultation"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+            >
+              <Calendar className="w-5 h-5 mr-2" />
+              Schedule Demo
+            </a>
+          </div>
+          <div className="mt-8 text-sm text-gray-200">
+            <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>
+            <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>
+            <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-804c
+=======
+
+export default MicroSaasPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e12a
+>>>>>>> 0cc94a9107be4e149f624d711393a8900b821eec

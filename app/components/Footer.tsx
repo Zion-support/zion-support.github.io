@@ -38,14 +38,18 @@ const Footer: React.FC = memo(() => {
       title: 'Micro SAAS',
       icon: Code,
       services: [
-        { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio' },
-        { name: 'AI Code Security Auditor Pro', href: '/ai-code-security-auditor' },
-        { name: 'AI Mental Health Companion Pro', href: '/ai-mental-health-companion' },
-        { name: 'AI Smart Home Controller Pro', href: '/ai-smart-home-controller' },
-        { name: 'AI Investment Portfolio Optimizer Pro', href: '/ai-investment-optimizer' },
-        { name: 'AI Language Learning Tutor Pro', href: '/ai-language-tutor' },
-        { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach' },
-        { name: 'AI Email Security Shield Pro', href: '/ai-email-security-shield' }
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
+        { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar' },
+        { name: 'AI Content Writer Pro', href: '/ai-content-writer' },
+        { name: 'AI Video Generator Pro', href: '/ai-video-generator' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager' },
+        { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
+        { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant' },
+        { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer' },
+        { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
+        { name: 'AI API Manager Pro', href: '/ai-api-manager' },
+        { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor' },
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager' }
       ]
     },
     {
@@ -90,17 +94,30 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-cyan-400/30">
+<<<<<<< HEAD
+    <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-cyan-400/30 cyber-scan-effect">
+=======
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 backdrop-blur-sm border-t border-cyan-400/30 relative overflow-hidden">
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.05)_0%,transparent_50%)] animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[length:50px_50px]" />
+      
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center cyber-glow">
+            <div className="flex items-center space-x-2 mb-6 group">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
+<<<<<<< HEAD
+              <span className="text-white font-bold text-xl neon-text-advanced cyber-text">Zion Tech Group</span>
+=======
+              <span className="text-white font-bold text-xl bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">Zion Tech Group</span>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5b7f
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
@@ -248,7 +265,7 @@ const Footer: React.FC = memo(() => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
-              <button className="cyber-button px-6 py-3">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
