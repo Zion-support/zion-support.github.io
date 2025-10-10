@@ -599,9 +599,8 @@ export const services: Service[] = [
       min: 200,
       max: 500,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'ai-customer-support-bot',
     name: 'AI Customer Support Bot',
     category: 'ai',
@@ -644,9 +643,8 @@ export const services: Service[] = [
       min: 150,
       max: 400,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'ai-content-generator',
     name: 'AI Content Generator Studio',
     category: 'ai',
@@ -689,9 +687,8 @@ export const services: Service[] = [
       min: 99,
       max: 300,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'ai-data-analytics',
     name: 'AI Data Analytics Platform',
     category: 'ai',
@@ -734,9 +731,8 @@ export const services: Service[] = [
       min: 300,
       max: 1000,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'ai-cybersecurity',
     name: 'AI Cybersecurity Suite',
     category: 'ai',
@@ -826,9 +822,8 @@ export const services: Service[] = [
       min: 50,
       max: 150,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'ai-email-marketing',
     name: 'AI Email Marketing Pro',
     category: 'micro-saas',
@@ -871,9 +866,8 @@ export const services: Service[] = [
       min: 60,
       max: 200,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'ai-seo-optimizer',
     name: 'AI SEO Optimizer',
     category: 'micro-saas',
@@ -916,9 +910,8 @@ export const services: Service[] = [
       min: 80,
       max: 250,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'ai-invoice-generator',
     name: 'AI Invoice Generator',
     category: 'micro-saas',
@@ -961,9 +954,8 @@ export const services: Service[] = [
       min: 30,
       max: 100,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'ai-time-tracker',
     name: 'AI Time Tracker Pro',
     category: 'micro-saas',
@@ -1053,9 +1045,8 @@ export const services: Service[] = [
       min: 500,
       max: 2000,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'cybersecurity-suite',
     name: 'Enterprise Cybersecurity Suite',
     category: 'it',
@@ -1098,9 +1089,8 @@ export const services: Service[] = [
       min: 800,
       max: 3000,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'devops-automation',
     name: 'DevOps & CI/CD Automation',
     category: 'it',
@@ -1143,9 +1133,8 @@ export const services: Service[] = [
       min: 500,
       max: 1500,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'database-management',
     name: 'Database Management & Optimization',
     category: 'it',
@@ -1237,9 +1226,8 @@ export const services: Service[] = [
       min: 3000,
       max: 10000,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'blockchain-solutions',
     name: 'Blockchain & Web3 Solutions',
     category: 'emerging-tech',
@@ -1284,9 +1272,8 @@ export const services: Service[] = [
       min: 2000,
       max: 8000,
       currency: 'USD'
-    }
-  },
-  {
+    },
+    {
     id: 'iot-edge-computing',
     name: 'IoT & Edge Computing Platform',
     category: 'emerging-tech',

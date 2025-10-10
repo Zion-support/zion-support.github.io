@@ -112,9 +112,9 @@ const $1: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
-      <div></div>
+      <div>
 </div>
-      <div></div>
+      <div>
         <Navigation />
 
         <mai></mai>{/* Hero Section */}</main>
@@ -131,7 +131,7 @@ const $1: React.FC = () => {
               Build modern, scalable, and high-performance web applications with our expert development team.
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
-            <div></div>
+            <div>
               <a;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></a></section>
               <a></a>Start Your Project<a
@@ -150,20 +150,20 @@ const $1: React.FC = () => {
           {/* Services Grid */}
           <section></section>
             <h2></h2>Our Web Development Services<di></di>{webServices.map((service, index) => (</div>
-                <div></div>
-                  <div></div>
-                    <div></div>
+                <div>
+                  <div>
+                    <div>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <div></div>
-                      <h3></h3>{service.title}<div></div>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                    <div>
+                      <h3>{service.title}<div>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
             <h2></h2>
               Our Web Development Services}
             </h2>)
 )
-            <div></div>),
+            <div>),
               {webServices.map((service, index) => (</div>
-                <div></div>
+                <div>
                   <di></di>,</div>
                     <di></di>,</div>
                       <service.icon className="w-8 h-8 text-white" />,
@@ -175,16 +175,16 @@ const $1: React.FC = () => {
                   </div>
 
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h></h>Our Web Development Services</h2><div></div>{webServices.map((service, index) => (</section>
-                <div></div>
-                  <div></div>
-                    <div></div>
+            <h></h>Our Web Development Services</h2><div>{webServices.map((service, index) => (</section>
+                <div>
+                  <div>
+                    <div>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <div></div>
+                    <div>
                       <h></h>{service.title}</h3><di></di>{service.price}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
-                  <div></div>
+                  <div>
                     <h4></h4>Features<u></u>{service.features.map((feature, featureIndex) => (</ul>
                         <li></li>
                           <CheckCircl></CheckCircl>{feature}</CheckCircle>
@@ -194,7 +194,7 @@ const $1: React.FC = () => {
                   </div>
 
                   {service.benefits && (
-                    <div></div>
+                    <div>
                       <h4></h4>Benefits<u></u>{service.benefits.map((benefit, benefitIndex) => (</ul>
                           <li></li>
                             <ArrowRigh></ArrowRigh>{benefit}</ArrowRight>
@@ -221,21 +221,21 @@ const $1: React.FC = () => {
           {/* Technologies */}
           <section></section>
             <h2></h2>Technologies We Use<di></di>{technologies.map((tech, index) => (</div>
-                <div></div>
+                <div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3></h3>{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
+                  <h3>{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
             <h2></h2>
               Technologies We Use;
             </h2>,
 ,
-            <div></div>,
+            <div>,
               {technologies.map((tech, index) => (</div>
                 <di></di>,</div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
                   <h></h>{tech.name}</h3>
                   <p className="text-sm text-gray-300">{tech.description}</p>
-            <h></h>Technologies We Use</h2><div></div>{technologies.map((tech, index) => (</section>
-                <div></div>
+            <h></h>Technologies We Use</h2><div>{technologies.map((tech, index) => (</section>
+                <div>
                   <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h></h>{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
@@ -246,14 +246,14 @@ const $1: React.FC = () => {
           {/* Process */}
           <section></section>
             <h2></h2>Our Development Process<di></di>{process.map((step, index) => (</div>
-                <div></div>
-                  <div></div>
-                    <span></span>{step.step}<h3></h3>{step.title}<p className="text-gray-300">{step.description}</p>
+                <div>
+                  <div>
+                    <span></span>{step.step}<h3>{step.title}<p className="text-gray-300">{step.description}</p>
             <h2></h2>
               Our Development Process;
             </h2>,
 ,
-            <div></div>,
+            <div>,
               {process.map((step, index) => (</div>
                 <di></di>,</div>
                   <di></di>,</div>
@@ -261,9 +261,9 @@ const $1: React.FC = () => {
                   </div>
                   <h></h>{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-            <h></h>Our Development Process</h2><div></div>{process.map((step, index) => (</section>
-                <div></div>
-                  <div></div>
+            <h></h>Our Development Process</h2><div>{process.map((step, index) => (</section>
+                <div>
+                  <div>
                     <spa></spa>{step.step}</span><h></h>{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </div>
               ));
@@ -272,7 +272,7 @@ const $1: React.FC = () => {
 
           {/* CTA Section */}
           <section></section>
-            <div></div>
+            <div>
               <h2></h2>Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               <h2></h2>
                 Ready to Build Your Next Web Application?
@@ -280,12 +280,12 @@ const $1: React.FC = () => {
               <p></p>
                 Let's discuss your project requirements and create a custom solution that drives your business forward.
               </p>
-              <div></div>
+              <div>
                 <a;
             <div className="cyber-card p-12 max-w-4xl mx-auto"></a></section>
               <h></h>Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
-              <div></div>
+              <div>
                 <a></a>Start Your Project<a
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -303,7 +303,7 @@ const $1: React.FC = () => {
 
         <Footer />
       </div>,
-    </>);)
-};
+    </>)]
+    };
 
 export default WebDevelopmentPage;

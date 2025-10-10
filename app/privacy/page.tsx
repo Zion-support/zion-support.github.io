@@ -10,87 +10,87 @@ export default function PrivacyPage() {
       category: 'Personal Information',
       icon: User,
       description: 'Name, email address, phone number, company information',
-      examples: ['Contact forms', 'Newsletter signups', 'Account creation'];)
-},
+      examples: ['Contact forms', 'Newsletter signups', 'Account creation']]
+    },
     {
       category: 'Usage Data',
       icon: Database,
       description: 'Information about how you use our website and services',
-      examples: ['Page views', 'Time spent', 'Features used', 'Device information'];)
-},
+      examples: ['Page views', 'Time spent', 'Features used', 'Device information']]
+    },
     {
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];)
-}
+      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']]
+    }
   ];
 
   const purposes = [
     {
       title: 'Service Provision',
       icon: Globe,
-      description: 'To provide and maintain our services';)
-},
+      description: 'To provide and maintain our services']
+    },
     {
       title: 'Communication',
       icon: Mail,
-      description: 'To communicate with you about our services';)
-},
+      description: 'To communicate with you about our services']
+    },
     {
       title: 'Improvement',
       icon: ArrowRight,
-      description: 'To improve and develop new features';)
-},
+      description: 'To improve and develop new features']
+    },
     {
       title: 'Security',
       icon: Shield,
-      description: 'To protect against fraud and abuse';)
-}
+      description: 'To protect against fraud and abuse']
+    }
   ];
 
   const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal data',
-      icon: Eye;)
-},
+      icon: Eye]
+    },
     {
       title: 'Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: CheckCircle;)
-},
+      icon: CheckCircle]
+    },
     {
       title: 'Erasure',
       description: 'Request deletion of your personal data',
-      icon: Lock;)
-},
+      icon: Lock]
+    },
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database;)
-}
+      icon: Database]
+    }
   ];
 
   return (
-    <div></div>
-      <div></div>
-        <div></div>
+    <div>
+      <div>
+        <div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
             Privacy Policy</h1>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
             Your privacy is important to us. Learn how we collect, use, and protect your information.
           </p>
-          <div></div>
+          <div>
             <Calendar className="h-4 w-4 mr-2" />
             Last updated: {lastUpdated}
           </div>
         </div>
       </div>
 
-      <div></div>
-        <div></div>
+      <div>
+        <div>
           <div className="max-w-4xl mx-auto space-y-12"></div>
             {/* Introduction */}</div>
             <section></section>
@@ -108,8 +108,8 @@ export default function PrivacyPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Information We Collect</h2>
               <div className="grid md:grid-cols-3 gap-6"></div>
                 {dataTypes.map((type, index) => (</div>
-                  <div></div>
-                    <div></div>
+                  <div>
+                    <div>
                       <type.icon className="h-6 w-6 text-blue-600 mr-3" />
                       <h3 className="text-lg font-semibold text-gray-900"></h>{type.category}</h3>
                     </div>
@@ -129,11 +129,11 @@ export default function PrivacyPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>How We Use Your Information</h2>
               <div className="grid md:grid-cols-2 gap-6"></div>
                 {purposes.map((purpose, index) => (</div>
-                  <div></div>
-                    <div></div>
+                  <div>
+                    <div>
                       <purpose.icon className="h-6 w-6 text-blue-600" />
                     </div>
-                    <div></div>
+                    <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>{purpose.title}</h3>
                       <p className="text-gray-700">{purpose.description}</p>
                     </div>
@@ -145,10 +145,10 @@ export default function PrivacyPage() {
             {/* Data Security */}
             <section></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Data Security</h2>
-              <div></div>
-                <div></div>
+              <div>
+                <div>
                   <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
-                  <div></div>
+                  <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>Security Measures</h3>
                     <p className="text-gray-700 mb-4"></p>
                       We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
@@ -169,8 +169,8 @@ export default function PrivacyPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Your Rights</h2>
               <div className="grid md:grid-cols-2 gap-6"></div>
                 {rights.map((right, index) => (</div>
-                  <div></div>
-                    <div></div>
+                  <div>
+                    <div>
                       <right.icon className="h-6 w-6 text-green-600 mr-3" />
                       <h3 className="text-lg font-semibold text-gray-900"></h>{right.title}</h3>
                     </div>
@@ -186,20 +186,20 @@ export default function PrivacyPage() {
               <p className="text-gray-700 mb-6"></p>
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
-              <div></div>
-                <div></div>
+              <div>
+                <div>
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
                   <span className="text-gray-700"></spa>privacy@ziontechgroup.com</span>
                 </div>
-                <div></div>
+                <div>
                   <Phone className="h-5 w-5 text-blue-600 mr-3" />
                   <span className="text-gray-700"></spa>(302) 464-0950</span>
                 </div>
-                <div></div>
+                <div>
                   <Globe className="h-5 w-5 text-blue-600 mr-3" />
                   <span className="text-gray-700"></spa>ziontechgroup.com</span>
                 </div>
-                <div></div>
+                <div>
                   <User className="h-5 w-5 text-blue-600 mr-3" />
                   <span className="text-gray-700"></spa>Zion Tech Group Privacy Team</span>
                 </div>
@@ -208,10 +208,10 @@ export default function PrivacyPage() {
 
             {/* Updates */}
             <section></section>
-              <div></div>
-                <div></div>
+              <div>
+                <div>
                   <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
-                  <div></div>
+                  <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2"></h>Policy Updates</h3>
                     <p className="text-gray-700"></p>
                       We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
@@ -224,5 +224,5 @@ export default function PrivacyPage() {
         </div>
       </div>
     </div>
-  );)
-}
+  )]
+    }

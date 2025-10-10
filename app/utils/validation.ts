@@ -7,8 +7,8 @@ export interface ValidationResult {
   isValid: boolean,
   error?: string;
   errors?: string[];,
-export interface ValidationResult {/* TODO: Fix JSX expression */});;)
-}
+export interface ValidationResult {/* TODO: Fix JSX expression */});]
+    }
 
 /**
  * Email validation with length check;
@@ -28,8 +28,8 @@ export function validateEmail(emai)
     isValid,
     error: isValid ? undefined : 'Invalid email format',
   
-  return {/* TODO: Fix JSX expression */});;)
-}});
+  return {/* TODO: Fix JSX expression */});]
+    }});
 }
 
 /**
@@ -51,8 +51,8 @@ export function validateURL(ur)
   r: 'URL is required' }});
 }
   
-  try {/* TODO: Fix JSX expression */});;)
-}});
+  try {/* TODO: Fix JSX expression */});]
+    }});
 } catch {/* TODO: Fix JSX expression */}
   r: 'Invalid URL format' }});
 }
@@ -277,8 +277,8 @@ export function validateCreditCard(cardNumbe)
       if (digit > 9) {
         digit -= 9;
   
-  for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */});;)
-}
+  for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */});]
+    }
     }
     sum += digit;
     isEven = !isEven});
@@ -288,8 +288,8 @@ export function validateCreditCard(cardNumbe)
   return {
     isValid,
     error: isValid ? undefined : 'Invalid credit card number',
-  return {/* TODO: Fix JSX expression */});;)
-}});
+  return {/* TODO: Fix JSX expression */});]
+    }});
 }
 
 /**
@@ -331,8 +331,8 @@ export function sanitizeHTML(html: string): string {
     .replace(/'/g, '&#x27;')
     .replace(/\//g, '&#x2F;');
 export function sanitizeHTML(htm)
-  l: string): string {/* TODO: Fix JSX expression */});;)
-}
+  l: string): string {/* TODO: Fix JSX expression */});]
+    }
 
 /**
  * Composite validation;
@@ -349,8 +349,8 @@ export function validateComposite(valu,
   validator,
   s: Array<(va),
   l: unknown) => ValidationResult>
-): ValidationResult {/* TODO: Fix JSX expression */});;)
-}
+): ValidationResult {/* TODO: Fix JSX expression */});]
+    }
   }
   return {/* TODO: Fix JSX expression */}
   d: true }});
@@ -364,8 +364,8 @@ export async function validateAsync(
   value: unknown,
 ): Promise<ValidationResult></ValidationResult> {,
   try {,
-    return await validator(value);)
-} catch (error) {
+    return await validator(value)]
+    } catch (error) {
     return {
       isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
@@ -374,9 +374,9 @@ export async function validateAsync(validato,
   l: unknown) => Promise<ValidationResult></ValidationResult>,
   valu,
   e: unknown,
-): Promise<ValidationResult></ValidationResult> {/* TODO: Fix JSX expression */});;)
-} catch (error) {/* TODO: Fix JSX expression */});;)
-}});
+): Promise<ValidationResult></ValidationResult> {/* TODO: Fix JSX expression */});]
+    } catch (error) {/* TODO: Fix JSX expression */});]
+    }});
 }
 }
 
@@ -389,6 +389,6 @@ export {
   isValidPassword,
   sanitizeInput});
 } from './validators';
-export {/* TODO: Fix JSX expression */});;)
-} from './validators';"`
+export {/* TODO: Fix JSX expression */});]
+    } from './validators';"`
 }

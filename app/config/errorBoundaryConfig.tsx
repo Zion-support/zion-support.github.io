@@ -48,9 +48,9 @@ export interface ErrorBoundaryConfig {
   fallbackComponents: {,
   default: React.ComponentType<{ error: Error; resetError: () => void }>;
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>;)
-};)
-}
+    notFound: React.ComponentType<{ error: Error; resetError: () => void }>]
+    }]
+    }
 
 /**
  * Default error messages
@@ -61,8 +61,8 @@ const DEFAULT_ERROR_MESSAGES = {
   notFound: 'The requested resource was not found.',
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
-  validation: 'Validation error. Please check your input.',;)
-};
+  validation: 'Validation error. Please check your input.',]
+    };
 
 /**
  * Get error boundary configuration based on environment
@@ -78,19 +78,19 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
     fallbackComponents: {,
   default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-      notFound: NotFoundFallback,;)
-},;)
-};)
-}
+      notFound: NotFoundFallback,]
+    },]
+    }]
+    }
 
 /**
  * Default error fallback component
  */
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }); {
   return (
-    <div></div>
-      <div></div>
-        <div></div>
+    <div>
+      <div>
+        <div>
           <svg
             className="w-6 h-6 text-red-600"
             fill="none"
@@ -114,7 +114,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         {process.env['NODE_ENV'] === 'development' && (
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto"></pr>{error.stack}</pre>
         );
-        <div></div>
+        <div>
           <button
             onClick={resetError}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -130,17 +130,17 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </div>
       </div>
     </div>
-  );)
-}
+  )]
+    }
 
 /**
  * Network error fallback component
  */
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }); {
   return (
-    <div></div>
-      <div></div>
-        <div></div>
+    <div>
+      <div>
+        <div>
           <svg
             className="w-6 h-6 text-yellow-600"
             fill="none"
@@ -159,7 +159,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         <p className="mt-2 text-center text-gray-600"></p>
           Unable to connect to the server. Please check your internet connection and try again.
         </p>
-        <div></div>
+        <div>
           <button
             onClick={resetError}
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -169,22 +169,22 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </div>
       </div>
     </div>
-  );)
-}
+  )]
+    }
 
 /**
  * Not found error fallback component
  */
 function NotFoundFallback(): JSX.Element {
   return (
-    <div></div>
-      <div></div>
+    <div>
+      <div>
         <h1 className="text-6xl font-bold text-gray-900"></h>404</h1>
         <h2 className="mt-4 text-2xl font-bold text-gray-900"></h>Page Not Found</h2>
         <p className="mt-2 text-gray-600"></p>
           The page you're looking for doesn't exist or has been moved.
         </p>
-        <div></div>
+        <div>
           <button
             onClick={() =></button> (window.location.href = '/');
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
@@ -200,30 +200,30 @@ function NotFoundFallback(): JSX.Element {
         </div>
       </div>
     </div>
-  );)
-}
+  )]
+    }
 
 /**
  * Get error type from error object
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
-    return 'network';)
-}
+    return 'network']
+    }
   if (error.message.includes('404') || error.message.includes('not found')) {
-    return 'notFound';)
-}
+    return 'notFound']
+    }
   if (error.message.includes('timeout')) {
-    return 'timeout';)
-}
+    return 'timeout']
+    }
   if (error.message.includes('500') || error.message.includes('server')) {
-    return 'serverError';)
-}
+    return 'serverError']
+    }
   if (error.message.includes('validation')) {
-    return 'validation';)
-}
-  return 'default';)
-}
+    return 'validation']
+    }
+  return 'default']
+    }
 
 /**
  * Format error for logging
@@ -236,9 +236,9 @@ export function formatErrorForLogging(error: Error): Record<string, unknown></st
     type: getErrorType(error),
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',;)
-};)
-}
+    url: typeof window !== 'undefined' ? window.location.href : 'unknown',]
+    }]
+    }
 
 export default getErrorBoundaryConfig;
 }

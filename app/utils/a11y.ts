@@ -278,4 +278,4 @@ export class FocusManager {
     const firstFocusable = focusableElements[0] as HTMLElement;
     firstFocusable?.focus();
   }
-}
+  }

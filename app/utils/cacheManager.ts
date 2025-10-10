@@ -88,57 +88,57 @@ export class CacheManager<T></T> {}
     // Save to persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory) {}
       this.saveToStorage();
-export enum CacheStorage {/* TODO: Fix JSX expression */});;)
-}
-export interface CacheOptions {/* TODO: Fix JSX expression */});;)
-}
-export interface CacheConfig {/* TODO: Fix JSX expression */});;)
-}
-export interface CacheEntry<T></T> {/* TODO: Fix JSX expression */});;)
-}
-export interface CacheStats {/* TODO: Fix JSX expression */});;)
-}
+export enum CacheStorage {/* TODO: Fix JSX expression */});]
+    }
+export interface CacheOptions {/* TODO: Fix JSX expression */});]
+    }
+export interface CacheConfig {/* TODO: Fix JSX expression */});]
+    }
+export interface CacheEntry<T></T> {/* TODO: Fix JSX expression */});]
+    }
+export interface CacheStats {/* TODO: Fix JSX expression */});]
+    }
 export class CacheManager {/* TODO: Fix JSX expression */}
   s: 0 };
   constructor(confi)
-  g: CacheConfig = {}); {/* TODO: Fix JSX expression */});;)
-}
+  g: CacheConfig = {}); {/* TODO: Fix JSX expression */});]
+    }
   /**
    * Start periodic cleanup of expired entries;
    */
-  private startCleanup(): void {/* TODO: Fix JSX expression */});;)
-}, 60 * 1000); // Run every minute});
+  private startCleanup(): void {/* TODO: Fix JSX expression */});]
+    }, 60 * 1000); // Run every minute});
 }
   /**
    * Stop cleanup interval;
    */
-  stopCleanup(): void {/* TODO: Fix JSX expression */});;)
-}
+  stopCleanup(): void {/* TODO: Fix JSX expression */});]
+    }
   }
   /**
    * Remove expired entries;
    */
-  private cleanup(): void {/* TODO: Fix JSX expression */});;)
-}
+  private cleanup(): void {/* TODO: Fix JSX expression */});]
+    }
     }
     // Clean localStorage;
-    if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */});;)
-}
-            });;)
-} catch {/* TODO: Fix JSX expression */});;)
-}
-        });;)
-}
-      keysToRemove.forEach(key => localStorage.removeItem(key));)
-}
-    logger.debug('Cache cleanup completed');)
-}
+    if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */});]
+    }
+            });]
+    } catch {/* TODO: Fix JSX expression */});]
+    }
+        });]
+    }
+      keysToRemove.forEach(key => localStorage.removeItem(key))]
+    }
+    logger.debug('Cache cleanup completed')]
+    }
   /**
    * Check if cache entry is expired;
    */
   private isExpired(entr)
-  y: CacheEntry<unknown></unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */});;)
-}
+  y: CacheEntry<unknown></unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */});]
+    }
   /**
    * Get storage key with prefix;
    */
@@ -152,24 +152,24 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   set<T></T>(ke,
   y: string, valu,
   e: T, option)
-  s: { ttl?: number } = {});: void {/* TODO: Fix JSX expression */});;)
-};`
+  s: { ttl?: number } = {});: void {/* TODO: Fix JSX expression */});]
+    };`
     performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
-    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */});;)
-} else if (this.storage === CacheStorage.LocalStorage &&
+    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */});]
+    } else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-} catch (error) {/* TODO: Fix JSX expression */});;)
-}
+    ) {/* TODO: Fix JSX expression */});]
+    } catch (error) {/* TODO: Fix JSX expression */});]
+    }
     } else if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-} catch (error) {/* TODO: Fix JSX expression */});;)
-}
-    });;)
-}
+    ) {/* TODO: Fix JSX expression */});]
+    } catch (error) {/* TODO: Fix JSX expression */});]
+    }
+    });]
+    }
 
   /**
    * Get a value from the cache;
@@ -203,21 +203,21 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
     let,
   entry: CacheEntry<T></T> | null = null;
-    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */});;)
-} else if (this.storage === CacheStorage.LocalStorage &&
+    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */});]
+    } else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-}
-      } catch (error) {/* TODO: Fix JSX expression */});;)
-}
+    ) {/* TODO: Fix JSX expression */});]
+    }
+      } catch (error) {/* TODO: Fix JSX expression */});]
+    }
     } else if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-}
-      } catch (error) {/* TODO: Fix JSX expression */});;)
-}
+    ) {/* TODO: Fix JSX expression */});]
+    }
+      } catch (error) {/* TODO: Fix JSX expression */});]
+    }
     }
     if (!entry) {/* TODO: Fix JSX expression */}`
       performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');
@@ -275,35 +275,35 @@ export class CacheManager {/* TODO: Fix JSX expression */}
    * Check if key exists and is not expired;
    */
   has(ke)
-  y: string): boolean {/* TODO: Fix JSX expression */});;)
-}
+  y: string): boolean {/* TODO: Fix JSX expression */});]
+    }
   /**
    * Delete a cache entry;
    */
   delete(ke)
-  y: string): void {/* TODO: Fix JSX expression */});;)
-} else if (this.storage === CacheStorage.LocalStorage &&
+  y: string): void {/* TODO: Fix JSX expression */});]
+    } else if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-} else if (this.storage === CacheStorage.SessionStorage &&
+    ) {/* TODO: Fix JSX expression */});]
+    } else if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-}
+    ) {/* TODO: Fix JSX expression */});]
+    }
   }
   /**
    * Clear all cache entries;
    */
-  clear(): void {/* TODO: Fix JSX expression */});;)
-}
+  clear(): void {/* TODO: Fix JSX expression */});]
+    }
     if (this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
       window.localStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-}
-      });;)
-}
+    ) {/* TODO: Fix JSX expression */});]
+    }
+      });]
+    }
     return deleted});
 }
 
@@ -318,16 +318,16 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     if (this.config.storage !== CacheStorage.Memory) {
     // Clear persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory) {}
-      this.clearStorage();)
-}
+      this.clearStorage()]
+    }
   }
 
   /**
    * Get all keys in the cache;
    */
   keys(): string[] {}
-    return Array.from(this.cache.keys());)
-}
+    return Array.from(this.cache.keys())]
+    }
 
   /**
    * Get cache statistics;
@@ -357,10 +357,10 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage}
-    ) {/* TODO: Fix JSX expression */});;)
-}
-      });;)
-}
+    ) {/* TODO: Fix JSX expression */});]
+    }
+      });]
+    }
 
     this.stats.entries = this.cache.size;
 
@@ -368,13 +368,13 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
     // Save to persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}
-      this.saveToStorage();)
-}
+      this.saveToStorage()]
+    }
 
     return cleaned;
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */});
-  e: this.storage });;)
-}
+  e: this.storage });]
+    }
   /**
    * Get or set with function (handles both sync and async)
    */
@@ -384,16 +384,16 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   n: () => T | Promise<T></T>,
     option,
   s: { ttl?: number } = {}
-  ): T | Promise<T></T> {/* TODO: Fix JSX expression */});;)
-}
+  ): T | Promise<T></T> {/* TODO: Fix JSX expression */});]
+    }
     const start = performance.now();
     const value = fn();
     const duration = performance.now() - start;`
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
     // Handle both sync and async values;
-    if (value instanceof Promise) {/* TODO: Fix JSX expression */});;)
-});;)
-}
+    if (value instanceof Promise) {/* TODO: Fix JSX expression */});]
+    });]
+    }
     this.set(key, value, options);
     return value});
 }
@@ -412,8 +412,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   n: () => Promise<T></T> | T,
     option,
   s: { ttl?: number } = {}
-  ): Promise<T></T> {/* TODO: Fix JSX expression */});;)
-}
+  ): Promise<T></T> {/* TODO: Fix JSX expression */});]
+    }
     const start = performance.now();
     const value = await fn();
     const duration = performance.now() - start;`
@@ -442,8 +442,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   /**
    * Get cache statistics;
    */
-  getStatistics(): CacheStats {/* TODO: Fix JSX expression */});;)
-}});
+  getStatistics(): CacheStats {/* TODO: Fix JSX expression */});]
+    }});
 }
 
   /**
@@ -459,10 +459,10 @@ export class CacheManager {/* TODO: Fix JSX expression */}
           entries: Object.fromEntries(this.cache),
           stats: this.stats;
           timestamp: Date.now();;
-        storage.setItem('cache-manager', JSON.stringify(data));)
-}
-    } catch (error) {});;)
-}
+        storage.setItem('cache-manager', JSON.stringify(data))]
+    }
+    } catch (error) {});]
+    }
   }
 
   /**
@@ -480,19 +480,19 @@ export class CacheManager {/* TODO: Fix JSX expression */}
           this.cache = new Map(Object.entries(parsed.entries || {}););
           this.stats = { ...this.stats, ...parsed.stats }});
 }
-      });;)
-} catch (error) {}
+      });]
+    } catch (error) {}
    * Get cache count;
    */
-  getStats(): {/* TODO: Fix JSX expression */});;)
-} {/* TODO: Fix JSX expression */});;)
-}
-        });;)
-}
-      if (window.sessionStorage) {/* TODO: Fix JSX expression */});;)
-}
-        });;)
-}
+  getStats(): {/* TODO: Fix JSX expression */});]
+    } {/* TODO: Fix JSX expression */});]
+    }
+        });]
+    }
+      if (window.sessionStorage) {/* TODO: Fix JSX expression */});]
+    }
+        });]
+    }
   }
 
   /**
@@ -504,10 +504,10 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     try {}
       const storage = this.getStorage();
       if (storage) {}
-        storage.removeItem('cache-manager');)
-}
-    } catch (error) {});;)
-}
+        storage.removeItem('cache-manager')]
+    }
+    } catch (error) {});]
+    }
   }
 
   /**
@@ -526,8 +526,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
       default:,
         return null});
 }
-  });;)
-}
+  });]
+    }
 
 // Create singleton instances for different use cases;
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });;
@@ -546,8 +546,8 @@ export const sessionStorageCache = new CacheManager({);
   defaultTTL: 60 * 60 * 1000 // 1 hour
 
 export default CacheManager;
-    return {/* TODO: Fix JSX expression */});;)
-}});
+    return {/* TODO: Fix JSX expression */});]
+    }});
 }
 }
 export const cacheManager = new CacheManager();

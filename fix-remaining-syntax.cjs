@@ -22,6 +22,9 @@ files.forEach(file => {
   
   // Fix common syntax errors
   content = content
+    // Fix extra closing braces
+    .replace(/}\s*},\s*{/g, '},\n    {')
+    .replace(/}\s*},\s*$/g, '}\n  ]')
     // Fix array syntax errors
     .replace(/;\s*\)\s*}/g, ']\n    }')
     .replace(/;\s*\)\s*,/g, '],')
@@ -45,7 +48,12 @@ files.forEach(file => {
     .replace(/,\s*;\s*$/g, ']')
     .replace(/;\s*\)\s*$/g, ']')
     .replace(/;\s*\)\s*,/g, '],')
-    .replace(/;\s*\)\s*}/g, ']\n    }');
+    .replace(/;\s*\)\s*}/g, ']\n    }')
+    // Fix specific patterns
+    .replace(/}\s*},\s*{/g, '},\n    {')
+    .replace(/}\s*},\s*$/g, '}\n  ]')
+    .replace(/}\s*}\s*},/g, '}\n  },\n')
+    .replace(/}\s*}\s*$/g, '}\n  }');
   
   if (content !== originalContent) {
     console.log(`Fixed syntax errors in: ${file}`);

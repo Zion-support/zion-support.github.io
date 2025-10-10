@@ -111,10 +111,8 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 990,
       enterprise: 299,
       features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations']
-    }
-  },
-
-  {
+    },
+    {
     id: 'ai-task-manager-pro',
     title: 'AI Task Manager Pro',
     description: 'Intelligent task management system that uses AI to prioritize tasks, predict deadlines, and optimize your workflow. Features smart scheduling, habit tracking, and productivity insights.',
@@ -256,10 +254,8 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 790,
       enterprise: 199,
       features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support']
-    }
-  },
-
-  {
+    },
+    {
     id: 'ai-social-media-manager',
     title: 'AI Social Media Manager',
     description: 'Comprehensive AI-powered social media management platform that creates, schedules, and optimizes content across all major platforms. Features advanced analytics, audience insights, and automated engagement.',
@@ -403,10 +399,8 @@ export const microSaasServices: MicroSaasService[] = [
       yearly: 1290,
       enterprise: 399,
       features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support']
-    }
-  },
-
-  {
+    },
+    {
     id: 'ai-financial-analyzer',
     title: 'AI Financial Analyzer',
     description: 'Advanced AI-powered financial analysis platform that provides real-time insights, risk assessment, and investment recommendations. Features automated financial reporting, trend analysis, and predictive modeling.',

@@ -44,15 +44,15 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
       window.location.href = href;});
 }
   }</LinkProps>
-  return (<a;)
-}
+  return (<a]
+    }
   return(<a;
 import React from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */});
 }
 export const,
-  Link: React.FC<LinkProps></a> = ({/* TODO: Fix JSX expression */});;)
-}); => {/* TODO: Fix JSX expression */});
+  Link: React.FC<LinkProps></a> = ({/* TODO: Fix JSX expression */});]
+    }); => {/* TODO: Fix JSX expression */});
 }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */});
@@ -73,13 +73,13 @@ export const,
     >)
       {children});
     </a>)
-  );)
-}
+  )]
+    }
 export default Link;
     >
       {children}
     </a>)
-  );)
-};
+  )]
+    };
 export default Link;
 }

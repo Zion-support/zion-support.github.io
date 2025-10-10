@@ -9,10 +9,10 @@ interface ContentNewsletterSignupProps {
   buttonText?: string;
   features?: Array<{
     icon: React.ComponentType<{ className?: string }>;
-    text: string;)
-}>;
-  onSubscribe?: (email: string) => void;)
-}
+    text: string]
+    }>;
+  onSubscribe?: (email: string) => void]
+    }
 
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
@@ -22,23 +22,23 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
   features = [
     {
       icon: CheckCircle,
-      text: "Weekly industry insights";)
-},
+      text: "Weekly industry insights"]
+    },
     {
       icon: Star,
-      text: "Exclusive content and tips";)
-},
+      text: "Exclusive content and tips"]
+    },
     {
       icon: Users,
-      text: "Join 10,000+ subscribers";)
-},
+      text: "Join 10,000+ subscribers"]
+    },
     {
       icon: Globe,
-      text: "Global community access";)
-}
+      text: "Global community access"]
+    }
   ],
-  onSubscribe;)
-}); => {
+  onSubscribe]
+    }); => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -51,19 +51,19 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
     
     try {
       if (onSubscribe) {
-        await onSubscribe(email);)
-} else {
+        await onSubscribe(email)]
+    } else {
         // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));)
-}
+        await new Promise(resolve => setTimeout(resolve, 1000))]
+    }
       
       setIsSubscribed(true);
-      setEmail('');)
-} catch (error) {
-      console.error('Subscription failed:', error);)
-} finally {
-      setIsLoading(false);)
-}
+      setEmail('')]
+    } catch (error) {
+      console.error('Subscription failed:', error)]
+    } finally {
+      setIsLoading(false)]
+    }
   };
 
   if (isSubscribed) {
@@ -87,15 +87,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
           </button>
         </div>
       </div>
-    );)
-}
+    )]
+    }
 
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4"></div>
       <div className="max-w-6xl mx-auto"></div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
           {/* Content */}
-          <div></div>
+          <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               {title}
             </h2>
@@ -118,7 +118,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
           {/* Newsletter Form */}
           <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8"></div>
             <form onSubmit={handleSubmit} className="space-y-6"></form>
-              <div></div>
+              <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2"></label>
                   Email Address
                 </label>
@@ -140,7 +140,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
               ></button>
                 {isLoading ? (
                   <>
-                    <div></div>
+                    <div>
                     Subscribing...
                   </>
                 ) : (
@@ -159,8 +159,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps></ContentNe
         </div>
       </div>
     </div>
-  );)
-};
+  )]
+    };
 
 export default ContentNewsletterSignup;
 }

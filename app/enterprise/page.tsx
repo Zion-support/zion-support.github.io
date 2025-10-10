@@ -11,38 +11,38 @@ const EnterprisePage: React.FC = () => {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control'];)
-},
+      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']]
+    },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your business needs.',
-      benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization'];)
-},
+      benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']]
+    },
     {
       icon: Brain,
       title: 'AI Integration',
       description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
-      benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights'];)
-},
+      benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights']]
+    },
     {
       icon: Database,
       title: 'Data Management',
       description: 'Advanced data management and analytics for enterprise-scale operations.',
-      benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence'];)
-},
+      benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence']]
+    },
     {
       icon: Users,
       title: 'User Management',
       description: 'Comprehensive user and access management for large organizations.',
-      benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails'];)
-},
+      benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails']]
+    },
     {
       icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];)
-}
+      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']]
+    }
   ];
 
   const solutions = [
@@ -50,26 +50,26 @@ const EnterprisePage: React.FC = () => {
       title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
       icon: Building,
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'];)
-},
+      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']]
+    },
     {
       title: 'Customer Relationship Management',
       description: 'Advanced CRM systems for managing customer relationships and sales processes.',
       icon: Users,
-      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation'];)
-},
+      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']]
+    },
     {
       title: 'Business Intelligence',
       description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
       icon: BarChart,
-      benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring'];)
-},
+      benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring']]
+    },
     {
       title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'];)
-}
+      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']]
+    }
   ];
 
   const benefits = [
@@ -91,7 +91,7 @@ const EnterprisePage: React.FC = () => {
   ];
 
   return (
-    <div></div>
+    <div>
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
@@ -101,9 +101,9 @@ const EnterprisePage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden"></section>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>
+        <div>
+        <div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
             Enterprise</h1>
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"></span>
@@ -114,7 +114,7 @@ const EnterprisePage: React.FC = () => {
             Comprehensive enterprise-grade solutions designed for large-scale business operations. 
             Transform your organization with cutting-edge technology and expert implementation.
           </p>
-          <div></div>
+          <div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"></button>
               Get Enterprise Consultation
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -145,8 +145,8 @@ const EnterprisePage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4"></section>
-        <div></div>
-          <div></div>
+        <div>
+          <div>
             <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Enterprise-Grade Features
             </h2>
@@ -202,14 +202,14 @@ const EnterprisePage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
-        <div></div>
+        <div>
           <h2 className="text-4xl font-bold text-white mb-6"></h2>
             Ready to Transform Your Enterprise?
           </h2>
           <p className="text-xl text-gray-300 mb-8"></p>
             Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           </p>
-          <div></div>
+          <div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
               Contact Enterprise Sales
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
@@ -223,7 +223,7 @@ const EnterprisePage: React.FC = () => {
 
       <Footer />
     </div>
-  );)
-};
+  )]
+    };
 
 export default EnterprisePage;

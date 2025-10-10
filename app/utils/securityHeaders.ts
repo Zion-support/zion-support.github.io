@@ -52,8 +52,8 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
     'interest-cohort=()',
     'accelerometer=()',
     'gyroscope=()',
-    'magnetometer=()'].join(', ');)
-}
+    'magnetometer=()'].join(', ')]
+    }
 /**
  * Get security headers as key-value pairs;
  */
@@ -109,8 +109,8 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 }
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */});
 }
-  return headers;)
-}
+  return headers]
+    }
 /**
  * Get security headers in Next.js format;
  */
@@ -127,6 +127,6 @@ export function getNextSecurityHeaders()
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */});
-}););)
-}
+});)]
+    }
 export default defaultSecurityHeaders;

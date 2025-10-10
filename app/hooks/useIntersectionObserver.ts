@@ -38,9 +38,8 @@ export function useIntersectionObserver(
 
         if (entry.isIntersecting && freezeOnceVisible) {
           observer.disconnect();
-        }
-      },
-      {
+        },
+    {
         threshold,
         root,
         rootMargin,
