@@ -51,11 +51,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-<<<<<<< HEAD
       console.warn(`Failed to observe ${name}:`, error);
-=======
-      // console.warn removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }
   }
 
@@ -71,11 +67,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-<<<<<<< HEAD
       console.warn('Failed to observe LCP:', error);
-=======
-      // console.warn removed for production
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     }
   }
 
