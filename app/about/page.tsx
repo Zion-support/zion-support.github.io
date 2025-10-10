@@ -22,9 +22,57 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Settings
 } from 'lucide-react';
+
 const AboutPage: React.FC = () => {
+  const values = [
+    {
+      icon: Brain,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Your data and systems are protected with enterprise-grade security measures.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We work closely with our clients to understand and exceed their expectations.'
+    },
+    {
+      icon: Award,
+      title: 'Excellence',
+      description: 'We strive for excellence in everything we do, from code quality to customer service.'
+    }
+  ];
+
+  const team = [
+    {
+      name: 'John Smith',
+      role: 'CEO & Founder',
+      bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions.'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      bio: 'Expert in machine learning and cloud architecture, leading our technical innovation.'
+    },
+    {
+      name: 'Mike Chen',
+      role: 'Lead AI Engineer',
+      bio: 'Specialist in natural language processing and computer vision technologies.'
+    },
+    {
+      name: 'Emily Davis',
+      role: 'Head of Operations',
+      bio: 'Ensures smooth project delivery and exceptional client satisfaction.'
+    }
+  ];
+
   return (
     <React.Fragment>
       <Helmet>
@@ -49,16 +97,27 @@ const AboutPage: React.FC = () => {
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                About Zion Tech Group;
-  </
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
-              </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
+                <div className="text-gray-300">Projects Delivered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime Guarantee</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+                <div className="text-gray-300">Support Available</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">5★</div>
+                <div className="text-gray-300">Client Rating</div>
+              </div>
             </div>
           </div>
         </section>
+
         {/* Mission Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -110,6 +169,8 @@ const AboutPage: React.FC = () => {
                       <div className="text-sm text-gray-300">Real-time Analytics</div>
                     </div>
                   </div>
+                </div>
+                <div className="mt-6">
                   <h3 className="text-xl font-bold text-white mb-4">Our Vision</h3>
                   <p className="text-gray-300">
                     To be the leading provider of AI and IT solutions, helping businesses 
@@ -119,7 +180,8 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-</section>
+        </section>
+
         {/* Values Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -172,6 +234,7 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -180,20 +243,22 @@ const AboutPage: React.FC = () => {
               Let's discuss how we can help transform your business with AI and technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started;
-  </
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
-                Contact Us;
-  </
+              <a
+                href="/contact"
+                className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Started
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
+                Contact Us
+              </a>
             </div>
           </div>
         </section>
       </div>
     </React.Fragment>
-);
+  );
 };
+
 export default AboutPage;
-  </button>
-  </button>
-  </h1>
