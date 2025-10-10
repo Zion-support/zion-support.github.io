@@ -13,7 +13,14 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Code,
+  Users,
+  Mail,
+  Calendar,
+  CheckSquare,
+  Settings,
+  FileText
 } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -533,16 +540,7 @@ const ServicesPage: React.FC = () => {
       price: '$149/month',
       category: 'Micro SAAS',
       popular: true
-    },
-    {
-      icon: BarChart3,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with AI-powered insights, custom dashboards, and automated reporting.',
-      features: ['Real-time Analytics', 'Custom Dashboards', 'Automated Reports', 'Data Visualization', 'Predictive Insights'],
-      price: '$199/month',
-      category: 'Micro SAAS',
-      popular: true
-    },
+    }
     {
       icon: Code,
       title: 'AI Content Studio',
