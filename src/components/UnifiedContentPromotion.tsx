@@ -235,7 +235,7 @@ export default function UnifiedContentPromotion({
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-glow-cyan">{stat.number}</div>
               <div className="text-gray-400 font-medium">{stat.label}</div>
             </div>
           ))}
@@ -244,7 +244,7 @@ export default function UnifiedContentPromotion({
         {/* Featured Services */}
         <div className="mb-20" role="region" aria-label="Featured AI Solutions">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 cyber-text neon-pulse">
               Featured AI Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -273,7 +273,7 @@ export default function UnifiedContentPromotion({
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors neon-glow-cyan">
                     {service.title}
                   </h3>
                   
@@ -296,7 +296,7 @@ export default function UnifiedContentPromotion({
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-white">{service.price}</div>
+                    <div className="text-2xl font-bold text-white neon-glow-purple">{service.price}</div>
                     <Link
                       to={service.link}
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"

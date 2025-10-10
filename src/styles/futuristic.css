@@ -77,8 +77,8 @@ body {
   box-shadow: var(--shadow-glow);
 }
 
-/* Neon Text Effect */
-.neon-text {
+/* Neon Glow Effects */
+.neon-glow {
   text-shadow: 
     0 0 5px currentColor,
     0 0 10px currentColor,
