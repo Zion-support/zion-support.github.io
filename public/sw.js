@@ -1,19 +1,27 @@
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
+/**
+ * Service Worker for Zion Tech Group
+ * Provides caching, offline support, and performance optimization
+ */
 
-// Static assets to cache
+const CACHE_NAME = 'zion-tech-group-v1.0.0';
+const STATIC_CACHE_NAME = 'zion-static-v1.0.0';
+const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1.0.0';
+
+// Assets to cache immediately
 const STATIC_ASSETS = [
   '/',
-  '/main.tsx',
-  '/globals.css',
-  '/manifest.json'
+  '/offline',
+  '/manifest.json',
+  '/favicon.ico',
+  '/apple-touch-icon.png',
+  '/favicon-32x32.png',
+  '/favicon-16x16.png'
 ];
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(STATIC_CACHE)
+    caches.open(STATIC_CACHE_NAME)
       .then((cache) => {
         return cache.addAll(STATIC_ASSETS);
       })
@@ -31,7 +39,8 @@ self.addEventListener('activate', (event) => {
         return Promise.all(
           cacheNames
             .filter((cacheName) => {
-              return cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE;
+              return cacheName !== STATIC_CACHE_NAME && 
+                     cacheName !== DYNAMIC_CACHE_NAME;
             })
             .map((cacheName) => {
               return caches.delete(cacheName);
@@ -44,7 +53,7 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - serve from cache or network
+// Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -79,7 +88,7 @@ self.addEventListener('fetch', (event) => {
             const responseToCache = response.clone();
 
             // Cache dynamic content
-            caches.open(DYNAMIC_CACHE)
+            caches.open(DYNAMIC_CACHE_NAME)
               .then((cache) => {
                 cache.put(request, responseToCache);
               });
@@ -88,8 +97,8 @@ self.addEventListener('fetch', (event) => {
           })
           .catch(() => {
             // Return offline page for navigation requests
-            if (request.mode === 'navigate') {
-              return caches.match('/');
+            if (request.destination === 'document') {
+              return caches.match('/offline');
             }
           });
       })
@@ -108,32 +117,35 @@ self.addEventListener('sync', (event) => {
 
 // Push notifications
 self.addEventListener('push', (event) => {
-  const options = {
-    body: event.data ? event.data.text() : 'New update available!',
-    icon: '/icon-192x192.png',
-    badge: '/badge-72x72.png',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'View Details',
-        icon: '/icon-192x192.png'
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/favicon-32x32.png',
+      badge: '/favicon-16x16.png',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: 1
       },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/icon-192x192.png'
-      }
-    ]
-  };
+      actions: [
+        {
+          action: 'explore',
+          title: 'View Details',
+          icon: '/favicon-32x32.png'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/favicon-32x32.png'
+        }
+      ]
+    };
 
-  event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
-  );
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
 });
 
 // Handle notification clicks
@@ -152,5 +164,4 @@ async function handleOfflineSubmissions() {
   // Implementation for handling offline form submissions
   // This would typically involve storing form data in IndexedDB
   // and syncing when back online
-  console.log('Handling offline submissions...');
 }

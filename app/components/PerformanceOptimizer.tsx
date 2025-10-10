@@ -1,4 +1,6 @@
 'use client';
+import React, { useEffect, useState } from 'react';
+import { logger } from '../utils/productionLogger';
 
 import React, { useEffect, useCallback } from 'react';
 import { logger } from '../utils/logger';
@@ -43,15 +45,63 @@ export const PerformanceOptimizer: React.FC = () => {
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
 
-    // CLS - Cumulative Layout Shift
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
-          vitals.cls = clsValue;
-          logger.info('CLS measured', { cls: vitals.cls });
+    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
+  };
+
+  const setupCodeSplitting = () => {
+    // This would be handled by Next.js dynamic imports
+    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
+  };
+
+  const addResourceHints = () => {
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+    ];
+
+    hints.forEach((hint) => {
+      const link = document.createElement('link');
+      link.rel = hint.rel;
+      link.href = hint.href;
+      if (hint.crossorigin) {
+        link.crossOrigin = hint.crossorigin;
+      }
+      document.head.appendChild(link);
+    });
+
+    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
+  };
+
+  const registerServiceWorker = async () => {
+    if ('serviceWorker' in navigator) {
+      try {
+        const registration = await navigator.serviceWorker.register('/sw.js');
+        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
+      } catch (error) {
+        logger.error('Service Worker registration failed', { error: error.message }, 'PerformanceOptimizer');
+      }
+    }
+  };
+
+  // Performance monitoring
+  useEffect(() => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            // Track LCP
+            if (typeof window !== 'undefined' && 'gtag' in window) {
+              (window as any).gtag('event', 'web_vitals', {
+                name: 'LCP',
+                value: Math.round(entry.startTime),
+                event_category: 'Performance'
+              });
+            }
+          }
         }
       });
     });

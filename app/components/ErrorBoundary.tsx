@@ -1,7 +1,7 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-
+import { logger } from '../utils/productionLogger';
+import { FileWarning, AlertTriangle, RefreshCw, Home } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -28,11 +28,13 @@ class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-
-    // Log error to monitoring service
-    // console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    // You can also log to external services here
+    // Log error using production logger
+    logger.error('ErrorBoundary caught an error', {
+      error: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack
+    }, 'ErrorBoundary');
+    // Send error to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
         description: error.message,
@@ -91,10 +93,9 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
-              
               <button
-                onClick={this.handleReload}
-                className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors flex items-center justify-center gap-2"
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 <RefreshCw className="w-4 h-4" />
                 Reload Page
@@ -106,15 +107,7 @@ class ErrorBoundary extends Component<Props, State> {
               >
                 <Home className="w-4 h-4" />
                 Go Home
-              </a>
-              
-              <a
-                href="mailto:support@ziontechgroup.com?subject=Error Report"
-                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors flex items-center justify-center gap-2"
-              >
-                <Mail className="w-4 h-4" />
-                Report Issue
-              </a>
+              </button>
             </div>
 
             <div className="mt-6 text-sm text-gray-400">
