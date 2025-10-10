@@ -105,7 +105,7 @@ const Footer: React.FC = memo(() => {
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -114,7 +114,7 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  href="/ai-services"
+                  to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
@@ -132,7 +132,7 @@ const Footer: React.FC = memo(() => {
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -141,7 +141,7 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  href="/it-services"
+                  to="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All IT Services →
@@ -159,7 +159,7 @@ const Footer: React.FC = memo(() => {
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
@@ -168,7 +168,7 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  href="/micro-saas"
+                  to="/micro-saas"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All Micro SAAS →
@@ -186,7 +186,7 @@ const Footer: React.FC = memo(() => {
               {emergingTech.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}

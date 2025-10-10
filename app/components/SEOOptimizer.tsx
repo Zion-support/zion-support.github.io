@@ -1,7 +1,7 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
+
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -10,6 +10,7 @@ interface SEOOptimizerProps {
   ogImage?: string;
   structuredData?: Record<string, unknown>;
 }
+
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
@@ -21,110 +22,93 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   useEffect(() => {
     // Update page title
     document.title = title;
+    
     // Update meta description
+    const updateMetaTag = (name: string, content: string, attribute = 'name') => {
+      const meta = document.querySelector(`meta[${attribute}="${name}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        const newMeta = document.createElement('meta');
+        newMeta.setAttribute(attribute, name);
+        newMeta.setAttribute('content', content);
+        document.head.appendChild(newMeta);
+      }
+    };
+
     updateMetaTag('description', description);
     updateMetaTag('keywords', keywords.join(', '));
+    
     // Update Open Graph tags
     updateMetaTag('og:title', title, 'property');
     updateMetaTag('og:description', description, 'property');
     updateMetaTag('og:image', ogImage, 'property');
     updateMetaTag('og:url', canonicalUrl, 'property');
-    // Update Twitter tags
+    updateMetaTag('og:type', 'website', 'property');
+    
+    // Update Twitter Card tags
+    updateMetaTag('twitter:card', 'summary_large_image', 'name');
     updateMetaTag('twitter:title', title, 'name');
     updateMetaTag('twitter:description', description, 'name');
     updateMetaTag('twitter:image', ogImage, 'name');
+    
     // Update canonical URL
-    updateCanonicalUrl(canonicalUrl);
-    // Add structured data
-    if (structuredData) {
-      addStructuredData(structuredData);
-    }
-    // Add breadcrumb structured data
-    addBreadcrumbStructuredData();
-    // Add organization structured data
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', content);
-  };
-  const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
+    if (canonical) {
+      canonical.setAttribute('href', canonicalUrl);
+    } else {
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
+      canonical.setAttribute('href', canonicalUrl);
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute('href', url);
-  };
-  const addStructuredData = (data: Record<string, unknown>) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    // Remove existing structured data
-    const existing = document.getElementById('structured-data');
-    if (existing) {
-      existing.remove();
+
+    // Add structured data
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      script.id = 'structured-data';
+      
+      // Remove existing structured data
+      const existing = document.getElementById('structured-data');
+      if (existing) {
+        existing.remove();
+      }
+      document.head.appendChild(script);
     }
-    document.head.appendChild(script);
-  };
-  const addBreadcrumbStructuredData = () => {
-    const breadcrumbData = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      'itemListElement': [
+
+    // Add breadcrumb structured data
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
         {
-          '@type': 'ListItem',
-          'position': 1,
-          'name': 'Home',
-          'item': 'https://ziontechgroup.com'
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ziontechgroup.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": title,
+          "item": canonicalUrl
         }
       ]
-    };
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbData);
-    script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data
-    const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {
-      existing.remove();
+    });
+    breadcrumbScript.id = 'breadcrumb-structured-data';
+    
+    // Remove existing breadcrumb structured data
+    const existingBreadcrumb = document.getElementById('breadcrumb-structured-data');
+    if (existingBreadcrumb) {
+      existingBreadcrumb.remove();
     }
-    document.head.appendChild(script);
-  };
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+    document.head.appendChild(breadcrumbScript);
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOOptimizerProps {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl?: string;
-  structuredData?: any;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title,
-  description,
-  keywords,
-  canonicalUrl,
-  structuredData,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
-}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
 
@@ -134,37 +118,26 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph Meta Tags */}
+      {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#00ffff" />
-      <meta name="msapplication-TileColor" content="#00ffff" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonicalUrl} />
       
       {/* Structured Data */}
       {structuredData && (
@@ -173,14 +146,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         </script>
       )}
       
-      {/* Additional Structured Data for Organization */}
+      {/* Default Organization Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
           "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/images/logo.png",
+          "logo": "https://ziontechgroup.com/logo.png",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
           "foundingDate": "2020",
           "numberOfEmployees": "50-100",
