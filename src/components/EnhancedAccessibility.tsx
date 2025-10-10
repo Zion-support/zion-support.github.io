@@ -217,7 +217,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({
       inputs.forEach((input) => {
         const label = document.querySelector(`label[for="${input.id}"]`);
         if (!label && !input.getAttribute('aria-label')) {
-          input.setAttribute('aria-label', input.placeholder || 'Input field');
+          input.setAttribute('aria-label', (input as HTMLInputElement).placeholder || 'Input field');
         }
       });
     };
@@ -270,7 +270,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <>
       {/* Skip Links */}
-      <style jsx>{`
+      <style>{`
         .skip-links {
           position: absolute;
           top: -40px;
