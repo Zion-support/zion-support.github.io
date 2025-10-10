@@ -31,14 +31,10 @@ const CaseStudiesPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            </p>
-          </div>
-        </section>
-
-              ))}
-            </div>
-          </div>
-        </section>
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">Case Studies</h1>
+          <p className="text-xl text-gray-300 text-center mb-12">Explore our successful projects and client transformations</p>
+        </div>
       </div>
     </>
   );
