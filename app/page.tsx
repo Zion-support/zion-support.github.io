@@ -74,6 +74,131 @@ const HomePage: React.FC = () => {
 
 <<<<<<< HEAD
 =======
+  // Real AI Services with actual capabilities and pricing
+  const aiServices = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Chatbots',
+      description: 'Advanced conversational AI with natural language processing and sentiment analysis',
+      price: '$299/month',
+      marketPrice: '$500-2000/month',
+      features: ['Natural language processing', 'Multi-language support', 'Sentiment analysis', 'CRM integration', 'Real-time learning'],
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions'],
+      category: 'Customer Service',
+      popular: true
+    },
+    {
+      icon: FileText,
+      title: 'AI Content Generation',
+      description: 'Automated content creation using advanced language models for blogs, social media, and marketing',
+      price: '$199/month',
+      marketPrice: '$300-1500/month',
+      features: ['Blog post generation', 'Social media content', 'Email marketing campaigns', 'SEO optimization', 'Brand voice customization'],
+      benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
+      category: 'Content',
+      popular: true
+    },
+    {
+      icon: BarChart,
+      title: 'AI Data Analytics',
+      description: 'Advanced analytics and business intelligence powered by machine learning algorithms',
+      price: '$399/month',
+      marketPrice: '$800-3000/month',
+      features: ['Predictive analytics', 'Real-time dashboards', 'Automated reporting', 'Anomaly detection', 'Custom data models'],
+      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization'],
+      category: 'Analytics',
+      popular: false
+    },
+    {
+      icon: Eye,
+      title: 'AI Computer Vision',
+      description: 'Image and video analysis solutions for quality control, security, and automation',
+      price: '$599/month',
+      marketPrice: '$1000-5000/month',
+      features: ['Object detection and recognition', 'Quality control automation', 'Facial recognition systems', 'Video analytics', 'Real-time processing'],
+      benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction'],
+      category: 'Computer Vision',
+      popular: false
+    }
+  ];
+
+  // Real IT Services with actual capabilities and pricing
+  const itServices = [
+    {
+      icon: Cloud,
+      title: 'Cloud Infrastructure & Migration',
+      description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services',
+      price: '$2,500/month',
+      marketPrice: '$4000-15000/month',
+      features: ['Cloud architecture design', 'Multi-cloud strategies', 'Cost optimization', 'Disaster recovery', 'Auto-scaling solutions', 'Security compliance'],
+      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support'],
+      category: 'Cloud',
+      popular: true
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive security services including threat detection, compliance, and incident response',
+      price: '$1,800/month',
+      marketPrice: '$3000-12000/month',
+      features: ['Threat detection & response', 'Vulnerability assessments', 'Penetration testing', 'Security monitoring', 'Compliance management', 'Employee training'],
+      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team'],
+      category: 'Security',
+      popular: true
+    },
+    {
+      icon: Settings,
+      title: 'DevOps & CI/CD',
+      description: 'Modern development operations with automated deployment, monitoring, and infrastructure as code',
+      price: '$2,200/month',
+      marketPrice: '$3500-10000/month',
+      features: ['CI/CD pipeline setup', 'Infrastructure as Code', 'Container orchestration', 'Monitoring & logging', 'Automated testing', 'Deployment automation'],
+      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows'],
+      category: 'DevOps',
+      popular: false
+    }
+  ];
+
+  // Real Micro SaaS Services with actual capabilities and pricing
+  const microSaasServices = [
+    {
+      icon: BarChart,
+      title: 'Zion Analytics Pro',
+      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights',
+      price: '$89/month',
+      marketPrice: '$150-500/month',
+      features: ['Real-time data visualization with 50+ chart types', 'AI-powered predictive analytics and forecasting', 'Custom dashboard builder with drag-and-drop interface', 'Advanced data connectors (Salesforce, HubSpot, Google Analytics)', 'Automated report generation and email delivery', 'Multi-tenant architecture for agencies', 'API access for custom integrations', 'White-label solution available'],
+      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
+      category: 'Analytics',
+      popular: true,
+      users: 'Up to 25 users'
+    },
+    {
+      icon: MessageSquare,
+      title: 'Zion Chat AI',
+      description: 'Next-generation AI customer support platform with advanced NLP and sentiment analysis',
+      price: '$149/month',
+      marketPrice: '$300-800/month',
+      features: ['GPT-4 powered conversational AI with custom training', 'Multi-channel support (Web, WhatsApp, SMS, Email)', 'Advanced sentiment analysis and emotion detection', 'Automated ticket routing and escalation', 'Live agent handoff with context preservation', 'Multi-language support (50+ languages)', 'Advanced analytics and conversation insights', 'CRM integration and lead qualification'],
+      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation'],
+      category: 'Communication',
+      popular: true,
+      users: 'Up to 50 users'
+    },
+    {
+      icon: Shield,
+      title: 'Zion Security Shield',
+      description: 'Enterprise-grade cybersecurity monitoring with AI threat detection and automated response',
+      price: '$299/month',
+      marketPrice: '$500-2000/month',
+      features: ['AI-powered threat detection and behavioral analysis', 'Real-time security monitoring across all endpoints', 'Automated incident response and remediation', 'Compliance reporting (SOC2, GDPR, HIPAA)', 'Penetration testing and vulnerability assessments', 'Security awareness training platform', 'Dark web monitoring and breach detection', '24/7 SOC (Security Operations Center) support'],
+      benefits: ['Proactive security', 'Automated response', 'Compliance assurance', 'Expert monitoring'],
+      category: 'Security',
+      popular: false,
+      users: 'Up to 100 users'
+    }
+  ];
+
   const features = [
     {
       icon: Brain,

@@ -3,6 +3,7 @@ import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
+import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
@@ -17,10 +18,9 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-// Structured data for SEO - moved to SEOHead component
+
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
@@ -37,9 +37,6 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -61,14 +58,28 @@ const App: React.FC = () => {
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer>
                     <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <Navigation />
                       <Breadcrumb />
                       <main id="main-content" className="flex-1" tabIndex={-1}>
                         <Suspense fallback={<PageLoader />}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
-                            {/* Add more routes as needed */}
+                            <Route path="/about" element={<AboutPage />} />
+                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/services" element={<ServicesPage />} />
+                            <Route path="/pricing" element={<PricingPage />} />
+                            <Route path="/blog" element={<BlogPage />} />
+                            <Route path="/case-studies" element={<CaseStudiesPage />} />
+                            <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/partners" element={<PartnersPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/faq" element={<FAQPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/ai-services" element={<AiServicesPage />} />
+                            <Route path="/it-services" element={<ItServicesPage />} />
                           </Routes>
                         </Suspense>
                       </main>
