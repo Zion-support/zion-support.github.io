@@ -91,14 +91,6 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
-      title: 'AI Meeting Assistant Pro',
-      description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
-      icon: '🎯',
-      price: '$79/month',
-      originalPrice: '$119/month',
-      features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Voice recognition', 'Multi-language support', 'Meeting analytics'],
-      benefits: ['90% meeting efficiency', 'Zero missed action items', 'Automatic follow-ups', 'Better meeting outcomes'],
-      link: '/ai-meeting-assistant',
       popular: true,
       category: 'Productivity',
       rating: 4.8,
@@ -211,6 +203,7 @@ const HomePage: React.FC = () => {
       freeTrial: '7 days'
     },
     {
+>>>>>>> cursor/website-audit-and-update-with-deployment-74f7
       title: 'AI Task Manager Pro',
       description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
       icon: '✅',

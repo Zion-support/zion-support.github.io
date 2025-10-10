@@ -466,6 +466,7 @@ const Footer: React.FC = () => {
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
+>>>>>>> origin/main
             </div>
           </div>
         </div>
