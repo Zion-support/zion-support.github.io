@@ -25,9 +25,9 @@ export default function Error({)}
 }: {
   error: Error & { digest?: string };
   reset: () => void;
-}) {}
-  useEffect(() => {}
-    // Log the error to an error reporting service
+}) {
+  useEffect(() => {
+    // eslint-disable-next-line no-console
     console.error(error);
   }, [error]);
 

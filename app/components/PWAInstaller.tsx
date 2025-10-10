@@ -45,12 +45,21 @@ const PWAInstaller: React.FC = () => {,
     try {
       await deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-
-      if (outcome === 'accepted') {} else {}
-
+      
+      if (outcome === 'accepted') {
+        // eslint-disable-next-line no-console
+        console.log('User accepted the install prompt');
+      } else {
+        // eslint-disable-next-line no-console
+        console.log('User dismissed the install prompt');
+      }
+      
       setDeferredPrompt(null);
       setShowInstallButton(false);
-    } catch (error) {}
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error('Error installing PWA:', error);
+    }
   };
 
   if (isInstalled || !showInstallButton) {

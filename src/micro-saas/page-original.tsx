@@ -10311,7 +10311,6 @@ const categories = [
   ];
   return (<div>Coming Soon</div>)
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>"
@@ -10571,20 +10570,9 @@ const categories = [
         <div className="max-w-4xl mx-auto text-center"></div>"
           <h2 className="text-3xl font-bold text-white mb-6"></h2>
 // Ready to Transform Your Business?
-
           </h2>"
           <p className="text-xl text-purple-100 mb-8"></p>
 // Get started with our micro SAAS solutions today and see the difference AI can make.
-          
-          
-          
-          
-          
-          
-          
-          
-          
-
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -10603,6 +10591,4 @@ const categories = [
     </div>
   );
 };
-export default MicroSAASPage;
-
 export default MicroSAASPage;"`

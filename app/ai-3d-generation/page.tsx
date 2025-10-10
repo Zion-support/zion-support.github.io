@@ -1,6 +1,41 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
+import React, { lazy } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+
+const AI3DGenerationPage: React.FC = () => {,
+  const features = [,
+    'Generate high-quality 3D models from text descriptions',
+    'Create photorealistic textures and materials',
+    'Automated animation and rigging',
+    'LOD (Level of Detail) optimization',
+    'VR/AR integration ready',
+    'Real-time rendering capabilities',
+    'Batch processing for multiple models',
+    'Custom style transfer and adaptation',
+    'Physics simulation integration',
+    'Export to all major 3D formats'
+  ];
+
+  const benefits = [
+    'Reduce 3 D content creation time by 90%',
+    'Lower production costs by 80%',
+    'Create unlimited unique 3 D assets',
+    'Accelerate game and app development',
+    'Enable rapid prototyping',
+    'Improve visual quality and consistency',
+    'Scale content production instantly',
+    'Reduce dependency on 3D artists'
+  ];
+
+  const applications = [
+import React from 'react';
+>>>>>>> origin/main
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Cube, Zap, Eye, Palette, Download, ArrowRight, Sparkles } from 'lucide-react';

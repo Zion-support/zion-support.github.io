@@ -72,21 +72,22 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData = {}, 
   children 
 }) => {
-  const defaultSEO: SEOData = {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide.',
-    keywords: ['AI solutions', 'IT consulting', 'cloud infrastructure', 'cybersecurity', 'digital transformation'],
-    canonical: 'https://ziontechgroup.com',
-    ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-    ogDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
-    ogImage: 'https://ziontechgroup.com/og-image.jpg',
-    twitterCard: 'summary_large_image',
-    twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-    twitterDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
-    twitterImage: 'https://ziontechgroup.com/twitter-image.jpg'
-  };
-
-  const mergedSEO = useMemo(() => ({ ...defaultSEO, ...seoData }), [defaultSEO, seoData]);
+  const mergedSEO = useMemo(() => {
+    const defaultSEO: SEOData = {
+      title: 'Zion Tech Group - Advanced AI and IT Solutions',
+      description: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide.',
+      keywords: ['AI solutions', 'IT consulting', 'cloud infrastructure', 'cybersecurity', 'digital transformation'],
+      canonical: 'https://ziontechgroup.com',
+      ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+      ogDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
+      ogImage: 'https://ziontechgroup.com/og-image.jpg',
+      twitterCard: 'summary_large_image',
+      twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+      twitterDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
+      twitterImage: 'https://ziontechgroup.com/twitter-image.jpg'
+    };
+    return { ...defaultSEO, ...seoData };
+  }, [seoData]);
 
   const generateStructuredData = useCallback(() => {
     return {

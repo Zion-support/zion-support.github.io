@@ -50,6 +50,94 @@ const BusinessIntelligencePage: React.FC = () => {
       marketPrice: '$8,000-25,000/month',
       category: 'AI-Powered BI',
       technologies: ['Machine Learning', 'NLP', 'Computer Vision', 'AutoML', 'Custom AI Models']
+    },
+    {
+      title: 'Customer Analytics & Segmentation',
+      description: 'Advanced customer analytics for segmentation, behavior analysis, and lifetime value prediction.',
+      icon: '👥',
+      price: 'Starting at $2,500/month',
+      features: ['Customer segmentation', 'Behavior analysis', 'Churn prediction', 'Lifetime value modeling', 'Personalization'],
+      benefits: ['Increase customer retention', 'Improve targeting', 'Boost revenue per customer'],
+      marketPrice: '$4,000-12,000/month',
+      category: 'Customer Analytics',
+      technologies: ['RFM Analysis', 'Clustering', 'Cohort Analysis', 'Survival Analysis', 'ML Models']
+    },
+    {
+      title: 'Financial Analytics & Reporting',
+      description: 'Comprehensive financial analytics with automated reporting and compliance monitoring.',
+      icon: '💰',
+      price: 'Starting at $3,200/month',
+      features: ['Financial dashboards', 'Automated reporting', 'Budget vs actual analysis', 'Cash flow forecasting', 'Compliance monitoring'],
+      benefits: ['Improve financial visibility', 'Ensure compliance', 'Optimize financial performance'],
+      marketPrice: '$5,500-15,000/month',
+      category: 'Financial Analytics',
+      technologies: ['Financial Modeling', 'Budgeting Tools', 'Compliance Systems', 'Risk Analytics']
+    },
+    {
+      title: 'Supply Chain Analytics',
+      description: 'End-to-end supply chain visibility with demand forecasting and optimization analytics.',
+      icon: '📦',
+      price: 'Starting at $3,800/month',
+      features: ['Supply chain visibility', 'Demand forecasting', 'Inventory optimization', 'Supplier performance', 'Risk analysis'],
+      benefits: ['Reduce supply chain costs', 'Improve demand accuracy', 'Minimize disruptions'],
+      marketPrice: '$6,500-18,000/month',
+      category: 'Supply Chain Analytics',
+      technologies: ['Demand Planning', 'Inventory Optimization', 'Supplier Analytics', 'Risk Management']
+    },
+    {
+      title: 'Marketing Analytics & Attribution',
+      description: 'Comprehensive marketing analytics with multi-touch attribution and ROI optimization.',
+      icon: '📈',
+      price: 'Starting at $2,800/month',
+      features: ['Multi-touch attribution', 'Campaign performance', 'ROI analysis', 'Customer journey mapping', 'A/B testing analytics'],
+      benefits: ['Optimize marketing spend', 'Improve campaign performance', 'Increase ROI'],
+      marketPrice: '$4,500-12,000/month',
+      category: 'Marketing Analytics',
+      technologies: ['Attribution Modeling', 'Marketing Mix Modeling', 'Cohort Analysis', 'Funnel Analysis']
+    },
+    {
+      title: 'Operational Analytics',
+      description: 'Real-time operational metrics and KPI monitoring for business process optimization.',
+      icon: '⚙️',
+      price: 'Starting at $2,200/month',
+      features: ['KPI dashboards', 'Process monitoring', 'Performance metrics', 'Operational efficiency', 'Quality analytics'],
+      benefits: ['Improve operational efficiency', 'Reduce costs', 'Enhance quality'],
+      marketPrice: '$3,500-10,000/month',
+      category: 'Operational Analytics',
+      technologies: ['Process Mining', 'KPI Dashboards', 'Quality Analytics', 'Efficiency Metrics']
+    },
+    {
+      title: 'Self-Service Analytics Platform',
+      description: 'Empower business users with self-service analytics tools and data exploration capabilities.',
+      icon: '🔍',
+      price: 'Starting at $3,500/month',
+      features: ['Self-service dashboards', 'Data exploration', 'Ad-hoc reporting', 'User training', 'Governance controls'],
+      benefits: ['Reduce IT dependency', 'Accelerate insights', 'Empower business users'],
+      marketPrice: '$6,000-15,000/month',
+      category: 'Self-Service BI',
+      technologies: ['Self-Service Tools', 'Data Catalogs', 'Governance Platforms', 'Training Systems']
+    },
+    {
+      title: 'Advanced Data Visualization',
+      description: 'Custom data visualization solutions with interactive charts, maps, and infographics.',
+      icon: '🎨',
+      price: 'Starting at $2,000/month',
+      features: ['Custom visualizations', 'Interactive charts', 'Geographic mapping', 'Infographic design', 'Animation effects'],
+      benefits: ['Improve data comprehension', 'Enhance presentations', 'Engage stakeholders'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Data Visualization',
+      technologies: ['D3.js', 'Chart.js', 'Mapbox', 'Custom Graphics', 'Animation Tools']
+    },
+    {
+      title: 'BI Strategy & Consulting',
+      description: 'Strategic BI consulting and roadmap development for data-driven transformation.',
+      icon: '💡',
+      price: 'Starting at $300/hour',
+      features: ['BI strategy development', 'Technology assessment', 'Data governance', 'Change management', 'Training programs'],
+      benefits: ['Align BI with business goals', 'Maximize BI investment', 'Ensure successful adoption'],
+      marketPrice: '$500-1,200/hour',
+      category: 'BI Consulting',
+      technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
     }
   ];
 
@@ -239,27 +327,13 @@ const BusinessIntelligencePage: React.FC = () => {
               </Phone>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
-              ></a>
-                <Mail className="w-5 h-5 mr-2" >kleber@ziontechgroup.com</Mai>
-              </Mail>
-            </div>
-            <div className="mt-8 text-sm text-purple-200 flex items-center justify-center"></div>
-              <MapPin className="w-4 h-4 mr-2" />
-                <Phone className="w-5 h-5 mr-2" />
-                +1 302 464 0950;
-              </a>
-              <a;
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                <Mail className="w-5 h-5 mr-2" />
-                kleber@ziontechgroup.com;
+                ✉️ kleber@ziontechgroup.com
               </a>
-            </div>,
-            <div className="mt-8 text-sm text-purple-200 flex items-center justify-center">,
-              <MapPin className="w-4 h-4 mr-2" />,
-              <p>364 E Main St STE 1008, Middletown DE 19709</p>
+            </div>
+            <div className="mt-8 text-sm text-purple-200">
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>

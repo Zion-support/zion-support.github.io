@@ -1,8 +1,10 @@
-const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
 
-async function handler(req, res) {
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'subscribers.json');
+
+export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -10,16 +12,26 @@ async function handler(req, res) {
     return;
   }
 
-  const { email, name, source = 'website' } = req.body || {};
+  const { email, name, preferences } = req.body || {};
 
   if (!email) {
+<<<<<<< HEAD
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
+=======
+    return res.status(400).json({ error: 'Email is required' });
+>>>>>>> origin/main
   }
 
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+
+  let existing = [];
   try {
+<<<<<<< HEAD
     if (!isValidEmail(email)) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
@@ -38,19 +50,52 @@ async function handler(req, res) {
     // In a real application, you would save this to a database
     // For now, we'll just log it
     console.log('Subscription created:', subscription);
+=======
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8');
+      existing = JSON.parse(data);
+      if (!Array.isArray(existing)) existing = [];
+    }
+  } catch (error) {
+    console.error('Error reading existing subscribers:', error);
+    existing = [];
+  }
 
+  // Check if email already exists
+  const existingSubscriber = existing.find(sub => sub.email === email);
+  if (existingSubscriber) {
+    return res.status(400).json({ error: 'Email already subscribed' });
+  }
+>>>>>>> origin/main
+
+  const newSubscriber = {
+    id: Date.now().toString(),
+    email,
+    name: name || '',
+    preferences: preferences || {},
+    timestamp: new Date().toISOString(),
+    status: 'active'
+  };
+
+  existing.push(newSubscriber);
+
+  try {
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
+    res.end(JSON.stringify({ 
+      success: true, 
       message: 'Successfully subscribed to newsletter',
-      subscription
+      id: newSubscriber.id
     }));
   } catch (error) {
-    console.error('Subscription error:', error);
+    console.error('Error saving subscriber:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
+<<<<<<< HEAD
     res.end(JSON.stringify({ error: 'Failed to subscribe to newsletter' }));
+=======
+    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
+>>>>>>> origin/main
   }
 }
-
-module.exports = handler;
