@@ -4,24 +4,6 @@ const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-=======
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  const {
-    name,
-    email,
-    phone: _phone,
-    company: _company,
-    location,
-    details: _details
-  } = req.body || {};
-  const { name, email, company, phone, message } = req.body || {};
-
-  if (!name || !email) {
-    return res.status(400).json({ error: 'Name and email are required' });
->>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
@@ -38,8 +20,20 @@ async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
-    const request = {
+    const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
+    let existing = [];
+
+    try {
+      if (fs.existsSync(file)) {
+        existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+        if (!Array.isArray(existing)) existing = [];
+      }
+    } catch (error) {
+      console.error('Error reading existing requests:', error);
+      existing = [];
+    }
+
+    const newRequest = {
       id: Date.now().toString(),
       name,
       email,
@@ -51,15 +45,21 @@ async function handler(req, res) {
       status: 'pending'
     };
 
-    // In a real application, you would save this to a database
-    // For now, we'll just log it
-    console.log('Onsite request submitted:', request);
+    existing.push(newRequest);
+
+    // Ensure directory exists
+    const dir = path.dirname(file);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       message: 'Onsite request submitted successfully',
-      requestId: request.id
+      requestId: newRequest.id
     }));
   } catch (error) {
     console.error('Onsite request error:', error);
@@ -67,40 +67,6 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to submit onsite request' }));
   }
-=======
-    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-    if (!Array.isArray(existing)) existing = [];
-  } catch {
-    // File doesn't exist or is invalid, use empty array;
-    if (fs.existsSync(file)) {
-      existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-    }
-  } catch (error) {
-    console.error('Error reading existing requests:', error);
-    const data = fs.readFileSync(file, 'utf8');
-    existing = JSON.parse(data);
-  } catch {
-    // File doesn't exist or is invalid, start with empty array
-  }
-
-  const newRequest = {
-    id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    timestamp: new Date().toISOString()
-    createdAt: new Date().toISOString()
-  };
-
-  existing.push(newRequest);
-
-  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-  res.statusCode = 200;
-  res.json({ success: true, message: 'Request submitted successfully' });
-  res.json({ success: true, request: newRequest });
->>>>>>> cursor/fix-errors-and-merge-to-main-e8ab
 }
 
 module.exports = withSentry(handler);
