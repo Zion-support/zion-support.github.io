@@ -14,7 +14,8 @@ const EnhancedAccessibility: React.FC = () => {
     highContrast: false,
     reducedMotion: false,
     screenReader: false,
-    keyboardNavigation: false,
+    keyboardNavigation: false
+  });
 
   const [isVisible, setIsVisible] = useState(false);
 
