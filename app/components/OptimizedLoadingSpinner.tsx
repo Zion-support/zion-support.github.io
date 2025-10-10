@@ -9,7 +9,13 @@ interface OptimizedLoadingSpinnerProps {
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
+<<<<<<< HEAD
   fullScreen?: boolean;);
+=======
+  fullScreen?: boolean]
+    }
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',;
@@ -17,16 +23,22 @@ variant = 'spinner',
     text = 'Loading...',
     className = '',
     color = 'blue',
+<<<<<<< HEAD
     fullScreen = false,;)
 }); => {;
 const sizeClasses = useMemo(
+=======
+    fullScreen = false,]
+    }); => {
+    const sizeClasses = useMemo(
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
         md: 'h-8 w-8',
         lg: 'h-12 w-12',
-        xl: 'h-16 w-16',;)
-});,
+        xl: 'h-16 w-16',]
+    });,
       []
     );
 ;
@@ -36,8 +48,8 @@ const textSizeClasses = useMemo(
         sm: 'text-sm',
         md: 'text-base',
         lg: 'text-lg',
-        xl: 'text-xl',;)
-});,
+        xl: 'text-xl',]
+    });,
       []
     );
 ;
@@ -47,8 +59,8 @@ const colorClasses = useMemo(
         gray: 'border-gray-600 bg-gray-600',
         green: 'border-green-600 bg-green-600',
         red: 'border-red-600 bg-red-600',
-        purple: 'border-purple-600 bg-purple-600',;)
-});,
+        purple: 'border-purple-600 bg-purple-600',]
+    });,
       []
     );
 ;
@@ -78,10 +90,10 @@ switch (variant) {
 
         case 'skeleton':
           return (</div>
-            <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+            <div>
+              <div>
+              <div>
+              <div>
           );
 
         case 'bars':
@@ -93,8 +105,8 @@ switch (variant) {
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{
                     height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,;)
-}}
+                    animationDelay: `${i * 0.1}s`,]
+    }}
                 />
               ));</div>
           );
@@ -107,13 +119,22 @@ switch (variant) {
               role='status'
               aria-label='Loading'
             />
+<<<<<<< HEAD
           ););
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;)
 }, [fullScreen, className]);
+=======
+          )]
+    }
+    }, [size, variant, color, sizeClasses, colorClasses]);
+
+    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`]
+    }, [fullScreen, className]);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
     return (</div>
-      <div></div>
+      <div>
         <div className='text-center'></div>
           {renderSpinner}
           {text && (</div>
@@ -122,7 +143,12 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
             </p>
           );
         </div>
+<<<<<<< HEAD
     ););
+=======
+    )]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 );
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'

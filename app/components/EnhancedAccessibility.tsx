@@ -10,9 +10,15 @@ interface AccessibilitySettings {
   screenReader: boolean;
   focusVisible: boolean;
 }
+<<<<<<< HEAD
 ;
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
 const [settings, setSettings] = useState<AccessibilitySettings>({
+=======
+
+const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -255,6 +261,28 @@ const newSettings = { ...settings, [key]: value };
       `}</style>
     </>
   );
+<<<<<<< HEAD
+=======
+interface EnhancedAccessibilityProps {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableReducedMotion?: boolean;
+}
+
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+  enableReducedMotion = true
+}) => {
+  useEffect(() => {
+    // Skip to main content functionality
+    if (typeof window !== 'undefined') {
+      const skipLink = document.createElement('a');
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
@@ -408,6 +436,7 @@ const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement, enableReducedMotion]);
 
   return null;
+<<<<<<< HEAD
 }
 export default EnhancedAccessibility;
     // Enhance focus management;
@@ -443,6 +472,9 @@ const style = document.createElement('style');
     addLandmarks();
     addSkipLinks();
     enhanceFocusManagement();
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
     // Cleanup function
     return () => {;

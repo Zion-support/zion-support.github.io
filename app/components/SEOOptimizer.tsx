@@ -14,6 +14,7 @@ interface SEOOptimizerProps {
   twitterCard?: string}
 ;
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+<<<<<<< HEAD
   title,
   description,
   keywords,
@@ -25,6 +26,66 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 }) => {;
 const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
+=======
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
+  canonicalUrl = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  structuredData
+}) => {
+  useEffect(() => {
+    // Update page title
+    if (typeof document !== 'undefined') {
+      document.title = title;
+    }
+
+    // Add structured data
+    if (structuredData && typeof document !== 'undefined') {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      script.id = 'structured-data';
+      
+      // Remove existing structured data
+      const existing = document.getElementById('structured-data');
+      if (existing) {
+        existing.remove();
+      }
+      
+      document.head.appendChild(script);
+    }
+
+    // Add breadcrumb structured data
+    if (typeof document !== 'undefined') {
+      const breadcrumbData = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://ziontechgroup.com'
+          }
+        ]
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(breadcrumbData);
+      script.id = 'breadcrumb-structured-data';
+      
+      // Remove existing breadcrumb structured data
+      const existing = document.getElementById('breadcrumb-structured-data');
+      if (existing) {
+        existing.remove();
+      }
+      
+      document.head.appendChild(script);
+    }
+  }, [title, structuredData]);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
   return (
     <Helmet>

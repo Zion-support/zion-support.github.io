@@ -44,16 +44,27 @@ const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
     return () => clearTimeout(timer);
   }, []);
+<<<<<<< HEAD
   
   // Analytics tracking for phone clicks - optimized;
 const handlePhoneClick = useCallback(() => {
     if ($1) { const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+=======
+  // Analytics tracking for phone clicks - optimized
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
     }
+<<<<<<< HEAD
   }, []);
+=======
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -84,15 +95,20 @@ const handlePhoneClick = useCallback(() => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en';)
-},
+            availableLanguage: 'en']
+    },
           address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
+<<<<<<< HEAD
             addressCountry: 'US';);
+=======
+            addressCountry: 'US']
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         }}
       />
       <PerformanceOptimizer
@@ -127,8 +143,8 @@ const handlePhoneClick = useCallback(() => {
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-8';)
-}`}
+              : 'opacity-0 translate-y-8']
+    }`}
           aria-labelledby="hero-heading"
         ></section>
           <div className="max-w-6xl mx-auto"></div>
@@ -1022,7 +1038,7 @@ const handlePhoneClick = useCallback(() => {
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
                       <Phone className="w-6 h-6 text-white" />
                     </div>
-                    <div></div>
+                    <div>
                       <p className="text-gray-300 text-sm">Phone</p>
                       <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg"></a>
                         +1 (302) 464-0950
@@ -1034,7 +1050,7 @@ const handlePhoneClick = useCallback(() => {
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center"></div>
                       <Mail className="w-6 h-6 text-white" />
                     </div>
-                    <div></div>
+                    <div>
                       <p className="text-gray-300 text-sm">Email</p>
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg"></a>
                         kleber@ziontechgroup.com
@@ -1046,7 +1062,7 @@ const handlePhoneClick = useCallback(() => {
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center"></div>
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
-                    <div></div>
+                    <div>
                       <p className="text-gray-300 text-sm">Address</p>
                       <p className="text-white font-semibold"></p>
                         364 E Main St STE 1008<br />
@@ -1059,7 +1075,7 @@ const handlePhoneClick = useCallback(() => {
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center"></div>
                       <Clock className="w-6 h-6 text-white" />
                     </div>
-                    <div></div>
+                    <div>
                       <p className="text-gray-300 text-sm">Business Hours</p>
                       <p className="text-white font-semibold"></p>
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br />
@@ -1074,7 +1090,7 @@ const handlePhoneClick = useCallback(() => {
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text"></h>Get Free Consultation</h3>
                 <form className="space-y-6"></form>
-                  <div></div>
+                  <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Full Name
                     </label>
@@ -1088,7 +1104,7 @@ const handlePhoneClick = useCallback(() => {
                     />
                   </div>
                   
-                  <div></div>
+                  <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Email Address
                     </label>
@@ -1102,7 +1118,7 @@ const handlePhoneClick = useCallback(() => {
                     />
                   </div>
                   
-                  <div></div>
+                  <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Phone Number
                     </label>
@@ -1115,7 +1131,7 @@ const handlePhoneClick = useCallback(() => {
                     />
                   </div>
                   
-                  <div></div>
+                  <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Service Interest
                     </label>
@@ -1133,7 +1149,7 @@ const handlePhoneClick = useCallback(() => {
                     </select>
                   </div>
                   
-                  <div></div>
+                  <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Message
                     </label>
@@ -1156,5 +1172,10 @@ const handlePhoneClick = useCallback(() => {
       <Footer />
     </div>
     </>
+<<<<<<< HEAD
   );)
+=======
+  )]
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default HomePage;

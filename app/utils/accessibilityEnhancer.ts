@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 'use client'
+=======
+'use client';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface AccessibilityOptions {
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -23,6 +28,11 @@ export class AccessibilityEnhancer {
       enableReducedMotion: true,
       ...options
     };
+<<<<<<< HEAD
+=======
+const AccessibilityEnhancerPage: React.FC = () => {
+  const features = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -467,6 +477,7 @@ const lastElement = focusableElements[focusableElements.length - 1];
 }
 
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
     return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[]}
   /**
    * Announce to screen reader
@@ -506,3 +517,5 @@ Recommendations:
 - Test with screen readers regularly
 `}
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

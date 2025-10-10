@@ -1,4 +1,8 @@
 'use client';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {

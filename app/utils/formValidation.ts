@@ -5,11 +5,17 @@
  */
 export interface ValidationRule<T></T> {
   validate: (value: T) => boolean;
+<<<<<<< HEAD
   message: string;});;)
+=======
+  message: string;});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface ValidationResult {
   valid: boolean,
 export interface ValidationRule<T></T> {}
   validate: (value: T) => boolean,
+<<<<<<< HEAD
   message: string;});;)
 export interface ValidationResult {}
   valid: boolean,
@@ -19,6 +25,22 @@ export interface FieldValidation {}
 export interface ValidationRule<T></T> {/* TODO: Fix JSX expression */});;)
 export interface ValidationResult {/* TODO: Fix JSX expression */});;)
 export interface FieldValidation {/* TODO: Fix JSX expression */});;);
+=======
+  message: string;});]
+    }
+export interface ValidationResult {}
+  valid: boolean,
+  errors: string[];});]
+    }
+export interface FieldValidation {}
+  [fieldName: string]: ValidationRule[];}
+export interface ValidationRule<T></T> {/* TODO: Fix JSX expression */});]
+    }
+export interface ValidationResult {/* TODO: Fix JSX expression */});]
+    }
+export interface FieldValidation {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Common validation rules;
  */
@@ -31,8 +53,8 @@ export const validationRules = {}
   required: (message = 'This field is required'): ValidationRule<string></string> => ({}
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
     message}
-export const validationRules = {/* TODO: Fix JSX expression */});;)
-});,
+export const validationRules = {/* TODO: Fix JSX expression */});]
+    });,
   /**
    * Validate email format;
    */
@@ -42,14 +64,14 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   email: (message = 'Please enter a valid email address'): ValidationRule<string></string> => ({}
     validate: (value: string) => {}
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-      return emailRegex.test(value);});;)
-},
+      return emailRegex.test(value);});]
+    },
     message;
   emai,
-  l: (message = 'Please enter a valid email address'): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});;)
-},
-    message});;)
-});,
+  l: (message = 'Please enter a valid email address'): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});]
+    },
+    message});]
+    });,
   /**
    * Validate minimum length;
    */
@@ -59,8 +81,8 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   minLengt,
   h: (mi),
   n: number, message?: string): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */}
-  e: message || `Must be at least ${min} characters`);)
-});,
+  e: message || `Must be at least ${min} characters`)]
+    });,
   /**
    * Validate maximum length;
    */
@@ -70,8 +92,8 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   maxLengt,
   h: (ma),
   x: number, message?: string): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */}`
-  e: message || `Must be no more than ${max} characters`);)
-});,
+  e: message || `Must be no more than ${max} characters`)]
+    });,
   /**
    * Validate phone number (US format)
    */
@@ -82,9 +104,15 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
       return phoneRegex.test(value.replace(/\s/g, ''))
   phoneU,
   S: (message = 'Please enter a valid US phone number'): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});
+<<<<<<< HEAD
 const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));)
 },
+=======
+      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+      return phoneRegex.test(value.replace(/\s/g, ''))]
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     message});
 });,
   /**
@@ -98,6 +126,7 @@ const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
     validate: (value: string) => {}
       try {}
         new URL(value)
+<<<<<<< HEAD
         return true;});;)
 } catch {}
         return false;});;);
@@ -106,9 +135,21 @@ const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
   ur,
   l: (message = 'Please enter a valid URL'): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});;)
 } catch {/* TODO: Fix JSX expression */});;);
+=======
+        return true;});]
+    } catch {}
+        return false;});]
+    }
     },
-    message});;)
-});,
+    message;
+  ur,
+  l: (message = 'Please enter a valid URL'): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});]
+    } catch {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+    },
+    message});]
+    });,
   /**
    * Validate number range;
    */
@@ -119,8 +160,8 @@ const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
   e: (mi,
   n: number, ma)
   x: number, message?: string): ValidationRule<number></number> => ({/* TODO: Fix JSX expression */}`
-  e: message || `Must be between ${min} and ${max}`);)
-});,
+  e: message || `Must be between ${min} and ${max}`)]
+    });,
   /**
    * Validate pattern match;
    */
@@ -129,8 +170,8 @@ const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
     message}
   patter,
   n: (rege),
-  x: RegExp, message = 'Invalid format'): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});;)
-});,
+  x: RegExp, message = 'Invalid format'): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */});]
+    });,
   /**
    * Validate custom condition;
    */
@@ -143,8 +184,8 @@ const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
   m: <T></T>(validato,
   r: (valu),
   e: T) => boolean, messag,
-  e: string): ValidationRule<T></T> => ({/* TODO: Fix JSX expression */});;)
-});,
+  e: string): ValidationRule<T></T> => ({/* TODO: Fix JSX expression */});]
+    });,
   /**
    * Validate password strength;
    */
@@ -179,8 +220,8 @@ const hasMinLength = value.length >= 8;
   s: (otherFieldValu,
   e: string, fieldNam)
   e: string): ValidationRule<string></string> => ({/* TODO: Fix JSX expression */}`
-  e: `Must match ${fieldName}`);)
-});,
+  e: `Must match ${fieldName}`)]
+    });,
   /**
    * Validate file size;
    */
@@ -190,16 +231,16 @@ const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File></File> => ({}
     validate: (file: File) => {}
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024
-      return file.size <= maxSizeInBytes;});;)
-},
+      return file.size <= maxSizeInBytes;});]
+    },
     message: message || `File size must not exceed ${maxSizeInMB}MB;
   fileSiz,
   e: (maxSizeInM),
-  B: number, message?: string): ValidationRule<File></File> => ({/* TODO: Fix JSX expression */});;)
-},
+  B: number, message?: string): ValidationRule<File></File> => ({/* TODO: Fix JSX expression */});]
+    },
     messag,`
-  e: message || `File size must not exceed ${maxSizeInMB}MB`);)
-});,
+  e: message || `File size must not exceed ${maxSizeInMB}MB`)]
+    });,
   /**
    * Validate file type;
    */
@@ -210,7 +251,12 @@ const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
   e: (allowedType),
   s: string[], message?: string): ValidationRule<File></File> => ({/* TODO: Fix JSX expression */});`
   of: ${allowedTypes.join(', ');`});
+<<<<<<< HEAD
 });;);
+=======
+});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Validate a single field with multiple rules;
  */
@@ -218,7 +264,12 @@ export function validateField<T></T>(value: T, rules: ValidationRule<T></T>[]): 
 const errors: string[] = [],
   for (const rule of rules) {,
     if (!rule.validate(value)) {,
+<<<<<<< HEAD
       errors.push(rule.message);});;);
+=======
+      errors.push(rule.message);});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   return {
     valid: errors.length === 0
@@ -226,6 +277,7 @@ export function validateField<T></T>(value: T, rules: ValidationRule<T></T>[]): 
   const errors: string[] = []
   for (const rule of rules) {}
     if (!rule.validate(value)) {}
+<<<<<<< HEAD
       errors.push(rule.message);});;);
   }
   return {}
@@ -234,9 +286,22 @@ export function validateField<T></T>(value: T, rules: ValidationRule<T></T>[]): 
 export function validateField<T></T>(valu,
   e: T, rule)
   s: ValidationRule<T></T>[]): ValidationResult {/* TODO: Fix JSX expression */});;);
+=======
+      errors.push(rule.message);});]
+    }
   }
-  return {/* TODO: Fix JSX expression */});;)
-}});
+  return {}
+    valid: errors.length === 0,
+    errors});]
+    }
+export function validateField<T></T>(valu,
+  e: T, rule)
+  s: ValidationRule<T></T>[]): ValidationResult {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+  }
+  return {/* TODO: Fix JSX expression */});]
+    }});
 }
 /**
  * Validate entire form;
@@ -256,7 +321,12 @@ export function validateForm<T></T>>(formDat,
   a: Record<keyof></keyof>)
 ): Record<keyof></keyof> {/* TODO: Fix JSX expression */}
   const results = {} as Record<keyof></keyof>;
+<<<<<<< HEAD
   for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */});;);
+=======
+  for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return results});
 }
 /**
@@ -268,7 +338,12 @@ export function isFormValid<T></T>>(
   return Object.values(validationResults).every(result => result.valid);}
 export function isFormValid<T></T>>(validationResult,
   s: Record<keyof></keyof>)
+<<<<<<< HEAD
 ): boolean {/* TODO: Fix JSX expression */});;);
+=======
+): boolean {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Get all form errors;
  */
@@ -284,7 +359,12 @@ export function getFormErrors<T></T>>(validationResult,
   s: Record<keyof></keyof>)
 ): Record<keyof></keyof> {/* TODO: Fix JSX expression */}
   const errors = {} as Record<keyof></keyof>;
+<<<<<<< HEAD
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */});;);
+=======
+  for (const fieldName in validationResults) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   return errors});
 }
@@ -301,7 +381,12 @@ export function sanitizeInput(input: string): string {}
     .replace(/[<React.Fragment>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
 export function sanitizeInput(inpu)
+<<<<<<< HEAD
   t: string): string {/* TODO: Fix JSX expression */});;);
+=======
+  t: string): string {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Debounce function for form validation;
  */
@@ -320,10 +405,20 @@ const later = useCallback((...args) => {,
   return function executedFunction(...args: Parameters<T></T>) {}
     const later = useCallback((...args) => {}
       timeout = null
+<<<<<<< HEAD
       func(...args);});;);
     if (timeout) {}
       clearTimeout(timeout);});;);
     timeout = setTimeout(later, wait););
+=======
+      func(...args);});]
+    }
+    if (timeout) {}
+      clearTimeout(timeout);});]
+    }
+    timeout = setTimeout(later, wait)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 export function debounce<T extends (...arg)
   s: Parameters<T></T>) => ReturnType<T></T>>(fun,
@@ -331,10 +426,19 @@ export function debounce<T extends (...arg)
   wai,
   t: number}
 ): (...arg)
+<<<<<<< HEAD
   s: Parameters<T></T>) => void {/* TODO: Fix JSX expression */});;);
     if (timeout) {/* TODO: Fix JSX expression */});;);
     timeout = setTimeout(later, wait);)
 }});
+=======
+  s: Parameters<T></T>) => void {/* TODO: Fix JSX expression */});]
+    };
+    if (timeout) {/* TODO: Fix JSX expression */});]
+    }
+    timeout = setTimeout(later, wait)]
+    }});
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 "`
 }

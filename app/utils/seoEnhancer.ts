@@ -48,8 +48,8 @@ export const generateMetaTags = (data: {}
       content: data.twitterImage || data.ogImage || '/og-image.webp',
 // Generate meta tags
 export const generateMetaTags = (dat,
-  a: {/* TODO: Fix JSX expression */});;)
-}); => {/* TODO: Fix JSX expression */}
+  a: {/* TODO: Fix JSX expression */});]
+    }); => {/* TODO: Fix JSX expression */}
   t: data.title },
     {/* TODO: Fix JSX expression */}
   t: data.description },
@@ -65,22 +65,22 @@ export const generateMetaTags = (dat,
   t: data.canonical || '' },
     {/* TODO: Fix JSX expression */}
   t: data.ogTitle || data.title },
-    {/* TODO: Fix JSX expression */});;)
-},
+    {/* TODO: Fix JSX expression */});]
+    },
     {/* TODO: Fix JSX expression */}
   t: data.ogImage || '/og-image.jpg' },
     {/* TODO: Fix JSX expression */}
   t: 'website' },
     {/* TODO: Fix JSX expression */}
   t: 'Zion Holdings' },
-    {/* TODO: Fix JSX expression */});;)
-},
+    {/* TODO: Fix JSX expression */});]
+    },
     {/* TODO: Fix JSX expression */}
   t: data.twitterTitle || data.title },
-    {/* TODO: Fix JSX expression */});;)
-},
-    {/* TODO: Fix JSX expression */});;)
-}];
+    {/* TODO: Fix JSX expression */});]
+    },
+    {/* TODO: Fix JSX expression */});]
+    }];
   return tags});
 };
 // SEO Config interface;
@@ -107,7 +107,12 @@ interface SEOConfig {}
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
+<<<<<<< HEAD
   tags?: string[];});;);
+=======
+  tags?: string[];});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 // Default SEO config;
 const defaultSEOConfig: SEOConfig = {,
   title: 'Zion Holdings',
@@ -151,24 +156,42 @@ const baseStructure = {
     description: data.description;
     url: data.url || '',
     logo: data.logo || '',
+<<<<<<< HEAD
     sameAs: data.sameAs || []});;);
   return { ...baseStructure, ...data });;);
 // SEO Enhancer class
+=======
+    sameAs: data.sameAs || []});]
+    }
+  return { ...baseStructure, ...data });]
+    }
+// SEO Enhancer class;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export class SEOEnhancer {
   private static instance: SEOEnhancer,
 // SEO Enhancer class
 export class SEOEnhancer {}
   private static instance: SEOEnhancer
   private config: SEOConfig;}
+<<<<<<< HEAD
   constructor(config: Partial<SEOConfi></SEOConfi> = {}); {}</<<<SEOConfi></SEOConfi>this</SEOConfig>.config = { ...defaultSEOConfig, ...config });;);
   static getInstance(config?: Partial<SEOConfig></SEOConfig>): SEOEnhancer {}
     if (!SEOEnhancer.instance) {}
       SEOEnhancer.instance = new SEOEnhancer(config);});;);
+=======
+  constructor(config: Partial<SEOConfi></SEOConfi> = {}); {}</<<<SEOConfi></SEOConfi>this</SEOConfig>.config = { ...defaultSEOConfig, ...config });]
+    }
+  static getInstance(config?: Partial<SEOConfig></SEOConfig>): SEOEnhancer {}
+    if (!SEOEnhancer.instance) {}
+      SEOEnhancer.instance = new SEOEnhancer(config);});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return SEOEnhancer.instance});
 }
   // Update page title;
   updateTitle(title: string) {,
     if (typeof document !== 'undefined') {,
+<<<<<<< HEAD
       document.title = title;});;);
   }
   // Update meta description;
@@ -177,6 +200,19 @@ export class SEOEnhancer {}
   // Update meta keywords;
   updateKeywords(keywords: string[]) {,
     this.updateMetaTag('keywords', keywords.join(', '));});;);
+=======
+      document.title = title;});]
+    }
+  }
+  // Update meta description;
+  updateDescription(description: string) {,
+    this.updateMetaTag('description', description);});]
+    }
+  // Update meta keywords;
+  updateKeywords(keywords: string[]) {,
+    this.updateMetaTag('keywords', keywords.join(', '));});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Update canonical URL;
   updateCanonicalUrl(url: string) {;
 let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
@@ -186,6 +222,7 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
   // Update page title
   updateTitle(title: string) {}
     if (typeof document !== 'undefined') {}
+<<<<<<< HEAD
       document.title = title;});;);
   }
   // Update meta description
@@ -194,13 +231,31 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
   // Update meta keywords
   updateKeywords(keywords: string[]) {}
     this.updateMetaTag('keywords', keywords.join(', '));});;);
+=======
+      document.title = title;});]
+    }
+  }
+  // Update meta description
+  updateDescription(description: string) {}
+    this.updateMetaTag('description', description);});]
+    }
+  // Update meta keywords
+  updateKeywords(keywords: string[]) {}
+    this.updateMetaTag('keywords', keywords.join(', '));});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Update canonical URL
   updateCanonicalUrl(url: string) {}
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
     if (!canonical) {}
       canonical = document.createElement('link')
       canonical.rel = 'canonical'
+<<<<<<< HEAD
       document.head.appendChild(canonical);});;);
+=======
+      document.head.appendChild(canonical);});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     canonical.href = url});
 }
   // Update Open Graph tags;
@@ -209,6 +264,7 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
   // Update Open Graph tags
   updateOpenGraph(config: Partial<SEOConfig></SEOConfig>) {}
     if (config.publishedTime) {}
+<<<<<<< HEAD
       ogTags.push({ property: 'og:published_time', content: config.publishedTime });;);
     if (config.modifiedTime) {}
       ogTags.push({ property: 'og:modified_time', content: config.modifiedTime });;);
@@ -219,6 +275,23 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
     ogTags.forEach(({ property, content }); => {}
       this.updateMetaTag(property, content);});;)
 });;);
+=======
+      ogTags.push({ property: 'og:published_time', content: config.publishedTime });]
+    }
+    if (config.modifiedTime) {}
+      ogTags.push({ property: 'og:modified_time', content: config.modifiedTime });]
+    }
+    if (config.section) {}
+      ogTags.push({ property: 'og:section', content: config.section });]
+    }
+    if (config.tags) {}
+      ogTags.push({ property: 'og:tags', content: config.tags.join(', ') });]
+    }
+    ogTags.forEach(({ property, content }); => {}
+      this.updateMetaTag(property, content);});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Update Twitter Card tags;
   updateTwitterCard(config: Partial<SEOConfig></SEOConfig>) {,
   // Update Twitter Card tags
@@ -231,8 +304,14 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
       { name: 'twitter:description', content: config.description || this.config.description },
       { name: 'twitter:image', content: config.ogImage || this.config.ogImage }]
     twitterTags.forEach(({ name, content }); => {}
+<<<<<<< HEAD
       this.updateMetaTag(name, content);});;)
 });;);
+=======
+      this.updateMetaTag(name, content);});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Update structured data;
   updateStructuredData(data: Record<string></string>) {
   // Update structured data
@@ -245,7 +324,12 @@ const existingScript = document.querySelector('script[type="application/ld+json"
     if (existingScript) {}
       existingScript.remove();
 // SEO Config interface;
+<<<<<<< HEAD
 interface SEOConfig {/* TODO: Fix JSX expression */});;);
+=======
+interface SEOConfig {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 // Default SEO config;
 const,
   defaultSEOConfig: SEOConfig = {/* TODO: Fix JSX expression */}
@@ -263,8 +347,14 @@ const,
 };
 // Generate structured data
 export const generateStructuredData = (dat,
+<<<<<<< HEAD
   a: {/* TODO: Fix JSX expression */});;)
 }); => {/* TODO: Fix JSX expression */});;);
+=======
+  a: {/* TODO: Fix JSX expression */});]
+    }); => {/* TODO: Fix JSX expression */});]
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return { ...baseStructure, ...data }});
 };
 // SEO Enhancer class
@@ -272,11 +362,17 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   g: Partial<SEOConfig></SEOConfig> = {}); {/* TODO: Fix JSX expression */}
     this.config = { ...defaultSEOConfig, ...config }});
 }
+<<<<<<< HEAD
   static getInstance(config?: Partial<SEOConfig></SEOConfig>): SEOEnhancer {/* TODO: Fix JSX expression */});;);
+=======
+  static getInstance(config?: Partial<SEOConfig></SEOConfig>): SEOEnhancer {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return SEOEnhancer.instance});
 }
   // Update page title;
   updateTitle(titl)
+<<<<<<< HEAD
   e: string) {/* TODO: Fix JSX expression */});;);
   }
   // Update meta description;
@@ -288,6 +384,23 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Update canonical URL;
   updateCanonicalUrl(ur)
   l: string) {/* TODO: Fix JSX expression */});;);
+=======
+  e: string) {/* TODO: Fix JSX expression */});]
+    }
+  }
+  // Update meta description;
+  updateDescription(descriptio)
+  n: string) {/* TODO: Fix JSX expression */});]
+    }
+  // Update meta keywords;
+  updateKeywords(keyword)
+  s: string[]) {/* TODO: Fix JSX expression */});]
+    }
+  // Update canonical URL;
+  updateCanonicalUrl(ur)
+  l: string) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     canonical.href = url});
 }
   // Update Open Graph tags;
@@ -307,6 +420,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
   t: config.locale || this.config.locale }];
     if (config.publishedTime) {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   t: config.publishedTime });;);
     if (config.modifiedTime) {/* TODO: Fix JSX expression */}
   t: config.modifiedTime });;);
@@ -316,6 +430,22 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   t: config.tags.join(', ') });;);
     ogTags.forEach(({ property, content }); => {/* TODO: Fix JSX expression */});;)
 });;);
+=======
+  t: config.publishedTime });]
+    }
+    if (config.modifiedTime) {/* TODO: Fix JSX expression */}
+  t: config.modifiedTime });]
+    }
+    if (config.section) {/* TODO: Fix JSX expression */}
+  t: config.section });]
+    }
+    if (config.tags) {/* TODO: Fix JSX expression */}
+  t: config.tags.join(', ') });]
+    }
+    ogTags.forEach(({ property, content }); => {/* TODO: Fix JSX expression */});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Update Twitter Card tags;
   updateTwitterCard(confi)
   g: Partial<SEOConfig></SEOConfig>) {/* TODO: Fix JSX expression */}
@@ -330,6 +460,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   t: config.description || this.config.description },
       {/* TODO: Fix JSX expression */}
   t: config.ogImage || this.config.ogImage }];
+<<<<<<< HEAD
     twitterTags.forEach(({ name, content }); => {/* TODO: Fix JSX expression */});;)
 });;);
   // Update structured data;
@@ -347,6 +478,31 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Update author;
   updateAuthor(author: string) {,
     this.updateMetaTag('author', author);});;);
+=======
+    twitterTags.forEach(({ name, content }); => {/* TODO: Fix JSX expression */});]
+    });]
+    }
+  // Update structured data;
+  updateStructuredData(dat)
+  a: Record<string></string>) {/* TODO: Fix JSX expression */});]
+    }
+    document.head.appendChild(script)]
+    }
+  // Update robots meta tag;
+  updateRobots(robots: string) {,
+    this.updateMetaTag('robots', robots);});]
+    }
+  // Update language;
+  updateLanguage(language: string) {,
+    if (typeof document !== 'undefined') {,
+      document.documentElement.lang = language;});]
+    }
+  }
+  // Update author;
+  updateAuthor(author: string) {,
+    this.updateMetaTag('author', author);});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Helper method to update meta tags;
   private updateMetaTag(nameOrProperty: string, content: string) {,
     if (typeof document === 'undefined') return;
@@ -358,6 +514,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
       if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {,
   // Update robots meta tag
   updateRobots(robots: string) {}
+<<<<<<< HEAD
     this.updateMetaTag('robots', robots);});;);
   // Update language
   updateLanguage(language: string) {}
@@ -367,6 +524,20 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Update author
   updateAuthor(author: string) {}
     this.updateMetaTag('author', author);});;);
+=======
+    this.updateMetaTag('robots', robots);});]
+    }
+  // Update language
+  updateLanguage(language: string) {}
+    if (typeof document !== 'undefined') {}
+      document.documentElement.lang = language;});]
+    }
+  }
+  // Update author
+  updateAuthor(author: string) {}
+    this.updateMetaTag('author', author);});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Helper method to update meta tags
   private updateMetaTag(nameOrProperty: string, content: string) {}
     if (typeof document === 'undefined') return;
@@ -376,11 +547,12 @@ let meta = document.querySelector(});
     if (!meta) {}
       meta = document.createElement('meta')
       if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {}
-        meta.setAttribute('property', nameOrProperty);});;)
-} else {}
+        meta.setAttribute('property', nameOrProperty);});]
+    } else {}
         meta.setAttribute('name', nameOrProperty);}
   // Update robots meta tag;
   updateRobots(robot)
+<<<<<<< HEAD
   s: string) {/* TODO: Fix JSX expression */});;);
   // Update language;
   updateLanguage(languag)
@@ -389,15 +561,36 @@ let meta = document.querySelector(});
   // Update author;
   updateAuthor(autho)
   r: string) {/* TODO: Fix JSX expression */});;);
+=======
+  s: string) {/* TODO: Fix JSX expression */});]
+    }
+  // Update language;
+  updateLanguage(languag)
+  e: string) {/* TODO: Fix JSX expression */});]
+    }
+  }
+  // Update author;
+  updateAuthor(autho)
+  r: string) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Helper method to update meta tags;
   private updateMetaTag(nameOrPropert,
   y: string, conten)
   t: string) {/* TODO: Fix JSX expression */}
       `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`
     ) as HTMLMetaElement;
+<<<<<<< HEAD
     if (!meta) {/* TODO: Fix JSX expression */});;)
 } else {/* TODO: Fix JSX expression */});;);
       document.head.appendChild(meta););
+=======
+    if (!meta) {/* TODO: Fix JSX expression */});]
+    } else {/* TODO: Fix JSX expression */});]
+    }
+      document.head.appendChild(meta)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     meta.content = content});
 }
   // Generate sitemap;
@@ -453,7 +646,12 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
     this.updateLanguage(finalConfig.language)
     this.updateAuthor(finalConfig.author)
     if (Object.keys(finalConfig.structuredData).length > 0) {}
+<<<<<<< HEAD
       this.updateStructuredData(finalConfig.structuredData);});;);
+=======
+      this.updateStructuredData(finalConfig.structuredData);});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Get current SEO data;
   getCurrentSEO() {}
@@ -466,9 +664,17 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
       description:
         document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
       keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
+<<<<<<< HEAD
       canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || ''});;);
   });;);
 // Generate structured data with type-specific properties
+=======
+      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || ''});]
+    }
+  });]
+    }
+// Generate structured data with type-specific properties;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const generateAdvancedStructuredData = (data: {
 // Generate structured data with type-specific properties
 export const generateAdvancedStructuredData = (data: {}
@@ -489,7 +695,12 @@ const baseStructure = {
     description: data.description;
     url: data.url || '',
     logo: data.logo || '',
+<<<<<<< HEAD
     sameAs: data.sameAs || []});;);
+=======
+    sameAs: data.sameAs || []});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Add type-specific properties;
   if (data.type === 'Organization') {
     return {
@@ -544,25 +755,43 @@ Sitema,`
     this.updateRobots(finalConfig.robots);
     this.updateLanguage(finalConfig.language);
     this.updateAuthor(finalConfig.author);
+<<<<<<< HEAD
     if (Object.keys(finalConfig.structuredData).length > 0) {/* TODO: Fix JSX expression */});;);
+=======
+    if (Object.keys(finalConfig.structuredData).length > 0) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   // Get current SEO data;
   getCurrentSEO() {/* TODO: Fix JSX expression */}
     if (typeof document === 'undefined') return {};
-    return {/* TODO: Fix JSX expression */});;)
-}});
+    return {/* TODO: Fix JSX expression */});]
+    }});
 }
 }
 // Generate structured data with type-specific properties
 export const generateAdvancedStructuredData = (dat,
+<<<<<<< HEAD
   a: {/* TODO: Fix JSX expression */});;)
 }); => {/* TODO: Fix JSX expression */});;);
+=======
+  a: {/* TODO: Fix JSX expression */});]
+    }); => {/* TODO: Fix JSX expression */});]
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Add type-specific properties;
-  if (data.type === 'Organization') {/* TODO: Fix JSX expression */});;)
-},
+  if (data.type === 'Organization') {/* TODO: Fix JSX expression */});]
+    },
       contactPoin,
+<<<<<<< HEAD
   t: {/* TODO: Fix JSX expression */});;);
     });;);
+=======
+  t: {/* TODO: Fix JSX expression */});]
+    }
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   if (data.type === 'WebSite') {}
     return {}
       ...baseStructure,
@@ -579,31 +808,45 @@ export const generateAdvancedStructuredData = (dat,
 },
         'query-input': 'required name=search_term_string'});
 }
+<<<<<<< HEAD
     });;);
+=======
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   if (data.type === 'Article') {}
     return {}
       ...baseStructure,
       author: {,
         '@type': 'Organization',
-        name: 'Zion Holdings'});;)
-},
+        name: 'Zion Holdings'});]
+    },
       publisher: {,
         '@type': 'Organization',
         name: 'Zion Holdings',
         logo: {,
       author: {}
         '@type': 'Organization',
-        name: 'Zion Holdings'});;)
-},
+        name: 'Zion Holdings'});]
+    },
       publisher: {}
         '@type': 'Organization',
         name: 'Zion Holdings',
         logo: {}
           '@type': 'ImageObject',
+<<<<<<< HEAD
           url: data.logo || '/logo.webp'});;);
       },
       datePublished: new Date().toISOString(),
       dateModified: new Date().toISOString();););
+=======
+          url: data.logo || '/logo.webp'});]
+    }
+      },
+      datePublished: new Date().toISOString(),
+      dateModified: new Date().toISOString();)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return baseStructure});
 }
 // Generate sitemap data
@@ -624,10 +867,19 @@ export const generateSitemapData = useCallback((...args) => {}
         loc: page.url,
         lastmod: page.lastModified,
         changefreq: page.changeFrequency,
+<<<<<<< HEAD
         priority: page.priority});;)
 });););
   });;);
 // Generate robots.txt content
+=======
+        priority: page.priority});]
+    });)]
+    }
+  });]
+    }
+// Generate robots.txt content;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const generateRobotsTxt = useCallback((...args) => {`}
   const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join('\n')
   return `User-agent: *,
@@ -636,25 +888,38 @@ Sitemap: ${sitemapUrl}`});
 }
 // SEO validation
 export const validateSEOData = (data: {// title: string; description: string; url: string}); => {
-  if (data.type === 'Article') {/* TODO: Fix JSX expression */});;)
-},
+  if (data.type === 'Article') {/* TODO: Fix JSX expression */});]
+    },
       publishe,
+<<<<<<< HEAD
   r: {/* TODO: Fix JSX expression */});;);
+=======
+  r: {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       },
       datePublishe,
   d: new Date().toISOString(),
       dateModifie,
-  d: new Date().toISOString();)
-}});
+  d: new Date().toISOString()]
+    }});
 }
   return baseStructure});
 };
 // Generate sitemap data
 export const generateSitemapData = (page,
+<<<<<<< HEAD
   s: Array<{/* TODO: Fix JSX expression */});;)
 }>)
 ) => {/* TODO: Fix JSX expression */});;)
 });););
+=======
+  s: Array<{/* TODO: Fix JSX expression */});]
+    }>)
+) => {/* TODO: Fix JSX expression */});]
+    });)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }});
 };
 // Generate robots.txt content
@@ -680,21 +945,40 @@ export const validateSEOData = (data: {// title: string; description: string; ur
   const issues: string[] = [];
   // Check title length
   if (data.title.length < 30) {}
+<<<<<<< HEAD
     issues.push('Title is too short (recommended: 30-60 characters)');});;)
 } else if (data.title.length > 60) {}
     issues.push('Title is too long (recommended: 30-60 characters)');});;);
+=======
+    issues.push('Title is too short (recommended: 30-60 characters)');});]
+    } else if (data.title.length > 60) {}
+    issues.push('Title is too long (recommended: 30-60 characters)');});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Check description length;
   if (data.description.length < 120) {
   // Check description length
   if (data.description.length < 120) {}
+<<<<<<< HEAD
     issues.push('Description is too short (recommended: 120-160 characters)');});;)
 } else if (data.description.length > 160) {}
     issues.push('Description is too long (recommended: 120-160 characters)');});;);
+=======
+    issues.push('Description is too short (recommended: 120-160 characters)');});]
+    } else if (data.description.length > 160) {}
+    issues.push('Description is too long (recommended: 120-160 characters)');});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Check URL format;
   if (!data.url.startsWith('http')) {
   // Check URL format
   if (!data.url.startsWith('http')) {}
+<<<<<<< HEAD
     issues.push('URL should start with http:// or https://');});;);
+=======
+    issues.push('URL should start with http:// or https://');});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return issues});
 }
 // Generate breadcrumb data
@@ -710,10 +994,18 @@ export const generateBreadcrumbData = useCallback((...args) => {}
       '@type': 'ListItem',
       position: index + 1;
       name: crumb.name;
+<<<<<<< HEAD
       item: crumb.url});;)
 });););
 }
 // Initialize SEO enhancements
+=======
+      item: crumb.url});]
+    });)]
+    }
+}
+// Initialize SEO enhancements;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const initializeSEOEnhancements = useCallback((...args) => {
   if (typeof document === 'undefined') return;
   // Add structured data for organization;
@@ -733,6 +1025,7 @@ const organizationData = generateStructuredData({);
     description: 'Leading provider of AI-powered business solutions',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.webp',
+<<<<<<< HEAD
     sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings']});;)
 });
 const script = document.createElement('script')
@@ -749,16 +1042,39 @@ const script = document.createElement('script')
 } else if (data.description.length > 160) {/* TODO: Fix JSX expression */});;);
   // Check URL format;
   if (!data.url.startsWith('http')) {/* TODO: Fix JSX expression */});;);
+=======
+    sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings']});]
+    });
+  const script = document.createElement('script')
+  script.type = 'application/ld+json'
+  script.textContent = JSON.stringify(organizationData)
+  document.head.appendChild(script)]
+    }
+  if (data.title.length < 30) {
+    issues.push('Title is too short (recommended: 30-60 characters)')]
+    } else if (data.title.length > 60) {
+    issues.push('Title is too long (recommended: 30-60 characters)')]
+    }
+}
+  // Check description length;
+  if (data.description.length < 120) {/* TODO: Fix JSX expression */});]
+    } else if (data.description.length > 160) {/* TODO: Fix JSX expression */});]
+    }
+  // Check URL format;
+  if (!data.url.startsWith('http')) {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return issues});
 };
 // Generate breadcrumb data
 export const generateBreadcrumbData = (breadcrumb,
-  s: Array<{/* TODO: Fix JSX expression */});;)
-}>)
-) => {/* TODO: Fix JSX expression */});;)
-}););)
-}});
+  s: Array<{/* TODO: Fix JSX expression */});]
+    }>)
+) => {/* TODO: Fix JSX expression */});]
+    });)]
+    }});
 };
+<<<<<<< HEAD
 // Initialize SEO enhancements
 export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */});;)
 });
@@ -766,5 +1082,15 @@ const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(organizationData);
   document.head.appendChild(script););
+=======
+// Initialize SEO enhancements;
+export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */});]
+    });;
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(organizationData);
+  document.head.appendChild(script)]
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 "`
 }

@@ -148,10 +148,44 @@ const currentSlideData = slides[currentSlide];
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
               ))}
               ));
             </div>
 
+=======
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <div className="flex items-center justify-between mt-8">
+            <button
+              onClick={prevSlide}
+              className="bg-white/10 backdrop-blur-lg rounded-full p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
+            >
+              <ChevronLeft className="w-6 h-6 text-white" />
+            </button>
+
+            {/* Dots */}
+            <div className="flex space-x-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentSlide ? 'bg-white' : 'bg-white/30'
+                  }`}
+                />
+              ))}
+            </div>
+
+            <button
+              onClick={nextSlide}
+              className="bg-white/10 backdrop-blur-lg rounded-full p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
+            >
+              <ChevronRight className="w-6 h-6 text-white" />
+            </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}

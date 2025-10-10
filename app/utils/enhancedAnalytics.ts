@@ -8,7 +8,12 @@ export interface AnalyticsEvent {
   action: string,
   label?: string;
   value?: number;
+<<<<<<< HEAD
   metadata?: Record<string></string>;});;)
+=======
+  metadata?: Record<string></string>;});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface UserProperties {
   userId?: string;
   sessionId?: string;
@@ -24,7 +29,12 @@ export interface UserProperties {}
   userId?: string
   sessionId?: string
   userType?: string
+<<<<<<< HEAD
   [key: string]: unknown;});;);
+=======
+  [key: string]: unknown;});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 class EnhancedAnalytics {}
   private queue: AnalyticsEvent[] = []}
   private userProperties: UserProperties = {}
@@ -39,24 +49,41 @@ constructor() {,
 constructor() {}
     this.sessionId = this.generateSessionId()
     this.setupOfflineHandling()
+<<<<<<< HEAD
     this.setupPeriodicFlush();});;);
+=======
+    this.setupPeriodicFlush();});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   private generateSessionId(): string {}
     return `session-${Date.now();-${Math.random().toString(36).substring(7);`});
 }
   private setupOfflineHandling(): void {}
     if (typeof window !== 'undefined') {}
       window.addEventListener('online', () => {}
-        this.flushOfflineQueue();});;)
-});
+        this.flushOfflineQueue();});]
+    });
       window.addEventListener('beforeunload', () => {}
+<<<<<<< HEAD
         this.flush();});;)
 });;);
+=======
+        this.flush();});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   private setupPeriodicFlush(): void {}
     if (typeof window !== 'undefined') {}
       setInterval(() => {}
+<<<<<<< HEAD
         this.flush();});;)
 }, this.flushInterval););
+=======
+        this.flush();});]
+    }, this.flushInterval)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   public initialize(config?: { userId?: string; userType?: string });: void {
     if (this.isInitialized) return;
@@ -68,7 +95,12 @@ constructor() {}
     this.userProperties = {}
       ...this.userProperties,
       sessionId: this.sessionId;
+<<<<<<< HEAD
       ...config});;);
+=======
+      ...config});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Track initialization;
     this.trackEvent({)
       category: 'System'),
@@ -80,12 +112,24 @@ constructor() {}
       action: 'Analytics Initialized',
       metadata: {}
         timestamp: new Date().toISOString(),
+<<<<<<< HEAD
         userAgent: navigator.userAgent});;);
     });;);
   public setUserProperties(properties: UserProperties): void {,
     this.userProperties = {,
       ...this.userProperties;
       ...properties});;);
+=======
+        userAgent: navigator.userAgent});]
+    }
+    });]
+    }
+  public setUserProperties(properties: UserProperties): void {,
+    this.userProperties = {,
+      ...this.userProperties;
+      ...properties});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   public trackEvent(event: AnalyticsEvent): void {;
 const enrichedEvent: AnalyticsEvent = {
@@ -96,7 +140,12 @@ const enrichedEvent: AnalyticsEvent = {
   public setUserProperties(properties: UserProperties): void {}
     this.userProperties = {}
       ...this.userProperties,
+<<<<<<< HEAD
       ...properties});;);
+=======
+      ...properties});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   public trackEvent(event: AnalyticsEvent): void {}
     const enrichedEvent: AnalyticsEvent = {}
@@ -105,7 +154,12 @@ const enrichedEvent: AnalyticsEvent = {
         ...event.metadata,
         sessionId: this.sessionId,
         timestamp: new Date().toISOString(),
+<<<<<<< HEAD
         url: typeof window !== 'undefined' ? window.location.href : ''});;);
+=======
+        url: typeof window !== 'undefined' ? window.location.href : ''});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
     // Add to queue;
     this.queue.push(enrichedEvent)
@@ -113,30 +167,55 @@ const enrichedEvent: AnalyticsEvent = {
     this.sendToGtag(enrichedEvent)
     // Check if we should flush;
     if (this.queue.length >= this.batchSize) {
+<<<<<<< HEAD
       this.flush();});;);
+=======
+      this.flush();});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   private sendToGtag(event: AnalyticsEvent): void {,
     if(typeof window !== 'undefined' &&)
       ()
         window as {),
+<<<<<<< HEAD
           gtag?: (command: string, action: string, parameters: Record<string></string>) => void;});;);
+=======
+          gtag?: (command: string, action: string, parameters: Record<string></string>) => void;});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       ).gtag;
     ) {
     // Check if we should flush
     if (this.queue.length >= this.batchSize) {}
+<<<<<<< HEAD
       this.flush();});;);
+=======
+      this.flush();});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   private sendToGtag(event: AnalyticsEvent): void {}
     if (
       typeof window !== 'undefined' &&
       (
         window as {}
+<<<<<<< HEAD
           gtag?: (command: string, action: string, parameters: Record<string></string>) => void;});;);
+=======
+          gtag?: (command: string, action: string, parameters: Record<string></string>) => void;});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       ).gtag
     ) {}
       (
         window as unknown as {}
+<<<<<<< HEAD
           gtag: (command: string, action: string, parameters: Record<string></string>) => void;});;);
+=======
+          gtag: (command: string, action: string, parameters: Record<string></string>) => void;});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       ).gtag('event', event.action, {)
         event_category: event.category}
         event_label: event.label),
@@ -144,8 +223,14 @@ const enrichedEvent: AnalyticsEvent = {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
+<<<<<<< HEAD
         ...event.metadata});;)
 });;);
+=======
+        ...event.metadata});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   public trackPageView(pagePath: string, pageTitle?: string): void {
     this.trackEvent({)
@@ -162,8 +247,15 @@ const enrichedEvent: AnalyticsEvent = {
       metadata: {}
         pageTitle: pageTitle || document.title,
         referrer: document.referrer}
+<<<<<<< HEAD
 export interface AnalyticsEvent {/* TODO: Fix JSX expression */});;)
 export interface UserProperties {/* TODO: Fix JSX expression */});;);
+=======
+export interface AnalyticsEvent {/* TODO: Fix JSX expression */});]
+    }
+export interface UserProperties {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   userProperties: UserProperties = {};
   private,
@@ -173,6 +265,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   private flushInterval = 30000; // 30 seconds;
   private,
   offlineQueue: AnalyticsEvent[] = [];
+<<<<<<< HEAD
   constructor() {/* TODO: Fix JSX expression */});;);
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
     return `session-${Date.now();-${Math.random().toString(36).substring(7);`});
@@ -190,18 +283,48 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     this.trackEvent({/* TODO: Fix JSX expression */});;)
 });;)
 });;);
+=======
+  constructor() {/* TODO: Fix JSX expression */});]
+    }
+  private generateSessionId(): string {/* TODO: Fix JSX expression */}
+    return `session-${Date.now();-${Math.random().toString(36).substring(7);`});
+}
+  private setupOfflineHandling(): void {/* TODO: Fix JSX expression */});]
+    });;
+      window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */});]
+    });]
+    }
+  }
+  private setupPeriodicFlush(): void {/* TODO: Fix JSX expression */});]
+    }, this.flushInterval)]
+    }
+  }
+  public initialize(config?: { userId?: string; userType?: string });: void {/* TODO: Fix JSX expression */});]
+    };
+    // Track initialization;
+    this.trackEvent({/* TODO: Fix JSX expression */});]
+    });]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   public setUserProperties(propertie)
-  s: UserProperties): void {/* TODO: Fix JSX expression */});;)
-}});
+  s: UserProperties): void {/* TODO: Fix JSX expression */});]
+    }});
 }
   public trackEvent(even)
+<<<<<<< HEAD
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */});;);
+=======
+  t: AnalyticsEvent): void {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     };
     // Add to queue;
     this.queue.push(enrichedEvent);
     // Send to gtag if available;
     this.sendToGtag(enrichedEvent);
     // Check if we should flush;
+<<<<<<< HEAD
     if (this.queue.length >= this.batchSize) {/* TODO: Fix JSX expression */});;);
   }
   private sendToGtag(even)
@@ -214,13 +337,39 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   public trackPageView(pagePat)
   h: string, pageTitle?: string): void {/* TODO: Fix JSX expression */});;);
     });;);
+=======
+    if (this.queue.length >= this.batchSize) {/* TODO: Fix JSX expression */});]
+    }
+  }
+  private sendToGtag(even)
+  t: AnalyticsEvent): void {/* TODO: Fix JSX expression */});]
+    }
+      ).gtag;
+    ) {/* TODO: Fix JSX expression */});]
+    }
+      ).gtag('event', event.action, {/* TODO: Fix JSX expression */});]
+    });]
+    }
+  }
+  public trackPageView(pagePat)
+  h: string, pageTitle?: string): void {/* TODO: Fix JSX expression */});]
+    }
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   public trackUserInteraction(action: string, label?: string, value?: number): void {
     this.trackEvent({)
       category: 'User Interaction')
       action),
       label),
+<<<<<<< HEAD
       value});;)
 });;);
+=======
+      value});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   public trackError(error: Error, context?: Record<string></string>): void {
     this.trackEvent({)
       category: 'Error'),
@@ -233,8 +382,14 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       category: 'User Interaction',
       action,
       label,
+<<<<<<< HEAD
       value});;)
 });;);
+=======
+      value});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   public trackError(error: Error, context?: Record<string></string>): void {}
     this.trackEvent({);
       category: 'Error',
@@ -244,11 +399,22 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
         stack: error.stack,
         ...context}
   public trackUserInteraction(actio)
+<<<<<<< HEAD
   n: string, label?: string, value?: number): void {/* TODO: Fix JSX expression */});;)
 });;);
   public trackError(erro)
   r: Error, context?: Record<string></string>): void {/* TODO: Fix JSX expression */});;);
     });;);
+=======
+  n: string, label?: string, value?: number): void {/* TODO: Fix JSX expression */});]
+    });]
+    }
+  public trackError(erro)
+  r: Error, context?: Record<string></string>): void {/* TODO: Fix JSX expression */});]
+    }
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   public trackPerformance(metric: string, value: number, rating?: string): void {
     this.trackEvent({)
       category: 'Performance'),
@@ -264,8 +430,15 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
         rating}
   public trackPerformance(metri,
   c: string, valu)
+<<<<<<< HEAD
   e: number, rating?: string): void {/* TODO: Fix JSX expression */});;);
     });;);
+=======
+  e: number, rating?: string): void {/* TODO: Fix JSX expression */});]
+    }
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   public trackConversion(conversionType: string, value?: number): void {
     this.trackEvent({)
       category: 'Conversion'),
@@ -282,7 +455,12 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   e: string, value?: number): void {/* TODO: Fix JSX expression */}`
   d: `conv-${Date.now();`});
 }
+<<<<<<< HEAD
     });;);
+=======
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   public trackCustomEvent(category: string}
     action: string},
     label?: string),
@@ -294,8 +472,14 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       action)
       label)
       value)
+<<<<<<< HEAD
       metadata});;)
 });;);
+=======
+      metadata});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   private flush(): void {
     if (this.queue.length === 0) return;
     // Check if online;
@@ -312,17 +496,31 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       action,
       label,
       value,
+<<<<<<< HEAD
       metadata});;)
 });;);
+=======
+      metadata});]
+    });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   private flush(): void {}
     if (this.queue.length === 0) return
     // Check if online
     if (typeof navigator !== 'undefined' && !navigator.onLine) {}
       this.offlineQueue.push(...this.queue)
       this.queue = []
+<<<<<<< HEAD
       return;});;);
     // In a real implementation, send to analytics backend;
     if (process.env['NODE_ENV'] === 'development') {});;);
+=======
+      return;});]
+    }
+    // In a real implementation, send to analytics backend;
+    if (process.env['NODE_ENV'] === 'development') {});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Clear queue;
     this.queue = []});
 }
@@ -335,6 +533,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     this.queue.push(...this.offlineQueue)
     this.offlineQueue = []
     // Flush;
+<<<<<<< HEAD
     this.flush();});;);
   public getQueueSize(): number {}
     return this.queue.length;});;);
@@ -342,12 +541,25 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     return this.sessionId;});;);
   public getUserProperties(): UserProperties {}
     return { ...this.userProperties });;);
+=======
+    this.flush();});]
+    }
+  public getQueueSize(): number {}
+    return this.queue.length;});]
+    }
+  public getSessionId(): string {}
+    return this.sessionId;});]
+    }
+  public getUserProperties(): UserProperties {}
+    return { ...this.userProperties });]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   public getAnalyticsSummary(): {
     queueSize: number,
     offlineQueueSize: number,
     sessionId: string,
-    userProperties: UserProperties;});;)
-} {
+    userProperties: UserProperties;});]
+    } {
     return {
       queueSize: this.queue.length;
       offlineQueueSize: this.offlineQueue.length;
@@ -356,15 +568,23 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     queueSize: number,
   offlineQueueSize: number,
   sessionId: string,
-    userProperties: UserProperties;});;)
-} {}
+    userProperties: UserProperties;});]
+    } {}
     return {}
       queueSize: this.queue.length,
       offlineQueueSize: this.offlineQueue.length,
       sessionId: this.sessionId,
+<<<<<<< HEAD
       userProperties: this.getUserProperties();););
   });;);
 // Export singleton instance
+=======
+      userProperties: this.getUserProperties();)]
+    }
+  });]
+    }
+// Export singleton instance;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const analytics = new EnhancedAnalytics()
 export default analytics;
   public trackCustomEvent(categor,
@@ -374,6 +594,7 @@ export default analytics;
     label?: string,
     value?: number,
     metadata?: Record<string></string>)
+<<<<<<< HEAD
   ): void {/* TODO: Fix JSX expression */});;)
 });;);
   private flush(): void {/* TODO: Fix JSX expression */});;);
@@ -385,12 +606,31 @@ export default analytics;
   private flushOfflineQueue(): void {/* TODO: Fix JSX expression */});;);
   public getQueueSize(): number {/* TODO: Fix JSX expression */});;);
   public getSessionId(): string {/* TODO: Fix JSX expression */});;);
+=======
+  ): void {/* TODO: Fix JSX expression */});]
+    });]
+    }
+  private flush(): void {/* TODO: Fix JSX expression */});]
+    }
+    // In a real implementation, send to analytics backend;
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});]
+    }
+    // Clear queue;
+    this.queue = []});
+}
+  private flushOfflineQueue(): void {/* TODO: Fix JSX expression */});]
+    }
+  public getQueueSize(): number {/* TODO: Fix JSX expression */});]
+    }
+  public getSessionId(): string {/* TODO: Fix JSX expression */});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   public getUserProperties(): UserProperties {/* TODO: Fix JSX expression */}
     return { ...this.userProperties }});
 }
-  public getAnalyticsSummary(): {/* TODO: Fix JSX expression */});;)
-} {/* TODO: Fix JSX expression */});;)
-}});
+  public getAnalyticsSummary(): {/* TODO: Fix JSX expression */});]
+    } {/* TODO: Fix JSX expression */});]
+    }});
 }
 }
 // Export singleton instance

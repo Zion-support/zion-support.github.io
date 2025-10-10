@@ -73,7 +73,12 @@ const imageStyle: React.CSSProperties = {}
       width: '100%',
       height: '100%',
       objectFit: 'cover'});
+<<<<<<< HEAD
 });;);
+=======
+});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   if (hasError) {</ImageProps>
     return (</ImageProps>
   if (hasError) {}
@@ -86,14 +91,19 @@ import React, { useState, useCallback } from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */});
 }
 export const,
-  Image: React.FC<ImageProps></div> = ({/* TODO: Fix JSX expression */});;)
-}); => {/* TODO: Fix JSX expression */});
+  Image: React.FC<ImageProps></div> = ({/* TODO: Fix JSX expression */});]
+    }); => {/* TODO: Fix JSX expression */});
 }, [onLoad]);
 const handleError = useCallback(() => {/* TODO: Fix JSX expression */});
 }, [onError]);
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */});
+<<<<<<< HEAD
 });;);
+=======
+});]
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
@@ -104,9 +114,14 @@ const handleError = useCallback(() => {/* TODO: Fix JSX expression */});
     ),
         {...props}
       ></div>
-        <span></spa><span className="sr-only"></spa>Screen reader: </span>Failed to load image</span>
+        <span><span className="sr-only"></spa>Screen reader: </span>Failed to load image</span>
       </div>
+<<<<<<< HEAD
     ););
+=======
+    )]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return(<img;
   return (<img>
       src={src}
@@ -120,18 +135,27 @@ const handleError = useCallback(() => {/* TODO: Fix JSX expression */});
       onLoad={handleLoad}
       onError={handleError}
       {...props}
-    >)</img>;)
-}</img>
+    >)</img>]
+    }</img>
 export default Image</img>
       loading={priority ? 'eager' : 'lazy'});
       onLoad={handleLoad});
       onError={handleError});
       {...props});
     />)
+<<<<<<< HEAD
   );)
 export default Image;
     />)
   );)
+=======
+  )]
+    }
+export default Image;
+    />)
+  )]
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default Image;
 "`
 }

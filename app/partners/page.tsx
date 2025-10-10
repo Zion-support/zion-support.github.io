@@ -2,6 +2,11 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 
 interface Partner {
@@ -25,6 +30,11 @@ const PartnersPage: React.FC = () => {const partners: Partner[] = [
     {
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
+<<<<<<< HEAD
+=======
+      description: 'Preferred partner for AWS cloud infrastructure and machine learning services',
+      category: 'Cloud & AI',
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       description: 'Leading cloud infrastructure and machine learning platform provider',
       category: 'Cloud Computing',
       website: 'https://aws.amazon.com',
@@ -33,7 +43,14 @@ const PartnersPage: React.FC = () => {const partners: Partner[] = [
     {
       name: 'Google Cloud',
       logo: '/images/partners/google-cloud.png',
+<<<<<<< HEAD
       description: 'Advanced AI and machine learning platform with global reach',
+=======
+      description: 'Certified partner for Google Cloud Platform and AI/ML solutions',
+      category: 'Cloud & AI',
+      website: 'https://cloud.google.com',
+      description: 'Advanced AI and data analytics solutions on Google Cloud Platform',
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       category: 'Cloud & AI',
       website: 'https://cloud.google.com',
       tier: 'strategic'
@@ -49,8 +66,15 @@ const PartnersPage: React.FC = () => {const partners: Partner[] = [
     {
       name: 'Salesforce',
       logo: '/images/partners/salesforce.png',
+<<<<<<< HEAD
       description: 'Customer relationship management and business automation',
       category: 'CRM & Automation',
+=======
+      description: 'Strategic partnership for CRM integration and business automation',
+      category: 'Business Solutions',
+      description: 'CRM and customer experience platform integration',
+      category: 'CRM & Sales',
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       website: 'https://salesforce.com',
       tier: 'strategic'
     },
@@ -116,10 +140,17 @@ const PartnersPage: React.FC = () => {const partners: Partner[] = [
       description: 'Certified partner for data warehousing and analytics solutions',
       category: 'Data & Analytics',
       website: 'https://snowflake.com',
+<<<<<<< HEAD
+=======
+      description: 'Database and enterprise application solutions',
+      category: 'Database & Enterprise',
+      website: 'https://oracle.com',
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       tier: 'certified'
     }
   ];
 
+<<<<<<< HEAD
   const benefits = [
     'Access to cutting-edge technology platforms',
     'Joint go-to-market strategies',
@@ -135,6 +166,9 @@ const PartnersPage: React.FC = () => {const partners: Partner[] = [
 
   const partnershipTiers = [
     {
+=======
+  const partnerTiers = {
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     strategic: {
       name: 'Strategic Partners',
       description: 'Our most important partnerships with industry leaders',
@@ -152,6 +186,10 @@ const PartnersPage: React.FC = () => {const partners: Partner[] = [
       description: 'Validated partners with specialized expertise',
       color: 'from-orange-600 to-red-600',
       icon: <CheckCircle className="w-6 h-6" />
+<<<<<<< HEAD
+=======
+  const partnershipTiers = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       name: 'Strategic',
       description: 'Long-term strategic partnerships with shared vision and deep integration',
@@ -203,6 +241,12 @@ const getPartnersByTier = (tier: keyof typeof partnerTiers) =>
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
+=======
+        <title>Partners - Zion Tech Group</title>
+        <meta name="description" content="Discover our strategic partnerships with leading technology companies. We work with industry leaders to deliver the best solutions for your business." />
+        <meta name="keywords" content="partners, partnerships, technology partners, strategic alliances, certified partners" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
@@ -210,7 +254,20 @@ const getPartnersByTier = (tier: keyof typeof partnerTiers) =>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">
+=======
+        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Our Partners
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                We work with industry leaders to deliver the best technology solutions for your business
+              </p>
+        <section className="relative py-20 px-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Partnerships</span>
@@ -218,6 +275,7 @@ const getPartnersByTier = (tier: keyof typeof partnerTiers) =>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               We partner with industry leaders to deliver cutting-edge AI and IT solutions. Our strategic alliances ensure you get the best technology available.
             </p>
+<<<<<<< HEAD
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
@@ -232,10 +290,66 @@ const getPartnersByTier = (tier: keyof typeof partnerTiers) =>
                 <div className="text-3xl font-bold text-white mb-2">100%</div>
                 <div className="text-gray-400">Certified Solutions</div>
               </div>
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                Become a Partner
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-slate-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                View Partnership Program
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+        {/* Partner Tiers */}
+        {Object.entries(partnerTiers).map(([tierKey, tierInfo]) => {
+          const tierPartners = getPartnersByTier(tierKey as keyof typeof partnerTiers);
+          if (tierPartners.length === 0) return null;
+
+          return (
+            <section key={tierKey} className="py-16 bg-white">
+              <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                  <div className="flex items-center justify-center mb-4">
+                    <div className={`bg-gradient-to-r ${tierInfo.color} p-3 rounded-full text-white mr-4`}>
+                      {tierInfo.icon}
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-900">{tierInfo.name}</h2>
+                  </div>
+                  <p className="text-xl text-gray-600 max-w-3xl mx-auto">{tierInfo.description}</p>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {tierPartners.map((partner, index) => (
+                    <div key={index} className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all">
+                      <div className="flex items-center mb-4">
+                        <img
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          className="w-12 h-12 object-contain mr-4"
+                        />
+                        <div>
+                          <h3 className="text-xl font-bold text-gray-900">{partner.name}</h3>
+                          <span className="text-sm text-blue-600 font-medium">{partner.category}</span>
+                        </div>
+                      </div>
+                      <p className="text-gray-600 mb-4">{partner.description}</p>
+                      {partner.website && (
+                        <a
+                          href={partner.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+                        >
+                          Visit Website
+                          <ExternalLink className="w-4 h-4 ml-2" />
+                        </a>
+                      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         {/* Partnership Tiers */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -294,6 +408,7 @@ const tierInfo = getTierInfo(partner.tier);
                             <ExternalLink className="w-4 h-4" />
                           </a>);
                       </div>
+<<<<<<< HEAD
                       {partner.website && (
                         <a
                           href={partner.website}
@@ -304,6 +419,8 @@ const tierInfo = getTierInfo(partner.tier);
                           Visit Website
                           <ExternalLink className="w-3 h-3" />
                         </a>);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                     </div>
                   ));
                 </div>
@@ -326,13 +443,38 @@ const tierInfo = getTierInfo(partner.tier);
                   <div className="flex justify-center mb-4">
                     {benefit.icon}
                   </div>
+<<<<<<< HEAD
+=======
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
                 );
               })}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Partnership Benefits */}
+=======
+        {/* Become a Partner */}
+        <section className="py-16 bg-blue-900 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Become a Partner</h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Join our partner network and help us deliver innovative solutions to businesses worldwide
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Partner With Us
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+                Learn More
+              </button>
+        {/* Benefits Section */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">

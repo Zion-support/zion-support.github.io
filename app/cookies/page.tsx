@@ -8,21 +8,21 @@ const CookiesPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>Cookie Policy - Zion Tech Group</title>
+        <title>Cookie Policy - Zion Tech Group</title>
         <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
       </Helmet>
       
-      <div></div>
+      <div>
         <Navigation />
         
         <main className="pt-20"></main>
-          <div></div>
-            <div></div>
+          <div>
+            <div>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"></h1>
                 Cookie Policy</h1>
               </h1>
               
-              <div></div>
+              <div>
                 <p className="text-xl text-gray-600 mb-8"></p>
                   Last updated: {new Date().toLocaleDateString();
                 </p>
@@ -49,5 +49,11 @@ const CookiesPage: React.FC = () => {
         <Footer />
       </div>
     </>
+<<<<<<< HEAD
   );)
+=======
+  )]
+    };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default CookiesPage;

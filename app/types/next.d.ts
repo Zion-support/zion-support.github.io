@@ -51,8 +51,19 @@ declare global {
   }
 }
 
+<<<<<<< HEAD
 export {}
 const Next.dPage: React.FC = () => {const features = [
+=======
+export {};
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
+const Next.dPage: React.FC = () => {
+  const features = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: Brain,
       title: 'AI-Powered Solutions',

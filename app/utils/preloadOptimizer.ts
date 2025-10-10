@@ -152,4 +152,4 @@ export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
   }
 }
 const loadAnalytics = () => {/* TODO: Fix JSX expression */}
-}
+  }

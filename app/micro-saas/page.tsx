@@ -3,6 +3,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import { Zap, CheckCircle, ArrowRight, Star, Users, Shield, Cloud, BarChart3, Target, Rocket } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 
 interface MicroSaasProduct {
@@ -66,6 +70,55 @@ const MicroSaasPage: React.FC = () => {const microSaasProducts: MicroSaasProduct
     },
     {
       id: '3',
+<<<<<<< HEAD
+=======
+      icon: <Target className="w-8 h-8 text-purple-600" />,
+      title: 'Lead Scoring',
+      description: 'AI-powered lead qualification and scoring system',
+      features: [
+        'Automated lead scoring',
+        'Behavioral tracking',
+        'Lead prioritization',
+        'Integration capabilities',
+        'Custom scoring rules'
+      ],
+      price: '$39/month',
+      users: 'Up to 15 users',
+      popular: false,
+      category: 'Sales'
+    },
+    {
+      id: '4',
+      icon: <Cloud className="w-8 h-8 text-orange-600" />,
+      title: 'Document Processor',
+      description: 'Automated document processing and data extraction',
+      features: [
+        'OCR text recognition',
+        'Data extraction',
+        'Document classification',
+        'Batch processing',
+        'API integration'
+      ],
+      price: '$49/month',
+      users: 'Up to 20 users',
+      popular: true,
+      category: 'Automation'
+    },
+    {
+      id: '5',
+      icon: <Shield className="w-8 h-8 text-red-600" />,
+      title: 'Security Monitor',
+      description: 'Real-time security monitoring and threat detection',
+      features: [
+        'Threat detection',
+        'Security alerts',
+        'Compliance monitoring',
+        'Incident response',
+        'Security reports'
+      ],
+      price: '$59/month',
+      users: 'Up to 25 users',
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       icon: '🔒',
       title: 'Security Monitoring Suite',
       description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses',
@@ -112,15 +165,23 @@ const MicroSaasPage: React.FC = () => {const microSaasProducts: MicroSaasProduct
       price: '$34/month',
       users: 'Up to 12 users',
       popular: false,
+<<<<<<< HEAD
+=======
+      category: 'Performance'
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       category: 'Support'
     }
   ];
 
   const categories = ['all', ...Array.from(new Set(microSaasProducts.map(product => product.category)))];
 
+<<<<<<< HEAD
   const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
 
   const stats = [
+=======
+  const features = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: <Zap className="w-8 h-8 text-blue-600" />,
       title: 'Quick Setup',
@@ -140,6 +201,12 @@ const MicroSaasPage: React.FC = () => {const microSaasProducts: MicroSaasProduct
       icon: <BarChart3 className="w-8 h-8 text-blue-600" />,
       title: 'Advanced Analytics',
       description: 'Get insights into your business with comprehensive analytics and reporting'
+<<<<<<< HEAD
+=======
+  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
+
+  const stats = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: Users,
       value: '10,000+',
@@ -170,6 +237,12 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
   return (
     <React.Fragment>
       <Helmet>
+<<<<<<< HEAD
+=======
+        <title>Micro SaaS Solutions - Zion Tech Group</title>
+        <meta name="description" content="Discover our collection of micro SaaS solutions designed to solve specific business problems. Affordable, easy-to-use tools for modern businesses." />
+        <meta name="keywords" content="micro saas, saas solutions, business tools, productivity software, automation tools" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
         <meta name="description" content="Discover our collection of micro SaaS solutions designed for small to medium businesses. AI-powered tools for analytics, CRM, security, and more." />
         <meta name="keywords" content="micro SaaS, business tools, AI analytics, CRM, security monitoring, cloud management, small business software" />
@@ -177,6 +250,26 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
+        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Micro SaaS Solutions
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Powerful, focused tools designed to solve specific business problems. Simple, affordable, and effective.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                  Browse Solutions
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+                  Learn More
+                </button>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -201,6 +294,27 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+        {/* Features Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Micro SaaS Solutions?</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our micro SaaS products are designed with simplicity and effectiveness in mind
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center">
+                  <div className="flex justify-center mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         {/* Category Filter */}
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
@@ -223,6 +337,31 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+        {/* Featured Products */}
+        {popularProducts.length > 0 && (
+          <section className="py-16 bg-gray-50">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Solutions</h2>
+                <p className="text-xl text-gray-600">Our most popular micro SaaS products</p>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {popularProducts.map((product) => (
+                  <div key={product.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <div className="p-6">
+                      <div className="flex items-center mb-4">
+                        <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                          {product.icon}
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-gray-900">{product.title}</h3>
+                          <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                            Featured
+                          </span>
+                        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         {/* Products Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -329,7 +468,12 @@ const popularProducts = microSaasProducts.filter(product => product.popular);
                 ));
               </div>
             </div>
+<<<<<<< HEAD
           </section>);
+=======
+          </section>
+        )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 

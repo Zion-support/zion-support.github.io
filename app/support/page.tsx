@@ -52,6 +52,16 @@ const faqs: FAQ[] = [
       category: 'technical'
     },
     {
+<<<<<<< HEAD
+=======
+      question: 'What happens if I need to scale up?',
+      answer: 'Our solutions are designed to scale with your business. We can easily upgrade your plan or add additional features as your needs grow.',
+      category: 'general'
+    }
+  ];
+
+  const categories = ['all', 'general', 'technical', 'billing', 'implementation'];
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       question: 'Do you provide custom development?',
       answer: 'Yes, we offer custom development services to create tailored solutions that meet your specific business requirements and integrate perfectly with your existing workflows.',
       category: 'development'
@@ -108,10 +118,14 @@ const matchesCategory = selectedCategory === 'all' || faq.category === selectedC
     return matchesSearch && matchesCategory;
   });
 
+<<<<<<< HEAD
   const toggleFAQ = (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
   };
 
+=======
+  const supportChannels = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone Support',
@@ -141,6 +155,7 @@ const matchesCategory = selectedCategory === 'all' || faq.category === selectedC
       availability: 'Always Available'
     }
   ];
+<<<<<<< HEAD
 ;
 const categories = ['all', 'general', 'support', 'implementation', 'training', 'security', 'integration', 'scaling', 'development'];
 ;
@@ -152,9 +167,21 @@ const matchesCategory = selectedCategory === 'all' || faq.category === selectedC
 ;
 const toggleFAQ = (index: number) => {
     setExpandedFAQ(expandedFAQ === index ? null : index);
+=======
+  const toggleFAQ = (index: number) => {
+    setExpandedFAQ(expandedFAQ === index ? null : index);
+  };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <React.Fragment>
       <Helmet>
+<<<<<<< HEAD
+=======
+        <title>Support - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for your AI and IT solutions. Find answers to common questions, contact our support team, and access comprehensive documentation." />
+        <meta name="keywords" content="support, help, FAQ, technical support, customer service, documentation" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <title>Support - Zion Tech Group | 24/7 Technical Support</title>
         <meta name="description" content="Get 24/7 technical support for all your AI and IT solutions. Contact our expert team via phone, email, or live chat." />
         <meta name="keywords" content="technical support, IT support, AI support, customer service, help desk" />
@@ -162,6 +189,30 @@ const toggleFAQ = (index: number) => {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
+        <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                How Can We Help?
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Get the support you need to succeed with our AI and IT solutions
+              </p>
+              
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search for help..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -274,9 +325,31 @@ const toggleFAQ = (index: number) => {
                 >
                   {category === 'all' ? 'All Topics' : category.charAt(0).toUpperCase() + category.slice(1);
                 </button>
+<<<<<<< HEAD
                     </div>);
                 </div>
               ));
+=======
+            <div className="space-y-4">
+              {filteredFAQs.map((faq, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 overflow-hidden">
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
+                  >
+                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                    <div className={`transform transition-transform ${expandedFAQ === index ? 'rotate-180' : ''}`}>
+                      <HelpCircle className="w-6 h-6 text-purple-400" />
+                    </div>
+                  </button>
+                  {expandedFAQ === index && (
+                    <div className="px-6 pb-6">
+                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
 
             {/* FAQ List */}
@@ -349,6 +422,23 @@ const toggleFAQ = (index: number) => {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+        {/* CTA Section */}
+        <section className="py-16 bg-blue-900 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Still Need Help?</h2>
+            <p className="text-xl mb-8 text-blue-100">
+              Can't find what you're looking for? Our support team is here to help.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Contact Support
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors">
+                Schedule a Call
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         {/* Contact CTA */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">

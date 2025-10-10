@@ -13,13 +13,52 @@ interface BreadcrumbItem {
 ;
 const Breadcrumb: React.FC = () => {const location = useLocation();
   
+<<<<<<< HEAD
+=======
+  const generateBreadcrumbs = (): BreadcrumbItem[] => {
+    const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', href: '/' }
+    ];
+
+    let currentPath = '';
+    pathSegments.forEach((segment, index) => {
+      currentPath += `/${segment}`;
+      const isLast = index === pathSegments.length - 1;
+      
+      // Convert segment to readable name
+      const name = segment
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+
+      breadcrumbs.push({
+        name,
+        href: currentPath,
+        current: isLast
+      });
+    });
+
+    return breadcrumbs;
+  };
+
+  const breadcrumbs = generateBreadcrumbs();
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Don't show breadcrumb on home page
   if (location.pathname === '/') {
     return null;
   }
+<<<<<<< HEAD
 ;
 const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
 const breadcrumbItems = [
+=======
+
+  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+  
+  const breadcrumbItems = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     { name: 'Home', path: '/', icon: Home }
   ];
 
@@ -76,7 +115,12 @@ const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   {item.name}
+<<<<<<< HEAD
                 </Link>);
+=======
+                </Link>
+              )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </li>
           ));
         </ol>

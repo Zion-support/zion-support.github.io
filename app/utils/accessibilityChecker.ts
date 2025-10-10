@@ -7,22 +7,27 @@ const AccessibilityCheckerPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'});;)
-},
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'});]
+    },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'});;)
-},
+      description: 'Lightning-fast processing and real-time analytics for optimal results'});]
+    },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'});;)
-},
+      description: 'Bank-level security with encryption and compliance standards'});]
+    },
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses'});;);
+=======
+      description: 'Worldwide deployment and support for international businesses'});]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const benefits = [
@@ -38,7 +43,7 @@ const benefits = [
 
   return (
     <>
-      <div></div>
+      <div>
       <Helmet></Helmet>
         <titl></titl>AccessibilityChecker | Zion Tech Group</title>
         <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -47,8 +52,8 @@ const benefits = [
 
       {/* Hero Section */}
       <section></section>
-        <div></div>
-          <div></div>
+        <div>
+          <div>
             <h1></h1>
               <span></span>
                 AccessibilityChecker
@@ -60,7 +65,7 @@ const benefits = [
               Transform your business with our advanced accessibilitychecker solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div></div>
+            <div>
               <button></button>
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -75,8 +80,8 @@ const benefits = [
 
       {/* Features Section */}
       <section></section>
-        <div></div>
-          <div></div>
+        <div>
+          <div>
             <h2></h2>
               Why Choose Our AccessibilityChecker?
             </h2>
@@ -85,10 +90,10 @@ const benefits = [
             </p>
           </div>
 
-          <div></div>
+          <div>
             {features.map((feature, index) => (
-              <div></div>
-                <div></div>
+              <div>
+                <div>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h></h>{feature.title}</h3>
@@ -101,8 +106,8 @@ const benefits = [
 
       {/* Benefits Section */}
       <section></section>
-        <div></div>
-          <div></div>
+        <div>
+          <div>
             <h2></h2>
               Key Benefits
             </h2>
@@ -111,9 +116,9 @@ const benefits = [
             </p>
           </div>
 
-          <div></div>
+          <div>
             {benefits.map((benefit, index) => (
-              <div></div>
+              <div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -124,15 +129,15 @@ const benefits = [
 
       {/* CTA Section */}
       <section></section>
-        <div></div>
-          <div></div>
+        <div>
+          <div>
             <h2></h2>
               Ready to Get Started?
             </h2>
             <p></p>
               Contact our experts to discuss your accessibilitychecker needs and get a customized solution.
             </p>
-            <div></div>
+            <div>
               <button></button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
@@ -147,5 +152,11 @@ const benefits = [
       </section>
     </div>
     </>
+<<<<<<< HEAD
   ));)
+=======
+  ))]
+    };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default AccessibilityCheckerPage;

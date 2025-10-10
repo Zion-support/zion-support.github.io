@@ -28,9 +28,9 @@ const SitemapPage: React.FC = () => {const pages = [
     { path: '/terms', title: 'Terms of Service', description: 'Terms and conditions for our services' }];
 
   return (
-    <div></div>
-      <div></div>
-        <div></div>
+    <div>
+      <div>
+        <div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4"></h1>
             Sitemap</h1>
           </h1>
@@ -39,10 +39,10 @@ const SitemapPage: React.FC = () => {const pages = [
           </p>
         </div>
 
-        <div></div>
+        <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             {pages.map((page, index) => (</div>
-              <div></div>
+              <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2"></h3>
                   <a 
                     href={page.path} 
@@ -62,14 +62,14 @@ const SitemapPage: React.FC = () => {const pages = [
           </div>
         </div>
 
-        <div></div>
+        <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4"></h2>
             Need Help Finding Something?
           </h2>
           <p className="text-gray-600 mb-6"></p>
             If you can't find what you're looking for, feel free to contact us directly.
           </p>
-          <div></div>
+          <div>
             <a 
               href="/contact"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
@@ -86,5 +86,11 @@ const SitemapPage: React.FC = () => {const pages = [
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );)
+=======
+  )]
+    };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default SitemapPage;

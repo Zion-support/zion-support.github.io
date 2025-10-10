@@ -10,10 +10,18 @@ import {
   MapPin,
   Clock,
   Send,
+<<<<<<< HEAD
   CheckCircle;)
 } from 'lucide-react';
 ;
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
+=======
+  CheckCircle]
+    } from 'lucide-react';
+
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     name: '',
     email: '',
     company: '',
@@ -21,6 +29,7 @@ phone: '',
     service: '',
     budget: '',
     timeline: '',
+<<<<<<< HEAD
     message: '';)
 });
 const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,6 +42,23 @@ const { name, value } = e.target;
 }););)
 }, []);
 const handleSubmit = async (e: React.FormEvent) => {
+=======
+    message: '']
+    });;
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value]
+    });)]
+    }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -49,12 +75,22 @@ const handleSubmit = async (e: React.FormEvent) => {
         service: '',
         budget: '',
         timeline: '',
+<<<<<<< HEAD
         message: '';)
 });;)
 } catch (error) {
       setSubmitStatus('error');)
 } finally {
       setIsSubmitting(false););
+=======
+        message: '']
+    });]
+    } catch (error) {
+      setSubmitStatus('error')]
+    } finally {
+      setIsSubmitting(false)]
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   };
 ;
 const services = [
@@ -74,31 +110,36 @@ const contactInfo = [
       icon: Phone,
       title: 'Phone',
       details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST';)
-},
+      description: 'Mon-Fri 9AM-6PM EST']
+    },
     {
       icon: Mail,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours';)
-},
+      description: 'We respond within 24 hours']
+    },
     {
       icon: MapPin,
       title: 'Address',
       details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
-      description: 'Visit our office';)
-},
+      description: 'Visit our office']
+    },
     {
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
+<<<<<<< HEAD
       description: 'Eastern Time';);
+=======
+      description: 'Eastern Time']
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
     <>
       <Helmet></Helmet>
-        <title></titl>Contact Us - Zion Tech Group | Get in Touch</title>
+        <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
         <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
       </Helmet>
@@ -141,7 +182,7 @@ const contactInfo = [
 
               <form onSubmit={handleSubmit} className="space-y-6"></form>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div></div>
+                  <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Full Name *
                     </label>
@@ -159,7 +200,7 @@ const contactInfo = [
                     </div>
                   </div>
                   
-                  <div></div>
+                  <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Email Address *
                     </label>
@@ -179,7 +220,7 @@ const contactInfo = [
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div></div>
+                  <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Company
                     </label>
@@ -196,7 +237,7 @@ const contactInfo = [
                     </div>
                   </div>
                   
-                  <div></div>
+                  <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Phone Number
                     </label>
@@ -214,7 +255,7 @@ const contactInfo = [
                   </div>
                 </div>
 
-                <div></div>
+                <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                     Service Interest
                   </label>
@@ -236,7 +277,7 @@ const contactInfo = [
                   </div>
                 </div>
 
-                <div></div>
+                <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                     Message *
                   </label>
@@ -261,13 +302,13 @@ const contactInfo = [
                 ></button>
                   {isSubmitting ? (
                     <>
-                      <div></div>
-                      <span></spa>Sending...</span>
+                      <div>
+                      <span>Sending...</span>
                     </>
                   ) : (
                     <React.Fragment>
                       <Send className="w-5 h-5" />
-                      <span></spa>Send Message</span>
+                      <span>Send Message</span>
                     </>
                   );
                 </button>
@@ -276,7 +317,7 @@ const contactInfo = [
 
             {/* Contact Information */}
             <div className="space-y-8"></div>
-              <div></div>
+              <div>
                 <h2 className="text-3xl font-bold text-white mb-6"></h>Contact Information</h2>
                 <p className="text-lg text-gray-300 mb-8"></p>
                   We're here to help! Reach out to us through any of these channels 
@@ -287,7 +328,7 @@ const contactInfo = [
 
               {/* Contact Information */}
               <div className="space-y-8"></div>
-                <div></div>
+                <div>
                   <h2 className="text-3xl font-bold text-white mb-6"></h>Get in Touch</h2>
                   <p className="text-gray-300 mb-8"></p>
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
@@ -299,7 +340,7 @@ const contactInfo = [
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Phone className="w-6 h-6 text-white" />
                     </div>
-                    <div></div>
+                    <div>
 <h3 className="text-lg font-semibold text-white mb-1"></h3>
                         {info.title}
                       </h3>
@@ -317,7 +358,7 @@ const contactInfo = [
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Mail className="w-6 h-6 text-white" />
                     </div>
-                    <div></div>
+                    <div>
                       <h3 className="text-lg font-semibold text-white"></h>Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
                     </div>
@@ -327,7 +368,7 @@ const contactInfo = [
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
-                    <div></div>
+                    <div>
                       <h3 className="text-lg font-semibold text-white"></h>Address</h3>
                       <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
                     </div>
@@ -337,7 +378,7 @@ const contactInfo = [
                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Clock className="w-6 h-6 text-white" />
                     </div>
-                    <div></div>
+                    <div>
                       <h3 className="text-lg font-semibold text-white"></h>Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
@@ -350,5 +391,11 @@ const contactInfo = [
       </div>
 </div>
 
+<<<<<<< HEAD
   );)
+=======
+  )]
+    };
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContactPage;

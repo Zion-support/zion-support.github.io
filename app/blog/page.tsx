@@ -19,6 +19,11 @@ interface BlogPost {
   tags: string[];
   featured: boolean;
   image: string;
+<<<<<<< HEAD
+=======
+  image: string;
+  featured: boolean;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 ;
 const BlogPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
@@ -30,6 +35,7 @@ const blogPosts: BlogPost[] = [
   featured: boolean}
 ;
 const BlogPage: React.FC = () => {
+<<<<<<< HEAD
 return (;
 const [searchTerm, setSearchTerm] = useState('');
 const [selectedCategory, setSelectedCategory] = useState('all');
@@ -38,6 +44,15 @@ const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>
 }([]);
 ;
 const blogPosts: BlogPost[] = [
+=======
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  // Sample blog posts data
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
+
+  const blogPosts: BlogPost[] = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     {
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
@@ -127,13 +142,81 @@ const matchesCategory = selectedCategory === 'all' || post.category === selected
       return matchesSearch && matchesCategory;
     });
   }, [searchTerm, selectedCategory, blogPosts]);
+<<<<<<< HEAD
 const featuredPosts = blogPosts.filter(post => post.featured);
 const recentPosts = blogPosts.slice(0, 3);
+=======
+
+  const featuredPosts = blogPosts.filter(post => post.featured);
+  const recentPosts = blogPosts.slice(0, 3);
+      image: '/images/blog/ai-enterprise.jpg',
+      featured: true
+    },
+    {
+      id: '2',
+      title: 'Cloud Migration Best Practices',
+      excerpt: 'A comprehensive guide to successfully migrating your infrastructure to the cloud.',
+      content: 'Full article content...',
+      author: 'Michael Rodriguez',
+      date: '2024-01-10',
+      readTime: '7 min read',
+      category: 'Cloud Computing',
+      tags: ['Cloud', 'Migration', 'Best Practices'],
+      image: '/images/blog/cloud-migration.jpg',
+      featured: false
+    },
+    {
+      id: '3',
+      title: 'Cybersecurity Trends for 2024',
+      excerpt: 'Stay ahead of the latest cybersecurity threats and protection strategies.',
+      content: 'Full article content...',
+      author: 'Alex Thompson',
+      date: '2024-01-05',
+      readTime: '6 min read',
+      category: 'Cybersecurity',
+      tags: ['Security', 'Trends', 'Protection'],
+      image: '/images/blog/cybersecurity.jpg',
+      featured: true
+    },
+    {
+      id: '4',
+      title: 'Building Scalable Web Applications',
+      excerpt: 'Learn the principles and techniques for creating applications that can handle millions of users.',
+      content: 'Full article content...',
+      author: 'Emma Wilson',
+      date: '2024-01-01',
+      readTime: '8 min read',
+      category: 'Development',
+      tags: ['Web Development', 'Scalability', 'Architecture'],
+      image: '/images/blog/scalable-apps.jpg',
+      featured: false
+    }
+  ];
+
+  const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
+
+  useEffect(() => {
+    let filtered = blogPosts;
+
+    if (searchTerm) {
+      filtered = filtered.filter(post =>
+        post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
+    }
+
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(post => post.category === selectedCategory);
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
+<<<<<<< HEAD
     setFilteredPosts(filtered)}, [searchTerm, selectedCategory]);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 
   return (
     <React.Fragment>
@@ -141,6 +224,11 @@ const recentPosts = blogPosts.slice(0, 3);
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="technology blog, AI insights, cybersecurity, cloud computing, digital transformation" />
+<<<<<<< HEAD
+=======
+        <meta name="description" content="Latest insights on AI, blockchain, cloud computing, and IT solutions from Zion Tech Group experts." />
+        <meta name="keywords" content="tech blog, AI insights, blockchain news, cloud computing, IT solutions" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       </Helmet>
 
       <div className="min-h-screen bg-gray-50">
@@ -205,12 +293,16 @@ const recentPosts = blogPosts.slice(0, 3);
                 >
                   {category}
                 </button>
+<<<<<<< HEAD
               ));
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value);
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
+=======
+              ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             </div>
           </div>
         </section>
