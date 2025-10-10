@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const FuturisticServiceCardPage: React.FC = () => {
   const features = [
     {
@@ -28,7 +26,6 @@ const FuturisticServiceCardPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
   const benefits = [
     'Advanced AI technology integration',
@@ -75,8 +72,6 @@ const FuturisticServiceCardPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
       </section>
 
       {/* Features Section */}
@@ -152,7 +147,6 @@ const FuturisticServiceCardPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   );
 };
 

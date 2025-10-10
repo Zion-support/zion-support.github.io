@@ -63,8 +63,6 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
-<<<<<<< HEAD
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
@@ -124,18 +122,14 @@ const PricingPage: React.FC = () => {
                 <Link
                   to="/consultation"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border border-white/20 text-white hover:bg-white/10'
                   }`}
                 >
-<<<<<<< HEAD
-=======
                   <span>Get Started</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             ))}
           </div>
@@ -181,8 +175,6 @@ const PricingPage: React.FC = () => {
           </div>
 
           {/* CTA Section */}
-<<<<<<< HEAD
-=======
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -204,7 +196,6 @@ const PricingPage: React.FC = () => {
               >
                 Talk to Sales
               </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </div>

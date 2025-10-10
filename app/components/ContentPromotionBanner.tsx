@@ -21,12 +21,9 @@ const ContentPromotionBannerPage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
-<<<<<<< HEAD
-=======
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
@@ -42,8 +39,6 @@ const ContentPromotionBannerPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentPromotionBanner | Zion Tech Group</title>
@@ -151,7 +146,6 @@ const ContentPromotionBannerPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     </div>
   );
 };

@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const ContentNewsletterSignupPage: React.FC = () => {
   const features = [
     {
@@ -149,7 +147,6 @@ const ContentNewsletterSignupPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   );
 };
 

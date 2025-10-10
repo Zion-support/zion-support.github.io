@@ -27,8 +27,6 @@ const PagePage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-=======
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -71,7 +69,6 @@ const PagePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </div>

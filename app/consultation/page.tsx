@@ -78,9 +78,6 @@ export default function ConsultationPage() {
         <meta name="description" content="Schedule a consultation with our experts to discuss your AI and IT needs. Free initial consultation available." />
         <meta name="keywords" content="consultation, expert advice, AI strategy, IT consulting, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-              </div>
-=======
 
       <Navigation />
       
@@ -130,7 +127,6 @@ export default function ConsultationPage() {
                   </div>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </section>

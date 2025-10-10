@@ -8,8 +8,6 @@ import { Shield, Code, AlertTriangle, CheckCircle, XCircle, Eye, Lock, Unlock, F
 const AICodeSecurityAuditorPage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
     setIsLoaded(true);
   }, []);
@@ -50,7 +48,6 @@ const AICodeSecurityAuditorPage: React.FC = () => {
       title: 'Security Reporting',
       description: 'Comprehensive security reports with detailed analysis and remediation guidance.',
       benefits: ['Detailed reports', 'Visual dashboards', 'Trend analysis', 'Executive summaries']
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
@@ -98,8 +95,6 @@ const AICodeSecurityAuditorPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-=======
   return (
     <>
       <Helmet>
@@ -107,7 +102,6 @@ const AICodeSecurityAuditorPage: React.FC = () => {
         <meta name="description" content="Secure your code with our AI Code Security Auditor. Automated vulnerability detection, security analysis, and compliance checking for better code security." />
         <meta name="keywords" content="AI code security, security auditing, vulnerability detection, code analysis, security compliance, secure coding" />
       </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
       <Navigation />
 
@@ -118,18 +112,13 @@ const AICodeSecurityAuditorPage: React.FC = () => {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mb-8">
               <Shield className="w-10 h-10 text-white" />
             </div>
-<<<<<<< HEAD
-=======
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Code Security Auditor
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Secure your code with our AI Code Security Auditor. Automated vulnerability detection, 
               security analysis, and compliance checking for better code security.
             </p>
-<<<<<<< HEAD
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
                 Start Auditing
@@ -138,13 +127,10 @@ const AICodeSecurityAuditorPage: React.FC = () => {
               <button className="border border-red-400 text-red-300 px-8 py-4 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-300">
                 View Demo
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -161,7 +147,6 @@ const AICodeSecurityAuditorPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -179,8 +164,6 @@ const AICodeSecurityAuditorPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -198,15 +181,12 @@ const AICodeSecurityAuditorPage: React.FC = () => {
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -223,7 +203,6 @@ const AICodeSecurityAuditorPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg mb-4">
                     <CheckCircle className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
                 </div>
@@ -247,11 +226,8 @@ const AICodeSecurityAuditorPage: React.FC = () => {
                   Get Started Now
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
-<<<<<<< HEAD
-=======
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300">
                   Schedule Demo
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </button>
               </div>
             </div>

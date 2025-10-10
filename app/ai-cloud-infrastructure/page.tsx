@@ -51,8 +51,6 @@ const AICloudInfrastructurePage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-=======
   const benefits = [
     'Reduce infrastructure costs by 40%',
     'Improve performance by 60%',
@@ -62,13 +60,10 @@ const AICloudInfrastructurePage: React.FC = () => {
     'Automate infrastructure management',
     'Enhance security and compliance',
     'Optimize resource utilization'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   ];
 
   const useCases = [
     {
-<<<<<<< HEAD
-=======
       title: 'Enterprise Migration',
       description: 'Migrate enterprise applications to cloud with AI-powered optimization',
       icon: '🏢'
@@ -152,7 +147,6 @@ const AICloudInfrastructurePage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -170,8 +164,6 @@ const AICloudInfrastructurePage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -189,15 +181,12 @@ const AICloudInfrastructurePage: React.FC = () => {
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -214,7 +203,6 @@ const AICloudInfrastructurePage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg mb-4">
                     <CheckCircle className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
                 </div>
@@ -224,8 +212,6 @@ const AICloudInfrastructurePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-sky-500 to-blue-500 rounded-2xl p-12">
@@ -245,7 +231,6 @@ const AICloudInfrastructurePage: React.FC = () => {
                 </button>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </section>
       </main>

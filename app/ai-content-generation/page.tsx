@@ -5,11 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, ArrowRight, FileText, Image, Video, Music, Globe, Zap, Brain, Target, Users, Phone, Mail, MapPin } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const AIContentGenerationPage: React.FC = () => {
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     {
       icon: FileText,
       title: 'AI Blog Content Generator',
@@ -93,8 +90,6 @@ const AIContentGenerationPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <>
       <Helmet>
         <title>AI Content Generation - Zion Tech Group</title>
@@ -160,7 +155,6 @@ const AIContentGenerationPage: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </section>
 

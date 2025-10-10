@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const PWAInstallerPage: React.FC = () => {
   const features = [
     {
@@ -26,7 +24,6 @@ const PWAInstallerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
@@ -49,11 +46,6 @@ const PWAInstallerPage: React.FC = () => {
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
       </Helmet>
 
-<<<<<<< HEAD
-        </div>
-      </section>
-
-=======
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -156,7 +148,6 @@ const PWAInstallerPage: React.FC = () => {
       </section>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 };
 
 export default PWAInstallerPage;

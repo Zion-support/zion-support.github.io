@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 import {
   BarChart3,
   TrendingUp,
@@ -62,10 +59,7 @@ import {
   Phone as PhoneIcon,
   Mail as MailIcon,
   MapPin as Location
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
@@ -109,14 +103,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
   const benefits = [
     'Reduce data analysis time by 90%',
-<<<<<<< HEAD
-
-  const useCases = [
-    {
-    }
-  ],
-
-=======
     'Increase decision-making speed by 75%',
     'Improve data accuracy by 95%',
     'Lower operational costs by 40%',
@@ -179,7 +165,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Analytics Dashboard
             </h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your data into actionable insights with our advanced AI Analytics Dashboard. 
               Real-time analytics, predictive modeling, and custom dashboards for better business decisions.
@@ -196,8 +181,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -248,7 +231,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
@@ -300,8 +282,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-=======
         </section>
       </main>
 
@@ -311,4 +291,3 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 };
 
 export default AIAnalyticsDashboardPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb

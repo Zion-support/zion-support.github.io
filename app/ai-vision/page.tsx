@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -71,16 +69,11 @@ const PagePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-          </div>
-
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -101,7 +94,6 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             ))}
           </div>
@@ -118,8 +110,6 @@ const PagePage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
-<<<<<<< HEAD
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -152,7 +142,6 @@ const PagePage: React.FC = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </div>

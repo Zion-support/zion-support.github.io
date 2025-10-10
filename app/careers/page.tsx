@@ -59,8 +59,6 @@ const CareersPage: React.FC = () => {
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
       </Helmet>
-<<<<<<< HEAD
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
@@ -133,7 +131,6 @@ const CareersPage: React.FC = () => {
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             </div>
           </div>

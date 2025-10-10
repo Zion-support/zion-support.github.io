@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -16,7 +14,6 @@ const PagePage: React.FC = () => {
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     },
     {
       icon: Shield,
@@ -42,8 +39,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -75,13 +70,10 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -102,17 +94,12 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-          </div>
-
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -130,15 +117,12 @@ const PagePage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -164,7 +148,6 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 };
 
 export default PagePage;

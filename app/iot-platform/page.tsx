@@ -5,8 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const IoTPlatformPage: React.FC = () => {
   const features = [
     {
@@ -20,17 +18,12 @@ const IoTPlatformPage: React.FC = () => {
       title: 'Real-Time Processing',
       description: 'Process IoT data in real-time for immediate insights and automated responses.',
       benefits: ['Stream processing', 'Real-time analytics', 'Automated actions']
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     },
     {
       icon: Clock,
       title: '24/7 Monitoring',
       description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
-<<<<<<< HEAD
-    },
-    {
-=======
       description: 'Connect and manage millions of IoT devices with reliable, secure connectivity solutions.',
       benefits: ['Device management', 'Secure connectivity', 'Protocol support']
     },
@@ -95,13 +88,10 @@ const IoTPlatformPage: React.FC = () => {
       title: 'Healthcare',
       description: 'Enable remote patient monitoring with medical IoT devices',
       icon: '🏥'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IoT Platform - Zion Tech Group | Internet of Things Solutions</title>
@@ -145,14 +135,11 @@ const IoTPlatformPage: React.FC = () => {
               IoT Platform Features
             </h2>
             <h2 className="text-4xl font-bold text-white mb-4">IoT Platform Features</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform provides everything you need to build, deploy, and scale 
               Internet of Things solutions for any industry or use case.
             </p>
           </div>
-<<<<<<< HEAD
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -166,7 +153,6 @@ const IoTPlatformPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   ))}
                 </ul>
 </div>
@@ -200,39 +186,6 @@ const IoTPlatformPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our IoT Platform?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of a comprehensive IoT platform designed for scale, 
-              security, and performance.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-          <p className="text-xl text-gray-300 mb-8">
-            Start building your IoT platform today. Get started with a free consultation 
-            and discover how we can help you succeed.
-          </p>
-=======
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -253,7 +206,6 @@ const IoTPlatformPage: React.FC = () => {
               Get Free Consultation
             <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo

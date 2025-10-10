@@ -90,18 +90,13 @@ const AICustomerServicePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       <Helmet>
         <title>AI Customer Service - Zion Tech Group</title>
         <meta name="description" content="Transform your customer service with our AI Customer Service solutions. 24/7 support, multilingual capabilities, and intelligent problem solving for better customer experience." />
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support, AI support" />
       </Helmet>
 
-<<<<<<< HEAD
-=======
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
@@ -113,14 +108,11 @@ const AICustomerServicePage: React.FC = () => {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Customer Service
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your customer service with our AI Customer Service solutions. 24/7 support, 
               multilingual capabilities, and intelligent problem solving for better customer experience.
             </p>
-<<<<<<< HEAD
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
@@ -129,13 +121,10 @@ const AICustomerServicePage: React.FC = () => {
               <button className="border border-green-400 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300">
                 View Demo
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -168,7 +157,6 @@ const AICustomerServicePage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -237,11 +225,8 @@ const AICustomerServicePage: React.FC = () => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD
-=======
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       </main>
 
       <Footer />

@@ -26,8 +26,6 @@ const AIAutomationPage: React.FC = () => {
       benefits: ['Performance monitoring', 'Efficiency metrics', 'Cost reduction', 'Quality improvement']
     },
     {
-<<<<<<< HEAD
-=======
       icon: Clock,
       title: 'Real-time Monitoring',
       description: 'Monitor automated processes in real-time with intelligent alerts and notifications.',
@@ -44,13 +42,10 @@ const AIAutomationPage: React.FC = () => {
       title: 'Goal Achievement',
       description: 'Set and track business goals with AI-powered automation that adapts to achieve targets.',
       benefits: ['Goal setting', 'Progress tracking', 'Performance metrics', 'Success optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
     'Increase operational efficiency by 85%',
     'Reduce manual errors by 95%',
     'Lower operational costs by 60%',
@@ -59,7 +54,6 @@ const AIAutomationPage: React.FC = () => {
     'Scale processes without additional resources',
     'Enhance data accuracy and consistency',
     'Free up human resources for strategic tasks'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   ];
 
   const useCases = [
@@ -102,8 +96,6 @@ const AIAutomationPage: React.FC = () => {
         <meta name="description" content="Transform your business with AI Automation solutions. Intelligent process automation, workflow optimization, and smart decision-making for better efficiency." />
         <meta name="keywords" content="AI automation, process automation, workflow optimization, business automation, intelligent automation, RPA" />
       </Helmet>
-<<<<<<< HEAD
-=======
 
       <Navigation />
 
@@ -149,7 +141,6 @@ const AIAutomationPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -167,8 +158,6 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -208,7 +197,6 @@ const AIAutomationPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4">
                     <CheckCircle className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
                 </div>
@@ -217,21 +205,16 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 Ready to Automate Your Business?
               </h2>
               <p className="text-xl text-teal-100 mb-8">
                 Join thousands of businesses who are already using our AI Automation solution
               </p>
-<<<<<<< HEAD
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   Get Started Now
@@ -240,7 +223,6 @@ const AIAutomationPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-all duration-300">
                   Schedule Demo
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             </div>
           </div>

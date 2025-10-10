@@ -15,10 +15,7 @@ interface FormStatus {
   message: string,
 }
 
-<<<<<<< HEAD
-=======
 const ContactForm: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -82,8 +79,6 @@ const ContactForm: React.FC = () => {
     'Other'
   ];
 
-<<<<<<< HEAD
-=======
   return (
     <div className="max-w-2xl mx-auto">
       <div className="bg-white rounded-2xl shadow-2xl p-8">
@@ -99,7 +94,6 @@ const ContactForm: React.FC = () => {
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                 Full Name *
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </label>
               <input
                 type="text"
@@ -128,10 +122,7 @@ const ContactForm: React.FC = () => {
                 placeholder="your.email@company.com"
               />
             </div>
-<<<<<<< HEAD
-=======
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -176,8 +167,6 @@ const ContactForm: React.FC = () => {
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             >
-<<<<<<< HEAD
-=======
               <option value="">Select a service</option>
               {services.map((service) => (
                 <option key={service} value={service}>
@@ -215,7 +204,6 @@ const ContactForm: React.FC = () => {
                 <CheckCircle className="h-5 w-5 text-green-500" />
               ) : status.type === 'error' ? (
                 <AlertCircle className="h-5 w-5 text-red-500" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
               )}

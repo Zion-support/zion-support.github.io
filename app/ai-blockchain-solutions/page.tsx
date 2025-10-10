@@ -49,8 +49,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
     {
       title: 'DeFi Platforms',
       description: 'AI-enhanced decentralized finance platforms with intelligent trading and risk management.',
-<<<<<<< HEAD
-=======
       icon: '🏦'
     },
     {
@@ -77,16 +75,10 @@ const AIBlockchainSolutionsPage: React.FC = () => {
       title: 'Financial Services',
       description: 'AI-powered financial services built on blockchain technology.',
       icon: '💳'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-          </div>
-        </section>
-
-=======
     'Increase transaction speed by 80%',
     'Reduce costs by 70%',
     'Improve security by 95%',
@@ -149,7 +141,6 @@ const AIBlockchainSolutionsPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -238,12 +229,9 @@ const AIBlockchainSolutionsPage: React.FC = () => {
         </section>
       </main>
 
-<<<<<<< HEAD
-=======
       <Footer />
     </>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 };
 
 export default AIBlockchainSolutionsPage;

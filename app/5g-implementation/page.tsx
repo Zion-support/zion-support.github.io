@@ -43,10 +43,7 @@ const FiveGImplementationPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       <Helmet>
         <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
@@ -68,13 +65,10 @@ const FiveGImplementationPage: React.FC = () => {
             Complete 5G network implementation services with ultra-low latency, high-speed connectivity,
             and advanced features for modern applications and IoT ecosystems.
           </p>
-<<<<<<< HEAD
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
               Get Started Today
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo

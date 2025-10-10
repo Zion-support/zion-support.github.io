@@ -100,8 +100,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -113,7 +111,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               Experience the power of our enhancedseooptimizer solutions for your business.
             </p>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (

@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -28,7 +26,6 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
   const benefits = [
     'Advanced AI technology integration',
@@ -41,8 +38,6 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -73,15 +68,12 @@ const PagePage: React.FC = () => {
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </button>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -104,7 +96,6 @@ const PagePage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </div>
       </section>

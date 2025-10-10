@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const EnhancedHeroPage: React.FC = () => {
   const features = [
     {
@@ -27,7 +25,6 @@ const EnhancedHeroPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   ];
 
   const benefits = [
@@ -49,8 +46,6 @@ const EnhancedHeroPage: React.FC = () => {
         <meta name="keywords" content="EnhancedHero, AI solutions, IT services, Zion Tech Group, enhancedhero" />
       </Helmet>
 
-<<<<<<< HEAD
-=======
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -76,7 +71,6 @@ const EnhancedHeroPage: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
         </div>
       </section>
 

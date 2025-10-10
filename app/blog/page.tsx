@@ -6,8 +6,6 @@ import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const BlogPage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const blogPosts = [
     {
       title: 'The Future of AI in Business',
@@ -64,7 +62,6 @@ const categories = [
                 Insights, trends, and expert perspectives on AI, technology, and business transformation.
               </p>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </section>
 
@@ -104,8 +101,6 @@ const categories = [
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-white mb-6">Latest Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-=======
             {filteredPosts.map((post) => (
               <div key={post.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-all duration-300">
                 <div className="h-48 bg-gradient-to-r from-purple-500/20 to-blue-500/20 flex items-center justify-center">
@@ -156,15 +151,12 @@ const categories = [
                     </button>
                   </div>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* All Posts */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -210,7 +202,6 @@ const categories = [
                 </div>
               </article>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </div>
       </section>

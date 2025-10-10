@@ -1,22 +1,14 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Building, Target, Award, TrendingUp, Users, Clock, DollarSign } from 'lucide-react';
-=======
 import { ArrowRight, ExternalLink, Star, TrendingUp, Users, DollarSign } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-<<<<<<< HEAD
-const CaseStudiesPage: React.FC = () => {
-=======
 export default function CaseStudiesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   const caseStudies = [
     {
       id: 1,
@@ -95,13 +87,6 @@ export default function CaseStudiesPage() {
         <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
         <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
       </Helmet>
-<<<<<<< HEAD
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-=======
 
       <Navigation />
       
@@ -117,7 +102,6 @@ export default function CaseStudiesPage() {
                 Discover how we've helped businesses transform their operations with cutting-edge AI and IT solutions.
               </p>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -239,11 +223,4 @@ export default function CaseStudiesPage() {
       <SEOOptimizer />
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default CaseStudiesPage;
-
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb

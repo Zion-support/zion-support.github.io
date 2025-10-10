@@ -156,12 +156,9 @@ const EnterprisePage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-=======
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                 <div className="flex items-center mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
@@ -180,13 +177,10 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Solutions Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Solutions
             </h2>
@@ -195,8 +189,6 @@ const EnterprisePage: React.FC = () => {
             </p>
           </div>
           
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
@@ -210,7 +202,6 @@ const EnterprisePage: React.FC = () => {
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {benefit}
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                     </li>
                   ))}
                 </ul>
@@ -222,8 +213,6 @@ const EnterprisePage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
-=======
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -253,7 +242,6 @@ const EnterprisePage: React.FC = () => {
                 </button>
                 <button className="w-full border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
                   Download Brochure
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </button>
               </div>
             </div>

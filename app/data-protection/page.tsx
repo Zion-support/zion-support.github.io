@@ -21,8 +21,6 @@ const PagePage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
-<<<<<<< HEAD
-=======
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
@@ -38,7 +36,6 @@ const PagePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   ];
 
   return (
@@ -50,8 +47,6 @@ const PagePage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
-=======
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -74,7 +69,6 @@ const PagePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </div>

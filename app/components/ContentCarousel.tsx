@@ -39,11 +39,6 @@ const ContentCarouselPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentCarousel | Zion Tech Group</title>
@@ -152,7 +147,6 @@ const ContentCarouselPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   );
 };
 

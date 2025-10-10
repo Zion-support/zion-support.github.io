@@ -26,8 +26,6 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-<<<<<<< HEAD
-=======
 
   const benefits = [
     'Advanced AI technology integration',
@@ -58,14 +56,11 @@ const PagePage: React.FC = () => {
               </span>
               <br />
               <span className="text-white">Solutions</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -75,14 +70,11 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -102,14 +94,11 @@ const PagePage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -155,7 +144,6 @@ const PagePage: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
         </div>
       </section>
     </div>

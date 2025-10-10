@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const LazyImagePage: React.FC = () => {
   const features = [
     {
@@ -26,7 +24,6 @@ const LazyImagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
@@ -41,8 +38,6 @@ const LazyImagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-<<<<<<< HEAD
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -50,7 +45,6 @@ const LazyImagePage: React.FC = () => {
         <meta name="description" content="Professional LazyImage services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="LazyImage, AI solutions, IT services, Zion Tech Group, lazyimage" />
       </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -80,8 +74,6 @@ const LazyImagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -105,7 +97,6 @@ const LazyImagePage: React.FC = () => {
               </div>
             ))}
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
         </div>
       </section>
 

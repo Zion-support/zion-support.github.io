@@ -89,8 +89,6 @@ description: 'Create game assets, characters, and environments instantly',
     }
   ];
 
-<<<<<<< HEAD
-=======
   const benefits = [
     'Reduce 3D content creation time by 90%',
     'Lower production costs by 80%',
@@ -104,7 +102,6 @@ description: 'Create game assets, characters, and environments instantly',
 
   return (
     <>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
 <meta name="description" content="Transform text into stunning 3D models with our AI-powered 3D generation technology. Create game assets, architectural models, and more in seconds." />
@@ -112,10 +109,7 @@ description: 'Create game assets, characters, and environments instantly',
       </Helmet>
 
       <Navigation />
-<<<<<<< HEAD
-=======
 {/* Hero Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
@@ -151,11 +145,8 @@ description: 'Create game assets, characters, and environments instantly',
               Powerful 3D Generation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-=======
               Our AI-powered 3D generation technology combines cutting-edge machine learning 
               with intuitive design tools to create professional-quality 3D models.
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -185,15 +176,12 @@ description: 'Create game assets, characters, and environments instantly',
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-=======
             {applications.map((app, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
 
                 <div className="text-4xl mb-4">{app.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
                 <p className="text-gray-300">{app.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             ))}
           </div>
@@ -202,8 +190,6 @@ description: 'Create game assets, characters, and environments instantly',
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
-=======
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -230,15 +216,12 @@ description: 'Create game assets, characters, and environments instantly',
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
 {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -271,7 +254,6 @@ description: 'Create game assets, characters, and environments instantly',
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Experience the future of 3D content creation with our revolutionary AI technology
               </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (

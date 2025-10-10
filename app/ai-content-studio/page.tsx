@@ -8,8 +8,6 @@ import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield,
 const AIContentStudioPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-=======
       icon: Palette,
       title: 'AI Design Studio',
       description: 'Create stunning visual content with AI-powered design tools and templates.',
@@ -44,7 +42,6 @@ const AIContentStudioPage: React.FC = () => {
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics and insights to optimize content performance.',
       benefits: ['Performance metrics', 'Engagement analytics', 'ROI tracking', 'Custom reports']
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
@@ -61,8 +58,6 @@ const AIContentStudioPage: React.FC = () => {
 
   const useCases = [
     {
-<<<<<<< HEAD
-=======
       title: 'Marketing Campaigns',
       description: 'Create compelling marketing campaigns with AI-powered content generation',
       icon: '📢'
@@ -114,7 +109,6 @@ const AIContentStudioPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Content Studio
             </h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Create stunning content with our AI Content Studio. Advanced design tools, 
               content generation, and collaboration features for better content creation.
@@ -131,8 +125,6 @@ const AIContentStudioPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -160,7 +152,6 @@ const AIContentStudioPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>

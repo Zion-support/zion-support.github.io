@@ -58,8 +58,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
   const useCases = [
     {
-<<<<<<< HEAD
-=======
       title: 'E-commerce Support',
       description: 'Handle product inquiries, order tracking, and returns with AI assistance',
       icon: '🛒'
@@ -93,18 +91,12 @@ const AICustomerSupportChatbotPage: React.FC = () => {
 
   return (
     <>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       <Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Transform your customer support with our AI Customer Support Chatbot. 24/7 availability, natural language processing, and intelligent escalation for better customer experience." />
         <meta name="keywords" content="AI chatbot, customer support chatbot, virtual assistant, customer service automation, AI support bot" />
       </Helmet>
 
-<<<<<<< HEAD
-          </div>
-        </section>
-
-=======
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
@@ -160,15 +152,12 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -189,7 +178,6 @@ const AICustomerSupportChatbotPage: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </section>
 

@@ -5,12 +5,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Brain, Target, Activity, TrendingUp, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Compass, Navigation as NavIcon, PieChart, TrendingDown, Phone, Mail, MapPin } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       icon: Bot,
       title: 'AI-Powered Chatbots',
       description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
@@ -44,10 +41,7 @@ const AICustomerSupportPage: React.FC = () => {
       icon: Users,
       title: 'Human-AI Collaboration',
       description: 'Seamless handoff between AI and human agents for complex issues requiring human touch.',
-<<<<<<< HEAD
-=======
       benefits: ['Best of both worlds', 'Smooth transitions', 'Enhanced efficiency', 'Quality assurance']
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
@@ -64,8 +58,6 @@ const AICustomerSupportPage: React.FC = () => {
 
   const useCases = [
     {
-<<<<<<< HEAD
-=======
       title: 'E-commerce Support',
       description: 'Handle product inquiries, order tracking, and returns with AI assistance',
       icon: '🛒'
@@ -94,7 +86,6 @@ const AICustomerSupportPage: React.FC = () => {
       title: 'General Inquiries',
       description: 'Handle general questions and provide information about services',
       icon: '❓'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
@@ -106,8 +97,6 @@ const AICustomerSupportPage: React.FC = () => {
         <meta name="keywords" content="AI customer support, customer service automation, omnichannel support, AI chatbots, customer experience, support AI" />
       </Helmet>
 
-<<<<<<< HEAD
-=======
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
@@ -119,14 +108,11 @@ const AICustomerSupportPage: React.FC = () => {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Customer Support
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your customer support with our AI Customer Support solutions. Intelligent automation, 
               omnichannel communication, and human-AI collaboration for better customer experience.
             </p>
-<<<<<<< HEAD
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
@@ -156,7 +142,6 @@ const AICustomerSupportPage: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -173,8 +158,6 @@ const AICustomerSupportPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -192,15 +175,12 @@ const AICustomerSupportPage: React.FC = () => {
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -219,15 +199,12 @@ const AICustomerSupportPage: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -247,7 +224,6 @@ const AICustomerSupportPage: React.FC = () => {
                   Schedule Demo
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </section>

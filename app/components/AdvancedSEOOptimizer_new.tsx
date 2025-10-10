@@ -3,11 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-    }
-  ];
-
-=======
 const AdvancedSEOOptimizer_newPage: React.FC = () => {
   const features = [
     {
@@ -42,7 +37,6 @@ const AdvancedSEOOptimizer_newPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

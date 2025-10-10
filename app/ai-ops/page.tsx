@@ -5,12 +5,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Settings, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const AIOpsPage: React.FC = () => {
   const features = [
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       icon: Settings,
       title: 'Intelligent IT Operations',
       description: 'AI-powered IT operations that automatically detect, diagnose, and resolve issues before they impact your business.',
@@ -30,8 +27,6 @@ const AIOpsPage: React.FC = () => {
     },
     {
       icon: Users,
-<<<<<<< HEAD
-=======
       title: 'Self-Healing Systems',
       description: 'Systems that automatically detect and fix issues without human intervention, reducing manual work.',
       benefits: ['Automatic fixes', 'Reduced manual work', 'Improved reliability']
@@ -79,13 +74,10 @@ const AIOpsPage: React.FC = () => {
       title: 'Security Teams',
       description: 'Enhance security operations with AI-driven threat detection and response',
       icon: '🔒'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Ops - Zion Tech Group | Intelligent IT Operations</title>
@@ -129,14 +121,11 @@ const AIOpsPage: React.FC = () => {
               Intelligent IT Operations
             </h2>
             <h2 className="text-4xl font-bold text-white mb-4">AI Ops Features</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Ops solutions combine machine learning, automation, and intelligent monitoring 
               to revolutionize how you manage your IT infrastructure.
             </p>
           </div>
-<<<<<<< HEAD
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -150,7 +139,6 @@ const AIOpsPage: React.FC = () => {
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   ))}
                 </ul>
 </div>
@@ -209,12 +197,6 @@ const AIOpsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 mb-8">
-            Discover how AI Ops can revolutionize your IT infrastructure management. 
-            Get started with a free consultation and demo.
-          </p>
-=======
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -234,7 +216,6 @@ const AIOpsPage: React.FC = () => {
               Get Free Consultation
             <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Start Free Trial
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo

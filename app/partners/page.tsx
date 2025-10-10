@@ -48,8 +48,6 @@ export default function PartnersPage() {
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
     {
       icon: Globe,
       title: 'Global Reach',
@@ -77,21 +75,11 @@ export default function PartnersPage() {
     { number: '50+', label: 'Countries' },
     { number: '99.9%', label: 'Uptime SLA' },
     { number: '24/7', label: 'Support' }
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
-        <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
-        <meta name="description" content="Discover our strategic partnerships with leading technology companies. Learn how we collaborate to deliver cutting-edge AI and IT solutions." />
-        <meta name="keywords" content="partners, technology partnerships, strategic alliances, Microsoft, AWS, Google Cloud, IBM, NVIDIA" />
-
-          </div>
-        </section>
-
-=======
         <title>Partners | Zion Tech Group</title>
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group's AI and IT solutions." />
         <meta name="keywords" content="partners, partnership, business partners, technology partners, Zion Tech Group" />
@@ -129,7 +117,6 @@ export default function PartnersPage() {
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">
                       {partner.category}
                     </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   </div>
                 </div>
               ))}
@@ -137,13 +124,6 @@ export default function PartnersPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's explore how we can work together to deliver exceptional 
-              value to our mutual customers.
-            </p>
-=======
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -181,7 +161,6 @@ export default function PartnersPage() {
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </section>
 
@@ -209,14 +188,8 @@ export default function PartnersPage() {
         </section>
       </div>
 
-<<<<<<< HEAD
-};
-
-export default PartnersPage;
-=======
       <Footer />
       <SEOOptimizer />
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb

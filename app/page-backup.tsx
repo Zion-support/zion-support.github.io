@@ -1,10 +1,7 @@
 'use client';
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
 const PageBackupPage: React.FC = () => {
   const features = [
@@ -42,8 +39,6 @@ const PageBackupPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page Backup | Zion Tech Group</title>
@@ -61,14 +56,11 @@ const PageBackupPage: React.FC = () => {
               </span>
               <br />
               <span className="text-white">Solutions</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page backup solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-<<<<<<< HEAD
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -88,13 +80,10 @@ const PageBackupPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page Backup?
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page backup solutions deliver unmatched performance, security, and scalability.
             </p>
-<<<<<<< HEAD
-=======
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -102,13 +91,10 @@ const PageBackupPage: React.FC = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-<<<<<<< HEAD
-=======
             ))}
           </div>
         </div>
@@ -131,7 +117,6 @@ const PageBackupPage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             ))}
           </div>

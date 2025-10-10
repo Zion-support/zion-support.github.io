@@ -46,8 +46,6 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
         <meta name="keywords" content="EnhancedPerformanceOptimizer, AI solutions, IT services, Zion Tech Group, enhancedperformanceoptimizer" />
       </Helmet>
 
-<<<<<<< HEAD
-=======
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -75,7 +73,6 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -153,7 +150,4 @@ const EnhancedPerformanceOptimizerPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
 export default EnhancedPerformanceOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb

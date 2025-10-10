@@ -27,8 +27,6 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-=======
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -153,4 +151,3 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
 };
 
 export default EnhancedLoadingSkeletonPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb

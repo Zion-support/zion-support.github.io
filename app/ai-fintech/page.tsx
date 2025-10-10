@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -11,7 +9,6 @@ const PagePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     },
     {
       icon: Zap,
@@ -29,8 +26,6 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-<<<<<<< HEAD
-=======
 
   const benefits = [
     'Advanced AI technology integration',
@@ -152,7 +147,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   );
 };
 

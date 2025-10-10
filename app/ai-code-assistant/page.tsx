@@ -32,8 +32,6 @@ const AICodeAssistantPage: React.FC = () => {
       benefits: ['50+ languages', 'Syntax highlighting', 'Language-specific features', 'Cross-platform support']
     },
     {
-<<<<<<< HEAD
-=======
       icon: GitBranch,
       title: 'Version Control Integration',
       description: 'Seamlessly integrate with Git, GitHub, and other version control systems.',
@@ -50,7 +48,6 @@ const AICodeAssistantPage: React.FC = () => {
       title: 'Security Analysis',
       description: 'Automatically scan code for security vulnerabilities and suggest secure coding practices.',
       benefits: ['Vulnerability scanning', 'Security recommendations', 'Best practices', 'Compliance checking']
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
@@ -66,8 +63,6 @@ const AICodeAssistantPage: React.FC = () => {
   ];
 
   const useCases = [
-<<<<<<< HEAD
-=======
     {
       title: 'Software Development',
       description: 'Accelerate software development with AI-powered coding assistance',
@@ -132,13 +127,10 @@ const AICodeAssistantPage: React.FC = () => {
               <button className="border border-indigo-400 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300">
                 View Demo
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -155,7 +147,6 @@ const AICodeAssistantPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -173,8 +164,6 @@ const AICodeAssistantPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -192,15 +181,12 @@ const AICodeAssistantPage: React.FC = () => {
                   <div className="text-4xl mb-4">{useCase.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -219,7 +205,6 @@ const AICodeAssistantPage: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-white font-medium">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
@@ -227,8 +212,6 @@ const AICodeAssistantPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl p-12">
@@ -248,7 +231,6 @@ const AICodeAssistantPage: React.FC = () => {
                 </button>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </section>
       </main>

@@ -97,10 +97,7 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
         <meta name="keywords" content="AI CDN, content delivery network, edge computing, global CDN, content optimization, CDN security" />
       </Helmet>
 
-<<<<<<< HEAD
-=======
       <Navigation />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
         {/* Hero Section */}
@@ -128,8 +125,6 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -228,7 +223,6 @@ const AIContentDeliveryNetworkPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
                   Schedule Demo
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               </div>
             </div>
           </div>

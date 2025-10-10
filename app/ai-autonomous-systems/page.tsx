@@ -49,8 +49,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
     {
       title: 'Autonomous Vehicles',
       description: 'Self-driving cars, trucks, and drones with advanced AI navigation and safety systems.',
-<<<<<<< HEAD
-=======
       icon: '🚗'
     },
     {
@@ -114,7 +112,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Build intelligent autonomous systems with our advanced AI technology. 
               Self-managing, adaptive, and goal-oriented systems for various industries and applications.
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">
@@ -128,8 +125,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -146,7 +141,6 @@ const AIAutonomousSystemsPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -235,12 +229,9 @@ const AIAutonomousSystemsPage: React.FC = () => {
         </section>
       </main>
 
-<<<<<<< HEAD
-=======
       <Footer />
     </>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 };
 
 export default AIAutonomousSystemsPage;

@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Leaf, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
@@ -231,7 +229,6 @@ title: 'Crop Monitoring',
       </section>
 
       <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     </>
   );
 };

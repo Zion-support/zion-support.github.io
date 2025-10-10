@@ -1,12 +1,9 @@
 // Error reporting API endpoint
 export default function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-=======
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     return;
   }
 

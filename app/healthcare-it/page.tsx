@@ -6,12 +6,9 @@ import Footer from '../components/Footer';
 import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-<<<<<<< HEAD
-=======
 export default function HealthcareITPage() {
   const features = [
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -49,8 +46,6 @@ export default function HealthcareITPage() {
     }
   ];
 
-<<<<<<< HEAD
-=======
   const stats = [
     { number: '99.9%', label: 'System Uptime', icon: Clock },
     { number: '500+', label: 'Healthcare Clients', icon: Users },
@@ -71,7 +66,6 @@ export default function HealthcareITPage() {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Healthcare<span className="block bg-gradient-to-r from-red-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -97,13 +91,10 @@ export default function HealthcareITPage() {
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations. 
             Protect patient data while improving operational efficiency.
           </p>
-<<<<<<< HEAD
-=======
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
               Get Started
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
@@ -115,10 +106,6 @@ export default function HealthcareITPage() {
 
 {/* Features Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions for all aspects of healthcare delivery and management.
-=======
 
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -179,7 +166,6 @@ export default function HealthcareITPage() {
             <h2 className="text-4xl font-bold text-white mb-4">Healthcare Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive healthcare technology solutions for every medical need
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </p>
           </div>
           
@@ -223,11 +209,6 @@ export default function HealthcareITPage() {
 
       {/* CTA Section */}
 <section className="py-20 px-4">
-<<<<<<< HEAD
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
-              View Case Studies
-=======
 
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -255,7 +236,6 @@ export default function HealthcareITPage() {
             </button>
             <button className="border border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </button>
           </div>
         </div>

@@ -19,12 +19,7 @@ async function handler(req, res) {
 
   try {
     const paymentIntent = {
-<<<<<<< HEAD
-      id: 'pi_' + Math.random().toString(36).substr(2, 9),
-=======
-id: 'pi_' + Date.now(),
-
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
+      id: 'pi_' + Date.now(),
       amount: Math.round(amount * 100), // Convert to cents
       currency,
       status: 'requires_payment_method',

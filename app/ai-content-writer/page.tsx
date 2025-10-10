@@ -5,8 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { FileText, PenTool, Target, CheckCircle, Phone, Mail, MapPin, ArrowRight, Star, Users, Brain, Zap, Globe, Shield, Clock, Activity, TrendingUp } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const AIContentWriterPage: React.FC = () => {
   const features = [
     {
@@ -45,7 +43,6 @@ const AIContentWriterPage: React.FC = () => {
       description: 'Generate content in multiple languages with cultural adaptation.',
       benefits: ['Multi-language', 'Cultural adaptation', 'Localization', 'Translation']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   ];
 
   const benefits = [
@@ -63,24 +60,16 @@ const AIContentWriterPage: React.FC = () => {
     {
       title: 'Blog Writing',
       description: 'High-quality blog posts that engage readers and rank well in search engines',
-<<<<<<< HEAD
-=======
       icon: '📝'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     },
     {
       title: 'Social Media',
       description: 'Engaging social media content that drives engagement and conversions',
-<<<<<<< HEAD
-=======
       icon: '📱'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     },
     {
       title: 'Marketing Copy',
       description: 'Compelling marketing copy that converts visitors into customers',
-<<<<<<< HEAD
-=======
       icon: '📢'
     },
     {
@@ -235,7 +224,6 @@ const AIContentWriterPage: React.FC = () => {
                   Schedule Demo
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </div>
           </div>
         </section>

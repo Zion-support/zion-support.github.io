@@ -39,8 +39,6 @@ const ContentStatisticsPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentStatistics | Zion Tech Group</title>
@@ -149,7 +147,6 @@ const ContentStatisticsPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
   );
 };
 

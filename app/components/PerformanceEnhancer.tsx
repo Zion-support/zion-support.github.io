@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const PerformanceEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -26,7 +24,6 @@ const PerformanceEnhancerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
@@ -126,8 +123,6 @@ const PerformanceEnhancerPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -153,7 +148,6 @@ const PerformanceEnhancerPage: React.FC = () => {
       </section>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 };
 
 export default PerformanceEnhancerPage;

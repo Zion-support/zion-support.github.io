@@ -39,8 +39,6 @@ const LoadingPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Loading | Zion Tech Group</title>
@@ -148,7 +146,6 @@ const LoadingPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     </div>
   );
 };

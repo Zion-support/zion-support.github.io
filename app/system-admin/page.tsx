@@ -1,10 +1,7 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
 const PagePage: React.FC = () => {
   const features = [
@@ -31,8 +28,6 @@ const PagePage: React.FC = () => {
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -75,7 +70,6 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           </div>
         </div>
       </section>
