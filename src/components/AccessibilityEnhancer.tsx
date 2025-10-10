@@ -1,95 +1,203 @@
 import React, { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
+    // Skip to main content functionality
+    const setupSkipLinks = () => {
+      const skipLink = document.querySelector('[href="#main-content"]') as HTMLAnchorElement;
+      if (skipLink) {
+        skipLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.querySelector('#main-content');
+          if (target) {
+            target.focus();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
       }
     };
 
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
+    // Keyboard navigation enhancement
+    const enhanceKeyboardNavigation = () => {
+      // Add keyboard support for dropdowns
+      const dropdowns = document.querySelectorAll('[aria-haspopup="true"]');
+      dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            (dropdown as HTMLElement).click();
+          }
+        });
+      });
+
+      // Add keyboard support for cards
+      const cards = document.querySelectorAll('.cyber-card');
+      cards.forEach(card => {
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+        card.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            (card as HTMLElement).click();
+          }
+        });
+      });
     };
 
-    // Add focus indicators
-    const addFocusIndicators = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
+    // Focus management
+    const setupFocusManagement = () => {
+      // Trap focus in modals
+      const modals = document.querySelectorAll('[role="dialog"]');
+      modals.forEach(modal => {
+        const focusableElements = modal.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0] as HTMLElement;
+        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+        if (firstElement && lastElement) {
+          modal.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+              if (e.shiftKey) {
+                if (document.activeElement === firstElement) {
+                  e.preventDefault();
+                  lastElement.focus();
+                }
+              } else {
+                if (document.activeElement === lastElement) {
+                  e.preventDefault();
+                  firstElement.focus();
+                }
+              }
+            }
+          });
         }
-      `;
-      document.head.appendChild(style);
+      });
     };
 
-    // Add ARIA labels to interactive elements
-    const enhanceAccessibility = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(button => {
-        if (!button.getAttribute('aria-label') && button.textContent) {
-          button.setAttribute('aria-label', button.textContent.trim());
-        }
-        // Add role if missing
-        if (!button.getAttribute('role')) {
-          button.setAttribute('role', 'button');
+    // ARIA labels enhancement
+    const enhanceARIALabels = () => {
+      // Add ARIA labels to buttons without text
+      const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+      iconButtons.forEach(button => {
+        const icon = button.querySelector('svg');
+        if (icon && !button.textContent?.trim()) {
+          const iconName = icon.getAttribute('data-icon') || 'button';
+          button.setAttribute('aria-label', iconName);
         }
       });
 
+      // Add ARIA labels to links
       const links = document.querySelectorAll('a:not([aria-label])');
       links.forEach(link => {
-        if (!link.getAttribute('aria-label') && link.textContent) {
-          link.setAttribute('aria-label', link.textContent.trim());
-        }
-        // Add external link indicators
-        if (link.getAttribute('href')?.startsWith('http') && !link.getAttribute('href')?.includes('ziontechgroup.com')) {
-          link.setAttribute('aria-label', `${link.textContent?.trim()} (opens in new tab)`);
-          link.setAttribute('target', '_blank');
-          link.setAttribute('rel', 'noopener noreferrer');
+        if (!link.textContent?.trim() && !link.getAttribute('aria-label')) {
+          const href = link.getAttribute('href');
+          if (href) {
+            link.setAttribute('aria-label', `Link to ${href.replace('/', '').replace('-', ' ')}`);
+          }
         }
       });
-
-      // Add ARIA labels to images
-      const images = document.querySelectorAll('img:not([alt])');
-      images.forEach(img => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', '');
-        }
-      });
-
-      // Add ARIA labels to form inputs
-      const inputs = document.querySelectorAll('input:not([aria-label])');
-      inputs.forEach(input => {
-        const label = document.querySelector(`label[for="${input.getAttribute('id')}"]`);
-        if (label && !input.getAttribute('aria-label')) {
-          input.setAttribute('aria-label', label.textContent?.trim() || '');
-        }
-      });
-
-      // Add skip links
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-    addFocusIndicators();
-    enhanceAccessibility();
+    // High contrast mode detection
+    const setupHighContrastMode = () => {
+      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+      
+      const handleContrastChange = (e: MediaQueryListEvent) => {
+        if (e.matches) {
+          document.body.classList.add('high-contrast');
+        } else {
+          document.body.classList.remove('high-contrast');
+        }
+      };
 
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
+      prefersHighContrast.addEventListener('change', handleContrastChange);
+      handleContrastChange(prefersHighContrast);
     };
+
+    // Reduced motion detection
+    const setupReducedMotion = () => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      
+      const handleMotionChange = (e: MediaQueryListEvent) => {
+        if (e.matches) {
+          document.body.classList.add('reduced-motion');
+        } else {
+          document.body.classList.remove('reduced-motion');
+        }
+      };
+
+      prefersReducedMotion.addEventListener('change', handleMotionChange);
+      handleMotionChange(prefersReducedMotion);
+    };
+
+    // Screen reader announcements
+    const setupScreenReaderAnnouncements = () => {
+      const announcementRegion = document.createElement('div');
+      announcementRegion.setAttribute('aria-live', 'polite');
+      announcementRegion.setAttribute('aria-atomic', 'true');
+      announcementRegion.className = 'sr-only';
+      announcementRegion.id = 'announcements';
+      document.body.appendChild(announcementRegion);
+
+      // Function to announce messages
+      window.announceToScreenReader = (message: string) => {
+        announcementRegion.textContent = message;
+        setTimeout(() => {
+          announcementRegion.textContent = '';
+        }, 1000);
+      };
+    };
+
+    // Initialize all accessibility enhancements
+    setupSkipLinks();
+    enhanceKeyboardNavigation();
+    setupFocusManagement();
+    enhanceARIALabels();
+    setupHighContrastMode();
+    setupReducedMotion();
+    setupScreenReaderAnnouncements();
+
+    // Add CSS for screen reader only content
+    const style = document.createElement('style');
+    style.textContent = `
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      
+      .high-contrast .cyber-card {
+        border: 2px solid #00ffff !important;
+        background: rgba(0, 0, 0, 0.9) !important;
+      }
+      
+      .high-contrast .neon-button {
+        border: 2px solid #00ffff !important;
+        background: #000 !important;
+        color: #fff !important;
+      }
+      
+      .reduced-motion * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      
+      .reduced-motion .neon-glow-cyan,
+      .reduced-motion .neon-glow-purple,
+      .reduced-motion .neon-glow-pink {
+        animation: none !important;
+      }
+    `;
+    document.head.appendChild(style);
+
   }, []);
 
   return <>{children}</>;

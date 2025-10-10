@@ -1,59 +1,25 @@
 import React, { useEffect } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/logo.png',
-        '/og-image.png'
+        '/images/hero-bg.jpg',
+        '/images/logo.png',
+        '/images/og-image.jpg'
       ];
 
-      const criticalFonts = [
-        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
-      ];
-
-      // Preload critical images
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
-
-      // Preload critical fonts
-      criticalFonts.forEach(href => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'style';
-        link.href = href;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
-
-      // Add DNS prefetch for external domains
-      const externalDomains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
-        'https://www.googletagmanager.com'
-      ];
-
-      externalDomains.forEach(domain => {
-        const link = document.createElement('link');
-        link.rel = 'dns-prefetch';
-        link.href = domain;
         document.head.appendChild(link);
       });
     };
 
-    // Optimize images with better lazy loading
+    // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
@@ -63,59 +29,87 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         if (!img.decoding) {
           img.decoding = 'async';
         }
-        // Add error handling
-        img.onerror = () => {
-          img.style.display = 'none';
-        };
       });
     };
 
-    // Defer non-critical scripts
-    const deferNonCriticalScripts = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        script.setAttribute('defer', '');
-      });
-    };
-
-    // Add resource hints for better performance
-    const addResourceHints = () => {
-      // Preconnect to external domains
-      const preconnectDomains = [
+    // Preconnect to external domains
+    const preconnectExternalDomains = () => {
+      const domains = [
         'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com'
+        'https://fonts.gstatic.com',
+        'https://www.google-analytics.com',
+        'https://www.googletagmanager.com'
       ];
 
-      preconnectDomains.forEach(domain => {
+      domains.forEach(domain => {
         const link = document.createElement('link');
         link.rel = 'preconnect';
         link.href = domain;
-        link.crossOrigin = 'anonymous';
         document.head.appendChild(link);
       });
     };
 
-    // Optimize third-party scripts
-    const optimizeThirdPartyScripts = () => {
-      // Add loading="lazy" to iframes
-      const iframes = document.querySelectorAll('iframe');
-      iframes.forEach(iframe => {
-        if (!iframe.loading) {
-          iframe.loading = 'lazy';
-        }
-      });
-    };
-
+    // Initialize performance optimizations
     preloadCriticalResources();
     optimizeImages();
-    deferNonCriticalScripts();
-    addResourceHints();
-    optimizeThirdPartyScripts();
+    preconnectExternalDomains();
 
-    // Cleanup
-    return () => {
-      // Cleanup if needed
+    // Service Worker registration for caching
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('SW registered: ', registration);
+        })
+        .catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+
+    // Performance monitoring
+    const measurePerformance = () => {
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+            if (perfData) {
+              console.log('Performance Metrics:', {
+                'DOM Content Loaded': perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+                'Load Complete': perfData.loadEventEnd - perfData.loadEventStart,
+                'First Paint': performance.getEntriesByName('first-paint')[0]?.startTime,
+                'First Contentful Paint': performance.getEntriesByName('first-contentful-paint')[0]?.startTime
+              });
+            }
+          }, 0);
+        });
+      }
     };
+
+    measurePerformance();
+
+    // Intersection Observer for lazy loading
+    const setupIntersectionObserver = () => {
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const element = entry.target as HTMLElement;
+              if (element.dataset.src) {
+                element.style.backgroundImage = `url(${element.dataset.src})`;
+                element.removeAttribute('data-src');
+                observer.unobserve(element);
+              }
+            }
+          });
+        });
+
+        document.querySelectorAll('[data-src]').forEach(el => {
+          observer.observe(el);
+        });
+      }
+    };
+
+    setupIntersectionObserver();
+
   }, []);
 
   return <>{children}</>;
