@@ -223,7 +223,7 @@ const Navigation: React.FC = () => {
     <>
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-glow-cyan' : 'bg-transparent'
+        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20 neon-glow-cyan matrix-bg-enhanced' : 'bg-transparent quantum-field-enhanced'
       }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -236,7 +236,7 @@ const Navigation: React.FC = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 rotate-slow">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white cyber-text font-bold">
+            <span className="text-white neon-text-cyber font-bold">
               Zion Tech Group
             </span>
           </Link>
@@ -348,7 +348,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="neon-button hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
+              className="neon-button-ultra hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 inline-flex items-center"
               onClick={closeAllMenus}
             >
               Get Started

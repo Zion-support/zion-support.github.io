@@ -175,7 +175,7 @@ const App: React.FC = memo(() => {
               <AppWithPerformanceMonitoring>
                 <SEOHead />
                 <Router>
-                <div className="min-h-screen bg-white overflow-x-hidden">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 overflow-x-hidden cyber-grid-ultra quantum-particles">
                   <SkipLink to="#main-content">Skip to main content</SkipLink>
                   <Navigation />
                   <main id="main-content" className="w-full">
