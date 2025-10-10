@@ -162,6 +162,7 @@ const Navigation: React.FC = () => {
   ];
 
   const aiServices = [
+<<<<<<< HEAD
     { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
     { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart },
     { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe },
@@ -188,6 +189,35 @@ const Navigation: React.FC = () => {
     { name: 'AI Robotics', href: '/ai-robotics', icon: Settings },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: Lock },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Settings }
+=======
+    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain, price: '$1,500/mo' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart, price: '$1,300/mo' },
+    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe, price: '$1,800/mo' },
+    { name: 'AI Fraud Detection System', href: '/ai-fraud-detection', icon: Shield, price: '$2,200/mo' },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings, price: '$1,600/mo' },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope, price: '$2,500/mo' },
+    { name: 'AI Financial Services', href: '/ai-financial-services', icon: CreditCard, price: '$1,900/mo' },
+    { name: 'AI Natural Language Processing', href: '/ai-nlp', icon: MessageSquare, price: '$1,100/mo' },
+    { name: 'AI Computer Vision', href: '/computer-vision', icon: Eye, price: '$1,400/mo' },
+    { name: 'AI Customer Service Automation', href: '/ai-customer-service', icon: MessageSquare, price: '$1,200/mo' },
+    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield, price: '$1,400/mo' },
+    { name: 'AI Human Resources', href: '/ai-hr', icon: Users, price: '$1,200/mo' },
+    { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText, price: '$1,500/mo' },
+    { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home, price: '$1,300/mo' },
+    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory, price: '$1,800/mo' },
+    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck, price: '$1,600/mo' },
+    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap, price: '$1,200/mo' },
+    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap, price: '$1,500/mo' },
+    { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield, price: '$1,400/mo' },
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap, price: '$1,300/mo' },
+    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu, price: '$3,000/mo' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, price: '$1,800/mo' },
+    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard, price: '$1,600/mo' },
+    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone, price: '$1,400/mo' },
+    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users, price: '$1,200/mo' },
+    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, price: '$800/mo' },
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, price: '$900/mo' }
+>>>>>>> cursor/website-audit-and-update-with-deployment-9f26
   ];
 
   const itServices = [
