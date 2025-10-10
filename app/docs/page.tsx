@@ -25,27 +25,27 @@ export default function DocsPage() {
         { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },;
         { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },;
         { title: 'SDKs', description: 'Client SDKs and libraries', link: '/docs/api/sdks' }
-      ];
-    },;
-    {;
-      title: 'AI Solutions',;
-      icon: 'brain',;
-      description: 'AI and machine learning documentation',;
-      docs: [;}
-        { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' },;
-        { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' },;
+      ]
+    },
+    {
+      title: 'AI Solutions',
+      icon: 'brain',
+      description: 'AI and machine learning documentation',
+      docs: [}
+        { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' },
+        { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' },
         { title: 'Deployment', description: 'Deploying AI models to production', link: '/docs/ai/deployment' }
-      ];
-    },;
-    {;
-      title: 'Cloud Services',;
-      icon: 'cloud',;
-      description: 'Cloud infrastructure and services',;
-      docs: [;}
-        { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },;
-        { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },;
+      ]
+    },
+    {
+      title: 'Cloud Services',
+      icon: 'cloud',
+      description: 'Cloud infrastructure and services',
+      docs: [}
+        { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },
+        { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },
         { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
-      ];
+      ]
     }
   ];
   const popularDocs = [
@@ -53,15 +53,14 @@ export default function DocsPage() {
     { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
     { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
     { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
-  ];
+  ]
   const filteredDocs = docCategories.map(category => ({
     ...category,
     docs: category.docs.filter(doc => 
       doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       doc.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(category => category.docs.length > 0);
-  return (
+  })).filter(category => category.docs.length > 0)return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="Documentation - Zion Tech Group"
@@ -88,9 +87,9 @@ export default function DocsPage() {
                 </div>;
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">;
                   {doc.title}
-                </h3>;
-                <p className="text-gray-300 text-sm mb-4">{doc.description}</p>;
-                <a;
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
+                <a
                   href={doc.link}
                   className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
                   Read More
@@ -134,8 +133,8 @@ export default function DocsPage() {
                       </div>;
                     </a>;
                   ))}
-                </div>;
-              </div>;
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -151,17 +150,17 @@ export default function DocsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Contact Support;
+              Contact Support
   </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Join Community;
+              Join Community
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
+  )
 }
   </button>
   </button>

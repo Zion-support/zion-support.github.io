@@ -1,27 +1,15 @@
-//Performance optimizations;
-// //Optimize images;
+//Performance optimizations
 const optimizeImages = () => {
-  //   //Add image optimization logic here;
-};
-
-//Optimize CSS;
+  //   //Add image optimization logic here
+}
 const optimizeCSS = () => {
-  //   //Add CSS optimization logic here;
-};
-
-//Optimize JavaScript;
+  //   //Add CSS optimization logic here
+}
 const optimizeJS = () => {
-  //   //Add JS optimization logic here;
-const optimizeImages = () => {/* TODO: Fix JSX expression */}
-};
-
-//Optimize CSS;
+  //   //Add JS optimization logic hereconst optimizeImages  = () => {/* TODO: Fix JSX expression */}
+}
 const optimizeCSS = () => {/* TODO: Fix JSX expression */}
-};
-
-//Optimize JavaScript;
+}
 const optimizeJS = () => {/* TODO: Fix JSX expression */}
-};
-
-// Run optimizations;
+}
 // 

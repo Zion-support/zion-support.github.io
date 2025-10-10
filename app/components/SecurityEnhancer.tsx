@@ -3,7 +3,7 @@ import React from 'react';
 'use client';
 import React, { useEffect } from 'react';
 interface SecurityEnhancerProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
   useEffect(() => {
@@ -23,12 +23,11 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
       document.head.appendChild(cspMeta);
       // Disable right-click context menu
       document.addEventListener('contextmenu', (e) => {
-        e.preventDefault();
-      });
-      // Disable F12 and other dev tools shortcuts
+        e.preventDefault()
+      })
       document.addEventListener('keydown', (e) => {
         if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
-          e.preventDefault();
+          e.preventDefault()
         }
       });
     };

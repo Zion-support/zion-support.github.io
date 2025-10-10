@@ -20,8 +20,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -47,8 +47,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "https://www.linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup"
     ]
-  };
-  return (
+  }return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>

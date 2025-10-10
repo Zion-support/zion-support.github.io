@@ -1,12 +1,9 @@
-import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
-'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const HelpPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
+import { HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users } from 'lucide-react'
+'use client'import React, { useState } from 'react'
+import { Link  } from 'react-router-dom'import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'const HelpPage: React.FC  = () => {
+  const [searchTerm, setSearchTerm] = useState('')
+  const [activeCategory, setActiveCategory] = useState('getting-started')
   const categories = [
     {
       id: 'getting-started',
@@ -31,7 +28,7 @@ idid: 'technical',
       color: 'text-purple-400',
       bgColor:     ,
 $4}
-  ];
+  ]
   const helpArticles = {
     'getting-started': [
         title: 'How to Get Started with AI Services',
@@ -88,7 +85,7 @@ titletitle: 'Security Best Practices',
         readTime: '12 min read',
         title: 'Monitoring and Logging',
         description: 'Set up monitoring and logging for your AI services and applications']
-  };
+  }
   const resources = [
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
@@ -135,12 +132,11 @@ questionquestion: 'Can I integrate your services with my existing systems?',
 questionquestion: 'Is there a free trial available?',
       answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
   const getCurrentArticles = () => {
-    return helpArticles[activeCategory as keyof typeof helpArticles] || [];
+    return helpArticles[activeCategory as keyof typeof helpArticles] || []
   const filteredArticles = getCurrentArticles().filter(article =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-  return (
+  )return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -148,7 +144,7 @@ questionquestion: 'Is there a free trial available?',
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Help Center;
+              Help Center
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers, get support, and learn how to make the most of our AI and IT services. 
@@ -186,7 +182,7 @@ questionquestion: 'Is there a free trial available?',
           {/* Articles */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">
-              {categories.find(cat => cat.id === activeCategory)?.name} Articles;
+              {categories.find(cat => cat.id === activeCategory)?.name} Articles
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredArticles.map((article, index) => (
@@ -252,7 +248,7 @@ questionquestion: 'Is there a free trial available?',
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <MessageSquare className="w-5 h-5 mr-2" />
-                Contact Support;
+                Contact Support
   </
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
@@ -266,14 +262,13 @@ questionquestion: 'Is there a free trial available?',
     </React.Fragment>
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
+  )}
+  const [searchTerm, setSearchTerm] = useState('')
+  const [activeCategory, setActiveCategory] = useState('getting-started')
 const categories = [
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content}
+}
   i,
   d: 'getting-started',
       nam,
@@ -306,11 +301,11 @@ const categories = [
       bgColo,
   r: 'bg-purple-500/10'
     }
-  ];
+  ]
   const helpArticles = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content}
 }
-    'getting-started': [;
+    'getting-started': [
   titl,
   e: 'Setting Up Your First Dashboard',
         descriptio,
@@ -362,17 +357,17 @@ const categories = [
       responseTim,
   e: 'Community driven'
           <MessageSquare className="w-5 h-5 mr-2" /></MessageSquare>
-// Contact Support;
+// Contact Support
           </a>
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us
       <Footer /></Footer>
     </React.Fragment>
-export default HelpPage;
+export default HelpPage
   </div>
   </p>
   </h2>

@@ -1,23 +1,18 @@
-import React, { useState } from 'react';
-export default function ContactSection() {
+import React, { useState } from 'react'export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     service: '',
     message: ''
-  });
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  })const handleChange  = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
+    })
+  }const handleSubmit  = () => {
+    e.preventDefault()
+    console.log('Form submitted:', formData)}
   const contactInfo = [
     {
       icon: (
@@ -50,7 +45,7 @@ export default function ContactSection() {
       details: '123 Tech Street, Innovation City, IC 12345',
       link: '#'
     }
-  ];
+  ]
   const services = [
     'AI & Machine Learning',
     'Cloud Solutions',
@@ -60,8 +55,7 @@ export default function ContactSection() {
     'Cybersecurity',
     'IT Consulting',
     'Other'
-  ];
-  return (
+  ]return (
     <section id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -229,7 +223,7 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
   </button>
   </textarea>

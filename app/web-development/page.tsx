@@ -56,7 +56,7 @@ const $1: React.FC = () => {;
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];
+  ]
   const process = [
     {
       step: '01',
@@ -134,8 +134,7 @@ const WebDevelopmentPage: React.FC = () => {
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'
     }
-  ];
-
+  ]
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -143,8 +142,7 @@ const WebDevelopmentPage: React.FC = () => {
     { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
     { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
-  ];
-
+  ]
   const process = [
     {
       step: '01',
@@ -170,9 +168,7 @@ const WebDevelopmentPage: React.FC = () => {
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield
     }
-  ];
-
-  return (
+  ]return (
     <>
       <SEOOptimizer
         title="Web Development Services - Zion Tech Group"
@@ -247,7 +243,7 @@ const WebDevelopmentPage: React.FC = () => {
                     <div></div>
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">
-              Our Web Development Services;)
+              Our Web Development Services)
             </h2>)
 )
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">),
@@ -297,7 +293,6 @@ const WebDevelopmentPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  
                   {service.benefits && (
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
@@ -348,6 +343,7 @@ const WebDevelopmentPage: React.FC = () => {
                 </div>
               ))}
             </div>
+          </section>            </div>
           </section>
             </div>
           </section>
@@ -404,9 +400,8 @@ const WebDevelopmentPage: React.FC = () => {
         </main>
         <Footer />
       </div>,
-    </React.Fragment>);
-};
-export default WebDevelopmentPage;
+    </React.Fragment>)}
+export default WebDevelopmentPage
   </h2>
   </span>
   </h2>

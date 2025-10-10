@@ -1,12 +1,7 @@
-import React from 'react';
-import { Brain, Zap, Shield, BarChart } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const AIServicesPage: React.FC = () => {
+import React from 'react'import { Brain, Zap, Shield, BarChart  } from 'lucide-react'
+import { Link  } from 'react-router-dom'import { Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async'import React from 'react'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'const AIServicesPage: React.FC  = () => {
   const services = [
     {
       title: 'AI Strategy & Consulting',
@@ -31,7 +26,7 @@ titletitle: 'AI Analytics & Insights',
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price:     ,
 $4}
-  ];
+  ]
   const benefits = [
     '300% Average ROI Increase',
     '95% Process Automation',
@@ -52,29 +47,24 @@ $4}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
+              Contact Us
   </
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More;
+              Learn More
   </
       <Footer />
-  );
-};
-export default $1;
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
+  )}
+export default $1
+'use client'import React, { useState, useEffect } from 'react'
+import { Helmet  } from 'react-helmet-async'import { Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
-} from 'lucide-react';
-export default function AIServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+ } from 'lucide-react'export default function AIServicesPage() {
+  const [activeTab, setActiveTab] = useState('overview')
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
+    setIsVisible(true)
+  }, [])
   const aiServices = [
     {
       id: 'ai-automation',
@@ -202,14 +192,13 @@ export default function AIServicesPage() {
       color: 'from-indigo-500 to-purple-600',
       popular: false
     }
-  ];
+  ]
   const stats = [
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
     { icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
-  ];
-  return (
+  ]return (
     <React.Fragment>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
@@ -237,13 +226,13 @@ export default function AIServicesPage() {
                   href="tel:+13024640950"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                   <Phone className="w-5 h-5 mr-2" />
-                  (302) 464-0950;
+                  (302) 464-0950
   </
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                   <Mail className="w-5 h-5 mr-2" />
-                  Get Quote;
+                  Get Quote
   </
               </div>
             </div>
@@ -285,7 +274,7 @@ export default function AIServicesPage() {
                     </div>
                     {service.popular && (
                       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">
-                        Most Popular;
+                        Most Popular
   </
                     )}
                   </div>
@@ -322,12 +311,12 @@ export default function AIServicesPage() {
                     <a
                       href="tel:+13024640950"
                       className="flex-1 cyber-button text-center py-3">
-                      Get Started;
+                      Get Started
   </
                     <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center">
-                      Learn More;
+                      Learn More
   </
                   </div>
                 </div>
@@ -349,20 +338,20 @@ export default function AIServicesPage() {
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                 <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950;
+                Call (302) 464-0950
   </
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                 <Mail className="w-5 h-5 mr-2" />
-                Email Us;
+                Email Us
   </
             </div>
           </div>
         </section>
       </div>
     </React.Fragment>
-  );
+  )
 }
   </a>
   </a>

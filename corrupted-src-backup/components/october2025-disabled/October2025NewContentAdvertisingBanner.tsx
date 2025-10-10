@@ -1,5 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-export default function October2025NewContentAdvertisingBann, e, r() { 
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"export default function October2025NewContentAdvertisingBann, e, r() { 
   return(<section, classNam, e = "relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Background, Elements */ })
       <div, className="absolute, inse, t-0">)
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-[u, r, l('da, t, a: image/s, v, g+x, m, l; ba, s, e, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-40" <div, classNam, e = "absolute, to, p-1/4, righ, t-1/4 w-9, 6, h-96, b, g-yell, o, w-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" <div, className="absolute, botto, m-1/4, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"</div>
@@ -37,7 +36,7 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
           {/* Main, Headlin, e */}"
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t"></h2>"
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t"></span>
-              3, Revolutionary, AI Breakthroug, h, s;
+              3, Revolutionary, AI Breakthroug, h, s
             </sp, a, n>
           </h2>"
           <p, className="te, x, t-3xl, m, d:te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8"></p>
@@ -140,6 +139,6 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
         </div>
       </div>
     </sec, t, i, o, n>
-  );
+  )
 }
 "

@@ -4,17 +4,17 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  image: string;
-  featured: boolean;
+  id: string
+  title: string
+  excerpt: string
+  content: string
+  author: string
+  date: string
+  readTime: string
+  category: string
+  tags: string[]
+  image: string
+  featured: boolean
 }
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -110,10 +110,10 @@ const BlogPage: React.FC = () => {
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
+      )
     }
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(post => post.category === selectedCategory);
+      filtered = filtered.filter(post => post.category === selectedCategory)
     }
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
@@ -176,12 +176,11 @@ const BlogPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Tech Insights & Updates;
+                Tech Insights & Updates
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Stay ahead with the latest trends, insights, and best practices in AI, cloud computing, and technology.
               </p>
-              
               <div className="max-w-md mx-auto relative mb-8">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -250,7 +249,7 @@ const BlogPage: React.FC = () => {
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Tech Insights & News;
+              Tech Insights & News
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay updated with the latest trends in AI, blockchain, cloud computing, and IT solutions.
@@ -258,7 +257,6 @@ const BlogPage: React.FC = () => {
         <meta name="description" content="Stay updated with the latest technology trends, AI insights, and industry best practices from Zion Tech Group's expert team." />
         <meta name="keywords" content="technology blog, AI insights, cloud computing, cybersecurity, digital transformation" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
         <div className="container mx-auto px-4">
@@ -320,7 +318,7 @@ const BlogPage: React.FC = () => {
                       </span>
                       {post.featured && (
                         <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 text-xs rounded-full">
-                          Featured;
+                          Featured
   </
                       )}
                     </div>
@@ -438,7 +436,6 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Newsletter Signup */}
       <section className="py-16 bg-blue-900 text-white">
         <div className="container mx-auto px-4">
@@ -479,7 +476,6 @@ export default BlogPage;
                 <p className="text-gray-400 text-lg">No articles found matching your search.</p>
               </div>
             )}
-
             <div className="text-center mt-12">
               <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                 Load More Articles

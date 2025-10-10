@@ -1,6 +1,5 @@
 export interface NewArticle {/* TODO: Fix JSX expression */}
 }
-
 export const newArticles2025: NewArticle[] = [
   {
     id: 'ai-automation-2025'
@@ -27,4 +26,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

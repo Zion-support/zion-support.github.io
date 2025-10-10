@@ -42,7 +42,7 @@ const EdgeComputingPage: React.FC = () => {
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
       benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
     }
-  ];
+  ]
   const services = [
     {
       icon: '⚡',
@@ -64,7 +64,7 @@ const EdgeComputingPage: React.FC = () => {
       title: 'Mobile Edge',
       description: 'Mobile edge computing for 5G and mobile applications'
     }
-  ];
+  ]
   const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
@@ -72,7 +72,7 @@ const EdgeComputingPage: React.FC = () => {
     'Enhanced Security',
     'Real-time Processing',
     'Global Scalability'
-  ];
+  ]
   const useCases = [
     {
       title: 'Autonomous Vehicles',
@@ -104,8 +104,7 @@ const EdgeComputingPage: React.FC = () => {
       description: 'Cloud gaming with minimal latency',
       icon: '🎮'
     }
-  ];
-  return (
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
@@ -121,7 +120,7 @@ const EdgeComputingPage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Edge Computing
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions;
+              Solutions
   </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -134,7 +133,7 @@ const EdgeComputingPage: React.FC = () => {
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo;
+              View Demo
   </
           </div>
         </div>
@@ -145,7 +144,7 @@ const EdgeComputingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced edge computing capabilities designed for modern applications and IoT solutions;
+              Advanced edge computing capabilities designed for modern applications and IoT solutions
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -163,8 +162,8 @@ const EdgeComputingPage: React.FC = () => {
                       {benefit}
                     </li>;
                   ))}
-                </ul>;
-              </div>;
+                </ul>
+              </div>
             ))}
           </div>
         </div>
@@ -175,7 +174,7 @@ const EdgeComputingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive edge computing solutions for all your business needs;
+              Comprehensive edge computing solutions for all your business needs
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -195,7 +194,7 @@ const EdgeComputingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Edge computing solutions for various industries and applications;
+              Edge computing solutions for various industries and applications
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -215,7 +214,7 @@ const EdgeComputingPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Edge Computing?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of edge computing with our proven solutions;
+              Experience the benefits of edge computing with our proven solutions
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -235,23 +234,22 @@ const EdgeComputingPage: React.FC = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your applications with ultra-low latency edge computing solutions;
+            Transform your applications with ultra-low latency edge computing solutions
   </
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial;
+              Start Free Trial
   </
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales;
+              Contact Sales
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
-};
-export default EdgeComputingPage;
+  )}
+export default EdgeComputingPage
   </button>
   </button>
   </p>

@@ -79,7 +79,6 @@ const Footer: React.FC = React.memo(() => {
               </a>
             </div>
           </div>
-
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
@@ -214,8 +213,6 @@ const Footer: React.FC = React.memo(() => {
         </div>
       </div>
     </footer>
-  );
-});
-
-Footer.displayName = 'Footer';
-export default Footer;
+  )
+})
+Footer.displayName = 'Footer'export default Footer

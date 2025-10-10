@@ -24,7 +24,7 @@ const FuturisticHeroPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ];
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -34,8 +34,7 @@ const FuturisticHeroPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-  return (
+  ]return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -59,16 +58,15 @@ const FuturisticHeroPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now;
+                Call Now
   </
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us;
+                Email Us
   </
             </div>
-  );
-};
-export default FuturisticHeroPage;
+  )}
+export default FuturisticHeroPage
   </button>
   </button>
   </div>

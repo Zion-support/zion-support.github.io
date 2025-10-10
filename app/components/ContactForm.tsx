@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
+  name: string
+  email: string
+  company: string
+  phone: string
+  service: string
+  message: string
 }
 interface FormStatus {
   type: 'idle' | 'loading' | 'success' | 'error';
@@ -19,7 +19,7 @@ interface FormStatus {
     phone: '',
     service: '',
     message: ''
-  });
+  })
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
@@ -48,16 +48,15 @@ interface FormStatus {
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus({ type: 'loading', message: 'Sending message...' });
+    e.preventDefault()
+    setStatus({ type: 'loading', message: 'Sending message...' })
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000))
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
-      });
-      // Reset form
+      })
       setFormData({
         name: '',
         email: '',
@@ -113,7 +112,7 @@ interface FormStatus {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                Company;
+                Company
   </
               <input
                 type="text"
@@ -127,7 +126,7 @@ interface FormStatus {
             </div>
             <div>
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number;
+                Phone Number
   </
               <input
                 type="tel"
@@ -142,7 +141,7 @@ interface FormStatus {
           </div>
           <div>
             <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-              Service Interest;
+              Service Interest
   </
             <select
               id="service"
@@ -171,63 +170,60 @@ interface FormStatus {
                 name="name";
                 value={formData.name}
                 onChange={handleChange}
-                required;
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200";
-                placeholder="Your full name";
-              />;
-            </div>;
-            <div></div>;
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">;
-                Email Address *;
-              </label>;
-              <input;
-                type="email";
-                id="email";
-                name="email";
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                placeholder="Your full name"
+               />
+            </div>
+            <div></div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                Email Address *
+              </label><input
+                type="email"
+                id="email"
+                name="email"
                 value={formData.email}
                 onChange={handleChange}
-                required;
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200";
-                placeholder="your.email@company.com";
-              />;
-            </div>;
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>;
-            <div></div>;
-              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">;
-                Company;
-              </label>;
-              <input;
-                type="text";
-                id="company";
-                name="company";
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                placeholder="your.email@company.com"
+               />
+            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+            <div></div>
+              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                Company
+              </label><input
+                type="text"
+                id="company"
+                name="company"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200";
-                placeholder="Your company name";
-              />;
-            </div>;
-            <div></div>;
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">;
-                Phone Number;
-              </label>;
-              <input;
-                type="tel";
-                id="phone";
-                name="phone";
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                placeholder="Your company name"
+               />
+            </div>
+            <div></div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                Phone Number
+              </label><input
+                type="tel"
+                id="phone"
+                name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200";
-                placeholder="+1 (555) 123-4567";
-              />;
-            </div>;
-          </div>;
-          <div></div>;
-            <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">;
-              Service Interest;
-            </label>;
-            <select;
-              id="service";
-              name="service";
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                placeholder="+1 (555) 123-4567"
+               />
+            </div>
+          </div>
+          <div></div>
+            <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+              Service Interest
+            </label>
+            <select
+              id="service"
+              name="service"
               value={formData.service}
               onChange={handleChange}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200";
@@ -235,8 +231,8 @@ interface FormStatus {
               ) : (;
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" /></div>;
               )}
-              <span className="text-sm font-medium">{status.message}</span>;
-            </div>;
+              <span className="text-sm font-medium">{status.message}</span>
+            </div>
           )}
           <button
             type="submit"
@@ -287,9 +283,8 @@ interface FormStatus {
           </div>
         </div>
     </div>
-  );
-};
-export default ContactForm;
+  )}
+export default ContactForm
   </select>
   </label>
   </label>

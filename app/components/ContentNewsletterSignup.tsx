@@ -1,16 +1,15 @@
-'use client';
-import React, { useState } from 'react';
-import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
+'use client'import React, { useState } from 'react'
+import { Mail, CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
 interface ContentNewsletterSignupProps {
-  title?: string;
-  subtitle?: string;
-  placeholder?: string;
-  buttonText?: string;
+  title?: string
+  subtitle?: string
+  placeholder?: string
+  buttonText?: string
   features?: Array<{
-    icon: React.ComponentType<{ className?: string }>;
-    text: string;
-  }>;
-  onSubscribe?: (email: string) => void;
+    icon: React.ComponentType<{ className?: string }>
+    text: string
+  }>
+  onSubscribe?: (email: string) => void
 }
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   title = "Stay Updated with Our Latest Insights",
@@ -35,19 +34,18 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     setIsLoading(true);
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
+      await new Promise(resolve => setTimeout(resolve, 1000))
       if (onSubscribe) {
-        onSubscribe(email);
+        onSubscribe(email)
       }
-      setIsSubscribed(true);
-      setEmail('');
+      setIsSubscribed(true)
+      setEmail('')
     } catch (error) {
-      console.error('Subscription error:', error);
+      console.error('Subscription error:', error)
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  }
   if (isSubscribed) {
     return (
       <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

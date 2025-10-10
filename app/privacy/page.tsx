@@ -22,7 +22,7 @@ export default function PrivacyPage() {
       description: 'IP address, browser type, operating system, cookies',
       examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']
     }
-  ];
+  ]
   const purposes = [
     {
       title: 'Service Provision',
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
       icon: Shield,
       description: 'To protect against fraud and abuse'
     }
-  ];
+  ]
   const rights = [
     {
       title: 'Access',
@@ -66,8 +66,7 @@ export default function PrivacyPage() {
       description: 'Receive your data in a structured format',
       icon: Database
     }
-  ];
-  return (
+  ]return (
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
         <div className="container mx-auto px-4 text-center"></div>
@@ -111,8 +110,8 @@ export default function PrivacyPage() {
                       {type.examples.map((example, idx) => (;}
                         <li key={idx}>• {example}</li>;
                       ))}
-                    </ul>;
-                  </div>;
+                    </ul>
+                  </div>
                 ))}
               </div>
             </section>
@@ -191,6 +190,18 @@ export default function PrivacyPage() {
                 <div className="flex items-center"></div>
                   <User className="h-5 w-5 text-blue-600 mr-3" />
                   <span className="text-gray-700">Zion Tech Group Privacy Team</span>
+                </div>
+              </div>
+            </section>            {/* Updates */}
+            <section></section>
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"></div>
+                <div className="flex items-start"></div><AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1"  />
+                  <div></div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Policy Updates</h3>
+                    <p className="text-gray-700">
+                      We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+                    </p>
+                  </div>
                 </div>
               </div>
             </section>

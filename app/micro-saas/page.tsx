@@ -28,15 +28,15 @@ const MicroSaasPage: React.FC = () => {
       features: ['Smart task management', 'Team collaboration', 'Progress analytics', 'Resource optimization']
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 interface MicroSaasProduct {
-  id: string;
-  icon: string;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  users: string;
-  popular: boolean;
-  category: string;
+  id: string
+  icon: string
+  title: string
+  description: string
+  features: string[]
+  price: string
+  users: string
+  popular: boolean
+  category: string
 }
 const MicroSaasPage: React.FC = () => {
   const products: MicroSaasProduct[] = [
@@ -270,8 +270,7 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       category: 'Support'
     }
-  ];
-return (
+  ]return (
     <React.Fragment>
       <Helmet>
         <title>Micro SaaS Solutions | Zion Tech Group - 50+ AI-Powered Tools</title>
@@ -283,7 +282,7 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Micro SaaS Solutions;
+                Micro SaaS Solutions
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive suite of 50+ AI-powered micro SaaS tools designed to solve specific business challenges.
@@ -456,7 +455,7 @@ return (
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions;
+              Micro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">SaaS</span> Solutions
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
@@ -516,7 +515,7 @@ return (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                         <Star className="w-4 h-4 fill-current" />
-                        Most Popular;
+                        Most Popular
   </
                     </div>
                   )}
@@ -544,7 +543,7 @@ return (
                   </ul>
                   <div className="flex flex-col gap-3">
                     <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600 transform hover:scale-105">
-                      Start Free Trial;
+                      Start Free Trial
   </
                     <button className="w-full py-2 px-6 rounded-lg font-semibold transition-all duration-300 bg-white/10 text-white border border-white/20 hover:bg-white/20">
                       Learn More;
@@ -553,7 +552,6 @@ return (
                 </div>
               ))}
             </div>
-
             {filteredProducts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-500 text-lg">No products found in this category.</p>
@@ -631,12 +629,12 @@ Choose the micro SaaS solution that fits your business needs. Start with a free 
                   to="/contact"
 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center justify-center">
                   <Zap className="w-5 h-5 mr-2" />
-                  Start Free Trial;
+                  Start Free Trial
   </
                 <Link
                   to="/pricing"
 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300">
-                  View All Plans;
+                  View All Plans
   </
               </div>
             </div>
@@ -674,7 +672,7 @@ className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semi
               Choose from our collection of micro SaaS solutions and start solving your business problems today.
             </p>
             <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
-              View All Plans;
+              View All Plans
   </
           </div>
         </section>

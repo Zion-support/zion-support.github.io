@@ -1,5 +1,4 @@
-impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-rea, c, t';
-const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
+impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-rea, c, t'const GlobalAITransformationHu, b  = () => {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
      },
@@ -12,9 +11,9 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
     { metr, i, c: '$15, B+', lab, e, l: 'Value, Creat, e, d' },
     { metr, i, c: '99.9, 9%', lab, e, l: 'Success, Ra, t, e' },
     { metr, i, c: '5, 0, 0, K+', lab, e, l: 'Enterprise, Clien, t, s' }
-  ]; return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
+  ]return (<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
-  ]; return (
+  ]return (
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l"></div>
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>
         <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" />
@@ -22,7 +21,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" />
       </div>
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-        Transforming, Business, Operations Worldwi, d, e;
+        Transforming, Business, Operations Worldwi, d, e
       </h2>
       <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o">
         Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.)
@@ -41,14 +40,14 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
               <span, className="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e}</sp, a, n>
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
-  ]; return (<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l"></div>"
+  ]return (<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l"></div>"
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
         <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Globe>"
         <span, className="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-4, 0, 0">🌍 GLOBAL, AI, TRANSFORMATION H, U, B</sp, a, n>"
         <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Globe>
       </div>"
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
-        Transforming, Business, Operations Worldwi, d, e;
+        Transforming, Business, Operations Worldwi, d, e
       </h2>"
       <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o"></p>
         Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.
@@ -144,7 +143,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         <Link, t, o="/conta, c, t" 
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg">
           <Sparkles, className="w-5 h-5" />
-          Start, Your, AI Transformation, Journe, y;
+          Start, Your, AI Transformation, Journe, y
           <Link, className="w-5 h-5" />
         </Li, n, k>
         <p, className="mt-4, tex, t-gr, a, y-400, tex, t-sm">
@@ -157,10 +156,9 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
           <Link, className="w-5 h-5" /></Link>
         </Li, n, k>"
         <p, className="mt-4, tex, t-gr, a, y-400, tex, t-sm"></p>
-          🌍 Joi, n, 2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology;
+          🌍 Joi, n, 2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology
         </p>
       </div>
     </div>
-  );
-};
+  )}
 export default GlobalAITransformationHub;"`

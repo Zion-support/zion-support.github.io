@@ -44,8 +44,7 @@ export default function TermsPage() {
       icon: Scale,
       content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
     }
-  ];
-  return (
+  ]return (
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
         <div className="container mx-auto px-4 text-center"></div>
@@ -53,7 +52,7 @@ export default function TermsPage() {
             Terms of Service</h1>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Please read these terms carefully before using our services;
+            Please read these terms carefully before using our services
   </
           <div className="flex items-center justify-center text-sm text-blue-200"></div>
             <Calendar className="h-4 w-4 mr-2" />
@@ -77,10 +76,10 @@ export default function TermsPage() {
                       </h2>;
                       <p className="text-gray-700 leading-relaxed">;
                         {section.content}
-                      </p>;
-                    </div>;
-                  </div>;
-                </div>;
+                      </p>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>
@@ -116,6 +115,6 @@ export default function TermsPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
   </p>

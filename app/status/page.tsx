@@ -63,7 +63,7 @@ export default function StatusPage() {
       lastIncident: 'Never',
       description: 'System monitoring and alerts'
     }
-  ];
+  ]
   const incidents = [
     {
       id: 1,
@@ -85,8 +85,7 @@ export default function StatusPage() {
       description: 'Intermittent database connection issues affecting some user operations.',
       affectedServices: ['Database', 'API Services']
     }
-  ];
-  const getStatusIcon = (status: string) => {
+  ]const getStatusIcon  = () => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
@@ -103,31 +102,40 @@ export default function StatusPage() {
       case 'operational':
         return 'text-green-400';
       case 'degraded':
-        return 'text-yellow-400';
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />
       case 'outage':
-        return 'text-red-400';
+        return <XCircle className="w-5 h-5 text-red-400" />
       default:
-        return 'text-gray-400';
+        return <Clock className="w-5 h-5 text-gray-400" />
     }
-  };
-  const getSeverityColor = (severity: string) => {
+  }const getStatusColor  = () => {
+    switch (status) {
+      case 'operational':
+        return 'text-green-400'
+      case 'degraded':
+        return 'text-yellow-400'
+      case 'outage':
+        return 'text-red-400'
+      default:
+        return 'text-gray-400'
+    }
+  }const getSeverityColor  = () => {
     switch (severity) {
       case 'critical':
-        return 'bg-red-500/20 text-red-400 border-red-500/50';
+        return 'bg-red-500/20 text-red-400 border-red-500/50'
       case 'major':
-        return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
+        return 'bg-orange-500/20 text-orange-400 border-orange-500/50'
       case 'minor':
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
+        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50'
       default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50';
+        return 'bg-gray-500/20 text-gray-400 border-gray-500/50'
     }
-  };
+  }
   const overallStatus = services.every(service => service.status === 'operational') 
     ? 'operational' 
     : services.some(service => service.status === 'outage') 
       ? 'outage' 
-      : 'degraded';
-  return (
+      : 'degraded'return (
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Real-time status of all our services. We're committed to providing reliable, 
@@ -139,14 +147,14 @@ export default function StatusPage() {
               <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>;
                 {overallStatus === 'operational' ? 'All Systems Operational' :;}
                  overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
-              </span>;
-            </div>;
-            <button;
+              </span>
+            </div>
+            <button
               onClick={refreshStatus}
               disabled={isRefreshing}
               className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
               <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
-              Refresh;
+              Refresh
   </
           </div>
           <p className="text-gray-400 text-sm">
@@ -164,9 +172,9 @@ export default function StatusPage() {
                 <div className="flex items-center justify-between mb-4"></div>;
                   <div className="flex items-center gap-3"></div>;
                     {getStatusIcon(service.status)}
-                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>;
-                  </div>;
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>;
+                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
                     {service.status}
                   </span>
                 </div>
@@ -208,12 +216,12 @@ export default function StatusPage() {
                   <div className="flex items-center gap-2"></div>;
                     <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>;
                       {incident.severity}
-                    </span>;
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${;
-                      incident.status === 'resolved';
-                        ? 'bg-green-500/20 text-green-400';
-                        : 'bg-yellow-500/20 text-yellow-400';}
-                    }`}>;
+                    </span>
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      incident.status === 'resolved'
+                        ? 'bg-green-500/20 text-green-400'
+                        : 'bg-yellow-500/20 text-yellow-400'}
+                    }`}>
                       {incident.status}
                     </span>
                   </div>
@@ -275,17 +283,17 @@ export default function StatusPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe to Updates;
+              Subscribe to Updates
   </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Contact Support;
+              Contact Support
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
+  )
 }
   </button>
   </button>

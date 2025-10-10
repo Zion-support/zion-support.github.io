@@ -1,1 +1,1 @@
-:src/components/SuccessStoriesShowcase.tsx;
+:src/components/SuccessStoriesShowcase.tsx

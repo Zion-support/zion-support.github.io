@@ -4,9 +4,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap } from 'lucide-react';
 interface FAQ {
-  question: string;
-  answer: string;
-  category: string;
+  question: string
+  answer: string
+  category: string
 }
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -116,7 +116,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
     faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchTerm.toLowerCase()) ||
     faq.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  )
       contact: 'Available on website',
       availability: 'Mon-Fri 9AM-6PM EST',
       color: 'text-purple-400'
@@ -171,7 +171,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Support Center;
+              Support Center
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Get help and support for our AI and IT solutions. We're here to help you succeed.
@@ -224,7 +224,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Contact Support;
+                Contact Support
   </
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose your preferred way to get in touch with our support team.
@@ -319,7 +319,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
                 <h3 className="text-xl font-bold text-white mb-4">Documentation</h3>
                 <p className="text-gray-300 mb-6">Comprehensive guides and API documentation for all our solutions.</p>
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                  View Docs;
+                  View Docs
   </
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
@@ -327,7 +327,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
                 <h3 className="text-xl font-bold text-white mb-4">Community Forum</h3>
                 <p className="text-gray-300 mb-6">Connect with other users and get help from the community.</p>
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                  Join Community;
+                  Join Community
   </
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
@@ -335,7 +335,7 @@ availability: 'Mon-Fri: 9AM-6PM EST'
                 <h3 className="text-xl font-bold text-white mb-4">Status Page</h3>
                 <p className="text-gray-300 mb-6">Check the real-time status of all our services and systems.</p>
                 <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300">
-                  Check Status;
+                  Check Status
   </
               </div>
             </div>
@@ -361,11 +361,11 @@ availability: 'Mon-Fri: 9AM-6PM EST'
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Phone className="w-5 h-5" />
-                  Call Support;
+                  Call Support
   </
                 <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <Mail className="w-5 h-5" />
-                  Email Support;
+                  Email Support
   </
               </div>
             </div>
@@ -405,7 +405,6 @@ export default SupportPage;
             </div>
           </div>
         </section>
-
         {/* FAQ Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -424,7 +423,6 @@ export default SupportPage;
           </div>
         </section>
       </main>
-
       <Footer />
     </>
   );

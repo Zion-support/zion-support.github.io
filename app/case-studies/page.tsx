@@ -78,8 +78,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
     { icon: <Users className="w-8 h-8 text-green-600" />, value: '98%', label: 'Client Satisfaction' },
     { icon: <TrendingUp className="w-8 h-8 text-purple-600" />, value: '40%', label: 'Average Cost Reduction' },
     { icon: <Shield className="w-8 h-8 text-red-600" />, value: '99.9%', label: 'Uptime Achieved' }
-  ];
-  return (
+  ]return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Case Studies - Zion Tech Group | Success Stories</title>
@@ -91,7 +90,7 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Case Studies;
+            Case Studies
   </
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Discover how we've helped businesses transform with cutting-edge AI and IT solutions.
@@ -162,13 +161,12 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
                     </Link>
                     <button className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
                       <ExternalLink className="w-4 h-4" />
-                      Share;
+                      Share
   </
                   </div>
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -212,9 +210,8 @@ challenge: 'Legacy on-premises infrastructure limiting scalability and increasin
         </div>
       </section>
     </div>
-  );
-};
-export default CaseStudiesPage;
+  )}
+export default CaseStudiesPage
   </button>
   </div>
   </div>

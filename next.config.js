@@ -1,10 +1,7 @@
-import withBundleAnalyzer from '@next/bundle-analyzer';
-import crypto from 'crypto';
-
+import withBundleAnalyzer from '@next/bundle-analyzer'import crypto from 'crypto'
 const bundleAnalyzer = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
-});
-
+})
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -17,7 +14,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
     formats: ['image/webp', 'image/avif'],
@@ -25,9 +21,8 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    contentSecurityPolicy: "default-src 'self' script-src 'none'; sandbox",
   },
-
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Fix for "self is not defined" error by providing a polyfill
     if (isServer) {
@@ -35,9 +30,8 @@ const nextConfig = {
         new webpack.DefinePlugin({
           'self': 'undefined',
         })
-      );
+      )
     }
-
     // Optimize bundle size
     config.optimization = {
       ...config.optimization,
@@ -58,12 +52,12 @@ const nextConfig = {
               return (
                 module.size() > 160000 &&
                 /node_modules[/\\]/.test(module.identifier())
-              );
+              )
             },
             name(module) {
-              const _hash = crypto.createHash('sha1');
-              _hash.update(module.identifier());
-              return _hash.digest('hex').substring(0, 8);
+              const _hash = crypto.createHash('sha1')
+              _hash.update(module.identifier())
+              return _hash.digest('hex').substring(0, 8)
             },
             priority: 30,
             minChunks: 1,
@@ -83,7 +77,7 @@ const nextConfig = {
                   .update(chunks.reduce((acc, chunk) => acc + chunk.name, ''))
                   .digest('hex')
                   .substring(0, 8)
-              );
+              )
             },
             priority: 10,
             minChunks: 2,
@@ -94,14 +88,10 @@ const nextConfig = {
         minSize: 20000,
       },
       minimize: !dev,
-    };
-
-    // Tree shaking
-    config.optimization.usedExports = true;
-
-    return config;
+    }
+    config.optimization.usedExports = true
+    return config
   },
-
   async headers() {
     return [
       {
@@ -129,11 +119,11 @@ const nextConfig = {
           },
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload',
+            value: 'max-age=63072000 includeSubDomains preload',
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
+            value: "default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self' form-action 'self'",
           },
         ],
       },
@@ -155,9 +145,8 @@ const nextConfig = {
           },
         ],
       },
-    ];
+    ]
   },
-
   async redirects() {
     return [
       {
@@ -165,15 +154,13 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-    ];
+    ]
   },
-
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@heroicons/react'],
     webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
-
   // Performance optimizations
   modularizeImports: {
     'lucide-react': {
@@ -183,13 +170,10 @@ const nextConfig = {
       transform: '@heroicons/react/{{member}}',
     },
   },
-
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn'],
     } : false,
   },
-};
-
-export default bundleAnalyzer(nextConfig);
+}export default bundleAnalyzer(nextConfig)

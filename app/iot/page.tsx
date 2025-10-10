@@ -135,9 +135,8 @@ const IoTPage: React.FC = () => {
       category: 'Analytics',
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
     }
-  ];
-  const categories = [...new Set(iotServices.map(service => service.category))];
-  return (
+  ]
+  const categories = [...new Set(iotServices.map(service => service.category))]return (
     <React.Fragment>
       <Helmet>
         <title>IoT Services - Zion Tech Group</title>
@@ -155,14 +154,14 @@ const IoTPage: React.FC = () => {
                 IoT Solutions</h1>
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
-                Connect, monitor, and optimize your world with intelligent Internet of Things solutions;
+                Connect, monitor, and optimize your world with intelligent Internet of Things solutions
   </
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors shadow-lg">
-                  Explore IoT Solutions;
+                  Explore IoT Solutions
   </
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                  Schedule IoT Consultation;
+                  Schedule IoT Consultation
   </
               </div>
             </div>
@@ -176,7 +175,7 @@ const IoTPage: React.FC = () => {
                 Why Choose Our IoT Services?
               </h2>
               <p className="text-xl text-gray-600">
-                End-to-end IoT solutions with proven expertise in connectivity, security, and analytics;
+                End-to-end IoT solutions with proven expertise in connectivity, security, and analytics
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -217,10 +216,10 @@ const IoTPage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
               <div className="text-center mb-12"></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions;
+                  {category} Solutions
   </
                 <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} solutions powered by IoT technology;
+                  Specialized {category.toLowerCase()} solutions powered by IoT technology
   </
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -273,7 +272,7 @@ const IoTPage: React.FC = () => {
                         </ul>
                       </div>
                       <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                        Get IoT Quote;
+                        Get IoT Quote
   </
                     </div>
                   ))}
@@ -286,10 +285,10 @@ const IoTPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our IoT Capabilities;
+                Our IoT Capabilities
   </
               <p className="text-xl text-gray-600">
-                Comprehensive IoT technologies and methodologies for connected solutions;
+                Comprehensive IoT technologies and methodologies for connected solutions
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -333,18 +332,18 @@ const IoTPage: React.FC = () => {
               Ready to Connect Your World?
             </h2>
             <p className="text-xl mb-8 text-green-100">
-              Contact our IoT experts for a free consultation and custom IoT strategy development;
+              Contact our IoT experts for a free consultation and custom IoT strategy development
   </
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center">
-                📞 +1 302 464 0950;
+                📞 +1 302 464 0950
   </
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
-                ✉️ kleber@ziontechgroup.com;
+                ✉️ kleber@ziontechgroup.com
   </
             </div>
             <div className="mt-8 text-sm text-green-200"></div>
@@ -354,9 +353,8 @@ const IoTPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default IoTPage;
+  )}
+export default IoTPage
   </a>
   </a>
   </p>

@@ -20,9 +20,9 @@ const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+      import('./components/ContentPromotionBanner')
+      import('./components/ContentCarousel')
+    }, 100)
   }
 };
 // Loading skeleton component
@@ -49,11 +49,11 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
       gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      })
     }
   }, []);
 
@@ -120,12 +120,10 @@ const HomePage: React.FC = () => {
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
           Skip to main content
         </a>
-        
         {/* Content Promotion Banner */}
         <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
           <ContentPromotionBanner />
         </Suspense>
-        
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
           <section
@@ -261,7 +259,6 @@ const HomePage: React.FC = () => {
                       <span>(302) 464-0950</span>
                     </a>
                   </div>
-                  
                   {/* Stats Section */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                     <div className="text-center">
@@ -375,7 +372,6 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -389,7 +385,6 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="services-heading">
           <div className="max-w-7xl mx-auto">
@@ -401,7 +396,6 @@ const HomePage: React.FC = () => {
                 Comprehensive solutions designed to meet your business needs
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
               {features.map((feature, index) => (
                 <article key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group" role="listitem">
@@ -423,7 +417,6 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="cta-heading">
           <div className="max-w-4xl mx-auto text-center">
@@ -500,7 +493,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </section>
-
             {/* Features Section */}
             <section className="py-20">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -539,7 +531,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </section>
-
             {/* Testimonials Section */}
             <section className="py-20 bg-slate-900/50">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -618,7 +609,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </section>
-
             {/* CTA Section */}
             <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -647,13 +637,11 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </section>
-
             {/* Footer */}
             <Footer />
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
     </React.Fragment>

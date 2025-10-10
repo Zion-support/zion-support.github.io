@@ -1,10 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
-const NewsPage: React.FC = () => {
+import React from 'react'import { Link  } from 'react-router-dom'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity  } from 'lucide-react'const NewsPage: React.FC  = () => {
   const newsArticles = [
     {
       id: 1,
@@ -66,15 +62,14 @@ const NewsPage: React.FC = () => {
       featured: false,
       readTime: '5 min read'
     }
-  ];
-  const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security'];
+  ]
+  const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security']
   const stats = [
     { icon: Users, number: '100+', label: 'Happy Clients' },
     { icon: Award, number: '50+', label: 'Awards Won' },
     { icon: TrendingUp, number: '300%', label: 'Average ROI' },
     { icon: Globe, number: '25+', label: 'Countries Served' }
-  ];
-  return (
+  ]return (
     <React.Fragment>
       <SEOOptimizer
         title="News & Updates - Zion Tech Group"
@@ -88,10 +83,10 @@ const NewsPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              News & Updates;
+              News & Updates
   </
             <p className="text-xl text-cyan-400 mb-8">
-              Stay informed with our latest innovations and success stories;
+              Stay informed with our latest innovations and success stories
   </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Discover the latest developments in AI technology, product launches, 
@@ -113,7 +108,7 @@ const NewsPage: React.FC = () => {
           {/* Featured Articles */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Featured News;
+              Featured News
   </
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {newsArticles.filter(article => article.featured).map((article) => (
@@ -156,7 +151,7 @@ const NewsPage: React.FC = () => {
           {/* All Articles */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Latest Updates;
+              Latest Updates
   </
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {newsArticles.map((article) => (
@@ -200,10 +195,10 @@ const NewsPage: React.FC = () => {
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Stay Updated;
+                Stay Updated
   </
               <p className="text-xl text-gray-300 mb-8">
-                Subscribe to our newsletter for the latest AI insights and company updates;
+                Subscribe to our newsletter for the latest AI insights and company updates
   </
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
@@ -212,7 +207,7 @@ const NewsPage: React.FC = () => {
                   className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
                 <button className="cyber-button px-8 py-3 font-semibold">
-                  Subscribe;
+                  Subscribe
   </
               </div>
               <p className="text-gray-400 text-sm mt-4">
@@ -224,9 +219,8 @@ const NewsPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default NewsPage;
+  )}
+export default NewsPage
   </button>
   </p>
   </h2>

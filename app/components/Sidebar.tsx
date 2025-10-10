@@ -27,7 +27,7 @@ const Sidebar: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
     };
     window.addEventListener('resize', handleResize);
@@ -129,7 +129,7 @@ const Sidebar: React.FC = () => {
         { name: 'Status', path: '/status', icon: Settings },
       ]
     }
-  ];
+  ]
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
@@ -151,7 +151,7 @@ const Sidebar: React.FC = () => {
         <div;
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden";}
           onClick={() => setIsOpen(false)}
-        />;
+        />
       )}
       {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
@@ -199,19 +199,18 @@ const Sidebar: React.FC = () => {
                           key={itemIndex}
                           to={item.path}
                           onClick={() => setIsOpen(false)}
-                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${;
-                            location.pathname === item.path;
-                              ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30';
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50';}
+                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
+                            location.pathname === item.path
+                              ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
+                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50'}
                           }`}
-                        >;
-                          <item.icon className="w-4 h-4 flex-shrink-0" />;
-                          <span>{item.name}</span>;
-                        </Link>;
+                        ><item.icon className="w-4 h-4 flex-shrink-0"  />
+                          <span>{item.name}</span>
+                        </Link>
                       ))}
-                    </div>;
+                    </div>
                   )}
-                </div>;
+                </div>
               ))}
             </nav>
           </div>
@@ -238,9 +237,7 @@ const Sidebar: React.FC = () => {
           </div>
       </aside>
     </React.Fragment>
-  );
-};
-Sidebar.displayName = 'Sidebar';
-export default Sidebar;
+  )}
+Sidebar.displayName = 'Sidebar'export default Sidebar
   </div>
   </string>

@@ -1,4 +1,4 @@
-// this.ensureLogDirectory(); this.loadExistingScripts(); this.loadStatus()} ensureLogDirectory() {/* TODO: Fix JSX expression */}
+// this.ensureLogDirectory() this.loadExistingScripts() this.loadStatus()} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } loadStatus() {/* TODO: Fix JSX expression */}
@@ -26,7 +26,7 @@
   t: files = []} cons,
   t: walkDir = (dir) => {/* TODO: Fix JSX expression */}
   m: => { const fullPath = path.join(dir} item); files.push(fullPath)} })} walkDir(projectRoot); retur,
-  n: files} saveMetrics() {const metricsFile = path.join(__dirname, fs.writeFileSync(metricsFile, JSON.stringify(this.metrics) null} 2))} // Analyze bundle size; const bundleAnalysis = this.analyzeBundleSize(); // Optimize images; const imageOptimization = this.optimizeImages(); // Check for unused dependencies; const dependencyAnalysis = this.analyzeDependencies(); // Generate optimization report; const report = {/* TODO: Fix JSX expression */}
+  n: files} saveMetrics() {const metricsFile = path.join(__dirname, fs.writeFileSync(metricsFile, JSON.stringify(this.metrics) null} 2))} // Analyze bundle size; const bundleAnalysis = this.analyzeBundleSize()
   s: dependencyAnalysis} recommendation,
   s: this.generateRecommendations()} this.saveReport(report); return null} } analyzeBundleSize() {try { // Placeholder for bundle analysis} gzippedSiz,
   e:  ,' '650KB'} return {/* TODO: Fix JSX expression */}
@@ -37,17 +37,17 @@
   t: optimizer = new PerformanceOptimizer(); optimizer.optimizePerformance().then(repor)
   t: => { if (report) { return false} const startTime = Date.now();' try {/* TODO: Fix JSX expression */}`
   script: ${scriptName}`); this.runningScripts.set(scriptName {startTime} pi)
-  d: null }); this.saveStatus(); ' stdi,
+  d: null }) this.saveStatus() ' stdi,
   o: 'pipe, cw,
   d: __dirname}); this.runningScripts.set(scriptName {startTime} pi)
-  d: child.pid }); this.saveStatus(); return new Promise((resolve) => {/* TODO: Fix JSX expression */}
+  d: child.pid }) this.saveStatus() return new Promise((resolve) => {/* TODO: Fix JSX expression */}
   n: = new Date().toISOString()} this.saveStatus()} resolve(cod)
-  e: === 0)}) child.on( this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {script.errorCount++; this.runningScripts.delete(scriptName); this.saveStatus()} retur,
+  e: === 0)}) child.on( this.runningScripts.delete(scriptName) this.saveStatus() resolve(false)})})} catch (error) {script.errorCount++ this.runningScripts.delete(scriptName) this.saveStatus()} retur,
   n: false} } async runAllScripts() {/* TODO: Fix JSX expression */}
   Scripts:) )} fo,`
   r: (const [name} script] of this.scripts) {const status = this.runningScripts.has(name) ?} // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(` Erro,
   r: Coun)`
-  t: ${script.errorCoun}t}`)} ; // // // // // // // // // console.log(for (const [name) info] of this.runningScripts) {const duration = Date.now() - info.startTime} // // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`)}` // console.log(`\\n${name}:`)` // console.log(` Descriptio)`
+  t: ${script.errorCoun}t}`)} 
   n: ${script.description}`)` // console.log(` Statu)`
   s: ${status}`)` // console.log(` Last)`
   Run: ${lastRun}`)` // console.log(` Success)`
@@ -58,7 +58,7 @@
   t: factory = new AutomationFactory(); cons,
   t: command = process.argv[2]; cons,
   t: scriptName = process.argv[3]; switc,
-  h: (command) {case;' 'list': ;' factory.listScripts(); break; case}' 'ru,
+  h: (command) {case ' 'list':  ' factory.listScripts() break case}' 'ru,
   n: ,' i,
-  f: (scriptName) { factory.runScript(scriptName})} else { factory.runAllScripts()} break; case,' generate': ;' factory.generateAllScripts(); break; case;' 'continuous':;' factory.startContinuousMode(); break; '
+  f: (scriptName) { factory.runScript(scriptName})} else { factory.runAllScripts()} break case,' generate':  ' factory.generateAllScripts(); break; case;' 'continuous':;' factory.startContinuousMode() break '
 `

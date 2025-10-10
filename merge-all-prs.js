@@ -1,103 +1,80 @@
-#!/usr/bin/env node;
-import { execSync } from 'child_process';
-import fs from 'fs';
-
-console.log('🚀 Starting comprehensive PR merge process...');
-
-// Function to get all open PRs;
+#!/usr/bin/env nodeimport { execSync  } from 'child_process'
+import fs from 'fs'
+console.log('🚀 Starting comprehensive PR merge process...')
 async function getOpenPRs() {
   try {
-    const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100');
-    const prs = await response.json();
-    return prs;
+    const response = await fetch('https: //api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100')
+    const prs = await response.json()
+    return prs
   } catch (error) {
-    console.error('❌ Failed to fetch PRs:', error.message);
-    return [];
+    console.error('❌ Failed to fetch PRs:', error.message)
+    return []
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
-
-// Function to merge a PR branch;
+// Function to merge a PR branch
 function mergePRBranch(branchName, prNumber) {
   try {
-    console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
-    
-    // Fetch the branch;
-    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' });
-    
-    // Try to merge;
+    console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`)
+    execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' })
     try {
-      execSync(`git merge origin/${branchName} --no-commit`, { stdio: 'pipe' });
+      execSync(`git merge origin/${branchName} --no-commit`, { stdio: 'pipe' })
 function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
-    console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
-    
-    // Fetch the branch;`
+    console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`)
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' });
-    
-    // Try to merge;
+  o: 'pipe' })
     try {/* TODO: Fix JSX expression */}`
       execSync(`git merge origin/${branchName} --no-commit`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });`
-      console.log(`✅ PR #${prNumber} merged successfully without conflicts`);
-      return true;
+      console.log(`✅ PR #${prNumber} merged successfully without conflicts`)
+      return true
     } catch (mergeError) {/* TODO: Fix JSX expression */}`
-      console.log(`⚠️  Merge conflicts detected in PR #${prNumber}, resolving...`);
-      
-      // Get conflicted files;
+      console.log(`⚠️  Merge conflicts detected in PR #${prNumber}, resolving...`)
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TODO: Fix JSX expression */})
   g: 'utf8' })
-        .trim().split('\n').filter(f => f);
-      
+        .trim().split('\n').filter(f => f)
       if (conflictedFiles.length > 0) {/* TODO: Fix JSX expression */}`
-        console.log(`📁 Resolving ${conflictedFiles.length} conflicted files...`);
-        
-        // Resolve conflicts by keeping the incoming version;
+        console.log(`📁 Resolving ${conflictedFiles.length} conflicted files...`)
         conflictedFiles.forEach(file => {)
           if (fs.existsSync(file)) {
             try {
-              execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
-              execSync(`git add "${file}"`, { stdio: 'pipe' });
+              execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' })
+              execSync(`git add "${file}"`, { stdio: 'pipe' })
         conflictedFiles.forEach(file => {/* TODO: Fix JSX expression */}`
               execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });"`
               execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });`
-              console.log(`  ✅ Resolved ${file}`);
+              console.log(`  ✅ Resolved ${file}`)
             } catch (error) {/* TODO: Fix JSX expression */}`
-              console.log(`  ❌ Failed to resolve ${file}: ${error.message}`);
+              console.log(`  ❌ Failed to resolve ${file}: ${error.message}`)
             }
           }
-        });
-        
-        // Commit the merge;
-        execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, { stdio: 'pipe' });
-        // Commit the merge;"`
+        })
+        execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, { stdio: 'pipe' })
         execSync(`git commit -m "Merge PR #${prNumber}: ${branchName} (conflicts resolved)"`, {/* TODO: Fix JSX expression */}
   o: 'pipe' });`
-        console.log(`✅ PR #${prNumber} merged with conflicts resolved`);
-        return true;
+        console.log(`✅ PR #${prNumber} merged with conflicts resolved`)
+        return true
       } else {/* TODO: Fix JSX expression */}`
-        console.log(`❌ No conflicted files found for PR #${prNumber}`);
-        return false;
+        console.log(`❌ No conflicted files found for PR #${prNumber}`)
+        return false
       }
     }
   } catch (error) {/* TODO: Fix JSX expression */}`
-    console.log(`❌ Failed to merge PR #${prNumber}: ${error.message}`);
-    return false;
+    console.log(`❌ Failed to merge PR #${prNumber}: ${error.message}`)
+    return false
   }
 }
-
-// Function to clean up console.log statements;
+// Function to clean up console.log statements
 function cleanConsoleLogs() {
 function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
 }
-  console.log('🧹 Cleaning up console.log statements...');
-  
+  console.log('🧹 Cleaning up console.log statements...')
   const commonFiles = [
     'app/App.tsx',
     'app/components/Footer.tsx',
@@ -105,45 +82,35 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
     'app/page.tsx',
     'app/layout.tsx',
     'app/main.tsx'
-  ];
-  
+  ]
   commonFiles.forEach(file => {)
     if (fs.existsSync(file)) {
       try {
-        let content = fs.readFileSync(file, 'utf8');
-        const originalLength = content.length;
-        
-        // Remove console.log statements;
-        content = content.replace(/^\s*console\.log\([^)]*\);\s*$/gm, '');
-        content = content.replace(/^\s*console\.(warn|error|info|debug)\([^)]*\);\s*$/gm, '');
-        
-        // Clean up extra whitespace;
-        content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-        
+        let content = fs.readFileSync(file, 'utf8')
+        const originalLength = content.length
+        content = content.replace(/^\s*console\.log\([^)]*\);\s*$/gm, '')
+        content = content.replace(/^\s*console\.(warn|error|info|debug)\([^)]*\);\s*$/gm, '')
+        content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
         if (content.length !== originalLength) {
-          fs.writeFileSync(file, content);
+          fs.writeFileSync(file, content)
   commonFiles.forEach(file => {/* TODO: Fix JSX expression */})`
-          console.log(`  ✅ Cleaned ${file}`);
+          console.log(`  ✅ Cleaned ${file}`)
         }
       } catch (error) {/* TODO: Fix JSX expression */}`
-        console.log(`  ⚠️  Could not clean ${file}: ${error.message}`);
+        console.log(`  ⚠️  Could not clean ${file}: ${error.message}`)
       }
     }
-  });
+  })
 }
-
-// Function to optimize build configuration;
+// Function to optimize build configuration
 function optimizeBuild() {
 function optimizeBuild() {/* TODO: Fix JSX expression */}
 }
-  console.log('⚡ Optimizing build configuration...');
-  
-  // Update package.json with optimized scripts;
-  const packageJsonPath = 'package.json';
+  console.log('⚡ Optimizing build configuration...')
+  const packageJsonPath = 'package.json'
   if (fs.existsSync(packageJsonPath)) {
     try {
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-      
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
       packageJson.scripts = {
         ...packageJson.scripts,
         'build: optimized': 'NODE_OPTIONS="--max-old-space-size=4096" next build',
@@ -155,87 +122,73 @@ function optimizeBuild() {/* TODO: Fix JSX expression */}
         'prebuild': 'npm run clean',
         'postbuild': 'echo "Build completed successfully"'
   if (fs.existsSync(packageJsonPath)) {/* TODO: Fix JSX expression */}
-      };
-      
-      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-      console.log('✅ Updated package.json with optimized scripts');
+      }
+      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
+      console.log('✅ Updated package.json with optimized scripts')
     } catch (error) {/* TODO: Fix JSX expression */}`
-  n: ${error.message}`);
+  n: ${error.message}`)
     }
   }
 }
-
-// Main execution;
+// Main execution
 async function main() {
   try {
-    console.log('📋 Fetching open PRs...');
-    const prs = await getOpenPRs();
-    
+    console.log('📋 Fetching open PRs...')
+    const prs = await getOpenPRs()
     if (prs.length === 0) {
-      console.log('✅ No open PRs found');
-      return;
+      console.log('✅ No open PRs found')
+      return
 async function main() {/* TODO: Fix JSX expression */}
 }
   try {/* TODO: Fix JSX expression */}
     }
     `
-    console.log(`📊 Found ${prs.length} open PRs`);
-    
-    let mergedCount = 0;
-    let failedCount = 0;
-    
-    // Process each PR;
+    console.log(`📊 Found ${prs.length} open PRs`)
+    let mergedCount = 0
+    let failedCount = 0
     for (const pr of prs) {
-      const branchName = pr.head.ref;
-      const prNumber = pr.number;
-      const title = pr.title;
+      const branchName = pr.head.ref
+      const prNumber = pr.number
+      const title = pr.title
     for (const pr of prs) {/* TODO: Fix JSX expression */}`
       console.log(`\n🔄 Processing PR #${prNumber}: ${title}`);`
       console.log(`   Branc)`
-  h: ${branchName}`);
-      
+  h: ${branchName}`)
       try {/* TODO: Fix JSX expression */}`
-          console.log(`✅ Successfully merged PR #${prNumber}`);
+          console.log(`✅ Successfully merged PR #${prNumber}`)
         } else {/* TODO: Fix JSX expression */}`
-          console.log(`❌ Failed to merge PR #${prNumber}`);
+          console.log(`❌ Failed to merge PR #${prNumber}`)
         }
       } catch (error) {/* TODO: Fix JSX expression */}`
-        console.log(`❌ Error processing PR #${prNumber}: ${error.message}`);
+        console.log(`❌ Error processing PR #${prNumber}: ${error.message}`)
       }
     }
-    
-    // Clean up and optimize;
-    console.log('\n🧹 Post-merge cleanup...');
-    
-    // Final commit;
-    console.log('\n💾 Committing final optimizations...');
+    // Clean up and optimize
+    console.log('\n🧹 Post-merge cleanup...')
+    console.log('\n💾 Committing final optimizations...')
     execSync('git add .', {/* TODO: Fix JSX expression */})
   o: 'pipe' });"
     execSync('git commit -m "Final,"
   optimizations: clean console.logs, optimize build, resolve all conflicts"', {/* TODO: Fix JSX expression */})
-  o: 'pipe' });
-    
-    // Push to main;
-    console.log('\n🚀 Pushing to main branch...');
+  o: 'pipe' })
+    console.log('\n🚀 Pushing to main branch...')
     execSync('git push origin main', {/* TODO: Fix JSX expression */})
-  o: 'pipe' });
-    
-    console.log('\n🎉 PR merge process completed!');
-    console.log('📊 Summary: ');
-    console.log(`  ✅ Successfully merged: ${mergedCount} PRs`);
-    console.log(`  ❌ Failed to merge: ${failedCount} PRs`);
-    console.log(`  🧹 Console.log statements cleaned`);
-    console.log(`  ⚡ Build configuration optimized`);
+  o: 'pipe' })
+    console.log('\n🎉 PR merge process completed!')
+    console.log('📊 Summary: ')
+    console.log(`  ✅ Successfully merged: ${mergedCount} PRs`)
+    console.log(`  ❌ Failed to merge: ${failedCount} PRs`)
+    console.log(`  🧹 Console.log statements cleaned`)
+    console.log(`  ⚡ Build configuration optimized`)
     console.log('📊 Summar)
   y:');`
     console.log(`  ✅ Successfully)`
   merged: ${mergedCount} PRs`);`
     console.log(`  ❌ Failed to)`
-  merge: ${failedCount} PRs`);`
+  merge: ${failedCount} PRs`) `
     console.log(`  🧹 Console.log statements cleaned`);`
-    console.log(`  ⚡ Build configuration optimized`);`
-    console.log(`  🚀 All changes pushed to main`);
-    
+    console.log(`  ⚡ Build configuration optimized`)`
+    console.log(`  🚀 All changes pushed to main`)
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }

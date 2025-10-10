@@ -1,10 +1,6 @@
-'use client';
-import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const ContactPage: React.FC = () => {
+'use client'import React, { useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'const ContactPage: React.FC  = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,16 +15,14 @@ const ContactPage: React.FC = () => {
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  }, []);
+    }))
+  }, [])
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
       // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Reset form
+      await new Promise(resolve => setTimeout(resolve, 2000))
       setFormData({
         name: '',
         email: '',
@@ -36,13 +30,12 @@ const ContactPage: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      });
-      
-      setSubmitStatus('success');
+      })
+      setSubmitStatus('success')
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
   }, []);
   return (
@@ -61,7 +54,7 @@ const ContactPage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Get in
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Touch;
+              Touch
   </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -109,7 +102,6 @@ const ContactPage: React.FC = () => {
                       ))}
                     </select>
                   </div>
-
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message *
@@ -143,7 +135,7 @@ const ContactPage: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                      Company Name;
+                      Company Name
   </
                     <input
                       type="text"
@@ -156,7 +148,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number;
+                      Phone Number
   </
                     <input
                       type="tel"
@@ -170,7 +162,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                    Service Interest;
+                    Service Interest
   </
                   <select
                     id="service"

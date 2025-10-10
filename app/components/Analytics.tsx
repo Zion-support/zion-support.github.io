@@ -15,16 +15,16 @@ const Analytics: React.FC<AnalyticsProps> = ({
 }) => {
   useEffect(() => {
     if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics();
+      initializeGoogleAnalytics()
     }
     if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring();
+      initializePerformanceMonitoring()
     }
     if (enableErrorTracking) {
-      initializeErrorTracking();
+      initializeErrorTracking()
     }
     if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking();
+      initializeUserBehaviorTracking()
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
   const initializeGoogleAnalytics = () => {
@@ -38,9 +38,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
     function gtag(...args: any[]) {;) => {
   return (
     $3
-  );
-};
-      (window as any).dataLayer.push(args);}
+  )}
+      (window as any).dataLayer.push(args)}
     }
     (window as any).gtag = gtag;
     gtag('js', new Date());
@@ -74,7 +73,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         if (navigation) {;
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));}
         }
-      });
+      })
     }
   };
   const initializeErrorTracking = () => {
@@ -86,16 +85,14 @@ const Analytics: React.FC<AnalyticsProps> = ({
         lineno: event.lineno,
         colno: event.colno,
         error: event.error?.stack
-      });
-    });
-    // Track unhandled promise rejections
+      })
+    })
     window.addEventListener('unhandledrejection', (event) => {
       trackEvent('error', 'unhandled_promise_rejection', {
         reason: event.reason,
         promise: event.promise
-      });
-    });
-    // Track resource loading errors
+      })
+    })
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
         trackEvent('error', 'resource_error', {
@@ -163,12 +160,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
         event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined
-      });
+      })
     }
-  };
-  return null;
-};
-// Extend Window interface for gtag
+  }
+  return null
+}
 declare global {
   interface Window {
     dataLayer: any[];

@@ -1,8 +1,5 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react';
-const MedicalRecordsManagerPage: React.FC = () => {
+'use client'import React from 'react'
+import { Helmet  } from 'react-helmet-async'import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain  } from 'lucide-react'const MedicalRecordsManagerPage: React.FC  = () => {
   const features = [
     {
       icon: FileText,
@@ -34,8 +31,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
       title: 'Advanced Security',
       description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
     }
-  ];
-  return (
+  ]return (
     <React.Fragment>
       <Helmet>
         <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
@@ -47,7 +43,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Medical Records Manager;
+                Medical Records Manager
   </
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Secure, HIPAA-compliant medical records management system with AI-powered insights to streamline healthcare data management and improve patient care.
@@ -70,7 +66,6 @@ const MedicalRecordsManagerPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default MedicalRecordsManagerPage;
+  )}
+export default MedicalRecordsManagerPage
   </h1>

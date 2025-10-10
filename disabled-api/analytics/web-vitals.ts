@@ -9,7 +9,7 @@
   r: 'Invalid data format' })} ' // Log the web vitals data (in production; you&apos)d send this to your analytics service)'' // console.log('Web,
   Vitals: ' {/* TODO: Fix JSX expression */}
   l: data.url} timestam)
-  p: new Date(data.timestamp).toISOString() }); // Here you would typically send the data to your analytics service // For,
+  p: new Date(data.timestamp).toISOString() })
   example: Google Analytics, Mixpanel, or your own analytics database ' // For now, we&apos;ll just acknowledge receipt' res.status(200).json({/* TODO: Fix JSX expression */}
   c: data.name} valu)
   e: data.value })} catch (error) {/* TODO: Fix JSX expression */}

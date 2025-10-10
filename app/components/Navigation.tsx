@@ -14,38 +14,26 @@ const Navigation: React.FC = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
-    };
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleServices = () => setServicesOpen(!servicesOpen);
-  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
-  const toggleItServices = () => setItServicesOpen(!itServicesOpen);
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
-
-  const closeAllMenus = () => {
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-    setIsOpen(false);
-  };
-
-  // Service data
+    }const handleScroll  = () => {
+      setIsScrolled(window.scrollY > 50)}
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('scroll', handleScroll)return () => {
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('scroll', handleScroll)}
+  }, [])
+  const toggleMenu = () => setIsOpen(!isOpen)
+  const toggleServices = () => setServicesOpen(!servicesOpen)
+  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen)
+  const toggleItServices = () => setItServicesOpen(!itServicesOpen)
+  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)const closeAllMenus  = () => {
+    setServicesOpen(false)
+    setAiServicesOpen(false)
+    setItServicesOpen(false)
+    setMicroSaasOpen(false)
+    setIsOpen(false)
+  }
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process automation' },
@@ -94,13 +82,11 @@ const Navigation: React.FC = () => {
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
-            
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button
@@ -132,7 +118,6 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
@@ -226,7 +211,6 @@ const Navigation: React.FC = () => {
               </a>
             </div>
           </div>
-
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -237,7 +221,6 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
@@ -245,7 +228,6 @@ const Navigation: React.FC = () => {
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>
-              
               {/* Mobile AI Services */}
               <div>
                 <button
@@ -279,7 +261,6 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
-
               {/* Mobile IT Services */}
               <div>
                 <button
@@ -360,7 +341,6 @@ const Navigation: React.FC = () => {
               <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact
               </Link>
-              
               {/* Mobile Contact Info */}
               <div className="border-t border-white/10 pt-3 mt-3">
                 <a href="tel:+13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 px-3 py-2 rounded-md text-base font-medium">
@@ -382,7 +362,5 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
-
-export default Navigation;
+  )}
+export default Navigation

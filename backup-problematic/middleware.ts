@@ -1,20 +1,15 @@
-
 /**
- * Security Middleware;
- * Applies security headers and implements security policies;
+ * Security Middleware
+ * Applies security headers and implements security policies
  */
-
 export function middleware(request: NextRequest) {
-  const _response = NextResponse.next();
-
-  // Security Headers;
+  const _response = NextResponse.next()
   const securityHeaders = {,
-    // Prevent XSS attacks;
+    // Prevent XSS attacks
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
-    
-    // Content Security Policy;
+    // Content Security Policy
     'Content-Security-Policy': [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com https://vercel.live"
@@ -27,13 +22,10 @@ export function middleware(request: NextRequest) {
       "base-uri 'self'",
       "form-action 'self'",
       "upgrade-insecure-requests"].join('; '),
-    
-    // Force HTTPS;
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-    
-    // Referrer policy;
+    // Force HTTPS
+    'Strict-Transport-Security': 'max-age=31536000 includeSubDomains preload',
+    // Referrer policy
     'Referrer-Policy': 'strict-origin-when-cross-origin',
-    
     // Permissions policy (Feature-Policy replacement)
     'Permissions-Policy': [
       'camera=()',
@@ -44,48 +36,34 @@ export function middleware(request: NextRequest) {
       'magnetometer=()',
       'accelerometer=()',
       'gyroscope=()'].join(', '),
-
-    // Additional security headers;
+    // Additional security headers
     'X-DNS-Prefetch-Control': 'on',
     'X-Download-Options': 'noopen',
-    'X-Permitted-Cross-Domain-Policies': 'none'};
-
-  // Apply all security headers;
+    'X-Permitted-Cross-Domain-Policies': 'none'}
   Object.entries(securityHeaders).forEach(([key, value]) => {
-    response.headers.set(key, value);
-  });
-
-  // CORS headers for API routes;
+    response.headers.set(key, value)
+  })
   if (request.nextUrl.pathname.startsWith('/api/')) {
-    response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*');
-    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    response.headers.set('Access-Control-Max-Age', '86400');
+    response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*')
+    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
+    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    response.headers.set('Access-Control-Max-Age', '86400')
   }
-
-  // Handle preflight requests;
+  // Handle preflight requests
   if (request.method === 'OPTIONS') {
-    return new NextResponse(null, { status: 204, headers: response.headers });
-export function middleware(reques)
+    return new NextResponse(null, { status: 204, headers: response.headers })export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
-  };
-
-  // Apply all security headers;
+  }
   Object.entries(securityHeaders).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-  });
-
-  // CORS headers for API routes;
+  })
   if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */}
   }
-
-  // Handle preflight requests;
+  // Handle preflight requests
   if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
-  s: response.headers });
+  s: response.headers })
   }
-
-  return response;
+  return response
 }
-
 export const config = {
   matcher: [
     /*
@@ -93,8 +71,8 @@ export const config = {
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
-     * - public folder;
+     * - public folder
      */,
     '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
 export const config = {/* TODO: Fix JSX expression */}
-};
+}

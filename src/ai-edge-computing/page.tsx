@@ -1,13 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield } from 'lucide-react';
-const AIEdgeComputingPage: React.FC = () => {
-  const features = [];
-  return (
-    {// TODO: Add content;}
-};
+import React from 'react'import { Link  } from 'react-router-dom'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'
+import { Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield  } from 'lucide-react'const AIEdgeComputingPage: React.FC  = () => {
+  const features = []return (
+    {// TODO: Add content}
+}
   ico,
   n: Cpu,
       titl,
@@ -15,7 +11,7 @@ const AIEdgeComputingPage: React.FC = () => {
       descriptio,
   n: 'AI processing at the edge for real-time decision making',
       benefit,
-  s: ['Low latency', 'Real-time processing', 'Offline capability'];
+  s: ['Low latency', 'Real-time processing', 'Offline capability']
     },
       ico,
   n: Zap,
@@ -34,8 +30,7 @@ const AIEdgeComputingPage: React.FC = () => {
       benefit,
   s: ['Data privacy', 'Secure communication', 'Access control']
     }
-  ];
-  return (
+  ]return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -84,6 +79,5 @@ const AIEdgeComputingPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default PagePage;
+  )}
+export default PagePage

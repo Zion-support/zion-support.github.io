@@ -399,7 +399,7 @@ const ITConsultingPage: React.FC = () => {
       link: 'https://ziontechgroup.com/compliance-auditing',
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
     }
-  ];
+  ]
   const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -437,13 +437,13 @@ const ITConsultingPage: React.FC = () => {
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Phone className="w-5 h-5 inline mr-2" />
-              Call (302) 464-0950;
+              Call (302) 464-0950
   </
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Mail className="w-5 h-5 inline mr-2" />
-              Get IT Consultation;
+              Get IT Consultation
   </
           </div>
         </div>
@@ -485,14 +485,14 @@ const ITConsultingPage: React.FC = () => {
               <button;}
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
-                  selectedCategory === category.id;
-                    ? 'bg-cyan-500 text-white';
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400';}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'}
                 }`}
-              >;
+              >
                 {category.name}
-              </button>;
+              </button>
             ))}
           </div>
         </div>
@@ -563,13 +563,13 @@ const ITConsultingPage: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                    Get Free Consultation;
+                    Get Free Consultation
   </
                   <a
                     href="tel:+13024640950"
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                     <Phone className="w-4 h-4 inline mr-2" />
-                    Call for Quote;
+                    Call for Quote
   </
                 </div>
               </div>
@@ -592,21 +592,20 @@ const ITConsultingPage: React.FC = () => {
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Phone className="w-5 h-5" />
-              Call (302) 464-0950;
+              Call (302) 464-0950
   </
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
               <Mail className="w-5 h-5" />
-              Get Custom IT Strategy;
+              Get Custom IT Strategy
   </
           </div>
         </div>
       </section>
     </div>
-  );
-};
-export default ITConsultingPage;
+  )}
+export default ITConsultingPage
   </a>
   </a>
   </a>

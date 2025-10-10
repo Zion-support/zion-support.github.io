@@ -1,9 +1,6 @@
-import React from 'react';
-import { Music, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-const AIMusicCompositionPage: React.FC = () => {
+import React from 'react'import { Music, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles  } from 'lucide-react'
+import Navigation from '../components/Navigation'import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'const AIMusicCompositionPage: React.FC  = () => {
   const features = [
     'AI Composition',
     'Multiple Genres',
@@ -15,7 +12,7 @@ const AIMusicCompositionPage: React.FC = () => {
     'Instrument Selection',
     'Tempo Control',
     'Export Options'
-  ];
+  ]
   const benefits = [
     'Unlimited music',
     'No copyright issues',
@@ -23,7 +20,7 @@ const AIMusicCompositionPage: React.FC = () => {
     'Professional quality',
     'Fast generation',
     'Cost-effective'
-  ];
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -46,8 +43,7 @@ const AIMusicCompositionPage: React.FC = () => {
       features: ['Everything in Pro', 'Custom genres', 'White-label', 'Dedicated support', 'Commercial license'],
       popular: false
     }
-  ];
-  return (
+  ]return (
     <React.Fragment>
       <SEOOptimizer
         title="AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group"
@@ -180,8 +176,7 @@ const AIMusicCompositionPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  )}
 export default AIMusicCompositionPage</a>
   </p>
   </a>

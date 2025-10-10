@@ -24,7 +24,7 @@ const PagePage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ];
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -34,15 +34,14 @@ const PagePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-  return (
+  ]return (
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page;
+                Page
   </
               <br />
               <span className="text-white">Solutions</span>
@@ -57,7 +56,7 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
+                Learn More
   </
             </div>
           </div>
@@ -122,20 +121,20 @@ const PagePage: React.FC = () => {
         </div>;
       </section>;
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>;
-        <div className="max-w-7xl mx-auto"></div>;
-          <div className="text-center mb-16"></div>;
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
-              Why Choose Our Page?;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Our page solutions deliver unmatched performance, security, and scalability.;
-            </p>;
-          </div>;
-                </div>;
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>;
-                <p className="text-gray-300">{feature.description}</p>;
-              </div>;
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -145,7 +144,7 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
+              Key Benefits
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
@@ -169,20 +168,19 @@ const PagePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now;
+                Call Now
   </
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us;
+                Email Us
   </
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
-};
-export default PagePage;
+  )}
+export default PagePage
   </button>
   </button>
   </h2>
@@ -198,9 +196,7 @@ export default PagePage;
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
-  return (
+  ]return (
     <>
       <Helmet>
         <title>Smart City Infrastructure - Zion Tech Group</title>
@@ -236,7 +232,6 @@ export default PagePage;
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -261,7 +256,6 @@ export default PagePage;
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -298,7 +292,6 @@ export default PagePage;
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -320,7 +313,6 @@ export default PagePage;
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
