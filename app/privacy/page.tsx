@@ -61,8 +61,7 @@ const PrivacyPage: React.FC = () => {
         'Opt-out: You can unsubscribe from marketing communications at any time.'
       ]
     }
-<<<<<<< HEAD
-  ];];];
+  ];
   const purposes = [
     {
     }
@@ -84,11 +83,9 @@ const PrivacyPage: React.FC = () => {
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database];];
-=======
+      icon: Database
+    }
   ];
-
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   return (
     <>
       <Helmet>

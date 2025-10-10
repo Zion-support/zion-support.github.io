@@ -79,27 +79,6 @@ const ConsultationPage: React.FC = () => {
       features: ['Process analysis', 'Technology selection', 'Change management', 'Timeline planning']
     }
   ];
-<<<<<<< HEAD
-  const process = [
-    {
-      step: '1',
-    },
-    {
-      step: '2',
-      title: 'Strategy Development',
-    },
-    {
-      step: '3',
-      title: 'Implementation Plan',
-    },
-    {
-      step: '4',
-      title: 'Ongoing Support',
-    }
-  ];];];
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   return (
     <>
       <Helmet>
@@ -366,11 +345,10 @@ const ConsultationPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
-      {/* Selected Consultation Details */},
-    {selectedConsultation && (
+      {/* Selected Consultation Details */}
+      {selectedConsultation && (
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
@@ -410,16 +388,13 @@ const ConsultationPage: React.FC = () => {
                 <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
                   Book Now
                 </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
               </div>
             </div>
           </div>
         </section>
-=======
       </main>
       
       <Footer />
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
     </>
   );
 };
@@ -517,7 +492,3 @@ const ConsultationPage: React.FC = () => {
 };
 
 export default ConsultationPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
-=======
-export default ConsultationPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
