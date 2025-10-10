@@ -1,251 +1,236 @@
-#!/usr/bin/env node;
 import https from 'https';
 import http from 'http';
-import { URL } from 'url';
+import { JSDOM } from 'jsdom';
 import fs from 'fs';
 
-// List of all routes from App.tsx;
-const routes = [
-  // Main Pages;
-  '/',
-  '/about',
-  '/contact',
-  '/pricing',
-  '/services',
-  '/blog',
-  '/case-studies',
-  '/team',
-  '/careers',
-  '/privacy',
-  '/terms',
-  '/cookies',
-  '/docs',
-  '/api-docs',
-  '/support',
-  '/status',
-  '/demo',
-  '/consultation',
-  '/health',
-  '/security',
-  '/compliance',
-  '/gdpr',
+class WebsiteAuditor {
+  constructor(baseUrl) {
+    this.baseUrl = baseUrl;
+    this.visitedUrls = new Set();
+    this.brokenLinks = [];
+    this.workingLinks = [];
+    this.missingPages = [];
+    this.allLinks = new Set();
+  }
 
-  // Service Category Pages;
-  '/ai-services',
-  '/it-services',
-  '/micro-saas',
-
-  // AI Services Pages;
-  '/ai-3d-generation',
-  '/ai-agricultural-intelligence-pro',
-  '/ai-analytics-dashboard',
-  '/ai-api-management',
-  '/ai-autonomous-systems',
-  '/ai-blockchain-solutions',
-  '/ai-climate-solutions-pro',
-  '/ai-computer-vision',
-  '/ai-content-generation',
-  '/ai-content-studio',
-  '/ai-content-writer',
-  '/ai-crm-assistant',
-  '/ai-customer-support',
-  '/ai-customer-support-bot',
-  '/ai-data-analytics',
-  '/ai-drug-discovery-pro',
-  '/ai-email-marketing',
-  '/ai-energy',
-  '/ai-energy-grid-management-pro',
-  '/ai-fashion-design',
-  '/ai-financial-advisor',
-  '/ai-financial-crime-detection-pro',
-  '/ai-fintech',
-  '/ai-healthcare',
-  '/ai-holographic-workspace',
-  '/ai-infrastructure-monitoring',
-  '/ai-logo-designer',
-  '/ai-ml-platform',
-  '/ai-mobile-app-builder',
-  '/ai-music-composition',
-  '/ai-neural-memory-assistant',
-  '/ai-ops',
-  '/ai-project-manager',
-  '/ai-quantum-computing',
-  '/ai-quantum-financial-oracle',
-  '/ai-smart-calendar',
-  '/ai-social-media-manager',
-  '/ai-space-technology-pro',
-  '/ai-supply-chain-optimization-pro',
-  '/ai-video-generator',
-  '/ai-workflow-automation',
-
-  // IT Services Pages;
-  '/cloud-migration',
-  '/cybersecurity',
-  '/it-infrastructure',
-  '/it-support',
-  '/custom-development',
-  '/devops-cicd',
-  '/database-management',
-  '/network-design',
-  '/blockchain-integration-services',
-  '/smart-contract-security-audit',
-
-  // Emerging Technologies Pages;
-  '/autonomous-systems',
-  '/blockchain-web3',
-  '/iot-edge-computing',
-  '/ar-vr-solutions',
-  '/smart-cities',
-  '/digital-transformation',
-  '/innovation-labs',
-  '/business-intelligence',
-  '/robotics',
-
-  // Additional Pages;
-  '/edge-computing',
-  '/financial-it',
-  '/healthcare-it',
-  '/iot-platform',
-  '/5 g-implementation'
-];
-
-const baseUrl = 'https: //ziontechgroup.com';
-const results = {
-  working: []
-  broken: [],
-  missing: [],
-  errors: []};
-
-function checkUrl(url) {
-  return new Promise((resolve) => {
-    const parsedUrl = new URL(url);
-    const client = parsedUrl.protocol === 'https: ' ? https : http;
-    
-    const options = {
-      hostname: parsedUrl.hostname;
-      port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80)
-      path: parsedUrl.pathname + parsedUrl.search;
-      method: 'HEAD'
-      timeout: 10000;
-      headers: {,
-        'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'}
-    };
-
-    const req = client.request(options, (res) => {
-      resolve({)
-        url)
-        status: res.statusCode),
-        statusText: res.statusMessage),
-        headers: res.headers;
+  async fetchPage(url) {
+    return new Promise((resolve, reject) => {
+      const protocol = url.startsWith('https') ? https : http;
+      
+      const request = protocol.get(url, {
+        timeout: 10000,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+      }, (response) => {
+        let data = '';
+        
+        response.on('data', (chunk) => {
+          data += chunk;
+        });
+        
+        response.on('end', () => {
+          resolve({
+            statusCode: response.statusCode,
+            headers: response.headers,
+            body: data
+          });
+        });
+      });
+      
+      request.on('error', (error) => {
+        reject(error);
+      });
+      
+      request.on('timeout', () => {
+        request.destroy();
+        reject(new Error('Request timeout'));
       });
     });
+  }
 
-    req.on('error', (error) => {
-      resolve({)
-        url)
-        error: error.message),
-        status: 0;
-      });
+  extractLinks(html, baseUrl) {
+    const dom = new JSDOM(html);
+    const document = dom.window.document;
+    const links = [];
+    
+    // Extract all href attributes
+    const anchorTags = document.querySelectorAll('a[href]');
+    anchorTags.forEach(anchor => {
+      const href = anchor.getAttribute('href');
+      if (href) {
+        const absoluteUrl = this.resolveUrl(baseUrl, href);
+        links.push({
+          text: anchor.textContent.trim(),
+          href: href,
+          absoluteUrl: absoluteUrl,
+          element: anchor.outerHTML
+        });
+      }
     });
-
-    req.on('timeout', () => {
-      req.destroy();
-      resolve({)
-        url)
-        error: 'Request timeout'),
-        status: 0;
-      });
-    });
-
-    req.end();
-  });
-}
-
-async function auditWebsite() {
-  console.log('🔍 Starting comprehensive website audit...\n');
-  console.log(`Testing ${routes.length} routes on ${baseUrl}\n`);
-
-  for (let i = 0; i < routes.length; i++) {
-    const route = routes[i];
-    const fullUrl = baseUrl + route;
     
-    process.stdout.write(`[${i + 1}/${routes.length}] Testing ${route}... `);
-    
-    const result = await checkUrl(fullUrl);
-    
-    if (result.error) {
-      results.errors.push({ url: fullUrl, error: result.error });
-      console.log(`❌ ERROR: ${result.error}`);
-    } else if (result.status >= 200 && result.status < 300) {
-      results.working.push({ url: fullUrl, status: result.status });
-      console.log(`✅ ${result.status}`);
-    } else if (result.status === 404) {
-      results.missing.push({ url: fullUrl, status: result.status });
-      console.log(`❌ 404 - Missing`);
-    } else {
-      results.broken.push({ url: fullUrl, status: result.status, statusText: result.statusText });
-      console.log(`❌ ${result.status} - ${result.statusText}`);
+    return links;
+  }
+
+  resolveUrl(baseUrl, href) {
+    if (href.startsWith('http://') || href.startsWith('https://')) {
+      return href;
     }
     
-    // Small delay to avoid overwhelming the server;
-    await new Promise(resolve => setTimeout(resolve, 100));
+    if (href.startsWith('//')) {
+      return 'https:' + href;
+    }
+    
+    if (href.startsWith('/')) {
+      const url = new URL(baseUrl);
+      return url.origin + href;
+    }
+    
+    if (href.startsWith('#')) {
+      return baseUrl + href;
+    }
+    
+    if (href.startsWith('mailto:') || href.startsWith('tel:')) {
+      return href;
+    }
+    
+    // Relative URL
+    const base = new URL(baseUrl);
+    return new URL(href, base).href;
   }
 
-  console.log('\n' + '='.repeat(60));
-  console.log('📊 AUDIT RESULTS SUMMARY');
-  console.log('='.repeat(60));
-  
-  console.log(`\n✅ Working URLs: ${results.working.length}`);
-  results.working.forEach(item => {)
-    console.log(`   ${item.url} (${item.status})`);
-  });
+  async checkLink(link) {
+    const { absoluteUrl, text, href } = link;
+    
+    // Skip external links, mailto, tel, and anchors for now
+    if (absoluteUrl.startsWith('mailto:') || 
+        absoluteUrl.startsWith('tel:') || 
+        absoluteUrl.startsWith('#') ||
+        !absoluteUrl.includes('ziontechgroup.com')) {
+      return { status: 'skipped', reason: 'External or special link' };
+    }
+    
+    try {
+      const response = await this.fetchPage(absoluteUrl);
+      
+      if (response.statusCode >= 200 && response.statusCode < 400) {
+        this.workingLinks.push({
+          url: absoluteUrl,
+          text: text,
+          statusCode: response.statusCode
+        });
+        return { status: 'working', statusCode: response.statusCode };
+      } else {
+        this.brokenLinks.push({
+          url: absoluteUrl,
+          text: text,
+          statusCode: response.statusCode,
+          originalHref: href
+        });
+        return { status: 'broken', statusCode: response.statusCode };
+      }
+    } catch (error) {
+      this.brokenLinks.push({
+        url: absoluteUrl,
+        text: text,
+        error: error.message,
+        originalHref: href
+      });
+      return { status: 'error', error: error.message };
+    }
+  }
 
-  console.log(`\n❌ Broken URLs: ${results.broken.length}`);
-  results.broken.forEach(item => {)
-    console.log(`   ${item.url} (${item.status} - ${item.statusText})`);
-  });
+  async auditWebsite() {
+    console.log('🔍 Starting comprehensive website audit...');
+    console.log(`📡 Base URL: ${this.baseUrl}`);
+    
+    try {
+      // Start with the homepage
+      const response = await this.fetchPage(this.baseUrl);
+      
+      if (response.statusCode !== 200) {
+        throw new Error(`Homepage returned status ${response.statusCode}`);
+      }
+      
+      console.log('✅ Homepage is accessible');
+      
+      // Extract links from homepage
+      const links = this.extractLinks(response.body, this.baseUrl);
+      console.log(`🔗 Found ${links.length} links on homepage`);
+      
+      // Check all links
+      for (const link of links) {
+        if (!this.visitedUrls.has(link.absoluteUrl)) {
+          this.visitedUrls.add(link.absoluteUrl);
+          this.allLinks.add(link.absoluteUrl);
+          
+          console.log(`🔍 Checking: ${link.absoluteUrl}`);
+          const result = await this.checkLink(link);
+          console.log(`   ${result.status === 'working' ? '✅' : '❌'} ${result.status} ${result.statusCode || result.error || ''}`);
+          
+          // If it's a working internal page, crawl it for more links
+          if (result.status === 'working' && link.absoluteUrl.includes('ziontechgroup.com')) {
+            try {
+              const pageResponse = await this.fetchPage(link.absoluteUrl);
+              const pageLinks = this.extractLinks(pageResponse.body, link.absoluteUrl);
+              
+              for (const pageLink of pageLinks) {
+                if (!this.visitedUrls.has(pageLink.absoluteUrl) && 
+                    pageLink.absoluteUrl.includes('ziontechgroup.com')) {
+                  this.visitedUrls.add(pageLink.absoluteUrl);
+                  this.allLinks.add(pageLink.absoluteUrl);
+                  
+                  console.log(`🔍 Checking sub-page: ${pageLink.absoluteUrl}`);
+                  const subResult = await this.checkLink(pageLink);
+                  console.log(`   ${subResult.status === 'working' ? '✅' : '❌'} ${subResult.status} ${subResult.statusCode || subResult.error || ''}`);
+                }
+              }
+            } catch (error) {
+              console.log(`   ⚠️  Could not crawl sub-page: ${error.message}`);
+            }
+          }
+        }
+      }
+      
+      // Generate report
+      this.generateReport();
+      
+    } catch (error) {
+      console.error('❌ Audit failed:', error.message);
+    }
+  }
 
-  console.log(`\n🚫 Missing URLs (404): ${results.missing.length}`);
-  results.missing.forEach(item => {)
-    console.log(`   ${item.url}`);
-  });
-
-  console.log(`\n⚠️  Errors: ${results.errors.length}`);
-  results.errors.forEach(item => {)
-    console.log(`   ${item.url} - ${item.error}`);
-  });
-
-  console.log('\n' + '='.repeat(60));
-  console.log('📋 RECOMMENDATIONS');
-  console.log('='.repeat(60));
-  
-  if (results.missing.length > 0) {
-    console.log('\n🔧 Missing pages that need to be created: ');
-    results.missing.forEach(item => {),
-      const route = item.url.replace(baseUrl, '');
-      console.log(`   - Create page component for: ${route}`);
+  generateReport() {
+    console.log('\n📊 AUDIT REPORT');
+    console.log('================');
+    
+    console.log(`\n✅ Working Links: ${this.workingLinks.length}`);
+    this.workingLinks.forEach(link => {
+      console.log(`   ${link.statusCode} - ${link.url}`);
     });
-  }
-
-  if (results.broken.length > 0) {
-    console.log('\n🔧 Broken pages that need to be fixed: ');
-    results.broken.forEach(item => {),
-      console.log(`   - Fix: ${item.url} (${item.status})`);
+    
+    console.log(`\n❌ Broken Links: ${this.brokenLinks.length}`);
+    this.brokenLinks.forEach(link => {
+      console.log(`   ${link.statusCode || 'ERROR'} - ${link.url}`);
+      if (link.error) console.log(`      Error: ${link.error}`);
     });
+    
+    // Save detailed report
+    const report = {
+      timestamp: new Date().toISOString(),
+      baseUrl: this.baseUrl,
+      totalLinks: this.allLinks.size,
+      workingLinks: this.workingLinks.length,
+      brokenLinks: this.brokenLinks.length,
+      workingLinksList: this.workingLinks,
+      brokenLinksList: this.brokenLinks
+    };
+    
+    fs.writeFileSync('website-audit-report.json', JSON.stringify(report, null, 2));
+    console.log('\n💾 Detailed report saved to website-audit-report.json');
   }
-
-  if (results.errors.length > 0) {
-    console.log('\n🔧 Pages with connection errors: ');
-    results.errors.forEach(item => {),
-      console.log(`   - Check: ${item.url} - ${item.error}`);
-    });
-  }
-
-  console.log('\n✨ Audit completed!');
-  
-  // Save results to file;
-  fs.writeFileSync('audit-results.json', JSON.stringify(results, null, 2));
-  console.log('\n📄 Results saved to audit-results.json');
 }
 
-auditWebsite().catch(console.error);
+// Run the audit
+const auditor = new WebsiteAuditor('https://ziontechgroup.com');
+auditor.auditWebsite().catch(console.error);
