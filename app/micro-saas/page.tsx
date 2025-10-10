@@ -3,7 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare, ExternalLink } from 'lucide-react';
+import { microSaasServices } from '../../data/services';
 
 interface MicroSaasProduct {
   id: string;
@@ -18,112 +19,9 @@ interface MicroSaasProduct {
 }
 
 const MicroSaasPage: React.FC = () => {
-  const products: MicroSaasProduct[] = [
-    {
-      id: '1',
-      icon: '📊',
-      title: 'Analytics Dashboard',
-      description: 'Real-time analytics and reporting for your business metrics',
-      features: [
-        'Real-time data visualization',
-        'Custom report generation',
-        'Email alerts and notifications',
-        'Multi-platform integration',
-        'Advanced filtering options'
-      ],
-      price: '$29/month',
-      users: 'Up to 5 users',
-      popular: true,
-      category: 'Analytics'
-    },
-    {
-      id: '2',
-      icon: '💬',
-      title: 'Customer Chat',
-      description: 'AI-powered customer support and live chat solution',
-      features: [
-        'AI chatbot integration',
-        'Live chat support',
-        'Ticket management system',
-        'Multi-language support',
-        'Analytics and reporting'
-      ],
-      price: '$49/month',
-      users: 'Up to 10 users',
-      popular: false,
-      category: 'Communication'
-    },
-    {
-      id: '3',
-      icon: '🔐',
-      title: 'Security Monitor',
-      description: 'Comprehensive security monitoring and threat detection',
-      features: [
-        'Real-time threat detection',
-        'Automated security scans',
-        'Compliance reporting',
-        'Incident response tools',
-        'Security dashboard'
-      ],
-      price: '$79/month',
-      users: 'Up to 25 users',
-      popular: false,
-      category: 'Security'
-    },
-    {
-      id: '4',
-      icon: '☁️',
-      title: 'Cloud Backup',
-      description: 'Automated cloud backup and disaster recovery solution',
-      features: [
-        'Automated daily backups',
-        'Cross-platform sync',
-        'Version control',
-        'Disaster recovery',
-        'Encrypted storage'
-      ],
-      price: '$39/month',
-      users: 'Up to 15 users',
-      popular: false,
-      category: 'Storage'
-    },
-    {
-      id: '5',
-      icon: '📈',
-      title: 'Performance Tracker',
-      description: 'Monitor and optimize your application performance',
-      features: [
-        'Performance monitoring',
-        'Error tracking',
-        'Uptime monitoring',
-        'Performance insights',
-        'Alert management'
-      ],
-      price: '$59/month',
-      users: 'Up to 20 users',
-      popular: false,
-      category: 'Monitoring'
-    },
-    {
-      id: '6',
-      icon: '🤖',
-      title: 'AI Assistant',
-      description: 'Intelligent automation and workflow optimization',
-      features: [
-        'Workflow automation',
-        'AI-powered insights',
-        'Task scheduling',
-        'Integration capabilities',
-        'Custom AI models'
-      ],
-      price: '$99/month',
-      users: 'Up to 50 users',
-      popular: true,
-      category: 'AI'
-    }
-  ];
+  const products = microSaasServices;
 
-  const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI'];
+  const categories = ['All', 'Analytics', 'Email Marketing', 'Social Media', 'Finance', 'Project Management', 'Inventory'];
 
   const benefits = [
     'Quick setup and deployment',
@@ -145,7 +43,7 @@ const MicroSaasPage: React.FC = () => {
 
   const filteredProducts = selectedCategory === 'All' 
     ? products 
-    : products.filter(product => product.category === selectedCategory);
+    : products.filter(product => product.tags.some(tag => tag.toLowerCase().includes(selectedCategory.toLowerCase())));
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -232,10 +130,10 @@ const MicroSaasPage: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProducts.map((product) => (
-                <div key={product.id} className={`bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 ${product.popular ? 'ring-2 ring-blue-500' : ''}`}>
+                <div key={product.id} className={`bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 relative ${product.popular ? 'ring-2 ring-blue-500' : ''}`}>
                   {product.popular && (
-                    <div className="flex items-center justify-center mb-4">
-                      <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
                         <Star className="w-4 h-4 mr-1" />
                         Popular
                       </div>
@@ -243,32 +141,65 @@ const MicroSaasPage: React.FC = () => {
                   )}
                   
                   <div className="text-center mb-6">
-                    <div className="text-4xl mb-4">{product.icon}</div>
+                    <div className="text-6xl mb-4">{product.icon}</div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
                     <p className="text-gray-600 mb-4">{product.description}</p>
                     <div className="flex items-center justify-between">
                       <div>
-                        <span className="text-3xl font-bold text-gray-900">{product.price}</span>
+                        <span className="text-3xl font-bold text-gray-900">{product.pricing.starting}</span>
+                        <div className="text-sm text-gray-500">Market: {product.marketPrice}</div>
                       </div>
-                      <div className="text-sm text-gray-500">
-                        <Users className="w-4 h-4 inline mr-1" />
-                        {product.users}
+                      <div className="text-right">
+                        <div className="text-sm text-gray-500">Category</div>
+                        <div className="text-sm font-medium text-blue-600">{product.category}</div>
                       </div>
                     </div>
                   </div>
 
-                  <ul className="space-y-3 mb-8">
-                    {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="text-sm font-semibold text-blue-600 mb-2">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {product.features.slice(0, 4).map((feature, index) => (
+                          <li key={index} className="flex items-start">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-gray-700">{feature}</span>
+                          </li>
+                        ))}
+                        {product.features.length > 4 && (
+                          <li className="text-xs text-gray-500">
+                            +{product.features.length - 4} more features
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-sm font-semibold text-green-600 mb-2">Benefits:</h4>
+                      <ul className="space-y-1">
+                        {product.benefits.slice(0, 2).map((benefit, index) => (
+                          <li key={index} className="text-sm text-gray-600">
+                            • {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
 
-                  <div className="text-center">
-                    <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {product.tags.slice(0, 3).map((tag, index) => (
+                      <span key={index} className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex gap-2">
+                    <button className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200">
                       Start Free Trial
+                    </button>
+                    <button className="flex items-center justify-center text-gray-400 hover:text-gray-600 transition-colors p-3">
+                      <ExternalLink className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
@@ -309,19 +240,36 @@ const MicroSaasPage: React.FC = () => {
             <p className="text-xl mb-8 text-blue-100">
               Choose from our collection of micro SaaS solutions and start solving your business problems today.
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="text-2xl mb-2">📞</div>
+                <div className="text-white font-semibold">Phone</div>
+                <div className="text-blue-100">+1 302 464 0950</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl mb-2">✉️</div>
+                <div className="text-white font-semibold">Email</div>
+                <div className="text-blue-100">kleber@ziontechgroup.com</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl mb-2">📍</div>
+                <div className="text-white font-semibold">Address</div>
+                <div className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</div>
+              </div>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <a
+                href="tel:+13024640950"
                 className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center"
               >
-                Get Started <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-              <Link
-                to="/pricing"
+                Call Now <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
                 className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-medium transition-colors duration-200"
               >
-                View Pricing
-              </Link>
+                Email Us
+              </a>
             </div>
           </div>
         </div>

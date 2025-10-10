@@ -3,7 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
+import { CheckCircle, Star, ArrowRight, Zap, Phone, Mail, MapPin } from 'lucide-react';
+import { allServices } from '../../data/services';
 
 const PricingPage: React.FC = () => {
   const plans = [
@@ -181,6 +182,71 @@ const PricingPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Service-Specific Pricing */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Service-Specific Pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Detailed pricing for individual services. Mix and match to create your perfect solution.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {allServices.slice(0, 9).map((service, index) => (
+                <div key={service.id} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 ${service.popular ? 'ring-2 ring-blue-400' : ''}`}>
+                  {service.popular && (
+                    <div className="flex items-center justify-center mb-4">
+                      <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
+                        Popular
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-4">
+                    <div className="text-4xl mb-3">{service.icon}</div>
+                    <h3 className="text-lg font-bold text-white mb-2">{service.title}</h3>
+                    <p className="text-sm text-gray-300 mb-4">{service.description}</p>
+                  </div>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-white">{service.pricing.starting}</div>
+                      <div className="text-xs text-gray-400">Market: {service.marketPrice}</div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-1 justify-center">
+                      {service.tags.slice(0, 2).map((tag, idx) => (
+                        <span key={idx} className="text-xs bg-blue-500/20 text-blue-300 px-2 py-1 rounded">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 text-sm">
+                      Get Quote
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="text-center mt-8">
+              <Link
+                to="/services"
+                className="text-blue-400 hover:text-blue-300 font-medium"
+              >
+                View All Services →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -191,20 +257,39 @@ const PricingPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team to discuss your needs and find the perfect solution for your business.
               </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-2xl mb-2">📞</div>
+                  <div className="text-white font-semibold">Phone</div>
+                  <div className="text-gray-300">+1 302 464 0950</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl mb-2">✉️</div>
+                  <div className="text-white font-semibold">Email</div>
+                  <div className="text-gray-300">kleber@ziontechgroup.com</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl mb-2">📍</div>
+                  <div className="text-white font-semibold">Address</div>
+                  <div className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</div>
+                </div>
+              </div>
+              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
+                <a
+                  href="tel:+13024640950"
                   className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Contact Sales
+                  Call Now
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
-                  to="/consultation"
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
                   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center"
                 >
-                  Free Consultation
-                </Link>
+                  Email Us
+                </a>
               </div>
             </div>
           </div>
