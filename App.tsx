@@ -9,14 +9,20 @@ import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/EnhancedSEOHead';
-import SkipLink from './app/components/SkipLink';
+import SkipLink from './app/components/EnhancedSkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/AnalyticsProvider';
+import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+<<<<<<< HEAD
+=======
+import ServiceWorker from './app/components/ServiceWorker';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-5431
 // Structured data for SEO - moved to SEOHead component
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -42,10 +48,11 @@ const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({
 // Main App Component
 const App: React.FC = () => {
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary>
       <HelmetProvider>
         <SEOHead />
         <SkipLink />
+        <ServiceWorker />
         <Router>
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
@@ -56,7 +63,7 @@ const App: React.FC = () => {
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                       <Navigation />
                       <Breadcrumb />
-                      <main id="main-content" className="flex-1">
+                      <main id="main-content" className="flex-1" tabIndex={-1}>
                         <Suspense fallback={<PageLoader />}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
@@ -87,7 +94,7 @@ const App: React.FC = () => {
           </AppWithPerformanceMonitoring>
         </Router>
       </HelmetProvider>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 };
 App.displayName = 'App';

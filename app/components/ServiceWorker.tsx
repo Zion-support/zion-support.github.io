@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -247,3 +248,25 @@ export default ServiceWorkerPage;
 ;
 export default ServiceWorkerPage;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+=======
+import { useEffect } from 'react';
+
+const ServiceWorker: React.FC = () => {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
+
+  return null;
+};
+
+export default ServiceWorker;
+>>>>>>> cursor/analyze-improve-and-deploy-application-5431
