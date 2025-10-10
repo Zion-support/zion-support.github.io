@@ -971,11 +971,6 @@ export default function MicroSaasPage() {
     </div>
   );
 }
-                    </span>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-cyan-400">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
               </div>
