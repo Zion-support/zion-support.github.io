@@ -1,85 +1,63 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
+import React from 'react';
+import { CheckCircle, Star, Zap, Shield, Brain, BarChart } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time'
+      title: 'AI-Powered Analytics',
+      description: 'Advanced machine learning algorithms for data insights'
     },
     {
       icon: Zap,
-      title: 'Lightning Fast Performance',
-      description: 'Optimized for speed with sub-second response times and seamless user experience'
+      title: 'Real-time Processing',
+      description: 'Lightning-fast data processing and analysis'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
+      description: 'Bank-level security for your sensitive data'
     },
     {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
+      icon: BarChart,
+      title: 'Custom Dashboards',
+      description: 'Personalized analytics dashboards for your needs'
     }
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    '24/7 monitoring',
+    'Scalable infrastructure',
+    'Expert support',
+    'Cost-effective solutions'
   ];
 
   const testimonials = [
     {
       name: 'Sarah Johnson',
       company: 'TechCorp Inc.',
-      role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible.',
+      content: 'Zion Tech Group transformed our data analytics capabilities. The AI insights have been game-changing for our business decisions.',
       rating: 5
     },
     {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
-      role: 'CEO',
-      content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Outstanding security features and seamless integration. Perfect for our needs.',
+      content: 'The implementation was seamless and the results exceeded our expectations. Highly recommend their services.',
       rating: 5
     }
   ];
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, [features.length]);
-
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
+    <div className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Dynamic Content Showcase
+          <h2 className="text-4xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              Dynamic Content
+            </span> Showcase
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience our cutting-edge solutions through an interactive showcase of features and capabilities.
+            Experience the power of our AI-driven solutions through interactive demonstrations and real-world applications.
           </p>
         </div>
 
@@ -90,7 +68,6 @@ const DynamicContentShowcase: React.FC = () => {
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                 <feature.icon className="h-6 w-6 text-white" />
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
@@ -113,7 +90,7 @@ const DynamicContentShowcase: React.FC = () => {
         {/* Testimonials */}
         <div className="text-center">
           <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
                 <div className="flex justify-center mb-4">
@@ -122,21 +99,15 @@ const DynamicContentShowcase: React.FC = () => {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                <div>
+                  <p className="font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-=======
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
     </div>
   );
 };
