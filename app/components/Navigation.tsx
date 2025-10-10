@@ -74,9 +74,11 @@ import {
   Truck,
   Smartphone
 } from 'lucide-react';
+import Sidebar from './Sidebar';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isAIOpen, setIsAIOpen] = useState(false);
   const [isITOpen, setIsITOpen] = useState(false);
@@ -476,109 +478,15 @@ const Navigation: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={toggleMenu}
+            onClick={() => setIsSidebarOpen(true)}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <Menu className="w-6 h-6" />
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-4">
-              <div>
-                <button
-                  onClick={toggleServices}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="mt-4 pl-4 space-y-3">
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <span>{service.name}</span>
-                            <span className="text-cyan-400 text-xs font-medium">{service.price}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center justify-between text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <span>{service.name}</span>
-                            <span className="text-purple-400 text-xs font-medium">{service.price}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <a href="/services"
-                      className="block text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services →
-                    </a>
-                  </div>
-                )}
-              </div>
-
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
-                Pricing
-              </a>
-              <a href="/team" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
-                Team
-              </a>
-              <a href="/careers" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
-                Careers
-              </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
-                Case Studies
-              </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
-                Blog
-              </a>
-              <a href="/enterprise" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
-                Enterprise
-              </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
-                Contact
-              </a>
-              
-              <div className="pt-4 border-t border-gray-700">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4 font-medium"
-                  onClick={handlePhoneClick}
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>+1 302 464 0950</span>
-                </a>
-                <a href="/contact"
-                  className="block cyber-button px-6 py-3 text-center font-semibold hover:scale-105 transition-all duration-300"
-                  onClick={closeAllMenus}
-                >
-                  Get Started
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* Sidebar */}
+        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       </div>
     </nav>
   );
