@@ -30,7 +30,9 @@ const ServiceWorkerPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]return (
+  ]
+
+  return (
     <React.Fragment>
       <Helmet>
         <title>ServiceWorker - Zion Tech Group</title>

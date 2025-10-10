@@ -93,15 +93,21 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     enhanceFocusManagement();
     const cleanup = addKeyboardNavigation();
 
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
+    const header = document.querySelector('header');
+    if (header && !header.getAttribute('role')) {
+      header.setAttribute('role', 'banner');
+    }
+
     // Cleanup function
     return () => {
       const skipLink = document.querySelector('a[href="#main-content"]');
       if (skipLink) {
         skipLink.remove();
       }
+    };
+  }, []);
+
+  useEffect(() => {
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
@@ -147,6 +153,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       contrastQuery.removeEventListener('change', handleContrastChange);
     };
   }, []);
+
   return <React.Fragment>{children}</React.Fragment>;
 };
 
