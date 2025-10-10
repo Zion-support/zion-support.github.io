@@ -7,5 +7,4 @@ const,
     </div>
   );
 };
-export default ContentShowcase;
-  </ContentShowcaseProps>
+export default ContentShowcase</$1>

@@ -1085,15 +1085,13 @@ this.props.fallback || (
                 cursor:               ,
 $4}}
             >
-              Try again;
-  </</div>
+              Try again</$1>
         )
       );
                 cursor: 'pointer'
               }}
 >
-              Try again;
-          </button></div>
+              Try again</$1></div>
         )
       )
     }

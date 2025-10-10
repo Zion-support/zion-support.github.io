@@ -6,8 +6,7 @@ export default function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme, 
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
       <Helm, e, t>
         <title>
-          AI, Executive, Playbook 20, 2, 7: Fu, n, d, Gove, r, n, and, Scale, with KP, I, s;
-        </title>
+          AI, Executive, Playbook 20, 2, 7: Fu, n, d, Gove, r, n, and, Scale, with KP, I, s</$1>
         <meta, nam, e = 'description'
           conte, n, t='Executive, roadmap, with K, P, I‑linked, scorecar, d, s, budgeted, action, s, and, governance, that accelerates, deliver, y.'
         />)
@@ -17,11 +16,9 @@ export default function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme, 
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          AI, Executive, Playbook 20, 2, 7;
-        </h1>
+          AI, Executive, Playbook 20, 2, 7</$1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Fu, n, d, Gove, r, n, and, Scale, with KP, I, s;
-        </p>
+          Fu, n, d, Gove, r, n, and, Scale, with KP, I, s</$1>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
 }
 }</div>

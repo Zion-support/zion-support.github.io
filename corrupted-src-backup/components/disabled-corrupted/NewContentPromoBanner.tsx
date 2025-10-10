@@ -85,8 +85,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <Star, className="w-5 h-5, animat, e-sp, i, n" /></Star>
             </div>"
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2"></h3>
-              Just, Publishe, d: New, Guides, for 20, 2, 6;
-            </h3>"
+              Just, Publishe, d: New, Guides, for 20, 2, 6</$1>"
             <p, className="te, x, t-whi, t, e/90, m, b-4, tex, t-sm"></p>
               Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
               and, privac, y‑first, observabilit, y.
@@ -124,13 +123,11 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <Link, t, o="/ca, s, e-studi, e, s"
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
                 <TrendingUp, className="w-4 h-4" />
-                View, Case, Studies;
-              </Li, n, k>
+                View, Case, Studies</$1>
               <Link, t, o="/servic, e, s"
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2">
                 <Shield, className="w-4 h-4" />
-                Explore, Service, s;
-              </Li, n, k>
+                Explore, Service, s</$1>
             </div>
             {/* S, t, a, t, s */}
             <div, classNam, e = "flex, item, s-center, ga, p-6, m, t-4, tex, t-sm, tex, t-whi, t, e/80"></div>
@@ -152,13 +149,11 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
               <Link, t, o="/ca, s, e-studi, e, s""
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"></Link>"
                 <TrendingUp, className="w-4 h-4" /></TrendingUp>
-                View, Case, Studies;
-              </Li, n, k>"
+                View, Case, Studies</$1>"
               <Link, t, o="/servic, e, s""
                 className="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"></Link>"
                 <Shield, className="w-4 h-4" /></Shield>
-                Explore, Service, s;
-              </Li, n, k>
+                Explore, Service, s</$1>
             </div>
             {/* S, t, a, t, s */}"
             <div, classNam, e = "flex, item, s-center, ga, p-6, m, t-4, tex, t-sm, tex, t-whi, t, e/80"></div>"

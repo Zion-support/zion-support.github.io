@@ -20,14 +20,11 @@ export default function about() {
             <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
             <div className="flex justify-center space-x-4"></div>
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                BREAKTHROUGH;
-              </span>
+                BREAKTHROUGH</$1>
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                AI;
-              </span>
+                AI</$1>
               <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                ENTERPRISE;
-              </span>
+                ENTERPRISE</$1>
             </div>
           </div>
           <div className="prose max-w-none"></div>
@@ -51,14 +48,11 @@ export default function about() {/* TODO: Fix JSX expression */}
             <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>"
             <div className="flex justify-center space-x-4"></div>"
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"></span>
-                BREAKTHROUGH;
-              </span>"
+                BREAKTHROUGH</$1>"
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"></span>
-                AI;
-              </span>"
+                AI</$1>"
               <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"></span>
-                ENTERPRISE;
-              </span>
+                ENTERPRISE</$1>
             </div>
           </div>"
           <div className="prose max-w-none"></div>"

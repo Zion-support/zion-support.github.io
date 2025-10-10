@@ -15,8 +15,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
       </Helm, e, t>
       <div, className='container, m, x-auto, p, x-6, p, y-16'></div>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, RO, I;
-        </h1>
+          Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, RO, I</$1>
         <p>
           Production, patterns, that sca, l, e: golden, pat, h, s, ev, a, l‑gated, release, s)
           cost, guardrail, s, priva, c, y‑first, telemetr, y)
@@ -28,10 +27,12 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         </div>
         <div, className='mt-8'></div>
           <Link, t, o='/<bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
-            ← Back, to, Blog;
-          </Li, n, k>
+            ← Back, to, Blog</$1>
         </div>
       </div>
     </d, i, v > );
-export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
+
+  };
+
+  export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
  }

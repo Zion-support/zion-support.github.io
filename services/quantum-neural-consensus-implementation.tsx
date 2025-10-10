@@ -17,8 +17,7 @@ export default function QuantumNeuralConsensusImplementation() {
         <div className="bg-white rounded-lg shadow-lg p-8"></div>
           <div className="text-center mb-8"></div>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Quantum Neural Consensus Implementation;
-            </h1>
+              Quantum Neural Consensus Implementation</$1>
             <p className="text-xl text-gray-600 mb-6">Professional Technology Services</p>
           </div>
           <div className="prose max-w-none"></div>
@@ -39,8 +38,7 @@ export default function QuantumNeuralConsensusImplementation() {/* TODO: Fix JSX
         <div className="bg-white rounded-lg shadow-lg p-8"></div>"
           <div className="text-center mb-8"></div>"
             <h1 className="text-4xl font-bold text-gray-900 mb-4"></h1>
-              Quantum Neural Consensus Implementation;
-            </h1>"
+              Quantum Neural Consensus Implementation</$1>"
             <p className="text-xl text-gray-600 mb-6">Professional Technology Services</p>
           </div>"
           <div className="prose max-w-none"></div>"

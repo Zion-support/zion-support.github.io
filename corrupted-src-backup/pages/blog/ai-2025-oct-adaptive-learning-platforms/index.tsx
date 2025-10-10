@@ -4,8 +4,7 @@ const AdaptiveLearningPlatform, s = () => {
   return(<React.Fragment>
       <Helm, e, t>
         <title>
-          AI-Powered, Adaptive, Learning Platforms, 202, 5: Personalized, Enterprise, Training at, Scal, e | Zion, Tech, Group;
-        </title>
+          AI-Powered, Adaptive, Learning Platforms, 202, 5: Personalized, Enterprise, Training at, Scal, e | Zion, Tech, Group</$1>
         <meta, nam, e = 'description'
           conte, n, t='Revolutionary, adaptive, learning systems, using, AI to, personalize, enterprise traini, n, g. Achieve, 9, 2% completion, ra, t, e, s, 5 x, faster, skill developme, n, t, a, n, d $34, 0, M+ in, productivity, gains.'
         /></meta>
@@ -52,8 +51,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
             <div, className='bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30'></div>
               <h2, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
               <h2, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'></h2>
-                📊 Adaptive, Learning, Impact;
-              </h2>
+                📊 Adaptive, Learning, Impact</$1>
               <div, className='grid, m, d: gr, i, d-co, l, s-4, ga, p-6'></div>
                 <div, className='te, x, t-cent, e, r'></div>
                   <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
@@ -74,8 +72,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
               <p, classNam, e = 'te, x, t-lg, leadin, g-relaxed, m, b-4'></p>
                 By, personalizing, learning paths, in, real-time, based, on individual, performan, c, e, learning, style, s, and, career, goals, adaptive, platforms, achieve 92% completion, rate, s—a, 4x, improvement over, traditional, methods.
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>
-                🧠 How, AI, Adaptive Learning, Work, s;
-              </h2>
+                🧠 How, AI, Adaptive Learning, Work, s</$1>
               <div, className='spa, c, e-y-6'></div>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, flex, items-center, ga, p-2'></h3>
@@ -182,8 +179,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                     <div, className='flex, item, s-center, ga, p-2'></div>
                       <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
                       <sp, a, n></sp>
-                        5x, faster, time-to-productivity, for, new develope, r, s;
-                      </sp, a, n>
+                        5x, faster, time-to-productivity, for, new develope, r, s</$1>
                     </div>
                     <div, className='flex, item, s-center, ga, p-2'></div>
                       <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
@@ -216,22 +212,18 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                         <sp, a, n>Faster, tim, e-to-productivi, t, y:</sp, a, n>
                         <span, className='te, x, t-gre, e, n-400, fon, t-semibo, l, d'>
                         <span, className='te, x, t-gre, e, n-400, fon, t-semibo, l, d'></span>
-                          $1.8M;
-                        </sp, a, n>
+                          $1.8M</$1>
                       <li, classNam, e='flex, justif, y-between, borde, r-t, borde, r-whi, t, e/20, p, t-2, m, t-2'></li>
                         <stro, n, g>Total, Valu, e:</stro, n, g>
                         <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>$7.6M</stro, n, g>
                 <div, classNam, e='mt-8, tex, t-cent, e, r'></div>
                   <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-40, 0'>
-                    , 1,1, 6, 7% ROI, in, Year 1;
-                  </d, i, v>
+                    , 1,1, 6, 7% ROI, in, Year 1</$1>
                   <div, classNam, e = 'te, x, t-sm, m, t-2'>
                   <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-40, 0'></div>
-                    , 1,1, 6, 7% ROI, in, Year 1;
-                  </d, i, v>
+                    , 1,1, 6, 7% ROI, in, Year 1</$1>
                   <div, classNam, e = 'te, x, t-sm, m, t-2'></div>
-                    Payback, perio, d: 1.2, month, s • $7.0M, net, value;
-                  </d, i, v>
+                    Payback, perio, d: 1.2, month, s • $7.0M, net, value</$1>
                       <li, className='flex, justif, y-between, borde, r-t, borde, r-whi, t, e/20, p, t-2, m, t-2'></li>
                         <stro, n, g>Total, Valu, e:</stro, n, g>
                         <strong, className='te, x, t-gre, e, n-4, 0, 0'>$7.6M</stro, n, g>
@@ -241,49 +233,40 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                 </div>
                 <div, className='mt-8, tex, t-cent, e, r'></div>
                   <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-40, 0'>
-                    , 1,1, 6, 7% ROI, in, Year 1;
-                  </div>
+                    , 1,1, 6, 7% ROI, in, Year 1</$1>
                   <div, classNam, e = 'te, x, t-sm, m, t-2'>
                   <div, className='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-40, 0'></div>
-                    , 1,1, 6, 7% ROI, in, Year 1;
-                  </div>
+                    , 1,1, 6, 7% ROI, in, Year 1</$1>
                   <div, classNam, e = 'te, x, t-sm, m, t-2'></div>
-                    Payback, perio, d: 1.2, month, s • $7.0M, net, value;
-                  </div>
+                    Payback, perio, d: 1.2, month, s • $7.0M, net, value</$1>
                 </div>
               </div>
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'></h2>
-                🚀 90-Day, Implementation, Plan;
-              </h2>
+                🚀 90-Day, Implementation, Plan</$1>
               <div, className='spa, c, e-y-4'></div>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-4, 0, 0'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'></h3>
-                    Mont, h, 1: Foundati, o, n & Pil, o, t;
-                  </h3>
+                    Mont, h, 1: Foundati, o, n & Pil, o, t</$1>
                   <ul, classNam, e='spa, c, e-y-2, m, l-4, tex, t-sm'></ul>
                 </div>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-cy, a, n-4, 0, 0'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'></h3>
-                    Mont, h, 2: Expansi, o, n & Refineme, n, t;
-                  </h3>
+                    Mont, h, 2: Expansi, o, n & Refineme, n, t</$1>
                   <ul, classNam, e='spa, c, e-y-2, m, l-4, tex, t-sm'></ul>
                 </div>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-gre, e, n-4, 0, 0'></div>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
-                    Mont, h, 3: Full, Deploymen, t;
-                  </h3>
+                    Mont, h, 3: Full, Deploymen, t</$1>
                   <ul, className='spa, c, e-y-2, m, l-4, tex, t-sm'>
                     <li>
                   <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'></h3>
-                    Mont, h, 3: Full, Deploymen, t;
-                  </h3>
+                    Mont, h, 3: Full, Deploymen, t</$1>
                   <ul, className='spa, c, e-y-2, m, l-4, tex, t-sm'></ul>
                     <li></li>
-                      ✓ Organizati, o, n-wide, rollout, to all, eligible, learners;
-                    </li>
+                      ✓ Organizati, o, n-wide, rollout, to all, eligible, learners</$1>
               <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                 <Link, t, o='/conta, c, t'
                   className='bg-white, tex, t-bl, u, e-600, hove, r:bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'

@@ -148,19 +148,13 @@ const PagePage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-                  Create Your Account;
-  </
-                <p className="text-gray-300">
-                  Join thousands of businesses transforming with AI and IT solutions;
-  </
-              </div>
+                  Create Your Account</$1>
+                  Join thousands of businesses transforming with AI and IT solutions</$1>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      First Name;
-  </
-                    <div className="relative">
+                      First Name</$1>
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
                         type="text"
@@ -220,19 +214,16 @@ const PagePage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
               <div className="text-center mb-8"></div>"
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
-// Create Your Account;
-          </h1>"
+// Create Your Account</$1>"
                 <p className="text-gray-300"></p>
-// Join thousands of businesses transforming with AI and IT solutions;
-          </p>
+// Join thousands of businesses transforming with AI and IT solutions</$1>
               </div>"
               <form onSubmit={handleSubmit} className="space-y-6"></form>"
                 <div className="grid grid-cols-1,"
   md:grid-cols-2 gap-4"></div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// First Name;
-          </label>
+// First Name</$1>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
@@ -280,13 +271,8 @@ Confirm Password;
                     <span className="ml-2 text-sm text-gray-300">
                       I agree to the{' '}
                       <a href="/terms" className="text-cyan-400 hover:text-cyan-300">
-                        Terms of Service;
-  </{' '}
-                      and{' '}
-                      <a href="/privacy" className="text-cyan-400 hover:text-cyan-300">
-                        Privacy Policy;
-  </
-                    </span>
+                        Terms of Service</$1>
+                        Privacy Policy</$1>
                       name="subscribeNewsletter"
                       checked={formData.subscribeNewsletter}
                       Subscribe to our newsletter for updates and tips
@@ -310,9 +296,7 @@ Confirm Password;
             {/* Right Side - Features and Benefits */}
             <div className="space-y-8">
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Transform Your Business Today;
-  </
-                <p className="text-xl text-gray-300 mb-8">
+                  Transform Your Business Today</$1>
                   Join thousands of businesses already using our AI and IT solutions 
                   to achieve unprecedented growth and efficiency.
               <div className="space-y-6">
@@ -341,13 +325,11 @@ Confirm Password;
                   <div className="text-2xl font-bold text-white">Amazon</div>
       <Footer />
     </React.Fragment>
-// Terms of Service;
-          </a>{' '}
+// Terms of Service</$1>{' '}
                       and{' '}"
                       <a href="/privacy" className="text-cyan-400,"
   hover:text-cyan-300"></a>
-// Privacy Policy;
-          </a>
+// Privacy Policy</$1>
                     </span>
 name="subscribeNewsletter" checked={formData.subscribeNewsletter}
                       Subscribe to our newsletter for updates and tips;
@@ -369,8 +351,7 @@ Sign in here;
             {/* Right Side - Features and Benefits */}"
             <div className="space-y-8"></div>"
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
-// Transform Your Business Today;
-          </h2>"
+// Transform Your Business Today</$1>"
                 <p className="text-xl text-gray-300 mb-8"></p>
 Join thousands of businesses already using our AI and IT solutions;
                   to achieve unprecedented growth and efficiency."
@@ -403,8 +384,10 @@ Join thousands of businesses already using our AI and IT solutions;
       <Footer />
     </div>
   );
-export default SignupPage;
-  </a>
+
+  };
+
+  export default SignupPage</$1>
   </div>
   </p>
   </div>

@@ -81,8 +81,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
         {/* Statis, t, i, c, s */}
         <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'></div>
           <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'></h3>
-            Content, Library, Overview;
-          </h3>
+            Content, Library, Overview</$1>
           <div, classNam, e='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8'></div>
             <div, classNam, e='te, x, t-cent, e, r'></div>
               <div, classNam, e='te, x, t-gr, a, y-3, 0, 0'>Total, Article, s</d, i, v>

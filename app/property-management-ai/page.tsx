@@ -37,8 +37,8 @@ const PropertyManagementAIPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </React.Fragment>
   );
 };

@@ -7,5 +7,4 @@ const,
     </div>
   );
 };
-export default NewestContent2025Banner;
-  </NewestContent2025BannerProps>
+export default NewestContent2025Banner</$1>

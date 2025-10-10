@@ -79,7 +79,10 @@ $4});
           Contact Us</span>
       </div>
   );
-export default ContactPage;
+
+  };
+
+  export default ContactPage;
     'Quantum Computing',
     'Cybersecurity',
     'Cloud Migration',
@@ -214,7 +217,6 @@ export default ContactPage;
             </div>
           </div>
         </div>
-      </section>
       {/* Contact Form & Info */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -429,7 +431,6 @@ export default ContactPage;
             </div>
           </div>
         </div>
-      </section>
       {/* Global Offices */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -466,7 +467,6 @@ export default ContactPage;
             ))}
           </div>
         </div>
-      </section>
       {/* FAQ Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -487,8 +487,7 @@ export default ContactPage;
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
   );
 }
   </p>

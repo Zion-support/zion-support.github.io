@@ -53,7 +53,8 @@ readingTimereadingTime: '45 min read',
   const filteredContent = selectedCategory === 'all' 
     ? content 
     : content.filter(item => item.category === selectedCategory);
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    
+              <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -136,7 +137,10 @@ readingTimereadingTime: '45 min read',
                 to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300">Learn More</Link>
     </section>);
-export default UltimateBusinessIntelligenceShowcase2025
+
+  };
+
+  export default UltimateBusinessIntelligenceShowcase2025
 'use client';
 import React, { useState } from 'react';
         return (import { Link } from 'react-router-dom';)
@@ -257,5 +261,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   hover:bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>
     </section>);
-export default UltimateBusinessIntelligenceShowcase2025;
-  </path>
+
+  };
+
+  export default UltimateBusinessIntelligenceShowcase2025</$1>

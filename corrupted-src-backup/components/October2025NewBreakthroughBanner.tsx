@@ -18,7 +18,7 @@ const, October2025NewBreakthroughBanne, r = () => {
         <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
         <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
-      <div, className="absolute, inse, t-0, opacit, y-30">";</div>
+      <div, className="absolute, inse, t-0, opacit, y-30">"</$1>
         <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
 const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
@@ -32,29 +32,26 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
       <div, className="absolute, inse, t-0, opacit, y-30">";"
         <div, className="absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
         <div, className="absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';"
-        <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
-      </d, i, v>"
+        <div, className="absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>'</$1>"
       <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10">";
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-16"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30"></div>
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  />
             <span, className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e">
-              🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5;
-            </sp, a, n>
+              🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5</$1>
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  /></Zap>
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">"</h2>
-        <div, className="te, x, t-center, m, b-16">";</div>
-          <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30">";</div>
+        <div, className="te, x, t-center, m, b-16">"</$1>
+          <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30">"</$1>
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";
         {/* Header, Sectio, n */}"
         <div, className="te, x, t-center, m, b-16"></div>"
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30"></div>"
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  /></Zap>"
             <span, className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e"></span>
-              🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5;
-            </sp, a, n>"
+              🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5</$1>"
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e  /></Zap>
           </d, i, v>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">""
@@ -62,18 +59,15 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30">";"
             <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";"
             <span, className="te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e">";
-              🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5;
-            </sp, a, n>"
-            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />";
-          </d, i, v>"
+              🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBE, R, 2, 20, 2, 5</$1>"
+            <Zap, className="w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e" />"</$1>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
-            Ne, x, t-Generation, Enterprise, AI;</h2>
+            Ne, x, t-Generation, Enterprise, AI</$1>
             <br />
             Ne, x, t-Generation, Enterprise, AI;
             <br /></br>"
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, tex, t-transparent, b, g-cl, i, p-te, x, t">";
-              Systems, That, Transform Operatio, n, s;
-            </sp, a, n>
+              Systems, That, Transform Operatio, n, s</$1>
           </h2>"
           <p, className="te, x, t-2xl, tex, t-purp, l, e-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";
             Master, contex, t-aware, agent, s, intelligent, cost, governance, and, multimodal, intelligence;
@@ -102,11 +96,10 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`</div>
                     <Icon, className="w-8 h-8, tex, t-whi, t, e  />
-                <div, className="flex, item, s-start, ga, p-4, m, b-6">";</div>
+                <div, className="flex, item, s-start, ga, p-4, m, b-6">"</$1>
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`</div>
-                    <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
-                  </d, i, v>
-                  <div, className="fl, e, x-1">";</div>
+                    <Icon, className="w-8 h-8, tex, t-whi, t, e" />"</$1>
+                  <div, className="fl, e, x-1">"</$1>
                     <div, className="te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r">";
                       {conte, n, t.catego, r, y}
                     </d, i, v>
@@ -125,8 +118,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                     <Icon, className="w-8 h-8, tex, t-whi, t, e  /></Icon>"
                 <div, className="flex, item, s-start, ga, p-4, m, b-6">";`
                   <div, className={`bg-gradie, n, t-to-br ${conte, n, t.gradie, n, t} p-4, rounde, d-xl, shado, w-lg`}>`;`"
-                    <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
-                  </d, i, v>"
+                    <Icon, className="w-8 h-8, tex, t-whi, t, e" />"</$1>"
                   <div, className="fl, e, x-1">";"
                     <div, className="te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r">";
                       {conte, n, t.catego, r, y}
@@ -151,8 +143,8 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10"></div>
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>
                       <div, className="te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m">
-                        {k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()};</div>
-                    <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">";</div>
+                        {k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}</$1>
+                    <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">"</$1>
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>";
                   {/* TODO: Fix JSX expression */}"
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10"></div>"
@@ -162,8 +154,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">";"
                       <div, className="te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1">{val, u, e}</d, i, v>";"
                       <div, className="te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m">";
-                        {k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}';
-                      </d, i, v>
+                        {k, e, y.repla, c, e(/([A-Z])/g, ' $1').tr, i, m()}'</$1>
                     </d, i, v>
                   ))}
                 </d, i, v>
@@ -175,21 +166,19 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                       <span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>"
                     <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0">";"
                       <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";"
-                      <span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>";
-                    </li>
+                      <span, className="leadi, n, g-relax, e, d">{highlig, h, t}</sp, a, n>"</$1>
                   ))}
                 </ul>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
-                  Read, Full, Guide;</div>
+                  Read, Full, Guide</$1>
                   <Link, className="w-5 h-5  />
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
-                  Read, Full, Guide;</div>
+                  Read, Full, Guide</$1>
                   Read, Full, Guide;"
                   <Link, className="w-5 h-5  /></Link>"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   Read, Full, Guide;"
-                  <Link, className="w-5 h-5" />";
-                </d, i, v>
+                  <Link, className="w-5 h-5" />"</$1>
               </Li, n, k>
             );
           })}
@@ -199,8 +188,8 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r"></div>
             <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0  />
             <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e"></h3>
-        <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l">";</div>
-          <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r">";</div>
+        <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l">"</$1>
+          <div, className="flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r">"</$1>
             <Target, className="w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0" />";
         {/* CTA, Sectio, n */}"
         <div, className="bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l"></div>"
@@ -221,11 +210,10 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           </p>
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-cent, e, r">";
             <Li, n, k;
-          <div, className="flex, fle, x-wrap, ga, p-6, justif, y-cent, e, r">";</div>
+          <div, className="flex, fle, x-wrap, ga, p-6, justif, y-cent, e, r">"</$1>
             <Li, n, k
   to="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-yell, o, w-300, hove, r:to-oran, g, e-400, transitio, n-all, shado, w-lg, hove, r:shad, o, w-2xl, hov, e;
-          </p>"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-yell, o, w-300, hove, r:to-oran, g, e-400, transitio, n-all, shado, w-lg, hove, r:shad, o, w-2xl, hov, e</$1>"
           <div, className="flex, fle, x-wrap, ga, p-6, justif, y-cent, e, r">";
             <Li, n, k;"
   to="/conta, c, t""
@@ -237,8 +225,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               <Link, className="w-6 h-6  /></Link>"
               <Target, className="w-6 h-6" />";
               Get, Free, Enterprise Assessme, n, t;"
-              <Link, className="w-6 h-6" />";
-            </Li, n, k>
+              <Link, className="w-6 h-6" />"</$1>
             <Li, n, k;
   to="/bl, o, g"
             <Li, n, k;"
@@ -247,8 +234,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             ></Li>
               Explore, All, Articles;"
               <Link, className="w-6 h-6  /></Link>"
-              <Link, className="w-6 h-6" />";
-            </Li, n, k>
+              <Link, className="w-6 h-6" />"</$1>
           </d, i, v>
         </d, i, v>
         {/* Stats, Ba, r */}
@@ -256,43 +242,37 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10"></div>
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2">{sta, t, s.totalMarketVal, u, e}</d, i, v>
             <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Market, Opportunit, y</d, i, v>
-        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-6, ga, p-6">";</div>
-          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
+        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-6, ga, p-6">"</$1>
+          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">"</$1>
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2">{sta, t, s.totalMarketVal, u, e}</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Market, Opportunit, y</d, i, v>";
-          </d, i, v>
-          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Market, Opportunit, y</d, i, v>"</$1>
+          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">"</$1>
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2">{sta, t, s.avgCostReducti, o, n}</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Cost, Reduction</d, i, v>";
-          </d, i, v>
-          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Cost, Reduction</d, i, v>"</$1>
+          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">"</$1>
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-400, m, b-2">{sta, t, s.avgSpeedImproveme, n, t}</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Speed, Improvemen, t</d, i, v>";
-          </d, i, v>
-          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Speed, Improvemen, t</d, i, v>"</$1>
+          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">"</$1>
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-2">{sta, t, s.enterpriseAdopti, o, n}</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Enterprise, Adoptio, n</d, i, v>";
-          </d, i, v>
-          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Enterprise, Adoptio, n</d, i, v>"</$1>
+          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">"</$1>
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-2">{sta, t, s.customerSatisfacti, o, n}</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Customer, Satisfactio, n</d, i, v>";
-          </d, i, v>
-          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";</div>
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Customer, Satisfactio, n</d, i, v>"</$1>
+          <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">"</$1>
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2">{sta, t, s.paybackPeri, o, d}</d, i, v>";
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Payback, Period</d, i, v>";
-          </d, i, v>
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Payback, Period</d, i, v>"</$1>
         </d, i, v>
         {/* Technology, s */}
         <div, className="mt-12, tex, t-cent, e, r"></div>
           <div, className="inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">
             {['AI, Agent, s', 'Memory, System, s', 'FinO, p, s', 'Cost, Optimizatio, n', 'Multimodal, A, I'
               'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => (</div>
-        <div, className="mt-12, tex, t-cent, e, r">";</div>
+        <div, className="mt-12, tex, t-cent, e, r">"</$1>
           <div, className="inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">";
             {['AI, Agent, s', 'Memory, System, s', 'FinO, p, s', 'Cost, Optimizatio, n', 'Multimodal, A, I', ';
               'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => (';
               <sp, a, n;
-              'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => (';</div>
+              'Computer, Visio, n', 'N, L, P', 'Enterprise, Automatio, n', 'Cloud, Managemen, t'].m, a, p((t, a, g) => ('</$1>
               <sp, a, n
   k, e, y={t, a, g}
         {/* Stats, Ba, r */}"
@@ -303,28 +283,22 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-6, ga, p-6">";"
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2">{sta, t, s.totalMarketVal, u, e}</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Market, Opportunit, y</d, i, v>";
-          </d, i, v>"
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Market, Opportunit, y</d, i, v>"</$1>"
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2">{sta, t, s.avgCostReducti, o, n}</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Cost, Reduction</d, i, v>";
-          </d, i, v>"
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Cost, Reduction</d, i, v>"</$1>"
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-400, m, b-2">{sta, t, s.avgSpeedImproveme, n, t}</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Speed, Improvemen, t</d, i, v>";
-          </d, i, v>"
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Speed, Improvemen, t</d, i, v>"</$1>"
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-2">{sta, t, s.enterpriseAdopti, o, n}</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Enterprise, Adoptio, n</d, i, v>";
-          </d, i, v>"
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Enterprise, Adoptio, n</d, i, v>"</$1>"
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-2">{sta, t, s.customerSatisfacti, o, n}</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Customer, Satisfactio, n</d, i, v>";
-          </d, i, v>"
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Customer, Satisfactio, n</d, i, v>"</$1>"
           <div, className="te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10">";"
             <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2">{sta, t, s.paybackPeri, o, d}</d, i, v>";"
-            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Payback, Period</d, i, v>";
-          </d, i, v>
+            <div, className="te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m">Avg, Payback, Period</d, i, v>"</$1>
         </d, i, v>
         {/* Technology, s */}"
         <div, className="mt-12, tex, t-cent, e, r"></div>"

@@ -55,28 +55,22 @@ const October2025SupplyChainRevolutionBanne, r: React.FC = () => {/* TODO: Fix J
         {/* Main, Headlin, e */}
         <h2, classNam, e = "te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-center, m, b-6, tex, t-white, leadin, g-tig, h, t"></h2>
           <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-200, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">
-            Autonomous, Supply, Chain Revoluti, o, n;
-          </sp, a, n>
+            Autonomous, Supply, Chain Revoluti, o, n</$1>
         </h2>
         <p, className="te, x, t-2xl, m, d:te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o">
           Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e;
-          Fortune, 100, Retail Giant, Achieve, s</p> <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e;
-  </
-        {/* Key, Metrics, Gr, i, d */}
-        <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o"></div>
+          Fortune, 100, Retail Giant, Achieve, s</p> <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e</$1></div>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r:bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl"></div>
             <div, className="flex, item, s-center, ga, p-3, m, b-2"></div>
               <CurrencyDollarIcon, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0" /> />
         {/* Main, Headlin, e */}"
         <h2, classNam, e = "te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-center, m, b-6, tex, t-white, leadin, g-tig, h, t"></h2>"
           <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-200, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t"></span>
-            Autonomous, Supply, Chain Revoluti, o, n;
-          </sp, a, n>
+            Autonomous, Supply, Chain Revoluti, o, n</$1>
         </h2>
 "
         <p, className="te, x, t-2xl, m, d:te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o"></p>"
-          Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e;
-        </p>
+          Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e</$1>
         {/* Key, Metrics, Gr, i, d */}"
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o"></div>"
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r:bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl"></div>"

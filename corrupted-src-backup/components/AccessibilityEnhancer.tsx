@@ -146,8 +146,7 @@ const,
           }
         }}
       >
-        Skip to main content;
-      </a>
+        Skip to main content</$1>
       {/* Accessibility controls */}
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
         <button;
@@ -162,8 +161,7 @@ const,
           className="accessibility-toggle"`
           aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
         >
-          {isHighContrast ? '🔆' : '🌙'} High Contrast;
-        </button>
+          {isHighContrast ? '🔆' : '🌙'} High Contrast</$1>
         <button;
           onClick={() => setIsReducedMotion(!isReducedMotion)}
           className="accessibility-toggle"
@@ -172,8 +170,7 @@ const,
           className="accessibility-toggle"`
           aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}
         >
-          {isReducedMotion ? '🏃' : '🚶'} Motion;
-        </button>
+          {isReducedMotion ? '🏃' : '🚶'} Motion</$1>
       </div>
       {children}
     </div>

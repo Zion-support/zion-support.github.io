@@ -90,8 +90,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
                   href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">Explore AI Services</a>
     </div>)
 }
-export default AiAutonomousBusinessSystems2026Page;
-  </p>
+export default AiAutonomousBusinessSystems2026Page</$1>
   </li>
   </li>
   </li>

@@ -148,9 +148,7 @@ questionquestion: 'Is there a free trial available?',
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Help Center;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Help Center</$1>
               Find answers, get support, and learn how to make the most of our AI and IT services. 
               We're here to help you succeed.
             </p>
@@ -186,9 +184,7 @@ questionquestion: 'Is there a free trial available?',
           {/* Articles */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-white mb-8">
-              {categories.find(cat => cat.id === activeCategory)?.name} Articles;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {categories.find(cat => cat.id === activeCategory)?.name} Articles</$1>
               {filteredArticles.map((article, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
@@ -252,11 +248,7 @@ questionquestion: 'Is there a free trial available?',
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <MessageSquare className="w-5 h-5 mr-2" />
-                Contact Support;
-  </
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
+                Contact Support</$1>
                 (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
@@ -362,8 +354,7 @@ const categories = [
       responseTim,
   e: 'Community driven'
           <MessageSquare className="w-5 h-5 mr-2" /></MessageSquare>
-// Contact Support;
-          </a>
+// Contact Support</$1>
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
@@ -372,8 +363,7 @@ const categories = [
                 Email Us;
       <Footer /></Footer>
     </React.Fragment>
-export default HelpPage;
-  </div>
+export default HelpPage</$1>
   </p>
   </h2>
   </div>

@@ -110,5 +110,4 @@ key={index}
           </Link>
         </div>
       </div>
-    </section>
 }}}}"`

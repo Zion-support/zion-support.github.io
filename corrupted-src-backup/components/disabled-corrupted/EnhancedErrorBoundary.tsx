@@ -171,12 +171,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 </svg>
               </div>
               <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
-                Oops! Something went wrong;
-              </h2>
+                Oops! Something went wrong</$1>
               <p className='mt-2 text-sm text-gray-600'>
               <h2 className='mt-6 text-3xl font-extrabold text-gray-900'></h2>
-                Oops! Something went wrong;
-              </h2>
+                Oops! Something went wrong</$1>
               <p className='mt-2 text-sm text-gray-600'></p>
                 We're sorry, but something unexpected happened. Our team has;
                 been notified.
@@ -225,8 +223,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   focus:ring-offset-2,
   focus:ring-indigo-500'
                 >
-                  Reload Page;
-                </button>
+                  Reload Page</$1>
               </div>
 ,
               <div className='flex space-x-4'>,
@@ -236,8 +233,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                   onClick={this.handleReportBug}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
-                  Report Bug;
-                </button>,
+                  Report Bug</$1>,
                 <button;
                   onClick={() => window.history.back()}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
@@ -250,8 +246,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   focus:ring-offset-2,
   focus:ring-indigo-500'
                 >
-                  Report Bug;
-                </button>
+                  Report Bug</$1>
                 <button></button>
                   onClick={() => window.history.back()}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
@@ -261,20 +256,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   focus:ring-offset-2,
   focus:ring-indigo-500'
                 >
-                  Go Back;
-                </button>
+                  Go Back</$1>
               </div>
             </div>
             {this.props.showDetails && this.state.error && (
               <details className='mt-8'>
                 <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
-                  Technical Details;
-                </summary>,
+                  Technical Details</$1>,
                 <div className='mt-2 p-4 bg-gray-100 rounded-md'>,
                   <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>,
-                  Technical Details;
-  </
-                <div className='mt-2 p-4 bg-gray-100 rounded-md'></div>
+                  Technical Details</$1></div>
                   <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>
             {/* TODO: Fix JSX expression */}
                     {this.state.error.message}

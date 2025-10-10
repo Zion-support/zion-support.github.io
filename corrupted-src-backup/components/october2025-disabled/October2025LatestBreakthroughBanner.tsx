@@ -16,15 +16,12 @@ const October2025LatestBreakthroughBanne, r = () => {
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6"></div>
             <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />
             <span, className="te, x, t-white, fon, t-semibold, tex, t-sm">
-              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5;
-            </sp, a, n>
+              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5</$1>
           </div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
-            Latest, AI, Infrastructure Breakthroug, h, s;
-          </h2>
+            Latest, AI, Infrastructure Breakthroug, h, s</$1>
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">
-            Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s;
-          </p>
+            Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s</$1>
         </div>)
         {/* Content, Card, s */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">)
@@ -51,15 +48,12 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6"></div>"
             <Zap, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" /></Zap>"
             <span, className="te, x, t-white, fon, t-semibold, tex, t-sm"></span>
-              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5;
-            </sp, a, n>
+              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5</$1>
           </div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4"></h2>
-            Latest, AI, Infrastructure Breakthroug, h, s;
-          </h2>"
+            Latest, AI, Infrastructure Breakthroug, h, s</$1>"
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o"></p>
-            Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s;
-          </p>
+            Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s</$1>
         </div>
         {/* Content, Card, s */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8"></div>
@@ -149,8 +143,7 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
             </Li, n, k>"
             <Link, t, o="/bl, o, g""
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"></Link>
-              Explore, All, Articles;
-            </Li, n, k>
+              Explore, All, Articles</$1>
           </div>
         </div>
         {/* Stat, s, B, a, r */}

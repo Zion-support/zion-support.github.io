@@ -154,16 +154,9 @@ const CareersPage: React.FC = () => {
             <Link
               to="#open-positions"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Open Positions;
-  </
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Us;
-  </
-          </div>
+              View Open Positions</$1>
+              Contact Us</$1>
         </div>
-      </section>
       {/* Why Work With Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -172,9 +165,7 @@ const CareersPage: React.FC = () => {
               Why Work With Us?
             </h2>
             <p className="text-xl text-gray-600">
-              We offer more than just a job - we offer a career and a community;
-  </
-          </div>
+              We offer more than just a job - we offer a career and a community</$1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -187,16 +178,13 @@ const CareersPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
       {/* Company Culture */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Culture;
-  </
-              <p className="text-lg text-gray-600 mb-8">
+                Our Culture</$1>
                 At Zion Tech Group, we believe that great technology comes from great people. 
                 We foster an environment where innovation thrives, collaboration is encouraged, 
                 and everyone has the opportunity to grow and succeed.
@@ -233,18 +221,13 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
       {/* Open Positions */}
       <section id="open-positions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Open Positions;
-  </
-            <p className="text-xl text-gray-600">
-              Find your next career opportunity with us;
-  </
-          </div>
+              Open Positions</$1>
+              Find your next career opportunity with us</$1>
           <div className="space-y-8">
             {openPositions.map((position) => (
               <div key={position.id} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -307,7 +290,6 @@ const CareersPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -321,22 +303,14 @@ const CareersPage: React.FC = () => {
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Send Us Your Resume;
-  </
-            <Link
-              to="/team"
-              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Meet Our Team;
-  </
-          </div>
+              Send Us Your Resume</$1>
+              Meet Our Team</$1>
         </div>
-      </section>
       <Footer />
     </div>
   );
 };
-export default CareersPage;
-  </Link>
+export default CareersPage</$1>
   </Link>
   </p>
   </h2>

@@ -75,8 +75,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
   focus:ring-2,"
   focus:ring-blue-500"
           >
-            Try again;
-          </button>
+            Try again</$1>
           <button></button>
             onClick={() => window?.location.reload()}"
             className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium,
@@ -85,8 +84,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
   focus:ring-2,"
   focus:ring-gray-500"
           >
-            Reload page;
-          </button>
+            Reload page</$1>
         </div>
       </div>,
     </div>);

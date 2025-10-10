@@ -47,9 +47,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Medical Records Manager;
-  </
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Medical Records Manager</$1>
                 Secure, HIPAA-compliant medical records management system with AI-powered insights to streamline healthcare data management and improve patient care.
               </p>
             </div>
@@ -67,10 +65,9 @@ const MedicalRecordsManagerPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </React.Fragment>
   );
 };
-export default MedicalRecordsManagerPage;
-  </h1>
+export default MedicalRecordsManagerPage</$1>

@@ -194,8 +194,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center"></div>"
             <div className="text-6xl mb-6"></div>"
             <h1 className="text-3xl font-bold text-white mb-4"></h1>
-// Oops! Something went wrong;
-          </h1>"
+// Oops! Something went wrong</$1>"
             <p className="text-gray-300 mb-6"></p>
 // We encountered an unexpected error. Our team has been notified and is working to fix it.
           </p>"
@@ -231,16 +230,13 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                 className="cyber-button""
                 aria-label="Reload the entire page"
 // >
-//                  Reload Page;
-          </button>
+//                  Reload Page</$1>
               <a></a>"
                 href="/contact""
                 className="cyber-button""
                 aria-label="Contact support for help with this error"
 //               >
-//                  Contact Support;
-  </
-            </div>
+//                  Contact Support</$1>
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()}"
           <details className="mt-6 text-left"></details>"
                 <summary className="text-white cursor-pointer,"

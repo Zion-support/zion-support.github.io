@@ -25,8 +25,7 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
             <Sparkles, classNam, e = "w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />
           </div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            🚀 5, Revolutionary, AI Breakthroug, h, s;
-          </h2>
+            🚀 5, Revolutionary, AI Breakthroug, h, s</$1>
           <p, className="te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-4xl, m, x-au, t, o">
   ]; return ("
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n"></div>
@@ -41,12 +40,10 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
             <Sparkles, classNam, e = "w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" /></Sparkles>
           </div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
-            🚀 5, Revolutionary, AI Breakthroug, h, s;
-          </h2>"
+            🚀 5, Revolutionary, AI Breakthroug, h, s</$1>"
           <p, className="te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-4xl, m, x-au, t, o"></p>
             Neural, coding, that programs, at, thought spe, e, d • Holographic, 3D, visualization • Quantum, consciousness, AI • 
-            Molecular, manufacturing, at atomic, precisio, n • Personalized, education, revolution;
-          </p>
+            Molecular, manufacturing, at atomic, precisio, n • Personalized, education, revolution</$1>
         </div>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">)
@@ -144,23 +141,18 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
           <Link, t, o="/conta, c, t"
             className="bord, e, r-2, borde, r-cy, a, n-400, hove, r:bg-cy, a, n-400, hove, r:te, x, t-gr, a, y-900, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-3">
             <Sparkles, className="w-5 h-5" />
-            Getted, Today;
-          </Li, n, k>
+            Getted, Today</$1>
         </div>
         {/* Ta, g, s */}
         <div, classNam, e = "mt-8, flex, flex-wrap, ga, p-3, justif, y-cent, e, r"></div>
           <span, className="bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-purp, l, e-4, 0, 0/30">
-            🧠 Neural, Codin, g;
-          </sp, a, n>
+            🧠 Neural, Codin, g</$1>
           <span, className="bg-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-cy, a, n-4, 0, 0/30">
-            📊 Holographic, A, I;
-          </sp, a, n>
+            📊 Holographic, A, I</$1>
           <span, className="bg-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-bl, u, e-4, 0, 0/30">
-            ⚛️ Quantum, A, I;
-          </sp, a, n>
+            ⚛️ Quantum, A, I</$1>
           <span, className="bg-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-gre, e, n-4, 0, 0/30">
-            🔬 Molecular, Manufacturin, g;
-          </sp, a, n>
+            🔬 Molecular, Manufacturin, g</$1>
           <span, className="bg-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-pi, n, k-4, 0, 0/30">
         {/* CTA, Butt, o, n, s */}"
         <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r"></div>"
@@ -173,26 +165,20 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
           <Link, t, o="/conta, c, t""
             className="bord, e, r-2, borde, r-cy, a, n-400, hove, r:bg-cy, a, n-400, hove, r:te, x, t-gr, a, y-900, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-3"></Link>"
             <Sparkles, className="w-5 h-5" /></Sparkles>
-            Getted, Today;
-          </Li, n, k>
+            Getted, Today</$1>
         </div>
         {/* Ta, g, s */}"
         <div, classNam, e = "mt-8, flex, flex-wrap, ga, p-3, justif, y-cent, e, r"></div>"
           <span, className="bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-purp, l, e-4, 0, 0/30"></span>
-            🧠 Neural, Codin, g;
-          </sp, a, n>"
+            🧠 Neural, Codin, g</$1>"
           <span, className="bg-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-cy, a, n-4, 0, 0/30"></span>
-            📊 Holographic, A, I;
-          </sp, a, n>"
+            📊 Holographic, A, I</$1>"
           <span, className="bg-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-bl, u, e-4, 0, 0/30"></span>
-            ⚛️ Quantum, A, I;
-          </sp, a, n>"
+            ⚛️ Quantum, A, I</$1>"
           <span, className="bg-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-gre, e, n-4, 0, 0/30"></span>
-            🔬 Molecular, Manufacturin, g;
-          </sp, a, n>"
+            🔬 Molecular, Manufacturin, g</$1>"
           <span, className="bg-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-pi, n, k-4, 0, 0/30"></span>
-            📚 AI, Educatio, n;
-          </sp, a, n>
+            📚 AI, Educatio, n</$1>
         </div>
       </div>
     </di, v>

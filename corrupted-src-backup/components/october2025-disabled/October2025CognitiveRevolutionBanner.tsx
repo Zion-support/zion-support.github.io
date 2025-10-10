@@ -40,36 +40,29 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
             <div, className='fl, e, x-1, mi, n-w-0'></div>
               <div, className='flex, item, s-center, ga, p-2, m, b-2, fle, x-wr, a, p'></div>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e'>
-                  🚀 BRAND, NEW, OCTOBER 20, 2, 5;
-                </sp, a, n>
+                  🚀 BRAND, NEW, OCTOBER 20, 2, 5</$1>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg'></span>
                   <Award, className='w-3 h-3, m, r-1' />
-                  BREAKTHROUGH, CONTEN, T;
-                </sp, a, n>
+                  BREAKTHROUGH, CONTEN, T</$1>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg'></span>
                   <TrendingUp, className='w-3 h-3, m, r-1' />
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, shado, w-lg, animat, e-pul, s, e'></span>
-                  🚀 BRAND, NEW, OCTOBER 20, 2, 5;
-                </sp, a, n>
+                  🚀 BRAND, NEW, OCTOBER 20, 2, 5</$1>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-yell, o, w-500, tex, t-black, shado, w-lg'></span>
                   <Award, className='w-3 h-3, m, r-1' /></Award>
-                  BREAKTHROUGH, CONTEN, T;
-                </sp, a, n>
+                  BREAKTHROUGH, CONTEN, T</$1>
                 <span, className='inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gre, e, n-500, tex, t-white, shado, w-lg'></span>
                   <TrendingUp, className='w-3 h-3, m, r-1' /></TrendingUp>
-                  $4.7B, VALUE, DELIVERED;
-                </sp, a, n>
+                  $4.7B, VALUE, DELIVERED</$1>
               </div>
               <h2, className='te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t'>
-                🧠 Cognitive, Computing, Revolution: Hum, a, n-Like, AI, Intelligence;
-              </h2>
+                🧠 Cognitive, Computing, Revolution: Hum, a, n-Like, AI, Intelligence</$1>
               <p, className='te, x, t-purp, l, e-100, tex, t-sm, s, m:te, x, t-base, leadin, g-relaxed, m, b-3'></p>
                 <span, className='fo, n, t-bold, tex, t-yell, o, w-3, 0, 0'>
                   JUST, PUBLISHED, TODAY:
               <h2, className='te, x, t-2xl, s, m: te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2, leadin, g-tig, h, t'></h2>
                 🧠 Cognitive, Computing, Revolutio,
-  n: Hum, a, n-Like, AI, Intelligence;
-              </h2>
+  n: Hum, a, n-Like, AI, Intelligence</$1>
               <p, className='te, x, t-purp, l, e-100, tex, t-sm, s, m:te, x, t-base, leadin, g-relaxed, m, b-3'></p>
                 <span, className='fo, n, t-bold, tex, t-yell, o, w-3, 0, 0'></span>
                   JUST, PUBLISHED, TODA,
@@ -79,17 +72,14 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
                 systems, that, understand, reas, o, n, and, learn, like huma, n, s —
                 achievi, n, g{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
-                  98.7% decision, accurac, y;
-                </span>
+                  98.7% decision, accurac, y</$1>
                 ,{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                  98.7% decision, accurac, y;
-                </span>
+                  98.7% decision, accurac, y</$1>
                 ,{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                  $4.7B+ in, value, creation;
-                </span>
+                  $4.7B+ in, value, creation</$1>
                 , a, n, d{' '}
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>, 3,6, 0, 0% R, O, I</sp, a, n>.
                 Explore, mult, i-agent, orchestratio, n(97.8% automati, o, n, $84, 7, M+)

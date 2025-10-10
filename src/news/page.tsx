@@ -88,12 +88,8 @@ const NewsPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              News & Updates;
-  </
-            <p className="text-xl text-cyan-400 mb-8">
-              Stay informed with our latest innovations and success stories;
-  </
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+              News & Updates</$1>
+              Stay informed with our latest innovations and success stories</$1>
               Discover the latest developments in AI technology, product launches, 
               client success stories, and industry insights from Zion Tech Group.
             </p>
@@ -109,13 +105,10 @@ const NewsPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* Featured Articles */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Featured News;
-  </
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              Featured News</$1>
               {newsArticles.filter(article => article.featured).map((article) => (
                 <article key={article.id} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
@@ -152,13 +145,10 @@ const NewsPage: React.FC = () => {
                 </article>
               ))}
             </div>
-          </section>
           {/* All Articles */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Latest Updates;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Latest Updates</$1>
               {newsArticles.map((article) => (
                 <article key={article.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
@@ -195,39 +185,31 @@ const NewsPage: React.FC = () => {
                 </article>
               ))}
             </div>
-          </section>
           {/* Newsletter Signup */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Stay Updated;
-  </
-              <p className="text-xl text-gray-300 mb-8">
-                Subscribe to our newsletter for the latest AI insights and company updates;
-  </
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                Stay Updated</$1>
+                Subscribe to our newsletter for the latest AI insights and company updates</$1>
                 <input
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
                 <button className="cyber-button px-8 py-3 font-semibold">
-                  Subscribe;
-  </
-              </div>
+                  Subscribe</$1>
               <p className="text-gray-400 text-sm mt-4">
                 No spam, unsubscribe at any time.
               </p>
             </div>
-          </section>
         </main>
         <Footer />
       </div>
+      </section>
     </React.Fragment>
   );
 };
-export default NewsPage;
-  </button>
+export default NewsPage</$1>
   </p>
   </h2>
   </h2>

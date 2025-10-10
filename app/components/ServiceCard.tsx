@@ -60,5 +60,4 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     </div>
   );
 };
-export default ServiceCard;
-  </ServiceCardProps>
+export default ServiceCard</$1>

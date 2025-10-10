@@ -46,8 +46,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
         <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" />
       </div>
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-        Revolutionary, AI, Breakthroughs;
-      </h2>
+        Revolutionary, AI, Breakthroughs</$1>
       <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o">
         Experience, the, most advanced, AI, technologies transforming, business, operations with, unprecedented, accura, c, y, consciousne, s, s, and, enterprise, value creati, o, n.)
       </p>)
@@ -81,8 +80,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
         <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Sparkles>
       </div>"
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
-        Revolutionary, AI, Breakthroughs;
-      </h2>"
+        Revolutionary, AI, Breakthroughs</$1>"
       <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o"></p>
         Experience, the, most advanced, AI, technologies transforming, business, operations with, unprecedented, accura, c, y, consciousne, s, s, and, enterprise, value creati, o, n.
       </p>"
@@ -182,8 +180,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
       </div>"
       <div, className="mt-8, tex, t-cent, e, r"></div>"
         <p, className="te, x, t-gr, a, y-400, tex, t-sm"></p>
-          🚀 Joi, n, 2.5M+ professionals, transforming, their businesses, with, revolutionary AI, technolog, y;
-        </p>
+          🚀 Joi, n, 2.5M+ professionals, transforming, their businesses, with, revolutionary AI, technolog, y</$1>
       </div>
     </div>
   );

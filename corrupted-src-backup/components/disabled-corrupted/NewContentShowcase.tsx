@@ -11,14 +11,11 @@ const NewContentShowcas, e: React.FC = () => {
       <div, className="container, m, x-auto, p, x-6"></section>
         <div, className="te, x, t-center, m, b-16"></div>
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-purp, l, e-100, rounde, d-full, tex, t-purp, l, e-700, fon, t-semibold, m, b-4">
-            🌟 JUST, RELEASE, D;
-          </div>
+            🌟 JUST, RELEASE, D</$1>
           <h2, className="te, x, t-5xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-            New, Conten, t & Servic, e, s;
-          </h2>
+            New, Conten, t & Servic, e, s</$1>
           <p, className="te, x, t-2xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
-            Explore, our, latest breakthrough, articles, and revolutionary, services;
-          </p>
+            Explore, our, latest breakthrough, articles, and revolutionary, services</$1>
         </div>
         <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"> {/* Articles, Sect, i, o, n */ }</div>
           <d, i, v>

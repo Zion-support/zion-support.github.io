@@ -19,5 +19,8 @@ const EnhancedAccessibilityProvider = React.memo(function EnhancedAccessibilityP
     </div>
   );
 });
-export default EnhancedAccessibilityProvider;
+
+  };
+
+  export default EnhancedAccessibilityProvider;
 "`

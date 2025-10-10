@@ -79,12 +79,8 @@ const SitemapPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Site Map;
-  </
-            <p className="text-xl text-cyan-400 mb-8">
-              Navigate through all our pages and services;
-  </
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+              Site Map</$1>
+              Navigate through all our pages and services</$1>
               Find everything you need on our website. From AI services to IT solutions, 
               case studies to technical resources - everything is organized for easy navigation.
             </p>
@@ -92,9 +88,7 @@ const SitemapPage: React.FC = () => {
           {/* Main Pages */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Main Pages;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Main Pages</$1>
               {mainPages.map((page, index) => (
                 <Link
                   key={index}
@@ -110,13 +104,10 @@ const SitemapPage: React.FC = () => {
                 </Link>
               ))}
             </div>
-          </section>
           {/* Micro SAAS Services */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Micro SAAS Services;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Micro SAAS Services</$1>
               {microSaasServices.map((service, index) => (
                 <Link
                   key={index}
@@ -132,13 +123,10 @@ const SitemapPage: React.FC = () => {
                 </Link>
               ))}
             </div>
-          </section>
           {/* AI Services */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI Services;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              AI Services</$1>
               {aiServices.map((service, index) => (
                 <Link
                   key={index}
@@ -154,13 +142,10 @@ const SitemapPage: React.FC = () => {
                 </Link>
               ))}
             </div>
-          </section>
           {/* IT Services */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              IT Services</$1>
               {itServices.map((service, index) => (
                 <Link
                   key={index}
@@ -176,13 +161,10 @@ const SitemapPage: React.FC = () => {
                 </Link>
               ))}
             </div>
-          </section>
           {/* Specialized Services */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Specialized Solutions;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Specialized Solutions</$1>
               {specializedServices.map((service, index) => (
                 <Link
                   key={index}
@@ -198,13 +180,10 @@ const SitemapPage: React.FC = () => {
                 </Link>
               ))}
             </div>
-          </section>
           {/* Blog Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Blog Categories;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Blog Categories</$1>
               {blogCategories.map((category, index) => (
                 <Link
                   key={index}
@@ -220,7 +199,6 @@ const SitemapPage: React.FC = () => {
                 </Link>
               ))}
             </div>
-          </section>
           {/* Contact CTA */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -228,30 +206,21 @@ const SitemapPage: React.FC = () => {
                 Can't Find What You're Looking For?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact our team for personalized assistance and recommendations;
-  </
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                Contact our team for personalized assistance and recommendations</$1>
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold">
-                  Contact Us;
-  </
-                <Link
-                  to="/demo"
-                  className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                  Request Demo;
-  </
-              </div>
+                  Contact Us</$1>
+                  Request Demo</$1>
             </div>
-          </section>
         </main>
         <Footer />
       </div>
+      </section>
     </React.Fragment>
   );
 };
-export default SitemapPage;
-  </Link>
+export default SitemapPage</$1>
   </Link>
   </p>
   </h2>

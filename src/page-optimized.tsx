@@ -42,8 +42,7 @@ export default function OptimizedHomePage() {// TODO: Add content;}
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
 // AI Enterprise Transformation;
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-// That Delivers Results;
-          </span>
+// That Delivers Results</$1>
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
 // Transform your enterprise with AI-powered solutions that deliver 300% ROI,
@@ -54,12 +53,9 @@ export default function OptimizedHomePage() {// TODO: Add content;}
                 <a
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
 // >
-//                   Get Your Free AI Assessment;
-          </a>
+//                   Get Your Free AI Assessment</$1>
                   href="/case-studies" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
-View Success Stories;
-              </div>
-        </section>
+View Success Stories</$1>
       </main>
       <Footer />
     </div>

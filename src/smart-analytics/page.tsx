@@ -73,30 +73,16 @@ $4}
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Smart Analytics;
-  </
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">
-            Transform your data into actionable insights with AI-powered analytics that drive real business results;
-  </
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            Smart Analytics</$1>
+            Transform your data into actionable insights with AI-powered analytics that drive real business results</$1>
             <a
               href="tel:+13024640950"
               className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
-              📞 Call: (302) 464-0950;
-  </
-            <Link
-              to="/contact"
-              className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-              Get Free Consultation;
-  </
-          </div>
-        </section>
+              📞 Call: (302) 464-0950</$1>
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Analytics Features;
-  </
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            Powerful Analytics Features</$1>
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
@@ -117,10 +103,7 @@ $4}
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular;
-  </
-                )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                      Most Popular</$1>{plan.name}</h3>
                 <p className="text-gray-300 mb-4">{plan.description}</p>
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
@@ -168,12 +151,8 @@ const PagePage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
-  </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Page</$1>
+            Coming Soon</$1>
             This page is under development. Please check back soon for updates.
           </p>
         </section>
@@ -196,8 +175,7 @@ const PagePage: React.FC = () => {
                 {plan.popular && ()}
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>"
                     <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium"></span>
-// Most Popular;
-          </span>
+// Most Popular</$1>
                 )}"
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                 <p className="text-gray-300 mb-4">{plan.description}</p>"
@@ -253,20 +231,17 @@ const PagePage: React.FC = () => {
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
   );
 };
-export default SmartAnalyticsPage;
-  </a>
+export default SmartAnalyticsPage</$1>
   </a>
   </a>
   </div>
   </div>
   </div>
-  </section>
   </p>
   </h2>
   </section>
   </p>
   </h1>
-  </section>
   </div>
   </div>
   </div>

@@ -16,5 +16,8 @@ const EnhancedFooter = React.memo(function EnhancedFooter({ className = '' }: En
     </div>
   );
 });
-export default EnhancedFooter;
+
+  };
+
+  export default EnhancedFooter;
 "`

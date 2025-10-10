@@ -203,8 +203,7 @@ featur, e, d: fal, s, e;
             </d, i, v>
           </d, i, v>"
           <h2, className="te, x, t-6xl, m, d:te, x, t-7xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
-            Revolutionary, 2026, Content;
-          </h2>"
+            Revolutionary, 2026, Content</$1>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
             Experience, the, future of, AI, with breakthrough, technologies, that are, reshaping, enterprise operatio, n, s. 
             Me, t, a-cognitive, A, I, quant, u, m-neural, convergenc, e, and, autonomous, systems achieving, unprecedented, performance.
@@ -295,8 +294,7 @@ featur, e, d: fal, s, e;
                     {/* TODO: Fix JSX expression */}
                     )}"
                     <span, className="px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30"></span>
-                      REVOLUTIONA, R, Y;
-                    </sp, a, n>
+                      REVOLUTIONA, R, Y</$1>
                   </d, i, v>
                 </d, i, v>
                 {/* Catego, r, y & Impa, c, t */}
@@ -370,8 +368,7 @@ featur, e, d: fal, s, e;
         <div, className="grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, m, b-16"></div>"
           <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>"
             <div, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
-              100, 0, x;
-            </d, i, v>"
+              100, 0, x</$1>"
             <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Processing, Spee, d</d, i, v>
           </d, i, v>
           <div, className="te, x, t-cente, r, p-6, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-xl, border, border-whi, t, e/10"></div>
@@ -432,8 +429,7 @@ featur, e, d: fal, s, e;
                 </a>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/bl, o, g"
-                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e;
-                </a>"
+                  classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e</$1>"
                 <a, titl, e="Internal, lin, k""
                   hr, e, f="/bl, o, g""
                   classNa, m, e="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hov, e,"

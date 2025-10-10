@@ -115,7 +115,8 @@ $4];
                   {category.questions.map((item, itemIndex) => {
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
+                      
+              <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors">

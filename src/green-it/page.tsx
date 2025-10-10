@@ -164,9 +164,7 @@ valuevalue: '100%',
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Green IT Solutions;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Green IT Solutions</$1>
               Transform your IT infrastructure into a sustainable, environmentally friendly system 
               that reduces costs while protecting our planet.
             </p>
@@ -210,9 +208,7 @@ valuevalue: '100%',
           {activeTab === 'solutions' && (
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-                Our Green IT Solutions;
-  </
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                Our Green IT Solutions</$1>
                 {greenSolutions.map((solution, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                     <div className="flex items-start mb-4">
@@ -557,8 +553,7 @@ const tabs = [
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Green IT Solutions;
-          </h1>"
+// Green IT Solutions</$1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Transform your IT infrastructure into a sustainable, environmentally friendly system;
               that reduces costs while protecting our planet.
@@ -609,8 +604,7 @@ const tabs = [
           {activeTab === 'solutions' && ()}"
           <div className="mb-16"></div>"
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Our Green IT Solutions;
-          </h2>"
+// Our Green IT Solutions</$1>"
               <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
@@ -710,8 +704,7 @@ Benefits of Green IT;"
     </div>
   );
 };
-export default GreenItPage;
-  </div>
+export default GreenItPage</$1>
   </div>
   </div>
   </div>

@@ -320,7 +320,8 @@ $4});
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
         </div>
     );
-    <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
+    
+              <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
         <div className="flex items-center space-x-4">

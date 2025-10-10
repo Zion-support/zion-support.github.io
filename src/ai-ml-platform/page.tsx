@@ -134,36 +134,25 @@ const AIMLPlatformPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
-  </
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More;
-  </
-      <Footer />
+              Contact Us</$1>
+              Learn More</$1>
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
-  </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            Page</$1>
+            Coming Soon</$1>
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us;
-          </button>"
+// Contact Us</$1>"
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-colors"></button>
-Learn More;
-          </div>
+Learn More</$1>
       <Footer />
     </div>
   );
 };
 export default $1;
-export default AiMlPlatformPage;
-  </p>
+export default AiMlPlatformPage</$1>
   </h1>
   </section>
   </main>

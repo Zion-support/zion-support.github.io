@@ -14,24 +14,20 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
         <div, className="te, x, t-center, m, b-16"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-6"></div>
             <span, className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-              🚀 Latest, AI, Breakthroughs & Innovatio, n, s;
-            </sp, a, n>
+              🚀 Latest, AI, Breakthroughs & Innovatio, n, s</$1>
           </div>
           <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            Featured, Conten, t;
-          </h2>
+            Featured, Conten, t</$1>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
   ]; return (<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg"></section>"
       <div, className="container, m, x-auto, p, x-6"></div>"
         <div, className="te, x, t-center, m, b-16"></div>"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-6"></div>"
             <span, className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e"></span>
-              🚀 Latest, AI, Breakthroughs & Innovatio, n, s;
-            </sp, a, n>
+              🚀 Latest, AI, Breakthroughs & Innovatio, n, s</$1>
           </div>"
           <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
-            Featured, Conten, t;
-          </h2>"
+            Featured, Conten, t</$1>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
             Discover, breakthrough, AI innovati, o, n, s, $5, 0, M+ savings, strategie, s, and, revolutionary, product development, frameworks, that are, transforming, Fortune 500, companies, worldwide.
           </p>
@@ -105,8 +101,7 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
             <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>
               <a, hre, f="/conta, c, t" 
                 className="bg-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-gre, e, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r">
-                Get, Free, Assessment;
-              </a>
+                Get, Free, Assessment</$1>
               <a, hre, f="/ca, s, e-studi, e, s" 
                 className="bord, e, r-2, borde, r-gre, e, n-500, tex, t-gre, e, n-400, hove, r:bg-gre, e, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r">
         {/* Additional, Promotional, Content */}"
@@ -120,12 +115,10 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
             <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
               <a, hre, f="/conta, c, t" "
                 className="bg-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-gre, e, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"></a>
-                Get, Free, Assessment;
-              </a>"
+                Get, Free, Assessment</$1>"
               <a, hre, f="/ca, s, e-studi, e, s" "
                 className="bord, e, r-2, borde, r-gre, e, n-500, tex, t-gre, e, n-400, hove, r:bg-gre, e, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"></a>
-                View, Success, Stories;
-              </a>
+                View, Success, Stories</$1>
             </div>
           </div>
           <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8"></div>
@@ -137,8 +130,7 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
             <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4"></div>
               <a, hre, f="/conta, c, t" 
                 className="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r">
-                Join, Innovation, Lab;
-              </a>
+                Join, Innovation, Lab</$1>
               <a, hre, f="/servic, e, s" 
                 className="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r">
 "
@@ -151,12 +143,10 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
             <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4"></div>"
               <a, hre, f="/conta, c, t" "
                 className="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"></a>
-                Join, Innovation, Lab;
-              </a>"
+                Join, Innovation, Lab</$1>"
               <a, hre, f="/servic, e, s" "
                 className="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r"></a>
-                Explore, Service, s;
-              </a>
+                Explore, Service, s</$1>
             </div>
           </div>
         </div>
@@ -186,8 +176,7 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
               className="fl, e, x-1, p, x-4, p, y-3, b, g-whi, t, e/10, border, border-whi, t, e/20, rounde, d-lg, tex, t-white, placeholde, r-gr, a, y-400, focu, s:bord, e, r-bl, u, e-500, focu, s:outli, n, e-no, n, e"
 /></input>"
 <button, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-3, 0, 0"></button>
-              Subscri, b, e;
-            </button>
+              Subscri, b, e</$1>
           </div>"
           <p, className="te, x, t-xs, tex, t-gr, a, y-500, m, t-4"></p>
             No, spa, m. Unsubscribe, anytim, e. Privacy, policy, applies.

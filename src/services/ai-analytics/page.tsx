@@ -159,9 +159,7 @@ icon$5: Award,
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              AI Analytics Services;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              AI Analytics Services</$1>
               Transform your data into actionable insights with our advanced AI-powered analytics platform. 
               Make data-driven decisions that drive growth and optimize performance.
             </p>
@@ -179,9 +177,7 @@ icon$5: Award,
           {/* Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Key Features;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              Key Features</$1>
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
@@ -194,12 +190,9 @@ icon$5: Award,
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-300 flex items-start">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-// AI Analytics Services;
-          </h1>
+// AI Analytics Services</$1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
-            <div className="flex flex-wrap justify-center gap-4">
+            Coming Soon</$1>
               <div className="flex items-center text-cyan-400">
                 <Brain className="w-5 h-5 mr-2" />
                 <span className="font-medium">AI-Powered Insights</span>
@@ -213,8 +206,7 @@ icon$5: Award,
           {/* Features */}"
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
-// Key Features;
-          </h2>"
+// Key Features</$1>"
             <div className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>)
               {features.map((feature, index) => ()}"
@@ -251,10 +243,7 @@ icon$5: Award,
                   {tier.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-                        Most Popular;
-  </
-                  )}
-                  <div className="text-center mb-6">
+                        Most Popular</$1>
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
                     <div className="flex items-baseline justify-center">
                       <span className={`text-3xl font-bold ${tier.color}`}>{tier.price}</span>
@@ -272,11 +261,7 @@ icon$5: Award,
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
                   >
-                    Get Started;
-  </
-          {/* Benefits */}
-              Why Choose Our AI Analytics?
-              {benefits.map((benefit, index) => (
+                    Get Started</$1> (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
@@ -326,8 +311,7 @@ export default AIAnalyticsPage;
                   {tier.popular && ()}"
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium"></span>
-// Most Popular;
-          </span>
+// Most Popular</$1>
                   )}"
                   <div className="text-center mb-6"></div>"
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>"
@@ -350,8 +334,7 @@ export default AIAnalyticsPage;
   hover:bg-slate-600'`
                     }`}
 //                   >
-//                     Get Started;
-          </a>
+//                     Get Started</$1>
 {/* Benefits */}
               Why Choose Our AI Analytics?
               {benefits.map((benefit, index) => ()}"
@@ -379,8 +362,7 @@ export default AIAnalyticsPage;
     </div>
   );
 };
-export default AiAnalyticsPage;
-  </div>
+export default AiAnalyticsPage</$1>
   </p>
   </h2>
   </div>

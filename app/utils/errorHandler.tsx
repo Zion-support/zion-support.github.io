@@ -46,7 +46,7 @@ export interface AppError {}
   url?: string;
   userAgent?: string;
   componentStack?: string;
-  context?: Record<string, unknown>;</string></<<<strin>resolved</strin></strin>?: boolean;
+  context?: Record<string, unknown></$1></<<<strin>resolved</strin></strin>?: boolean;
   retryCount?: number;
 }
 // Error handler configuration;
@@ -101,11 +101,11 @@ export class ErrorHandler {;
 // Error Handler class;}
 export class ErrorHandler {}
   private static instance: ErrorHandler,;
-  private config: ErrorHandlerConfig;</string>;
-  private errors: AppError[] = [];</string>;
+  private config: ErrorHandlerConfig</$1>;
+  private errors: AppError[] = []</$1>;
   private retryQueue: Array<{ error: AppError; retryCount: number }> = [];
   constructor(config: Partial<ErrorHandlerConfig>= {}) {;}
-    this.config = { ...defaultErrorHandlerConfig, ...config };</ErrorHandlerConfig>;
+    this.config = { ...defaultErrorHandlerConfig, ...config }</$1>;
   }</ErrorHandlerConfig>;
   static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {;
     if (!ErrorHandler.instance) {;
@@ -453,7 +453,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       await fetch(this.config.reportEndpoint, {)}
         method: 'POST',;
         headers: {}
-<<<<<<< HEAD
           'Content-Type': 'application/json'
         })
     body: JSON.stringify(error)
@@ -463,17 +462,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         headers: {,
           'Content-Type': 'application/json'})
         body: JSON.stringify(error),
-=======
-          'Content-Type': 'application/json';
-        });
-    body: JSON.stringify(error);
-    try {,;
-      await fetch(this.config.reportEndpoint, {);
-        method: 'POST'),;
-        headers: {,;}
-          'Content-Type': 'application/json'});
-        body: JSON.stringify(error),;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 } catch (err) {}
   }
   // Report error;
@@ -504,15 +492,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           ...error),;
           timestamp: error.timestamp.toISOString(),;}
         body: JSON.stringify({)}
-<<<<<<< HEAD
           ...error,
           timestamp: error.timestamp.toISOString()
         })
-=======
-          ...error,;
-          timestamp: error.timestamp.toISOString();
-        });
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     } catch (err) {}
       }
   }
@@ -535,7 +517,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       z-index: 10000,;
       max-width: 400 px;
       font-family: Arial, sans-serif;
-    `;</string>;
+    `</$1>;
     notification.innerHTML = `</string>;
       <div style="display:flex;justify-content:space-between;align-items:center;"></div>;
         <div></div>;
@@ -545,13 +527,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       <div style="display: flex;justify-content:space-between;align-items:center;">,</div>;
         <div>,</div>;
           <strong>${error.severity} Error</strong>;
-          <p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>;
-        </div>;
+          <p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p></$1>;
         <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>;
       <div style="display:flex;justify-content:space-between;align-items:center;"></div>;
         <div></div>;
-          <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>;
-      </div>;
+          <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button></$1>;
     `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors;
@@ -615,8 +595,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           <strong>${error.severity} Error</strong>";
           <p style="margi,;
   n: 5px 0 0 0; font-siz,";
-  e: 14px;">${error.message}</p>;
-        </div>";
+  e: 14px;">${error.message}</p></$1>";
         <button onclick="this.parentElement.parentElement.remove()" style=";
           backgroun,;
   d: none,;
@@ -630,8 +609,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   r: pointer,;
           margin-lef,;
   t: 10px;";
-        ">×</button>;
-      </div>`;
+        ">×</button></$1>`;
     `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors;
@@ -704,16 +682,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     setTimeout(() => {/* TODO: Fix JSX expression */}
     }, this.config.retryDelay * retryItem.retryCount);
   }
-<<<<<<< HEAD
   // Retry error
   private async retryError(retryItem: { error: AppError; retryCount: number }) {
     try {
-=======
-;
-  // Retry error;
-  private async retryError(retryItem: { error: AppError; retryCount: number }) {;
-    try {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       // Implement retry logic based on error type;
       if (retryItem.error.type === ErrorType.NETWORK) {;
         // Retry network request;
@@ -816,10 +787,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       (acc, error) => {;}
       {} as Record<ErrorType, number>;
             `);
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           }
         }
         // Add your retry logic here;
@@ -868,9 +835,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     const bySeverity = this.errors.reduce();
       (acc, error) => {}
         acc[error.severity] = (acc[error.severity] || 0) + 1;
-        return acc;</ErrorType>;
+        return acc</$1>;
       },</ErrorType>;
-      {} as Record<ErrorSeverity, number>);</ErrorSeverity></<<<ErrorSeverit>const</ErrorSeverit></<<ErrorSeverit>resolved</ErrorSeverit> = this.errors.filter(error => error.resolved).length;
+      {} as Record<ErrorSeverity, number>)</$1></<<<ErrorSeverit>const</ErrorSeverit></<<ErrorSeverit>resolved</ErrorSeverit> = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
     return {}
       total,;
@@ -889,17 +856,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Set up global error handler;
       window.addEventListener('error', event => {);
     this.handleError(event.error || new Error(event.message));
-<<<<<<< HEAD
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {)
     this.handleError(new Error(event.reason));
-=======
-;
-      // Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {);
-    this.handleError(new Error(event.reason));
-;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     }
   }
 }</ErrorSeverity>;
@@ -907,10 +866,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Set up global error handler;
       window.addEventListener('error', event => {);
         this.handleError(event.error || new Error(event.message));
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       // Set up unhandled promise rejection handler;
       window.addEventListener('unhandledrejection', event => {);}
   init(): void {}
@@ -918,17 +873,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Set up global error handler;
       window.addEventListener('error', event => {)}
         this.handleError(event.error || new Error(event.message));
-<<<<<<< HEAD
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {)}
         this.handleError(new Error(event.reason));
-=======
-;
-      // Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {)}
-        this.handleError(new Error(event.reason));
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   init(): void {/* TODO: Fix JSX expression */}
       });
       // Set up unhandled promise rejection handler;
@@ -958,21 +905,12 @@ export class ErrorBoundary extends React.Component<;
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.errorHandler.handleError(error, errorInfo, {)}
-<<<<<<< HEAD
       component: 'ErrorBoundary'
   })
     render() {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.errorHandler.handleError(error, errorInfo, {)
       component: 'ErrorBoundary')
-=======
-      component: 'ErrorBoundary';
-  });
-    render() {;
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,;
-    this.errorHandler.handleError(error, errorInfo, {);
-      component: 'ErrorBoundary');}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 )}
   render() {;
     if (this.state.hasError) {;
@@ -987,8 +925,10 @@ export class ErrorBoundary extends React.Component<;
             <h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button;
               onClick={() =>this.setState({ hasError: false, error: undefined })}
             <h2>Something went wrong</h2>);
-            <p>We're sorry, but something unexpected happened.</p>);
-            <button;);
+            
+              <p>We're sorry, but something unexpected happened.</p>);
+            
+              <button;);
               onClick={() => this.setState({ hasError: false, error: undefined })}
               style={{;}
               style={{}
@@ -1029,9 +969,7 @@ export class ErrorBoundary extends React.Component<;
             ></button>;
               Try again</button>;
             >;
-              Try again;
-            </button>;
-          </div>;
+              Try again</$1></$1>;
         );
       );
     }
@@ -1073,8 +1011,7 @@ export const useErrorHandler = () => {}
     getErrorStatistics: () => errorHandler.getErrorStatistics(),;
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()};
 };
-export default ErrorHandler;</string>;
-</string>;
+export default ErrorHandler</$1></$1>;
 // React hook for error handling;
 export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
     },;
@@ -1096,7 +1033,6 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
   };
 };
 export default ErrorHandler;
-<<<<<<< HEAD
 "`
   </h2>
   </ErrorSeverit>
@@ -1107,6 +1043,3 @@ export default ErrorHandler;
   </ErrorHandlerConfig>
   </ErrorHandlerConfig>
   </strin>
-=======
-"`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

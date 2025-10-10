@@ -16,5 +16,8 @@ const SEOEnhancer = React.memo(function SEOEnhancer({ className = '' }: SEOEnhan
     </div>
   );
 });
-export default SEOEnhancer;
+
+  };
+
+  export default SEOEnhancer;
 "`

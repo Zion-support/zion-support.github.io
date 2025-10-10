@@ -37,8 +37,7 @@ const ITConsultingPage: React.FC = () => {
             <div className="text-center mb-16"></div>"
               <h1 className="text-4xl,"
   md:text-6xl font-bold text-gray-900 mb-6"></h1>
-                IT Consulting Services;
-              </h1>"
+                IT Consulting Services</$1>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
                 Transform your business with expert IT consulting. We provide strategic guidance, 
                 digital transformation, and technology solutions that drive growth and efficiency.
@@ -87,14 +86,11 @@ const ITConsultingPage: React.FC = () => {
                     <div className="text-center">
                       <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
                       <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
-                        Get Started;
-  </
-                    </div>
+                        Get Started</$1>
                   </div>
                 </div>
               ))}
             </div>
-          </section>
           {/* CTA Section */}
           <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
             <div className="max-w-4xl mx-auto text-center">
@@ -105,22 +101,17 @@ const ITConsultingPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
                   <Phone className="w-5 h-5 inline mr-2" />
-                  Call Us;
-  </
-                <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
+                  Call Us</$1>
                   <Mail className="w-5 h-5 inline mr-2" />
-                  Email Us;
-  </
-              </div>
+                  Email Us</$1>
             </div>
-          </section>
         </main>
         <Footer />
       </div>
+      </section>
     </React.Fragment>
   );
 };
-export default ITConsultingPage;
-  </button>
+export default ITConsultingPage</$1>
   </button>
   </button>

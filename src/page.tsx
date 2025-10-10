@@ -671,24 +671,16 @@ const HomePage: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-              ZION TECH GROUP;
-  </
-            <p className="text-2xl md:text-3xl text-white mb-8 font-light">
-              AI-Powered Enterprise Solutions & Digital Transformation;
-  </
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+              ZION TECH GROUP</$1>
+              AI-Powered Enterprise Solutions & Digital Transformation</$1>
               <div className="flex items-center text-cyan-400 text-lg">
                 <Phone className="w-6 h-6 mr-2" />
                 <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
-                  +1 302 464 0950;
-  </
-              </div>
+                  +1 302 464 0950</$1>
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
-                  kleber@ziontechgroup.com;
-  </
-              </div>
+                  kleber@ziontechgroup.com</$1>
               <div className="flex items-center text-pink-400 text-lg">
                 <MapPin className="w-6 h-6 mr-2" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
@@ -713,15 +705,12 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
       {/* Micro SAAS Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Micro SAAS Services;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Micro SAAS Services</$1>
               Powerful, affordable AI-powered tools designed for modern businesses. 
               Start with our micro SAAS solutions and scale as you grow.
             </p>
@@ -732,9 +721,7 @@ const HomePage: React.FC = () => {
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                      🔥 POPULAR;
-  </
-                  </div>
+                      🔥 POPULAR</$1>
                 )}
                 <div className="text-center mb-4">
                   <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -792,15 +779,12 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
       {/* AI Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI Services & Solutions;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              AI Services & Solutions</$1>
               Cutting-edge artificial intelligence solutions tailored for enterprise needs. 
               Transform your business with our advanced AI capabilities.
             </p>
@@ -864,15 +848,12 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
       {/* IT Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Services & Solutions;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              IT Services & Solutions</$1>
               Comprehensive IT services to support your digital transformation journey. 
               From infrastructure to cybersecurity, we've got you covered.
             </p>
@@ -936,15 +917,12 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
       {/* Specialized Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-              Specialized Solutions;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Specialized Solutions</$1>
               Advanced specialized solutions for complex business challenges. 
               Cutting-edge technology meets practical business needs.
             </p>
@@ -1008,7 +986,6 @@ const HomePage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4">
@@ -1026,36 +1003,28 @@ const HomePage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
               <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950;
-  </
-            </div>
+                +1 302 464 0950</$1>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com;
-  </
-            </div>
+                kleber@ziontechgroup.com</$1>
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709;
-  </
-            </div>
+                Middletown DE 19709</$1>
           </div>
         </div>
-      </section>
       {/* Footer */}
       <Footer />
     </div>
   );
 };
-export default HomePage;
-  </p>
+export default HomePage</$1>
   </a>
   </a>
   </h2>

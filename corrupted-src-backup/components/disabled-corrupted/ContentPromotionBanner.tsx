@@ -20,12 +20,10 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
           <div, className="m, a, x-w-2, x, l"></div>
             <div, className="flex, item, s-center, ga, p-2, m, b-4"></div>
               <span, className="te, x, t-sm, fon, t-medium, tex, t-yell, o, w-300, uppercase, tracking-wi, d, e">
-                Fresh, Conten, t;
-              </sp, a, n>
+                Fresh, Conten, t</$1>
             </div>
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
-              Latest, from Zion Insigh, t, s;
-            </h2>
+              Latest, from Zion Insigh, t, s</$1>
             <p, className="te, x, t-whi, t, e/90, tex, t-lg, leadin, g-relax, e, d">
               Fresh, articles, on AI, automat, i, o, n, cloud, securit, y, and, developer, productivity. 
               Stay, ahead, with expert, analysis, and practical, guide, s.
@@ -41,8 +39,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
             <Link, t, o="/ca, s, e-studi, e, s" 
               className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
               <Zap, className="w-5 h-5" />
-              View, Case, Studies;
-            </Li, n, k>
+              View, Case, Studies</$1>
           </div>
         </div>)
         {/* Featured, Content, Car, d, s */})
@@ -72,12 +69,10 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
           <div, className="m, a, x-w-2, x, l"></div>"
             <div, className="flex, item, s-center, ga, p-2, m, b-4"></div>"
               <span, className="te, x, t-sm, fon, t-medium, tex, t-yell, o, w-300, uppercase, tracking-wi, d, e"></span>
-                Fresh, Conten, t;
-              </sp, a, n>
+                Fresh, Conten, t</$1>
             </div>"
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4"></h2>
-              Latest, from Zion Insigh, t, s;
-            </h2>"
+              Latest, from Zion Insigh, t, s</$1>"
             <p, className="te, x, t-whi, t, e/90, tex, t-lg, leadin, g-relax, e, d"></p>
               Fresh, articles, on AI, automat, i, o, n, cloud, securit, y, and, developer, productivity. 
               Stay, ahead, with expert, analysis, and practical, guide, s.
@@ -93,8 +88,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
             <Link, t, o="/ca, s, e-studi, e, s" "
               className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></Link>"
               <Zap, className="w-5 h-5" /></Zap>
-              View, Case, Studies;
-            </Li, n, k>
+              View, Case, Studies</$1>
           </div>
         </div>
         {/* Featured, Content, Car, d, s */}"

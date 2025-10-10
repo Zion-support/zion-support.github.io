@@ -120,8 +120,7 @@ className="w-6 h-6 text-red-600""
 // /></svg>
         </div>"
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900"></h2>
-// Oops! Something went wrong;
-          </h2>"
+// Oops! Something went wrong</$1>"
         <p className="mt-2 text-center text-gray-600"></p>
           {error.message || 'An unexpected error occurred'}
         </p>
@@ -134,15 +133,13 @@ className="w-6 h-6 text-red-600""
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg,"
   hover:bg-blue-700 transition-colors"
 // >
-//             Try Again;
-          </button>
+//             Try Again</$1>
           <button></button>
             onClick={() => (window.location.href = '/')}"
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg,"
   hover:bg-gray-300 transition-colors"
 // >
-//             Go Home;
-          </button>
+//             Go Home</$1>
         </div>
       </div>
     </div>
@@ -183,8 +180,7 @@ className="w-6 h-6 text-yellow-600""
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg,"
   hover:bg-blue-700 transition-colors"
 // >
-            Retry Connection;
-          </button>
+            Retry Connection</$1>
         </div>
       </div>
     </div>
@@ -212,15 +208,13 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg,"
   hover:bg-blue-700 transition-colors"
 // >
-//             Go Home;
-          </button>
+//             Go Home</$1>
           <button></button>
             onClick={() => window.history.back()}"
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg,"
   hover:bg-gray-300 transition-colors"
 // >
-//             Go Back;
-          </button>
+//             Go Back</$1>
         </div>
       </div>
     </div>

@@ -78,24 +78,18 @@ const CloudServicesPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-// Cloud Services;
-          </h1>
+// Cloud Services</$1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            Coming Soon</$1>
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
-//               Get Started Today;
-          </a>
+//               Get Started Today</$1>
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
-//               Learn More;
-          </a>
+//               Learn More</$1>
           </div>
-        </section>
         {/* Services Grid */}"
         <section className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Cloud Services</h2>"
@@ -118,7 +112,6 @@ const CloudServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
         {/* Benefits Section */}"
         <section className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>"
@@ -134,7 +127,6 @@ const CloudServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
         {/* CTA Section */}"
         <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12"></section>"
           <h2 className="text-3xl font-bold text-white mb-4"></h2>
@@ -147,15 +139,12 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
-//               Call (302) 464-0950;
-          </a>
+//               Call (302) 464-0950</$1>
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
-//               Get Free Consultation;
-          </a>
+//               Get Free Consultation</$1>
           </div>
-        </section>
       </main>
       <Footer /></Footer>
     </div>

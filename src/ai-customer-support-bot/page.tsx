@@ -118,9 +118,7 @@ const AICustomerSupportBotPage: React.FC = () => {
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-                  Get Started;
-  </
-        <div className="text-center">
+                  Get Started</$1>
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Contact our experts to discuss your support needs and get a custom AI solution.
@@ -137,8 +135,7 @@ export default $1;
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react';
-export default AICustomerSupportBotPage;
-  </button>
+export default AICustomerSupportBotPage</$1>
   </button>
   </div>
   </p>

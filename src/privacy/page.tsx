@@ -77,9 +77,7 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Privacy Policy;
-  </
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+              Privacy Policy</$1>
               Your privacy is important to us. Learn how we collect, use, and protect your personal information.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -98,7 +96,6 @@ export default function PrivacyPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Last Updated */}
       <section className="py-8">
         <div className="container mx-auto px-4">
@@ -113,7 +110,6 @@ export default function PrivacyPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Introduction */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -132,7 +128,6 @@ export default function PrivacyPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Information We Collect */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -162,7 +157,6 @@ export default function PrivacyPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* How We Use Your Information */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -202,7 +196,6 @@ export default function PrivacyPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Data Security */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -221,7 +214,6 @@ export default function PrivacyPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Your Rights */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -238,7 +230,6 @@ export default function PrivacyPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
@@ -265,12 +256,9 @@ export default function PrivacyPage() {
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" />
-              Contact Us;
-  </
-          </div>
+              Contact Us</$1>
         </div>
-      </section>
-    </div>
+      </div>
   );
 }
   </a>

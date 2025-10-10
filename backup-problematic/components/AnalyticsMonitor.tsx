@@ -19,5 +19,8 @@ const AnalyticsMonitor = React.memo(function AnalyticsMonitor({/* TODO: Fix JSX 
     </div>
   );
 });
-export default AnalyticsMonitor;
+
+  };
+
+  export default AnalyticsMonitor;
 "`

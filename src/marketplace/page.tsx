@@ -164,9 +164,7 @@ icon$5: Award,
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Zion Tech Marketplace;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Zion Tech Marketplace</$1>
               Discover, compare, and purchase AI and IT solutions from verified vendors. 
               Find the perfect tools, talent, and equipment for your business needs.
             </p>
@@ -194,10 +192,7 @@ icon$5: Award,
                 />
               <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
                 <Filter className="w-5 h-5 mr-2" />
-                Filters;
-  </
-            {/* Category Tabs */}
-            <div className="flex flex-wrap justify-center gap-4">
+                Filters</$1>
               {categories.map((category) => (
                 <button
                   key={category.id}
@@ -247,7 +242,8 @@ icon$5: Award,
                           <span className="text-sm text-white font-medium">{item.rating}</span>
                           <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)</span>
                         <div className="text-lg font-bold text-cyan-400">{item.price}</div>
-                    </React.Fragment>
+      </section>
+    </React.Fragment>
                   {activeCategory === 'talent' && (
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:</h4>
                         <div className="flex flex-wrap gap-1">
@@ -292,11 +288,7 @@ icon$5: Award,
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <ShoppingCart className="w-5 h-5 mr-2" />
-                Start Shopping;
-  </
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
+                Start Shopping</$1>
                 (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
@@ -409,8 +401,7 @@ const categories = [
       vendo,
   r: 'QuantumCloud',
           <ShoppingCart className="w-5 h-5 mr-2" /></ShoppingCart>
-// Start Shopping;
-          </a>
+// Start Shopping</$1>
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
@@ -418,8 +409,7 @@ const categories = [
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
       <Footer /></Footer>
-export default MarketplacePage;
-  </div>
+export default MarketplacePage</$1>
   </p>
   </h2>
   </div>

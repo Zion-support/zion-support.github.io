@@ -42,16 +42,13 @@ export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expr
               </p><div className="space-x-4"><a></a>"
                   href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg,"
   hover:bg-blue-700 transition-colors">
-                  Get Autonomous Assessment;
-                </a><a></a>"
+                  Get Autonomous Assessment</$1><a></a>"
                   href="/services" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600,"
   hover:bg-blue-50 transition-colors">
-                  Explore AI Services;
-                </a></div></div></div></div></div></div>
+                  Explore AI Services</$1></div></div></div></div></div></div>
   );
 };
-export default AiPoweredAutonomousBusinessProcesses2026Page;
-  </div>
+export default AiPoweredAutonomousBusinessProcesses2026Page</$1>
   </div>
   </h3>
   </ul>

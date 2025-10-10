@@ -6,7 +6,6 @@ interface ImageProps {;
   src: string,;
     alt: string;}
 interface ImageProps {}
-<<<<<<< HEAD
   src: string,
     alt: string
   width?: number
@@ -16,10 +15,6 @@ interface ImageProps {}
   _quality?: number
   src: string,
   alt: string,
-=======
-  src: string;
-  alt: string;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   width?: number;
   height?: number;
   className?: string;
@@ -113,13 +108,11 @@ export const,;
         style={imageStyle}
         {...props});
       >)</div>;
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>);
-      </div>);
+        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)</$1>);
     ),;
         {...props}
       ></div>;
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>;
-      </div>;
+        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span></$1>;
     );
   }
   return(<img;
@@ -150,10 +143,6 @@ export default Image;
   );
 };
 export default Image;
-<<<<<<< HEAD
 "`
   </ImageProps>
   </ImageProps>
-=======
-"`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

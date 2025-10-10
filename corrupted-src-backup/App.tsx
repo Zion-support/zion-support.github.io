@@ -90,8 +90,7 @@ class ErrorBoundary extends React.Component<
                 className="bg-blue-600 text-white px-4 py-2 rounded,"
   hover:bg-blue-700"
               >
-                Try again;
-              </button>
+                Try again</$1>
             </div>
           </div>));
     }

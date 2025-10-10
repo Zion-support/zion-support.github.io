@@ -18,9 +18,7 @@ export default function BlogPost(): React.JSX.Element {
         <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Edge Rate Limiter Blueprint 2026;
-  </
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
+              Edge Rate Limiter Blueprint 2026</$1></div>
               <span>By Zion Tech Group Team</span>
               <span>•</span>
               <span>2025-10-03</span>
@@ -64,8 +62,7 @@ export default function BlogPost(): React.JSX.Element {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
-                    Twitter;
-                  </a>,
+                    Twitter</$1>,
                   <a;
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
@@ -78,8 +75,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                     className="bg-white bg-opacity-20,"
   hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
-                    Twitter;
-                  </a>
+                    Twitter</$1>
                   <a></a>
                     href={/* TODO: Fix JSX expression */}`
   s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
@@ -88,8 +84,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                     className="bg-white bg-opacity-20,"
   hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
-                    LinkedIn;
-                  </a>
+                    LinkedIn</$1>
                 </div>
               </div>
               <a;
@@ -100,8 +95,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-100 transition-colors"
               >
-                Back to Blog;
-              </a>
+                Back to Blog</$1>
             </div>
           </div>
         </div>

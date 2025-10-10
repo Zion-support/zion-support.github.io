@@ -5,8 +5,7 @@ const AutonomousBusinessOperation, s = () => {
   return(<React.Fragment>
       <Helm, e, t>
         <title>
-          Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group;
-        </title>
+          Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group</$1>
         <meta, nam, e = 'description'
           conte, n, t='Transform, your, enterprise with, A, I-powered, autonomous, operations. Deploy, 4, 0+ se, l, f-managing, workflows, in 90, day, s. $50, 0, M+ value, creatio, n. 3, 0, 0-5, 0, 0% R, O, I. Get, started, with a, free, consultation.'
         /></meta>
@@ -49,8 +48,7 @@ const AutonomousBusinessOperation, s = () => {
                     85%
                   </div>
                   <div, className='te, x, t-gre, e, n-100, fon, t-semibo, l, d'>
-                    Cost, Reductio, n;
-                  </d, i, v>
+                    Cost, Reductio, n</$1>
                   <Link, classNam, e='w-5 h-5' />
               <div, classNam, e='flex, item, s-center, ga, p-2'></div>
                 <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
@@ -99,8 +97,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                     85%
                   </div>
                   <div, className='te, x, t-gre, e, n-100, fon, t-semibo, l, d'></div>
-                    Cost, Reductio, n;
-                  </d, i, v>
+                    Cost, Reductio, n</$1>
                   <Link, classNam, e='w-5 h-5' /></Link>
               <div, classNam, e='flex, item, s-center, ga, p-2'></div>
                 <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' /></CheckCircle>
@@ -134,8 +131,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, className='te, x, t-center, m, b-16'></section>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
-              Wh, a, t's, Included, in Your, Platfor, m;
-          </div>
+              Wh, a, t's, Included, in Your, Platfor, m</$1>
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
             {/* Feat, u, r, e , 1 */}</div>
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, hove, r: bord, e, r-bl, u, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'></div>
@@ -196,8 +192,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'></section>
           <div, className='te, x, t-center, m, b-16'></div>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'></h2>
-              Wh, a, t's, Included, in Your, Platfor, m;
-          </div>
+              Wh, a, t's, Included, in Your, Platfor, m</$1>
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'></div>
             {/* Feat, u, r, e , 1 */}
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, hove, r: bord, e, r-bl, u, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'></div>
@@ -307,8 +302,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, className='te, x, t-center, m, b-16'></section>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
-              90-Day, Implementation, Timeline;
-                    </div>
+              90-Day, Implementation, Timeline</$1>
                     <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-2, 0, 0'></div>
                       <CheckCircle, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
                     </div>
@@ -321,18 +315,15 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, className='te, x, t-center, m, b-16'></section>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
-              Investme, n, t & R, O, I;
-          </div>
+              Investme, n, t & R, O, I</$1>
           <div, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-8, ma, x-w-4xl, m, x-au, t, o'>
             {/* Invest, m, e, n, t */}</div>
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50'></div>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
-                Total, Investmen, t;
-              </h3>
+                Total, Investmen, t</$1>
               <div, className='te, x, t-center, m, b-6'></div>
                 <div, className='te, x, t-5xl, fon, t-bold, tex, t-white, m, b-2'>
-                  $10-2, 5, M;
-                </d, i, v>
+                  $10-2, 5, M</$1>
                 <div, classNam, e='te, x, t-bl, u, e-2, 0, 0'>3-Year, Total, Cost</d, i, v>
                 <li, classNam, e='flex, item, s-start, ga, p-2'>
                   <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
@@ -390,8 +381,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
         <section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'></section>
           <div, className='te, x, t-center, m, b-16'></div>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'></h2>
-              90-Day, Implementation, Timeline;
-                    </div>
+              90-Day, Implementation, Timeline</$1>
                     <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-2, 0, 0'></div>
                       <CheckCircle, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' /></CheckCircle>
                     </div>
@@ -404,18 +394,15 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'></section>
           <div, className='te, x, t-center, m, b-16'></div>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'></h2>
-              Investme, n, t & R, O, I;
-          </div>
+              Investme, n, t & R, O, I</$1>
           <div, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-8, ma, x-w-4xl, m, x-au, t, o'></div>
             {/* Invest, m, e, n, t */}
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50'></div>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3>
-                Total, Investmen, t;
-              </h3>
+                Total, Investmen, t</$1>
               <div, className='te, x, t-center, m, b-6'></div>
                 <div, className='te, x, t-5xl, fon, t-bold, tex, t-white, m, b-2'></div>
-                  $10-2, 5, M;
-                </d, i, v>
+                  $10-2, 5, M</$1>
                 <div, classNam, e='te, x, t-bl, u, e-2, 0, 0'>3-Year, Total, Cost</d, i, v>
                 <li, classNam, e='flex, item, s-start, ga, p-2'></li>
                   <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' /></CheckCircle>

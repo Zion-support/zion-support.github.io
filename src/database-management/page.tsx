@@ -54,7 +54,6 @@ const DatabaseManagementPage: React.FC = () => {
               <Database className="w-5 h-5" />
               +1 302 464 0950</span>
           </div>
-        </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Database Services</span>
@@ -81,7 +80,6 @@ const DatabaseManagementPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
       </main>
       <Footer />
     </div>

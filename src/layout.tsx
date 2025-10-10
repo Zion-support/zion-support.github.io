@@ -169,7 +169,10 @@ $4]
       </body>
     </html>
   );
-export default RootLayout;
+
+  };
+
+  export default RootLayout;
         priceSpecification: {// TODO: Add content;}
 }
           '@type': 'PriceSpecification',

@@ -304,38 +304,27 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 style={styles.button}"
                 aria-label="Try Again"
               >
-                Try Again;
-  </
-              <button
-// >
-//                 Try Again;
-          </button>
+                Try Again</$1>
+//                 Try Again</$1>
               <button></button>
                 onClick={this.handleReload}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Reload Page"
               >
-                Reload Page;
-  </
-              <button
-// >
-//                 Reload Page;
-          </button>
+                Reload Page</$1>
+//                 Reload Page</$1>
               <button></button>
                 onClick={this.handleGoHome}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Go to Homepage"
               >
-                Go Home;
-  </
-            </div>
+                Go Home</$1>
             {this.state.errorCount > 1 && (
               <p style={styles.errorCount}>
                 This error has occurred {this.state.errorCount} times
             {this.state.errorCount > 1 && ()}
           <p style={styles.errorCount}></p>
-                This error has occurred {this.state.errorCount} times;
-              </p>
+                This error has occurred {this.state.errorCount} times</$1>
             )}
           </div>
         </div>
@@ -637,7 +626,6 @@ const styles = {// TODO: Add content;}
     colo,
   r: '#999'
   }
-};
-  </State>
+}</$1>
   </State>
   </string>

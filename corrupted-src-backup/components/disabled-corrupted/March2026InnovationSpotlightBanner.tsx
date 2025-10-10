@@ -35,14 +35,12 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
           <div, className='inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-indi, g, o-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8'></div>
             <Rocket, className='w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e' /></Rocket>
             <span, className='te, x, t-purp, l, e-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e'></span>
-              🚀 MARCH, 202, 6: INNOVATION, SPOTLIGH, T;
-            </sp, a, n>
+              🚀 MARCH, 202, 6: INNOVATION, SPOTLIGH, T</$1>
             <Rocket, className='w-6 h-6, tex, t-indi, g, o-400, animat, e-pul, s, e' /></Rocket>
           </div>
           <h2, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
           <h2, className='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></h2>
-            The, Innovation, Revolution;
-          </h2>
+            The, Innovation, Revolution</$1>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'></p>
             Witness, the, most revolutionary, technological, breakthroughs of, our, time. These, innovations, are reshaping, reality, itself and, creating, unprecedented opportunities, for, human advanceme, n, t.
           </p>
@@ -137,12 +135,10 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
         <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16'></div>
           <div, className='te, x, t-center, m, b-12'></div>
             <h3, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'>
-              Revolutionary, Success, Stories;
-            </h3>
+              Revolutionary, Success, Stories</$1>
             <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'>
             <h3, className='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4'></h3>
-              Revolutionary, Success, Stories;
-            </h3>
+              Revolutionary, Success, Stories</$1>
             <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o'></p>
               See, how, our innovations, are, transforming industries, and, creating;
               unprecedented, valu, e.
@@ -185,8 +181,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
             <div, className='bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10'></div>
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h3>
-                Join, the, Innovation Revoluti, o, n;
-              </h3>
+                Join, the, Innovation Revoluti, o, n</$1>
               <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'></p>
                 Be, part, of the, futur, e. Get, exclusive, access to, revolutionary, innovation, s, early, research, insights, and, transformative, technologies that, are, reshaping our, worl, d.
               </p>

@@ -16,12 +16,8 @@ const QuantumComputingPage: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Quantum Computing;
-  </
-            <p className="text-xl text-cyan-400 mb-8">
-              Next-generation computing power for complex problem solving;
-  </
-          </div>
+              Quantum Computing</$1>
+              Next-generation computing power for complex problem solving</$1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Unlock Quantum Potential</h2>
@@ -32,21 +28,13 @@ const QuantumComputingPage: React.FC = () => {
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-center">
                   <span className="text-cyan-400 mr-3">✓</span>
-                  Quantum optimization algorithms;
-  </
-                <li className="flex items-center">
+                  Quantum optimization algorithms</$1>
                   <span className="text-cyan-400 mr-3">✓</span>
-                  Quantum machine learning;
-  </
-                <li className="flex items-center">
+                  Quantum machine learning</$1>
                   <span className="text-cyan-400 mr-3">✓</span>
-                  Cryptography and security;
-  </
-                <li className="flex items-center">
+                  Cryptography and security</$1>
                   <span className="text-cyan-400 mr-3">✓</span>
-                  Financial modeling;
-  </
-              </ul>
+                  Financial modeling</$1>
             </div>
             <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Applications</h3>
@@ -72,14 +60,8 @@ const QuantumComputingPage: React.FC = () => {
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300">
-                Explore Quantum Solutions;
-  </
-              <a
-                href="/consultation"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Schedule Consultation;
-  </
-            </div>
+                Explore Quantum Solutions</$1>
+                Schedule Consultation</$1>
           </div>
         </div>
       </main>
@@ -87,8 +69,7 @@ const QuantumComputingPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default QuantumComputingPage;
-  </a>
+export default QuantumComputingPage</$1>
   </a>
   </li>
   </li>

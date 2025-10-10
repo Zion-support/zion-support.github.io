@@ -16,5 +16,8 @@ const EnhancedHero = React.memo(function EnhancedHero({ className = '' }: Enhanc
     </div>
   );
 });
-export default EnhancedHero;
+
+  };
+
+  export default EnhancedHero;
 "`

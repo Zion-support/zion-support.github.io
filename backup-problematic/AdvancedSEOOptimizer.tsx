@@ -14,7 +14,7 @@ interface SEOData {
  twitterTitle?: string;
  twitterDescription?: string;,
  twitterImage?: string;
- structuredData?: Record<string, unknown>;</string>robots</string>?: string;
+ structuredData?: Record<string, unknown></$1>robots</string>?: string;
  author?: string;
  publishedTime?: string;
  modifiedTime?: string;
@@ -30,7 +30,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  enableOpenGraph = true,
  enableTwitterCards = true,
  enableSchemaMarkup = true}) => {
- const _structuredDataRef = useRef<HTMLScriptElement | null>(null);</HTMLScriptElement>const</HTMLScriptElement> generateStructuredData = useCallback(() => {
+ const _structuredDataRef = useRef<HTMLScriptElement | null>(null)</$1>const</HTMLScriptElement> generateStructuredData = useCallback(() => {
  if (!enableStructuredData || !seoData.structuredData) return null;
  const baseStructuredData = {
  '@context': 'https: //schema.org',

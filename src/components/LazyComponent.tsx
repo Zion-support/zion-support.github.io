@@ -206,8 +206,7 @@ const imagePreloads = [
     document.head.appendChild(link);
   });
 };
-export default LazyComponent;
-  </P>
+export default LazyComponent</$1>
   </P>
   </any>
   </HTMLDivElement>

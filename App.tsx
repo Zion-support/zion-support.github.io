@@ -25,25 +25,25 @@ const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
-const BlogPage = React.lazy(() => import('./app/blog/page'));
-const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
-const CareersPage = React.lazy(() => import('./app/careers/page'));
-const PartnersPage = React.lazy(() => import('./app/partners/page'));
-const SupportPage = React.lazy(() => import('./app/support/page'));
-const FAQPage = React.lazy(() => import('./app/faq/page'));
-const DemoPage = React.lazy(() => import('./app/demo/page'));
-const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
-const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
-const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
-const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
-// New AI Services
-const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
-const AISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'));
-const AIEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-marketing-automation/page'));
-const AIVoiceAssistantPlatformPage = React.lazy(() => import('./app/ai-voice-assistant-platform/page'));
-const AIPredictiveMaintenancePage = React.lazy(() => import('./app/ai-predictive-maintenance/page'));
-const AISupplyChainOptimizationPage = React.lazy(() => import('./app/ai-supply-chain-optimization/page'));
-const AICloudInfrastructurePage = React.lazy(() => import('./app/ai-cloud-infrastructure/page'));
+// const BlogPage = React.lazy(() => import('./app/blog/page'));
+// const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
+// const CareersPage = React.lazy(() => import('./app/careers/page'));
+// const PartnersPage = React.lazy(() => import('./app/partners/page'));
+// const SupportPage = React.lazy(() => import('./app/support/page'));
+// const FAQPage = React.lazy(() => import('./app/faq/page'));
+// const DemoPage = React.lazy(() => import('./app/demo/page'));
+// const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+// const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+// const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
+// const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+// New AI Services - Disabled for now
+// const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
+// const AISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'));
+// const AIEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-marketing-automation/page'));
+// const AIVoiceAssistantPlatformPage = React.lazy(() => import('./app/ai-voice-assistant-platform/page'));
+// const AIPredictiveMaintenancePage = React.lazy(() => import('./app/ai-predictive-maintenance/page'));
+// const AISupplyChainOptimizationPage = React.lazy(() => import('./app/ai-supply-chain-optimization/page'));
+// const AICloudInfrastructurePage = React.lazy(() => import('./app/ai-cloud-infrastructure/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -76,25 +76,25 @@ const App: React.FC = () => {
                             <Route path="/contact" element={<ContactPage />} />
                             <Route path="/services" element={<ServicesPage />} />
                             <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/faq" element={<FAQPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                            <Route path="/ai-services" element={<AiServicesPage />} />
-                            <Route path="/it-services" element={<ItServicesPage />} />
-                            {/* New AI Services Routes */}
-                            <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
-                            <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
-                            <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
-                            <Route path="/ai-voice-assistant-platform" element={<AIVoiceAssistantPlatformPage />} />
-                            <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} />
-                            <Route path="/ai-supply-chain-optimization" element={<AISupplyChainOptimizationPage />} />
-                            <Route path="/ai-cloud-infrastructure" element={<AICloudInfrastructurePage />} />
+                            {/* <Route path="/blog" element={<BlogPage />} /> */}
+                            {/* <Route path="/case-studies" element={<CaseStudiesPage />} /> */}
+                            {/* <Route path="/careers" element={<CareersPage />} /> */}
+                            {/* <Route path="/partners" element={<PartnersPage />} /> */}
+                            {/* <Route path="/support" element={<SupportPage />} /> */}
+                            {/* <Route path="/faq" element={<FAQPage />} /> */}
+                            {/* <Route path="/demo" element={<DemoPage />} /> */}
+                            {/* <Route path="/consultation" element={<ConsultationPage />} /> */}
+                            {/* <Route path="/micro-saas" element={<MicroSaasPage />} /> */}
+                            {/* <Route path="/ai-services" element={<AiServicesPage />} /> */}
+                            {/* <Route path="/it-services" element={<ItServicesPage />} /> */}
+                            {/* New AI Services Routes - Disabled for now */}
+                            {/* <Route path="/ai-project-manager" element={<AIProjectManagerPage />} /> */}
+                            {/* <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} /> */}
+                            {/* <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} /> */}
+                            {/* <Route path="/ai-voice-assistant-platform" element={<AIVoiceAssistantPlatformPage />} /> */}
+                            {/* <Route path="/ai-predictive-maintenance" element={<AIPredictiveMaintenancePage />} /> */}
+                            {/* <Route path="/ai-supply-chain-optimization" element={<AISupplyChainOptimizationPage />} /> */}
+                            {/* <Route path="/ai-cloud-infrastructure" element={<AICloudInfrastructurePage />} /> */}
                           </Routes>
                         </Suspense>
                       </main>

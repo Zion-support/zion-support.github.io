@@ -24,9 +24,7 @@ export default function ServicesAdvertisingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home;
-  </
-        </div>
+            Back to Home</$1>
       </header>
       {/* Hero Section */}"
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></section>"
@@ -40,12 +38,10 @@ export default function ServicesAdvertisingPage() {
 AI-Powered Advertising Solutions;"
             <h1 className="text-4xl,"
   md:text-6xl font-bold mb-6"></h1>
-// AI Advertising Services;
-          </h1>"
+// AI Advertising Services</$1>"
             <p className="text-xl,"
   md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto"></p>
-// Revolutionize Your Marketing with 300% ROI Guaranteed;
-          </p>"
+// Revolutionize Your Marketing with 300% ROI Guaranteed</$1>"
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto"></p>
 // Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
 //               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven;
@@ -57,8 +53,7 @@ AI-Powered Advertising Solutions;"
 //                 Start Free Consultation;
           <ArrowRight className="w-4 h-4 ml-2" />
 href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-                View Our Services;
-      </section>
+                View Our Services</$1>
       {/* Key Metrics */}"
       <section className="py-16 bg-white"></section>"
         <div className="max-w-7xl mx-auto px-4,
@@ -67,8 +62,7 @@ href="#services" className="border-2 border-white text-white hover:bg-white hove
           <div className="text-center mb-12"></div>"
             <h2 className="text-3xl,"
   md:text-4xl font-bold text-gray-900 mb-4"></h2>
-// Proven Advertising Results;
-          </h2>"
+// Proven Advertising Results</$1>"
             <p className="text-xl text-gray-600"></p>
 Our AI-powered advertising delivers measurable business impact;"
           <div className="grid grid-cols-1,
@@ -179,8 +173,7 @@ Transparent Pricing;
                   <span>2 platforms included</span>"
               <button className="w-full bg-blue-600,"
   hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"></button>
-// Get Started;
-          </button>"
+// Get Started</$1>"
             <div className="bg-blue-600 text-white rounded-lg p-8 relative"></div>"
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>"
                 <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>"
@@ -218,11 +211,9 @@ Ready to Transform Your Advertising?
               View Success Stories;
   );
 };
-export default ServicesAdvertisingPage;
-  </p>
+export default ServicesAdvertisingPage</$1>
   </h2>
   </div>
-  </section>
   </div>
   </div>
   </div>

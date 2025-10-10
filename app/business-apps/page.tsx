@@ -61,14 +61,11 @@ title: 'AI-Powered Business Apps',
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Business Apps;
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Business Apps</$1>
             Transform your business with our advanced business app solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
         </div>
-      </section>
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -95,9 +92,7 @@ title: 'AI-Powered Business Apps',
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Key Benefits</$1>
               Experience the power of our business app solutions for your business.
             </p>
           </div>
@@ -110,7 +105,6 @@ title: 'AI-Powered Business Apps',
             ))}
           </div>
         </div>
-      </section>
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -123,13 +117,9 @@ title: 'AI-Powered Business Apps',
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
-              Call Now;
-  </
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              Call Now</$1>
               <Mail className="mr-2 h-5 w-5" />
-              Email Us;
-  </
-          </div>
+              Email Us</$1>
         </div>
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -141,20 +131,15 @@ title: 'AI-Powered Business Apps',
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
-              Call Now;
-  </
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              Call Now</$1>
               <Mail className="mr-2 h-5 w-5" />
-              Email Us;
-  </
-          </div>
+              Email Us</$1>
         </div>
       </div>
     </div>
   );
 };
-export default BusinessAppsPage;
-  </button>
+export default BusinessAppsPage</$1>
   </button>
   </button>
   </button>

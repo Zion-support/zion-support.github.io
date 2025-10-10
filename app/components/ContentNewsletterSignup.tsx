@@ -28,21 +28,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
     setIsLoading(true);
-=======
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setIsSubmitting(true);
-    
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -79,7 +69,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               Subscribe another email
             </button>
           </div>
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Welcome to Our Community!
           </h2>
@@ -89,11 +78,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           <button
             onClick={() => setIsSubscribed(false)}
             className="text-white underline hover:text-blue-200 transition-colors">
-            Subscribe another email;
-  </
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-        </div>
+            Subscribe another email</$1>
       </div>
     );
   }
@@ -108,7 +93,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               {subtitle}
             </p>
-<<<<<<< HEAD
             <div className="space-y-4">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -125,20 +109,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-                  Email Address;
-  </
-=======
-          </div>
-
-          <form onSubmit={handleSubmit} className="mb-12">
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <div className="relative flex-1">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  Email Address</$1> setEmail(e.target.value)}
                   placeholder={placeholder}
                   required
                   className="w-full pl-10 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -146,26 +117,16 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               </div>
               <button
                 type="submit"
-<<<<<<< HEAD
                 disabled={isLoading || !email}
                 className="w-full bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-blue-50 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center">
                 {isLoading ? (
                   <React.Fragment>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
-=======
-                disabled={isSubmitting}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-              >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     Subscribing...
                   </React.Fragment>
                 ) : (
                   <React.Fragment>
                     {buttonText}
-<<<<<<< HEAD
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </React.Fragment>
                 )}
@@ -174,36 +135,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                 We respect your privacy. Unsubscribe at any time.
               </p>
             </form>
-=======
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </>
-                )}
-              </button>
-            </div>
-          </form>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <p className="text-gray-300 text-sm">{feature.text}</p>
-              </div>
-            ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
       </div>
     </div>
   );
 };
-<<<<<<< HEAD
-export default ContentNewsletterSignup;
-  </label>
+export default ContentNewsletterSignup</$1>
   </button>
   </ContentNewsletterSignupProps>
-=======
-
-export default ContentNewsletterSignup;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

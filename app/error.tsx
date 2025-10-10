@@ -45,30 +45,21 @@ const ErrorPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Error;
-  </
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Error</$1>
                 Error page.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Started;
-  </
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                  Learn More;
-  </
-              </div>
+                  Get Started</$1>
+                  Learn More</$1>
             </div>
           </div>
-        </section>
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Services;
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our Services</$1>
                 Discover how our solutions can help transform your business.
               </p>
             </div>
@@ -92,7 +83,6 @@ const ErrorPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -103,17 +93,13 @@ const ErrorPage: React.FC = () => {
               Contact us today to learn more about our services.
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Contact Us;
-  </
-          </div>
-        </section>
+              Contact Us</$1>
       </main>
       <Footer />
     </React.Fragment>
   );
 };
-export default ErrorPage;
-  </button>
+export default ErrorPage</$1>
   </h2>
   </button>
   </button>

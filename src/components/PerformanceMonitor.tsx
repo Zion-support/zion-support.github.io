@@ -122,5 +122,4 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-export default PerformanceMonitor;
-  </PerformanceMetrics>
+export default PerformanceMonitor</$1>

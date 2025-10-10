@@ -9,9 +9,7 @@ export default function AIHealthcarePage() {
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            AI Healthcare;
-  </
-          <p className="text-xl text-gray-300 mb-8">
+            AI Healthcare</$1>
             Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
           </p>
           <div className="bg-slate-800/50 rounded-lg p-8">
@@ -23,9 +21,7 @@ export default function AIHealthcarePage() {
               href="/contact"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />
-              Contact Us;
-  </
-          </div>
+              Contact Us</$1>
         </div>
       </div>
     </div>

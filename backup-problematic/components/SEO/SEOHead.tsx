@@ -16,5 +16,8 @@ const SEOHead = React.memo(function SEOHead({ className = '' }: SEOHeadProps) {/
     </div>
   );
 });
-export default SEOHead;
+
+  };
+
+  export default SEOHead;
 "`

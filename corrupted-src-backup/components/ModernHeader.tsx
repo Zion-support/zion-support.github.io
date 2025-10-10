@@ -137,11 +137,11 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   return (</div>
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">";</div>
+  g:px-8">"</$1>
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">";
           {/* Lo, g, o */}</div>
           <Link, t, o="/" classNa, m, e="flex, item, s-center, spac, e-x-2">";
-            <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";</div>
+            <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, flex, items-center, justif, y-cent, e, r">"</$1>
   return ("
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";"
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -150,10 +150,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           {/* Lo, g, o */}"
           <Link, t, o="/" classNa, m, e="flex, item, s-center, spac, e-x-2">";"
             <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";"
-              <span, className="te, x, t-white, fon, t-bold, tex, t-sm">Z</sp, a, n>";
-            </d, i, v>"
-            <span, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Zion, Tech, Group</sp, a, n>";
-          </Li, n, k>
+              <span, className="te, x, t-white, fon, t-bold, tex, t-sm">Z</sp, a, n>"</$1>"
+            <span, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Zion, Tech, Group</sp, a, n>"</$1>
           {/* Desktop, Navigatio, n */}"
           <nav, className="hidden, m, d: flex, spac, e-x-8">""
           <nav, className="hidden, m, d: flex, spac, e-x-8">";
@@ -180,8 +178,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   {/* TODO: Fix JSX expression */}"
                       <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7  /></path>"
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">";"
-                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7" />";
-                    </s, v, g>
+                      <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7" />"</$1>
                   )}
                 </Li, n, k>
                 {/* Dropdown, Men, u */}
@@ -210,7 +207,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           </n, a, v>
           {/* CTA, Butto, n */}
           <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">"</div>
-          <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">";</div>
+          <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">"</$1>
             <a, titl, e="Internal, lin, k"
               hr, e, f="te;
   l: +130246409, 5, 0"
@@ -222,16 +219,14 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   l: +130246409, 5, 0""
               classNa, m, e="te, x, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medi, u, m"
             ></a>
-              +1, 302, 464 09, 5, 0;
-            </a>
+              +1, 302, 464 09, 5, 0</$1>
             <Li, n, k;
   to="/conta, c, t"
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="px-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m"
             ></Li>
-              Gette, d;
-            </Li, n, k>
+              Gette, d</$1>
           </d, i, v>
           {/* Mobile, menu, button */}
           <butt, o, n;
@@ -297,7 +292,7 @@ isMenuOp, e, n && (
 }>
                   <Li, n, k;
 <div, className="m
-  d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";</div>
+  d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,"</$1>
 <nav, className="flex, fle, x-col, spac, e-y-1">";
 {navigationIte, m, s.m, a, p((it, e, m) => (
 <div, ke, y={it, e, m.na, m, e;
@@ -338,7 +333,7 @@ isMenuOp, e, n && (
                   )}
                 </d, i, v>
               ))}
-              <div, className="px-4, p, y-2, borde, r-t, borde, r-gr, a, y-200, m, t-2">";</div>
+              <div, className="px-4, p, y-2, borde, r-t, borde, r-gr, a, y-200, m, t-2">"</$1>
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="t, e, l: +130246409, 5, 0"
               ))}"
@@ -347,8 +342,7 @@ isMenuOp, e, n && (
                   hr, e, f="t, e, l: +130246409, 5, 0""
                   classNa, m, e="block, tex, t-gr, a, y-700, hove, r: te, x, t-bl, u, e-600, transitio, n-colors, fon, t-medium, m, b-2"
                 ></a>
-                  +1, 302, 464 09, 5, 0;
-                </a>
+                  +1, 302, 464 09, 5, 0</$1>
                 <Li, n, k;
   to="/conta, c, t"
                 <Li, n, k;"
@@ -356,8 +350,7 @@ isMenuOp, e, n && (
                   classNa, m, e="block, p, x-4, p, y-2, b, g-bl, u, e-600, tex, t-white, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medium, tex, t-cent, e, r"
                   onCli, c, k={() => setIsMenuOp, e, n(fal, s, e)}</Li>
                 >
-                  Gette, d;
-                </Li, n, k>
+                  Gette, d</$1>
               </d, i, v>
             </n, a, v>
           </d, i, v>

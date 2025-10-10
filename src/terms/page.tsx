@@ -79,9 +79,7 @@ export default function TermsPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Terms of Service;
-  </
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+              Terms of Service</$1>
               Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -100,7 +98,6 @@ export default function TermsPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Last Updated */}
       <section className="py-8">
         <div className="container mx-auto px-4">
@@ -115,7 +112,6 @@ export default function TermsPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Key Terms */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -134,7 +130,6 @@ export default function TermsPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Prohibited Uses */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -153,7 +148,6 @@ export default function TermsPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Service Level Agreements */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -183,7 +177,6 @@ export default function TermsPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Payment Terms */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -213,7 +206,6 @@ export default function TermsPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Termination */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -244,7 +236,6 @@ export default function TermsPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Governing Law */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -270,7 +261,6 @@ export default function TermsPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* Contact Information */}
       <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
@@ -297,12 +287,9 @@ export default function TermsPage() {
               href="/contact"
               className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" />
-              Contact Us;
-  </
-          </div>
+              Contact Us</$1>
         </div>
-      </section>
-    </div>
+      </div>
   );
 }
   </a>

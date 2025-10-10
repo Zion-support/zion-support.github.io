@@ -19,8 +19,7 @@ const,
       <div className="container mx-auto px-4"></div>
         <div className="flex justify-between items-center py-4"></div>
           <Link href="/" className="text-xl font-bold text-blue-600">
-            Zion Tech Group;
-          </Link>
+            Zion Tech Group</$1>
           {/* Desktop Navigation */}
           <div className="hidden md: flex space-x-8">,
             {navigationItems.map(item => (,
@@ -36,8 +35,7 @@ const,
       <div className="container mx-auto px-4"></div>"
         <div className="flex justify-between items-center py-4"></div>"
           <Link href="/" className="text-xl font-bold text-blue-600"></Link>
-            Zion Tech Group;
-          </Link>
+            Zion Tech Group</$1>
           {/* Desktop Navigation */}"
           <div className="hidden,"
   md:flex space-x-8"></div>

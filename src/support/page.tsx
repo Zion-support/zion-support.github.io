@@ -149,12 +149,8 @@ const SupportPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Support Center;
-  </
-            <p className="text-xl text-cyan-400 mb-8">
-              We're here to help you succeed with AI;
-  </
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+              Support Center</$1>
+              We're here to help you succeed with AI</$1>
               Get instant answers to your questions, access comprehensive resources, 
               and connect with our expert support team.
             </p>
@@ -173,13 +169,10 @@ const SupportPage: React.FC = () => {
                 />
               </div>
             </div>
-          </section>
           {/* Support Channels */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Get Support;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              Get Support</$1>
               {supportChannels.map((channel, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`} />
@@ -190,13 +183,10 @@ const SupportPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* FAQ Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category;
-  </
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
+              Browse by Category</$1>
               {supportCategories.map((category) => (
                 <button
                   key={category.id}
@@ -213,13 +203,10 @@ const SupportPage: React.FC = () => {
                 </button>
               ))}
             </div>
-          </section>
           {/* FAQ Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Frequently Asked Questions;
-  </
-            <div className="max-w-4xl mx-auto space-y-4">
+              Frequently Asked Questions</$1>
               {searchResults.map((faq) => (
                 <div key={faq.id} className="cyber-card p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
@@ -227,13 +214,10 @@ const SupportPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* Resources Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Helpful Resources;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Helpful Resources</$1>
               {resources.map((resource, index) => (
                 <Link
                   key={index}
@@ -250,7 +234,6 @@ const SupportPage: React.FC = () => {
                 </Link>
               ))}
             </div>
-          </section>
           {/* Contact CTA */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -258,32 +241,23 @@ const SupportPage: React.FC = () => {
                 Still Need Help?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our expert team is ready to assist you with any questions or issues;
-  </
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                Our expert team is ready to assist you with any questions or issues</$1>
                 <a
                   href="tel:+13024640950"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Phone className="w-5 h-5 mr-2" />
-                  Call (302) 464-0950;
-  </
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
+                  Call (302) 464-0950</$1>
                   <Mail className="w-5 h-5 mr-2" />
-                  Send Email;
-  </
-              </div>
+                  Send Email</$1>
             </div>
-          </section>
         </main>
         <Footer />
       </div>
+      </section>
     </React.Fragment>
   );
 };
-export default SupportPage;
-  </a>
+export default SupportPage</$1>
   </a>
   </p>
   </h2>

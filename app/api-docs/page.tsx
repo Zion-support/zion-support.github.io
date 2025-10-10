@@ -113,24 +113,17 @@ export default function APIDocsPage() {
 <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
-            API Documentation;
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            API Documentation</$1>
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
               <Code className="mr-2 h-5 w-5" />
-              Get Started;
-  </
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              Get Started</$1>
               <Download className="mr-2 h-5 w-5" />
-              Download SDK;
-  </
-          </div>
+              Download SDK</$1>
         </div>
-      </section>
       {/* Quick Start */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -168,7 +161,6 @@ export default function APIDocsPage() {
             </div>
           </div>
         </div>
-      </section>
       {/* API Endpoints */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -228,7 +220,6 @@ export default function APIDocsPage() {
             ))}
           </div>
         </div>
-      </section>
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
@@ -240,14 +231,9 @@ export default function APIDocsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Get API Key;
-  </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View SDKs;
-  </
-          </div>
+              Get API Key</$1>
+              View SDKs</$1>
         </div>
-      </section>
       <Footer />
     </div>
   );

@@ -196,10 +196,10 @@ const,
                 ))}
               </div>
             </div>
-          </section>
         </main>
       </div>
     </div>
+      </section>
     </React.Fragment>
   );
 };
@@ -261,7 +261,6 @@ const AIWorkflowAutomationPage = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -281,7 +280,6 @@ const AIWorkflowAutomationPage = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -317,7 +315,6 @@ const AIWorkflowAutomationPage = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card"></sectio></section>
             <h2 className="text-3 xl font-bold text-white mb-4"></h2></<<<h>Ready</h></<<h>to</h> Automate Your Workflows?
@@ -337,7 +334,6 @@ const AIWorkflowAutomationPage = () => {
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
                 Email Us</a>
             </div>
-          </section>
         </main>
         <Footer />
       </div>,

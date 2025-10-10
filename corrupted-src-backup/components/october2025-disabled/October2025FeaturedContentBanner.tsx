@@ -76,12 +76,10 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
             <Sparkles, classNam, e = 'w-5 h-5, m, l-2' />
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
-            Latest, AI, Solutions & Insigh, t, s;
-          </h2>
+            Latest, AI, Solutions & Insigh, t, s</$1>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
             Discover, breakthrough, AI platforms, delivering, millions in, value, to;
-            enterprise, organization, s;
-          </p>
+            enterprise, organization, s</$1>
         </div>)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>)
@@ -99,12 +97,10 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
             <Sparkles, classNam, e = 'w-5 h-5, m, l-2' /></Sparkles>
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'></h2>
-            Latest, AI, Solutions & Insigh, t, s;
-          </h2>
+            Latest, AI, Solutions & Insigh, t, s</$1>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>
             Discover, breakthrough, AI platforms, delivering, millions in, value, to;
-            enterprise, organization, s;
-          </p>
+            enterprise, organization, s</$1>
         </div>
         {/* Featured, Content, Car, d, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'></div>
@@ -164,8 +160,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
                   {/* C, T, A */}
                   <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'></div>
                     <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
-                      Published, Octobe, r , 1, 20, 2, 5;
-                    </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}
+                      Published, Octobe, r , 1, 20, 2, 5</$1> <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}
                     >
                       Read, Full, Article;
                       Read, Full, Article</div>
@@ -220,8 +215,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
             <d, i, v></d>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'></div>
-                $31.1M;
-              </div>
+                $31.1M</$1>
               <div, className='te, x, t-gr, a, y-300, tex, t-sm'>Combined, Annual, Value</div>
             </div>
             <d, i, v></d>
@@ -234,8 +228,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
             <d, i, v></d>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'></div>
-                8-12, Week, s;
-              </div>
+                8-12, Week, s</$1>
               <div, className='te, x, t-gr, a, y-300, tex, t-sm'>Implementation, Tim, e</div>
             </div>
             <d, i, v></d>

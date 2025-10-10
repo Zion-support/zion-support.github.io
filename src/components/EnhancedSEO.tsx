@@ -47,7 +47,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     if (!metaDescription) {/* TODO: Fix JSX expression */}
     }
     metaDescription.setAttribute('content', description);
-          <Helmet>
+          
+              <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
       {/* Open Graph Meta Tags */}

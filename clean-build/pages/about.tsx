@@ -160,7 +160,6 @@ export default function About() {/* TODO: Fix JSX expression */}
               </p>
             </div>
           </div>
-        </section>
         {/* Mission Section */}"
         <section className="py-16"></section>"
           <div className="container mx-auto px-4"></div>"
@@ -201,7 +200,6 @@ export default function About() {/* TODO: Fix JSX expression */}
               </div>
             </div>
           </div>
-        </section>
         {/* Values Section */}"
         <section className="py-16 bg-white"></section>"
           <div className="container mx-auto px-4"></div>"
@@ -269,7 +267,6 @@ export default function About() {/* TODO: Fix JSX expression */}
               </div>
             </div>
           </div>
-        </section>
         {/* Team Section */}
         <section className="py-16">
           <div className="container mx-auto px-4"></section>
@@ -379,7 +376,6 @@ export default function About() {/* TODO: Fix JSX expression */}
               </div>
             </div>
           </div>
-        </section>
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center"></section>
@@ -394,8 +390,7 @@ export default function About() {/* TODO: Fix JSX expression */}
               <a
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get In Touch;
-              </a>
+                Get In Touch</$1>
               <a;
                 href="/services"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
@@ -414,22 +409,20 @@ export default function About() {/* TODO: Fix JSX expression */}
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold,"
   hover:bg-gray-100 transition-colors"
               >
-                Get In Touch;
-              </a>
+                Get In Touch</$1>
               <a></a>"
                 href="/services""
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover:text-blue-600 transition-colors"
               >
-                View Our Services;
-              </a>
+                View Our Services</$1>
             </div>
           </div>
-        </section>
-      </div>,
+        </div>,
     </React.Fragment>,
       </div>
+      </section>
     </React.Fragment>)
   );
 }

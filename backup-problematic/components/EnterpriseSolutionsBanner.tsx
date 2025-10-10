@@ -9,8 +9,7 @@ export default function EnterpriseSolutionsBanner() {
         <div className="text-center"></div>
           <h2 className="text-4xl font-bold mb-4">Enterprise Solutions</h2>
           <p className="text-xl mb-8">
-            Transform your business with our comprehensive AI and IT solutions;
-          </p>)
+            Transform your business with our comprehensive AI and IT solutions</$1>)
         </div>)
       </div>)
     </div>)
@@ -23,8 +22,7 @@ export default function EnterpriseSolutionsBanner() {/* TODO: Fix JSX expression
         <div className="text-center"></div>"
           <h2 className="text-4xl font-bold mb-4">Enterprise Solutions</h2>"
           <p className="text-xl mb-8"></p>
-            Transform your business with our comprehensive AI and IT solutions;
-          </p>
+            Transform your business with our comprehensive AI and IT solutions</$1>
         </div>
       </div>
     </div>)

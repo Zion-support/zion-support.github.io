@@ -9,9 +9,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
-  </
-<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
+            Page</$1>Ship autonomous agents with budgeted actions, KPI;
             canaries, approvals and one‑click rollback.
           </p>
           <div></div>
@@ -42,7 +40,6 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
             <li>Automate rollback and postmortems</li>
           </ol>
         </div>
-      </section>
       <section className='py-12 bg-white'></section>
 <div></div>
           <div></div>
@@ -58,7 +55,6 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
             <div className='text-slate-600'>One click, under 60s MTR</div>
           </div>
         </div>
-      </section>
       <section className='py-16'></section>
         <div></div>
           <div></div>
@@ -77,9 +73,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
           <RefreshCw />
             </Link>
           </div>
-        </div>
-      </section>)
+        </div>)
     </main>)
 }
-export default AgentReleaseRunbooksV22026Page;
-  </h1>
+export default AgentReleaseRunbooksV22026Page</$1>

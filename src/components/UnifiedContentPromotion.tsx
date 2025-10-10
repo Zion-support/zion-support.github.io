@@ -7,5 +7,4 @@ const,
     </div>
   );
 };
-export default UnifiedContentPromotion;
-  </UnifiedContentPromotionProps>
+export default UnifiedContentPromotion</$1>

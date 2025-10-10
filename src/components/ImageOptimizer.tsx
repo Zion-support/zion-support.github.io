@@ -24,7 +24,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);</HTMLImageElement>useEffect</HTMLImageElement>(() => {
+  const imgRef = useRef<HTMLImageElement>(null)</$1>useEffect</HTMLImageElement>(() => {
     if (priority) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -115,5 +115,4 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
     </div>
   );
 };
-export default ImageOptimizer;
-  </ImageOptimizerProps>
+export default ImageOptimizer</$1>

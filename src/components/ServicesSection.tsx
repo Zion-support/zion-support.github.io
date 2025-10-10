@@ -129,18 +129,11 @@ export default function ServicesSection() {
               <a
                 href="#contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Get Free Consultation;
-  </
-              <a
-                href="tel:+1234567890"
-                className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
-                Call Now;
-  </
-            </div>
+                Get Free Consultation</$1>
+                Call Now</$1>
           </div>
         </div>
       </div>
-    </section>
   );
 }
   </a>

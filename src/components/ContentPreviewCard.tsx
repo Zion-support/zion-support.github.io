@@ -92,8 +92,7 @@ const,
         {featured && ()}"
           <div className="absolute top-4 left-4"></div>"
             <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold"></span>
-// Featured;
-          </span>
+// Featured</$1>
           </div>
         )}
         {/* Stats Overlay */}

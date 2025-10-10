@@ -19,5 +19,8 @@ const ComprehensiveErrorBoundary = React.memo(function ComprehensiveErrorBoundar
     </div>
   );
 });
-export default ComprehensiveErrorBoundary;
+
+  };
+
+  export default ComprehensiveErrorBoundary;
 "`

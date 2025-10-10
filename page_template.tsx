@@ -7,7 +7,7 @@ import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain,
 const PageTemplate: React.FC<{
   title: string;
   description: string;
-  icon: React.ComponentType<any>;</any>features</any>: string[];
+  icon: React.ComponentType<any></$1>features</any>: string[];
   benefits: string[];
   price: string;
   category: string;
@@ -46,14 +46,12 @@ const PageTemplate: React.FC<{
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                Get Started Today;
-              </a>
+                Get Started Today</$1>
               <a;
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 <Phone className="w-5 h-5" />
-                +1 302 464 0950;
-              </a>
+                +1 302 464 0950</$1>
             </div>
           </div>,
         </section>,
@@ -65,11 +63,8 @@ const PageTemplate: React.FC<{
               Key Features;
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Features;
-  </
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Powerful capabilities designed to transform your business;
-            </p>
+              Key Features</$1>
+              Powerful capabilities designed to transform your business</$1>
           </div>,
           ,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
@@ -86,7 +81,6 @@ const PageTemplate: React.FC<{
               </div>
             ))}
           </div>
-        </section>
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -96,8 +90,7 @@ const PageTemplate: React.FC<{
               Why Choose Our {title}?
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Proven results and measurable impact for your business;
-            </p>
+              Proven results and measurable impact for your business</$1>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             {benefits.map((benefit, index) => (
@@ -112,7 +105,6 @@ const PageTemplate: React.FC<{
               </div>
             ))}
           </div>
-        </section>
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -120,11 +112,8 @@ const PageTemplate: React.FC<{
               Pricing;
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Pricing;
-  </
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Transparent pricing with no hidden fees;
-            </p>
+              Pricing</$1>
+              Transparent pricing with no hidden fees</$1>
           </div>
           ,
           <div className="max-w-md mx-auto">,
@@ -137,8 +126,7 @@ const PageTemplate: React.FC<{
               <a;
                 href="/contact"
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block">
-                Get Started;
-              </a>
+                Get Started</$1>
             </div>
           </div>,
         </section>,
@@ -152,8 +140,7 @@ const PageTemplate: React.FC<{
               Ready to Get Started?
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Contact our experts to discuss your specific needs;
-            </p>
+              Contact our experts to discuss your specific needs</$1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20"></div>
@@ -161,16 +148,14 @@ const PageTemplate: React.FC<{
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
               <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950;
-              </a>
+                +1 302 464 0950</$1>
             </div>
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"></div>
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
               <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com;
-              </a>
+                kleber@ziontechgroup.com</$1>
             </div>
             <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20"></div>
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
@@ -180,17 +165,13 @@ const PageTemplate: React.FC<{
                 364 E Main St STE 1008<br />
                 Middletown DE 19709;
                 364 E Main St STE 1008</p><br />
-                Middletown DE 19709;
-  </
-            </div>
+                Middletown DE 19709</$1>
           </div>
-        </section>
       </main>
       <Footer />,
     </div>);
 };
-export default PageTemplate;
-  </h2>
+export default PageTemplate</$1>
   </h2>
   </h2>
   </h2>

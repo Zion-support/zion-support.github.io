@@ -101,12 +101,8 @@ $4}
             <Receipt className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Expense Tracker;
-  </
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Smart Financial Management;
-  </
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            AI Expense Tracker</$1>
+            Smart Financial Management</$1>
             Transform your expense management with AI-powered receipt scanning, automated categorization, 
             and intelligent financial insights. Save time, reduce errors, and gain complete control 
             over your business finances.
@@ -115,15 +111,7 @@ $4}
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950;
-  </
-            <Link 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              Start Free Trial;
-  </
-        {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+              Call: (302) 464-0950</$1>
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">8+</div>
             <div className="text-white font-semibold mb-2">Hours Saved</div>
@@ -140,9 +128,7 @@ $4}
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Expense Management Features;
-  </
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            Powerful Expense Management Features</$1>
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
@@ -187,11 +173,7 @@ $4}
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                  Get Started;
-  </
-        {/* Testimonials */}
-            What Our Customers Say
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  Get Started</$1>
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
@@ -242,12 +224,10 @@ const PagePage: React.FC = () => {
           </div>"
           <h1 className="text-4xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
-// AI Expense Tracker;
-          </h1>"
+// AI Expense Tracker</$1>"
           <p className="text-xl,"
   md:text-2xl text-cyan-400 mb-8 font-medium"></p>
-// Smart Financial Management;
-          </p>"
+// Smart Financial Management</$1>"
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Transform your expense management with AI-powered receipt scanning, automated categorization,
             and intelligent financial insights. Save time, reduce errors, and gain complete control;
@@ -259,12 +239,10 @@ Transform your expense management with AI-powered receipt scanning, automated ca
           "
           <Phone className="w-5 h-5 mr-2" />,
  Cal,
-  l: (302) 464-0950;
-            </a>
+  l: (302) 464-0950</$1>
             <Link
               href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-Start Free Trial;
-            </Link>
+Start Free Trial</$1>
         {/* Key Benefits */}"
         <div className="grid grid-cols-1,"
   md:grid-cols-4 gap-8 mb-16"></div>"
@@ -285,8 +263,7 @@ Start Free Trial;
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-12 text-center"></h2>
-// Powerful Expense Management Features;
-          </h2>"
+// Powerful Expense Management Features</$1>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
@@ -346,8 +323,7 @@ Most Popular;
                     : 'border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
   hover:text-white'
-                  Get Started;
-                </button></button>
+                  Get Started</$1></button>
         {/* Testimonials */}
             What Our Customers Say;"
           <div className="grid grid-cols-1,"
@@ -372,8 +348,7 @@ Most Popular;
             management and gain better control over their spending.
   );
 };
-export default ExpenseTrackerPage;
-  </div>
+export default ExpenseTrackerPage</$1>
   </div>
   </div>
   </div>
@@ -396,5 +371,4 @@ export default ExpenseTrackerPage;
   </p>
   </p>
   </div>
-  </section>
   </div>

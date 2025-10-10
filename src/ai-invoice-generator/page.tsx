@@ -154,7 +154,6 @@ namename: 'Emily Rodriguez',
                   <div className="text-gray-300">Invoices Generated</div>
                   <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
                   <div className="text-gray-300">Faster Payments</div>
-          </section>
           {/* Features Section */}
           <section className="py-16 bg-slate-800/30">
             <div className="container mx-auto px-4">
@@ -266,7 +265,6 @@ import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Bra
 export default AIInvoiceGeneratorPage</div>
   </p>
   </div>
-  </section>
   </div>
   </div>
   </div>
@@ -281,12 +279,10 @@ export default AIInvoiceGeneratorPage</div>
   </div>
   </div>
   </div>
-  </section>
   </ul>
   </div>
   </div>
   </div>
-  </section>
   </div>
   </div>
   </div>
@@ -294,7 +290,6 @@ export default AIInvoiceGeneratorPage</div>
   </h2>
   </div>
   </div>
-  </section>
   </div>
   </div>
   </a>

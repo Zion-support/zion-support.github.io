@@ -45,5 +45,4 @@ export const Link: React.FC;
           </a>
   )
 }
-export default Link;
-  </LinkProps>
+export default Link</$1>

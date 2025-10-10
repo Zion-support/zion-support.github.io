@@ -151,15 +151,9 @@ $4}
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                   <Phone className="w-5 h-5 mr-2" />
-                  Contact Us;
-  </
-                <a
-                  href="/"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
+                  Contact Us</$1>
                   <ArrowRight className="w-4 h-4 mr-2" />
-                  Back to Home;
-  </
-              </div>
+                  Back to Home</$1>
             </div>
           </div>
         </div>
@@ -175,9 +169,7 @@ $4}
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Request a Quote;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Request a Quote</$1>
               Get a detailed, no-obligation quote for your AI and IT project. 
               Our experts will provide you with a comprehensive proposal within 24 hours.
             </p>
@@ -222,29 +214,11 @@ $4}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company Name;
-  </
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your company name"
-                      />
+                        Company Name</$1>
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number;
-  </
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your phone number"
-                      />
+                        Phone Number</$1>
                     </div>
                   </div>
                   {/* Project Information */}
@@ -267,13 +241,7 @@ $4}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Size;
-  </
-                      <select
-                        name="projectSize"
-                        value={formData.projectSize}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
+                        Project Size</$1>
                         <option value="">Select project size</option>
                         {projectSizes.map((size, index) => (
                           <option key={index} value={size}>{size}</option>
@@ -282,13 +250,7 @@ $4}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Timeline;
-  </
-                      <select
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
+                        Timeline</$1>
                         <option value="">Select timeline</option>
                         {timelines.map((timeline, index) => (
                           <option key={index} value={timeline}>{timeline}</option>
@@ -298,13 +260,7 @@ $4}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range;
-  </
-                    <select
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
+                      Budget Range</$1>
                       <option value="">Select budget range</option>
                       {budgetRanges.map((range, index) => (
                         <option key={index} value={range}>{range}</option>
@@ -327,16 +283,7 @@ $4}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Specific Requirements;
-  </
-                    <textarea
-                      name="requirements"
-                      value={formData.requirements}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Any specific technical requirements, integrations, or constraints..."
-                    />
+                      Specific Requirements</$1>
                   </div>
                   <button
                     type="submit"
@@ -645,15 +592,13 @@ $4}
 // >
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
-// Contact Us;
-          </a>
+// Contact Us</$1>
                 <a
                   href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
-// Back to Home;
-          </a>
+// Back to Home</$1>
               </div>
             </div>
           </div>
@@ -675,12 +620,9 @@ $4}
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Request a Quote;
-          </h1>
+// Request a Quote</$1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
-          </div>
+            Coming Soon</$1>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Quote Form */}
             <div className="lg:col-span-2">
@@ -718,8 +660,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
   md:grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Company Name;
-          </label>
+// Company Name</$1>
                       <input
 type="text" name="company"
                         value={formData.company}
@@ -729,8 +670,7 @@ type="text" name="company"
           </div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Phone Number;
-          </label>
+// Phone Number</$1>
                       <input
 type="tel" name="phone"
                         value={formData.phone}
@@ -761,8 +701,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
   md:grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Project Size;
-          </label>
+// Project Size</$1>
                       <select
                         name="projectSize" value={formData.projectSize}
                         onChange={handleInputChange}
@@ -777,13 +716,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-// Timeline;
-  </
-                      <select
-                        name="timeline" value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-// >
+// Timeline</$1>
           "
           <option value="">Select timeline</option>
                         {timelines.map((timeline, index) => ()}
@@ -794,8 +727,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                   </div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Budget Range;
-          </label>
+// Budget Range</$1>
                     <select
                       name="budget" value={formData.budget}
                       onChange={handleInputChange}
@@ -822,8 +754,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Specific Requirements;
-          </label>
+// Specific Requirements</$1>
                     <textarea
                       name="requirements" value={formData.requirements}
                       onChange={handleInputChange}
@@ -895,8 +826,7 @@ type="submit" disabled={isSubmitting}
     </div>
   );
 };
-export default RequestQuotePage;
-  </textarea>
+export default RequestQuotePage</$1>
   </textarea>
   </HTMLInputElement>
   </textarea>

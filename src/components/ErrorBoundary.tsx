@@ -58,24 +58,21 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:bg-cyan-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Try Again;
-              </button>
+                Try Again</$1>
               <button></button>
                 onClick={this.handleReload}"
                 className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Reload Page;
-              </button>
+                Reload Page</$1>
               <a></a>"
                 href="/""
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <Home className="w-4 h-4" /></Home>
-                Go Home;
-              </a>
+                Go Home</$1>
               <a></a>"
                 href="mailt,"
   o:support@ziontechgroup.com?subject=Error Report""
@@ -84,8 +81,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:text-slate-900 transition-colors flex items-center justify-center gap-2"
               >"
                 <Mail className="w-4 h-4" /></Mail>
-                Report Issue;
-              </a>
+                Report Issue</$1>
             </div>
 "
             <div className="mt-6 text-sm text-gray-400"></div>
@@ -95,15 +91,13 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 <a href="mailt,"
   o:support@ziontechgroup.com" className="text-cyan-400,"
   hover:text-cyan-300"></a>
-                  support@ziontechgroup.com;
-                </a>
+                  support@ziontechgroup.com</$1>
               </p>"
               <p className="mt-1"></p>"
                 <a href="te,"
   l:+13024640950" className="text-cyan-400,"
   hover:text-cyan-300"></a>
-                  (302) 464-0950;
-                </a>
+                  (302) 464-0950</$1>
               </p>
             </div>
           </div>

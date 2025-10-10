@@ -94,4 +94,7 @@ export const,
     ))}
   </div>
 );
-export default Skeleton</SkeletonProps>
+
+  };
+
+  export default Skeleton</SkeletonProps>

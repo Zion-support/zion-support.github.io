@@ -1,47 +1,113 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Find all tsx files in src directory
-const files = execSync('find src -name "*.tsx" -type f', { encoding: 'utf8' }).trim().split('\n');
-
-files.forEach(filePath => {
+function fixJSXStructure(filePath) {
   try {
-    if (fs.existsSync(filePath)) {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix all JSX structure issues
-      
-      // 1. Fix duplicate divs and fragments
-      content = content.replace(
-        /return \(\s*<>\s*<div className="min-h-screen[^"]*">\s*<div className="min-h-screen[^"]*">/g,
-        'return (\n    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">'
-      );
-      
-      // 2. Fix missing closing fragments
-      if (content.includes('return (\n    <>') && !content.includes('</>')) {
-        content = content.replace(
-          /(\s*\);\s*};?\s*$)/,
-          '\n    </>\n  );'
-        );
+    let content = fs.readFileSync(filePath, 'utf8');
+    let fixed = false;
+    
+    // Fix common JSX structure issues
+    const fixes = [
+      // Fix missing closing tags for sections
+      {
+        pattern: /(\s*<\/div>\s*)(<\/React\.Fragment>)/g,
+        replacement: '$1\n      </section>\n    $2'
+      },
+      // Fix missing closing tags for main sections
+      {
+        pattern: /(\s*<\/div>\s*)(<\/React\.Fragment>)/g,
+        replacement: '$1\n    </main>\n  $2'
+      },
+      // Fix malformed closing tags
+      {
+        pattern: /<\/\s*div\s*>\s*<\/\s*section\s*>/g,
+        replacement: '</div>\n      </section>'
+      },
+      // Fix missing closing tags before React.Fragment
+      {
+        pattern: /(\s*<\/div>\s*)(\s*<\/React\.Fragment>)/g,
+        replacement: '$1\n    $2'
+      },
+      // Fix function closing issues
+      {
+        pattern: /(\s*\)\s*;\s*)(\s*export\s+default)/g,
+        replacement: '$1\n  };\n\n  $2'
+      },
+      // Fix JSX element closing issues
+      {
+        pattern: /(\s*\)\s*;\s*)(\s*export\s+default)/g,
+        replacement: '$1\n  };\n\n  $2'
       }
-      
-      // 3. Fix any remaining fragment issues
-      content = content.replace(/<>\s*<div/g, '<div');
-      content = content.replace(/<\/div>\s*<\/>/g, '</div>');
-      
-      // 4. Fix any remaining structure issues
-      content = content.replace(
-        /(\s*\);\s*};?\s*$)/,
-        '\n  );'
-      );
-      
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed: ${filePath}`);
+    ];
+    
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        fixed = true;
+      }
     }
+    
+    // Additional specific fixes for common patterns
+    if (content.includes('</div>\n      </React.Fragment>')) {
+      content = content.replace('</div>\n      </React.Fragment>', '</div>\n      </section>\n    </React.Fragment>');
+      fixed = true;
+    }
+    
+    if (content.includes('</div>\n    </React.Fragment>')) {
+      content = content.replace('</div>\n    </React.Fragment>', '</div>\n    </section>\n  </React.Fragment>');
+      fixed = true;
+    }
+    
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed JSX structure in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('All JSX structure fixed!');
+function findTSXFiles(dir) {
+  const files = [];
+  
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        walkDir(fullPath);
+      } else if (stat.isFile() && /\.tsx$/.test(item)) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  walkDir(dir);
+  return files;
+}
+
+// Main execution
+const workspaceDir = process.argv[2] || '/workspace';
+console.log(`Fixing JSX structure in: ${workspaceDir}`);
+
+const tsxFiles = findTSXFiles(workspaceDir);
+console.log(`Found ${tsxFiles.length} TSX files`);
+
+let fixedCount = 0;
+for (const file of tsxFiles) {
+  if (fixJSXStructure(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed JSX structure in ${fixedCount} files`);

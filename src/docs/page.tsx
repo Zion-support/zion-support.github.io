@@ -179,12 +179,8 @@ const DocsPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Documentation;
-  </
-            <p className="text-xl text-cyan-400 mb-8">
-              Everything you need to build with AI;
-  </
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+              Documentation</$1>
+              Everything you need to build with AI</$1>
               Comprehensive guides, API references, and tutorials to help you 
               integrate and optimize our AI services for your business.
             </p>
@@ -203,13 +199,10 @@ const DocsPage: React.FC = () => {
                 />
               </div>
             </div>
-          </section>
           {/* Quick Links */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Quick Links;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              Quick Links</$1>
               {quickLinks.map((link, index) => (
                 <Link
                   key={index}
@@ -223,13 +216,10 @@ const DocsPage: React.FC = () => {
                 </Link>
               ))}
             </div>
-          </section>
           {/* Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category;
-  </
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+              Browse by Category</$1>
               {docCategories.map((category) => (
                 <button
                   key={category.id}
@@ -246,13 +236,10 @@ const DocsPage: React.FC = () => {
                 </button>
               ))}
             </div>
-          </section>
           {/* Documentation List */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Documentation;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              Documentation</$1>
               {searchResults.map((doc) => (
                 <div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-start mb-4">
@@ -289,7 +276,6 @@ const DocsPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* Getting Started CTA */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -297,32 +283,23 @@ const DocsPage: React.FC = () => {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Start building with our AI services today;
-  </
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                Start building with our AI services today</$1>
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <MessageSquare className="w-5 h-5 mr-2" />
-                  Contact Our Team;
-  </
-                <Link
-                  to="/demo"
-                  className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
+                  Contact Our Team</$1>
                   <Play className="w-5 h-5 mr-2" />
-                  Request Demo;
-  </
-              </div>
+                  Request Demo</$1>
             </div>
-          </section>
         </main>
         <Footer />
       </div>
+      </section>
     </React.Fragment>
   );
 };
-export default DocsPage;
-  </Link>
+export default DocsPage</$1>
   </Link>
   </p>
   </h2>

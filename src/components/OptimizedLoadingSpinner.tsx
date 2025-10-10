@@ -108,8 +108,7 @@ $4};
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-export default OptimizedLoadingSpinner;
-  </path>
+export default OptimizedLoadingSpinner</$1>
   </circle>
   </OptimizedLoadingSpinnerProps>
   </OptimizedLoadingSpinnerProps>

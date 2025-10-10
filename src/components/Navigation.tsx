@@ -186,13 +186,8 @@ const Navigation: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home;
-  </
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About;
-  </
-            {/* Services Dropdown */}
-            <div className="relative">
+              Home</$1>              
+              About</$1>
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
@@ -247,9 +242,7 @@ const Navigation: React.FC = () => {
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
-                      View All Services;
-  </
-                  </div>
+                      View All Services</$1>
                 </div>
               )}
             </div>
@@ -261,32 +254,11 @@ const Navigation: React.FC = () => {
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
-              Case Studies;
-  </
-            <Link
-              href="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Blog;
-  </
-            <Link
-              href="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Contact;
-  </
-            {/* CTA Button */}
-            <Link
-              href="/contact"
-              className="cyber-button inline-flex items-center"
-              onClick={closeAllMenus}
-            >
+              Case Studies</$1>
+              Blog</$1>
+              Contact</$1>
               <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950;
-  </
-          </div>
+              (302) 464-0950</$1>
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -307,17 +279,8 @@ const Navigation: React.FC = () => {
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                Home;
-  </
-              <Link
-                href="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                About;
-  </
-              {/* Mobile Services */}
-              <div>
+                Home</$1>
+                About</$1>
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
                   className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md">
@@ -369,9 +332,7 @@ const Navigation: React.FC = () => {
             <a
               href="/contact"
               className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started;
-  </
-          </div>
+              Get Started</$1>
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -405,17 +366,14 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950;
-  </
-            </div>
+                (302) 464-0950</$1>
           </div>
         )}
       </div>
     </nav>
   );
 };
-export default Navigation;
-  </a>
+export default Navigation</$1>
   </a>
   </Link>
   </Link>

@@ -68,13 +68,8 @@ $4}
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              Developer Tools;
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered development tools that accelerate your coding workflow and improve productivity;
-  </
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+              Developer Tools</$1>
+              AI-powered development tools that accelerate your coding workflow and improve productivity</$1>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
                 <div className="text-gray-300">Productivity Boost</div>
@@ -225,11 +220,9 @@ $4}
             <h1 className="text-4xl,
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
-// Developer Tools;
-          </h1>"
+// Developer Tools</$1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-// AI-powered development tools that accelerate your coding workflow and improve productivity;
-          </p>
+// AI-powered development tools that accelerate your coding workflow and improve productivity</$1>
             {/* Stats */}"
             <div className="grid grid-cols-2,"
   md:grid-cols-4 gap-6 mb-12"></div>"
@@ -271,14 +264,11 @@ $4}
               </div>
             </div>
           </div>
-        </section>
         {/* Tools Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Our Developer Tools;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              Our Developer Tools</$1>
               {devTools.map((tool, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                   <div className="text-center mb-6">
@@ -301,8 +291,7 @@ $4}
         <section className="py-16 px-4"></section>"
           <div className="max-w-7xl mx-auto"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
-// Our Developer Tools;
-          </h2>"
+// Our Developer Tools</$1>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
@@ -355,9 +344,7 @@ $4}
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block">
-                      Get Started Now;
-  </
-                  </div>"
+                      Get Started Now</$1>"
                   <div className="text-center"></div>
                     <a></a>
                       href={/* TODO: Fix JSX expression */}
@@ -366,14 +353,12 @@ $4}
   hover:from-purple-700,"
   hover:to-blue-700 transition-all inline-block"
 // >
-//                       Get Started Now;
-          </a>
+//                       Get Started Now</$1>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </section>
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -387,18 +372,12 @@ $4}
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-                Call (302) 464-0950;
-  </
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
-                Email Us;
-  </
-            </div>
+                Call (302) 464-0950</$1>
+                Email Us</$1>
           </div>
-        </section>
         <Footer />
       </div>
+      </section>
     </React.Fragment>
         {/* CTA Section */}"
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
@@ -413,21 +392,17 @@ $4}
               <a
                 href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
-//                 Call (302) 464-0950;
-          </a>
+//                 Call (302) 464-0950</$1>
               <a
                 href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
-//                 Email Us;
-          </a>
+//                 Email Us</$1>
             </div>
           </div>
-        </section>
       </main>
       <Footer /></Footer>
     </div>
   );
 };
-export default DeveloperToolsPage;
-  </a>
+export default DeveloperToolsPage</$1>
   </a>

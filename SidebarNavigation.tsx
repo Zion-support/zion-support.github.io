@@ -49,6 +49,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           ))}
         </nav>
       </div>
+      </section>
     </React.Fragment>
   );
 };

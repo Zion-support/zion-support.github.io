@@ -159,9 +159,7 @@ export default function BlogPage() {
         <header className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Latest insights on AI, enterprise automation, and digital transformation from our expert team;
-  </
-        </header>
+            Latest insights on AI, enterprise automation, and digital transformation from our expert team</$1>
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category) => (
@@ -182,9 +180,7 @@ export default function BlogPage() {
         {selectedCategory === 'all' && (
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              🌟 Featured Articles;
-  </
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              🌟 Featured Articles</$1>
               {featuredPosts.map((post) => (
                 <ContentPreviewCard
                   key={post.id}
@@ -192,7 +188,6 @@ export default function BlogPage() {
                 />
               ))}
             </div>
-          </section>
         )}
         {/* All Posts */}
         <section>
@@ -207,23 +202,18 @@ export default function BlogPage() {
               />
             ))}
           </div>
-        </section>
         {/* Newsletter CTA */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Never Miss an Update;
-  </
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Never Miss an Update</$1>
               Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
               and breakthrough content delivered directly to your inbox.
             </p>
             <Link
               to="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
-              Subscribe to Newsletter;
-  </
-          </div>
+              Subscribe to Newsletter</$1>
         </div>
       </div>
     </div>

@@ -45,7 +45,6 @@ const Pagetsx: React.FC = () => {
                 View Demo</a>
             </div>
           </div>
-        </section>
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
@@ -68,7 +67,6 @@ const Pagetsx: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
         {/* CTA Section */}"
         <section className="py-16 px-4 bg-gray-800"></section>"
           <div className="max-w-4xl mx-auto text-center"></div>"
@@ -78,7 +76,6 @@ const Pagetsx: React.FC = () => {
   hover:bg-cyan-600 transition-colors"></a>
               Contact Us</a>
           </div>
-        </section>
       </main>
       <Footer /></div>
   )

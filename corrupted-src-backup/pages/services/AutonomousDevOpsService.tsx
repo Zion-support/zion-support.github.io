@@ -5,8 +5,7 @@ const AutonomousDevOpsServic, e = () => {
   return(<React.Fragment>
       <Helm, e, t>
         <title>
-          Autonomous, DevOps, Services - 80% Faster, Release, s | Zion, Tech, Group;
-        </title>
+          Autonomous, DevOps, Services - 80% Faster, Release, s | Zion, Tech, Group</$1>
         <meta, nam, e = 'description'
           conte, n, t='Transform, your, DevOps with, autonomous, self-optimizing, C, I/CD, pipeline, s. Achieve, 9, 9.99% upt, i, m, e, 80% faster, release, s, and, eliminate, manual intervention, with, AI-driven, automatio, n.'
         /></meta>
@@ -26,8 +25,7 @@ const AutonomousDevOpsServic, e = () => {
               <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, m, b-6'></div>
                 <Rocket, className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' />
                 <span, className='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>
-                  New, Service, Launch - October, 202, 5;
-                </sp, a, n>
+                  New, Service, Launch - October, 202, 5</$1>
               <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
                 Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and;
                 Zero, Downtim, e;
@@ -40,8 +38,7 @@ const AutonomousDevOpsServic, e = () => {
                 <Target, classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
                 <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work</h3>
                 <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-                  Eliminate, manual, configuration and, intervention, completely;
-                </p>
+                  Eliminate, manual, configuration and, intervention, completely</$1>
                   Getted, Today;
                   <Link, className='w-5 h-5' />
         {/* Key, Benef, i, t, s */}
@@ -57,8 +54,7 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
               <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, m, b-6'></div>
                 <Rocket, className='w-5 h-5, tex, t-bl, u, e-4, 0, 0' /></Rocket>
                 <span, className='te, x, t-bl, u, e-300, fon, t-semibo, l, d'></span>
-                  New, Service, Launch - October, 202, 5;
-                </sp, a, n>
+                  New, Service, Launch - October, 202, 5</$1>
               <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'></p>
                 Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and;
                 Zero, Downtim, e;
@@ -68,16 +64,14 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 <Target, classNam, e='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' /></Target>
                 <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work</h3>
                 <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'></p>
-                  Eliminate, manual, configuration and, intervention, completely;
-                </p>
+                  Eliminate, manual, configuration and, intervention, completely</$1>
                   Getted, Today;
                   <Link, className='w-5 h-5' /></Link>
         {/* Key, Benef, i, t, s */}
         <section, classNam, e = 'py-20, p, x-4'></section>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></div>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'></h2>
-              Transform, Your, DevOps Operatio, n, s;
-            </h2>
+              Transform, Your, DevOps Operatio, n, s</$1>
             <div, className='grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8'></div>
               <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                 <Zap, className='w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4' />
@@ -86,8 +80,7 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 <Zap, className='w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4' /></Zap>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>80% Fast, e, r</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'></p>
-                  Release, cycles, accelerated with, intelligent, automation and, predictive, optimization;
-                </p>
+                  Release, cycles, accelerated with, intelligent, automation and, predictive, optimization</$1>
               </div>
               <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                 <Shield, className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' />
@@ -96,8 +89,7 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 <Shield, className='w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4' /></Shield>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>99.99% Upti, m, e</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'></p>
-                  Se, l, f-healing, systems, that prevent, and, resolve issues, autonomousl, y;
-                </p>
+                  Se, l, f-healing, systems, that prevent, and, resolve issues, autonomousl, y</$1>
               </div>
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                 <DollarSign, className='w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4' />
@@ -106,8 +98,7 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 <DollarSign, className='w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4' /></DollarSign>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>$1, 0, M+ Savin, g, s</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'></p>
-                  Annual, cost, reduction through, automation, and optimizati, o, n;
-                </p>
+                  Annual, cost, reduction through, automation, and optimizati, o, n</$1>
               </div>
               <div, className='bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                 <Target, className='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' />
@@ -116,8 +107,7 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 <Target, className='w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4' /></Target>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work</h3>
                 <p, className='te, x, t-gr, a, y-3, 0, 0'></p>
-                  Eliminate, manual, configuration and, intervention, completely;
-                </p>
+                  Eliminate, manual, configuration and, intervention, completely</$1>
               </div>
             </div>
           </div>
@@ -129,16 +119,14 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         <section, classNam, e = 'py-20, p, x-4, b, g-bla, c, k/30'></section>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></div>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'></h2>
-              Autonomous, DevOps, Capabilities;
-            </h2>
+              Autonomous, DevOps, Capabilities</$1>
             <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'></div>
               <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                 <CheckCircle, className='w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
                 <CheckCircle, className='w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4' /></CheckCircle>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
-                  Se, l, f-Optimizing, Pipeline, s;
-                </h3>
+                  Se, l, f-Optimizing, Pipeline, s</$1>
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>
                   <li, className='flex, item, s-start, ga, p-3'></li>
                     <span, className='te, x, t-bl, u, e-400, m, t-1'>•</sp, a, n>
@@ -151,38 +139,33 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
                 <Shield, className='w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4' /></Shield>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
-                  Intelligent, Sel, f-Heali, n, g;
-                </h3>
+                  Intelligent, Sel, f-Heali, n, g</$1>
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>
                   <li, className='flex, item, s-start, ga, p-3'></li>
                     <span, className='te, x, t-gre, e, n-400, m, t-1'>•</sp, a, n>
                     <sp, a, n>
                     <sp, a, n></sp>
-                      Automatic, rollback, on anomaly, detection, with &lt; 5, second, response;
-                    </sp, a, n>
+                      Automatic, rollback, on anomaly, detection, with &lt; 5, second, response</$1>
               </div>
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                 <Rocket, className='w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
                 <Rocket, className='w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4' /></Rocket>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
-                  Ze, r, o-Downtime, Deploymen, t;
-                </h3>
+                  Ze, r, o-Downtime, Deploymen, t</$1>
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>
                   <li, className='flex, item, s-start, ga, p-3'></li>
                     <span, className='te, x, t-purp, l, e-400, m, t-1'>•</sp, a, n>
                     <sp, a, n>
                     <sp, a, n></sp>
-                      Bl, u, e-green, and, canary deployment, strategies, with AI, monitorin, g;
-                    </sp, a, n>
+                      Bl, u, e-green, and, canary deployment, strategies, with AI, monitorin, g</$1>
               </div>
               <div, className='bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/30, t, o-r, e, d-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                 <TrendingUp, className='w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4' />
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
                 <TrendingUp, className='w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4' /></TrendingUp>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
-                  Continuous, Optimizatio, n;
-                </h3>
+                  Continuous, Optimizatio, n</$1>
                 <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'></ul>
                   <li, className='flex, item, s-start, ga, p-3'></li>
                     <span, className='te, x, t-oran, g, e-400, m, t-1'>•</sp, a, n>
@@ -196,28 +179,23 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
         <section, classNam, e = 'py-20, p, x-4'></section>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'></div>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'></h2>
-              90-Day, Implementation, Roadmap;
-            </h2>
+              90-Day, Implementation, Roadmap</$1>
             <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-8'></div>
               <div, className='relati, v, e'></div>
                 <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                   <div, className='w-1, 2, h-12, b, g-bl, u, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
-                    1;
-                  </div>
+                    1</$1>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-                    Day, s, 1-30: Foundati, o, n;
-                  </h3>
+                    Day, s, 1-30: Foundati, o, n</$1>
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
               <div, classNam, e='relati, v, e'></div>
                 <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                   <div, classNam, e='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
                   <div, className='w-1, 2, h-12, b, g-bl, u, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
-                    1;
-                  </div>
+                    1</$1>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
                     Day, s, 1-3,
-  0: Foundati, o, n;
-                  </h3>
+  0: Foundati, o, n</$1>
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'></ul>
               <div, classNam, e='relati, v, e'></div>
                 <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
@@ -227,22 +205,18 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
               <div, className='relati, v, e'></div>
                 <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                   <div, className='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
-                    2;
-                  </div>
+                    2</$1>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-                    Days, 3, 1-60: Integrati, o, n;
-                  </h3>
+                    Days, 3, 1-60: Integrati, o, n</$1>
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
               <div, classNam, e='relati, v, e'></div>
                 <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                   <div, classNam, e='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
                   <div, className='w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
-                    2;
-                  </div>
+                    2</$1>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
                     Days, 3, 1-6,
-  0: Integrati, o, n;
-                  </h3>
+  0: Integrati, o, n</$1>
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'></ul>
               <div, classNam, e='relati, v, e'></div>
                 <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
@@ -252,11 +226,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
               <div, className='relati, v, e'></div>
                 <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'></div>
                   <div, className='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'>
-                    3;
-                  </div>
+                    3</$1>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'>
-                    Days, 6, 1-90: Optimizati, o, n;
-                  </h3>
+                    Days, 6, 1-90: Optimizati, o, n</$1>
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
                         <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
@@ -285,12 +257,10 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 Getted, Today</h2>
                 <Link, className='w-5 h-5' />
                   <div, className='w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d'></div>
-                    3;
-                  </div>
+                    3</$1>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4'></h3>
                     Days, 6, 1-9,
-  0: Optimizati, o, n;
-                  </h3>
+  0: Optimizati, o, n</$1>
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'></ul>
                       <li, classNam, e='flex, item, s-start, ga, p-2'></li>
                         <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1' /></CheckCircle>

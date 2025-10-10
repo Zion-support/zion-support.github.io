@@ -16,5 +16,8 @@ const Sitemap = React.memo(function Sitemap({ className = '' }: SitemapProps) {/
     </div>
   );
 });
-export default Sitemap;
+
+  };
+
+  export default Sitemap;
 "`

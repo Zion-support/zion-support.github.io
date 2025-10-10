@@ -1,9 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { useAnalytics } from './EnhancedAnalytics';
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -19,7 +16,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     largeText: false,
     focusVisible: false
   });
-<<<<<<< HEAD
 
   const { trackEvent } = useAnalytics();
 
@@ -121,15 +117,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       return () => document.removeEventListener('keydown', handleKeyDown);
     };
 
-=======
-
-  useEffect(() => {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
     // Check for user preferences
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-<<<<<<< HEAD
     setSettings({
       highContrast: prefersHighContrast,
       reducedMotion: prefersReducedMotion,
@@ -155,40 +146,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     };
 
     const handleContrastChange = (e: MediaQueryListEvent) => {
-=======
-    setSettings(prev => ({
-      ...prev,
-      highContrast: prefersHighContrast,
-      reducedMotion: prefersReducedMotion
-    }));
-
-    // Apply accessibility styles
-    const applyAccessibilityStyles = () => {
-      const root = document.documentElement;
-      
-      if (settings.highContrast) {
-        root.classList.add('high-contrast');
-      } else {
-        root.classList.remove('high-contrast');
-      }
-
-      if (settings.reducedMotion) {
-        root.classList.add('reduced-motion');
-      } else {
-        root.classList.remove('reduced-motion');
-      }
-
-      root.classList.add(`font-size-${settings.fontSize}`);
-    };
-
-    applyAccessibilityStyles();
-
-    // Listen for preference changes
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-    const handleHighContrastChange = (e: MediaQueryListEvent) => {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
       setSettings(prev => ({ ...prev, highContrast: e.matches }));
     };
 
@@ -196,7 +153,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
     };
 
-<<<<<<< HEAD
     // Initialize accessibility features
     addLandmarks();
     enhanceFocusManagement();
@@ -251,16 +207,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   useEffect(() => {
     applyAccessibilitySettings(settings);
   }, [settings]);
-=======
-    highContrastQuery.addEventListener('change', handleHighContrastChange);
-    reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
-
-    return () => {
-      highContrastQuery.removeEventListener('change', handleHighContrastChange);
-      reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
-    };
-  }, [settings.highContrast, settings.reducedMotion, settings.fontSize]);
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
 
   return <>{children}</>;
 };

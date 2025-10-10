@@ -55,8 +55,7 @@ const GlobalITSupportPage: React.FC = () => {
 //               Get Started</a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Globe className="w-5 h-5" />
-              +1 302 464 0950</div>
-        </section>"
+              +1 302 464 0950</div>"
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>

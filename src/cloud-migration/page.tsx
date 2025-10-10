@@ -191,8 +191,7 @@ const,
                 <Cloud className="w-8 h-8 text-white" /></Cloud>
               </div>"
               <h1 className="text-5xl font-bold text-white neon-text"></h1>
-                Cloud Migration;
-              </h1>"
+                Cloud Migration</$1>"
             <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
               Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.
@@ -244,18 +243,15 @@ const,
               <a></a>"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
   hover:bg-blue-700 transition-colors inline-flex items-center"
-                Get Started;
-              </a>"
+                Get Started</$1>"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-600,"
   hover:text-white transition-all duration-300 inline-flex items-center"
-                View Demo;
-          </section>
+                View Demo</$1>
 "
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-center text-white mb-12"></h2>
-              Our Migration Services;
-            </h2>"
+              Our Migration Services</$1>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"

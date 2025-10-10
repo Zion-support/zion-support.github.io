@@ -22,11 +22,9 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
           </div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
-            Latest, AI, Breakthroughs & Innovatio, n, s;
-          </h2>
+            Latest, AI, Breakthroughs & Innovatio, n, s</$1>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
-            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
-          </p>
+            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation</$1>
         </div>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">)
@@ -60,11 +58,9 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
           </div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4"></h2>
-            Latest, AI, Breakthroughs & Innovatio, n, s;
-          </h2>"
+            Latest, AI, Breakthroughs & Innovatio, n, s</$1>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
-            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation;
-          </p>
+            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation</$1>
         </div>
         {/* Articles, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12"></div>

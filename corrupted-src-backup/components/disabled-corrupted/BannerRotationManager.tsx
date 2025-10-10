@@ -36,7 +36,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
   rotationInterval = 10000,
   className = ''}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);</BannerKey>
+  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([])</$1>
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
 //     const selected = banners.slice(0, maxBanners);

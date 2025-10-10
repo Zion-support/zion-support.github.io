@@ -21,10 +21,12 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         </div>
         <div, className='mt-8'></div>
           <Link, t, o='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
-            ← Back, to, Blog;
-          </Li, n, k>
+            ← Back, to, Blog</$1>
         </div>
       </div>
     </d, i, v > );
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
+
+  };
+
+  export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
  }

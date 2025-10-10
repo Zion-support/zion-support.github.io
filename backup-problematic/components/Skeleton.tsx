@@ -16,5 +16,8 @@ const Skeleton = React.memo(function Skeleton({ className = '' }: SkeletonProps)
     </div>
   );
 });
-export default Skeleton;
+
+  };
+
+  export default Skeleton;
 "`

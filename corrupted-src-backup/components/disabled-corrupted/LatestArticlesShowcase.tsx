@@ -10,11 +10,9 @@ const LatestArticlesShowcas, e: React.FC = () => {
       <div, className='container, m, x-auto, p, x-6'></section>
         <div, className='te, x, t-center, m, b-12'></div>
           <h2, className='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-            Latest, Article, s & Resear, c, h;
-          </h2>
+            Latest, Article, s & Resear, c, h</$1>
           <p, className='te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o'>
-            Explore, cuttin, g-edge, insights, on A, I, automati, o, n, and, emerging, technologies;
-          </p>
+            Explore, cuttin, g-edge, insights, on A, I, automati, o, n, and, emerging, technologies</$1>
         </div>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
           {latestArticl, e, s.m, a, p(artic, l, e = > (</div>

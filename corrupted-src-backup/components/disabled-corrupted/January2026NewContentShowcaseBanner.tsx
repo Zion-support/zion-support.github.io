@@ -44,8 +44,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
             classNa, m, e = "inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4"
           ></moti>"
             <span, className="mr-2">🚀</sp, a, n>
-            January, 202, 6 - Revolutionary, AI, Breakthroughs;
-          </moti, o, n.d, i, v>
+            January, 202, 6 - Revolutionary, AI, Breakthroughs</$1>
           <moti, o, n.h2, initia, l={{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
             transiti, o, n = {/* TODO: Fix JSX expression */}
@@ -53,8 +52,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
             classNa, m, e = "te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-white, t, o-bl, u, e-200, b, g-cl, i, p-text, tex, t-transparent, m, b-4"
           >
           ></moti>
-            The, Future, of AI, is, Here;
-          </moti, o, n.h2>
+            The, Future, of AI, is, Here</$1>
           <moti, o, n.p, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
             transiti, o, n = {{ del, a, y: , 0., 4, duration: 0., 6 }})

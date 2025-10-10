@@ -26,8 +26,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <BookOpen, className="w-6 h-6, tex, t-whi, t, e" />
             <d, i, v>
               <h4, className="te, x, t-white, fon, t-bo, l, d">
-                {featuredArticl, e, s.leng, t, h} New, Articles, Published;
-              </h4>
+                {featuredArticl, e, s.leng, t, h} New, Articles, Published</$1>
   if (varia, n, t = == 'comp, a, c, t') {/* TODO: Fix JSX expression */}
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>
         <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>"
@@ -35,8 +34,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <BookOpen, className="w-6 h-6, tex, t-whi, t, e" /></BookOpen>
             <d, i, v></d>"
               <h4, className="te, x, t-white, fon, t-bo, l, d"></h4>
-                {featuredArticl, e, s.leng, t, h} New, Articles, Published;
-              </h4>"
+                {featuredArticl, e, s.leng, t, h} New, Articles, Published</$1>"
               <p, className="te, x, t-bl, u, e-100, tex, t-sm">Latest, AI, insights and, researc, h</p>
             </div>
           </div>"
@@ -76,8 +74,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
                 <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
                   <span, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">{artic, l, e.readTime}</sp, a, n>
           ></Link>
-            Read, No, w;
-          </Li, n, k>
+            Read, No, w</$1>
         </div>
       </d, i, v  > );
   }
@@ -138,8 +135,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s</h2>
             </div>
             <span, className="bg-yell, o, w-400, tex, t-black, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d">
-              N, E, W;
-            </sp, a, n>
+              N, E, W</$1>
           </div>
         </div>)
         <div, className="p-8">)
@@ -161,8 +157,7 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s</h2>
             </div>"
             <span, className="bg-yell, o, w-400, tex, t-black, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d"></span>
-              N, E, W;
-            </sp, a, n>
+              N, E, W</$1>
           </div>
         </div>"
         <div, className="p-8"></div>"

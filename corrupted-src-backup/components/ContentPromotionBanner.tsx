@@ -26,8 +26,7 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
               Explore, All, Articles;
               <Link, classNam, e="w-5 h-5" />
               <Zap, classNam, e="w-5 h-5" />
-              View, Case, Studies;
-            </Li, n, k>
+              View, Case, Studies</$1>
           </d, i, v>
         </d, i, v>)
         {/* Featured, Content, Car, d, s */})
@@ -57,8 +56,7 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
               Explore, All, Articles;"
               <Link, classNam, e="w-5 h-5" /></Link>"
               <Zap, classNam, e="w-5 h-5" /></Zap>
-              View, Case, Studies;
-            </Li, n, k>
+              View, Case, Studies</$1>
           </d, i, v>
         </d, i, v>
         {/* Featured, Content, Car, d, s */}"

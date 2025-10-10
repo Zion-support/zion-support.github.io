@@ -100,10 +100,7 @@ const, September30NewContentMegaBanne, r = () => {
           {newArticles.map((article, index) => (
             <Link;
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
-            🚀 5 Revolutionary AI Breakthroughs;
-  </
-        {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            🚀 5 Revolutionary AI Breakthroughs</$1>
           {newArticles.map((article, index) => (</div>
             <Link
               key={index}
@@ -204,8 +201,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
           </div>"
           <h2 className="text-4xl,"
   md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"></h2>
-            🚀 5 Revolutionary AI Breakthroughs;
-        </div>
+            🚀 5 Revolutionary AI Breakthroughs</$1>
         {/* Articles Grid */}"
         <div className="grid,
   md:grid-cols-2,"
@@ -271,23 +267,18 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
             <Sparkles className="w-5 h-5" />
-            Get Started Today;
-          </Link>,
+            Get Started Today</$1>,
         </div>,
         {/* Tags */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center"></div>
           <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30">
-            🧠 Neural Coding;
-          </span>
+            🧠 Neural Coding</$1>
           <span className="bg-cyan-500/20 text-cyan-200 px-4 py-2 rounded-full text-sm font-medium border border-cyan-400/30">
-            📊 Holographic AI;
-          </span>
+            📊 Holographic AI</$1>
           <span className="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium border border-blue-400/30">
-            ⚛️ Quantum AI;
-          </span>
+            ⚛️ Quantum AI</$1>
           <span className="bg-green-500/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium border border-green-400/30">
-            🔬 Molecular Manufacturing;
-          </span>
+            🔬 Molecular Manufacturing</$1>
           <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30">
         {/* CTA Buttons */}"
         <div className="flex flex-col,"
@@ -300,26 +291,20 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
   hover:scale-105,"
   hover:shadow-2xl inline-flex items-center gap-3 group""
             <Sparkles className="w-5 h-5" /></Sparkles>
-            Get Started Today;
-          </Link>
+            Get Started Today</$1>
         </div>
         {/* Tags */}"
         <div className="mt-8 flex flex-wrap gap-3 justify-center"></div>"
           <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30"></span>
-            🧠 Neural Coding;
-          </span>"
+            🧠 Neural Coding</$1>"
           <span className="bg-cyan-500/20 text-cyan-200 px-4 py-2 rounded-full text-sm font-medium border border-cyan-400/30"></span>
-            📊 Holographic AI;
-          </span>"
+            📊 Holographic AI</$1>"
           <span className="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium border border-blue-400/30"></span>
-            ⚛️ Quantum AI;
-          </span>"
+            ⚛️ Quantum AI</$1>"
           <span className="bg-green-500/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium border border-green-400/30"></span>
-            🔬 Molecular Manufacturing;
-          </span>"
+            🔬 Molecular Manufacturing</$1>"
           <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30"></span>
-            📚 AI Education;
-          </span>
+            📚 AI Education</$1>
         </div>
       </div>
     </div>

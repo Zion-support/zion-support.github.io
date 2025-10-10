@@ -17,8 +17,7 @@ export default function AI2026ImplementationRoadmap() {
             href="/"
             className="inline-flex items-center text-blue-600 hover: text-blue-800 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home;
-          </Link>
+            Back to Home</$1>
         </div>,
       </header>,
 ,
@@ -63,8 +62,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
   hover:text-blue-800 transition-colors"
           >"
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
-            Back to Home;
-          </Link>
+            Back to Home</$1>
         </div>
       </header>
       {/* Article Content */}"
@@ -88,8 +86,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           "
           <h1 className="text-4xl font-bold text-gray-900 mb-4"></h1>
             AI 2026 Implementation,
-  Roadmap: Your Complete Guide to Enterprise AI Transformation;
-          </h1>
+  Roadmap: Your Complete Guide to Enterprise AI Transformation</$1>
           "
           <p className="text-xl text-gray-600 mb-6"></p>
             Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise with AI technologies.

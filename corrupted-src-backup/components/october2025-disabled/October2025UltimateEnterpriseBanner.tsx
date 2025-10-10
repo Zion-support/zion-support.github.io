@@ -22,8 +22,7 @@ const October2025UltimateEnterpriseBanne, r = () => {
           </div>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t"></h2>
             <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">
-              Ultimate, Enterprise, AI;
-            </sp, a, n>
+              Ultimate, Enterprise, AI</$1>
             <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>)
           </h2>)
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">)
@@ -50,15 +49,12 @@ const October2025UltimateEnterpriseBanne, r = () => {
               <div, className="fl, e, x-1"></div>
                 <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>
                   <span, className="px-3, p, y-1, b, g-cy, a, n-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, uppercase, tracking-wid, e, r">
-                    NEW, RELEAS, E;
-                  </sp, a, n>
+                    NEW, RELEAS, E</$1>
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, animat, e-pul, s, e">
-                    🔥 H, O, T;
-                  </sp, a, n>
+                    🔥 H, O, T</$1>
                 </div>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-400, transitio, n-colo, r, s">
-                  {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e;
-                </h3>
+                  {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e</$1>
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">
 const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression */}"
     <div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */ }"
@@ -77,8 +73,7 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
           </div>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t"></h2>"
             <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0"></span>
-              Ultimate, Enterprise, AI;
-            </sp, a, n>"
+              Ultimate, Enterprise, AI</$1>"
             <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>
           </h2>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m"></p>"
@@ -100,15 +95,12 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               <div, className="fl, e, x-1"></div>"
                 <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>"
                   <span, className="px-3, p, y-1, b, g-cy, a, n-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, uppercase, tracking-wid, e, r"></span>
-                    NEW, RELEAS, E;
-                  </sp, a, n>"
+                    NEW, RELEAS, E</$1>"
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, animat, e-pul, s, e"></span>
-                    🔥 H, O, T;
-                  </sp, a, n>
+                    🔥 H, O, T</$1>
                 </div>"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-400, transitio, n-colo, r, s"></h3>
-                  {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e;
-                </h3>"
+                  {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e</$1>"
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4"></p>
                   {multiCloudConte, n, t.description}
                 </p>
@@ -185,15 +177,12 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               <div, className="fl, e, x-1"></div>
                 <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>
                   <span, className="px-3, p, y-1, b, g-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, uppercase, tracking-wid, e, r">
-                    FEATUR, E, D;
-                  </sp, a, n>
+                    FEATUR, E, D</$1>
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, animat, e-pul, s, e">
-                    ⭐ TRENDI, N, G;
-                  </sp, a, n>
+                    ⭐ TRENDI, N, G</$1>
                 </div>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-400, transitio, n-colo, r, s">
-                  {conversationalAIConte, n, t.ic, o, n} Conversational, AI, Revolution;
-                </h3>
+                  {conversationalAIConte, n, t.ic, o, n} Conversational, AI, Revolution</$1>
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">
           {/* Conversational, AI, Ca, r, d */}"
           <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-ro, s, e-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p"></div>"
@@ -206,15 +195,12 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               <div, className="fl, e, x-1"></div>"
                 <div, className="flex, item, s-center, ga, p-2, m, b-3"></div>"
                   <span, className="px-3, p, y-1, b, g-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, uppercase, tracking-wid, e, r"></span>
-                    FEATUR, E, D;
-                  </sp, a, n>"
+                    FEATUR, E, D</$1>"
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, animat, e-pul, s, e"></span>
-                    ⭐ TRENDI, N, G;
-                  </sp, a, n>
+                    ⭐ TRENDI, N, G</$1>
                 </div>"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-400, transitio, n-colo, r, s"></h3>
-                  {conversationalAIConte, n, t.ic, o, n} Conversational, AI, Revolution;
-                </h3>"
+                  {conversationalAIConte, n, t.ic, o, n} Conversational, AI, Revolution</$1>"
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4"></p>
                   {conversationalAIConte, n, t.description}
                 </p>
@@ -351,8 +337,7 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4"></div>
             <Link, t, o="/conta, c, t"
               className="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, hove, r:fr, o, m-cy, a, n-500, hove, r:v, i, a-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, tex, t-lg">
-              Schedule, Free, Assessment;
-            </Li, n, k>
+              Schedule, Free, Assessment</$1>
             <Link, t, o="/bl, o, g"
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, tex, t-lg">
         {/* Botto, m, C, T, A */}"
@@ -365,14 +350,12 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
               className="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, hove, r:fr, o, m-cy, a, n-500, hove, r:v, i, a-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, tex, t-lg"
             ></Link>
-              Schedule, Free, Assessment;
-            </Li, n, k>"
+              Schedule, Free, Assessment</$1>"
             <Link, t, o="/bl, o, g""
               className="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"
   r:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, tex, t-lg"
             ></Link>
-              Explore, All, Insights;
-            </Li, n, k>
+              Explore, All, Insights</$1>
           </div>
         </div>
       </div>

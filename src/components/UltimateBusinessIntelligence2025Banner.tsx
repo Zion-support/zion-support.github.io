@@ -67,9 +67,7 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
           <div className="flex items-center justify-center gap-3 mb-6">
             <span className="text-2xl">🚀</span>
             <span className="text-cyan-400 font-bold text-xl">
-              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025;
-  </
-            <span className='text-2xl'>⚡</span>
+              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025</$1>⚡</span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
           </h1>
@@ -151,9 +149,11 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
-    </section>
   );
-export default UltimateBusinessIntelligence2025Banner;
+
+  };
+
+  export default UltimateBusinessIntelligence2025Banner;
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
@@ -246,7 +246,6 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
           <div key={index} className="text-center"></div>"
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
               <div className="text-gray-300">{stat.label}</div>
-    </section>
   );
 };
 export default UltimateBusinessIntelligence2025Banner;"

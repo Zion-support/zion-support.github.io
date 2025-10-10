@@ -48,17 +48,13 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
       <div, className="container, m, x-auto, p, x-6"></section>
         <div, className="te, x, t-center, m, b-16"></div>
           <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-            Success, Storie, s;
-          </h2>
+            Success, Storie, s</$1>
           <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
-          </p>)
+            See, how, leading companies, are, transforming their, operations, with our, AI, solutions</$1>)
         </div>)
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">)
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
-  </
-        </div>
+            See, how, leading companies, are, transforming their, operations, with our, AI, solutions</$1>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (</div>
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
@@ -78,11 +74,9 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
       <div, className="container, m, x-auto, p, x-6"></div>"
         <div, className="te, x, t-center, m, b-16"></div>"
           <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-            Success, Storie, s;
-          </h2>"
+            Success, Storie, s</$1>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o"></p>
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
-          </p>
+            See, how, leading companies, are, transforming their, operations, with our, AI, solutions</$1>
         </div>"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12"></div>
           {/* TODO: Fix JSX expression */}"

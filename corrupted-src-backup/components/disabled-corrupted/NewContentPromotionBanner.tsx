@@ -61,8 +61,7 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
             <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>"`
               <div, className="flex, item, s-center, ga, p-2"> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} /></Sparkles>"
                 <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90"></span>
-                  Fresh, Conten, t;
-                </sp, a, n>
+                  Fresh, Conten, t</$1>
               </div>"`
               <div, className="flex, item, s-center, ga, p-1"> <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} /></TrendingUp>
               </div>

@@ -25,7 +25,6 @@ import Footer from '../components/Footer';
 // >
 //               Get Free Demo</a>
           </div>
-        </section>
         {/* Features Section */}"
         <section className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
@@ -82,7 +81,6 @@ import Footer from '../components/Footer';
           </p>
             </div>
           </div>
-        </section>
         {/* Pricing Section */}"
         <section className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
@@ -132,7 +130,6 @@ import Footer from '../components/Footer';
 // Contact Sales</a>
             </div>
           </div>
-        </section>
         {/* Contact Section */}"
         <section className="text-center"></section>"
           <h2 className="text-3xl font-bold text-white mb-8 neon-text"></h2>
@@ -153,7 +150,6 @@ import Footer from '../components/Footer';
 // >
 //                Email Us</a>
           </div>
-        </section>
       </main>
       <Footer /></Footer>
     </div>

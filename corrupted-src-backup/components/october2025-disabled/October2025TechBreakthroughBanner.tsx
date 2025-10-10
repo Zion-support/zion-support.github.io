@@ -53,68 +53,54 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-t, i, g, h, t'></h2>
             🚀{' '}
             <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t'></span>
-              3, Revolutionary, Enterprise Technologi, e, s;
-            </sp, a, n>{' '}
+              3, Revolutionary, Enterprise Technologi, e, s</$1>{' '}
             🚀
           </h2>
           <p, className='te, x, t-xl, m, d: te, x, t-2xl, tex, t-cy, a, n-100, fon, t-medi, u, m'></p>
             ⚡ Quant, u, m-Safe, Cryptograph, y • Autonomous, Risk, Management •
-            AI-Powered, Digital, Twins;
-          </p>
+            AI-Powered, Digital, Twins</$1>
         </div>
         {/* Key, Metrics, Gr, i, d */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10'></div>
           <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r:bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
             <div, className='te, x, t-cy, a, n-300, tex, t-4xl, fon, t-bold, m, b-2'>99.97%</div>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
-              Quantum, Attack, Protection;
-            </div>
+              Quantum, Attack, Protection</$1>
             <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
-              Quantum, Attack, Protection;
-            </div>
+              Quantum, Attack, Protection</$1>
             <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'></div>
-              Futu, r, e-Proof, Securit, y;
-            </div>
+              Futu, r, e-Proof, Securit, y</$1>
           </div>
           <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r:bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
             <div, className='te, x, t-bl, u, e-300, tex, t-4xl, fon, t-bold, m, b-2'>98.9%</div>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
-              Risk, Prediction, Accuracy;
-            </div>
+              Risk, Prediction, Accuracy</$1>
             <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
-              Risk, Prediction, Accuracy;
-            </div>
+              Risk, Prediction, Accuracy</$1>
             <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'></div>
-              90+ Days, Early, Warning;
-            </div>
+              90+ Days, Early, Warning</$1>
           </div>
           <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r:bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
             <div, className='te, x, t-indi, g, o-300, tex, t-4xl, fon, t-bold, m, b-2'>99.4%</div>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
-              Digital, Twin, Accuracy;
-            </div>
+              Digital, Twin, Accuracy</$1>
             <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
-              Digital, Twin, Accuracy;
-            </div>
+              Digital, Twin, Accuracy</$1>
             <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div>
-              Re, a, l-World, Fidelit, y;
-            </div>
+              Re, a, l-World, Fidelit, y</$1>
           </div>
           <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r:bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
             <div, className='te, x, t-purp, l, e-300, tex, t-4xl, fon, t-bold, m, b-2'>$15, 1, B</div>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
-              Combined, Annual, Value;
-            </div>
+              Combined, Annual, Value</$1>
             <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'>
             <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
-              Combined, Annual, Value;
-            </div>
+              Combined, Annual, Value</$1>
             <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'></div>
-              Fortune, 500, Average;
-            </div>
+              Fortune, 500, Average</$1>
           </div>
         </div>
         {/* Featured, Content, Car, d, s */}
@@ -127,8 +113,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               </div>
               <div, className='fl, e, x-1'></div>
                 <div, className='te, x, t-xs, fon, t-bold, tex, t-cy, a, n-300, uppercase, tracking-wide, m, b-1'>
-                  Quantum, Securit, y;
-                </div>
+                  Quantum, Securit, y</$1>
                 <div, className='te, x, t-sm, tex, t-cy, a, n-100, fon, t-medi, u, m'>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'></div>
           {/* Quant, u, m-Safe, Cryptogra, p, h, y */}
@@ -139,17 +124,14 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               </div>
               <div, className='fl, e, x-1'></div>
                 <div, className='te, x, t-xs, fon, t-bold, tex, t-cy, a, n-300, uppercase, tracking-wide, m, b-1'></div>
-                  Quantum, Securit, y;
-                </div>
+                  Quantum, Securit, y</$1>
                 <div, className='te, x, t-sm, tex, t-cy, a, n-100, fon, t-medi, u, m'></div>
-                  NI, S, T-Approv, e, d • Producti, o, n-Rea, d, y;
-                </div>
+                  NI, S, T-Approv, e, d • Producti, o, n-Rea, d, y</$1>
               </div>
             </div>
             <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-300, transitio, n-colo, r, s'>
             <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-300, transitio, n-colo, r, s'></h3>
-              Quant, u, m-Safe, Cryptography, Revolution;
-            </h3>
+              Quant, u, m-Safe, Cryptography, Revolution</$1>
             <div, className='spa, c, e-y-2, m, b-4'></div>
               <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'></div>
                 <Shield, className='w-4 h-4, tex, t-cy, a, n-4, 0, 0' />
@@ -199,24 +181,20 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               </div>
               <div, className='fl, e, x-1'></div>
                 <div, className='te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wide, m, b-1'>
-                  Risk, Intelligenc, e;
-                </div>
+                  Risk, Intelligenc, e</$1>
                 <div, className='te, x, t-sm, tex, t-bl, u, e-100, fon, t-medi, u, m'>
                 <TrendingUp, className='w-8 h-8, tex, t-bl, u, e-3, 0, 0' /></TrendingUp>
               </div>
               <div, className='fl, e, x-1'></div>
                 <div, className='te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wide, m, b-1'></div>
-                  Risk, Intelligenc, e;
-                </div>
+                  Risk, Intelligenc, e</$1>
                 <div, className='te, x, t-sm, tex, t-bl, u, e-100, fon, t-medi, u, m'></div>
-                  AI-Power, e, d • Autonomo, u, s;
-                </div>
+                  AI-Power, e, d • Autonomo, u, s</$1>
               </div>
             </div>
             <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
             <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3>
-              Autonomous, Risk, Management Platfo, r, m;
-            </h3>
+              Autonomous, Risk, Management Platfo, r, m</$1>
             <div, className='spa, c, e-y-2, m, b-4'></div>
               <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'></div>
                 <Shield, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
@@ -266,24 +244,20 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               </div>
               <div, className='fl, e, x-1'></div>
                 <div, className='te, x, t-xs, fon, t-bold, tex, t-indi, g, o-300, uppercase, tracking-wide, m, b-1'>
-                  Digital, Intelligenc, e;
-                </div>
+                  Digital, Intelligenc, e</$1>
                 <div, className='te, x, t-sm, tex, t-indi, g, o-100, fon, t-medi, u, m'>
                 <Target, className='w-8 h-8, tex, t-indi, g, o-3, 0, 0' /></Target>
               </div>
               <div, className='fl, e, x-1'></div>
                 <div, className='te, x, t-xs, fon, t-bold, tex, t-indi, g, o-300, uppercase, tracking-wide, m, b-1'></div>
-                  Digital, Intelligenc, e;
-                </div>
+                  Digital, Intelligenc, e</$1>
                 <div, className='te, x, t-sm, tex, t-indi, g, o-100, fon, t-medi, u, m'></div>
-                  Re, a, l-Ti, m, e • Se, l, f-Learni, n, g;
-                </div>
+                  Re, a, l-Ti, m, e • Se, l, f-Learni, n, g</$1>
               </div>
             </div>
             <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'>
             <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'></h3>
-              Ne, x, t-Gen, A, I-Powered, Digital, Twins;
-            </h3>
+              Ne, x, t-Gen, A, I-Powered, Digital, Twins</$1>
             <div, className='spa, c, e-y-2, m, b-4'></div>
               <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'></div>
                 <Shield, className='w-4 h-4, tex, t-indi, g, o-4, 0, 0' />
@@ -330,62 +304,46 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-whi, t, e/20, m, b-8'></div>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3>
-            🎯 Why, These, Technologies Are, Gam, e-Change, r, s;
-          </h3>
+            🎯 Why, These, Technologies Are, Gam, e-Change, r, s</$1>
           <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'></div>
             <div, className='te, x, t-cent, e, r'></div>
               <div, className='te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2'>
-                3-5, Year, s;
-              </div>
+                3-5, Year, s</$1>
               <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
-                Quantum, Threat, Window;
-              </div>
+                Quantum, Threat, Window</$1>
               <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>
               <div, className='te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2'></div>
-                3-5, Year, s;
-              </div>
+                3-5, Year, s</$1>
               <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
-                Quantum, Threat, Window;
-              </div>
+                Quantum, Threat, Window</$1>
               <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'></div>
-                Deploy, quantu, m-safe, security, NOW before, i, t's, too, late;
-              </div>
+                Deploy, quantu, m-safe, security, NOW before, i, t's, too, late</$1>
             </div>
             <div, className='te, x, t-cent, e, r'></div>
               <div, className='te, x, t-bl, u, e-300, tex, t-3xl, fon, t-bold, m, b-2'>
-                90+ Da, y, s;
-              </div>
+                90+ Da, y, s</$1>
               <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
-                Risk, Prediction, Lead Ti, m, e;
-              </div>
+                Risk, Prediction, Lead Ti, m, e</$1>
               <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>
               <div, className='te, x, t-bl, u, e-300, tex, t-3xl, fon, t-bold, m, b-2'></div>
-                90+ Da, y, s;
-              </div>
+                90+ Da, y, s</$1>
               <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
-                Risk, Prediction, Lead Ti, m, e;
-              </div>
+                Risk, Prediction, Lead Ti, m, e</$1>
               <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'></div>
-                Prevent, crises, before they, happen, with AI, foresigh, t;
-              </div>
+                Prevent, crises, before they, happen, with AI, foresigh, t</$1>
             </div>
             <div, className='te, x, t-cent, e, r'></div>
               <div, className='te, x, t-indi, g, o-300, tex, t-3xl, fon, t-bold, m, b-2'>
-                100, m, s;
-              </div>
+                100, m, s</$1>
               <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
-                Digital, Twin, Sync Spe, e, d;
-              </div>
+                Digital, Twin, Sync Spe, e, d</$1>
               <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
               <div, className='te, x, t-indi, g, o-300, tex, t-3xl, fon, t-bold, m, b-2'></div>
-                100, m, s;
-              </div>
+                100, m, s</$1>
               <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div>
-                Digital, Twin, Sync Spe, e, d;
-              </div>
+                Digital, Twin, Sync Spe, e, d</$1>
               <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div>
-                Re, a, l-time, operational, intelligence at, your, fingertips;
-              </div>
+                Re, a, l-time, operational, intelligence at, your, fingertips</$1>
             </div>
           </div>
         </div>
@@ -393,23 +351,20 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
         <div, classNam, e = 'mb-8'></div>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
           <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3>
-            🌐 Proven, Results, Across Industri, e, s;
-          </h3>
+            🌐 Proven, Results, Across Industri, e, s</$1>
           <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4'></div>
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='te, x, t-2xl, m, b-2'>🏭</div>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
-                Manufacturi, n, g;
-              </div>
+                Manufacturi, n, g</$1>
               <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>127 x, ROI, Average</div>
             </div>
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='te, x, t-2xl, m, b-2'>🏦</div>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
-                Financial, Service, s;
-              </div>
+                Financial, Service, s</$1>
               <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>845 x, ROI, Average</div>
             </div>
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
@@ -417,28 +372,23 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>Healthca, r, e</div>
               <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
               <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div>
-                47x, ROI, Average;
-              </div>
+                47x, ROI, Average</$1>
             </div>
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='te, x, t-2xl, m, b-2'>⚡</div>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
-                Ener, g, y & Utiliti, e, s;
-              </div>
+                Ener, g, y & Utiliti, e, s</$1>
               <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
-                Ener, g, y & Utiliti, e, s;
-              </div>
+                Ener, g, y & Utiliti, e, s</$1>
               <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'></div>
-                89x, ROI, Average;
-              </div>
+                89x, ROI, Average</$1>
             </div>
             <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div>
               <div, className='te, x, t-2xl, m, b-2'>🏙️</div>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div>
-                Smart, Citie, s;
-              </div>
+                Smart, Citie, s</$1>
               <div, className='te, x, t-pi, n, k-200, tex, t-xs, m, t-1'>34 x, ROI, Average</div>
             </div>
           </div>
@@ -476,8 +426,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             </Li, n, k>
           </div>
           <p, className='te, x, t-cy, a, n-200, tex, t-sm, m, t-4'></p>
-            ⚡ <stro, n, g>Limited, Tim, e</stro, n, g>: Free, technology, assessment for, qualified, enterprises • No, obligatio, n;
-          </p>
+            ⚡ <stro, n, g>Limited, Tim, e</stro, n, g>: Free, technology, assessment for, qualified, enterprises • No, obligatio, n</$1>
         </div>
         {/* Trust, Indicat, o, r, s */}
         <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r'>
@@ -488,8 +437,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <stro, n, g>Trusted, by, Fortune 500, Leader, s</stro, n, g> • 89+ Enterprise, Deployment, s • $25, 1, B+ Value, Create, d
         <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r'></div>
           <div, className='te, x, t-cy, a, n-200, tex, t-sm, m, b-3'></div>
-            <stro, n, g>Trusted, by, Fortune 500, Leader, s</stro, n, g> • 89+ Enterprise, Deployment, s • $25, 1, B+ Value, Create, d;
-          </div>
+            <stro, n, g>Trusted, by, Fortune 500, Leader, s</stro, n, g> • 89+ Enterprise, Deployment, s • $25, 1, B+ Value, Create, d</$1>
           <div, className='flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-whi, t, e/60, tex, t-xs'></div>
             <sp, a, n>✅ NI, S, T-Certifi, e, d</sp, a, n>
             <sp, a, n>•</sp, a, n>

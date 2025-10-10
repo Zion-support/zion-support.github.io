@@ -10,12 +10,8 @@ const ProductivityPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page;
-  </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
-  </
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Page</$1>
+            Coming Soon</$1>
             This page is under development. Please check back soon for updates.
           </p>
         </section>
@@ -86,8 +82,7 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
       <Footer /></Footer>
 </div>);
 }
-export default ProductivityPage;
-  </section>
+export default ProductivityPage</$1>
   </p>
   </h1>
   </div>

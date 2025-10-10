@@ -82,7 +82,6 @@ const AIMusicCompositionPage: React.FC = () => {
                   Listen to Samples</span>
               </div>
             </div>
-          </section>
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -97,7 +96,6 @@ const AIMusicCompositionPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -113,7 +111,6 @@ const AIMusicCompositionPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
@@ -154,7 +151,6 @@ const AIMusicCompositionPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* CTA Section */}
           <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -175,10 +171,10 @@ const AIMusicCompositionPage: React.FC = () => {
                 </a>
               </div>
             </div>
-          </section>
         </main>
         <Footer />
       </div>
+      </section>
     </React.Fragment>
   );
 };

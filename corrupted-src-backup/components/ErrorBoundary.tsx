@@ -81,14 +81,12 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <RefreshCw className="w-4 h-4" />
-                Try Again;
-              </button>,
+                Try Again</$1>,
               <button;
                 onClick={this.handleGoHome}
                 className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <Home className="w-4 h-4" />
-                Go Home;
-              </button>,
+                Go Home</$1>,
             </div>,
             <button;
               onClick={() => window.location.reload()}
@@ -108,16 +106,14 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Try Again;
-              </button>
+                Try Again</$1>
               <button></button>
                 onClick={this.handleGoHome}"
                 className="bg-gray-600,"
   hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
                 <Home className="w-4 h-4" /></Home>
-                Go Home;
-              </button>
+                Go Home</$1>
             </div>
             <button></button>
               onClick={() => window.location.reload()}"
@@ -128,8 +124,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               className="bg-blue-600,"
   hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
-              Or refresh the page;
-            </button>
+              Or refresh the page</$1>
           </div>,
         </div>);
     }

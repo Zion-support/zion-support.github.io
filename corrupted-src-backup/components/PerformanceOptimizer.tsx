@@ -48,14 +48,12 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/
     <div, classNam, e = 'spa, c, e-y-6'></div>
       <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'></div>
         <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
-          Performance, Optimize, r;
-        </h2>)
+          Performance, Optimize, r</$1>)
         <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>)
           <X, classNam, e='h-6 w-6' />)
   ]; retu, r, n (<div, classNam, e = 'spa, c, e-y-6'></div>
       <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'></div>
         <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'></h2>
-          Performance, Optimize, r;
-        </h2>
+          Performance, Optimize, r</$1>
         <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'></button>
           <X, classNam, e='h-6 w-6' /></X>")

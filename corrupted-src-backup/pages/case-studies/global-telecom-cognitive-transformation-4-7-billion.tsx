@@ -12,8 +12,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
   return(<React.Fragment>,
       <Helm, e, t>
         <title>
-          Fortune, 20, Telecom: $4.7B, Cognitive, Computing Success, Stor, y | Zion, Tech, Group;
-        </title>
+          Fortune, 20, Telecom: $4.7B, Cognitive, Computing Success, Stor, y | Zion, Tech, Group</$1>
         <meta, nam, e = 'description'
           conte, n, t='How, a, Fortune 20, telecommunications, provider achiev, e, d $4.7 B, in, value through, cognitive, computing transformati, o, n. 98.7% satisfac, t, i, o, n, 99.96% reliabili, t, y, 3,6, 0, 2% R, O, I.'
         /></meta>
@@ -48,15 +47,13 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
               <Link, t, o='/'
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'
               ></Link>
-                Ho, m, e;
-              </Li, n, k>
+                Ho, m, e</$1>
               <span, className='te, x, t-purp, l, e-4, 0, 0'></span>/</sp, a, n>
               <Link, t, o='/ca, s, e-<studi, e, s'
                 className='te, x, t-purp, l, e-300, hove, r:te, x, t-white, transitio, n-colo, r, s'
               >
               ></Link>
-                Case, Studie, s;
-              </Li, n, k>
+                Case, Studie, s</$1>
               <span, className='te, x, t-purp, l, e-4, 0, 0'></span>/</sp, a, n>
               <span, className='te, x, t-whi, t, e'></span>Fortune</span>, 20, Telecom</sp, a, n>
             </n, a, v>
@@ -65,8 +62,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
               <div, className='flex, item, s-center, ga, p-3, m, b-6, fle, x-wr, a, p'></div>
                 <span, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, shado, w-lg'></span>
                   <Award, className='w-4 h-4, m, r-2' />
-                  SUCCESS, STOR, Y;
-              </div>
+                  SUCCESS, STOR, Y</$1>
               <h1, className='te, x, t-4xl, s, m: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
                 Fortune, 20, Global Telecommunications, Provide, r: $4.7B, Cognitive, Computing Transformati, o, n;
                 <span, classNam, e='flex, item, s-center, ga, p-2'>
@@ -90,8 +86,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                   <Zap, classNam, e='w-4 h-4' />
                   18, Month, Implementation
                   <Award, className='w-4 h-4, m, r-2' /></Award>
-                  SUCCESS, STOR, Y;
-              </div>
+                  SUCCESS, STOR, Y</$1>
               <h1, className='te, x, t-4xl, s, m: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h1>
                 Fortune, 20, Global Telecommunications, Provide, r: $4.7B, Cognitive, Computing Transformati, o, n;
                 <span, classNam, e='flex, item, s-center, ga, p-2'></span>
@@ -195,77 +190,66 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                       <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
                       <h3, classNam, e='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'></1>
                       <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'></h3>
-                        Revenue, Growt, h;
-                      </h3>
+                        Revenue, Growt, h</$1>
                       <ul, className='spa, c, e-y-2, tex, t-purp, l, e-1, 0, 0'></ul>
                         <li, className='flex, justif, y-betwe, e, n'></li>
                           <sp, a, n>Churn, reductio, n:</sp, a, n>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                            $1.8B;
-                          </sp, a, n>
+                            $1.8B</$1>
                         </li>
                         <li, className='flex, justif, y-betwe, e, n'></li>
                           <sp, a, n>New, customer, s:</sp, a, n>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                            $1.2B;
-                          </sp, a, n>
+                            $1.2B</$1>
                         </li>
                         <li, className='flex, justif, y-betwe, e, n'></li>
                           <sp, a, n>Upse, l, l/cro, s, s-se, l, l:</sp, a, n>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                            $89, 0, M;
-                          </sp, a, n>
+                            $89, 0, M</$1>
                         </li>
                         <li, className='flex, justif, y-betwe, e, n'></li>
                           <sp, a, n>New, opportunitie, s:</sp, a, n>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                            $2.1B;
-                          </sp, a, n>
+                            $2.1B</$1>
                         </li>
                         <li, className='flex, justif, y-between, p, t-2, borde, r-t, borde, r-gre, e, n-5, 0, 0/30'></li>
                           <span, className='fo, n, t-bo, l, d'>Total, Revenu, e:</sp, a, n>
                           <span, className='fo, n, t-bold, tex, t-xl, tex, t-gre, e, n-3, 0, 0'>
                           <span, className='fo, n, t-bold, tex, t-xl, tex, t-gre, e, n-3, 0, 0'></span>
-                            $6.0B;
-                          </sp, a, n>
+                            $6.0B</$1>
                         </li>
                       <h3, classNam, e='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'></h3>
                       <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
                       <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'></h3>
-                        Cost, Reductio, n;
-                      </h3>
+                        Cost, Reductio, n</$1>
                       <ul, className='spa, c, e-y-2, tex, t-purp, l, e-1, 0, 0'></ul>
                         <li, className='flex, justif, y-betwe, e, n'></li>
                           <sp, a, n>Network, operation, s:</sp, a, n>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                            $1.6, 2, B;
-                          </sp, a, n>
+                            $1.6, 2, B</$1>
                         </li>
                         <li, className='flex, justif, y-betwe, e, n'></li>
                           <sp, a, n>Customer, servic, e:</sp, a, n>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                            $64, 0, M;
-                          </sp, a, n>
+                            $64, 0, M</$1>
                         </li>
                         <li, className='flex, justif, y-betwe, e, n'></li>
                           <sp, a, n>Business, operation, s:</sp, a, n>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'>
                           <span, className='fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
-                            $28, 0, M;
-                          </sp, a, n>
+                            $28, 0, M</$1>
                         </li>
                         <li, className='flex, justif, y-between, p, t-2, borde, r-t, borde, r-gre, e, n-5, 0, 0/30'></li>
                           <span, className='fo, n, t-bo, l, d'>Total, Saving, s:</sp, a, n>
                           <span, className='fo, n, t-bold, tex, t-xl, tex, t-gre, e, n-3, 0, 0'>
                           <span, className='fo, n, t-bold, tex, t-xl, tex, t-gre, e, n-3, 0, 0'></span>
-                            $2.5, 4, B;
-                          </sp, a, n>
+                            $2.5, 4, B</$1>
                         </li>
                     Get, Similar, Results;
                     <Link, classNam, e='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />

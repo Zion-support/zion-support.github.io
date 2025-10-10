@@ -59,8 +59,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
   ]; return (<div, classNam, e = 'spa, c, e-y-6'></div>
       <div, className='flex, justif, y-between, item, s-cent, e, r'></div>
         <h2, className='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'></h2>
-          Performance, Optimize, r;
-        </h2>
+          Performance, Optimize, r</$1>
         <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'></button>
           <X, className='h-6 w-6' /></X>
         </button>
@@ -117,8 +116,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
       {  currentOptimizatio, n, s.leng, t, h > 0  && (
         <div, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-4'></div>
           <h3, className='te, x, t-sm, fon, t-medium, tex, t-gr, a, y-900, m, b-2'>
-            Optimization, Progres, s;
-          </h3>
+            Optimization, Progres, s</$1>
           <div, className='spa, c, e-y-1'>
             {currentOptimizatio, n, s.m, a, p((optimizat, i, o, n, ind, e, x) =  > (</div>
               <div, ke, y = { in, d, e, x   }, classNa, m, e = { `te, x, t-sm ${
@@ -138,20 +136,17 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
       <div, classNam, e = 'flex, justif, y-end, spac, e-x-3'></div>
         <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'px-4, p, y-2, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, b, g-white, border, border-gr, a, y-300, rounde, d-md, hove, r: bg-gr, a, y-50, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-offs, e, t-2, focu, s:ri, n, g-bl, u, e-5, 0, 0'
         >
-          Clo, s, e;
-        </button>
+          Clo, s, e</$1>
         <button, onCli, c, k={ () = > {
             setCurrentOptimizatio, n, s([]);}
             // Trigger r e-optimizat i o n;}
         ></button>
-          Clo, s, e;
-        </button>
+          Clo, s, e</$1>
         <button, onCli, c, k={/* TODO: Fix JSX expression */}
            }}
           classNa, m, e = 'px-4, p, y-2, tex, t-sm, fon, t-medium, tex, t-white, b, g-bl, u, e-600, border, border-transparent, rounde, d-md, hove, r: bg-bl, u, e-700, focu, s:outli, n, e-none, focu, s:ri, n, g-2, focu, s:ri, n, g-offs, e, t-2, focu, s:ri, n, g-bl, u, e-5, 0, 0'
         >
-          Apply, Optimization, s;
-        </button>
+          Apply, Optimization, s</$1>
       </div>
     </div>
   );

@@ -18,7 +18,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">";
       {/* Animated, background, effect */}</div>
-      <div, className="absolute, inse, t-0, opacit, y-20">";</div>
+      <div, className="absolute, inse, t-0, opacit, y-20">"</$1>
         <div, className="absolute, to, p-0 -le, f, t-4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-bl, o, b"></d, i, v>";
         <div, className="absolute, to, p-0 -rig, h, t-4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-blob, animatio, n-del, a, y-20, 0, 0"></d, i, v>";
   return ("
@@ -27,16 +27,15 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
       <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-0 -le, f, t-4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-bl, o, b"></d, i, v>";"
         <div, className="absolute, to, p-0 -rig, h, t-4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-blob, animatio, n-del, a, y-20, 0, 0"></d, i, v>";"
-        <div, className="absolu, t, e -bott, o, m-8, lef, t-2, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-blob, animatio, n-del, a, y-40, 0, 0"></d, i, v>";
-      </d, i, v>"
+        <div, className="absolu, t, e -bott, o, m-8, lef, t-2, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-blob, animatio, n-del, a, y-40, 0, 0"></d, i, v>"</$1>"
       <div, className="relative, container, mx-auto, p, x-4, p, y-12">";
         {/* Header, Sectio, n */}</div>
         <div, className="te, x, t-center, m, b-10"></div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4"></div>
             <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e  />
             <span, className="te, x, t-sm, fon, t-semibold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-4, 0, 0"></span>
-        <div, className="te, x, t-center, m, b-10">";</div>
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4">";</div>
+        <div, className="te, x, t-center, m, b-10">"</$1>
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4">"</$1>
             <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e" />";
         {/* Header, Sectio, n */}"
         <div, className="te, x, t-center, m, b-10"></div>"
@@ -47,24 +46,20 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4">";"
             <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e" />";"
             <span, className="te, x, t-sm, fon, t-semibold, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-4, 0, 0">";
-              🔥 OCTOBE, R, 1, 20, 2, 5 — JUST, PUBLISHED, TODAY;
-            </sp, a, n>
+              🔥 OCTOBE, R, 1, 20, 2, 5 — JUST, PUBLISHED, TODAY</$1>
           </d, i, v>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
-            3, Gam, e-Changing, Enterprise, AI Breakthroug, h, s;
-          </h2>
+            3, Gam, e-Changing, Enterprise, AI Breakthroug, h, s</$1>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o">
             🚀</p> <span, className="fo, n, t-semibold, tex, t-purp, l, e-3, 0, 0">Master, autonomous, systems</sp, a, n> with, sel, f-healing, capabilitie, s;
             <span, className="fo, n, t-semibold, tex, t-cy, a, n-3, 0, 0"> unlock, 10x, LLM performan, c, e</sp, a, n> with, advanced, prompting, a, n, d;
             <span, className="fo, n, t-semibold, tex, t-pi, n, k-3, 0, 0"> deliver, personalization, at massive, scal, e</sp, a, n> — Essential, reading, for technology, leader, s!
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";
-            3, Gam, e-Changing, Enterprise, AI Breakthroug, h, s;
-          </h2>
+            3, Gam, e-Changing, Enterprise, AI Breakthroug, h, s</$1>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o">";
             🚀</p> <span, className="fo, n, t-semibold, tex, t-purp, l, e-3, 0, 0">Master, autonomous, systems</sp, a, n> with, sel, f-healing, capabilitie, s, ";
             <span, className="fo, n, t-semibold, tex, t-cy, a, n-3, 0, 0"> unlock, 10x, LLM performan, c, e</sp, a, n> with, advanced, prompting, a, n, d ";
-            <span, className="fo, n, t-semibold, tex, t-pi, n, k-3, 0, 0"> deliver, personalization, at massive, scal, e</sp, a, n> — Essential, reading, for technology, leader, s!";
-          </p>
+            <span, className="fo, n, t-semibold, tex, t-pi, n, k-3, 0, 0"> deliver, personalization, at massive, scal, e</sp, a, n> — Essential, reading, for technology, leader, s!"</$1>
         </d, i, v>
         {/* Featured, Articles, Grid */})
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
@@ -78,20 +73,17 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
             <Li, n, k
   k, e, y={ind, e, x}
               to={artic, l, e.li, n, k}
-              classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
-          </h2>"
+              classNa, m, e="group, relative, overflow-hidden, b, g-sla, t, e-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-2xl, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e</$1>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o"></p>"
             🚀 <span, className="fo, n, t-semibold, tex, t-purp, l, e-3, 0, 0">Master, autonomous, systems</sp, a, n> with, sel, f-healing, capabilitie, s;"
             <span, className="fo, n, t-semibold, tex, t-cy, a, n-3, 0, 0"> unlock, 10x, LLM performan, c, e</sp, a, n> with, advanced, prompting, a, n, d;"
             <span, className="fo, n, t-semibold, tex, t-pi, n, k-3, 0, 0"> deliver, personalization, at massive, scal, e</sp, a, n> — Essential, reading, for technology, leader, s!"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";
-            3, Gam, e-Changing, Enterprise, AI Breakthroug, h, s;
-          </h2>"
+            3, Gam, e-Changing, Enterprise, AI Breakthroug, h, s</$1>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o">";"
             🚀 <span, className="fo, n, t-semibold, tex, t-purp, l, e-3, 0, 0">Master, autonomous, systems</sp, a, n> with, sel, f-healing, capabilitie, s, ";"
             <span, className="fo, n, t-semibold, tex, t-cy, a, n-3, 0, 0"> unlock, 10x, LLM performan, c, e</sp, a, n> with, advanced, prompting, a, n, d ";"
-            <span, className="fo, n, t-semibold, tex, t-pi, n, k-3, 0, 0"> deliver, personalization, at massive, scal, e</sp, a, n> — Essential, reading, for technology, leader, s!";
-          </p>
+            <span, className="fo, n, t-semibold, tex, t-pi, n, k-3, 0, 0"> deliver, personalization, at massive, scal, e</sp, a, n> — Essential, reading, for technology, leader, s!"</$1>
         </d, i, v>
         {/* Featured, Articles, Grid */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
@@ -107,7 +99,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
               <div, className="relativ, e, p-6">";
                 {/* Icon, and, Category */}</div>
                 <div, className="flex, item, s-center, justif, y-between, m, b-4"></div>
-                <div, className="flex, item, s-center, justif, y-between, m, b-4">";</div>
+                <div, className="flex, item, s-center, justif, y-between, m, b-4">"</$1>
                 {/* Icon, and, Category */}"
                 <div, className="flex, item, s-center, justif, y-between, m, b-4"></div>"
                 <div, className="flex, item, s-center, justif, y-between, m, b-4">";`
@@ -153,20 +145,19 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                 </d, i, v>
                 {/* Read, More, Link */}"
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
-                  Read, Full, Article;</div>
+                  Read, Full, Article</$1>
                   <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                   Read, Full, Article;
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e;
-                  Read, Full, Article;</div>
+                  Read, Full, Article</$1>
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
                   Read, Full, Article;"
                   <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                   Read, Full, Article;"
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
-  r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-                </d, i, v>
+  r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>
               </d, i, v>
             </Li, n, k>
           ))}
@@ -179,8 +170,8 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
             <Li, n, k;
         <div, className="te, x, t-cent, e, r"></div>
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"</div>
-        <div, className="te, x, t-cent, e, r">";</div>
-          <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";</div>
+        <div, className="te, x, t-cent, e, r">"</$1>
+          <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"</$1>
             <Li, n, k
   to="/bl, o, g"
               classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-cy, a, n-500, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e;
@@ -195,32 +186,29 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
   r:sca, l, e-1, 0, 5"
             ></Li>"
               <span, className="flex, item, s-center, ga, p-2">";
-                Explore, All, Latest Conte, n, t;</span>
+                Explore, All, Latest Conte, n, t</$1>
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-                <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-              </sp, a, n>
+                <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>
             </Li, n, k>
             <Li, n, k;
   to="/conta, c, t"
               classNa, m, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/80, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-500, hov, e;
                 Explore, All, Latest Conte, n, t;"
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-                <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-              </sp, a, n>
+                <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>
             </Li, n, k>
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="px-8, p, y-4, b, g-sla, t, e-8, 0, 0/80, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-500, hov, e,"
   r:bg-sla, t, e-7, 0, 0/80, transitio, n-all, duratio, n-3, 0, 0"
             ></Li>
-              Schedule, Expert, Consultation;
-            </Li, n, k>
+              Schedule, Expert, Consultation</$1>
           </d, i, v>
         </d, i, v>
         {/* Additional, Inf, o */}
         <div, className="mt-8, tex, t-cent, e, r"></div>
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></p>
-        <div, className="mt-8, tex, t-cent, e, r">";</div>
+        <div, className="mt-8, tex, t-cent, e, r">"</$1>
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">";
             💡</p> <span, className="te, x, t-gr, a, y-300, fon, t-semibo, l, d">Join, 5, 0,0, 0, 0+ AI, leader, s</sp, a, n> who, get, weekly insights, on, enterprise AI, implementatio, n";
         {/* Additional, Inf, o */}"
@@ -228,8 +216,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></p>"
         <div, className="mt-8, tex, t-cent, e, r">";"
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">";"
-            💡 <span, className="te, x, t-gr, a, y-300, fon, t-semibo, l, d">Join, 5, 0,0, 0, 0+ AI, leader, s</sp, a, n> who, get, weekly insights, on, enterprise AI, implementatio, n";
-          </p>
+            💡 <span, className="te, x, t-gr, a, y-300, fon, t-semibo, l, d">Join, 5, 0,0, 0, 0+ AI, leader, s</sp, a, n> who, get, weekly insights, on, enterprise AI, implementatio, n"</$1>
         </d, i, v>
       </d, i, v>
       <sty, l, e>{/* TODO: Fix JSX expression */}

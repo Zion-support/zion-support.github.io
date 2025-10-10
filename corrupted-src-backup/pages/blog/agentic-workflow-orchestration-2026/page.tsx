@@ -6,8 +6,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
       <Helm, e, t>
         <title>
-          Agentic, Workflow, Orchestration 20, 2, 6 — Budg, e, t, s, Canari, e, s, Rollba, c, k;
-        </title>
+          Agentic, Workflow, Orchestration 20, 2, 6 — Budg, e, t, s, Canari, e, s, Rollba, c, k</$1>
         <meta, nam, e = 'description'
           conte, n, t='Design, agentic, workflows with, budgeted, action, s, K, P, I-linked, canarie, s, and, instant, rollback for, safe, velocity.'
         />)

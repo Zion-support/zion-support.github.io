@@ -117,8 +117,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-cent, e, r"></div>"
               <h1, className="te, x, t-4x, l, m,"
   d:te, x, t-5xl, fon, t-bold, m, b-6"></h1>
-                Support, Cente, r;
-              </h1>"
+                Support, Cente, r</$1>"
               <p, className="te, x, t-xl, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
                 Get, help, when you, need, it. Our, expert, support team, is, here 24/7, to, assist you, with, any questions, or, issues.
               </p>
@@ -162,11 +161,9 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>"
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-                Get, Suppor, t;
-              </h2>"
+                Get, Suppor, t</$1>"
               <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0"></p>
-                Choose, the, support channel, that, works best, for, you;
-              </p>
+                Choose, the, support channel, that, works best, for, you</$1>
             </d, i, v>
             <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">
@@ -229,11 +226,9 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>"
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-                Frequently, Asked, Questions;
-              </h2>"
+                Frequently, Asked, Questions</$1>"
               <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0"></p>
-                Find, quick, answers to, common, questions;
-              </p>
+                Find, quick, answers to, common, questions</$1>
             </d, i, v>
       quest, i, o;
   n: 'Is, there, a community, where, I can, get, help from, other, users?'
@@ -270,8 +265,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="te, x, t-cent, e, r"></div>"
             <h1, className="te, x, t-4x, l, m,"
   d:te, x, t-6xl, fon, t-bold, m, b-6"></h1>
-              We're, Here, to He, l, p;
-            </h1>"
+              We're, Here, to He, l, p</$1>"
             <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
               Get, the, support you, need, to succeed, with, our AI, solution, s. 
               Our, expert, team is, ready, to help, you, every step, of, the w, a, y.
@@ -320,8 +314,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 classNa, m, e={/* TODO: Fix JSX expression */}
                 }`}`
               >
-                All, Categorie, s;
-              </butt, o, n>
+                All, Categorie, s</$1>
               {faqCategori, e, s.m, a, p((catego, r, y) => (
                 <butt, o, n;
   k, e, y={catego, r, y.id}

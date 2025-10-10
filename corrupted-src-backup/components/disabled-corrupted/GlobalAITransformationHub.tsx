@@ -22,8 +22,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" />
       </div>
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-        Transforming, Business, Operations Worldwi, d, e;
-      </h2>
+        Transforming, Business, Operations Worldwi, d, e</$1>
       <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o">
         Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.)
       </p>)
@@ -48,8 +47,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Globe>
       </div>"
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
-        Transforming, Business, Operations Worldwi, d, e;
-      </h2>"
+        Transforming, Business, Operations Worldwi, d, e</$1>"
       <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o"></p>
         Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.
       </p>"
@@ -157,8 +155,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
           <Link, className="w-5 h-5" /></Link>
         </Li, n, k>"
         <p, className="mt-4, tex, t-gr, a, y-400, tex, t-sm"></p>
-          🌍 Joi, n, 2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology;
-        </p>
+          🌍 Joi, n, 2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology</$1>
       </div>
     </div>
   );

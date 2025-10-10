@@ -19,11 +19,9 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-viol, e, t-300, fon, t-semibo, l, d">NEW, CONTEN, T - OCTOBER, 202, 5</sp, a, n>
           </div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            Latest, AI, Breakthroughs & Enterprise, Strategie, s;
-          </h2>
+            Latest, AI, Breakthroughs & Enterprise, Strategie, s</$1>
           <p, className="te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o">
-            Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;
-          </p>
+            Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing</$1>
         </div>)
         {/* Articles, Gri, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">)
@@ -50,11 +48,9 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
             <span, className="te, x, t-viol, e, t-300, fon, t-semibo, l, d">NEW, CONTEN, T - OCTOBER, 202, 5</sp, a, n>
           </div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
-            Latest, AI, Breakthroughs & Enterprise, Strategie, s;
-          </h2>"
+            Latest, AI, Breakthroughs & Enterprise, Strategie, s</$1>"
           <p, className="te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o"></p>
-            Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing;
-          </p>
+            Explore, cuttin, g-edge, insights, on GenAI, orchestrat, i, o, n, AI, security, frameworks, and, rea, l-time, multimodal, processing</$1>
         </div>
         {/* Articles, Gri, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12"></div>
@@ -86,8 +82,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8"></div>
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-              3;
-            </div>
+              3</$1>
             <div, className="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">New, Article, s</div>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
@@ -96,8 +91,7 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8"></div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
-              3;
-            </div>"
+              3</$1>"
             <div, className="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">New, Article, s</div>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
@@ -108,14 +102,12 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
           </div>
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-              Expe, r, t;
-            </div>
+              Expe, r, t</$1>
             <div, className="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">Implementation, Guide, s</div>
           </div>
           <div, className="te, x, t-cent, e, r"></div>
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, t, o-ro, s, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-              20, 2, 5;
-            </div>
+              20, 2, 5</$1>
             <div, className="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">Latest, Strategie, s</div>
           </div>
         </div>
@@ -128,14 +120,12 @@ const October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
-              Expe, r, t;
-            </div>"
+              Expe, r, t</$1>"
             <div, className="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">Implementation, Guide, s</div>
           </div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, t, o-ro, s, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2"></div>
-              20, 2, 5;
-            </div>"
+              20, 2, 5</$1>"
             <div, className="te, x, t-sm, tex, t-sla, t, e-4, 0, 0">Latest, Strategie, s</div>
           </div>
         </div>

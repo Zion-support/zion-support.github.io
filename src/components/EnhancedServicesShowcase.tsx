@@ -58,16 +58,9 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           {service.popular && (
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
               <Star className="w-3 h-3 mr-1" />
-              Popular;
-  </
-          )}
-          {service.new && (
-            <span className="bg-gradient-to-r from-green-400 to-cyan-500 text-black text-xs px-2 py-1 rounded-full font-bold flex items-center">
+              Popular</$1>
               <Sparkles className="w-3 h-3 mr-1" />
-              New;
-  </
-          )}
-        </div>
+              New</$1>
       </div>
       {/* Description */}
       <p className="text-gray-300 mb-4 leading-relaxed">
@@ -77,9 +70,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-cyan-400 mb-2 flex items-center">
           <CheckCircle className="w-4 h-4 mr-2" />
-          Key Features;
-  </
-        <ul className="space-y-1">
+          Key Features</$1>
           {service.features.slice(0, 3).map((feature, idx) => (
             <li key={idx} className="text-xs text-gray-300 flex items-center">
               <div className="w-1 h-1 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
@@ -88,18 +79,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           ))}
           {service.features.length > 3 && (
             <li className="text-xs text-cyan-400">
-              +{service.features.length - 3} more features;
-  </
-          )}
-        </ul>
+              +{service.features.length - 3} more features</$1>
       </div>
       {/* Benefits */}
       <div className="mb-4">
         <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
           <TrendingUp className="w-4 h-4 mr-2" />
-          Key Benefits;
-  </
-        <div className="grid grid-cols-2 gap-2">
+          Key Benefits</$1>
           {service.benefits.slice(0, 2).map((benefit, idx) => (
             <div key={idx} className="text-xs text-gray-300 bg-slate-800/50 rounded px-2 py-1">
               {benefit}
@@ -132,24 +118,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
           href={`tel:${contactInfo.phone}`}
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
           <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-          Call Now;
-  </
-        <div className="grid grid-cols-2 gap-2">
+          Call Now</$1>
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-            Email;
-  </
-          <a
-            href={service.contact.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
+            Email</$1>
             <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-            Demo;
-  </
-        </div>
+            Demo</$1>
       </div>
       {/* Use Cases */}
       <div className="mt-4 pt-4 border-t border-slate-700">
@@ -183,13 +159,8 @@ const EnhancedServicesShowcase: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
-            Our Services;
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations;
-  </
-          {/* Contact Info Banner */}
-          <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
+            Our Services</$1>
+            Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations</$1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div className="flex items-center justify-center space-x-2">
                 <Phone className="w-5 h-5 text-cyan-400" />
@@ -225,9 +196,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                 : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
             }`}
           >
-            All Services;
-  </
-          {serviceCategories.map((category) => (
+            All Services</$1> (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
@@ -252,9 +221,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         {selectedCategory === 'all' && (
           <div className="mb-12">
             <h3 className="text-2xl font-bold text-white mb-6 text-center neon-text">
-              Most Popular Services;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              Most Popular Services</$1>
               {popularServices.map((service, index) => (
                 <div key={service.id} className="cyber-card p-4 hover:scale-105 transition-all duration-300">
                   <div className="text-3xl mb-3 text-center">{service.icon}</div>
@@ -296,16 +263,12 @@ const EnhancedServicesShowcase: React.FC = () => {
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
               <Mail className="w-5 h-5 mr-2" />
-              Get Free Consultation;
-  </
-          </div>
+              Get Free Consultation</$1>
         </div>
       </div>
-    </section>
   );
 };
-export default EnhancedServicesShowcase;
-  </a>
+export default EnhancedServicesShowcase</$1>
   </h3>
   </button>
   </p>

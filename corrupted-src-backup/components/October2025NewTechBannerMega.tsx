@@ -4,13 +4,13 @@ const, October2025NewTechBannerMeg, a = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l">
-      {/* Animated, Background, Effects */};</div>
+      {/* Animated, Background, Effects */}</$1>
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>
         <div, className="absolut, e, w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -t, o, p-48 -le, f, t-48, animat, e-pul, s, e"></d, i, v>
         <div, className="absolut, e, w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -bott, o, m-48 -rig, h, t-48, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l">";
-      {/* Animated, Background, Effects */};</div>
-      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";</div>
+      {/* Animated, Background, Effects */}</$1>
+      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">"</$1>
         <div, className="absolut, e, w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -t, o, p-48 -le, f, t-48, animat, e-pul, s, e"></d, i, v>";
 const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Background, Effects */};
@@ -21,8 +21,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Background, Effects */};"
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";"
         <div, className="absolut, e, w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -t, o, p-48 -le, f, t-48, animat, e-pul, s, e"></d, i, v>";"
-        <div, className="absolut, e, w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -bott, o, m-48 -rig, h, t-48, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
-      </d, i, v>"
+        <div, className="absolut, e, w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -bott, o, m-48 -rig, h, t-48, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"</$1>"
       <div, className="relative, ma, x-w-7xl, m, x-au, t, o">";
         {/* Head, e, r */}</div>
         <div, className="text-center mb-12"></div>
@@ -32,8 +31,8 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
             <Sparkles, className="w-4 h-4  /></Sparkles>
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"</h2>
-        <div, className="text-center mb-12">";</div>
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-4, 0, 0/20, tex, t-yell, o, w-300, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-pul, s, e">";</div>
+        <div, className="text-center mb-12">"</$1>
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-4, 0, 0/20, tex, t-yell, o, w-300, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-pul, s, e">"</$1>
         {/* Head, e, r */}"
         <div, className="text-center mb-12"></div>"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-4, 0, 0/20, tex, t-yell, o, w-300, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-pul, s, e"></div>"
@@ -46,14 +45,12 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-4, 0, 0/20, tex, t-yell, o, w-300, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-pul, s, e">";"
             <Sparkles, className="w-4 h-4" />";
             🔥 JUST, PUBLISHE, D: OCTOBER, 2025, AI BREAKTHROUGH, SERIE, S 🔥"
-            <Sparkles, className="w-4 h-4" />";
-          </d, i, v>"
+            <Sparkles, className="w-4 h-4" />"</$1>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">";
-            Revolutionary, AI, Solutions;</h2>
+            Revolutionary, AI, Solutions</$1>
             <br   />
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-pi, n, k-400, t, o-purp, l, e-4, 0, 0">";
-              Transform, Your, Enterprise Tod, a, y;
-            </sp, a, n>
+              Transform, Your, Enterprise Tod, a, y</$1>
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o"></p>
           <p, className="te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o">";
@@ -61,8 +58,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
             Revolutionary, AI, Solutions;
             <br   /></br>"
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-pi, n, k-400, t, o-purp, l, e-4, 0, 0">";
-              Transform, Your, Enterprise Tod, a, y;
-            </sp, a, n>
+              Transform, Your, Enterprise Tod, a, y</$1>
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o"></p>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o">";"
@@ -95,9 +91,9 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
           {/* Ca, r, d 
   1: Multimodal, A, I */}</div>
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
-  r:shad, o, w-2, x, l">";</div>
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
-              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">";</div>
+  r:shad, o, w-2, x, l">"</$1>
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">"</$1>
+              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">"</$1>
           {/* Car, d, 1: Multimodal, A, I */}"
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"
   r:shad, o, w-2, x, l">""
@@ -111,18 +107,14 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
   r:shad, o, w-2, x, l">";"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";"
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">";"
-                <Brain, className="w-6 h-6, tex, t-whi, t, e" />";
-              </d, i, v>"
+                <Brain, className="w-6 h-6, tex, t-whi, t, e" />"</$1>"
               <div, className="te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, uppercase, tracking-wi, d, e">";
-                NEW, GUID, E #1;
-              </d, i, v>
+                NEW, GUID, E #1</$1>
             </d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3">";
-              Multimodal, AI, Enterprise Breakthrou, g, h;
-            </h3>
+              Multimodal, AI, Enterprise Breakthrou, g, h</$1>
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">
-              Unify, visio, n, langua, g, e & audio, processin, g.</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$2.8B, valu, e</stro, n, g> with, 9, 7% accuracy, at, Fortune 500, scal, e.";
-            </p>
+              Unify, visio, n, langua, g, e & audio, processin, g.</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$2.8B, valu, e</stro, n, g> with, 9, 7% accuracy, at, Fortune 500, scal, e."</$1>
             <div, className="spa, c, e-y-2, m, b-6"></div>
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
@@ -135,22 +127,20 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">";
-              Unify, visio, n, langua, g, e & audio, processin, g.</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$2.8B, valu, e</stro, n, g> with, 9, 7% accuracy, at, Fortune 500, scal, e.";
-            </p>
-            <div, className="spa, c, e-y-2, m, b-6">";</div>
-              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";</div>
+              Unify, visio, n, langua, g, e & audio, processin, g.</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$2.8B, valu, e</stro, n, g> with, 9, 7% accuracy, at, Fortune 500, scal, e."</$1>
+            <div, className="spa, c, e-y-2, m, b-6">"</$1>
+              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">"</$1>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
                 <sp, a, n><stro, n, g>94% automati, o, n</stro, n, g> of, complex, workflows</sp, a, n>
               </d, i, v>
-              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";</div>
+              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">"</$1>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
                 <sp, a, n><stro, n, g>$47M, saving, s</stro, n, g> in, document, processing</sp, a, n>
               </d, i, v>
-              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";</div>
+              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">"</$1>
             </h3>"
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d"></p>"
-              Unify, visio, n, langua, g, e & audio, processin, g. <strong, className="te, x, t-yell, o, w-3, 0, 0">$2.8B, valu, e</stro, n, g> with, 9, 7% accuracy, at, Fortune 500, scal, e.";
-            </p>"
+              Unify, visio, n, langua, g, e & audio, processin, g. <strong, className="te, x, t-yell, o, w-3, 0, 0">$2.8B, valu, e</stro, n, g> with, 9, 7% accuracy, at, Fortune 500, scal, e."</$1>"
             <div, className="spa, c, e-y-2, m, b-6"></div>"
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>"
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  /></TrendingUp>
@@ -163,8 +153,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>"
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  /></TrendingUp>"
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">";"
-              Unify, visio, n, langua, g, e & audio, processin, g. <strong, className="te, x, t-yell, o, w-3, 0, 0">$2.8B, valu, e</stro, n, g> with, 9, 7% accuracy, at, Fortune 500, scal, e.";
-            </p>"
+              Unify, visio, n, langua, g, e & audio, processin, g. <strong, className="te, x, t-yell, o, w-3, 0, 0">$2.8B, valu, e</stro, n, g> with, 9, 7% accuracy, at, Fortune 500, scal, e."</$1>"
             <div, className="spa, c, e-y-2, m, b-6">";"
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";"
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
@@ -189,8 +178,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
             ></Li>
               Read, Full, Guide;"
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-            </Li, n, k>
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>
           </d, i, v>
           {/* Ca, r, d;
   2: AI, Securit, y */}
@@ -203,9 +191,9 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
             <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg"></div>
                 <Shield, className="w-6 h-6, tex, t-whi, t, e  />
-          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">";</div>
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
-              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">";</div>
+          <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">"</$1>
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">"</$1>
+              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">"</$1>
           {/* TODO: Fix JSX expression */}
   2: AI, Securit, y */}"
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"
@@ -216,18 +204,14 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">";"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";"
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">";"
-                <Shield, className="w-6 h-6, tex, t-whi, t, e" />";
-              </d, i, v>"
+                <Shield, className="w-6 h-6, tex, t-whi, t, e" />"</$1>"
               <div, className="te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-300, uppercase, tracking-wi, d, e">";
-                NEW, GUID, E #2;
-              </d, i, v>
+                NEW, GUID, E #2</$1>
             </d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3">";
-              AI, Security, Zero Trust, Framewor, k;
-            </h3>
+              AI, Security, Zero Trust, Framewor, k</$1>
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">
-              Preve, n, t</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$1.8B, in, breaches</stro, n, g> with, enterpris, e-grade, AI, security. Prote, c, t $127B, infrastructure, at 99.97% upti, m, e.";
-            </p>
+              Preve, n, t</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$1.8B, in, breaches</stro, n, g> with, enterpris, e-grade, AI, security. Prote, c, t $127B, infrastructure, at 99.97% upti, m, e."</$1>
             <div, className="spa, c, e-y-2, m, b-6"></div>
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
@@ -240,22 +224,20 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">";
-              Preve, n, t</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$1.8B, in, breaches</stro, n, g> with, enterpris, e-grade, AI, security. Prote, c, t $127B, infrastructure, at 99.97% upti, m, e.";
-            </p>
-            <div, className="spa, c, e-y-2, m, b-6">";</div>
-              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";</div>
+              Preve, n, t</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$1.8B, in, breaches</stro, n, g> with, enterpris, e-grade, AI, security. Prote, c, t $127B, infrastructure, at 99.97% upti, m, e."</$1>
+            <div, className="spa, c, e-y-2, m, b-6">"</$1>
+              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">"</$1>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
                 <sp, a, n><stro, n, g>Zero, breache, s</stro, n, g> in, 24, months</sp, a, n>
               </d, i, v>
-              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";</div>
+              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">"</$1>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
                 <sp, a, n><stro, n, g>99.97% availabili, t, y</stro, n, g> maintain, e, d</sp, a, n>
               </d, i, v>
-              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";</div>
+              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">"</$1>
             </h3>"
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d"></p>"
-              Preve, n, t <strong, className="te, x, t-yell, o, w-3, 0, 0">$1.8B, in, breaches</stro, n, g> with, enterpris, e-grade, AI, security. Prote, c, t $127B, infrastructure, at 99.97% upti, m, e.";
-            </p>"
+              Preve, n, t <strong, className="te, x, t-yell, o, w-3, 0, 0">$1.8B, in, breaches</stro, n, g> with, enterpris, e-grade, AI, security. Prote, c, t $127B, infrastructure, at 99.97% upti, m, e."</$1>"
             <div, className="spa, c, e-y-2, m, b-6"></div>"
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>"
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  /></TrendingUp>
@@ -268,8 +250,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>"
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  /></TrendingUp>"
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">";"
-              Preve, n, t <strong, className="te, x, t-yell, o, w-3, 0, 0">$1.8B, in, breaches</stro, n, g> with, enterpris, e-grade, AI, security. Prote, c, t $127B, infrastructure, at 99.97% upti, m, e.";
-            </p>"
+              Preve, n, t <strong, className="te, x, t-yell, o, w-3, 0, 0">$1.8B, in, breaches</stro, n, g> with, enterpris, e-grade, AI, security. Prote, c, t $127B, infrastructure, at 99.97% upti, m, e."</$1>"
             <div, className="spa, c, e-y-2, m, b-6">";"
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";"
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
@@ -294,8 +275,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
             ></Li>
               Read, Full, Guide;"
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-            </Li, n, k>
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>
           </d, i, v>
           {/* Ca, r, d;
   3: RAG, Architectur, e */}
@@ -314,9 +294,9 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg"></div>
                 <Sparkles, className="w-6 h-6, tex, t-whi, t, e  />
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
-  r:shad, o, w-2, x, l">";</div>
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">";</div>
-              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">";</div>
+  r:shad, o, w-2, x, l">"</$1>
+            <div, className="flex, item, s-center, ga, p-3, m, b-4">"</$1>
+              <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">"</$1>
           {/* TODO: Fix JSX expression */}
   3: RAG, Architectur, e */}"
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"
@@ -328,18 +308,14 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
   r:shad, o, w-2, x, l">";"
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";"
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">";"
-                <Sparkles, className="w-6 h-6, tex, t-whi, t, e" />";
-              </d, i, v>"
+                <Sparkles, className="w-6 h-6, tex, t-whi, t, e" />"</$1>"
               <div, className="te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-300, uppercase, tracking-wi, d, e">";
-                NEW, GUID, E #3;
-              </d, i, v>
+                NEW, GUID, E #3</$1>
             </d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3">";
-              Enterprise, RAG, Production Architectu, r, e;
-            </h3>
+              Enterprise, RAG, Production Architectu, r, e</$1>
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">
-              Deploy, RAG, at sca, l, e. Proce, s, s</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">1, 0, M+ queri, e, s/d, a, y</stro, n, g> with, 9, 4% accuracy, deliverin, g $470M, valu, e.";
-            </p>
+              Deploy, RAG, at sca, l, e. Proce, s, s</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">1, 0, M+ queri, e, s/d, a, y</stro, n, g> with, 9, 4% accuracy, deliverin, g $470M, valu, e."</$1>
             <div, className="spa, c, e-y-2, m, b-6"></div>
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
@@ -352,22 +328,20 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">";
-              Deploy, RAG, at sca, l, e. Proce, s, s</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">1, 0, M+ queri, e, s/d, a, y</stro, n, g> with, 9, 4% accuracy, deliverin, g $470M, valu, e.";
-            </p>
-            <div, className="spa, c, e-y-2, m, b-6">";</div>
-              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";</div>
+              Deploy, RAG, at sca, l, e. Proce, s, s</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">1, 0, M+ queri, e, s/d, a, y</stro, n, g> with, 9, 4% accuracy, deliverin, g $470M, valu, e."</$1>
+            <div, className="spa, c, e-y-2, m, b-6">"</$1>
+              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">"</$1>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
                 <sp, a, n><stro, n, g>94% accura, c, y</stro, n, g> vs, 6, 7% pure, LL, M</sp, a, n>
               </d, i, v>
-              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";</div>
+              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">"</$1>
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
                 <sp, a, n><stro, n, g>$470M, annual, value</stro, n, g> Fortune, 50, 0</sp, a, n>
               </d, i, v>
-              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";</div>
+              <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">"</$1>
             </h3>"
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d"></p>"
-              Deploy, RAG, at sca, l, e. Proce, s, s <strong, className="te, x, t-yell, o, w-3, 0, 0">1, 0, M+ queri, e, s/d, a, y</stro, n, g> with, 9, 4% accuracy, deliverin, g $470M, valu, e.";
-            </p>"
+              Deploy, RAG, at sca, l, e. Proce, s, s <strong, className="te, x, t-yell, o, w-3, 0, 0">1, 0, M+ queri, e, s/d, a, y</stro, n, g> with, 9, 4% accuracy, deliverin, g $470M, valu, e."</$1>"
             <div, className="spa, c, e-y-2, m, b-6"></div>"
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>"
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  /></TrendingUp>
@@ -380,8 +354,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0"></div>"
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  /></TrendingUp>"
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">";"
-              Deploy, RAG, at sca, l, e. Proce, s, s <strong, className="te, x, t-yell, o, w-3, 0, 0">1, 0, M+ queri, e, s/d, a, y</stro, n, g> with, 9, 4% accuracy, deliverin, g $470M, valu, e.";
-            </p>"
+              Deploy, RAG, at sca, l, e. Proce, s, s <strong, className="te, x, t-yell, o, w-3, 0, 0">1, 0, M+ queri, e, s/d, a, y</stro, n, g> with, 9, 4% accuracy, deliverin, g $470M, valu, e."</$1>"
             <div, className="spa, c, e-y-2, m, b-6">";"
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">";"
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />";
@@ -406,8 +379,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
             ></Li>
               Read, Full, Guide;"
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
-            </Li, n, k>
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>
           </d, i, v>
         </d, i, v>
         {/* Bottom, CT, A */}
@@ -418,8 +390,8 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
             <Li, n, k;
         <div, className="te, x, t-cent, e, r"></div>
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"</div>
-        <div, className="te, x, t-cent, e, r">";</div>
-          <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";</div>
+        <div, className="te, x, t-cent, e, r">"</$1>
+          <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"</$1>
             <Li, n, k
   to="/conta, c, t"
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-yell, o, w-500, hove, r:to-oran, g, e-600, transitio, n-all, duratio, n-300, shado, w-2xl, hove, r:shad, o, w-yell, o, w-5, 0, 0/50, hov, e;
@@ -438,8 +410,7 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
               <Link, className="w-6 h-6  /></Link>"
               <Sparkles, className="w-6 h-6" />";
               Get, Free, Expert Consultati, o, n;"
-              <Link, className="w-6 h-6" />";
-            </Li, n, k>
+              <Link, className="w-6 h-6" />"</$1>
             <Li, n, k;
   to="/bl, o, g"
             <Li, n, k;"
@@ -451,19 +422,15 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
             </Li, n, k>
           </d, i, v>
           <p, className="te, x, t-sm, tex, t-gr, a, y-300, m, t-6"></p>
-              <Link, className="w-6 h-6" />";
-            </Li, n, k>
+              <Link, className="w-6 h-6" />"</$1>
           </d, i, v>
           <p, className="te, x, t-sm, tex, t-gr, a, y-300, m, t-6">";
-            Jo, i, n</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">1,247, Fortune, 500 compani, e, s</stro, n, g> transforming, with, Zion Tech, Group, AI solutio, n, s";
-          </d, i, v>"
+            Jo, i, n</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">1,247, Fortune, 500 compani, e, s</stro, n, g> transforming, with, Zion Tech, Group, AI solutio, n, s"</$1>"
           <p, className="te, x, t-sm, tex, t-gr, a, y-300, m, t-6"></p>"
-              <Link, className="w-6 h-6" />";
-            </Li, n, k>
+              <Link, className="w-6 h-6" />"</$1>
           </d, i, v>"
           <p, className="te, x, t-sm, tex, t-gr, a, y-300, m, t-6">";"
-            Jo, i, n <strong, className="te, x, t-yell, o, w-3, 0, 0">1,247, Fortune, 500 compani, e, s</stro, n, g> transforming, with, Zion Tech, Group, AI solutio, n, s";
-          </p>
+            Jo, i, n <strong, className="te, x, t-yell, o, w-3, 0, 0">1,247, Fortune, 500 compani, e, s</stro, n, g> transforming, with, Zion Tech, Group, AI solutio, n, s"</$1>
         </d, i, v>)
       </d, i, v>)
     </d, i, v>)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface LinkProps {
   href: string,
     children: React.ReactNode
@@ -15,14 +14,6 @@ export const Link: React.FC<LinkProps>= ({
 export const Link: React.FC<LinkProps> = ({}
   href,
   href: string,
-=======
-
-interface LinkProps {;
-  href: string,;
-    children: React.ReactNode;}
-interface LinkProps {}
-  href: string;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   children: React.ReactNode;
   className?: string;
   target?: string;
@@ -85,13 +76,11 @@ export const,;
       onClick={handleClick}
       aria-label={ariaLabel}
       {...props}
-    >{children}</a>;
-    </a>;
+    >{children}</a></$1>;
       aria-label={ariaLabel});
       {...props});
     >);
-      {children});
-    </a>);
+      {children})</$1>);
   );
 }
 export default Link;
@@ -100,11 +89,6 @@ export default Link;
     </a>);
   );
 };
-export default Link;
-<<<<<<< HEAD
+export default Link</$1>
   </LinkProps>
   </LinkProps>
-  </LinkProps>
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

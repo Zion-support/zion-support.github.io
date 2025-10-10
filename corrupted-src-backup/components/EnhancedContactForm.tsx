@@ -40,8 +40,7 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
       />"
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded"></button>
-        Send;
-      </button>
+        Send</$1>
     </form>
   );
 }

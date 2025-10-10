@@ -60,11 +60,9 @@ const CompliancePage: React.FC = () => {
 // >
           "
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
-// Back to Privacy Policy;
-          </Link>"
+// Back to Privacy Policy</$1>"
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
-            </div>
-        </section>"
+            </div>"
         <main className="max-w-7xl mx-auto px-4,
   sm:px-6,"
   lg:px-8 py-12"></main>
@@ -72,8 +70,7 @@ const CompliancePage: React.FC = () => {
           <section className="mb-16"></section>"
             <div className="text-center mb-12"></div>"
               <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2>
-// Our Commitment to Compliance;
-          </h2>"
+// Our Commitment to Compliance</$1>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto"></p>
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
                 Our certifications and adherence to industry standards ensure your data is protected;
@@ -119,14 +116,12 @@ Compliance Areas;"
               security measures, or data protection practices.
             <a
               href="mailto:compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
-              Contact Compliance Team;
-            </a>"
+              Contact Compliance Team</$1>"
             <div className="mt-8 text-sm text-blue-200"></div>
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
   );
 };
-export default CompliancePage;
-  </div>
+export default CompliancePage</$1>
   </div>

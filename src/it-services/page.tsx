@@ -387,7 +387,6 @@ const ITServicesPage: React.FC = () => {
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               (302) 464-0950</span>
           </div>
-        </section>
         {/* Main Services Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
@@ -455,7 +454,6 @@ const ITServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
         {/* Additional Services */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
@@ -471,7 +469,6 @@ const ITServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </section>
         {/* Support Tiers */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
@@ -540,7 +537,6 @@ const ITServicesPage: React.FC = () => {
                 Contact Sales</span>
             </div>
           </div>
-        </section>
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
@@ -559,7 +555,6 @@ const ITServicesPage: React.FC = () => {
                 (302) 464-0950</span>
             </div>
           </div>
-          </section>
         </main>
         <Footer />
       </div>

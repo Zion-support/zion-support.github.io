@@ -76,8 +76,7 @@ const,
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-                AI Customer Support Solutions;
-              </h1>
+                AI Customer Support Solutions</$1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">)
                 Transform your customer service with intelligent AI that never sleeps;)
               </p>)
@@ -106,12 +105,10 @@ const,
             <div className="max-w-4xl mx-auto"></div>"
               <h1 className="text-4xl,"
   md:text-6xl font-bold text-white mb-6 neon-text"></h1>
-                AI Customer Support Solutions;
-              </h1>"
+                AI Customer Support Solutions</$1>"
               <p className="text-xl,"
   md:text-2xl text-cyan-400 mb-8"></p>
-                Transform your customer service with intelligent AI that never sleeps;
-              </p>"
+                Transform your customer service with intelligent AI that never sleeps</$1>"
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto"></p>
                 Our AI-powered customer support platform combines advanced chatbots, omnichannel communication, 
                 and intelligent automation to deliver exceptional customer experiences while reducing costs by up to 60%.
@@ -164,10 +161,10 @@ const,
                 ))}
               </div>
             </div>
-          </section>
         </main>
       </div>
     </div>
+      </section>
     </React.Fragment>
   );
 };
@@ -185,8 +182,7 @@ const AICustomerSupportPage2: React.FC = () => {
           {/* Hero Section */}</div>
           <section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Customer Support;
-            </h1>,
+              AI Customer Support</$1>,
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance),
               smart ticket routing, and predictive analytics.
@@ -203,23 +199,19 @@ const AICustomerSupportPage2: React.FC = () => {
               <a;
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                Learn More;
-              </a>,
+                Learn More</$1>,
             </div>,
           </section>,
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-              Key Features;
-            </h2>,
+              Key Features</$1>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Key Features;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              Key Features</$1>
               {features.map((feature, index) => (</section>
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -236,19 +228,15 @@ const AICustomerSupportPage2: React.FC = () => {
                 </div>
               ))}
             </div>
-          </section>
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-              Pricing Plans;
-            </h2>,
+              Pricing Plans</$1>,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
               {pricingPlans.map((plan, index) => (
                 <div;
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Pricing Plans;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              Pricing Plans</$1>
               {pricingPlans.map((plan, index) => (</section>
                 <div
                   key={index}
@@ -259,8 +247,7 @@ const AICustomerSupportPage2: React.FC = () => {
                   {plan.popular && (</div>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-                        Most Popular;
-                      </span>
+                        Most Popular</$1>
                     </div>
                   )}
                   <h3 className="text-2 xl font-bold text-white mb-2">{plan.name}</h></h3>
@@ -277,12 +264,10 @@ const AICustomerSupportPage2: React.FC = () => {
                   <a;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
                     className="cyber-button w-full text-center block">
-                    Get Started;
-                  </a>
+                    Get Started</$1>
                 </div>
               ))}
             </div>
-          </section>
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -292,8 +277,7 @@ const AICustomerSupportPage2: React.FC = () => {
                 Ready to Transform Your Customer Support?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions;
-              </p>
+                Join 500+ companies already using our AI customer support solutions</$1>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a;
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -313,24 +297,19 @@ const AICustomerSupportPage2: React.FC = () => {
                 </a>
               </div>
             </div>
-          </section>
         </main>
         <Footer /></Foote></Footer>
       </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Customer Support;
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              AI Customer Support</$1>
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
             </p>
-          </section>
-        </div>
+          </div>
       </main>
     </div>
   );
 };
-export default AICustomerSupportPage;
-  </h1>
+export default AICustomerSupportPage</$1>
   </h2>
   </h3>
   </h2>

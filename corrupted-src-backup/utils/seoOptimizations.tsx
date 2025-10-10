@@ -228,7 +228,7 @@ export const contentOptimization = {/* content */}
     const wordCount = words.reduce((acc, word) => {/* content */}
       acc[word] = (acc[word] || 0) + 1;
       return acc;
-    }, {} as Record<string, number>);</string>return</string> Object.entries(wordCount)
+    }, {} as Record<string, number>)</$1>return</string> Object.entries(wordCount)
       .sort(([,a], [,b]) => b - a)
       .slice(0, 10)
       .map(([word]) => word);

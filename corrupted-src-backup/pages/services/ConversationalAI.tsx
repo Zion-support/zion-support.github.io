@@ -375,8 +375,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           content="Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t, and, mult, i-modal, conversation, s. Enterpri, s, e-grade, security, and re, a, l-time, processing, for customer, suppor, t, sal, e, s, and, engagemen, t."
          />"
         <meta name="keywor, d, s" content="conversational, A, I, chatb, o, t, voice, A, I, mul, t, i-modal, A, I, customer, support, AI, sales, automatio, n, natural, language, processing, AI, conversation, s" />";"
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/conversation, a, l-ai" />";
-      </Helmet>
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/conversation, a, l-ai" />"</$1>
       <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">";
         {/* Hero, Sectio, n */}
@@ -398,11 +397,10 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <section, className="bg-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">";
             <div, className="te, x, t-cent, e, r">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
-            <div, className="te, x, t-cent, e, r">";</div>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">"</$1>
+            <div, className="te, x, t-cent, e, r">"</$1>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
-                Conversation, a, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>";
-              </h1>
+                Conversation, a, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>"</$1>
               <p, className="te, x, t-x, l, m;
   d: te, x, t-2xl, tex, t-viol, e, t-100, ma, x-w-4xl, m, x-auto, m, b-8">";
                 Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t;
@@ -410,7 +408,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                 <a;
-              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</$1>
                 <a
   hr, e, f="/conta, c, t"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-viol, e, t-600, hov, e;
@@ -431,8 +429,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-cent, e, r">";"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";"
-                Conversation, a, l <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>";
-              </h1>"
+                Conversation, a, l <span, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">AI</sp, a, n>"</$1>"
               <p, className="te, x, t-x, l, m,"
   d: te, x, t-2xl, tex, t-viol, e, t-100, ma, x-w-4xl, m, x-auto, m, b-8">";
                 Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ language, suppor, t;
@@ -446,8 +443,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 >"
                   <Phone, className="w-5 h-5, m, r-2  /></Phone>"
                   <Phone, className="w-5 h-5, m, r-2" />";
-                  Schedule, Dem, o;
-                </a>
+                  Schedule, Dem, o</$1>
                 <a;
   hr, e, f="#prici, n, g"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
@@ -458,8 +454,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 >
                   View, Pricin, g;"
                   <Link, className="w-5 h-5, m, l-2  /></Link>"
-                  <Link, className="w-5 h-5, m, l-2" />";
-                </a>
+                  <Link, className="w-5 h-5, m, l-2" />"</$1>
               </d, i, v>
             </d, i, v>
           </d, i, v>
@@ -480,8 +475,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">";</section>
-            <div, className="text-center mb-12">";</div>
+  g:px-8">"</$1>
+            <div, className="text-center mb-12">"</$1>
         {/* Key, Benefit, s */}"
         <section, className="py-16, b, g-gr, a, y-50"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -503,9 +498,9 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-4"></div>
                   <Brain, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0  />
-            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";</div>
-              <div, className="te, x, t-cent, e, r">";</div>
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-4">";</div>
+            <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">"</$1>
+              <div, className="te, x, t-cent, e, r">"</$1>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-4">"</$1>
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">""
               <div, className="te, x, t-cent, e, r"></div>"
@@ -514,59 +509,51 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-4">";"
-                  <Brain, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
-                </d, i, v>"
+                  <Brain, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">96% Accura, c, y</h3>";"
-                <p, className="te, x, t-gr, a, y-6, 0, 0">Indust, r, y-leading, conversation, understanding</p>";
-              </d, i, v>
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Indust, r, y-leading, conversation, understanding</p>"</$1>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4"></div>
                   <Clock, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  />
-              <div, className="te, x, t-cent, e, r">";</div>
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">";</div>
+              <div, className="te, x, t-cent, e, r">"</$1>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">"</$1>
               </d, i, v>"
               <div, className="te, x, t-cent, e, r"></div>"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4"></div>"
                   <Clock, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0  /></Clock>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-full, m, b-4">";"
-                  <Clock, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0" />";
-                </d, i, v>"
+                  <Clock, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Instant, Respons, e</h3>";"
-                <p, className="te, x, t-gr, a, y-6, 0, 0">S, u, b-second, response, times</p>";
-              </d, i, v>
+                <p, className="te, x, t-gr, a, y-6, 0, 0">S, u, b-second, response, times</p>"</$1>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-pi, n, k-100, rounde, d-full, m, b-4"></div>
                   <Languages, className="w-8 h-8, tex, t-pi, n, k-6, 0, 0  />
-              <div, className="te, x, t-cent, e, r">";</div>
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-pi, n, k-100, rounde, d-full, m, b-4">";</div>
+              <div, className="te, x, t-cent, e, r">"</$1>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-pi, n, k-100, rounde, d-full, m, b-4">"</$1>
               </d, i, v>"
               <div, className="te, x, t-cent, e, r"></div>"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-pi, n, k-100, rounde, d-full, m, b-4"></div>"
                   <Languages, className="w-8 h-8, tex, t-pi, n, k-6, 0, 0  /></Languages>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-pi, n, k-100, rounde, d-full, m, b-4">";"
-                  <Languages, className="w-8 h-8, tex, t-pi, n, k-6, 0, 0" />";
-                </d, i, v>"
+                  <Languages, className="w-8 h-8, tex, t-pi, n, k-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">1, 5, 0+ Languag, e, s</h3>";"
-                <p, className="te, x, t-gr, a, y-6, 0, 0">Global, reach, with cultural, contex, t</p>";
-              </d, i, v>
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Global, reach, with cultural, contex, t</p>"</$1>
               <div, className="te, x, t-cent, e, r"></div>
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4"></div>
                   <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  />
-              <div, className="te, x, t-cent, e, r">";</div>
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";</div>
+              <div, className="te, x, t-cent, e, r">"</$1>
+                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">"</$1>
               </d, i, v>"
               <div, className="te, x, t-cent, e, r"></div>"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4"></div>"
                   <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0  /></Shield>"
               <div, className="te, x, t-cent, e, r">";"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, m, b-4">";"
-                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />";
-                </d, i, v>"
+                  <Shield, className="w-8 h-8, tex, t-bl, u, e-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Enterprise, Securit, y</h3>";"
-                <p, className="te, x, t-gr, a, y-6, 0, 0">Ba, n, k-grade, encryptio, n & complian, c, e</p>";
-              </d, i, v>
+                <p, className="te, x, t-gr, a, y-6, 0, 0">Ba, n, k-grade, encryptio, n & complian, c, e</p>"</$1>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -584,8 +571,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
-            <div, className="te, x, t-center, m, b-16">";</div>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">"</$1>
+            <div, className="te, x, t-center, m, b-16">"</$1>
         {/* Use, Case, s */}"
         <section, className="py-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -596,8 +583,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Industry, Application, s;
-              </h2>"
+                Industry, Application, s</$1>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Transform, customer, engagement across, multiple, industries with, intelligent, conversations.
               </p>
@@ -624,10 +610,9 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";</div>
-                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
-                    </d, i, v>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</$1>
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">"</$1>
+                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />"</$1>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";)
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";)
                     <ul, className="spa, c, e-y-2">";)
@@ -636,8 +621,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";
-                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
-            </d, i, v>"
+                          <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />"</$1>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
@@ -649,8 +633,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";"
-                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
-                    </d, i, v>"
+                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />"</$1>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{useCa, s, e.tit, l, e}</h3>";"
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{useCa, s, e.descripti, o, n}</p>";"
                     <ul, className="spa, c, e-y-2">";
@@ -660,8 +643,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"
                         <li, ke, y={benefitInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">";"
                           <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";"
-                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>";
-                        </li>)
+                          <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"</$1>)
                       ))}
                     </ul>
                   </d, i, v>
@@ -684,8 +666,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
-            <div, className="te, x, t-center, m, b-16">";</div>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">"</$1>
+            <div, className="te, x, t-center, m, b-16">"</$1>
         {/* Integratio, n, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -696,8 +678,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Seamless, Integration, s;
-              </h2>"
+                Seamless, Integration, s</$1>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Connect, with, your existing, tools, and systems, for, a unified, experienc, e.
               </p>
@@ -724,10 +705,9 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {integratio, n, s.m, a, p((integrati, o, n, ind, e, x) => {
                 const, Ico, n = integrati, o, n.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";</div>
-                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
-                    </d, i, v>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">"</$1>
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">"</$1>
+                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />"</$1>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{integrati, o, n.na, m, e}</h3>";)
                     <p, className="te, x, t-gr, a, y-6, 0, 0">{integrati, o, n.descripti, o, n}</p>";)
                   </d, i, v>)
@@ -743,11 +723,9 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-viol, e, t-100, rounde, d-full, m, b-6">";"
-                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />";
-                    </d, i, v>"
+                      <Icon, className="w-8 h-8, tex, t-viol, e, t-6, 0, 0" />"</$1>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{integrati, o, n.na, m, e}</h3>";"
-                    <p, className="te, x, t-gr, a, y-6, 0, 0">{integrati, o, n.descripti, o, n}</p>";
-                  </d, i, v>
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">{integrati, o, n.descripti, o, n}</p>"</$1>
                 );
               })}
             </d, i, v>
@@ -769,8 +747,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">";</section>
-            <div, className="te, x, t-center, m, b-16">";</div>
+  g:px-8">"</$1>
+            <div, className="te, x, t-center, m, b-16">"</$1>
         {/* Featur, e, s */}"
         <section, className="py-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -782,8 +760,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Advanced, AI, Capabilities;
-              </h2>"
+                Advanced, AI, Capabilities</$1>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Powerful, features, that make, conversations, natural, intellige, n, t, and, effectiv, e.
               </p>
@@ -816,13 +793,12 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (</div>
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";</div>
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">";</div>
-                      <Icon, className="w-6 h-6, tex, t-viol, e, t-6, 0, 0" />";
-                    </d, i, v>
+                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"</$1>
+                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">"</$1>
+                      <Icon, className="w-6 h-6, tex, t-viol, e, t-6, 0, 0" />"</$1>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";</div>
+                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">"</$1>
             </d, i, v>"
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-3, ga, p-8">"
@@ -840,8 +816,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-viol, e, t-100, rounde, d-lg, m, b-4">";"
-                      <Icon, className="w-6 h-6, tex, t-viol, e, t-6, 0, 0" />";
-                    </d, i, v>"
+                      <Icon, className="w-6 h-6, tex, t-viol, e, t-6, 0, 0" />"</$1>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
@@ -868,8 +843,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
-            <div, className="te, x, t-center, m, b-16">";</div>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">"</$1>
+            <div, className="te, x, t-center, m, b-16">"</$1>
         {/* Prici, n, g */}"
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -880,8 +855,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                Transparent, Pricing, for Every, Business, Size;
-              </h2>"
+                Transparent, Pricing, for Every, Business, Size</$1>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Choose, the, plan that, fits, your conversational, AI, needs and, conversation, volume.
               </p>
@@ -894,17 +868,15 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-viol, e, t-500, relativ, e' : ''}`}>`;`
                   {pl, a, n.popul, a, r && (</div>
-                    <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";</div>
+                    <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">"</$1>
                       <span, className="bg-viol, e, t-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
-                        Most, Popula, r;
-                      </sp, a, n>
+                        Most, Popula, r</$1>
                     </d, i, v>
                   )}
-                  <div, className="te, x, t-center, m, b-8">";</div>
+                  <div, className="te, x, t-center, m, b-8">"</$1>
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";
-                    <div, className="flex, item, s-center, justif, y-center, m, b-2">";</div>
-                      <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";
-            </d, i, v>"
+                    <div, className="flex, item, s-center, justif, y-center, m, b-2">"</$1>
+                      <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>"</$1>"
             <div, className="gri, d, m,"
   d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
@@ -916,10 +888,8 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";"
                     <div, className="flex, item, s-center, justif, y-center, m, b-2">";"
                       <span, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">{pl, a, n.pri, c, e}</sp, a, n>";"
-                      <span, className="te, x, t-gr, a, y-600, m, l-1">/{pl, a, n.peri, o, d}</sp, a, n>";
-                    </d, i, v>"
-                    <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>";
-                  </d, i, v>"
+                      <span, className="te, x, t-gr, a, y-600, m, l-1">/{pl, a, n.peri, o, d}</sp, a, n>"</$1>"
+                    <p, className="te, x, t-gr, a, y-6, 0, 0">{pl, a, n.descripti, o, n}</p>"</$1>"
                   <ul, className="spa, c, e-y-4, m, b-8">";
                     {/* TODO: Fix JSX expression */}"
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r"></li>"
@@ -927,8 +897,7 @@ const, ConversationalA, I: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>"
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";"
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";"
-                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
-                      </li>
+                        <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>"</$1>
                     ))}
                   </ul>
                   <a;
@@ -945,12 +914,11 @@ pl, a, n.popul, a, r;
                     classNa, m, e={/* TODO: Fix JSX expression */}`
 }`}`;`
                   >
-                    Get, Starte, d;
-                  </a>
+                    Get, Starte, d</$1>
                 </d, i, v>
               ))}
             </d, i, v>
-            <div, className="te, x, t-center, m, t-12">";</div>
+            <div, className="te, x, t-center, m, t-12">"</$1>
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom conversational, AI, solution?</p>";
               <a;
   hr, e, f="/conta, c, t"
@@ -963,8 +931,7 @@ pl, a, n.popul, a, r;
               >
                 Contact, our, AI Te, a, m;"
                 <Link, className="w-4 h-4, m, l-1  /></Link>"
-                <Link, className="w-4 h-4, m, l-1" />";
-              </a>
+                <Link, className="w-4 h-4, m, l-1" />"</$1>
             </d, i, v>
           </d, i, v>
         </secti, o, n>
@@ -982,8 +949,8 @@ pl, a, n.popul, a, r;
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";</section>
-            <div, className="te, x, t-center, m, b-16">";</div>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">"</$1>
+            <div, className="te, x, t-center, m, b-16">"</$1>
         {/* Testimonia, l, s */}"
         <section, className="py-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -994,8 +961,7 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";"
             <div, className="te, x, t-center, m, b-16">";"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
-                What, Our, Clients S, a, y;
-              </h2>"
+                What, Our, Clients S, a, y</$1>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Join, hundreds, of companies, already, using our, conversational, AI to, transform, customer engageme, n, t.
               </p>
@@ -1006,7 +972,7 @@ pl, a, n.popul, a, r;
   d: gr, i, d-co, l, s-3, ga, p-8">"</div>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (</div>
-                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
+                <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">"</$1>
                   <div, className="flex, item, s-center, m, b-4">";
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (</div>
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
@@ -1028,8 +994,7 @@ pl, a, n.popul, a, r;
                   <d, i, v></d>"
                     <div, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{testimoni, a, l.na, m, e}</d, i, v>";"
                     <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>";"
-                    <div, className="te, x, t-viol, e, t-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>";
-                  </d, i, v>
+                    <div, className="te, x, t-viol, e, t-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>"</$1>
                 </d, i, v>
               ))}
             </d, i, v>
@@ -1048,7 +1013,7 @@ pl, a, n.popul, a, r;
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8, tex, t-cent, e, r">";</section>
+  g:px-8, tex, t-cent, e, r">"</$1>
         {/* CTA, Sectio, n */}"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"
@@ -1067,11 +1032,10 @@ pl, a, n.popul, a, r;
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a;
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
-            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";</div>
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</$1>
               <a
   hr, e, f="/conta, c, t"
-                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-viol, e, t-600, hov, e;
-            </p>"
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-viol, e, t-600, hov, e</$1>"
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a></a>"
@@ -1081,8 +1045,7 @@ pl, a, n.popul, a, r;
               >"
                 <Phone, className="w-5 h-5, m, r-2  /></Phone>"
                 <Phone, className="w-5 h-5, m, r-2" />";
-                Schedule, Dem, o;
-              </a>
+                Schedule, Dem, o</$1>
               <a;
   hr, e, f="/ca, s, e-studi, e, s"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e;
@@ -1093,8 +1056,7 @@ pl, a, n.popul, a, r;
               >
                 View, Success, Stories;"
                 <Link, className="w-5 h-5, m, l-2  /></Link>"
-                <Link, className="w-5 h-5, m, l-2" />";
-              </a>
+                <Link, className="w-5 h-5, m, l-2" />"</$1>
             </d, i, v>
           </d, i, v>
         </secti, o, n>

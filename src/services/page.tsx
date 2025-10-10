@@ -215,27 +215,16 @@ const ServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Services;
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business operations and drive growth;
-  </
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              Our Services</$1>
+              Comprehensive AI and IT solutions designed to transform your business operations and drive growth</$1>
               <a
                 href="tel:+13024640950"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950;
-  </
-              <Link
-                to="/contact"
-                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Free Consultation;
-  </
-            </div>
+                Call (302) 464-0950</$1>
+                Get Free Consultation</$1>
           </div>
         </div>
-      </section>
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -252,27 +241,20 @@ const ServicesPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
       {/* AI Services Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI Services;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced artificial intelligence solutions to automate, optimize, and transform your business;
-  </
-          </div>
+              AI Services</$1>
+              Advanced artificial intelligence solutions to automate, optimize, and transform your business</$1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
-  </
-                  </div>
+                      Most Popular</$1>
                 )}
                 <div className="flex items-center mb-4">
                   <service.icon className="h-8 w-8 text-cyan-400 mr-3" />
@@ -292,34 +274,25 @@ const ServicesPage: React.FC = () => {
                   <Link
                     to={service.link}
                     className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More;
-  </
-                </div>
+                    Learn More</$1>
               </div>
             ))}
           </div>
         </div>
-      </section>
       {/* IT Services Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              IT Services;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Robust IT infrastructure and support services to keep your business running smoothly;
-  </
-          </div>
+              IT Services</$1>
+              Robust IT infrastructure and support services to keep your business running smoothly</$1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
               <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
-  </
-                  </div>
+                      Most Popular</$1>
                 )}
                 <div className="flex items-center mb-4">
                   <service.icon className="h-8 w-8 text-blue-400 mr-3" />
@@ -339,22 +312,17 @@ const ServicesPage: React.FC = () => {
                   <Link
                     to={service.link}
                     className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More;
-  </
-                </div>
+                    Learn More</$1>
               </div>
             ))}
           </div>
         </div>
-      </section>
       {/* Micro SAAS Services Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Micro SAAS Solutions;
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Micro SAAS Solutions</$1>
               Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
             </p>
           </div>
@@ -364,9 +332,7 @@ const ServicesPage: React.FC = () => {
                 {service.popular && (
                   <div className="flex items-center justify-center mb-4">
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular;
-  </
-                  </div>
+                      Most Popular</$1>
                 )}
                 <div className="flex items-center mb-4">
                   <service.icon className="h-8 w-8 text-purple-400 mr-3" />
@@ -386,14 +352,11 @@ const ServicesPage: React.FC = () => {
                   <Link
                     to={service.link}
                     className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More;
-  </
-                </div>
+                    Learn More</$1>
               </div>
             ))}
           </div>
         </div>
-      </section>
       {/* Benefits Section */}
       <section className="py-24 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -402,9 +365,7 @@ const ServicesPage: React.FC = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver exceptional results with proven expertise and cutting-edge technology;
-  </
-          </div>
+              We deliver exceptional results with proven expertise and cutting-edge technology</$1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -417,7 +378,6 @@ const ServicesPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -433,23 +393,15 @@ const ServicesPage: React.FC = () => {
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950;
-  </
-              <Link
-                to="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Free Consultation;
-  </
-            </div>
+                Call (302) 464-0950</$1>
+                Get Free Consultation</$1>
           </div>
         </div>
-      </section>
       <Footer />
     </div>
   );
 };
-export default ServicesPage;
-  </Link>
+export default ServicesPage</$1>
   </a>
   </p>
   </Link>

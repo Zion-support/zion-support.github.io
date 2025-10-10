@@ -228,7 +228,6 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-    </section>
   );
 }
   </button>

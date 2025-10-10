@@ -157,24 +157,19 @@ titl,
             <div className="text-center"></div>"
               <h1 className="text-4xl,"
   md:text-6xl font-bold mb-6"></h1>
-// IoT & Edge Computing Services;
-          </h1>"
+// IoT & Edge Computing Services</$1>"
               <p className="text-xl,"
   md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
-// Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions;
-          </p>"
+// Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions</$1>"
               <div className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"
   hover:bg-cyan-50 transition-colors"></button>
-// Explore IoT Solutions;
-          </button>"
+// Explore IoT Solutions</$1>"
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover:text-cyan-600 transition-colors"></button>
-Schedule Demo;
-              </div>
-        </section>
+Schedule Demo</$1>
         {/* Key Benefits */}"
         <section className="py-16 bg-white"></section>"
           <div className="max-w-7xl mx-auto px-4,
@@ -297,13 +292,11 @@ Ready to Connect Your World?"
               <a
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
-//                  +1 302 464 0950;
-          </a>
+//                  +1 302 464 0950</$1>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com;
             <div className="mt-8 text-sm text-cyan-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );
 };
-export default IotEdgePage;
-  </div>
+export default IotEdgePage</$1>

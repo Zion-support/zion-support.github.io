@@ -60,7 +60,10 @@ Expected Efficiency Gain (%)
                   Expected return on investment over {timeframe} months</p>
     </section>
   );
-export default InteractiveAIROICalculator</div>
+
+  };
+
+  export default InteractiveAIROICalculator</div>
   </div>
   </div>
   </h2>

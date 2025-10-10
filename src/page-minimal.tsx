@@ -17,8 +17,7 @@ export default function HomePage() {
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <Link href="/" className="text-2xl font-bold text-gray-900">
-// Zion Tech Group;
-          </Link>
+// Zion Tech Group</$1>
             </div>
             <nav className="hidden md:flex space-x-8">
               <Link href="/" className="text-gray-900 hover:text-blue-600">
@@ -28,8 +27,7 @@ Home;
               <Link href="/blog" className="text-gray-900 hover:text-blue-600">
                 Blog;
               <Link href="/contact" className="text-gray-900 hover:text-blue-600">
-                Contact;
-            </nav>
+                Contact</$1>
       </header>
       <main>
         {/* Hero Section */}
@@ -51,8 +49,7 @@ Home;
           <Link className="w-5 h-5 ml-2" />
               <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 <Phone className="w-5 h-5 mr-2" />
-// Call +1 302 464 0950;
-          </a>
+// Call +1 302 464 0950</$1>
         </section>
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
@@ -67,8 +64,7 @@ Home;
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                   <CheckCircle className="w-6 h-6 text-blue-600" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-// Proven Results;
-          </h3>
+// Proven Results</$1>
                 <p className="text-gray-600">
                   Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
@@ -113,7 +109,6 @@ Ready to Transform Your Business?
   </div>
   </p>
   </h2>
-  </section>
   </div>
   </div>
   </p>
@@ -122,7 +117,6 @@ Ready to Transform Your Business?
   </div>
   </p>
   </div>
-  </section>
   </Link>
   </div>
   </div>
