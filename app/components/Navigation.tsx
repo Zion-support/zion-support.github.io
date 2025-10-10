@@ -749,16 +749,23 @@ const Navigation: React.FC = () => {
             </Link>
             <Link 
               to="/pricing" 
+<<<<<<< HEAD
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
+=======
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
               onClick={closeAllMenus}
             >
               Pricing
             </Link>
+<<<<<<< HEAD
             
             {/* Search */}
             <div className="w-64">
               <Search />
             </div>
+=======
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
 
             {/* Services Dropdown */}
             <div className="relative">

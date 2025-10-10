@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-10-10T05:16:49.900Z",
   "summary": {
     "totalPaths": 63,
@@ -302,4 +303,194 @@
   "missingPages": [],
   "duplicatePaths": [],
   "recommendations": []
+=======
+  "timestamp": "2025-10-10T04:17:42.613Z",
+  "summary": {
+    "totalExisting": 20,
+    "totalMissing": 2,
+    "missingByType": {
+      "footer": [
+        {
+          "path": "tel:+13024640950",
+          "status": "missing",
+          "type": "footer",
+          "filePath": "/workspace/app/tel:+13024640950/page.tsx"
+        },
+        {
+          "path": "mailto:kleber@ziontechgroup.com",
+          "status": "missing",
+          "type": "footer",
+          "filePath": "/workspace/app/mailto:kleber@ziontechgroup.com/page.tsx"
+        }
+      ]
+    }
+  },
+  "existingPages": [
+    {
+      "path": "/about",
+      "component": "AboutPage ",
+      "filePath": "/workspace/app/about/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/contact",
+      "component": "ContactPage ",
+      "filePath": "/workspace/app/contact/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/pricing",
+      "component": "PricingPage ",
+      "filePath": "/workspace/app/pricing/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/ai-services",
+      "component": "AIServicesPage ",
+      "filePath": "/workspace/app/ai-services/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/it-services",
+      "component": "ITServicesPage ",
+      "filePath": "/workspace/app/it-services/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/micro-saas",
+      "component": "MicroSaasPage ",
+      "filePath": "/workspace/app/micro-saas/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/blog",
+      "component": "BlogPage ",
+      "filePath": "/workspace/app/blog/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/case-studies",
+      "component": "CaseStudiesPage ",
+      "filePath": "/workspace/app/case-studies/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/team",
+      "component": "TeamPage ",
+      "filePath": "/workspace/app/team/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/careers",
+      "component": "CareersPage ",
+      "filePath": "/workspace/app/careers/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/privacy",
+      "component": "PrivacyPage ",
+      "filePath": "/workspace/app/privacy/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/terms",
+      "component": "TermsPage ",
+      "filePath": "/workspace/app/terms/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/cookies",
+      "component": "CookiesPage ",
+      "filePath": "/workspace/app/cookies/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/docs",
+      "component": "DocsPage ",
+      "filePath": "/workspace/app/docs/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/api-docs",
+      "component": "ApiDocsPage ",
+      "filePath": "/workspace/app/api-docs/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/support",
+      "component": "SupportPage ",
+      "filePath": "/workspace/app/support/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/status",
+      "component": "StatusPage ",
+      "filePath": "/workspace/app/status/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/demo",
+      "component": "DemoPage ",
+      "filePath": "/workspace/app/demo/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/consultation",
+      "component": "ConsultationPage ",
+      "filePath": "/workspace/app/consultation/page.tsx",
+      "status": "exists",
+      "type": "page"
+    },
+    {
+      "path": "/services",
+      "component": "ServicesPage ",
+      "filePath": "/workspace/app/services/page.tsx",
+      "status": "exists",
+      "type": "page"
+    }
+  ],
+  "missingPages": [
+    {
+      "path": "tel:+13024640950",
+      "status": "missing",
+      "type": "footer",
+      "filePath": "/workspace/app/tel:+13024640950/page.tsx"
+    },
+    {
+      "path": "mailto:kleber@ziontechgroup.com",
+      "status": "missing",
+      "type": "footer",
+      "filePath": "/workspace/app/mailto:kleber@ziontechgroup.com/page.tsx"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Create missing pages identified in the audit",
+      "count": 2,
+      "pages": [
+        "tel:+13024640950",
+        "mailto:kleber@ziontechgroup.com"
+      ]
+    }
+  ]
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
 }

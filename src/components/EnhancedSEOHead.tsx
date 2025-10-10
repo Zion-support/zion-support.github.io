@@ -32,6 +32,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
+<<<<<<< HEAD
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.",
   keywords = [
     "AI solutions",
@@ -45,6 +46,10 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     "cybersecurity",
     "cloud computing"
   ],
+=======
+  description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with cutting-edge technology.",
+  keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, cybersecurity, business intelligence, micro SAAS",
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-ce29
   image = "https://ziontechgroup.com/og-image.jpg",
   url,
   type = "website",
