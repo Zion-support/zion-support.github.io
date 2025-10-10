@@ -1,250 +1,213 @@
 'use client';
 import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import SEOOptimizer from '../../components/SEOOptimizer';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Navigation } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Shield, Users, Globe, Zap, Database, Cloud, Code, Target, BarChart, Award, Clock, Star, ArrowRight } from 'lucide-react';
 
 const EnterprisePage: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer;
-        title="Enterprise Solutions - Zion Tech Group",
-        description="Comprehensive enterprise-grade solutions for large-scale business operations.",
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
         keywords={["enterprise solutions","enterprise software","large-scale solutions","enterprise integration","business solutions"]}
         canonicalUrl="https://ziontechgroup.com/enterprise"
-      /></SEOOptimize>
+      />
 
-      <Navigation /></Navigatio>
+      <Navigation />
 
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-        canonicalUrl="https: //ziontechgroup.com/enterprise",
-      />,
-      <Navigation />,
-      <main className="container mx-auto px-4 py-16 pt-24">,
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <div className="max-w-4xl mx-auto"></section>
-            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
-              <Building className="w-10 h-10 text-white" />
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Enterprise Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Comprehensive enterprise-grade solutions for large-scale business operations.</p>
-            </div>
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Enterprise Solutions;
+      {/* Hero Section */}
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+              Enterprise Solutions
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive enterprise-grade solutions for large-scale business operations.
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+              Comprehensive enterprise-grade solutions designed for large-scale business operations, 
+              scalability, and mission-critical performance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a;
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Enterprise Solutions</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Comprehensive enterprise-grade solutions for large-scale business operations.</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
-              >Get Started Today</a>
-              >
-                Get Started Today;
-              </a>
-              <a;
-                href="tel:+13024640950"
-                className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                <Phone className="w-5 h-5" >+1 302 464 0950</Phone>
-              </Phone>
-                <Phone className="w-5 h-5" />
-                +1 302 464 0950;
-              </a>
-            </div>
-          </div>,
-        </section>,
-,
-        {/* Features Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features<p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Key Features;
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Powerful capabilities designed to transform your business;
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
-          <div className="text-center mb-12"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Powerful capabilities designed to transform your business</p>
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Enterprise Architecture</h3><p className="text-gray-300">Advanced enterprise architecture capabilities powered by AI</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Scalable Solutions</h3><p className="text-gray-300">Advanced scalable solutions capabilities powered by AI</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Integration Services</h3><p className="text-gray-300">Advanced integration services capabilities powered by AI</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Custom Development</h3><p className="text-gray-300">Advanced custom development capabilities powered by AI</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Support & Maintenance</h3><p className="text-gray-300">Advanced support & maintenance capabilities powered by AI</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300"></div>
-              <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Training</h3><p className="text-gray-300">Advanced training capabilities powered by AI</p>
-            </div>
-          </div>,
-        </section>,
-,
-        {/* Benefits Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Enterprise Solutions?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Why Choose Our Enterprise Solutions?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Proven results and measurable impact for your business;
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
-          <div className="text-center mb-12"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Enterprise Solutions?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Proven results and measurable impact for your business</p>
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Scalable Solutions</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Enterprise Integration</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Custom Development</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
-              <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Comprehensive Support</h3><p className="text-gray-300">Measurable improvement in your business metrics</p>
-            </div>
-          </div>,
-        </section>,
-,
-        {/* Pricing Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing<p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
-          <div className="text-center mb-12"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Transparent pricing with no hidden fees</p>
-            </p>
-          </div>
-
-          <div className="max-w-md mx-auto"></div>
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center"></div>
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Solutions</h3><div className="text-4xl font-bold text-cyan-400 mb-4">$2,000/month</div>
-              <p className="text-gray-300 mb-6">per month</p><a
-                href="/contact"
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
-              >Get Started</a>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Pricing;
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Transparent pricing with no hidden fees;
-            </p>
-          </div>
-
-          <div className="max-w-md mx-auto">,
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Solutions</h3>,
-              <div className="text-4xl font-bold text-cyan-400 mb-4">$2,000/month</div>
-              <p className="text-gray-300 mb-6">per month</p>
-              <a;
-                href="/contact"
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block"
-              >
-                Get Started;
-              </a>
-            </div>)
-          </div>)
-        </section>)
-),
-        {/* Contact Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?<p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Contact our experts to discuss your specific needs;
-          <div className="text-center mb-12"></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2><p className="text-lg text-gray-300 max-w-2xl mx-auto">Contact our experts to discuss your specific needs</p>
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
-            <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20"></div>
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Call Us<p className="text-gray-300 mb-4">Speak directly with our experts<a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">+1 302 464 0950</a>
-              <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
-              <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
-                +1 302 464 0950;
-              <h3 className="text-xl font-bold text-white mb-2">Call Us</h3><p className="text-gray-300 mb-4">Speak directly with our experts</p><a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">+1 302 464 0950</a>
-              </a>
-            </div>
-
-            <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"></div>
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Email Us<p className="text-gray-300 mb-4">Send us your requirements<a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">kleber@ziontechgroup.com</a>
-              <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300 mb-4">Send us your requirements</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
-                kleber@ziontechgroup.com;
-              <h3 className="text-xl font-bold text-white mb-2">Email Us</h3><p className="text-gray-300 mb-4">Send us your requirements</p><a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">kleber@ziontechgroup.com</a>
-              </a>
-            </div>
-
-            <div className="text-center bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-pink-400/20"></div>
-              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3><p className="text-gray-300 mb-4">Our headquarters location</p>
-              <p className="text-pink-400 text-sm">
-                364 E Main St STE 1008<br >Middletown DE 19709</br>
-                364 E Main St STE 1008</p><br >Middletown DE 19709</br>
-              </br>
-                364 E Main St STE 1008<br />
-                Middletown DE 19709;
-              </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+                <Shield className="w-5 h-5 text-cyan-400" />
+                <span className="text-white font-medium">Enterprise Security</span>
+              </div>
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+                <Users className="w-5 h-5 text-purple-400" />
+                <span className="text-white font-medium">Scalable Solutions</span>
+              </div>
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+                <Globe className="w-5 h-5 text-green-400" />
+                <span className="text-white font-medium">Global Support</span>
+              </div>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
-      <Footer />,
-    </div>);
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Enterprise-Grade Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Built for enterprise needs with security, scalability, and reliability at the core.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Shield,
+                title: 'Enterprise Security',
+                description: 'Bank-level security with end-to-end encryption, compliance certifications, and advanced threat protection.'
+              },
+              {
+                icon: Users,
+                title: 'Scalable Architecture',
+                description: 'Designed to handle millions of users and transactions with auto-scaling and load balancing capabilities.'
+              },
+              {
+                icon: Database,
+                title: 'Data Management',
+                description: 'Advanced data processing, analytics, and management solutions for enterprise-scale operations.'
+              },
+              {
+                icon: Cloud,
+                title: 'Cloud Integration',
+                description: 'Seamless integration with existing cloud infrastructure and hybrid cloud deployment options.'
+              },
+              {
+                icon: Code,
+                title: 'Custom Development',
+                description: 'Tailored solutions built specifically for your enterprise requirements and business processes.'
+              },
+              {
+                icon: Globe,
+                title: 'Global Support',
+                description: '24/7 enterprise support with dedicated account managers and global deployment capabilities.'
+              }
+            ].map((feature, index) => (
+              <div key={index} className="group">
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-6 h-full border border-slate-700/50 group-hover:border-purple-500/50 transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Enterprise Solutions</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive solutions designed to address enterprise challenges and drive digital transformation.
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {[
+              {
+                title: 'AI-Powered Enterprise Automation',
+                description: 'Intelligent automation solutions that streamline complex enterprise processes, reduce operational costs, and improve efficiency across all departments.',
+                features: [
+                  'Process automation and workflow optimization',
+                  'Intelligent document processing',
+                  'Predictive analytics and insights',
+                  'Integration with existing enterprise systems'
+                ],
+                icon: Zap
+              },
+              {
+                title: 'Enterprise Data Analytics Platform',
+                description: 'Advanced analytics platform that transforms enterprise data into actionable insights, enabling data-driven decision making at scale.',
+                features: [
+                  'Real-time data processing and analysis',
+                  'Advanced visualization and reporting',
+                  'Machine learning-powered insights',
+                  'Enterprise-grade data governance'
+                ],
+                icon: BarChart
+              },
+              {
+                title: 'Cloud Migration & Modernization',
+                description: 'Comprehensive cloud migration services that modernize legacy systems and optimize enterprise infrastructure for the cloud era.',
+                features: [
+                  'Legacy system modernization',
+                  'Cloud-native architecture design',
+                  'Zero-downtime migration strategies',
+                  'Cost optimization and performance tuning'
+                ],
+                icon: Cloud
+              },
+              {
+                title: 'Enterprise Cybersecurity Suite',
+                description: 'Comprehensive security solutions that protect enterprise assets, ensure compliance, and provide advanced threat detection and response.',
+                features: [
+                  'Advanced threat detection and prevention',
+                  'Compliance management and reporting',
+                  'Security monitoring and incident response',
+                  'Employee security training and awareness'
+                ],
+                icon: Shield
+              }
+            ].map((solution, index) => (
+              <div key={index} className="group">
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 group-hover:border-purple-500/50 transition-all duration-300">
+                  <div className="flex items-center mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                      <solution.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
+                  <ul className="space-y-3">
+                    {solution.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-400">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Enterprise?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our enterprise solutions can help you achieve your business objectives 
+            and drive digital transformation at scale.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Schedule Enterprise Consultation
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Download Enterprise Brochure
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
 };
 
 export default EnterprisePage;

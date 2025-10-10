@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import { Calendar, Phone, Mail, CheckCircle, ArrowRight, Star, Users, Clock, Shield, Brain, Cloud, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
-const ConsultationPage: React.FC = () => {,
+const ConsultationPage: React.FC = () => {
   const [selectedService, setSelectedService] = useState('ai-services');
 
   const services = [
@@ -12,10 +13,10 @@ const ConsultationPage: React.FC = () => {,
       id: 'ai-services',
       title: 'AI Services Consultation',
       description: 'Get expert advice on AI implementation, strategy, and optimization',
-      icon: Brain;
-      duration: '60 minutes'
+      icon: Brain,
+      duration: '60 minutes',
       price: 'Free',
-      features: [,
+      features: [
         'AI Strategy Assessment',
         'Technology Recommendations',
         'Implementation Roadmap',
@@ -23,391 +24,332 @@ const ConsultationPage: React.FC = () => {,
       ]
     },
     {
-      id: 'it-services'
-      title: 'IT Services Consultation'
-      description: 'Comprehensive IT infrastructure and security consultation'
-      icon: Cloud;
-      duration: '90 minutes'
+      id: 'it-solutions',
+      title: 'IT Solutions Consultation',
+      description: 'Comprehensive IT infrastructure and system optimization guidance',
+      icon: Cloud,
+      duration: '90 minutes',
       price: 'Free',
-      features: [,
-        'Infrastructure Assessment',
-        'Security Audit',
-        'Cloud Migration Planning',
-        'Cost Optimization'
+      features: [
+        'Infrastructure Audit',
+        'Security Assessment',
+        'Performance Optimization',
+        'Scalability Planning'
       ]
     },
     {
-      id: 'micro-saas'
-      title: 'Micro SAAS Consultation'
-      description: 'Discover how micro SAAS tools can streamline your business operations'
-      icon: Zap;
-      duration: '45 minutes'
+      id: 'digital-transformation',
+      title: 'Digital Transformation',
+      description: 'Strategic guidance for complete digital transformation initiatives',
+      icon: Zap,
+      duration: '120 minutes',
       price: 'Free',
-      features: [,
-        'Tool Recommendations',
-        'Integration Planning',
-        'Workflow Optimization',
-        'Training Requirements'
-      ]
-    },
-    {
-      id: 'custom'
-      title: 'Custom Solution Consultation'
-      description: 'Tailored consultation for complex business requirements'
-      icon: Users;
-      duration: '120 minutes'
-      price: 'Free',
-      features: [,
-        'Custom Solution Design',
-        'Technical Architecture',
-        'Project Planning',
-        'Budget Estimation'
+      features: [
+        'Transformation Strategy',
+        'Change Management',
+        'Technology Integration',
+        'Success Metrics'
       ]
     }
-  ];
-
-  const consultationProcess = [
-    {
-      step: 1;
-      title: 'Initial Assessment',
-      description: 'We analyze your current systems and business requirements',
-      duration: '15 minutes'},
-    {
-      step: 2;
-      title: 'Solution Design',
-      description: 'We design a customized solution based on your needs',
-      duration: '30 minutes'},
-    {
-      step: 3;
-      title: 'Implementation Plan',
-      description: 'We create a detailed roadmap for implementation',
-      duration: '20 minutes'},
-    {
-      step: 4;
-      title: 'Q&A Session',
-      description: 'We answer all your questions and address concerns',
-      duration: '15 minutes'}
   ];
 
   const benefits = [
     {
-      icon: CheckCircle;
-      title: 'Expert Analysis',
-      description: 'Get insights from our experienced consultants and solution architects'},
+      icon: Users,
+      title: 'Expert Guidance',
+      description: 'Get advice from our experienced consultants and solution architects'
+    },
     {
-      icon: Star;
+      icon: Shield,
       title: 'Customized Solutions',
-      description: 'Tailored recommendations based on your specific business needs'},
-    {
-      icon: Shield;
-      title: 'Risk Assessment',
-      description: 'Identify potential challenges and mitigation strategies'},
-    {
-      icon: Clock;
-      title: 'Quick Turnaround',
-      description: 'Get actionable recommendations within 24-48 hours'}
-  ];
-
-  const testimonials = [
-    {
-      name: 'David Kim',
-      company: 'TechStart Solutions',
-      role: 'CTO',
-      content: 'The consultation helped us identify the right AI tools for our business. The implementation roadmap was exactly what we needed.',
-      rating: 5;
+      description: 'Tailored recommendations based on your specific business needs'
     },
     {
-      name: 'Lisa Wang',
-      company: 'DataCorp Inc',
-      role: 'VP of Operations',
-      content: 'The IT consultation saved us thousands of dollars by identifying cost optimization opportunities we never knew existed.',
-      rating: 5;
+      icon: Star,
+      title: 'Proven Results',
+      description: 'Leverage our track record of successful implementations'
     },
     {
-      name: 'Robert Johnson',
-      company: 'InnovateLab',
-      role: 'CEO',
-      content: 'The micro SAAS consultation opened our eyes to tools that have significantly improved our productivity and efficiency.',
-      rating: 5;
+      icon: Clock,
+      title: 'Quick Implementation',
+      description: 'Fast-track your projects with our proven methodologies'
     }
   ];
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  const selectedServiceData = services.find(service => service.id === selectedService);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation />
-
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Free Consultation<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get expert advice on how to transform your business with AI and technology solutions. Our free consultation will help you identify opportunities and create a roadmap for success.</p>
-      <main className="container mx-auto px-4 py-16 pt-24">
+    <>
+      <SEOOptimizer 
+        title="Free Consultation - Expert IT & AI Guidance | Zion Tech Group"
+        description="Get a free consultation with our experts. Receive personalized guidance on AI, IT solutions, and digital transformation."
+        keywords="free consultation, expert guidance, AI consultation, IT consultation, digital transformation"
+        canonicalUrl="https://ziontechgroup.com/consultation"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
         {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
-            Free Consultation;
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get expert advice on how to transform your business with AI and technology solutions. Our free consultation will help you identify opportunities and create a roadmap for success.
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Free Consultation</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get expert advice on how to transform your business with AI and technology solutions. Our free consultation will help you identify opportunities and create a roadmap for success.</p>
-          </p>
-          <div className="flex flex-wrap justify-center gap-4"></section>
-            <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
-              <CheckCircle className="w-5 h-5 text-cyan-400" />
-              <span className="text-white font-medium">100% Free</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
-              <Users className="w-5 h-5 text-purple-400" />
-              <span className="text-white font-medium">Expert Guidance</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-              <Star className="w-5 h-5 text-green-400" />)
-              <span className="text-white font-medium">Customized Solutions</span>)
-            </div>)
-          </div>)
-        </section>)),
-        {/* Consultation Types */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Consultation<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service) => (<div
-            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
-              <Star className="w-5 h-5 text-green-400" />
-              <span className="text-white font-medium">Customized Solutions</span>
-            </div>
-          </div>
-        </section>
-
-        {/* Consultation Types */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Consultation</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{services.map((service) => (</section><div
-                key={service.id}
-                onClick={() =>setSelectedService(service.id)}</div></<<<di>className</di></di>={`cyber-card p-6 cursor-pointer transition-all duration-300 ${
-                  selectedService === service.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'
-                }`}</div>
-              ></div>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Choose Your Consultation</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {services.map((service) => (,
-              <div;
-                key={service.id}
-                onClick={() => setSelectedService(service.id)}
-                className={`cyber-card p-6 cursor-pointer transition-all duration-300 ${}
-                  selectedService === service.id ? 'ring-2 ring-cyan-400 bg-cyan-500/10' : 'hover:bg-slate-700/50'}
-                }`}
-              >
-                <div className="text-center">
-                <div className="text-center"></div>
-                  <service.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3><p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                  <div className="flex items-center justify-center text-cyan-400 text-sm mb-4"></div>
-                    <Clock className="w-4 h-4 mr-1" >{service.duration}<div className="text-2xl font-bold text-green-400 mb-4">{service.price}</div><ul className="space-y-1 text-xs text-gray-400">{service.features.map((feature, index) => (</ul>
-                      <li key={index} className="flex items-center">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" >{feature}</CheckCircle>
-                      </CheckCircle>
-                    ))}
-                  </ul>
+        <section className="relative py-20 lg:py-32 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+                Free Consultation
+              </h1>
+              <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+                Get expert guidance on AI, IT solutions, and digital transformation. 
+                Our consultants are here to help you succeed.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span className="text-white font-medium">100% Free</span>
+                </div>
+                <div className="flex items-center space-x-2 bg-blue-500/20 px-4 py-2 rounded-lg">
+                  <Clock className="w-5 h-5 text-blue-400" />
+                  <span className="text-white font-medium">No Obligation</span>
+                </div>
+                <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+                  <Star className="w-5 h-5 text-purple-400" />
+                  <span className="text-white font-medium">Expert Guidance</span>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </section>
 
-        {/* Consultation Process */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our Consultation Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{consultationProcess.map((step, index) => (</div>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our Consultation Process</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-              {consultationProcess.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300 text-sm mb-2">{step.description}<div className="text-cyan-400 text-xs">{step.duration}</div>
-          <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Our Consultation Process</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{consultationProcess.map((step, index) => (</div>
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                    <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-lg font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300 text-sm mb-2">{step.description}</p><div className="text-cyan-400 text-xs">{step.duration}</div>
+        {/* Services */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Consultation Services</h2>
+              <p className="text-gray-300">Choose the type of consultation that best fits your needs</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {services.map((service) => (
+                <div key={service.id} className="group">
+                  <div 
+                    className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-6 h-full border transition-all duration-300 cursor-pointer ${
+                      selectedService === service.id 
+                        ? 'border-purple-500/50 bg-purple-500/10' 
+                        : 'border-slate-700/50 group-hover:border-purple-500/50'
+                    }`}
+                    onClick={() => setSelectedService(service.id)}
+                  >
+                    <div className="text-center mb-6">
+                      <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                        <service.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                      <p className="text-gray-400 text-sm mb-4">{service.description}</p>
+                      <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
+                        <div className="flex items-center space-x-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{service.duration}</span>
+                        </div>
+                        <div className="text-green-400 font-medium">{service.price}</div>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      {service.features.map((feature, index) => (
+                        <div key={index} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Benefits */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our Consultation?<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our Consultation?</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
-            {benefits.map((benefit, index) => (
-              <div key={index} className="cyber-card p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Why Choose Our Consultation?</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</section>
-              <div key={index} className="cyber-card p-6 text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
-                  <benefit.icon className="w-8 h-8 text-white" />
-                <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3><p className="text-gray-300 text-sm">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="cyber-card p-6">
-                <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <h4 className="text-white font-bold">{testimonial.name}<p className="text-cyan-400 text-sm">{testimonial.role}<p className="text-gray-400 text-sm">{testimonial.company}</p>
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">What Our Clients Say</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</section>
-              <div key={index} className="cyber-card p-6"></div>
-                <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-4">"{testimonial.content}"</p>
-                <div className="text-center"></div>
-                  <h4 className="text-white font-bold">{testimonial.name}<p className="text-cyan-400 text-sm">{testimonial.role}</p><p className="text-gray-400 text-sm">{testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Booking Form */}
-        <section className="mb-16">
-          <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Schedule Your Free Consultation</h2>
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              <div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
-              <div></div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Consultation Details</h3>
-                <div className="space-y-4"></div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Selected Service<div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">{services.find(s => s.id === selectedService)?.title}</div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Consultation Details</h3>,
-                <div className="space-y-4">,
-                  <div>,
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Selected Service</label>,
-                    <div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">,
-                      {services.find(s => s.id === selectedService)?.title}
+        {/* Selected Service Details */}
+        {selectedServiceData && (
+          <section className="py-20 px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50">
+                <div className="text-center mb-8">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mb-4">
+                    <selectedServiceData.icon className="w-10 h-10 text-white" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-white mb-4">{selectedServiceData.title}</h2>
+                  <p className="text-gray-300 text-lg mb-6">{selectedServiceData.description}</p>
+                  <div className="flex items-center justify-center space-x-6 text-gray-400">
+                    <div className="flex items-center space-x-2">
+                      <Clock className="w-5 h-5" />
+                      <span>Duration: {selectedServiceData.duration}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Star className="w-5 h-5" />
+                      <span>Price: {selectedServiceData.price}</span>
                     </div>
                   </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Duration<div className="bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white">{services.find(s => s.id === selectedService)?.duration}</div>
-                    </div>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Company Name</label>
-                    <input;
-                      type="text"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus: outline-none focus:border-cyan-400"
-                      placeholder="Your company name"
-                    /></inpu>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                    <input;
-                      type="text"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="Your full name"
-                    /></inpu>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                    <input;
-                      type="email"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="your.email@company.com"
-                    /></inpu>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                    <input;
-                      type="tel"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                      placeholder="+1 (555) 123-4567"
-                    /></inpu>
-                  </div>
                 </div>
-              </div>
-              <div></div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Preferred Time</h3>
-                <div className="space-y-4"></div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Date</label>
-                    <input;
-                      type="date"
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400"
-                    /></inpu>
+                
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-4">What's Included</h3>
+                    <ul className="space-y-3">
+                      {selectedServiceData.features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Time</label>
-                    <select className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400">
-                      <option>9:00 AM - 10:00 AM<option>10:00 AM - 11:00 AM</option>
-                      <option>11:00 AM - 12:00 PM<option>1:00 PM - 2:00 PM</option>
-                      <option>2:00 PM - 3:00 PM<option>3:00 PM - 4:00 PM<option>4:00 PM - 5:00 PM</option>
-                    </select>
-                  </div>
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Time Zone</label>
-                    <select className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus:outline-none focus:border-cyan-400">
-                      <option>Eastern Time (ET)<option>Central Time (CT)</option>
-                      <option>Mountain Time (MT)<option>Pacific Time (PT)<option>GMT</option>
-                    </select>
-                  </div>
-                  <div>,
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Current Challenges</label>,
-                    <textarea;
-                  <div></div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">Current Challenges</label>
-                    <textarea
-                      rows={4}
-                      className="w-full bg-slate-800/50 border border-gray-600 rounded-lg p-3 text-white focus: outline-none focus:border-cyan-400"
-                      placeholder="Tell us about your current challenges and what you hope to achieve..."
-                    /></textare>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>
+                    <ul className="space-y-3">
+                      {benefits.map((benefit, index) => (
+                        <li key={index} className="flex items-start text-gray-300">
+                          <benefit.icon className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0 mt-0.5" />
+                          <div>
+                            <div className="font-medium text-white">{benefit.title}</div>
+                            <div className="text-sm text-gray-400">{benefit.description}</div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-8 text-center"></div>
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all inline-flex items-center">
-                <Calendar className="w-5 h-5 mr-2" >Schedule Free Consultation</Calendar>
-                </Calendar><ArrowRight className="w-5 h-5 ml-2" />
-                <Calendar className="w-5 h-5 mr-2" />
-                Schedule Free Consultation;
-                <ArrowRight className="w-5 h-5 ml-2" />
+          </section>
+        )}
+
+        {/* Schedule Form */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Schedule Your Consultation</h2>
+              <p className="text-gray-300">Fill out the form below and we'll contact you to schedule your free consultation</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50">
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">First Name *</label>
+                    <input
+                      type="text"
+                      required
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="Your first name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Last Name *</label>
+                    <input
+                      type="text"
+                      required
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="Your last name"
+                    />
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Email Address *</label>
+                    <input
+                      type="email"
+                      required
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="your.email@company.com"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                    <input
+                      type="tel"
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="+1 (555) 123-4567"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Company</label>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Your company name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Consultation Type</label>
+                  <select
+                    value={selectedService}
+                    onChange={(e) => setSelectedService(e.target.value)}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  >
+                    {services.map((service) => (
+                      <option key={service.id} value={service.id}>{service.title}</option>
+                    ))}
+                  </select>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Preferred Time</label>
+                  <select className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    <option>Morning (9 AM - 12 PM)</option>
+                    <option>Afternoon (12 PM - 5 PM)</option>
+                    <option>Evening (5 PM - 8 PM)</option>
+                    <option>Flexible</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Message (Optional)</label>
+                  <textarea
+                    rows={4}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Tell us about your specific needs or questions..."
+                  />
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  Schedule Free Consultation
+                  <Calendar className="inline-block ml-2 w-5 h-5" />
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Don't wait to transform your business. Schedule your free consultation today and get expert guidance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Schedule Now
+                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Call Us
               </button>
             </div>
-          </div>,
-        </section>,
-,
-        {/* Contact Information */}
-        <section className="mb-16">
-          <div className="cyber-card p-8"></section>
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Need Help Scheduling?</h2><p className="text-gray-300 mb-6">If you need assistance scheduling your consultation or have questions about our services, our team is here to help.</p>
-            </p>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
-              <div className="text-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
-              <div className="text-center"></div>
-                <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3><p className="text-gray-300 mb-2">+1 (302) 464-0950</p><p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
-              </div>
-              <div className="text-center"></div>
-                <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3><p className="text-gray-300 mb-2">consultation@ziontechgroup.com</p><p className="text-sm text-gray-400">Response within 24 hours</p>
-              </div>
-              <div className="text-center"></div>
-                <Calendar className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
-                <h3 className="text-lg font-semibold text-white mb-2">Book Online</h3><p className="text-gray-300 mb-2">Instant scheduling</p><p className="text-sm text-gray-400">Available 24/7</p>
-              </div>
-            </div>
           </div>
         </section>
-      </main>,
-,
-      <Footer />,
-    </div>);
+
+        <Footer />
+      </div>
+    </>
+  );
 };
 
 export default ConsultationPage;
