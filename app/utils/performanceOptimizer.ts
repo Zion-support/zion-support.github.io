@@ -1,5 +1,5 @@
 // Performance optimization utilities;
-export const debounce = <T extends (...args: any[]) => any>(
+export const _debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number,
 ): ((...args: Parameters<T>) => void) => {
@@ -11,11 +11,11 @@ export const debounce = <T extends (...args: any[]) => any>(
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {}
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    _timeout = setTimeout(() => func(...args), wait);
   };
 };
 
-export const throttle = <T extends (...args: any[]) => any>(
+export const _throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number,
 ): ((...args: Parameters<T>) => void) => {
@@ -29,19 +29,19 @@ export const throttle = <T extends (...args: any[]) => any>(
   return (...args: Parameters<T>) => {}
     if (!inThrottle) {}
       func(...args);
-      inThrottle = true;
+      _inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
     }
   };
 };
 
-export const lazyLoad = (callback: () => void, options?: IntersectionObserverInit) => {}
+export const _lazyLoad = (callback: () => void, options?: IntersectionObserverInit) => {}
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {}
     callback();
     return;
   }
 
-  const observer = new IntersectionObserver((entries) => {}
+  const _observer = new IntersectionObserver((entries) => {}
     entries.forEach((entry) => {}
       if (entry.isIntersecting) {}
         callback();
@@ -53,7 +53,7 @@ export const lazyLoad = (callback: () => void, options?: IntersectionObserverIni
   return observer;
 };
 
-export const preloadImage = (src: string): Promise<void> => {,
+export const _preloadImage = (src: string): Promise<void> => {,
   return new Promise((resolve, reject) => {
 export const preloadImage = (src: string): Promise<void> => {}
   return new Promise((resolve, reject) => {}
@@ -64,7 +64,7 @@ export const preloadImage = (src: string): Promise<void> => {}
 
 };
 
-export const preloadScript = (src: string): Promise<void> => {,
+export const _preloadScript = (src: string): Promise<void> => {,
   return new Promise((resolve, reject) => {
 export const preloadScript = (src: string): Promise<void> => {}
   return new Promise((resolve, reject) => {}
@@ -76,7 +76,7 @@ export const preloadScript = (src: string): Promise<void> => {}
 
 };
 
-export const measurePerformance = (name: string, fn: () => void) => {,
+export const _measurePerformance = (name: string, fn: () => void) => {,
   if (typeof window === 'undefined' || !('performance' in window)) {,
 export const measurePerformance = (name: string, fn: () => void) => {}
   if (typeof window === 'undefined' || !('performance' in window)) {}
@@ -84,34 +84,34 @@ export const measurePerformance = (name: string, fn: () => void) => {}
     return;
   }
 
-  const start = performance.now();
+  const _start = performance.now();
   fn();
-  const end = performance.now();
+  const _end = performance.now();
 
   if (process.env.NODE_ENV === 'development') {}
     }
 };
 
-export const getDeviceInfo = () => {}
+export const _getDeviceInfo = () => {}
   if (typeof window === 'undefined') {}
     return { isMobile: false, isTablet: false, isDesktop: true };
   }
 
-  const width = window.innerWidth;
+  const _width = window.innerWidth;
   return {
     isMobile: width < 768;
     isTablet: width >= 768 && width < 1024;
     isDesktop: width >= 1024;
   };
   private observers: PerformanceObserver[] = [];
-  private isMonitoring: boolean = false;
+  private isMonitoring: _boolean = false;
   constructor(config?: Partial<OptimizationConfig>) {,
   return {}
     isMobile: width < 768,
     isTablet: width >= 768 && width < 1024,
     isDesktop: width >= 1024};
   private observers: PerformanceObserver[] = [];
-  private isMonitoring: boolean = false;
+  private isMonitoring: _boolean = false;
   constructor(config?: Partial<OptimizationConfig>) {}
 'use client';
 /**
@@ -119,16 +119,16 @@ export const getDeviceInfo = () => {}
  * Provides tools for monitoring and optimizing application performance;
  */
 // Simple logger for performance optimizer;
-const logger = {/* TODO: Fix JSX expression */}
+const _logger = {/* TODO: Fix JSX expression */}
   },
   performanc,
   e: (messag,
-  e: string, dat)
+  e: string, dat);
   a: Record<string, unknown>, context?: string) => {/* TODO: Fix JSX expression */}
   },
   erro,
   r: (messag,
-  e: string, erro)
+  e: string, erro);
   r: Error) => {/* TODO: Fix JSX expression */}
   }
 };
@@ -140,12 +140,12 @@ interface PerformanceConfig extends OptimizationConfig {}
 class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   };
   private,
-  config: OptimizationConfig = {/* TODO: Fix JSX expression */}
+  config: _OptimizationConfig = {/* TODO: Fix JSX expression */}
   };
   private,
   observers: PerformanceObserver[] = [];
   private,
-  isMonitoring: boolean = false;
+  isMonitoring: _boolean = false;
   constructor(config?: Partial<OptimizationConfig>) {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...config };
     this.initializePerformanceMonitoring();
@@ -154,7 +154,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    * Initialize performance monitoring;
    */
   private initializePerformanceMonitoring(): void {}
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
     // Monitor page load performance;
     window.addEventListener('load', () => {
     // Monitor page load performance
@@ -178,10 +178,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    * Measure page load time;
    */
   private measureLoadTime(): void {}
-    if (typeof window === 'undefined' || !window.performance) return;
+    if (typeof _window === 'undefined' || !window.performance) return;
     if (typeof window.performance.getEntriesByType !== 'function') return;
     try {}
-      const navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;
+      const _navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {}
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
   private measureLoadTime(): void {/* TODO: Fix JSX expression */}
@@ -193,10 +193,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    * Measure render time using PerformanceObserver;
    */
   private measureRenderTime(): void {}
-    // Check if PerformanceObserver exists (may not be available in test environments)
-    if (typeof PerformanceObserver === 'undefined') return;
+    // Check if PerformanceObserver exists (may not be available in test environments);
+    if (typeof _PerformanceObserver === 'undefined') return;
     try {}
-      const observer = new PerformanceObserver((list) => {}
+      const _observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries();
         entries.forEach((entry) => {}
           if (entry.entryType === 'measure') {}
@@ -214,7 +214,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
   private observeLCP() {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
+      const _observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime;
@@ -232,7 +232,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       })
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] })
-      this.observers.push(observer)
+      this.observers.push(observer);
     } catch {
       // Ignore if not supported;
     } catch {}
@@ -241,7 +241,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
   private observeFID() {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
+      const _observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,
         entries.forEach((entry: PerformanceEntry) => {}
@@ -256,15 +256,15 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       })
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['first-input'] })
-      this.observers.push(observer)
+      this.observers.push(observer);
     } catch {
       // Ignore if not supported;
     }
   }
   private observeCLS() {
     try {
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
+      let _clsValue = 0;
+      const _observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
@@ -276,7 +276,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
   private observeCLS() {}
     try {}
-      let clsValue = 0
+      let _clsValue = 0
       const observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {}
@@ -288,7 +288,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         this.metrics.cls = clsValue;
       })
       observer.observe({ entryTypes: ['layout-shift'] })
-      this.observers.push(observer)
+      this.observers.push(observer);
     } catch {
       // Ignore if not supported;
     } catch {}
@@ -297,7 +297,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
   private observeFCP() {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
+      const _observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
@@ -317,7 +317,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       })
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] })
-      this.observers.push(observer)
+      this.observers.push(observer);
     } catch {/* TODO: Fix JSX expression */}
     }
   }
@@ -327,7 +327,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       })
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['paint'] })
-      this.observers.push(observer)
+      this.observers.push(observer);
     } catch {
       // Ignore if not supported;
     } catch {}
@@ -336,14 +336,14 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
   private observeTTFB() {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
+      const _observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
         entries.forEach((entry: PerformanceEntry) => {}
-          const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
+          const _navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {}
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
     } catch {/* TODO: Fix JSX expression */}
@@ -357,14 +357,14 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       })
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['navigation'] })
-      this.observers.push(observer)
+      this.observers.push(observer);
     } catch {
       // Ignore if not supported;
     }
   }
   private observeMemory() {
     if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
+      const _memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
       if (memory) {
         this.metrics.memoryUsage = memory.usedJSHeapSize;
     } catch {}
@@ -373,7 +373,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
   private observeMemory() {}
     if (typeof window !== 'undefined' && 'memory' in performance) {}
-      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory
+      const _memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory
       if (memory) {}
         this.metrics.memoryUsage = memory.usedJSHeapSize
     } catch {/* TODO: Fix JSX expression */}
@@ -389,8 +389,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    * Measure memory usage;
    */
   private measureMemoryUsage(): void {}
-    if (typeof window === 'undefined' || !('memory' in window.performance)) return;
-    const memory = (window.performance as Performance & {}
+    if (typeof _window === 'undefined' || !('memory' in window.performance)) return;
+    const _memory = (window.performance as Performance & {}
       memory?: {}
         usedJSHeapSize: number,
         totalJSHeapSize: number,
@@ -409,11 +409,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    * Optimize images for better performance;
    */
   public optimizeImages(): void {}
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
     if (!this.config.enableImageOptimization) return;
-    const images = document.querySelectorAll('img');
+    const _images = document.querySelectorAll('img');
     images.forEach((img) => {
-      // Add loading="lazy" for better performance;
+      // Add _loading="lazy" for better performance;
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
       }
@@ -426,7 +426,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         // Convert to WebP if supported;
         if (this.supportsWebP()) {
     images.forEach((img) => {}
-      // Add loading="lazy" for better performance
+      // Add _loading="lazy" for better performance
       if (!img.hasAttribute('loading')) {}
         img.setAttribute('loading', 'lazy');
       }
@@ -502,7 +502,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     return { ...this.metrics };
   }
   /**
-   * Get performance score (0-100)
+   * Get performance score (0-100);
    */
   getPerformanceScore(): number {/* TODO: Fix JSX expression */}
   }
@@ -542,7 +542,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Report web vitals;
    */
-  reportWebVitals(metric)
+  reportWebVitals(metric);
   s: PerformanceMetrics): void {/* TODO: Fix JSX expression */}
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
   g: Function }).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */})
@@ -586,7 +586,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
   }
 }
 // Export singleton instance;
-export const performanceOptimizer = new PerformanceOptimizer();
+export const _performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
 export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
 `

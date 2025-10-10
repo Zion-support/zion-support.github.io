@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiSpaceTechnologyProPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -33,7 +33,7 @@ const AiSpaceTechnologyProPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -45,7 +45,7 @@ const AiSpaceTechnologyProPage: React.FC = () => {
     <>
       <Helmet>
         <title>Ai Space Technology Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai space technology pro solution for modern businesses." />
+        <meta _name="description" content="Advanced AI-powered ai space technology pro solution for modern businesses." />
         <meta name="keywords" content="AI ai space technology pro, artificial intelligence, ai space technology pro, AI solutions, intelligent automation" />
       </Helmet>
 

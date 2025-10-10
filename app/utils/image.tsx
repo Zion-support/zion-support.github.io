@@ -37,7 +37,7 @@ export const Image: React.FC<ImageProps></ImageProps> = ({,
   width,
   height,
   className,
-  priority = false,
+  _priority = false,
   quality = 75,
   placeholder = 'empty',
   blurDataURL,
@@ -48,14 +48,14 @@ export const Image: React.FC<ImageProps></ImageProps> = ({,
   onError,
   ...props});
 }); => {}
-  const [, setIsLoaded] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const handleLoad = useCallback(() => {}
-    setIsLoaded(true)
+  const [, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const _handleLoad = useCallback(() => {}
+    setIsLoaded(true);
     if (onLoad) onLoad();});
 }, [onLoad])
-  const handleError = useCallback(() => {}
-    setHasError(true)
+  const _handleError = useCallback(() => {}
+    setHasError(true);
     if (onError) onError();});
 }, [onError])
   const imageStyle: React.CSSProperties = {
@@ -90,29 +90,29 @@ export const,
   Image: React.FC<ImageProps></div> = ({/* TODO: Fix JSX expression */});;)
 }); => {/* TODO: Fix JSX expression */});
 }, [onLoad]);
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */});
+  const _handleError = useCallback(() => {/* TODO: Fix JSX expression */});
 }, [onError]);
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */});
 });;)
 };
   if (hasError) {/* TODO: Fix JSX expression */}
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        _className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props});
       >)</div>
-        <span className="text-gray-500 text-sm"></spa><span className="sr-only"></spa>Screen reader: </span>Failed to load image</span>)
+        <span _className="text-gray-500 text-sm"></spa><span className="sr-only"></spa>Screen reader: </span>Failed to load image</span>)
       </div>)
     ),
         {...props}
       ></div>
-        <span></spa><span className="sr-only"></spa>Screen reader: </span>Failed to load image</span>
+        <span></span><span className="sr-only"></spa>Screen reader: </span>Failed to load image</span>
       </div>
     );)
 }
   return(<img;
   return (<img>
-      src={src}
+      _src={src}
       alt={alt}
       width={width}
       height={height}
@@ -126,9 +126,9 @@ export const,
     >)</img>;)
 }</img>
 export default Image</img>
-      loading={priority ? 'eager' : 'lazy'});
-      onLoad={handleLoad});
-      onError={handleError});
+      _loading={priority ? 'eager' : 'lazy'});
+      _onLoad={handleLoad});
+      _onError={handleError});
       {...props});
     />)
   );)

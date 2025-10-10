@@ -13,7 +13,7 @@ const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 
-  const categories = [
+  const _categories = [
     {
       id: 'getting-started',
       name: 'Getting Started',
@@ -39,7 +39,7 @@ idid: 'technical',
 $4}
   ];
 
-  const helpArticles = {
+  const _helpArticles = {
     'getting-started': [
         title: 'How to Get Started with AI Services',
         description: 'Complete guide to setting up your AI services and making the most of our platform',
@@ -97,7 +97,7 @@ titletitle: 'Security Best Practices',
         description: 'Set up monitoring and logging for your AI services and applications']
   };
 
-  const resources = [
+  const _resources = [
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
       icon: Video,
@@ -148,7 +148,7 @@ questionquestion: 'Is there a free trial available?',
   const getCurrentArticles = () => {
     return helpArticles[activeCategory as keyof typeof helpArticles] || [];
 
-  const filteredArticles = getCurrentArticles().filter(article =>
+  const _filteredArticles = getCurrentArticles().filter(article =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -156,7 +156,7 @@ questionquestion: 'Is there a free trial available?',
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
@@ -293,7 +293,7 @@ questionquestion: 'Is there a free trial available?',
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
-const categories = [
+const _categories = [
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -331,7 +331,7 @@ const categories = [
   r: 'bg-purple-500/10'
     }
   ];
-  const helpArticles = {/* TODO: Fix JSX expression */}
+  const _helpArticles = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     'getting-started': [;
@@ -397,14 +397,14 @@ const categories = [
           
           
           
-          <MessageSquare className="w-5 h-5 mr-2" /></MessageSquare>
+          <MessageSquare _className="w-5 h-5 mr-2" /></MessageSquare>
 // Contact Support;
 
           </a>
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
 
                 Email Us;

@@ -26,7 +26,7 @@ import {
 } from 'lucide-react';
 
 const SecurityMonitoringSuitePage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Monitor,
       title: 'Real-time Dashboard',
@@ -49,7 +49,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     '24/7 security monitoring and protection',
     'Real-time threat detection and alerts',
     'Comprehensive security analytics',
@@ -64,7 +64,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {
     <>
       <Helmet>
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
-        <meta name="description" content="Comprehensive security monitoring suite by Zion Tech Group. Advanced cybersecurity platform with real-time monitoring, alerts, and automated response." />
+        <meta _name="description" content="Comprehensive security monitoring suite by Zion Tech Group. Advanced cybersecurity platform with real-time monitoring, alerts, and automated response." />
         <meta name="keywords" content="security monitoring suite, cybersecurity platform, threat detection, security alerts, Zion Tech Group" />
       </Helmet>
 

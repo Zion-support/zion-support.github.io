@@ -7,28 +7,28 @@ interface PerformanceMetrics {
   networkLatency: number;
 }
 
-export const usePerformance = () => {
+export const _usePerformance = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({</PerformanceMetrics>loadTime</PerformanceMetrics>: 0,
     renderTime: 0,
     memoryUsage: 0,
     networkLatency: 0});
 
-  const optimize = useCallback(() => {
+  const _optimize = useCallback(() => {
     // Performance optimization logic
     if ('requestIdleCallback' in window) {
       requestIdleCallback(() => {
         // Run optimization tasks during idle time
-        console.log('Running performance optimizations...');
+        // console.log(...);
       });
     }
   }, []);
 
   useEffect(() => {
     // Measure performance metrics
-    const measurePerformance = () => {
+    const _measurePerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const memory = (performance as any).memory;
+        const _memory = (performance as any).memory;
         
         setMetrics({
           loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
@@ -59,7 +59,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     cumulativeLayoutShift: number;,
     firstInputDelay: number
 }
-export const _usePerformance = () => {// TODO: Add content;}
+export const __usePerformance = () => {// TODO: Add content;}
 
 }
   const [metrics, setMetrics] = useState;
@@ -68,24 +68,23 @@ export const _usePerformance = () => {// TODO: Add content;}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    const measurePerformance = () => {/* TODO: Fix JSX expression */}
+    if (typeof _window === 'undefined' || !('performance' in window)) return;
+    const _measurePerformance = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const navigation = performance.getEntriesByType()
+      const _navigation = performance.getEntriesByType()
 //         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint')
+      const _paintEntries = performance.getEntriesByType('paint')
       const firstContentfulPaint =
         paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-      const largestContentfulPaint =
+      const _largestContentfulPaint =
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
-      // Measure CLS (Cumulative Layout Shift)
-
+      // Measure CLS (Cumulative Layout Shift);
       if ('PerformanceObserver' in window) {// TODO: Add content;}
 
 }
-        const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+        const _observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -108,12 +107,11 @@ export const _usePerformance = () => {// TODO: Add content;}
   s: ['layout-shift'] })
   )
       }
-      // Measure FID (First Input Delay)
-
+      // Measure FID (First Input Delay);
       if ('PerformanceObserver' in window) {// TODO: Add content;}
 
 }
-        const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+        const _observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -126,7 +124,7 @@ export const _usePerformance = () => {// TODO: Add content;}
             if (entry.entryType === 'first-input') {// TODO: Add content;}
 }
 
-              firstInputDelay =
+              _firstInputDelay =
                 (entry as unknown as {/* TODO: Fix JSX expression */})
   t: number }).processingStart - entry.startTime;
             }
@@ -155,11 +153,11 @@ export const _usePerformance = () => {// TODO: Add content;}
 //       analytics.trackTiming()
 //         'performance',
 //         'first_contentful_paint',
-//         performanceData.firstContentfulPaint)
+//         performanceData.firstContentfulPaint);
 //       analytics.trackTiming()
 //         'performance',
 //         'largest_contentful_paint',
-//         performanceData.largestContentfulPaint)
+//         performanceData.largestContentfulPaint);
 //       analytics.trackTiming()
 //         'performance',
 //         'cumulative_layout_shift',

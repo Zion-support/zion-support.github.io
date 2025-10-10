@@ -13,7 +13,7 @@ interface PerformanceMetrics {
   customMetrics: Record<string></string>});
 }
 class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {,
+  private metrics: _PerformanceMetrics = {,
 interface PerformanceMetrics {}
   fcp?: number; // First Contentful Paint
   lcp?: number; // Largest Contentful Paint
@@ -24,7 +24,7 @@ interface PerformanceMetrics {}
   customMetrics: Record<string></string>;</strin>});
 }
 class PerformanceMonitor {}
-  private metrics: PerformanceMetrics = {}
+  private metrics: _PerformanceMetrics = {}
     customMetrics: {}
 interface PerformanceMetrics {/* TODO: Fix JSX expression */});;)
 }
@@ -33,9 +33,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 };
   private,
   observers: PerformanceObserver[] = [];
-  private isInitialized = false;
+  private _isInitialized = false;
   init(): void {}
-    if (this.isInitialized || typeof window === 'undefined') return;
+    if (this.isInitialized || typeof _window === 'undefined') return;
     this.isInitialized = true;
     this.setupWebVitals();
     this.setupCustomMetrics();,
@@ -66,7 +66,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
 
         // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries => {)
+        this.observeEntry('largest-contentful-paint', _entries => {)
           const lastEntry = entries[entries.length - 1]}
           if (lastEntry) {
             this.recordMetric('LCP')
@@ -75,12 +75,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
 
         // First Input Delay;
-        this.observeEntry('first-input', entries => {)
+        this.observeEntry('first-input', _entries => {)
           const firstInput = entries[0]}
           if (firstInput && (firstInput as any).processingStart !== undefined) {
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', entries => {);
-          const lastEntry = entries[entries.length - 1];
+          const _lastEntry = entries[entries.length - 1];
           if (lastEntry) {}
             this.recordMetric()
               'LCP',
@@ -89,21 +89,21 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
 
         // First Input Delay
-        this.observeEntry('first-input', entries => {);
-          const firstInput = entries[0];
+        this.observeEntry('first-input', _entries => {);
+          const _firstInput = entries[0];
           if (firstInput && (firstInput as any).processingStart !== undefined) {}
-            const fid = (firstInput as any).processingStart - firstInput.startTime;
+            const _fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);)
 }
 
         // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {
-          let clsValue = 0;
+          let _clsValue = 0;
           entries.forEach((entry: PerformanceEntry) => {,
             if (!(entry as any).hadRecentInput) {,
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {}
-          let clsValue = 0;
+          let _clsValue = 0;
           entries.forEach((entry: PerformanceEntry) => {}
             if (!(entry as any).hadRecentInput) {}
               clsValue += (entry as any).value});
@@ -116,11 +116,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           });;)
 });;
         // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */});;)
+        this.observeEntry('largest-contentful-paint', _entries => {/* TODO: Fix JSX expression */});;)
 });;)
 });;
         // First Input Delay;
-        this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */});;)
+        this.observeEntry('first-input', _entries => {/* TODO: Fix JSX expression */});;)
 });;)
 });;
         // Cumulative Layout Shift;
@@ -137,13 +137,13 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
     try {,
-      const observer = new PerformanceObserver((list) => {,
+      const _observer = new PerformanceObserver((list) => {,
         for (const entry of list.getEntries()) {,
           if (entry.name === name) {,
             (this.metrics as any)[metricKey] = entry.startTime;,
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
+      const _observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           if (entry.name === name) {}
             (this.metrics as any)[metricKey] = entry.startTime;
@@ -158,9 +158,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
   private observeLCP(): void {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
+      const _observer = new PerformanceObserver((list) => {}
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+        const _lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
         this.logMetric('lcp', lastEntry.startTime);
 
@@ -171,7 +171,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
   private observeFID(): void {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
+      const _observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           this.metrics.fid = (entry as any).processingStart - entry.startTime;
           this.logMetric('fid', this.metrics.fid);)
@@ -184,8 +184,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
   private observeCLS(): void {}
     try {}
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {}
+      let _clsValue = 0;
+      const _observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           if (!(entry as any).hadRecentInput) {}
             clsValue += (entry as any).value});
@@ -193,7 +193,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
   }
   private observePaint(nam,
-  e: string, metricKe)
+  e: string, metricKe);
   y: keyof PerformanceMetrics): void {/* TODO: Fix JSX expression */});;)
 }
         });;)
@@ -240,7 +240,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
     // Page Load Time;
     if (performance.timing) {
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+      const _loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
       this.addCustomMetric('pageLoadTime', loadTime);)
 }
     // DOM Content Loaded;
@@ -253,18 +253,18 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
     // Page Load Time
     if (performance.timing) {}
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+      const _loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
       this.addCustomMetric('pageLoadTime', loadTime);)
 }
     // DOM Content Loaded
     if (performance.timing) {}
-      const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
+      const _domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
       this.addCustomMetric('domContentLoaded', domContentLoaded);)
 }
   }
   private setupResourceTiming(): void {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
+      const _observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           if (entry.entryType === 'resource') {}
             const resourceEntry = entry as PerformanceResourceTiming;
@@ -278,8 +278,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
   }
   private analyzeResource(entry: PerformanceResourceTiming): void {}
-    const duration = entry.responseEnd - entry.startTime;
-    const size = entry.transferSize || 0;
+    const _duration = entry.responseEnd - entry.startTime;
+    const _size = entry.transferSize || 0;
     // Track slow resources;
     if (duration > 1000) {,
       this.addCustomMetric(`slowResource_${entry.name}`, duration);)
@@ -329,28 +329,28 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     return { ...this.metrics }});
 }
   getScore(): number {}
-    const scores = [];
-    // FCP scoring (0-100)
+    const _scores = [];
+    // FCP scoring (0-100);
     if (this.metrics.fcp) {}
       if (this.metrics.fcp <= 1800) scores.push(100);
       else if (this.metrics.fcp <= 4000) scores.push(50);
       else scores.push(25);)
 }
-    // LCP scoring (0-100)
+    // LCP scoring (0-100);
     if (this.metrics.lcp) {}
       if (this.metrics.lcp <= 2500) scores.push(100);
       else if (this.metrics.lcp <= 4000) scores.push(75);
       else if (this.metrics.lcp <= 6000) scores.push(50);
       else scores.push(25);)
 }
-    // FID scoring (0-100)
+    // FID scoring (0-100);
     if (this.metrics.fid) {}
       if (this.metrics.fid <= 100) scores.push(100);
       else if (this.metrics.fid <= 300) scores.push(75);
       else if (this.metrics.fid <= 500) scores.push(50);
       else scores.push(25);)
 }
-    // CLS scoring (0-100)
+    // CLS scoring (0-100);
     if (this.metrics.cls) {}
       if (this.metrics.cls <= 0.1) scores.push(100);
       else if (this.metrics.cls <= 0.25) scores.push(75);
@@ -386,7 +386,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 } catch (error) {/* TODO: Fix JSX expression */});;)
 }
   }
-  private analyzeResource(entr)
+  private analyzeResource(entr);
   y: PerformanceResourceTiming): void {/* TODO: Fix JSX expression */}
       this.addCustomMetric(`slowResource_${entry.name}`, duration);)
 }
@@ -396,11 +396,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
   }
   addCustomMetric(nam,
-  e: string, valu)
+  e: string, valu);
   e: number): void {/* TODO: Fix JSX expression */});;)
 }
   private logMetric(nam,
-  e: string, valu)
+  e: string, valu);
   e: number): void {/* TODO: Fix JSX expression */}`});
 }ms`);)
 }
@@ -414,21 +414,21 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
   getScore(): number {/* TODO: Fix JSX expression */});;)
 }
-    // LCP scoring (0-100)
+    // LCP scoring (0-100);
     if (this.metrics.lcp) {/* TODO: Fix JSX expression */});;)
 }
-    // FID scoring (0-100)
+    // FID scoring (0-100);
     if (this.metrics.fid) {/* TODO: Fix JSX expression */});;)
 }
-    // CLS scoring (0-100)
+    // CLS scoring (0-100);
     if (this.metrics.cls) {/* TODO: Fix JSX expression */});;)
 }
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0});
 }
 
   generateReport(): string {
-    const score = this.getScore();
-    const metrics = this.getMetrics();
+    const _score = this.getScore();
+    const _metrics = this.getMetrics();
     return `
 Performance Report:
 Score: ${score}

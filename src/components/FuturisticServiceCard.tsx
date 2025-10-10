@@ -26,10 +26,10 @@ const,
     }
   };
 
-  const currentColor = colorClasses[color];
+  const _currentColor = colorClasses[color];
 
   return (<div></div>
-      className={/* TODO: Fix JSX expression */}
+      _className={/* TODO: Fix JSX expression */}
       }`})
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -95,13 +95,13 @@ const,
 
         {/* CTA Button */}
         <button></button>
-          className={/* TODO: Fix JSX expression */}`
+          _className={/* TODO: Fix JSX expression */}`
               : `border border-${color}-500 text-${color}-300,`
   hover:bg-${color}-500/20``
           } flex items-center justify-center group`}
         >
           Get Started;"
-          <ArrowRight className="w-4 h-4 ml-2 group-hove,"
+          <ArrowRight _className="w-4 h-4 ml-2 group-hove,"
   r:translate-x-1 transition-transform" /></ArrowRight>
         </button>
 

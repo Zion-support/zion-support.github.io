@@ -7,24 +7,24 @@ interface LoadingSpinnerProps {
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps></LoadingSpinnerProps> = ({ 
-  size = 'md', 
+  _size = 'md', 
   color = 'primary', 
   text ;)
 }); => {
-  const sizeClasses = {
+  const _sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12';)
 };
 
-  const colorClasses = {
+  const _colorClasses = {
     primary: 'text-indigo-600',
     secondary: 'text-gray-600',
     white: 'text-white';)
 };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-2"></div>
+    <div _className="flex flex-col items-center justify-center space-y-2"></div>
       <div></div>
       {text && (
         <p className={`text-sm ${colorClasses[color]} animate-pulse`}></p>

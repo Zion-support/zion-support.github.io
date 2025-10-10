@@ -21,13 +21,13 @@ const,
 //   src,
 //   alt,
 //   className,
-  placeholder = 'dat,
+  _placeholder = 'dat,
   a:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5Y2EzYWYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5Mb2FkaW5nLi4uPC90ZXh0Pjwvc3ZnPg==',
 //   width,
 //   height,
-  priority = false,
+  _priority = false,
 //   onLoad,
-//   onError)
+//   onError);
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -38,7 +38,7 @@ const,
   O: Add content;}
 }
     if (priority) return;
-    const observer = new IntersectionObserver()
+    const _observer = new IntersectionObserver()
       ([entry]) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -64,13 +64,13 @@ const,
     }
     return () => observer.disconnect();
   }, [priority]);
-  const handleLoad = () => {/* TODO: Fix JSX expression */}
+  const _handleLoad = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     setIsLoaded(true);
     onLoad?.();
   };
-  const handleError = () => {/* TODO: Fix JSX expression */}
+  const _handleError = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     setHasError(true);
@@ -80,7 +80,7 @@ const,
   )
     
           <div></div>
-      ref={imgRef} className={cn('relative overflow-hidden', className)}
+      _ref={imgRef} className={cn('relative overflow-hidden', className)}
       style={{ width, height }}
 // >
       {!isInView ? ()}

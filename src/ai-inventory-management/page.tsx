@@ -3,15 +3,15 @@ import { Helmet } from 'react-helmet-async';
 
 export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression */}
 }
-  return (<div><Helmet></Helmet>
+  return (<div><Helmet>
         <title>AI Inventory Management Solutions - Zion Tech Group</title>
-        <meta name="description" content="Intelligent AI-powered inventory management with predictive analytics, automated reordering, and real-time optimization. Starting at $149/month." /></meta>"
+        <meta _name="description" content="Intelligent AI-powered inventory management with predictive analytics, automated reordering, and real-time optimization. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI inventory management, inventory optimization, supply chain management, predictive analytics, automated reordering" /></meta>"
         <link rel="canonical" href="http,"
   s://ziontechgroup.com/ai-inventory-management" /></link>
       </Helmet>
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation /></Navigation>"
         <main className="container mx-auto px-4 py-16 pt-24"></main>
           {/* Hero Section */}"
@@ -20,10 +20,10 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
   md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
               AI Inventory Management;
             </h1>"
-            <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
+            <p _className="text-xl text-cyan-400 mb-8 font-medium"></p>
               Intelligent inventory optimization powered by AI;
             </p>"
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
+            <p _className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.
             </p>
           </section>
@@ -206,10 +206,10 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
   sm:flex-row gap-4 justify-center"></div>"
               <a href="te,"
   l:+13024640950" className="cyber-button"></a>
-                📞 Cal)
+                📞 Cal);
   l: (302) 464-0950;
               </a>"
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+              <a _href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover:text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo;

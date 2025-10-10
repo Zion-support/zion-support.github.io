@@ -33,7 +33,7 @@ export interface AppConfig {
   };
 }
 
-const config: AppConfig = {
+const config: _AppConfig = {
   app: {
     name: 'Zion Tech Group',
     version: '1.0.0',
@@ -68,10 +68,10 @@ const config: AppConfig = {
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
  */
-export function getConfig<T = unknown>(keyPath: string): T {let value: unknown = config;
+export function getConfig<T = unknown>(keyPath: string): T {let value: _unknown = config;
 
   for (const key of keys) {
-    if (value && typeof value === 'object' && key in value) {
+    if (value && typeof _value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key];
     } else {
       throw new Error(`Configuration key "${keyPath}" not found`);

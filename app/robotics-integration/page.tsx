@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -27,7 +27,7 @@ const PagePage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -41,7 +41,7 @@ const PagePage: React.FC = () => {
   return (
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section _className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

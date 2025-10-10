@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const FuturisticHeroPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -27,7 +27,7 @@ const FuturisticHeroPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -40,7 +40,7 @@ const FuturisticHeroPage: React.FC = () => {
 
   return (
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div _className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />

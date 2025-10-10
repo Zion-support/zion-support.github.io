@@ -8,7 +8,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIServicesPage: React.FC = () => {
-  const services = [
+  const _services = [
     {
       title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
@@ -34,7 +34,7 @@ titletitle: 'AI Analytics & Insights',
 $4}
   ];
 
-  const benefits = [
+  const _benefits = [
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
@@ -86,7 +86,7 @@ export default function AIServicesPage() {
     setIsVisible(true);
   }, []);
 
-  const aiServices = [
+  const _aiServices = [
     {
       id: 'ai-automation',
       title: 'AI Process Automation',
@@ -215,7 +215,7 @@ export default function AIServicesPage() {
     }
   ];
 
-  const stats = [
+  const _stats = [
     { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
     { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
     { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
@@ -226,7 +226,7 @@ export default function AIServicesPage() {
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing</title>
-        <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
+        <meta _name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" />
         <meta property="og:title" content="AI Services - Zion Tech Group" />
         <meta property="og:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." />

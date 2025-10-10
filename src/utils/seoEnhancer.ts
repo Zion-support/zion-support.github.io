@@ -20,7 +20,7 @@ interface SEOConfig {title: string;}
 
 class SEOEnhancer {/* TODO: Fix JSX expression */}
   config: SEOConfig;}
-  constructor(confi)
+  constructor(confi);
   g: SEOConfig) {this.config = config;}
     this.init();
   }
@@ -34,16 +34,16 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
       document.title = this.config.title;
       
       // Update meta description;
-      let metaDescription = document.querySelector('meta[name="description"]');
+      let _metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {metaDescription = document.createElement('meta');}
         metaDescription.setAttribute('name', 'description');
         document.head.appendChild(metaDescription);
       }
-      metaDescription.setAttribute('content', this.config.description)
+      metaDescription.setAttribute('content', this.config.description);
     }
   }
 
-  public updateConfig(newConfi)
+  public updateConfig(newConfi);
   g: Partial<SEOConfig>): void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...newConfig }
     this.updateMetaTags()

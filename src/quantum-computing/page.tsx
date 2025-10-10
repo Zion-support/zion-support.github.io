@@ -9,7 +9,7 @@ const QuantumComputingPage: React.FC = () => {
     <>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group</title>
-        <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
+        <meta _name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
         <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum machine learning" />
       </Helmet>
       

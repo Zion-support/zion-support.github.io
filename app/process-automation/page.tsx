@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 const ProcessAutomationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Zap,
       title: 'Workflow Automation',
@@ -48,7 +48,7 @@ const ProcessAutomationPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
     'Lower operational costs',
@@ -63,7 +63,7 @@ const ProcessAutomationPage: React.FC = () => {
     <>
       <Helmet>
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
-        <meta name="description" content="Professional process automation services by Zion Tech Group. Streamline workflows, reduce costs, and improve efficiency with AI-powered automation." />
+        <meta _name="description" content="Professional process automation services by Zion Tech Group. Streamline workflows, reduce costs, and improve efficiency with AI-powered automation." />
         <meta name="keywords" content="process automation, workflow automation, business automation, AI automation, Zion Tech Group" />
       </Helmet>
 

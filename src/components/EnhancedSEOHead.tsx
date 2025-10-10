@@ -11,7 +11,7 @@ interface SEOHeadProps {
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
-  description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
+  _description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
   keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
   image = "https://ziontechgroup.com/og-image.png",
   url = "https://ziontechgroup.com",
@@ -59,10 +59,10 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
   };
 
   return (
-    <Helmet></Helmet>
+    <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content={description} /></meta>
+      <meta _name="description" content={description} /></meta>
       <meta name="keywords" content={keywords} /></meta>
       <meta name="author" content="Zion Tech Group" /></meta>
       <meta name="robots" content="index, follow" /></meta>
@@ -97,7 +97,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
       
       {/* Fonts */}
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" /></link>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" _rel="stylesheet" /></link>
       
       {/* Favicon */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" /></link>
@@ -141,7 +141,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" /></meta>
       <meta httpEquiv="X-Frame-Options" content="DENY" /></meta>
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /></meta>
+      <meta httpEquiv="X-XSS-Protection" content="1; _mode=block" /></meta>
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" /></meta>
       <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" /></meta>
       

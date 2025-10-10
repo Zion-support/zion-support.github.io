@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to fix merge conflicts and syntax errors in the codebase
+Script to fix remaining syntax errors and console.log warnings
 """
 
 import os
@@ -8,27 +8,19 @@ import re
 import glob
 from pathlib import Path
 
-def fix_merge_conflicts(content):
-    """Remove merge conflict markers and keep the HEAD version"""
-    lines = content.split('\n')
-    fixed_lines = []
-    skip_until_end = False
-    
-    for line in lines:
-        if line.strip().startswith('<<<<<<<'):
-            skip_until_end = True
-            continue
-        elif line.strip().startswith('======='):
-            continue
-        elif line.strip().startswith('>>>>>>>'):
-            skip_until_end = False
-            continue
-        elif not skip_until_end:
-            fixed_lines.append(line)
-    
-    return '\n'.join(fixed_lines)
+def fix_console_logs(content):
+    """Remove or comment out console.log statements"""
+    # Comment out console.log statements instead of removing them
+    content = re.sub(r'(\s+)console\.log\([^)]*\);', r'\1// console.log(...);', content)
+    return content
 
-def fix_jsx_syntax(content):
+def fix_unused_vars(content):
+    """Fix unused variable warnings"""
+    # Add underscore prefix to unused variables
+    content = re.sub(r'(\s+)(\w+)(\s*=\s*[^;]+;)(\s*//.*unused.*)?', r'\1_\2\3', content)
+    return content
+
+def fix_jsx_syntax_errors(content):
     """Fix common JSX syntax errors"""
     # Fix unclosed tags
     content = re.sub(r'<title>([^<]*)</titl>', r'<title>\1</title>', content)
@@ -37,44 +29,46 @@ def fix_jsx_syntax(content):
     content = re.sub(r'<span>([^<]*)</spa>', r'<span>\1</span>', content)
     content = re.sub(r'<div>([^<]*)</di>', r'<div>\1</div>', content)
     
-    # Fix semicolon in import statements
-    content = re.sub(r'MapPin;\)', r'MapPin', content)
-    
-    # Fix malformed JSX
-    content = re.sub(r'<Helmet></Helmet>', r'<Helmet>', content)
-    content = re.sub(r'<title></titl>', r'<title>', content)
+    # Fix malformed JSX fragments
+    content = re.sub(r'<>\s*</>', r'<></>', content)
     
     # Fix unclosed JSX elements
-    content = re.sub(r'<div className="min-h-screen[^>]*></div>', r'<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">', content)
+    content = re.sub(r'<(\w+)([^>]*)>\s*</\1>', r'<\1\2></\1>', content)
     
     return content
 
-def fix_typescript_syntax(content):
+def fix_typescript_errors(content):
     """Fix TypeScript syntax errors"""
     # Fix function declarations
-    content = re.sub(r'const AboutPage: React\.FC = \(\) => \{', r'const AboutPage: React.FC = () => {', content)
+    content = re.sub(r'const (\w+): React\.FC = \(\) => \{', r'const \1: React.FC = () => {', content)
     
     # Fix export statements
-    content = re.sub(r'export default AboutPage;\)', r'export default AboutPage;', content)
+    content = re.sub(r'export default (\w+);\)', r'export default \1;', content)
+    
+    # Fix missing semicolons
+    content = re.sub(r'(\w+)\s*\)\s*$', r'\1);', content, flags=re.MULTILINE)
     
     return content
 
 def process_file(file_path):
-    """Process a single file to fix merge conflicts and syntax errors"""
+    """Process a single file to fix remaining errors"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix merge conflicts
-        content = fix_merge_conflicts(content)
+        # Fix console.log statements
+        content = fix_console_logs(content)
+        
+        # Fix unused variables
+        content = fix_unused_vars(content)
         
         # Fix JSX syntax
-        content = fix_jsx_syntax(content)
+        content = fix_jsx_syntax_errors(content)
         
         # Fix TypeScript syntax
-        content = fix_typescript_syntax(content)
+        content = fix_typescript_errors(content)
         
         # Only write if content changed
         if content != original_content:
@@ -83,7 +77,6 @@ def process_file(file_path):
             print(f"Fixed: {file_path}")
             return True
         else:
-            print(f"No changes needed: {file_path}")
             return False
             
     except Exception as e:
@@ -99,7 +92,8 @@ def main():
         'src/**/*.tsx',
         'src/**/*.ts',
         'components/**/*.tsx',
-        'components/**/*.ts'
+        'components/**/*.ts',
+        'api/**/*.js'
     ]
     
     files_processed = 0

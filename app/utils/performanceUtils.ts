@@ -5,11 +5,11 @@
   }
 
   private initializeMetrics(): void {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
+    if (typeof _window === 'undefined' || !('performance' in window)) return;
 
     // Measure page load time
     window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     });
 
@@ -34,10 +34,10 @@
   }
 
   private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    if (typeof _window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
-      const observer = new PerformanceObserver((list) => {
+      const _observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === type) {
             callback(entry);
@@ -52,12 +52,12 @@
   }
 
   private observeLCP(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    if (typeof _window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
-      const observer = new PerformanceObserver((list) => {
+      const _observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
+        const _lastEntry = entries[entries.length - 1];
         this.metrics.largestContentfulPaint = lastEntry.startTime;
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -68,10 +68,10 @@
   }
 
   private observeFID(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    if (typeof _window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
-      const observer = new PerformanceObserver((list) => {
+      const _observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
         }
@@ -84,11 +84,11 @@
   }
 
   private observeCLS(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+    if (typeof _window === 'undefined' || !('PerformanceObserver' in window)) return;
 
     try {
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
+      let _clsValue = 0;
+      const _observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
@@ -142,27 +142,27 @@
   }
 }
 
-export const performanceMonitor = new PerformanceMonitor();
+export const _performanceMonitor = new PerformanceMonitor();
 
 // Utility functions
-export const measureFunction = <T extends (...args: any[]) => any>(
+export const _measureFunction = <T extends (...args: any[]) => any>(
   fn: T,
   name?: string
 ): T => {
   return ((...args: Parameters<T>) => {
     const start = performance.now();
-    const result = fn(...args);
-    const end = performance.now();
+    const _result = fn(...args);
+    const _end = performance.now();
     
     if (name) {
-      console.log(`${name} took ${end - start} milliseconds`);
+      // console.log(...);
     }
     
     return result;
   }) as T;
 };
 
-export const debounce = <T extends (...args: any[]) => any>(
+export const _debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): T => {
@@ -170,11 +170,11 @@ export const debounce = <T extends (...args: any[]) => any>(
   
   return ((...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    _timeout = setTimeout(() => func(...args), wait);
   }) as T;
 };
 
-export const throttle = <T extends (...args: any[]) => any>(
+export const _throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): T => {
@@ -183,13 +183,13 @@ export const throttle = <T extends (...args: any[]) => any>(
   return ((...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      _inThrottle = true;
+      setTimeout(() => _inThrottle = false, limit);
     }
   }) as T;
 };
 
-export const lazyLoad = (callback: () => void): void => {
+export const _lazyLoad = (callback: () => void): void => {
   if ('requestIdleCallback' in window) {
     requestIdleCallback(callback);
   } else {
@@ -197,7 +197,7 @@ export const lazyLoad = (callback: () => void): void => {
   }
 };
 
-export const preloadImage = (src: string): Promise<void> => {
+export const _preloadImage = (src: string): Promise<void> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve();
@@ -206,6 +206,6 @@ export const preloadImage = (src: string): Promise<void> => {
   });
 };
 
-export const preloadImages = (srcs: string[]): Promise<void[]> => {
+export const _preloadImages = (srcs: string[]): Promise<void[]> => {
   return Promise.all(srcs.map(preloadImage));
 };

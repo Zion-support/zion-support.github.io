@@ -3,15 +3,15 @@ import { Helmet } from 'react-helmet-async';
 import { Settings, ArrowRight } from 'lucide-react';
 
 const MicroSaaSPage: React.FC = () => {
-  const serviceName = 'content-generator';
-  const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  const _serviceName = 'content-generator';
+  const _title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
   return (
     <>
-      <Helmet></Helmet>
-        <title></titl>{title} | Zion Tech Group - Micro SaaS Solutions</title>
-        <meta name="description" content={`Powerful ${title.toLowerCase(); micro SaaS solution for modern businesses.`} />
-        <link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />
+      <Helmet>
+        <title></title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
+        <meta _name="description" content={`Powerful ${title.toLowerCase(); micro SaaS solution for modern businesses.`} />
+        <link _rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />
       </Helmet>
 
       <div></div>
@@ -19,7 +19,7 @@ const MicroSaaSPage: React.FC = () => {
           <div></div>
             <div></div>
               <Settings className="w-4 h-4" />
-              <span></spa>{title}</span>
+              <span></span>{title}</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text"></h1>
               {title} </h1>
@@ -29,8 +29,8 @@ const MicroSaaSPage: React.FC = () => {
               Powerful {title.toLowerCase(); micro SaaS solution designed for modern businesses.
             </p>
             <div></div>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"></button>
-                <span></spa>Get Started</span>
+              <button _className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"></button>
+                <span></span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"></button>

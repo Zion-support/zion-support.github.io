@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">

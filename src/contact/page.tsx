@@ -20,7 +20,7 @@ $4});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const __handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     message: '',
     budget: '',
     timeline: ''
@@ -29,7 +29,7 @@ $4});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -37,16 +37,16 @@ $4});
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const _handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
+    // // console.log(...);
     setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({}, 3000);
-  const handleSubmit = async (e: React.FormEvent) => {
+  const _handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -57,14 +57,14 @@ $4});
     setIsSubmitting(false);
   };
 
-  const contactInfo = {
+  const _contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
   };
 
-  const services = [
+  const _services = [
     'AI Services',
     'IT Services',
     'Micro SAAS Solutions',
@@ -77,7 +77,7 @@ $4});
     'Other'
   ];
 
-  const achievements = [
+  const _achievements = [
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
@@ -104,7 +104,7 @@ export default ContactPage;
     'Other'
   ];
 
-  const budgetRanges = [
+  const _budgetRanges = [
     'Under $10K',
     '$10K - $50K',
     '$50K - $100K',
@@ -113,7 +113,7 @@ export default ContactPage;
     'Not sure'
   ];
 
-  const timelines = [
+  const _timelines = [
     'ASAP',
     'Within 1 month',
     '1-3 months',
@@ -122,7 +122,7 @@ export default ContactPage;
     'Just exploring'
   ];
 
-  const offices = [
+  const _offices = [
     {
       city: 'Middletown, DE',
       address: '364 E Main St STE 1008, Middletown, DE 19709',
@@ -149,7 +149,7 @@ export default ContactPage;
     }
   ];
 
-  const faqs = [
+  const _faqs = [
     {
       question: 'How quickly can you start my project?',
       answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.'
@@ -170,7 +170,7 @@ export default ContactPage;
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="max-w-2xl mx-auto text-center p-8">
           <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-white" />
@@ -213,7 +213,7 @@ export default ContactPage;
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>

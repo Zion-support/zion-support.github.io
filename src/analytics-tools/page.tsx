@@ -4,7 +4,7 @@ import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, Map
 
 import React from 'react';
 const AnalyticsToolsPage: React.FC = () => {
-  const analyticsTools = [
+  const _analyticsTools = [
     {
       title: 'AI Business Intelligence',
       price: '$399/month',
@@ -45,7 +45,7 @@ titletitle: 'AI Financial Analytics',
       category:     ,
 $4}
   ];
-  const benefits = [
+  const _benefits = [
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
       description:       ,
@@ -81,7 +81,7 @@ const PagePage: React.FC = () => {
           <div>Coming Soon</div>
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Analytics Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
@@ -105,7 +105,7 @@ const PagePage: React.FC = () => {
 // AI Analytics Tools;
 
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p _className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
           {/* Stats */}
@@ -202,7 +202,7 @@ const PagePage: React.FC = () => {
   md:text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Our Analytics Tools;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
             {analyticsTools.map((tool, index) => ()}"
@@ -238,7 +238,7 @@ const PagePage: React.FC = () => {
           </a>
       {/* Benefits Section */}
 Why Choose Our Analytics Tools?"
-          <div className="grid grid-cols-1,
+          <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
             {benefits.map((benefit, index) => ()}"
@@ -265,12 +265,12 @@ Why Choose Our Analytics Tools?"
   );
 };
 Ready to Unlock Your Data?
-          <p className="text-xl text-purple-100 mb-8">
+          <p _className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 Call (302) 464-0950;
-              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              _href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 
               Email Us;
   );

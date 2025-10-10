@@ -33,11 +33,11 @@ export interface TrackedError {}
 }
 class EnhancedErrorTracker {}
   private errors: TrackedError[] = []
-  private maxErrors = 100;
+  private _maxErrors = 100;
   private sessionId: string,
   constructor() {,
     this.sessionId = this.generateSessionId(),
-  private maxErrors = 100
+  private _maxErrors = 100
   private sessionId: string
   constructor() {}
     this.sessionId = this.generateSessionId()
@@ -48,7 +48,7 @@ class EnhancedErrorTracker {}
   }
   private setupGlobalErrorHandler(): void {
     if (typeof window !== 'undefined') {
-      window.addEventListener('error', event => {)
+      window.addEventListener('error', _event => {)
         this.trackError(event.error, {)
           component: 'Global'),
           action: 'Uncaught Error'}
@@ -74,12 +74,12 @@ class EnhancedErrorTracker {}
   }
   public trackError(error: Error, context: ErrorContext = {}): void {
     if (typeof window === 'undefined') return;
-    const trackedError: TrackedError = {
+    const trackedError: _TrackedError = {
       message: error.message;
       stack: error.stack;
       context: {,
         ...context;
-  public trackError(error: Error, context: ErrorContext = {}): void {}
+  public trackError(error: Error, context: _ErrorContext = {}): void {}
     if (typeof window === 'undefined') return
     const trackedError: TrackedError = {}
       message: error.message,
@@ -92,7 +92,7 @@ class EnhancedErrorTracker {}
       userAgent: navigator.userAgent;
       url: window.location.href;
     }
-    this.errors.push(trackedError)
+    this.errors.push(trackedError);
     // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {
     // Keep only the most recent errors
@@ -103,7 +103,7 @@ class EnhancedErrorTracker {}
     if (process.env['NODE_ENV'] === 'development') {}
       }
     // Send to analytics if available;
-    this.sendToAnalytics(trackedError)
+    this.sendToAnalytics(trackedError);
   }
   private sendToAnalytics(error: TrackedError): void {,
     if(typeof window !== 'undefined' &&)
@@ -150,13 +150,13 @@ class EnhancedErrorTracker {}
   } {}
     const byComponent: Record<string, number> = {}
     this.errors.forEach(error => {)
-      const component = error.context.component || 'Unknown')
+      const _component = error.context.component || 'Unknown')
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
     return {
       total: this.errors.length;
     this.errors.forEach(error => {)}
-      const component = error.context.component || 'Unknown'
+      const _component = error.context.component || 'Unknown'
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
     return {}
@@ -167,7 +167,7 @@ class EnhancedErrorTracker {}
   }
 }
 // Export singleton instance;
-export const errorTracker = new EnhancedErrorTracker()
+export const _errorTracker = new EnhancedErrorTracker()
 export default errorTracker;
 export interface ErrorContext {/* TODO: Fix JSX expression */}
 }
@@ -181,14 +181,14 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
   private setupGlobalErrorHandler(): void {/* TODO: Fix JSX expression */}
         });
       });
-      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
+      window.addEventListener('unhandledrejection', _event => {/* TODO: Fix JSX expression */})
         });
       });
     }
   }
   public trackError(erro,
-  r: Error, contex)
-  t: ErrorContext = {}): void {/* TODO: Fix JSX expression */}
+  r: Error, contex);
+  t: _ErrorContext = {}): void {/* TODO: Fix JSX expression */}
       },
       timestam,
   p: new Date().toISOString(),
@@ -207,7 +207,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
     // Send to analytics if available;
     this.sendToAnalytics(trackedError);
   }
-  private sendToAnalytics(erro)
+  private sendToAnalytics(erro);
   r: TrackedError): void {/* TODO: Fix JSX expression */}
         }
       ).gtag;
@@ -231,6 +231,6 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
   }
 }
 // Export singleton instance;
-export const errorTracker = new EnhancedErrorTracker();
+export const _errorTracker = new EnhancedErrorTracker();
 export default errorTracker;
 `

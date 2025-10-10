@@ -6,17 +6,17 @@ export interface ValidationResult {
 }
 
 // URL Validation
-export const isValidUrl = (url: string): boolean => {
+export const _isValidUrl = (url: string): boolean => {
   if (!url || typeof url !== 'string') return false;
   try {
-    const urlObj = new URL(url);
+    const _urlObj = new URL(url);
     return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
   } catch {
     return false;
   }
 };
 
-export const validateURL = (url: string): ValidationResult => {
+export const _validateURL = (url: string): ValidationResult => {
   if (!url) {
     return { isValid: false, error: 'URL is required' };
   }
@@ -29,7 +29,7 @@ export const validateURL = (url: string): ValidationResult => {
 };
 
 // String Length Validation
-export const validateLength = (
+export const _validateLength = (
   value: string, 
   min: number, 
   max: number, 
@@ -51,18 +51,18 @@ export const validateLength = (
 };
 
 // Password Validation
-export const isValidPassword = (password: string): boolean => {
+export const _isValidPassword = (password: string): boolean => {
   if (!password || password.length < 8) return false;
   
-  const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  const _hasUpperCase = /[A-Z]/.test(password);
+  const _hasLowerCase = /[a-z]/.test(password);
+  const _hasNumbers = /\d/.test(password);
+  const _hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
   
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 };
 
-export const validatePassword = (password: string): ValidationResult => {
+export const _validatePassword = (password: string): ValidationResult => {
   if (!password) {
     return { isValid: false, error: 'Password is required' };
   }
@@ -86,7 +86,7 @@ export const validatePassword = (password: string): ValidationResult => {
 };
 
 // HTML Sanitization
-export const sanitizeHTML = (input: string | null | undefined): string => {
+export const _sanitizeHTML = (input: string | null | undefined): string => {
   if (!input || typeof input !== 'string') return '';
   
   return input
@@ -99,25 +99,25 @@ export const sanitizeHTML = (input: string | null | undefined): string => {
 };
 
 // Date Validation
-export const validateDate = (dateString: string): ValidationResult => {
+export const _validateDate = (dateString: string): ValidationResult => {
   if (!dateString) {
     return { isValid: false, error: 'Date is required' };
   }
   
   // Check if the date string matches YYYY-MM-DD format
-  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  const _dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(dateString)) {
     return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' };
   }
   
-  const date = new Date(dateString);
+  const _date = new Date(dateString);
   
   if (isNaN(date.getTime())) {
     return { isValid: false, error: 'Invalid date' };
   }
   
-  // Check if the date is valid (e.g., not 2025-13-01)
-  const isoString = date.toISOString().split('T')[0];
+  // Check if the date is valid (e.g., not 2025-13-01);
+  const _isoString = date.toISOString().split('T')[0];
   if (isoString !== dateString) {
     return { isValid: false, error: 'Invalid date' };
   }
@@ -125,25 +125,25 @@ export const validateDate = (dateString: string): ValidationResult => {
   return { isValid: true };
 };
 
-// Credit Card Validation (Luhn Algorithm)
-export const validateCreditCard = (cardNumber: string): ValidationResult => {
+// Credit Card Validation (Luhn Algorithm);
+export const _validateCreditCard = (cardNumber: string): ValidationResult => {
   if (!cardNumber) {
     return { isValid: false, error: 'Credit card number is required' };
   }
   
   // Remove spaces and non-digits
-  const cleaned = cardNumber.replace(/\D/g, '');
+  const _cleaned = cardNumber.replace(/\D/g, '');
   
   if (cleaned.length < 13 || cleaned.length > 19) {
     return { isValid: false, error: 'Invalid credit card number length' };
   }
   
   // Luhn algorithm
-  let sum = 0;
-  let isEven = false;
+  let _sum = 0;
+  let _isEven = false;
   
-  for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i]);
+  for (let _i = cleaned.length - 1; i >= 0; i--) {
+    let _digit = parseInt(cleaned[i]);
     
     if (isEven) {
       digit *= 2;
@@ -153,7 +153,7 @@ export const validateCreditCard = (cardNumber: string): ValidationResult => {
     }
     
     sum += digit;
-    isEven = !isEven;
+    _isEven = !isEven;
   }
   
   if (sum % 10 !== 0) {
@@ -164,7 +164,7 @@ export const validateCreditCard = (cardNumber: string): ValidationResult => {
 };
 
 // JSON Validation
-export const validateJSON = (jsonString: string): ValidationResult => {
+export const _validateJSON = (jsonString: string): ValidationResult => {
   if (!jsonString) {
     return { isValid: false, error: 'JSON string is required' };
   }
@@ -178,7 +178,7 @@ export const validateJSON = (jsonString: string): ValidationResult => {
 };
 
 // Required Field Validation
-export const validateRequired = (value: any, fieldName: string = 'Field'): ValidationResult => {
+export const _validateRequired = (value: any, fieldName: string = 'Field'): ValidationResult => {
   if (value === null || value === undefined || value === '') {
     return { isValid: false, error: `${fieldName} is required` };
   }
@@ -187,7 +187,7 @@ export const validateRequired = (value: any, fieldName: string = 'Field'): Valid
 };
 
 // Composite Validation
-export const validateComposite = (
+export const _validateComposite = (
   value: string, 
   validators: Array<(val: string) => ValidationResult>
 ): ValidationResult => {
@@ -202,7 +202,7 @@ export const validateComposite = (
 };
 
 // Async Validation Helper
-export const asyncValidator = async (val: string): Promise<string> => {
+export const _asyncValidator = async (val: string): Promise<string> => {
   // Simulate async validation
   await new Promise(resolve => setTimeout(resolve, 100));
   return 'success';

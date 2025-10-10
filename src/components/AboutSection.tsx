@@ -1,14 +1,14 @@
 import React from 'react';
 
 export default function AboutSection() {
-  const stats = [
+  const _stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Success Rate' }
   ];
 
-  const values = [
+  const _values = [
     {
       title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions.',
@@ -39,7 +39,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-20 relative">
+    <section _id="about" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

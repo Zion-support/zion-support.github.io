@@ -1,6 +1,6 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-const PROD_DOMAIN = 'https://ziontechgroup.com';
+const _PROD_DOMAIN = 'https://ziontechgroup.com';
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -21,7 +21,7 @@ async function handler(req, res) {
 
   try {
     // Basic checkout session creation logic
-    const sessionData = {
+    const _sessionData = {
       productId,
       userId: userId || null,
       timestamp: new Date().toISOString(),

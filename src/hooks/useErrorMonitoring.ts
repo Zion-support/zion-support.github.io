@@ -11,16 +11,16 @@ declare global {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     __REACT_ERROR_HANDLER__?: (erro,
-  r: Error, errorInf)
+  r: Error, errorInf);
   o: unknown) => void;
   }
 }
-export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
+export const __useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const { trackError } = useAnalytics();
-  const reportError = useCallback()
-    (erro)
+  const _reportError = useCallback()
+    (erro);
   r: Error, context?: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -32,36 +32,36 @@ export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     // Global error handler;
-const handleError = (even)
+const _handleError = (even);
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const errorEvent = event as {/* TODO: Fix JSX expression */}
+      const _errorEvent = event as {/* TODO: Fix JSX expression */}
   e: string; error?: Error };
-      const error = new Error(errorEvent.message);
+      const _error = new Error(errorEvent.message);
       error.stack = errorEvent.error?.stack;
       reportError(error, 'global_error');
     };
     // Unhandled promise rejection handler;
-const handleUnhandledRejection = (even)
+const _handleUnhandledRejection = (even);
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const rejectionEvent = event as {/* TODO: Fix JSX expression */}
+      const _rejectionEvent = event as {/* TODO: Fix JSX expression */}
   n: unknown };
-      const error =
+      const _error =
 //         rejectionEvent.reason instanceof Error;
 //           ? rejectionEvent.reason;
           : new Error(String(rejectionEvent.reason));
       reportError(error, 'unhandled_promise_rejection');
     };
-    // React error boundary handler (if available)
-    const handleReactError = (erro,
-  r: Error, errorInf)
+    // React error boundary handler (if available);
+    const _handleReactError = (erro,
+  r: Error, errorInf);
   o: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const componentStack =
+      const _componentStack =
         (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
       reportError(error, `react_error_boundar)`
   y: ${componentStack}`);

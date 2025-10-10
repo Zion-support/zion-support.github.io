@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
-  const services = [
+  const _services = [
     // AI Services
     {
       icon: Brain,
@@ -778,7 +778,7 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = [
+  const _categories = [
     'All',
     'AI Services',
     'Cloud Services',
@@ -795,19 +795,19 @@ const ServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
   const [currentPage, setCurrentPage] = React.useState(1);
-  const servicesPerPage = 12;
+  const _servicesPerPage = 12;
 
-  const filteredServices = services.filter(service => {
+  const _filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const _matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
-  const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
-  const startIndex = (currentPage - 1) * servicesPerPage;
-  const endIndex = startIndex + servicesPerPage;
-  const currentServices = filteredServices.slice(startIndex, endIndex);
+  const _totalPages = Math.ceil(filteredServices.length / servicesPerPage);
+  const _startIndex = (currentPage - 1) * servicesPerPage;
+  const _endIndex = startIndex + servicesPerPage;
+  const _currentServices = filteredServices.slice(startIndex, endIndex);
 
   // Reset to first page when filters change
   React.useEffect(() => {
@@ -818,7 +818,7 @@ const ServicesPage: React.FC = () => {
     <>
       <Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
-        <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
+        <meta _name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
       </Helmet>
 

@@ -26,7 +26,7 @@ import {
 } from 'lucide-react';
 
 const PenetrationTestingPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Search,
       title: 'Comprehensive Vulnerability Assessment',
@@ -49,7 +49,7 @@ const PenetrationTestingPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',
     'Improve your security posture and defenses',
@@ -64,7 +64,7 @@ const PenetrationTestingPage: React.FC = () => {
     <>
       <Helmet>
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
-        <meta name="description" content="Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis." />
+        <meta _name="description" content="Professional penetration testing services by Zion Tech Group. Comprehensive security assessments, vulnerability testing, and expert security analysis." />
         <meta name="keywords" content="penetration testing, security assessment, vulnerability testing, security audit, Zion Tech Group" />
       </Helmet>
 

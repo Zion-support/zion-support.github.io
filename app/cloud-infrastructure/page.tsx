@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react';
 
 const CloudInfrastructurePage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Cloud,
       title: 'Cloud Migration',
@@ -27,7 +27,7 @@ const CloudInfrastructurePage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Scalable cloud infrastructure',
     'Cost-effective solutions',
     'High availability and reliability',
@@ -39,7 +39,7 @@ const CloudInfrastructurePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Infrastructure | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />

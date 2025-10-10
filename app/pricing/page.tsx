@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
-  const plans = [
+  const _plans = [
     {
       name: 'Starter',
       price: '$2,999',
@@ -60,17 +60,13 @@ const PricingPage: React.FC = () => {
     <>
       <Helmet>
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
-        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
+        <meta _name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
         <meta property="og:title" content="Pricing - Zion Tech Group" />
         <meta property="og:description" content="Transparent pricing for AI and IT solutions" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">

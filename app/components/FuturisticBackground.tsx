@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const FuturisticBackgroundPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Analysis',
@@ -37,7 +37,7 @@ const FuturisticBackgroundPage: React.FC = () => {
     <>
       <Helmet>
         <title>FuturisticBackground - Zion Tech Group</title>
-        <meta name="description" content="Advanced futuristicbackground solutions powered by AI technology." />
+        <meta _name="description" content="Advanced futuristicbackground solutions powered by AI technology." />
       </Helmet>
 
       <Navigation />

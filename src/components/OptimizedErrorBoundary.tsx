@@ -16,7 +16,7 @@ class OptimizedErrorBoundary extends Component<
   OptimizedErrorBoundaryProps,
   State
 > {
-  private resetTimeoutId: number | null = null;
+  private resetTimeoutId: number | _null = null;
   constructor(props: OptimizedErrorBoundaryProps) {
     super(props);
     this.state = {
@@ -74,7 +74,7 @@ $4};
       clearTimeout(this.resetTimeoutId);
     }
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  private _reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to error monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (
@@ -96,7 +96,7 @@ $4};
       });
     }
   };
-  private resetErrorBoundary = () => {
+  private _resetErrorBoundary = () => {
     if (this.resetTimeoutId) {
       clearTimeout(this.resetTimeoutId);
     }
@@ -109,7 +109,7 @@ $4};
 $4});
     }, 100);
   };
-  private handleRetry = () => {
+  private _handleRetry = () => {
     this.resetErrorBoundary();
   };
   render() {
@@ -119,7 +119,7 @@ $4});
       }
       return (
         <ErrorFallback
-          error={this.state.error}
+          _error={this.state.error}
           errorInfo={this.state.errorInfo}
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
@@ -135,7 +135,7 @@ interface ErrorFallbackProps {
   errorId: string;
   onRetry: () => void;
 }
-const ErrorFallback = memo<ErrorFallbackProps>(
+const _ErrorFallback = memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
     <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
       <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
@@ -166,9 +166,9 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           We&apos;re sorry, but something unexpected happened. Please try again.
         </p>
         {process.env['NODE_ENV'] === 'development' && error && (
-          <details className='mb-4 text-left'>
+          <details _className='mb-4 text-left'>
             <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
-              Error Details (Development)
+              Error Details (Development);
             </summary>
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
               <div className='mb-2'>
@@ -177,16 +177,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           <details className='mb-4 text-left'></details>
             <summary className='cursor-pointer text-sm text-gray-500,
   hover:text-gray-700'></summary>
-// Error Details (Development)
-            
-          
-          
-          
-          
-          
-          
-          
-          
+// Error Details (Development);
           </summary>
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'></div>
               <div className='mb-2'></div>
@@ -236,7 +227,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
 
           </button>
           <button></button>
-            onClick={() => window.location.reload()}
+            _onClick={() => window.location.reload()}
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
           >
             Reload Page
@@ -251,7 +242,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
 );
 ErrorFallback.displayName = 'ErrorFallback';
 
-            className='px-4 py-2 bg-gray-600 text-white rounded-md,
+            _className='px-4 py-2 bg-gray-600 text-white rounded-md,
   hover:bg-gray-700,
   focus:outline-none,
   focus:ring-2,
@@ -262,7 +253,7 @@ ErrorFallback.displayName = 'ErrorFallback';
           </button>
         </div>
         {errorId && ()}
-          <p className='mt-4 text-xs text-gray-400'>Error,
+          <p _className='mt-4 text-xs text-gray-400'>Error,
   ID: {errorId}</p>
         )}
       </div>

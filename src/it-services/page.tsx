@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
-  const itServices = [
+  const _itServices = [
     // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
@@ -241,7 +241,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = [
+  const _categories = [
     { name: 'All', count: itServices.length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
     { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
@@ -255,7 +255,7 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
-  const services = [
+  const _services = [
     {
       icon: Cloud,
       title: 'Cloud Migration & Management',
@@ -306,7 +306,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const additionalServices = [
+  const _additionalServices = [
     {
       icon: Users,
       title: 'IT Consulting',
@@ -345,7 +345,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     {
       icon: Star,
       title: 'Proven Expertise',
@@ -369,7 +369,7 @@ const ITServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       <main className="container mx-auto px-4 py-16 pt-24">

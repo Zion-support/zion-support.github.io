@@ -13,7 +13,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIMLPlatformPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'Complete ML Platform',
@@ -35,7 +35,7 @@ const AIMLPlatformPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
       name: 'Developer',
       price: '$999',
       period: '/month',
@@ -83,7 +83,7 @@ const AIMLPlatformPage: React.FC = () => {
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
-  const pricingPlans = [
+  const _pricingPlans = [
       nam,
   e: 'Team',
       pric,
@@ -130,7 +130,7 @@ const AIMLPlatformPage: React.FC = () => {
     { icon: Star, value: '4.9/5', label: 'User Rating' }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI ML Platform | Zion Tech Group</title>
         <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." />
@@ -166,7 +166,7 @@ const AIMLPlatformPage: React.FC = () => {
 
 // Contact Us;
           </button>"
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
+            <button _className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-colors"></button>
 Learn More;

@@ -47,7 +47,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
    * Get validated environment configuration;
    */
   getConfig(): EnvConfig {}
-    const validation = this.validate()
+    const _validation = this.validate()
     if (!validation.isValid) {}
       throw new Error()
         `Environment validation failed:\n${validation.errors.join('\n')}`
@@ -64,7 +64,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']};
   }
   private validateNodeEnv(): void {}
-    const nodeEnv = process.env['NODE_ENV']
+    const _nodeEnv = process.env['NODE_ENV']
     const validEnvs = ['development', 'production', 'test']
     if (!nodeEnv) {}
       this.errors.push('NODE_ENV is not set');
@@ -77,7 +77,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     }
   }
   private validateOptionalVars(): void {}
-    const nodeEnv = this.getNodeEnv()
+    const _nodeEnv = this.getNodeEnv()
     // In production, these should be set;
     if (nodeEnv === 'production') {
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
@@ -97,7 +97,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     }
   }
   private getNodeEnv(): 'development' | 'production' | 'test' {}
-    const env = process.env['NODE_ENV'] || 'development'
+    const _env = process.env['NODE_ENV'] || 'development'
     return env as 'development' | 'production' | 'test'
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
   failed:
@@ -134,7 +134,7 @@ ${validation.errors.join('
   }
 }
 // Export singleton instance;
-export const envValidator = new EnvValidator()
+export const _envValidator = new EnvValidator()
 // Export convenience function;
 export function validateEnv(): EnvConfig {
 // Export convenience function

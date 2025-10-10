@@ -5,7 +5,7 @@
  */
 
 export enum LogLevel {
-  DEBUG = 0,
+  _DEBUG = 0,
   INFO = 1,
   WARN = 2,
   ERROR = 3,
@@ -21,7 +21,7 @@ export interface LogContext {
 }
 
 class Logger {
-  private logLevel: LogLevel = LogLevel.INFO;
+  private logLevel: _LogLevel = LogLevel.INFO;
   private logs: Array<{,
   level: LogLevel,
     message: string,
@@ -57,15 +57,15 @@ class Logger {
     let meta: Record<string></string> | undefined;
     // Handle different parameter combinations;
     if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata;
-      context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata } : contextOrMetadata;
-      meta = metadata});
-} else if (typeof errorOrContextOrMetadata === 'string') {
+      _error = errorOrContextOrMetadata;
+      _context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata } : contextOrMetadata;
+      _meta = metadata});
+} else if (typeof _errorOrContextOrMetadata === 'string') {
       context = { action: errorOrContextOrMetadata }
       meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined});
-} else if (typeof errorOrContextOrMetadata === 'object') {
+} else if (typeof _errorOrContextOrMetadata === 'object') {
       context = errorOrContextOrMetadata;
-      meta = contextOrMetadata as Record<string></string>
+      _meta = contextOrMetadata as Record<string></string>
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
  */
@@ -80,7 +80,7 @@ class Logger {/* TODO: Fix JSX expression */});;)
   /**
    * Set the minimum log level;
    */
-  setLogLevel(leve)
+  setLogLevel(leve);
   l: LogLevel): void {/* TODO: Fix JSX expression */});;)
 }
   /**
@@ -91,19 +91,19 @@ class Logger {/* TODO: Fix JSX expression */});;)
   /**
    * Log a debug message;
    */
-  debug(messag)
+  debug(messag);
   e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;)
 }
   /**
    * Log an info message;
    */
-  info(messag)
+  info(messag);
   e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;)
 }
   /**
    * Log a warning message;
    */
-  warn(messag)
+  warn(messag);
   e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;)
 }
   /**
@@ -115,10 +115,10 @@ class Logger {/* TODO: Fix JSX expression */});;)
     contextOrMetadata?: string | Record<string></string>,
     metadata?: Record<string></string>)
   ): void {/* TODO: Fix JSX expression */});;)
-} else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
+} else if (typeof _errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
   t: errorOrContextOrMetadata };
-      meta = contextOrMetadata as Record<string></string>});
-} else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */});;)
+      _meta = contextOrMetadata as Record<string></string>});
+} else if (typeof _errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */});;)
 }
 
     this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack });;)
@@ -133,27 +133,26 @@ class Logger {/* TODO: Fix JSX expression */});;)
     metadata?: Record<string></string>
   ): void {
     if (level < this.logLevel) return;
-    const logEntry = {
+    const _logEntry = {
       level,
       message,
       context,
       metadata,
       timestamp: Date.now();
 
-    this.logs.push(logEntry)
-
+    this.logs.push(logEntry);
     // Keep only last 1000 logs;
     if (this.logs.length > 1000) {
       this.logs = this.logs.slice(-1000);)
 }
 
     // Console output;
-    const levelName = LogLevel[level]
+    const _levelName = LogLevel[level]
     const timestamp = new Date().toISOString()
     const contextStr = context ? ` [${JSON.stringify(context);]` : ''
-    const metaStr = metadata ? ` ${JSON.stringify(metadata);` : ''
+    const _metaStr = metadata ? ` ${JSON.stringify(metadata);` : ''
 
-    const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`
+    const _logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`
 
     switch (level) {
       case LogLevel.DEBUG: break,
@@ -173,11 +172,11 @@ class Logger {/* TODO: Fix JSX expression */});;)
     timestamp: number,});
 }> {
     if (level !== undefined) {
-      return this.logs.filter(log => log.level === level)
+      return this.logs.filter(log => log.level === level);
   /**
    * Log a fatal error message;
    */
-  fatal(messag)
+  fatal(messag);
   e: string, context?: LogContext, metadata?: Record<string></string>): void {/* TODO: Fix JSX expression */});;)
 }
   /**
@@ -192,10 +191,10 @@ class Logger {/* TODO: Fix JSX expression */});;)
   ): void {/* TODO: Fix JSX expression */});;)
 }
     const,
-  logEntry: LogMetadata = {/* TODO: Fix JSX expression */});;)
+  logEntry: _LogMetadata = {/* TODO: Fix JSX expression */});;)
 };
     // Format the log entry;
-    const formattedMessage = this.formatLogEntry(logEntry);
+    const _formattedMessage = this.formatLogEntry(logEntry);
     // Output to console in development;
     if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */});;)
 }
@@ -206,16 +205,16 @@ class Logger {/* TODO: Fix JSX expression */});;)
   /**
    * Format a log entry for output;
    */
-  private formatLogEntry(entr)
+  private formatLogEntry(entr);
   y: LogMetadata): string {/* TODO: Fix JSX expression */}
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context);]` : '';`
-    const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata);` : '';`
+    const _contextStr = entry.context ? ` [${this.formatContext(entry.context);]` : '';`
+    const _metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata);` : '';`
     return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`});
 }
   /**
    * Format context object for display;
    */
-  private formatContext(contex)
+  private formatContext(contex);
   t: LogContext): string {/* TODO: Fix JSX expression */}`
   t:${context.component}`);`
     if (context.action) parts.push(`actio)`
@@ -233,14 +232,14 @@ class Logger {/* TODO: Fix JSX expression */});;)
    */
   private outputToConsole(leve,
   l: LogLevel, messag,
-  e: string, entr)
+  e: string, entr);
   y: LogMetadata): void {/* TODO: Fix JSX expression */});;)
 }
   }
   /**
    * Get console styles for different log levels;
    */
-  private getConsoleStyles(leve)
+  private getConsoleStyles(leve);
   l: LogLevel): string {/* TODO: Fix JSX expression */});;)
 }
     return [...this.logs]});
@@ -266,22 +265,22 @@ class Logger {/* TODO: Fix JSX expression */});;)
 }
 
 // Export singleton instance;
-export const logger = new Logger()
-  private sendToLoggingService(entr)
+export const _logger = new Logger()
+  private sendToLoggingService(entr);
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
   s: {// 'Content-Type': 'application/json'},
     //   bod,
-  y: JSON.stringify(entry)
+  y: JSON.stringify(entry);
     // });.catch(err => {/* TODO: Fix JSX expression */});
     //   // });;)
 }
   /**
    * Get string representation of log level;
    */
-  private getLevelString(leve)
+  private getLevelString(leve);
   l: LogLevel): string {/* TODO: Fix JSX expression */});;)
 }
   });;)
 }
-export const logger = new Logger();`
+export const _logger = new Logger();`
 }

@@ -3,9 +3,9 @@ import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 
 export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024';
+  const _lastUpdated = 'January 1, 2024';
 
-  const dataTypes = [
+  const _dataTypes = [
     {
       category: 'Personal Information',
       icon: User,
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
     }
   ];
 
-  const rights = [
+  const _rights = [
     {
       title: 'Right to Access',
       description: 'Request a copy of your personal data',
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
     }
   ];
 
-  const securityMeasures = [
+  const _securityMeasures = [
     'SSL/TLS encryption for data transmission',
     'Regular security audits and penetration testing',
     'Access controls and authentication systems',
@@ -75,7 +75,7 @@ export default function PrivacyPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>

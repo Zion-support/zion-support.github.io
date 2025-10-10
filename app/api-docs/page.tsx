@@ -9,13 +9,13 @@ export default function APIDocsPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
-  const copyToClipboard = (code: string, id: string) => {
+  const _copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
   };
 
-  const apiEndpoints = [
+  const _apiEndpoints = [
     {
       title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
@@ -97,7 +97,7 @@ export default function APIDocsPage() {
     }
   ];
 
-  const filteredEndpoints = apiEndpoints.map(category => ({
+  const _filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -107,7 +107,7 @@ export default function APIDocsPage() {
   })).filter(category => category.endpoints.length > 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="API Documentation - Zion Tech Group"
         description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."

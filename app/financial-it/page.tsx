@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
 const FinancialITPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: DollarSign,
       title: 'SOX Compliance',
@@ -45,7 +45,7 @@ const FinancialITPage: React.FC = () => {
     }
   ];
 
-  const services = [
+  const _services = [
     {
       icon: '🏦',
       title: 'Banking Solutions',
@@ -68,7 +68,7 @@ const FinancialITPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
     'Real-time Processing',
@@ -78,7 +78,7 @@ const FinancialITPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Helmet>
         <title>Financial IT Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional financial IT solutions by Zion Tech Group. SOX compliance, security, and regulatory solutions for financial services." />

@@ -10,14 +10,14 @@ export interface SitemapUrl {/* TODO: Fix JSX expression */}
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
-export const _generateSitemap = (url)
+export const __generateSitemap = (url);
   s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const baseUrl = 'http,
+  const _baseUrl = 'http,
   s://ziontechgroup.com';
-  const currentDate = new Date().toISOString().split('T')[0];
-  const sitemap = `
+  const _currentDate = new Date().toISOString().split('T')[0];
+  const _sitemap = `
           
           
           
@@ -32,7 +32,7 @@ export const _generateSitemap = (url)
 ${urls;}
   .map((url) => {// TODO: Add content;}
 }
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
+    const _fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
 
     return `  
           
@@ -60,11 +60,11 @@ ${urls;}
 };
 // Define all the pages for the sitemap;
 
-export const getAllPages = (): SitemapUrl[] => {// TODO: Add content;}
+export const _getAllPages = (): SitemapUrl[] => {// TODO: Add content;}
 
 }
 // Define all the pages for the sitemap;
-export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
+export const _getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   }
   const currentDate = new Date().toISOString().split('T')[0]
   return [

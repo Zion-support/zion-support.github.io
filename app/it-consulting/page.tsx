@@ -79,7 +79,7 @@ const ITConsultingPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const itServices = [
+  const _itServices = [
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -403,7 +403,7 @@ const ITConsultingPage: React.FC = () => {
 }
   ];
 
-  const categories = [
+  const _categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
     { id: 'cloud', name: 'Cloud Services', icon: Cloud },
@@ -417,15 +417,15 @@ const ITConsultingPage: React.FC = () => {
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
 
-  const filteredServices = itServices.filter(service => {
+  const _filteredServices = itServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const _matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;)
 });;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}</div>
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid"></section>
         <div></div>
@@ -469,7 +469,7 @@ const ITConsultingPage: React.FC = () => {
                   placeholder="Search IT services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value);
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                  _className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
             </div>
@@ -479,7 +479,7 @@ const ITConsultingPage: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) =></select> setSelectedCategory(e.target.value);
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                _className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >
                 {categories.map((category) => (
                   <option key={category.id} value={category.id}></option>
@@ -491,12 +491,12 @@ const ITConsultingPage: React.FC = () => {
           </div>
 
           {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mb-8"></div>
+          <div _className="flex flex-wrap gap-2 mb-8"></div>
             {categories.map((category) => (</div>
               <button
                 key={category.id}
                 onClick={() =></button> setSelectedCategory(category.id);
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                _className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400';)
@@ -510,7 +510,7 @@ const ITConsultingPage: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
+      <section _className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {filteredServices.map((service) => (</div>
@@ -535,19 +535,19 @@ const ITConsultingPage: React.FC = () => {
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300"></li>
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          <span></spa>{feature}</span>
+                          <span></span>{feature}</span>
                         </li>
                       ));
                     </ul>
                   </div>
                   
                   <div></div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Benefits:</h4>
+                    <h4 _className="text-sm font-semibold text-cyan-400 mb-2"></h>Benefits:</h4>
                     <ul className="space-y-1"></ul>
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300"></li>
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          <span></spa>{benefit}</span>
+                          <span></span>{benefit}</span>
                         </li>
                       ));
                     </ul>
@@ -556,7 +556,7 @@ const ITConsultingPage: React.FC = () => {
 
                 <div></div>
                   <div></div>
-                    <span className="text-gray-400"></spa>Setup Time:</span>
+                    <span _className="text-gray-400"></spa>Setup Time:</span>
                     <span className="text-white"></spa>{service.setupTime}</span>
                   </div>
                   <div></div>
@@ -577,7 +577,7 @@ const ITConsultingPage: React.FC = () => {
 
                 <div></div>
                   <a
-                    href={service.link}
+                    _href={service.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -599,7 +599,7 @@ const ITConsultingPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
+      <section _className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
         <div></div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse"></h2>
             Ready to Optimize Your IT Infrastructure?

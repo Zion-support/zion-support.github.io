@@ -34,7 +34,7 @@ class MonitoringService {/* TODO: Fix JSX expression */}
 }
 
 class MonitoringService {
-  private metrics: PerformanceMetrics = {}
+  private metrics: _PerformanceMetrics = {}
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null
 
@@ -58,12 +58,12 @@ class MonitoringService {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
-          this.reportMetric('lcp', this.metrics.lcp)
+          this.reportMetric('lcp', this.metrics.lcp);
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
 
         // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
+        const _fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
@@ -72,8 +72,8 @@ class MonitoringService {
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
 
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
+        let _clsValue = 0;
+        const _clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
@@ -86,7 +86,7 @@ class MonitoringService {
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 
         // First Contentful Paint
-        const fcpObserver = new PerformanceObserver(list => {
+        const _fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
@@ -103,7 +103,7 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
-        const longTaskObserver = new PerformanceObserver((list) => {
+        const _longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             // console.warn('Long task detected:', {
             //   duration: entry.duration,
@@ -124,7 +124,7 @@ class MonitoringService {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-            const resourceEntry = entry as PerformanceResourceTiming;
+            const _resourceEntry = entry as PerformanceResourceTiming;
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
               // console.warn('Slow resource detected:', {
               //   name: resourceEntry.name,
@@ -167,11 +167,11 @@ class MonitoringService {
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
     }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
+    const _thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
     }
-    // Send to analytics (if configured)
+    // Send to analytics (if configured);
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
@@ -181,9 +181,9 @@ class MonitoringService {
   }
 
   public logError(error: ErrorReport): void {
-    this.errors.push(error)
+    this.errors.push(error);
     if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50)
+      this.errors = this.errors.slice(-50);
     }
   }
 
@@ -214,7 +214,7 @@ class MonitoringService {
 
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
         // console.log('[Navigation Timing]', {
         //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,

@@ -9,7 +9,7 @@ const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const docCategories = [
+  const _docCategories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
@@ -18,7 +18,7 @@ const DocsPage: React.FC = () => {
     { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
   ];
 
-  const documentation = [
+  const _documentation = [
     {
       id: 1,
       title: 'Quick Start Guide',
@@ -121,7 +121,7 @@ const DocsPage: React.FC = () => {
     }
   ];
 
-  const quickLinks = [
+  const _quickLinks = [
     {
       title: 'API Reference',
       description: 'Complete API documentation',
@@ -152,11 +152,11 @@ const DocsPage: React.FC = () => {
     }
   ];
 
-  const filteredDocs = selectedCategory === 'all' 
+  const _filteredDocs = selectedCategory === 'all' 
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory);
 
-  const searchResults = searchQuery 
+  const _searchResults = searchQuery 
     ? documentation.filter(doc => 
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -164,7 +164,7 @@ const DocsPage: React.FC = () => {
       )
     : filteredDocs;
 
-  const getDifficultyColor = (difficulty: string) => {
+  const _getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Beginner': return 'text-green-400 bg-green-500/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
@@ -176,7 +176,7 @@ const DocsPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="Documentation - Zion Tech Group"
+        _title="Documentation - Zion Tech Group"
         description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples."
         keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}
         canonicalUrl="https://ziontechgroup.com/docs"

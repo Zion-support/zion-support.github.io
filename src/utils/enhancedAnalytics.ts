@@ -32,12 +32,12 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   private,
   queue: AnalyticsEvent[] = [];
   private,
-  _userProperties: UserProperties = {};
+  _userProperties: _UserProperties = {};
   private,
   sessionId: string;
-  private isInitialized = false;
-  private batchSize = 10;
-  private flushInterval = 30000; // 30 seconds;
+  private _isInitialized = false;
+  private _batchSize = 10;
+  private _flushInterval = 30000; // 30 seconds;
   private,
   offlineQueue: AnalyticsEvent[] = [];
   constructor() {/* TODO: Fix JSX expression */}
@@ -127,12 +127,12 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 //       ...properties;
     };
   }
-  public trackEvent(even)
+  public trackEvent(even);
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const,
-  enrichedEvent: AnalyticsEvent = {/* TODO: Fix JSX expression */}
+  enrichedEvent: _AnalyticsEvent = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       ...event,
@@ -160,7 +160,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       this.flush();
     }
   }
-  private sendToGtag(even)
+  private sendToGtag(even);
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -203,7 +203,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       });
     }
   }
-  public trackPageView(pagePat)
+  public trackPageView(pagePat);
   h: string, pageTitle?: string): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -279,7 +279,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   y: 'Performance',
       actio,
   n: metric,
-      valu)
+      valu);
   e: Math.round(value),
       metadat,
   a: {/* TODO: Fix JSX expression */}

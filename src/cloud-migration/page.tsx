@@ -59,7 +59,7 @@ const,
     }
   ];
 
-  const migrationSteps = [
+  const _migrationSteps = [
 
       titl,
   e: 'Assessment & Planning',
@@ -190,7 +190,7 @@ const,
       percentag,
   e: 'Unlimited'
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}"
       <div className="relative overflow-hidden"></div>"
         <div className="cyber-grid"></div>"
@@ -203,7 +203,7 @@ const,
               <h1 className="text-5xl font-bold text-white neon-text"></h1>
                 Cloud Migration;
               </h1>"
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
+            <p _className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
               Seamlessly migrate your infrastructure to the cloud with our expert migration services. 
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.
             </p>"
@@ -214,13 +214,13 @@ const,
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
               >
                 Start Migration;"
-                <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
+                <ArrowRight _className="w-5 h-5 ml-2" /></ArrowRight>
               </Link>"
                 href="/demo""
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
                 Free Assessment;
       {/* Features Section */}"
-      <div className="py-20 bg-slate-800/50"></div>"
+      <div _className="py-20 bg-slate-800/50"></div>"
         <div className="container mx-auto px-4"></div>"
           <div className="text-center mb-16"></div>"
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Cloud Migration</h2>"
@@ -250,24 +250,24 @@ const,
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
               Cloud Migration Services;"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p _className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Seamlessly migrate your applications and data to the cloud with our expert migration services;
               <a></a>"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
+                _className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
   hover:bg-blue-700 transition-colors inline-flex items-center"
                 Get Started;
               </a>"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
+                _className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-600,"
   hover:text-white transition-all duration-300 inline-flex items-center"
                 View Demo;
           </section>
 "
-          <section className="mb-16"></section>"
+          <section _className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-center text-white mb-12"></h2>
               Our Migration Services;
             </h2>"
-            <div className="grid grid-cols-1,
+            <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6,"
@@ -289,7 +289,7 @@ const,
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" /></CheckCircle>
           {/* Migration Process */}
               Our Migration Process;"
-            <div className="grid grid-cols-1,
+            <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
               {/* TODO: Fix JSX expression */}"
@@ -305,7 +305,7 @@ const,
               Ready to Migrate to the Cloud?"
             <p className="text-xl text-gray-300 mb-8"></p>
               Let our experts help you migrate to the cloud safely and efficiently;"
-              <div key={index} className="cyber-card p-8 group,"
+              <div _key={index} className="cyber-card p-8 group,"
   hover:scale-105 transition-transform duration-300"></div>"
                   <step.icon className="w-8 h-8 text-blue-400 mr-3" /></step>"
                   <h3 className="text-xl font-bold text-white">{step.title}</h3>"
@@ -356,17 +356,17 @@ const,
               <div className="space-y-4"></div>"
                   className="cyber-button w-full inline-flex items-center justify-center py-3"
                   Get Free Assessment;"
-                  className="cyber-button-outline w-full inline-flex items-center justify-center py-3"
+                  _className="cyber-button-outline w-full inline-flex items-center justify-center py-3"
                   Schedule Consultation;"
-      <div className="py-20"></div>"
+      <div _className="py-20"></div>"
         <div className="container mx-auto px-4 text-center"></div>"
           <h2 className="text-4xl font-bold text-white mb-6"></h2>
             Accelerate Your Cloud Journey;"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+          <p _className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             Don't let outdated infrastructure hold your business back. Our cloud migration;
             services will help you modernize, scale, and compete in the digital economy.
               Start Your Migration;"
-      <section className="py-16 px-4"></section>"
+      <section _className="py-16 px-4"></section>"
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Cloud Migration?</h2>"
             <p className="text-xl text-gray-300">Proven benefits that drive business value</p>
 
@@ -405,7 +405,7 @@ const,
             <button className="cyber-button-outline px-8 py-4 text-lg"></button>
               Contact Our Experts;
       <Footer /></Footer>"
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       <div className="text-center"></div>"
         <h1 className="text-4xl font-bold text-white mb-4">Cloud Migration</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>"

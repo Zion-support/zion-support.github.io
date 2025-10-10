@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
 
-  const tabs = [
+  const _tabs = [
     {
       id: 'solutions',
       name: 'Green Solutions',
@@ -29,7 +29,7 @@ idid: 'certifications',
 $4}
   ];
 
-  const greenSolutions = [
+  const _greenSolutions = [
       title: 'Energy-Efficient Data Centers',
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
@@ -254,8 +254,7 @@ valuevalue: '100%',
                         href="/contact"
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                         Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </a>
+                        <ArrowRight className="w-4 h-4 ml-1" /></a>
           )}
 
           {activeTab === 'benefits' && (
@@ -341,7 +340,7 @@ const GreenITPage: React.FC = () => {
   );
 };
   const [activeTab, setActiveTab] = useState('solutions');
-const tabs = [
+const _tabs = [
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -463,7 +462,7 @@ const tabs = [
   t: 'Achieve 100% environmental transparency',
       pricin,
   g: 'Starting at $600/month'
-  const benefits = [,
+  const _benefits = [,
 
       ico,
   n: TrendingUp,
@@ -502,7 +501,7 @@ const tabs = [
         'Customer loyalty increase',
         'Investor confidence boost',
         'Talent attraction and retention'
-  const certifications = [
+  const _certifications = [
       nam,
   e: 'ISO,
   14001:2015',
@@ -588,7 +587,7 @@ const tabs = [
     
           <>
       <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
@@ -596,7 +595,7 @@ const tabs = [
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Green IT Solutions;
           </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p _className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Transform your IT infrastructure into a sustainable, environmentally friendly system;
               that reduces costs while protecting our planet.
             
@@ -609,7 +608,7 @@ const tabs = [
           
           
           </p>"
-            <div className="flex flex-wrap justify-center gap-4"></div>"
+            <div _className="flex flex-wrap justify-center gap-4"></div>"
               <div className="flex items-center text-green-400"></div>"
                 <Leaf className="w-5 h-5 mr-2" /></Leaf>"
                 <span className="font-medium">Carbon Neutral Operations</span>
@@ -641,7 +640,7 @@ const tabs = [
   // TOD,
   O: Add content;
 }
-                    activeTab === tab.id;`
+                    _activeTab === tab.id;`
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
   hover:bg-slate-700/50 border-2 border-transparent'`
@@ -656,7 +655,7 @@ const tabs = [
           
           
           "
-          <tab.icon className="w-5 h-5 mr-2" /></tab>"
+          <tab.icon _className="w-5 h-5 mr-2" /></tab>"
                   <span className="font-medium">{tab.name}</span>
                 </button>
           {/* Tab Content */}
@@ -665,7 +664,7 @@ const tabs = [
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Our Green IT Solutions;
           </h2>"
-              <div className="grid grid-cols-1,
+              <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
                 {greenSolutions.map((solution, index) => ()}"
@@ -697,13 +696,11 @@ const tabs = [
                       <a
                         href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
 Learn More;
-                        <ArrowRight className="w-4 h-4 ml-1" />
-
-                      </a>
+                        <ArrowRight _className="w-4 h-4 ml-1" /></a>
           )}
           {activeTab === 'benefits' && (}
 Benefits of Green IT;"
-              <div className="grid grid-cols-1,"
+              <div _className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>)
                 {benefits.map((benefit, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
@@ -718,7 +715,7 @@ Benefits of Green IT;"
                           {detail}
 {activeTab === 'certifications' && (}
                 Our Certifications;"
-              <div className="grid grid-cols-1,
+              <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-6"></div>)
                 {certifications.map((cert, index) => ()}"
@@ -730,7 +727,7 @@ Benefits of Green IT;"
                     <div className="text-green-400 text-sm font-medium">{cert.status}</div>
 {/* Case Studies */}
               Success Stories;"
-            <div className="grid grid-cols-1,"
+            <div _className="grid grid-cols-1,"
   lg:grid-cols-2 gap-8"></div>
               {caseStudies.map((study, index) => (}`
                       <study.icon className={`w-6 h-6 ${study.color}`} /></study>"
@@ -764,12 +761,12 @@ Benefits of Green IT;"
           
 
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div _className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment;
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
       <Footer />

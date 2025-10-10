@@ -1,6 +1,6 @@
 
 export default function ServicesSection() {
-  const services = [
+  const _services = [
     {
       title: 'AI & Machine Learning',
       description: 'Custom AI solutions including predictive analytics, natural language processing, and computer vision.',
@@ -64,7 +64,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="py-20 relative">
+    <section _id="services" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

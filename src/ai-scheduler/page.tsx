@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const AISchedulerPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Calendar,
       title: 'Smart Scheduling',
@@ -35,7 +35,7 @@ iconicon: Shield,
 $4}
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
       name: 'Personal',
       price: '$19',
       period: '/month',

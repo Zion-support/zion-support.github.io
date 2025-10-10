@@ -7,7 +7,7 @@ import SEOOptimizer from '../../components/SEOOptimizer';
 
 
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Invoice Generation',
@@ -37,7 +37,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
       name: 'Starter',
       price: '$29',
       period: '/month',

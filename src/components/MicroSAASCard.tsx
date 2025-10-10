@@ -49,7 +49,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           <div>Coming Soon</div>
   )
     
-          <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+          <div _className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
 
       {service.popular && ()}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
@@ -58,7 +58,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           </span>
         </div>
       )}"
-      <div className="text-center mb-4"></div>"
+      <div _className="text-center mb-4"></div>"
         <div className="text-4xl mb-3">{service.icon}</div>"
         <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>"
         <p className="text-gray-300 text-sm mb-4">{service.description}</p>"
@@ -117,7 +117,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
 // >
 //             Get Started;"
-          <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
+          <ArrowRight _className="w-4 h-4 ml-2" /></ArrowRight>
           </a>"
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
         </div>

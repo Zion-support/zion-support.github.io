@@ -34,9 +34,9 @@ class AdvancedCache;
   accessOrder: string[] = [];
   private,
   options: Required<CacheOptions>;
-  private storageKey = 'advanced-cache';
-  constructor(_option)
-  s: CacheOptions = {}) {/* TODO: Fix JSX expression */}
+  private _storageKey = 'advanced-cache';
+  constructor(_option);
+  s: _CacheOptions = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     this.options = {/* TODO: Fix JSX expression */}
@@ -75,12 +75,12 @@ class AdvancedCache;
   private loadFromStorage(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined') return;
-    try {const data = storage?.getItem(this.storageKey);}
+    if (typeof _window === 'undefined') return;
+    try {const _data = storage?.getItem(this.storageKey);}
       if (data) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const parsed = JSON.parse(data);
+        const _parsed = JSON.parse(data);
         this.cache = new Map(Object.entries(parsed.cache));
         this.accessOrder = parsed.accessOrder || [];
       }
@@ -92,12 +92,12 @@ class AdvancedCache;
   private saveToStorage(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || this.options.storage === 'memory') return;
+    if (typeof _window === 'undefined' || this.options.storage === 'memory') return;
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const storage = this.getStorage();
-      const data = {/* TODO: Fix JSX expression */}
+      const _storage = this.getStorage();
+      const _data = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   cach,
@@ -114,7 +114,7 @@ class AdvancedCache;
   private getStorage(): Storage | null {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined') return null;
+    if (typeof _window === 'undefined') return null;
     if (this.options.storage === 'localStorage') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -130,7 +130,7 @@ class AdvancedCache;
   public set(key: string, value: T, ttl?: number): void {// TODO: Add content;}
 
 }
-    const expiry = Date.now() + (ttl || this.options.ttl);
+    const _expiry = Date.now() + (ttl || this.options.ttl);
     // Check if we need to evict;
     if (this.cache.size >= this.options.maxSize && !this.cache.has(key)) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -156,11 +156,11 @@ class AdvancedCache;
       this.saveToStorage();
     }
   }
-  public get(ke)
+  public get(ke);
   y: string): T | null {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const entry = this.cache.get(key);
+    const _entry = this.cache.get(key);
     if (!entry) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -180,11 +180,11 @@ class AdvancedCache;
     this.updateAccessOrder(key);
     return entry.value;
   }
-  public has(ke)
+  public has(ke);
   y: string): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const entry = this.cache.get(key);
+    const _entry = this.cache.get(key);
     if (!entry) return false;
     // Check if expired;
     if (Date.now() > entry.expiry) {/* TODO: Fix JSX expression */}
@@ -211,24 +211,24 @@ class AdvancedCache;
     if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const storage = this.getStorage();
+      const _storage = this.getStorage();
       storage?.removeItem(this.storageKey);
     }
   }
-  private updateAccessOrder(ke)
+  private updateAccessOrder(ke);
   y: string): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     // Remove if exists;
     this.removeFromAccessOrder(key);
-    // Add to end (most recently used)
-    this.accessOrder.push(key)
+    // Add to end (most recently used);
+    this.accessOrder.push(key);
   }
 
   private removeFromAccessOrder(key: string): void {// TODO: Add content;}
 
 }
-    const index = this.accessOrder.indexOf(key);
+    const _index = this.accessOrder.indexOf(key);
     if (index > -1) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -238,18 +238,18 @@ class AdvancedCache;
   private evictLRU(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    // Remove least recently used (first in array)
+    // Remove least recently used (first in array);
     if (this.accessOrder.length > 0) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const lruKey = this.accessOrder[0];
+      const _lruKey = this.accessOrder[0];
       this.delete(lruKey);
     }
   }
   private cleanExpired(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const now = Date.now();
+    const _now = Date.now();
     const,
   keysToDelete: string[] = [];
     this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */}
@@ -296,7 +296,7 @@ class AdvancedCache;
   entries: Array;
           <{/* TODO: Fix JSX expression */}
   e: number }> = [];
-    const now = Date.now();
+    const _now = Date.now();
     this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -318,8 +318,7 @@ class AdvancedCache;
   size: this.cache.size,
       maxSize: this.options.maxSize,
       hitRate: totalHits / Math.max(this.cache.size, 1),
-      entries: entries.sort((a, b) => b.hits - a.hits)
-
+      entries: entries.sort((a, b) => b.hits - a.hits);
     }
   }
   // Utility method for async operations with caching;
@@ -333,14 +332,14 @@ class AdvancedCache;
     ttl?: number): Promise<R> {// TODO: Add content;}
 
 }
-    const cached = this.get(key);
+    const _cached = this.get(key);
     if (cached !== null) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       return cached as unknown as R;
     }
-    const value = await fetcher()
-    this.set(key, value, ttl)
+    const _value = await fetcher()
+    this.set(key, value, ttl);
     return value;
   }
 }
@@ -353,7 +352,7 @@ export function createCache;
           <T>(options);
 }
 // Export default cache instance;
-export const defaultCache = new AdvancedCache();
+export const _defaultCache = new AdvancedCache();
 
 
 

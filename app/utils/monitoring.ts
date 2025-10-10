@@ -22,7 +22,7 @@ export interface ErrorReport {
   url: string,
 }
 class MonitoringService {
-  private metrics: PerformanceMetrics = {}
+  private metrics: _PerformanceMetrics = {}
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null
   constructor() {
@@ -48,11 +48,11 @@ class MonitoringService {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
-          this.reportMetric('lcp', this.metrics.lcp)
+          this.reportMetric('lcp', this.metrics.lcp);
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
+        const _fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             this.metrics.fid = (entry as any).processingStart - entry.startTime;
@@ -61,8 +61,8 @@ class MonitoringService {
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         // Cumulative Layout Shift
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
+        let _clsValue = 0;
+        const _clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
@@ -74,7 +74,7 @@ class MonitoringService {
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint
-        const fcpObserver = new PerformanceObserver(list => {
+        const _fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach(entry => {
             this.metrics.fcp = entry.startTime;
@@ -89,7 +89,7 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
-        const longTaskObserver = new PerformanceObserver((list) => {
+        const _longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
     // Keep HEAD version
         })
@@ -138,11 +138,11 @@ class MonitoringService {
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
       return
     }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
+    const _thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
     // Keep HEAD version
-    // Send to analytics (if configured)
+    // Send to analytics (if configured);
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
@@ -151,12 +151,12 @@ class MonitoringService {
     }
   }
   public logError(error: ErrorReport): void {
-    this.errors.push(error)
+    this.errors.push(error);
     // Keep only last 50 errors
     if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50)
+      this.errors = this.errors.slice(-50);
     }
-    // Send to error tracking service (if configured)
+    // Send to error tracking service (if configured);
   }
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics }

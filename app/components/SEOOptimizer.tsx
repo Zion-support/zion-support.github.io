@@ -1,65 +1,30 @@
 'use client';
-<<<<<<< HEAD
-=======
 
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
+  title: string;
+  description: string;
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: any;
+  breadcrumbData?: any;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
+  title,
+  description,
+  keywords = [],
+  canonicalUrl,
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData,
+  breadcrumbData
 }) => {
   useEffect(() => {
-    // Update page title
-    if (typeof document !== 'undefined') {
-      document.title = title;
-    }
-
-    // Add structured data
-    if (structuredData && typeof document !== 'undefined') {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      script.id = 'structured-data';
-      
-      // Remove existing structured data
-      const existing = document.getElementById('structured-data');
-      if (existing) {
-        existing.remove();
-      }
-      
-      document.head.appendChild(script);
-    }
-
-    // Add breadcrumb structured data
-    if (typeof document !== 'undefined') {
-      const breadcrumbData = {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://ziontechgroup.com'
-          }
-        ]
-      };
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
-
+    // Add structured data for breadcrumbs
+    if (breadcrumbData) {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(breadcrumbData);
@@ -73,40 +38,113 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       
       document.head.appendChild(script);
     }
-  }, [title, structuredData]);
+  }, [title, structuredData, breadcrumbData]);
 
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <link rel="canonical" href={canonicalUrl} />
+      {keywords.length > 0 && (
+        <meta name="keywords" content={keywords.join(', ')} />
+      )}
+      {canonicalUrl && (
+        <link rel="canonical" href={canonicalUrl} />
+      )}
       
-      {/* Open Graph tags */}
+      {/* Open Graph Tags */}
+      <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
+      {canonicalUrl && (
+        <meta property="og:url" content={canonicalUrl} />
+      )}
       <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card tags */}
+      {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
+      {/* Additional SEO Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
-      {/* Structured data */}
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
+      
+      {/* Default Organization Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
+          logo: 'https://ziontechgroup.com/logo.png',
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '364 E Main St STE 1008',
+            addressLocality: 'Middletown',
+            addressRegion: 'DE',
+            postalCode: '19709',
+            addressCountry: 'US'
+          },
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'Customer Service',
+            areaServed: 'US',
+            availableLanguage: 'en'
+          },
+          sameAs: [
+            'https://linkedin.com/company/ziontechgroup',
+            'https://twitter.com/ziontechgroup'
+          ]
+        })}
+      </script>
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="format-detection" content="telephone=yes" />
+      <meta name="geo.region" content="US-DE" />
+      <meta name="geo.placename" content="Middletown" />
+      <meta name="geo.position" content="39.4496;-75.7163" />
+      <meta name="ICBM" content="39.4496, -75.7163" />
+      
+      {/* Language and Content */}
+      <meta httpEquiv="content-language" content="en-US" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="rating" content="General" />
+      
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      
+      {/* Performance Hints */}
+      <meta httpEquiv="x-dns-prefetch-control" content="on" />
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
     </Helmet>
   );
 };

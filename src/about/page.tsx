@@ -7,7 +7,7 @@ import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
-  const team = [
+  const _team = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -24,14 +24,14 @@ const AboutPage: React.FC = () => {
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.'}];
 
-  const stats = [
+  const _stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
   ];
 
-  const values = [
+  const _values = [
     {
       icon: Brain,
       title: 'Innovation',
@@ -50,7 +50,7 @@ const AboutPage: React.FC = () => {
       description: 'We work closely with our clients as strategic technology partners.'}];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group</h1>
@@ -59,7 +59,7 @@ const AboutPage: React.FC = () => {
           </p>
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
 export default function AboutPage() {
-  const teamMembers = [
+  const _teamMembers = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -89,7 +89,7 @@ export default function AboutPage() {
       expertise: ['NLP', 'Computer Vision', 'Deep Learning']
     }
   ];
-  const values = [
+  const _values = [
     {
       icon: Brain,
       title: 'Innovation First',
@@ -111,13 +111,13 @@ export default function AboutPage() {
       description: 'We believe technology should make the world better, more efficient, and more connected.'
     }
   ];
-  const achievements = [
+  const _achievements = [
     { number: '500+', label: 'Successful Projects', icon: Target },
     { number: '100+', label: 'Enterprise Clients', icon: Users },
     { number: '300%', label: 'Average ROI', icon: TrendingUp },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield }
   ];
-  const timeline = [
+  const _timeline = [
     {
       year: '2018',
       title: 'Company Founded',
@@ -155,7 +155,7 @@ export default function AboutPage() {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">

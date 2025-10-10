@@ -9,7 +9,7 @@ import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileTe
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
-  const certifications = [];
+  const _certifications = [];
   return (
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -19,7 +19,7 @@ const CompliancePage: React.FC = () => {
     { name: 'NIST Framework', status: 'Implemented' }
 
   ];
-  const complianceAreas = [
+  const _complianceAreas = [
   // TOD,
   O: Add items;
 ];;
@@ -56,7 +56,7 @@ const CompliancePage: React.FC = () => {
   )
     
 
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+          <div _className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         {/* Header */}
         <section className="bg-white shadow-sm border-b">
@@ -78,7 +78,7 @@ const CompliancePage: React.FC = () => {
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Privacy Policy;
           </Link>"
-              <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
+              <h1 _className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
         </section>"
         <main className="max-w-7xl mx-auto px-4,
@@ -90,7 +90,7 @@ const CompliancePage: React.FC = () => {
               <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2>
 // Our Commitment to Compliance;
           </h2>"
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto"></p>
+              <p _className="text-lg text-gray-600 max-w-3xl mx-auto"></p>
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
                 Our certifications and adherence to industry standards ensure your data is protected;
 //                 and our services meet the most stringent requirements.
@@ -105,7 +105,7 @@ const CompliancePage: React.FC = () => {
           
           </p>
             {/* Certifications Grid */}"
-            <div className="grid grid-cols-1,
+            <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-6 mb-12"></div>
               {certifications.map((cert, index) => ()}"
@@ -119,7 +119,7 @@ const CompliancePage: React.FC = () => {
           {/* Compliance Areas */}"
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12"></h2>
 Compliance Areas;"
-            <div className="grid grid-cols-1,"
+            <div _className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>
               {complianceAreas.map((area, index) => ()}"
           <div key={index} className="bg-white rounded-lg shadow-md p-8"></div>"
@@ -148,7 +148,7 @@ Compliance Areas;"
 
               Contact Compliance Team;
             </a>"
-            <div className="mt-8 text-sm text-blue-200"></div>
+            <div _className="mt-8 text-sm text-blue-200"></div>
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
 

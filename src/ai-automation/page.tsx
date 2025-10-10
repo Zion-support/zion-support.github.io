@@ -7,7 +7,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIAutomationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Settings,
       title: 'Process Automation',
@@ -34,7 +34,7 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
     {
       name: 'Starter',
       price: '$1,400',
@@ -82,7 +82,7 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
-  const stats = [
+  const _stats = [
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },
@@ -91,7 +91,7 @@ const AIAutomationPage: React.FC = () => {
 
 export default function AIAutomationPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">

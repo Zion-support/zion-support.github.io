@@ -1,11 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-const UltimateBusinessIntelligence2025Banner = () => {
-import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {
+import { Link } from 'react-router-dom';
+const __UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const content = [
+  const _content = [
     {
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
@@ -41,17 +41,17 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
   ];
   useEffect(() => {
-    const timer = setInterval(() => {
+    const _timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [content.length]);
-  const handleClose = () => {
+  const _handleClose = () => {
     setIsVisible(false);
   };
 
   if (!isVisible) return null;return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
+    <section _className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -160,14 +160,14 @@ export default UltimateBusinessIntelligence2025Banner;
 
 'use client';
 import React, { useState, useEffect } from 'react';
-const UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
-import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
+import { Link } from 'react-router-dom';
+const __UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  const content = [
+  const _content = [
   // TOD,
   O: Add items;
 ];;
@@ -232,7 +232,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
           
           
           
-          <div className="flex flex-col,"
+          <div _className="flex flex-col,"
   sm:flex-row items-center justify-center gap-6"></div>
                 href={currentContent.url}"
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600,

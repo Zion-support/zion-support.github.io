@@ -14,16 +14,16 @@ const,
           <SkeletonProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  className = '',
+  _className = '',
 //   width,
 //   height,
   rounded = false,
   animated = true;)
-}) => {const roundedClasses = rounded ? 'rounded' : '';}
-  const animatedClasses = animated ? 'animate-pulse' : '';
+}) => {const _roundedClasses = rounded ? 'rounded' : '';}
+  const _animatedClasses = animated ? 'animate-pulse' : '';
 
   return (
-    <div className="loadingskeleton">
+    <div _className="loadingskeleton">
 
       {/* Component content */}
     </div>)
@@ -41,10 +41,10 @@ const,
           
           
           "
-          <div className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px" rounded /></div>
+          <div _className="bg-white rounded-lg shadow-lg p-6"><Skeleton height="24px" width="75%" className="mb-4" /><Skeleton height="16px" width="100%" className="mb-2" /><Skeleton height="16px" width="90%" className="mb-4" /><Skeleton height="40px" width="120px" rounded /></div>
 );
 export const,
-  TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
+  TextSkeleton: React.FC<{ lines?: number }> = ({ _lines = 3 }) => ()
   "
           <div className="space-y-2"></div>
     {/* TODO: Fix JSX expression */}
@@ -71,7 +71,7 @@ export const,
   ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  aspectRatio = '16/9')
+  _aspectRatio = '16/9')
 }) => ("
           <div className="bg-gray-200 rounded-lg animate-pulse"
     style={{ aspectRatio }}"
@@ -80,7 +80,7 @@ export const,
   ><span className="sr-only">Loading image...</span></div>)
 );
 export const,
-  ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
+  ListSkeleton: React.FC<{ items?: number }> = ({ _items = 5 }) => ()
   "
           <div className="space-y-3"></div>
     {/* TODO: Fix JSX expression */}
@@ -93,10 +93,10 @@ export const,
   TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  rows = 5,
+  _rows = 5,
   columns = 4;)
 }) => ("
-          <div className="overflow-hidden"><div className="grid gap-4 mb-4" style={/* TODO: Fix JSX expression */})
+          <div _className="overflow-hidden"><div className="grid gap-4 mb-4" style={/* TODO: Fix JSX expression */})
   s: `repeat(${columns}, 1fr)` }}></div>
       {/* TODO: Fix JSX expression */}
   h: columns }).map((_, index) => ()

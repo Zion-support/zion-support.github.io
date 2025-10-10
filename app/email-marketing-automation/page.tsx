@@ -24,7 +24,7 @@ import {
 } from 'lucide-react';
 
 const EmailMarketingAutomationPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Mail,
       title: 'Automated Campaigns',
@@ -47,7 +47,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
     'Personalize customer experiences',
@@ -62,7 +62,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
     <>
       <Helmet>
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
-        <meta name="description" content="Advanced email marketing automation platform by Zion Tech Group. Create, manage, and optimize email campaigns with AI-powered automation." />
+        <meta _name="description" content="Advanced email marketing automation platform by Zion Tech Group. Create, manage, and optimize email campaigns with AI-powered automation." />
         <meta name="keywords" content="email marketing automation, marketing platform, email campaigns, marketing automation, Zion Tech Group" />
       </Helmet>
 

@@ -3,7 +3,7 @@ import React from 'react';
 'use client';
 
 const PageBackupPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -26,7 +26,7 @@ const PageBackupPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -39,7 +39,7 @@ const PageBackupPage: React.FC = () => {
 
   return (
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p _className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page backup solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>

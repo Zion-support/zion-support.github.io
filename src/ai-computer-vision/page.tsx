@@ -8,7 +8,7 @@ import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings }
 
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
-  const features = [];
+  const _features = [];
   return (
     {// TODO: Add content;}
 
@@ -40,7 +40,7 @@ const AIComputerVisionPage: React.FC = () => {
   s: ['Identity verification', 'Access control', 'Privacy protection']
     }
   ];
-  const applications = [
+  const _applications = [
       titl,
   e: 'Security & Surveillance',
       descriptio,
@@ -57,7 +57,7 @@ const AIComputerVisionPage: React.FC = () => {
   n: Settings,
       useCase,
   s: ['Defect detection', 'Quality assurance', 'Process monitoring']
-  const pricing = [
+  const _pricing = [
       nam,
   e: 'Starter',
       pric,
@@ -78,7 +78,7 @@ const AIComputerVisionPage: React.FC = () => {
 
 const PagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -86,10 +86,10 @@ const PagePage: React.FC = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Computer Vision;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
+          <p _className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
 // Advanced Visual Intelligence Solutions;
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p _className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -98,19 +98,19 @@ Transform your business with cutting-edge computer vision technology. From objec
 // >
 //               Get Started;
           </a>
-              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              _href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Eye className="w-5 h-5" />
               +1 302 464 0950;
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="mb-16"></section>"
+        <section _className="mb-16"></section>"
           <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => ()}"
@@ -133,7 +133,7 @@ Transform your business with cutting-edge computer vision technology. From objec
                 </ul>
         {/* Applications Section */}
             Industry Applications;"
-          <div className="grid grid-cols-1,"
+          <div _className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>
             {applications.map((application, index) => ()}"
           <div key={index} className="quantum-card p-8,"
@@ -154,7 +154,7 @@ Transform your business with cutting-edge computer vision technology. From objec
                       {useCase}
 {/* Pricing Section */}
             Choose Your Plan;"
-          <div className="grid grid-cols-1,"
+          <div _className="grid grid-cols-1,"
   md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             {pricing.map((plan, index) => ()}
           <div key={index} className={/* TODO: Fix JSX expression */}
@@ -164,7 +164,7 @@ Transform your business with cutting-edge computer vision technology. From objec
                     <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold"></div>
 Most Popular;
                 )}"
-                <div className="text-center mb-6"></div>"
+                <div _className="text-center mb-6"></div>"
                   <h3 className="text-2xl font-bold text-white mb-2 neon-text">{plan.name}</h3>"
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{plan.price}</div>"
                   <p className="text-gray-400 text-sm">{plan.description}</p>"
@@ -193,7 +193,7 @@ Most Popular;
           
           
           "
-          <section className="text-center"></section>"
+          <section _className="text-center"></section>"
           <div className="cyber-card p-12 max-w-4xl mx-auto"></div>"
             <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-6 neon-text"></h2>
@@ -202,7 +202,7 @@ Ready to See the Future?"
               Transform your business with AI-powered computer vision solutions that see, understand, and act.
 
                 Start Your Vision Journey;
-                href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                _href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
                 <Camera className="w-5 h-5" />
 
                 Request Demo;

@@ -26,7 +26,7 @@ class EnvironmentConfig {// TODO: Add content;}
 }
   private,
   config: EnvConfig;
-  private isInitialized = false;
+  private _isInitialized = false;
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -47,7 +47,7 @@ class EnvironmentConfig {// TODO: Add content;}
   y: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
       enableAnalytic,
   s:
-        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
+        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || _nodeEnv === 'production',
       enableLoggin,
   g: nodeEnv !== 'test',
       logLeve,
@@ -72,7 +72,7 @@ class EnvironmentConfig {// TODO: Add content;}
    * Get a specific configuration value;
    */
   public get;
-          <K extends keyof EnvConfig>(ke)
+          <K extends keyof EnvConfig>(ke);
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -195,7 +195,7 @@ class EnvironmentConfig {// TODO: Add content;}
   }
 }
 // Export singleton instance;
-export const envConfig = new EnvironmentConfig()
+export const _envConfig = new EnvironmentConfig()
 // Export convenient helper functions;
 export const isProduction = () => envConfig.isProduction()
 export const isDevelopment = () => envConfig.isDevelopment()

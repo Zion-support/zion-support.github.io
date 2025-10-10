@@ -8,7 +8,7 @@
 export enum CacheStorage {// TODO: Add content;}
 
 }
-  Memory = 'memory',
+  _Memory = 'memory',
   LocalStorage = 'localStorage',
   SessionStorage = 'sessionStorage'
 }
@@ -54,11 +54,11 @@ export class CacheManager {// TODO: Add content;}
   private readonly,
   storage: CacheStorage;
   private,
-  cleanupInterval: NodeJS.Timeout | null = null;
-  private stats = {/* TODO: Fix JSX expression */}
+  cleanupInterval: NodeJS.Timeout | _null = null;
+  private _stats = {/* TODO: Fix JSX expression */}
   s: 0 };
-  constructor(_confi)
-  g: CacheConfig = {}) {/* TODO: Fix JSX expression */}
+  constructor(_confi);
+  g: _CacheConfig = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     this.defaultTTL = config.defaultTTL || 5 * 60 * 1000; // 5 minutes;
@@ -72,7 +72,7 @@ export class CacheManager {// TODO: Add content;}
   private startCleanup(): void {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
     this.cleanupInterval = setInterval(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -112,22 +112,22 @@ export class CacheManager {// TODO: Add content;}
 }
       const,
   keysToRemove: string[] = [];
-      for (let _i = 0; i;)
+      for (let __i = 0; i;)
           < localStorage.length; i++) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const key = localStorage.key(i);
+        const _key = localStorage.key(i);
         if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
           try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-            const item = localStorage.getItem(key);
+            const _item = localStorage.getItem(key);
             if (item) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-              const entry = JSON.parse(item) as CacheEntry;
+              const _entry = JSON.parse(item) as CacheEntry;
           <unknown>;
               if (this.isExpired(entry, now)) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -151,7 +151,7 @@ export class CacheManager {// TODO: Add content;}
    */
 
   private isExpired(entry: CacheEntry;
-          <unknown>, now = Date.now()): boolean {// TODO: Add content;}
+          <unknown>, _now = Date.now()): boolean {// TODO: Add content;}
 
 }
     if (entry.ttl === Infinity) return false;
@@ -172,11 +172,11 @@ export class CacheManager {// TODO: Add content;}
   set;
           <T>(ke,
   y: string, valu,
-  e: T, option)
+  e: T, option);
   s: { ttl?: number } = {}): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;
+    const _ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;
     const,
   entry: CacheEntry;
           <T> = {/* TODO: Fix JSX expression */}
@@ -232,18 +232,18 @@ export class CacheManager {// TODO: Add content;}
    * Get cache entry;
    */
   get;
-          <T>(ke)
+          <T>(ke);
   y: string): T | undefined {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
     performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
     let,
   entry: CacheEntry;
-          <T> | null = null;
+          <T> | _null = null;
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      entry = (this.memoryCache.get(key) as CacheEntry;
+      _entry = (this.memoryCache.get(key) as CacheEntry;
           <T> | undefined) || null;
     } else if ()
       this.storage === CacheStorage.LocalStorage &&
@@ -254,11 +254,11 @@ export class CacheManager {// TODO: Add content;}
       try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const item = localStorage.getItem(this.getStorageKey(key));
+        const _item = localStorage.getItem(this.getStorageKey(key));
         if (item) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          entry = JSON.parse(item) as CacheEntry;
+          _entry = JSON.parse(item) as CacheEntry;
           <T>;
         }
       } catch (error) {/* TODO: Fix JSX expression */}
@@ -275,11 +275,11 @@ export class CacheManager {// TODO: Add content;}
       try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const item = sessionStorage.getItem(this.getStorageKey(key));
+        const _item = sessionStorage.getItem(this.getStorageKey(key));
         if (item) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          entry = JSON.parse(item) as CacheEntry;
+          _entry = JSON.parse(item) as CacheEntry;
           <T>;
         }
       } catch (error) {/* TODO: Fix JSX expression */}
@@ -363,11 +363,11 @@ export class CacheManager {// TODO: Add content;}
 }
       const,
   keysToRemove: string[] = [];
-      for (let i = 0; i;)
+      for (let _i = 0; i;)
           < localStorage.length; i++) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const key = localStorage.key(i);
+        const _key = localStorage.key(i);
         if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -384,11 +384,11 @@ export class CacheManager {// TODO: Add content;}
 }
       const,
   keysToRemove: string[] = [];
-      for (let i = 0; i;)
+      for (let _i = 0; i;)
           < sessionStorage.length; i++) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const key = sessionStorage.key(i);
+        const _key = sessionStorage.key(i);
         if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -402,7 +402,7 @@ export class CacheManager {// TODO: Add content;}
   )
   }
   /**
-   * Get or set with function (handles both sync and async)
+   * Get or set with function (handles both sync and async);
    */
 //   getOrSet;
           <T>()
@@ -416,16 +416,16 @@ export class CacheManager {// TODO: Add content;}
   ): T | Promise<T> {// TODO: Add content;}
 
 }
-    const cached = this.get;
+    const _cached = this.get;
           <T>(key);
     if (cached !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       return cached;
     }
-    const start = performance.now();
-    const value = fn();
-    const duration = performance.now() - start;`
+    const _start = performance.now();
+    const _value = fn();
+    const _duration = performance.now() - start;`
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
     // Handle both sync and async values;
     if (value instanceof Promise) {/* TODO: Fix JSX expression */}
@@ -438,7 +438,7 @@ export class CacheManager {// TODO: Add content;}
         return resolvedValue;
       });
     }
-    this.set(key, value, options)
+    this.set(key, value, options);
     return value;
   }
   /**
@@ -456,18 +456,18 @@ export class CacheManager {// TODO: Add content;}
   ): Promise<T> {// TODO: Add content;}
 
 }
-    const cached = this.get;
+    const _cached = this.get;
           <T>(key);
     if (cached !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       return cached;
     }
-    const start = performance.now()
+    const _start = performance.now()
     const value = await fn()
     const duration = performance.now() - start;`
     performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
-    this.set(key, value, options)
+    this.set(key, value, options);
     return value;
   }
   /**
@@ -482,14 +482,13 @@ export class CacheManager {// TODO: Add content;}
 
 }
     const { keyGenerator, ...cacheOptions } = options;
-    return (...arg)
-  s: TArgs): TResult => {/* TODO: Fix JSX expression */}
+    return (...arg);
+  s: TArgs): _TResult => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const key = keyGenerator;
+      const _key = keyGenerator;
 
-//         ? keyGenerator(...args)
-
+//         ? keyGenerator(...args);
         : `memoize_${fn.name}_${JSON.stringify(args)}`
       return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult;
     }
@@ -501,7 +500,7 @@ export class CacheManager {// TODO: Add content;}
   getStatistics(): CacheStats {// TODO: Add content;}
 
 }
-    const total = this.stats.hits + this.stats.misses;
+    const _total = this.stats.hits + this.stats.misses;
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -530,19 +529,19 @@ export class CacheManager {// TODO: Add content;}
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    let localStorageSize = 0;
-    let sessionStorageSize = 0;
+    let _localStorageSize = 0;
+    let _sessionStorageSize = 0;
     if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       if (window.localStorage) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        for (let i = 0; i;)
+        for (let _i = 0; i;)
           < localStorage.length; i++) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          const key = localStorage.key(i);
+          const _key = localStorage.key(i);
           if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -553,11 +552,11 @@ export class CacheManager {// TODO: Add content;}
       if (window.sessionStorage) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        for (let i = 0; i;)
+        for (let _i = 0; i;)
           < sessionStorage.length; i++) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          const key = sessionStorage.key(i);
+          const _key = sessionStorage.key(i);
           if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

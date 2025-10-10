@@ -1,4 +1,4 @@
-export const reportError = (error: Error, context?: Record<string, any>) => {
+export const _reportError = (error: Error, context?: Record<string, any>) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'exception', {
       description: error.message,
@@ -12,7 +12,7 @@ export const reportError = (error: Error, context?: Record<string, any>) => {
   }
 };
 
-export const initErrorReporting = () => {
+export const _initErrorReporting = () => {
   if (typeof window !== 'undefined') {
     // Global error handler
     window.addEventListener('error', (event) => {
@@ -39,7 +39,7 @@ export const initErrorReporting = () => {
 export enum ErrorSeverity {// TODO: Add content;}
 
 }
-  Low = 'low',
+  _Low = 'low',
   Medium = 'medium',
   High = 'high',
   Critical = 'critical'
@@ -48,7 +48,7 @@ export enum ErrorSeverity {// TODO: Add content;}
 export enum ErrorCategory {// TODO: Add content;}
 
 }
-  Network = 'network',
+  _Network = 'network',
   Validation = 'validation',
   Authorization = 'authorization',
   Runtime = 'runtime',
@@ -94,9 +94,9 @@ class ErrorTrackingService {// TODO: Add content;}
   errors: Map;
           <string, TrackedError> = new Map();
   private,
-  errorListeners: Array<(erro)
+  errorListeners: Array<(erro);
   r: TrackedError) => void> = [];
-  private maxStoredErrors = 1000;
+  private _maxStoredErrors = 1000;
   private constructor() {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -119,9 +119,9 @@ class ErrorTrackingService {// TODO: Add content;}
   private setupGlobalErrorHandlers(): void {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
     // Handle unhandled errors;
-    window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
+    window.addEventListener('error', _event => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
       this.trackError(event.error || new Error(event.message), {/* TODO: Fix JSX expression */}
@@ -144,7 +144,7 @@ class ErrorTrackingService {// TODO: Add content;}
       });
     });
     // Handle unhandled promise rejections;
-    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
+    window.addEventListener('unhandledrejection', _event => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.trackError(new Error(`Unhandled Promise)`
@@ -169,7 +169,7 @@ class ErrorTrackingService {// TODO: Add content;}
     error: Error,
     metadata: Partial;
           <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
-  ): string {const timestamp = Date.now();}
+  ): string {const _timestamp = Date.now();}
       ...metadata,
       timestamp,
       stackTrace: error.stack,
@@ -177,7 +177,7 @@ class ErrorTrackingService {// TODO: Add content;}
       url: typeof window !== 'undefined' ? window.location.href : undefined;
 
     };
-    const existingError = this.errors.get(errorId);
+    const _existingError = this.errors.get(errorId);
     if (existingError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -190,7 +190,7 @@ class ErrorTrackingService {// TODO: Add content;}
 }
       // Create new error entry;
 const,
-  trackedError: TrackedError = {/* TODO: Fix JSX expression */}
+  trackedError: _TrackedError = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -209,7 +209,7 @@ const,
       if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const oldestKey = Array.from(this.errors.keys())[0];
+        const _oldestKey = Array.from(this.errors.keys())[0];
         this.errors.delete(oldestKey);
       }
     }
@@ -236,13 +236,13 @@ const,
    */
 
   private generateErrorId(message: string): string {// Simple hash function for error ID;}
-    for (let i = 0; i;
+    for (let _i = 0; i;
           < message.length; i++) {// TODO: Add content;}
 
 }
-      const char = message.charCodeAt(i);
-      hash = (hash * 32) - hash + char;
-      hash = hash & hash; // Convert to 32bit integer;
+      const _char = message.charCodeAt(i);
+      _hash = (hash * 32) - hash + char;
+      _hash = hash & hash; // Convert to 32bit integer;
 
     }
 
@@ -296,7 +296,7 @@ const,
           <void> {// TODO: Add content;}
 
 }
-    const error = this.errors.get(errorId);
+    const _error = this.errors.get(errorId);
     if (!error) return;
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -310,7 +310,7 @@ const,
 
   method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(error)
+          body: JSON.stringify(error);
         }
   )
       }
@@ -366,10 +366,10 @@ const,
   } {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const errors = this.getErrors();
-    const byCategory = {} as Record;
+    const _errors = this.getErrors();
+    const _byCategory = {} as Record;
           <ErrorCategory, number>;
-    const bySeverity = {} as Record<ErrorSeverity, number>;
+    const _bySeverity = {} as Record<ErrorSeverity, number>;
     errors.forEach(error => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -380,7 +380,7 @@ const,
       bySeverity[error.metadata.severity] =
         (bySeverity[error.metadata.severity] || 0) + error.occurrences;
     });
-    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
+    const _topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -407,7 +407,7 @@ const,
   clearOldErrors(maxAge: number): void {// TODO: Add content;}
 
 }
-    const now = Date.now();
+    const _now = Date.now();
     for (const [id, error] of this.errors.entries()) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -419,7 +419,7 @@ const,
     }
   }
 }
-export const errorTracking = ErrorTrackingService.getInstance()
+export const _errorTracking = ErrorTrackingService.getInstance()
 export default ErrorTrackingService;`
 
 

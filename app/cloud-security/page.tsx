@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react';
 
 const CloudSecurityPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Lock,
       title: 'Data Encryption',
@@ -27,7 +27,7 @@ const CloudSecurityPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Advanced security monitoring',
     'Real-time threat detection',
     'Enterprise-grade encryption',
@@ -39,7 +39,7 @@ const CloudSecurityPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Security | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Security services by Zion Tech Group. Advanced AI and IT solutions for your business." />

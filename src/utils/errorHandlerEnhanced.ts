@@ -11,22 +11,22 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
   l: boolean;,
     timestam,
   p: string;
-  constructor(messag)
-  e: string, statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */}
+  constructor(messag);
+  e: string, _statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-//     super(message)
+//     super(message);
     this.statusCode = statusCode;
     this.isOperational = isOperational;
     this.timestamp = new Date().toISOString()
-//     Error.captureStackTrace(this, this.constructor)
+//     Error.captureStackTrace(this, this.constructor);
   }
 }
 
-export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;}
+export const __errorHandler = (error: AppError | Error) => {// TODO: Add content;}
 }
-  const isDevelopment = process.env.NODE_ENV === 'development';
-  const appError = error instanceof AppError ? error : new AppError(error.message)
+  const _isDevelopment = process.env.NODE_ENV === 'development';
+  const _appError = error instanceof AppError ? error : new AppError(error.message);
 // console.error({message: appError.message}
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
@@ -42,21 +42,21 @@ export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;
   e: appError.statusCode || 500;
   };
 };
-export const asyncHandler = (f,
+export const _asyncHandler = (f,
   n: (re,
   q: unknown, re,
-  s: unknown, nex)
+  s: unknown, nex);
   t: unknown) => unknown) => (re,
   q: unknown, re,
-  s: unknown, nex)
+  s: unknown, nex);
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  Promise.resolve(fn(req, res, next)).catch((erro)
+  Promise.resolve(fn(req, res, next)).catch((erro);
   r: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}
+    if (next && typeof _next === 'function') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       next(error);

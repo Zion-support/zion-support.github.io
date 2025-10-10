@@ -10,7 +10,7 @@ const BusinessAppsPage: React.FC = () => {
   return (
     <div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
+      <main _className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
@@ -54,9 +54,9 @@ const BusinessAppsPage: React.FC = () => {
           <section key={category} className="mb-16"></section>"
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>
             <div>{businessApps;}
-                .filter(app => app.category === category)
+                .filter(app => app.category === category);
                 .map((app, index) => ("
-<div className="text-4xl mb-4 text-center">{app.icon}</div>"
+<div _className="text-4xl mb-4 text-center">{app.icon}</div>"
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{app.title}</h4>"
                     <p className="text-gray-300 mb-4 text-sm text-center">{app.description}</p>"
                         <span className="text-2xl font-bold text-cyan-400">{app.price}</span>"

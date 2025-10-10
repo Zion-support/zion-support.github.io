@@ -64,23 +64,23 @@ const ContentCarousel: React.FC = () => {
     }
   ];
 
-  const nextSlide = () => {
+  const _nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  const prevSlide = () => {
+  const _prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const _timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, []);
 
-  const currentSlideData = slides[currentSlide];
+  const _currentSlideData = slides[currentSlide];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+    <div _className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -157,95 +157,8 @@ const ContentCarousel: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-between mt-8">
-            <button
-              onClick={prevSlide}
-              className="bg-white/10 backdrop-blur-lg rounded-full p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              <ChevronLeft className="w-6 h-6 text-white" />
-            </button>
-
-            {/* Dots */}
-            <div className="flex space-x-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-white' : 'bg-white/30'
-                  }`}
-                />
-              ))}
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
             </div>
 
-<<<<<<< HEAD
-            <button
-              onClick={nextSlide}
-              className="bg-white/10 backdrop-blur-lg rounded-full p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              <ChevronRight className="w-6 h-6 text-white" />
-            </button>
-=======
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Additional Info */}
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-3 text-white">
-              <Star className="w-6 h-6 text-yellow-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">4.9/5</div>
-                <div className="text-gray-400 text-sm">Customer Rating</div>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-3 text-white">
-              <Users className="w-6 h-6 text-blue-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">10,000+</div>
-                <div className="text-gray-400 text-sm">Happy Customers</div>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-3 text-white">
-              <TrendingUp className="w-6 h-6 text-green-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">99.9%</div>
-                <div className="text-gray-400 text-sm">Uptime</div>
-              </div>
-            </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
           </div>
         </div>
       </div>

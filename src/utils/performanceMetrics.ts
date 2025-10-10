@@ -33,7 +33,7 @@ export interface PerformanceReport {
 export class PerformanceMetrics {
   private static instance: PerformanceMetrics;
   private metrics: PerformanceMetric[] = [];
-  private _webVitals: WebVitalsMetrics = {};
+  private _webVitals: _WebVitalsMetrics = {};
   private observers: PerformanceObserver[] = [];
   constructor() {
     if (typeof window !== 'undefined') {
@@ -100,7 +100,7 @@ export class PerformanceMetrics {// TODO: Add content;}
   private,
   metrics: PerformanceMetric[] = [];
   private,
-  _webVitals: WebVitalsMetrics = {};
+  _webVitals: _WebVitalsMetrics = {};
   private,
   observers: PerformanceObserver[] = [];
   constructor() {/* TODO: Fix JSX expression */}
@@ -132,7 +132,7 @@ export class PerformanceMetrics {// TODO: Add content;}
         // Navigation timing
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'navigation') {
-              const navEntry = entry as PerformanceNavigationTiming;
+              const _navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({
                 name: 'pageLoadTime',
    * Initialize performance observers;
@@ -152,7 +152,7 @@ export class PerformanceMetrics {// TODO: Add content;}
             if (entry.entryType === 'navigation') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-              const navEntry = entry as PerformanceNavigationTiming;
+              const _navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -173,7 +173,7 @@ export class PerformanceMetrics {// TODO: Add content;}
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
         // Paint timing
-        const paintObserver = new PerformanceObserver(list => {
+        const _paintObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
               this.webVitals.FCP = entry.startTime;
@@ -190,9 +190,9 @@ $4});
         paintObserver.observe({ entryTypes: ['paint'] });
         this.observers.push(paintObserver);
         // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver(list => {
+        const _lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
+          const _lastEntry = entries[entries.length - 1];
           if (lastEntry) {
             this.webVitals.LCP = lastEntry.startTime;
             this.recordMetric({
@@ -207,7 +207,7 @@ $4});
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
         // Layout Shift
-        const clsObserver = new PerformanceObserver(list => {
+        const _clsObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
                 metadata: {// TODO: Add content;}
 };
@@ -224,7 +224,7 @@ $4});
   s: ['navigation'] });
         this.observers.push(navObserver);
         // Paint timing;
-const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+const _paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -253,11 +253,11 @@ const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expressi
   s: ['paint'] });
         this.observers.push(paintObserver);
         // Largest Contentful Paint;
-const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+const _lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
+          const _entries = list.getEntries();
+          const _lastEntry = entries[entries.length - 1];
           if (lastEntry) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -280,7 +280,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
   s: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
 // Layout Shift;
-        const clsObserver = new PerformanceObserver(list => {for (const entry of list.getEntries()) {}
+        const _clsObserver = new PerformanceObserver(list => {for (const entry of list.getEntries()) {}
   // TOD,
   O: Add content;
 }
@@ -345,9 +345,9 @@ $4});
    * Record page load time
    */
   recordPageLoad(): void {
-    if (typeof window === 'undefined') return;
-    const perfData = window.performance.timing;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+    if (typeof _window === 'undefined') return;
+    const _perfData = window.performance.timing;
+    const _pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({
       name: 'pageLoad',
    * Record page load time;
@@ -356,9 +356,9 @@ $4});
   recordPageLoad(): void {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return;
-    const perfData = window.performance.timing;
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+    if (typeof _window === 'undefined') return;
+    const _perfData = window.performance.timing;
+    const _pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -419,9 +419,9 @@ $4});
    * Record memory usage
    */
   recordMemoryUsage(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
     if (!(performance as PerformanceWithMemory).memory) return;
-    const memory = (performance as PerformanceWithMemory).memory;
+    const _memory = (performance as PerformanceWithMemory).memory;
     this.recordMetric({
       name: 'memoryUsage',
       metadata: {// TODO: Add content;}
@@ -440,9 +440,9 @@ $4});
   recordMemoryUsage(): void {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
     if (!(performance as PerformanceWithMemory).memory) return;
-    const memory = (performance as PerformanceWithMemory).memory;
+    const _memory = (performance as PerformanceWithMemory).memory;
     this.recordMetric({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -463,9 +463,9 @@ $4});
    * Measure function execution time
    */
   measureFunction<T>(name: string, fn: () => T): T {
-    const startTime = performance.now();
-    const result = fn();
-    const endTime = performance.now();
+    const _startTime = performance.now();
+    const _result = fn();
+    const _endTime = performance.now();
     this.recordMetric({
       name: `function:${name}`,
       value: endTime - startTime,
@@ -479,9 +479,9 @@ $4});
    * Measure async function execution time
    */
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const startTime = performance.now();
-    const result = await fn();
-    const endTime = performance.now();
+    const _startTime = performance.now();
+    const _result = await fn();
+    const _endTime = performance.now();
     this.recordMetric({
       name: `async:${name}`,
       value: endTime - startTime,
@@ -522,13 +522,13 @@ $4});
    */
   measureFunction;
           <T>(nam,
-  e: string, f)
+  e: string, f);
   n: () => T): T {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const startTime = performance.now();
-    const result = fn();
-    const endTime = performance.now();
+    const _startTime = performance.now();
+    const _result = fn();
+    const _endTime = performance.now();
     this.recordMetric({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -548,13 +548,13 @@ $4});
    */
   async measureAsyncFunction;
           <T>(nam,
-  e: string, f)
+  e: string, f);
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const startTime = performance.now();
-    const result = await fn();
-    const endTime = performance.now();
+    const _startTime = performance.now();
+    const _result = await fn();
+    const _endTime = performance.now();
     this.recordMetric({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -597,10 +597,10 @@ $4});
     return { ...this.webVitals };
   }
   /**
-   * Calculate performance score (0-100)
+   * Calculate performance score (0-100);
    */
   calculatePerformanceScore(): number {
-    let score = 100;
+    let _score = 100;
     // FCP scoring
     if (this.webVitals.FCP) {
       if (this.webVitals.FCP > 3000) score -= 20;
@@ -646,8 +646,8 @@ $4});
     if (this.webVitals.FID && this.webVitals.FID > 100) {
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');
     }
-    const networkMetrics = this.getMetricsByCategory('network');
-    const avgNetworkTime =
+    const _networkMetrics = this.getMetricsByCategory('network');
+    const _avgNetworkTime =
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {
       recommendations.push(
@@ -657,7 +657,7 @@ $4});
   calculatePerformanceScore(): number {// TODO: Add content;}
 
 }
-    let score = 100;
+    let _score = 100;
     // FCP scoring;
     if (this.webVitals.FCP) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -726,7 +726,7 @@ $4});
 }
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');
     }
-    const networkMetrics = this.getMetricsByCategory('network')
+    const _networkMetrics = this.getMetricsByCategory('network')
     const avgNetworkTime =
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {/* TODO: Fix JSX expression */}
@@ -742,8 +742,8 @@ $4});
    * Generate performance report
    */
   generateReport(): PerformanceReport {
-    const loadMetrics = this.getMetricsByCategory('load');
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
+    const _loadMetrics = this.getMetricsByCategory('load');
+    const _avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {
       metrics: this.getMetrics(),
       webVitals: this.getWebVitals(),
@@ -772,8 +772,8 @@ $4});
   generateReport(): PerformanceReport {// TODO: Add content;}
 
 }
-    const loadMetrics = this.getMetricsByCategory('load');
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
+    const _loadMetrics = this.getMetricsByCategory('load');
+    const _avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -844,7 +844,7 @@ interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
 }
 // Export singleton instance
-export const performanceMetrics = PerformanceMetrics.getInstance();
+export const _performanceMetrics = PerformanceMetrics.getInstance();
 // Type for performance.memory;
 interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -867,6 +867,6 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
     hadRecentInput: boolean
 }
 // Export singleton instance;
-export const performanceMetrics = PerformanceMetrics.getInstance();
+export const _performanceMetrics = PerformanceMetrics.getInstance();
 
 

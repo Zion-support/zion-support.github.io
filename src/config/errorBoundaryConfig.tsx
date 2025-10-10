@@ -89,7 +89,7 @@ export interface ErrorBoundaryConfig {// TODO: Add content;}
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {// TODO: Add content;}
 
 }
-  const isDevelopment = process.env['NODE_ENV'] === 'development';
+  const _isDevelopment = process.env['NODE_ENV'] === 'development';
   return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -129,7 +129,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
 
   )
     
-          <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>"
+          <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>"
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
           <svg></svg>"
@@ -156,7 +156,7 @@ className="w-6 h-6 text-red-600""
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900"></h2>
 // Oops! Something went wrong;
           </h2>"
-        <p className="mt-2 text-center text-gray-600"></p>
+        <p _className="mt-2 text-center text-gray-600"></p>
           {error.message || 'An unexpected error occurred'}
         </p>
         {process.env['NODE_ENV'] === 'development' && ()}"
@@ -171,7 +171,7 @@ className="w-6 h-6 text-red-600""
 //             Try Again;
           </button>
           <button></button>
-            onClick={() => (window.location.href = '/')}"
+            _onClick={() => (window.location.href = '/')}"
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg,"
   hover:bg-gray-300 transition-colors"
 // >
@@ -201,7 +201,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
 
   )
     "
-          <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>"
+          <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>"
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
           <svg></svg>"
@@ -261,7 +261,7 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
 
   )
     "
-          <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>"
+          <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       <div className="max-w-md w-full text-center"></div>"
         <h1 className="text-6xl font-bold text-gray-900">404</h1>"
         <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>"
@@ -277,7 +277,7 @@ function NotFoundFallback(): JSX.Element {// TODO: Add content;}
 //             Go Home;
           </button>
           <button></button>
-            onClick={() => window.history.back()}"
+            _onClick={() => window.history.back()}"
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg,"
   hover:bg-gray-300 transition-colors"
 // >

@@ -26,7 +26,7 @@ import {
 } from 'lucide-react';
 
 const CloudInfrastructureManagerPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Cloud,
       title: 'Multi-Cloud Management',
@@ -49,7 +49,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Centralized cloud infrastructure management',
     'Automated scaling and optimization',
     'Cost reduction and optimization',
@@ -64,7 +64,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {
     <>
       <Helmet>
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
-        <meta name="description" content="Comprehensive cloud infrastructure management platform by Zion Tech Group. Manage, monitor, and optimize your cloud resources across multiple providers." />
+        <meta _name="description" content="Comprehensive cloud infrastructure management platform by Zion Tech Group. Manage, monitor, and optimize your cloud resources across multiple providers." />
         <meta name="keywords" content="cloud infrastructure manager, cloud management, multi-cloud, cloud optimization, Zion Tech Group" />
       </Helmet>
 

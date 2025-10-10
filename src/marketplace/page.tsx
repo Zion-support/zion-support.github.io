@@ -13,7 +13,7 @@ const MarketplacePage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const categories = [
+  const _categories = [
     {
       id: 'products',
       name: 'Products',
@@ -37,7 +37,7 @@ idid: 'equipment',
 $4}
   ];
 
-  const products = [
+  const _products = [
       id: 1,
       name: 'AI Project Manager Pro',
       description: 'Intelligent project management with AI-powered insights and automation',
@@ -136,12 +136,12 @@ $4}
         return [];
   };
 
-  const filteredItems = getCurrentItems().filter(item =>
+  const _filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const stats = [
+  const _stats = [
       value: '500+',
       label: 'Products Available',
       color:       ,
@@ -334,7 +334,7 @@ icon$5: Award,
 };
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
-const categories = [
+const _categories = [
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -444,14 +444,14 @@ const categories = [
           
           
           
-          <ShoppingCart className="w-5 h-5 mr-2" /></ShoppingCart>
+          <ShoppingCart _className="w-5 h-5 mr-2" /></ShoppingCart>
 // Start Shopping;
 
           </a>
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
 
                 Email Us;

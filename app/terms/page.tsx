@@ -3,9 +3,9 @@ import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
 
 export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024';
+  const _lastUpdated = 'January 1, 2024';
   
-  const sections = [
+  const _sections = [
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
@@ -52,7 +52,7 @@ export default function TermsPage() {
     <div></div>
       <div></div>
         <div></div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
+          <h1 _className="text-5xl md:text-6xl font-bold mb-6"></h1>
             Terms of Service</h1>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
@@ -89,7 +89,7 @@ export default function TermsPage() {
             </div>
 
             <div></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>Contact Information</h3>
+              <h3 _className="text-2xl font-bold text-gray-900 mb-4"></h>Contact Information</h3>
               <p className="text-gray-700 mb-6"></p>
                 If you have any questions about these Terms of Service, please contact us:
               </p>

@@ -70,13 +70,13 @@ const mockSearchResults: SearchResult[] = [
   }
 ];
 
-const recentSearches = [
+const _recentSearches = [
   'AI Analytics',
   'Workflow Automation',
   'Healthcare AI'
 ];
 
-const popularSearches = [
+const _popularSearches = [
   'AI Services',
   'Quantum Computing',
   'Cybersecurity',
@@ -88,14 +88,14 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [showSuggestions, setShowSuggestions] = useState(false);
   
-  const inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> resultsRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
+  const _inputRef = useRef<HTMLInputElement>(null);</HTMLInputElement>const</HTMLInputElement> _resultsRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
     if (isOpen && inputRef.current) {
       inputRef.current.focus();
     }
   }, [isOpen]);
 
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const _handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
 
       if (e.key === 'Escape') {
@@ -118,7 +118,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, results, selectedIndex, onClose]);
 
-  const searchResults = async (searchQuery: string) => {
+  const _searchResults = async (searchQuery: string) => {
     if (!searchQuery.trim()) {
       setResults([]);
       setShowSuggestions(true);
@@ -131,16 +131,16 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 300));
 
-    const filteredResults = mockSearchResults.filter(result =>
+    const _filteredResults = mockSearchResults.filter(result =>
       result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       result.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Sort by popularity and relevance
-    const sortedResults = filteredResults.sort((a, b) => {
+    const _sortedResults = filteredResults.sort((a, b) => {
       const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
-      const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
+      const _bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;
       return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
     });
 
@@ -149,22 +149,22 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     setIsSearching(false);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
     setQuery(value);
     searchResults(value);
   };
 
-  const handleResultClick = (result: SearchResult) => {
+  const _handleResultClick = (result: SearchResult) => {
     window.location.href = result.url;
     onClose();
   };
 
-  const handleSuggestionClick = (suggestion: string) => {
+  const _handleSuggestionClick = (suggestion: string) => {
     setQuery(suggestion);
     searchResults(suggestion);
   };
 
-  const getCategoryIcon = (category: string) => {
+  const _getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Services':
         return '🧠';
@@ -181,7 +181,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     }
   };
 
-  const getTypeColor = (type: string) => {
+  const _getTypeColor = (type: string) => {
     switch (type) {
       case 'service':
         return 'text-cyan-400';
@@ -199,7 +199,7 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">
+    <div _className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm"

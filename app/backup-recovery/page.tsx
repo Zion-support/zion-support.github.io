@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react';
 
 const BackupRecoveryPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Database,
       title: 'Automated Backups',
@@ -27,7 +27,7 @@ const BackupRecoveryPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Automated backup scheduling',
     'Real-time data protection',
     'Enterprise-grade security and compliance',
@@ -39,7 +39,7 @@ const BackupRecoveryPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Backup & Recovery | Zion Tech Group</title>
         <meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />

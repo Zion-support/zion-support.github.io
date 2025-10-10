@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
 
 const AIAnalyticsDashboardPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: BarChart,
       title: 'Real-time Analytics',
@@ -36,7 +36,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
     'Customizable dashboard widgets',
@@ -45,7 +45,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     'Mobile-responsive design'
   ];
 
-  const metrics = [
+  const _metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
@@ -54,21 +54,21 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
   return (
     <>
-      <Helmet></Helmet>
-        <title></titl>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
+      <Helmet>
+        <title></title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
+        <meta _name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
         <meta name="keywords" content="AI analytics dashboard, business intelligence, data visualization, real-time analytics, predictive insights, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}</div>
         <section className="pt-24 pb-16 px-4"></section>
           <div></div>
             <div></div>
               <div></div>
                 <BarChart className="w-4 h-4" />
-                <span></spa>AI Analytics Dashboard</span>
+                <span></span>AI Analytics Dashboard</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text"></h1>
                 Real-time Business </h1>
@@ -80,7 +80,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </p>
               <div></div>
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"></button>
-                  <span></spa>Start Free Trial</span>
+                  <span></span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"></button>
@@ -115,7 +115,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </section>
 
         {/* Metrics Section */}
-        <section className="py-16 px-4 bg-slate-800/30"></section>
+        <section _className="py-16 px-4 bg-slate-800/30"></section>
           <div></div>
             <div></div>
               <h2 className="text-4xl font-bold text-white mb-4"></h>Platform Performance</h2>
@@ -138,7 +138,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 px-4"></section>
+        <section _className="py-16 px-4"></section>
           <div></div>
             <div></div>
               <h2 className="text-4xl font-bold text-white mb-4"></h>Why Choose Our Dashboard</h2>
@@ -156,7 +156,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 ));
               </div>
               <div></div>
-                <h3 className="text-2xl font-bold text-white mb-4"></h>Success Stories</h3>
+                <h3 _className="text-2xl font-bold text-white mb-4"></h>Success Stories</h3>
                 <div></div>
                   <div></div>
                     <Star className="w-5 h-5 text-yellow-400" />
@@ -189,7 +189,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </p>
               <div></div>
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"></button>
-                  <span></spa>Start Free Trial</span>
+                  <span></span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"></button>

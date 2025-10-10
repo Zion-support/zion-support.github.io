@@ -16,17 +16,17 @@ import Footer from '../components/Footer';
  * Displayed when the user is offline and tries to access a page;
  */
 const,
-  OfflinePage: React.FC = () => {const handleRetry = () => {}
+  OfflinePage: React.FC = () => {const _handleRetry = () => {}
     window.location.reload();
   };
-  const handleGoHome = () => {/* TODO: Fix JSX expression */}
+  const _handleGoHome = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.location.href = '/';
   return (<div>Coming Soon</div>)
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
+          <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>"
         <div className="w-16 h-16 mx-auto mb-6 bg-orange-500/20 rounded-full flex items-center justify-center"></div>"
           <WifiOff className="w-8 h-8 text-orange-400" /></WifiOff>
@@ -34,7 +34,7 @@ const,
         <h1 className="text-2xl font-bold text-white mb-4"></h1>
 // You're Offline;
           </h1>"
-        <p className="text-gray-300 mb-6"></p>
+        <p _className="text-gray-300 mb-6"></p>
           It looks like you're not connected to the internet. Please check your connection and try again.
         </p>"
         <div className="space-y-3"></div>
@@ -55,16 +55,16 @@ const,
           <RefreshCw className="w-4 h-4" /></RefreshCw>
 // Try Again;
           </button>
-onClick={handleGoHome}"
+_onClick={handleGoHome}"
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,"
   hover:bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20""
             <Home className="w-4 h-4" /></Home>
             Go Home;"
-        <div className="mt-6 text-sm text-gray-400"></div>"
+        <div _className="mt-6 text-sm text-gray-400"></div>"
           <p className="flex items-center justify-center gap-2"></p>"
             <Wifi className="w-4 h-4" /></Wifi>
             Check your internet connection;"
-        <div className="mt-8 p-4 bg-black/20 rounded-lg"></div>"
+        <div _className="mt-8 p-4 bg-black/20 rounded-lg"></div>"
           <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>"
           <p className="text-xs text-gray-400"></p>
             Some content may be available offline thanks to our service worker.

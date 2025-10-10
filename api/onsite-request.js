@@ -1,11 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 
 // Simple wrapper function to replace withSentry
-const withSentry = (handler) => handler;
+const _withSentry = (handler) => handler;
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'onsite-requests.json');
+const _dir = path.join(process.cwd(), 'data');
+const _file = path.join(dir, 'onsite-requests.json');
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -21,19 +21,19 @@ export default function handler(req, res) {
     fs.mkdirSync(dir, { recursive: true });
   }
 
-  let existing = [];
+  let _existing = [];
   try {
     if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
+      const _data = fs.readFileSync(file, 'utf8');
+      _existing = JSON.parse(data);
+      if (!Array.isArray(existing)) _existing = [];
     }
   } catch (error) {
     console.error('Error reading existing requests:', error);
-    existing = [];
+    _existing = [];
   }
 
-  const newRequest = {
+  const _newRequest = {
     id: Date.now().toString(),
     name,
     email,

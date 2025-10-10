@@ -17,14 +17,14 @@ const PerformanceDashboard: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const updateMetrics = () => {
+    const _updateMetrics = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
+      const _loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
-      const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
+      const _memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
+      const _memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
       setMetrics(prev => ({
         ...prev,
@@ -37,7 +37,7 @@ const PerformanceDashboard: React.FC = () => {
     updateMetrics();
 
     //Update metrics periodically
-    const interval = setInterval(updateMetrics, 1000);
+    const _interval = setInterval(updateMetrics, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -48,7 +48,7 @@ const PerformanceDashboard: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div _className="fixed bottom-4 right-4 z-50">
       <button
         onClick={() => setIsVisible(!isVisible)}
         className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"

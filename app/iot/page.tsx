@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 
 const IoTPage: React.FC = () => {
-  const iotServices = [
+  const _iotServices = [
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
@@ -138,17 +138,17 @@ const IoTPage: React.FC = () => {
 }
   ];
 
-  const categories = [...new Set(iotServices.map(service => service.category))];
+  const _categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
     <>
-      <Helmet></Helmet>
-        <title></titl>IoT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
+      <Helmet>
+        <title></title>IoT Services - Zion Tech Group</title>
+        <meta _name="description" content="Comprehensive IoT solutions including smart cities, industrial IoT, smart agriculture, and connected device management." />
         <meta name="keywords" content="IoT services, smart cities, industrial IoT, smart agriculture, connected devices, Internet of Things" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}</div>
         <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-teal-800 text-white py-20"></section>
           <div></div>
@@ -229,9 +229,9 @@ const IoTPage: React.FC = () => {
                   Specialized {category.toLowerCase(); solutions powered by IoT technology
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div _className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                 {iotServices
-                  .filter(service => service.category === category)
+                  .filter(service => service.category === category);
                   .map((service, index) => (</div>
                     <div></div>
                       <div className="text-4xl mb-4"></di>{service.icon}</div>
@@ -261,7 +261,7 @@ const IoTPage: React.FC = () => {
                       </div>
 
                       <div></div>
-                        <h4 className="font-semibold text-gray-900 mb-2"></h>Technologies:</h4>
+                        <h4 _className="font-semibold text-gray-900 mb-2"></h>Technologies:</h4>
                         <div className="flex flex-wrap gap-2"></div>
                           {service.technologies.map((tech, techIndex) => (</div>
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded"></span>
@@ -272,7 +272,7 @@ const IoTPage: React.FC = () => {
                       </div>
 
                       <div></div>
-                        <h4 className="font-semibold text-gray-900 mb-2"></h>Business Benefits:</h4>
+                        <h4 _className="font-semibold text-gray-900 mb-2"></h>Business Benefits:</h4>
                         <ul className="space-y-1"></ul>
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>
@@ -283,7 +283,7 @@ const IoTPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"></button>
+                      <button _className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"></button>
                         Get IoT Quote
                       </button>
                     </div>
@@ -294,7 +294,7 @@ const IoTPage: React.FC = () => {
         ));
 
         {/* IoT Capabilities Showcase */}
-        <section className="py-16 bg-white"></section>
+        <section _className="py-16 bg-white"></section>
           <div></div>
             <div></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>

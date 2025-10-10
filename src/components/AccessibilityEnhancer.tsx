@@ -6,18 +6,18 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {</AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
     // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const _handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
     };
 
-    const handleMouseDown = () => {
+    const _handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
     };
 
     // Add focus indicators
-    const addFocusIndicators = () => {
+    const _addFocusIndicators = () => {
       const style = document.createElement('style');
       style.textContent = `
         .keyboard-navigation *:focus {
@@ -29,7 +29,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
 
     // Add ARIA labels to interactive elements
-    const enhanceAccessibility = () => {
+    const _enhanceAccessibility = () => {
       const buttons = document.querySelectorAll('button:not([aria-label])');
       buttons.forEach(button => {
         if (!button.getAttribute('aria-label') && button.textContent) {
@@ -40,7 +40,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           button.setAttribute('role', 'button');
         }
 
-      const links = document.querySelectorAll('a:not([aria-label])');
+      const _links = document.querySelectorAll('a:not([aria-label])');
       links.forEach(link => {
         if (!link.getAttribute('aria-label') && link.textContent) {
           link.setAttribute('aria-label', link.textContent.trim());
@@ -54,7 +54,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       });
 
       // Add ARIA labels to images
-      const images = document.querySelectorAll('img:not([alt])');
+      const _images = document.querySelectorAll('img:not([alt])');
       images.forEach(img => {
         if (!img.getAttribute('alt')) {
           img.setAttribute('alt', '');
@@ -62,16 +62,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       });
 
       // Add ARIA labels to form inputs
-      const inputs = document.querySelectorAll('input:not([aria-label])');
+      const _inputs = document.querySelectorAll('input:not([aria-label])');
       inputs.forEach(input => {
-        const label = document.querySelector(`label[for="${input.getAttribute('id')}"]`);
+        const _label = document.querySelector(`label[for="${input.getAttribute('id')}"]`);
         if (label && !input.getAttribute('aria-label')) {
           input.setAttribute('aria-label', label.textContent?.trim() || '');
         }
       });
 
       // Add skip links
-      const skipLink = document.createElement('a');
+      const _skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
@@ -109,8 +109,8 @@ const AccessibilityEnhancer: React.FC = () => {
 
   useEffect(() => {
     // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    const _prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const _prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     
     setSettings(prev => ({
       ...prev,
@@ -118,7 +118,7 @@ const AccessibilityEnhancer: React.FC = () => {
       highContrast: prefersHighContrast}));
 
     // Apply accessibility settings
-    const root = document.documentElement;
+    const _root = document.documentElement;
     
     if (settings.highContrast) {
       root.classList.add('high-contrast');
@@ -144,7 +144,7 @@ const AccessibilityEnhancer: React.FC = () => {
     }
 
     // Add keyboard navigation support
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const _handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
         const mainContent = document.querySelector('main, [role="main"]');
@@ -156,7 +156,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
       // Escape key to close modals/dropdowns
       if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
+        const _activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {
           activeElement.blur();
         }
@@ -172,7 +172,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
   // Add ARIA live region for announcements
   useEffect(() => {
-    const liveRegion = document.createElement('div');
+    const _liveRegion = document.createElement('div');
     liveRegion.setAttribute('aria-live', 'polite');
     liveRegion.setAttribute('aria-atomic', 'true');
     liveRegion.className = 'sr-only';
@@ -180,7 +180,7 @@ const AccessibilityEnhancer: React.FC = () => {
     document.body.appendChild(liveRegion);
 
     return () => {
-      const existingLiveRegion = document.getElementById('live-region');
+      const _existingLiveRegion = document.getElementById('live-region');
       if (existingLiveRegion) {
         existingLiveRegion.remove();
       }
@@ -189,16 +189,16 @@ const AccessibilityEnhancer: React.FC = () => {
 
   // Announce page changes
   useEffect(() => {
-    const announcePageChange = () => {
+    const _announcePageChange = () => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
-        const pageTitle = document.title;
+        const _pageTitle = document.title;
         liveRegion.textContent = `Page loaded: ${pageTitle}`;
       }
     };
 
     // Announce after a short delay to ensure content is loaded
-    const timeoutId = setTimeout(announcePageChange, 1000);
+    const _timeoutId = setTimeout(announcePageChange, 1000);
 
     return () => clearTimeout(timeoutId);
   }, []);
@@ -209,7 +209,7 @@ const AccessibilityEnhancer: React.FC = () => {
   }
 
   return (
-    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
+    <div _className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
       <div className="mb-2 font-bold">Accessibility Settings</div>
       <div className="space-y-2">
         <label className="flex items-center space-x-2">

@@ -18,14 +18,14 @@ const PWAInstaller: React.FC = () => {
     }
 
     // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
+    const _handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallButton(true);
     };
 
     // Listen for the appinstalled event
-    const handleAppInstalled = () => {
+    const _handleAppInstalled = () => {
       setIsInstalled(true);
       setShowInstallButton(false);
       setDeferredPrompt(null);
@@ -40,7 +40,7 @@ const PWAInstaller: React.FC = () => {
     };
   }, []);
 
-  const handleInstallClick = async () => {
+  const _handleInstallClick = async () => {
     if (!deferredPrompt) return;
 
     try {
@@ -48,9 +48,9 @@ const PWAInstaller: React.FC = () => {
       const { outcome } = await deferredPrompt.userChoice;
       
       if (outcome === 'accepted') {
-        console.log('User accepted the install prompt');
+        // console.log(...);
       } else {
-        console.log('User dismissed the install prompt');
+        // console.log(...);
       }
       
       setDeferredPrompt(null);
@@ -65,7 +65,7 @@ const PWAInstaller: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+    <div _className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
       <div className="flex items-start space-x-3">
         <div className="flex-shrink-0">
           <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">

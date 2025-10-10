@@ -17,7 +17,7 @@ export function announceToScreenReader(
   message: string,
   priority: 'polite' | 'assertive' = 'polite'
 ): void {
-  const announcement = document.createElement('div');
+  const _announcement = document.createElement('div');
   announcement.setAttribute('aria-live', priority);
   announcement.setAttribute('aria-atomic', 'true');
   announcement.className = 'sr-only';
@@ -32,16 +32,16 @@ export function announceToScreenReader(
 }
 
 /**
- * Trap focus within a container (useful for modals)
+ * Trap focus within a container (useful for modals);
  */
 export function trapFocus(element: HTMLElement): () => void {
-  const focusableElements = element.querySelectorAll(
+  const _focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   );
-  const firstFocusable = focusableElements[0] as HTMLElement;
-  const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
+  const _firstFocusable = focusableElements[0] as HTMLElement;
+  const _lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const _handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstFocusable) {
@@ -69,7 +69,7 @@ export function trapFocus(element: HTMLElement): () => void {
  * Check if element is keyboard accessible
  */
 export function isKeyboardAccessible(element: HTMLElement): boolean {
-  const tabIndex = element.getAttribute('tabindex');
+  const _tabIndex = element.getAttribute('tabindex');
   return tabIndex !== null && tabIndex !== '-1';
 }
 
@@ -84,12 +84,12 @@ export function makeKeyboardAccessible(
     tabindex?: number;
   } = {}
 ): () => void {
-  const { role = 'button', tabindex = 0 } = options;
+  const { _role = 'button', tabindex = 0 } = options;
   
   element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
   
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const _handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       onClick(e);
@@ -106,22 +106,22 @@ export function makeKeyboardAccessible(
 }
 
 /**
- * Check color contrast ratio (WCAG 2.1)
+ * Check color contrast ratio (WCAG 2.1);
  */
 export function getContrastRatio(color1: string, color2: string): number {
-  const getLuminance = (color: string): number => {
+  const _getLuminance = (color: string): number => {
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
     const [r, g, b] = rgb.map(c => {
-      c = c / 255;
+      _c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   };
 
-  const lum1 = getLuminance(color1);
-  const lum2 = getLuminance(color2);
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
+  const _lum1 = getLuminance(color1);
+  const _lum2 = getLuminance(color2);
+  const _brightest = Math.max(lum1, lum2);
+  const _darkest = Math.min(lum1, lum2);
   
   return (brightest + 0.05) / (darkest + 0.05);
 }
@@ -135,14 +135,14 @@ export function meetsContrastRequirements(
   level: 'AA' | 'AAA' = 'AA',
   fontSize: 'normal' | 'large' = 'normal'
 ): boolean {
-  const ratio = getContrastRatio(color1, color2);
-  return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;
+  const _ratio = getContrastRatio(color1, color2);
+  return _fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;
 }
 
 /**
  * Skip to content link helper
  */
-export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
+export function createSkipLink(targetId: string, _text = 'Skip to main content'): HTMLAnchorElement {
   const skipLink = document.createElement('a');
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
@@ -198,7 +198,7 @@ export function createAccessibleTooltip(
   content: string,
   placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
 ): () => void {
-  const tooltip = document.createElement('div');
+  const _tooltip = document.createElement('div');
   tooltip.textContent = content;
   tooltip.className = 'tooltip';
   tooltip.setAttribute('role', 'tooltip');
@@ -213,9 +213,9 @@ export function createAccessibleTooltip(
   
   document.body.appendChild(tooltip);
   
-  const showTooltip = () => {
+  const _showTooltip = () => {
     tooltip.style.display = 'block';
-    const triggerRect = trigger.getBoundingClientRect();
+    const _triggerRect = trigger.getBoundingClientRect();
     
     switch (placement) {
       case 'top':
@@ -237,7 +237,7 @@ export function createAccessibleTooltip(
     }
   };
   
-  const hideTooltip = () => {
+  const _hideTooltip = () => {
     tooltip.style.display = 'none';
   };
   
@@ -256,10 +256,10 @@ export function createAccessibleTooltip(
 }
 
 /**
- * Manage focus restoration (useful for modals)
+ * Manage focus restoration (useful for modals);
  */
 export class FocusManager {
-  private previousActiveElement: HTMLElement | null = null;
+  private previousActiveElement: HTMLElement | _null = null;
 
   saveFocus(): void {
     this.previousActiveElement = document.activeElement as HTMLElement;
@@ -272,10 +272,10 @@ export class FocusManager {
   }
 
   moveFocusInside(container: HTMLElement): void {
-    const focusableElements = container.querySelectorAll(
+    const _focusableElements = container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    const firstFocusable = focusableElements[0] as HTMLElement;
+    const _firstFocusable = focusableElements[0] as HTMLElement;
     firstFocusable?.focus();
   }
 }

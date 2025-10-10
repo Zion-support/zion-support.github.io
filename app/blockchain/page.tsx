@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
-  const blockchainServices = [
+  const _blockchainServices = [
     {
       title: 'Smart Contract Development',
       description: 'Custom smart contract development for DeFi, NFTs, and enterprise blockchain applications.',
@@ -138,17 +138,17 @@ const BlockchainPage: React.FC = () => {
 }
   ];
 
-  const categories = [...new Set(blockchainServices.map(service => service.category))];
+  const _categories = [...new Set(blockchainServices.map(service => service.category))];
 
   return (
     <>
-      <Helmet></Helmet>
-        <title></titl>Blockchain Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
+      <Helmet>
+        <title></title>Blockchain Services - Zion Tech Group</title>
+        <meta _name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
         <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, enterprise blockchain, Web3" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20"></section>
           <div></div>
@@ -229,9 +229,9 @@ const BlockchainPage: React.FC = () => {
                   Professional {category.toLowerCase(); solutions powered by blockchain technology
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+              <div _className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                 {blockchainServices
-                  .filter(service => service.category === category)
+                  .filter(service => service.category === category);
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
                       <div className="text-4xl mb-4"></di>{service.icon}</div>
@@ -260,7 +260,7 @@ const BlockchainPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <div className="mb-4"></div>
+                      <div _className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2"></h>Technologies:</h4>
                         <div className="flex flex-wrap gap-2"></div>
                           {service.technologies.map((tech, techIndex) => (
@@ -271,7 +271,7 @@ const BlockchainPage: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className="mb-6"></div>
+                      <div _className="mb-6"></div>
                         <h4 className="font-semibold text-gray-900 mb-2"></h>Business Benefits:</h4>
                         <ul className="space-y-1"></ul>
                           {service.benefits.map((benefit, benefitIndex) => (
@@ -283,7 +283,7 @@ const BlockchainPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"></button>
+                      <button _className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"></button>
                         Get Blockchain Quote
                       </button>
                     </div>
@@ -294,7 +294,7 @@ const BlockchainPage: React.FC = () => {
         ));
 
         {/* Blockchain Capabilities Showcase */}
-        <section className="py-16 bg-white"></section>
+        <section _className="py-16 bg-white"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>

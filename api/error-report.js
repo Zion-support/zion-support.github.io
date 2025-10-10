@@ -7,7 +7,7 @@ export default function handler(req, res) {
   try {
     const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
 
-    // Log error details (in production you would send this to your monitoring service)
+    // Log error details (in production you would send this to your monitoring service);
     // In a real application, you would:
     // 1. Send to Sentry, LogRocket, Bugsnag, etc.
     // 2. Store in your database

@@ -148,11 +148,11 @@ titl,
   s: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
     }
   ];
-  const categories = [...new Set(iotServices.map(service => service.category))];
+  const _categories = [...new Set(iotServices.map(service => service.category))];
   return (<div>Coming Soon</div>)
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+          <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}"
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"
           <div className="absolute inset-0 bg-black opacity-20"></div>"
@@ -164,24 +164,24 @@ titl,
   md:text-6xl font-bold mb-6"></h1>
 // IoT & Edge Computing Services;
           </h1>"
-              <p className="text-xl,"
+              <p _className="text-xl,"
   md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
 // Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions;
           </p>"
-              <div className="flex flex-col,"
+              <div _className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"
   hover:bg-cyan-50 transition-colors"></button>
 // Explore IoT Solutions;
           </button>"
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+                <button _className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover:text-cyan-600 transition-colors"></button>
 Schedule Demo;
               </div>
         </section>
         {/* Key Benefits */}"
-        <section className="py-16 bg-white"></section>"
+        <section _className="py-16 bg-white"></section>"
           <div className="max-w-7xl mx-auto px-4,
   sm:px-6,"
   lg:px-8"></div>"
@@ -201,7 +201,7 @@ Schedule Demo;
           </h2>"
               <p className="text-xl text-gray-600"></p>
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;"
-            <div className="grid grid-cols-1,
+            <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-8"></div>"
                 <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
@@ -225,14 +225,14 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
           <section key={category} className="py-16 bg-gray-50"></section>
                   {category} Solutions;
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
-              <div className="grid grid-cols-1,
+              <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
                 {iotServices;}
-                  .filter(service => service.category === category)
+                  .filter(service => service.category === category);
                   .map((service, index) => ()
                     "
-          <div key={index} className="bg-white rounded-lg shadow-lg p-6,"
+          <div _key={index} className="bg-white rounded-lg shadow-lg p-6,"
   hover:shadow-xl transition-shadow"></div>"
                       <div className="text-4xl mb-4">{service.icon}</div>"
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>"
@@ -244,7 +244,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
   t: {service.marketPrice}</span>"
                         <div className="text-sm text-green-600 font-semibold"></div>
 Save up to 40% vs market rates;"
-                        <h4 className="font-semibold text-gray-900 mb-2">Key,
+                        <h4 _className="font-semibold text-gray-900 mb-2">Key,
   Features:</h4>"
                         <ul className="space-y-1"></ul>
                           {service.features.map((feature, featureIndex) => ()}"
@@ -274,7 +274,7 @@ Save up to 40% vs market rates;"
         {/* IoT Capabilities Showcase */}
                 Our IoT & Edge Capabilities;
                 Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics;"
-              <div className="text-center p-6 bg-gradient-to-br from-cyan-50 to-blue-100 rounded-lg"></div>"
+              <div _className="text-center p-6 bg-gradient-to-br from-cyan-50 to-blue-100 rounded-lg"></div>"
                 <Wifi className="w-12 h-12 text-cyan-600 mx-auto mb-4" /></Wifi>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>"
                 <p className="text-gray-600">Comprehensive platform for managing IoT devices at scale</p>"
@@ -310,13 +310,13 @@ Ready to Connect Your World?"
               Contact our IoT experts for a free consultation and custom connected solution strategy;
 
               <a
-                href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
+                _href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
 //                  +1 302 464 0950;
           </a>
-href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
+_href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com;
-            <div className="mt-8 text-sm text-cyan-200">
+            <div _className="mt-8 text-sm text-cyan-200">
 
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );

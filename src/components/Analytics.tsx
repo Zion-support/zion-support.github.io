@@ -19,7 +19,7 @@ const,
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 
-  const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
+  const _initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
     }
     (window as any).gtag = gtag;
     
@@ -28,7 +28,7 @@ const,
     });
   };
 
-  const initializePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
+  const _initializePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
           } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
           } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
             }
@@ -46,7 +46,7 @@ const,
     }
   };
 
-  const initializeErrorTracking = () => {/* TODO: Fix JSX expression */}
+  const _initializeErrorTracking = () => {/* TODO: Fix JSX expression */}
       });
     });
 
@@ -62,18 +62,18 @@ const,
     }, true);
   };
 
-  const initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
+  const _initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
     });
 
     // Track scroll depth;
-    let maxScroll = 0;
+    let _maxScroll = 0;
     window.addEventListener('scroll', () => {/* TODO: Fix JSX expression */}
         }
       }
     });
 
     // Track time on page;
-    const startTime = Date.now();
+    const _startTime = Date.now();
     window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
     });
 
@@ -91,8 +91,8 @@ const,
     });
   };
 
-  const trackEvent = (categor,
-  y: string, actio)
+  const _trackEvent = (categor,
+  y: string, actio);
   n: string, value?: any) => {/* TODO: Fix JSX expression */}
       });
     }

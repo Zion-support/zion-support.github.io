@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SitemapPage: React.FC = () => {
-  const pages = [
+  const _pages = [
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },
     { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },
     { path: '/services', title: 'All Services', description: 'Comprehensive AI, IT, and micro SAAS solutions' },
@@ -33,7 +33,7 @@ const SitemapPage: React.FC = () => {
     <div></div>
       <div></div>
         <div></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4"></h1>
+          <h1 _className="text-4xl font-bold text-gray-900 mb-4"></h1>
             Sitemap</h1>
           </h1>
           <p className="text-xl text-gray-600"></p>
@@ -65,7 +65,7 @@ const SitemapPage: React.FC = () => {
         </div>
 
         <div></div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4"></h2>
+          <h2 _className="text-2xl font-bold text-gray-900 mb-4"></h2>
             Need Help Finding Something?
           </h2>
           <p className="text-gray-600 mb-6"></p>

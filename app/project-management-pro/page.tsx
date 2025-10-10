@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 const ProjectManagementProPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: CheckSquare,
       title: 'Task Management',
@@ -48,7 +48,7 @@ const ProjectManagementProPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Improve project delivery times',
     'Enhance team collaboration',
     'Track progress and performance',
@@ -63,7 +63,7 @@ const ProjectManagementProPage: React.FC = () => {
     <>
       <Helmet>
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
-        <meta name="description" content="Advanced project management platform by Zion Tech Group. Manage projects, teams, and tasks with AI-powered insights and automation." />
+        <meta _name="description" content="Advanced project management platform by Zion Tech Group. Manage projects, teams, and tasks with AI-powered insights and automation." />
         <meta name="keywords" content="project management, team collaboration, task management, project tracking, Zion Tech Group" />
       </Helmet>
 

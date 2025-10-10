@@ -6,7 +6,7 @@ interface ModernLoadingSpinnerProps {
   fullScreen?: boolean;
 }
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
-  size = 'md',
+  _size = 'md',
   color = 'primary',
   text = 'Loading...',
   fullScreen = false
@@ -16,12 +16,12 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     lg: 'w-12 h-12',
     xl:   ,
 $4};
-  const colorClasses = {
+  const _colorClasses = {
     primary: 'text-cyan-400',
     secondary: 'text-purple-400',
     accent:   ,
 $4};
-  const spinnerClasses = `
+  const _spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
     animate-spin
@@ -30,11 +30,11 @@ $4};
     border-t-transparent
     rounded-full
   `;
-  const containerClasses = fullScreen
+  const _containerClasses = fullScreen
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
   return (
-    <div className={containerClasses} role="status" aria-label="Loading">
+    <div _className={containerClasses} role="status" aria-label="Loading">
       <div className="flex flex-col items-center space-y-4">
         <div className="relative">
           <div className={spinnerClasses}></div>
@@ -60,7 +60,7 @@ const,
           <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  size = 'md',
+  _size = 'md',
   color = 'primary',
   text = 'Loading...',
   fullScreen = false;)
@@ -73,7 +73,7 @@ const,
     x,
   l: 'w-16 h-16'
   };
-  const colorClasses = {/* TODO: Fix JSX expression */}
+  const _colorClasses = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   primar,
@@ -83,7 +83,7 @@ const,
     accen,
   t: 'text-pink-400'
   };
-  const spinnerClasses = `
+  const _spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
 //     animate-spin;
@@ -92,13 +92,13 @@ const,
 //     border-t-transparent;
 //     rounded-full;`
   `;
-  const containerClasses = fullScreen;
+  const _containerClasses = fullScreen;
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
   return (<div>Coming Soon</div>)
   )
     
-          <div className={containerClasses} role="status" aria-label="Loading"></div>"
+          <div _className={containerClasses} role="status" aria-label="Loading"></div>"
       <div className="flex flex-col items-center space-y-4"></div>"
         <div className="relative"></div>
           <div className={spinnerClasses}></div>"

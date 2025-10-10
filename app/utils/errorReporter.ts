@@ -20,7 +20,7 @@ export interface ErrorReporterConfig {
   maxErrorsInMemory: number,
   captureContext: boolean;});;)
 }
-const defaultConfig: ErrorReporterConfig = {,
+const defaultConfig: _ErrorReporterConfig = {,
 export interface ErrorReport {}
   message: string
   stack?: string
@@ -38,7 +38,7 @@ export interface ErrorReporterConfig {}
   maxErrorsInMemory: number,
     captureContext: boolean;});;)
 }
-const defaultConfig: ErrorReporterConfig = {}
+const defaultConfig: _ErrorReporterConfig = {}
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
@@ -63,7 +63,7 @@ export interface ErrorReport {/* TODO: Fix JSX expression */});;)
 export interface ErrorReporterConfig {/* TODO: Fix JSX expression */});;)
 }
 const,
-  defaultConfig: ErrorReporterConfig = {/* TODO: Fix JSX expression */});;)
+  defaultConfig: _ErrorReporterConfig = {/* TODO: Fix JSX expression */});;)
 };
 /**
  * ErrorReporter class for comprehensive error handling;
@@ -89,7 +89,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     severity: ErrorReport['severity'] = 'medium'),
     context?: Record<string></string>
   ): void {
-    const errorReport: ErrorReport = {,
+    const errorReport: _ErrorReport = {,
   message: error.message;
       stack: error.stack;
   reportError()
@@ -97,7 +97,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     severity: ErrorReport['severity'] = 'medium',
     context?: Record<string></string>
   ): void {}
-    const errorReport: ErrorReport = {}
+    const errorReport: _ErrorReport = {}
       message: error.message,
       stack: error.stack,
       timestamp: new Date().toISOString(),
@@ -107,10 +107,10 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       context: this.config.captureContext ? context : undefined});;)
 }
     // Track error frequency;
-    const errorKey = `${error.name}:${error.message}`
-    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1)
-    // Add to queue (with size limit)
-    this.errorQueue.push(errorReport)
+    const _errorKey = `${error.name}:${error.message}`
+    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
+    // Add to queue (with size limit);
+    this.errorQueue.push(errorReport);
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {}
       this.errorQueue.shift();});;)
 }
@@ -135,9 +135,9 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   ): void {/* TODO: Fix JSX expression */});;)
 };
     // Track error frequency;
-    const errorKey = `${error.name}:${error.message}`;
+    const _errorKey = `${error.name}:${error.message}`;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
-    // Add to queue (with size limit)
+    // Add to queue (with size limit);
     this.errorQueue.push(errorReport);
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {/* TODO: Fix JSX expression */});;)
 }
@@ -153,8 +153,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    */
   private logToConsole(report: ErrorReport): void {,
   private logToConsole(report: ErrorReport): void {}
-    const style = this.getConsoleStyle(report.severity);`});;)
-}] Error Report`, style)
+    const _style = this.getConsoleStyle(report.severity);`});;)
+}] Error Report`, style);
     if (process.env['NODE_ENV'] === 'development') {});;)
 }
     if (process.env['NODE_ENV'] === 'development') {});;)
@@ -167,7 +167,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     }
     if (report.context) {}
       if (process.env['NODE_ENV'] === 'development') {}
-  private logToConsole(repor)
+  private logToConsole(repor);
   t: ErrorReport): void {/* TODO: Fix JSX expression */}`
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */});;)
 }
@@ -187,7 +187,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    * Get console styling based on severity;
    */
   private getConsoleStyle(severity: ErrorReport['severity']): string {
-    const styles = {,
+    const _styles = {,
   private getConsoleStyle(severity: ErrorReport['severity']): string {}
     const styles = {}
       low: 'color: #2196F3; font-weight: bold',
@@ -196,7 +196,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       critical: 'color: #D32 F2 F; font-weight: bold; font-size: 14 px'});;)
 }
     return styles[severity]
-  private getConsoleStyle(severit)
+  private getConsoleStyle(severit);
   y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */});;)
 };
     return styles[severity]});
@@ -225,7 +225,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {}
         logger.warn('Failed to send error to remote endpoint:', error);}
-  private async sendToRemote(repor)
+  private async sendToRemote(repor);
   t: ErrorReport): Promise<void></void> {/* TODO: Fix JSX expression */});;)
 },
         bod,
@@ -300,7 +300,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
 /**
  * Convenience function to report errors;
  */
-export const reportError = (
+export const _reportError = (
   error: Error,
   severity?: ErrorReport['severity'],
   context?: Record<string></string>
@@ -310,14 +310,14 @@ export const reportError = (
 /**
  * React error boundary helper;
  */
-export const captureComponentError = (
+export const _captureComponentError = (
   error: Error,
   errorInfo: { componentStack: string },
   componentName: string,
 ): void => {,
   const report = ErrorReporter.getInstance(),
   report.reportError(error, 'high', {)
-    componentName)
+    componentName);
   componentName: string
 ): void => {}
   const report = ErrorReporter.getInstance()
@@ -327,7 +327,7 @@ export const captureComponentError = (
 });;)
 }
 export default ErrorReporter;
-export const reportError = (erro,
+export const _reportError = (erro,
   r: Error,
   severity?: ErrorReport['severity'],
   context?: Record<string></string>)
@@ -336,7 +336,7 @@ export const reportError = (erro,
 /**
  * React error boundary helper;
  */
-export const captureComponentError = (erro,
+export const _captureComponentError = (erro,
   r: Error,
   errorInf,
   o: {/* TODO: Fix JSX expression */}

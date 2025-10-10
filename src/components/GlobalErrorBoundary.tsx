@@ -51,7 +51,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+        <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
             <div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
@@ -62,7 +62,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="text-left bg-black/20 rounded-lg p-4 mb-6">
                 <summary className="cursor-pointer text-cyan-400 font-medium mb-2">
-                  Error Details (Development Only)
+                  Error Details (Development Only);
                 </summary>
                 <pre className="text-xs text-red-400 overflow-auto">
                   {this.state.error.toString()}

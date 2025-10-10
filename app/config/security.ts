@@ -3,7 +3,7 @@
  * Defines security headers and policies for the application
  */
 
-export const securityHeaders = {
+export const _securityHeaders = {
   // Content Security Policy
   contentSecurityPolicy: {
     directives: {
@@ -29,7 +29,7 @@ export const securityHeaders = {
   headers: {
     'X-DNS-Prefetch-Control': 'on',
     'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
-    'X-XSS-Protection': '1; mode=block',
+    'X-XSS-Protection': '1; _mode=block',
     'X-Frame-Options': 'SAMEORIGIN',
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
@@ -40,7 +40,7 @@ export const securityHeaders = {
 /**
  * Rate limiting configuration
  */
-export const rateLimitConfig = {
+export const _rateLimitConfig = {
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // Limit each IP to 100 requests per windowMs
   message: 'Too many requests from this IP, please try again later.',
@@ -49,7 +49,7 @@ export const rateLimitConfig = {
 /**
  * CORS configuration
  */
-export const corsConfig = {
+export const _corsConfig = {
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -60,7 +60,7 @@ export const corsConfig = {
 /**
  * Session configuration
  */
-export const sessionConfig = {
+export const _sessionConfig = {
   secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
@@ -75,7 +75,7 @@ export const sessionConfig = {
 /**
  * Input validation patterns
  */
-export const validationPatterns = {
+export const _validationPatterns = {
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
@@ -111,15 +111,15 @@ export function validateUrl(url: string): boolean {
 /**
  * Generate secure token
  */
-export function generateSecureToken(length: number = 32): string {if (typeof window !== 'undefined' && window.crypto) {
+export function generateSecureToken(length: _number = 32): string {if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   } else {
     // Fallback for non-browser environments
-    for (let i = 0; i < length; i++) {
+    for (let _i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256);
     }
   }
-  return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+  return Array.from(array, _byte => byte.toString(16).padStart(2, '0')).join('');
 }
 
 export default {

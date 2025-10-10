@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const PricingPage: React.FC = () => {
-  const plans = [
+  const _plans = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses getting started with AI',
@@ -76,7 +76,7 @@ const PricingPage: React.FC = () => {
     }
   ];
 
-  const addOns = [
+  const _addOns = [
     {
       name: 'Additional AI Models',
       description: 'Extra custom AI models beyond your plan limits',
@@ -103,7 +103,7 @@ const PricingPage: React.FC = () => {
     }
   ];
 
-  const faqs = [
+  const _faqs = [
     {
       question: 'Can I change my plan at any time?',
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
@@ -130,7 +130,7 @@ const PricingPage: React.FC = () => {
     }
   ];
 
-  const getColorClasses = (color: string) => {
+  const _getColorClasses = (color: string) => {
     switch (color) {
       case 'blue':
         return {
@@ -168,7 +168,7 @@ const PricingPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       {/* Hero Section */}
@@ -191,7 +191,7 @@ const PricingPage: React.FC = () => {
               const colors = getColorClasses(plan.color);
               return (
                 <div
-                  key={index}
+                  _key={index}
                   className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                     plan.popular ? colors.border : 'border-gray-200'
                   } overflow-hidden`}
@@ -260,7 +260,7 @@ const PricingPage: React.FC = () => {
       </section>
 
       {/* Add-ons */}
-      <section className="py-20 bg-gray-50">
+      <section _className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 
 
 const PartnersPage: React.FC = () => {
-  const partnerTypes = [
+  const _partnerTypes = [
     {
       title: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
@@ -51,7 +51,7 @@ const PartnersPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
       icon: Globe,
       title: 'Global Reach',
       description:       ,
@@ -178,7 +178,7 @@ namename: 'Channel Partners',
   o: '📋' }
     }
   ];
-  const benefits = [
+  const _benefits = [
 
 icon: Globe,
       title: 'Global Reach',
@@ -281,7 +281,7 @@ const PagePage: React.FC = () => {
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Our Partners;
           </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p _className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // We work with industry-leading technology partners to deliver comprehensive solutions;
 //               that drive innovation and business success.
             
@@ -296,7 +296,7 @@ const PagePage: React.FC = () => {
           </p>
           </div>
           {/* Partner Types */}"
-          <div className="mb-16"></div>
+          <div _className="mb-16"></div>
             {partnerTypes.map((type, index) => ()}"
           <div key={index} className="mb-12"></div>"
                 <div className="flex items-center mb-8"></div>
@@ -339,7 +339,7 @@ const PagePage: React.FC = () => {
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
 {/* Partnership Tiers */}
               Partnership Tiers;"
-            <div className="grid grid-cols-1,"
+            <div _className="grid grid-cols-1,"
   md:grid-cols-3 gap-8"></div>
               {partnershipTiers.map((tier, index) => ()}`
           <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}></div>"
@@ -358,7 +358,7 @@ const PagePage: React.FC = () => {
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Become Our Partner;"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+            <p _className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success.
 
               Let's build the future together.
@@ -380,10 +380,10 @@ const PagePage: React.FC = () => {
 // Become a Partner;
 
           </a>
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
       <Footer />

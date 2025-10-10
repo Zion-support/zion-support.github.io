@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITConsultingPage: React.FC = () => {
-  const consultingServices = [
+  const _consultingServices = [
     {
 
       title: 'Digital Transformation',
@@ -28,13 +28,13 @@ const ITConsultingPage: React.FC = () => {
   ];
 
   return (<>
-      <Helmet></Helmet>
+      <Helmet>
         <title>IT Consulting Services - Zion Tech Group</title>
-        <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
+        <meta _name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
         <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" /></meta>
       </Helmet>
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation /></Navigation>"
         <main className="pt-24 pb-16 px-4"></main>"
           <div className="max-w-7xl mx-auto"></div>"
@@ -43,7 +43,7 @@ const ITConsultingPage: React.FC = () => {
   md:text-6xl font-bold text-gray-900 mb-6"></h1>
                 IT Consulting Services;
               </h1>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
+              <p _className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
                 Transform your business with expert IT consulting. We provide strategic guidance, 
                 digital transformation, and technology solutions that drive growth and efficiency.
               </p>

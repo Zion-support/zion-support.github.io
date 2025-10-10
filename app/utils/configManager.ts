@@ -5,7 +5,7 @@
  * Centralized configuration management with environment-based settings;
  */
 
-export type Environment = 'development' | 'staging' | 'production' | 'test'
+export type _Environment = 'development' | 'staging' | 'production' | 'test'
 
 export interface AppConfig {
   environment: Environment,
@@ -47,7 +47,7 @@ export interface AppConfig {
 }
 }
 
-const defaultConfig: AppConfig = {,
+const defaultConfig: _AppConfig = {,
   environment: 'development',
   api: {,
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
@@ -94,7 +94,7 @@ class ConfigManager {
 }
 
   private loadEnvironmentConfig(): void {
-    const env = process.env.NODE_ENV as Environment || 'development'
+    const _env = process.env.NODE_ENV as Environment || 'development'
 
     this.config.environment = env;
     // Override with environment-specific settings;
@@ -154,9 +154,9 @@ class ConfigManager {
 }
 
 // Export singleton instance;
-export const configManager = new ConfigManager()
+export const _configManager = new ConfigManager()
 export default configManager;
-export type Environment = 'development' | 'staging' | 'production' | 'test';
+export type _Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {/* TODO: Fix JSX expression */});;)
 };
   feature,
@@ -176,7 +176,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */});;)
 }});
 }
 const,
-  defaultConfig: AppConfig = {/* TODO: Fix JSX expression */});;)
+  defaultConfig: _AppConfig = {/* TODO: Fix JSX expression */});;)
 },
   feature,
   s: {/* TODO: Fix JSX expression */});;)
@@ -260,21 +260,21 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Load configuration based on environment;
    */
   private loadConfig(): AppConfig {/* TODO: Fix JSX expression */}
-    let config = { ...defaultConfig };
+    let _config = { ...defaultConfig };
     switch (this.environment) {/* TODO: Fix JSX expression */});;)
 }
     // Apply overrides;
-    config = this.mergeConfig(config, this.overrides);
+    _config = this.mergeConfig(config, this.overrides);
     return config});
 }
   /**
    * Deep merge two config objects;
    */
   private mergeConfig(bas,
-  e: AppConfig, overrid)
+  e: AppConfig, overrid);
   e: Partial<AppConfig></AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
-    const result = { ...base } as AppConfig;
-    (Object.keys(override) as Array<keyof></keyof>).forEach(<K></K>(ke)
+    const _result = { ...base } as AppConfig;
+    (Object.keys(override) as Array<keyof></keyof>).forEach(<K></K>(ke);
   y: K) => {/* TODO: Fix JSX expression */}
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue});
 } else {/* TODO: Fix JSX expression */});;)
@@ -287,7 +287,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Get configuration value;
    */
-  get<K></K>(ke)
+  get<K></K>(ke);
   y: K): AppConfig[K];
   get<K></K>(ke,
   y: K,
@@ -305,7 +305,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Set configuration value;
    */
   set<K></K>(ke,
-  y: K, valu)
+  y: K, valu);
   e: AppConfig[K]): void;
   set<K></K>(ke,
   y: K,
@@ -332,7 +332,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Get default value for a config key;
    */
-  private getDefaultForKey<K></K>(ke)
+  private getDefaultForKey<K></K>(ke);
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */});;)
 },
       feature,
@@ -367,19 +367,19 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Check if feature is enabled;
    */
-  isFeatureEnabled(featur)
+  isFeatureEnabled(featur);
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */});;)
 }
   /**
    * Enable feature;
    */
-  enableFeature(featur)
+  enableFeature(featur);
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */});;)
 }
   /**
    * Disable feature;
    */
-  disableFeature(featur)
+  disableFeature(featur);
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */});;)
 }
   /**
@@ -391,7 +391,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Update API configuration;
    */
-  updateAPIConfig(confi)
+  updateAPIConfig(confi);
   g: Partial<AppConfig></AppConfig>): void {/* TODO: Fix JSX expression */}
     this.config.api = { ...this.config.api, ...config }});
 }
@@ -418,7 +418,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Override configuration;
    */
-  override(confi)
+  override(confi);
   g: Partial<AppConfig></AppConfig>): void {/* TODO: Fix JSX expression */});;)
 }
   /**
@@ -451,6 +451,6 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
 }
 }
 // Export singleton instance;
-export const configManager = ConfigManager.getInstance();
+export const _configManager = ConfigManager.getInstance();
 export default ConfigManager;
 }

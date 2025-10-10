@@ -1,8 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'shipping-rates.json');
+const _dir = path.join(process.cwd(), 'data');
+const _file = path.join(dir, 'shipping-rates.json');
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -22,25 +22,25 @@ export default function handler(req, res) {
     fs.mkdirSync(dir, { recursive: true });
   }
 
-  let existing = [];
+  let _existing = [];
   try {
     if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
+      const _data = fs.readFileSync(file, 'utf8');
+      _existing = JSON.parse(data);
+      if (!Array.isArray(existing)) _existing = [];
     }
   } catch (error) {
     console.error('Error reading existing rates:', error);
-    existing = [];
+    _existing = [];
   }
 
   // Calculate shipping rates based on destination and weight
-  const baseRate = 10;
-  const weightMultiplier = weight * 0.5;
-  const distanceMultiplier = destination === 'US' ? 1 : 1.5;
-  const totalRate = Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100;
+  const _baseRate = 10;
+  const _weightMultiplier = weight * 0.5;
+  const _distanceMultiplier = destination === 'US' ? 1 : 1.5;
+  const _totalRate = Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100;
 
-  const newRate = {
+  const _newRate = {
     id: Date.now().toString(),
     destination,
     weight,

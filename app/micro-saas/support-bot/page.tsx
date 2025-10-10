@@ -5,9 +5,9 @@ import { Bot, ArrowRight } from 'lucide-react';
 const SmartSupportBotPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
-        <title></titl>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
-        <meta name="description" content="AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses." />
+      <Helmet>
+        <title></title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
+        <meta _name="description" content="AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses." />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/support-bot" />
       </Helmet>
 
@@ -16,7 +16,7 @@ const SmartSupportBotPage: React.FC = () => {
           <div></div>
             <div></div>
               <Bot className="w-4 h-4" />
-              <span></spa>Smart Support Bot</span>
+              <span></span>Smart Support Bot</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text"></h1>
               AI Customer Service </h1>
@@ -28,7 +28,7 @@ const SmartSupportBotPage: React.FC = () => {
             </p>
             <div></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"></button>
-                <span></spa>Get Started</span>
+                <span></span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"></button>

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 export default function MicroSaasPage() {
-  const microSaasServices = [
+  const _microSaasServices = [
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -240,7 +240,7 @@ export default function MicroSaasPage() {
     }
   ];
 
-  const categories = [
+  const _categories = [
     { name: 'All', count: microSaasServices.length },
     { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length },
     { name: 'E-commerce', count: microSaasServices.filter(s => s.category === 'E-commerce').length },
@@ -258,7 +258,7 @@ export default function MicroSaasPage() {
     { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }
   ];
 
-  const benefits = [
+  const _benefits = [
     {
       icon: TrendingUp,
       title: 'Proven ROI',
@@ -281,7 +281,7 @@ export default function MicroSaasPage() {
     }
   ];
 
-  const stats = [
+  const _stats = [
     { label: 'Active Users', value: '10,000+' },
     { label: 'Apps Available', value: '50+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
@@ -289,7 +289,7 @@ export default function MicroSaasPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="Micro SAAS Solutions - Zion Tech Group"
         description="50+ AI-powered micro SAAS applications for modern businesses. Affordable tools starting from $14/month. Analytics, e-commerce, productivity, marketing, and more."

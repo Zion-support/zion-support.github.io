@@ -1,8 +1,4 @@
 'use client';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -13,7 +9,7 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  enableKeyboardNavigation = true,
+  _enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true
@@ -33,7 +29,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
         // Close dropdowns with Escape key
         if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+          const _openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
           openDropdowns.forEach(dropdown => {
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
           });
@@ -46,14 +42,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Focus management
     if (enableFocusManagement && typeof window !== 'undefined') {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      const _focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
-      const trapFocus = (container: HTMLElement) => {
+      const _trapFocus = (container: HTMLElement) => {
         const focusableContent = container.querySelectorAll(focusableElements);
-        const firstFocusableElement = focusableContent[0] as HTMLElement;
-        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
+        const _firstFocusableElement = focusableContent[0] as HTMLElement;
+        const _lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
 
-        const handleTabKey = (e: KeyboardEvent) => {
+        const _handleTabKey = (e: KeyboardEvent) => {
           if (e.key !== 'Tab') return;
 
           if (e.shiftKey) {
@@ -76,14 +72,14 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
+      const _modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
       modals.forEach(modal => trapFocus(modal as HTMLElement));
     }
 
     // Screen reader support
     if (enableScreenReaderSupport && typeof window !== 'undefined') {
       // Add live region for dynamic content updates
-      const liveRegion = document.createElement('div');
+      const _liveRegion = document.createElement('div');
       liveRegion.setAttribute('aria-live', 'polite');
       liveRegion.setAttribute('aria-atomic', 'true');
       liveRegion.className = 'sr-only';
@@ -91,16 +87,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.appendChild(liveRegion);
 
       // Announce page changes
-      const announcePageChange = (message: string) => {
+      const _announcePageChange = (message: string) => {
         const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
           liveRegion.textContent = message;
         }
       };
 
-      // Listen for route changes (if using React Router)
-      const originalPushState = history.pushState;
-      const originalReplaceState = history.replaceState;
+      // Listen for route changes (if using React Router);
+      const _originalPushState = history.pushState;
+      const _originalReplaceState = history.replaceState;
 
       history.pushState = function(...args) {
         originalPushState.apply(history, args);
@@ -121,9 +117,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // High contrast mode support
     if (enableHighContrast && typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+      const _prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
       
-      const updateHighContrast = (e: MediaQueryListEvent) => {
+      const _updateHighContrast = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.documentElement.classList.add('high-contrast');
         } else {

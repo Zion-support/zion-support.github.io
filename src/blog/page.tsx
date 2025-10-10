@@ -119,20 +119,20 @@ export default function BlogPage() {
     }
   ], []);
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const _timer = setTimeout(() => {
       setPosts(blogPosts);
       setLoading(false);
     }, 500);
     return () => clearTimeout(timer);
   }, [blogPosts]);
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-  const filteredPosts = selectedCategory === 'all' 
+  const _categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+  const _filteredPosts = selectedCategory === 'all' 
     ? posts 
     : posts.filter(post => post.category === selectedCategory);
-  const featuredPosts = posts.filter(post => post.featured);
+  const _featuredPosts = posts.filter(post => post.featured);
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div _className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center mb-12">
             <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
@@ -153,7 +153,7 @@ export default function BlogPage() {
     );
   }
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div _className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <header className="text-center mb-12">

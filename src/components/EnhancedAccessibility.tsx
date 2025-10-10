@@ -35,13 +35,13 @@ const,
           <AccessibilityProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  enableKeyboardNavigation = true,
+  _enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true,
   enableReducedMotion = true,
   enableColorBlindSupport = true,
-  enableZoomControl = true)
+  enableZoomControl = true);
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -80,7 +80,7 @@ const,
     }
   }, []);
   // Save settings to localStorage;
-const saveSettings = useCallback((newSetting)
+const _saveSettings = useCallback((newSetting);
   s: AccessibilitySettings) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -146,7 +146,7 @@ const saveSettings = useCallback((newSetting)
   O: Add content;}
 }
     if (!enableKeyboardNavigation) return;
-    const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
+    const _handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       // Skip to main content;
@@ -154,7 +154,7 @@ const saveSettings = useCallback((newSetting)
   O: Add content;}
 }
         e.preventDefault();
-        const mainContent = document.querySelector('main, [role="main"]');
+        const _mainContent = document.querySelector('main, [role="main"]');
         if (mainContent) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -183,20 +183,20 @@ const saveSettings = useCallback((newSetting)
   O: Add content;}
 }
     if (!enableFocusManagement) return;
-    const handleFocusIn = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
+    const _handleFocusIn = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const target = e.target as HTMLElement;
+      const _target = e.target as HTMLElement;
       if (target && settings.focusVisible) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         target.classList.add('focus-visible');
       }
     };
-    const handleFocusOut = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
+    const _handleFocusOut = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const target = e.target as HTMLElement;
+      const _target = e.target as HTMLElement;
       if (target) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -213,12 +213,12 @@ const saveSettings = useCallback((newSetting)
     };
   }, [enableFocusManagement, settings.focusVisible]);
   // Screen reader announcements;
-const announceToScreenReader = useCallback((messag)
+const _announceToScreenReader = useCallback((messag);
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (!enableScreenReader) return;
-    const announcement = document.createElement('div');
+    const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -231,67 +231,67 @@ const announceToScreenReader = useCallback((messag)
     }, 1000);
   }, [enableScreenReader]);
   // Toggle functions;
-const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
+const _toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const _newSettings = {/* TODO: Fix JSX expression */}
   t: !settings.highContrast };
     saveSettings(newSettings);`
     announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
   };
-  const toggleLargeText = () => {/* TODO: Fix JSX expression */}
+  const _toggleLargeText = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const _newSettings = {/* TODO: Fix JSX expression */}
   t: !settings.largeText };
     saveSettings(newSettings);`
     announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
   };
-  const toggleReducedMotion = () => {/* TODO: Fix JSX expression */}
+  const _toggleReducedMotion = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const _newSettings = {/* TODO: Fix JSX expression */}
   n: !settings.reducedMotion };
     saveSettings(newSettings);`
     announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`);
   };
-  const toggleScreenReader = () => {/* TODO: Fix JSX expression */}
+  const _toggleScreenReader = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const _newSettings = {/* TODO: Fix JSX expression */}
   r: !settings.screenReader };
     saveSettings(newSettings);`
     announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`);
   };
-  const toggleFocusVisible = () => {/* TODO: Fix JSX expression */}
+  const _toggleFocusVisible = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const _newSettings = {/* TODO: Fix JSX expression */}
   e: !settings.focusVisible };
     saveSettings(newSettings);`
     announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`);
   };
-  const adjustZoom = (delt)
+  const _adjustZoom = (delt);
   a: number) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const _newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
+    const _newSettings = {/* TODO: Fix JSX expression */}
   l: newZoom };
     saveSettings(newSettings);`
     announceToScreenReader(`Zoom level set to ${newZoom}%`);
   };
-  const setColorBlind = (typ)
+  const _setColorBlind = (typ);
   e: AccessibilitySettings['colorBlind']) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const _newSettings = {/* TODO: Fix JSX expression */}
   d: type };
     saveSettings(newSettings);`
     announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`);
   };
 // Reset all settings;
-  const resetSettings = () => {/* TODO: Fix JSX expression */}
+  const _resetSettings = () => {/* TODO: Fix JSX expression */}
   t: false}
       largeTex,
   t: false,
@@ -315,7 +315,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   )
       
           <button></button>"
-        onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white,"
+        _onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white,"
   hover:bg-slate-800 transition-colors duration-200 z-50""
         aria-label="Open accessibility settings""
         title="Open accessibility settings (Alt + A)""
@@ -323,7 +323,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
     );
   }
   return ("
-<div className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-cyan-400">Accessibility Settings</h3><button></button>")
+<div _className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-cyan-400">Accessibility Settings</h3><button></button>")
           onClick={() => setIsVisible(false)} className="text-gray-400,"
   hover:text-white""
           aria-label="Close accessibility settings"
@@ -395,7 +395,7 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600,"
   hover:bg-red-700 text-white rounded text-sm"
         >
           Reset Settings;"
-        </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
+        </button></div><div _className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
   );
 };
 

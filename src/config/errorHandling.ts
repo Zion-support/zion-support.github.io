@@ -14,7 +14,7 @@ export enum ErrorSeverity {
 export enum ErrorSeverity {// TODO: Add content;}
 
 }
-  LOW = 'low',
+  _LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
   CRITICAL = 'critical'
@@ -24,7 +24,7 @@ export enum ErrorCategory {
 export enum ErrorCategory {// TODO: Add content;}
 
 }
-  NETWORK = 'network',
+  _NETWORK = 'network',
   VALIDATION = 'validation',
   AUTHENTICATION = 'authentication',
   AUTHORIZATION = 'authorization',
@@ -43,7 +43,7 @@ export interface ErrorConfig {
   ignoreErrors: RegExp[];
   severityThreshold: ErrorSeverity;
 }
-export const _errorHandlingConfig: ErrorConfig = {
+export const _errorHandlingConfig: _ErrorConfig = {
 
 export interface ErrorConfig {// TODO: Add content;}
 };
@@ -55,7 +55,7 @@ export interface ErrorConfig {// TODO: Add content;}
     ignoreErrors: RegExp[];,
     severityThreshold: ErrorSeverity
 }
-export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content;}
+export const _errorHandlingConfig: _ErrorConfig = {// TODO: Add content;}
 };
   enabled: true,
   logToConsole: process.env['NODE_ENV'] !== 'production',
@@ -68,7 +68,7 @@ export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content;}
     /Loading chunk \d+ failed/i],
   severityThreshold: ErrorSeverity.LOW
 };
-export const _errorMessages = {
+export const __errorMessages = {
   network: {
     offline: 'You are currently offline. Please check your internet connection.',
     timeout: 'Request timed out. Please try again.',
@@ -92,7 +92,7 @@ $4}
 export class AppError extends Error {
   constructor(
     message: string,
-    public category: ErrorCategory = ErrorCategory.UNKNOWN,
+    public category: _ErrorCategory = ErrorCategory.UNKNOWN,
     public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     public metadata?: Record<string, unknown>
   ) {
@@ -182,7 +182,7 @@ export class AppError extends Error {
   messag,
   e: string,
     public,
-  category: ErrorCategory = ErrorCategory.UNKNOWN,
+  category: _ErrorCategory = ErrorCategory.UNKNOWN,
     public,
   severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     public metadata?: Record;

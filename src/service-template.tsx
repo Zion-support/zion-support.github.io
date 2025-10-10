@@ -34,7 +34,7 @@ const,
 }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -64,7 +64,7 @@ const,
           </Link>
 
             <a
-              href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              _href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
               <Phone className="w-4 h-4 mr-2" />
 
 // (302) 464-0950;
@@ -72,7 +72,7 @@ const,
           </div>
         </section>
         {/* Services Grid */}"
-        <section className="container mx-auto px-4 py-16"></section>"
+        <section _className="container mx-auto px-4 py-16"></section>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-2 gap-8"></div>
@@ -95,7 +95,7 @@ const,
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                   className="cyber-button w-full text-center inline-block" Get Started;
         {/* Benefits Section */}
-          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+          <h2 _className="text-3xl font-bold text-white text-center mb-12 neon-text">
 
             Why Choose Our {title}?
           </h2>"

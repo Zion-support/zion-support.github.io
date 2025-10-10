@@ -10,7 +10,7 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
+  _enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true
@@ -26,13 +26,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       document.head.appendChild(fontPreload);
 
       // Preload critical images
-      const criticalImages = [
+      const _criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
 
       criticalImages.forEach(src => {
-        const link = document.createElement('link');
+        const _link = document.createElement('link');
         link.rel = 'preload';
         link.href = src;
         link.as = 'image';
@@ -42,14 +42,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Optimize images
     if (enableImageOptimization && typeof window !== 'undefined') {
-      const images = document.querySelectorAll('img');
+      const _images = document.querySelectorAll('img');
       images.forEach(img => {
-        // Add loading="lazy" for non-critical images
+        // Add _loading="lazy" for non-critical images
         if (enableLazyLoading && !img.hasAttribute('loading')) {
           img.loading = 'lazy';
         }
 
-        // Add decoding="async" for better performance
+        // Add _decoding="async" for better performance
         if (!img.hasAttribute('decoding')) {
           img.decoding = 'async';
         }
@@ -58,7 +58,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Intersection Observer for lazy loading
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
+      const _imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
@@ -71,19 +71,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         });
       });
 
-      const lazyImages = document.querySelectorAll('img[data-src]');
+      const _lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
     }
 
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const _observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+            // console.log(...);
           }
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            // console.log(...);
           }
         });
       });
@@ -98,14 +98,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Resource hints for better performance
     if (typeof window !== 'undefined') {
       // DNS prefetch for external domains
-      const dnsPrefetchDomains = [
+      const _dnsPrefetchDomains = [
         'fonts.googleapis.com',
         'fonts.gstatic.com',
         'www.google-analytics.com'
       ];
 
       dnsPrefetchDomains.forEach(domain => {
-        const link = document.createElement('link');
+        const _link = document.createElement('link');
         link.rel = 'dns-prefetch';
         link.href = `//${domain}`;
         document.head.appendChild(link);

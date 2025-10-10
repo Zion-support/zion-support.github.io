@@ -3,9 +3,9 @@ import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 
 export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024';
+  const _lastUpdated = 'January 1, 2024';
   
-  const dataTypes = [
+  const _dataTypes = [
     {
       category: 'Personal Information',
       icon: User,
@@ -26,7 +26,7 @@ export default function PrivacyPage() {
 }
   ];
 
-  const purposes = [
+  const _purposes = [
     {
       title: 'Service Provision',
       icon: Globe,
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
 }
   ];
 
-  const rights = [
+  const _rights = [
     {
       title: 'Access',
       description: 'Request access to your personal data',
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
     <div></div>
       <div></div>
         <div></div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
+          <h1 _className="text-5xl md:text-6xl font-bold mb-6"></h1>
             Privacy Policy</h1>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto"></p>
@@ -126,7 +126,7 @@ export default function PrivacyPage() {
 
             {/* How We Use Information */}
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>How We Use Your Information</h2>
+              <h2 _className="text-3xl font-bold text-gray-900 mb-6"></h>How We Use Your Information</h2>
               <div className="grid md:grid-cols-2 gap-6"></div>
                 {purposes.map((purpose, index) => (</div>
                   <div></div>
@@ -144,7 +144,7 @@ export default function PrivacyPage() {
 
             {/* Data Security */}
             <section></section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Data Security</h2>
+              <h2 _className="text-3xl font-bold text-gray-900 mb-6"></h>Data Security</h2>
               <div></div>
                 <div></div>
                   <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
@@ -181,7 +181,7 @@ export default function PrivacyPage() {
             </section>
 
             {/* Contact Information */}
-            <section className="bg-gray-50 rounded-lg p-8"></section>
+            <section _className="bg-gray-50 rounded-lg p-8"></section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6"></h>Contact Us</h2>
               <p className="text-gray-700 mb-6"></p>
                 If you have any questions about this Privacy Policy or our data practices, please contact us:

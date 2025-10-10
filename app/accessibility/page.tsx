@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
 
 const AccessibilityPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Eye,
       title: 'Visual Accessibility',
@@ -43,7 +43,7 @@ const AccessibilityPage: React.FC = () => {
     }
   ];
 
-  const standards = [
+  const _standards = [
     {
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
@@ -70,7 +70,7 @@ const AccessibilityPage: React.FC = () => {
     <>
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
-        <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities." />
+        <meta _name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities." />
         <meta name="keywords" content="accessibility, WCAG, ADA compliance, inclusive design, digital accessibility, Zion Tech Group" />
       </Helmet>
 

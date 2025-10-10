@@ -8,7 +8,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
               </span>
               <br />
-              <span className="text-white">Solutions</span>
+              <span _className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced systemmonitor solutions. 

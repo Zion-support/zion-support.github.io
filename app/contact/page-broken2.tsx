@@ -28,7 +28,7 @@ phone: '',
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
+  const _handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -36,7 +36,7 @@ phone: '',
 }););)
 }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const _handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -62,7 +62,7 @@ phone: '',
 }
   };
 
-  const services = [
+  const _services = [
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -74,7 +74,7 @@ phone: '',
     'Other'
   ];
 
-  const contactInfo = [
+  const _contactInfo = [
     {
       icon: Phone,
       title: 'Phone',
@@ -103,13 +103,13 @@ phone: '',
 
   return (
     <>
-      <Helmet></Helmet>
-        <title></titl>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
+      <Helmet>
+        <title></title>Contact Us - Zion Tech Group | Get in Touch</title>
+        <meta _name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." />
         <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" />
       </Helmet>
 
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4"></div>
           {/* Header */}
           <div className="text-center mb-16"></div>
@@ -140,12 +140,12 @@ phone: '',
               );
 
               {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
+                <div _className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400"></spa>Failed to send message. Please try again.</span>
                 </div>
               );
 
-              <form onSubmit={handleSubmit} className="space-y-6"></form>
+              <form _onSubmit={handleSubmit} className="space-y-6"></form>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -243,7 +243,7 @@ phone: '',
                 </div>
 
                 <div></div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2"></label>
+                  <label _className="block text-sm font-medium text-gray-300 mb-2"></label>
                     Message *
                   </label>
                   <div className="relative"></div>
@@ -268,12 +268,12 @@ phone: '',
                   {isSubmitting ? (
                     <>
                       <div></div>
-                      <span></spa>Sending...</span>
+                      <span></span>Sending...</span>
                     </>
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      <span></spa>Send Message</span>
+                      <span></span>Send Message</span>
                     </>
                   );
                 </button>
@@ -281,7 +281,7 @@ phone: '',
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-8"></div>
+            <div _className="space-y-8"></div>
               <div></div>
                 <h2 className="text-3xl font-bold text-white mb-6"></h>Contact Information</h2>
                 <p className="text-lg text-gray-300 mb-8"></p>

@@ -28,23 +28,23 @@ const,
     addSecurityEventListeners();
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 
-  const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
+  const _addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
   };
 
-  const enforceHTTPS = () => {/* TODO: Fix JSX expression */}
+  const _enforceHTTPS = () => {/* TODO: Fix JSX expression */}
     }
   };
 
-  const addXSSProtection = () => {/* TODO: Fix JSX expression */}
+  const _addXSSProtection = () => {/* TODO: Fix JSX expression */}
   };
 
-  const addClickjackingProtection = () => {/* TODO: Fix JSX expression */}
+  const _addClickjackingProtection = () => {/* TODO: Fix JSX expression */}
   };
 
-  const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */}
+  const _addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */}
   };
 
-  const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
+  const _addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
   t: 'strict-origin-when-cross-origin' },
       {/* TODO: Fix JSX expression */}
   t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
@@ -56,11 +56,11 @@ const,
     });
   };
 
-  const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
+  const _addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
       }
     });
 
-    // Prevent text selection (optional)
+    // Prevent text selection (optional);
     document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
       }
     });
@@ -91,15 +91,15 @@ const,
     });
 
     // Monitor for suspicious activity;
-    let suspiciousActivity = 0;
-    const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
+    let _suspiciousActivity = 0;
+    const _resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
     };
 
     // Reset suspicious activity counter every 5 minutes;
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
 
-    // Track rapid clicks (potential bot activity)
-    let clickCount = 0;
+    // Track rapid clicks (potential bot activity);
+    let _clickCount = 0;
     document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
 
         }
@@ -109,11 +109,11 @@ const,
     checkForXSS();
 
     // Monitor form submissions for CSRF
-    const forms = document.querySelectorAll('form');
+    const _forms = document.querySelectorAll('form');
     forms.forEach(form => {
       form.addEventListener('submit', (e) => {
-        const formData = new FormData(form as HTMLFormElement);
-        const token = formData.get('csrf_token');
+        const _formData = new FormData(form as HTMLFormElement);
+        const _token = formData.get('csrf_token');
         
         if (!token) {
           setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
@@ -124,7 +124,7 @@ const,
 
 
     // Track rapid keyboard input;
-    let keyCount = 0;
+    let _keyCount = 0;
     document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
 
           }
@@ -135,11 +135,11 @@ const,
     checkSuspiciousCode();
 
     // Monitor for unusual network requests
-    const originalFetch = window.fetch;
+    const _originalFetch = window.fetch;
     window.fetch = async (...args) => {
-      const url = args[0] as string;
+      const _url = args[0] as string;
       
-      if (typeof url === 'string' && !validateURL(url)) {
+      if (typeof _url === 'string' && !validateURL(url)) {
         setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
         logger.warn('Suspicious network request blocked', { url });
         throw new Error('Suspicious network request blocked');
@@ -151,7 +151,7 @@ const,
   }, [validateURL]);
 
   // Security headers validation
-  const validateSecurityHeaders = useCallback(() => {
+  const _validateSecurityHeaders = useCallback(() => {
     if (typeof window === 'undefined') return;
 
     const warnings: string[] = [];
@@ -162,8 +162,8 @@ const,
       setIsSecure(false);
     }
 
-    // Check for security headers (if available)
-    const headers = (window as any).securityHeaders;
+    // Check for security headers (if available);
+    const _headers = (window as any).securityHeaders;
     if (headers) {
       if (!headers['x-frame-options']) {
         warnings.push('X-Frame-Options header missing');
@@ -184,11 +184,11 @@ const,
   }, []);
 
   // Rate limiting
-  const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
+  const _rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
     const now = Date.now();
-    const windowStart = now - windowMs;
+    const _windowStart = now - windowMs;
     
-    const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
+    const _requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
       .filter((timestamp: number) => timestamp > windowStart);
     
     if (requests.length >= limit) {
@@ -208,7 +208,7 @@ const,
     validateSecurityHeaders();
 
     // Set up periodic security checks
-    const interval = setInterval(() => {
+    const _interval = setInterval(() => {
       validateSecurityHeaders();
     }, 30000); // Check every 30 seconds
 
@@ -216,7 +216,7 @@ const,
   }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
 
   // Security event handlers
-  const handleSecurityEvent = useCallback((event: string, data: any) => {
+  const _handleSecurityEvent = useCallback((event: string, data: any) => {
     logger.info('Security event', { event, data });
     
     // Rate limit security events
@@ -250,7 +250,7 @@ const,
     <>
       {/* Security Status Indicator */}
       {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
+        <div _className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
           ⚠️ Security Warning: This site is not served over HTTPS
         </div>
       )}

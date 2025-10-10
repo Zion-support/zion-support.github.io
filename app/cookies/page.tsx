@@ -7,9 +7,9 @@ import Footer from '../components/Footer';
 const CookiesPage: React.FC = () => {
   return (
     <>
-      <Helmet></Helmet>
-        <title></titl>Cookie Policy - Zion Tech Group</title>
-        <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
+      <Helmet>
+        <title></title>Cookie Policy - Zion Tech Group</title>
+        <meta _name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
       </Helmet>
       
       <div></div>
@@ -27,7 +27,7 @@ const CookiesPage: React.FC = () => {
                   Last updated: {new Date().toLocaleDateString();
                 </p>
                 
-                <h2 className="text-2xl font-bold text-gray-900 mb-4"></h>What Are Cookies</h2>
+                <h2 _className="text-2xl font-bold text-gray-900 mb-4"></h>What Are Cookies</h2>
                 <p className="text-gray-700 mb-6"></p>
                   Cookies are small text files that are placed on your computer or mobile device when you visit our website.
                 </p>

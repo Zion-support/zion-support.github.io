@@ -8,14 +8,14 @@ interface LoadingSpinnerProps {
   className?: string;
 }
 
-const sizeClasses = {
+const _sizeClasses = {
   sm: 'h-4 w-4',
   md: 'h-6 w-6',
   lg: 'h-8 w-8',
 };
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
+  _size = 'md',
   text = 'Loading...',
   className = '',
 }) => {

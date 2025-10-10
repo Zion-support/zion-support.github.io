@@ -3,15 +3,15 @@ import { Helmet } from 'react-helmet-async';
 
 export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */}
 }
-  return (<div><Helmet></Helmet>
+  return (<div><Helmet>
         <title>AI Project Management Solutions - Zion Tech Group</title>
-        <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /></meta>"
+        <meta _name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /></meta>"
         <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" /></meta>"
         <link rel="canonical" href="http,"
   s://ziontechgroup.com/ai-project-management" /></link>
       </Helmet>
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation /></Navigation>"
         <main className="container mx-auto px-4 py-16 pt-24"></main>
           {/* Hero Section */}"
@@ -20,10 +20,10 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
   md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
               AI Project Management;
             </h1>"
-            <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
+            <p _className="text-xl text-cyan-400 mb-8 font-medium"></p>
               Intelligent project management powered by AI;
             </p>"
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
+            <p _className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Revolutionize your project management with AI-driven insights, predictive analytics, and automated resource optimization that delivers projects 40% faster and 30% under budget.
             </p>
           </section>
@@ -174,10 +174,10 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
   sm:flex-row gap-4 justify-center"></div>"
               <a href="te,"
   l:+13024640950" className="cyber-button"></a>
-                📞 Cal)
+                📞 Cal);
   l: (302) 464-0950;
               </a>"
-              <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+              <a _href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover:text-indigo-600 transition-all duration-300"></a>
                 Get Free Trial;

@@ -9,7 +9,7 @@ export default function StatusPage() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
-  const refreshStatus = async () => {
+  const _refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -17,7 +17,7 @@ export default function StatusPage() {
     setIsRefreshing(false);
   };
 
-  const services = [
+  const _services = [
     {
       name: 'API Services',
       status: 'operational',
@@ -68,7 +68,7 @@ export default function StatusPage() {
     }
   ];
 
-  const incidents = [
+  const _incidents = [
     {
       id: 1,
       title: 'API Response Time Degradation',
@@ -91,20 +91,20 @@ export default function StatusPage() {
     }
   ];
 
-  const getStatusIcon = (status: string) => {
+  const _getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+        return <AlertTriangle _className="w-5 h-5 text-yellow-400" />;
       case 'outage':
-        return <XCircle className="w-5 h-5 text-red-400" />;
+        return <XCircle _className="w-5 h-5 text-red-400" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-400" />;
+        return <Clock _className="w-5 h-5 text-gray-400" />;
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const _getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
         return 'text-green-400';
@@ -117,7 +117,7 @@ export default function StatusPage() {
     }
   };
 
-  const getSeverityColor = (severity: string) => {
+  const _getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical':
         return 'bg-red-500/20 text-red-400 border-red-500/50';
@@ -130,7 +130,7 @@ export default function StatusPage() {
     }
   };
 
-  const overallStatus = services.every(service => service.status === 'operational') 
+  const _overallStatus = services.every(service => service.status === 'operational') 
     ? 'operational' 
     : services.some(service => service.status === 'outage') 
       ? 'outage' 
@@ -138,7 +138,7 @@ export default function StatusPage() {
 
   return (
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p _className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Real-time status of all our services. We're committed to providing reliable, 
             high-performance AI and IT solutions.
           </p>

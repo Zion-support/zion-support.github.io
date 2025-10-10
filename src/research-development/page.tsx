@@ -12,7 +12,7 @@ import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-  const _researchAreas = [
+  const __researchAreas = [
     {
       id: 'ai',
       name: 'Artificial Intelligence',
@@ -47,7 +47,7 @@ $4},
 $4}
   ];
 
-  const researchProjects = {
+  const _researchProjects = {
     ai: [
       {
         title: 'Consensus Intelligence Framework',
@@ -193,7 +193,7 @@ $4}
     ]
   };
 
-  const publications = [
+  const _publications = [
     {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
       authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, et al.',
@@ -228,7 +228,7 @@ $4},
 $4}
   ];
 
-  const achievements = [
+  const _achievements = [
     {
       icon: Award,
       title: '50+ Research Papers',
@@ -254,7 +254,7 @@ $4}
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
@@ -293,7 +293,7 @@ $4}
   );
 };
   const [activeTab, setActiveTab] = useState('ai');
-  const _researchAreas = [
+  const __researchAreas = [
   // TOD,
   O: Add items;
 ];;
@@ -362,7 +362,7 @@ $4}
   n: 'Researching next-generation technologies'
     }
   ];
-  const researchProjects = {/* TODO: Fix JSX expression */}
+  const _researchProjects = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   a,
@@ -638,7 +638,7 @@ $4}
       }
 //     ]
   };
-  const publications = [
+  const _publications = [
   // TOD,
   O: Add items;
 ];;
@@ -708,7 +708,7 @@ $4}
   k: '#'
     }
   ];
-  const achievements = [
+  const _achievements = [
   // TOD,
   O: Add items;
 ];;
@@ -758,7 +758,7 @@ $4}
     
           <>
       <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
@@ -767,7 +767,7 @@ $4}
 // Research & Development;
 
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p _className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
 
           </p>
@@ -783,7 +783,7 @@ $4}
   // TOD,
   O: Add content;
 }
-                    activeTab === area.id;`
+                    _activeTab === area.id;`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
   hover:bg-slate-700/50 border-2 border-transparent'`
@@ -798,7 +798,7 @@ $4}
           
           
           "
-          <area.icon className="w-5 h-5 mr-2" /></area>"
+          <area.icon _className="w-5 h-5 mr-2" /></area>"
                   <span className="font-medium">{area.name}</span>
                 </button>
               ))}
@@ -862,7 +862,7 @@ $4}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Current Research Projects;
           </h2>"
-            <div className="grid grid-cols-1,"
+            <div _className="grid grid-cols-1,"
   lg:grid-cols-2 gap-8"></div>
               {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
@@ -899,7 +899,7 @@ $4}
           </div>
                     </div>
                     <div></div>"
-                      <div className="text-sm text-gray-400 mb-1">Timeline</div>"
+                      <div _className="text-sm text-gray-400 mb-1">Timeline</div>"
                       <div className="text-sm text-white">{project.timeline}</div>
                     </div>
                     <div></div>"
@@ -961,7 +961,7 @@ $4}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Recent Publications;
           </h2>"
-            <div className="max-w-4xl mx-auto"></div>"
+            <div _className="max-w-4xl mx-auto"></div>"
               <div className="space-y-6"></div>
                 {publications.map((pub, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
@@ -983,7 +983,7 @@ $4}
           </span>
                       </div>
                       <a></a>
-                        href={pub.link}"
+                        _href={pub.link}"
                         className="text-cyan-400,"
   hover:text-cyan-300 text-sm font-medium"
 // >
@@ -997,7 +997,7 @@ $4}
           </div>
 
           {/* Achievements */}
-          <div className="mb-16">
+          <div _className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
               Research Achievements
             </h2>
@@ -1013,7 +1013,7 @@ $4}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Research Achievements;
           </h2>"
-            <div className="grid grid-cols-1,
+            <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-6"></div>
               {achievements.map((achievement, index) => ()}"
@@ -1064,7 +1064,7 @@ $4}
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
 // Collaborate With Our Research Team;
           </h2>"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
+            <p _className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
 // Interested in collaborating on cutting-edge research? We welcome partnerships with;
               universities, research institutions, and industry leaders.
             
@@ -1078,7 +1078,7 @@ $4}
           
 
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div _className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
@@ -1097,7 +1097,7 @@ $4}
           </a>
 
               <a
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 
 // >
                 
@@ -1114,7 +1114,7 @@ $4}
           </a>
 
               <a
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 
 // >
                 

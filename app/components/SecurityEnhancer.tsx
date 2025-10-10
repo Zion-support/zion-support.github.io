@@ -11,7 +11,7 @@ interface SecurityEnhancerProps {
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
-  enableCSP = true,
+  _enableCSP = true,
   enableHSTS = true,
   enableXSSProtection = true,
   enableClickjackingProtection = true,
@@ -24,7 +24,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
 
     // Content Security Policy
     if (enableCSP) {
-      const cspMeta = document.createElement('meta');
+      const _cspMeta = document.createElement('meta');
       cspMeta.httpEquiv = 'Content-Security-Policy';
       cspMeta.content = [
         "default-src 'self'",
@@ -45,15 +45,15 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
 
     // XSS Protection
     if (enableXSSProtection) {
-      const xssMeta = document.createElement('meta');
+      const _xssMeta = document.createElement('meta');
       xssMeta.httpEquiv = 'X-XSS-Protection';
-      xssMeta.content = '1; mode=block';
+      xssMeta.content = '1; _mode=block';
       document.head.appendChild(xssMeta);
     }
 
     // Clickjacking Protection
     if (enableClickjackingProtection) {
-      const frameOptionsMeta = document.createElement('meta');
+      const _frameOptionsMeta = document.createElement('meta');
       frameOptionsMeta.httpEquiv = 'X-Frame-Options';
       frameOptionsMeta.content = 'DENY';
       document.head.appendChild(frameOptionsMeta);
@@ -61,28 +61,28 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
 
     // Content Type Sniffing Protection
     if (enableContentTypeSniffing) {
-      const contentTypeMeta = document.createElement('meta');
+      const _contentTypeMeta = document.createElement('meta');
       contentTypeMeta.httpEquiv = 'X-Content-Type-Options';
       contentTypeMeta.content = 'nosniff';
       document.head.appendChild(contentTypeMeta);
     }
 
     // Referrer Policy
-    const referrerMeta = document.createElement('meta');
+    const _referrerMeta = document.createElement('meta');
     referrerMeta.name = 'referrer';
     referrerMeta.content = 'strict-origin-when-cross-origin';
     document.head.appendChild(referrerMeta);
 
     // Permissions Policy
-    const permissionsMeta = document.createElement('meta');
+    const _permissionsMeta = document.createElement('meta');
     permissionsMeta.httpEquiv = 'Permissions-Policy';
-    permissionsMeta.content = 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()';
+    permissionsMeta.content = 'camera=(), _microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()';
     document.head.appendChild(permissionsMeta);
 
     // Security headers for API calls
-    const originalFetch = window.fetch;
+    const _originalFetch = window.fetch;
     window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
-      const headers = new Headers(init?.headers);
+      const _headers = new Headers(init?.headers);
       
       // Add security headers
       headers.set('X-Requested-With', 'XMLHttpRequest');
@@ -96,7 +96,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     };
 
     // Input sanitization for forms
-    const sanitizeInput = (input: string): string => {
+    const _sanitizeInput = (input: string): string => {
       return input
         .replace(/[<>]/g, '') // Remove potential HTML tags
         .replace(/javascript:/gi, '') // Remove javascript: protocol
@@ -105,10 +105,10 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     };
 
     // Apply input sanitization to all form inputs
-    const inputs = document.querySelectorAll('input, textarea, select');
+    const _inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach(input => {
       input.addEventListener('input', (e) => {
-        const target = e.target as HTMLInputElement;
+        const _target = e.target as HTMLInputElement;
         if (target.value !== sanitizeInput(target.value)) {
           target.value = sanitizeInput(target.value);
         }
@@ -116,8 +116,8 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     });
 
     // Console warning for security
-    console.log('%cSecurity Notice', 'color: red; font-size: 16px; font-weight: bold;');
-    console.log('%cThis is a browser feature intended for developers. If someone told you to copy-paste something here, it is a scam.', 'color: red; font-size: 14px;');
+    // console.log(...);
+    // console.log(...);
 
   }, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
 

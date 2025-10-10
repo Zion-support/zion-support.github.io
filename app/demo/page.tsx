@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
-  const demos = [
+  const _demos = [
     {
       title: 'AI Analytics Dashboard',
       description: 'See how our AI analytics can transform your business intelligence',
@@ -29,7 +29,7 @@ const DemoPage: React.FC = () => {
     <>
       <Helmet>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
+        <meta _name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
         <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
       </Helmet>
       

@@ -29,11 +29,11 @@ export interface UserProperties {}
 }
 class EnhancedAnalytics {}
   private queue: AnalyticsEvent[] = [];}
-  private userProperties: UserProperties = {}
+  private userProperties: _UserProperties = {}
   private sessionId: string,
   private isInitialized = false;
-  private batchSize = 10;
-  private flushInterval = 30000; // 30 seconds;
+  private _batchSize = 10;
+  private _flushInterval = 30000; // 30 seconds;
   private offlineQueue: AnalyticsEvent[] = []
   constructor() {,
     this.sessionId = this.generateSessionId(),
@@ -97,7 +97,7 @@ class EnhancedAnalytics {}
 }
   }
   public trackEvent(event: AnalyticsEvent): void {
-    const enrichedEvent: AnalyticsEvent = {
+    const enrichedEvent: _AnalyticsEvent = {
       ...event;
       metadata: {
         ...event.metadata;
@@ -109,7 +109,7 @@ class EnhancedAnalytics {}
 }
   }
   public trackEvent(event: AnalyticsEvent): void {}
-    const enrichedEvent: AnalyticsEvent = {}
+    const enrichedEvent: _AnalyticsEvent = {}
       ...event,
       metadata: {}
         ...event.metadata,
@@ -119,9 +119,9 @@ class EnhancedAnalytics {}
 }
     }
     // Add to queue;
-    this.queue.push(enrichedEvent)
+    this.queue.push(enrichedEvent);
     // Send to gtag if available;
-    this.sendToGtag(enrichedEvent)
+    this.sendToGtag(enrichedEvent);
     // Check if we should flush;
     if (this.queue.length >= this.batchSize) {
       this.flush();});;)
@@ -184,12 +184,12 @@ export interface AnalyticsEvent {/* TODO: Fix JSX expression */});;)
 export interface UserProperties {/* TODO: Fix JSX expression */});;)
 }
 class EnhancedAnalytics {/* TODO: Fix JSX expression */}
-  userProperties: UserProperties = {};
+  userProperties: _UserProperties = {};
   private,
   sessionId: string,
-  private isInitialized = false;
-  private batchSize = 10;
-  private flushInterval = 30000; // 30 seconds;
+  private _isInitialized = false;
+  private _batchSize = 10;
+  private _flushInterval = 30000; // 30 seconds;
   private,
   offlineQueue: AnalyticsEvent[] = [];
   constructor() {/* TODO: Fix JSX expression */});;)
@@ -214,11 +214,11 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 });;)
 });;)
 }
-  public setUserProperties(propertie)
+  public setUserProperties(propertie);
   s: UserProperties): void {/* TODO: Fix JSX expression */});;)
 }});
 }
-  public trackEvent(even)
+  public trackEvent(even);
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */});;)
 }
     };
@@ -230,7 +230,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     if (this.queue.length >= this.batchSize) {/* TODO: Fix JSX expression */});;)
 }
   }
-  private sendToGtag(even)
+  private sendToGtag(even);
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */});;)
 }
       ).gtag;
@@ -240,7 +240,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 });;)
 }
   }
-  public trackPageView(pagePat)
+  public trackPageView(pagePat);
   h: string, pageTitle?: string): void {/* TODO: Fix JSX expression */});;)
 }
     });;)
@@ -276,11 +276,11 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       metadata: {}
         stack: error.stack,
         ...context}
-  public trackUserInteraction(actio)
+  public trackUserInteraction(actio);
   n: string, label?: string, value?: number): void {/* TODO: Fix JSX expression */});;)
 });;)
 }
-  public trackError(erro)
+  public trackError(erro);
   r: Error, context?: Record<string></string>): void {/* TODO: Fix JSX expression */});;)
 }
     });;)
@@ -299,7 +299,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       metadata: {}
         rating}
   public trackPerformance(metri,
-  c: string, valu)
+  c: string, valu);
   e: number, rating?: string): void {/* TODO: Fix JSX expression */});;)
 }
     });;)
@@ -316,7 +316,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       value,
       metadata: {`}
         conversionId: `conv-${Date.now();
-  public trackConversion(conversionTyp)
+  public trackConversion(conversionTyp);
   e: string, value?: number): void {/* TODO: Fix JSX expression */}`
   d: `conv-${Date.now();`});
 }
@@ -329,10 +329,10 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     metadata?: Record<string></string>
   ): void {
     this.trackEvent({)
-      category)
-      action)
-      label)
-      value)
+      category);
+      action);
+      label);
+      value);
       metadata});;)
 });;)
 }
@@ -359,7 +359,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     if (this.queue.length === 0) return
     // Check if online
     if (typeof navigator !== 'undefined' && !navigator.onLine) {}
-      this.offlineQueue.push(...this.queue)
+      this.offlineQueue.push(...this.queue);
       this.queue = []
       return;});;)
 }
@@ -375,7 +375,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   private flushOfflineQueue(): void {}
     if (this.offlineQueue.length === 0) return
     // Merge offline queue into main queue
-    this.queue.push(...this.offlineQueue)
+    this.queue.push(...this.offlineQueue);
     this.offlineQueue = []
     // Flush;
     this.flush();});;)
@@ -414,7 +414,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   });;)
 }
 // Export singleton instance;
-export const analytics = new EnhancedAnalytics()
+export const _analytics = new EnhancedAnalytics()
 export default analytics;
   public trackCustomEvent(categor,
   y: string,
@@ -449,7 +449,7 @@ export default analytics;
 }
 }
 // Export singleton instance;
-export const analytics = new EnhancedAnalytics();
+export const _analytics = new EnhancedAnalytics();
 export default analytics;
 `
 }

@@ -29,7 +29,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
       // Add keyboard navigation support;)
       document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
           // Handle tab navigation;
-          console.log('Tab navigation detected');
+          // console.log(...);
         }
       }
   )
@@ -38,7 +38,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
 
   private setupFocusIndicators(): void {if (typeof document !== 'undefined') {}
       // Add focus indicators;
-      const style = document.createElement('style');
+      const _style = document.createElement('style');
       style.textContent = `
 
         *:focus {outline: 2px solid #0066cc;}
@@ -46,7 +46,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
         }
 
       `
-      document.head.appendChild(style)
+      document.head.appendChild(style);
     }
   }
 

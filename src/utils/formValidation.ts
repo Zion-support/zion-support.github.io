@@ -24,7 +24,7 @@ export interface FieldValidation {// TODO: Add content;}
  * Common validation rules;
  */
 
-export const _validationRules = {// TODO: Add content;}
+export const __validationRules = {// TODO: Add content;}
 
 }
   /**
@@ -47,11 +47,11 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (valu)
+  e: (valu);
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const _emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);
     },
 //     message;
@@ -81,18 +81,18 @@ export const _validationRules = {// TODO: Add content;}
   e: message || `Must be no more than ${max} characters`
   }),
   /**
-   * Validate phone number (US format)
+   * Validate phone number (US format);
    */
 
   phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({// TODO: Add content;}
 
 };
   validat,
-  e: (valu)
+  e: (valu);
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+      const _phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
     },
 //     message;
@@ -106,7 +106,7 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (valu)
+  e: (valu);
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -140,7 +140,7 @@ export const _validationRules = {// TODO: Add content;}
    * Validate pattern match;
    */
 
-  pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({// TODO: Add content;}
+  pattern: (regex: RegExp, _message = 'Invalid format'): ValidationRule<string> => ({// TODO: Add content;}
 };
   validate: (value: string) => regex.test(value),
 
@@ -171,20 +171,20 @@ export const _validationRules = {// TODO: Add content;}
    */
   strongPasswor,
   d: ()
-    message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
+    _message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
   ): ValidationRule;
           <string> => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   validat,
-  e: (valu)
+  e: (valu);
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const hasUpperCase = /[A-Z]/.test(value);
-      const hasLowerCase = /[a-z]/.test(value);
-      const hasNumber = /[0-9]/.test(value);
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|
+      const _hasUpperCase = /[A-Z]/.test(value);
+      const _hasLowerCase = /[a-z]/.test(value);
+      const _hasNumber = /[0-9]/.test(value);
+      const _hasSpecialChar = /[!@#$%^&*(),.?":{}|
           
           
           
@@ -193,20 +193,20 @@ export const _validationRules = {// TODO: Add content;}
           
           
           
-          <>]/.test(value)
+          <>]/.test(value);
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
     },
 // message;
   }),
   /**
-   * Validate matching fields (e.g., password confirmation)
+   * Validate matching fields (e.g., password confirmation);
    */
 
   matches: (otherFieldValue: string, fieldName: string): ValidationRule;
           <string> => ({// TODO: Add content;}
 };
-  validate: (value: string) => value === otherFieldValue,
+  validate: (value: string) => _value === otherFieldValue,
     message: `Must match ${fieldName}`
 
   }),
@@ -219,11 +219,11 @@ export const _validationRules = {// TODO: Add content;}
 
 };
   validat,
-  e: (fil)
+  e: (fil);
   e: File) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
+      const _maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size;
           <= maxSizeInBytes;
     },
@@ -247,7 +247,7 @@ export const _validationRules = {// TODO: Add content;}
  */
 export function validateField;
           <T>(valu,
-  e: T, rule)
+  e: T, rule);
   s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -282,18 +282,18 @@ export function validateForm;
 ): Record<keyof T, ValidationResult> {// TODO: Add content;}
 
 }
-  const results = {} as Record;
+  const _results = {} as Record;
           <keyof T, ValidationResult>;
   for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const value = formData[fieldName];
-    const rules = validationSchema[fieldName];
+    const _value = formData[fieldName];
+    const _rules = validationSchema[fieldName];
     results[fieldName] = validateField(value, rules);
   }
-    const value = formData[fieldName]
+    const _value = formData[fieldName]
     const rules = validationSchema[fieldName]
-    results[fieldName] = validateField(value, rules)
+    results[fieldName] = validateField(value, rules);
   }
   return results;
 }
@@ -321,12 +321,12 @@ export function getFormErrors;
 ): Record<keyof T, string[]> {// TODO: Add content;}
 
 }
-  const errors = {} as Record;
+  const _errors = {} as Record;
           <keyof T, string[]>;
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const result = validationResults[fieldName];
+    const _result = validationResults[fieldName];
     if (!result.valid) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -368,16 +368,16 @@ export function debounce;
 
 }
   let,
-  timeout: NodeJS.Timeout | null = null;
+  timeout: NodeJS.Timeout | _null = null;
   return function executedFunction(...arg,
   s: Parameters;)
           <T>) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const later = () => {/* TODO: Fix JSX expression */}
+    const _later = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      timeout = null;
+      _timeout = null;
       func(...args);
     };
     if (timeout) {/* TODO: Fix JSX expression */}
@@ -387,9 +387,9 @@ export function debounce;
     }
     if (timeout) {/* TODO: Fix JSX expression */}
   }
-      clearTimeout(timeout)
+      clearTimeout(timeout);
     }
-    timeout = setTimeout(later, wait)
+    timeout = setTimeout(later, wait);
   }
 }"`
 

@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 const DataAnalyticsPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: BarChart,
       title: 'Advanced Data Visualization',
@@ -48,7 +48,7 @@ const DataAnalyticsPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
     'Improve operational efficiency',
@@ -63,7 +63,7 @@ const DataAnalyticsPage: React.FC = () => {
     <>
       <Helmet>
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
-        <meta name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />
+        <meta _name="description" content="Professional data analytics services by Zion Tech Group. Advanced business intelligence, data visualization, and AI-powered insights for your business." />
         <meta name="keywords" content="data analytics, business intelligence, data visualization, AI analytics, Zion Tech Group" />
       </Helmet>
 

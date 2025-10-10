@@ -5,7 +5,7 @@ import { Loader2 } from 'lucide-react';
 
 export const PageLoader: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
           <Loader2 className="w-8 h-8 text-slate-900 animate-spin" />
@@ -19,7 +19,7 @@ export const PageLoader: React.FC = () => {
 
 export const ComponentLoader: React.FC = () => {
   return (
-    <div className="flex items-center justify-center p-8">
+    <div _className="flex items-center justify-center p-8">
       <div className="flex items-center space-x-2 text-cyan-400">
         <Loader2 className="w-5 h-5 animate-spin" />
         <span>Loading component...</span>
@@ -30,7 +30,7 @@ export const ComponentLoader: React.FC = () => {
 
 export const ServiceCardSkeleton: React.FC = () => {
   return (
-    <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse">
+    <div _className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse">
       <div className="h-4 bg-slate-700 rounded mb-4"></div>
       <div className="h-3 bg-slate-700 rounded mb-2"></div>
       <div className="h-3 bg-slate-700 rounded mb-4"></div>
@@ -41,7 +41,7 @@ export const ServiceCardSkeleton: React.FC = () => {
 
 export const ContentSkeleton: React.FC = () => {
   return (
-    <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
+    <div _className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
       <div className="h-6 bg-slate-700 rounded mb-4"></div>
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded mb-2"></div>

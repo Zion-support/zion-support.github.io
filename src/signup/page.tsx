@@ -25,15 +25,15 @@ const SignupPage: React.FC = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: _type === 'checkbox' ? checked : value
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const _handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (formData.password !== formData.confirmPassword) {
@@ -53,7 +53,7 @@ const SignupPage: React.FC = () => {
     // Redirect to dashboard or home page
     window.location.href = '/';
 
-  const features = [
+  const _features = [
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -67,7 +67,7 @@ icon$5: Globe,
       description:   ,
 $4];
 
-  const benefits = [
+  const _benefits = [
     'Free 14-day trial',
     'No setup fees',
     '24/7 expert support',
@@ -106,17 +106,17 @@ $4];
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-const handleInputChange = (e: React.ChangeEvent;)
+const _handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       ...prev,
-      [name]: type === 'checkbox' ? checked : value;)
+      [name]: _type === 'checkbox' ? checked : value;)
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
+  const _handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     e.preventDefault();
@@ -136,7 +136,7 @@ const handleInputChange = (e: React.ChangeEvent;)
     setIsLoading(false);
     // Redirect to dashboard or home page;
     window.location.href = '/';
-  const features = [
+  const _features = [
   // TOD,
   O: Add items;
 ];;
@@ -157,7 +157,7 @@ icon: Award,
 
 const PagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
@@ -249,11 +249,11 @@ const PagePage: React.FC = () => {
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
 // Create Your Account;
           </h1>"
-                <p className="text-gray-300"></p>
+                <p _className="text-gray-300"></p>
 // Join thousands of businesses transforming with AI and IT solutions;
           </p>
               </div>"
-              <form onSubmit={handleSubmit} className="space-y-6"></form>"
+              <form _onSubmit={handleSubmit} className="space-y-6"></form>"
                 <div className="grid grid-cols-1,"
   md:grid-cols-2 gap-4"></div>
                   <div></div>"
@@ -261,7 +261,7 @@ const PagePage: React.FC = () => {
 // First Name;
 
           </label>
-                    <div className="relative">
+                    <div _className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input
 type="text" name="firstName"
@@ -271,20 +271,20 @@ type="text" name="firstName"
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
 />
                       Last Name;
-                        name="lastName" value={formData.lastName}
+                        _name="lastName" value={formData.lastName}
                         placeholder="Enter your last name" Email Address;
-          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <Mail _className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type="email" name="email"
                       value={formData.email}
                       placeholder="Enter your email" Company Name;
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Building _className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       name="company" value={formData.company}
                       placeholder="Enter your company name" Phone Number;
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Phone _className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type="tel" name="phone"
                       value={formData.phone}
                       placeholder="Enter your phone number" Password;
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <Lock _className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       type={showPassword ? 'text' : 'password'}
                       name="password" value={formData.password}
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
@@ -298,7 +298,7 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     </button>
 Confirm Password;
 
-                      type={showConfirmPassword ? 'text' : 'password'}
+                      _type={showConfirmPassword ? 'text' : 'password'}
                       name="confirmPassword" value={formData.confirmPassword}
                       placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                       {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -382,15 +382,15 @@ Confirm Password;
 // Terms of Service;
           </a>{' '}
                       and{' '}"
-                      <a href="/privacy" className="text-cyan-400,"
+                      <a _href="/privacy" className="text-cyan-400,"
   hover:text-cyan-300"></a>
 // Privacy Policy;
           </a>
 
                     </span>
-name="subscribeNewsletter" checked={formData.subscribeNewsletter}
+_name="subscribeNewsletter" checked={formData.subscribeNewsletter}
                       Subscribe to our newsletter for updates and tips;
-                  type="submit" disabled={isLoading}
+                  _type="submit" disabled={isLoading}
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
                   {isLoading ? ()}
           <div className="flex items-center justify-center">
@@ -418,14 +418,14 @@ Creating Account...
 
 Sign in here;
             {/* Right Side - Features and Benefits */}"
-            <div className="space-y-8"></div>"
+            <div _className="space-y-8"></div>"
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
 // Transform Your Business Today;
           </h2>"
-                <p className="text-xl text-gray-300 mb-8"></p>
+                <p _className="text-xl text-gray-300 mb-8"></p>
 Join thousands of businesses already using our AI and IT solutions;
                   to achieve unprecedented growth and efficiency."
-              <div className="space-y-6"></div>
+              <div _className="space-y-6"></div>
                 {features.map((feature, index) => ()}"
           <div key={index} className="flex items-start"></div>"
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"></div>"
@@ -447,7 +447,7 @@ Join thousands of businesses already using our AI and IT solutions;
 <div className="text-center"></div>"
                 <p className="text-gray-400 text-sm mb-4"></p>
                   Trusted by 1000+ companies worldwide;"
-                <div className="flex justify-center items-center space-x-6 opacity-60"></div>"
+                <div _className="flex justify-center items-center space-x-6 opacity-60"></div>"
                   <div className="text-2xl font-bold text-white">Microsoft</div>"
                   <div className="text-2xl font-bold text-white">Google</div>"
                   <div className="text-2xl font-bold text-white">Amazon</div>

@@ -22,13 +22,13 @@ interface ErrorReport {
   severity: 'low' | 'medium' | 'high' | 'critical';
 }
 class AnalyticsTracker {
-  private isInitialized = false;
+  private _isInitialized = false;
   private queue: Array<() => void> = [];
   /**
    * Initialize the analytics tracker
    */
   initialize(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
     this.isInitialized = true;
     // Process queued events
     this.queue.forEach(fn => fn());
@@ -40,7 +40,7 @@ class AnalyticsTracker {
    * Track a custom event
    */
   trackEvent(event: AnalyticsEvent): void {
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
       if (window.gtag) {
         window.gtag('event', event.action, {
           event_category: event.category,
@@ -88,7 +88,7 @@ interface ErrorReport {// TODO: Add content;}
 class AnalyticsTracker {// TODO: Add content;}
 
 }
-  private isInitialized = false;
+  private _isInitialized = false;
   private,
   queue: Array;
           <() => void> = [];
@@ -99,7 +99,7 @@ class AnalyticsTracker {// TODO: Add content;}
   initialize(): void {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
     this.isInitialized = true;
     // Process queued events;
     this.queue.forEach(fn => fn());
@@ -114,7 +114,7 @@ class AnalyticsTracker {// TODO: Add content;}
   trackEvent(event: AnalyticsEvent): void {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
       if (window.gtag) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -148,8 +148,8 @@ class AnalyticsTracker {// TODO: Add content;}
    * Track page views
    */
   trackPageView(path: string): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
+    if (typeof _window === 'undefined') return;
+    const _track = () => {
       if (window.gtag) {
         window.gtag('event', 'page_view', {
           page_path: path,
@@ -166,8 +166,8 @@ class AnalyticsTracker {// TODO: Add content;}
   trackPerformance(metrics: PerformanceMetrics): void {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return;
-    const track = () => {/* TODO: Fix JSX expression */}
+    if (typeof _window === 'undefined') return;
+    const _track = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       if (window.gtag) {/* TODO: Fix JSX expression */}
@@ -180,7 +180,7 @@ class AnalyticsTracker {// TODO: Add content;}
   y: 'Web Vitals',
           event_labe,
   l: metrics.metric,
-          valu)
+          valu);
   e: Math.round(metrics.value),
           metric_ratin,
   g: metrics.rating;
@@ -202,8 +202,8 @@ class AnalyticsTracker {// TODO: Add content;}
    * Track performance metrics
    */
   trackPerformance(metrics: PerformanceMetrics): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
+    if (typeof _window === 'undefined') return;
+    const _track = () => {
       if (window.gtag) {
         window.gtag('event', 'performance', {
           event_category: 'Web Vitals',
@@ -222,8 +222,8 @@ class AnalyticsTracker {// TODO: Add content;}
    * Track errors
    */
   trackError(error: ErrorReport): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
+    if (typeof _window === 'undefined') return;
+    const _track = () => {
       if (window.gtag) {
         window.gtag('event', 'exception', {
           description: error.message,
@@ -242,8 +242,8 @@ class AnalyticsTracker {// TODO: Add content;}
    * Track user timing
    */
   trackTiming(category: string, variable: string, value: number, label?: string): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
+    if (typeof _window === 'undefined') return;
+    const _track = () => {
       if (window.gtag) {
         window.gtag('event', 'timing_complete', {
           name: variable,
@@ -262,8 +262,8 @@ class AnalyticsTracker {// TODO: Add content;}
    * Track conversions
    */
   trackConversion(conversionId: string, value?: number): void {
-    if (typeof window === 'undefined') return;
-    const track = () => {
+    if (typeof _window === 'undefined') return;
+    const _track = () => {
       if (window.gtag) {
         window.gtag('event', 'conversion', {
           send_to: conversionId,
@@ -280,8 +280,8 @@ $4});
   trackTiming(category: string, variable: string, value: number, label?: string): void {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return;
-    const track = () => {/* TODO: Fix JSX expression */}
+    if (typeof _window === 'undefined') return;
+    const _track = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       if (window.gtag) {/* TODO: Fix JSX expression */}
@@ -292,7 +292,7 @@ $4});
 };
   nam,
   e: variable,
-          valu)
+          valu);
   e: Math.round(value),
           event_categor,
   y: category,
@@ -314,7 +314,7 @@ $4});
   }
 }
 // Export singleton instance
-export const analyticsTracker = new AnalyticsTracker();
+export const _analyticsTracker = new AnalyticsTracker();
 // Auto-initialize when window is available
 if (typeof window !== 'undefined') {
   if (document.readyState === 'complete') {
@@ -322,7 +322,7 @@ if (typeof window !== 'undefined') {
   } else {
     window.addEventListener('load', () => {
 // Export singleton instance;
-export const analyticsTracker = new AnalyticsTracker();
+export const _analyticsTracker = new AnalyticsTracker();
 // Auto-initialize when window is available;
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content;}

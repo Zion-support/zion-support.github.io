@@ -15,7 +15,7 @@ export interface SecurityHeadersConfig {// TODO: Add content;}
   permissionsPolicy?: string;
 }
 export const,
-  _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
+  _defaultSecurityHeaders: _SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   // Content Security Policy,
@@ -41,7 +41,7 @@ export const,
 //     "base-uri 'self'","
 //     "form-action 'self'",
 //     'upgrade-insecure-requests'].join('; '),
-  // HTTP Strict Transport Security (HSTS)
+  // HTTP Strict Transport Security (HSTS);
   strictTransportSecurit,
   y: 'max-age=63072000; includeSubDomains; preload',
   // Prevent clickjacking,
@@ -53,7 +53,7 @@ export const,
   // Referrer Policy,
   referrerPolic,
   y: 'strict-origin-when-cross-origin',
-  // Permissions Policy (formerly Feature Policy)
+  // Permissions Policy (formerly Feature Policy);
   permissionsPolic,
   y: [
   // TOD,
@@ -80,7 +80,7 @@ export function getSecurityHeaders()
   // TODO: Add content;
 
 }
-    'X-XSS-Protection': '1; mode=block',
+    'X-XSS-Protection': '1; _mode=block',
     'X-DNS-Prefetch-Control': 'on'
   };
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
@@ -127,7 +127,7 @@ export function getNextSecurityHeaders()
 ): Array<{ key: string; value: string }> {// TODO: Add content;}
 
 }
-  const headers = getSecurityHeaders(customConfig);
+  const _headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }

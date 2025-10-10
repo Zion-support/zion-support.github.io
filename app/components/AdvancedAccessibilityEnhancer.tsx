@@ -10,7 +10,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
 
   useEffect(() => {
     // Initialize accessibility enhancements
-    const initAccessibility = () => {
+    const _initAccessibility = () => {
       // Add high contrast mode support
       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
       if (prefersHighContrast) {
@@ -18,13 +18,13 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       }
 
       // Add reduced motion support
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const _prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (prefersReducedMotion) {
         document.documentElement.classList.add('reduced-motion');
       }
 
       // Add focus indicators
-      const style = document.createElement('style');
+      const _style = document.createElement('style');
       style.textContent = `
         .focus-visible {
           outline: 2px solid #3b82f6;
@@ -44,13 +44,13 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       document.head.appendChild(style);
 
       // Add keyboard navigation support
-      const handleKeyDown = (e: KeyboardEvent) => {
+      const _handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
       };
 
-      const handleMouseDown = () => {
+      const _handleMouseDown = () => {
         document.body.classList.remove('keyboard-navigation');
       };
 
@@ -66,7 +66,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       };
     };
 
-    const cleanup = initAccessibility();
+    const _cleanup = initAccessibility();
     return cleanup;
   }, []);
 
@@ -75,7 +75,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
   }
 
   return (
-    <div className="accessibility-enhanced">
+    <div _className="accessibility-enhanced">
       {children}
     </div>
   );

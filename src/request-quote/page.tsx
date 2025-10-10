@@ -26,7 +26,7 @@ $4});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const _serviceTypes = [
+  const __serviceTypes = [
     'AI Services',
     'IT Infrastructure',
     'Cybersecurity',
@@ -38,14 +38,14 @@ $4});
     'Other'
   ];
 
-  const projectSizes = [
+  const _projectSizes = [
     'Small (1-10 employees)',
     'Medium (11-100 employees)',
     'Large (101-1000 employees)',
     'Enterprise (1000+ employees)'
   ];
 
-  const timelines = [
+  const _timelines = [
     'ASAP',
     '1-3 months',
     '3-6 months',
@@ -54,7 +54,7 @@ $4});
     'Flexible'
   ];
 
-  const budgetRanges = [
+  const _budgetRanges = [
     'Under $10,000',
     '$10,000 - $50,000',
     '$50,000 - $100,000',
@@ -63,7 +63,7 @@ $4});
     'To be discussed'
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -71,7 +71,7 @@ $4});
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const _handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -82,7 +82,7 @@ $4});
     setIsSubmitted(true);
   };
 
-  const benefits = [
+  const _benefits = [
     {
       icon: Calculator,
       title: 'Free Quote',
@@ -105,7 +105,7 @@ $4},
 $4}
   ];
 
-  const whyChooseUs = [
+  const _whyChooseUs = [
     {
       icon: Users,
       title: '50+ Successful Projects',
@@ -132,7 +132,7 @@ $4}
     return (
       <>
         <Navigation />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="container mx-auto px-4 py-16 pt-24">
             <div className="max-w-2xl mx-auto text-center">
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -189,7 +189,7 @@ $4}
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
@@ -484,7 +484,7 @@ $4}
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const _serviceTypes = [
+  const __serviceTypes = [
   // TOD,
   O: Add items;
 ];;
@@ -498,7 +498,7 @@ $4}
 //     'Consulting Services',
 //     'Other'
   ];
-  const projectSizes = [
+  const _projectSizes = [
   // TOD,
   O: Add items;
 ];;
@@ -507,7 +507,7 @@ $4}
 //     'Large (101-1000 employees)',
 //     'Enterprise (1000+ employees)'
   ];
-  const timelines = [
+  const _timelines = [
   // TOD,
   O: Add items;
 ];;
@@ -518,7 +518,7 @@ $4}
 //     '12+ months',
 //     'Flexible'
   ];
-  const budgetRanges = [
+  const _budgetRanges = [
   // TOD,
   O: Add items;
 ];;
@@ -529,7 +529,7 @@ $4}
 //     '$500,000+',
 //     'To be discussed'
   ];
-  const handleInputChange = (e: React.ChangeEvent;)
+  const _handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -541,7 +541,7 @@ $4}
       [name]: value;)
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
+  const _handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     e.preventDefault();
@@ -551,7 +551,7 @@ $4}
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
-  const benefits = [
+  const _benefits = [
   // TOD,
   O: Add items;
 ];;
@@ -596,7 +596,7 @@ $4}
   n: 'Free consultation with our technology experts'
     }
   ];
-  const whyChooseUs = [
+  const _whyChooseUs = [
   // TOD,
   O: Add items;
 ];;
@@ -649,7 +649,7 @@ $4}
       
           <>
         <Navigation /></Navigation>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+        <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
           <div className="container mx-auto px-4 py-16 pt-24"></div>"
             <div className="max-w-2xl mx-auto text-center"></div>"
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>"
@@ -680,7 +680,7 @@ $4}
           
           
           </p>"
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>"
+              <div _className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>"
                 <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>"
                 <div className="space-y-3 text-left"></div>"
                   <div className="flex items-center"></div>"
@@ -717,7 +717,7 @@ $4}
           </a>
 
                 <a
-                  href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                  _href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 
 // >
                   
@@ -748,7 +748,7 @@ $4}
     
           <>
       <Navigation /></Navigation>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
@@ -757,7 +757,7 @@ $4}
 // Request a Quote;
 
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p _className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
           </div>
@@ -843,7 +843,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </label>
 
                       <input
-type="text" name="company"
+_type="text" name="company"
                         value={formData.company}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
@@ -865,7 +865,7 @@ type="text" name="company"
           </label>
 
                       <input
-type="tel" name="phone"
+_type="tel" name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number"
@@ -927,7 +927,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </label>
 
                       <select
-                        name="projectSize" value={formData.projectSize}
+                        _name="projectSize" value={formData.projectSize}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 
@@ -980,7 +980,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </label>
 
                     <select
-                      name="budget" value={formData.budget}
+                      _name="budget" value={formData.budget}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 
@@ -1038,7 +1038,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </label>
 
                     <textarea
-                      name="requirements" value={formData.requirements}
+                      _name="requirements" value={formData.requirements}
                       onChange={handleInputChange}
                       rows={3}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints..."

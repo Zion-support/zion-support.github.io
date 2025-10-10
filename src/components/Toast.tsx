@@ -1,7 +1,7 @@
 
 
 'use client';
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
+export type _ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -19,7 +19,7 @@ const,
   O: Add content;}
 }
 //   message,
-  type = 'success',
+  _type = 'success',
   duration = 3000,
 //   onClose,
 //   show;)
@@ -40,7 +40,7 @@ const,
     return undefined;
   }, [show, duration, onClose]);
   if (!isVisible) return null;
-  const getToastStyles = () => {/* TODO: Fix JSX expression */}
+  const _getToastStyles = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     switch (type) {/* TODO: Fix JSX expression */}
@@ -59,7 +59,7 @@ const,
         return 'bg-gray-800 text-white';
     }
   };
-  const getIcon = () => {/* TODO: Fix JSX expression */}
+  const _getIcon = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     switch (type) {/* TODO: Fix JSX expression */}
@@ -82,7 +82,7 @@ const,
   )
     
           <div></div>
-className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
+_className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert""
       aria-live="polite"
 // >
@@ -105,7 +105,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           setIsVisible(false);
           if (onClose) onClose();
         }}"
-        className="ml-4,"
+        _className="ml-4,"
   hover:opacity-80 transition-opacity""
         aria-label="Close notification"
 //       >

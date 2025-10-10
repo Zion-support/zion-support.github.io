@@ -8,7 +8,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AICustomerSupportBotPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Bot,
       title: '24/7 AI Support',
@@ -30,7 +30,7 @@ const AICustomerSupportBotPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
       name: 'Starter',
       price: '$149',
       period: '/month',

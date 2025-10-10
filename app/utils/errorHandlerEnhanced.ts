@@ -6,15 +6,15 @@ export class AppError extends Error {}
   statusCode: number,
   isOperational: boolean,
   timestamp: string,
-  constructor(message: string, statusCode = 500, isOperational = true) {}
-    super(message)
+  constructor(message: string, _statusCode = 500, isOperational = true) {}
+    super(message);
     this.statusCode = statusCode;
     this.isOperational = isOperational;
     this.timestamp = new Date().toISOString()
-    Error.captureStackTrace(this, this.constructor)
+    Error.captureStackTrace(this, this.constructor);
   }
 }
-export const errorHandler = (error: AppError | Error) => {}
+export const _errorHandler = (error: AppError | Error) => {}
   const isDevelopment = process.env.NODE_ENV === 'development'
   const appError = error instanceof AppError ? error : new AppError(error.message);
 
@@ -29,7 +29,7 @@ export const errorHandler = (error: AppError | Error) => {}
     statusCode: appError.statusCode || 500;
   };
 };
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {,
+export const _asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {,
   Promise.resolve(fn(req, res, next)).catch((error: unknown) => {,
     if (next && typeof next === 'function') {,
 export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {}
@@ -41,7 +41,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
   }
 }
 
-export const errorHandler = (error: AppError | Error) => {
+export const _errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development'
   const appError = error instanceof AppError ? error : new AppError(error.message);
   
@@ -54,13 +54,13 @@ export const errorHandler = (error: AppError | Error) => {
   return {/* TODO: Fix JSX expression */}
   };
 };
-export const asyncHandler = (f,
+export const _asyncHandler = (f,
   n: (re,
   q: unknown, re,
-  s: unknown, nex)
+  s: unknown, nex);
   t: unknown) => unknown) => (re,
   q: unknown, re,
-  s: unknown, nex)
+  s: unknown, nex);
   t: unknown) => {/* TODO: Fix JSX expression */}
     }
 

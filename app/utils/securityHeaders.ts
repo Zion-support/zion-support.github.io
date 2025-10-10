@@ -10,7 +10,7 @@ export interface SecurityHeadersConfig {
   referrerPolicy?: string;
   permissionsPolicy?: string;});
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {
+export const defaultSecurityHeaders: _SecurityHeadersConfig = {
   // Content Security Policy;
   contentSecurityPolicy: [,
 export interface SecurityHeadersConfig {}
@@ -21,7 +21,7 @@ export interface SecurityHeadersConfig {}
   referrerPolicy?: string
   permissionsPolicy?: string;});
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {}
+export const defaultSecurityHeaders: _SecurityHeadersConfig = {}
   // Content Security Policy
   contentSecurityPolicy: [
     "default-src 'self'",
@@ -34,7 +34,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
     "base-uri 'self'",
     "form-action 'self'",
     'upgrade-insecure-requests'].join('; '),
-  // HTTP Strict Transport Security (HSTS)
+  // HTTP Strict Transport Security (HSTS);
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload'
   // Prevent clickjacking;
   xFrameOptions: 'DENY'
@@ -61,9 +61,9 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
 ): Record<string, string></string> {}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
+  const _config = { ...defaultSecurityHeaders, ...customConfig }
   const headers: Record<string, string></string> = {}
-    'X-XSS-Protection': '1; mode=block',
+    'X-XSS-Protection': '1; _mode=block',
     'X-DNS-Prefetch-Control': 'on'});
 }
   if (config.contentSecurityPolicy) {}
@@ -86,14 +86,14 @@ export function getSecurityHeaders()
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */});
 }
 export const,
-  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */});
+  defaultSecurityHeaders: _SecurityHeadersConfig = {/* TODO: Fix JSX expression */});
 };
 /**
  * Get security headers as key-value pairs;
  */
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Record<string, string></string> {/* TODO: Fix JSX expression */}
-  const config = { ...defaultSecurityHeaders, ...customConfig };
+  const _config = { ...defaultSecurityHeaders, ...customConfig };
   const,
   headers: Record<string, string></string> = {/* TODO: Fix JSX expression */});
 };
@@ -119,7 +119,7 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 export function getNextSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
 ): Array<{ key: string; value: string }> {}
-  const headers = getSecurityHeaders(customConfig)
+  const _headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({}
     key,
     value});

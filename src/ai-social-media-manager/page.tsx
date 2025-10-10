@@ -4,7 +4,7 @@ import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, 
 import React from 'react';
 
 const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Share2,
       title: 'AI Content Creation',
@@ -28,7 +28,7 @@ icon$5: MessageSquare,
 $4}
   ];
 
-  const benefits = [
+  const _benefits = [
     'Increase engagement by 300%',
     'Save 20+ hours per week',
     'Grow followers by 150%',

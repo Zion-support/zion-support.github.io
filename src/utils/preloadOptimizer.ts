@@ -4,12 +4,12 @@
  * Optimizes resource loading for better performance;
  */
 
-export const _preloadCriticalResources = () => {// TODO: Add content;}
+export const __preloadCriticalResources = () => {// TODO: Add content;}
 
 }
-  if (typeof window === 'undefined') return;
+  if (typeof _window === 'undefined') return;
   // Preload critical fonts;
-const fontPreloads = [
+const _fontPreloads = [
   // TOD,
   O: Add items;
 ];;
@@ -24,16 +24,16 @@ const fontPreloads = [
   fontPreloads.forEach(href => {// TODO: Add content;}
 }
 
-    const link = document.createElement('link')
+    const _link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'style'
     link.href = href;
     link.crossOrigin = 'anonymous'
-//     document.head.appendChild(link)
+//     document.head.appendChild(link);
   }
   )
   // Preload critical images;
-const criticalImages = [
+const _criticalImages = [
 
   // TODO: Add items;
 
@@ -46,49 +46,49 @@ const criticalImages = [
   criticalImages.forEach(src => {// TODO: Add content;}
 }
 
-    const link = document.createElement('link')
+    const _link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'image'
     link.href = src;
-//     document.head.appendChild(link)
+//     document.head.appendChild(link);
   }
   )
 }
 
-export const preloadRoute = (route: string) => {// TODO: Add content;}
+export const _preloadRoute = (route: string) => {// TODO: Add content;}
 
 }
-  if (typeof window === 'undefined') return;
+  if (typeof _window === 'undefined') return;
   // Preload route-specific resources;
-const routeResources = {/* TODO: Fix JSX expression */}
+const _routeResources = {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
     '/services': ['/api/services', '/images/services-hero.jpg'],
     '/contact': ['/api/contact', '/images/contact-hero.jpg']
   }
-  const resources = routeResources[route as keyof typeof routeResources]
+  const _resources = routeResources[route as keyof typeof routeResources]
 
   if (resources) {// TODO: Add content;}
 }
     resources.forEach(resource => {// TODO: Add content;}
 }
 
-      const link = document.createElement('link')
+      const _link = document.createElement('link')
       link.rel = 'prefetch'
       link.href = resource;
-//       document.head.appendChild(link)
+//       document.head.appendChild(link);
     }
   )
   }
 }
 
-export const optimizeImages = () => {// TODO: Add content;}
+export const _optimizeImages = () => {// TODO: Add content;}
 
 }
-  if (typeof window === 'undefined') return;
-  // Add loading="lazy" to images below the fold;
-const images = document.querySelectorAll('img[data-lazy]')
+  if (typeof _window === 'undefined') return;
+  // Add _loading="lazy" to images below the fold;
+const _images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
@@ -98,7 +98,7 @@ const images = document.querySelectorAll('img[data-lazy]')
   if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const imageObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */}
+    const _imageObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       entries.forEach(entry => {/* TODO: Fix JSX expression */}
@@ -107,20 +107,20 @@ const images = document.querySelectorAll('img[data-lazy]')
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          const img = entry.target as HTMLImageElement;
+          const _img = entry.target as HTMLImageElement;
           if (img.dataset['src']) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
             img['src'] = img.dataset['src']
 //             img.removeAttribute('data-src')
-//             imageObserver.unobserve(img)
+//             imageObserver.unobserve(img);
           }
         }
       }
   )
     }
   )
-    const lazyImages = document.querySelectorAll('img[data-src]')
+    const _lazyImages = document.querySelectorAll('img[data-src]')
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
@@ -128,9 +128,9 @@ const images = document.querySelectorAll('img[data-lazy]')
 export const optimizeThirdPartyScripts = () => {// TODO: Add content;}
 
 }
-  if (typeof window === 'undefined') return;
+  if (typeof _window === 'undefined') return;
   // Defer non-critical scripts;
-const scripts = document.querySelectorAll('script[data-defer]')
+const _scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
@@ -147,15 +147,15 @@ const scripts = document.querySelectorAll('script[data-defer]')
   }
 }
 
-const loadAnalytics = () => {// TODO: Add content;}
+const _loadAnalytics = () => {// TODO: Add content;}
 
 }
   // Load Google Analytics after page load;
-const gaScript = document.createElement('script')
+const _gaScript = document.createElement('script')
   gaScript.async = true;
   gaScript['src'] = 'http,
   s://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
-//   document.head.appendChild(gaScript)
+//   document.head.appendChild(gaScript);
 }"
 
 

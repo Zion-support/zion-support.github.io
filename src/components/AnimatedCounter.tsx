@@ -9,15 +9,15 @@ interface AnimatedCounterProps {
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
-  duration = 2000,
+  _duration = 2000,
   prefix = '',
   suffix = '',
   className = ''
 }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const counterRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
-    const observer = new IntersectionObserver(
+  const _counterRef = useRef<HTMLDivElement>(null);</HTMLDivElement>useEffect</HTMLDivElement>(() => {
+    const _observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true);
@@ -40,22 +40,22 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
     let startTime: number;
     let animationFrame: number;
 
-    const animate = (currentTime: number) => {
+    const _animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const _progress = Math.min((currentTime - startTime) / duration, 1);
       
       // Easing function for smooth animation
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      const currentCount = Math.floor(easeOutQuart * end);
+      const _easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      const _currentCount = Math.floor(easeOutQuart * end);
       
       setCount(currentCount);
 
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
+        _animationFrame = requestAnimationFrame(animate);
       }
     };
 
-    animationFrame = requestAnimationFrame(animate);
+    _animationFrame = requestAnimationFrame(animate);
 
     return () => {
       if (animationFrame) {
@@ -65,7 +65,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
   }, [isVisible, end, duration]);
 
   return (
-    <div ref={counterRef} className={className}></di>
+    <div _ref={counterRef} className={className}></di>
       {prefix}{count.toLocaleString()}{suffix}
     </div>
   );

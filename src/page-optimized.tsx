@@ -5,19 +5,19 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 // Fallback component;
-const EmptyComponent = () => null;
+const _EmptyComponent = () => null;
 // Lazy load heavy components - these may not exist, so make them optional;
-const UnifiedBanner = lazy(() =>
+const _UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() =>;
     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
 //   )
 );
-const ContentPromotion = lazy(() =>
+const _ContentPromotion = lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {// TODO: Add content;}
 }
     return { default: EmptyComponent } as { default: React.ComponentType };
   })
-const ContentShowcase = lazy(() =>
+const _ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({// TODO: Add content;}
 };
   default: EmptyComponent;
@@ -36,7 +36,7 @@ export default function OptimizedHomePage() {// TODO: Add content;}
           <div>Coming Soon</div>
   )
     
-          <div className="min-h-screen bg-white">
+          <div _className="min-h-screen bg-white">
       <SEOOptimizer />
       <AccessibilityEnhancer>
         <div />
@@ -51,11 +51,11 @@ export default function OptimizedHomePage() {// TODO: Add content;}
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
 // AI Enterprise Transformation;
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+          <span _className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
 // That Delivers Results;
           </span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
+              <p _className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
 // Transform your enterprise with AI-powered solutions that deliver 300% ROI,
 //                 70% cost reduction, and 90% efficiency gains. Expert AI consulting,
 //                 autonomous systems, and digital transformation services.
@@ -75,7 +75,7 @@ export default function OptimizedHomePage() {// TODO: Add content;}
 // >
 //                   Get Your Free AI Assessment;
           </a>
-                  href="/case-studies" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
+                  _href="/case-studies" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
 View Success Stories;
               </div>
         </section>

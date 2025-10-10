@@ -63,7 +63,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
   }
 
-  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
+  private _reportError = async (error: Error, errorInfo: ErrorInfo) => {
     try {
       const errorReport: ErrorReport = {
         errorId: this.state.errorId,
@@ -91,7 +91,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
   };
 
-  private handleRetry = () => {
+  private _handleRetry = () => {
     this.setState({
       hasError: false,
       error: null,
@@ -100,7 +100,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     });
   };
 
-  private handleReload = () => {
+  private _handleReload = () => {
     if (typeof window !== 'undefined') {
       window.location.reload();
     }
@@ -113,7 +113,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div _className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center mb-4">
               <div className="flex-shrink-0">

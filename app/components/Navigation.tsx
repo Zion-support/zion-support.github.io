@@ -10,12 +10,12 @@ const Navigation: React.FC = () => {
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
-    const handleResize = () => {
+    const _handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
       }
     };
-    const handleScroll = () => {
+    const _handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('resize', handleResize);
@@ -25,20 +25,20 @@ const Navigation: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  const closeAllMenus = () => {
+  const _closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
   };
-  const toggleMenu = () => {
+  const _toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
     }
   };
-  const aiServices = [
+  const _aiServices = [
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
     { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support Systems' },
@@ -71,7 +71,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
     { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
   ];
-  const itServices = [
+  const _itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
@@ -102,7 +102,7 @@ const Navigation: React.FC = () => {
     { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
     { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
   ];
-  const microSaasServices = [
+  const _microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
     { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Customer Management' },
@@ -136,7 +136,7 @@ const Navigation: React.FC = () => {
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
     { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
   ];
-  const emergingTech = [
+  const _emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics & Automation', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
     { name: 'IoT & Edge Computing', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
@@ -148,7 +148,7 @@ const Navigation: React.FC = () => {
     { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' }
   ];
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav _className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

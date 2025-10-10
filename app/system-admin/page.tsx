@@ -2,7 +2,7 @@
 import React from 'react';
 
 const PagePage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -25,7 +25,7 @@ const PagePage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
           </div>
         </div>
       </section>

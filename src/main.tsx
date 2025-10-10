@@ -16,12 +16,12 @@ if ('serviceWorker' in navigator) {
       .then((registration) => {
         // Service Worker registered successfully
         if (process.env.NODE_ENV === 'development') {
-          console.log('SW registered: ', registration);
+          // console.log(...);
         }
         
         // Handle updates
         registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing;
+          const _newWorker = registration.installing;
           if (newWorker) {
             newWorker.addEventListener('statechange', () => {
               if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
@@ -37,13 +37,13 @@ if ('serviceWorker' in navigator) {
       .catch((registrationError) => {
         // Service Worker registration failed - handled silently
         if (process.env.NODE_ENV === 'development') {
-          console.log('SW registration failed: ', registrationError);
+          // console.log(...);
         }
       });
   });
 }
 
-const root = document.getElementById('root');
+const _root = document.getElementById('root');
 if (root) {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>

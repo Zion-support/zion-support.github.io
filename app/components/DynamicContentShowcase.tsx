@@ -69,7 +69,7 @@ const DynamicContentShowcase: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -114,29 +114,29 @@ const DynamicContentShowcase: React.FC = () => {
   useEffect(() => {
     if (!isPlaying) return;
     
-    const timer = setInterval(() => {
+    const _timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
     
     return () => clearInterval(timer);
   }, [isPlaying, testimonials.length]);
 
-  const nextTestimonial = () => {
+  const _nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {
+  const _prevTestimonial = () => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const togglePlayPause = () => {
+  const _togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
 
-  const currentTestimonial = testimonials[currentIndex];
+  const _currentTestimonial = testimonials[currentIndex];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
+    <div _className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -301,41 +301,15 @@ const DynamicContentShowcase: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses that have already revolutionized their operations with our solutions.
+          <p className="text-xl text-gray-300 mb-8">
+            Contact our experts to discuss your requirements and get started today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-              <Zap className="w-5 h-5" />
-              Get Started Today
-            </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <ArrowRight className="w-5 h-5" />
-              Schedule Demo
-            </button>
-=======
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Experience the Future?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Start Free Trial</span>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo
-              </button>
-            </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
-          </div>
+          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            Contact Us
+          </button>
         </div>
       </section>
     </div>

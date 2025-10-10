@@ -1,8 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'wallets.json');
+const _dir = path.join(process.cwd(), 'data');
+const _file = path.join(dir, 'wallets.json');
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -25,20 +25,20 @@ export default function handler(req, res) {
     fs.mkdirSync(dir, { recursive: true });
   }
 
-  let existing = [];
+  let _existing = [];
   try {
     if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
+      const _data = fs.readFileSync(file, 'utf8');
+      _existing = JSON.parse(data);
+      if (!Array.isArray(existing)) _existing = [];
     }
   } catch (error) {
     console.error('Error reading existing wallets:', error);
-    existing = [];
+    _existing = [];
   }
 
   // Check if wallet address already exists
-  const existingWallet = existing.find(wallet => wallet.address === address);
+  const _existingWallet = existing.find(wallet => wallet.address === address);
   if (existingWallet) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
@@ -46,7 +46,7 @@ export default function handler(req, res) {
     return;
   }
 
-  const newWallet = {
+  const _newWallet = {
     id: Date.now().toString(),
     address,
     type,

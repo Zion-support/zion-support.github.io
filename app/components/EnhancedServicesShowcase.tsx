@@ -2,7 +2,7 @@ import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
 
 const EnhancedServicesShowcase: React.FC = () => {
-  const services = [
+  const _services = [
     {
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence',
@@ -38,7 +38,7 @@ const EnhancedServicesShowcase: React.FC = () => {
   ];
 
   return (
-    <section className="py-16"></section>
+    <section _className="py-16"></section>
       <div className="container mx-auto px-4"></div>
         <div className="text-center mb-16"></div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse"></h2>
@@ -71,7 +71,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               </ul>
               
               <a
-                href="/services"
+                _href="/services"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
               ></a>
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -80,7 +80,7 @@ const EnhancedServicesShowcase: React.FC = () => {
           ));
         </div>
 
-        <div className="text-center mt-12"></div>
+        <div _className="text-center mt-12"></div>
           <a
             href="/services"
             className="cyber-button inline-flex items-center"

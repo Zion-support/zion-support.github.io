@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiSocialMediaSchedulerPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -33,7 +33,7 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -45,7 +45,7 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
     <>
       <Helmet>
         <title>Ai Social Media Scheduler - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai social media scheduler solution for modern businesses." />
+        <meta _name="description" content="Advanced AI-powered ai social media scheduler solution for modern businesses." />
         <meta name="keywords" content="AI ai social media scheduler, artificial intelligence, ai social media scheduler, AI solutions, intelligent automation" />
       </Helmet>
 

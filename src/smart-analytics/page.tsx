@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 
 const SmartAnalyticsPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
@@ -35,7 +35,7 @@ iconicon: Shield,
 $4}
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -153,7 +153,7 @@ $4}
 
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
-  const features = [];
+  const _features = [];
   return (
     {// TODO: Add content;}
 
@@ -180,7 +180,7 @@ import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -205,7 +205,7 @@ const PagePage: React.FC = () => {
 
     }
   ];
-  const pricingPlans = [
+  const _pricingPlans = [
       nam,
   e: 'Professional',
       pric,
@@ -218,7 +218,7 @@ const PagePage: React.FC = () => {
 // Most Popular;
           </span>
                 )}"
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
+                <h3 _className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                 <p className="text-gray-300 mb-4">{plan.description}</p>"
                 <div className="mb-6"></div>"
                   <span className="text-4xl font-bold text-white">{plan.price}</span>"
@@ -252,7 +252,7 @@ const PagePage: React.FC = () => {
           
 
           
-          <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+          <section _className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Data?
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
@@ -263,7 +263,7 @@ const PagePage: React.FC = () => {
 
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo;
         {/* Contact Info */}
-        <section className="mt-16 text-center">
+        <section _className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
             <div className="grid md:grid-cols-3 gap-6 text-gray-300">
@@ -276,10 +276,10 @@ const PagePage: React.FC = () => {
                   kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
 +1 (302) 464-0950;
-                <Mail className="w-5 h-5 mr-2 text-cyan-400" />
+                <Mail _className="w-5 h-5 mr-2 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com;
-                <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
+                <MapPin _className="w-5 h-5 mr-2 text-cyan-400" />
 
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
   );

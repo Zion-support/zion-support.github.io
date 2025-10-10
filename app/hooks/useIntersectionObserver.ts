@@ -14,7 +14,7 @@ interface UseIntersectionObserverReturn {
 }
 
 export function useIntersectionObserver(
-  options: UseIntersectionObserverOptions = {}
+  options: _UseIntersectionObserverOptions = {}
 ): UseIntersectionObserverReturn {
   const {
     threshold = 0,
@@ -25,13 +25,13 @@ export function useIntersectionObserver(
 
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
-  const ref = useRef<HTMLElement>(null);
+  const _ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const element = ref.current;
+    const _element = ref.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(
+    const _observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
         setEntry(entry);

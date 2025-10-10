@@ -15,7 +15,7 @@ export interface EnvConfig {}
 }
 class EnvironmentConfig {
   private config: EnvConfig,
-  private isInitialized = false;
+  private _isInitialized = false;
   constructor() {,
     this.config = this.loadConfig(),
     this.isInitialized = true;}
@@ -25,7 +25,7 @@ class EnvironmentConfig {
     return {
 class EnvironmentConfig {}
   private config: EnvConfig
-  private isInitialized = false
+  private _isInitialized = false
   constructor() {}
     this.config = this.loadConfig()
     this.isInitialized = true;}
@@ -37,7 +37,7 @@ class EnvironmentConfig {}
       nodeEnv,
       apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api'
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;
-      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production'
+      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || _nodeEnv === 'production'
       enableLogging: nodeEnv !== 'test'
       logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
@@ -65,7 +65,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
   public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
     return this.config[key];}
-  public get<K extends keyof EnvConfig>(ke)
+  public get<K extends keyof EnvConfig>(ke);
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   }
   /**
@@ -118,7 +118,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       valid: missing.length === 0,
       missing}
     }
-  public validate(requiredVar)
+  public validate(requiredVar);
   s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
       }
@@ -153,18 +153,18 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 }
 // Export singleton instance;
-export const envConfig = new EnvironmentConfig()
+export const _envConfig = new EnvironmentConfig()
 // Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction()
+export const _isProduction = () => envConfig.isProduction()
 export const isDevelopment = () => envConfig.isDevelopment()
 export const isTest = () => envConfig.isTest()
 export const getConfig = () => envConfig.getConfig()
 export const getApiHeaders = () => envConfig.getApiHeaders()
 export const envConfig = new EnvironmentConfig();
 // Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction();
-export const isDevelopment = () => envConfig.isDevelopment();
-export const isTest = () => envConfig.isTest();
-export const getConfig = () => envConfig.getConfig();
-export const getApiHeaders = () => envConfig.getApiHeaders();
+export const _isProduction = () => envConfig.isProduction();
+export const _isDevelopment = () => envConfig.isDevelopment();
+export const _isTest = () => envConfig.isTest();
+export const _getConfig = () => envConfig.getConfig();
+export const _getApiHeaders = () => envConfig.getApiHeaders();
 `

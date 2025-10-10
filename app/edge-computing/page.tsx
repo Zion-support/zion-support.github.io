@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
 
 const EdgeComputingPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Cpu,
       title: 'Edge Processing',
@@ -45,7 +45,7 @@ const EdgeComputingPage: React.FC = () => {
     }
   ];
 
-  const services = [
+  const _services = [
     {
       icon: '⚡',
       title: 'Edge Analytics',
@@ -68,7 +68,7 @@ const EdgeComputingPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
     'Improved Reliability',
@@ -77,7 +77,7 @@ const EdgeComputingPage: React.FC = () => {
     'Global Scalability'
   ];
 
-  const useCases = [
+  const _useCases = [
     {
       title: 'Autonomous Vehicles',
       description: 'Real-time decision making for self-driving cars',
@@ -111,7 +111,7 @@ const EdgeComputingPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional edge computing solutions by Zion Tech Group. Ultra-low latency, real-time processing, and global edge infrastructure." />

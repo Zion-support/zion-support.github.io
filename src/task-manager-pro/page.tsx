@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 const TaskManagerProPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: CheckSquare,
       title: 'AI Task Prioritization',
@@ -35,7 +35,7 @@ iconicon: BarChart,
 $4}
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
       name: 'Individual',
       price: '$19',
       period: '/month',
@@ -226,7 +226,7 @@ $4}
 
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
-  const features = [];
+  const _features = [];
   return (
     {// TODO: Add content;}
 
@@ -264,7 +264,7 @@ const PagePage: React.FC = () => {
           <div>Coming Soon</div>
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24"></section>"
@@ -276,16 +276,16 @@ const PagePage: React.FC = () => {
   md:text-6xl font-bold text-white mb-6"></h1>
 // Task Manager Pro;
           </h1>"
-          <p className="text-xl,"
+          <p _className="text-xl,"
   md:text-2xl text-cyan-400 mb-8 font-medium"></p>
 // AI-Powered Productivity Platform;
           </p>"
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
+          <p _className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Supercharge your productivity with our AI-powered task management platform.
             Get intelligent prioritization, automated workflows, and team collaboration;
 
             tools that help you achieve more in less time.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div _className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
 
@@ -305,12 +305,12 @@ Supercharge your productivity with our AI-powered task management platform.
             </a>
 
             <Link
-              href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              _href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
 
 Start Free Trial;
             </Link>
         {/* Key Benefits */}"
-        <div className="grid grid-cols-1,"
+        <div _className="grid grid-cols-1,"
   md:grid-cols-4 gap-8 mb-16"></div>"
           <div className="text-center"></div>"
             <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>"
@@ -331,7 +331,7 @@ Start Free Trial;
   md:text-4xl font-bold text-white mb-12 text-center"></h2>
 // Powerful Task Management Features;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
             {features.map((feature, index) => ()}"
@@ -345,7 +345,7 @@ Start Free Trial;
         </section>
         {/* Integrations Section */}
 Works with Your Tools;"
-          <div className="grid grid-cols-2,"
+          <div _className="grid grid-cols-2,"
   md:grid-cols-4 gap-6"></div>
             {integrations.map((integration, index) => ()}"
           <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center,"
@@ -355,7 +355,7 @@ Works with Your Tools;"
                 <p className="text-gray-300 text-sm">{integration.description}</p>
 {/* Pricing Section */}
             Simple, Transparent Pricing;"
-          <div className="grid grid-cols-1,"
+          <div _className="grid grid-cols-1,"
   md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             {pricingPlans.map((plan, index) => ()}
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}
@@ -368,10 +368,10 @@ Works with Your Tools;"
   hover:border-cyan-500/50'`
               }`}></div>
                 {plan.popular && ()}"
-          <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
+          <div _className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
 Most Popular;
                 )}"
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
+                <h3 _className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                 <p className="text-gray-300 mb-6">{plan.description}</p>"
                 <div className="mb-6"></div>"
                   <span className="text-4xl font-bold text-white">{plan.price}</span>"
@@ -394,7 +394,7 @@ Most Popular;
                 </button></button>
         {/* Testimonials */}
             What Our Users Say;"
-          <div className="grid grid-cols-1,"
+          <div _className="grid grid-cols-1,"
   md:grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => ()}"
           <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>"

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 
 
 const AIAnalyticsPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'Predictive Analytics',
@@ -29,7 +29,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIAnalyticsPage: React.FC = () => {
-  const features = [];
+  const _features = [];
   return (
     {// TODO: Add content;}
 
@@ -89,7 +89,7 @@ ico,
     }
   ];
 
-  const useCases = [
+  const _useCases = [
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
@@ -209,7 +209,7 @@ icon$5: Award,
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
 // AI Analytics Services;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p _className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -229,7 +229,7 @@ icon$5: Award,
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Key Features;
           </h2>"
-            <div className="grid grid-cols-1,"
+            <div _className="grid grid-cols-1,"
   md:grid-cols-2 gap-8"></div>)
               {features.map((feature, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"
@@ -326,7 +326,7 @@ icon$5: Award,
 export default AIAnalyticsPage;
 {/* Use Cases */}
               Use Cases;"
-            <div className="grid grid-cols-1,
+            <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-4 gap-6"></div>
               {useCases.map((useCase, index) => ()}"
@@ -338,7 +338,7 @@ export default AIAnalyticsPage;
                   <p className="text-gray-300 text-sm">{useCase.description}</p>
 {/* Pricing */}
               Pricing Plans;"
-            <div className="grid grid-cols-1,"
+            <div _className="grid grid-cols-1,"
   md:grid-cols-3 gap-8"></div>
               {pricingTiers.map((tier, index) => ()}`
           <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
@@ -348,7 +348,7 @@ export default AIAnalyticsPage;
 // Most Popular;
           </span>
                   )}"
-                  <div className="text-center mb-6"></div>"
+                  <div _className="text-center mb-6"></div>"
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>"
                     <div className="flex items-baseline justify-center"></div>`
                       <span className={`text-3xl font-bold ${tier.color}`}>{tier.price}</span>"
@@ -376,7 +376,7 @@ export default AIAnalyticsPage;
 {/* Benefits */}
               Why Choose Our AI Analytics?
               {benefits.map((benefit, index) => ()}"
-          <div key={index} className="text-center"></div>"
+          <div _key={index} className="text-center"></div>"
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                     <benefit.icon className="w-8 h-8 text-cyan-400" /></benefit>"
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
@@ -389,12 +389,12 @@ export default AIAnalyticsPage;
               Start your journey with AI analytics today. Get a free consultation and discover;
 
               how our platform can revolutionize your business intelligence.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div _className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
       <Footer />

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiInsurancePage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -33,7 +33,7 @@ const AiInsurancePage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -45,7 +45,7 @@ const AiInsurancePage: React.FC = () => {
     <>
       <Helmet>
         <title>Ai Insurance - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai insurance solution for modern businesses." />
+        <meta _name="description" content="Advanced AI-powered ai insurance solution for modern businesses." />
         <meta name="keywords" content="AI ai insurance, artificial intelligence, ai insurance, AI solutions, intelligent automation" />
       </Helmet>
 

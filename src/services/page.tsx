@@ -10,7 +10,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const ServicesPage: React.FC = () => {
-  const aiServices = [
+  const _aiServices = [
     {
       icon: Brain,
       title: 'AI Services',
@@ -67,7 +67,7 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-  const itServices = [
+  const _itServices = [
     {
       icon: Database,
       title: 'Database Management',
@@ -124,7 +124,7 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-  const microSaasServices = [
+  const _microSaasServices = [
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -181,7 +181,7 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     {
       icon: TrendingUp,
       title: 'Proven ROI',
@@ -204,7 +204,7 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-  const stats = [
+  const _stats = [
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
@@ -212,7 +212,7 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="AI & IT Services - Zion Tech Group"
         description="Comprehensive AI and IT solutions including AI services, automation, cybersecurity, cloud services, and micro SAAS applications. Starting from $39/month."

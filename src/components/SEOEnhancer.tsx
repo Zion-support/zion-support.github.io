@@ -13,18 +13,18 @@ const,
   s: {/* TODO: Fix JSX expression */}
     }};
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  const _finalStructuredData = structuredData || defaultStructuredData;
 
   return (<>
-      <Helmet></Helmet>
+      <Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>
-        <meta name="description" content={description} /></meta>")
+        <meta _name="description" content={description} /></meta>")
         <meta name="keywords" content={keywords.join(', ')} /></meta>"
         <meta name="author" content="Zion Tech Group" /></meta>"
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} /></meta>"
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>"
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>"
+        <meta httpEquiv="Content-Type" content="text/html; _charset=utf-8" /></meta>"
         <meta name="language" content="English" /></meta>"
         <meta name="revisit-after" content="7 days" /></meta>"
         <meta name="distribution" content="global" /></meta>"

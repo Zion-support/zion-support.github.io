@@ -8,7 +8,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIProjectManagerPage: React.FC = () => {
-  const _features = [
+  const __features = [
 
 const AiProjectManagerPage: React.FC = () => {
   const features = [
@@ -33,7 +33,7 @@ const AiProjectManagerPage: React.FC = () => {
     }
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
       name: 'Starter',
       price: '$99',
       period: '/month',

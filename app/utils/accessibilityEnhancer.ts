@@ -1,60 +1,9 @@
 'use client';
 
-<<<<<<< HEAD
-export interface AccessibilityOptions {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  enableColorContrast?: boolean;
-  enableTextScaling?: boolean;
-  enableReducedMotion?: boolean;
-}
-
-export class AccessibilityEnhancer {
-  private options: AccessibilityOptions;
-
-  constructor(options: AccessibilityOptions = {}) {
-    this.options = {
-      enableKeyboardNavigation: true,
-      enableScreenReaderSupport: true,
-      enableHighContrast: true,
-      enableFocusManagement: true,
-      enableColorContrast: true,
-      enableTextScaling: true,
-      enableReducedMotion: true,
-      ...options
-    };
-=======
-const AccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-    focusableElements[nextIndex]?.focus();
-    event.preventDefault();
->>>>>>> cursor/analyze-improve-and-deploy-application-975f
   }
 
   public initialize(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
 
     this.setupKeyboardNavigation();
     this.setupScreenReaderSupport();
@@ -71,16 +20,16 @@ const AccessibilityEnhancerPage: React.FC = () => {
     document.addEventListener('keydown', (event) => {
       // Skip links for keyboard navigation
       if (event.key === 'Tab' && event.shiftKey) {
-        const focusableElements = this.getFocusableElements();
-        const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+        const _focusableElements = this.getFocusableElements();
+        const _currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
         
         if (currentIndex > 0) {
           focusableElements[currentIndex - 1]?.focus();
           event.preventDefault();
         }
       } else if (event.key === 'Tab' && !event.shiftKey) {
-        const focusableElements = this.getFocusableElements();
-        const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
+        const _focusableElements = this.getFocusableElements();
+        const _currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
         
         if (currentIndex < focusableElements.length - 1) {
           focusableElements[currentIndex + 1]?.focus();
@@ -94,7 +43,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (!this.options.enableScreenReaderSupport) return;
 
     // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label])');
+    const _buttons = document.querySelectorAll('button:not([aria-label])');
     buttons.forEach((button) => {
       if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
@@ -102,13 +51,13 @@ const AccessibilityEnhancerPage: React.FC = () => {
     });
 
     // Add ARIA labels to images
-    const images = document.querySelectorAll('img:not([alt])');
+    const _images = document.querySelectorAll('img:not([alt])');
     images.forEach((img) => {
       img.setAttribute('alt', 'Image');
     });
 
     // Add role attributes where needed
-    const sections = document.querySelectorAll('section:not([role])');
+    const _sections = document.querySelectorAll('section:not([role])');
     sections.forEach((section) => {
       section.setAttribute('role', 'region');
     });
@@ -136,7 +85,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (!this.options.enableFocusManagement) return;
 
     // Add focus indicators
-    const style = document.createElement('style');
+    const _style = document.createElement('style');
     style.textContent = `
       *:focus {
         outline: 2px solid #0066cc;
@@ -153,7 +102,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     // Manage focus for modals and dropdowns
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
-        const modal = document.querySelector('[role="dialog"]');
+        const _modal = document.querySelector('[role="dialog"]');
         if (modal) {
           (modal as HTMLElement).focus();
         }
@@ -183,13 +132,13 @@ const AccessibilityEnhancerPage: React.FC = () => {
     if (!this.options.enableTextScaling) return;
 
     // Check for text scaling preference
-    const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    const _fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
     if (fontSize > 16) {
       document.body.classList.add('text-scaled');
     }
 
     // Listen for changes in text scaling
-    const observer = new ResizeObserver(() => {
+    const _observer = new ResizeObserver(() => {
       const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
       if (fontSize > 16) {
         document.body.classList.add('text-scaled');
@@ -220,7 +169,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   }
 
   private getFocusableElements(): HTMLElement[] {
-    const focusableSelectors = [
+    const _focusableSelectors = [
       'a[href]',
       'button:not([disabled])',
       'input:not([disabled])',
@@ -236,7 +185,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
   public announceToScreenReader(message: string): void {
     if (!this.options.enableScreenReaderSupport) return;
 
-    const announcement = document.createElement('div');
+    const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -258,14 +207,14 @@ const AccessibilityEnhancerPage: React.FC = () => {
   public trapFocus(container: HTMLElement): void {
     if (!this.options.enableFocusManagement) return;
 
-    const focusableElements = this.getFocusableElements().filter(el => 
-      container.contains(el)
+    const _focusableElements = this.getFocusableElements().filter(el => 
+      container.contains(el);
     );
 
     if (focusableElements.length === 0) return;
 
-    const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements.length - 1];
+    const _firstElement = focusableElements[0];
+    const _lastElement = focusableElements[focusableElements.length - 1];
 
     container.addEventListener('keydown', (event) => {
       if (event.key === 'Tab') {
@@ -284,8 +233,3 @@ const AccessibilityEnhancerPage: React.FC = () => {
     });
   }
 }
-<<<<<<< HEAD
-
-export default AccessibilityEnhancer;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-975f

@@ -11,9 +11,9 @@ const,
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
 
-  const calculateROI = () => {return Math.max(0, roi);
+  const _calculateROI = () => {return Math.max(0, roi);
   };return (
-    <section className='bg-white py-16 rounded-2xl shadow-lg'>
+    <section _className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
           AI ROI Calculator
@@ -53,7 +53,7 @@ Expected Efficiency Gain (%)
                   className='w-full'
 <div className='text-center text-sm text-gray-600'></div>
                   {efficiencyGain}%
-                  Implementation Timeframe (months)
+                  Implementation Timeframe (months);
                 <select></select>
                   value={timeframe}
                   onChange={e => setTimeframe(Number(e.target.value))}
@@ -67,7 +67,7 @@ Expected Efficiency Gain (%)
               <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'></h3>
 // Your ROI Projection;
           </h3>
-              <div className='text-center'></div>
+              <div _className='text-center'></div>
                 <div className='text-6xl font-bold text-blue-600 mb-4'></div>
                   {roi.toFixed(0)}%
                 <p className='text-gray-600 text-sm'></p>

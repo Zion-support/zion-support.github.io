@@ -11,13 +11,13 @@ const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
+    const _handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false);
       }
     };
 
-    const handleScroll = () => {
+    const _handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -29,7 +29,7 @@ const Navigation: React.FC = () => {
     };
   }, []);
 
-  const closeAllMenus = () => {
+  const _closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
@@ -37,14 +37,14 @@ const Navigation: React.FC = () => {
     setIsOpen(false);
   };
 
-  const toggleMenu = () => {
+  const _toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
     }
   };
 
-  const serviceCategories = [
+  const _serviceCategories = [
     {
       title: 'Micro SAAS Solutions',
       icon: Zap,
@@ -174,7 +174,7 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav _className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
         : 'bg-transparent'

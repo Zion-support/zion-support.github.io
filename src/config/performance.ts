@@ -2,7 +2,7 @@
  * Performance Configuration
  * Centralized performance monitoring and optimization settings
  */
-export const _performanceConfig = {
+export const __performanceConfig = {
   // Core Web Vitals thresholds
   metrics: {
 // lcp: {
@@ -83,7 +83,7 @@ export const _performanceConfig = {
 // logThreshold:   ,
 $4}
 };
-export type PerformanceConfig = typeof performanceConfig;
+export type _PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
 
 /**
@@ -91,7 +91,7 @@ export default performanceConfig;
  * Centralized performance monitoring and optimization settings;
  */
 
-export const _performanceConfig = {// TODO: Add content;}
+export const __performanceConfig = {// TODO: Add content;}
 
 }
   // Core Web Vitals thresholds,
@@ -219,7 +219,7 @@ export const _performanceConfig = {// TODO: Add content;}
   d: 'needsImprovement'
   }
 }
-export type PerformanceConfig = typeof performanceConfig;
+export type _PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
 
 

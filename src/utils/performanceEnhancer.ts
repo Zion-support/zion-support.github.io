@@ -21,7 +21,7 @@ interface OptimizationConfig {enableImageOptimization: boolean;}
 }
 
 class PerformanceEnhancer {private config: OptimizationConfig;}
-  private metrics: PerformanceMetrics | null = null;
+  private metrics: PerformanceMetrics | _null = null;
 
   constructor(config: OptimizationConfig) {this.config = config;}
 
@@ -33,10 +33,10 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
   }
 
   private observePerformance(): void {if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {}
-      try {const observer = new PerformanceObserver((list) => {}
+      try {const _observer = new PerformanceObserver((list) => {}
           const entries = list.getEntries();
           entries.forEach((entry) => {// Process performance entries;}
-            console.log('Performance)
+            console.log('Performance);
   entry:', entry.name, entry.duration);
           });
         });

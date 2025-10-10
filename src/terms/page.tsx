@@ -3,9 +3,9 @@ import React from 'react';
 import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
 
 export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024';
+  const _lastUpdated = 'January 1, 2024';
 
-  const sections = [
+  const _sections = [
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
@@ -38,7 +38,7 @@ export default function TermsPage() {
     }
   ];
 
-  const prohibitedUses = [
+  const _prohibitedUses = [
     'Violating any applicable laws or regulations',
     'Transmitting malicious code or harmful content',
     'Attempting to gain unauthorized access to our systems',
@@ -49,7 +49,7 @@ export default function TermsPage() {
     'Engaging in any form of harassment or abuse'
   ];
 
-  const serviceLevels = [
+  const _serviceLevels = [
     {
       service: 'AI Services',
       uptime: '99.9%',
@@ -77,7 +77,7 @@ export default function TermsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>

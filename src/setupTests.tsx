@@ -11,17 +11,17 @@ import '@testing-library/jest-dom';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings;
-const originalConsoleError = console.error;
+const _originalConsoleError = console.error;
 // eslint-disable-next-line no-console;
-const __originalConsoleError = console.error;
+const ___originalConsoleError = console.error;
 console.error = (...args) => {// TODO: Add content;}
 }
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console
-const originalConsoleError = console.error;
+const _originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
+  const _message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') ||
       message.includes('navigation (except hash changes)')) {// TODO: Add content;}
 }
@@ -49,7 +49,7 @@ Object.defineProperty(window, 'matchMedia', {// TODO: Add content;}
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 // Mock localStorage;
-const localStorageMock = {// TODO: Add content;}
+const _localStorageMock = {// TODO: Add content;}
 };
   getItem: jest.fn(),
   setItem: jest.fn(),
@@ -59,7 +59,7 @@ Object.defineProperty(window, 'localStorage', {// TODO: Add content;}
 };
   value: localStorageMock;
 // Mock sessionStorage;
-const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
+const _sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
   // TODO: Add content;
 };
   value: sessionStorageMock;
@@ -68,14 +68,14 @@ global.fetch = jest.fn();
 // Mock console methods for cleaner test output;
 // Mock console methods for cleaner test output
 // eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
+const _originalConsoleWarn = console.warn;
 // eslint-disable-next-line no-console
-const originalConsoleInfo = console.info;
+const _originalConsoleInfo = console.info;
 console.warn = (...args) => {// TODO: Add content;}
 }
 // eslint-disable-next-line no-console
 console.warn = (...args) => {
-  const message = args[0]?.toString?.() || '';
+  const _message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
   // TODO: Add content;
 }
@@ -87,7 +87,7 @@ delete (window as unknown as Record;
 };
 // eslint-disable-next-line no-console
 console.info = (...args) => {
-  const message = args[0]?.toString?.() || '';
+  const _message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
   }

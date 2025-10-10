@@ -7,7 +7,7 @@ interface SkipLinkProps {
 
 const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps>return</SkipLinkProps> (
     <a
-      href={to}
+      _href={to}
       className="skip-link"
       style={{
         position: 'absolute',
@@ -26,7 +26,7 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps
       onFocus={(e) => {
         e.currentTarget.style.top = '6 px';
       }}
-      onBlur={(e) => {
+      _onBlur={(e) => {
         e.currentTarget.style.top = '-40 px';
       }}
     >

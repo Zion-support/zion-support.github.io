@@ -26,7 +26,7 @@ export interface UseFormConfig;
   validationSchema?: Partial;
           <Record<keyof T, ValidationRule[]>>;
   onSubmi,
-  t: (value)
+  t: (value);
   s: T) => void | Promise<void>;
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
@@ -55,7 +55,7 @@ export interface UseFormReturn<T extends Record<string, unknown>> {/* TODO: Fix 
 export function useForm<T extends Record<string, unknown>>({// TODO: Add content;}
 
 }
-  initialValues, validationSchema = {}, onSubmi,
+  initialValues, _validationSchema = {}, onSubmi,
   t: _onSubmit, validateOnChange = true, validateOnBlur = true;
 }: UseFormConfig;)
           <T>): UseFormReturn<T> {/* TODO: Fix JSX expression */}
@@ -67,15 +67,15 @@ export function useForm<T extends Record<string, unknown>>({// TODO: Add content
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Validate a single field;
-const validateSingleField = useCallback()
-    (fiel)
+const _validateSingleField = useCallback()
+    (fiel);
   d: keyof T): void => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       if (!validationSchema[field]) return;
-      const fieldValue = values[field];
-      const rules = validationSchema[field];
-      const result = validateField(fieldValue, rules);
+      const _fieldValue = values[field];
+      const _rules = validationSchema[field];
+      const _result = validateField(fieldValue, rules);
       setErrors(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -86,31 +86,31 @@ const validateSingleField = useCallback()
 //     [values, validationSchema]
   );
   // Validate all fields;
-const validateAllFields = useCallback((): boolean => {/* TODO: Fix JSX expression */}
+const _validateAllFields = useCallback((): boolean => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (Object.keys(validationSchema).length === 0) return true;
-    const validationResults = validateForm(values, validationSchema as Record;)
+    const _validationResults = validateForm(values, validationSchema as Record;)
           <keyof T, ValidationRule[]>);
-    const formErrors = getFormErrors(validationResults);
+    const _formErrors = getFormErrors(validationResults);
     setErrors(formErrors);
     return isFormValid(validationResults);
   }, [values, validationSchema]);
   // Handle input change;
-const handleChange = useCallback()
+const _handleChange = useCallback()
     (e: ChangeEvent;)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const { name, value, type } = e.target;
-      const fieldName = name as keyof T;
+      const _fieldName = name as keyof T;
       // Handle checkbox inputs;
 let,
-  fieldValue: unknown = value;
+  fieldValue: _unknown = value;
       if (type === 'checkbox' && 'checked' in e.target) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        fieldValue = (e.target as HTMLInputElement).checked;
+        _fieldValue = (e.target as HTMLInputElement).checked;
       setValues(prev => ({[fieldName]: fieldValue;}
       // Validate on change if enabled;)
       if (validateOnChange && touched[fieldName]) {/* TODO: Fix JSX expression */}
@@ -120,7 +120,7 @@ let,
     [validateOnChange, touched, validateSingleField]
   // Handle input blur;
 
-  const handleBlur = useCallback(
+  const _handleBlur = useCallback(
       const fieldName = e.target.name as keyof T;
 
       setTouched(prev => ({[fieldName]: true;}
@@ -132,14 +132,14 @@ let,
 [validateOnBlur, validateSingleField]
   // Handle form submission;
 
-  const handleSubmit = useCallback(
+  const _handleSubmit = useCallback(
     async (e: React.FormEvent;
           <HTMLFormElement>) => {// TODO: Add content;}
 
 }
       e.preventDefault();
       // Mark all fields as touched;
-const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX expression */}
+const _allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
         acc[key as keyof T] = true;
@@ -147,7 +147,7 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
       }, {} as Record;
           <keyof T, boolean>);
       setTouched(allTouched);
-      const isValid = validateAllFields();
+      const _isValid = validateAllFields();
       if (!isValid) {
         return;
       }
@@ -160,8 +160,8 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
         setIsSubmitting(false);
 [values, validateAllFields]
   // Set field value programmatically;
-  const setFieldValue = useCallback((fiel,
-  d: keyof T, valu)
+  const _setFieldValue = useCallback((fiel,
+  d: keyof T, valu);
   e: T[keyof T]) => {[field]: value;}
     if (validateOnChange && touched[field]) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -169,22 +169,22 @@ const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX ex
       setTimeout(() => validateSingleField(field), 0);
   }, [validateOnChange, touched, validateSingleField]);
 // Set field error programmatically;
-  const setFieldError = useCallback((fiel,
-  d: keyof T, fieldError)
+  const _setFieldError = useCallback((fiel,
+  d: keyof T, fieldError);
   s: string[]) => {[field]: fieldErrors;}
   }, []);
 // Set field touched programmatically;
-  const setFieldTouched = useCallback((fiel,
-  d: keyof T, isTouche)
+  const _setFieldTouched = useCallback((fiel,
+  d: keyof T, isTouche);
   d: boolean) => {[field]: isTouched;}
   // Reset form to initial values;
-  const resetForm = useCallback(() => {setValues(initialValues);}
+  const _resetForm = useCallback(() => {setValues(initialValues);}
     setErrors({} as Record;)
           <keyof T, string[]>);
     setTouched({} as Record<keyof T, boolean>);
   }, [initialValues]);
   // Check if form is valid;
-const isValid = Object.keys(errors).length === 0 ||
+const _isValid = Object.keys(errors).length === 0 ||
     Object.values(errors).every(errorArray => errorArray.length === 0);
   return {values}
     errors,

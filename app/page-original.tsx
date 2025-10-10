@@ -11,13 +11,13 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+const _ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const _ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+const _DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+const _ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const _ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 // Preload critical components
-const preloadComponents = () => {
+const _preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
@@ -42,13 +42,13 @@ const HomePage: React.FC = memo(() => {
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const _timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
     preloadComponents();
     return () => clearTimeout(timer);)
 }, []);
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
+  const _handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
@@ -59,7 +59,7 @@ const HomePage: React.FC = memo(() => {
   return (
     <>
       <SEOOptimizer
-        title="Zion Tech Group - Advanced AI and IT Solutions"
+        _title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
         canonicalUrl="https://ziontechgroup.com"
@@ -99,7 +99,7 @@ const HomePage: React.FC = memo(() => {
         }}
       />
       <PerformanceOptimizer
-        enableImageOptimization={true}
+        _enableImageOptimization={true}
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
@@ -125,7 +125,7 @@ const HomePage: React.FC = memo(() => {
         enableClickjackingProtection={true}
         enableContentTypeSniffingProtection={true}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Navigation */}</div>
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -151,7 +151,7 @@ const HomePage: React.FC = memo(() => {
         ></section>
           <div></div>
             <h1 
-              id="hero-heading" 
+              _id="hero-heading" 
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text glitch"
               data-text="Zion Tech Group"
             ></h1>

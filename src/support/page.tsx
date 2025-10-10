@@ -9,7 +9,7 @@ const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const supportCategories = [
+  const _supportCategories = [
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8 },
@@ -19,7 +19,7 @@ const SupportPage: React.FC = () => {
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
   ];
 
-  const faqs = [
+  const _faqs = [
     {
       id: 1,
       question: 'How do I get started with Zion Tech Group services?',
@@ -58,7 +58,7 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const supportChannels = [
+  const _supportChannels = [
     {
       icon: Phone,
       title: 'Phone Support',
@@ -93,7 +93,7 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const resources = [
+  const _resources = [
     {
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
@@ -132,11 +132,11 @@ const SupportPage: React.FC = () => {
     }
   ];
 
-  const filteredFaqs = selectedCategory === 'all' 
+  const _filteredFaqs = selectedCategory === 'all' 
     ? faqs 
     : faqs.filter(faq => faq.category === selectedCategory);
 
-  const searchResults = searchQuery 
+  const _searchResults = searchQuery 
     ? faqs.filter(faq => 
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
@@ -146,7 +146,7 @@ const SupportPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="Support Center - Zion Tech Group"
+        _title="Support Center - Zion Tech Group"
         description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources."
         keywords={['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']}
         canonicalUrl="https://ziontechgroup.com/support"

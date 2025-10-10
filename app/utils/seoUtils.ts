@@ -31,7 +31,7 @@ export class SEOManager {
   }
 
   private applyConfig(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof _document === 'undefined') return;
 
     // Update title
     document.title = this.config.title;
@@ -85,11 +85,11 @@ export class SEOManager {
   }
 
   private updateMetaTag(name: string, content: string): void {
-    if (typeof document === 'undefined') return;
+    if (typeof _document === 'undefined') return;
 
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+    let _meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
-      meta = document.createElement('meta');
+      _meta = document.createElement('meta');
       meta.name = name;
       document.head.appendChild(meta);
     }
@@ -97,11 +97,11 @@ export class SEOManager {
   }
 
   private updateCanonicalUrl(): void {
-    if (typeof document === 'undefined' || !this.config.canonicalUrl) return;
+    if (typeof _document === 'undefined' || !this.config.canonicalUrl) return;
 
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    let _canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {
-      canonical = document.createElement('link');
+      _canonical = document.createElement('link');
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
@@ -109,9 +109,9 @@ export class SEOManager {
   }
 
   private updateOpenGraphTags(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof _document === 'undefined') return;
 
-    const ogTags = [
+    const _ogTags = [
       { property: 'og:title', content: this.config.ogTitle || this.config.title },
       { property: 'og:description', content: this.config.ogDescription || this.config.description },
       { property: 'og:type', content: this.config.ogType || 'website' },
@@ -128,9 +128,9 @@ export class SEOManager {
   }
 
   private updateTwitterTags(): void {
-    if (typeof document === 'undefined') return;
+    if (typeof _document === 'undefined') return;
 
-    const twitterTags = [
+    const _twitterTags = [
       { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },
       { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },
       { name: 'twitter:description', content: this.config.twitterDescription || this.config.description },
@@ -146,11 +146,11 @@ export class SEOManager {
   }
 
   private updateMetaTagByProperty(property: string, content: string): void {
-    if (typeof document === 'undefined') return;
+    if (typeof _document === 'undefined') return;
 
-    let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+    let _meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
     if (!meta) {
-      meta = document.createElement('meta');
+      _meta = document.createElement('meta');
       meta.setAttribute('property', property);
       document.head.appendChild(meta);
     }
@@ -158,9 +158,9 @@ export class SEOManager {
   }
 
   private addMetaTag(name: string, content: string): void {
-    if (typeof document === 'undefined') return;
+    if (typeof _document === 'undefined') return;
 
-    const meta = document.createElement('meta');
+    const _meta = document.createElement('meta');
     meta.name = name;
     meta.content = content;
     document.head.appendChild(meta);
@@ -168,7 +168,7 @@ export class SEOManager {
 }
 
 // Utility functions
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
+export const _generateMetaDescription = (content: string, maxLength: number = 160): string => {
   const cleanContent = content.replace(/<[^>]*>/g, '').trim();
   if (cleanContent.length <= maxLength) {
     return cleanContent;
@@ -179,10 +179,10 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
   });
 };
 
-export const addStructuredData = (data: any): void => {
+export const _addStructuredData = (data: any): void => {
   if (typeof document === 'undefined') return;
 
-  const script = document.createElement('script');
+  const _script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = createStructuredData(data);
   document.head.appendChild(script);

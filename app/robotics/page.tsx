@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -27,7 +27,7 @@ const PagePage: React.FC = () => {
 }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -40,9 +40,9 @@ const PagePage: React.FC = () => {
 
   return (
     <div></div>
-      <Helmet></Helmet>
-        <title></titl>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+      <Helmet>
+        <title></title>Page | Zion Tech Group</title>
+        <meta _name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
@@ -64,7 +64,7 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+      <section _className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
               </div>
             ));
           </div>
@@ -72,7 +72,7 @@ const PagePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+      <section _className="py-20 px-4 sm:px-6 lg:px-8"></section>
           </div>
         </div>
       </section>

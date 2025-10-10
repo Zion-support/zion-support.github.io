@@ -29,7 +29,7 @@ const EnhancedSEO: React.FC;
 
 const EnhancedSEO: React.FC<SEOProps> = ({
 
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  _title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
 //   canonicalUrl,
@@ -46,12 +46,12 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   modifiedTime,
 //   section,
   tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+  const _keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
     
     // Update meta description
 
-    let metaDescription = document.querySelector('meta[name="description"]');
+    let _metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {/* TODO: Fix JSX expression */}
     }
     metaDescription.setAttribute('content', description);
@@ -59,7 +59,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 
           <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
+      <title>{fullTitle}</title><meta _name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} /><meta property="og:description" content={fullDescription} /><meta property="og:type" content={ogType} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={ogImage} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:site_name" content="Zion Tech Group" /><meta property="og:locale" content="en_US" />
       {/* Twitter Card Meta Tags */}

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const AccessibilityCheckerPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -27,7 +27,7 @@ const AccessibilityCheckerPage: React.FC = () => {
 }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -41,9 +41,9 @@ const AccessibilityCheckerPage: React.FC = () => {
   return (
     <>
       <div></div>
-      <Helmet></Helmet>
+      <Helmet>
         <titl></titl>AccessibilityChecker | Zion Tech Group</title>
-        <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta _name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" />
       </Helmet>
 
@@ -116,7 +116,7 @@ const AccessibilityCheckerPage: React.FC = () => {
           <div></div>
             {benefits.map((benefit, index) => (
               <div></div>
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <CheckCircle _className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ));
@@ -136,7 +136,7 @@ const AccessibilityCheckerPage: React.FC = () => {
             </p>
             <div></div>
               <button></button>
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone _className="mr-2 h-5 w-5" />
                 Call Now
               </button>
               <button></button>

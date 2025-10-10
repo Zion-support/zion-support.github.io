@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
-  const _features = [];
+  const __features = [];
   return (
     {icon: Users,
     title: 'Advanced Features',
@@ -24,8 +24,8 @@ const Pagetsx: React.FC = () => {
 
     }
   ]
-  return (<div className="min-h-screen bg-gray-900 text-white"></div>
-      <Helmet></Helmet>
+  return (<div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>tsx - Zion Tech Group</title>"
         <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" /></Helmet>
       <Navigation /></Navigation>"
@@ -36,16 +36,16 @@ const Pagetsx: React.FC = () => {
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h1>
               tsx;
             </h1>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            <p _className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Advanced tsx solutions powered by AI and cutting-edge technology;
             </p>"
-            <div className="flex flex-col,"
+            <div _className="flex flex-col,"
   sm:flex-row gap-4 justify-center"></div>"
               <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
   hover:bg-cyan-600 transition-colors"></a>
                 Get Started;
               </a>"
-              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
+              <a _href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg,
   hover:bg-cyan-500,"
   hover:text-white transition-colors"></a>
                 View Demo;
@@ -55,7 +55,7 @@ const Pagetsx: React.FC = () => {
 </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4">
+        <section _className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

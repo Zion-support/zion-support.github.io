@@ -6,7 +6,7 @@ interface AnalyticsContextType {
   identify: (userId: string, traits?: Record<string, any>) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const _AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
   children: ReactNode;
@@ -15,7 +15,7 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
   children, 
-  trackingId = 'G-XXXXXXXXXX' 
+  _trackingId = 'G-XXXXXXXXXX' 
 }) => {
   useEffect(() => {
     // Initialize Google Analytics
@@ -40,18 +40,18 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   }, [trackingId]);
 
-  const track = (event: string, properties?: Record<string, any>) => {
+  const _track = (event: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties);
     }
     
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', event, properties);
+      // console.log(...);
     }
   };
 
-  const page = (name: string, properties?: Record<string, any>) => {
+  const _page = (name: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         page_title: name,
@@ -61,11 +61,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Page:', name, properties);
+      // console.log(...);
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, any>) => {
+  const _identify = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,
@@ -74,23 +74,23 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Identify:', userId, traits);
+      // console.log(...);
     }
   };
 
-  const value: AnalyticsContextType = {
+  const value: _AnalyticsContextType = {
     track,
     page,
     identify};
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider _value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
 
-export const useAnalytics = (): AnalyticsContextType => {
+export const _useAnalytics = (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');

@@ -29,7 +29,7 @@ interface FormStatus {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const _handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -37,7 +37,7 @@ interface FormStatus {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const _handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ type: 'loading', message: 'Sending message...' });
 
@@ -67,7 +67,7 @@ interface FormStatus {
     }
   };
 
-  const services = [
+  const _services = [
     'AI Solutions',
     'Web Development',
     'Mobile App Development',
@@ -80,7 +80,7 @@ interface FormStatus {
 
               </label>
               <input
-                type="text"
+                _type="text"
                 id="name"
                 name="name"
                 value={formData.name}

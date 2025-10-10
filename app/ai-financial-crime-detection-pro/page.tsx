@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiFinancialCrimeDetectionProPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -33,7 +33,7 @@ const AiFinancialCrimeDetectionProPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -45,7 +45,7 @@ const AiFinancialCrimeDetectionProPage: React.FC = () => {
     <>
       <Helmet>
         <title>Ai Financial Crime Detection Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai financial crime detection pro solution for modern businesses." />
+        <meta _name="description" content="Advanced AI-powered ai financial crime detection pro solution for modern businesses." />
         <meta name="keywords" content="AI ai financial crime detection pro, artificial intelligence, ai financial crime detection pro, AI solutions, intelligent automation" />
       </Helmet>
 

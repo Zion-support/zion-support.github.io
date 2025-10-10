@@ -32,7 +32,7 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
   'aria-label': ariaLabel,
   ...props});
 }); => {}
-  const handleClick = useCallback((...args) => {}
+  const _handleClick = useCallback((...args) => {}
     if (onClick) {}
       onClick();});
 }
@@ -59,7 +59,7 @@ export const,
 }
   };
   return (<a></a>
-      href={href}
+      _href={href}
       className={className}
       target={target}
       rel={rel}

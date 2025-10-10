@@ -6,7 +6,7 @@ interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 const,
   OptimizedImage: React.FC<OptimizedImageProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      src={src}
+      _src={src}
       alt={alt}
       width={width}
       height={height}

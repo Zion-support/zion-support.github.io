@@ -9,15 +9,15 @@ const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 
-  const toggleItem = (index: number) => {
+  const _toggleItem = (index: number) => {
     setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
+      prev.includes(index);
+        ? prev.filter(i => i !== index);
         : [...prev, index]
     );
   };
 
-  const faqData = [
+  const _faqData = [
     {
       category: 'General Questions',
       questions: [
@@ -79,7 +79,7 @@ questionquestion: 'How quickly do you respond to support requests?',
           answer:   ,
 $4];
 
-  const filteredData = faqData.map(category => ({
+  const _filteredData = faqData.map(category => ({
     ...category,
     questions: category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -90,7 +90,7 @@ $4];
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-12">
@@ -123,9 +123,9 @@ $4];
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
                     const globalIndex = categoryIndex * 100 + itemIndex;
-                    const isOpen = openItems.includes(globalIndex);
+                    const _isOpen = openItems.includes(globalIndex);
                     
-                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
+                      <div _key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
@@ -182,14 +182,14 @@ const FAQPage: React.FC = () => {
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
-const toggleItem = (inde)
+const _toggleItem = (inde);
   x: number) => {setOpenItems(prev =>})
-      prev.includes(index)
-        ? prev.filter(i => i !== index)
+      prev.includes(index);
+        ? prev.filter(i => i !== index);
         : [...prev, index]
     );
   };
-  const faqData = [
+  const _faqData = [
   // TOD,
   O: Add items;
 ];;
@@ -313,7 +313,7 @@ const toggleItem = (inde)
           answe,
   r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
-  const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
+  const _filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //     ...category,
@@ -328,7 +328,7 @@ const toggleItem = (inde)
     
           <>
       <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-12"></div>"
@@ -336,7 +336,7 @@ const toggleItem = (inde)
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Frequently Asked Questions;
           </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p _className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Find answers to common questions about our AI and IT services, pricing, and support.
             
           
@@ -385,8 +385,8 @@ type="text" placeholder="Search FAQs..."
   // TOD,
   O: Add content;
 }
-                    const globalIndex = categoryIndex * 100 + itemIndex;
-                    const isOpen = openItems.includes(globalIndex);
+                    const _globalIndex = categoryIndex * 100 + itemIndex;
+                    const _isOpen = openItems.includes(globalIndex);
                       
           
           
@@ -396,7 +396,7 @@ type="text" placeholder="Search FAQs..."
           
           
           "
-          <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
+          <div _key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
                         <button></button>
                           onClick={() => toggleItem(globalIndex)}"
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
@@ -437,10 +437,10 @@ type="text" placeholder="Search FAQs..."
                 <Phone className="w-5 h-5 mr-2" />
 // Call (302) 464-0950;
           </a>
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
-                href="/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <MessageSquare className="w-4 h-4 mr-2" />
 
                 Contact Form;

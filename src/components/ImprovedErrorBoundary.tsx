@@ -10,7 +10,7 @@ interface Props {
 
   fallback?: ReactNode;
   onError?: (erro,
-  r: Error, errorInf)
+  r: Error, errorInf);
   o: ErrorInfo) => void;
   resetKeys?: Array;
           <string | number>;
@@ -58,7 +58,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     }));
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {}
-    // Send to external error tracking (if available)
+    // Send to external error tracking (if available);
     if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
       (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
@@ -100,7 +100,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   t: 0;
     };
   }
-  static getDerivedStateFromError(erro)
+  static getDerivedStateFromError(erro);
   r: Error): Partial;
           <State> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -114,7 +114,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     };
   }
   componentDidCatch(erro,
-  r: Error, errorInf)
+  r: Error, errorInf);
   o: ErrorInfo): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -129,7 +129,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   k: error.stack,
       componen,
   t: errorInfo.componentStack ?? undefined,
-      timestam)
+      timestam);
   p: Date.now(),
       userAgen,
   t: navigator.userAgent,
@@ -155,7 +155,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   O: Add content;}
 }
     }
-    // Send to external error tracking (if available)
+    // Send to external error tracking (if available);
     if (typeof window !== 'undefined' && (window as unknown as {/* TODO: Fix JSX expression */})
   y: unknown }).Sentry) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -183,7 +183,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   }
   componentDidUpdate(prevProps: Props): void {
 
-  componentDidUpdate(prevProp)
+  componentDidUpdate(prevProp);
   s: Props): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 
@@ -202,17 +202,17 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       }
     }
   }
-  resetErrorBoundary = (): void => {
+  _resetErrorBoundary = (): void => {
     this.setState({
       hasError: false,
       error: null,
       errorInfo: null
     });
   };
-  handleReload = (): void => {
+  _handleReload = (): void => {
     window.location.reload();
   };
-  handleGoHome = (): void => {
+  _handleGoHome = (): void => {
     window.location.href = '/';
   };
   render(): ReactNode {
@@ -223,7 +223,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       }
       // Default error UI
       return (
-        <div className="error-boundary-container" style={styles.container}>
+        <div _className="error-boundary-container" style={styles.container}>
           <div style={styles.content}>
             <div style={styles.icon}>⚠️</div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
@@ -247,12 +247,12 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   o: null;)
     });
   };
-  handleReload = (): void => {/* TODO: Fix JSX expression */}
+  _handleReload = (): void => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.location.reload();
   };
-  handleGoHome = (): void => {/* TODO: Fix JSX expression */}
+  _handleGoHome = (): void => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.location.href = '/';
@@ -273,7 +273,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       return (<div>Coming Soon</div>)
   )
         
-          <div className="error-boundary-container" style={styles.container}></div>
+          <div _className="error-boundary-container" style={styles.container}></div>
           <div style={styles.content}></div>
             <div style={styles.icon}></div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
@@ -329,7 +329,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           </button>
               <button></button>
 
-                onClick={this.handleReload}
+                _onClick={this.handleReload}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Reload Page"
               >
@@ -342,7 +342,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           </button>
               <button></button>
 
-                onClick={this.handleGoHome}
+                _onClick={this.handleGoHome}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Go to Homepage"
               >
@@ -366,7 +366,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     return this.props.children;
   }
 }
-const styles = {
+const _styles = {
   container: {
     minHeight: '100vh',
     display: 'flex',
@@ -466,7 +466,7 @@ $4}
   }
 }
 
-const styles = {// TODO: Add content;}
+const _styles = {// TODO: Add content;}
 
 }
   containe,

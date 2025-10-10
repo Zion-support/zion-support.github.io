@@ -8,7 +8,7 @@
 export enum ErrorSeverity {// TODO: Add content;}
 
 }
-  LOW = 'low',
+  _LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
   CRITICAL = 'critical'
@@ -35,7 +35,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 }
   private,
   logs: ErrorLogEntry[] = [];
-  private maxLogs = 1000;
+  private _maxLogs = 1000;
   /**
    * Log an error with context;
    */
@@ -43,7 +43,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
     messag,
   e: string,
     _severit,
-  y: ErrorSeverity = ErrorSeverity.MEDIUM,
+  y: _ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
     context?: Record;
 
@@ -52,7 +52,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 
 }
     const,
-  entry: ErrorLogEntry = {/* TODO: Fix JSX expression */}
+  entry: _ErrorLogEntry = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -82,7 +82,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       this.logToConsole(entry);
     }
     // Send to external logging service in production;
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
+    if (process.env['NODE_ENV'] === 'production' && _severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.sendToExternalService(entry);
@@ -181,7 +181,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    * Get recent logs;
    */
 
-  getRecentLogs(count: number = 10): ErrorLogEntry[] {// TODO: Add content;}
+  getRecentLogs(count: _number = 10): ErrorLogEntry[] {// TODO: Add content;}
 
 }
     return this.logs.slice(-count);
@@ -215,22 +215,22 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   }
 }
 // Singleton instance;
-const errorLogger = new ErrorLogger();
+const _errorLogger = new ErrorLogger();
 // Convenience functions;
 
-export const logError = (message: string, error?: Error, context?: Record;)
+export const _logError = (message: string, error?: Error, context?: Record;)
 
           <string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context)
-export const logCritical = (messag)
+  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
+export const _logCritical = (messag);
   e: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context)
-export const logWarning = (messag)
+  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
+export const logWarning = (messag);
   e: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
-export const logInfo = (messag)
+  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
+export const logInfo = (messag);
   e: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
+  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export default errorLogger;`
 
 

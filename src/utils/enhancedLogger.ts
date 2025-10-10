@@ -17,7 +17,7 @@
 export enum LogLevel {// TODO: Add content;}
 
 }
-  DEBUG = 0,
+  _DEBUG = 0,
   INFO = 1,
   WARN = 2,
   ERROR = 3,
@@ -133,7 +133,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   private,
   performanceMarks: Map;
           <string, number> = new Map();
-  private constructor(confi)
+  private constructor(confi);
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -163,7 +163,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     return EnhancedLogger.instance;
   }
   /**
-   * Reset singleton instance (mainly for testing)
+   * Reset singleton instance (mainly for testing);
    *
    * @internal;
    */
@@ -261,7 +261,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     source?: string): void {// TODO: Add content;}
 
 }
-    const logData = { ...data };
+    const _logData = { ...data };
     if (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -276,7 +276,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   k: error.stack;
       };
     }
-    this.log(LogLevel.ERROR, message, logData, source, error?.stack)
+    this.log(LogLevel.ERROR, message, logData, source, error?.stack);
   }
   /**
    * Log a fatal error message;
@@ -295,7 +295,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     source?: string): void {// TODO: Add content;}
 
 }
-    const logData = { ...data };
+    const _logData = { ...data };
     if (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -310,7 +310,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   k: error.stack;
       };
     }
-    this.log(LogLevel.FATAL, message, logData, source, error?.stack)
+    this.log(LogLevel.FATAL, message, logData, source, error?.stack);
   }
   /**
    * Start a performance measurement;
@@ -323,7 +323,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * logger.endPerformance('api_call'); // Logs the duration;`
    * ```
    */
-  public startPerformance(markNam)
+  public startPerformance(markNam);
   e: string): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -343,16 +343,15 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
 
 }
     if (!this.config.enablePerformance) return undefined;
-    const startTime = this.performanceMarks.get(markName);
+    const _startTime = this.performanceMarks.get(markName);
     if (!startTime) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
       return undefined;
     }
-    const duration = performance.now() - startTime;
-    this.performanceMarks.delete(markName)
-
+    const _duration = performance.now() - startTime;
+    this.performanceMarks.delete(markName);
 //     this.info()
       `Performance: ${markName}`,
       {// TODO: Add content;}
@@ -390,7 +389,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (level;)
           < this.config.minLevel) return;
     const,
-  logEntry: LogEntry = {/* TODO: Fix JSX expression */}
+  logEntry: _LogEntry = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -452,14 +451,14 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   private logToConsole(entry: LogEntry): void {// TODO: Add content;}
 
 }
-    const levelName = LogLevel[entry.level];
-    const timestamp = entry.timestamp.toISOString();`
-    const source = entry.source ? ` [${entry.source}]` : '';`
-    const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
+    const _levelName = LogLevel[entry.level];
+    const _timestamp = entry.timestamp.toISOString();`
+    const _source = entry.source ? ` [${entry.source}]` : '';`
+    const _message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
     if (this.config.enableStructured) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const structuredLog = {/* TODO: Fix JSX expression */}
+      const _structuredLog = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -490,8 +489,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
           break;
         case LogLevel.WAR,
   N:
-          logger.warn(message, structuredLog)
-
+          logger.warn(message, structuredLog);
           break
         case LogLevel.ERROR:
         case LogLevel.FATAL:
@@ -531,13 +529,13 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
           break;
         case LogLevel.WAR,
   N:
-          logger.warn(message, entry.data)
+          logger.warn(message, entry.data);
           break;
         case LogLevel.ERRO,
   R:
         case LogLevel.FATA,
   L:
-          logger.error(message, entry.data)
+          logger.error(message, entry.data);
           break;
       }
     }
@@ -573,7 +571,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //           ...entry,
-          timestam)
+          timestam);
   p: entry.timestamp.toISOString()
         })
       });
@@ -586,8 +584,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
 
-  error: error instanceof Error ? error.message : String(error)
-
+  error: error instanceof Error ? error.message : String(error);
       }
   )
     }
@@ -614,7 +611,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   private getUserId(): string | undefined {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return undefined;
+    if (typeof _window === 'undefined') return undefined;
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -635,12 +632,12 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   private getSessionId(): string | undefined {// TODO: Add content;}
 
 }
-    if (typeof window === 'undefined') return undefined;
+    if (typeof _window === 'undefined') return undefined;
     try {if (!sessionId) {}
   // TOD,
   O: Add content;
 }`
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        _sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);
       }
       return sessionId;
@@ -706,7 +703,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     this.logs.forEach(log => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const levelName = LogLevel[log.level];)
+      const _levelName = LogLevel[log.level];)
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;
       if (log.source) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -758,15 +755,15 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //         ...log,
-        timestam)
+        timestam);
   p: log.timestamp.toISOString()
       })),
 //       null,
-//       2)
+//       2);
   }
 }
 // Export singleton instance;
-export const logger = EnhancedLogger.getInstance();
+export const _logger = EnhancedLogger.getInstance();
 // Export default;
 
 

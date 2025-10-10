@@ -10,11 +10,11 @@ const,
 }) => {/* TODO: Fix JSX expression */}
   };
 
-  const bgColorClasses = {/* TODO: Fix JSX expression */}
+  const _bgColorClasses = {/* TODO: Fix JSX expression */}
   };
 
   return (<article></article>
-      className="quantum-card p-4,"
+      _className="quantum-card p-4,"
   sm:p-6 energy-pulse group relative""
       role="article")
       aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
@@ -60,7 +60,7 @@ const,
         </ul>
       </div>
       "
-      <div className="mb-4"></div>"
+      <div _className="mb-4"></div>"
         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologie,
   s:</h4>"
         <div className="flex flex-wrap gap-1"></div>
@@ -100,7 +100,7 @@ const,
         aria-label={`Learn more about ${title}`}
       >
         Learn More;"
-        <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
+        <ArrowRight _className="w-4 h-4 ml-1" /></ArrowRight>
       </a>
     </article>
   );

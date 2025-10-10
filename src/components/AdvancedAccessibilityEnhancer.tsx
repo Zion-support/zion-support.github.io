@@ -14,16 +14,16 @@ const,
     }));
 
     // Listen for changes in user preferences;
-    const motionQuery = window.matchMedia('(prefers-reduced-motio)
+    const _motionQuery = window.matchMedia('(prefers-reduced-motio);
   n: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contras)
+    const _contrastQuery = window.matchMedia('(prefers-contras);
   t: high)');
     
-    const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
+    const _handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
   n: e.matches }));
     };
     
-    const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
+    const _handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
   t: e.matches }));
     };
     
@@ -49,7 +49,7 @@ const,
   }, [accessibilitySettings]);
 
   // Keyboard navigation enhancement;
-  const setupKeyboardNavigation = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _setupKeyboardNavigation = useCallback(() => {/* TODO: Fix JSX expression */}
         }
       }
       
@@ -69,13 +69,13 @@ const,
   }, []);
 
   // Screen reader enhancements;
-  const setupScreenReaderSupport = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _setupScreenReaderSupport = useCallback(() => {/* TODO: Fix JSX expression */}
       }
     };
 
-    // Listen for route changes (if using client-side routing)
-    const originalPushState = history.pushState;
-    const originalReplaceState = history.replaceState;
+    // Listen for route changes (if using client-side routing);
+    const _originalPushState = history.pushState;
+    const _originalReplaceState = history.replaceState;
     
     history.pushState = function(...args) {/* TODO: Fix JSX expression */}
     };
@@ -85,7 +85,7 @@ const,
   }, []);
 
   // Focus management;
-  const setupFocusManagement = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _setupFocusManagement = useCallback(() => {/* TODO: Fix JSX expression */}
             }
           } else {/* TODO: Fix JSX expression */}
             }
@@ -100,27 +100,27 @@ const,
     };
 
     // Apply focus trap to modals;
-    const modals = document.querySelectorAll('[role="dialog"]');
+    const _modals = document.querySelectorAll('[role="dialog"]');
     modals.forEach(modal => {/* TODO: Fix JSX expression */})
     });
   }, []);
 
   // ARIA labels enhancement;
-  const enhanceARIALabels = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _enhanceARIALabels = useCallback(() => {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
         button.setAttribute('aria-label', `Button ${index + 1}`);
       }
     });
 
     // Add ARIA labels to images;
-    const images = document.querySelectorAll('im)
+    const _images = document.querySelectorAll('im);
   g:not([alt])');
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
       img.setAttribute('alt', `Image ${index + 1}`);
     });
 
     // Add ARIA labels to form inputs;
-    const inputs = document.querySelectorAll('inpu)
+    const _inputs = document.querySelectorAll('inpu);
   t:not([aria-label]):not([aria-labelledby])');
     inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}
       } else if (label) {/* TODO: Fix JSX expression */}
@@ -131,7 +131,7 @@ const,
   }, []);
 
   // Skip links;
-  const addSkipLinks = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _addSkipLinks = useCallback(() => {/* TODO: Fix JSX expression */}
   t: 'Skip to main content' },
       {/* TODO: Fix JSX expression */}
   t: 'Skip to navigation' },
@@ -139,7 +139,7 @@ const,
   t: 'Skip to footer' }
     ];
 
-    const skipLinksContainer = document.createElement('div');
+    const _skipLinksContainer = document.createElement('div');
     skipLinksContainer.className = 'skip-links';
     skipLinksContainer.setAttribute('aria-label', 'Skip links');
 
@@ -150,16 +150,16 @@ const,
   }, []);
 
   // Color contrast checking;
-  const checkColorContrast = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _checkColorContrast = useCallback(() => {/* TODO: Fix JSX expression */}
       }
     };
 
-    const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
+    const _elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div');
     elements.forEach(element => checkElementContrast(element as HTMLElement));
   }, []);
 
   // Voice navigation support;
-  const setupVoiceNavigation = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _setupVoiceNavigation = useCallback(() => {/* TODO: Fix JSX expression */}
       } else if (command.includes('go to about')) {/* TODO: Fix JSX expression */}
       } else if (command.includes('go to contact')) {/* TODO: Fix JSX expression */}
       } else if (command.includes('go to services')) {/* TODO: Fix JSX expression */}
@@ -169,13 +169,13 @@ const,
     };
 
     // Add voice navigation button;
-    const voiceButton = document.createElement('button');
+    const _voiceButton = document.createElement('button');
     voiceButton.textContent = 'Voice Navigation';
     voiceButton.className = 'voice-navigation-button';
     voiceButton.setAttribute('aria-label', 'Start voice navigation');
     voiceButton.onclick = () => recognition.start();
     
-    const header = document.querySelector('header') || document.querySelector('nav');
+    const _header = document.querySelector('header') || document.querySelector('nav');
     if (header) {/* TODO: Fix JSX expression */}
     }
   }, []);

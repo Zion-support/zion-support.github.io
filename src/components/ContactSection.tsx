@@ -9,20 +9,20 @@ export default function ContactSection() {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const _handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const _handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    // console.log(...);
   };
 
-  const contactInfo = [
+  const _contactInfo = [
     {
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export default function ContactSection() {
     }
   ];
 
-  const services = [
+  const _services = [
     'AI & Machine Learning',
     'Cloud Solutions',
     'Web Development',
@@ -68,7 +68,7 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="py-20 relative">
+    <section _id="contact" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

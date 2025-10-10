@@ -8,7 +8,7 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 const $1: React.FC = () => {
-  const webServices = [,
+  const _webServices = [,
     {,
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
@@ -50,7 +50,7 @@ const $1: React.FC = () => {
       color: 'text-gray-400'}
   ];
 
-  const technologies = [
+  const _technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
     { name: 'Python/Django', icon: Globe, description: 'Backend development' },
@@ -59,7 +59,7 @@ const $1: React.FC = () => {
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
   ];
 
-  const process = [
+  const _process = [
     {
       step: '01',
       title: 'Discovery & Planning',
@@ -88,25 +88,25 @@ const $1: React.FC = () => {
 
   return(<>
       <SEOOptimizer;
-        title="Web Development Services - Zion Tech Group"
+        _title="Web Development Services - Zion Tech Group"
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
         canonicalUrl="https: //ziontechgroup.com/web-development",
       />,
         <PerformanceOptimizer;
-          enableImageOptimization={true}
+          _enableImageOptimization={true}
           enableLazyLoading={true}
           enableCodeSplitting={true}
           enablePrefetching={true}
         />
       <AccessibilityEnhancer;
-        enableKeyboardNavigation={true}
+        _enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
       />
       <SecurityEnhancer;
-        enableCSP={true}
+        _enableCSP={true}
         enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
@@ -133,7 +133,7 @@ const $1: React.FC = () => {
             </p>
             <div></div>
               <a;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></a></section>
+            <div _className="flex flex-col sm:flex-row gap-4 justify-center"></a></section>
               <a></a>Start Your Project<a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
@@ -153,7 +153,7 @@ const $1: React.FC = () => {
                 <div></div>
                   <div></div>
                     <div></div>
-                      <service.icon className="w-8 h-8 text-white" />
+                      <service.icon _className="w-8 h-8 text-white" />
                     </div>
                     <div></div>
                       <h3></h3>{service.title}<div></div>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
@@ -205,7 +205,7 @@ const $1: React.FC = () => {
                   );
 
                   <a;
-                    href="/contact"
+                    _href="/contact"
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
                   >Get Started</a>
                   </a>
@@ -222,7 +222,7 @@ const $1: React.FC = () => {
           <section></section>
             <h2></h2>Technologies We Use<di></di>{technologies.map((tech, index) => (</div>
                 <div></div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <tech.icon _className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3></h3>{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
             <h2></h2>
               Technologies We Use;
@@ -231,7 +231,7 @@ const $1: React.FC = () => {
             <div></div>,
               {technologies.map((tech, index) => (</div>
                 <di></di>,</div>
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
+                  <tech.icon _className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
                   <h></h>{tech.name}</h3>
                   <p className="text-sm text-gray-300">{tech.description}</p>
             <h></h>Technologies We Use</h2><div></div>{technologies.map((tech, index) => (</section>
@@ -248,7 +248,7 @@ const $1: React.FC = () => {
             <h2></h2>Our Development Process<di></di>{process.map((step, index) => (</div>
                 <div></div>
                   <div></div>
-                    <span></span>{step.step}<h3></h3>{step.title}<p className="text-gray-300">{step.description}</p>
+                    <span></span>{step.step}<h3></h3>{step.title}<p _className="text-gray-300">{step.description}</p>
             <h2></h2>
               Our Development Process;
             </h2>,
@@ -260,7 +260,7 @@ const $1: React.FC = () => {
                     <spa></spa>{step.step}</span>
                   </div>
                   <h></h>{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
+                  <p _className="text-gray-300">{step.description}</p>
             <h></h>Our Development Process</h2><div></div>{process.map((step, index) => (</section>
                 <div></div>
                   <div></div>
@@ -273,7 +273,7 @@ const $1: React.FC = () => {
           {/* CTA Section */}
           <section></section>
             <div></div>
-              <h2></h2>Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
+              <h2></h2>Ready to Build Your Next Web Application?<p _className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               <h2></h2>
                 Ready to Build Your Next Web Application?
               </h2>
@@ -282,7 +282,7 @@ const $1: React.FC = () => {
               </p>
               <div></div>
                 <a;
-            <div className="cyber-card p-12 max-w-4xl mx-auto"></a></section>
+            <div _className="cyber-card p-12 max-w-4xl mx-auto"></a></section>
               <h></h>Ready to Build Your Next Web Application?</h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               </p>
               <div></div>

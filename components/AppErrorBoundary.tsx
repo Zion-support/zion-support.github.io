@@ -7,7 +7,7 @@ interface ErrorFallbackProps {
 
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div _className="min-h-screen flex items-center justify-center bg-gray-50">
       <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
         <div className="flex items-center mb-4">
           <div className="flex-shrink-0">
@@ -80,13 +80,13 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     // Here you could send error to monitoring service
   }
 
-  resetError = () => {
+  _resetError = () => {
     this.setState({ hasError: false, error: undefined });
   };
 
   render() {
     if (this.state.hasError && this.state.error) {
-      return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
+      return <ErrorFallback _error={this.state.error} resetError={this.resetError} />;
     }
 
     return this.props.children;

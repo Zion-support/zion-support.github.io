@@ -17,14 +17,14 @@ interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 const,
   OptimizedLoadingSpinner: React.FC;
           <OptimizedLoadingSpinnerProps> = memo()
-  ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
+  ({ _size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
       m,
   d: 'w-8 h-8',
       l,
   g: 'w-12 h-12'
     };
-    const colorClasses = {/* TODO: Fix JSX expression */}
+    const _colorClasses = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   primar,
@@ -38,7 +38,7 @@ const,
   )
       
           <div></div>
-className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
+_className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
         role="status""
         aria-label="Loading"
 // >
@@ -109,13 +109,13 @@ export default OptimizedLoadingSpinner;
 
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
-  ({ size = 'md', color = 'primary', className = '' }) => {
+  ({ _size = 'md', color = 'primary', className = '' }) => {
       sm: 'w-4 h-4',
       md: 'w-8 h-8',
       lg:     ,
 $4};
 
-    const colorClasses = {
+    const _colorClasses = {
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white:     ,
@@ -123,7 +123,7 @@ $4};
 
     return (
       <div
-        className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
+        _className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
         role="status"
         aria-label="Loading"
       >

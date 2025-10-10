@@ -8,7 +8,7 @@ async function handler(req, res) {
     return;
   }
 
-  const { amount, currency = 'usd' } = req.body || {};
+  const { amount, _currency = 'usd' } = req.body || {};
 
   if (!amount) {
     res.statusCode = 400;
@@ -18,12 +18,12 @@ async function handler(req, res) {
   }
 
   try {
-    const paymentIntent = {
+    const _paymentIntent = {
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: Math.round(amount * 100), // Convert to cents
       currency,
       status: 'requires_payment_method',
-      created: Math.floor(Date.now() / 1000)
+      created: Math.floor(Date.now() / 1000);
     };
 
     res.statusCode = 200;

@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const PageFixedPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Brain,
       title: 'AI-Powered Analysis',
@@ -37,7 +37,7 @@ const PageFixedPage: React.FC = () => {
     <>
       <Helmet>
         <title>Page Fixed - Zion Tech Group</title>
-        <meta name="description" content="Advanced page fixed solutions powered by AI technology." />
+        <meta _name="description" content="Advanced page fixed solutions powered by AI technology." />
       </Helmet>
 
       <Navigation />

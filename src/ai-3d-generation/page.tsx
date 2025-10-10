@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const AI3DGenerationPage: React.FC = () => {
-  const features = [
+  const _features = [
     '3D Model Generation',
     'Animation Creation',
     'Texture Mapping',
@@ -18,7 +18,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Scene Composition'
   ];
 
-  const benefits = [
+  const _benefits = [
     'Professional 3D content',
     'Time savings',
     'No 3D skills needed',
@@ -27,7 +27,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Scalable production'
   ];
 
-  const pricingPlans = [
+  const _pricingPlans = [
     {
       name: 'Starter',
       price: '$299',
@@ -54,7 +54,7 @@ const AI3DGenerationPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="AI 3D Generation Studio - Create 3D Models & Animations with AI | Zion Tech Group"
+        _title="AI 3D Generation Studio - Create 3D Models & Animations with AI | Zion Tech Group"
         description="Create professional 3D models, animations, and virtual environments with AI 3D Generation Studio. No 3D skills needed, starting at $299/month."
         keywords={['AI 3D generation', '3D models', '3D animation', 'VR AR content', '3D automation', 'AI 3D']}
         canonicalUrl="https://ziontechgroup.com/ai-3d-generation"

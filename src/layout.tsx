@@ -13,7 +13,7 @@ export default function RootLayout({
   children}: {
   children: React.ReactNode;
 }) {
-  const structuredData = {
+  const _structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -96,7 +96,7 @@ name$5: 'Cloud Infrastructure',
 $4]
   };
   return (
-    <html lang='en'>
+    <html _lang='en'>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />

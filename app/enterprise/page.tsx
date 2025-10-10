@@ -6,7 +6,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
 
 const EnterprisePage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Shield,
       title: 'Enterprise Security',
@@ -45,7 +45,7 @@ const EnterprisePage: React.FC = () => {
 }
   ];
 
-  const solutions = [
+  const _solutions = [
     {
       title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
@@ -72,7 +72,7 @@ const EnterprisePage: React.FC = () => {
 }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
     'Enhance security and compliance',
@@ -83,7 +83,7 @@ const EnterprisePage: React.FC = () => {
     'Provide 24/7 support and monitoring'
   ];
 
-  const stats = [
+  const _stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
@@ -93,7 +93,7 @@ const EnterprisePage: React.FC = () => {
   return (
     <div></div>
       <SEOOptimizer
-        title="Enterprise Solutions - Zion Tech Group"
+        _title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
       />
@@ -144,7 +144,7 @@ const EnterprisePage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4"></section>
+      <section _className="py-20 px-4"></section>
         <div></div>
           <div></div>
             <h2 className="text-4xl font-bold text-white mb-4"></h2>
@@ -174,7 +174,7 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
-            <h2 className="text-4xl font-bold text-white mb-4"></h2>
+            <h2 _className="text-4xl font-bold text-white mb-4"></h2>
               Comprehensive Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
@@ -192,7 +192,7 @@ const EnterprisePage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4"></section>
+      <section _className="py-20 px-4"></section>
                 </button>
               </div>
             </div>

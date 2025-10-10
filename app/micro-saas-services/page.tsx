@@ -851,7 +851,7 @@ export const microSaasServices: MicroSaasService[] = [
 ];
 
 // Service categories for filtering and organization;
-export const serviceCategories = [
+export const _serviceCategories = [
   'All',
   'Productivity',
   'Content & Marketing',
@@ -867,7 +867,7 @@ export const serviceCategories = [
 ];
 
 // Pricing tiers for comparison;
-export const pricingTiers = {
+export const _pricingTiers = {
   starter: {,
     name: 'Starter',
     price: '$29-99/month',
@@ -886,7 +886,7 @@ export const pricingTiers = {
 };
 
 // Contact information;
-export const contactInfo = {
+export const _contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',

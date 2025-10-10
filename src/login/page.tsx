@@ -18,15 +18,15 @@ const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const __handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: _type === 'checkbox' ? checked : value
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const _handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     
@@ -38,7 +38,7 @@ const LoginPage: React.FC = () => {
     window.location.href = '/';
   };
 
-  const features = [
+  const _features = [
     {
       icon: Shield,
       title: 'Secure Access',
@@ -59,7 +59,7 @@ $4}
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Login Form */}
@@ -106,7 +106,7 @@ $4}
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const _handleInputChange = (e: React.ChangeEvent;)
+  const __handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -115,10 +115,10 @@ $4}
   O: Add content;}
 }
 //       ...prev,
-      [name]: type === 'checkbox' ? checked : value;)
+      [name]: _type === 'checkbox' ? checked : value;)
     }));
   };
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
+  const _handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     e.preventDefault();
@@ -129,7 +129,7 @@ $4}
     // Redirect to dashboard or home page;
     window.location.href = '/';
   };
-  const features = [
+  const _features = [
   // TOD,
   O: Add items;
 ];;
@@ -169,7 +169,7 @@ $4}
     
           <>
       <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12"></div>"
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <div className="max-w-6xl mx-auto px-4"></div>"
           <div className="grid grid-cols-1,"
   lg:grid-cols-2 gap-12 items-center"></div>
@@ -179,17 +179,17 @@ $4}
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
 // Welcome Back;
           </h1>"
-                <p className="text-gray-300"></p>
+                <p _className="text-gray-300"></p>
 // Sign in to your account to access your AI and IT services;
           </p>
               </div>"
-              <form onSubmit={handleSubmit} className="space-y-6"></form>
+              <form _onSubmit={handleSubmit} className="space-y-6"></form>
                 <div></div>"
                   <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Email Address;
 
           </label>
-                  <div className="relative">
+                  <div _className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
 type="email" name="email"
@@ -445,11 +445,11 @@ type="submit" disabled={isLoading}
           </a>
                 </p>
               </div>"
-              <div className="mt-8 pt-6 border-t border-gray-700"></div>"
+              <div _className="mt-8 pt-6 border-t border-gray-700"></div>"
                 <p className="text-center text-sm text-gray-400 mb-4"></p>
                   Or continue with;
                 </p>"
-                <div className="grid grid-cols-2 gap-3"></div>"
+                <div _className="grid grid-cols-2 gap-3"></div>"
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,"
   hover:bg-slate-600 transition-colors"></button>"
                     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24"></svg>"
@@ -477,7 +477,7 @@ type="submit" disabled={isLoading}
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
 // Access Your AI & IT Services;
           </h2>"
-                <p className="text-xl text-gray-300 mb-8"></p>
+                <p _className="text-xl text-gray-300 mb-8"></p>
 // Sign in to manage your AI services, view analytics, and access all your;
 //                   enterprise solutions in one place.
                 
@@ -491,7 +491,7 @@ type="submit" disabled={isLoading}
           
           </p>
               </div>"
-              <div className="space-y-6"></div>
+              <div _className="space-y-6"></div>
                 {features.map((feature, index) => ()}"
           <div key={index} className="flex items-start"></div>"
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"></div>"
@@ -548,11 +548,11 @@ type="submit" disabled={isLoading}
           </p>
 
                 <a
-                  href="/signup" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                  _href="/signup" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
 
 // >
 //                   Create your account;"
-          <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
+          <ArrowRight _className="w-4 h-4 ml-1" /></ArrowRight>
                 </a>
               </div>
             </div>

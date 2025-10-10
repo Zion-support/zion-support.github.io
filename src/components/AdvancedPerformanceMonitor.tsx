@@ -30,7 +30,7 @@ const AdvancedPerformanceMonitor: React.FC;
 
 }
 //   onMetricsUpdate,
-  enableRealTimeMonitoring = true;)
+  _enableRealTimeMonitoring = true;)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -47,25 +47,25 @@ const AdvancedPerformanceMonitor: React.FC;
     memory: null;
 
   });
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
+    if (typeof _window === 'undefined' || !('performance' in window)) return;
+    if (typeof _PerformanceObserver === 'undefined') return;
     const,
   observers: PerformanceObserver[] = [];
-    // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
-    // Measure Largest Contentful Paint (LCP)
+    // Measure First Contentful Paint (FCP);
+    const _fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
+    const _fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
+    // Measure Largest Contentful Paint (LCP);
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+        const _lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
-          const entries = list.getEntries();
-          const lastEntry = _entries[_entries.length - 1];
+          const _entries = list.getEntries();
+          const _lastEntry = _entries[_entries.length - 1];
           setMetrics(prev => ({/* TODO: Fix JSX expression */})
   p: _lastEntry.startTime }));
         });
@@ -77,17 +77,17 @@ const AdvancedPerformanceMonitor: React.FC;
 }
         }
     }
-    // Measure First Input Delay (FID)
+    // Measure First Input Delay (FID);
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+        const _fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
-          const entries = list.getEntries();
+          const _entries = list.getEntries();
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
@@ -97,7 +97,7 @@ const AdvancedPerformanceMonitor: React.FC;
 //               'startTime' in entry) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-              const fidEntry = entry as PerformanceEventTiming;
+              const _fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -116,15 +116,15 @@ const AdvancedPerformanceMonitor: React.FC;
 }
         }
     }
-    // Measure Cumulative Layout Shift (CLS)
+    // Measure Cumulative Layout Shift (CLS);
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      try {const clsObserver = new PerformanceObserver(list => {}
+      try {const _clsObserver = new PerformanceObserver(list => {}
   // TOD,
   O: Add content;
 })
-          const entries = list.getEntries();
+          const _entries = list.getEntries();
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content;}
 })
@@ -134,7 +134,7 @@ const AdvancedPerformanceMonitor: React.FC;
 //               'value' in entry) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-              const clsEntry = entry as LayoutShift;
+              const _clsEntry = entry as LayoutShift;
               if (!_clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -153,17 +153,17 @@ const AdvancedPerformanceMonitor: React.FC;
 }
         }
     }
-    // Measure Time to First Byte (TTFB)
+    // Measure Time to First Byte (TTFB);
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = _navigationEntry;
+      const _navigationEntries = performance.getEntriesByType?.('navigation') || [];
+      const _navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
+      const _ttfb = _navigationEntry;
 //         ? _navigationEntry.responseStart - _navigationEntry.requestStart;
         : null;
       // Measure Memory Usage;
-const memory =
+const _memory =
         (performance as Performance & {/* TODO: Fix JSX expression */})
   e: number } })
           .memory?.usedJSHeapSize || null;
@@ -198,13 +198,13 @@ const memory =
       });
     };
   }, []);
-  const measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    const resources = performance.getEntriesByType('resource');
-    const slowResources = _resources.filter()
-      (resourc)
+    if (typeof _window === 'undefined' || !('performance' in window)) return;
+    const _resources = performance.getEntriesByType('resource');
+    const _slowResources = _resources.filter()
+      (resourc);
   e: PerformanceResourceTiming) => resource.duration > 1000);
     if (slowResources.length > 0) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -220,10 +220,10 @@ const memory =
       // })));
     }
   }, []);
-  const measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined') return;
+    if (typeof _window === 'undefined') return;
     // Use web-vitals library if available;
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -289,9 +289,9 @@ const memory =
   O: Add content;}
 }
     if (!enableRealTimeMonitoring) return;
-    const cleanup = measureWebVitals();
+    const _cleanup = measureWebVitals();
 // Monitor performance every 5 seconds;
-    const interval = setInterval(() => {/* TODO: Fix JSX expression */}
+    const _interval = setInterval(() => {/* TODO: Fix JSX expression */}
     }, 5000);
     return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -316,7 +316,7 @@ const memory =
     }
   }, [metrics, onMetricsUpdate]);
   // Performance recommendations;
-const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expression */}
+const _getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const,
@@ -358,14 +358,14 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
     }
     return recommendations;
   }, [metrics]);
-  const recommendations = getPerformanceRecommendations();
+  const _recommendations = getPerformanceRecommendations();
   if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return (<div>Coming Soon</div>)
   )
       
-          <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
+          <div _className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'></div>
           <div>FC,
@@ -389,12 +389,12 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
           </div>
         </div>
         {_recommendations.length > 0 && ()}
-          <div className='mt-2'></div>
+          <div _className='mt-2'></div>
             <h4 className='font-semibold text-xs text-red-600'>;
   Recommendation,
   s:
             </h4>
-            <ul className='text-xs text-red-600'></ul>
+            <ul _className='text-xs text-red-600'></ul>
 {recommendations.map((rec, index) => (}
                 <li key={index}>• {rec}</li>)
               ))}

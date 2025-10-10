@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const BlockchainWeb3Page: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Zap,
       title: 'Smart Contracts',
@@ -36,7 +36,7 @@ const BlockchainWeb3Page: React.FC = () => {
     <>
       <Helmet>
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
+        <meta _name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">

@@ -12,18 +12,18 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: false };
   }
 
-  static getDerivedStateFromError(erro)
+  static getDerivedStateFromError(erro);
   r: Error): State {/* TODO: Fix JSX expression */}
   r: true, error };
   }
 
   componentDidCatch(erro,
-  r: Error, errorInf)
+  r: Error, errorInf);
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
 
     // Log error to monitoring service;
-    // console.error('ErrorBoundary caught an)
+    // console.error('ErrorBoundary caught an);
   error:', error, errorInfo);
     
     // You can also log to external services here;
@@ -32,17 +32,17 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
     }
   }
 
-  handleRetry = () => {/* TODO: Fix JSX expression */}
+  _handleRetry = () => {/* TODO: Fix JSX expression */}
   o: undefined });
   };
 
-  handleReload = () => {/* TODO: Fix JSX expression */}
+  _handleReload = () => {/* TODO: Fix JSX expression */}
   };
 
   render() {/* TODO: Fix JSX expression */}
       }
 
-      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
+      return (<div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20"></div>"
             <div className="mb-6"></div>"
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" /></AlertTriangle>"
@@ -74,7 +74,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </button>
               
               <button></button>
-                onClick={this.handleReload}"
+                _onClick={this.handleReload}"
                 className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-700 transition-colors flex items-center justify-center gap-2"
               >"
@@ -83,7 +83,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </button>
               
               <a></a>"
-                href="/""
+                _href="/""
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
               >"
@@ -92,7 +92,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </a>
               
               <a></a>"
-                href="mailt,"
+                _href="mailt,"
   o:support@ziontechgroup.com?subject=Error Report""
                 className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,
   hover:bg-cyan-400,"
@@ -103,7 +103,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </a>
             </div>
 "
-            <div className="mt-6 text-sm text-gray-400"></div>
+            <div _className="mt-6 text-sm text-gray-400"></div>
               <p>If this problem persists, please contact our support,
   team:</p>"
               <p className="mt-1"></p>"
@@ -113,7 +113,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                   support@ziontechgroup.com;
                 </a>
               </p>"
-              <p className="mt-1"></p>"
+              <p _className="mt-1"></p>"
                 <a href="te,"
   l:+13024640950" className="text-cyan-400,"
   hover:text-cyan-300"></a>

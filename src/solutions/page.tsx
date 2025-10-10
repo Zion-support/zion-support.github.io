@@ -12,7 +12,7 @@ import React, { useState } from 'react';
 const SolutionsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-  const _solutionCategories = [
+  const __solutionCategories = [
     {
       id: 'ai',
       name: 'AI Solutions',
@@ -47,7 +47,7 @@ $4},
 $4}
   ];
 
-  const solutions = {
+  const _solutions = {
     ai: [
       {
         title: 'AI-Powered Analytics',
@@ -186,7 +186,7 @@ $4}
     ]
   };
 
-  const benefits = [
+  const _benefits = [
     {
       icon: Star,
       title: 'Proven Results',
@@ -212,7 +212,7 @@ $4}
   return (
     <>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
@@ -251,7 +251,7 @@ $4}
   );
 };
   const [activeTab, setActiveTab] = useState('ai');
-  const _solutionCategories = [
+  const __solutionCategories = [
   // TOD,
   O: Add items;
 ];;
@@ -320,7 +320,7 @@ $4}
   n: 'Streamline operations with intelligent automation'
     }
   ];
-  const solutions = {/* TODO: Fix JSX expression */}
+  const _solutions = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   a,
@@ -600,7 +600,7 @@ $4}
       }
 //     ]
   };
-  const benefits = [
+  const _benefits = [
   // TOD,
   O: Add items;
 ];;
@@ -650,7 +650,7 @@ $4}
     
           <>
       <Navigation /></Navigation>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+      <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <div className="container mx-auto px-4 py-16 pt-24"></div>
           {/* Header */}"
           <div className="text-center mb-16"></div>"
@@ -658,7 +658,7 @@ $4}
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Our Solutions;
           </h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
+            <p _className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Comprehensive technology solutions designed to transform your business operations;
 //               and drive innovation across every aspect of your organization.
             
@@ -673,7 +673,7 @@ $4}
           </p>
           </div>
           {/* Solution Categories Tabs */}"
-          <div className="mb-12"></div>"
+          <div _className="mb-12"></div>"
             <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
               {solutionCategories.map((category) => ()}
           <button></button>
@@ -683,7 +683,7 @@ $4}
   // TOD,
   O: Add content;
 }
-                    activeTab === category.id;`
+                    _activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
   hover:bg-slate-700/50 border-2 border-transparent'`
@@ -698,7 +698,7 @@ $4}
           
           
           "
-          <category.icon className="w-5 h-5 mr-2" /></category>"
+          <category.icon _className="w-5 h-5 mr-2" /></category>"
                   <span className="font-medium">{category.name}</span>
                 </button>
               ))}
@@ -781,7 +781,7 @@ $4}
 
 // >
 //                       Learn More;"
-          <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
+          <ArrowRight _className="w-4 h-4 ml-1" /></ArrowRight>
                     </a>
                   </div>
                 </div>
@@ -889,7 +889,7 @@ $4}
           
 
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div _className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 
@@ -908,7 +908,7 @@ $4}
           </a>
 
               <a
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 
 // >
                 
@@ -925,7 +925,7 @@ $4}
           </a>
 
               <a
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                _href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 
 // >
                 

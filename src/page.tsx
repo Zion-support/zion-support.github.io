@@ -115,14 +115,14 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+const _ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const _ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+const _DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+const _ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const _ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Preload critical components
-const preloadComponents = () => {
+const _preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
@@ -133,7 +133,7 @@ const preloadComponents = () => {
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+  <div _className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
@@ -147,7 +147,7 @@ const HomePage: React.FC = () => {
 
   useEffect(() => {
     setIsLoaded(true);
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const _timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
     
     // Initialize performance optimizations
@@ -157,7 +157,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
+  const _handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
@@ -167,7 +167,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   // Enhanced Micro SAAS Services with real functionality and pricing
-  const microSAASServices = [
+  const _microSAASServices = [
     {
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
@@ -379,7 +379,7 @@ const HomePage: React.FC = () => {
   ];
 
   // Enhanced AI Services with real capabilities and market pricing
-  const aiServices = [
+  const _aiServices = [
     {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making with 99.9% accuracy',
@@ -479,7 +479,7 @@ const HomePage: React.FC = () => {
   ];
 
   // Enhanced IT Services with comprehensive capabilities
-  const itServices = [
+  const _itServices = [
     {
       title: 'Cloud Migration & Management',
       description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
@@ -579,7 +579,7 @@ const HomePage: React.FC = () => {
   ];
 
   // Specialized Services
-  const specializedServices = [
+  const _specializedServices = [
     {
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable business insights with advanced AI analytics',
@@ -655,7 +655,7 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Performance Optimizer */}
       <PerformanceOptimizer />
       
@@ -684,7 +684,7 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0" style={{
           backgroundImage: `
             linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+            linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
           `,
           backgroundSize: '50px 50px'
         }}></div>

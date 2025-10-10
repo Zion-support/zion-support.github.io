@@ -24,7 +24,7 @@ export const Image: React.FC<ImageProps> = ({
   width,
   height,
   className,
-  priority = false,
+  _priority = false,
   quality = 75,
   placeholder = 'empty',
   blurDataURL,
@@ -37,11 +37,11 @@ export const Image: React.FC<ImageProps> = ({
 }) => {
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const _handleLoad = useCallback(() => {
+  const __handleLoad = useCallback(() => {
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
-  const handleError = useCallback(() => {
+  const _handleError = useCallback(() => {
     setHasError(true);
     if (onError) onError();
   }, [onError]);
@@ -59,7 +59,7 @@ $4})
   if (hasError) {
     return (
       <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        _className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
       >
@@ -69,7 +69,7 @@ $4})
   }
   return (
     <img
-      src={src}
+      _src={src}
       alt={alt}
       width={width}
       height={height}
@@ -120,7 +120,7 @@ export const Image: React.FC;
 //   width,
 //   height,
 //   className,
-  priority = false,
+  _priority = false,
 quality = 75,
   placeholder = 'empty',
   blurDataURL,
@@ -136,13 +136,13 @@ quality = 75,
 }
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
+  const __handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     setHasError(true);
@@ -184,7 +184,7 @@ quality = 75,
   )
       
           <div></div>
-className={`bg-gray-200 flex items-center justify-center ${className}`}
+_className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
 // >

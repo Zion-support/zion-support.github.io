@@ -42,7 +42,7 @@ const,
 //   date,
 //   path,
 //   image,
-  featured = false,
+  _featured = false,
 //   stats,
 //   excerpt;)
 }) => {if (num >= 1000) {}
@@ -53,7 +53,7 @@ const,
     }
     return num.toString();
   };
-  const getCategoryColor = (categor)
+  const _getCategoryColor = (categor);
   y: string): string => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -76,7 +76,7 @@ const,
   return (<div>Coming Soon</div>)
   )
     
-          <article className={/* TODO: Fix JSX expression */}
+          <article _className={/* TODO: Fix JSX expression */}
   hover:-translate-y-1 ${}
   // TOD,
   O: Add content;
@@ -93,7 +93,7 @@ const,
           
           
           `
-          <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}></div>
+          <div _className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}></div>
         <div className="text-center text-white"></div>"
           <div className="text-6xl mb-2">{image}</div>"
           <div className="text-sm font-medium opacity-90">{category}</div>
@@ -108,7 +108,7 @@ const,
         )}
         {/* Stats Overlay */}
         {stats && ()}"
-          <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2"></div>"
+          <div _className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2"></div>"
             <div className="text-center"></div>"
               <div className="text-lg font-bold text-white"></div>
                 {formatNumber(stats.views)}
@@ -166,7 +166,7 @@ const,
   hover:text-indigo-700 font-medium text-sm"
 // >
 //             Read Article;"
-          <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>"
+          <svg _className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>"
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></path>
             </svg>
           </Link>

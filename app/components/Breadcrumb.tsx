@@ -14,110 +14,47 @@ interface BreadcrumbItem {
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   
-<<<<<<< HEAD
-=======
-  const generateBreadcrumbs = (): BreadcrumbItem[] => {
-    const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
-    const breadcrumbs: BreadcrumbItem[] = [
-      { name: 'Home', href: '/' }
-    ];
-
-    let currentPath = '';
-    pathSegments.forEach((segment, index) => {
-      currentPath += `/${segment}`;
-      const isLast = index === pathSegments.length - 1;
-      
-      // Convert segment to readable name
-      const name = segment
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
-
-      breadcrumbs.push({
-        name,
-        href: currentPath,
-        current: isLast
-      });
-    });
-
-    return breadcrumbs;
-  };
-
-  const breadcrumbs = generateBreadcrumbs();
-
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
   // Don't show breadcrumb on home page
   if (location.pathname === '/') {
     return null;
   }
-<<<<<<< HEAD
 
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
-  
-  const breadcrumbItems = [
-    { name: 'Home', path: '/', icon: Home }
+  // Generate breadcrumb items from pathname
+  const pathSegments = location.pathname.split('/').filter(Boolean);
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: 'Home', href: '/' }
   ];
 
+  let currentPath = '';
   pathSegments.forEach((segment, index) => {
-    const path = '/' + pathSegments.slice(0, index + 1).join('/');
-    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    breadcrumbItems.push({ name, path, icon: null });
+    currentPath += `/${segment}`;
+    const isLast = index === pathSegments.length - 1;
+    breadcrumbItems.push({
+      name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+      href: currentPath,
+      current: isLast
+    });
   });
 
   return (
-    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <ol className="flex items-center space-x-2 text-sm">
-          {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">
-              {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-              )}
-              <a
-                href={item.path}
-                className={`flex items-center space-x-1 transition-colors duration-200 ${
-                  index === breadcrumbItems.length - 1
-                    ? 'text-cyan-400 font-medium'
-                    : 'text-gray-300 hover:text-cyan-400'
-                }`}
-              >
-                {item.icon && <item.icon className="w-4 h-4" />}
-                <span>{item.name}</span>
-              </a>
-=======
-
-  return (
-    <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700/50" aria-label="Breadcrumb">
+    <nav className="flex" aria-label="Breadcrumb">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ol className="flex items-center space-x-2 py-3 text-sm">
-          {breadcrumbs.map((item, index) => (
+        <ol className="flex items-center space-x-4">
+          {breadcrumbItems.map((item, index) => (
             <li key={item.href} className="flex items-center">
               {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="true" />
+                <ChevronRight className="flex-shrink-0 h-5 w-5 text-gray-400" />
               )}
-              
-              {index === 0 ? (
-                <Link
-                  to={item.href}
-                  className="flex items-center text-gray-300 hover:text-white transition-colors"
-                  aria-label="Home"
-                >
-                  <Home className="w-4 h-4" aria-hidden="true" />
-                  <span className="sr-only">Home</span>
-                </Link>
-              ) : item.current ? (
-                <span className="text-white font-medium" aria-current="page">
-                  {item.name}
-                </span>
+              {item.current ? (
+                <span className="text-gray-500 font-medium">{item.name}</span>
               ) : (
                 <Link
                   to={item.href}
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="text-cyan-400 hover:text-cyan-300 font-medium"
                 >
                   {item.name}
                 </Link>
               )}
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
             </li>
           ))}
         </ol>

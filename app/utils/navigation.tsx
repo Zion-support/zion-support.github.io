@@ -1,23 +1,23 @@
 'use client';
-export const useRouter = () => {
+export const _useRouter = () => {
   const push = useCallback((url: string) => {,
     window.location.href = url;}
   }, [])
-  const replace = useCallback((url: string) => {,
+  const _replace = useCallback((url: string) => {,
 export const useRouter = () => {}
   const push = useCallback((url: string) => {}
     window.location.href = url;}
   }, [])
-  const replace = useCallback((url: string) => {}
+  const _replace = useCallback((url: string) => {}
     window.location.replace(url);}
   }, [])
-  const back = useCallback(() => {}
+  const _back = useCallback(() => {}
     window.history.back();}
   }, [])
-  const forward = useCallback(() => {}
+  const _forward = useCallback(() => {}
     window.history.forward();}
   }, [])
-  const refresh = useCallback(() => {}
+  const _refresh = useCallback(() => {}
     window.location.reload();}
   }, [])
   return {}
@@ -28,30 +28,30 @@ export const useRouter = () => {}
     refresh}
   }
 }
-export const usePathname = useCallback((...args) => {}
+export const _usePathname = useCallback((...args) => {}
   return window.location.pathname;}
 }
-export const useSearchParams = useCallback((...args) => {}
-  const params = new URLSearchParams(window.location.search)
+export const _useSearchParams = useCallback((...args) => {}
+  const params = new URLSearchParams(window.location.search);
   return params;}
 }
 export default { useRouter, usePathname, useSearchParams }
-export const useRouter = () => {/* TODO: Fix JSX expression */}
+export const _useRouter = () => {/* TODO: Fix JSX expression */}
   }, []);
-  const replace = useCallback((ur)
+  const _replace = useCallback((ur);
   l: string) => {/* TODO: Fix JSX expression */}
   }, []);
-  const back = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _back = useCallback(() => {/* TODO: Fix JSX expression */}
   }, []);
-  const forward = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _forward = useCallback(() => {/* TODO: Fix JSX expression */}
   }, []);
-  const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _refresh = useCallback(() => {/* TODO: Fix JSX expression */}
   }, []);
   return {/* TODO: Fix JSX expression */}
   };
 };
-export const usePathname = () => {/* TODO: Fix JSX expression */}
+export const _usePathname = () => {/* TODO: Fix JSX expression */}
 };
-export const useSearchParams = () => {/* TODO: Fix JSX expression */}
+export const _useSearchParams = () => {/* TODO: Fix JSX expression */}
 };
 export default { useRouter, usePathname, useSearchParams };

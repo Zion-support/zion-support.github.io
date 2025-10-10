@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     // 3. Send confirmation email to the customer
     // 4. Integrate with your CRM
 
-    const quoteData = {
+    const _quoteData = {
       name,
       email,
       phone,
@@ -28,7 +28,7 @@ export default async function handler(req, res) {
       status: 'pending'
     };
 
-    console.log('Quote request received:', quoteData);
+    // console.log(...);
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');

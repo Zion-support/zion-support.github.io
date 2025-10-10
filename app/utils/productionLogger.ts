@@ -2,7 +2,7 @@
  * Production-ready logger that removes console statements in production;
  */
 
-type LogLevel = 'debug' | 'info' | 'warn' | 'error';
+type _LogLevel = 'debug' | 'info' | 'warn' | 'error';
 
 interface LogEntry {}
   level: LogLevel,
@@ -13,14 +13,14 @@ interface LogEntry {}
 }
 
 class ProductionLogger {}
-  private isDevelopment = process.env.NODE_ENV === 'development';
-  private isProduction = process.env.NODE_ENV === 'production';
+  private _isDevelopment = process.env.NODE_ENV === 'development';
+  private _isProduction = process.env.NODE_ENV === 'production';
 
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
-    const entry: LogEntry = {,
+    const entry: _LogEntry = {,
       level;
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
-    const entry: LogEntry = {}
+    const entry: _LogEntry = {}
       level,
       message,
       data,
@@ -46,7 +46,7 @@ class ProductionLogger {}
     }
 
     // In production, send critical errors to monitoring service;
-    if (this.isProduction && level === 'error') {
+    if (this.isProduction && _level === 'error') {
     // In production, send critical errors to monitoring service
     if (this.isProduction && level === 'error') {}
       this.sendToMonitoring(entry);)
@@ -90,5 +90,5 @@ class ProductionLogger {}
 }
 }
 
-export const logger = new ProductionLogger();
+export const _logger = new ProductionLogger();
 export default logger;

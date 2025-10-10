@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
-  const _microSAASServices = [
+  const __microSAASServices = [
     // AI-Powered Developer Tools
     {
       title: 'AI Code Review Assistant Pro',
@@ -1665,7 +1665,7 @@ $4},
 $4}
   ];
   
-  /* const realEstateSaaS = [
+  /* const _realEstateSaaS = [
     {
       title: 'AI Property Valuation Platform',
       description: 'Advanced property valuation using machine learning and real estate data analysis.',
@@ -3370,11 +3370,11 @@ $4},
       contactInfo:     ,
 $4}
   ];
-  const categories = [
+  const _categories = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ]; */
-  /* const categories = [
+  /* const _categories = [
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
     { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
@@ -3399,7 +3399,7 @@ $4}
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
   ]; */
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
@@ -3419,7 +3419,7 @@ const MicroSAASPage: React.FC = () => {
     <div>Coming Soon</div>
   );
 };
-  const _microSAASServices = [
+  const __microSAASServices = [
   // TOD,
   O: Add items;
 ];;
@@ -6816,7 +6816,7 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-const realEstateSaaS = [
+const _realEstateSaaS = [
     {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -10263,7 +10263,7 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-const categories = [
+const _categories = [
     {/* TODO: Fix JSX expression */}
   t: microSAASServices.length },
     {/* TODO: Fix JSX expression */}
@@ -10311,8 +10311,8 @@ const categories = [
   ];
   return (<div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
+          <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>"
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." /></meta>"
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" /></meta>
@@ -10325,7 +10325,7 @@ const categories = [
   md:text-6xl font-bold text-white mb-6"></h1>
 // Micro SAAS Solutions;
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p _className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
           {/* Stats */}
@@ -10447,7 +10447,7 @@ const categories = [
           <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
 // Choose Your Perfect AI Tools;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
             {microSAASServices.map((service, index) => ()}"
@@ -10486,7 +10486,7 @@ const categories = [
                     )}
                   </ul>
                 </div>"
-                <div className="mb-6"></div>"
+                <div _className="mb-6"></div>"
                   <h4 className="font-semibold text-gray-900 mb-3">Benefit,
   s:</h4>"
                   <ul className="space-y-1"></ul>
@@ -10534,7 +10534,7 @@ const categories = [
 // >
 //                     Get Started Now;
           </a>"
-                  <p className="text-xs text-gray-500 mt-2"></p>
+                  <p _className="text-xs text-gray-500 mt-2"></p>
                     {service.contactInfo}
                   </p>
                 </div>
@@ -10581,7 +10581,7 @@ const categories = [
 //               Call (302) 464-0950;
           </a>
             <a
-              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              _href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
 //               Email Us;
           </a>

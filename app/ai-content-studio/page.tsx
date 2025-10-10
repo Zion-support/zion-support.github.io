@@ -3,22 +3,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const AiContentStudioPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
-<<<<<<< HEAD
-=======
-      icon: Brain,
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';      icon: Brain,
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -39,13 +28,8 @@ import { CheckCircle, ArrowRight } from 'lucide-react';      icon: Brain,
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       title: 'AI Content Generation',
-=======
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']      title: 'AI Content Generation',
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       description: 'Generate high-quality content using advanced AI algorithms',
       benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
     },
@@ -57,18 +41,6 @@ import { CheckCircle, ArrowRight } from 'lucide-react';      icon: Brain,
     {
       title: 'Collaboration',
       description: 'Work together with your team on content projects',
-<<<<<<< HEAD
-      benefits: ['Real-time editing', 'Comments', 'Version control']
-    }
-  ];
-
-  const benefits = [
-<<<<<<< HEAD
-=======
-    'Increase efficiency by up to 50%',
-=======
-      benefits: ['Real-time editing', 'Comments', 'Version control']    'Increase efficiency by up to 50%',
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -79,7 +51,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';      icon: Brain,
     <>
       <Helmet>
         <title>Ai Content Studio - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai content studio solution for modern businesses." />
+        <meta _name="description" content="Advanced AI-powered ai content studio solution for modern businesses." />
         <meta name="keywords" content="AI ai content studio, artificial intelligence, ai content studio, AI solutions, intelligent automation" />
       </Helmet>
 
@@ -184,13 +156,8 @@ import { CheckCircle, ArrowRight } from 'lucide-react';      icon: Brain,
                 </button>
                 <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
-<<<<<<< HEAD
-                </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
     'Increase content production by 10x',
-=======
                 </button>    'Increase content production by 10x',
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Improve engagement by 200%',
     'Save 50+ hours per week',
     'Reduce content costs by 70%',
@@ -199,7 +166,7 @@ import { CheckCircle, ArrowRight } from 'lucide-react';      icon: Brain,
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI Content Studio | Zion Tech Group</title>
         <meta name="description" content="Professional AI content studio solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -260,21 +227,9 @@ import { CheckCircle, ArrowRight } from 'lucide-react';      icon: Brain,
                       {benefit}
                     </li>
                   ))}
-<<<<<<< HEAD
-                </ul>
-              </div>
-            ))}
-          </div>
-<<<<<<< HEAD
-=======
-        </section>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
         </div>
-=======
                 </ul>        </section>
       </div>        </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-9948
       </section>
 
       {/* Benefits Section */}
@@ -317,18 +272,5 @@ import { CheckCircle, ArrowRight } from 'lucide-react';      icon: Brain,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-      <Footer />
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-=======
-export default AiContentStudioPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 export default AIContentStudioPage;
-=======
 export default AiContentStudioPage;export default AIContentStudioPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9948

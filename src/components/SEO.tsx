@@ -63,7 +63,7 @@ export const,
 //   keywords,
 //   image,
 //   url,
-  type = defaultSEO.type,
+  _type = defaultSEO.type,
 //   author,
 //   publishDate,
 //   modifiedDate,
@@ -76,7 +76,7 @@ export const,
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const seo = {/* TODO: Fix JSX expression */}
+  const _seo = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
   titl,
@@ -93,7 +93,7 @@ export const,
 //     twitterCard,
 //     locale};
   // Generate structured data;
-const generateStructuredData = () => {/* TODO: Fix JSX expression */}
+const _generateStructuredData = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (structuredData) {/* TODO: Fix JSX expression */}
@@ -108,7 +108,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
 }
       '@context': 'http,
   s://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebPage',
+      '@type': _type === 'article' ? 'Article' : 'WebPage',
       headlin,
   e: seo.title,
       descriptio,

@@ -6,7 +6,7 @@ const AiEmailMarketingPage: React.FC = () => {
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
 
 const AIEmailMarketingPage: React.FC = () => {
-  const _features = [
+  const __features = [
     {
       icon: Mail,
       title: 'AI Content Generation',
@@ -30,7 +30,7 @@ icon$5: TrendingUp,
 $4}
   ];
 
-  const benefits = [
+  const _benefits = [
     'Increase open rates by 200%',
     'Boost click-through rates by 150%',
     'Reduce unsubscribe rates by 60%',
@@ -86,7 +86,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Email Marketing | Zion Tech Group</title>
         <meta name="description" content="Advanced AI email marketing solutions by Zion Tech Group." />

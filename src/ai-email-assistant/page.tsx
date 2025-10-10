@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
   return (
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -16,12 +16,12 @@ import Footer from '../components/Footer';
 
 // AI Email Assistant;
           </h1>"
-          <p className="text-xl,"
+          <p _className="text-xl,"
   md:text-2xl text-cyan-400 mb-8 font-medium neon-glow"></p>
 // Smart Email Management with AI-Powered Intelligence;
 
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p _className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
@@ -29,12 +29,12 @@ import Footer from '../components/Footer';
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 
 // >,
- Cal)
+ Cal);
   l: (302) 464-0950;
           </a>
 
             <a
-              href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              _href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
 
 // >
 //               Get Free Demo;
@@ -42,11 +42,11 @@ import Footer from '../components/Footer';
           </div>
         </section>
         {/* Features Section */}"
-        <section className="mb-16"></section>"
+        <section _className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
 // Key Features;
           </h2>"
-          <div className="grid grid-cols-1,
+          <div _className="grid grid-cols-1,
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>"
             <div className="cyber-card hologram-card p-6"></div>"
@@ -66,7 +66,7 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
+            <div _className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Intelligent Scheduling</h3>"
               <p className="text-gray-300"></p>
@@ -83,7 +83,7 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
+            <div _className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Priority Sorting</h3>"
               <p className="text-gray-300"></p>
@@ -100,7 +100,7 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
+            <div _className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Auto Follow-ups</h3>"
               <p className="text-gray-300"></p>
@@ -117,7 +117,7 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
+            <div _className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Analytics Dashboard</h3>"
               <p className="text-gray-300"></p>
@@ -134,7 +134,7 @@ import Footer from '../components/Footer';
           
           </p>
             </div>"
-            <div className="cyber-card hologram-card p-6"></div>"
+            <div _className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>"
               <p className="text-gray-300"></p>
@@ -154,11 +154,11 @@ import Footer from '../components/Footer';
           </div>
         </section>
         {/* Pricing Section */}"
-        <section className="mb-16"></section>"
+        <section _className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
 // Pricing Plans;
           </h2>"
-          <div className="grid grid-cols-1,"
+          <div _className="grid grid-cols-1,"
   md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
             <div className="cyber-card hologram-card p-8 text-center"></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
@@ -174,7 +174,7 @@ import Footer from '../components/Footer';
 // Get Started;
           </a>
             </div>"
-            <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400"></div>"
+            <div _className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400"></div>"
               <div className="text-sm font-bold text-cyan-400 mb-2">MOST POPULAR</div>"
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
               <div className="text-4xl font-bold text-cyan-400 mb-6">$79<span className="text-lg text-gray-400">/month</span></div>"
@@ -190,7 +190,7 @@ import Footer from '../components/Footer';
 // Get Started;
           </a>
             </div>"
-            <div className="cyber-card hologram-card p-8 text-center"></div>"
+            <div _className="cyber-card hologram-card p-8 text-center"></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
               <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div>"
               <ul className="text-gray-300 space-y-3 mb-8"></ul>
@@ -208,7 +208,7 @@ import Footer from '../components/Footer';
           </div>
         </section>
         {/* Contact Section */}"
-        <section className="text-center"></section>"
+        <section _className="text-center"></section>"
           <h2 className="text-3xl font-bold text-white mb-8 neon-text"></h2>
 // Ready to Transform Your Email Workflow?
           
@@ -235,7 +235,7 @@ import Footer from '../components/Footer';
           
 
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div _className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 
@@ -245,7 +245,7 @@ import Footer from '../components/Footer';
           </a>
 
             <a
-              href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
+              _href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
 
 // >
 //                Email Us;

@@ -13,7 +13,7 @@ const,
 }) => {/* TODO: Fix JSX expression */}
     }
 
-    const baseStructuredData = {/* TODO: Fix JSX expression */}
+    const _baseStructuredData = {/* TODO: Fix JSX expression */}
       },
       addres,
   s: {/* TODO: Fix JSX expression */}
@@ -40,7 +40,7 @@ const,
   }, [seoData, enableStructuredData]);
 
   // Generate Open Graph data;
-  const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {};
 
     return {/* TODO: Fix JSX expression */}
@@ -48,10 +48,10 @@ const,
   }, [seoData, enableOpenGraph]);
 
   // Generate Twitter Card data;
-  const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {};
 
-    const faqData = {/* TODO: Fix JSX expression */}
+    const _faqData = {/* TODO: Fix JSX expression */}
           }},
         {/* TODO: Fix JSX expression */}
           }},
@@ -60,7 +60,7 @@ const,
   }, [seoData, enableTwitterCards]);
 
   // Generate meta tags;
-  const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
   t: seoData.description },
       {/* TODO: Fix JSX expression */}
   t: seoData.keywords.join(', ') },
@@ -79,24 +79,24 @@ const,
     return metaTags;
   }, [seoData]);
 
-  const structuredData = generateStructuredData();
-  const openGraphData = generateOpenGraphData();
-  const twitterCardData = generateTwitterCardData();
-  const metaTags = generateMetaTags();
+  const _structuredData = generateStructuredData();
+  const _openGraphData = generateOpenGraphData();
+  const _twitterCardData = generateTwitterCardData();
+  const _metaTags = generateMetaTags();
 
   useEffect(() => {/* TODO: Fix JSX expression */}
       }
       metaDescription.setAttribute('content', seoData.description);
 
       // Update canonical URL;
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      let _canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
       }
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
   }, [seoData]);
 
-  const addStructuredData = (dat)
+  const _addStructuredData = (dat);
   a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
     }
     
@@ -119,11 +119,11 @@ const,
     }
   }, []);
 
-  return (<Helmet></Helmet>
+  return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
       {/* TODO: Fix JSX expression */}
-        <meta key={index} name={tag.name} content={tag.content} /></meta>)
+        <meta _key={index} name={tag.name} content={tag.content} /></meta>)
       ))}
 
       {/* Canonical URL */}

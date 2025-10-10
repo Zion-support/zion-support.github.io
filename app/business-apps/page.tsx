@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react';
 
 const BusinessAppsPage: React.FC = () => {
-  const features = [
+  const _features = [
     {
       icon: Smartphone,
       title: 'Mobile Apps',
@@ -27,7 +27,7 @@ const BusinessAppsPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const _benefits = [
     'Custom mobile and web applications',
     'Cross-platform compatibility',
     'Modern UI/UX design',
@@ -39,7 +39,7 @@ const BusinessAppsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Business Apps | Zion Tech Group</title>
         <meta name="description" content="Professional Business Apps development by Zion Tech Group. Advanced AI and IT solutions for your business." />

@@ -8,7 +8,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 export default function DocsPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const docCategories = [
+  const _docCategories = [
     {
       title: 'Getting Started',
       icon: 'rocket',
@@ -51,14 +51,14 @@ export default function DocsPage() {
     }
   ];
 
-  const popularDocs = [
+  const _popularDocs = [
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
     { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
     { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
     { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
   ];
 
-  const filteredDocs = docCategories.map(category => ({
+  const _filteredDocs = docCategories.map(category => ({
     ...category,
     docs: category.docs.filter(doc => 
       doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -67,7 +67,7 @@ export default function DocsPage() {
   })).filter(category => category.docs.length > 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="Documentation - Zion Tech Group"
         description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."

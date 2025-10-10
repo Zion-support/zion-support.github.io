@@ -2,7 +2,7 @@
 'use client';
 // Performance optimization utilities;
 // Debounce utility for performance;
-export const _debounce = 
+export const __debounce = 
           
           
           
@@ -21,7 +21,7 @@ export const _debounce =
           <T>) => {// TODO: Add content;}
 }
 // Throttle utility for performance
-export const throttle = 
+export const _throttle = 
           
           
           
@@ -47,20 +47,20 @@ export const throttle =
   O: Add content;}
 }
       func(...args);
-      inThrottle = true;
+      _inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
     }
   }
 }
 // Intersection Observer hook for lazy loading;
-export const useIntersectionObserver = ()
+export const _useIntersectionObserver = ()
 
   callback: (entries: IntersectionObserverEntry[]) => void,
   _options: IntersectionObserverInit = {}
 ) => {// TODO: Add content;}
 
 }
-  const observer = useMemo()
+  const _observer = useMemo()
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {/* TODO: Fix JSX expression */}
@@ -75,7 +75,7 @@ export const useIntersectionObserver = ()
         : null,
 //     [callback, options]
   )
-  const observe = useCallback()
+  const _observe = useCallback()
 
     (element: Element | null) => {// TODO: Add content;}
 
@@ -90,7 +90,7 @@ export const useIntersectionObserver = ()
     },
 //     [observer]
   );
-  const disconnect = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _disconnect = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (observer) {/* TODO: Fix JSX expression */}
@@ -107,7 +107,7 @@ export const useIntersectionObserver = ()
   return { observe, disconnect };
 };
 // Image lazy loading hook;
-export const useLazyImage = (sr)
+export const _useLazyImage = (sr);
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -125,7 +125,7 @@ export const useLazyImage = (sr)
           if (entry.isIntersecting && !isLoaded && !isError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-            const img = new Image();
+            const _img = new Image();
             img.onload = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -148,7 +148,7 @@ export const useLazyImage = (sr)
   return { imageSrc, isLoaded, isError, observe };
 };
 // Performance monitoring hook;
-export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
+export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const [metrics, setMetrics] = useState;
@@ -164,14 +164,14 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined') return;
-    const updateMetrics = () => {/* TODO: Fix JSX expression */}
+    if (typeof _window === 'undefined') return;
+    const _updateMetrics = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
+      const _navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const _paint = performance.getEntriesByType('paint');
+      const _fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
+      const _lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -216,7 +216,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   return metrics;
 };
 // Memory usage monitoring;
-export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
+export const _useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const [memoryInfo, setMemoryInfo] = useState;
@@ -230,11 +230,11 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined' || !('memory' in performance)) return;
-    const updateMemoryInfo = () => {/* TODO: Fix JSX expression */}
+    if (typeof _window === 'undefined' || !('memory' in performance)) return;
+    const _updateMemoryInfo = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const memory = (performance as any).memory;
+      const _memory = (performance as any).memory;
       if (memory) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -250,29 +250,29 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
         });
       }
     };
-    const interval = setInterval(updateMemoryInfo, 5000);
+    const _interval = setInterval(updateMemoryInfo, 5000);
     return () => clearInterval(interval);
   }, []);
   return memoryInfo;
 };
 // Resource preloading utility;
-export const preloadResource = (hre,
-  f: string, a)
+export const _preloadResource = (hre,
+  f: string, a);
   s: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (typeof window === 'undefined') return;
-  const link = document.createElement('link');
+  if (typeof _window === 'undefined') return;
+  const _link = document.createElement('link');
   link.rel = 'preload';
   link.href = href;
   link.as = as;
   document.head.appendChild(link);
 };
 // Critical resource preloading;
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
+export const _preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (typeof window === 'undefined') return;
+  if (typeof _window === 'undefined') return;
   // Preload critical fonts;
   preloadResource('/fonts/inter-var.woff2', 'font');
   preloadResource('/fonts/inter-var.woff', 'font');
@@ -283,7 +283,7 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   preloadResource('/styles/critical.css', 'style');
 };
 // Bundle size monitoring;
-export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
+export const _useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const [bundleSize, setBundleSize] = useState;
@@ -298,18 +298,18 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (typeof window === 'undefined') return;
-    const calculateBundleSize = () => {/* TODO: Fix JSX expression */}
+    if (typeof _window === 'undefined') return;
+    const _calculateBundleSize = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const resources = performance.getEntriesByType('resource');
-      let jsSize = 0;
-      let cssSize = 0;
-      let imageSize = 0;
+      const _resources = performance.getEntriesByType('resource');
+      let _jsSize = 0;
+      let _cssSize = 0;
+      let _imageSize = 0;
       resources.forEach((resource) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        const size = (resource as PerformanceResourceTiming).transferSize || 0;
+        const _size = (resource as PerformanceResourceTiming).transferSize || 0;
         totalSize += size;
         if (resource.name.includes('.js')) {/* TODO: Fix JSX expression */}
   O: Add content;}

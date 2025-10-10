@@ -4,7 +4,7 @@
 
   fallback?: ReactNode;
   onError?: (erro,
-  r: Error, errorInf)
+  r: Error, errorInf);
   o: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   maxRetries?: number;
@@ -50,7 +50,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     };
     this.maxRetries = props.maxRetries || 3;
   }
-  static getDerivedStateFromError(erro)
+  static getDerivedStateFromError(erro);
   r: Error): Partial;
           <State> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -70,7 +70,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     };
   }
   componentDidCatch(erro,
-  r: Error, errorInf)
+  r: Error, errorInf);
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -93,8 +93,8 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
   }
 
-  private reportError = (erro,
-  r: Error, errorInf)
+  private _reportError = (erro,
+  r: Error, errorInf);
   o: ErrorInfo) => {// Enhanced error reporting}
  messag,
   e: error.message,
@@ -141,7 +141,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 }
       }
   };
-  private handleRetry = async () => {/* TODO: Fix JSX expression */}
+  private _handleRetry = async () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (this.state.retryCount;)
@@ -168,7 +168,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       }));
     }
   };
-  private handleReload = () => {/* TODO: Fix JSX expression */}
+  private _handleReload = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.location.reload();
@@ -191,7 +191,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   )
           
           <ModernLoadingSpinner></ModernLoadingSpinner>
-            size="lg""
+            _size="lg""
 
             text="Retrying..."
             fullScreen={true}
@@ -202,13 +202,13 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       return (<div>Coming Soon</div>)
   )
         "
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
+          <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center"></div>"
             <div className="text-6xl mb-6"></div>"
             <h1 className="text-3xl font-bold text-white mb-4"></h1>
 // Oops! Something went wrong;
           </h1>"
-            <p className="text-gray-300 mb-6"></p>
+            <p _className="text-gray-300 mb-6"></p>
 // We encountered an unexpected error. Our team has been notified and is working to fix it.
             
           
@@ -245,7 +245,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
                   aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
 //                 >
-                   Try Again ({this.maxRetries - this.state.retryCount} left)
+                   Try Again ({this.maxRetries - this.state.retryCount} left);
                 </button>
               )}
               <button></button>
@@ -257,7 +257,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 //                  Reload Page;
           </button>
               <a></a>"
-                href="/contact""
+                _href="/contact""
                 className="cyber-button""
 
                 aria-label="Contact support for help with this error"
@@ -270,16 +270,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
           <details className="mt-6 text-left"></details>"
                 <summary className="text-white cursor-pointer,"
   hover:text-cyan-400"></summary>
-// Technical Details (Development)
-                
-          
-          
-          
-          
-          
-          
-          
-          
+// Technical Details (Development);
           </summary>"
                 <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto"></pre>
 

@@ -1,4 +1,4 @@
-export const logger = {
+export const _logger = {
   debug: (message: string, ...args: any[]) => {
     if (process.env.NODE_ENV === 'development') {
       console.debug(`[DEBUG] ${message}`, ...args);
@@ -22,7 +22,7 @@ export const logger = {
 export enum LogLevel {// TODO: Add content;}
 
 }
-  DEBUG = 0,
+  _DEBUG = 0,
   INFO = 1,
   WARN = 2,
   ERROR = 3,
@@ -137,21 +137,21 @@ class Logger {/* TODO: Fix JSX expression */}
     if (errorOrContextOrMetadata instanceof Error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      error = errorOrContextOrMetadata;
-      context = contextOrMetadata as LogContext;
-      meta = metadata;
-    } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
+      _error = errorOrContextOrMetadata;
+      _context = contextOrMetadata as LogContext;
+      _meta = metadata;
+    } else if (typeof _errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      context = {/* TODO: Fix JSX expression */}
+      _context = {/* TODO: Fix JSX expression */}
   t: errorOrContextOrMetadata };
-      meta = contextOrMetadata as Record;
+      _meta = contextOrMetadata as Record;
           <string, unknown>;
-    } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
+    } else if (typeof _errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      context = errorOrContextOrMetadata as LogContext;
-      meta = contextOrMetadata as Record;
+      _context = errorOrContextOrMetadata as LogContext;
+      _meta = contextOrMetadata as Record;
           <string, unknown>;
     }
     this.log(LogLevel.ERROR, message, context, { ...meta, error })
@@ -216,10 +216,10 @@ class Logger {/* TODO: Fix JSX expression */}
   private formatLogEntry(entry: LogMetadata): string {// TODO: Add content;}
 
 }
-    const levelStr = this.getLevelString(entry.level || LogLevel.INFO);
-    const timestamp = entry.timestamp || new Date().toISOString();
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`
-    const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
+    const _levelStr = this.getLevelString(entry.level || LogLevel.INFO);
+    const _timestamp = entry.timestamp || new Date().toISOString();
+    const _contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`
+    const _metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
     return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
   }
   /**
@@ -250,29 +250,29 @@ class Logger {/* TODO: Fix JSX expression */}
   private outputToConsole(level: LogLevel, message: string, entry: LogMetadata): void {// TODO: Add content;}
 
 }
-    if (typeof console === 'undefined') return;
-    const styles = this.getConsoleStyles(level);
+    if (typeof _console === 'undefined') return;
+    const _styles = this.getConsoleStyles(level);
     switch (level) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 
       case LogLevel.DEBUG:
 
-        console.debug(`%c${message}`, styles, entry)
+        console.debug(`%c${message}`, styles, entry);
         break;
       case LogLevel.INF,
   O:`
-        // console.info(`%c${message}`, styles, entry)
+        // console.info(`%c${message}`, styles, entry);
         break;
       case LogLevel.WAR,
   N:`
-        // // console.warn(`%c${message}`, styles, entry)
+        // // console.warn(`%c${message}`, styles, entry);
         break;
       case LogLevel.ERRO,
   R:
       case LogLevel.FATA,
   L:`
-        // // console.error(`%c${message}`, styles, entry)
+        // // console.error(`%c${message}`, styles, entry);
         break;
     }
   }
@@ -320,8 +320,8 @@ class Logger {/* TODO: Fix JSX expression */}
   d: 'POST',
     //   header,
   s: {// 'Content-Type': 'application/json'},
-    //   bod)
-  y: JSON.stringify(entry)
+    //   bod);
+  y: JSON.stringify(entry);
     // }).catch(err => {/* TODO: Fix JSX expression */})
   service:', err);}
     // });

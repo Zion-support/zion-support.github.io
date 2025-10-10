@@ -16,7 +16,7 @@ interface PerformanceMetrics {
 }
 
 class PerformanceMonitor {
-  private _metrics: PerformanceMetrics = {
+  private metrics: PerformanceMetrics = {
     customMetrics: {}
   };
   private observers: PerformanceObserver[] = [];
@@ -50,7 +50,7 @@ class PerformanceMonitor {
         const entries = list.getEntries();
         const entry = entries[entries.length - 1];
         if (entry) {
-          (this._metrics as any)[metric] = entry.startTime;
+          (this.metrics as any)[metric] = entry.startTime;
         }
       });
       observer.observe({ entryTypes: ['paint'] });
@@ -66,7 +66,7 @@ class PerformanceMonitor {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
-          this._metrics.lcp = lastEntry.startTime;
+          this.metrics.lcp = lastEntry.startTime;
         }
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -81,7 +81,7 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          this._metrics.fid = entry.processingStart - entry.startTime;
+          this.metrics.fid = entry.processingStart - entry.startTime;
         });
       });
       observer.observe({ entryTypes: ['first-input'] });
@@ -101,7 +101,7 @@ class PerformanceMonitor {
             clsValue += entry.value;
           }
         });
-        this._metrics.cls = clsValue;
+        this.metrics.cls = clsValue;
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
@@ -113,7 +113,7 @@ class PerformanceMonitor {
   private setupCustomMetrics(): void {
     // Time to First Byte
     if (performance.timing) {
-      this._metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
+      this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
     }
 
     // Navigation timing
@@ -123,27 +123,25 @@ class PerformanceMonitor {
   }
 
   addCustomMetric(name: string, value: number): void {
-    this._metrics.customMetrics[name] = value;
+    this.metrics.customMetrics[name] = value;
   }
 
   getMetrics(): PerformanceMetrics {
-    return { ...this._metrics };
+    return { ...this.metrics };
   }
 
   reportMetrics(): void {
     if (typeof window === 'undefined') return;
     
-    console.log('Performance Metrics:', this._metrics);
-    
     // Send to analytics service
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'performance_metrics', {
+    if (typeof (window as any).gtag !== 'undefined') {
+      (window as any).gtag('event', 'performance_metrics', {
         event_category: 'performance',
         event_label: 'web_vitals',
-        value: Math.round(this._metrics.lcp || 0),
-        custom_parameter_1: this._metrics.fcp,
-        custom_parameter_2: this._metrics.cls,
-        custom_parameter_3: this._metrics.fid
+        value: Math.round(this.metrics.lcp || 0),
+        custom_parameter_1: this.metrics.fcp,
+        custom_parameter_2: this.metrics.cls,
+        custom_parameter_3: this.metrics.fid
       });
     }
   }

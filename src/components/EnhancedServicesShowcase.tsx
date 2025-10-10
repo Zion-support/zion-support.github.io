@@ -11,14 +11,14 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const formatPrice = (pricing: typeof service.pricing) => {
+  const _formatPrice = (pricing: typeof service.pricing) => {
     if (pricing.custom) {
       return 'Custom Pricing';
     }
     return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`;
   };
 
-  const getCategoryIcon = (category: string) => {
+  const _getCategoryIcon = (category: string) => {
     switch (category) {
       case 'ai': return Brain;
       case 'micro-saas': return Zap;
@@ -28,11 +28,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
     }
   };
 
-  const CategoryIcon = getCategoryIcon(service.category);
+  const _CategoryIcon = getCategoryIcon(service.category);
 
   return (
     <div
-      className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
+      _className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
         isHovered ? 'shadow-2xl' : 'shadow-lg'
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -193,11 +193,11 @@ const EnhancedServicesShowcase: React.FC = () => {
     }
   }, [selectedCategory]);
 
-  const popularServices = services.filter(service => service.popular);
-  const newServices = services.filter(service => service.new);
+  const _popularServices = services.filter(service => service.popular);
+  const _newServices = services.filter(service => service.new);
 
   return (
-    <section className="py-16 px-4">
+    <section _className="py-16 px-4">
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

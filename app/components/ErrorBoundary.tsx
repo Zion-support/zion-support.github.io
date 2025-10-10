@@ -55,7 +55,7 @@ class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  _logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
     const errorData = {
@@ -69,7 +69,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Example: Send to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      const _gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
       gtag('event', 'exception', {
         description: error.message,
         fatal: false
@@ -79,7 +79,7 @@ class ErrorBoundary extends Component<Props, State> {
     console.error('Error logged:', errorData);
   };
 
-  handleRetry = () => {
+  _handleRetry = () => {
     this.setState({
       hasError: false,
       error: null,
@@ -87,7 +87,7 @@ class ErrorBoundary extends Component<Props, State> {
     });
   };
 
-  handleGoHome = () => {
+  _handleGoHome = () => {
     window.location.href = '/';
   };
 
@@ -100,7 +100,7 @@ class ErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+        <div _className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
@@ -117,7 +117,7 @@ class ErrorBoundary extends Component<Props, State> {
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-red-400 cursor-pointer mb-2">
-                  Error Details (Development)
+                  Error Details (Development);
                 </summary>
                 <div className="bg-red-900/20 p-4 rounded-lg text-sm text-red-300 font-mono overflow-auto">
                   <div className="mb-2">

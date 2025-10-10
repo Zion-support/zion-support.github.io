@@ -29,30 +29,30 @@ const PerformanceDashboard: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const updateMetrics = () => {
+    const _updateMetrics = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation
+      const _loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
 
       // Measure render time// Measure memory usage
-      let _memoryUsage = 0;
+      let __memoryUsage = 0;
       if ('memory' in performance) {memoryUsage = memory?.usedJSHeapSize || 0;
       }
 
-      // Measure FPS (simplified)
-      let _fps = 0;
+      // Measure FPS (simplified);
+      let __fps = 0;
       if ('requestAnimationFrame' in window) {
-        let _lastTime = performance.now();
-        let _frameCount = 0;
-        const measureFPS = (currentTime: number) => {
+        let __lastTime = performance.now();
+        let __frameCount = 0;
+        const _measureFPS = (currentTime: number) => {
           frameCount++;
           if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            frameCount = 0;
-            lastTime = currentTime;
+            _fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+            _frameCount = 0;
+            _lastTime = currentTime;
           }
           requestAnimationFrame(measureFPS);
         };
@@ -75,7 +75,7 @@ const PerformanceDashboard: React.FC = () => {
   if (!isVisible) {
     return (
       <button
-        onClick={() => setIsVisible(true)}
+        _onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
       >
         Show Performance
@@ -84,7 +84,7 @@ const PerformanceDashboard: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
+    <div _className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
         <button

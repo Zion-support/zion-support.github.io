@@ -4,28 +4,28 @@ export   }, [])
     }, [])
 import { useCallback } from 'react';
 
-export const _useRouter = () => {// TODO: Add content;}
+export const __useRouter = () => {// TODO: Add content;}
 
 }
-  const push = useCallback((ur)
+  const _push = useCallback((ur);
   l: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.location.href = url;
-  const replace = useCallback((ur)
+  const _replace = useCallback((ur);
   l: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.location.replace(url);
-  const back = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _back = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.history.back();
-  const forward = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _forward = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.history.forward();
-  const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _refresh = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     window.location.reload();
@@ -36,7 +36,7 @@ export const _useRouter = () => {// TODO: Add content;}
     refresh;
   }
 export }
-export const rateLimitingMiddleware = params;
+export const _rateLimitingMiddleware = params;
 export default { useRouter, usePathname, useSearchParams }
 
 
