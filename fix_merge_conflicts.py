@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to automatically resolve merge conflicts by choosing the HEAD version
+Script to automatically resolve merge conflicts in the codebase
 """
 import os
 import re
@@ -12,27 +12,34 @@ def fix_merge_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        if ' and before >>>>>>>
-        pattern1 = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>.*?'
-        content = re.sub(pattern1, r'\1', content, flags=re.DOTALL)
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content:
+            return False
         
-        # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> cursor/...
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> cursor/[^\n]+'
-        content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+        print(f"Fixing merge conflicts in: {file_path}")
         
-        # Pattern 3: Remove any remaining ======= lines
-        content = re.sub(r'^=======.*?\n', '', content, flags=re.MULTILINE)
+        # Remove merge conflict markers and keep the newer version (after =======)
+        lines = content.split('\n')
+        new_lines = []
+        skip_until_end = False
         
-        # Pattern 4: Remove any remaining 
-        content = re.sub(r'^>>>>>>>.*?\n', '', content, flags=re.MULTILINE)
+        for line in lines:
+            if line.strip() == '<<<<<<< HEAD':
+                skip_until_end = True
+                continue
+            elif line.strip() == '=======':
+                skip_until_end = False
+                continue
+            elif line.strip() == '>>>>>>> cursor/fix-errors-and-merge-to-main-19af':
+                skip_until_end = False
+                continue
+            elif not skip_until_end:
+                new_lines.append(line)
         
-        # Clean up any double newlines
-        content = re.sub(r'\n\n\n+', '\n\n', content)
-        
+        # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+            f.write('\n'.join(new_lines))
         
-        print(f"Fixed merge conflicts in: {file_path}")
         return True
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
@@ -40,27 +47,24 @@ def fix_merge_conflicts(file_path):
 
 def main():
     """Main function to fix all merge conflicts"""
-    # Find all TypeScript and JavaScript files
+    # Find all TypeScript/JavaScript files with merge conflicts
     patterns = [
-        'src/**/*.ts',
-        'src/**/*.tsx',
-        'app/**/*.ts',
         'app/**/*.tsx',
-        'components/**/*.ts',
-        'components/**/*.tsx'
+        'app/**/*.ts',
+        'src/**/*.tsx',
+        'src/**/*.ts'
     ]
     
-    files_to_fix = []
+    files_fixed = 0
+    total_files = 0
+    
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
-    
-    fixed_count = 0
-    for file_path in files_to_fix:
-        if os.path.exists(file_path):
+        for file_path in glob.glob(pattern, recursive=True):
+            total_files += 1
             if fix_merge_conflicts(file_path):
-                fixed_count += 1
+                files_fixed += 1
     
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files")
 
 if __name__ == "__main__":
     main()
