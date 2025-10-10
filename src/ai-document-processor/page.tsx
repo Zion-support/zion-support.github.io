@@ -1,7 +1,25 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { FileText, Search, Zap, CheckCircle, Clock, TrendingUp, Shield, Globe, ArrowRight, Phone, Mail, MapPin, Star, Award, Brain, Eye, Database, Settings, Users, Target, BarChart, MessageSquare, Calendar, Download, Upload, Filter, RefreshCw } from 'lucide-react';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-export default AIDocumentProcessorPage;
+import { Helmet } from 'react-helmet-async';
+
+const Page: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content="Professional  services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6"></h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default Page;

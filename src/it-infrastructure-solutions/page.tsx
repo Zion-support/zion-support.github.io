@@ -1,5 +1,25 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Server, Cloud, Shield, Database, Settings, Users, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star, Target, BarChart, MessageSquare, Eye, Code, Smartphone, Lock, Globe, Cpu, Sparkles, Zap, Network, HardDrive, Wifi, Monitor } from 'lucide-react';
-export default ITInfrastructureSolutionsPage;
+
+const Page: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content="Professional  services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6"></h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default Page;

@@ -1,3 +1,25 @@
-const navigation = [; {"name": 'Home', "href": '/','' { "name": 'Home', "href": '/'}' return (<nav className="text-left">;" <div className="text-left" sm":px-6 "lg":px-8">;"</div> <div className="text-left">;" import {} Menu; X ' } from 'lucide-react'' const Navigation = () } const [isOpen) setIsOpen] = useState(false); const [activeDropdown, setActiveDropdown] = useState</div><string | null>(null); ]; return (; <nav className="text-left">" <div className="text-left" sm": px-6 "lg":px-8">"</div> <div className="text-left">" {/* Logo */} {/* Logo * import React} { useState } from "react"" import Link from "next/link"" import {motion} AnimatePresence } from "framer-motion"" origin/automation-improvements-final, import React) { useState } from "react"" import Link from "next/link"" import {motion} AnimatePresence } from "framer-motion"" import {{ "name": "News", "href": "/news"} "description": "Industry news and updates" }" {"name": "News", "href": "/news") "description": "Industry news and updates"" className="text-left" hover":text - blue - 600 font - medium transition - colors"" {services && services.map((service} index) => {; } const IconComponent = service && service.icon; className="text-left" hover":text - blue - 600 font - medium transition - colors"" {services && services.map((service} index) => {; } href="/"" className="text-left" hover":text - blue - 600 font-medium transition-colors"" >; className="text-left" hover":text - blue - 600 font - medium transition - colors">" />; className=\\"text - gray - 700 hover: text - blue - 600 font - medium transition - colors\\"> className="text-left" hover":text - blue - 600 font - medium transition - colors"" {services && services.map((service} index) => {; } const IconComponent = service && service.icon; {/* Desktop Navigation */}</div> <div className="text-left" lg":flex items-center space-x-8">;"</div> <Link; href="/"" className="text-left" hover":text - blue - 600 font-medium transition-colors"" <Link className="text-left" />;" {solutions && solutions.map((solution} index) => {; } const IconComponent = solution && solution.icon; <Link className="text-left" />;" {solutions && solutions.map((solution} index) => {; } } const [isOpen, setIsOpen] = useState(false); const [activeDropdown, setActiveDropdown] = useState<string | null>(null); '
-const navigation = [; {"name": 'Home', "href": '/','' { "name": 'Home', "href": '/'}' return (<nav className="text-left">;" <div className="text-left" sm":px-6 "lg":px-8">;" <div className="text-left">;" import {} Menu; X ' } from 'lucide-react'' const Navigation = () } const [isOpen) setIsOpen] = useState(false); const [activeDropdown, setActiveDropdown] = useState<string | null>(null); ]; return (; <nav className="text-left">" <div className="text-left" sm": px-6 "lg":px-8">" <div className="text-left">" {/* Logo */} {/* Logo * import React} { useState } from "react"" import Link from "next/link"" import {motion} AnimatePresence } from "framer-motion"" origin/automation-improvements-final, import React) { useState } from "react"" import Link from "next/link"" import {motion} AnimatePresence } from "framer-motion"" import {{ "name": "News", "href": "/news"} "description": "Industry news and updates" }" {"name": "News", "href": "/news") "description": "Industry news and updates"" className="text-left" hover":text - blue - 600 font - medium transition - colors"" {services && services.map((service} index) => {; } const IconComponent = service && service.icon; className="text-left" hover":text - blue - 600 font - medium transition - colors"" {services && services.map((service} index) => {; } href="/"" className="text-left" hover":text - blue - 600 font-medium transition-colors"" >; className="text-left" hover":text - blue - 600 font - medium transition - colors">" />; className=\\"text - gray - 700,"
-  hover: text - blue - 600 font - medium transition - colors\\"> className="text-left" hover":text - blue - 600 font - medium transition - colors"" {services && services.map((service} index) => {; } const IconComponent = service && service.icon; {/* Desktop Navigation */} <div className="text-left" lg":flex items-center space-x-8">;" <Link; href="/"" className="text-left" hover":text - blue - 600 font-medium transition-colors"" <Link className="text-left" />;" {solutions && solutions.map((solution} index) => {; } const IconComponent = solution && solution.icon; <Link className="text-left" />;" {solutions && solutions.map((solution} index) => {; } } const [isOpen, setIsOpen] = useState(false); const [activeDropdown, setActiveDropdown] = useState<string | null>(null); '"
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const NavigationPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>Navigation - Zion Tech Group</title>
+        <meta name="description" content="Professional Navigation services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">Navigation</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default NavigationPage;

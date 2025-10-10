@@ -1,78 +1,31 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-interface UserExperienceEnhancerProps {
-  children: React.ReactNode;
-}
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
+
+const UserExperienceEnhancer: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
-    // UX enhancement logic
-    const enhanceUX = () => {
-      // Add smooth scrolling
-      document.documentElement.style.scrollBehavior = 'smooth';
-      // Add loading states for interactive elements
-=======
-;
-interface UserExperienceEnhancerProps {;
-  children: React.ReactNode;}
-}
-;
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {;}
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
-;
-  useEffect(() => {;
-    // UX enhancement logic;
-    const enhanceUX = (;
-      // Add smooth scrolling;
-      document.documentElement.style.scrollBehavior = 'smooth';
-;
-      // Add loading states for interactive elements;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      const interactiveElements = document.querySelectorAll('button, a, input');
-      interactiveElements.forEach((element, index) => {;) => {
-  return (
-    $3
-  );
-};
-        element.addEventListener('click', () => {;}
-          setLoadingStates(prev => ({ ...prev, [index]: true }));
-          setTimeout(() => {;}
-            setLoadingStates(prev => ({ ...prev, [index]: false }));
-          }, 1000);
-        });
+    // Add smooth scrolling
+    const style = document.createElement('style');
+    style.textContent = `
+      html { scroll-behavior: smooth; }
+      * { box-sizing: border-box; }
+    `;
+    document.head.appendChild(style);
+
+    // Add focus indicators
+    const interactiveElements = document.querySelectorAll('button, a, input');
+    interactiveElements.forEach((element) => {
+      element.addEventListener('focus', () => {
+        element.classList.add('focus-visible');
       });
-<<<<<<< HEAD
-      // Add focus indicators
-=======
-;
-      // Add focus indicators;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      const style = document.createElement('style');
-      style.textContent = `;
-        *:focus {;
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px,;}
-        }
-      `;
-      document.head.appendChild(style);
-    };
-<<<<<<< HEAD
-    enhanceUX();
+      element.addEventListener('blur', () => {
+        element.classList.remove('focus-visible');
+      });
+    });
   }, []);
-  return <React.Fragment>{children}</React.Fragment>;
+
+  return null;
 };
+
 export default UserExperienceEnhancer;
-  </UserExperienceEnhancerProps>
-=======
-;
-    enhanceUX();
-  }, []);
-;
-  return <>{children}</>;
-};
-;
-export default UserExperienceEnhancer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

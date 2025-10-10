@@ -1,74 +1,25 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-const TeamPage: React.FC = () => {
+
+const Page: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Our Team - Zion Tech Group</title>
-        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />
+        <title> - Zion Tech Group</title>
+        <meta name="description" content="Professional  services by Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation />
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Our Team</h1>
-              </h1>
-              <div className="prose prose-lg max-w-none"></div>
-                <p className="text-xl text-gray-600 mb-8">
-                  Meet the experts behind our success.
-                </p>
-                <p className="text-gray-700 mb-6">
-                  Coming soon - stay tuned to meet our team!
-                </p>
-              </div>
-            </div>
-          </div>
-        </main>
-        <Footer />
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6"></h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
       </div>
     </React.Fragment>
   );
 };
-=======
-;
-const TeamPage: React.FC = () => {;
-  return (;
-    <></>;
-      <Helmet>;
-        <title>Our Team - Zion Tech Group</title>;
-        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />;
-      </Helmet>;
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>;
-        <Navigation />;
-        <main className="pt-20"></main>;
-          <div className="container mx-auto px-4 py-16"></div>;
-            <div className="max-w-4xl mx-auto"></div>;
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">;
-                Our Team</h1>;
-              </h1>;
-              <div className="prose prose-lg max-w-none"></div>;
-                <p className="text-xl text-gray-600 mb-8">;
-                  Meet the experts behind our success.;
-                </p>;
-                <p className="text-gray-700 mb-6">;
-                  Coming soon - stay tuned to meet our team!;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </main>;
-        <Footer />;
-      </div>;
-    </>;
-  );}
-};
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-export default TeamPage;
-;
+
+export default Page;

@@ -1,88 +1,25 @@
-// Global type definitions for the application;
-declare global {;
-  interface Window {;
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];}
-  }
-}
-;
-// Environment variables;
-declare namespace NodeJS {;
-  interface ProcessEnv {;
-    NODE_ENV: 'development' | 'production' | 'test';
-    NEXT_PUBLIC_GA_ID?: string;
-    NEXT_PUBLIC_SITE_URL?: string;}
-  }
-}
-;
-// Component props interfaces;
-export interface BaseComponentProps {;
-  className?: string;
-  children?: React.ReactNode;}
-}
-;
-export interface PageProps {;}
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-;
-// API response types;
-export interface ApiResponse<T = any> {;
-  success: boolean;
-  data?: T;
-  error?: string;
-  message?: string;}
-}
-;
-// Form types;
-export interface ContactFormData {;
-  name: string;
-  email: string;
-  company?: string;
-  message: string;
-  phone?: string;}
-}
-;
-export interface NewsletterFormData {;
-  email: string;
-  name?: string;}
-}
-;
-// Service types;
-export interface Service {;
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  features: string[];
-  benefits: string[];}
-}
-;
-export interface BlogPost {;
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  slug: string;
-  publishedAt: string;
-  author: string;
-  tags: string[];
-  featuredImage?: string;}
-}
-;
-// Navigation types;
-export interface NavigationItem {;
-  label: string;
-  href: string;
-  children?: NavigationItem[];}
-}
-;
-// Analytics types;
-export interface AnalyticsEvent {;
-  action: string;
-  category: string;
-  label?: string;
-  value?: number;}
-}
-;
-export {};
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const Global.d.tsPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>Global.d.ts - Zion Tech Group</title>
+        <meta name="description" content="Professional global.d.ts services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">Global.d.ts</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default Global.d.tsPage;

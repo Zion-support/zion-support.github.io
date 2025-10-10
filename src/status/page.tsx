@@ -1,41 +1,25 @@
-import { Link } from 'react-router-dom';
-import { Star, Phone } from 'lucide-react';
+'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const Status: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const Page: React.FC = () => {
   return (
-    <div>Coming Soon</div>
-  )
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="pt-20">
-        <section className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-// Status;
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-// System status and service availability;
+    <React.Fragment>
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content="Professional  services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6"></h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
-// >
-          "
-          <Phone className="w-5 h-5 mr-2" /></Phone>
-// Get Free Consultation;
-          </Link>
-            <a
-              href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              <Phone className="w-4 h-4 mr-2" />
-// (302) 464-0950;
-          </a>
-          </div>
-        </section>
-      </main>
-      <Footer /></Footer>
-    </div>
+        </div>
+      </div>
+    </React.Fragment>
   );
 };
-export default StatusPage;
-  </h1>
+
+export default Page;

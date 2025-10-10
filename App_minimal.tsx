@@ -1,24 +1,25 @@
+'use client';
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import HomePage from './app/page';
-const App: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const App_minimalPage: React.FC = () => {
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-white">
-          <Navigation />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </main>
-          <Footer />
+    <React.Fragment>
+      <Helmet>
+        <title>App_minimal - Zion Tech Group</title>
+        <meta name="description" content="Professional App_minimal services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">App_minimal</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
         </div>
-      </Router>
-    </HelmetProvider>
+      </div>
+    </React.Fragment>
   );
 };
-export default App;
+
+export default App_minimalPage;

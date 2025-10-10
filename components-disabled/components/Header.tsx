@@ -1,6 +1,25 @@
-); }; export default Header; import React, {useState} useEffect } from 'react''' import { useRouter } from 'next/router'' import {} Menu, X, Phone, Mail, MapPin, ChevronDown; Building2' } from 'lucide-react'' const navigation = {' 'Services': ['' { "name": 'AI Services'} "href": '/ai-services' },'' {"name": 'IT Services'} "href": '/it-services' },'' {"name": 'Micro SaaS'} "href": '/micro-saas' },'' {"name": 'Consulting'} "href": '/consulting' }' ],' 'Solutions': ['' {"name": 'Enterprise'} "href": '/enterprise' },'' {"name": 'Startup'} "href": '/startup' },'' {"name": 'Industry'} "href": '/industries' }' ],' 'Company': ['' {"name": 'About'} "href": '/about' },'' {"name": 'Team'} "href": '/team' },'' {"name": 'Careers'} "href": '/careers' },'' {"name": 'Contact'} "href": '/contact' }' ] }; export default function Header() {} const [mobileMenuOpen; setMobileMenuOpen] = useState(false); const [activeDropdown, setActiveDropdown] = useState<string | null>(null); const router = useRouter(); useEffect(() => {} const handleRouteChange = () => {} setMobileMenuOpen(false); setActiveDropdown(null); };' router.events.on('routeChangeStart') handleRouteChange);' return () => {}' router.events.off('routeChangeStart') handleRouteChange);' }; }, [router.events]); return(; <header className="text-left">" <div className="text-left" sm":px-6 "lg":px-8">"')
-); }; export default Header; import React, {useState} useEffect } from 'react''' import { useRouter } from 'next/router'' import {} Menu, X, Phone, Mail, MapPin, ChevronDown; Building2' } from 'lucide-react'' const navigation = {' 'Services': ['' { "name": 'AI Services'} "href": '/ai-services' },'' {"name": 'IT Services'} "href": '/it-services' },'' {"name": 'Micro SaaS'} "href": '/micro-saas' },'' {"name": 'Consulting'} "href": '/consulting' }' ],' 'Solutions': ['' {"name": 'Enterprise'} "href": '/enterprise' },'' {"name": 'Startup'} "href": '/startup' },'' {"name": 'Industry'} "href": '/industries' }' ],' 'Company': ['' {"name": 'About'} "href": '/about' },'' {"name": 'Team'} "href": '/team' },'' {"name": 'Careers'} "href": '/careers' },'' {"name": 'Contact'} "href": '/contact' }' ] }; export default function Header() {} const [mobileMenuOpen; setMobileMenuOpen] = useState(false); const [activeDropdown, setActiveDropdown] = useState<string | null>(null); const router = useRouter(); useEffect(() => {} const handleRouteChange = () => {} setMobileMenuOpen(false); setActiveDropdown(null); };' router.events.on('routeChangeStart') handleRouteChange);' return () => {}' router.events.off('routeChangeStart') handleRouteChange);' }; }, [router.events]); return (; <header className="text-left">" <div className="text-left" sm":px-6 "lg":px-8">"'</div>
-); }; export default Header; import React, {useState} useEffect } from 'react''' import { useRouter } from 'next/router'' import {} Menu, X, Phone, Mail, MapPin, ChevronDown; Building2' } from 'lucide-react'' const navigation = {' 'Services': ['' { "name": 'AI Services'} "href": '/ai-services' },'' {"name": 'IT Services'} "href": '/it-services' },'' {"name": 'Micro SaaS'} "href": '/micro-saas' },'' {"name": 'Consulting'} "href": '/consulting' }' ],' 'Solutions': ['' {"name": 'Enterprise'} "href": '/enterprise' },'' {"name": 'Startup'} "href": '/startup' },'' {"name": 'Industry'} "href": '/industries' }' ],' 'Company': ['' {"name": 'About'} "href": '/about' },'' {"name": 'Team'} "href": '/team' },'' {"name": 'Careers'} "href": '/careers' },'' {"name": 'Contact'} "href": '/contact' }' ] }; export default function Header() {} const [mobileMenuOpen; setMobileMenuOpen] = useState(false); const [activeDropdown, setActiveDropdown] = useState<string | null>(null); const router = useRouter(); useEffect(() => {} const handleRouteChange = () => {} setMobileMenuOpen(false); setActiveDropdown(null); };' router.events.on('routeChangeStart') handleRouteChange);' return () => {}' router.events.off('routeChangeStart') handleRouteChange);' }; }, [router.events]); return (; <header className="text-left">" <div className="text-left" sm":px-6 "lg":px-8">"'")
-  </string>
-  </string>
-  </string>
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const HeaderPage: React.FC = () => {
+  return (
+    <React.Fragment>
+      <Helmet>
+        <title>Header - Zion Tech Group</title>
+        <meta name="description" content="Professional Header services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6">Header</h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+};
+
+export default HeaderPage;

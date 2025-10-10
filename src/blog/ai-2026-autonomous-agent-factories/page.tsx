@@ -1,25 +1,25 @@
+'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const Page: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Ai 2026 Autonomous Agent Factories</h1>
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced ai 2026 autonomous agent factories solutions</p>
-          <Link 
-            to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-            Contact Us;
-  </
+    <React.Fragment>
+      <Helmet>
+        <title> - Zion Tech Group</title>
+        <meta name="description" content="Professional  services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-900 text-white">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-4xl font-bold mb-6"></h1>
+          <p className="text-lg text-gray-300">
+            This page is currently under development. Please check back soon for more information.
+          </p>
         </div>
       </div>
-      <Footer />
-    </div>
+    </React.Fragment>
   );
 };
-export default Ai2026AutonomousAgentFactoriesPage;
-  </Link>
+
+export default Page;

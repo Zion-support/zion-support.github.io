@@ -28,25 +28,7 @@ const ServiceWorker: React.FC = () => {
         }
       };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // Handle service worker updates
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        window.location.reload();
-=======
-      // Listen for updates
-      navigator.serviceWorker.addEventListener('message', (event) => {
-        if (event.data && event.data.type === 'SW_UPDATE') {
-          // Handle service worker update
-          if (confirm('New version available! Reload to update?')) {
-            window.location.reload();
-          }
-        }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-      });
-=======
       registerSW();
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
     }
   }, []);
 
