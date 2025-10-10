@@ -1,1391 +1,683 @@
 'use client';
+
 import React, { useState, useEffect } from 'react';
 import { 
-  Code, 
+  Brain, 
+  Zap, 
   BarChart, 
-  Calendar, 
-  FileText, 
-  Video, 
-  Smartphone, 
-  Mail, 
   Users, 
-  DollarSign, 
-  Settings, 
   Shield, 
-  Lock,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Brain,
-  Globe,
+  Clock, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  TrendingUp, 
+  Target, 
   Rocket,
-  Truck,
-  Stethoscope,
-  Clock,
+  Code,
+  Cloud,
+  Smartphone,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  Settings,
+  Globe,
+  Lock,
   Database,
-  ShoppingCart,
-  Scale,
-<<<<<<< HEAD
-  Palette,
-  Music,
   Cpu,
+  Palette,
+  Camera,
+  Music,
+  Video,
+  ShoppingCart,
+  Building,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Home,
+  Heart,
+  Stethoscope,
+  GraduationCap,
+  Briefcase,
+  Wrench,
+  Hammer,
+  Paintbrush,
+  Scissors,
+  BookOpen,
+  Calculator,
+  Compass,
+  PieChart,
+  Activity,
+  Truck,
+  ChefHat,
   Sprout,
+  Scale,
   Phone,
+  Mail,
   MapPin
-=======
-  Palette
->>>>>>> origin/main
 } from 'lucide-react';
 
 const MicroSAASPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const microSAASServices = [
-    // Productivity & Project Management
-    { 
-      name: 'AI Project Manager Pro', 
-      href: '/ai-project-manager', 
-      icon: BarChart, 
-      category: 'Productivity', 
-      price: '$199/mo',
-      description: 'Intelligent project management with AI-powered insights, predictive analytics, and automated resource allocation. Trusted by 2,500+ teams worldwide.',
-      features: ['Smart Task Assignment', 'Progress Tracking', 'Resource Optimization', 'Risk Assessment', 'Predictive Analytics', 'Team Performance Insights', 'Real-time Collaboration', 'Custom Workflows'],
-      popular: true,
-      rating: 4.8,
-      users: '2,500+',
-      trial: '14-day free trial',
-<<<<<<< HEAD
-      link: 'https://ziontechgroup.com/ai-project-manager'
-=======
-      link: 'https://ziontechgroup.com/ai-project-manager',
-      capabilities: ['40% faster project delivery', '60% reduction in project overruns', 'Real-time team insights', 'Automated risk detection']
->>>>>>> origin/main
-    },
-    { 
-      name: 'AI Smart Calendar Pro', 
-      href: '/ai-smart-calendar', 
-      icon: Calendar, 
-      category: 'Productivity', 
-      price: '$89/mo',
-      description: 'AI-powered calendar management with smart scheduling, conflict resolution, and productivity optimization. Integrates with 50+ apps.',
-      features: ['Smart Scheduling', 'Conflict Resolution', 'Time Optimization', 'Meeting Insights', 'Energy Level Tracking', 'Focus Time Blocks', 'Auto Meeting Prep', 'Travel Time Calculation'],
-      popular: true,
-      rating: 4.7,
-      users: '1,800+',
-      trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-smart-calendar',
-      capabilities: ['35% time saved on scheduling', '90% reduction in double bookings', 'Smart meeting optimization', 'Energy-based scheduling']
-    },
-    { 
-      name: 'AI Workflow Automation Studio', 
-      href: '/ai-workflow-automation', 
-      icon: Zap, 
-      category: 'Productivity', 
-      price: '$149/mo',
-      description: 'Visual workflow builder with AI-powered automation for complex business processes',
-      features: ['Visual Workflow Builder', 'AI Process Discovery', 'Smart Triggers', 'Error Handling', 'Performance Analytics', 'Integration Hub'],
-      popular: true,
-      rating: 4.9,
-      users: '3,200+',
-      trial: '21-day free trial'
-    },
-    { 
-      name: 'AI Time Tracker Pro', 
-      href: '/ai-time-tracker', 
-      icon: Clock, 
-      category: 'Productivity', 
-      price: '$59/mo',
-      description: 'Intelligent time tracking with automatic categorization and productivity insights',
-      features: ['Auto Time Tracking', 'Smart Categorization', 'Productivity Analytics', 'Focus Mode', 'Distraction Alerts', 'Team Reports'],
-      popular: false,
-      rating: 4.6,
-      users: '1,200+',
-      trial: '14-day free trial'
-    },
-
-    // Content Creation & Marketing
-    { 
-      name: 'AI Content Writer Pro', 
-      href: '/ai-content-writer', 
-      icon: FileText, 
-      category: 'Content', 
-      price: '$129/mo',
-      description: 'Advanced AI content creation with SEO optimization, brand consistency, and multi-platform publishing',
-      features: ['SEO Optimization', 'Brand Voice Training', 'Content Templates', 'Multi-language Support', 'Plagiarism Check', 'Performance Analytics'],
-      popular: true,
-      rating: 4.9,
-      users: '4,100+',
-      trial: '10-day free trial'
-    },
-    { 
-      name: 'AI Video Generator Pro', 
-      href: '/ai-video-generator', 
-      icon: Video, 
-      category: 'Content', 
-      price: '$199/mo',
-      description: 'Create professional videos with AI-powered editing, voice synthesis, and automated storytelling',
-      features: ['Auto Editing', 'Voice Synthesis', 'Visual Effects', 'Template Library', 'Brand Kit', 'Social Media Optimization'],
-      popular: true,
-      rating: 4.6,
-      users: '2,800+',
-      trial: '7-day free trial'
-    },
-    { 
-      name: 'AI Social Media Manager Pro', 
-      href: '/ai-social-media-manager', 
-      icon: Smartphone, 
-      category: 'Marketing', 
+    {
+      id: 'ai-project-manager-pro',
+      name: 'AI Project Manager Pro',
+      description: 'Intelligent project management with predictive analytics, automated resource allocation, and real-time collaboration tools.',
       price: '$99/mo',
-      description: 'Automated social media management with AI content generation, scheduling, and engagement optimization',
-      features: ['Auto Posting', 'Content Generation', 'Analytics Dashboard', 'Engagement Optimization', 'Hashtag Research', 'Competitor Analysis'],
+      originalPrice: '$149/mo',
+      category: 'productivity',
+      icon: Target,
+      color: 'from-blue-500 to-cyan-500',
       popular: true,
-      rating: 4.8,
-      users: '3,500+',
-      trial: '14-day free trial'
+      features: [
+        'Smart Scheduling & Resource Allocation',
+        'Predictive Risk Analysis',
+        'Team Performance Analytics',
+        'Automated Progress Tracking',
+        'Real-time Collaboration Tools',
+        'Integration with 50+ Tools',
+        'Custom Workflow Builder',
+        'Advanced Reporting Dashboard'
+      ],
+      benefits: [
+        '40% faster project completion',
+        '60% reduction in project delays',
+        '85% improvement in resource utilization',
+        'Real-time team collaboration'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-project-manager',
+      trial: '14-day free trial',
+      rating: 4.9,
+      reviews: 1247
     },
-    { 
-      name: 'AI Email Marketing Suite', 
-      href: '/ai-email-marketing', 
-      icon: Mail, 
-      category: 'Marketing', 
-      price: '$79/mo',
-      description: 'Intelligent email marketing with personalization, A/B testing, and automated campaign optimization',
-      features: ['Personalization Engine', 'A/B Testing', 'Automation Workflows', 'Advanced Analytics', 'Deliverability Optimization', 'Template Library'],
-      popular: true,
-      rating: 4.7,
-      users: '2,900+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI SEO Optimizer Pro', 
-      href: '/ai-seo-optimizer', 
-      icon: Globe, 
-      category: 'Marketing', 
+    {
+      id: 'ai-analytics-dashboard',
+      name: 'AI Analytics Dashboard',
+      description: 'Advanced business intelligence with AI-powered insights, predictive analytics, and customizable reporting.',
       price: '$149/mo',
-      description: 'AI-powered SEO optimization with keyword research, content analysis, and ranking predictions',
-      features: ['Keyword Research', 'Content Optimization', 'Ranking Predictions', 'Competitor Analysis', 'Technical SEO Audit', 'Link Building'],
+      originalPrice: '$199/mo',
+      category: 'analytics',
+      icon: BarChart,
+      color: 'from-purple-500 to-pink-500',
+      popular: true,
+      features: [
+        'Real-time Data Visualization',
+        'AI-Powered Predictive Insights',
+        'Custom Report Builder',
+        'Multi-source Data Integration',
+        'Automated Alerts & Notifications',
+        'Advanced Filtering & Segmentation',
+        'Export to Multiple Formats',
+        'White-label Solutions'
+      ],
+      benefits: [
+        '300% faster data analysis',
+        '90% reduction in manual reporting',
+        'Predictive insights with 95% accuracy',
+        'Real-time business intelligence'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-analytics',
+      trial: '30-day free trial',
+      rating: 4.8,
+      reviews: 892
+    },
+    {
+      id: 'ai-customer-support-bot',
+      name: 'AI Customer Support Bot',
+      description: '24/7 AI-powered customer support with natural language processing, sentiment analysis, and seamless escalation.',
+      price: '$199/mo',
+      originalPrice: '$299/mo',
+      category: 'support',
+      icon: MessageSquare,
+      color: 'from-green-500 to-emerald-500',
+      popular: true,
+      features: [
+        '24/7 Multilingual Support',
+        'Natural Language Processing',
+        'Sentiment Analysis & Escalation',
+        'Knowledge Base Integration',
+        'Live Chat Handoff',
+        'Custom Bot Training',
+        'Analytics & Performance Metrics',
+        'API Integration'
+      ],
+      benefits: [
+        '80% reduction in support tickets',
+        '95% customer satisfaction rate',
+        '24/7 availability',
+        'Multi-language support'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-support-bot',
+      trial: '21-day free trial',
+      rating: 4.7,
+      reviews: 1156
+    },
+    {
+      id: 'ai-content-studio',
+      name: 'AI Content Studio',
+      description: 'Complete content creation suite with AI writing, image generation, video editing, and social media management.',
+      price: '$79/mo',
+      originalPrice: '$129/mo',
+      category: 'content',
+      icon: Palette,
+      color: 'from-orange-500 to-red-500',
+      popular: true,
+      features: [
+        'AI Content Generation',
+        'Image & Video Creation',
+        'SEO Optimization',
+        'Social Media Scheduling',
+        'Brand Voice Consistency',
+        'Plagiarism Detection',
+        'Multi-format Export',
+        'Team Collaboration Tools'
+      ],
+      benefits: [
+        '500% increase in content output',
+        '70% reduction in content costs',
+        'Consistent brand voice',
+        'Automated SEO optimization'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-content-studio',
+      trial: '14-day free trial',
+      rating: 4.6,
+      reviews: 743
+    },
+    {
+      id: 'ai-financial-advisor',
+      name: 'AI Financial Advisor',
+      description: 'Personalized financial planning with AI-powered investment recommendations, budget tracking, and risk assessment.',
+      price: '$59/mo',
+      originalPrice: '$89/mo',
+      category: 'finance',
+      icon: CreditCard,
+      color: 'from-yellow-500 to-orange-500',
       popular: false,
+      features: [
+        'Personalized Investment Advice',
+        'Budget Tracking & Analysis',
+        'Risk Assessment Tools',
+        'Portfolio Optimization',
+        'Tax Planning Assistance',
+        'Goal Setting & Tracking',
+        'Market Analysis & Alerts',
+        'Retirement Planning'
+      ],
+      benefits: [
+        '25% better investment returns',
+        'Automated budget management',
+        'Personalized financial advice',
+        'Real-time market analysis'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-financial-advisor',
+      trial: '7-day free trial',
       rating: 4.5,
-      users: '1,600+',
-      trial: '7-day free trial'
+      reviews: 456
     },
-
-    // Business & Finance
-    { 
-      name: 'AI Financial Advisor Pro', 
-      href: '/ai-financial-advisor', 
-      icon: DollarSign, 
-      category: 'Finance', 
-      price: '$299/mo',
-      description: 'Personalized financial planning and investment advice powered by advanced AI algorithms',
-      features: ['Portfolio Analysis', 'Risk Assessment', 'Investment Recommendations', 'Tax Optimization', 'Retirement Planning', 'Market Predictions'],
-      popular: true,
-      rating: 4.8,
-      users: '1,400+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI Invoice Generator Pro', 
-      href: '/ai-invoice-generator', 
-      icon: FileText, 
-      category: 'Business', 
-      price: '$49/mo',
-      description: 'Automated invoice generation with smart templates, payment tracking, and financial reporting',
-      features: ['Smart Templates', 'Auto Calculations', 'Payment Tracking', 'Financial Reports', 'Tax Integration', 'Client Portal'],
-      popular: true,
-      rating: 4.7,
-      users: '2,200+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI Expense Tracker Pro', 
-      href: '/ai-expense-tracker', 
-      icon: BarChart, 
-      category: 'Finance', 
-      price: '$39/mo',
-      description: 'Intelligent expense tracking with automatic categorization, receipt scanning, and budget management',
-      features: ['Receipt Scanning', 'Auto Categorization', 'Budget Management', 'Tax Preparation', 'Expense Reports', 'Spending Insights'],
-      popular: false,
-      rating: 4.6,
-      users: '1,800+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI Lead Generation Suite', 
-      href: '/ai-lead-generation', 
-      icon: Users, 
-      category: 'Business', 
-      price: '$199/mo',
-      description: 'AI-powered lead generation with automated prospecting, qualification, and nurturing',
-      features: ['Lead Scoring', 'Auto Prospecting', 'Email Sequences', 'CRM Integration', 'Lead Nurturing', 'Conversion Analytics'],
-      popular: true,
-      rating: 4.8,
-      users: '2,700+',
-      trial: '21-day free trial'
-    },
-
-    // Development & Technical
-    { 
-      name: 'AI Code Assistant Pro', 
-      href: '/ai-code-assistant', 
-      icon: Code, 
-      category: 'Development', 
-      price: '$179/mo',
-      description: 'Advanced AI coding assistant with code generation, debugging, and optimization suggestions',
-      features: ['Code Generation', 'Debug Assistant', 'Code Review', 'Documentation', 'Test Generation', 'Performance Optimization'],
-      popular: true,
-      rating: 4.9,
-      users: '4,500+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI API Builder Pro', 
-      href: '/ai-api-builder', 
-      icon: Settings, 
-      category: 'Development', 
-      price: '$249/mo',
-      description: 'Build and manage APIs with AI-powered code generation, testing, and documentation',
-      features: ['API Generation', 'Auto Testing', 'Documentation', 'Rate Limiting', 'Authentication', 'Monitoring'],
-      popular: false,
-      rating: 4.7,
-      users: '1,300+',
-      trial: '21-day free trial'
-    },
-    { 
-      name: 'AI Database Optimizer', 
-      href: '/ai-database-optimizer', 
-      icon: Database, 
-      category: 'Development', 
-      price: '$199/mo',
-      description: 'AI-powered database optimization with query analysis, indexing suggestions, and performance monitoring',
-      features: ['Query Optimization', 'Index Suggestions', 'Performance Monitoring', 'Security Analysis', 'Backup Management', 'Scaling Recommendations'],
-      popular: false,
-      rating: 4.6,
-      users: '1,100+',
-      trial: '14-day free trial'
-    },
-
-    // Security & Compliance
-    { 
-      name: 'AI Security Monitor Pro', 
-      href: '/ai-security-monitor', 
-      icon: Shield, 
-      category: 'Security', 
-      price: '$299/mo',
-      description: 'AI-powered security monitoring with threat detection, vulnerability assessment, and incident response',
-      features: ['Threat Detection', 'Vulnerability Scanning', 'Incident Response', 'Compliance Monitoring', 'Security Reports', 'Risk Assessment'],
-      popular: true,
-      rating: 4.8,
-      users: '1,900+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI Password Manager Pro', 
-      href: '/ai-password-manager', 
-      icon: Lock, 
-      category: 'Security', 
-      price: '$29/mo',
-      description: 'Advanced password management with AI-powered security recommendations and breach monitoring',
-      features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Multi-device Sync', 'Team Sharing', '2FA Integration'],
-      popular: true,
-      rating: 4.7,
-      users: '3,800+',
-      trial: '14-day free trial'
-    },
-
-    // Specialized Industry Solutions
-    { 
-      name: 'AI Healthcare Assistant Pro', 
-      href: '/ai-healthcare-assistant', 
-      icon: Stethoscope, 
-      category: 'Healthcare', 
-      price: '$399/mo',
-      description: 'AI-powered healthcare management with patient scheduling, medical records, and diagnostic assistance',
-      features: ['Patient Scheduling', 'Medical Records', 'Diagnostic Support', 'Prescription Management', 'Insurance Processing', 'Compliance Tracking'],
-      popular: false,
-      rating: 4.9,
-      users: '800+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI Legal Assistant Pro', 
-      href: '/ai-legal-assistant', 
-      icon: Scale, 
-      category: 'Legal', 
-      price: '$349/mo',
-      description: 'AI-powered legal research, document analysis, and case management for law firms',
-      features: ['Legal Research', 'Document Analysis', 'Case Management', 'Contract Review', 'Compliance Tracking', 'Client Communication'],
-      popular: false,
-      rating: 4.8,
-      users: '600+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI E-commerce Optimizer', 
-      href: '/ai-ecommerce-optimizer', 
-      icon: ShoppingCart, 
-      category: 'E-commerce', 
-      price: '$199/mo',
-      description: 'AI-powered e-commerce optimization with product recommendations, pricing strategies, and inventory management',
-      features: ['Product Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Customer Segmentation', 'Conversion Optimization', 'Analytics Dashboard'],
-      popular: true,
-      rating: 4.7,
-      users: '2,100+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI HR Assistant Pro', 
-      href: '/ai-hr-assistant', 
-      icon: Users, 
-      category: 'HR', 
-      price: '$179/mo',
-      description: 'AI-powered HR management with recruitment, employee engagement, and performance analytics. Streamline your HR operations.',
-      features: ['Resume Screening', 'Interview Scheduling', 'Employee Onboarding', 'Performance Tracking', 'Engagement Surveys', 'Compliance Management', 'Payroll Integration', 'Benefits Management'],
-      popular: true,
-      rating: 4.6,
-      users: '1,700+',
-<<<<<<< HEAD
-      trial: '21-day free trial',
-      link: 'https://ziontechgroup.com/ai-hr-assistant'
-    },
-
-    // Advanced AI & Machine Learning
-=======
-<<<<<<< HEAD
-      trial: '21-day free trial'
-    },
-<<<<<<< HEAD
-    { 
-      name: 'AI Quantum Financial Oracle', 
-      href: '/ai-quantum-financial-oracle', 
-      icon: DollarSign, 
-      category: 'Finance', 
-      price: '$2,999/mo',
-      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
-      features: ['Quantum Market Analysis', 'Ultra-fast Predictions', 'Risk Assessment', 'Portfolio Optimization', 'Cryptocurrency Analysis', 'Real-time Trading Signals'],
-=======
-
-    // Advanced AI Solutions
->>>>>>> origin/main
-    { 
-      name: 'AI Quantum Financial Oracle', 
-      href: '/ai-quantum-financial-oracle', 
-      icon: Brain, 
-      category: 'Quantum AI', 
-<<<<<<< HEAD
-      price: '$2,999/mo',
-      description: 'Revolutionary quantum-powered financial prediction system with 99.7% accuracy in market forecasting',
-      features: ['Quantum Market Analysis', 'Real-time Risk Assessment', 'Portfolio Optimization', 'Crypto Prediction', 'Economic Modeling', 'Quantum Encryption'],
-      popular: true,
-      rating: 4.9,
-      users: '150+',
-      trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-quantum-financial-oracle'
-    },
-    { 
-      name: 'AI Neural Memory Assistant', 
-      href: '/ai-neural-memory-assistant', 
-      icon: Brain, 
-      category: 'AI Memory', 
-      price: '$399/mo',
-      description: 'Advanced AI system that learns and remembers everything about your business for instant recall and decision making',
-      features: ['Infinite Memory Storage', 'Contextual Recall', 'Pattern Recognition', 'Predictive Memory', 'Knowledge Graphs', 'Smart Search'],
-      popular: true,
-      rating: 4.8,
-      users: '800+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-neural-memory-assistant'
-    },
-    { 
-      name: 'AI Holographic Workspace', 
-      href: '/ai-holographic-workspace', 
-      icon: Globe, 
-      category: 'Immersive Tech', 
-      price: '$1,299/mo',
-      description: 'Next-generation 3D holographic workspace for immersive collaboration and data visualization',
-      features: ['3D Data Visualization', 'Holographic Meetings', 'Spatial Computing', 'AR/VR Integration', 'Gesture Controls', 'Real-time Collaboration'],
-      popular: false,
-      rating: 4.7,
-      users: '200+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-holographic-workspace'
-    },
-
-    // Specialized Industry Solutions
-    { 
-      name: 'AI Drug Discovery Pro', 
-      href: '/ai-drug-discovery-pro', 
-      icon: Stethoscope, 
-      category: 'Healthcare', 
-      price: '$4,999/mo',
-      description: 'Revolutionary AI platform for pharmaceutical drug discovery with molecular simulation and clinical trial optimization',
-      features: ['Molecular Simulation', 'Drug Target Identification', 'Clinical Trial Design', 'Side Effect Prediction', 'Patent Analysis', 'Regulatory Compliance'],
-      popular: true,
-      rating: 4.9,
-      users: '50+',
-      trial: '60-day free trial',
-      link: 'https://ziontechgroup.com/ai-drug-discovery-pro'
-    },
-    { 
-      name: 'AI Climate Solutions Pro', 
-      href: '/ai-climate-solutions-pro', 
-      icon: Globe, 
-      category: 'Climate Tech', 
-      price: '$2,499/mo',
-      description: 'Advanced AI system for climate modeling, carbon tracking, and environmental impact optimization',
-      features: ['Climate Modeling', 'Carbon Footprint Tracking', 'Renewable Energy Optimization', 'Environmental Impact Analysis', 'Sustainability Reporting', 'Green Tech Integration'],
-      popular: true,
-      rating: 4.8,
-      users: '300+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-climate-solutions-pro'
-    },
-    { 
-      name: 'AI Space Technology Pro', 
-      href: '/ai-space-technology-pro', 
-      icon: Rocket, 
-      category: 'Space Tech', 
-      price: '$9,999/mo',
-      description: 'Cutting-edge AI platform for space mission planning, satellite optimization, and space resource management',
-      features: ['Mission Planning', 'Satellite Optimization', 'Space Resource Mapping', 'Orbital Mechanics', 'Space Weather Prediction', 'Launch Optimization'],
-      popular: false,
-      rating: 4.9,
-      users: '25+',
-      trial: '90-day free trial',
-      link: 'https://ziontechgroup.com/ai-space-technology-pro'
-    },
-    { 
-      name: 'AI Financial Crime Detection Pro', 
-      href: '/ai-financial-crime-detection-pro', 
-      icon: Shield, 
-      category: 'FinTech', 
-      price: '$1,999/mo',
-      description: 'Advanced AI system for real-time financial crime detection, fraud prevention, and compliance monitoring',
-      features: ['Real-time Fraud Detection', 'Money Laundering Prevention', 'Transaction Analysis', 'Risk Scoring', 'Compliance Monitoring', 'Regulatory Reporting'],
-      popular: true,
-      rating: 4.8,
-      users: '400+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-financial-crime-detection-pro'
-    },
-
-    // Creative & Design
-    { 
-      name: 'AI Fashion Design Studio', 
-      href: '/ai-fashion-design', 
-      icon: Palette, 
-      category: 'Creative', 
-      price: '$299/mo',
-      description: 'Revolutionary AI fashion design platform with trend prediction, virtual modeling, and sustainable design optimization',
-      features: ['Trend Prediction', 'Virtual Modeling', 'Sustainable Design', 'Color Palette Generation', 'Pattern Creation', 'Market Analysis'],
-      popular: true,
-      rating: 4.7,
-      users: '1,200+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-fashion-design'
-    },
-    { 
-      name: 'AI Music Composition Studio', 
-      href: '/ai-music-composition', 
-      icon: Music, 
-      category: 'Creative', 
-      price: '$199/mo',
-      description: 'Advanced AI music composition platform with genre analysis, emotional scoring, and collaborative composition tools',
-      features: ['Genre Analysis', 'Emotional Scoring', 'Collaborative Composition', 'Instrument Simulation', 'Lyric Generation', 'Mastering Tools'],
-      popular: true,
-      rating: 4.6,
-      users: '900+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-music-composition'
-=======
-      price: '$8,500/mo',
-      description: 'Revolutionary quantum-powered financial predictions with 99.7% accuracy and real-time market analysis',
-      features: ['Quantum Risk Analysis', 'Market Prediction', 'Portfolio Optimization', 'Real-time Trading Signals', 'Fraud Detection', 'Compliance Monitoring'],
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
-      popular: true,
-      rating: 4.9,
-      users: '150+',
-      trial: '30-day free trial'
-    },
-    { 
-<<<<<<< HEAD
-      name: 'AI 3D Generation Studio', 
-      href: '/ai-3d-generation', 
-      icon: FileText, 
-      category: 'Creative', 
-      price: '$299/mo',
-      description: 'AI-powered 3D model generation, animation, and virtual environment creation',
-      features: ['3D Model Generation', 'Animation Creation', 'Virtual Environments', 'Texture Generation', 'Rigging Automation', 'Rendering Optimization'],
-      popular: true,
-      rating: 4.7,
-=======
-      name: 'AI Neural Memory Assistant', 
-      href: '/ai-neural-memory-assistant', 
-      icon: Brain, 
-      category: 'Cognitive AI', 
-      price: '$299/mo',
-      description: 'Advanced AI memory system for enhanced cognitive performance and accelerated learning',
-      features: ['Memory Enhancement', 'Learning Acceleration', 'Cognitive Training', 'Knowledge Management', 'Pattern Recognition', 'Neural Optimization'],
-      popular: true,
-      rating: 4.8,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
-      users: '1,200+',
-      trial: '14-day free trial'
-    },
-    { 
-<<<<<<< HEAD
-      name: 'AI Mobile App Builder Pro', 
-      href: '/ai-mobile-app-builder', 
-      icon: Smartphone, 
-      category: 'Development', 
-      price: '$399/mo',
-      description: 'AI-powered mobile app development with automated coding, testing, and deployment',
-      features: ['Auto Code Generation', 'UI/UX Design', 'Cross-platform Development', 'Automated Testing', 'App Store Optimization', 'Performance Monitoring'],
-      popular: true,
-      rating: 4.8,
-      users: '2,300+',
-      trial: '21-day free trial'
-=======
-      trial: '21-day free trial',
-      link: 'https://ziontechgroup.com/ai-hr-assistant',
-      capabilities: ['50% faster hiring process', '80% reduction in HR admin time', 'Automated compliance tracking', 'Employee satisfaction insights']
-    },
-
-    // New Innovative Services
-    { 
-      name: 'AI Voice Assistant Pro', 
-      href: '/ai-voice-assistant', 
-      icon: Brain, 
-      category: 'AI Tools', 
-      price: '$149/mo',
-      description: 'Advanced voice AI assistant with natural language processing, multi-language support, and custom voice training',
-      features: ['Natural Language Processing', 'Multi-language Support', 'Custom Voice Training', 'Voice Commands', 'Text-to-Speech', 'Speech Recognition', 'Voice Analytics', 'Integration APIs'],
-      popular: true,
-      rating: 4.8,
-      users: '3,200+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-voice-assistant',
-      capabilities: ['95% voice recognition accuracy', 'Support for 50+ languages', 'Real-time voice processing', 'Custom voice cloning']
-    },
-    { 
-      name: 'AI Document Scanner Pro', 
-      href: '/ai-document-scanner', 
-      icon: FileText, 
-      category: 'Document Management', 
-      price: '$79/mo',
-      description: 'Intelligent document scanning with OCR, data extraction, and automated organization. Perfect for businesses handling large volumes of documents.',
-      features: ['Advanced OCR Technology', 'Data Extraction', 'Document Classification', 'Auto Organization', 'Search & Retrieval', 'Cloud Storage', 'Batch Processing', 'API Integration'],
-      popular: true,
-      rating: 4.7,
-      users: '2,100+',
-      trial: '10-day free trial',
-      link: 'https://ziontechgroup.com/ai-document-scanner',
-      capabilities: ['99% OCR accuracy', 'Process 1000+ docs/hour', 'Auto data extraction', 'Smart document sorting']
-    },
-    { 
-      name: 'AI Meeting Transcriber Pro', 
-      href: '/ai-meeting-transcriber', 
-      icon: Video, 
-      category: 'Communication', 
-      price: '$99/mo',
-      description: 'Real-time meeting transcription with AI-powered insights, action items extraction, and meeting summaries',
-      features: ['Real-time Transcription', 'Speaker Identification', 'Action Items Extraction', 'Meeting Summaries', 'Search & Playback', 'Multi-language Support', 'Integration with Calendars', 'Analytics Dashboard'],
-      popular: true,
-      rating: 4.9,
-      users: '4,500+',
-      trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-meeting-transcriber',
-      capabilities: ['98% transcription accuracy', 'Real-time processing', 'Auto action item detection', 'Meeting insights & analytics']
-    },
-    { 
-      name: 'AI Website Builder Pro', 
-      href: '/ai-website-builder', 
-      icon: Globe, 
-      category: 'Web Development', 
-      price: '$199/mo',
-      description: 'AI-powered website builder with drag-and-drop interface, automatic SEO optimization, and responsive design',
-      features: ['Drag & Drop Builder', 'AI Design Suggestions', 'Auto SEO Optimization', 'Responsive Design', 'E-commerce Integration', 'Analytics Dashboard', 'Custom Domain', 'SSL Certificate'],
-      popular: true,
-      rating: 4.8,
-      users: '5,200+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-website-builder',
-      capabilities: ['Build websites in minutes', 'Auto SEO optimization', 'Mobile-first design', 'E-commerce ready']
-    },
-    { 
-      name: 'AI Data Visualizer Pro', 
-      href: '/ai-data-visualizer', 
-      icon: BarChart, 
-      category: 'Analytics', 
+    {
+      id: 'ai-workflow-automation',
+      name: 'AI Workflow Automation',
+      description: 'Visual workflow builder with AI-powered automation, process optimization, and integration capabilities.',
       price: '$129/mo',
-      description: 'Intelligent data visualization with automatic chart generation, interactive dashboards, and AI-powered insights',
-      features: ['Auto Chart Generation', 'Interactive Dashboards', 'AI Insights', 'Real-time Data', 'Custom Visualizations', 'Export Options', 'Collaboration Tools', 'API Integration'],
+      originalPrice: '$179/mo',
+      category: 'automation',
+      icon: Settings,
+      color: 'from-indigo-500 to-purple-500',
       popular: true,
-      rating: 4.7,
-      users: '2,800+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-data-visualizer',
-      capabilities: ['Auto chart recommendations', 'Interactive dashboards', 'AI-powered insights', 'Real-time data updates']
+      features: [
+        'Visual Workflow Builder',
+        'AI Process Optimization',
+        '500+ App Integrations',
+        'Custom Automation Rules',
+        'Performance Analytics',
+        'Error Handling & Recovery',
+        'Team Collaboration',
+        'API & Webhook Support'
+      ],
+      benefits: [
+        '90% reduction in manual tasks',
+        '75% faster process completion',
+        '99.9% automation reliability',
+        'Seamless app integration'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-workflow-automation',
+      trial: '21-day free trial',
+      rating: 4.8,
+      reviews: 934
     },
-    { 
-      name: 'AI Email Signature Manager', 
-      href: '/ai-email-signature-manager', 
-      icon: Mail, 
-      category: 'Email Tools', 
+    {
+      id: 'ai-smart-calendar',
+      name: 'AI Smart Calendar',
+      description: 'Intelligent scheduling with AI-powered time management, meeting optimization, and productivity insights.',
       price: '$39/mo',
-      description: 'Professional email signature management with AI-powered design suggestions and team-wide deployment',
-      features: ['Signature Templates', 'AI Design Suggestions', 'Team Management', 'Brand Consistency', 'Mobile Optimization', 'Analytics Tracking', 'Easy Deployment', 'Custom Fields'],
-      popular: false,
+      originalPrice: '$59/mo',
+      category: 'productivity',
+      icon: Calendar,
+      color: 'from-teal-500 to-cyan-500',
+      popular: true,
+      features: [
+        'Smart Scheduling & Optimization',
+        'Meeting Conflict Resolution',
+        'Productivity Analytics',
+        'Time Blocking & Focus Mode',
+        'Team Calendar Management',
+        'Integration with 100+ Apps',
+        'AI-Powered Suggestions',
+        'Mobile & Desktop Sync'
+      ],
+      benefits: [
+        '50% reduction in scheduling conflicts',
+        '30% increase in productivity',
+        'Automated meeting optimization',
+        'Real-time team coordination'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-smart-calendar',
+      trial: '14-day free trial',
+      rating: 4.7,
+      reviews: 678
+    },
+    {
+      id: 'ai-content-writer',
+      name: 'AI Content Writer',
+      description: 'Advanced content generation with AI writing assistance, SEO optimization, and multi-format support.',
+      price: '$49/mo',
+      originalPrice: '$79/mo',
+      category: 'content',
+      icon: FileText,
+      color: 'from-pink-500 to-rose-500',
+      popular: true,
+      features: [
+        'AI Writing Assistant',
+        'SEO Content Optimization',
+        'Multi-format Support',
+        'Plagiarism Detection',
+        'Tone & Style Customization',
+        'Research & Fact-checking',
+        'Content Templates Library',
+        'Team Collaboration'
+      ],
+      benefits: [
+        '400% faster content creation',
+        '85% improvement in SEO scores',
+        'Consistent quality output',
+        'Multi-language support'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-content-writer',
+      trial: '14-day free trial',
       rating: 4.6,
-      users: '1,400+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-email-signature-manager',
-      capabilities: ['Professional signatures', 'Brand consistency', 'Team-wide deployment', 'Mobile optimization']
+      reviews: 567
     },
-    { 
-      name: 'AI Password Generator Pro', 
-      href: '/ai-password-generator', 
-      icon: Lock, 
-      category: 'Security', 
-      price: '$29/mo',
-      description: 'Advanced password generator with security analysis, breach monitoring, and secure storage',
-      features: ['Smart Password Generation', 'Security Analysis', 'Breach Monitoring', 'Secure Storage', 'Multi-device Sync', 'Team Sharing', '2FA Integration', 'Password History'],
-      popular: true,
-      rating: 4.8,
-      users: '6,800+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-password-generator',
-      capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
->>>>>>> origin/main
-    },
-    { 
-      name: 'AI Logo Designer Pro', 
-      href: '/ai-logo-designer', 
-<<<<<<< HEAD
-      icon: Palette, 
-      category: 'Design', 
-      price: '$99/mo',
-      description: 'Intelligent logo design platform with brand analysis, style matching, and automated design generation',
-      features: ['Brand Analysis', 'Style Matching', 'Auto Design Generation', 'Vector Export', 'Brand Guidelines', 'A/B Testing'],
-      popular: true,
-      rating: 4.8,
-      users: '2,100+',
-      trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-logo-designer'
-    },
-
-    // Advanced Business Solutions
-    { 
-      name: 'AI Supply Chain Optimization Pro', 
-      href: '/ai-supply-chain-optimization-pro', 
-      icon: Truck, 
-      category: 'Supply Chain', 
-      price: '$1,499/mo',
-      description: 'Comprehensive AI supply chain optimization with demand forecasting, inventory management, and logistics automation',
-      features: ['Demand Forecasting', 'Inventory Optimization', 'Logistics Automation', 'Supplier Management', 'Risk Assessment', 'Cost Optimization'],
-      popular: true,
-      rating: 4.7,
-      users: '600+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-supply-chain-optimization-pro'
-    },
-    { 
-      name: 'AI Energy Grid Management Pro', 
-      href: '/ai-energy-grid-management-pro', 
-      icon: Zap, 
-      category: 'Energy', 
-      price: '$3,999/mo',
-      description: 'Smart energy grid management system with real-time optimization, renewable integration, and demand response',
-      features: ['Grid Optimization', 'Renewable Integration', 'Demand Response', 'Energy Storage', 'Predictive Maintenance', 'Carbon Tracking'],
-      popular: false,
-      rating: 4.8,
-      users: '100+',
-      trial: '60-day free trial',
-      link: 'https://ziontechgroup.com/ai-energy-grid-management-pro'
-    },
-    { 
-      name: 'AI Agricultural Intelligence Pro', 
-      href: '/ai-agricultural-intelligence-pro', 
-      icon: Sprout, 
-      category: 'Agriculture', 
-      price: '$799/mo',
-      description: 'Precision agriculture AI platform with crop monitoring, yield prediction, and sustainable farming optimization',
-      features: ['Crop Monitoring', 'Yield Prediction', 'Soil Analysis', 'Pest Detection', 'Irrigation Optimization', 'Sustainability Tracking'],
-      popular: true,
-      rating: 4.7,
-      users: '500+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-agricultural-intelligence-pro'
-    },
-
-    // Emerging Technologies
-    { 
-      name: 'AI Autonomous Systems Pro', 
-      href: '/ai-autonomous-systems', 
-      icon: Cpu, 
-      category: 'Autonomous', 
-      price: '$2,999/mo',
-      description: 'Advanced AI platform for autonomous system development with self-learning capabilities and real-time adaptation',
-      features: ['Self-Learning Algorithms', 'Real-time Adaptation', 'Sensor Fusion', 'Decision Making', 'Safety Protocols', 'Performance Optimization'],
-      popular: true,
-      rating: 4.8,
-      users: '150+',
-      trial: '45-day free trial',
-      link: 'https://ziontechgroup.com/ai-autonomous-systems'
-    },
-    { 
-      name: 'AI Blockchain Solutions Pro', 
-      href: '/ai-blockchain-solutions', 
-      icon: Shield, 
-      category: 'Blockchain', 
-      price: '$1,799/mo',
-      description: 'Intelligent blockchain platform with smart contract optimization, DeFi integration, and automated compliance',
-      features: ['Smart Contract Optimization', 'DeFi Integration', 'Automated Compliance', 'Token Economics', 'Cross-chain Interoperability', 'Security Auditing'],
-      popular: true,
-      rating: 4.7,
-      users: '300+',
-      trial: '30-day free trial',
-      link: 'https://ziontechgroup.com/ai-blockchain-solutions'
-    }
-  ];
-
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Quantum AI', 'AI Memory', 'Immersive Tech', 'Climate Tech', 'Space Tech', 'FinTech', 'Creative', 'Design', 'Supply Chain', 'Energy', 'Agriculture', 'Autonomous', 'Blockchain'];
-=======
-<<<<<<< HEAD
-      icon: FileText, 
-      category: 'Design', 
+    {
+      id: 'ai-video-generator',
+      name: 'AI Video Generator',
+      description: 'AI-powered video creation with automated editing, voice synthesis, and multi-platform optimization.',
       price: '$89/mo',
-      description: 'AI-powered logo design with brand analysis, multiple variations, and style consistency',
-      features: ['Brand Analysis', 'Multiple Variations', 'Style Consistency', 'Color Palette Generation', 'Vector Export', 'Brand Guidelines'],
+      originalPrice: '$139/mo',
+      category: 'content',
+      icon: Video,
+      color: 'from-red-500 to-pink-500',
       popular: true,
+      features: [
+        'AI Video Generation',
+        'Automated Editing',
+        'Voice Synthesis & Dubbing',
+        'Multi-platform Optimization',
+        'Template Library',
+        'Brand Customization',
+        'Batch Processing',
+        'Cloud Rendering'
+      ],
+      benefits: [
+        '600% faster video production',
+        '70% reduction in production costs',
+        'Professional quality output',
+        'Automated optimization'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-video-generator',
+      trial: '14-day free trial',
+      rating: 4.7,
+      reviews: 423
+    },
+    {
+      id: 'ai-crm-assistant',
+      name: 'AI CRM Assistant',
+      description: 'Intelligent customer relationship management with AI-powered insights, lead scoring, and automation.',
+      price: '$119/mo',
+      originalPrice: '$169/mo',
+      category: 'sales',
+      icon: Users,
+      color: 'from-blue-500 to-indigo-500',
+      popular: true,
+      features: [
+        'AI Lead Scoring',
+        'Automated Follow-ups',
+        'Customer Journey Mapping',
+        'Sales Pipeline Optimization',
+        'Email & Call Automation',
+        'Performance Analytics',
+        'Integration with 200+ Tools',
+        'Custom Workflow Builder'
+      ],
+      benefits: [
+        '45% increase in conversion rates',
+        '60% reduction in manual tasks',
+        'Predictive lead scoring',
+        'Automated customer engagement'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-crm-assistant',
+      trial: '21-day free trial',
+      rating: 4.8,
+      reviews: 789
+    },
+    {
+      id: 'ai-email-marketing',
+      name: 'AI Email Marketing Suite',
+      description: 'Intelligent email marketing with AI-powered personalization, automation, and performance optimization.',
+      price: '$69/mo',
+      originalPrice: '$99/mo',
+      category: 'marketing',
+      icon: Mail,
+      color: 'from-green-500 to-teal-500',
+      popular: true,
+      features: [
+        'AI-Powered Personalization',
+        'Automated Campaign Management',
+        'A/B Testing & Optimization',
+        'Advanced Segmentation',
+        'Performance Analytics',
+        'Template Library',
+        'Integration with 150+ Tools',
+        'Compliance Management'
+      ],
+      benefits: [
+        '300% increase in open rates',
+        '250% improvement in click-through rates',
+        'Automated personalization',
+        'Advanced analytics & insights'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-email-marketing',
+      trial: '14-day free trial',
       rating: 4.6,
-      users: '3,100+',
-      trial: '7-day free trial'
+      reviews: 634
     },
-    { 
-      name: 'AI Image Recognition Pro', 
-      href: '/ai-image-recognition', 
-      icon: FileText, 
-      category: 'Computer Vision', 
-      price: '$199/mo',
-      description: 'Advanced image recognition and analysis with object detection, facial recognition, and content moderation',
-      features: ['Object Detection', 'Facial Recognition', 'Content Moderation', 'Text Extraction', 'Scene Analysis', 'Custom Model Training'],
-      popular: true,
-      rating: 4.8,
-      users: '2,800+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI Manufacturing Optimizer', 
-      href: '/ai-manufacturing', 
-      icon: Settings, 
-      category: 'Manufacturing', 
-      price: '$599/mo',
-      description: 'AI-powered manufacturing optimization with predictive maintenance and quality control',
-      features: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Management', 'Defect Detection', 'Energy Optimization'],
-      popular: false,
-      rating: 4.7,
-      users: '800+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI Insurance Claims Processor', 
-      href: '/ai-insurance', 
-      icon: Shield, 
-      category: 'Insurance', 
-      price: '$449/mo',
-      description: 'AI-powered insurance claims processing with automated assessment and fraud detection',
-      features: ['Claims Assessment', 'Fraud Detection', 'Document Processing', 'Risk Analysis', 'Automated Payouts', 'Compliance Monitoring'],
-      popular: true,
-      rating: 4.8,
-      users: '1,400+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI Inventory Manager Pro', 
-      href: '/ai-inventory-manager', 
-      icon: BarChart, 
-      category: 'Business', 
-      price: '$149/mo',
-      description: 'Intelligent inventory management with demand forecasting and automated reordering',
-      features: ['Demand Forecasting', 'Automated Reordering', 'Stock Optimization', 'Supplier Management', 'Cost Analysis', 'Multi-location Support'],
-      popular: true,
-      rating: 4.6,
-      users: '2,100+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI Quality Assurance Suite', 
-      href: '/ai-quality-assurance', 
-      icon: CheckCircle, 
-      category: 'Testing', 
-      price: '$299/mo',
-      description: 'AI-powered quality assurance with automated testing, bug detection, and performance optimization',
-      features: ['Automated Testing', 'Bug Detection', 'Performance Testing', 'Security Testing', 'Load Testing', 'Test Case Generation'],
-      popular: true,
-      rating: 4.7,
-      users: '1,900+',
-      trial: '21-day free trial'
-    },
-    { 
-      name: 'AI Education Platform Pro', 
-      href: '/ai-education', 
-      icon: BookOpen, 
-      category: 'Education', 
-      price: '$199/mo',
-      description: 'AI-powered educational platform with personalized learning and automated assessment',
-      features: ['Personalized Learning', 'Automated Assessment', 'Progress Tracking', 'Content Generation', 'Student Analytics', 'Adaptive Curriculum'],
-      popular: true,
-      rating: 4.8,
-      users: '2,500+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI Fitness Coach Pro', 
-      href: '/ai-fitness-coach', 
-      icon: Users, 
-      category: 'Health', 
-      price: '$79/mo',
-      description: 'AI-powered fitness coaching with personalized workout plans and nutrition guidance',
-      features: ['Personalized Workouts', 'Nutrition Guidance', 'Progress Tracking', 'Form Analysis', 'Goal Setting', 'Community Features'],
-      popular: true,
-      rating: 4.6,
-      users: '3,200+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI Fraud Detection Suite', 
-      href: '/ai-fraud-detection', 
-      icon: Shield, 
-      category: 'Security', 
-      price: '$399/mo',
-      description: 'Advanced AI fraud detection with real-time monitoring and automated response',
-      features: ['Real-time Monitoring', 'Pattern Recognition', 'Automated Response', 'Risk Scoring', 'Transaction Analysis', 'Compliance Reporting'],
-      popular: true,
-      rating: 4.9,
-      users: '1,600+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI Predictive Analytics Pro', 
-      href: '/ai-predictive-analytics', 
-      icon: BarChart, 
-      category: 'Analytics', 
-      price: '$349/mo',
-      description: 'Advanced predictive analytics with machine learning models and business intelligence',
-      features: ['Machine Learning Models', 'Business Intelligence', 'Trend Analysis', 'Forecasting', 'Data Visualization', 'Custom Dashboards'],
-      popular: true,
-      rating: 4.8,
-      users: '2,200+',
-      trial: '21-day free trial'
-    },
-    { 
-      name: 'AI Predictive Maintenance Pro', 
-      href: '/ai-predictive-maintenance', 
-      icon: Settings, 
-      category: 'Industrial', 
-      price: '$499/mo',
-      description: 'AI-powered predictive maintenance for industrial equipment and machinery',
-      features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Analytics', 'Alert Systems'],
-      popular: false,
-      rating: 4.7,
-      users: '900+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI NLP Processing Suite', 
-      href: '/ai-nlp', 
-      icon: FileText, 
-      category: 'Language', 
-      price: '$199/mo',
-      description: 'Advanced natural language processing with sentiment analysis and language translation',
-      features: ['Sentiment Analysis', 'Language Translation', 'Text Summarization', 'Entity Recognition', 'Language Generation', 'Conversation AI'],
-      popular: true,
-      rating: 4.7,
-      users: '2,600+',
-      trial: '14-day free trial'
-    }
-  ];
-
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Creative', 'Computer Vision', 'Manufacturing', 'Insurance', 'Testing', 'Education', 'Health', 'Analytics', 'Industrial', 'Language', 'Design'];
-=======
-      icon: Palette, 
-      category: 'Design', 
-      price: '$79/mo',
-      description: 'AI-powered logo design with brand analysis, multiple variations, and professional quality output',
-      features: ['AI Logo Generation', 'Brand Analysis', 'Multiple Variations', 'High-res Export', 'Vector Format', 'Brand Guidelines', 'Color Palette', 'Font Suggestions'],
-      popular: true,
-      rating: 4.7,
-      users: '3,600+',
-      trial: '7-day free trial',
-      link: 'https://ziontechgroup.com/ai-logo-designer',
-      capabilities: ['Unlimited logo variations', 'Professional quality', 'Brand consistency', 'Multiple file formats']
-    },
-    { 
-      name: 'AI Invoice Designer Pro', 
-      href: '/ai-invoice-designer', 
-      icon: FileText, 
-      category: 'Business', 
+    {
+      id: 'ai-social-media-manager',
+      name: 'AI Social Media Manager',
+      description: 'Automated social media management with AI content creation, scheduling, and performance analytics.',
       price: '$59/mo',
-      description: 'Professional invoice design with AI-powered templates, automated calculations, and payment tracking',
-      features: ['AI Template Generation', 'Auto Calculations', 'Payment Tracking', 'Tax Integration', 'Client Portal', 'Recurring Invoices', 'Multi-currency', 'Analytics Dashboard'],
+      originalPrice: '$89/mo',
+      category: 'marketing',
+      icon: Globe,
+      color: 'from-purple-500 to-pink-500',
       popular: true,
-      rating: 4.8,
-      users: '2,300+',
+      features: [
+        'AI Content Generation',
+        'Multi-platform Scheduling',
+        'Hashtag Optimization',
+        'Engagement Analytics',
+        'Competitor Analysis',
+        'Influencer Collaboration',
+        'Crisis Management',
+        'ROI Tracking'
+      ],
+      benefits: [
+        '400% increase in engagement',
+        '80% reduction in management time',
+        'Automated content optimization',
+        'Multi-platform coordination'
+      ],
+      demo: 'https://demo.ziontechgroup.com/ai-social-media-manager',
       trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-invoice-designer',
-      capabilities: ['Professional templates', 'Auto calculations', 'Payment tracking', 'Multi-currency support']
-    },
-    { 
-      name: 'AI Social Media Scheduler', 
-      href: '/ai-social-media-scheduler', 
-      icon: Smartphone, 
-      category: 'Social Media', 
-      price: '$89/mo',
-      description: 'Intelligent social media scheduling with optimal timing, content suggestions, and performance analytics',
-      features: ['Optimal Timing', 'Content Suggestions', 'Multi-platform Posting', 'Analytics Dashboard', 'Hashtag Research', 'Engagement Tracking', 'Auto Posting', 'Team Collaboration'],
-      popular: true,
-      rating: 4.7,
-      users: '4,100+',
-      trial: '14-day free trial',
-      link: 'https://ziontechgroup.com/ai-social-media-scheduler',
-      capabilities: ['Optimal posting times', 'Content recommendations', 'Multi-platform management', 'Engagement analytics']
+      rating: 4.5,
+      reviews: 512
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media'];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
-=======
-      name: 'AI Holographic Workspace', 
-      href: '/ai-holographic-workspace', 
-      icon: Rocket, 
-      category: 'Immersive Tech', 
-      price: '$1,200/mo',
-      description: 'Next-generation 3D workspace with holographic interfaces and spatial computing capabilities',
-      features: ['3D Workspace', 'Holographic UI', 'Spatial Computing', 'Collaborative Environment', 'Virtual Meetings', 'AR Integration'],
-      popular: true,
-      rating: 4.7,
-      users: '400+',
-      trial: '7-day free trial'
-    },
-    { 
-      name: 'AI Autonomous Systems Pro', 
-      href: '/ai-autonomous-systems', 
-      icon: Settings, 
-      category: 'Autonomous AI', 
-      price: '$4,200/mo',
-      description: 'Self-managing systems with advanced AI decision-making and autonomous operations',
-      features: ['Autonomous Operations', 'Self-Healing Systems', 'Predictive Maintenance', 'Intelligent Monitoring', 'Adaptive Learning', 'Risk Management'],
-      popular: true,
-      rating: 4.8,
-      users: '300+',
-      trial: '21-day free trial'
-    },
-    { 
-      name: 'AI Blockchain Solutions Pro', 
-      href: '/ai-blockchain-solutions', 
-      icon: Shield, 
-      category: 'Blockchain AI', 
-      price: '$3,800/mo',
-      description: 'Advanced blockchain integration with AI-powered smart contracts and DeFi protocols',
-      features: ['Smart Contracts', 'DeFi Integration', 'NFT Marketplace', 'Cross-chain Operations', 'Token Economics', 'Governance Systems'],
-      popular: false,
-      rating: 4.6,
-      users: '250+',
-      trial: '14-day free trial'
-    },
-    { 
-      name: 'AI Energy Grid Management', 
-      href: '/ai-energy-grid-management', 
-      icon: Zap, 
-      category: 'Energy AI', 
-      price: '$6,500/mo',
-      description: 'Intelligent energy distribution and optimization for smart cities and utilities',
-      features: ['Grid Optimization', 'Demand Forecasting', 'Renewable Integration', 'Load Balancing', 'Energy Trading', 'Carbon Tracking'],
-      popular: false,
-      rating: 4.7,
-      users: '180+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI Space Technology Pro', 
-      href: '/ai-space-technology-pro', 
-      icon: Rocket, 
-      category: 'Space Tech', 
-      price: '$5,500/mo',
-      description: 'Advanced space exploration and satellite management solutions with AI optimization',
-      features: ['Satellite Operations', 'Space Mission Planning', 'Astronomical Data Analysis', 'Orbital Mechanics', 'Space Weather', 'Mission Control'],
-      popular: false,
-      rating: 4.9,
-      users: '120+',
-      trial: '30-day free trial'
-    },
-    { 
-      name: 'AI Climate Solutions Pro', 
-      href: '/ai-climate-solutions-pro', 
-      icon: Globe, 
-      category: 'Environmental AI', 
-      price: '$3,200/mo',
-      description: 'Combat climate change with intelligent environmental monitoring and prediction systems',
-      features: ['Carbon Footprint Analysis', 'Weather Prediction', 'Sustainability Planning', 'Emission Tracking', 'Climate Modeling', 'Green Energy'],
-      popular: false,
-      rating: 4.8,
-      users: '350+',
-      trial: '21-day free trial'
-    },
-    { 
-      name: 'AI Drug Discovery Pro', 
-      href: '/ai-drug-discovery-pro', 
-      icon: Stethoscope, 
-      category: 'Pharma AI', 
-      price: '$4,500/mo',
-      description: 'Accelerate pharmaceutical research with AI-powered molecular analysis and drug development',
-      features: ['Molecular Modeling', 'Drug Interaction Analysis', 'Clinical Trial Optimization', 'Protein Folding', 'Toxicity Prediction', 'Patent Analysis'],
-      popular: true,
-      rating: 4.9,
-      users: '200+',
-      trial: '30-day free trial'
-    }
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Grid, count: microSAASServices.length },
+    { id: 'productivity', name: 'Productivity', icon: Target, count: microSAASServices.filter(s => s.category === 'productivity').length },
+    { id: 'analytics', name: 'Analytics', icon: BarChart, count: microSAASServices.filter(s => s.category === 'analytics').length },
+    { id: 'support', name: 'Support', icon: MessageSquare, count: microSAASServices.filter(s => s.category === 'support').length },
+    { id: 'content', name: 'Content', icon: Palette, count: microSAASServices.filter(s => s.category === 'content').length },
+    { id: 'finance', name: 'Finance', icon: CreditCard, count: microSAASServices.filter(s => s.category === 'finance').length },
+    { id: 'automation', name: 'Automation', icon: Settings, count: microSAASServices.filter(s => s.category === 'automation').length },
+    { id: 'sales', name: 'Sales', icon: Users, count: microSAASServices.filter(s => s.category === 'sales').length },
+    { id: 'marketing', name: 'Marketing', icon: Globe, count: microSAASServices.filter(s => s.category === 'marketing').length }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'Quantum AI', 'Cognitive AI', 'Immersive Tech', 'Autonomous AI', 'Blockchain AI', 'Energy AI', 'Space Tech', 'Environmental AI', 'Pharma AI'];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-32a7
->>>>>>> origin/main
-
-  if (!isLoaded) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
-      </div>
-    );
-  }
+  const filteredServices = microSAASServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 relative overflow-hidden">
-      {/* Futuristic Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />
-      
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
-      </div>
-
-=======
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 matrix-bg">
->>>>>>> origin/main
-      {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
-          <div className="text-center">
-<<<<<<< HEAD
-            <div className="inline-block mb-6">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 neon-text">
-                Micro SAAS Solutions
-              </h1>
-              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
-            </div>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Revolutionary AI-powered micro SaaS tools that transform your business operations with cutting-edge technology
-            </p>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                <div className="text-gray-300">Micro SAAS Tools</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">25K+</div>
-                <div className="text-gray-300">Active Users</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime SLA</div>
-=======
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Micro SAAS Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto neon-glow-cyan">
-              Powerful AI-powered micro SaaS tools to streamline your business operations
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-cyan-400 font-semibold">50+ AI Tools</span>
-              </div>
-              <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-purple-400 font-semibold">50,000+ Users</span>
-              </div>
-              <div className="holographic px-6 py-3 rounded-lg">
-                <span className="text-pink-400 font-semibold">99.9% Uptime</span>
->>>>>>> origin/main
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Category Filter */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-wrap justify-center gap-4">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-300 font-medium"
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Services Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {microSAASServices.map((service) => (
-            <div
-              key={service.name}
-<<<<<<< HEAD
-              className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
-                service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20' : ''
-=======
-              className={`futuristic-card hover-lift p-8 ${
-                service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
->>>>>>> origin/main
-              }`}
-            >
-              {/* Animated Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              
-              <div className="relative z-10">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <service.icon className="h-8 w-8" />
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    {service.popular && (
-                      <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full flex items-center font-bold shadow-lg">
-                        <Star className="w-3 h-3 mr-1" />
-                        Popular
-                      </span>
-                    )}
-                    <div className="flex items-center text-yellow-400">
-                      <Star className="w-4 h-4 fill-current" />
-                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
-                    </div>
-                  </div>
-                </div>
-
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                  {service.name}
-                </h3>
-
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-<<<<<<< HEAD
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
-                    <Zap className="w-4 h-4 mr-2 text-cyan-400" />
-                    Key Features:
-                  </h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                    {service.features.length > 4 && (
-                      <li className="text-cyan-400 text-sm font-medium">
-                        +{service.features.length - 4} more features
-                      </li>
-                    )}
-                  </ul>
-=======
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                <ul className="space-y-2">
-                  {service.features.slice(0, 6).map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {service.capabilities && (
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-white mb-3">Proven Results:</h4>
-                  <ul className="space-y-1">
-                    {service.capabilities.map((capability, index) => (
-                      <li key={index} className="flex items-center text-cyan-300 text-sm">
-                        <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
-                        {capability}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              <div className="flex items-center justify-between mb-6">
-                <div className="text-2xl font-bold text-white">
-                  {service.price}
->>>>>>> origin/main
-                </div>
-
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-2xl font-bold text-white">
-                    {service.price}
-                  </div>
-                  <div className="px-3 py-1 bg-white/10 rounded-full text-sm text-cyan-400 font-medium">
-                    {service.category}
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between mb-6 text-sm">
-                  <div className="flex items-center text-gray-400">
-                    <Users className="w-4 h-4 mr-1" />
-                    {service.users} users
-                  </div>
-                  <div className="text-cyan-400 font-medium">
-                    {service.trial}
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <a
-                    href={service.link}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                  <a
-                    href="/contact"
-                    className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              </div>
-<<<<<<< HEAD
-=======
-
-              <div className="flex items-center justify-between mb-6 text-sm">
-                <div className="flex items-center text-gray-400">
-                  <Users className="w-4 h-4 mr-1" />
-                  {service.users}
-                </div>
-                <div className="text-cyan-400 font-medium">
-                  {service.trial}
-                </div>
-              </div>
-
-              <a
-                href={service.link || '#'}
-                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
->>>>>>> origin/main
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* CTA Section */}
-<<<<<<< HEAD
-      <div className="relative bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 py-20 overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Join thousands of companies already using our revolutionary AI-powered micro SaaS tools to boost productivity and drive innovation
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Micro SAAS Solutions
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Powerful AI-powered micro SaaS tools to streamline your business operations. 
+            Choose from our comprehensive suite of intelligent solutions.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
-            <a
-              href="/contact"
-              className="bg-white text-cyan-600 py-4 px-8 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-white/25 inline-flex items-center"
-            >
-              Start Your Free Trial
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+              Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white py-4 px-8 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 inline-flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call +1 (302) 464-0950
-            </a>
+            </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              View All Demos
+            </button>
           </div>
 
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">Phone</h3>
-              <p className="text-gray-200">+1 (302) 464-0950</p>
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-gray-400">Micro SAAS Tools</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">Email</h3>
-              <p className="text-gray-200">kleber@ziontechgroup.com</p>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+              <div className="text-gray-400">Uptime Guarantee</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-white font-bold text-lg mb-2">Address</h3>
-              <p className="text-gray-200">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-pink-400 mb-2">24/7</div>
+              <div className="text-gray-400">Support Available</div>
             </div>
-=======
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Join 50,000+ businesses already using our AI-powered micro SaaS solutions. Start your free trial today!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <a
-              href="https://ziontechgroup.com/contact"
-              className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-            >
-              Start Your Free Trial
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
-            >
-              Call: +1 (302) 464-0950
-            </a>
-          </div>
-          <div className="text-purple-100 text-sm">
-            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
->>>>>>> origin/main
+            <div className="text-center">
+              <div className="text-4xl font-bold text-green-400 mb-2">10K+</div>
+              <div className="text-gray-400">Happy Customers</div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Search and Filter Section */}
+      <section className="py-8 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
+              <input
+                type="text"
+                placeholder="Search micro SAAS tools..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-4 py-3 pl-10 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+              />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                  }`}
+                >
+                  <category.icon className="w-4 h-4" />
+                  <span>{category.name}</span>
+                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
+                    {category.count}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <div
+                key={service.id}
+                className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative group"
+              >
+                {service.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                      <Star className="w-3 h-3 mr-1" />
+                      Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="text-center mb-6">
+                  <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {service.name}
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Pricing */}
+                  <div className="mb-6">
+                    <div className="flex items-center justify-center space-x-2 mb-2">
+                      <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
+                      {service.originalPrice && (
+                        <span className="text-lg text-gray-500 line-through">{service.originalPrice}</span>
+                      )}
+                    </div>
+                    <div className="text-sm text-gray-400">{service.trial}</div>
+                  </div>
+
+                  {/* Rating */}
+                  <div className="flex items-center justify-center space-x-2 mb-6">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`w-4 h-4 ${
+                            i < Math.floor(service.rating)
+                              ? 'text-yellow-400 fill-current'
+                              : 'text-gray-600'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-sm text-gray-400">
+                      {service.rating} ({service.reviews} reviews)
+                    </span>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <div className="space-y-2 mb-6">
+                  {service.features.slice(0, 4).map((feature, index) => (
+                    <div key={index} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </div>
+                  ))}
+                  {service.features.length > 4 && (
+                    <div className="text-sm text-cyan-400 font-medium">
+                      +{service.features.length - 4} more features
+                    </div>
+                  )}
+                </div>
+
+                {/* Benefits */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
+                  <div className="space-y-1">
+                    {service.benefits.slice(0, 2).map((benefit, index) => (
+                      <div key={index} className="text-xs text-gray-400 flex items-center">
+                        <TrendingUp className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="space-y-3">
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                    Start Free Trial
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                  
+                  <div className="flex space-x-2">
+                    <button className="flex-1 border border-cyan-400 text-cyan-400 font-medium py-2 px-4 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 text-sm">
+                      View Demo
+                    </button>
+                    <button className="flex-1 border border-gray-600 text-gray-300 font-medium py-2 px-4 rounded-lg hover:bg-gray-600 hover:text-white transition-all duration-300 text-sm">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Start your free trial today and experience the power of AI-driven micro SAAS solutions. 
+            No credit card required.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              Contact Sales
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
