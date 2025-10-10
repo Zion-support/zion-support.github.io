@@ -1,33 +1,17 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-            </div>
-          </div>
-        </div>
-      </section>
-
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';</div></section>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+            ))}</div></section>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+            ))}</div></section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
+              Ready to Get Started?<p>
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -39,8 +23,5 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-            </div>
-          </div>
-};
-
+            </div>};
 export default PagePage;

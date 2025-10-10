@@ -15,13 +15,21 @@ export default {
   },
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.json'
+      tsconfig: 'tsconfig.json',
+      useESM: true
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
     '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)'
+  ],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/.next/',
+    '<rootDir>/out/',
+    '<rootDir>/app/utils/__tests__/'
   ],
   collectCoverageFrom: [
     'app/**/*.{ts,tsx}',

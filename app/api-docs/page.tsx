@@ -4,17 +4,14 @@ import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, S
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-
 export default function APIDocsPage() {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
   };
-
   const apiEndpoints = [
     {
       title: 'AI Services',
@@ -96,30 +93,23 @@ export default function APIDocsPage() {
       ]
     }
   ];
-
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
-    endpoints: category.endpoints.filter(endpoint => 
+    endpoints: category.endpoints.filter(endpoint =>
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(category => category.endpoints.length > 0);
-
+  }.filter(category => category.endpoints.length > 0);
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
+      <SEOOptimizer
         title="API Documentation - Zion Tech Group"
         description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
         keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
       />
       <Navigation />
-      
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Quick Start */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -129,38 +119,29 @@ export default function APIDocsPage() {
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Key className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3>
-              <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p>
+              <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key<p>Sign up and get your API key from the dashboard</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 Get API Key →
               </button>
             </div>
-            
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Code className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3>
-              <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
+              <h3 className="text-xl font-semibold text-white mb-3">2. Make Request<p>Use our REST API with your preferred language</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 View Examples →
               </button>
             </div>
-            
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3>
-              <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
+              <h3 className="text-xl font-semibold text-white mb-3">3. Integrate<p>Build amazing applications with our APIs</p>
               <button className="text-purple-400 hover:text-purple-300 font-medium">
                 Start Building →
               </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
+            </div></section>
       {/* API Endpoints */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -173,19 +154,15 @@ export default function APIDocsPage() {
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
-                    <p className="text-gray-300">{category.description}</p>
-                  </div>
-                </div>
-                
-                <div className="space-y-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}<p>{category.description}</p>
+                  </div><div className="space-y-6">
                   {category.endpoints.map((endpoint, endpointIndex) => (
                     <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-4">
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            endpoint.method === 'POST' 
-                              ? 'bg-green-500/20 text-green-400' 
+                            endpoint.method === 'POST'
+                              ? 'bg-green-500/20 text-green-400'
                               : 'bg-blue-500/20 text-blue-400'
                           }`}>
                             {endpoint.method}
@@ -209,30 +186,17 @@ export default function APIDocsPage() {
                           )}
                         </button>
                       </div>
-                      
                       <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                      
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-gray-300 text-sm">
                           <code>{endpoint.code}</code>
                         </pre>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+                      </div>))}</div>))}</div></section>
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
+            Ready to Get Started?<p>
             Start building with our APIs today and create amazing applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -242,10 +206,7 @@ export default function APIDocsPage() {
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               View SDKs
             </button>
-          </div>
-        </div>
-      </section>
-
+          </div></section>
       <Footer />
     </div>
   );
