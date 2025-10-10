@@ -18,15 +18,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
               observer.unobserve(img);
             }
           }
+        });
 
       }, {
         rootMargin: '50px 0px',
         threshold: 0.01
+      });
 
       // Observe all lazy images
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
-
+      });
     }
   }, []);
 
@@ -44,10 +46,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         const link = document.createElement('link');
         Object.entries(resource).forEach(([key, value]) => {
           link.setAttribute(key, value as string);
+        });
 
         document.head.appendChild(link);
       }
-
+    });
   }, []);
 
   // Critical CSS inlining
@@ -83,7 +86,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         link.as = 'image';
         link.href = src;
         document.head.appendChild(link);
-
+      });
     };
 
     // Optimize images
@@ -99,7 +102,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         if (!img.hasAttribute('decoding')) {
           img.setAttribute('decoding', 'async');
         }
-
+      });
     };
 
     // Enable service worker for caching
@@ -115,7 +118,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
             if (process.env.NODE_ENV === 'development') {
 
             }
-
+          });
       }
     };
 
@@ -128,7 +131,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         if (!ticking) {
           requestAnimationFrame(() => {
             ticking = false;
-
+          });
           ticking = true;
         }
       };
@@ -176,7 +179,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
           getFCP(logMetric);
           getLCP(logMetric);
           getTTFB(logMetric);
-
+        });
       }
     };
 
@@ -184,6 +187,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
   }, []);
 
   return <>{children}</>;
+});
 
 PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
