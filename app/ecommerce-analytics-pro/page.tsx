@@ -47,8 +47,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-                E-commerce Analytics Pro,
-  </
+                E-commerce Analytics Pro</h1>h1>>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.
               </p>

@@ -308,7 +308,7 @@ const HomePage: React.FC = memo(() => {
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            </section>
+            </div>section>
 
             {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">

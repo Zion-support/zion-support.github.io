@@ -97,8 +97,7 @@ return (
                 Platform Features
               </h2>
               <p>
-                Our security monitoring suite provides everything you need to protect your business from cyber threats.,
-              </p>
+                Our security monitoring suite provides everything you need to protect your business from cyber threats.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
@@ -121,8 +120,7 @@ return (
                 Why Choose Our Suite?
               </h2>
               <p>
-                Experience comprehensive security protection with our all-in-one monitoring platform.,
-              </p>
+                Experience comprehensive security protection with our all-in-one monitoring platform.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (

@@ -84,7 +84,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
           <svg>
             <path>
-          </svg>
+          </p>svg>
         </div>
         <h2 className="text-4xl font-bold text-white mb-4">Oops! Something went wrong</h2>
         <p>
@@ -94,7 +94,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
         {
     process.env['NODE_ENV'] === 'development' && (
   }
-          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
+          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</p>pre>
         )}
         <div className="mt-6 flex gap-4"></div>
           <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Try Again
@@ -119,7 +119,7 @@ function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => 
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
           <svg>
             <path>
-          </svg>
+          </p>svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
         <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Unable to connect to the server. Please check your internet connection and try again.</p>

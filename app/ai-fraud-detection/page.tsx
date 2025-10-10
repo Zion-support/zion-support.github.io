@@ -28,7 +28,8 @@ const features = [
     {
     icon: TrendingUp,
       title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   }];
 
@@ -60,8 +61,7 @@ return (
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Get Started
               </button>
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo,
-              </button>
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo</button>
             </div>
           </div>
         </section>

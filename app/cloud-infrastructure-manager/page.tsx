@@ -95,8 +95,7 @@ return (
                 Platform Features
               </h2>
               <p>
-                Our cloud infrastructure manager provides everything you need to optimize your cloud operations.,
-              </p>
+                Our cloud infrastructure manager provides everything you need to optimize your cloud operations.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
@@ -119,8 +118,7 @@ return (
                 Key Benefits
               </h2>
               <p>
-                Optimize your cloud infrastructure with our comprehensive management platform.,
-              </p>
+                Optimize your cloud infrastructure with our comprehensive management platform.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (

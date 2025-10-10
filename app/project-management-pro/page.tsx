@@ -94,8 +94,7 @@ return (
                 Platform Features
               </h2>
               <p>
-                Our project management platform provides everything you need to succeed.,
-              </p>
+                Our project management platform provides everything you need to succeed.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
@@ -118,8 +117,7 @@ return (
                 Key Benefits
               </h2>
               <p>
-                Transform your project management with our comprehensive platform.,
-              </p>
+                Transform your project management with our comprehensive platform.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (

@@ -61,8 +61,7 @@ return (
                 Get Started
                 <ArrowRight>
               </button>
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More,
-              </button>
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More</button>
             </div>
           </div>
         </div>
@@ -72,8 +71,7 @@ return (
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
-              Why Choose Our EnhancedSEOOptimizer?,
-            </h2>
+              Why Choose Our EnhancedSEOOptimizer?</h2>h2>
             <p>
               Our enhancedseooptimizer solutions deliver unmatched performance, security, and scalability.
             </p>

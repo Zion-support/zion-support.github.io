@@ -94,8 +94,7 @@ return (
                 Our Automation Solutions
               </h2>
               <p>
-                We provide comprehensive process automation services to transform your business operations.,
-              </p>
+                We provide comprehensive process automation services to transform your business operations.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
@@ -118,8 +117,7 @@ return (
                 Key Benefits
               </h2>
               <p>
-                Transform your business with our comprehensive process automation services.,
-              </p>
+                Transform your business with our comprehensive process automation services.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (

@@ -63,21 +63,21 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
             aria-label="Small font size"
           >
             A;
-  </
+  </button>>
           <button
             onClick={() => changeFontSize('medium')}
             className="accessibility-button"
             aria-label="Medium font size"
           >
             A;
-  </
+  </button>>
           <button
             onClick={() => changeFontSize('large')}
             className="accessibility-button"
             aria-label="Large font size"
           >
             A
-  </
+  </button>>
         </div>
       </div>
       {children}

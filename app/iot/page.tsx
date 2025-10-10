@@ -161,8 +161,7 @@ return (
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Explore IoT Solutions
                 </button>
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Schedule IoT Consultation,
-                </button>
+                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Schedule IoT Consultation</button>
               </div>
             </div>
           </div>
@@ -172,8 +171,7 @@ return (
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
               <h2>
-                Why Choose Our IoT Services?,
-              </h2>
+                Why Choose Our IoT Services?</h2>h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">End-to-end IoT solutions with proven expertise in connectivity, security, and analytics</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -300,8 +298,7 @@ return (
                 Our IoT Capabilities
               </h2>
               <p>
-                Comprehensive IoT technologies and methodologies for connected solutions,
-              </p>
+                Comprehensive IoT technologies and methodologies for connected solutions</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>

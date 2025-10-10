@@ -21,6 +21,8 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import FuturisticBackground from './app/components/FuturisticBackground';
+import PerformanceOptimizations from './app/components/PerformanceOptimizations';
+import EnhancedAccessibilityFeatures from './app/components/EnhancedAccessibilityFeatures';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -67,6 +69,8 @@ const App: React.FC = () => {
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer>
                     <PerformanceMonitor />
+                    <PerformanceOptimizations />
+                    <EnhancedAccessibilityFeatures />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <FuturisticBackground />
                       <Navigation />

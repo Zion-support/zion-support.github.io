@@ -50,8 +50,7 @@ return (
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
-              Why Choose Our Page?,
-            </h2>
+              Why Choose Our Page?</h2>h2>
             <p>
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
@@ -77,8 +76,7 @@ return (
               Key Benefits
             </h2>
             <p>
-              Experience the power of our page solutions for your business.,
-            </p>
+              Experience the power of our page solutions for your business.</p>p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (

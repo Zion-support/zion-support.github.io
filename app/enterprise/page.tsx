@@ -39,7 +39,8 @@ const EnterprisePage: React.FC = () => {
     {
     icon: Settings,
       title: 'System Integration',
-      description: 'Seamless integration with existing enterprise systems and workflows.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+      description: 'Seamless integration with existing enterprise systems and workflows.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   }];
 
@@ -109,8 +110,7 @@ return (
               Get Enterprise Consultation
               <ArrowRight>
             </button>
-            <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Case Studies,
-            </button>
+            <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Case Studies</button>
           </div>
         </div>
       </section>

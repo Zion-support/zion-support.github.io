@@ -67,8 +67,7 @@ const AIApiManagerPage: React.FC = () => {
               Get Started
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo,
-  </
+              View Demo</button>>
           </div>
         </div>
       </section>

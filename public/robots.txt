@@ -11,15 +11,14 @@ Crawl-delay: 1
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
+Disallow: /test/
 
 # Allow important pages
 Allow: /
 Allow: /about
 Allow: /services
 Allow: /contact
-Allow: /ai-services
-Allow: /it-services
 Allow: /pricing
 Allow: /blog
 Allow: /case-studies
@@ -29,3 +28,29 @@ Allow: /support
 Allow: /faq
 Allow: /demo
 Allow: /consultation
+Allow: /micro-saas
+Allow: /ai-services
+Allow: /it-services
+Allow: /privacy
+Allow: /terms
+Allow: /cookies
+Allow: /docs
+Allow: /community
+Allow: /tutorials
+
+# AI Services
+Allow: /ai-*
+Allow: /micro-saas/*
+
+# IT Services
+Allow: /it-*
+Allow: /cloud-*
+Allow: /cybersecurity-*
+Allow: /devops-*
+Allow: /data-*
+Allow: /blockchain-*
+Allow: /quantum-*
+Allow: /ar-vr-*
+Allow: /iot-*
+Allow: /edge-computing
+Allow: /5g-implementation

@@ -95,8 +95,7 @@ return (
                 Our Penetration Testing Approach
               </h2>
               <p>
-                We use industry-standard methodologies and cutting-edge tools to thoroughly assess your security posture.,
-              </p>
+                We use industry-standard methodologies and cutting-edge tools to thoroughly assess your security posture.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
@@ -119,8 +118,7 @@ return (
                 Key Benefits
               </h2>
               <p>
-                Strengthen your security defenses with our comprehensive penetration testing services.,
-              </p>
+                Strengthen your security defenses with our comprehensive penetration testing services.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (

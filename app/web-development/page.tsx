@@ -272,7 +272,7 @@ const WebDevelopmentPage: React.FC = () => {
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{
-    webServices.map((service, index) => (</section>
+    webServices.map((service, index) => (</div>section>
   }
                 <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6"></div>

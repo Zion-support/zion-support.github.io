@@ -94,8 +94,7 @@ return (
                 Our Analytics Solutions
               </h2>
               <p>
-                We provide comprehensive data analytics services to help you unlock the power of your data.,
-              </p>
+                We provide comprehensive data analytics services to help you unlock the power of your data.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
@@ -118,8 +117,7 @@ return (
                 Key Benefits
               </h2>
               <p>
-                Drive business success with our comprehensive data analytics services.,
-              </p>
+                Drive business success with our comprehensive data analytics services.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (

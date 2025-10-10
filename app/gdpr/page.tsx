@@ -22,8 +22,7 @@ const benefits = [
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
-              Why Choose Our Page?,
-            </h2>
+              Why Choose Our Page?</h2>h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Our page solutions deliver unmatched performance, security, and scalability.</p>
           </div>
                 </div>

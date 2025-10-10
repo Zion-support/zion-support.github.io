@@ -596,8 +596,7 @@ return (
       <section className="py-20 px-4 sm: px-6 lg:px-8 cyber-scan-effect"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2>
-            Ready to Optimize Your IT Infrastructure?,
-          </h2>
+            Ready to Optimize Your IT Infrastructure?</h2>h2>
           <p>
             Our certified IT professionals deliver reliable, secure, and scalable solutions.;
             All services include free consultations and ongoing support.

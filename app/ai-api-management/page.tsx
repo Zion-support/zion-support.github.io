@@ -69,8 +69,8 @@ const AIApiManagementPage: React.FC = () => {
               Start Free Trial
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo,
-  </
+              View Demo
+            </button>
           </div>
         </div>
       </section>
@@ -130,7 +130,7 @@ const AIApiManagementPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our API Management?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the benefits of our proven solutions
-  </
+  </p>>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (

@@ -93,8 +93,7 @@ return (
                 Platform Features
               </h2>
               <p>
-                Our email marketing automation platform provides everything you need to succeed.,
-              </p>
+                Our email marketing automation platform provides everything you need to succeed.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
@@ -117,8 +116,7 @@ return (
                 Key Benefits
               </h2>
               <p>
-                Drive better results with our comprehensive email marketing automation platform.,
-              </p>
+                Drive better results with our comprehensive email marketing automation platform.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (

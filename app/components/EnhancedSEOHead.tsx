@@ -1,62 +1,135 @@
-'use client';
+'use client'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title: string;
-  description: string;
-  keywords?: string[]
-  canonicalUrl?: string;
-  structuredData?: any
-  ogImage?: string
-  twitterCard?: string
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  structuredData?: object;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords = [],
-  canonicalUrl,
-  structuredData,
-  ogImage = '/og-image.jpg',
-  twitterCard = 'summary_large_image'
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI-powered solutions, IT services, and digital transformation. Expert AI development, cloud infrastructure, cybersecurity, and business automation.",
+  keywords = "AI solutions, artificial intelligence, IT services, cloud computing, cybersecurity, digital transformation, machine learning, automation, business intelligence",
+  image = "https://ziontechgroup.com/images/og-image.jpg",
+  url = "https://ziontechgroup.com",
+  type = "website",
+  structuredData
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/images/logo.png",
+    "description": description,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "10-50",
+    "industry": "Technology",
+    "services": [
+      "AI Development",
+      "IT Services",
+      "Cloud Computing",
+      "Cybersecurity",
+      "Digital Transformation",
+      "Business Automation"
+    ]
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <link rel="canonical" href={canonicalUrl} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="bingbot" content="index, follow" />
       
       {/* Open Graph Tags */}
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
       <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#00ffff" />
+      <meta name="msapplication-TileColor" content="#00ffff" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       
       {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
+      
+      {/* Additional Performance Hints */}
+      <meta httpEquiv="x-dns-prefetch-control" content="on" />
+      <meta name="format-detection" content="telephone=no" />
+      
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
-  )
-}
+  );
+};
 
-export default SEOHead
+export default EnhancedSEOHead;

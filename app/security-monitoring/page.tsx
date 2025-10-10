@@ -93,8 +93,7 @@ return (
                 Why Choose Our Security Monitoring?
               </h2>
               <p>
-                Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.,
-              </p>
+                Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
@@ -117,8 +116,7 @@ return (
                 Key Benefits
               </h2>
               <p>
-                Experience comprehensive security protection with our advanced monitoring services.,
-              </p>
+                Experience comprehensive security protection with our advanced monitoring services.</p>p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
               {benefits.map((benefit, index) => (

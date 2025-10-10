@@ -582,8 +582,7 @@ useEffect(() => {
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Mobile App Development</h3>
                 <p>
-                  Native and cross-platform mobile applications with AI integration and modern UX design.,
-                </p>
+                  Native and cross-platform mobile applications with AI integration and modern UX design.</p>p>
                 <div className="text-center"></div>
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$1,999/month</div>
                   <a>
@@ -951,8 +950,7 @@ useEffect(() => {
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Mobile Development</h3>
                 <p>
-                  Native and cross-platform mobile applications with AI integration and modern UX design.,
-                </p>
+                  Native and cross-platform mobile applications with AI integration and modern UX design.</p>p>
                 <div className="text-center"></div>
                   <div className="text-lg font-bold text-indigo-400 mb-2">Starting at $1,299/month</div>
                   <a>
@@ -1308,8 +1306,7 @@ useEffect(() => {
                       placeholder="Tell us about your project or requirements"
                     ></textarea>
                   </div>
-                  <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Send Message,
-                  </button>
+                  <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Send Message</button>
                 </form>
               </div>
             </div>
