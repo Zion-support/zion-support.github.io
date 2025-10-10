@@ -1,4 +1,3 @@
-import React from 'react';
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
 const React = require('react');
@@ -37,8 +36,8 @@ jest.mock('./src/hooks/usePerformanceMonitoring.ts', () => ({
     report: {}}))}));
 
 // Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => {;
-const actual = jest.requireActual('react-router-dom');
+jest.mock('react-router-dom', () => {
+  const actual = jest.requireActual('react-router-dom');
   const React = require('react');
   return {
     ...actual,
@@ -47,23 +46,32 @@ const actual = jest.requireActual('react-router-dom');
       pathname: '/',
       search: '',
       hash: '',
-      state: null}),
+      state: null
+    }),
     useParams: () => ({}),
     Link: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children)},
+      return React.createElement('a', { href: to, ...props }, children);
+    },
     NavLink: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children)},
+      return React.createElement('a', { href: to, ...props }, children);
+    },
     BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {;
-const { createMemoryRouter, RouterProvider } = actual;
+    MemoryRouter: ({ children }) => {
+      const { createMemoryRouter, RouterProvider } = actual;
       const router = createMemoryRouter([
         {
           path: '/',
-          element: children}], {
+          element: children
+        }
+      ], {
         initialEntries: ['/'],
-        initialIndex: 0});
-      return React.createElement(RouterProvider, { router })},
-    RouterProvider: ({ router }) => null}});
+        initialIndex: 0
+      });
+      return React.createElement(RouterProvider, { router });
+    },
+    RouterProvider: ({ router }) => null
+  };
+});
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -76,19 +84,22 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()}))});
+    dispatchEvent: jest.fn()
+  }))
+});
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {;
-constructor() {}
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
   disconnect() {}
   observe() {}
   takeRecords() {
-    return []}
+    return [];
+  }
   unobserve() {}
 };
 
-// Suppress console errors in tests;
+// Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {
   console.error = jest.fn((...args) => {
@@ -97,8 +108,12 @@ beforeAll(() => {
       (args[0].includes('Warning: ReactDOM.render') ||
         args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
     ) {
-      return}
-    originalError.call(console, ...args)})});
+      return;
+    }
+    originalError.call(console, ...args);
+  });
+});
 
 afterAll(() => {
-  console.error = originalError});
+  console.error = originalError;
+});

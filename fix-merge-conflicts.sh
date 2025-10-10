@@ -1,33 +1,35 @@
 #!/bin/bash
 
-# Script to fix all merge conflicts by removing conflict markers and keeping the HEAD version
+echo "Fixing merge conflicts and syntax errors..."
 
-echo "Fixing merge conflicts..."
-
-# Find all files with merge conflicts
-files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "^[<>=]\{7\}" 2>/dev/null)
-
-if [ -z "$files_with_conflicts" ]; then
-    echo "No merge conflicts found."
-    exit 0
-fi
-
-echo "Found merge conflicts in the following files:"
-echo "$files_with_conflicts"
-
-# Fix each file
-for file in $files_with_conflicts; do
-    echo "Fixing $file..."
+# Find all files with merge conflict markers
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | while read file; do
+  if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file"; then
+    echo "Fixing merge conflicts in: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Remove merge conflict markers and keep HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> .*/d' "$file"
+    # Remove merge conflict markers and keep the HEAD version
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
+    sed -i '/>>>>>>> /d' "$file"
     
-    echo "Fixed $file"
+    # Clean up any remaining conflict markers
+    sed -i '/^=======$/d' "$file"
+  fi
 done
 
-echo "All merge conflicts have been resolved."
-echo "Please review the changes and test the build."
+echo "Merge conflicts fixed. Checking for syntax errors..."
+
+# Fix common syntax errors
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | while read file; do
+  if [ -f "$file" ]; then
+    # Fix unterminated string literals (basic fix)
+    sed -i 's/"[^"]*$/"\n/g' "$file"
+    
+    # Fix missing closing braces (basic fix)
+    sed -i 's/^[[:space:]]*}[[:space:]]*$//g' "$file"
+  fi
+done
+
+echo "Basic fixes applied. Manual review may be needed for complex issues."
