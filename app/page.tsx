@@ -176,38 +176,38 @@ const HomePage: React.FC = () => {
                 className="cyber-button w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
               >
-                📞 Call: (302) 464-0950;
-  </
+                📞 Call: (302) 464-0950
+              </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                📧 Email Us;
-  </
+                📧 Email Us
+              </a>
               <a 
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Consultation;
-  </
+                Get Free Consultation
+              </a>
             </div>
             {/* Contact Info */}
             <div className="mt-8 text-center">
               <p className="text-gray-300 text-sm mb-2">
-                📍 364 E Main St STE 1008, Middletown, DE 19709;
-  </
+                📍 364 E Main St STE 1008, Middletown, DE 19709
+              </p>
               <p className="text-gray-300 text-sm">
-                ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available;
-  </
+                ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
+              </p>
             </div>
           </div>
         </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Services;
-  </
+              Our Services
+          </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Comprehensive AI and IT solutions designed to transform your business operations;
-  </
+            Comprehensive AI and IT solutions designed to transform your business operations
+          </p>
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -307,8 +307,8 @@ const HomePage: React.FC = () => {
           {/* Micro SAAS Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Micro SAAS Solutions;
-  </
+              Micro SAAS Solutions
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -435,8 +435,8 @@ const HomePage: React.FC = () => {
           {/* IT Services & Infrastructure */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure;
-  </
+              IT Services & Infrastructure
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
