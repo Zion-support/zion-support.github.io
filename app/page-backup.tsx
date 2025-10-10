@@ -8,7 +8,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 import StructuredData from './components/StructuredData';
 
-import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText}}from 'lucide-react';
+import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText} from 'lucide-react';
 
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (,
@@ -20,7 +20,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (,
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 
-const HomePage: React.FC = () => {,
+const HomePage: React.FC = () => {
     const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -190,7 +190,7 @@ const HomePage: React.FC = () => {,
                 </div>
               </div>
 
-const HomePage: React.FC = memo(() => {,
+const HomePage: React.FC = memo(() => {
     const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {

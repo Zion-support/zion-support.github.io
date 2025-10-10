@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const BlockchainIntegrationServicesPage: React.FC = () => {,
+import {Helmet} from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react';
+const BlockchainIntegrationServicesPage: React.FC = () => {
   const features = [
     {
       icon: Shield,
@@ -27,23 +27,6 @@ const BlockchainIntegrationServicesPage: React.FC = () => {,
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-<<<<<<< HEAD
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-        <title>Blockchain Integration Services | Zion Tech Group</title>
-        <meta name="description" content="Professional Blockchain Integration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="blockchain integration, blockchain services, IT services, Zion Tech Group, smart contracts" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">Blockchain Integration Services;</h1>
-  </
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced blockchain integration solutions.</p>
-=======
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced blockchain integration solutions. 
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
             Powered by cutting-edge AI technology and industry expertise.
           </p>
       {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
@@ -63,7 +46,6 @@ const BlockchainIntegrationServicesPage: React.FC = () => {,
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
@@ -106,39 +88,6 @@ const BlockchainIntegrationServicesPage: React.FC = () => {,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">,</section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
-              Key Benefits,
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our blockchain integration solutions for your business.</p>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
-            {benefits.map((benefit, index) => (
-              <div key={index}className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit</span>}</span>
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-              Key Benefits,
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Experience the power of our blockchain integration solutions for your business.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3"></div>
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" /></CheckCircle>
-                <span className="text-gray-300"></spa>{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </div>
             ))}
           </div>

@@ -133,7 +133,7 @@ export const usePerformanceMonitor = (;) => {return($3;)
 export const usePerformanceMonitor = (componentName: string) => {,}const renderStartTime = useRef<number>(0);
   const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {}renderStartTime.current = performance.now();
-    return () => {,}return () => {}const renderTime = performance.now() - renderStartTime.current;
+    return () => {}return () => {}const renderTime = performance.now() - renderStartTime.current;
       monitor.trackRender(componentName, renderTime);
       monitor.trackMemory(componentName);
     }

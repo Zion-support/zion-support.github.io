@@ -1,10 +1,9 @@
 'use client';
-<<<<<<< HEAD
-import React, {useState, useEffect, useCallback}from 'react';
-import {Link}}from 'react-router-dom';
-import {ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart}}from 'lucide-react';
+import React, {useState, useEffect, useCallback} from 'react';
+import {Link} from 'react-router-dom';
+import {ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart} from 'lucide-react';
 
-const Navigation: React.FC = () => {,
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -15,24 +14,33 @@ const Navigation: React.FC = () => {,
   // Handle scroll effect;
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);}window.addEventListener('scroll', handleScroll);
+        setIsScrolled(window.scrollY > 50);
+      };
+      window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when clicking outside;
-  useEffect(() => {const handleClickOutside = (event: MouseEvent) => {,
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as Element).closest('.mobile-menu')) {
-        setIsOpen(false);}}
+        setIsOpen(false);
+      }
+    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
-  const toggleMenu = useCallback(() => {setIsOpen(!isOpen);}, [isOpen]);
+  const toggleMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
 
-  const toggleServices = useCallback(() => {setServicesOpen(!servicesOpen);
+  const toggleServices = useCallback(() => {
+    setServicesOpen(!servicesOpen);
     setAiServicesOpen(false);
     setItServicesOpen(false);
-    setMicroSaasOpen(false);}, [servicesOpen]);
+    setMicroSaasOpen(false);
+  }, [servicesOpen]);
 
   const toggleAiServices = useCallback(() => {setAiServicesOpen(!aiServicesOpen);
     setServicesOpen(false);

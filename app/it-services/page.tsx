@@ -1,7 +1,7 @@
 'use client';
 import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
 import {Cloud,}
   Shield, 
   Settings, 
@@ -25,7 +25,7 @@ import {Cloud,}
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ItServicesPage: React.FC = () => {,
+const ItServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [

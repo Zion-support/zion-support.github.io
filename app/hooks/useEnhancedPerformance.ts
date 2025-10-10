@@ -2,9 +2,9 @@
  * Enhanced Performance Hook;
  * Combines performance monitoring, error tracking, and analytics;
  */;
-import {useEffect, useCallback, useRef}}from 'react';
-import {errorTracker}}from '../utils/enhancedErrorTracking';
-import {analytics}}from '../utils/enhancedAnalytics';
+import {useEffect, useCallback, useRef} from 'react';
+import {errorTracker} from '../utils/enhancedErrorTracking';
+import {analytics} from '../utils/enhancedAnalytics';
 export interface UseEnhancedPerformanceOptions {component?: string;}
   trackErrors?: boolean;
   trackPerformance?: boolean;
@@ -59,7 +59,7 @@ const trackUserAction = useCallback(;)
 const measureOperation = useCallback(;)
     (operationName: string) => {,}const _markName = `${component}-${operationName}`;
       const _startTime = performance.now();
-return {end: () => {,}
+return {end: () => {}
           const _duration = performance.now() - startTime,
 if (trackPerformance) {
             analytics.trackPerformance()}`${component}-${operationName}`,;

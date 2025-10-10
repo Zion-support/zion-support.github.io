@@ -1,9 +1,9 @@
 'use client';
 import React, {useState, useEffect}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Shield, CheckCircle, AlertTriangle, Code, DollarSign, Clock, Users, Zap, Brain, ArrowRight, Star, TrendingUp, Lock, FileText, BarChart, Target, Award, Rocket, Globe, Database, Cpu, Eye, MessageSquare, Settings, Calendar, CheckSquare, Phone, Mail, MapPin}}from 'lucide-react';
+import {Helmet} from 'react-helmet-async';
+import {Shield, CheckCircle, AlertTriangle, Code, DollarSign, Clock, Users, Zap, Brain, ArrowRight, Star, TrendingUp, Lock, FileText, BarChart, Target, Award, Rocket, Globe, Database, Cpu, Eye, MessageSquare, Settings, Calendar, CheckSquare, Phone, Mail, MapPin} from 'lucide-react';
 
-const AISmartContractAuditor: React.FC = () => {,
+const AISmartContractAuditor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

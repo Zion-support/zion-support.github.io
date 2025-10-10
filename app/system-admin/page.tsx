@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-const PagePage: React.FC = () => {,
+const PagePage: React.FC = () => {
     const features = [
     {
       icon: Brain,

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-const MainPage: React.FC = () => {,
+import {Helmet} from 'react-helmet-async';
+const MainPage: React.FC = () => {
     const features = [
     {
       icon: Brain,

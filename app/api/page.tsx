@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink}}from 'lucide-react';
+import {Helmet} from 'react-helmet-async';
+import {Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink} from 'lucide-react';
 
-const ApiPage: React.FC = () => {,
+const ApiPage: React.FC = () => {
   const apiEndpoints = [
     {
       category: 'AI Services',

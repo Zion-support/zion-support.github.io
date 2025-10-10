@@ -1,9 +1,9 @@
 'use client';
 import React, {memo}from 'react';
-import {Link}}from 'react-router-dom';
-import {Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users}}from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users} from 'lucide-react';
 
-const Footer: React.FC = memo(() => {,
+const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -109,75 +109,6 @@ const Footer: React.FC = memo(() => {,
     {name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' ,}]
 
   const companyLinks = [
-<<<<<<< HEAD
-    {name: 'About Us', url: '/about' ,},
-    {name: 'Our Team', url: '/team' ,},
-    {name: 'Case Studies', url: '/case-studies' ,},
-    {name: 'Blog', url: '/blog' ,},
-    {name: 'Careers', url: '/careers' ,},
-    {name: 'Partners', url: '/partners' ,},
-    {name: 'Support', url: '/support' ,},
-    {name: 'Status', url: '/status' ,}]
-
-  const resourcesLinks = [
-    {name: 'Pricing', url: '/pricing' ,},
-    {name: 'FAQ', url: '/faq' ,},
-    {name: 'Documentation', url: '/docs' ,},
-    {name: 'API Reference', url: '/api-docs' ,},
-    {name: 'Tutorials', url: '/tutorials' ,},
-    {name: 'Community', url: '/community' ,},
-    {name: 'Demo', url: '/demo' ,},
-    {name: 'Compliance', url: '/compliance' ,}]
-
-  const enterpriseLinks = [
-    {name: 'Enterprise Solutions', url: '/enterprise' ,},
-    {name: 'Digital Transformation', url: '/digital-transformation' ,},
-    {name: 'Business Intelligence', url: '/business-intelligence' ,},
-    {name: 'Edge Computing', url: '/edge-computing' ,},
-    {name: 'Consultation', url: '/consultation' ,},
-    {name: 'Custom Development', url: '/custom-software' ,}]
-
-  return(<footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">)
-      {/* Futuristic Background Effects */} <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
-=======
-    { name: 'About Us', url: '/about' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Blog', url: '/blog' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'Partners', url: '/partners' },
-    { name: 'Contact', url: '/contact' }
-  ];
-
-  const supportLinks = [
-    { name: 'Support Center', url: '/support' },
-    { name: 'FAQ', url: '/faq' },
-    { name: 'Documentation', url: '/docs' },
-    { name: 'Status Page', url: '/status' },
-    { name: 'Demo', url: '/demo' },
-    { name: 'Consultation', url: '/consultation' }
-  ];
-
-  const legalLinks = [
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' },
-    { name: 'Cookie Policy', url: '/cookies' },
-    { name: 'SLA', url: '/sla' }
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github },
-    { name: 'YouTube', url: 'https://youtube.com/ziontechgroup', icon: Youtube },
-    { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram }
-  ];
-
-  return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
-      {/* Futuristic Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16 relative z-10">,</div>
@@ -192,12 +123,6 @@ const Footer: React.FC = memo(() => {,
                 <span className="text-sm text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
               </div>
             </div>
-<<<<<<< HEAD
-            <p className="text-gray-300 text-sm leading-relaxed">Leading provider of AI and IT solutions for modern businesses.</p>
-=======
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Leading provider of AI and IT solutions for modern businesses. 
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
               We help companies transform their operations with cutting-edge technology, 
               delivering measurable results and exceptional value.
             </p>
@@ -229,12 +154,6 @@ const Footer: React.FC = memo(() => {,
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* AI Services */} <div className="cyber-card-enhanced p-6 rounded-2xl">
-=======
-          {/* AI Services */}
-          <div className="cyber-card-enhanced p-6 rounded-2xl">
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
             <h3 className="text-lg font-bold mb-6 text-cyan-400 flex items-center neon-text-enhanced">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
                 <Brain className="w-5 h-5 text-white" />
@@ -244,67 +163,16 @@ const Footer: React.FC = memo(() => {,
             <ul className="space-y-3">
               {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
-<<<<<<< HEAD
-                  <Link;
-                    to={service.url}className="text-gray-300 hover: text-cyan-400 transition-all duration-300 text-sm group flex items-center">,
-                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3 group-hover: scale-150 transition-transform"></div>,
-                    {service.name} </Link>
-=======
-                  <Link 
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-sm group flex items-center">
-                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
-                    {service.name}
-                  </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
                 </li>
               ))}
               <li className="pt-2 border-t border-cyan-500/20">
                 <Link;
                   to="/ai-services"
-<<<<<<< HEAD
-                  className="text-cyan-400 hover: text-cyan-300 transition-all duration-300 text-sm font-semibold flex items-center group">,
-                  View All AI Services;
-                  <Zap className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />,
-=======
-                  className="text-cyan-400 hover:text-cyan-300 transition-all duration-300 text-sm font-semibold flex items-center group">
-                  View All AI Services
-                  <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
                 </Link>
               </li>
             </ul>
           </div>
 
-<<<<<<< HEAD
-          {/* Micro SAAS Services */} <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Cpu className="w-5 h-5 mr-2 text-cyan-400" />
-              Micro SAAS Tools;
-            </h3>
-            <ul className="space-y-3">
-              {microSaasServices.map((service, index) => (
-                <li key={index}>
-                  <Link;
-                    href={service.url}className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 group flex items-start",
-                  >
-                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover: opacity-100 transition-opacity" />,
-                    <div>
-                      <div className="font-medium">{service.name</div>}</div>
-                      <div className="text-xs text-gray-400 group-hover: text-gray-300">,</div>
-                        {service.description} </div>
-                    </div>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* IT Services */} <div className="cyber-card-enhanced p-6 rounded-2xl">
-=======
-          {/* IT Services */}
-          <div className="cyber-card-enhanced p-6 rounded-2xl">
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
             <h3 className="text-lg font-bold mb-6 text-purple-400 flex items-center neon-text-enhanced">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3">
                 <Cloud className="w-5 h-5 text-white" />
@@ -314,19 +182,6 @@ const Footer: React.FC = memo(() => {,
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
-<<<<<<< HEAD
-                  <Link;
-                    to={service.url}className="text-gray-300 hover: text-purple-400 transition-all duration-300 text-sm group flex items-center">,
-                    <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover: scale-150 transition-transform"></div>,
-                    {service.name} </Link>
-=======
-                  <Link 
-                    to={service.url}
-                    className="text-gray-300 hover:text-purple-400 transition-all duration-300 text-sm group flex items-center">
-                    <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
-                    {service.name}
-                  </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
                 </li>
               ))}
               <li className="pt-2 border-t border-purple-500/20">
@@ -350,19 +205,6 @@ const Footer: React.FC = memo(() => {,
             <ul className="space-y-3">
               {microSaasServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
-<<<<<<< HEAD
-                  <Link;
-                    to={service.url}className="text-gray-300 hover: text-green-400 transition-all duration-300 text-sm group flex items-center">,
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-3 group-hover: scale-150 transition-transform"></div>,
-                    {service.name} </Link>
-=======
-                  <Link 
-                    to={service.url}
-                    className="text-gray-300 hover:text-green-400 transition-all duration-300 text-sm group flex items-center">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
-                    {service.name}
-                  </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
                 </li>
               ))}
               <li className="pt-2 border-t border-green-500/20">
@@ -395,25 +237,6 @@ const Footer: React.FC = memo(() => {,
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
             <ul className="space-y-2">
-<<<<<<< HEAD
-              {resourcesLinks.map((link, index) => (
-                <li key={index}>
-                  <Link;
-                    to={link.url}className="text-gray-300 hover: text-cyan-400 text-sm transition-colors",
-                  >
-                    {link.name} </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Enterprise</h3>
-            <ul className="space-y-2">
-              {enterpriseLinks.map((link, index) => (
-=======
-              {supportLinks.map((link, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
                 <li key={index}>
                   <Link;
                     to={link.url}className="text-gray-300 hover: text-cyan-400 text-sm transition-colors",
@@ -447,35 +270,6 @@ const Footer: React.FC = memo(() => {,
                   Technical Support;
                 </Link>
               </li>
-<<<<<<< HEAD
-              <li>
-                <Link to="/privacy" className="text-gray-300 hover: text-cyan-400 text-sm transition-colors">,
-                  Privacy Policy;
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms" className="text-gray-300 hover: text-cyan-400 text-sm transition-colors">,
-                  Terms of Service;
-                </Link>
-              </li>
-=======
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Legal</h3>
-            <ul className="space-y-2">
-              {legalLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to={link.url} 
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
             </ul>
           </div>
 
@@ -512,11 +306,6 @@ const Footer: React.FC = memo(() => {,
               <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
                 <Brain className="w-4 h-4 text-white" />
               </div>
-<<<<<<< HEAD
-              © {currentYear}Zion Tech Group. All rights reserved.
-=======
-              © {currentYear} Zion Tech Group. All rights reserved.
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
             </div>
             <div className="flex flex-wrap justify-center md: justify-end space-x-6 gap-y-2">,</div>
               <a href="/privacy" className="text-sm text-gray-400 hover: text-cyan-400 transition-all duration-300 hover:scale-105">,

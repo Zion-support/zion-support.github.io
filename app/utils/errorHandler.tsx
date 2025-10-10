@@ -421,7 +421,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */,}}t: number ,}> = []
     `
     document.body.appendChild(notification)
     // Auto-remove after 5 seconds for non-critical errors,
-    if (error.severity !== ErrorSeverity.CRITICAL) {setTimeout(() => {,
+    if (error.severity !== ErrorSeverity.CRITICAL) {setTimeout(() => {
         if (notification.parentElement) {,
     // Auto-remove after 5 seconds for non-critical errors;}if (error.severity !== ErrorSeverity.CRITICAL) {}setTimeout(() => {}if (notification.parentElement) {}notification.remove();
     if (this.config.enableNetworkLogging) {/* TODO: Fix JSX expression */,}}

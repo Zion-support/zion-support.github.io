@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 import {CheckSquare,}
   Users,
   CheckCircle,
@@ -25,7 +25,7 @@ import {CheckSquare,}
   Calendar,
 
   FileText;}} from 'lucide-react'
-const ProjectManagementProPage: React.FC = () => {,
+const ProjectManagementProPage: React.FC = () => {
     const features = [
     {
       icon: CheckSquare,

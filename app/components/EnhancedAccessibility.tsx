@@ -1,6 +1,6 @@
 'use client';
 import React, {useEffect, useState}from 'react';
-import {useAnalytics}}from './EnhancedAnalytics';
+import {useAnalytics} from './EnhancedAnalytics';
 
 interface AccessibilitySettings {highContrast: boolean;,}
   reducedMotion: boolean;,

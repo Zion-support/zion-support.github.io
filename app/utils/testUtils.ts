@@ -171,17 +171,17 @@ export const createMockPerformance = (): Performance => {}const entries: Perform
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
     getEntries: () => entries,
-    clearMarks: () => {,
+    clearMarks: () => {
     ,}entries.length = 0;},
-    clearMeasures: () => {,
+    clearMeasures: () => {
     ,
-    getEntries: () => entries,}clearMarks: () => {,}entries.length = 0;},
-    clearMeasures: () => {,}entries.length = 0;},
-    clearResourceTimings: () => {,},;
-    setResourceTimingBufferSize: () => {,},;
+    getEntries: () => entries,}clearMarks: () => {}entries.length = 0;},
+    clearMeasures: () => {}entries.length = 0;},
+    clearResourceTimings: () => {},;
+    setResourceTimingBufferSize: () => {},;
     toJSON: () => ({,}),;
-    addEventListener: () => {,},;
-    removeEventListener: () => {,},;
+    addEventListener: () => {},;
+    removeEventListener: () => {},;
     dispatchEvent: () => true,
     onresourcetimingbufferfull: null,
     timeOrigin: Date.now(),
@@ -206,15 +206,15 @@ export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expres
     clearMeasure,;
   s: () => {/* TODO: Fix JSX expression */,},
     clearResourceTiming,;
-  s: () => {,},;
+  s: () => {},;
     setResourceTimingBufferSiz,;
-  e: () => {,},;
+  e: () => {},;
     toJSO,;
   N: () => ({,}),;
     addEventListene,;
-  r: () => {,},;
+  r: () => {},;
     removeEventListene,;
-  r: () => {,},;
+  r: () => {},;
     dispatchEven,;
   t: () => true,
     onresourcetimingbufferful,;

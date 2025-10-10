@@ -3,14 +3,6 @@
  * Provides comprehensive accessibility improvements for web applications;
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [],}
-  private skipLinks: HTMLElement[] = [],
-  private landmarks: HTMLElement[] = [],
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = []
   private skipLinks: HTMLElement[] = []
@@ -95,17 +87,8 @@ export class AccessibilityEnhancer {
   /**
    * Handle escape key;
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private handleEscapeKey(event: KeyboardEvent): void {,}
-    // Close any open modals or dropdowns;
-=======
-  private handleEscapeKey(event: KeyboardEvent): void {
-    // Close any open modals or dropdowns
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {)
-=======
 
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns;
@@ -117,16 +100,6 @@ const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]')
       closeButton?.click();})
     
     // Close any open menus;
-<<<<<<< HEAD
-    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
-    menus.forEach(menu => {)
-      const trigger = document.querySelector(`[aria-controls="${menu.id)}"]`) as HTMLElement;
-=======
-
-const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
-    menus.forEach(menu => {
-      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
       trigger?.click();
     })
   }
@@ -176,15 +149,6 @@ const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
   /**
    * Setup skip links;
    */
-<<<<<<< HEAD
-  private setupSkipLinks(): void {// Create skip to main content link;}
-    const skipLink = document.createElement('a');
-=======
-  private setupSkipLinks(): void {
-    // Create skip to main content link;
-
-const skipLink = document.createElement('a');
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';,
@@ -193,93 +157,20 @@ const skipLink = document.createElement('a');
     this.skipLinks.push(skipLink);}/**
    * Setup landmarks;
    */
-<<<<<<< HEAD
-  private setupLandmarks(): void {// Ensure main content has proper landmark;}
-    const mainContent = document.querySelector('main') || document.querySelector('#main-content');
-    if (mainContent) {
-      mainContent.setAttribute('role', 'main');
-      mainContent.id = 'main-content';}// Setup navigation landmarks;
-    const navs = document.querySelectorAll('nav');
-    navs.forEach((nav, index) => {if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')) {
-        nav.setAttribute('aria-label', `Navigation ${index + 1)}`);
-=======
-  private setupLandmarks(): void {
-    // Ensure main content has proper landmark;
-
-const mainContent = document.querySelector('main') || document.querySelector('#main-content');
-    if (mainContent) {
-      mainContent.setAttribute('role', 'main');
-      mainContent.id = 'main-content';
-    }
-    
-    // Setup navigation landmarks;
-
-const navs = document.querySelectorAll('nav');
-    navs.forEach((nav, index) => {
-      if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')) {
-        nav.setAttribute('aria-label', `Navigation ${index + 1}`);
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
       }
     })
     
     // Setup banner landmark;
-<<<<<<< HEAD
-    const header = document.querySelector('header');
-    if (header) {header.setAttribute('role', 'banner');}// Setup contentinfo landmark;
-    const footer = document.querySelector('footer');
-    if (footer) {footer.setAttribute('role', 'contentinfo');}}
-=======
-
-const header = document.querySelector('header');
-    if (header) {
-      header.setAttribute('role', 'banner');
-    }
-    
-    // Setup contentinfo landmark;
-
-const footer = document.querySelector('footer');
-    if (footer) {
-      footer.setAttribute('role', 'contentinfo');
-    }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 
   /**
    * Setup ARIA labels;
    */
-<<<<<<< HEAD
-  private setupAriaLabels(): void {// Add ARIA labels to buttons without text;}
-    const iconButtons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');,
-    iconButtons.forEach(button => {)
-=======
-  private setupAriaLabels(): void {
-    // Add ARIA labels to buttons without text;
-
-const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    iconButtons.forEach(button => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
       const icon = button.querySelector('svg');
       if (icon) {
         const iconName = icon.getAttribute('data-icon') || 'button';
         button.setAttribute('aria-label', iconName);}})
     
     // Add ARIA labels to form inputs;
-<<<<<<< HEAD
-    const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');,
-    inputs.forEach(input => {)
-      const label = document.querySelector(`label[for="${input.id)}"]`);
-      if (label) {input.setAttribute('aria-labelledby', label.id || `label-${input.id)}`);
-        if (!label.id) {label.id = `label-${input.id}`;
-=======
-
-const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    inputs.forEach(input => {
-      const label = document.querySelector(`label[for="${input.id}"]`);
-      if (label) {
-        input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
-        if (!label.id) {
-          label.id = `label-${input.id}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
         }
       }
     })
@@ -288,15 +179,6 @@ const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labe
   /**
    * Setup color contrast improvements;
    */
-<<<<<<< HEAD
-  private setupColorContrast(): void {// Add high contrast mode support;}
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');,
-=======
-  private setupColorContrast(): void {
-    // Add high contrast mode support;
-
-const mediaQuery = window.matchMedia('(prefers-contrast: high)');
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
     
     const handleContrastChange = (e: MediaQueryListEvent) => {,
       if (e.matches) {
@@ -309,15 +191,6 @@ const mediaQuery = window.matchMedia('(prefers-contrast: high)');
   /**
    * Setup screen reader support;
    */
-<<<<<<< HEAD
-  private setupScreenReaderSupport(): void {// Add live region for announcements;}
-    const liveRegion = document.createElement('div');
-=======
-  private setupScreenReaderSupport(): void {
-    // Add live region for announcements;
-
-const liveRegion = document.createElement('div');
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
     liveRegion.setAttribute('aria-live', 'polite');
     liveRegion.setAttribute('aria-atomic', 'true');
     liveRegion.className = 'sr-only';
@@ -361,26 +234,9 @@ const liveRegion = document.createElement('div');
   public destroy(): void {this.isInitialized = false;}
     this.focusableElements = []
     this.skipLinks = []
-<<<<<<< HEAD
-    this.landmarks = []}}
-=======
-    this.landmarks = []
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 
 // Create global instance;
 export const accessibilityEnhancer = new AccessibilityEnhancer();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-// Export utility functions;
-export const announceToScreenReader = (message: string) => {,
-  accessibilityEnhancer.announce(message);}export const updateFocusableElements = () => {accessibilityEnhancer.updateFocusableElements();}export const focusFirstElement = () => {accessibilityEnhancer.focusFirst();}export const focusLastElement = () => {accessibilityEnhancer.focusLast();}
-=======
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
@@ -398,8 +254,4 @@ export const focusFirstElement = () => {
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 }
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8

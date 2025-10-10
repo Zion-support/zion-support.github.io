@@ -2,7 +2,7 @@
 import React from 'react';
 'use client';
 import React, {useCallback, useState, useEffect, Suspense, lazy, memo}from 'react';
-import {Phone, Mail, MapPin, Clock}}from 'lucide-react';
+import {Phone, Mail, MapPin, Clock} from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -35,7 +35,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (,
   </div>
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
-const HomePage: React.FC = memo(() => {,
+const HomePage: React.FC = memo(() => {
     const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 useEffect(() => {

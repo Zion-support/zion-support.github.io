@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
-const AboutPage: React.FC = () => {,
+const AboutPage: React.FC = () => {
   return(<>)
       <Helmet />
         <title>About - Zion Tech Group | AI & IT Solutions</title>

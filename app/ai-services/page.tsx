@@ -1,7 +1,7 @@
 'use client';
 import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
 import {Brain,}
   MessageSquare, 
   Eye, 
@@ -26,7 +26,7 @@ import {Brain,}
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AiServicesPage: React.FC = () => {,
+const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [

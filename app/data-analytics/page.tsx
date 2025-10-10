@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 import {BarChart,}
   TrendingUp,
   Database,
@@ -25,7 +25,7 @@ import {BarChart,}
   PieChart,
 
   LineChart;}} from 'lucide-react'
-const DataAnalyticsPage: React.FC = () => {,
+const DataAnalyticsPage: React.FC = () => {
     const features = [
     {
       icon: BarChart,
