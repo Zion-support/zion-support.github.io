@@ -5,11 +5,8 @@ import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
 import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-=======
 import StructuredData from './components/StructuredData';
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 // Dynamically import heavy components for better performance
@@ -29,7 +26,7 @@ const preloadComponents = () => {
     }, 100);
   }
 };
-<<<<<<< HEAD
+
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -39,6 +36,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -121,8 +119,8 @@ const HomePage: React.FC = () => {
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-          Skip to main content;
-  </
+          Skip to main content
+        </a>
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <ContentPromotionBanner />
@@ -143,11 +141,11 @@ const HomePage: React.FC = () => {
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
               data-text="Zion Tech Group"
             >
-              Zion Tech Group;
-  </
+              Zion Tech Group
+            </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-              Advanced AI and IT Solutions;
-  </
+              Advanced AI and IT Solutions
+            </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
@@ -184,38 +182,38 @@ const HomePage: React.FC = () => {
                 className="cyber-button w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
               >
-                📞 Call: (302) 464-0950;
-  </
+                📞 Call: (302) 464-0950
+              </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                📧 Email Us;
-  </
+                📧 Email Us
+              </a>
               <a 
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Consultation;
-  </
+                Get Free Consultation
+              </a>
             </div>
             {/* Contact Info */}
             <div className="mt-8 text-center">
               <p className="text-gray-300 text-sm mb-2">
-                📍 364 E Main St STE 1008, Middletown, DE 19709;
-  </
+                📍 364 E Main St STE 1008, Middletown, DE 19709
+              </p>
               <p className="text-gray-300 text-sm">
-                ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available;
-  </
+                ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
+              </p>
             </div>
           </div>
         </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Services;
-  </
+            Our Services
+          </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Comprehensive AI and IT solutions designed to transform your business operations;
-  </
+            Comprehensive AI and IT solutions designed to transform your business operations
+          </p>
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -315,8 +313,8 @@ const HomePage: React.FC = () => {
           {/* Micro SAAS Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Micro SAAS Solutions;
-  </
+              Micro SAAS Solutions
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -443,8 +441,8 @@ const HomePage: React.FC = () => {
           {/* IT Services & Infrastructure */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure;
-  </
+              IT Services & Infrastructure
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
@@ -555,8 +553,8 @@ const HomePage: React.FC = () => {
           {/* New AI Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Advanced AI Services;
-  </
+              Advanced AI Services
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
@@ -641,8 +639,8 @@ const HomePage: React.FC = () => {
           {/* Emerging Technologies Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Emerging Technologies;
-  </
+              Emerging Technologies
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
@@ -701,8 +699,8 @@ const HomePage: React.FC = () => {
           {/* IT Services Grid */}
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure;
-  </
+              IT Services & Infrastructure
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
@@ -749,16 +747,16 @@ const HomePage: React.FC = () => {
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Micro SAAS Solutions;
-  </
+            Micro SAAS Solutions
+          </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
           </p>
           {/* Productivity Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Productivity & Business Tools;
-  </
+              Productivity & Business Tools
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
@@ -869,8 +867,8 @@ const HomePage: React.FC = () => {
           {/* Marketing & Sales Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Marketing & Sales Tools;
-  </
+              Marketing & Sales Tools
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
@@ -929,8 +927,8 @@ const HomePage: React.FC = () => {
           {/* Developer Tools */}
           <div className="mb-12">
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Developer Tools;
-  </
+              Developer Tools
+            </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
@@ -1024,8 +1022,8 @@ const HomePage: React.FC = () => {
                     <div>
                       <p className="text-gray-300 text-sm">Phone</p>
                       <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
-                        +1 (302) 464-0950;
-  </
+                        +1 (302) 464-0950
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -1035,8 +1033,8 @@ const HomePage: React.FC = () => {
                     <div>
                       <p className="text-gray-300 text-sm">Email</p>
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
-                        kleber@ziontechgroup.com;
-  </
+                        kleber@ziontechgroup.com
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -1047,8 +1045,8 @@ const HomePage: React.FC = () => {
                       <p className="text-gray-300 text-sm">Address</p>
                       <p className="text-white font-semibold">
                         364 E Main St STE 1008<br />
-                        Middletown, DE 19709;
-  </
+                        Middletown, DE 19709
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -1059,8 +1057,8 @@ const HomePage: React.FC = () => {
                       <p className="text-gray-300 text-sm">Business Hours</p>
                       <p className="text-white font-semibold">
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br />
-                        24/7 Emergency Support Available;
-  </
+                        24/7 Emergency Support Available
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1071,8 +1069,8 @@ const HomePage: React.FC = () => {
                 <form className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name;
-  </
+                      Full Name
+                    </label>
                     <input
                       type="text"
                       id="name"
@@ -1084,8 +1082,8 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                      Email Address;
-  </
+                      Email Address
+                    </label>
                     <input
                       type="email"
                       id="email"
@@ -1097,8 +1095,8 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number;
-  </
+                      Phone Number
+                    </label>
                     <input
                       type="tel"
                       id="phone"
@@ -1109,8 +1107,8 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest;
-  </
+                      Service Interest
+                    </label>
                     <select
                       id="service"
                       name="service"
@@ -1125,8 +1123,8 @@ const HomePage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message;
-  </
+                      Message
+                    </label>
                     <textarea
                       id="message"
                       name="message"
@@ -1138,181 +1136,9 @@ const HomePage: React.FC = () => {
                   <button
                     type="submit"
                     className="w-full cyber-button text-center py-4">
-                    Send Message;
-  </
+                    Send Message
+                  </button>
                 </form>
-=======
-
-const HomePage: React.FC = memo(() => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    preloadComponents();
-    setIsLoaded(true);
-  }, []);
-
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and data.',
-      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored software solutions designed specifically for your business requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics tools.',
-      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting']
-    },
-    {
-      icon: Users,
-      title: 'IT Consulting',
-      description: 'Expert guidance to help you make the right technology decisions.',
-      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '50+', label: 'Expert Team Members' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <StructuredData type="Organization" />
-      <StructuredData type="WebSite" />
-      <StructuredData type="WebPage" />
-      <StructuredData type="Service" />
-      <PerformanceOptimizer />
-      <SEOOptimizer />
-      <AccessibilityEnhancer />
-      
-      <Navigation />
-      
-      <main>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Transform Your Business with
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              We help businesses leverage cutting-edge technology to drive growth, 
-              improve efficiency, and stay ahead of the competition.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                aria-label="Get started with our AI and IT solutions"
-              >
-                Get Started
-                <ArrowRight className="inline-block ml-2 w-5 h-5" aria-hidden="true" />
-              </button>
-              <button 
-                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-                aria-label="View our portfolio and case studies"
-              >
-                View Our Work
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="services-heading">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 id="services-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive solutions designed to meet your business needs
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
-              {features.map((feature, index) => (
-                <article key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group" role="listitem">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" aria-hidden="true">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2" role="list">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" aria-hidden="true" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="cta-heading">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 id="cta-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our AI and IT solutions can help you achieve your goals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                  aria-label="Contact us to discuss your business transformation needs"
-                >
-                  Contact Us
-                </button>
-                <button 
-                  className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
-                  aria-label="Learn more about our AI and IT solutions"
-                >
-                  Learn More
-                </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               </div>
             </div>
           </div>
@@ -1321,48 +1147,10 @@ const HomePage: React.FC = memo(() => {
       
       <Footer />
     </div>
-<<<<<<< HEAD
     </React.Fragment>
   );
 };
-export default HomePage;
-  </button>
-  </label>
-  </label>
-  </label>
-  </label>
-  </label>
-  </p>
-  </p>
-  </a>
-  </a>
-  </h3>
-  </h3>
-  </h3>
-  </h2>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
-  </p>
-  </h2>
-  </p>
-  </p>
-  </a>
-  </a>
-  </a>
-  </p>
-  </h1>
-  </a>
-  </AccessibilityEnhancer>
-  </PerformanceOptimizer>
-  </SEOOptimizer>
-=======
-  );
-});
 
 HomePage.displayName = 'HomePage';
 
 export default HomePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

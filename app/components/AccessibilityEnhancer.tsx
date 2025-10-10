@@ -1,42 +1,8 @@
 'use client';
-
-import React, { useEffect } from 'react';
-<<<<<<< HEAD
-const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-    // Add focus indicators
-    const addFocusStyles = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-    // Initialize accessibility features
-    addFocusStyles();
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, []);
-  return <React.Fragment>{children}</React.Fragment>;
-=======
+import React, { useEffect, ReactNode } from 'react';
 
 interface AccessibilityEnhancerProps {
+  children: ReactNode;
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
@@ -44,132 +10,135 @@ interface AccessibilityEnhancerProps {
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true
 }) => {
   useEffect(() => {
-    // Keyboard navigation enhancements
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {
+    // Keyboard navigation support
+    if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
-            skipLink.focus();
-            event.preventDefault();
-          }
+        if (event.key === 'Tab') {
+          document.body.classList.add('keyboard-navigation');
         }
+      };
 
-        // Close dropdowns with Escape key
-        if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
-          openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          });
-        }
+      const handleMouseDown = () => {
+        document.body.classList.remove('keyboard-navigation');
       };
 
       document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
-
-    // Focus management
-    if (enableFocusManagement && typeof window !== 'undefined') {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
-      const trapFocus = (container: HTMLElement) => {
-        const focusableContent = container.querySelectorAll(focusableElements);
-        const firstFocusableElement = focusableContent[0] as HTMLElement;
-        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
-
-        const handleTabKey = (e: KeyboardEvent) => {
-          if (e.key !== 'Tab') return;
-
-          if (e.shiftKey) {
-            if (document.activeElement === firstFocusableElement) {
-              lastFocusableElement.focus();
-              e.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastFocusableElement) {
-              firstFocusableElement.focus();
-              e.preventDefault();
-            }
-          }
-        };
-
-        container.addEventListener('keydown', handleTabKey);
-        firstFocusableElement?.focus();
-
-        return () => container.removeEventListener('keydown', handleTabKey);
-      };
-
-      // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
-    }
-
-    // Screen reader support
-    if (enableScreenReaderSupport && typeof window !== 'undefined') {
-      // Add live region for dynamic content updates
-      const liveRegion = document.createElement('div');
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      liveRegion.id = 'live-region';
-      document.body.appendChild(liveRegion);
-
-      // Announce page changes
-      const announcePageChange = (message: string) => {
-        const liveRegion = document.getElementById('live-region');
-        if (liveRegion) {
-          liveRegion.textContent = message;
-        }
-      };
-
-      // Listen for route changes (if using React Router)
-      const originalPushState = history.pushState;
-      const originalReplaceState = history.replaceState;
-
-      history.pushState = function(...args) {
-        originalPushState.apply(history, args);
-        announcePageChange('Page changed');
-      };
-
-      history.replaceState = function(...args) {
-        originalReplaceState.apply(history, args);
-        announcePageChange('Page updated');
-      };
+      document.addEventListener('mousedown', handleMouseDown);
 
       return () => {
-        document.body.removeChild(liveRegion);
-        history.pushState = originalPushState;
-        history.replaceState = originalReplaceState;
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
       };
     }
+  }, [enableKeyboardNavigation]);
 
-    // High contrast mode support
-    if (enableHighContrast && typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
-      
-      const updateHighContrast = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
-        } else {
-          document.documentElement.classList.remove('high-contrast');
+  useEffect(() => {
+    // Add focus styles
+    if (enableFocusManagement) {
+      const addFocusStyles = () => {
+        const style = document.createElement('style');
+        style.textContent = `
+          .keyboard-navigation *:focus {
+            outline: 2px solid #3b82f6 !important;
+            outline-offset: 2px !important;
+          }
+          
+          .keyboard-navigation button:focus,
+          .keyboard-navigation a:focus,
+          .keyboard-navigation input:focus,
+          .keyboard-navigation textarea:focus,
+          .keyboard-navigation select:focus {
+            outline: 2px solid #3b82f6 !important;
+            outline-offset: 2px !important;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1) !important;
+          }
+          
+          .sr-only {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+          }
+          
+          .sr-only:focus {
+            position: static !important;
+            width: auto !important;
+            height: auto !important;
+            padding: 0.5rem !important;
+            margin: 0 !important;
+            overflow: visible !important;
+            clip: auto !important;
+            white-space: normal !important;
+          }
+        `;
+        document.head.appendChild(style);
+      };
+
+      addFocusStyles();
+    }
+  }, [enableFocusManagement]);
+
+  useEffect(() => {
+    // Screen reader support
+    if (enableScreenReaderSupport) {
+      // Add ARIA landmarks
+      const addAriaLandmarks = () => {
+        const main = document.querySelector('main');
+        if (main && !main.getAttribute('role')) {
+          main.setAttribute('role', 'main');
+        }
+
+        const nav = document.querySelector('nav');
+        if (nav && !nav.getAttribute('role')) {
+          nav.setAttribute('role', 'navigation');
+        }
+
+        const footer = document.querySelector('footer');
+        if (footer && !footer.getAttribute('role')) {
+          footer.setAttribute('role', 'contentinfo');
         }
       };
 
-      prefersHighContrast.addEventListener('change', updateHighContrast);
-      updateHighContrast(prefersHighContrast);
-
-      return () => prefersHighContrast.removeEventListener('change', updateHighContrast);
+      addAriaLandmarks();
     }
-  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
+  }, [enableScreenReaderSupport]);
 
-  return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+  useEffect(() => {
+    // High contrast mode
+    if (enableHighContrast) {
+      const addHighContrastStyles = () => {
+        const style = document.createElement('style');
+        style.textContent = `
+          .high-contrast {
+            filter: contrast(150%) brightness(110%);
+          }
+          
+          .high-contrast * {
+            border-color: currentColor !important;
+          }
+        `;
+        document.head.appendChild(style);
+      };
+
+      addHighContrastStyles();
+    }
+  }, [enableHighContrast]);
+
+  return <>{children}</>;
 };
+
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
+
 export default AccessibilityEnhancer;
