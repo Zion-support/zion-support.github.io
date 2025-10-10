@@ -42,10 +42,16 @@ const Footer: React.FC = () => {
     { name: 'FAQ', url: '/faq' }
   ];
 
+  const legalLinks = [
+    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' }
+  ];
+
   return (
     <footer className="bg-slate-900 border-t border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -130,6 +136,25 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-purple-400 flex items-center">
+              <FileText className="w-5 h-5 mr-2" />
+              Resources
+            </h3>
+            <ul className="space-y-2">
+              {resourcesLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Section */}
@@ -138,16 +163,15 @@ const Footer: React.FC = () => {
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6">
-              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
-              </Link>
+            <div className="flex flex-wrap justify-center gap-6">
+              {legalLinks.map((link, index) => (
+                <Link 
+                  key={index}
+                  to={link.url} 
+                  className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                  {link.name}
+                </Link>
+              ))}
               <Link to="/contact" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Contact
               </Link>

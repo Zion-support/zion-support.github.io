@@ -1,44 +1,44 @@
 'use client';
 import React from 'react';
-import { DollarSign, CreditCard, TrendingUp, Shield, BarChart, Users, CheckCircle, ArrowRight, Star, Brain, Cloud, Code, Database, Smartphone, Lock, Settings, Calendar, Target, Clock, Zap, Heart, Box, Monitor, Link as LinkIcon, Server, Share2, Mic, Wrench, Truck, FileText } from 'lucide-react';
+import { Monitor, Activity, AlertTriangle, BarChart, Settings, Bell, CheckSquare, Target, Clock, Zap, ArrowRight, Star, Shield, Brain, Cloud, Code, Database, Smartphone, Lock, TrendingUp, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Link as LinkIcon, Server, Share2, Mic, Wrench, Truck, Users } from 'lucide-react';
 
-const AIFintechPage: React.FC = () => {
+const MicroSaasMonitoringPage: React.FC = () => {
   const features = [
     {
-      icon: DollarSign,
-      title: 'Financial Analytics',
-      description: 'Advanced AI-powered financial analysis and risk assessment',
-      benefits: ['Risk modeling', 'Credit scoring', 'Fraud detection', 'Market analysis']
+      icon: Monitor,
+      title: 'System Monitoring',
+      description: 'Monitor your systems and applications in real-time with comprehensive dashboards',
+      benefits: ['Real-time metrics', 'Custom dashboards', 'Performance tracking', 'Uptime monitoring']
     },
     {
-      icon: CreditCard,
-      title: 'Payment Processing',
-      description: 'Secure and intelligent payment processing solutions',
-      benefits: ['Multi-currency support', 'Real-time processing', 'Fraud prevention', 'Compliance']
+      icon: Activity,
+      title: 'Performance Analytics',
+      description: 'Analyze system performance and identify bottlenecks before they impact users',
+      benefits: ['Performance metrics', 'Bottleneck detection', 'Trend analysis', 'Capacity planning']
     },
     {
-      icon: TrendingUp,
-      title: 'Investment Management',
-      description: 'AI-driven investment strategies and portfolio management',
-      benefits: ['Algorithmic trading', 'Portfolio optimization', 'Market prediction', 'Risk management']
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Ensure financial security and regulatory compliance',
-      benefits: ['Data encryption', 'Audit trails', 'Regulatory reporting', 'Access controls']
+      icon: AlertTriangle,
+      title: 'Smart Alerts',
+      description: 'Get notified immediately when issues arise with intelligent alerting',
+      benefits: ['Custom thresholds', 'Multi-channel alerts', 'Escalation rules', 'Alert suppression']
     },
     {
       icon: BarChart,
-      title: 'Financial Reporting',
-      description: 'Automated financial reporting and business intelligence',
-      benefits: ['Real-time reporting', 'Custom dashboards', 'Compliance reports', 'Analytics']
+      title: 'Reporting & Insights',
+      description: 'Generate detailed reports and gain insights into your system health',
+      benefits: ['Custom reports', 'Historical data', 'Trend analysis', 'Scheduled reports']
     },
     {
-      icon: Users,
-      title: 'Customer Experience',
-      description: 'Enhance customer experience with AI-powered financial services',
-      benefits: ['Personalized services', 'Chatbots', 'Mobile banking', '24/7 support']
+      icon: Settings,
+      title: 'Configuration Management',
+      description: 'Manage and monitor configuration changes across your infrastructure',
+      benefits: ['Change tracking', 'Version control', 'Compliance monitoring', 'Audit trails']
+    },
+    {
+      icon: Bell,
+      title: 'Notification Management',
+      description: 'Control how and when you receive notifications with smart filtering',
+      benefits: ['Notification rules', 'Priority filtering', 'Escalation policies', 'Integration options']
     }
   ];
 
@@ -52,25 +52,25 @@ const AIFintechPage: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <DollarSign className="w-4 h-4 mr-2" />
-              AI Fintech
+              <Monitor className="w-4 h-4 mr-2" />
+              Micro SaaS Solution
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Fintech
+              Performance Monitoring
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                {' '}Solutions
+                {' '}Platform
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize financial services with AI-powered fintech solutions. 
-              Enhance security, improve efficiency, and deliver exceptional customer experiences.
+              Keep your systems running smoothly with our comprehensive monitoring Micro SaaS solution. 
+              Monitor performance, detect issues, and ensure optimal uptime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 hover:scale-105"
               >
-                <span className="relative z-10">Get Started</span>
+                <span className="relative z-10">Start Free Trial</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-purple-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
               <a
@@ -92,7 +92,7 @@ const AIFintechPage: React.FC = () => {
               Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Features</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to build next-generation financial services.
+              Everything you need to monitor and maintain your systems effectively.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ const AIFintechPage: React.FC = () => {
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                        <CheckSquare className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -136,17 +136,17 @@ const AIFintechPage: React.FC = () => {
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Financial Services?
+            Ready to Monitor Your Systems?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join financial institutions already using our AI fintech solutions to innovate and grow.
+            Join thousands of businesses already using our Micro SaaS solution to keep their systems running smoothly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/25 hover:scale-105"
             >
-              <span className="relative z-10">Start Your Project</span>
+              <span className="relative z-10">Start Your Free Trial</span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-purple-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
             <a
@@ -162,4 +162,4 @@ const AIFintechPage: React.FC = () => {
   );
 };
 
-export default AIFintechPage;
+export default MicroSaasMonitoringPage;

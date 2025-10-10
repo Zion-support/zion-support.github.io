@@ -1,44 +1,44 @@
 'use client';
 import React from 'react';
-import { DollarSign, CreditCard, TrendingUp, Shield, BarChart, Users, CheckCircle, ArrowRight, Star, Brain, Cloud, Code, Database, Smartphone, Lock, Settings, Calendar, Target, Clock, Zap, Heart, Box, Monitor, Link as LinkIcon, Server, Share2, Mic, Wrench, Truck, FileText } from 'lucide-react';
+import { Globe, Shield, Zap, BarChart, Users, Settings, CheckCircle, ArrowRight, Star, Brain, Cloud, Code, Database, Smartphone, Lock, TrendingUp, Calendar, Target, Clock, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Share2, Mic, Wrench, Truck, FileText } from 'lucide-react';
 
-const AIFintechPage: React.FC = () => {
+const AINetworkSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: DollarSign,
-      title: 'Financial Analytics',
-      description: 'Advanced AI-powered financial analysis and risk assessment',
-      benefits: ['Risk modeling', 'Credit scoring', 'Fraud detection', 'Market analysis']
-    },
-    {
-      icon: CreditCard,
-      title: 'Payment Processing',
-      description: 'Secure and intelligent payment processing solutions',
-      benefits: ['Multi-currency support', 'Real-time processing', 'Fraud prevention', 'Compliance']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Investment Management',
-      description: 'AI-driven investment strategies and portfolio management',
-      benefits: ['Algorithmic trading', 'Portfolio optimization', 'Market prediction', 'Risk management']
+      icon: Globe,
+      title: 'Network Optimization',
+      description: 'AI-powered network optimization for maximum performance and efficiency',
+      benefits: ['Traffic analysis', 'Bandwidth optimization', 'Load balancing', 'Performance monitoring']
     },
     {
       icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Ensure financial security and regulatory compliance',
-      benefits: ['Data encryption', 'Audit trails', 'Regulatory reporting', 'Access controls']
+      title: 'Security Monitoring',
+      description: 'Advanced AI-driven network security and threat detection',
+      benefits: ['Threat detection', 'Anomaly detection', 'Real-time alerts', 'Automated response']
+    },
+    {
+      icon: Zap,
+      title: 'Performance Analytics',
+      description: 'Comprehensive network performance analytics and insights',
+      benefits: ['Real-time metrics', 'Historical analysis', 'Predictive insights', 'Custom dashboards']
     },
     {
       icon: BarChart,
-      title: 'Financial Reporting',
-      description: 'Automated financial reporting and business intelligence',
-      benefits: ['Real-time reporting', 'Custom dashboards', 'Compliance reports', 'Analytics']
+      title: 'Traffic Management',
+      description: 'Intelligent traffic management and routing optimization',
+      benefits: ['Smart routing', 'QoS management', 'Traffic shaping', 'Congestion control']
     },
     {
       icon: Users,
-      title: 'Customer Experience',
-      description: 'Enhance customer experience with AI-powered financial services',
-      benefits: ['Personalized services', 'Chatbots', 'Mobile banking', '24/7 support']
+      title: 'User Experience',
+      description: 'Enhanced user experience through intelligent network management',
+      benefits: ['Latency optimization', 'Connection stability', 'Seamless handoffs', 'Quality assurance']
+    },
+    {
+      icon: Settings,
+      title: 'Automation',
+      description: 'Automated network configuration and management',
+      benefits: ['Auto-configuration', 'Self-healing networks', 'Predictive maintenance', 'Zero-touch deployment']
     }
   ];
 
@@ -52,18 +52,18 @@ const AIFintechPage: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <DollarSign className="w-4 h-4 mr-2" />
-              AI Fintech
+              <Globe className="w-4 h-4 mr-2" />
+              AI Network Solutions
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Fintech
+              AI Network
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 {' '}Solutions
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize financial services with AI-powered fintech solutions. 
-              Enhance security, improve efficiency, and deliver exceptional customer experiences.
+              Transform your network infrastructure with AI-powered solutions. 
+              Optimize performance, enhance security, and ensure seamless connectivity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -92,7 +92,7 @@ const AIFintechPage: React.FC = () => {
               Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Features</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to build next-generation financial services.
+              Everything you need to build and manage intelligent network infrastructure.
             </p>
           </div>
 
@@ -136,10 +136,10 @@ const AIFintechPage: React.FC = () => {
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Financial Services?
+            Ready to Optimize Your Network?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join financial institutions already using our AI fintech solutions to innovate and grow.
+            Join thousands of organizations already using our AI network solutions to enhance their infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -162,4 +162,4 @@ const AIFintechPage: React.FC = () => {
   );
 };
 
-export default AIFintechPage;
+export default AINetworkSolutionsPage;

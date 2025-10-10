@@ -1,44 +1,44 @@
 'use client';
 import React from 'react';
-import { DollarSign, CreditCard, TrendingUp, Shield, BarChart, Users, CheckCircle, ArrowRight, Star, Brain, Cloud, Code, Database, Smartphone, Lock, Settings, Calendar, Target, Clock, Zap, Heart, Box, Monitor, Link as LinkIcon, Server, Share2, Mic, Wrench, Truck, FileText } from 'lucide-react';
+import { Settings, Link, Zap, BarChart, Users, Shield, CheckCircle, ArrowRight, Star, Brain, Cloud, Code, Database, Smartphone, Lock, TrendingUp, Calendar, Target, Clock, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Share2, Mic, Wrench, Truck, FileText, Globe } from 'lucide-react';
 
-const AIFintechPage: React.FC = () => {
+const AISystemIntegrationPage: React.FC = () => {
   const features = [
     {
-      icon: DollarSign,
-      title: 'Financial Analytics',
-      description: 'Advanced AI-powered financial analysis and risk assessment',
-      benefits: ['Risk modeling', 'Credit scoring', 'Fraud detection', 'Market analysis']
+      icon: Settings,
+      title: 'Seamless Integration',
+      description: 'Connect disparate systems and applications with AI-powered integration solutions',
+      benefits: ['API integration', 'Data synchronization', 'Real-time connectivity', 'Error handling']
     },
     {
-      icon: CreditCard,
-      title: 'Payment Processing',
-      description: 'Secure and intelligent payment processing solutions',
-      benefits: ['Multi-currency support', 'Real-time processing', 'Fraud prevention', 'Compliance']
+      icon: Link,
+      title: 'Data Flow Management',
+      description: 'Intelligent data flow management across multiple systems and platforms',
+      benefits: ['Data mapping', 'Transformation rules', 'Validation logic', 'Monitoring']
     },
     {
-      icon: TrendingUp,
-      title: 'Investment Management',
-      description: 'AI-driven investment strategies and portfolio management',
-      benefits: ['Algorithmic trading', 'Portfolio optimization', 'Market prediction', 'Risk management']
+      icon: Zap,
+      title: 'Automated Workflows',
+      description: 'Create and manage automated workflows that span multiple systems',
+      benefits: ['Workflow automation', 'Event triggers', 'Conditional logic', 'Process orchestration']
+    },
+    {
+      icon: BarChart,
+      title: 'Performance Monitoring',
+      description: 'Monitor integration performance and health with comprehensive analytics',
+      benefits: ['Real-time metrics', 'Performance alerts', 'Bottleneck detection', 'Optimization insights']
+    },
+    {
+      icon: Users,
+      title: 'User Management',
+      description: 'Centralized user management across integrated systems',
+      benefits: ['Single sign-on', 'Role synchronization', 'Permission mapping', 'User provisioning']
     },
     {
       icon: Shield,
       title: 'Security & Compliance',
-      description: 'Ensure financial security and regulatory compliance',
-      benefits: ['Data encryption', 'Audit trails', 'Regulatory reporting', 'Access controls']
-    },
-    {
-      icon: BarChart,
-      title: 'Financial Reporting',
-      description: 'Automated financial reporting and business intelligence',
-      benefits: ['Real-time reporting', 'Custom dashboards', 'Compliance reports', 'Analytics']
-    },
-    {
-      icon: Users,
-      title: 'Customer Experience',
-      description: 'Enhance customer experience with AI-powered financial services',
-      benefits: ['Personalized services', 'Chatbots', 'Mobile banking', '24/7 support']
+      description: 'Ensure security and compliance across all integrated systems',
+      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance reporting']
     }
   ];
 
@@ -52,18 +52,18 @@ const AIFintechPage: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <DollarSign className="w-4 h-4 mr-2" />
-              AI Fintech
+              <Settings className="w-4 h-4 mr-2" />
+              AI System Integration
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Fintech
+              AI System
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                {' '}Solutions
+                {' '}Integration
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize financial services with AI-powered fintech solutions. 
-              Enhance security, improve efficiency, and deliver exceptional customer experiences.
+              Connect and integrate your systems with AI-powered solutions. 
+              Seamlessly connect disparate applications and automate complex workflows.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -92,7 +92,7 @@ const AIFintechPage: React.FC = () => {
               Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Features</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to build next-generation financial services.
+              Everything you need to integrate and connect your systems seamlessly.
             </p>
           </div>
 
@@ -136,10 +136,10 @@ const AIFintechPage: React.FC = () => {
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Financial Services?
+            Ready to Integrate Your Systems?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join financial institutions already using our AI fintech solutions to innovate and grow.
+            Join thousands of organizations already using our AI system integration solutions to connect their technology stack.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -162,4 +162,4 @@ const AIFintechPage: React.FC = () => {
   );
 };
 
-export default AIFintechPage;
+export default AISystemIntegrationPage;
