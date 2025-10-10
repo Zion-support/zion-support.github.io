@@ -125,4 +125,4 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
 
 };
 
-export default EnhancedAccessibilityEnhancerPage;
+export default EnhancedAccessibilityEnhancerPage;)

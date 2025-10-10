@@ -1,117 +1,146 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
 
-// Function to fix specific critical files
-function fixCriticalFiles() {
-  const criticalFiles = [
-    {
-      path: '/workspace/src/metadata.ts',
-      content: `export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise'],
-  openGraph: {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    type: 'website'}};`
-    },
-    {
-      path: '/workspace/src/vite-env.d.ts',
-      content: `/// <reference types="vite/client" />
+const criticalFiles = [
+  'app/careers/page.tsx',
+  'app/cloud-migration-services/page.tsx', 
+  'app/cloud-services/page.tsx',
+  'app/components/ContactForm.tsx',
+  'app/components/ContentCarousel.tsx',
+  'app/components/ContentStatistics.tsx',
+  'app/components/EnhancedAccessibilityEnhancer.tsx',
+  'app/components/EnhancedErrorBoundary.tsx',
+  'app/components/EnhancedHero.tsx',
+  'app/components/EnhancedLoadingSkeleton.tsx',
+  'app/components/EnhancedLoading.tsx',
+  'app/components/EnhancedPerformanceMonitor.tsx',
+  'app/components/EnhancedSEOOptimizer.tsx',
+  'app/components/EnhancedSEO.tsx',
+  'app/components/EnhancedServicesShowcase.tsx',
+  'app/components/FuturisticHero.tsx',
+  'app/components/FuturisticServiceCard.tsx',
+  'app/components/GlobalErrorBoundary.tsx',
+  'app/components/LazyImage.tsx',
+  'app/components/OptimizedImage.tsx'
+];
 
-interface ImportMetaEnv {
-  readonly VITE_APP_TITLE: string;
-  readonly VITE_APP_DESCRIPTION: string;
-  readonly VITE_APP_URL: string;
-  readonly VITE_APP_API_URL: string;
-  readonly DEV: boolean;
-  readonly PROD: boolean;
-  readonly MODE: string;
-}
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}`
-    },
-    {
-      path: '/workspace/src/layout.tsx',
-      content: `import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Analytics from './components/Analytics';
+    // Fix common JSX syntax issues
+    const originalContent = content;
 
-export default function RootLayout({
-  children}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <head>
-        <Analytics />
-      </head>
-      <body>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
-}`
+    // Fix missing closing tags by ensuring proper JSX structure
+    // Remove any stray characters or incomplete tags
+    content = content.replace(/<[^>]*$/gm, ''); // Remove incomplete tags at end of lines
+    
+    // Fix missing closing braces and parentheses
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    const missingBraces = openBraces - closeBraces;
+    
+    if (missingBraces > 0) {
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true;
     }
-  ];
 
-  for (const file of criticalFiles) {
-    try {
-      fs.writeFileSync(file.path, file.content, 'utf8');
-      console.log(`✓ Fixed: ${file.path}`);
-    } catch (error) {
-      console.error(`Error fixing ${file.path}:`, error.message);
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+    const missingParens = openParens - closeParens;
+    
+    if (missingParens > 0) {
+      content += ')'.repeat(missingParens);
+      modified = true;
     }
-  }
-}
 
-// Function to clean up other problematic files
-function cleanProblematicFiles() {
-  const problematicFiles = [
-    '/workspace/src/page-minimal-metadata.ts',
-    '/workspace/src/page-minimal.tsx',
-    '/workspace/src/page-optimized.tsx',
-    '/workspace/src/setupTests.tsx',
-    '/workspace/src/sitemap-utils.ts',
-    '/workspace/src/sitemap.ts',
-    '/workspace/src/sitemap.tsx',
-    '/workspace/src/services/BaseService.ts',
-    '/workspace/src/middleware/rateLimiter.ts',
-    '/workspace/src/middleware/requestMiddleware.ts'
-  ];
-
-  for (const filePath of problematicFiles) {
-    try {
-      if (fs.existsSync(filePath)) {
-        // Create minimal valid content for each file type
-        let content = '';
-        if (filePath.endsWith('.tsx')) {
-          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`;
-        } else if (filePath.endsWith('.ts')) {
-          content = `// TypeScript file placeholder\nexport {};`;
-        } else if (filePath.endsWith('.js')) {
-          content = `// JavaScript file placeholder\nexport {};`;
+    // Fix common TypeScript/JSX issues
+    content = content.replace(/\}\s*\)\s*:\s*\(/g, '} : (');
+    content = content.replace(/\}\s*\)\s*\)/g, '})');
+    content = content.replace(/\}\s*\)\s*;/g, '});');
+    
+    // Fix missing semicolons in variable declarations
+    content = content.replace(/(let|const|var)\s+(\w+):\s*(\w+)\s*,/g, '$1 $2: $3;');
+    
+    // Fix missing return statements
+    if (content.includes('export default') && !content.includes('return (')) {
+      // Find the last function/component and add return if missing
+      const lines = content.split('\n');
+      let inFunction = false;
+      let lastFunctionStart = -1;
+      
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].includes('=>') || lines[i].includes('function')) {
+          inFunction = true;
+          lastFunctionStart = i;
         }
-        
-        fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`✓ Cleaned: ${filePath}`);
+        if (lines[i].includes('export default')) {
+          break;
+        }
       }
-    } catch (error) {
-      console.error(`Error cleaning ${filePath}:`, error.message);
+      
+      if (lastFunctionStart !== -1) {
+        // Add return statement if missing
+        const functionContent = lines.slice(lastFunctionStart).join('\n');
+        if (!functionContent.includes('return (') && !functionContent.includes('return <')) {
+          lines.splice(lastFunctionStart + 1, 0, '  return (');
+          lines.splice(lines.length - 1, 0, '  );');
+          content = lines.join('\n');
+          modified = true;
+        }
+      }
     }
+
+    // Ensure proper JSX structure
+    if (content.includes('export default') && !content.includes('return (')) {
+      // Find the component name and add proper return
+      const componentMatch = content.match(/export default (\w+)/);
+      if (componentMatch) {
+        const componentName = componentMatch[1];
+        const componentStart = content.indexOf(`const ${componentName}`);
+        if (componentStart !== -1) {
+          const beforeReturn = content.substring(0, componentStart);
+          const afterComponent = content.substring(componentStart);
+          
+          // Find the JSX part
+          const jsxStart = afterComponent.indexOf('<');
+          if (jsxStart !== -1) {
+            const jsxContent = afterComponent.substring(jsxStart);
+            const beforeJsx = afterComponent.substring(0, jsxStart);
+            
+            content = beforeReturn + beforeJsx + 'return (\n' + jsxContent + '\n);\n}';
+            modified = true;
+          }
+        }
+      }
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Main execution
-console.log('🔧 Fixing critical files...');
-fixCriticalFiles();
-console.log('🧹 Cleaning problematic files...');
-cleanProblematicFiles();
-console.log('✅ Critical files fixed!');
+console.log(`Fixing ${criticalFiles.length} critical files...`);
+
+let fixedCount = 0;
+criticalFiles.forEach(file => {
+  if (fs.existsSync(file)) {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  } else {
+    console.log(`File not found: ${file}`);
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);
