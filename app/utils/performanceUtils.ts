@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance utilities for optimizing React components and application performance;
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
@@ -626,6 +627,27 @@ export const performanceOptimizer = () => {
 
 class PerformanceMonitor {}
   private metrics: PerformanceMetrics | null = null;
+=======
+// Performance utilities for the application
+
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+}
+
+export class PerformanceMonitor {
+  private metrics: PerformanceMetrics = {
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+  };
+
+>>>>>>> origin/main
   private observers: PerformanceObserver[] = [];
 
   constructor() {
@@ -770,6 +792,7 @@ class PerformanceMonitor {}
   }
 }
 
+<<<<<<< HEAD
 // Utility functions;
 export function lazyLoadImages(): void {
 // Utility functions
@@ -870,6 +893,8 @@ export const seoOptimizer = () => {
 
 // Export instances;
 export const performanceOptimizer = new PerformanceOptimizer();
+=======
+>>>>>>> origin/main
 export const performanceMonitor = new PerformanceMonitor();
 
 // Utility functions

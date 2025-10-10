@@ -41,16 +41,16 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // In production, you would send this to your error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+    // You can also log the error to an error reporting service here
+    // Example: logErrorToService(error, errorInfo);
   }
 
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    });
+  handleRefresh = () => {
+    window.location.reload();
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
   };
 
   render() {
@@ -62,7 +62,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             
-            <h1 className="text-2xl font-bold text-white mb-4">
+            <h1 className="text-3xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
             
@@ -71,48 +71,47 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             </p>
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-cyan-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-slate-800 p-4 rounded-lg text-sm text-gray-300 overflow-auto max-h-40">
-                  <p className="font-mono text-red-400 mb-2">
-                    {this.state.error.message}
-                  </p>
-                  <pre className="text-xs text-gray-400 whitespace-pre-wrap">
-                    {this.state.error.stack}
+              <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
+                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                <pre className="text-xs text-red-300 whitespace-pre-wrap">
+                  {this.state.error.toString()}
+                </pre>
+                {this.state.errorInfo && (
+                  <pre className="text-xs text-red-300 whitespace-pre-wrap mt-2">
+                    {this.state.errorInfo.componentStack}
                   </pre>
-                </div>
-              </details>
+                )}
+              </div>
             )}
             
-            <div className="space-y-3">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
+                onClick={this.handleRefresh}
+                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors"
               >
-                <RefreshCw className="w-5 h-5 mr-2" />
+                <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
               
               <button
-                onClick={() => window.location.href = '/'}
-                className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors"
               >
-                <Home className="w-5 h-5 mr-2" />
+                <Home className="w-4 h-4 mr-2" />
                 Go Home
               </button>
             </div>
             
-            <div className="mt-8 pt-6 border-t border-white/20">
-              <p className="text-sm text-gray-400 mb-2">
+            <div className="mt-6 pt-6 border-t border-white/20">
+              <p className="text-sm text-gray-400 mb-3">
                 Still having trouble? Contact our support team:
               </p>
               <a
-                href="tel:+13024640950"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                href="mailto:support@ziontechgroup.com"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
               >
-                (302) 464-0950
+                <Phone className="w-4 h-4 mr-2" />
+                support@ziontechgroup.com
               </a>
             </div>
           </div>
