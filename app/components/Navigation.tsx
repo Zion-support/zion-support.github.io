@@ -142,7 +142,21 @@ const Navigation: React.FC = () => {
         { name: 'AI Code Security Auditor', path: '/ai-code-security-auditor', description: 'Automated code security analysis', icon: '🔒', popular: true },
         { name: 'AI Mental Health Companion', path: '/ai-mental-health-companion', description: 'AI-powered mental health support', icon: '💚', popular: true },
         { name: 'AI Smart Home Controller', path: '/ai-smart-home-controller', description: 'Intelligent home automation', icon: '🏠', popular: true },
-        { name: 'AI Investment Optimizer', path: '/ai-investment-optimizer', description: 'Advanced portfolio management', icon: '📈', popular: true }
+        { name: 'AI Investment Optimizer', path: '/ai-investment-optimizer', description: 'Advanced portfolio management', icon: '📈', popular: true },
+        { name: 'AI Language Translator Pro', path: '/ai-language-translator-pro', description: 'Real-time translation with context', icon: '🌐', popular: true },
+        { name: 'AI Resume Builder', path: '/ai-resume-builder', description: 'Intelligent resume creation', icon: '📄', popular: true },
+        { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant', description: 'Smart meeting management', icon: '👥', popular: true },
+        { name: 'AI Recipe Generator', path: '/ai-recipe-generator', description: 'Personalized recipe creation', icon: '👨‍🍳', popular: true },
+        { name: 'AI Travel Planner', path: '/ai-travel-planner', description: 'Intelligent travel planning', icon: '✈️', popular: true },
+        { name: 'AI Personal Trainer', path: '/ai-personal-trainer', description: 'AI-powered fitness coaching', icon: '💪', popular: true },
+        { name: 'AI Study Assistant', path: '/ai-study-assistant', description: 'Intelligent study companion', icon: '📚', popular: true },
+        { name: 'AI Weather Predictor', path: '/ai-weather-predictor', description: 'Advanced weather forecasting', icon: '🌤️', popular: true },
+        { name: 'AI Pet Care Assistant', path: '/ai-pet-care-assistant', description: 'Comprehensive pet care management', icon: '🐕', popular: true },
+        { name: 'AI Home Security Monitor', path: '/ai-home-security-monitor', description: 'Intelligent home security', icon: '🏠', popular: true },
+        { name: 'AI Garden Planner', path: '/ai-garden-planner', description: 'Smart gardening assistant', icon: '🌱', popular: true },
+        { name: 'AI Sleep Optimizer', path: '/ai-sleep-optimizer', description: 'AI-powered sleep analysis', icon: '😴', popular: true },
+        { name: 'AI Car Maintenance', path: '/ai-car-maintenance', description: 'Predictive vehicle maintenance', icon: '🚗', popular: true },
+        { name: 'AI Wedding Planner', path: '/ai-wedding-planner', description: 'Complete wedding planning', icon: '💒', popular: true }
       ]
     },
     {
@@ -166,7 +180,14 @@ const Navigation: React.FC = () => {
         { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration AI', icon: '🚀', popular: true },
         { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Advanced AI with persistent memory', icon: '🧠', popular: true },
         { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: 'Immersive 3D collaboration', icon: '🥽', popular: false },
-        { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true }
+        { name: 'AI Fashion Design Studio', path: '/ai-fashion-design', description: 'AI-powered fashion design', icon: '👗', popular: true },
+        { name: 'AI Legal Research Pro', path: '/ai-legal-research-pro', description: 'Advanced legal research and case analysis', icon: '⚖️', popular: true },
+        { name: 'AI Real Estate Analytics', path: '/ai-real-estate-analytics', description: 'Comprehensive real estate market analysis', icon: '🏢', popular: true },
+        { name: 'AI Manufacturing Intelligence', path: '/ai-manufacturing-intelligence', description: 'Smart manufacturing solutions', icon: '🏭', popular: true },
+        { name: 'AI Retail Analytics Pro', path: '/ai-retail-analytics-pro', description: 'Advanced retail analytics', icon: '🛒', popular: true },
+        { name: 'AI Energy Management Pro', path: '/ai-energy-management-pro', description: 'Intelligent energy management', icon: '⚡', popular: true },
+        { name: 'AI Transportation Optimization', path: '/ai-transportation-optimization', description: 'Smart transportation solutions', icon: '🚛', popular: true },
+        { name: 'AI Agriculture Intelligence', path: '/ai-agriculture-intelligence', description: 'Smart farming solutions', icon: '🌾', popular: true }
       ]
     },
     {

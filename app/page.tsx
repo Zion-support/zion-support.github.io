@@ -305,6 +305,196 @@ const microSAASServices = [
     popular: true,
     icon: Palette,
     link: "https://ziontechgroup.com/ai-design-studio"
+  },
+  {
+    name: "AI Voice Cloning Studio",
+    description: "Professional voice synthesis and cloning with emotion control and multi-language support",
+    price: "$79/mo",
+    features: ["Voice Cloning", "Emotion Control", "50+ Languages", "Real-time Processing"],
+    category: "Audio",
+    popular: true,
+    icon: Mic,
+    link: "https://ziontechgroup.com/ai-voice-cloning-studio"
+  },
+  {
+    name: "AI Code Security Auditor",
+    description: "Automated code security analysis with vulnerability detection and compliance checking",
+    price: "$149/mo",
+    features: ["Vulnerability Scanning", "Compliance Checking", "Auto-fix Suggestions", "Real-time Monitoring"],
+    category: "Security",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-code-security-auditor"
+  },
+  {
+    name: "AI Mental Health Companion",
+    description: "24/7 AI-powered mental health support with mood tracking and therapy sessions",
+    price: "$49/mo",
+    features: ["24/7 Support", "Mood Tracking", "Therapy Sessions", "Crisis Support"],
+    category: "Health",
+    popular: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-mental-health-companion"
+  },
+  {
+    name: "AI Smart Home Controller",
+    description: "Intelligent home automation with voice control and predictive maintenance",
+    price: "$99/mo",
+    features: ["Voice Control", "Predictive Maintenance", "Energy Optimization", "Security Integration"],
+    category: "IoT",
+    popular: true,
+    icon: Home,
+    link: "https://ziontechgroup.com/ai-smart-home-controller"
+  },
+  {
+    name: "AI Investment Optimizer",
+    description: "Advanced portfolio management with AI-powered investment strategies and risk analysis",
+    price: "$199/mo",
+    features: ["Portfolio Analysis", "Risk Assessment", "Auto Rebalancing", "Market Predictions"],
+    category: "Finance",
+    popular: true,
+    icon: TrendingUp,
+    link: "https://ziontechgroup.com/ai-investment-optimizer"
+  },
+  {
+    name: "AI Language Translator Pro",
+    description: "Real-time translation with context understanding and cultural adaptation",
+    price: "$89/mo",
+    features: ["100+ Languages", "Context Understanding", "Cultural Adaptation", "Voice Translation"],
+    category: "Communication",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-language-translator-pro"
+  },
+  {
+    name: "AI Resume Builder",
+    description: "Intelligent resume creation with ATS optimization and job matching",
+    price: "$39/mo",
+    features: ["ATS Optimization", "Job Matching", "Skills Analysis", "Cover Letter Generation"],
+    category: "Career",
+    popular: true,
+    icon: FileText,
+    link: "https://ziontechgroup.com/ai-resume-builder"
+  },
+  {
+    name: "AI Meeting Assistant",
+    description: "Smart meeting management with transcription, summaries, and action items",
+    price: "$69/mo",
+    features: ["Live Transcription", "Meeting Summaries", "Action Items", "Follow-up Reminders"],
+    category: "Productivity",
+    popular: true,
+    icon: Users,
+    link: "https://ziontechgroup.com/ai-meeting-assistant"
+  },
+  {
+    name: "AI Recipe Generator",
+    description: "Personalized recipe creation with dietary restrictions and nutritional analysis",
+    price: "$29/mo",
+    features: ["Dietary Restrictions", "Nutritional Analysis", "Shopping Lists", "Cooking Instructions"],
+    category: "Lifestyle",
+    popular: true,
+    icon: ChefHat,
+    link: "https://ziontechgroup.com/ai-recipe-generator"
+  },
+  {
+    name: "AI Travel Planner",
+    description: "Intelligent travel planning with personalized itineraries and real-time updates",
+    price: "$79/mo",
+    features: ["Personalized Itineraries", "Real-time Updates", "Budget Optimization", "Local Recommendations"],
+    category: "Travel",
+    popular: true,
+    icon: Plane,
+    link: "https://ziontechgroup.com/ai-travel-planner"
+  },
+  {
+    name: "AI Personal Trainer",
+    description: "AI-powered fitness coaching with personalized workout plans and form analysis",
+    price: "$59/mo",
+    features: ["Personalized Workouts", "Form Analysis", "Progress Tracking", "Nutrition Guidance"],
+    category: "Fitness",
+    popular: true,
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-personal-trainer"
+  },
+  {
+    name: "AI Study Assistant",
+    description: "Intelligent study companion with personalized learning paths and progress tracking",
+    price: "$49/mo",
+    features: ["Personalized Learning", "Progress Tracking", "Quiz Generation", "Study Reminders"],
+    category: "Education",
+    popular: true,
+    icon: BookOpen,
+    link: "https://ziontechgroup.com/ai-study-assistant"
+  },
+  {
+    name: "AI Weather Predictor",
+    description: "Advanced weather forecasting with hyperlocal predictions and climate analysis",
+    price: "$39/mo",
+    features: ["Hyperlocal Forecasts", "Climate Analysis", "Severe Weather Alerts", "Agricultural Insights"],
+    category: "Weather",
+    popular: true,
+    icon: CloudRain,
+    link: "https://ziontechgroup.com/ai-weather-predictor"
+  },
+  {
+    name: "AI Pet Care Assistant",
+    description: "Comprehensive pet care management with health monitoring and behavior analysis",
+    price: "$39/mo",
+    features: ["Health Monitoring", "Behavior Analysis", "Vet Reminders", "Nutrition Planning"],
+    category: "Pet Care",
+    popular: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-pet-care-assistant"
+  },
+  {
+    name: "AI Home Security Monitor",
+    description: "Intelligent home security with facial recognition and anomaly detection",
+    price: "$99/mo",
+    features: ["Facial Recognition", "Anomaly Detection", "Smart Alerts", "Remote Monitoring"],
+    category: "Security",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-home-security-monitor"
+  },
+  {
+    name: "AI Garden Planner",
+    description: "Smart gardening assistant with plant recommendations and care schedules",
+    price: "$29/mo",
+    features: ["Plant Recommendations", "Care Schedules", "Pest Detection", "Harvest Planning"],
+    category: "Gardening",
+    popular: true,
+    icon: Sprout,
+    link: "https://ziontechgroup.com/ai-garden-planner"
+  },
+  {
+    name: "AI Sleep Optimizer",
+    description: "AI-powered sleep analysis and optimization for better rest and recovery",
+    price: "$49/mo",
+    features: ["Sleep Analysis", "Optimization Tips", "Sleep Tracking", "Recovery Monitoring"],
+    category: "Health",
+    popular: true,
+    icon: Moon,
+    link: "https://ziontechgroup.com/ai-sleep-optimizer"
+  },
+  {
+    name: "AI Car Maintenance",
+    description: "Predictive vehicle maintenance with AI-powered diagnostics and scheduling",
+    price: "$79/mo",
+    features: ["Predictive Maintenance", "Diagnostic Analysis", "Service Scheduling", "Cost Optimization"],
+    category: "Automotive",
+    popular: true,
+    icon: Car,
+    link: "https://ziontechgroup.com/ai-car-maintenance"
+  },
+  {
+    name: "AI Wedding Planner",
+    description: "Complete wedding planning with vendor recommendations and timeline management",
+    price: "$199/mo",
+    features: ["Vendor Recommendations", "Timeline Management", "Budget Tracking", "Guest Management"],
+    category: "Events",
+    popular: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-wedding-planner"
   }
 ];
 
@@ -388,6 +578,76 @@ const aiServices = [
     enterprise: true,
     icon: Settings,
     link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+  },
+  {
+    name: "AI Legal Research Pro",
+    description: "Advanced legal research and case analysis with AI-powered insights and precedent matching",
+    price: "$2,500/mo",
+    features: ["Case Analysis", "Precedent Matching", "Legal Research", "Document Review"],
+    category: "Legal AI",
+    enterprise: true,
+    icon: Scale,
+    link: "https://ziontechgroup.com/ai-legal-research-pro"
+  },
+  {
+    name: "AI Real Estate Analytics",
+    description: "Comprehensive real estate market analysis with property valuation and investment insights",
+    price: "$1,800/mo",
+    features: ["Property Valuation", "Market Analysis", "Investment Insights", "Trend Prediction"],
+    category: "Real Estate AI",
+    enterprise: false,
+    icon: Building,
+    link: "https://ziontechgroup.com/ai-real-estate-analytics"
+  },
+  {
+    name: "AI Manufacturing Intelligence",
+    description: "Smart manufacturing solutions with predictive maintenance and quality control",
+    price: "$3,500/mo",
+    features: ["Predictive Maintenance", "Quality Control", "Process Optimization", "Supply Integration"],
+    category: "Manufacturing AI",
+    enterprise: true,
+    icon: Factory,
+    link: "https://ziontechgroup.com/ai-manufacturing-intelligence"
+  },
+  {
+    name: "AI Retail Analytics Pro",
+    description: "Advanced retail analytics with customer behavior analysis and inventory optimization",
+    price: "$2,200/mo",
+    features: ["Customer Analytics", "Inventory Optimization", "Price Optimization", "Demand Forecasting"],
+    category: "Retail AI",
+    enterprise: false,
+    icon: ShoppingCart,
+    link: "https://ziontechgroup.com/ai-retail-analytics-pro"
+  },
+  {
+    name: "AI Energy Management Pro",
+    description: "Intelligent energy management with grid optimization and renewable energy integration",
+    price: "$3,000/mo",
+    features: ["Grid Optimization", "Renewable Integration", "Energy Storage", "Cost Optimization"],
+    category: "Energy AI",
+    enterprise: true,
+    icon: Zap,
+    link: "https://ziontechgroup.com/ai-energy-management-pro"
+  },
+  {
+    name: "AI Transportation Optimization",
+    description: "Smart transportation solutions with route optimization and fleet management",
+    price: "$2,800/mo",
+    features: ["Route Optimization", "Fleet Management", "Fuel Efficiency", "Maintenance Scheduling"],
+    category: "Transportation AI",
+    enterprise: true,
+    icon: Truck,
+    link: "https://ziontechgroup.com/ai-transportation-optimization"
+  },
+  {
+    name: "AI Agriculture Intelligence",
+    description: "Smart farming solutions with crop monitoring and yield optimization",
+    price: "$1,500/mo",
+    features: ["Crop Monitoring", "Yield Optimization", "Pest Detection", "Weather Integration"],
+    category: "Agriculture AI",
+    enterprise: false,
+    icon: Sprout,
+    link: "https://ziontechgroup.com/ai-agriculture-intelligence"
   }
 ];
 
@@ -499,6 +759,105 @@ const itServices = [
     category: "Blockchain Security",
     icon: Shield,
     link: "https://ziontechgroup.com/smart-contract-security-audit"
+  },
+  {
+    name: "AI IT Operations (AIOps)",
+    description: "AI-powered IT operations with intelligent monitoring and automated responses",
+    price: "$1,800/mo",
+    features: ["Intelligent Monitoring", "Automated Responses", "Predictive Analytics", "Self-healing Systems"],
+    category: "AI Operations",
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-ops"
+  },
+  {
+    name: "Healthcare IT Solutions",
+    description: "HIPAA-compliant healthcare IT infrastructure and data management",
+    price: "$2,500/mo",
+    features: ["HIPAA Compliance", "Patient Data Security", "EMR Integration", "Telemedicine Support"],
+    category: "Healthcare IT",
+    icon: Heart,
+    link: "https://ziontechgroup.com/healthcare-it"
+  },
+  {
+    name: "Financial Services IT",
+    description: "SOX-compliant financial IT infrastructure with advanced security",
+    price: "$3,000/mo",
+    features: ["SOX Compliance", "Financial Security", "Risk Management", "Regulatory Reporting"],
+    category: "Financial IT",
+    icon: DollarSign,
+    link: "https://ziontechgroup.com/financial-it"
+  },
+  {
+    name: "Edge Computing Solutions",
+    description: "Low-latency edge infrastructure for real-time applications",
+    price: "$1,600/mo",
+    features: ["Low Latency", "Real-time Processing", "Distributed Computing", "IoT Integration"],
+    category: "Edge Computing",
+    icon: Cpu,
+    link: "https://ziontechgroup.com/edge-computing"
+  },
+  {
+    name: "5G Network Implementation",
+    description: "High-speed 5G network deployment and optimization",
+    price: "$4,500/mo",
+    features: ["5G Deployment", "Network Optimization", "Performance Tuning", "Coverage Analysis"],
+    category: "5G Networks",
+    icon: Wifi,
+    link: "https://ziontechgroup.com/5g-implementation"
+  },
+  {
+    name: "IoT Platform Development",
+    description: "Comprehensive IoT solutions with device management and analytics",
+    price: "$2,200/mo",
+    features: ["Device Management", "Data Analytics", "Remote Monitoring", "Scalable Architecture"],
+    category: "IoT Solutions",
+    icon: Globe,
+    link: "https://ziontechgroup.com/iot-platform"
+  },
+  {
+    name: "AI Data Pipeline",
+    description: "Intelligent data processing and ETL pipelines with AI optimization",
+    price: "$1,900/mo",
+    features: ["Data Processing", "ETL Pipelines", "AI Optimization", "Real-time Streaming"],
+    category: "Data Engineering",
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-data-pipeline"
+  },
+  {
+    name: "Microservices Architecture",
+    description: "Scalable microservices design and implementation",
+    price: "$2,800/mo",
+    features: ["Service Design", "API Gateway", "Service Mesh", "Container Orchestration"],
+    category: "Architecture",
+    icon: Settings,
+    link: "https://ziontechgroup.com/microservices-architecture"
+  },
+  {
+    name: "AI Model Deployment",
+    description: "Production-ready AI model deployment and monitoring",
+    price: "$2,100/mo",
+    features: ["Model Deployment", "A/B Testing", "Performance Monitoring", "Auto-scaling"],
+    category: "AI Infrastructure",
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-model-deployment"
+  },
+  {
+    name: "Disaster Recovery Solutions",
+    description: "Comprehensive disaster recovery and business continuity planning",
+    price: "$1,700/mo",
+    features: ["Backup Solutions", "Recovery Planning", "Testing & Validation", "RTO/RPO Optimization"],
+    category: "Business Continuity",
+    icon: Shield,
+    link: "https://ziontechgroup.com/disaster-recovery-solutions"
+  },
+  {
+    name: "AI Compliance Monitoring",
+    description: "Automated compliance monitoring and reporting for regulatory requirements",
+    price: "$2,300/mo",
+    features: ["Compliance Monitoring", "Automated Reporting", "Risk Assessment", "Audit Support"],
+    category: "Compliance",
+    icon: CheckCircle,
+    link: "https://ziontechgroup.com/ai-compliance-monitoring"
   }
 ];
 
