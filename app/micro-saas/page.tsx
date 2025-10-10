@@ -329,8 +329,6 @@ const microSAASServices = [
       popular: true,
       rating: 4.6,
       users: '1,700+',
-<<<<<<< HEAD
-=======
       trial: '21-day free trial'
     },
     { 
@@ -475,8 +473,6 @@ const microSAASServices = [
     { 
       name: 'AI Logo Designer Pro', 
       href: '/ai-logo-designer', 
-<<<<<<< HEAD
-=======
       icon: FileText, 
       category: 'Design', 
       price: '$89/mo',

@@ -1,6 +1,22 @@
 'use client';
 
-import Footer from './components/Footer';
+import React from 'react';
+import { 
+  BarChart, 
+  Target, 
+  Users, 
+  Zap, 
+  Brain, 
+  Globe, 
+  Rocket, 
+  Shield, 
+  Settings, 
+  Clock, 
+  Building, 
+  Star, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
 
 // Service data
 const microSAASServices = [
@@ -116,18 +132,6 @@ const itServices = [
   }
 ];
 
-<<<<<<< HEAD
-=======
->>>>>>> a52ba596b624 (Add missing pages and fix navigation)
-          
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI-Powered Enterprise Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
-            </p>
-=======
 const testimonials = [
   {
     name: "Sarah Chen",
@@ -456,62 +460,33 @@ const HomePage: React.FC = () => {
                 +1 (302) 464-0950
               </a>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-58b3
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                Watch Demo
-              </button>
+            <div className="text-center">
+              <div className="text-2xl mb-2">✉️</div>
+              <h3 className="text-lg font-bold text-white mb-2">Email</h3>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                kleber@ziontechgroup.com
+              </a>
             </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
-                <div className="text-gray-400">Average ROI</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
-                <div className="text-gray-400">Cost Reduction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-pink-400 mb-2">90%</div>
-                <div className="text-gray-400">Efficiency Gains</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-                <div className="text-gray-400">Uptime Guarantee</div>
-              </div>
+            <div className="text-center">
+              <div className="text-2xl mb-2">📍</div>
+              <h3 className="text-lg font-bold text-white mb-2">Location</h3>
+              <p className="text-cyan-400 font-medium">
+                Middletown, DE 19709
+              </p>
             </div>
           </div>
-                  
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">🤖</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                    
-                    <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
-                        Learn More →
-                      </button>
-                    </div>
-                  </div>
-=======
->>>>>>> a52ba596b624 (Add missing pages and fix navigation)
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+              Schedule Consultation
+            </button>
+            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              View Case Studies
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
