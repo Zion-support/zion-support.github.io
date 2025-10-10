@@ -366,12 +366,16 @@ const Footer: React.FC = memo(() => {
     { name: 'API Reference', href: '/api-docs' },
 <<<<<<< HEAD
     { name: 'Status Page', href: '/status' },
+<<<<<<< HEAD
     { name: 'System Health', href: '/health' },
     { name: 'Knowledge Base', href: '/knowledge-base' },
     { name: 'Community Forum', href: '/community' }
 =======
     { name: 'Status Page', href: '/status' }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb01
+=======
+    { name: 'Demo', href: '/demo' }
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-b3bb
   ];
 
   const legalLinks = [

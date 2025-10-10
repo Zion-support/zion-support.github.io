@@ -660,6 +660,7 @@ const Navigation: React.FC = () => {
       services: [
         { name: 'Cloud Infrastructure', path: '/cloud-infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
+<<<<<<< HEAD
         { name: 'Network Management', path: '/network-management' },
         { name: 'Database Management', path: '/database-management' },
         { name: 'DevOps', path: '/devops' },
@@ -667,6 +668,12 @@ const Navigation: React.FC = () => {
         { name: 'IT Consulting', path: '/it-consulting' },
         { name: 'IT Training', path: '/it-training' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5694
+=======
+        { name: 'Cloud Services', path: '/cloud-services' },
+        { name: 'DevOps', path: '/devops' },
+        { name: 'Database Services', path: '/database' },
+        { name: 'Network Services', path: '/network-infrastructure' }
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-b3bb
       ]
     },
     {
@@ -678,6 +685,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-cyan-500/10',
       hoverColor: 'hover:bg-cyan-500/20',
       services: [
+<<<<<<< HEAD
         { name: 'AI Project Manager Pro', path: '/ai-project-manager', description: 'Intelligent project management', icon: '📊', popular: true },
         { name: 'AI Smart Calendar Pro', path: '/ai-smart-calendar', description: 'AI-powered calendar management', icon: '📅', popular: true },
         { name: 'AI Content Writer Pro', path: '/ai-content-writer', description: 'Advanced AI content creation', icon: '✍️', popular: true },
@@ -702,6 +710,13 @@ const Navigation: React.FC = () => {
         { name: 'Blockchain Integration Services Pro', path: '/blockchain-integration-services', description: 'Complete blockchain integration', icon: '⛓️', popular: true },
         { name: 'AI API Management Pro', path: '/ai-api-management', description: 'Advanced API management platform', icon: '🔧', popular: true }
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-d464
+=======
+        { name: 'Micro SAAS', path: '/micro-saas' },
+        { name: 'Developer Tools', path: '/developer-tools' },
+        { name: 'Business Apps', path: '/business-apps' },
+        { name: 'Productivity Tools', path: '/productivity' },
+        { name: 'Marketing Tools', path: '/marketing-tools' }
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-b3bb
       ]
     },
     {
@@ -830,6 +845,7 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/cursor/website-audit-and-update-with-deployment-f31a
       ]
     }
+<<<<<<< HEAD
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1029,6 +1045,10 @@ const Navigation: React.FC = () => {
   ];
 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e939
+=======
+  };
+
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-b3bb
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
