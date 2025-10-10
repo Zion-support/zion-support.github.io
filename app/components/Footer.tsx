@@ -24,14 +24,14 @@ const Footer: React.FC = memo(() => {
       title: 'IT Services',
       icon: Cloud,
       services: [
-        { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring' },
-        { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services' },
-        { name: 'AI API Management Pro', href: '/ai-api-management' },
-        { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration' },
-        { name: 'AI Load Testing Pro', href: '/ai-load-testing' },
-        { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit' },
-        { name: 'AI Content Delivery Network Pro', href: '/ai-content-delivery-network' },
-        { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure' }
+        { name: 'AI Infrastructure Monitoring', href: '/ai-infrastructure-monitoring' },
+        { name: 'Blockchain Integration Services', href: '/blockchain-integration-services' },
+        { name: 'AI API Management', href: '/ai-api-management' },
+        { name: 'Intelligent Database Migration', href: '/intelligent-database-migration' },
+        { name: 'AI Load Testing', href: '/ai-load-testing' },
+        { name: 'Smart Contract Security Audit', href: '/smart-contract-security-audit' },
+        { name: 'AI Content Delivery Network', href: '/ai-content-delivery-network' },
+        { name: 'Intelligent Email Infrastructure', href: '/intelligent-email-infrastructure' }
       ]
     },
     {
@@ -39,15 +39,15 @@ const Footer: React.FC = memo(() => {
       icon: Code,
       services: [
         { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
-        { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar' },
+        { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
         { name: 'AI Content Writer Pro', href: '/ai-content-writer' },
         { name: 'AI Video Generator Pro', href: '/ai-video-generator' },
         { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager' },
         { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
-        { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant' },
+        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' },
         { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
-        { name: 'AI API Manager Pro', href: '/ai-api-manager' },
+        { name: 'AI API Manager', href: '/ai-api-manager' },
         { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor' },
         { name: 'AI Password Manager Pro', href: '/ai-password-manager' }
       ]

@@ -1,0 +1,461 @@
+import React, { useState } from 'react';
+import { CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Clock, Users, Award, Target, Shield, Zap, Brain, Cloud, Code, BarChart, TrendingUp, DollarSign, Calendar, MessageSquare, ExternalLink, Globe, Leaf, Wind, Sun, Droplets, Thermometer, Activity, AlertTriangle, CheckSquare, Play, Pause, RotateCcw, Settings, Download, Upload, Eye, Search, Filter, SortAsc, SortDesc, Maximize, Minimize, X, Plus, Minus, RefreshCw, Save, Edit, Trash2, Copy, Share, Bookmark, Flag, ThumbsUp, ThumbsDown, MessageCircle, Send, Reply, Forward, Archive, Tag, Link, ExternalLink as ExternalLinkIcon, Info, HelpCircle, AlertCircle, CheckCircle2, XCircle, Clock as ClockIcon, Calendar as CalendarIcon, User, Users as UsersIcon, Building, Home, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Globe as GlobeIcon, Lock, Unlock, Key, Shield as ShieldIcon, Zap as ZapIcon, Brain as BrainIcon, Cloud as CloudIcon, Code as CodeIcon, BarChart as BarChartIcon, TrendingUp as TrendingUpIcon, DollarSign as DollarSignIcon, Award as AwardIcon, Target as TargetIcon, Star as StarIcon, CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon, Phone as PhoneIcon2, Mail as MailIcon2, MapPin as MapPinIcon2, Clock as ClockIcon2, Users as UsersIcon2, Award as AwardIcon2, Target as TargetIcon2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon2, Cloud as CloudIcon2, Code as CodeIcon2, BarChart as BarChartIcon2, TrendingUp as TrendingUpIcon2, DollarSign as DollarSignIcon2, Calendar as CalendarIcon2, MessageSquare as MessageSquareIcon2, ExternalLink as ExternalLinkIcon2 } from 'lucide-react';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
+export default function AIClimateSolutionsProPage() {
+  const [activeTab, setActiveTab] = useState('overview');
+  const [selectedFeature, setSelectedFeature] = useState(0);
+
+  const features = [
+    {
+      title: 'Carbon Footprint Analysis',
+      description: 'Comprehensive AI-powered carbon footprint tracking and reduction strategies for organizations',
+      icon: Leaf,
+      benefits: [
+        'Real-time carbon tracking',
+        'Automated reduction recommendations',
+        'Industry-specific benchmarks',
+        'Regulatory compliance monitoring'
+      ],
+      image: '/images/ai-climate-solutions/carbon-footprint.jpg'
+    },
+    {
+      title: 'Weather Prediction & Modeling',
+      description: 'Advanced weather forecasting with AI-powered climate modeling and extreme weather prediction',
+      icon: Cloud,
+      benefits: [
+        '95% accuracy in weather predictions',
+        'Extreme weather early warning',
+        'Climate trend analysis',
+        'Long-term forecasting'
+      ],
+      image: '/images/ai-climate-solutions/weather-prediction.jpg'
+    },
+    {
+      title: 'Sustainability Planning',
+      description: 'AI-driven sustainability roadmaps and environmental impact optimization strategies',
+      icon: Target,
+      benefits: [
+        'Custom sustainability roadmaps',
+        'ROI analysis for green initiatives',
+        'Resource optimization',
+        'Progress tracking & reporting'
+      ],
+      image: '/images/ai-climate-solutions/sustainability-planning.jpg'
+    },
+    {
+      title: 'Emission Tracking & Monitoring',
+      description: 'Real-time emission monitoring and automated compliance reporting for environmental regulations',
+      icon: Activity,
+      benefits: [
+        'Real-time emission monitoring',
+        'Automated compliance reporting',
+        'Predictive emission modeling',
+        'Regulatory alert system'
+      ],
+      image: '/images/ai-climate-solutions/emission-tracking.jpg'
+    }
+  ];
+
+  const capabilities = [
+    {
+      category: 'Environmental Monitoring',
+      items: [
+        'Air quality monitoring',
+        'Water quality assessment',
+        'Soil health analysis',
+        'Biodiversity tracking',
+        'Pollution source identification',
+        'Environmental impact assessment'
+      ]
+    },
+    {
+      category: 'Climate Analytics',
+      items: [
+        'Temperature trend analysis',
+        'Precipitation modeling',
+        'Sea level rise prediction',
+        'Extreme weather forecasting',
+        'Climate risk assessment',
+        'Seasonal pattern analysis'
+      ]
+    },
+    {
+      category: 'Sustainability Management',
+      items: [
+        'Carbon footprint calculation',
+        'Energy efficiency optimization',
+        'Waste reduction strategies',
+        'Renewable energy planning',
+        'Green building certification',
+        'Sustainable supply chain'
+      ]
+    },
+    {
+      category: 'Compliance & Reporting',
+      items: [
+        'Environmental regulation tracking',
+        'Automated compliance reporting',
+        'Audit preparation',
+        'Risk assessment',
+        'Documentation management',
+        'Stakeholder reporting'
+      ]
+    }
+  ];
+
+  const pricing = {
+    monthly: 3200,
+    yearly: 32000,
+    features: [
+      'Unlimited environmental monitoring',
+      'Advanced AI climate models',
+      'Real-time data processing',
+      '24/7 technical support',
+      'Custom model training',
+      'API access',
+      'Data export/import',
+      'White-label options'
+    ],
+    addOns: [
+      {
+        name: 'Custom Climate Models',
+        price: 1500,
+        description: 'Train AI models on your specific climate data'
+      },
+      {
+        name: 'Dedicated Support',
+        price: 800,
+        description: 'Dedicated environmental specialist'
+      },
+      {
+        name: 'On-premise Deployment',
+        price: 3000,
+        description: 'Deploy on your infrastructure'
+      }
+    ]
+  };
+
+  const testimonials = [
+    {
+      name: 'Jennifer Walsh',
+      role: 'VP of Sustainability',
+      company: 'GreenTech Solutions',
+      content: 'AI Climate Solutions Pro helped us reduce our carbon footprint by 40% while improving operational efficiency. The ROI was evident within the first quarter.',
+      rating: 5,
+      avatar: 'JW'
+    },
+    {
+      name: 'Dr. Michael Chen',
+      role: 'Environmental Director',
+      company: 'EcoCorp International',
+      content: 'The weather prediction accuracy is incredible. We achieved 95% accuracy in forecasting extreme weather events, helping us prepare better for climate risks.',
+      rating: 5,
+      avatar: 'MC'
+    },
+    {
+      name: 'Sarah Rodriguez',
+      role: 'Chief Sustainability Officer',
+      company: 'ClimateFirst Industries',
+      content: 'The sustainability planning feature helped us create a comprehensive roadmap to net-zero emissions. This is exactly what we needed for our climate goals.',
+      rating: 5,
+      avatar: 'SR'
+    }
+  ];
+
+  const stats = [
+    { number: '40%', label: 'Carbon Footprint Reduction', icon: Leaf },
+    { number: '95%', label: 'Weather Prediction Accuracy', icon: Cloud },
+    { number: '60%', label: 'Cost Savings', icon: DollarSign },
+    { number: '100+', label: 'Environmental Clients', icon: Building }
+  ];
+
+  const contactInfo = {
+    phone: '+1 (302) 464-0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown, DE 19709'
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
+              <Globe className="w-4 h-4 text-cyan-400" />
+              <span className="text-cyan-400 text-sm font-medium">AI Climate Solutions Pro</span>
+            </div>
+            
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+              AI-Powered Climate Solutions
+              <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Saving Our Planet
+              </span>
+            </h1>
+            
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+              Combat climate change with intelligent environmental monitoring, carbon footprint optimization, 
+              and sustainability planning. Make data-driven decisions for a greener future.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="#features"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Explore Features
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative mb-4">
+                  <div className="w-20 h-20 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <stat.icon className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                </div>
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-400 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features */}
+      <section id="features" className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Advanced Climate AI Capabilities
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge AI technology designed specifically for environmental monitoring and climate solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-3">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <div key={benefitIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Comprehensive Climate Solutions Platform
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              End-to-end AI-powered solutions for environmental monitoring and climate action
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            {capabilities.map((capability, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-white mb-4">{capability.category}</h3>
+                <ul className="space-y-3">
+                  {capability.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start space-x-3">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />
+                      <span className="text-gray-300 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Enterprise Pricing
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Flexible pricing options for organizations committed to climate action
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-slate-800/50 rounded-2xl p-8">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-white mb-2">AI Climate Solutions Pro</h3>
+                <p className="text-gray-300 mb-6">Complete AI-powered climate solutions platform</p>
+                
+                <div className="flex items-baseline justify-center mb-6">
+                  <span className="text-5xl font-bold text-white">${pricing.monthly.toLocaleString()}</span>
+                  <span className="text-gray-400 ml-2">/month</span>
+                </div>
+                
+                <div className="text-green-400 text-sm mb-8">
+                  Save ${(pricing.monthly * 12) - pricing.yearly} per year with annual billing
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
+                  <ul className="space-y-3">
+                    {pricing.features.map((feature, index) => (
+                      <li key={index} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Add-ons:</h4>
+                  <ul className="space-y-3">
+                    {pricing.addOns.map((addon, index) => (
+                      <li key={index} className="flex items-center justify-between">
+                        <div>
+                          <div className="text-white font-medium">{addon.name}</div>
+                          <div className="text-gray-400 text-sm">{addon.description}</div>
+                        </div>
+                        <div className="text-cyan-400 font-bold">+${addon.price.toLocaleString()}/mo</div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+                >
+                  <MessageSquare className="w-5 h-5 mr-2" />
+                  Get Started Today
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Trusted by Leading Environmental Organizations
+            </h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              See how our AI technology is transforming climate action
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-lg">{testimonial.avatar}</span>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-cyan-400">{testimonial.role}</div>
+                    <div className="text-sm text-gray-400">{testimonial.company}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            Ready to Take Climate Action?
+          </h2>
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+            Join leading organizations using AI to combat climate change and build a sustainable future.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a
+              href="/contact"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+            >
+              <MessageSquare className="w-5 h-5 mr-2" />
+              Start Free Trial
+            </a>
+            <a
+              href="/consultation"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+            >
+              <Calendar className="w-5 h-5 mr-2" />
+              Schedule Demo
+            </a>
+          </div>
+          
+          <div className="text-gray-200 text-sm">
+            <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>
+            <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>
+            <p>📍 Address: {contactInfo.address}</p>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
