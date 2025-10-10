@@ -3,7 +3,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Play, Share2, Mic, Code, Cpu, Smartphone } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Play, Share2, Mic, Code, Cpu, Smartphone, Link } from 'lucide-react';
 
 // Loading skeleton component
 const ServiceCardSkeleton = () => (
@@ -82,11 +82,11 @@ const HomePage: React.FC = () => {
 
   const itServices = [
     { name: 'Quantum Computing Solutions', href: '/quantum-computing-solutions', icon: Cpu, description: 'Next-gen computing power' },
+    { name: 'Blockchain Development', href: '/blockchain-development', icon: Link, description: 'Smart contracts & DeFi' },
+    { name: 'Advanced Cybersecurity', href: '/cybersecurity-advanced', icon: Shield, description: 'Threat hunting & response' },
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'AWS, Azure, GCP' },
     { name: 'DevOps & CI/CD', href: '/devops-cicd', icon: Settings, description: 'Automation pipelines' },
-    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: Shield, description: 'Security solutions' },
-    { name: 'Web Development', href: '/web-development', icon: Code, description: 'Modern web apps' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android' }
+    { name: 'Web Development', href: '/web-development', icon: Code, description: 'Modern web apps' }
   ];
 
   return (

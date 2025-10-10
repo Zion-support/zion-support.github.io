@@ -113,9 +113,11 @@ const Navigation: React.FC = () => {
   ]
 
   const itServices = [
+    { name: 'Quantum Computing Solutions', href: '/quantum-computing-solutions', icon: Cpu, description: 'Next-gen computing power' },
+    { name: 'Blockchain Development', href: '/blockchain-development', icon: Link, description: 'Smart contracts & DeFi' },
+    { name: 'Advanced Cybersecurity', href: '/cybersecurity-advanced', icon: Shield, description: 'Threat hunting & response' },
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Development', href: '/api-development', icon: Code, description: 'API development & management' },
-    { name: 'Cybersecurity', href: '/cybersecurity-solutions', icon: Shield, description: 'Comprehensive security' },
     { name: 'Database Management', href: '/database-management', icon: Database, description: 'Data processing & storage' },
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
@@ -129,12 +131,10 @@ const Navigation: React.FC = () => {
     { name: 'IT Project Management', href: '/it-project-management', icon: Calendar, description: 'Professional project management' },
     { name: 'Cloud-Native Development', href: '/cloud-native-development', icon: Cloud, description: 'Microservices & containers' },
     { name: 'AI Integration Services', href: '/ai-integration-services', icon: Brain, description: 'AI model integration' },
-    { name: 'Blockchain Development', href: '/blockchain-development', icon: Link, description: 'Smart contracts & DeFi' },
     { name: 'IoT Development', href: '/iot-development', icon: Wifi, description: 'Connected device solutions' },
     { name: 'E-commerce Development', href: '/e-commerce-development', icon: ShoppingCart, description: 'Online store platforms' },
     { name: 'Advanced API Development', href: '/api-development-advanced', icon: Code, description: 'Enterprise-grade APIs' },
     { name: 'Data Engineering', href: '/data-engineering', icon: Database, description: 'Data pipeline development' },
-    { name: 'Advanced Cybersecurity', href: '/cybersecurity-advanced', icon: Shield, description: 'Threat hunting & response' },
     { name: 'Cloud Migration', href: '/cloud-migration-advanced', icon: Cloud, description: 'Zero-downtime migration' },
     { name: 'Advanced DevOps & SRE', href: '/devops-advanced', icon: Settings, description: 'Site reliability engineering' },
     { name: 'MLOps & AI Operations', href: '/machine-learning-ops', icon: Cpu, description: 'ML model deployment' },
