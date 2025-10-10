@@ -1,29 +1,16 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import React, { useCallback, useState, useEffect, memo } from 'react';
 import { 
-  Phone, Mail, MapPin, Clock, Zap, Shield, Brain, Cpu, Target, BarChart, 
-  MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, 
-  Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, 
-  Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, 
-  Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, 
-  Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, 
-  PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, 
-  Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, 
-  ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, 
-  Rocket, Microscope, Layers, Database as DbIcon, Server, Network, Cpu as Processor, 
-  HardDrive, Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Router, 
-  RotateCcw, RefreshCw, Move, Link, 
-  HelpCircle, ShieldCheck, FileCheck, 
-  TestTube, BarChart3, 
-  Bell, FileBarChart, LayoutDashboard
+  Phone, Mail, MapPin, BarChart, MessageSquare, Eye, Database, Cloud, Code, Settings
 } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import OptimizedPerformanceMonitor from './components/OptimizedPerformanceMonitor';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import OptimizedErrorBoundary from './components/OptimizedErrorBoundary';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
@@ -71,7 +58,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag: (command: string, action: string, parameters?: Record<string, any>) => void }).gtag('event', 'phone_click', {
+      (window as Window & { gtag: (command: string, action: string, parameters?: Record<string, unknown>) => void }).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
@@ -567,21 +554,22 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Performance Optimizer */}
-      <PerformanceOptimizer />
-      
-      {/* SEO Optimizer */}
-      <SEOOptimizer />
-      
-      {/* Accessibility Enhancer */}
-      <AccessibilityEnhancer />
-      
-      {/* Analytics */}
-      <Analytics />
-      
-      {/* Security Enhancer */}
-      <SecurityEnhancer />
+    <OptimizedErrorBoundary level="page">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Enhanced Performance Monitor */}
+        <OptimizedPerformanceMonitor />
+        
+        {/* Enhanced SEO */}
+        <EnhancedSEO />
+        
+        {/* Enhanced Accessibility */}
+        <EnhancedAccessibility />
+        
+        {/* Analytics */}
+        <Analytics />
+        
+        {/* Security Enhancer */}
+        <SecurityEnhancer />
 
       {/* Navigation */}
       <Navigation />
@@ -1016,9 +1004,10 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <Footer />
+      </div>
+    </OptimizedErrorBoundary>
   );
 };
 

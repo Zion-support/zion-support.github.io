@@ -8,6 +8,8 @@ const Footer: React.FC = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Services', href: '/services' },
     { name: 'AI Solutions', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
@@ -81,13 +83,7 @@ const Footer: React.FC = () => {
     { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
-    { name: 'AI Edge Computing', href: '/ai-edge-computing' },
-    { name: 'AI Metaverse Solutions', href: '/ai-metaverse-solutions' },
-    { name: 'AI Climate Solutions', href: '/ai-climate-solutions' },
-    { name: 'AI Space Technology', href: '/ai-space-technology' },
-    { name: 'AI Biotechnology', href: '/ai-biotechnology' },
     { name: 'AI Robotics', href: '/ai-robotics' },
-    { name: 'AI Digital Twin', href: '/ai-digital-twin' },
   ];
 
   const itServices = [
@@ -142,35 +138,53 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
+              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. 
+              Trusted by Fortune 500 companies worldwide with 99.9% uptime and 24/7 expert support.
             </p>
             
             {/* Contact Info */}
-            <div className="space-y-3">
+            <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <a 
-                  href="tel:+13024640950" 
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-                >
-                  +1 302 464 0950
-                </a>
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <a 
+                    href="tel:+13024640950" 
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium text-lg"
+                  >
+                    +1 302 464 0950
+                  </a>
+                  <p className="text-sm text-gray-400">24/7 Support Available</p>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-                >
-                  kleber@ziontechgroup.com
-                </a>
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <a 
+                    href="mailto:kleber@ziontechgroup.com" 
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                  >
+                    kleber@ziontechgroup.com
+                  </a>
+                  <p className="text-sm text-gray-400">Primary Contact</p>
+                </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
-                <address className="text-gray-300 not-italic">
-                  364 E Main St STE 1008<br />
-                  Middletown, DE 19709
-                </address>
+                <MapPin className="w-5 h-5 text-cyan-400 mt-1" />
+                <div>
+                  <address className="text-gray-300 not-italic font-medium">
+                    364 E Main St STE 1008<br />
+                    Middletown, DE 19709
+                  </address>
+                  <p className="text-sm text-gray-400">Headquarters</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Clock className="w-5 h-5 text-cyan-400" />
+                <div>
+                  <p className="text-gray-300 font-medium">Business Hours</p>
+                  <p className="text-sm text-gray-400">Mon-Fri: 9AM-6PM EST</p>
+                  <p className="text-sm text-gray-400">Emergency: 24/7</p>
+                </div>
               </div>
             </div>
           </div>

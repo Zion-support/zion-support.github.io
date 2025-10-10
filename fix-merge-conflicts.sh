@@ -1,33 +1,23 @@
 #!/bin/bash
 
-# List of files with conflicts
-files=(
-  "app/components/ImprovedErrorBoundary.tsx"
-  "app/components/NewestContent2025Banner.tsx"
-  "app/enterprise/page.tsx"
-  "app/hooks/useEnhancedPerformance.ts"
-  "app/not-found.tsx"
-  "app/page-optimized.tsx"
-  "app/utils/enhancedErrorHandler.ts"
-  "app/utils/performanceMonitor.ts"
-  "src/components/PerformanceMonitor.tsx"
-  "src/data/bannerConfigurations.ts"
-  "src/hooks/useBannerRotation.tsx"
-  "src/hooks/usePerformance.ts"
-  "src/utils/analytics.ts"
-  "src/utils/codeSplitting.ts"
-  "src/utils/errorHandler.ts"
-)
+# Find all files with merge conflicts
+files_with_conflicts=$(grep -r "<<<<<<< HEAD" /workspace/app/ /workspace/src/ | cut -d: -f1 | sort -u)
 
-for file in "${files[@]}"; do
-  if [ -f "$file" ]; then
-    echo "Fixing conflicts in $file..."
-    # Use git merge-file with ours strategy or manually remove conflict markers
-    # Remove conflict markers and keep the incoming version (after =======)
-    perl -i -0777 -pe 's/<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> origin\/cursor\/fix-errors-and-merge-to-main-[a-z0-9]+/\1/gs' "$file"
-    # Also handle nested conflicts
-    perl -i -0777 -pe 's/<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> origin\/cursor\/fix-errors-and-merge-to-main-[a-z0-9]+/\1/gs' "$file"
-  fi
+echo "Found merge conflicts in the following files:"
+echo "$files_with_conflicts"
+
+# Fix each file
+for file in $files_with_conflicts; do
+    echo "Fixing merge conflicts in: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Remove merge conflict markers and keep the HEAD version
+    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+    
+    echo "Fixed: $file"
 done
 
-echo "Done fixing conflicts!"
+echo "All merge conflicts have been resolved!"
