@@ -149,11 +149,14 @@ const Footer: React.FC = memo(() => {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Globe className="w-5 h-5" />
+              <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Users className="w-5 h-5" />
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                <Github className="w-5 h-5" />
               </a>
             </div>
           </div>
