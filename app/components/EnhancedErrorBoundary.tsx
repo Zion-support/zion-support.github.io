@@ -2,7 +2,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-    }
+
+const EnhancedErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const features = [
+    'Advanced error detection and recovery',
+    'Real-time monitoring and alerting',
+    'Custom error handling strategies',
+    'Performance optimization',
+    'User experience enhancement',
+    'Automated error reporting'
   ];
   const benefits = [
     'Advanced AI technology integration',
