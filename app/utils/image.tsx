@@ -1,141 +1,95 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useCallback } from 'react';
-interface ImageProps {;
-  src: string,;
-    alt: string;}
-interface ImageProps {}
+
+interface ImageProps {
   src: string;
   alt: string;
   width?: number;
   height?: number;
   className?: string;
   priority?: boolean;
-  _quality?: number;
-  src: string,;
-  alt: string,;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
+  quality?: number;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
   fill?: boolean;
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void;
-  onError?: () => void;}
+  onError?: () => void;
 }
-export const Image: React.FC<ImageProps>= ({;}
-export const Image: React.FC<ImageProps> = ({}
-  src,;
-export const Image: React.FC<ImageProps> = ({,;
-  src;
-  alt,;
-  width,;
-  height,;
-  className,;
-  priority = false,;
-  quality = 75,;
-  placeholder = 'empty',;
-  blurDataURL,;
-  fill = false,;
-  sizes,;
-  style,;
-  onLoad,;
-  onError,;}
-  ...props}
-}) => {}
-  const [, setIsLoaded] = useState(false);
+
+export const Image: React.FC<ImageProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  priority = false,
+  quality = 75,
+  placeholder = 'empty',
+  blurDataURL,
+  fill = false,
+  sizes,
+  style,
+  onLoad,
+  onError
+}) => {
+  const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const handleLoad = useCallback(() => {}
-    setIsLoaded(true);
-    if (onLoad) onLoad();}
+
+  const handleLoad = useCallback(() => {
+    setIsLoading(false);
+    if (onLoad) {
+      onLoad();
+    }
   }, [onLoad]);
-  const handleError = useCallback(() => {}
+
+  const handleError = useCallback(() => {
+    setIsLoading(false);
     setHasError(true);
-    if (onError) onError();}
+    if (onError) {
+      onError();
+    }
   }, [onError]);
-  const imageStyle: React.CSSProperties = {;
-    ...style;
-    ...(fill && {;
-      position: 'absolute';
-      top: 0,;
-      left: 0,;}
-  const imageStyle: React.CSSProperties = {}
-    ...style,;
-    ...(fill && {}
-      position: 'absolute',;
-      top: 0,;
-      left: 0,;
-      width: '100%',;
-      height: '100%',;
-      objectFit: 'cover'}
-    });
-  }
-  if (hasError) {</ImageProps>;
-    return (</ImageProps>;}
-  if (hasError) {}
-    return (;
-      <div}
-  if (hasError) {;}
-    return(<div}
-'use client';
-import React, { useState, useCallback } from 'react';
-interface ImageProps {/* TODO: Fix JSX expression */}
-}
-export const,;
-  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */});
-}) => {/* TODO: Fix JSX expression */}
-  }, [onLoad]);
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
-  }, [onError]);
-  const,;
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-    });
-  };
-  if (hasError) {/* TODO: Fix JSX expression */}
+
+  if (hasError) {
+    return (
+      <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props});
-      >)</div>;
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>);
-      </div>);
-    ),;
-        {...props}
-      ></div>;
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>;
-      </div>;
+        style={style}
+      >
+        <span className="text-gray-500">Failed to load image</span>
+      </div>
     );
   }
-  return(<img;
-  return (<img></img>;
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-      onError={handleError}
-      {...props}
-    >)</img>;
-}</img>;
-export default Image</img>;
-      loading={priority ? 'eager' : 'lazy'});
-      onLoad={handleLoad});
-      onError={handleError});
-      {...props});
-    />);
-  );
-}
-export default Image;
-    />);
+
+  return (
+    <div className={`relative ${fill ? 'w-full h-full' : ''} ${className}`} style={style}>
+      {isLoading && placeholder === 'blur' && blurDataURL && (
+        <img
+          src={blurDataURL}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover filter blur-sm"
+          aria-hidden="true"
+        />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        sizes={sizes}
+        loading={priority ? 'eager' : 'lazy'}
+        onLoad={handleLoad}
+        onError={handleError}
+        className={`transition-opacity duration-300 ${
+          isLoading ? 'opacity-0' : 'opacity-100'
+        } ${fill ? 'w-full h-full object-cover' : ''}`}
+        style={{
+          ...style,
+          ...(fill && { position: 'absolute', top: 0, left: 0 })
+        }}
+      />
+    </div>
   );
 };
-export default Image;
-"`;
