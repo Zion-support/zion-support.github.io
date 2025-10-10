@@ -158,7 +158,21 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="msvalidate.01" content="your-bing-verification-code" />
       <meta name="yandex-verification" content="your-yandex-verification-code" />
       <meta name="pinterest-site-verification" content="your-pinterest-verification-code" />
+<<<<<<< HEAD
 
+=======
+      
+      {/* Additional Performance Hints */}
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
+      
+      {/* Critical Resource Hints */}
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+      
+>>>>>>> cursor/analyze-improve-and-deploy-application-4b35
       {/* Rich Snippets */}
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
