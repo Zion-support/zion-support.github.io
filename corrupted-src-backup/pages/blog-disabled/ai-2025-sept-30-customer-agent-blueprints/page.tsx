@@ -2,115 +2,137 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function BlogPost(): React.JSX.Element {
+<<<<<<< HEAD
   return(<React.Fragment>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"></div>
         <Helmet>
           <title>Ai 2025 Sept 30 Customer Agent Blueprints - Zion Tech Group</title>
+=======
+  return(<>
+      <Header 
+      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white"><
+        
+          <title>Ai 2025 Sept 30 Customer Agent Blueprints - Zion Tech Group<
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <meta;
             name="description"
             content="Ai 2025 Sept 30 Customer Agent Blueprints - Latest insights from Zion Tech Group"
-          /></meta>
-        </Helmet>
+          /><
+        <
 
         <div className="max-w-4xl mx-auto px-4 py-20">
           <div className="mb-12">
             <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">
               Ai 2025 Sept 30 Customer Agent Blueprints;
-        <div className="max-w-4xl mx-auto px-4 py-20"></div>
-          <div className="mb-12"></div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        <div className="max-w-4xl mx-auto px-4 py-20"><
+          <div className="mb-12"><
+            <h1 className="text-4xl m,
+    d:text-5xl font-bold mb-6 leading-tight">
               Ai 2025 Sept 30 Customer Agent Blueprints
-            </h1>
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"></div>
-              <span>By Zion Tech Group Team</span>
-              <span>•</span>
-              <span>2025-10-03</span>
-              <span>•</span>
-              <span>5 min read</span>
-            </div>
-          </div>
+            <
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-300 mb-8"><
+              <span>By Zion Tech Group Team<
+              <span>•<
+              <span>2025-10-03<
+              <span>•<
+              <span>5 min read<
+            <
+          <
 
-          <div className="prose prose-lg prose-invert max-w-none"></div>
-            <div className="text-gray-200 leading-relaxed"></div>
-              <h2>Introduction</h2>
+          <div className="prose prose-lg prose-invert max-w-none"><
+            <div className="text-gray-200 leading-relaxed"><
+              <h2>Introduction<
               <p>
                 This is a placeholder blog post. The content for "Ai 2025 Sept 30 Customer Agent;
                 Blueprints" will be added here.
-              </p>
+              <
 ,
-              <h2>Main Content</h2>,
+              <h2>Main Content<
               <p>,
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor;
                 incididunt ut labore et dolore magna aliqua.
-              </p>
+              <
 
-              <h2>Conclusion</h2>
+              <h2>Conclusion<
               <p>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip;
                 ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
+              <
+            <
+          <
 
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
-            <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
+            <div className="flex flex-col sm: flex-row justify-between items-center gap-6">)
               <div>)
-                <h3 className="text-xl font-bold mb-2">Share this article</h3>)
+                <h3 className="text-xl font-bold mb-2">Share this article<
                 <div className="flex gap-4">)
                   <a;),
-          <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-6"></div>
-              <div></div>
-                <h3 className="text-xl font-bold mb-2">Share this article</h3>
-                <div className="flex gap-4"></div>
+          <div className="mt-16 pt-8 border-t border-white border-opacity-20"><
+            <div className="flex flex-col sm: flex-row justify-between items-center gap-6"><
+              <div><
+                <h3 className="text-xl font-bold mb-2">Share this article<
+                <div className="flex gap-4"><
                   <a
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Sept 30 Customer Agent Blueprints')}&url=${encodeURIComponent(window.location.href)}`}
+                    href = { `https://twitter.com/intent
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
                     Twitter;
-                  </a>,
+                  <
                   <a;
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                    href={`https://www.linkedin.com/sharing/share-offsite
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */}
-  s://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Sept 30 Customer Agent Blueprints')}&url=${encodeURIComponent(window.location.href)}`}
+export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression *
+  ,
+    s://twitter.com/intent
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
-  hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
                     Twitter;
-                  </a>
-                  <a></a>
-                    href={/* TODO: Fix JSX expression */}`
-  s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
+                  <
+                  <a><
+                    href={/* TODO: Fix JSX expression *
+  ,
+    s://www.linkedin.com/sharing/share-offsite
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
-  hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
                     LinkedIn;
-                  </a>
-                </div>
-              </div>
+                  <
+                <
+              <
               <a;
-                href="/blog"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              <a></a>"
-                href="/blog""
+                href="
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hove,
+    r:bg-gray-100 transition-colors"
+              <a><
+                href="
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-100 transition-colors"
               >
                 Back to Blog;
+<<<<<<< HEAD
               </a>
             </div>
           </div>
         </div>
       </div>,
     </React.Fragment>)}
+=======
+              <
+            <
+          <
+        <
+      <
+    <
+ };
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 "`

@@ -7,7 +7,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 ;
 const AiAnalyticsPage: React.FC = () => {const features = [
     {
-      icon: Brain,
+      ico,
+    n: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -16,6 +17,9 @@ const AiAnalyticsPage: React.FC = () => {const features = [
       icon: BarChart,
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
@@ -31,10 +35,16 @@ const AiAnalyticsPage: React.FC = () => {const features = [
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+<<<<<<< HEAD
     },
     {
       icon: Globe,
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
@@ -44,6 +54,7 @@ const AiAnalyticsPage: React.FC = () => {const features = [
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
+>>>>>>> main
     }
   ];
 <<<<<<< HEAD
@@ -56,6 +67,17 @@ const benefits = [
     'Gain competitive advantage with advanced technology'
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return (<title>Ai Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
+        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />
+=======
+<<<<<<< HEAD
+=======
+  return (
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     <>
       <Helmet>
         <title>Ai Analytics - Zion Tech Group</title>
@@ -104,6 +126,7 @@ const useCases = [
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
+<<<<<<< HEAD
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, business intelligence, predictive analytics, data visualization" />
       </Helmet>
 
@@ -137,6 +160,32 @@ const useCases = [
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
+=======
+>>>>>>> main
+      </Helmet>
+
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">)
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Analytics
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai analytics solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hove,
+    r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             </div>
           </div>
         </section>
@@ -145,26 +194,43 @@ const useCases = [
         <section id="features" className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
+<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-6">Powerful AI Analytics Features</h2>
+=======
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our comprehensive analytics platform provides everything you need to make data-driven decisions.
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
+=======
+
+            <div className="grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
+    r:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                   </div>
 <<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
                     <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
+                          
                           {benefit}
+<<<<<<< HEAD
                         </li>
                       ));
                     </ul>);
@@ -179,6 +245,12 @@ const useCases = [
                       </li>
                     ))}
                   </ul>
+=======
+                        </li>)
+                      ))}
+                    </ul>
+                  )}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 </div>
               ))}
             </div>
@@ -210,6 +282,7 @@ const useCases = [
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -255,11 +328,35 @@ const useCases = [
 =======
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
+=======
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+                Why Choose Our Solution?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven results that drive business growth and efficiency
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
+    r:scale-110 transition-transform">
+                    
+                  </div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
+                </div>)
+              ))}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4 text-center">
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 rounded-2xl p-12 backdrop-blur-sm border border-white/10">
@@ -283,6 +380,25 @@ const useCases = [
                   <span>View Pricing</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
+=======
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hove,
+    r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               </div>
             </div>
           </div>
@@ -290,7 +406,11 @@ const useCases = [
 
         <Footer />
       </div>
+<<<<<<< HEAD
     </>
+=======
+      
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   );
 }
 export default AiAnalyticsPage;

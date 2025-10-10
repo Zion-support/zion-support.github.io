@@ -11,7 +11,13 @@ import {
   Clock,
   Send,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   CheckCircle;)
+>>>>>>> main
 } from 'lucide-react';
 ;
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
@@ -30,6 +36,16 @@ phone: '',
     budget: '',
     timeline: '',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    message: '')
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = useCallback ((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     message: '';)
 });
 const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,6 +66,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
+>>>>>>> main
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -64,7 +81,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     setSubmitStatus('idle');
     
     try {
-      // Simulate form submission
+      /
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
       setFormData({
@@ -75,6 +92,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         service: '',
         budget: '',
         timeline: '',
+<<<<<<< HEAD
 message: '']
     });]
     } catch (error) {
@@ -82,6 +100,25 @@ message: '']
     } finally {
       setIsSubmitting(false)]
     }
+=======
+<<<<<<< HEAD
+        message: '')
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+=======
+        message: '';)
+});;)
+} catch (error) {
+      setSubmitStatus('error');)
+} finally {
+      setIsSubmitting(false);)
+}
+>>>>>>> main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   };
 ;
 const services = [
@@ -118,6 +155,26 @@ const contactInfo = [
     {
       icon: Clock,
       title: 'Business Hours',
+<<<<<<< HEAD
+      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - ,
+    4:00 PM',
+      description: 'Eastern Time'
+    }
+  ];
+
+  return (
+    <div>
+        <title>Contact Us - Zion Tech Group | Get in Touch<
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations, support, or to discuss your project needs." 
+        <meta name="keywords" content="contact us, Zion Tech Group, AI consultation, IT support, get in touch" 
+      <
+
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          {/* Header *
+          <div className="text-center mb-16">
+            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+=======
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
 description: 'Eastern Time']
     }
@@ -136,19 +193,44 @@ description: 'Eastern Time']
           {/* Header */}
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6"></h1>
+>>>>>>> main
               Get in
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"></span>
                 {' '}Touch
+<<<<<<< HEAD
+              <
+            <
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+=======
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+>>>>>>> main
               Ready to transform your business? Let's discuss your project and explore 
               how our AI and IT solutions can help you achieve your goals.
-            </p>
+            <
 
-          </div>
-        </section>
+          <
+        <
 
+<<<<<<< HEAD
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form *
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white
+              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message<
+              
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500
+                  <CheckCircle className="w-5 h-5 text-green-400" 
+                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.<
+                <
+              )}
+
+              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500
+                  <span className="text-red-400">Failed to send message. Please try again.<
+                <)
+              )}
+=======
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
             {/* Contact Form */}
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
@@ -166,12 +248,47 @@ description: 'Eastern Time']
                   <span className="text-red-400"></spa>Failed to send message. Please try again.</span>
                 </div>
               );
+>>>>>>> main
 
               <form onSubmit={handleSubmit} className="space-y-6"></form>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Full Name *
+<<<<<<< HEAD
+                    <
+                    <div className="relative">
+                      
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Email Address *
+                    <
+                    <div className="relative">
+                      
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+
+                    <
+                    <div className="relative">
+                      
+                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                      Phone Number
+                    <
+                    <div className="relative">
+                      
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                    Service Interest
+                  <
+                  <div className="relative">
+                    
+                      <option value="">Select a service<
+                      {services.map((service) => (<option key={service} value={service}>
+                          {service}
+                        <)
+                      ))}
+                    <
+                  <
+                <
+=======
                     </label>
                     <div className="relative"></div>
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -263,10 +380,34 @@ description: 'Eastern Time']
                     </select>
                   </div>
                 </div>
+>>>>>>> main
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                     Message *
+<<<<<<< HEAD
+                  <
+                  <div className="relative">
+                    
+                  {isSubmitting ? (<>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"><
+                      <span>Sending...<
+                    <)
+                  ) : (<>
+                      <Send className="w-5 h-5" 
+                      <span>Send Message<
+                    <)
+                  )}
+                <
+              <
+            <
+
+            {/* Contact Information *
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-6">Contact Information<
+                <p className="text-lg text-gray-300 mb-8">
+=======
                   </label>
                   <div className="relative"></div>
                     <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
@@ -307,21 +448,43 @@ description: 'Eastern Time']
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6"></h>Contact Information</h2>
                 <p className="text-lg text-gray-300 mb-8"></p>
+>>>>>>> main
                   We're here to help! Reach out to us through any of these channels 
                   and we'll get back to you as soon as possible.
-                </p>
+                <
 
-              </div>
+              <
 
+<<<<<<< HEAD
+              {/* Contact Information *
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-3xl font-bold text-white mb-6">Get in Touch<
+                  <p className="text-gray-300 mb-8">
+=======
               {/* Contact Information */}
               <div className="space-y-8"></div>
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6"></h>Get in Touch</h2>
                   <p className="text-gray-300 mb-8"></p>
+>>>>>>> main
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
-                  </p>
-                </div>
+                  <
+                <
 
+<<<<<<< HEAD
+                <div className="space-y-6">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
+                      
+<h3 className="text-lg font-semibold text-white mb-1">
+                        {info.title}
+                      <
+                      <p className="text-cyan-400 font-medium mb-1">
+                        {info.details}
+                      <
+                      <p className="text-gray-300 text-sm">
+=======
                 <div className="space-y-6"></div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
@@ -335,12 +498,46 @@ description: 'Eastern Time']
                         {info.details}
                       </p>
                       <p className="text-gray-300 text-sm"></p>
+>>>>>>> main
                         {info.description}
-                      </p>
+                      <
 
-                    </div>
-                  </div>
+                    <
+                  <
 
+<<<<<<< HEAD
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                      
+                      <h3 className="text-lg font-semibold text-white">Email<
+                      <p className="text-gray-300">info@ziontechgroup.com<
+                    <
+                  <
+
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
+                      
+                      <h3 className="text-lg font-semibold text-white">Address<
+                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105<
+                    <
+                  <
+
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+                      
+                      <h3 className="text-lg font-semibold text-white">Business Hours<
+                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - ,
+    4:00 PM<
+                    <
+                  <
+                <
+              <
+            <
+          <
+        <
+      <
+<
+=======
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Mail className="w-6 h-6 text-white" />
@@ -377,6 +574,7 @@ description: 'Eastern Time']
         </section>
       </div>
 </div>
+>>>>>>> main
 
 )]
     };

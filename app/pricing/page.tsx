@@ -3,9 +3,69 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 
 const PagePage: React.FC = () => {
+=======
+import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
+
+const PricingPage: React.FC = () => {
+  const plans = [
+    {
+      nam,
+    e: 'Starter',
+      price: '$2,999',
+      period: '
+      descriptio,
+    n: 'Perfect for small businesses getting started with AI',
+      features: [
+        'Basic AI Integration',
+        'Cloud Infrastructure Setup',
+        'Email Support',
+        'Monthly Reports',
+        'Basic Analytics Dashboard'
+      ],
+      popular: false});;)
+},
+    {
+      name: 'Professional',
+      price: '$7,999',
+      period: '
+      descriptio,
+    n: 'Ideal for growing companies with advanced needs',
+      features: [
+        'Advanced AI Solutions',
+        'Custom Development',
+        'Priority Support',
+        'Weekly Reports',
+        'Advanced Analytics',
+        'API Access',
+        'Training Sessions'
+      ],
+      popular: true});;)
+},
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations',
+      features: [
+        'Custom AI Solutions',
+        'Dedicated Team',
+        '24
+        'Real-time Monitoring',
+        'Custom Integrations',
+        'White-label Options',
+        'On-site Training',
+        'SLA Guarantee'
+      ],
+      popular: false});;)
+}
+  ];
+
+<<<<<<< HEAD
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
   return (
     <>
       <Helmet>
@@ -106,7 +166,23 @@ const PagePage: React.FC = () => {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   );
+=======
+<<<<<<< HEAD
+=======
+  return (<div>
+        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing<
+        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." 
+        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" 
+      <
+    <)
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
+  );
+=======
+  ));)
+>>>>>>> main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
 
 export default PagePage;

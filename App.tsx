@@ -3,6 +3,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+<<<<<<< HEAD
 import './app/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
@@ -19,10 +20,33 @@ import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import SecurityEnhancer from './app/components/SecurityEnhancer';
+=======
+import './src/globals.css';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
-// Structured data for SEO - moved to SEOHead component
+// Lazy load pages
+const HomePage = React.lazy(() => import('./app/page'));
 
+<<<<<<< HEAD
 // Lazy load pages for better performance;
+=======
+<<<<<<< HEAD
+const App: React.FC = () => {
+  return (
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+          </Suspense>
+        </div>
+      </Router>
+    </HelmetProvider>
+=======
+// Lazy load pages for better performance
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
@@ -96,9 +120,8 @@ const App: React.FC = () => {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
+>>>>>>> main
   );
 };
-
-App.displayName = 'App';
 
 export default App;

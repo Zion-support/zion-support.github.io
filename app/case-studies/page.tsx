@@ -33,6 +33,7 @@ const CaseStudiesPage: React.FC = () => {
         'Improved customer satisfaction by 45%',
         'Handled 10x more inquiries with same team size'
       ],
+<<<<<<< HEAD
       image: '/images/case-studies/customer-service.jpg',
       duration: '6 months',
       team: 'AI & Customer Experience Team'
@@ -58,6 +59,115 @@ const CaseStudiesPage: React.FC = () => {
       id: '3',
       title: 'Cloud Migration & Optimization',
       client: 'Manufacturing Corporation',
+=======
+<<<<<<< HEAD
+      image: '/images/case-studies/ai-customer-service.jpg',
+      duration: '3 months',
+<<<<<<< HEAD
+      team: '8 specialists'
+=======
+<<<<<<< HEAD
+      imag,
+    e: '/api/placeholder/600
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
+=======
+      image: '/images/case-studies/ai-customer-service.jpg',
+      challenge: 'High customer service costs and long response times',
+      solution: 'Implemented AI chatbot and automated ticketing system',
+      results: [
+        '60% reduction in response time',
+        '40% cost savings',
+        '95% customer satisfaction rate'
+      ],
+      duration: '3 months',
+      team: '5 specialists'
+>>>>>>> cursor/analyze-improve-and-deploy-application-a851
+=======
+      image: '/images/case-studies/ecommerce-ai.jpg'
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
+>>>>>>> main
+    },
+=======
+      team: '8 specialists'});;)
+},
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+    {
+      id: 2,
+      title: 'Cloud Migration for Financial Services',
+      company: 'FinanceFlow Ltd.',
+      industry: 'Financial Services',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+>>>>>>> main
+      challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
+      solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.',
+=======
+      challenge: 'Legacy systems causing performance issues and security concerns',
+      solution: 'Complete cloud migration with enhanced security measures',
+>>>>>>> cursor/fix-errors-and-merge-to-main-550e
+      results: [
+        '50% improvement in system performance',
+        '99.9% uptime achieved',
+        '30% reduction in operational costs'
+      ],
+<<<<<<< HEAD
+      image: '/images/case-studies/cloud-migration.jpg',
+      duration: '6 months',
+<<<<<<< HEAD
+      team: '12 specialists'
+=======
+      image: '/api/placeholder/600
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
+    },
+=======
+      team: '12 specialists'});;)
+},
+>>>>>>> main
+    {
+      id: '3',
+      title: 'Cybersecurity Enhancement for Healthcare',
+      client: 'MediCare Plus',
+      industry: 'Healthcare',
+<<<<<<< HEAD
+      challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
+      solution: 'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.',
+      results: [
+        '100% HIPAA compliance achieved',
+        'Zero security breaches in 12 months',
+        'Real-time threat detection and response',
+        'Automated compliance reporting'
+      ],
+      image: '/images/case-studies/cybersecurity-healthcare.jpg',
+      duration: '4 months',
+      team: '10 specialists'});;)
+},
+    {
+      id: '4',
+      title: 'Machine Learning for Predictive Analytics',
+      client: 'RetailMax',
+      industry: 'Retail',
+      challenge: 'Inventory management inefficiencies leading to stockouts and overstock situations.',
+      solution: 'ML-powered demand forecasting system with real-time inventory optimization.',
+      results: [
+        '40% reduction in stockouts',
+        '25% decrease in excess inventory',
+        '15% increase in revenue',
+        'Real-time demand prediction accuracy of 92%'
+      ],
+      image: '/images/case-studies/ml-predictive-analytics.jpg',
+      duration: '5 months',
+      team: '6 specialists'});;)
+},
+    {
+      id: '5',
+      title: 'Digital Transformation for Manufacturing',
+      client: 'ManufacturingPro',
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       industry: 'Manufacturing',
       challenge: 'Legacy systems causing operational inefficiencies and high maintenance costs.',
       solution: 'Complete cloud migration with microservices architecture and AI optimization.',
@@ -266,7 +376,37 @@ const CaseStudiesPage: React.FC = () => {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   );
+=======
+<<<<<<< HEAD
+=======
+      image: '/api/placeholder/600
+    }
+  ];
+
+  return (<div>
+        <title>Case Studies | Zion Tech Group<
+        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." 
+        <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" 
+      <
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <
+          <
+        <)
+              ))}
+            <
+          <
+        <
+      <
+    <
+>>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
+  );
+=======
+  ));)
+>>>>>>> main
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 };
 
 export default CaseStudiesPage;
