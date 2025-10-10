@@ -42,16 +42,18 @@ const AnalyticsToolsPage: React.FC = () => {
         <meta name="description" content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="analytics tools, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>
+<<<<<<< HEAD
 <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
             Analytics Tools
   </
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced analytics tools. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-</div>
       </section>
       {/* Features Section */}
       <section className="py-16 px-4">
@@ -74,7 +76,6 @@ const AnalyticsToolsPage: React.FC = () => {
             ))}
           </div>
         </div>
-{/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -111,8 +112,11 @@ const AnalyticsToolsPage: React.FC = () => {
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
+<<<<<<< HEAD
               Email Us
   </
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
           </div>
         </div>
         <div className="text-center">

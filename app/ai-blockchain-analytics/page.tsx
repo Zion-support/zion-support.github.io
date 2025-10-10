@@ -34,7 +34,6 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-<title>AI Blockchain Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain analytics powered by AI for comprehensive insights." />
         <meta name="keywords" content="AI blockchain analytics, artificial intelligence, blockchain technology, AI solutions, crypto analytics" />
       </Helmet>
@@ -106,7 +105,6 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
               Start Your Free Trial,
   </
           </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -168,6 +166,7 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       <Footer />
     </div>
   ),
+<<<<<<< HEAD
 };
 
 export default PagePage
@@ -181,3 +180,7 @@ export default PagePage
   </button>
   </h1>
   </main>
+=======
+}
+export default PagePage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

@@ -1,35 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const CloudMigrationServicesPage: React.FC = () => {
-  const features = [
-    {
-icon: Shield,
-      title: 'Secure Cloud Migration',
-      description: 'Safe and secure migration of your applications and data to the cloud'
-    },
-    {
-      icon: Zap,
-      title: 'Zero Downtime Migration',
-      description: 'Seamless migration with minimal to zero downtime for your business'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Migration',
-      description: 'Intelligent migration planning and execution powered by AI technology'
-    },
-    {
-      icon: Globe,
-      title: 'Multi-Cloud Support',
-      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
     }
   ];
   const benefits = [
-'Advanced cloud migration technology',
-    'Real-time migration monitoring',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible migration solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -40,7 +14,6 @@ icon: Shield,
       <Helmet>
         <title>Cloud Migration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="cloud migration, cloud services, IT services, Zion Tech Group, cloud computing" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -91,8 +64,6 @@ icon: Shield,
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-              Email Us,
-  </
           </div>
         </div>
       </section>

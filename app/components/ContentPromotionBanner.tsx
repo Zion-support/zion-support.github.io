@@ -1,11 +1,10 @@
 'use client';
-
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-  const features = [
+  const stats = [
     {
+<<<<<<< HEAD
       title: 'AI-Powered Solutions',
       description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
       icon: Zap
@@ -52,35 +51,44 @@ const ContentPromotionBanner: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
               <p className="text-purple-100 text-sm">{feature.description}</p>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
             </div>
           ))}
         </div>
 
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
-              <ul className="space-y-3">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-purple-100">{benefit}</span>
-                  </li>
-                ))}
-              </ul>
+        {/* Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <feature.icon className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="text-purple-100 mb-4">Happy Clients</div>
-              <div className="text-4xl font-bold mb-2">99.9%</div>
-              <div className="text-purple-100 mb-6">Uptime</div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold flex items-center mx-auto">
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-            </div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Ready to Get Started?
+          </h3>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Schedule a free consultation with our AI experts and discover how we can transform your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2">
+              Schedule Free Consultation
+              <ArrowRight className="w-4 h-4" />
+            </button>
+            <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-all duration-300">
+              Download Case Study
+            </button>
           </div>
         </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-1f73
       </div>
     </div>
   );

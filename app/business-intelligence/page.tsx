@@ -5,24 +5,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
     {
-icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Advanced AI technology to transform your business intelligence and data analysis'
-    },
-    {
-      icon: Zap,
-      title: 'Real-Time Insights',
-      description: 'Lightning-fast data processing and real-time business intelligence'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your data'
-    },
-    {
-      icon: Globe,
-      title: 'Global Analytics',
-      description: 'Worldwide business intelligence deployment and support'
     }
   ];
   const benefits = [
@@ -40,7 +22,6 @@ icon: Brain,
       <Helmet>
         <title>Business Intelligence | Zion Tech Group</title>
         <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<meta name="keywords" content="business intelligence, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -55,7 +36,6 @@ icon: Brain,
             Our business intelligence solutions deliver unmatched performance, security, and scalability.
           </p>
         </div>
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
@@ -77,7 +57,6 @@ icon: Brain,
             ))}
           </div>
         </div>
-{/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">

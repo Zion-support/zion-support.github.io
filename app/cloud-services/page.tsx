@@ -27,21 +27,9 @@ const CloudServicesPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Cloud Security',
-      description: 'Comprehensive security solutions to protect your cloud infrastructure and data.',
-      features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
-
     }
   ];
   const benefits = [
-
-    'Reduced infrastructure costs by up to 40%',
-    'Improved scalability and flexibility',
-    'Enhanced security and compliance',
-    '24/7 monitoring and support',
-    'Faster deployment and updates',
-    'Disaster recovery and backup solutions',
-    'Global availability and performance',
-    'Expert cloud architecture guidance'
   ];
   const pricing = [
     {
@@ -126,7 +114,6 @@ const CloudServicesPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-
             </div>
           </div>
         </div>
@@ -166,6 +153,7 @@ const CloudServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -276,3 +264,5 @@ export default CloudServicesPage
   </button>
   </h1>
   </div>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b

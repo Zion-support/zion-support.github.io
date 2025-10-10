@@ -14,7 +14,6 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
-title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
     },
@@ -86,7 +85,6 @@ title: 'Real-Time Dashboards',
     <React.Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-<meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
       </Helmet>
       <Navigation />

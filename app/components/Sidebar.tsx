@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -195,84 +196,9 @@ return (
               aria-label="Close sidebar"
             >,
               <X>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-bc7b
             </button>
           </div>
 
           {/* Navigation */}
-          <div className="flex-1 overflow-y-auto py-6"></div>
-            <nav>
-              {
-    navigationSections.map((section, sectionIndex) => (
-  }
-                <div key={sectionIndex} className="space-y-1"></div>
-                  <button;
-                    onClick={() => section.key && toggleSection(section.key)}
-
-                    className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors"
-                  >,
-                    <span>{section.title}</span>
-                    {
-    section.key && (;
-                      expandedSections.has(section.key) ?;
-                        <ChevronDown className="w-4 h-4" /> :;
-                        <ChevronRight className="w-4 h-4" />
-  }
-                    )}
-                  </button>
-                  {
-    (!section.key || expandedSections.has(section.key)) && (;
-                    <div className="ml-4 space-y-1"></div>
-                      {section.items.map((item, itemIndex) => (</div>
-                        <Link
-  }
-
-                          key={itemIndex}
-                          to={item.path}
-                          onClick={() => setIsOpen(false)}
-                          className={
-    `flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
-                            location.pathname === item.path;
-                              ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30';
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50'
-  }
-                          }`}
-                        >;
-                          <item>
-                          <span>{item.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-
-            </nav>
-          </div>
-          {/* Contact Info */}
-          <div className="border-t border-slate-700/50 p-6"></div>
-            <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
-            <div className="space-y-3 text-sm text-gray-300"></div>
-              <div className="flex items-center space-x-3"></div>
-                <Phone>
-                <span>{contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center space-x-3"></div>
-                <Mail>
-                <span className="truncate">{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center space-x-3"></div>
-                <MapPin>
-                <span className="text-xs">{contactInfo.address}</span>
-              </div>
-              <div className="flex items-center space-x-3"></div>
-                <Clock>
-                <span className="text-xs">{contactInfo.hours}</span>
-              </div>
-          </div>
-      </aside>
-    </>
-  );
-}
-Sidebar.displayName = 'Sidebar';
-export default Sidebar;
-

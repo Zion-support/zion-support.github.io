@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-import { CheckCircle, ArrowRight, PenTool, Zap, Users, BarChart3 } from 'lucide-react';
-
 const AIContentWriterPage: React.FC = () => {
   const features = [
     {
@@ -169,6 +167,4 @@ const AIContentWriterPage: React.FC = () => {
     </div>
   );
 };
-
-export default AIContentWriterPage;
 
