@@ -1,4 +1,6 @@
 'use client'
+import React from 'react';
+
 const ContentNewsletterSignup: React.FC = React.memo((props) => {
   return (
     <div className="py-8">
@@ -9,6 +11,7 @@ const ContentNewsletterSignup: React.FC = React.memo((props) => {
         </div>
       </div>
     </div>
-  );}
-}
-export default ContentNewsletterSignup
+  );
+});
+
+export default ContentNewsletterSignup;

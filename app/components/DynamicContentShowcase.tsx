@@ -1,4 +1,6 @@
 'use client'
+import React from 'react';
+
 const DynamicContentShowcase: React.FC = React.memo((props) => {
   return (
     <div className="py-8">
@@ -9,6 +11,7 @@ const DynamicContentShowcase: React.FC = React.memo((props) => {
         </div>
       </div>
     </div>
-  );}
-}
-export default DynamicContentShowcase
+  );
+});
+
+export default DynamicContentShowcase;

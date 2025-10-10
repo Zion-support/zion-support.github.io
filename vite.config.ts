@@ -22,13 +22,16 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more aggressive chunking
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+            if (id.includes('framer-motion')) {
+              return 'vendor-framer';
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons';
             }
             if (id.includes('recharts')) {
               return 'vendor-charts';
@@ -36,20 +39,34 @@ export default defineConfig({
             if (id.includes('react-router-dom')) {
               return 'vendor-router';
             }
-            return 'vendor';
+            if (id.includes('react-helmet-async')) {
+              return 'vendor-helmet';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
+            }
+            return 'vendor-other';
           }
-          // Page chunks - group similar pages
-          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision')) {
-            return 'pages-ai';
+          // App chunks - group by functionality
+          if (id.includes('/app/')) {
+            if (id.includes('/app/ai-')) {
+              return 'app-ai';
+            }
+            if (id.includes('/app/cloud-') || id.includes('/app/cybersecurity')) {
+              return 'app-it';
+            }
+            if (id.includes('/app/blog')) {
+              return 'app-blog';
+            }
+            return 'app-pages';
           }
-          if (id.includes('/src/it-') || id.includes('/src/cloud-') || id.includes('/src/cybersecurity') || id.includes('/src/devops')) {
-            return 'pages-it';
+          // Components
+          if (id.includes('/src/components/')) {
+            return 'components';
           }
-          if (id.includes('/src/blog/')) {
-            return 'pages-blog';
-          }
-          if (id.includes('/src/')) {
-            return 'pages-other';
+          // Utils
+          if (id.includes('/src/utils/')) {
+            return 'utils';
           }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
