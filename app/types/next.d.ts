@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const Next.dPage: React.FC = () => {
   const features = [
     {
@@ -47,6 +48,8 @@ const Next.dPage: React.FC = () => {
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       </Helmet>
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
@@ -126,6 +129,7 @@ export interface MetadataRouteSitemap extends MetadataRoute {
 export interface NextPageProps {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
+<<<<<<< HEAD
 }
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
@@ -163,11 +167,19 @@ export interface NextPageProps {
         <div></div>
           <div></div>
             <h2></h2>
+=======
+}      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
               Why Choose Our Next.d?
             </h2>
             <p></p>
               Our next.d solutions deliver unmatched performance, security, and scalability.
             </p>
+<<<<<<< HEAD
           </div>
 <<<<<<< HEAD
 // API route types
@@ -208,6 +220,12 @@ export interface ApiRouteHandler {
 =======
           <div></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+=======
+          </div>// API route types
+export interface ApiRouteHandler {
+  (req: Request): Promise<Response>;
+}          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
             {benefits.map((benefit, index) => (
               <div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -246,9 +264,13 @@ export interface ApiRouteHandler {
   ));)
 };
 
+<<<<<<< HEAD
 export default Next.dPage;
 <<<<<<< HEAD
 // Server components types
+=======
+export default Next.dPage;// Server components types
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
 export interface ServerComponentProps {
   params: { [key: string]: string };
   searchParams: { [key: string]: string | string[] | undefined };
@@ -308,7 +330,11 @@ declare module 'next' {
   }
 }
 
+<<<<<<< HEAD
 export {};
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+=======
+export {};
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948

@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
@@ -33,6 +34,8 @@ const AiCrmAssistantPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const AICrmAssistantPage: React.FC = () => {
@@ -50,6 +53,7 @@ const AICrmAssistantPage: React.FC = () => {
     {
       title: 'Customer Support',
       description: 'Enhanced customer support with AI-powered assistance',
+<<<<<<< HEAD
       benefits: ['Ticket management', 'Response automation', 'Customer satisfaction']
     }
   ];
@@ -64,10 +68,18 @@ const AICrmAssistantPage: React.FC = () => {
     'Gain competitive advantage with advanced technology'
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
     'Increase sales by 30%',
+=======
+      benefits: ['Ticket management', 'Response automation', 'Customer satisfaction']    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'    'Increase sales by 30%',
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Improve customer satisfaction',
     'Reduce manual work by 60%',
     'Better lead qualification',
     'Automated follow-ups',
+<<<<<<< HEAD
     'Enhanced customer insights'
   ];
 
@@ -90,6 +102,13 @@ const AICrmAssistantPage: React.FC = () => {
 <<<<<<< HEAD
 =======
       <Navigation />
+=======
+    'Enhanced customer insights'        <title>Ai Crm Assistant - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered ai crm assistant solution for modern businesses." />
+        <meta name="keywords" content="AI ai crm assistant, artificial intelligence, ai crm assistant, AI solutions, intelligent automation" />        <title>AI CRM Assistant | Zion Tech Group</title>
+        <meta name="description" content="Professional AI CRM assistant solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="ai crm assistant, AI solutions, IT services, Zion Tech Group" />      <Navigation />
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -190,9 +209,13 @@ const AICrmAssistantPage: React.FC = () => {
                 </button>
                 <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
+<<<<<<< HEAD
                 </button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       {/* Hero Section */}
+=======
+                </button>      {/* Hero Section */}
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -244,6 +267,7 @@ const AICrmAssistantPage: React.FC = () => {
                       {benefit}
                     </li>
                   ))}
+<<<<<<< HEAD
                 </ul>
               </div>
             ))}
@@ -254,6 +278,10 @@ const AICrmAssistantPage: React.FC = () => {
       </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
         </div>
+=======
+                </ul>        </section>
+      </div>        </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
       </section>
 
       {/* Benefits Section */}
@@ -296,6 +324,7 @@ const AICrmAssistantPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       <Footer />
     </div>
@@ -307,3 +336,6 @@ const AICrmAssistantPage: React.FC = () => {
 export default AiCrmAssistantPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 export default AICrmAssistantPage;
+=======
+export default AiCrmAssistantPage;export default AICrmAssistantPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948

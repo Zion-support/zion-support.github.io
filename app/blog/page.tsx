@@ -3,17 +3,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
+import { Search, Calendar, User, Clock, ArrowRight, Filter } from 'lucide-react';
 
 interface BlogPost {
-  id: string;
+  id: number;
   title: string;
   excerpt: string;
   content: string;
@@ -23,7 +25,10 @@ interface BlogPost {
   category: string;
   tags: string[];
   image: string;
+<<<<<<< HEAD
   featured: boolean});
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
 }
 
 const BlogPage: React.FC = () => {
@@ -33,14 +38,15 @@ const BlogPage: React.FC = () => {
 
   const blogPosts: BlogPost[] = [
     {
-      id: '1',
+      id: 1,
       title: 'The Future of AI in Enterprise Solutions',
-      excerpt: 'Exploring how artificial intelligence is transforming business operations and creating new opportunities for growth.',
+      excerpt: 'Exploring how artificial intelligence is transforming business operations and what to expect in the coming years.',
       content: 'Full article content...',
-      author: 'Dr. Sarah Chen',
+      author: 'John Smith',
       date: '2024-01-15',
       readTime: '8 min read',
       category: 'AI & Machine Learning',
+<<<<<<< HEAD
       tags: ['AI', 'Enterprise', 'Technology'],
       image: '/images/blog/ai-enterprise.jpg',
       featured: true});
@@ -109,6 +115,15 @@ const BlogPage: React.FC = () => {
 <<<<<<< HEAD
       title: 'Data Analytics: Turning Information into Business Intelligence',
       excerpt: 'Discover how to transform raw data into actionable insights that drive business growth and decision-making.',
+=======
+      tags: ['AI', 'Enterprise', 'Future Tech'],
+      image: '/images/blog/ai-enterprise.jpg'
+    },
+    {
+      id: 2,
+      title: 'Building Scalable Cloud Applications',
+      excerpt: 'Learn the principles and techniques for creating applications that can handle millions of users.',
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
       content: 'Full article content...',
       author: 'Jennifer Liu',
       date: '2024-01-08',
@@ -147,6 +162,7 @@ const BlogPage: React.FC = () => {
 =======
       category: 'Development',
       tags: ['Web Development', 'Scalability', 'Architecture'],
+<<<<<<< HEAD
       image: '/images/blog/scalable-apps.jpg',
       featured: false});
 }
@@ -162,6 +178,13 @@ const BlogPage: React.FC = () => {
 =======
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
+=======
+      image: '/images/blog/scalable-apps.jpg'
+    }
+  ];
+
+  const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development', 'Data Analytics', 'Emerging Technology'];
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
 
   useEffect(() => {
     let filtered = blogPosts;
@@ -187,6 +210,7 @@ const BlogPage: React.FC = () => {
 <<<<<<< HEAD
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -343,10 +367,13 @@ const BlogPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
 
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -378,10 +405,24 @@ const BlogPage: React.FC = () => {
         <section className="py-20 px-4">
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
           <div className="max-w-7xl mx-auto text-center">
+=======
+        <title>Blog - Zion Tech Group | AI and IT Insights</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and emerging technologies. Expert articles, tutorials, and industry trends." />
+        <meta name="keywords" content="AI blog, IT insights, technology trends, enterprise solutions, cloud computing, cybersecurity" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Insights</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+<<<<<<< HEAD
               Stay ahead with expert insights on AI, cloud computing, cybersecurity, and the latest technology trends.
             </p>
             
@@ -634,12 +675,17 @@ const BlogPage: React.FC = () => {
                 Stay updated with the latest insights on AI, cloud computing, cybersecurity, and IT solutions.
               </p>
             </div>
+=======
+              Stay ahead with the latest insights on AI, cloud computing, cybersecurity, and emerging technologies from our expert team.
+            </p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
           </div>
         </section>
 
         {/* Search and Filter Section */}
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="flex flex-col md:flex-row gap-4 mb-6">
                 <div className="flex-1 relative">
@@ -667,11 +713,41 @@ const BlogPage: React.FC = () => {
                     </button>
                   ))}
                 </div>
+=======
+            <div className="flex flex-col md:flex-row gap-4 mb-8">
+              {/* Search Bar */}
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                />
+              </div>
+
+              {/* Category Filter */}
+              <div className="relative">
+                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="pl-10 pr-8 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none cursor-pointer"
+                >
+                  {categories.map((category) => (
+                    <option key={category} value={category.toLowerCase() === 'all' ? 'all' : category}>
+                      {category}
+                    </option>
+                  ))}
+                </select>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
               </div>
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Featured Posts */}
         {selectedCategory === 'all' && (
@@ -767,6 +843,57 @@ const BlogPage: React.FC = () => {
                         <Clock className="w-4 h-4" />
                         <span>{post.readTime}</span>
                       </div>
+=======
+        {/* Blog Posts Grid */}
+        <section className="py-12 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (
+                <article key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/20" />
+                    <div className="absolute bottom-4 left-4">
+                      <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {post.category}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center text-sm text-gray-400 mb-3">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      <span>{post.date}</span>
+                      <Clock className="w-4 h-4 ml-4 mr-2" />
+                      <span>{post.readTime}</span>
+                    </div>
+                    
+                    <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {post.title}
+                    </h2>
+                    
+                    <p className="text-gray-300 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-sm text-gray-400">
+                        <User className="w-4 h-4 mr-2" />
+                        <span>{post.author}</span>
+                      </div>
+                      
+                      <button className="flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
+                        Read More
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {post.tags.map((tag, index) => (
+                        <span key={index} className="bg-white/10 text-gray-300 px-2 py-1 rounded text-xs">
+                          {tag}
+                        </span>
+                      ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
                     </div>
                     <button className="w-full bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-2 px-4 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 flex items-center justify-center gap-2">
                       Read More
@@ -859,6 +986,7 @@ const BlogPage: React.FC = () => {
                 <p className="text-gray-500">Try adjusting your search or filter criteria</p>
               </div>
             )}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
 =======
@@ -867,6 +995,32 @@ const BlogPage: React.FC = () => {
               </div>
             );
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+=======
+          </div>
+        </section>
+
+        {/* Newsletter Signup */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Stay Updated
+              </h2>
+              <p className="text-gray-300 mb-6">
+                Get the latest insights and updates delivered directly to your inbox.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
+                />
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
           </div>
         </section>
       </div>

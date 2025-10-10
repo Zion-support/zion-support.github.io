@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
@@ -15,6 +16,9 @@ const AiContentStudioPage: React.FC = () => {
 <<<<<<< HEAD
 =======
       icon: Brain,
+=======
+import { CheckCircle, ArrowRight } from 'lucide-react';      icon: Brain,
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
@@ -35,9 +39,13 @@ const AiContentStudioPage: React.FC = () => {
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
+<<<<<<< HEAD
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
       title: 'AI Content Generation',
+=======
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']      title: 'AI Content Generation',
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
       description: 'Generate high-quality content using advanced AI algorithms',
       benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
     },
@@ -49,6 +57,7 @@ const AiContentStudioPage: React.FC = () => {
     {
       title: 'Collaboration',
       description: 'Work together with your team on content projects',
+<<<<<<< HEAD
       benefits: ['Real-time editing', 'Comments', 'Version control']
     }
   ];
@@ -57,6 +66,9 @@ const AiContentStudioPage: React.FC = () => {
 <<<<<<< HEAD
 =======
     'Increase efficiency by up to 50%',
+=======
+      benefits: ['Real-time editing', 'Comments', 'Version control']    'Increase efficiency by up to 50%',
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -172,9 +184,13 @@ const AiContentStudioPage: React.FC = () => {
                 </button>
                 <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
+<<<<<<< HEAD
                 </button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
     'Increase content production by 10x',
+=======
+                </button>    'Increase content production by 10x',
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Improve engagement by 200%',
     'Save 50+ hours per week',
     'Reduce content costs by 70%',
@@ -244,6 +260,7 @@ const AiContentStudioPage: React.FC = () => {
                       {benefit}
                     </li>
                   ))}
+<<<<<<< HEAD
                 </ul>
               </div>
             ))}
@@ -254,6 +271,10 @@ const AiContentStudioPage: React.FC = () => {
       </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
         </div>
+=======
+                </ul>        </section>
+      </div>        </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
       </section>
 
       {/* Benefits Section */}
@@ -296,6 +317,7 @@ const AiContentStudioPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       <Footer />
     </div>
@@ -307,3 +329,6 @@ const AiContentStudioPage: React.FC = () => {
 export default AiContentStudioPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 export default AIContentStudioPage;
+=======
+export default AiContentStudioPage;export default AIContentStudioPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948

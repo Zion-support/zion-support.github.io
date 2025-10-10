@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
@@ -33,6 +34,8 @@ const AiBlockchainSolutionsPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -50,6 +53,7 @@ const PagePage: React.FC = () => {
     {
       title: 'Feature 3',
       description: 'Description of feature 3',
+<<<<<<< HEAD
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
   ];
@@ -58,6 +62,9 @@ const PagePage: React.FC = () => {
 <<<<<<< HEAD
 =======
     'Increase efficiency by up to 50%',
+=======
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -173,9 +180,13 @@ const PagePage: React.FC = () => {
                 </button>
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
+<<<<<<< HEAD
                 </button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
     'Benefit 1',
+=======
+                </button>    'Benefit 1',
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Benefit 2',
     'Benefit 3',
     'Benefit 4',
@@ -244,6 +255,7 @@ const PagePage: React.FC = () => {
                       {benefit}
                     </li>
                   ))}
+<<<<<<< HEAD
                 </ul>
               </div>
             ))}
@@ -251,15 +263,22 @@ const PagePage: React.FC = () => {
 <<<<<<< HEAD
 =======
         </section>
+=======
+                </ul>        </section>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
       </div>
       <Footer />
     </>
   );
 };
 
+<<<<<<< HEAD
 export default AiBlockchainSolutionsPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
         </div>
+=======
+export default AiBlockchainSolutionsPage;        </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
       </section>
 
       {/* Benefits Section */}
@@ -308,4 +327,8 @@ export default AiBlockchainSolutionsPage;
   );
 };
 
+<<<<<<< HEAD
 export default PagePage;
+=======
+export default PagePage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948

@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
@@ -33,6 +34,8 @@ const AiClimateSolutionsProPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -50,6 +53,7 @@ const PagePage: React.FC = () => {
     {
       title: 'Feature 3',
       description: 'Description of feature 3',
+<<<<<<< HEAD
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     }
   ];
@@ -58,6 +62,9 @@ const PagePage: React.FC = () => {
 <<<<<<< HEAD
 =======
     'Increase efficiency by up to 50%',
+=======
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']    'Increase efficiency by up to 50%',
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -184,9 +191,13 @@ const PagePage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AiClimateSolutionsProPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
     'Benefit 1',
+=======
+export default AiClimateSolutionsProPage;    'Benefit 1',
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
     'Benefit 2',
     'Benefit 3',
     'Benefit 4',
@@ -308,4 +319,8 @@ export default AiClimateSolutionsProPage;
   );
 };
 
+<<<<<<< HEAD
 export default PagePage;
+=======
+export default PagePage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948

@@ -25,11 +25,33 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps></PerformanceOpti
       fontPreload.as = 'style';
       document.head.appendChild(fontPreload);
 
+<<<<<<< HEAD
       // Preload critical images
       const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
+=======
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      if (!img.loading) {
+        img.loading = 'lazy';
+      }
+      if (!img.decoding) {
+        img.decoding = 'async';
+      }
+      // Add fetchpriority for above-the-fold images
+      if (img.getBoundingClientRect().top < window.innerHeight) {
+        img.setAttribute('fetchpriority', 'high');
+      }
+      // Add proper alt text if missing
+      if (!img.alt) {
+        img.alt = 'Zion Tech Group - AI and IT Solutions';
+      }
+    });
+  }, []);
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
 
       criticalImages.forEach(src => {
         const link = document.createElement('link');

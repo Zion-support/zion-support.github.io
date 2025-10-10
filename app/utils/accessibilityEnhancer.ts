@@ -26,6 +26,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
 <<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses'
     }
+<<<<<<< HEAD
 =======
       description: 'Worldwide deployment and support for international businesses'});;)
 }
@@ -518,6 +519,8 @@ Recommendations:
 }
 }
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
   ];
 
   const benefits = [
@@ -643,6 +646,10 @@ Recommendations:
   );
 };
 
+<<<<<<< HEAD
 export default AccessibilityEnhancerPage;
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+=======
+export default AccessibilityEnhancerPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948

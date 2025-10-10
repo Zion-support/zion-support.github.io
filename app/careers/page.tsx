@@ -281,6 +281,7 @@ const CareersPage: React.FC = () => {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 =======
                 </div>
@@ -289,6 +290,8 @@ const CareersPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
           </div>
         </section>
 
@@ -359,6 +362,7 @@ const CareersPage: React.FC = () => {
               ));
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
         </section>
 
@@ -417,6 +421,8 @@ const CareersPage: React.FC = () => {
             </Link>
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
           </div>
         </section>
       </div>

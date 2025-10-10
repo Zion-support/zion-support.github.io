@@ -108,18 +108,19 @@ const CaseStudiesPage: React.FC = () => {
     {
       id: '3',
       title: 'Cybersecurity Enhancement for Healthcare',
-      client: 'MediCare Plus',
+      client: 'HealthTech Systems',
       industry: 'Healthcare',
-      challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
-      solution: 'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.',
+      challenge: 'Critical security vulnerabilities and compliance requirements for patient data protection.',
+      solution: 'Comprehensive cybersecurity overhaul with zero-trust architecture and advanced threat detection.',
       results: [
-        '100% HIPAA compliance achieved',
+        '100% compliance with HIPAA regulations',
         'Zero security breaches in 12 months',
-        'Real-time threat detection and response',
-        'Automated compliance reporting'
+        '95% reduction in security incidents',
+        'Automated threat response system'
       ],
-      image: '/images/case-studies/cybersecurity-healthcare.jpg',
+      image: '/images/case-studies/cybersecurity.jpg',
       duration: '4 months',
+<<<<<<< HEAD
       team: '10 specialists'});;)
 },
     {
@@ -244,6 +245,9 @@ const CaseStudiesPage: React.FC = () => {
 =======
       image: '/images/case-studies/blockchain-logistics.jpg'
 >>>>>>> cursor/fix-errors-and-merge-to-main-550e
+=======
+      team: '10 specialists'
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
     }
 =======
       team: '11 specialists'});;)
@@ -251,15 +255,9 @@ const CaseStudiesPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
   ];
 
-  const stats = [
-    { label: 'Projects Completed', value: '150+', icon: CheckCircle },
-    { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
-    { label: 'Team Members', value: '50+', icon: Users },
-    { label: 'Industry Awards', value: '25+', icon: Award }
-  ];
-
   return (
     <>
+<<<<<<< HEAD
       <Helmet></Helmet>
         <titl></titl>Case Studies | Zion Tech Group | Success Stories & Client Results</title>
         <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions. Real results from real clients." />
@@ -268,10 +266,17 @@ const CaseStudiesPage: React.FC = () => {
         <meta property="og:description" content="Success stories and client results from our AI and IT solutions" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/case-studies" />
+=======
+      <Helmet>
+        <title>Case Studies - Zion Tech Group | Success Stories</title>
+        <meta name="description" content="Explore our successful AI and IT implementations. Real case studies showcasing measurable results and client transformations." />
+        <meta name="keywords" content="case studies, AI implementation, IT solutions, success stories, client results, digital transformation" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
       </Helmet>
 
       <div></div>
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4">
@@ -372,6 +377,18 @@ const CaseStudiesPage: React.FC = () => {
               ));
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
             </div>
+=======
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Stories</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover how we've helped businesses transform their operations with cutting-edge AI and IT solutions. Real results, real impact.
+            </p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
           </div>
         </section>
 
@@ -379,6 +396,7 @@ const CaseStudiesPage: React.FC = () => {
 <<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Case Studies</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study) => (
@@ -485,15 +503,74 @@ const CaseStudiesPage: React.FC = () => {
                           <li></li>
                             <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                             {result}
+=======
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+              {caseStudies.map((study) => (
+                <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 relative overflow-hidden">
+                    <div className="absolute inset-0 bg-black/20" />
+                    <div className="absolute bottom-4 left-4">
+                      <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {study.industry}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {study.title}
+                    </h3>
+                    
+                    <div className="mb-4">
+                      <p className="text-cyan-400 font-semibold text-sm mb-1">Client: {study.client}</p>
+                      <div className="flex items-center gap-4 text-sm text-gray-400">
+                        <div className="flex items-center gap-1">
+                          <Users className="w-4 h-4" />
+                          <span>{study.team}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Award className="w-4 h-4" />
+                          <span>{study.duration}</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <h4 className="text-white font-semibold mb-2">Challenge:</h4>
+                      <p className="text-gray-300 text-sm">{study.challenge}</p>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <h4 className="text-white font-semibold mb-2">Solution:</h4>
+                      <p className="text-gray-300 text-sm">{study.solution}</p>
+                    </div>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-white font-semibold mb-3">Results:</h4>
+                      <ul className="space-y-2">
+                        {study.results.map((result, index) => (
+                          <li key={index} className="flex items-start gap-2 text-sm">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-300">{result}</span>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
                           </li>
                         ));
                       </ul>
                     </div>
+<<<<<<< HEAD
 
                     <div></div>
                       <Link></Link>
+=======
+                    
+                    <div className="flex items-center justify-between">
+                      <Link
+                        to={`/case-studies/${study.id}`}
+                        className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                      >
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
                         Read Full Case Study
-                        <ArrowRight className="w-4 h-4" />
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </Link>
                       <button></button>
                         <ExternalLink className="w-4 h-4" />
@@ -503,12 +580,17 @@ const CaseStudiesPage: React.FC = () => {
                   </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-bba0
                 </div>
+<<<<<<< HEAD
               ));
+=======
+              ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section></section>
           <div></div>
             <div></div>
@@ -520,11 +602,34 @@ const CaseStudiesPage: React.FC = () => {
               </p>
               <div></div>
                 <Link></Link>
+=======
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Create Your Success Story?
+              </h2>
+              <p className="text-gray-300 mb-6">
+                Let's discuss how we can help transform your business with our proven AI and IT solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
                   Start Your Project
-                  <ArrowRight className="w-5 h-5" />
                 </Link>
+<<<<<<< HEAD
                 <Link></Link>
                   Explore Our Services
+=======
+                <Link
+                  to="/consultation"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300"
+                >
+                  Free Consultation
+>>>>>>> cursor/analyze-improve-and-deploy-application-9948
                 </Link>
               </div>
             </div>
