@@ -5,7 +5,8 @@ import { Calendar, Users, CheckSquare, BarChart3, Clock, Target, Zap, ArrowRight
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIProjectManagerPage: React.FC = () => {
+const AIProjectManagerPage: React.FC = () => {;
+
   const features = [
     {
       icon: Calendar,
@@ -29,9 +30,8 @@ const AIProjectManagerPage: React.FC = () => {
       icon: Zap,
       title: 'Automation',
       description: 'Automate repetitive tasks and streamline project workflows',
-      benefits: ['Task automation', 'Report generation', 'Status updates', 'Integration management']
-    }
-  ];
+      benefits: ['Task automation', 'Report generation', 'Status updates', 'Integration management'],
+ }];
 
   const pricingPlans = [
     {
@@ -76,9 +76,8 @@ const AIProjectManagerPage: React.FC = () => {
         'Advanced security',
         'Custom training'
       ],
-      popular: false
-    }
-  ];
+      popular: false,
+ }];
 
   const testimonials = [
     {
@@ -100,9 +99,8 @@ const AIProjectManagerPage: React.FC = () => {
       role: 'Operations Director',
       company: 'Global Solutions',
       content: 'Our team productivity increased by 60% since implementing AI Project Manager. The automation features save us hours every week.',
-      rating: 5
-    }
-  ];
+      rating: 5,
+ }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -239,8 +237,8 @@ const AIProjectManagerPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">,
+ {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

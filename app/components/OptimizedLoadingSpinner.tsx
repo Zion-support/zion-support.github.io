@@ -19,8 +19,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     className = '',
     color = 'blue',
     fullScreen = false,
-  }) => {
-    const sizeClasses = useMemo(
+  }) => {;
+
+  const sizeClasses = useMemo(
       () => ({
         xs: 'h-3 w-3',
         sm: 'h-4 w-4',
@@ -56,8 +57,9 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2].map(i => (</div>
                 <div
-;
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
+;);
+
+  const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(;
   ({;
     size = 'md',;
     variant = 'spinner',;

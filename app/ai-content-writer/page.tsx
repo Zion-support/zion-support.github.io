@@ -3,9 +3,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight } from 'lucide-react';
-import { CheckCircle, ArrowRight, PenTool, Zap, Users, BarChart3 } from 'lucide-react';
-const AIContentWriterPage: React.FC = () => {
+import { CheckCircle,  ArrowRight,  PenTool,  Zap,  Users,  BarChart3 } from 'lucide-react';
+const AIContentWriterPage: React.FC = () => {;
+
   const features = [
     {
       title: 'AI-Powered Writing',
@@ -20,9 +20,8 @@ const AIContentWriterPage: React.FC = () => {
     {
       title: 'Multi-Format Support',
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
-      benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
-    }
-  ];
+      benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy'],
+ }];
   const benefits = [
     '10x faster content creation',
     'Improved SEO performance',

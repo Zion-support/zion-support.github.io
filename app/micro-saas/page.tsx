@@ -16,7 +16,8 @@ interface MicroSaasProduct {
   category: string;
 }
 
-const MicroSaasPage: React.FC = () => {
+const MicroSaasPage: React.FC = () => {;
+
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const products: MicroSaasProduct[] = [
@@ -162,9 +163,8 @@ const MicroSaasPage: React.FC = () => {
       price: '$179/month',
       users: 'Up to 20 users',
       popular: false,
-      category: 'Finance'
-    }
-  ];
+      category: 'Finance',
+ }];
 
   const categories = ['All', 'Analytics', 'Communication', 'Security', 'Storage', 'Monitoring', 'AI', 'Marketing', 'Finance'];
 

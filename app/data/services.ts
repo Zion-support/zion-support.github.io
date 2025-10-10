@@ -1326,9 +1326,9 @@ export const services: Service[] = [;
       min: 800,;
       max: 2500,;
       currency: 'USD';}
-    }
-  }
-];
+    },
+
+    }];
 ;
 export const serviceCategories = [;
   {;
@@ -1361,9 +1361,8 @@ export const serviceCategories = [;
     description: 'Next-generation technology solutions',;
     icon: '🚀',;
     color: 'text-pink-400',;
-    bgColor: 'bg-pink-500/10';}
-  }
-];
+    bgColor: 'bg-pink-500/10';},
+ }];
 ;
 export const contactInfo = {;
   phone: '+1 (302) 464-0950',;

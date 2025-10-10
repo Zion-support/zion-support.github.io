@@ -39,8 +39,8 @@ export class AccessibilityEnhancer {
    * Update list of focusable elements
    */
   private updateFocusableElements(): void {
-    const selectors = [
-      'a[href]',
+    const selectors = [,
+ 'a[href]',
       'button:not([disabled])',
       'input:not([disabled])',
       'select:not([disabled])',
@@ -95,14 +95,15 @@ export class AccessibilityEnhancer {
     if (currentIndex === -1) return;
     if (event.shiftKey) {
       // Shift + Tab (backward)
-      const prevIndex = currentIndex > 0 ? currentIndex - 1 : this.focusableElements.length - 1;
-      this.focusableElements[prevIndex]?.focus();
+      const prevIndex = currentIndex > 0 ? currentIndex - 1 : this.focusableElements.length - 1;,
+ this.focusableElements[prevIndex]?.focus();
     } else {
       // Tab (forward)
-      const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;
-      this.focusableElements[nextIndex]?.focus();
-    }
-focusableElements[nextIndex]?.focus();
+      const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;,
+ this.focusableElements[nextIndex]?.focus();
+    },
+
+    focusableElements[nextIndex]?.focus();
     focusableElements[nextIndex]?.focus();
     event.preventDefault();
   }
@@ -112,14 +113,16 @@ focusableElements[nextIndex]?.focus();
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
-    modals.forEach(modal => {
-      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
+    modals.forEach(modal => {);
+
+  const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
       closeButton?.click();
     });
     // Close any open menus
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
-    menus.forEach(menu => {
-      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
+    menus.forEach(menu => {);
+
+  const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
       trigger?.click();
     });
   }
@@ -139,8 +142,8 @@ focusableElements[nextIndex]?.focus();
    */
   private handleMenuNavigation(event: KeyboardEvent): void {
     const activeElement = document.activeElement as HTMLElement;
-    const menuItems = Array.from(
-      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
+    const menuItems = Array.from(,
+ activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
     ) as HTMLElement[];
     const currentIndex = menuItems.indexOf(activeElement);
     if (currentIndex === -1) return;
@@ -158,7 +161,8 @@ focusableElements[nextIndex]?.focus();
       case 'ArrowLeft':
         nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
         break;
-    }
+    },
+
     menuItems[nextIndex]?.focus();
     event.preventDefault();
   }
@@ -208,8 +212,9 @@ focusableElements[nextIndex]?.focus();
   private setupAriaLabels(): void {
     // Add ARIA labels to buttons without text
     const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    iconButtons.forEach(button => {
-      const icon = button.querySelector('svg');
+    iconButtons.forEach(button => {);
+
+  const icon = button.querySelector('svg');
       if (icon) {
         const iconName = icon.getAttribute('data-icon') || 'button';
         button.setAttribute('aria-label', iconName);
@@ -217,8 +222,9 @@ focusableElements[nextIndex]?.focus();
     });
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    inputs.forEach(input => {
-      const label = document.querySelector(`label[for="${input.id}"]`);
+    inputs.forEach(input => {);
+
+  const label = document.querySelector(`label[for="${input.id}"]`);
       if (label) {
         input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
         if (!label.id) {
@@ -291,8 +297,8 @@ focusableElements[nextIndex]?.focus();
   /**
    * Focus first focusable element
    */
-  public focusFirst(): void {
-    this.focusableElements[0]?.focus();
+  public focusFirst(): void {,
+ this.focusableElements[0]?.focus();
   }
   /**
    * Focus last focusable element

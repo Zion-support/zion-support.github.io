@@ -192,7 +192,8 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </h2>;
         <p className="mt-2 text-center text-gray-600">;
           {error.message || 'An unexpected error occurred'}
-        </p>;
+        </p>;,
+
         {process.env['NODE_ENV'] === 'development' && (;}
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>;
         )}

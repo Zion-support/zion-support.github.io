@@ -7,8 +7,8 @@ interface Feature {
   description: string;
   stats?: {
     value: string;
-    label: string;
-  }[];
+    label: string;,
+ }[];
 }
 import { CheckCircle, ArrowRight, Star, Quote, ChevronLeft, ChevronRight, Zap, Shield, Brain, Globe, Users, TrendingUp } from 'lucide-react';
 import React from 'react';
@@ -28,7 +28,8 @@ interface Feature {
   description: string;
   benefits: string[];
 }
-const DynamicContentShowcase: React.FC = () => {
+const DynamicContentShowcase: React.FC = () => {;
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -58,15 +59,15 @@ const DynamicContentShowcase: React.FC = () => {
       role: 'CEO',
       content: 'The cybersecurity solutions provided by Zion Tech Group gave us peace of mind. Our data is now more secure than ever, and compliance is no longer a concern.',
       rating: 5,
-      avatar: '/images/avatars/emily.jpg'
-    }
-  ];
+      avatar: '/images/avatars/emily.jpg',
+ }];
   const features: Feature[] = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced artificial intelligence to automate and optimize your business processes',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
+
   const features = [
     {
       icon: Brain,
@@ -78,6 +79,8 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
       benefits: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']
+    },
+    {
       description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
@@ -85,6 +88,8 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
       benefits: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring']
+    },
+    {
       description: 'Bank-level security with encryption and compliance standards'
     },
     {
@@ -92,9 +97,10 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
       benefits: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+    },
+    {
+      description: 'Worldwide deployment and support for international businesses',
+ }];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -137,9 +143,8 @@ company: 'InnovateLab',
       role: 'Operations Director',
       company: 'Global Solutions',
       content: 'The best technology partner we\'ve ever worked with. Highly recommend their services.',
-      rating: 5
-    }
-  ];
+      rating: 5,
+ }];
   useEffect(() => {
     if (!isPlaying) return;
     const timer = setInterval(() => {
@@ -309,11 +314,11 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <div className="text-center">
                 <Quote className="w-12 h-12 text-blue-400 mx-auto mb-6" />
-                <p className="text-xl text-gray-300 mb-8 italic">
-                  "{testimonials[currentTestimonial].content}"
+                <p className="text-xl text-gray-300 mb-8 italic">,
+ "{testimonials[currentTestimonial].content}"
                 </p>
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                <div className="flex justify-center mb-4">,
+ {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -322,8 +327,8 @@ setCurrentIndex((prev) => (prev + 1) % testimonials.length);
                 </blockquote>
                 <div className="flex items-center justify-center gap-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <span className="text-white font-semibold text-lg">
-                      {testimonials[currentTestimonial].name.charAt(0)}
+                    <span className="text-white font-semibold text-lg">,
+ {testimonials[currentTestimonial].name.charAt(0)}
                     </span>
                   </div>
                   <div className="text-left">

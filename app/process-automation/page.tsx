@@ -23,7 +23,8 @@ import {;
   Workflow,;
   Bot;}
 } from 'lucide-react';
-const ProcessAutomationPage: React.FC = () => {
+const ProcessAutomationPage: React.FC = () => {;
+
   const features = [
     {
       icon: Zap,
@@ -43,9 +44,8 @@ const ProcessAutomationPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Performance Monitoring',
-      description: 'Track and optimize your automated processes with real-time analytics and reporting.'
-    }
-  ];
+      description: 'Track and optimize your automated processes with real-time analytics and reporting.',
+ }];
   const benefits = [
     'Reduce manual work and human errors',
     'Increase operational efficiency',
@@ -189,9 +189,8 @@ const ProcessAutomationPage: React.FC = () => {;
     {;
       icon: BarChart,;
       title: 'Performance Monitoring',;
-      description: 'Track and optimize your automated processes with real-time analytics and reporting.';}
-    }
-  ];
+      description: 'Track and optimize your automated processes with real-time analytics and reporting.';},
+ }];
   const benefits = [;
     'Reduce manual work and human errors',;
     'Increase operational efficiency',;

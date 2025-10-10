@@ -31,8 +31,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+      }
 
     // Send error to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -64,7 +63,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
 
     // Send error report to your error tracking service
-    console.log('Error report:', errorReport);
     // You can implement actual error reporting here
     // e.g., send to Sentry, LogRocket, etc.
   };

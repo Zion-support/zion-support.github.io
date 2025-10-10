@@ -23,7 +23,8 @@ import {;
   Calendar,;
   FileText;}
 } from 'lucide-react';
-const ProjectManagementProPage: React.FC = () => {
+const ProjectManagementProPage: React.FC = () => {;
+
   const features = [
     {
       icon: CheckSquare,
@@ -43,9 +44,8 @@ const ProjectManagementProPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automation',
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
-    }
-  ];
+      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.',
+ }];
   const benefits = [
     'Improve project delivery times',
     'Enhance team collaboration',
@@ -189,9 +189,8 @@ const ProjectManagementProPage: React.FC = () => {;
     {;
       icon: Zap,;
       title: 'Automation',;
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.';}
-    }
-  ];
+      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.';},
+ }];
   const benefits = [;
     'Improve project delivery times',;
     'Enhance team collaboration',;

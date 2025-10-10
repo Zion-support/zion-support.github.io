@@ -1,7 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const MainPage: React.FC = () => {
+const MainPage: React.FC = () => {;
+
   const features = [
     {
       icon: Brain,
@@ -21,9 +22,8 @@ const MainPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+      description: 'Worldwide deployment and support for international businesses',
+ }];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -166,9 +166,8 @@ const MainPage: React.FC = () => {;
     {;
       icon: Globe,;
       title: 'Global Reach',;
-      description: 'Worldwide deployment and support for international businesses';}
-    }
-  ];
+      description: 'Worldwide deployment and support for international businesses';},
+ }];
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;

@@ -26,7 +26,8 @@ interface FormStatus {;
   type: 'idle' | 'loading' | 'success' | 'error';
   message: string;
 }
-const ContactForm: React.FC = () => {
+const ContactForm: React.FC = () => {;
+
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -78,7 +79,8 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-;
+;);
+
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();}
     setStatus({ type: 'loading', message: 'Sending message...' });

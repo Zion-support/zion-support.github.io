@@ -2,11 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const PagePage: React.FC = () => {
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const SmartCityInfrastructurePage: React.FC = () => {
+const SmartCityInfrastructurePage: React.FC = () => {;
+
   const features = [
     {
       icon: Brain,
@@ -29,9 +29,8 @@ const SmartCityInfrastructurePage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+      description: 'Worldwide deployment and support for international businesses',
+ }];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -92,9 +91,8 @@ const PagePage: React.FC = () => {;
       icon: Globe,;
       title: 'Global Reach',;
       description: 'Worldwide deployment and support for international businesses';}
-      description: 'Worldwide deployment and support for international smart city projects'
-    }
-  ];
+      description: 'Worldwide deployment and support for international smart city projects',
+ }];
   const smartCityServices = [
     {
       icon: Building,
@@ -118,9 +116,8 @@ const PagePage: React.FC = () => {;
       icon: Database,
       title: 'Digital Infrastructure',
       description: 'Robust digital infrastructure for smart city operations',
-      features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
-    }
-  ];
+      features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols'],
+ }];
   return (;
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>;

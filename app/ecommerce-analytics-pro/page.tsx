@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
-const EcommerceAnalyticsProPage: React.FC = () => {
+const EcommerceAnalyticsProPage: React.FC = () => {;
+
   const features = [
     {
       icon: BarChart,
@@ -32,9 +33,8 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     {
       icon: Target,
       title: 'Conversion Tracking',
-      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
-    }
-  ];
+      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.',
+ }];
   return (
     <React.Fragment>
       <Helmet>

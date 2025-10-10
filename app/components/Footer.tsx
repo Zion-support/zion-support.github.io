@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Brain, Cloud, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Github, Linkedin, Twitter } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = () => {;
+
   const currentYear = new Date().getFullYear();
   
   const aiServices = [

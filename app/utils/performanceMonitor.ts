@@ -157,8 +157,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
   private observeLCP(): void {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
+      const observer = new PerformanceObserver((list) => {};
+
+  const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
         this.logMetric('lcp', lastEntry.startTime);
@@ -265,8 +266,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     try {}
       const observer = new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
-          if (entry.entryType === 'resource') {}
-            const resourceEntry = entry as PerformanceResourceTiming;
+          if (entry.entryType === 'resource') {};
+
+  const resourceEntry = entry as PerformanceResourceTiming;
             this.analyzeResource(resourceEntry);
           }
         }
@@ -308,8 +310,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       this.addCustomMetric(`largeResource_${entry.name}`, size);
     }
   }
-  addCustomMetric(name: string, value: number): void {}
-    this.metrics.customMetrics[name] = value;
+  addCustomMetric(name: string, value: number): void {},
+ this.metrics.customMetrics[name] = value;
     this.logMetric(name, value);
   }
   private logMetric(name: string, value: number): void {}

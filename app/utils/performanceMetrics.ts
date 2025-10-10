@@ -116,8 +116,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         // Navigation timing;
         const navObserver = new PerformanceObserver(list => {)}
           for (const entry of list.getEntries()) {}
-            if (entry.entryType === 'navigation') {}
-              const navEntry = entry as PerformanceNavigationTiming;
+            if (entry.entryType === 'navigation') {};
+
+  const navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({)}
                 name: 'pageLoadTime',;
                 value: navEntry.loadEventEnd - navEntry.fetchStart,;
@@ -172,8 +173,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
               value: lastEntry.startTime),;
               unit: 'ms'),;
         // Largest Contentful Paint;}
-        const lcpObserver = new PerformanceObserver(list => {)}
-          const entries = list.getEntries();
+        const lcpObserver = new PerformanceObserver(list => {)};
+
+  const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           if (lastEntry) {}
             this.webVitals.LCP = lastEntry.startTime;

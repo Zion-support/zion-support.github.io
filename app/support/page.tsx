@@ -9,7 +9,8 @@ interface FAQ {
   category: string;
 }
 
-const SupportPage: React.FC = () => {
+const SupportPage: React.FC = () => {;
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
@@ -53,9 +54,8 @@ const SupportPage: React.FC = () => {
     {
       question: 'Can you help with scaling our solutions?',
       answer: 'Absolutely! Our solutions are designed to scale with your business. We provide ongoing optimization and scaling support to ensure your systems can handle growth and increased demand.',
-      category: 'Scaling'
-    }
-  ];
+      category: 'Scaling',
+ }];
 
   const supportChannels = [
     {
@@ -80,14 +80,15 @@ const SupportPage: React.FC = () => {
       icon: MessageCircle,
       contact: 'Available on website',
       availability: 'Mon-Fri: 9AM-6PM EST',
-      color: 'text-purple-400'
-    }
-  ];
+      color: 'text-purple-400',
+ }];
 
   const categories = ['all', 'Getting Started', 'Support', 'Security', 'Integration', 'Training', 'Service Level', 'Data Management', 'Scaling'];
 
-  const filteredFAQs = faqs.filter(faq => {
-    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredFAQs = faqs.filter(faq => {;
+);
+
+  const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;

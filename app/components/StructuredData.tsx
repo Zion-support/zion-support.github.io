@@ -9,7 +9,8 @@ interface StructuredDataProps {
 const StructuredData: React.FC<StructuredDataProps> = ({ 
   type = 'Organization', 
   data 
-}) => {
+}) => {;
+
   const getDefaultData = () => {
     switch (type) {
       case 'Organization':
@@ -94,9 +95,8 @@ const StructuredData: React.FC<StructuredDataProps> = ({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://ziontechgroup.com"
-              }
-            ]
+                "item": "https://ziontechgroup.com",
+ }]
           }
         };
       

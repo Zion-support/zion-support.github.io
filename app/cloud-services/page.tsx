@@ -2,8 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-const CloudServicesPage: React.FC = () => {
-const features = [
+const CloudServicesPage: React.FC = () => {;
+
+  const features = [
     {
       icon: Shield,
       title: 'Secure Cloud Services',
@@ -24,7 +25,8 @@ const features = [
       title: 'Global Deployment',
       description: 'Worldwide cloud services deployment and support'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
-const CloudServicesPage: React.FC = () => {
+const CloudServicesPage: React.FC = () => {;
+
   const services = [
     {
       icon: Cloud,
@@ -48,9 +50,8 @@ const CloudServicesPage: React.FC = () => {
       icon: Shield,
       title: 'Cloud Security',
       description: 'Comprehensive security solutions to protect your cloud infrastructure and data.',
-      features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
-    }
-  ];
+      features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection'],
+ }];
   const benefits = [
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',
@@ -110,9 +111,9 @@ const CloudServicesPage: React.FC = () => {
         'Enterprise security',
         'Unlimited users',
         'Custom development'
-      ]
-    }
-  ];
+      ],
+
+      }];
   return (
     <React.Fragment>
       <Helmet>

@@ -5,7 +5,8 @@ import { Mail, BarChart3, Users, Zap, Target, ArrowRight, Star, CheckSquare, Glo
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIEmailMarketingAutomationPage: React.FC = () => {
+const AIEmailMarketingAutomationPage: React.FC = () => {;
+
   const features = [
     {
       icon: Mail,
@@ -29,9 +30,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       icon: Zap,
       title: 'Workflow Automation',
       description: 'Create complex email workflows with triggers, conditions, and automated follow-ups',
-      benefits: ['Trigger-based campaigns', 'Drip sequences', 'Abandoned cart recovery', 'Welcome series']
-    }
-  ];
+      benefits: ['Trigger-based campaigns', 'Drip sequences', 'Abandoned cart recovery', 'Welcome series'],
+ }];
 
   const automationWorkflows = [
     {
@@ -60,9 +60,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       description: 'Send personalized birthday offers and special promotions automatically',
       emails: 2,
       openRate: '78%',
-      clickRate: '32%'
-    }
-  ];
+      clickRate: '32%',
+ }];
 
   const pricingPlans = [
     {
@@ -107,9 +106,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
         'Advanced reporting',
         'Custom integrations'
       ],
-      popular: false
-    }
-  ];
+      popular: false,
+ }];
 
   const testimonials = [
     {
@@ -131,9 +129,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
       role: 'Digital Marketing Director',
       company: 'Global Brands',
       content: 'The AI segmentation and personalization features are game-changers. Our customers love the personalized experience.',
-      rating: 5
-    }
-  ];
+      rating: 5,
+ }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -307,8 +304,8 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">,
+ {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

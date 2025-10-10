@@ -136,7 +136,8 @@ const StatCard = memo(({ value, label, icon: Icon, delay = 0 }: {
   );
 });
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = () => {;
+
   const [isLoading, setIsLoading] = useState(true);
   const [scrollY, setScrollY] = useState(0);
 
@@ -200,9 +201,8 @@ const HomePage: React.FC = () => {
       title: 'IT Consulting',
       description: 'Strategic technology consulting to optimize your IT infrastructure and processes.',
       features: ['Technology Assessment', 'Digital Transformation', 'Process Optimization', 'Change Management'],
-      href: '/it-consulting'
-    }
-  ];
+      href: '/it-consulting',
+ }];
 
   const stats = [
     { value: '500+', label: 'Projects Completed', icon: CheckCircle },

@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react';
-const BusinessIntelligencePage: React.FC = () => {
+const BusinessIntelligencePage: React.FC = () => {;
+
   const features = [
     {
 icon: Brain,
@@ -22,9 +23,8 @@ icon: Brain,
     {
       icon: Globe,
       title: 'Global Analytics',
-      description: 'Worldwide business intelligence deployment and support'
-    }
-  ];
+      description: 'Worldwide business intelligence deployment and support',
+ }];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',

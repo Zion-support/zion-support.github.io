@@ -74,7 +74,8 @@ import {;
   Keyboard as KeyboardIcon, Mouse as MouseIcon,;
   Webcam as WebcamIcon, Speaker as SpeakerIcon;}
 } from 'lucide-react';
-const ITConsultingPage: React.FC = () => {
+const ITConsultingPage: React.FC = () => {;
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const itServices = [
@@ -397,9 +398,8 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
-    }
-  ];
+      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits',
+ }];
   const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -414,8 +414,9 @@ const ITConsultingPage: React.FC = () => {
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
   const filteredServices = itServices.filter(service => {
-;
-const ITConsultingPage: React.FC = () => {;
+;);
+
+  const ITConsultingPage: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const itServices = [;
@@ -738,9 +739,8 @@ const ITConsultingPage: React.FC = () => {;
       support: 'Compliance specialist and ongoing monitoring',;
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],;
       link: 'https://ziontechgroup.com/compliance-auditing',;
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';}
-    }
-  ];
+      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';},
+ }];
   const categories = [;
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },;
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },;
@@ -755,8 +755,9 @@ const ITConsultingPage: React.FC = () => {;
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
   const filteredServices = itServices.filter(service => {;
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;);
+
+  const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;}
   });

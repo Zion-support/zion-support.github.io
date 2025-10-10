@@ -5,7 +5,8 @@ import { Share2, BarChart3, Calendar, Users, Zap, Target, ArrowRight, Star, Chec
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AISocialMediaManagerPage: React.FC = () => {
+const AISocialMediaManagerPage: React.FC = () => {;
+
   const features = [
     {
       icon: Share2,
@@ -29,9 +30,8 @@ const AISocialMediaManagerPage: React.FC = () => {
       icon: Users,
       title: 'Community Management',
       description: 'AI-powered community management with automated responses and sentiment analysis',
-      benefits: ['Auto-responses', 'Sentiment monitoring', 'Crisis detection', 'Engagement optimization']
-    }
-  ];
+      benefits: ['Auto-responses', 'Sentiment monitoring', 'Crisis detection', 'Engagement optimization'],
+ }];
 
   const platforms = [
     { name: 'Facebook', icon: '📘', users: '2.9B', engagement: '+45%' },
@@ -85,9 +85,8 @@ const AISocialMediaManagerPage: React.FC = () => {
         'API access',
         'Advanced reporting'
       ],
-      popular: false
-    }
-  ];
+      popular: false,
+ }];
 
   const testimonials = [
     {
@@ -109,9 +108,8 @@ const AISocialMediaManagerPage: React.FC = () => {
       role: 'Social Media Manager',
       company: 'Creative Agency',
       content: 'Managing multiple client accounts is now effortless. The AI handles content creation while we focus on strategy.',
-      rating: 5
-    }
-  ];
+      rating: 5,
+ }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -275,8 +273,8 @@ const AISocialMediaManagerPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">,
+ {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

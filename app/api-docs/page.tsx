@@ -42,9 +42,9 @@ export default function APIDocsPage() {
   -d '{
     "image_url": "https://example.com/image.jpg",
     "features": ["objects", "faces", "text"]
-  }'`
-        }
-      ]
+  }'`,
+
+  }]
     },
     {
       title: 'Cloud Services',
@@ -67,9 +67,9 @@ export default function APIDocsPage() {
       "memory": "4GB",
       "instances": 3
     }
-  }'`
-        }
-      ]
+  }'`,
+
+  }]
     },
     {
       title: 'Data Analytics',
@@ -88,9 +88,9 @@ export default function APIDocsPage() {
     "dataset_id": "dataset_123",
     "operations": ["aggregate", "filter", "transform"],
     "output_format": "json"
-  }'`
-        }
-      ]
+  }'`,
+
+  }]
     }
   ];
   const filteredEndpoints = apiEndpoints.map(category => ({

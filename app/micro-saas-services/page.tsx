@@ -934,9 +934,9 @@ export const microSaasServices: MicroSaasService[] = [;
       yearly: 890,;
       enterprise: 299,;
       features: ['Unlimited students', 'Advanced AI features', 'Custom curriculum', 'Analytics dashboard'];}
-    }
-  }
-];
+    },
+
+    }];
 // Service categories for filtering and organization;
 export const serviceCategories = [;
   'All',;

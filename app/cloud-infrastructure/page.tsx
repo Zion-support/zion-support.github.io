@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react';
-const CloudInfrastructurePage: React.FC = () => {
+const CloudInfrastructurePage: React.FC = () => {;
+
   const features = [
     {
 icon: Shield,
@@ -22,9 +23,8 @@ icon: Shield,
     {
       icon: Globe,
       title: 'Global Deployment',
-      description: 'Worldwide cloud infrastructure deployment and support'
-    }
-  ];
+      description: 'Worldwide cloud infrastructure deployment and support',
+ }];
   const benefits = [
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',

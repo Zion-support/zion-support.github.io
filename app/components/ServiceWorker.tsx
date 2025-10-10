@@ -7,8 +7,6 @@ const ServiceWorker: React.FC = () => {
       // Register service worker
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered successfully:', registration);
-          
           // Handle service worker updates
           registration.addEventListener('updatefound', () => {
             const newWorker = registration.installing;
@@ -25,8 +23,7 @@ const ServiceWorker: React.FC = () => {
           });
         })
         .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
+          });
 
       // Listen for controller changes
       navigator.serviceWorker.addEventListener('controllerchange', () => {

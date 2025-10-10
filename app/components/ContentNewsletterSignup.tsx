@@ -24,7 +24,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     { icon: Zap, text: "Early access" }
   ],
   onSubscribe
-}) => {
+}) => {;
+
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -46,8 +47,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setIsSubscribed(true);
       setEmail('');
     } catch (error) {
-      console.error('Subscription error:', error);
-    } finally {
+      } finally {
       setIsSubmitting(false);
     }
   };

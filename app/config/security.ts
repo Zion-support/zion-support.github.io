@@ -85,8 +85,8 @@ export const validationPatterns = {;}
  * Sanitize user input;
  */;
 export function sanitizeInput(input: string): string {;
-  return input;
-    .replace(/[<>]/g, '') // Remove < and >;
+  return input;,
+ .replace(/[<>]/g, '') // Remove < and >;
     .replace(/javascript:/gi, '') // Remove javascript: protocol;
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim();}
@@ -113,8 +113,8 @@ export function generateSecureToken(length: number = 32): string {if (typeof win
     window.crypto.getRandomValues(array);}
   } else {;
     // Fallback for non-browser environments;
-    for (let i = 0; i < length; i++) {;
-      array[i] = Math.floor(Math.random() * 256);}
+    for (let i = 0; i < length; i++) {;,
+ array[i] = Math.floor(Math.random() * 256);}
     }
   }
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');

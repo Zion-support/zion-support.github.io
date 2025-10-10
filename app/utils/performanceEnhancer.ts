@@ -181,7 +181,8 @@ export const usePerformanceMonitor = (;) => {
   );
 };
 // React hook for performance monitoring;}
-export const usePerformanceMonitor = (componentName: string) => {}
+export const usePerformanceMonitor = (componentName: string) => {};
+
   const renderStartTime = useRef<number>(0);
   const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {}
@@ -232,9 +233,10 @@ export const lazyLoadImages = () => {}
   const images = document.querySelectorAll('img[data-src]');
   const imageObserver = new IntersectionObserver((entries) => {}
     entries.forEach((entry) => {}
-      if (entry.isIntersecting) {}
-        const img = entry.target as HTMLImageElement;
-        img['src'] = img.dataset['src'] || '';
+      if (entry.isIntersecting) {};
+
+  const img = entry.target as HTMLImageElement;,
+ img['src'] = img.dataset['src'] || '';
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
 // Image lazy loading utility;
@@ -312,8 +314,9 @@ export const optimizeScrollPerformance = () => {}
       value: number,;
     }
     const observer = new PerformanceObserver((list) => {}
-      for (const entry of list.getEntries()) {}
-        const layoutEntry = entry as LayoutShiftEntry;
+      for (const entry of list.getEntries()) {};
+
+  const layoutEntry = entry as LayoutShiftEntry;
         if (!layoutEntry.hadRecentInput) {}
           clsEntries.push(entry);
           clsValue += layoutEntry.value;
@@ -326,8 +329,9 @@ export const optimizeScrollPerformance = () => {}
       return clsValue;
     };
   };
-  const trackLCP = () => {}
-    const observer = new PerformanceObserver((list) => {}
+  const trackLCP = () => {};
+
+  const observer = new PerformanceObserver((list) => {}
       for (const entry of list.getEntries()) {}
         if (process.env['NODE_ENV'] === 'development') {}
           }
@@ -341,8 +345,9 @@ export const optimizeScrollPerformance = () => {}
       processingStart: number,;
     }
     const observer = new PerformanceObserver((list) => {}
-      for (const entry of list.getEntries()) {}
-        const fidEntry = entry as FirstInputEntry;
+      for (const entry of list.getEntries()) {};
+
+  const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {}
           }
@@ -362,8 +367,9 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
   };
   // Track Core Web Vitals;
   const trackCLS = () => {/* TODO: Fix JSX expression */}
-    }
-    const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+    };
+
+  const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
         }
       }
     });
@@ -381,8 +387,9 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
     return () => observer.disconnect();
   };
   const trackFID = () => {/* TODO: Fix JSX expression */}
-    }
-    const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+    };
+
+  const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
           }
       }
     });
@@ -490,7 +497,8 @@ export const initializePerformanceEnhancements = () => {}
 };
 // Memory usage monitoring;
 export const getMemoryUsage = () => {/* TODO: Fix JSX expression */}
-  }
+  };
+
   const memory = (performance as unknown as {/* TODO: Fix JSX expression */});
   t: number} }).memory;
   return {/* TODO: Fix JSX expression */}

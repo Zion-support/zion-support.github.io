@@ -61,28 +61,29 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getSecurityHeaders();
   customConfig?: Partial<SecurityHeadersConfig>;
 ): Record<string, string> {}
-  const config = { ...defaultSecurityHeaders, ...customConfig }
+  const config = { ...defaultSecurityHeaders, ...customConfig };
+
   const headers: Record<string, string> = {}
     'X-XSS-Protection': '1; mode=block',;
     'X-DNS-Prefetch-Control': 'on'}
   }
-  if (config.contentSecurityPolicy) {}
-    headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
+  if (config.contentSecurityPolicy) {},
+ headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
   }
-  if (config.strictTransportSecurity) {}
-    headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
+  if (config.strictTransportSecurity) {},
+ headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
   }
-  if (config.xFrameOptions) {}
-    headers['X-Frame-Options'] = config.xFrameOptions;}
+  if (config.xFrameOptions) {},
+ headers['X-Frame-Options'] = config.xFrameOptions;}
   }
-  if (config.xContentTypeOptions) {}
-    headers['X-Content-Type-Options'] = config.xContentTypeOptions;}
+  if (config.xContentTypeOptions) {},
+ headers['X-Content-Type-Options'] = config.xContentTypeOptions;}
   }
-  if (config.referrerPolicy) {}
-    headers['Referrer-Policy'] = config.referrerPolicy;}
+  if (config.referrerPolicy) {},
+ headers['Referrer-Policy'] = config.referrerPolicy;}
   }
-  if (config.permissionsPolicy) {}
-    headers['Permissions-Policy'] = config.permissionsPolicy;}
+  if (config.permissionsPolicy) {},
+ headers['Permissions-Policy'] = config.permissionsPolicy;}
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 }
 export const,;

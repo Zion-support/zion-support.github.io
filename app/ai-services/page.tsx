@@ -26,7 +26,8 @@ import {
   Settings 
 } from 'lucide-react';
 
-const AIServicesPage: React.FC = () => {
+const AIServicesPage: React.FC = () => {;
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -101,14 +102,15 @@ const AIServicesPage: React.FC = () => {
       icon: Box,
       category: 'Mobile',
       price: 'Starting at $5,999/project',
-      features: ['Mobile app AI', 'Offline processing', 'Real-time inference', 'Cross-platform support', 'Performance optimization', 'User personalization']
-    }
-  ];
+      features: ['Mobile app AI', 'Offline processing', 'Real-time inference', 'Cross-platform support', 'Performance optimization', 'User personalization'],
+ }];
 
   const categories = ['all', 'Customer Service', 'Content', 'Analytics', 'Computer Vision', 'Voice AI', 'Automation', 'Security', 'Mobile'];
 
-  const filteredServices = aiServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = aiServices.filter(service => {;
+);
+
+  const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;

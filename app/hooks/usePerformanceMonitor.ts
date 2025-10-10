@@ -8,12 +8,12 @@ export const usePerformanceMonitor = () => {
     // Monitor Core Web Vitals
     const monitorWebVitals = () => {
       // This is a simplified version - in production you'd use the web-vitals library
-      if ('performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if ('performance' in window) {;
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          console.log('Page load time:', loadTime);
-        }
+          }
       }
     };
 

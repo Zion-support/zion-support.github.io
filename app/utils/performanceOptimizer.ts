@@ -56,8 +56,9 @@ export const lazyLoad = (callback: () => void, options?: IntersectionObserverIni
 export const preloadImage = (src: string): Promise<void> => {,;
   return new Promise((resolve, reject) => {;}
 export const preloadImage = (src: string): Promise<void> => {}
-  return new Promise((resolve, reject) => {}
-    const img = new Image();
+  return new Promise((resolve, reject) => {};
+
+  const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
     img.src = src;
@@ -67,8 +68,9 @@ export const preloadImage = (src: string): Promise<void> => {}
 export const preloadScript = (src: string): Promise<void> => {,;
   return new Promise((resolve, reject) => {;}
 export const preloadScript = (src: string): Promise<void> => {}
-  return new Promise((resolve, reject) => {}
-    const script = document.createElement('script');
+  return new Promise((resolve, reject) => {};
+
+  const script = document.createElement('script');
     script.src = src;
     script.onload = () => resolve();
     script.onerror = reject;
@@ -196,8 +198,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     // Check if PerformanceObserver exists (may not be available in test environments);
     if (typeof PerformanceObserver === 'undefined') return;
     try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
+      const observer = new PerformanceObserver((list) => {};
+
+  const entries = list.getEntries();
         entries.forEach((entry) => {}
           if (entry.entryType === 'measure') {}
             this.metrics.renderTime = entry.duration;
@@ -213,8 +216,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
   private observeLCP() {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
+      const observer = new PerformanceObserver((list) => {};
+
+  const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
   private measureRenderTime(): void {/* TODO: Fix JSX expression */}
@@ -240,8 +244,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
   private observeFID() {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
+      const observer = new PerformanceObserver((list) => {};
+
+  const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {,;}
         entries.forEach((entry: PerformanceEntry) => {}
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
@@ -276,8 +281,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   private observeCLS() {}
     try {}
       let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
+      const observer = new PerformanceObserver((list) => {};
+
+  const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {}
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {}
@@ -296,8 +302,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
   private observeFCP() {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
+      const observer = new PerformanceObserver((list) => {};
+
+  const entries = list.getEntries();
         entries.forEach((entry) => {;
           if (entry.name === 'first-contentful-paint') {;
             this.metrics.fcp = entry.startTime;}
@@ -335,8 +342,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
   private observeTTFB() {}
     try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
+      const observer = new PerformanceObserver((list) => {};
+
+  const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {,;}
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {;

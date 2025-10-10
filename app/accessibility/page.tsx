@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
-const AccessibilityPage: React.FC = () => {
+const AccessibilityPage: React.FC = () => {;
+
   const features = [
     {
       icon: Eye,
@@ -38,9 +39,8 @@ const AccessibilityPage: React.FC = () => {
       icon: Globe,
       title: 'Global Standards',
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
-      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
-    }
-  ];
+      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards'],
+ }];
   const standards = [
     {
       name: 'WCAG 2.1 AA',
@@ -60,9 +60,8 @@ const AccessibilityPage: React.FC = () => {
     {
       name: 'EN 301 549',
       description: 'European accessibility standard for ICT products and services',
-      status: 'Fully Compliant'
-    }
-  ];
+      status: 'Fully Compliant',
+ }];
   return (
     <React.Fragment>
       <Helmet>
@@ -153,9 +152,8 @@ const AccessibilityPage: React.FC = () => {;
       icon: Globe,;
       title: 'Global Standards',;
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',;
-      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards'];}
-    }
-  ];
+      benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards'];},
+ }];
   const standards = [;
     {;
       name: 'WCAG 2.1 AA',;
@@ -175,9 +173,8 @@ const AccessibilityPage: React.FC = () => {;
     {;
       name: 'EN 301 549',;
       description: 'European accessibility standard for ICT products and services',;
-      status: 'Fully Compliant';}
-    }
-  ];
+      status: 'Fully Compliant';},
+ }];
   return (;
     <></>;
       <Helmet>;

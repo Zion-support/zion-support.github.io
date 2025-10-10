@@ -79,8 +79,8 @@ export const generateMetaTags = (dat,;
   t: data.twitterTitle || data.title },;
     {/* TODO: Fix JSX expression */}
     },;
-    {/* TODO: Fix JSX expression */}
-    }];
+    {/* TODO: Fix JSX expression */},
+ }];
   return tags;
 };
 // SEO Config interface;
@@ -380,8 +380,8 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Helper method to update meta tags;
   private updateMetaTag(nameOrProperty: string, content: string) {,;
     if (typeof document === 'undefined') return;}
-    let meta = document.querySelector(});
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]);
+    let meta = document.querySelector(});,
+ `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]);
     ) as HTMLMetaElement;
     if (!meta) {;
       meta = document.createElement('meta');
@@ -403,8 +403,8 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Helper method to update meta tags;
   private updateMetaTag(nameOrProperty: string, content: string) {}
     if (typeof document === 'undefined') return;
-    let meta = document.querySelector(});
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"];
+    let meta = document.querySelector(});,
+ `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"];
     ) as HTMLMetaElement;
     if (!meta) {}
       meta = document.createElement('meta');
@@ -428,8 +428,8 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   // Helper method to update meta tags;
   private updateMetaTag(nameOrPropert,;
   y: string, conten);
-  t: string) {/* TODO: Fix JSX expression */}
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`;
+  t: string) {/* TODO: Fix JSX expression */},
+ `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`;
     ) as HTMLMetaElement;
     if (!meta) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
@@ -502,8 +502,9 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
       description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',;}
     return {}
       title: document.title,;
-      description:;
-        document.querySelector('meta[name="description"]')?.getAttribute('content') || '',;
+      description:;,
+
+      document.querySelector('meta[name="description"]')?.getAttribute('content') || '',;
       keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',;
       canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || ''}
     }
@@ -673,7 +674,8 @@ export const generateSitemapData = useCallback((...args) => {}
   }
 }
 // Generate robots.txt content;
-export const generateRobotsTxt = useCallback((...args) => {`}
+export const generateRobotsTxt = useCallback((...args) => {`};
+
   const disallowRules = disallowPaths.map(path => `Disallow: ${path}`).join('\n');
   return `User-agent: *,;
 ${disallowRules}

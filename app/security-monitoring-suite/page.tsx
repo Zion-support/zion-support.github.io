@@ -24,7 +24,8 @@ import {;
   Target,;
   Monitor;}
 } from 'lucide-react';
-const SecurityMonitoringSuitePage: React.FC = () => {
+const SecurityMonitoringSuitePage: React.FC = () => {;
+
   const features = [
     {
       icon: Monitor,
@@ -44,9 +45,8 @@ const SecurityMonitoringSuitePage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automated Response',
-      description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
-    }
-  ];
+      description: 'Automated incident response and threat mitigation to protect your systems 24/7.',
+ }];
   const benefits = [
     '24/7 security monitoring and protection',
     'Real-time threat detection and alerts',
@@ -189,9 +189,8 @@ const SecurityMonitoringSuitePage: React.FC = () => {;
     {;
       icon: Zap,;
       title: 'Automated Response',;
-      description: 'Automated incident response and threat mitigation to protect your systems 24/7.';}
-    }
-  ];
+      description: 'Automated incident response and threat mitigation to protect your systems 24/7.';},
+ }];
   const benefits = [;
     '24/7 security monitoring and protection',;
     'Real-time threat detection and alerts',;

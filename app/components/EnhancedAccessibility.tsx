@@ -9,7 +9,8 @@ interface AccessibilitySettings {
   screenReader: boolean;
 }
 
-const EnhancedAccessibility: React.FC = () => {
+const EnhancedAccessibility: React.FC = () => {;
+
   const { trackEvent } = useAnalytics();
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -23,8 +24,9 @@ const EnhancedAccessibility: React.FC = () => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Add ARIA landmarks
-  const addLandmarks = useCallback(() => {
-    const main = document.querySelector('main');
+  const addLandmarks = useCallback(() => {;
+
+  const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {
       main.setAttribute('role', 'main');
     }
@@ -47,8 +49,9 @@ const EnhancedAccessibility: React.FC = () => {
 
   // Enhance focus management
   const enhanceFocusManagement = useCallback(() => {
-    // Add focus indicators
-    const style = document.createElement('style');
+    // Add focus indicators;
+
+  const style = document.createElement('style');
     style.textContent = `
       *:focus {
         outline: 2px solid #06b6d4 !important;
@@ -63,8 +66,9 @@ const EnhancedAccessibility: React.FC = () => {
 
     // Add focus trap for modals
     const modals = document.querySelectorAll('[role="dialog"]');
-    modals.forEach(modal => {
-      const focusableElements = modal.querySelectorAll(
+    modals.forEach(modal => {);
+
+  const focusableElements = modal.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       );
       const firstElement = focusableElements[0] as HTMLElement;
@@ -94,8 +98,9 @@ const EnhancedAccessibility: React.FC = () => {
   const addKeyboardNavigation = useCallback(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
-      if (e.key === 'Tab' && e.ctrlKey && e.shiftKey) {
-        const main = document.querySelector('main');
+      if (e.key === 'Tab' && e.ctrlKey && e.shiftKey) {;
+
+  const main = document.querySelector('main');
         if (main) {
           (main as HTMLElement).focus();
           e.preventDefault();
@@ -117,8 +122,9 @@ const EnhancedAccessibility: React.FC = () => {
   }, []);
 
   // Apply accessibility styles
-  const applyAccessibilityStyles = useCallback(() => {
-    const root = document.documentElement;
+  const applyAccessibilityStyles = useCallback(() => {;
+
+  const root = document.documentElement;
     
     if (settings.highContrast) {
       root.classList.add('high-contrast');

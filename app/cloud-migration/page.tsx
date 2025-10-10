@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const CloudMigrationPage: React.FC = () => {
+const CloudMigrationPage: React.FC = () => {;
+
   const features = [
     {
       icon: Shield,
@@ -22,9 +23,8 @@ icon: Zap,
     {
       icon: Globe,
       title: 'Multi-Cloud Support',
-      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
-    }
-  ];
+      description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms',
+ }];
   const benefits = [
     'Advanced cloud migration technology',
     'Real-time migration monitoring',

@@ -14,7 +14,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true
-}) => {
+}) => {;
+
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizations, setOptimizations] = useState<string[]>([]);
   const [performanceScore, setPerformanceScore] = useState<number | null>(null);
@@ -31,8 +32,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     });
   }, [enableImageOptimization]);
   const optimizeMemory = useCallback(() => {
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
+    if ('memory' in performance) {;
+
+  const memory = (performance as any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if (window.gc) {
@@ -118,8 +120,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     // Preload critical resources
     if (enablePreloading && typeof window !== 'undefined') {
-      // Preload critical fonts
-      const fontPreload = document.createElement('link');
+      // Preload critical fonts;
+
+  const fontPreload = document.createElement('link');
       fontPreload.rel = 'preload';
       fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontPreload.as = 'style';
@@ -129,8 +132,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
+      criticalImages.forEach(src => {);
+
+  const link = document.createElement('link');
         link.rel = 'preload';
         link.href = src;
         link.as = 'image';
@@ -155,8 +159,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
       const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+          if (entry.isIntersecting) {;
+
+  const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
               img.removeAttribute('data-src');

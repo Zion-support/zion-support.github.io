@@ -31,8 +31,8 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   sanitizeInput(input: string): string {,;
     return input;}
   sanitizeInput(input: string): string {}
-    return input;
-      .replace(/[<>{]/g, '');
+    return input;,
+ .replace(/[<>{]/g, '');
       .replace(/javascript:/gi, '');
       .replace(/on\w+=/gi, '');}
       .trim();}

@@ -4,7 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
-const EdgeComputingPage: React.FC = () => {
+const EdgeComputingPage: React.FC = () => {;
+
   const features = [
     {
       icon: Cpu,
@@ -40,9 +41,8 @@ const EdgeComputingPage: React.FC = () => {
       icon: Server,
       title: 'Edge Infrastructure',
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',
-      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance']
-    }
-  ];
+      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance'],
+ }];
   const services = [
     {
       icon: '⚡',
@@ -62,9 +62,8 @@ const EdgeComputingPage: React.FC = () => {
     {
       icon: '📱',
       title: 'Mobile Edge',
-      description: 'Mobile edge computing for 5G and mobile applications'
-    }
-  ];
+      description: 'Mobile edge computing for 5G and mobile applications',
+ }];
   const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
@@ -102,9 +101,8 @@ const EdgeComputingPage: React.FC = () => {
     {
       title: 'Gaming',
       description: 'Cloud gaming with minimal latency',
-      icon: '🎮'
-    }
-  ];
+      icon: '🎮',
+ }];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -197,9 +195,8 @@ const EdgeComputingPage: React.FC = () => {;
       icon: Server,;
       title: 'Edge Infrastructure',;
       description: 'Robust infrastructure designed for edge computing requirements and scalability.',;
-      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance'];}
-    }
-  ];
+      benefits: ['High availability', 'Auto-scaling', 'Load balancing', 'Fault tolerance'];},
+ }];
   const services = [;
     {;
       icon: '⚡',;
@@ -219,9 +216,8 @@ const EdgeComputingPage: React.FC = () => {;
     {;
       icon: '📱',;
       title: 'Mobile Edge',;
-      description: 'Mobile edge computing for 5G and mobile applications';}
-    }
-  ];
+      description: 'Mobile edge computing for 5G and mobile applications';},
+ }];
   const benefits = [;
     'Ultra-Low Latency',;
     'Reduced Bandwidth Costs',;
@@ -259,9 +255,8 @@ const EdgeComputingPage: React.FC = () => {;
     {;
       title: 'Gaming',;
       description: 'Cloud gaming with minimal latency',;
-      icon: '🎮';}
-    }
-  ];
+      icon: '🎮';},
+ }];
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>;
       <Helmet>;

@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
-const AIRecruitmentAssistantPage: React.FC = () => {
+const AIRecruitmentAssistantPage: React.FC = () => {;
+
   const features = [
     {
       icon: Search,
@@ -32,9 +33,8 @@ const AIRecruitmentAssistantPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automated Screening',
-      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
-    }
-  ];
+      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.',
+ }];
   return (
     <React.Fragment>
       <Helmet>

@@ -18,7 +18,8 @@ import {
   Brain
 } from 'lucide-react';
 
-const CareersPage: React.FC = () => {
+const CareersPage: React.FC = () => {;
+
   const jobOpenings = [
     {
       id: 1,
@@ -114,9 +115,9 @@ const CareersPage: React.FC = () => {
         'Experience with AI/ML products',
         'Strong analytical and communication skills',
         'MBA preferred'
-      ]
-    }
-  ];
+      ],
+
+      }];
 
   const benefits = [
     {
@@ -147,9 +148,8 @@ const CareersPage: React.FC = () => {
     {
       icon: <Star className="w-8 h-8 text-orange-500" />,
       title: 'Recognition & Rewards',
-      description: 'Performance bonuses, stock options, and recognition programs'
-    }
-  ];
+      description: 'Performance bonuses, stock options, and recognition programs',
+ }];
 
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-600" />, value: '50+', label: 'Team Members' },

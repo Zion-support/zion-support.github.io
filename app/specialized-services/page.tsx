@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const PagePage: React.FC = () => {
+const PagePage: React.FC = () => {;
+
   const features = [
     {
             </div>
@@ -166,7 +167,8 @@ const PagePage: React.FC = () => {;
 export default PagePage;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const SpecializedServicesPage: React.FC = () => {
+const SpecializedServicesPage: React.FC = () => {;
+
   const features = [
     {
       icon: Brain,
@@ -186,9 +188,8 @@ const SpecializedServicesPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Scalability',
-      description: 'Scale your operations worldwide with our robust infrastructure'
-    }
-  ];
+      description: 'Scale your operations worldwide with our robust infrastructure',
+ }];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce operational costs by 30%',

@@ -1,7 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
-const ContentStatistics: React.FC = () => {
+const ContentStatistics: React.FC = () => {;
+
   const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,
@@ -65,9 +66,8 @@ const ContentStatistics: React.FC = () => {
       label: 'Uptime Guarantee',
       suffix: '%',
       color: 'text-red-400',
-      description: 'Service reliability'
-    }
-  ];
+      description: 'Service reliability',
+ }];
   const achievements = [
     {
       icon: Brain,
@@ -77,7 +77,8 @@ const ContentStatistics: React.FC = () => {
     {
       icon: Shield,
       title: 'Security Excellence',
-      description: 'Bank-level security for all our solutions'
+      description: 'Bank-level security for all our solutions';
+
   const features = [
     {
       icon: Brain,
@@ -102,9 +103,8 @@ const ContentStatistics: React.FC = () => {
       title: 'Global Reach',
 description: 'Worldwide deployment and support for international businesses',
       description: 'Worldwide deployment and support for international businesses',
-      stats: ['50+ Countries', '15+ Languages', '24/7 Support']
-    }
-  ];
+      stats: ['50+ Countries', '15+ Languages', '24/7 Support'],
+ }];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -132,20 +132,21 @@ description: 'Worldwide deployment and support for international businesses',
       icon: Rocket,
       title: 'Growth Rate',
       description: 'Year-over-year business growth',
-      value: '300%'
-    }
-  ];
+      value: '300%',
+ }];
   useEffect(() => {
     const duration = 3000; // 3 seconds
     const steps = 60;
     const stepDuration = duration / steps;
-    const timers = Object.keys(targetCounters).map((key) => {
-      const target = targetCounters[key as keyof typeof targetCounters];
+    const timers = Object.keys(targetCounters).map((key) => {;
+
+  const target = targetCounters[key as keyof typeof targetCounters];
       const duration = 2000; // 2 seconds
       const increment = target / (duration / 16); // 60fps
       return setInterval(() => {
-setCounters(prev => {
-          const current = prev[key as keyof typeof prev];
+setCounters(prev => {);
+
+  const current = prev[key as keyof typeof prev];
           if (current < target) {
             return {
               ...prev,

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
-const AIAnalyticsDashboardPage: React.FC = () => {
+const AIAnalyticsDashboardPage: React.FC = () => {;
+
   const features = [
     {
       icon: BarChart,
@@ -31,9 +32,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     {
       icon: Target,
       title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.'
-    }
-  ];
+      description: 'Monitor KPIs and business objectives with automated alerts.',
+ }];
   const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
@@ -231,9 +231,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {;
     {;
       icon: Target,;
       title: 'Goal Tracking',;
-      description: 'Monitor KPIs and business objectives with automated alerts.';}
-    }
-  ];
+      description: 'Monitor KPIs and business objectives with automated alerts.';},
+ }];
   const benefits = [;
     'Real-time data visualization and reporting',;
     'AI-powered predictive analytics',;

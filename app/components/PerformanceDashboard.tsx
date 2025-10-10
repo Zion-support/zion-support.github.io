@@ -11,7 +11,8 @@ interface PerformanceMetrics {
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 }
-const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
+const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {;
+
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -21,10 +22,12 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
   useEffect(() => {
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
+    const updateMetrics = () => {;
+
+  const navigation = performance.getEntriesByType(
+        'navigation',
+
+        )[0] as PerformanceNavigationTiming;
       const loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
@@ -42,8 +45,9 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
       if ('requestAnimationFrame' in window) {
         let lastTime = performance.now();
         let frameCount = 0;
-        const measureFPS = () => {
-          const currentTime = performance.now();
+        const measureFPS = () => {;
+
+  const currentTime = performance.now();
           frameCount++;
           if (currentTime - lastTime >= 1000) {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
@@ -73,8 +77,9 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
       return () => clearInterval(interval);
     }
   }, [isMonitoring, onMetricsUpdate]);
-  const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {
-    const newAlerts: string[] = [];
+  const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {;
+
+  const newAlerts: string[] = [];
     if (currentMetrics.loadTime > 3000) {
       newAlerts.push('Load time is above 3 seconds');
     }

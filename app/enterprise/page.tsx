@@ -4,7 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
-const EnterprisePage: React.FC = () => {
+const EnterprisePage: React.FC = () => {;
+
   const features = [
     {
       icon: Shield,
@@ -40,9 +41,8 @@ const EnterprisePage: React.FC = () => {
       icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
-    }
-  ];
+      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'],
+ }];
   const solutions = [
     {
       title: 'Enterprise Resource Planning',
@@ -66,9 +66,8 @@ const EnterprisePage: React.FC = () => {
       title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
-    }
-  ];
+      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'],
+ }];
   const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -156,9 +155,8 @@ const EnterprisePage: React.FC = () => {;
       icon: Settings,;
       title: 'System Integration',;
       description: 'Seamless integration with existing enterprise systems and workflows.',;
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];}
-    }
-  ];
+      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'];},
+ }];
   const solutions = [;
     {;
       title: 'Enterprise Resource Planning',;
@@ -182,9 +180,8 @@ const EnterprisePage: React.FC = () => {;
       title: 'Workflow Automation',;
       description: 'Automate complex business processes to improve efficiency and reduce errors.',;
       icon: Zap,;
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'];}
-    }
-  ];
+      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'];},
+ }];
   const benefits = [;
     'Reduce operational costs by 30%',;
     'Improve productivity by 50%',;

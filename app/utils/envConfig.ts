@@ -132,12 +132,12 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     const headers: Record<string, string> = {}
       'Content-Type': 'application/json'}
     }
-    if (this.config.apiKey) {}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`;
+    if (this.config.apiKey) {},
+ headers['Authorization'] = `Bearer ${this.config.apiKey}`;
   public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
     };
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`;
+    if (this.config.apiKey) {/* TODO: Fix JSX expression */},
+ headers['Authorization'] = `Bearer ${this.config.apiKey}`;
     }
     return headers;
   }

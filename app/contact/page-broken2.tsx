@@ -11,7 +11,8 @@ import {;
   Send,;
   CheckCircle;}
 } from 'lucide-react';
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC = () => {;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -111,9 +112,8 @@ phone: '',;
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time'
-    }
-  ];
+      description: 'Eastern Time',
+ }];
   return (
     <React.Fragment>
       <Helmet>
@@ -272,9 +272,8 @@ phone: '',;
       icon: Clock,;
       title: 'Business Hours',;
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',;
-      description: 'Eastern Time';}
-    }
-  ];
+      description: 'Eastern Time';},
+ }];
   return (;
     <></>;
       <Helmet>;

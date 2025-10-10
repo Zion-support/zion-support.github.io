@@ -9,9 +9,8 @@ export const preloadCriticalResources = useCallback((...args) => {}
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
   const fontPreloads = [;
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-    'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap';
-  ];
+    'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';,
+ 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap';];
   fontPreloads.forEach(href => {);}
   fontPreloads.forEach(href => {)}
     const link = document.createElement('link');
@@ -86,13 +85,14 @@ export const optimizeImages = useCallback((...args) => {}
   if ('IntersectionObserver' in window) {}
     const imageObserver = new IntersectionObserver((entries) => {}
       entries.forEach(entry => {)}
-        if (entry.isIntersecting) {}
-          const img = entry.target as HTMLImageElement;
-          if (img.dataset['src']) {}
-            img['src'] = img.dataset['src'];
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img)}
-  ];
+        if (entry.isIntersecting) {};
+
+  const img = entry.target as HTMLImageElement;
+          if (img.dataset['src']) {},
+ img['src'] = img.dataset['src'];
+            img.removeAttribute('data-src');,
+
+            imageObserver.unobserve(img)}];
   criticalImages.forEach(src => {/* TODO: Fix JSX expression */});
   });
 }
@@ -147,8 +147,8 @@ const loadAnalytics = useCallback((...args) => {;
 const loadAnalytics = useCallback((...args) => {}
   // Load Google Analytics after page load;
   const gaScript = document.createElement('script');
-  gaScript.async = true;
-  gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',;
+  gaScript.async = true;,
+ gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',;
   document.head.appendChild(gaScript)}
 export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
   });

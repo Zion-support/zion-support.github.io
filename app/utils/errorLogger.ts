@@ -93,12 +93,13 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   private logToConsole(entry: ErrorLogEntry): void {,;
     const styles: Record<ErrorSeverity, string> = {;}
   private logToConsole(entry: ErrorLogEntry): void {}
-    const styles: Record<ErrorSeverity, string> = {}
-      [ErrorSeverity.LOW]: 'color: #4ade80',;
+    const styles: Record<ErrorSeverity, string> = {},
+ [ErrorSeverity.LOW]: 'color: #4ade80',;
       [ErrorSeverity.MEDIUM]: 'color: #fbbf24',;
       [ErrorSeverity.HIGH]: 'color: #fb923 c',;
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'}
-    }
+    },
+
     }] ${entry.message}`, styles[entry.severity]);
     if (entry.error) {}
       }

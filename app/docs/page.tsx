@@ -56,9 +56,9 @@ export default function DocsPage() {;
         { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },;
         { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },;
         { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
-      ];
-    }
-  ];
+      ];,
+
+      }];
   const popularDocs = [
     { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
     { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },

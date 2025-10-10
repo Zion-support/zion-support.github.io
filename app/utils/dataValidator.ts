@@ -244,8 +244,8 @@ export function validateForm<T extends Record<string, unknown>>(;
         fieldErrors.push(rule.message);}
       }
     }
-    if (fieldErrors.length > 0) {;
-      errors[field] = fieldErrors;
+    if (fieldErrors.length > 0) {;,
+ errors[field] = fieldErrors;
       // Track validation errors;
       errorTracking.trackError(;}
         new ValidationError(`Validation failed for ${field}`, field, fieldErrors),;

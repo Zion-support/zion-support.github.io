@@ -24,7 +24,8 @@ import {;
   Target,;
   Eye;}
 } from 'lucide-react';
-const PenetrationTestingPage: React.FC = () => {
+const PenetrationTestingPage: React.FC = () => {;
+
   const features = [
     {
       icon: Search,
@@ -44,9 +45,8 @@ const PenetrationTestingPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Expert Security Analysis',
-      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
-    }
-  ];
+      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.',
+ }];
   const benefits = [
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',
@@ -190,9 +190,8 @@ const PenetrationTestingPage: React.FC = () => {;
     {;
       icon: Zap,;
       title: 'Expert Security Analysis',;
-      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.';}
-    }
-  ];
+      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.';},
+ }];
   const benefits = [;
     'Identify security vulnerabilities before attackers do',;
     'Comply with industry regulations and standards',;

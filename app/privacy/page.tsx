@@ -20,9 +20,8 @@ export default function PrivacyPage() {
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, operating system, cookies',
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']
-    }
-  ];
+      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'],
+ }];
   const purposes = [
     {
       title: 'Service Provision',
@@ -42,9 +41,8 @@ export default function PrivacyPage() {
     {
       title: 'Security',
       icon: Shield,
-      description: 'To protect against fraud and abuse'
-    }
-  ];
+      description: 'To protect against fraud and abuse',
+ }];
   const rights = [
     {
       title: 'Access',
@@ -64,9 +62,8 @@ export default function PrivacyPage() {
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database
-    }
-  ];
+      icon: Database,
+ }];
   return (
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
@@ -116,9 +113,8 @@ export default function PrivacyPage() {;
       category: 'Technical Data',;
       icon: Server,;
       description: 'IP address, browser type, operating system, cookies',;
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];}
-    }
-  ];
+      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels'];},
+ }];
   const purposes = [;
     {;
       title: 'Service Provision',;
@@ -138,9 +134,8 @@ export default function PrivacyPage() {;
     {;
       title: 'Security',;
       icon: Shield,;
-      description: 'To protect against fraud and abuse';}
-    }
-  ];
+      description: 'To protect against fraud and abuse';},
+ }];
   const rights = [;
     {;
       title: 'Access',;
@@ -160,9 +155,8 @@ export default function PrivacyPage() {;
     {;
       title: 'Portability',;
       description: 'Receive your data in a structured format',;
-      icon: Database;}
-    }
-  ];
+      icon: Database;},
+ }];
   return (;
     <div className="min-h-screen bg-white"></div>;
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>;

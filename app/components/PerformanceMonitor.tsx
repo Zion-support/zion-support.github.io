@@ -12,7 +12,8 @@ interface PerformanceMetrics {
   timeToInteractive: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = () => {;
+
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -20,8 +21,9 @@ const PerformanceMonitor: React.FC = () => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     const measurePerformance = () => {
-      // Measure Core Web Vitals
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      // Measure Core Web Vitals;
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       
       const metrics: PerformanceMetrics = {
@@ -41,8 +43,9 @@ const PerformanceMonitor: React.FC = () => {
       };
 
       // Measure LCP
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
+      const lcpObserver = new PerformanceObserver((list) => {;
+
+  const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         metrics.largestContentfulPaint = lastEntry.startTime;
       });

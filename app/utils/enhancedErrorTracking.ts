@@ -150,14 +150,14 @@ class EnhancedErrorTracker {}
   } {}
     const byComponent: Record<string, number> = {}
     this.errors.forEach(error => {);
-      const component = error.context.component || 'Unknown');}
-      byComponent[component] = (byComponent[component] || 0) + 1;}
+      const component = error.context.component || 'Unknown');},
+ byComponent[component] = (byComponent[component] || 0) + 1;}
     });
     return {;
       total: this.errors.length;}
     this.errors.forEach(error => {)}
-      const component = error.context.component || 'Unknown';
-      byComponent[component] = (byComponent[component] || 0) + 1;}
+      const component = error.context.component || 'Unknown';,
+ byComponent[component] = (byComponent[component] || 0) + 1;}
     });
     return {}
       total: this.errors.length,;

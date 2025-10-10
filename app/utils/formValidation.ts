@@ -162,8 +162,9 @@ export const validationRules = {/* TODO: Fix JSX expression */}
     validate: (value: string) => {,;
       const hasUpperCase = /[A-Z]/.test(value),;}
       const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string> => ({}
-    validate: (value: string) => {}
-      const hasUpperCase = /[A-Z]/.test(value);
+    validate: (value: string) => {};
+
+  const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);}
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{]/.test(value);
@@ -261,8 +262,8 @@ export function validateForm<T extends Record<string, unknown>>(;
   const results = {} as Record<keyof T, ValidationResult>;
   for (const fieldName in validationSchema) {}
     const value = formData[fieldName];
-    const rules = validationSchema[fieldName];
-    results[fieldName] = validateField(value, rules);}
+    const rules = validationSchema[fieldName];,
+ results[fieldName] = validateField(value, rules);}
 export function validateForm<T extends Record<string, unknown>>(formDat,;
   a: T,;
   validationSchem,;
@@ -293,8 +294,8 @@ export function getFormErrors<T extends Record<string, unknown>>(;
   const errors = {} as Record<keyof T, string[]>;
   for (const fieldName in validationResults) {}
     const result = validationResults[fieldName];
-    if (!result.valid) {}
-      errors[fieldName] = result.errors;}
+    if (!result.valid) {},
+ errors[fieldName] = result.errors;}
 export function getFormErrors<T extends Record<string, unknown>>(validationResult,;
   s: Record<keyof T, ValidationResult></keyof>);
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
@@ -313,9 +314,10 @@ export function sanitizeInput(input: string): string {,;
     .replace(/[<>{]/g, '') // Remove potential HTML tags;}
 export function sanitizeInput(input: string): string {}
   return input;
-    .trim()}</>;
-    .replace(/[<>{]/g, '') // Remove potential HTML tags;}
-    .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
+    .trim()}</>;,
+
+    .replace(/[<>{]/g, '') // Remove potential HTML tags;},
+ .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
 export function sanitizeInput(inpu);
   t: string): string {/* TODO: Fix JSX expression */}
 }

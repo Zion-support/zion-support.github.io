@@ -4,7 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-const FinancialITPage: React.FC = () => {
+const FinancialITPage: React.FC = () => {;
+
   const features = [
     {
       icon: DollarSign,
@@ -40,9 +41,8 @@ const FinancialITPage: React.FC = () => {
       icon: BarChart,
       title: 'Financial Analytics',
       description: 'Comprehensive analytics and reporting for financial operations and compliance.',
-      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
-    }
-  ];
+      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment'],
+ }];
   const services = [
     {
       icon: '🏦',
@@ -62,9 +62,8 @@ const FinancialITPage: React.FC = () => {
     {
       icon: '🔒',
       title: 'Security Services',
-      description: 'Cybersecurity and data protection solutions'
-    }
-  ];
+      description: 'Cybersecurity and data protection solutions',
+ }];
   const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
@@ -165,9 +164,8 @@ const FinancialITPage: React.FC = () => {;
       icon: BarChart,;
       title: 'Financial Analytics',;
       description: 'Comprehensive analytics and reporting for financial operations and compliance.',;
-      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment'];}
-    }
-  ];
+      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment'];},
+ }];
   const services = [;
     {;
       icon: '🏦',;
@@ -187,9 +185,8 @@ const FinancialITPage: React.FC = () => {;
     {;
       icon: '🔒',;
       title: 'Security Services',;
-      description: 'Cybersecurity and data protection solutions';}
-    }
-  ];
+      description: 'Cybersecurity and data protection solutions';},
+ }];
   const benefits = [;
     'SOX Compliance Ready',;
     'Bank-level Security',;

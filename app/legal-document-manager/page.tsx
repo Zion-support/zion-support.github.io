@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FileText, Search, Shield, Zap, BarChart, CheckCircle } from 'lucide-react';
-const LegalDocumentManagerPage: React.FC = () => {
+const LegalDocumentManagerPage: React.FC = () => {;
+
   const features = [
     { icon: FileText, title: 'Document Management', description: 'Organized storage and management of legal documents with smart categorization.' },
     { icon: Search, title: 'AI Document Search', description: 'Powerful AI-powered search across all legal documents and contracts.' },

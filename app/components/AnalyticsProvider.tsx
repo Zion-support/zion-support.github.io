@@ -8,7 +8,8 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const useAnalytics = () => {
+export const useAnalytics = () => {;
+
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
@@ -23,8 +24,9 @@ interface AnalyticsProviderProps {
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics if available
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, targetId: string, config?: any) => void }).gtag;
+    if (typeof window !== 'undefined' && 'gtag' in window) {;
+
+  const gtag = (window as { gtag: (command: string, targetId: string, config?: any) => void }).gtag;
       
       // Configure Google Analytics
       gtag('config', 'GA_MEASUREMENT_ID', {
@@ -50,8 +52,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, parameters);
-    }
+      }
   };
 
   const trackPageView = (pageName: string, pagePath: string) => {
@@ -68,8 +69,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName, pagePath);
-    }
+      }
   };
 
   const value: AnalyticsContextType = {

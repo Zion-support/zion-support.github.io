@@ -1,66 +1,155 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
-// Files that need syntax fixes
-const filesToFix = [
-  './app/ai-analytics/page.tsx',
-  './app/ai-api-management/page.tsx',
-  './app/ai-api-manager/page.tsx',
-  './app/ai-autonomous-systems/page.tsx',
-  './app/ai-blockchain-analytics/page.tsx',
-  './app/ai-blockchain-solutions/page.tsx',
-  './app/ai-climate-solutions-pro/page.tsx',
-  './app/ai-cloud-infrastructure/page.tsx',
-  './app/ai-code-assistant/page.tsx',
-  './app/ai-code-security-auditor/page.tsx',
-  './app/ai-computer-vision/page.tsx',
-  './app/ai-content-delivery-network/page.tsx',
-  './app/ai-content-generation/page.tsx',
-  './app/ai-content-studio/page.tsx',
-  './app/ai-content-writer/page.tsx',
-  './app/ai-crm-assistant/page.tsx'
+// Common syntax error patterns and their fixes
+const syntaxFixes = [
+  // Fix missing imports for Eye icon
+  {
+    pattern: /import { ([^}]+) } from 'lucide-react';/g,
+    replacement: (match, imports) => {
+      if (!imports.includes('Eye') && match.includes('icon: Eye')) {
+        return `import { ${imports}, Eye } from 'lucide-react';`;
+      }
+      return match;
+    }
+  },
+  
+  // Fix duplicate imports
+  {
+    pattern: /import { ([^}]+) } from 'lucide-react';\s*import { ([^}]+) } from 'lucide-react';/g,
+    replacement: (match, imports1, imports2) => {
+      const allImports = [...new Set([...imports1.split(','), ...imports2.split(',')])].join(', ');
+      return `import { ${allImports} } from 'lucide-react';`;
+    }
+  },
+  
+  // Fix missing commas in arrays
+  {
+    pattern: /(\s+)([^,\s]+)\s*\n\s*([^,\s]+)\s*\]/g,
+    replacement: '$1$2,\n$1$3]'
+  },
+  
+  // Fix missing closing braces
+  {
+    pattern: /(\s+benefits: \[[^\]]+\])\s*\n\s*title:/g,
+    replacement: '$1\n    },\n    {\n      title:'
+  },
+  
+  // Fix missing commas after object properties
+  {
+    pattern: /(\s+benefits: \[[^\]]+\])\s*\n\s*([a-zA-Z]+):/g,
+    replacement: '$1\n    },\n    {\n      $2:'
+  },
+  
+  // Fix malformed JSX attributes
+  {
+    pattern: /className="([^"]*)"\s*onClick/g,
+    replacement: 'className="$1" onClick'
+  },
+  
+  // Fix missing semicolons
+  {
+    pattern: /(\s+const [^=]+ = [^;]+)\s*\n\s*const/g,
+    replacement: '$1;\n\n  const'
+  },
+  
+  // Fix console.log statements (remove them)
+  {
+    pattern: /console\.(log|warn|error|info|debug)\([^)]*\);\s*\n?/g,
+    replacement: ''
+  },
+  
+  // Fix duplicate component declarations
+  {
+    pattern: /const (\w+): React\.FC = \(\) => \{\s*import/g,
+    replacement: 'import'
+  },
+  
+  // Fix missing closing parentheses in function calls
+  {
+    pattern: /(\w+\([^)]*)\s*\n\s*const/g,
+    replacement: '$1);\n\n  const'
+  }
 ];
 
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
     
-    // Fix common syntax issues
-    content = content.replace(/\s+return\s*\(\s*<>/g, '\n    }\n  ];\n\n  return (\n    <>');
+    // Apply all syntax fixes
+    syntaxFixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
     
-    // Fix missing closing brackets for features array
-    content = content.replace(/(benefits:\s*\[[^\]]+\])\s+return\s*\(/g, '$1\n    }\n  ];\n\n  return (');
+    // Additional specific fixes for common patterns
+    const additionalFixes = [
+      // Fix missing closing braces in features arrays
+      {
+        pattern: /(\s+benefits: \[[^\]]+\])\s*\n\s*title: '([^']+)',/g,
+        replacement: '$1\n    },\n    {\n      title: \'$2\','
+      },
+      
+      // Fix missing commas in object properties
+      {
+        pattern: /(\s+benefits: \[[^\]]+\])\s*\n\s*([a-zA-Z]+): '([^']+)',/g,
+        replacement: '$1\n    },\n    {\n      $2: \'$3\','
+      },
+      
+      // Fix malformed component structure
+      {
+        pattern: /const (\w+): React\.FC = \(\) => \{\s*import { ([^}]+) } from 'lucide-react';\s*const (\w+): React\.FC = \(\) => \{/g,
+        replacement: 'import { $2 } from \'lucide-react\';\n\nconst $3: React.FC = () => {'
+      }
+    ];
     
-    // Fix malformed JSX structure
-    content = content.replace(/(benefits:\s*\[[^\]]+\])\s*}\s*return\s*\(/g, '$1\n    }\n  ];\n\n  return (');
+    additionalFixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
     
-    // Fix missing closing tags
-    content = content.replace(/<Helmet>\s*<title>[^<]+<\/title>\s*<meta[^>]+>\s*<meta[^>]+>\s*<meta[^>]+>\s*<\/Helmet>/g, 
-      '<Helmet>\n        <title>AI Analytics - Zion Tech Group</title>\n        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />\n        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />\n      </Helmet>');
-    
-    // Ensure proper JSX structure
-    if (!content.includes('export default')) {
-      content = content.replace(/(const\s+\w+Page:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?)(\s*};?\s*)$/m, '$1\n};\n\nexport default $1Page;');
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
     
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`✅ Fixed syntax errors in ${filePath}`);
-    
+    return false;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Process all files
-console.log('🔧 Fixing syntax errors...\n');
+async function main() {
+  console.log('Starting syntax error fixes...');
+  
+  // Find all TypeScript/JavaScript files in the app directory
+  const files = await glob('app/**/*.{ts,tsx,js,jsx}');
+  
+  let fixedCount = 0;
+  let totalFiles = files.length;
+  
+  files.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  });
+  
+  console.log(`\nFixed ${fixedCount} out of ${totalFiles} files`);
+  console.log('Syntax error fixes completed!');
+}
 
-filesToFix.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    fixFile(filePath);
-  } else {
-    console.log(`⚠️  File not found: ${filePath}`);
-  }
-});
+main().catch(console.error);
 
-console.log('\n✨ Syntax error fixes complete!');
+export { fixFile, syntaxFixes };

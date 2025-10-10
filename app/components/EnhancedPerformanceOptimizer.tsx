@@ -16,7 +16,8 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true
-}) => {
+}) => {;
+
   const { trackPerformance } = useAnalytics();
 
   // Image optimization
@@ -40,8 +41,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const element = entry.target as HTMLElement;
+            if (entry.isIntersecting) {;
+
+  const element = entry.target as HTMLElement;
               element.classList.add('loaded');
               observer.unobserve(element);
             }
@@ -66,8 +68,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         { href: '/css/critical.css', as: 'style' }
       ];
 
-      preloadResources.forEach(resource => {
-        const link = document.createElement('link');
+      preloadResources.forEach(resource => {);
+
+  const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource.href;
         link.as = resource.as;
@@ -82,8 +85,9 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Performance monitoring
   useEffect(() => {
     const measurePerformance = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (typeof window !== 'undefined' && 'performance' in window) {;
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         
         const metrics = {
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -111,10 +115,12 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Code splitting optimization
   const handleRouteChange = useCallback(() => {
     if (enableCodeSplitting) {
-      // Preload next likely routes
-      const nextRoutes = ['/about', '/services', '/contact'];
-      nextRoutes.forEach(route => {
-        const link = document.createElement('link');
+      // Preload next likely routes;
+
+  const nextRoutes = ['/about', '/services', '/contact'];
+      nextRoutes.forEach(route => {);
+
+  const link = document.createElement('link');
         link.rel = 'prefetch';
         link.href = route;
         document.head.appendChild(link);

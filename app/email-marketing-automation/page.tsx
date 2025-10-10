@@ -22,7 +22,8 @@ import {;
   Send,;
   PieChart;}
 } from 'lucide-react';
-const EmailMarketingAutomationPage: React.FC = () => {
+const EmailMarketingAutomationPage: React.FC = () => {;
+
   const features = [
     {
       icon: Mail,
@@ -42,9 +43,8 @@ const EmailMarketingAutomationPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Smart Triggers',
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.'
-    }
-  ];
+      description: 'Behavior-based triggers and workflows to send the right message at the right time.',
+ }];
   const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
@@ -188,9 +188,8 @@ const EmailMarketingAutomationPage: React.FC = () => {;
     {;
       icon: Zap,;
       title: 'Smart Triggers',;
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.';}
-    }
-  ];
+      description: 'Behavior-based triggers and workflows to send the right message at the right time.';},
+ }];
   const benefits = [;
     'Increase email engagement rates',;
     'Automate repetitive marketing tasks',;

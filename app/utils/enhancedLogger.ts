@@ -628,13 +628,14 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     byLevel: Record<string, number>;
     bySource: Record<string, number>;}
   } {;}
-    const byLevel: Record<string, number> = {}
-    const bySource: Record<string, number> = {}
+    const byLevel: Record<string, number> = {};
+
+  const bySource: Record<string, number> = {}
     this.logs.forEach(log => {);
-      const levelName = LogLevel[log.level]);
-      byLevel[levelName] = (byLevel[levelName] || 0) + 1;
-      if (log.source) {;
-        bySource[log.source] = (bySource[log.source] || 0) + 1;}
+      const levelName = LogLevel[log.level]);,
+ byLevel[levelName] = (byLevel[levelName] || 0) + 1;
+      if (log.source) {;,
+ bySource[log.source] = (bySource[log.source] || 0) + 1;}
       }
     });
     return {;

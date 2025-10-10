@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-const AiApiManagerPage: React.FC = () => {
 import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react';
-const AIApiManagerPage: React.FC = () => {
+const AIApiManagerPage: React.FC = () => {;
+
   const features = [
     {
       title: 'Centralized API Control',
@@ -28,9 +28,8 @@ const AIApiManagerPage: React.FC = () => {
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
+ }];
   return (
     <React.Fragment>
       <Helmet>
@@ -39,9 +38,8 @@ const AIApiManagerPage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
-      benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
-    }
-  ];
+      benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control'],
+ }];
   const benefits = [
     'Centralized API management',
     'Real-time performance monitoring',

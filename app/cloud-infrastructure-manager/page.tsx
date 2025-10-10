@@ -24,7 +24,8 @@ import {;
   Server,;
   Monitor;}
 } from 'lucide-react';
-const CloudInfrastructureManagerPage: React.FC = () => {
+const CloudInfrastructureManagerPage: React.FC = () => {;
+
   const features = [
     {
       icon: Cloud,
@@ -44,9 +45,8 @@ const CloudInfrastructureManagerPage: React.FC = () => {
     {
       icon: Zap,
       title: 'DevOps Integration',
-      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
-    }
-  ];
+      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.',
+ }];
   const benefits = [
     'Centralized cloud infrastructure management',
     'Automated scaling and optimization',
@@ -190,9 +190,8 @@ const CloudInfrastructureManagerPage: React.FC = () => {;
     {;
       icon: Zap,;
       title: 'DevOps Integration',;
-      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.';}
-    }
-  ];
+      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.';},
+ }];
   const benefits = [;
     'Centralized cloud infrastructure management',;
     'Automated scaling and optimization',;

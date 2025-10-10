@@ -24,7 +24,8 @@ import {
   Filter
 } from 'lucide-react';
 
-const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC = () => {;
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -99,15 +100,16 @@ const ServicesPage: React.FC = () => {
       description: 'Optimize your database performance and ensure data integrity and security.',
       category: 'database',
       icon: Database,
-      features: ['Performance Tuning', 'Data Migration', 'Backup Solutions', 'Security Hardening']
-    }
-  ];
+      features: ['Performance Tuning', 'Data Migration', 'Backup Solutions', 'Security Hardening'],
+ }];
 
   const categories = ['all', 'ai', 'it', 'security', 'development', 'analytics', 'consulting', 'automation', 'database'];
 
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = services.filter(service => {;
+
+  const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;);
+
+  const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });

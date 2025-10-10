@@ -13,7 +13,8 @@ import {
   AlertCircle
 } from 'lucide-react';
 
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC = () => {;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,8 +26,9 @@ const ContactPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+
+  const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -79,9 +81,8 @@ const ContactPage: React.FC = () => {
       icon: Clock,
       title: 'Business Hours',
       value: 'Mon - Fri: 9:00 AM - 6:00 PM',
-      description: 'EST (Eastern Standard Time)'
-    }
-  ];
+      description: 'EST (Eastern Standard Time)',
+ }];
 
   const services = [
     'AI Strategy & Consulting',

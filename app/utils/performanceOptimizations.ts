@@ -128,7 +128,8 @@ export const useLazyImage = useCallback((...args) => {;
         entries.forEach((entry) => {;
           if (entry.isIntersecting && !isLoaded && !isError) {;
 // Image lazy loading hook;}
-export const useLazyImage = useCallback((...args) => {}
+export const useLazyImage = useCallback((...args) => {};
+
   const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);}
@@ -195,7 +196,8 @@ export const usePerformanceMonitoring = useCallback((...args) => {;
     // Monitor performance after page load;
     if (document.readyState === 'complete') {;
 // Performance monitoring hook;}
-export const usePerformanceMonitoring = useCallback((...args) => {}
+export const usePerformanceMonitoring = useCallback((...args) => {};
+
   const [metrics, setMetrics] = useState<{}
     fcp?: number;
     lcp?: number;
@@ -205,8 +207,9 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
   }>({});
   useEffect(() => {}
     if (typeof window === 'undefined') return;
-    const updateMetrics = useCallback((...args) => {}
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const updateMetrics = useCallback((...args) => {};
+
+  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
@@ -254,7 +257,8 @@ export const useMemoryMonitoring = useCallback((...args) => {;
           usedJSHeapSize: memory.usedJSHeapSize),;
           totalJSHeapSize: memory.totalJSHeapSize),;
 // Memory usage monitoring;}
-export const useMemoryMonitoring = useCallback((...args) => {}
+export const useMemoryMonitoring = useCallback((...args) => {};
+
   const [memoryInfo, setMemoryInfo] = useState<{}
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;
@@ -262,8 +266,9 @@ export const useMemoryMonitoring = useCallback((...args) => {}
   }>({});
   useEffect(() => {}
     if (typeof window === 'undefined' || !('memory' in performance)) return;
-    const updateMemoryInfo = useCallback((...args) => {}
-      const memory = (performance as any).memory;
+    const updateMemoryInfo = useCallback((...args) => {};
+
+  const memory = (performance as any).memory;
       if (memory) {}
         setMemoryInfo({)}
           usedJSHeapSize: memory.usedJSHeapSize,;
@@ -364,7 +369,8 @@ export const useBundleSizeMonitoring = useCallback((...args) => {;
         totalSize += size;
         if (resource.name.includes('.js')) {;
 // Bundle size monitoring;}
-export const useBundleSizeMonitoring = useCallback((...args) => {}
+export const useBundleSizeMonitoring = useCallback((...args) => {};
+
   const [bundleSize, setBundleSize] = useState<{}
     totalSize?: number;
     jsSize?: number;
@@ -373,8 +379,9 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
   }>({});
   useEffect(() => {}
     if (typeof window === 'undefined') return;
-    const calculateBundleSize = useCallback((...args) => {}
-      const resources = performance.getEntriesByType('resource');
+    const calculateBundleSize = useCallback((...args) => {};
+
+  const resources = performance.getEntriesByType('resource');
       let totalSize = 0;
       let jsSize = 0;
       let cssSize = 0;

@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react';
-const CloudSecurityPage: React.FC = () => {
+const CloudSecurityPage: React.FC = () => {;
+
   const features = [
     {
 icon: Shield,
@@ -22,9 +23,8 @@ icon: Shield,
     {
       icon: Globe,
       title: 'Global Compliance',
-      description: 'Worldwide compliance with security standards and regulations'
-    }
-  ];
+      description: 'Worldwide compliance with security standards and regulations',
+ }];
   const benefits = [
 'Advanced cloud security technology',
     'Real-time threat monitoring and detection',

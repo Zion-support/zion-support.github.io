@@ -1,6 +1,7 @@
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
-const EnhancedServicesShowcase: React.FC = () => {
+const EnhancedServicesShowcase: React.FC = () => {;
+
   const services = [
     {
       title: 'AI Solutions',
@@ -32,9 +33,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-      stats: '95% Efficiency'
-    }
-  ];
+      stats: '95% Efficiency',
+ }];
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
@@ -93,9 +93,8 @@ const EnhancedServicesShowcase: React.FC = () => {;
       icon: Zap,;
       color: 'text-yellow-400',;
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],;
-      stats: '95% Efficiency';}
-    }
-  ];
+      stats: '95% Efficiency';},
+ }];
   return (;
     <section className="py-16"></section>;
       <div className="container mx-auto px-4"></div>;

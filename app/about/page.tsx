@@ -26,7 +26,8 @@ import {
   FileText
 } from 'lucide-react';
 
-const AboutPage: React.FC = () => {
+const AboutPage: React.FC = () => {;
+
   const teamMembers = [
     {
       name: 'Dr. Sarah Johnson',
@@ -54,9 +55,8 @@ const AboutPage: React.FC = () => {
       role: 'Head of Cybersecurity',
       expertise: 'Cybersecurity & Risk Management',
       image: '/images/team/james-wilson.jpg',
-      bio: 'Cybersecurity expert with 15+ years protecting enterprise systems.'
-    }
-  ];
+      bio: 'Cybersecurity expert with 15+ years protecting enterprise systems.',
+ }];
 
   const values = [
     {
@@ -77,9 +77,8 @@ const AboutPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Impact',
-      description: 'We believe technology should make the world better for everyone.'
-    }
-  ];
+      description: 'We believe technology should make the world better for everyone.',
+ }];
 
   const achievements = [
     { number: '500+', label: 'Projects Completed' },

@@ -82,8 +82,9 @@ const Analytics: React.FC<AnalyticsProps> = ({;
   };
   const initializePerformanceMonitoring = () => {
     if ('PerformanceObserver' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
+      // Monitor Core Web Vitals;
+
+  const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));

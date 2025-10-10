@@ -22,7 +22,8 @@ import {;
   Settings,;
   Database;}
 } from 'lucide-react';
-const SecurityMonitoringPage: React.FC = () => {
+const SecurityMonitoringPage: React.FC = () => {;
+
   const features = [
     {
       icon: Eye,
@@ -42,9 +43,8 @@ const SecurityMonitoringPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Instant Response',
-      description: 'Automated incident response and immediate notification systems to minimize security breaches.'
-    }
-  ];
+      description: 'Automated incident response and immediate notification systems to minimize security breaches.',
+ }];
   const benefits = [
     '24/7 continuous security monitoring',
     'AI-powered threat detection and analysis',
@@ -187,9 +187,8 @@ const SecurityMonitoringPage: React.FC = () => {;
     {;
       icon: Zap,;
       title: 'Instant Response',;
-      description: 'Automated incident response and immediate notification systems to minimize security breaches.';}
-    }
-  ];
+      description: 'Automated incident response and immediate notification systems to minimize security breaches.';},
+ }];
   const benefits = [;
     '24/7 continuous security monitoring',;
     'AI-powered threat detection and analysis',;

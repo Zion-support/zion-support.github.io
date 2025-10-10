@@ -5,7 +5,8 @@ import { Truck, BarChart3, Target, Zap, ArrowRight, Star, CheckSquare, Shield, S
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AISupplyChainOptimizationPage: React.FC = () => {
+const AISupplyChainOptimizationPage: React.FC = () => {;
+
   const features = [
     {
       icon: Truck,
@@ -29,9 +30,8 @@ const AISupplyChainOptimizationPage: React.FC = () => {
       icon: Zap,
       title: 'Risk Management',
       description: 'Identify and mitigate supply chain risks with predictive analytics and real-time monitoring',
-      benefits: ['Risk prediction', 'Supplier monitoring', 'Disruption alerts', 'Contingency planning']
-    }
-  ];
+      benefits: ['Risk prediction', 'Supplier monitoring', 'Disruption alerts', 'Contingency planning'],
+ }];
 
   const industries = [
     {
@@ -56,9 +56,8 @@ const AISupplyChainOptimizationPage: React.FC = () => {
       title: 'Food & Beverage',
       description: 'Manage perishable goods and optimize distribution networks',
       icon: Smartphone,
-      benefits: ['Reduce food waste by 45%', 'Optimize freshness', 'Improve distribution efficiency', 'Enhance quality control']
-    }
-  ];
+      benefits: ['Reduce food waste by 45%', 'Optimize freshness', 'Improve distribution efficiency', 'Enhance quality control'],
+ }];
 
   const pricingPlans = [
     {
@@ -103,9 +102,8 @@ const AISupplyChainOptimizationPage: React.FC = () => {
         'On-premise deployment',
         'Advanced reporting'
       ],
-      popular: false
-    }
-  ];
+      popular: false,
+ }];
 
   const testimonials = [
     {
@@ -127,9 +125,8 @@ const AISupplyChainOptimizationPage: React.FC = () => {
       role: 'Logistics Director',
       company: 'PharmaSupply',
       content: 'We eliminated supply disruptions and reduced waste by 50%. The predictive capabilities are outstanding.',
-      rating: 5
-    }
-  ];
+      rating: 5,
+ }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -299,8 +296,8 @@ const AISupplyChainOptimizationPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">,
+ {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

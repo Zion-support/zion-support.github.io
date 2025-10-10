@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
-const DemoPage: React.FC = () => {
+const DemoPage: React.FC = () => {;
+
   const demos = [
     {
       title: 'AI Analytics Dashboard',
@@ -20,9 +21,8 @@ const DemoPage: React.FC = () => {
       title: 'AI Content Generation',
       description: 'Watch our AI create high-quality content in seconds',
       duration: '4 min',
-      features: ['Blog posts', 'Social media content', 'Product descriptions']
-    }
-  ];
+      features: ['Blog posts', 'Social media content', 'Product descriptions'],
+ }];
   return (
     <React.Fragment>
       <Helmet>

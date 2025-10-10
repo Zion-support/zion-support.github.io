@@ -5,7 +5,8 @@ import { Cloud, Shield, Zap, BarChart3, ArrowRight, Star, CheckSquare, Smartphon
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AICloudInfrastructurePage: React.FC = () => {
+const AICloudInfrastructurePage: React.FC = () => {;
+
   const features = [
     {
       icon: Cloud,
@@ -29,9 +30,8 @@ const AICloudInfrastructurePage: React.FC = () => {
       icon: BarChart3,
       title: 'Cost Management',
       description: 'Intelligent cost optimization and resource management to reduce cloud spending',
-      benefits: ['Cost analysis', 'Resource optimization', 'Budget alerts', 'Usage forecasting']
-    }
-  ];
+      benefits: ['Cost analysis', 'Resource optimization', 'Budget alerts', 'Usage forecasting'],
+ }];
 
   const cloudProviders = [
     {
@@ -56,9 +56,8 @@ const AICloudInfrastructurePage: React.FC = () => {
       name: 'Multi-Cloud',
       icon: '🌐',
       features: ['Hybrid cloud solutions', 'Cross-platform management', 'Disaster recovery', 'Vendor independence'],
-      pricing: 'Starting at $800/month'
-    }
-  ];
+      pricing: 'Starting at $800/month',
+ }];
 
   const pricingPlans = [
     {
@@ -103,9 +102,8 @@ const AICloudInfrastructurePage: React.FC = () => {
         '99.999% uptime SLA',
         'White-label solution'
       ],
-      popular: false
-    }
-  ];
+      popular: false,
+ }];
 
   const testimonials = [
     {
@@ -127,9 +125,8 @@ const AICloudInfrastructurePage: React.FC = () => {
       role: 'Cloud Architect',
       company: 'Digital Solutions',
       content: 'The auto-scaling and cost optimization features saved us $50K monthly. Highly recommended.',
-      rating: 5
-    }
-  ];
+      rating: 5,
+ }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -299,8 +296,8 @@ const AICloudInfrastructurePage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">,
+ {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

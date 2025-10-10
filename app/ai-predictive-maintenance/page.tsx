@@ -5,7 +5,8 @@ import { Wrench, BarChart3, AlertTriangle, Zap, ArrowRight, Star, CheckSquare, S
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIPredictiveMaintenancePage: React.FC = () => {
+const AIPredictiveMaintenancePage: React.FC = () => {;
+
   const features = [
     {
       icon: Wrench,
@@ -29,9 +30,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {
       icon: Zap,
       title: 'Automated Scheduling',
       description: 'AI-powered maintenance scheduling that optimizes resources and minimizes downtime',
-      benefits: ['Resource optimization', 'Downtime minimization', 'Workforce planning', 'Inventory management']
-    }
-  ];
+      benefits: ['Resource optimization', 'Downtime minimization', 'Workforce planning', 'Inventory management'],
+ }];
 
   const industries = [
     {
@@ -56,9 +56,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {
       title: 'Healthcare',
       description: 'Ensure medical equipment reliability and patient safety',
       icon: Users,
-      benefits: ['Prevent equipment failures', 'Ensure patient safety', 'Reduce maintenance costs', 'Improve efficiency']
-    }
-  ];
+      benefits: ['Prevent equipment failures', 'Ensure patient safety', 'Reduce maintenance costs', 'Improve efficiency'],
+ }];
 
   const pricingPlans = [
     {
@@ -103,9 +102,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {
         'On-premise deployment',
         'Advanced integrations'
       ],
-      popular: false
-    }
-  ];
+      popular: false,
+ }];
 
   const testimonials = [
     {
@@ -127,9 +125,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {
       role: 'Fleet Manager',
       company: 'Global Logistics',
       content: 'Vehicle breakdowns decreased by 60% and our maintenance costs dropped by 40%. The ROI was immediate.',
-      rating: 5
-    }
-  ];
+      rating: 5,
+ }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -299,8 +296,8 @@ const AIPredictiveMaintenancePage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">,
+ {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

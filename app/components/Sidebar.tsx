@@ -20,7 +20,8 @@ import {;
   MapPin,;
   Clock;}
 } from 'lucide-react';
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC = () => {;
+
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();
@@ -146,9 +147,9 @@ const Sidebar: React.FC = () => {;
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
-      ]
-    }
-  ];
+      ],
+
+      }];
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
@@ -239,9 +240,9 @@ const Sidebar: React.FC = () => {;
         { name: 'API Docs', path: '/api-docs', icon: Code },;
         { name: 'Support', path: '/support', icon: Users },;
         { name: 'Status', path: '/status', icon: Settings },;
-      ];
-    }
-  ];
+      ];,
+
+      }];
   const contactInfo = {;
     phone: '(302) 464-0950',;
     email: 'kleber@ziontechgroup.com',;

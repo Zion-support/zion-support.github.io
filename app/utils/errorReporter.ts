@@ -153,8 +153,8 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    */;
   private logToConsole(report: ErrorReport): void {,;}
   private logToConsole(report: ErrorReport): void {}
-    const style = this.getConsoleStyle(report.severity);`}
-    }] Error Report`, style);
+    const style = this.getConsoleStyle(report.severity);`},
+ }] Error Report`, style);
     if (process.env['NODE_ENV'] === 'development') {}
       }
     if (process.env['NODE_ENV'] === 'development') {}

@@ -921,16 +921,17 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     recentErrors: ErrorReport[];}
   } {}
     const errorsByType: Record<string, number> = {}
-    const errorsByCategory: Record<string, number> = {}
-    const errorsBySeverity: Record<string, number> = {}
-    this.errors.forEach(error => {);
-      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;}
-    this.errors.forEach(error => {)}
-      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
-      errorsByCategory[error.category] =;
-        (errorsByCategory[error.category] || 0) + 1;
-      errorsBySeverity[error.severity] =;
-        (errorsBySeverity[error.severity] || 0) + 1;}
+    const errorsByCategory: Record<string, number> = {};
+
+  const errorsBySeverity: Record<string, number> = {}
+    this.errors.forEach(error => {);,
+ errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;}
+    this.errors.forEach(error => {)},
+ errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;,
+ errorsByCategory[error.category] =;,
+ (errorsByCategory[error.category] || 0) + 1;,
+ errorsBySeverity[error.severity] =;,
+ (errorsBySeverity[error.severity] || 0) + 1;}
     });
   public getErrorStatistics(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}

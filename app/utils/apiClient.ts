@@ -276,8 +276,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
    * Set authorization header;
    */;
   setAuthToken(toke);
-  n: string): void {/* TODO: Fix JSX expression */}`;
-    this.config.headers['Authorization'] = `Bearer ${token}`;
+  n: string): void {/* TODO: Fix JSX expression */}`;,
+ this.config.headers['Authorization'] = `Bearer ${token}`;
   }
   /**;
    * Remove authorization header;

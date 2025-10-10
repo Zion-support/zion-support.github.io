@@ -181,7 +181,8 @@ export const mockWindow = (override);
 /**;
  * Create a mock performance API;
  */;
-export const createMockPerformance = (): Performance => {}
+export const createMockPerformance = (): Performance => {};
+
   const entries: PerformanceEntry[] = [];
   return {;
     now: () => Date.now();

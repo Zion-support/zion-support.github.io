@@ -3,10 +3,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-const AiApiManagementPage: React.FC = () => {
-import { CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3 } from 'lucide-react';
-const AIApiManagementPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, BarChart3 } from 'lucide-react';
+
+const AIApiManagementPage: React.FC = () => {;
+
   const features = [
     {
       title: 'Intelligent API Monitoring',
@@ -29,17 +29,18 @@ const AIApiManagementPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    },
+    {
       title: 'Automated Documentation',
       description: 'Generate and maintain comprehensive API documentation automatically with AI-powered analysis.',
-      benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal']
-    }
-  ];
+      benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal'],
+ }];
   const benefits = [
-'Increase efficiency by up to 50%',
+    'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+    'Gain competitive advantage with advanced technology',
     'Reduced API downtime by 95%',
     '50% faster API response times',
     'Automated security scanning',

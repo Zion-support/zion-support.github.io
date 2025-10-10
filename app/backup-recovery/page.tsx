@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Clock, ShieldCheck } from 'lucide-react';
-const BackupRecoveryPage: React.FC = () => {
+const BackupRecoveryPage: React.FC = () => {;
+
   const features = [
     {
 icon: Shield,
@@ -22,9 +23,8 @@ icon: Shield,
     {
       icon: Globe,
       title: 'Global Redundancy',
-      description: 'Worldwide backup storage with multiple redundancy layers'
-    }
-  ];
+      description: 'Worldwide backup storage with multiple redundancy layers',
+ }];
   const benefits = [
 'Advanced data protection and encryption',
     'Real-time backup monitoring and alerts',

@@ -5,7 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ExternalLink, Award, Users, Globe, Shield, Zap } from 'lucide-react';
 
-const PartnersPage: React.FC = () => {
+const PartnersPage: React.FC = () => {;
+
   const partners = [
     {
       name: 'Amazon Web Services',
@@ -77,9 +78,8 @@ const PartnersPage: React.FC = () => {
       description: 'Infrastructure and storage solutions',
       category: 'Hardware',
       website: 'https://dell.com',
-      tier: 'technology'
-    }
-  ];
+      tier: 'technology',
+ }];
 
   const benefits = [
     {
@@ -105,9 +105,8 @@ const PartnersPage: React.FC = () => {
     {
       icon: <Zap className="w-8 h-8 text-purple-500" />,
       title: 'Latest Technology',
-      description: 'Access to cutting-edge tools and early product releases'
-    }
-  ];
+      description: 'Access to cutting-edge tools and early product releases',
+ }];
 
   const tiers = {
     strategic: { label: 'Strategic Partner', color: 'from-cyan-400 to-purple-500' },

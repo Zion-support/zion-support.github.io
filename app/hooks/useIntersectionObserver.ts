@@ -31,8 +31,8 @@ export function useIntersectionObserver(;
     const element = ref.current;
     if (!element) return;
 ;
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
+    const observer = new IntersectionObserver(;,
+ ([entry]) => {;
         setIsIntersecting(entry.isIntersecting);
         setEntry(entry);
 ;

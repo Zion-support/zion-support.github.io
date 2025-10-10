@@ -62,8 +62,9 @@ class MonitoringService {;}
         fidObserver.observe({ entryTypes: ['first-input'] });
         // Cumulative Layout Shift;
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {;
-          const entries = list.getEntries();
+        const clsObserver = new PerformanceObserver(list => {;);
+
+  const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {;
             if (!(entry as any).hadRecentInput) {;
     // Keep HEAD version;
@@ -74,8 +75,9 @@ class MonitoringService {;}
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         // First Contentful Paint;
-        const fcpObserver = new PerformanceObserver(list => {;
-          const entries = list.getEntries();
+        const fcpObserver = new PerformanceObserver(list => {;);
+
+  const entries = list.getEntries();
           entries.forEach(entry => {;
             this.metrics.fcp = entry.startTime;
             this.reportMetric('fcp', entry.startTime);}

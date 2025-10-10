@@ -271,8 +271,8 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
     const result = { ...base } as AppConfig;
     (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke);
-  y: K) => {/* TODO: Fix JSX expression */}
-            result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
+  y: K) => {/* TODO: Fix JSX expression */},
+ result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
           } else {/* TODO: Fix JSX expression */}
           }
         }
@@ -315,11 +315,11 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
     nestedKeyOrValu,;
   e: NK | AppConfig[K],;
     value?: AppConfig[K][NK]);
-  ): void {/* TODO: Fix JSX expression */}
-        this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */});
+  ): void {/* TODO: Fix JSX expression */},
+ this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */});
         }) as AppConfig[K];
-      } else {/* TODO: Fix JSX expression */}
-        this.config[key] = Object.assign({}, defaultValue, {/* TODO: Fix JSX expression */});
+      } else {/* TODO: Fix JSX expression */},
+ this.config[key] = Object.assign({}, defaultValue, {/* TODO: Fix JSX expression */});
         }) as AppConfig[K];
       }
     } else {/* TODO: Fix JSX expression */}

@@ -42,9 +42,8 @@ export default function TermsPage() {
     {
       title: 'Governing Law',
       icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
-    }
-  ];
+      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.',
+ }];
   return (
     <div className="min-h-screen bg-white"></div>
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
@@ -115,9 +114,8 @@ export default function TermsPage() {;
     {;
       title: 'Governing Law',;
       icon: Scale,;
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';}
-    }
-  ];
+      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';},
+ }];
   return (;
     <div className="min-h-screen bg-white"></div>;
       <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>;

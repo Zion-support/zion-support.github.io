@@ -798,8 +798,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   getErrorStatistics() {}
     const total = this.errors.length;
     const byType = this.errors.reduce();
-      (acc, error) => {}
-        acc[error.type] = (acc[error.type] || 0) + 1;
+      (acc, error) => {},
+ acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
       },;
       {} as Record<ErrorType, number>);
@@ -853,8 +853,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       {} as Record<ErrorSeverity, number></ErrorSeverity>;
     );
     const bySeverity = this.errors.reduce();
-      (acc, error) => {}
-        acc[error.severity] = (acc[error.severity] || 0) + 1;
+      (acc, error) => {},
+ acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;</ErrorType>;
       },</ErrorType>;
       {} as Record<ErrorSeverity, number>);</ErrorSeverity></<<<ErrorSeverit>const</ErrorSeverit></<<ErrorSeverit>resolved</ErrorSeverit> = this.errors.filter(error => error.resolved).length;
@@ -1015,7 +1015,8 @@ export const useErrorHandler = (;) => {
   );
 };
 // React hook for error handling;}
-export const useErrorHandler = () => {}
+export const useErrorHandler = () => {};
+
   const errorHandler = ErrorHandler.getInstance();
   const handleError = useCallback();
     (error: Error, context?: Record<string, unknown>) => {}

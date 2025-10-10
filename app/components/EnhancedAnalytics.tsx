@@ -10,7 +10,8 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const useAnalytics = () => {
+export const useAnalytics = () => {;
+
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
@@ -22,7 +23,8 @@ interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {;
+
   const [isInitialized, setIsInitialized] = useState(false);
 
   // Initialize analytics
@@ -56,8 +58,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, parameters);
-    }
+      }
   };
 
   const trackPageView = (pageName: string, pagePath: string) => {
@@ -73,8 +74,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName, pagePath);
-    }
+      }
   };
 
   const trackConversion = (conversionType: string, value?: number) => {
@@ -92,8 +92,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Conversion:', conversionType, value);
-    }
+      }
   };
 
   const trackPerformance = (metricName: string, value: number) => {
@@ -109,8 +108,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Performance Metric:', metricName, value);
-    }
+      }
   };
 
   const value: AnalyticsContextType = {

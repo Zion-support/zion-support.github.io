@@ -23,7 +23,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   type = 'website',
   siteName = 'Zion Tech Group',
   structuredData
-}) => {
+}) => {;
+
   const location = useLocation();
   const currentUrl = url || `https://ziontechgroup.com${location.pathname}`;
   const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;

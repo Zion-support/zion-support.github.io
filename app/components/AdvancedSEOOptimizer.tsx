@@ -20,7 +20,8 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   children
-}) => {
+}) => {;
+
   const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
   const analyzeSEO = useCallback(() => {
@@ -79,8 +80,9 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   useEffect(() => {
     analyzeSEO();
   }, [analyzeSEO]);
-  const generateStructuredData = () => {
-    const defaultStructuredData = {
+  const generateStructuredData = () => {;
+
+  const defaultStructuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",

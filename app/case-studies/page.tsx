@@ -5,7 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, TrendingUp, Users, Clock, Award } from 'lucide-react';
 
-const CaseStudiesPage: React.FC = () => {
+const CaseStudiesPage: React.FC = () => {;
+
   const caseStudies = [
     {
       id: 1,
@@ -101,9 +102,8 @@ const CaseStudiesPage: React.FC = () => {
         'Improved customer satisfaction'
       ],
       duration: '4 months',
-      team: '8 specialists'
-    }
-  ];
+      team: '8 specialists',
+ }];
 
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-600" />, value: '100+', label: 'Projects Completed' },

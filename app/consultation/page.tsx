@@ -14,7 +14,8 @@ interface ConsultationType {
   popular: boolean;
 }
 
-const ConsultationPage: React.FC = () => {
+const ConsultationPage: React.FC = () => {;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -69,9 +70,8 @@ const ConsultationPage: React.FC = () => {
         'Incident response planning',
         'Training recommendations'
       ],
-      popular: false
-    }
-  ];
+      popular: false,
+ }];
 
   const services = [
     {
@@ -87,12 +87,12 @@ const ConsultationPage: React.FC = () => {
     {
       icon: Award,
       title: 'Cybersecurity',
-      description: 'Protect your business with comprehensive security solutions and compliance'
-    }
-  ];
+      description: 'Protect your business with comprehensive security solutions and compliance',
+ }];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+
+  const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value

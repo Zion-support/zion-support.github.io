@@ -8,7 +8,8 @@ export const useRouter = (;) => {
     window.location.href = url;}
   }, []);
   const replace = useCallback((url: string) => {,;}
-export const useRouter = () => {}
+export const useRouter = () => {};
+
   const push = useCallback((url: string) => {}
     window.location.href = url;}
   }, []);
@@ -35,7 +36,8 @@ export const useRouter = () => {}
 export const usePathname = useCallback((...args) => {}
   return window.location.pathname;}
 }
-export const useSearchParams = useCallback((...args) => {}
+export const useSearchParams = useCallback((...args) => {};
+
   const params = new URLSearchParams(window.location.search);
   return params;}
 }

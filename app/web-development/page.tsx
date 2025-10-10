@@ -122,8 +122,10 @@ const $1: React.FC = () => {;
   return(<></>;
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
-        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
-const WebDevelopmentPage: React.FC = () => {
+        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";);
+
+  const WebDevelopmentPage: React.FC = () => {;
+
   const webServices = [
     {
       title: 'Frontend Development',
@@ -167,9 +169,8 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Users,
       price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
-      color: 'text-gray-400'
-    }
-  ];
+      color: 'text-gray-400',
+ }];
   const technologies = [
     { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
     { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
@@ -201,9 +202,8 @@ const WebDevelopmentPage: React.FC = () => {
       step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
-      icon: Shield
-    }
-  ];
+      icon: Shield,
+ }];
   return (
     <>
       <SEOOptimizer

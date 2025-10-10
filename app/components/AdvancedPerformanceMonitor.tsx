@@ -15,7 +15,8 @@ interface PerformanceMonitorProps {
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
-}) => {
+}) => {;
+
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -34,8 +35,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure Largest Contentful Paint (LCP)
     if ('PerformanceObserver' in window) {
       try {
-        const lcpObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
+        const lcpObserver = new PerformanceObserver(list => {;
+);
+
+  const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         });
@@ -48,8 +51,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
       try {
-        const fidObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
+        const fidObserver = new PerformanceObserver(list => {;
+);
+
+  const entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'first-input' &&
@@ -74,8 +79,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if ('PerformanceObserver' in window) {
       try {
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
+        const clsObserver = new PerformanceObserver(list => {;
+);
+
+  const entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'layout-shift' &&
@@ -150,8 +157,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Use web-vitals library if available
     try {
       import('web-vitals')
-        .then(webVitals => {
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
+        .then(webVitals => {);
+
+  const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
           if (onCLS) {
             onCLS((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, cls: metric.value }))
@@ -205,8 +213,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, [metrics, onMetricsUpdate]);
   // Performance recommendations
-  const getPerformanceRecommendations = useCallback(() => {
-    const recommendations: string[] = [];
+  const getPerformanceRecommendations = useCallback(() => {;
+
+  const recommendations: string[] = [];
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'

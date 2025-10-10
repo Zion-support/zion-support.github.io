@@ -23,7 +23,8 @@ import {;
   PieChart,;
   LineChart;}
 } from 'lucide-react';
-const DataAnalyticsPage: React.FC = () => {
+const DataAnalyticsPage: React.FC = () => {;
+
   const features = [
     {
       icon: BarChart,
@@ -43,9 +44,8 @@ const DataAnalyticsPage: React.FC = () => {
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
-    }
-  ];
+      description: 'Forecast future trends and make data-driven decisions with predictive modeling.',
+ }];
   const benefits = [
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
@@ -189,9 +189,8 @@ const DataAnalyticsPage: React.FC = () => {;
     {;
       icon: TrendingUp,;
       title: 'Predictive Analytics',;
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.';}
-    }
-  ];
+      description: 'Forecast future trends and make data-driven decisions with predictive modeling.';},
+ }];
   const benefits = [;
     'Make data-driven business decisions',;
     'Identify new opportunities and trends',;

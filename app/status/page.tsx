@@ -66,9 +66,8 @@ export default function StatusPage() {;
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-      description: 'System monitoring and alerts'
-    }
-  ];
+      description: 'System monitoring and alerts',
+ }];
   const incidents = [
     {
       id: 1,
@@ -88,9 +87,8 @@ export default function StatusPage() {;
       startTime: '2024-01-12T14:20:00Z',
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
-      affectedServices: ['Database', 'API Services']
-    }
-  ];
+      affectedServices: ['Database', 'API Services'],
+ }];
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
@@ -142,9 +140,8 @@ export default function StatusPage() {;
       uptime: '100%',;
       responseTime: '5ms',;
       lastIncident: 'Never',;
-      description: 'System monitoring and alerts';}
-    }
-  ];
+      description: 'System monitoring and alerts';},
+ }];
   const incidents = [;
     {;
       id: 1,;
@@ -164,9 +161,8 @@ export default function StatusPage() {;
       startTime: '2024-01-12T14:20:00Z',;
       endTime: '2024-01-12T16:30:00Z',;
       description: 'Intermittent database connection issues affecting some user operations.',;
-      affectedServices: ['Database', 'API Services'];}
-    }
-  ];
+      affectedServices: ['Database', 'API Services'];},
+ }];
   const getStatusIcon = (;
     switch (status) {;
       case 'operational':;

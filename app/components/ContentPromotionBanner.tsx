@@ -3,7 +3,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Star, Users, TrendingUp, Shield } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
+const ContentPromotionBanner: React.FC = () => {;
+
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Happy Clients' },
     { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },

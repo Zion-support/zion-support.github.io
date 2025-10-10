@@ -19,8 +19,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableKeyboardNavigation && typeof window !== 'undefined') {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {;
+
+  const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
           if (skipLink) {
             skipLink.focus();
             event.preventDefault();
@@ -40,8 +41,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Focus management
     if (enableFocusManagement && typeof window !== 'undefined') {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      const trapFocus = (container: HTMLElement) => {
-        const focusableContent = container.querySelectorAll(focusableElements);
+      const trapFocus = (container: HTMLElement) => {;
+
+  const focusableContent = container.querySelectorAll(focusableElements);
         const firstFocusableElement = focusableContent[0] as HTMLElement;
         const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
         const handleTabKey = (e: KeyboardEvent) => {
@@ -76,8 +78,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       liveRegion.id = 'live-region';
       document.body.appendChild(liveRegion);
       // Announce page changes
-      const announcePageChange = (message: string) => {
-        const liveRegion = document.getElementById('live-region');
+      const announcePageChange = (message: string) => {;
+
+  const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
           liveRegion.textContent = message;
         }

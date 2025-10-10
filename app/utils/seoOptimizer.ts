@@ -399,9 +399,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         changefreq: 'daily',;
         priority: '1.0'}
   generateSitemapData(): Array<{/* TODO: Fix JSX expression */}
-  y: number }> {/* TODO: Fix JSX expression */}
-      }
-    ];
+  y: number }> {/* TODO: Fix JSX expression */},
+ }];
   }
   /**;
    * Generate robots.txt content;

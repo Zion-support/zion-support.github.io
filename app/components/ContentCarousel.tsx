@@ -11,7 +11,8 @@ interface Slide {
   stats: { value: string; label: string }[];
 }
 
-const ContentCarousel: React.FC = () => {
+const ContentCarousel: React.FC = () => {;
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [
@@ -89,9 +90,9 @@ const ContentCarousel: React.FC = () => {
         { value: '85%', label: 'Better Decisions' },
         { value: '30%', label: 'Revenue Growth' },
         { value: '50%', label: 'Time Saved' }
-      ]
-    }
-  ];
+      ],
+
+      }];
 
   useEffect(() => {
     const timer = setInterval(() => {

@@ -242,8 +242,8 @@ export function validateForm(fields: Record<string, FormField>);
         fieldErrors.push(validator.message);}
       }
     }
-    if (fieldErrors.length > 0) {;
-      errors[fieldName] = fieldErrors;}
+    if (fieldErrors.length > 0) {;,
+ errors[fieldName] = fieldErrors;}
     }
   }
   return errors;

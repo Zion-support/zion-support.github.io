@@ -5,7 +5,8 @@ import { Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown, P
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-const AiFraudDetectionPage: React.FC = () => {
+const AiFraudDetectionPage: React.FC = () => {;
+
   const features = [
     {
       icon: Brain,
@@ -29,9 +30,8 @@ const AiFraudDetectionPage: React.FC = () => {
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
+ }];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -118,9 +118,8 @@ const AiFraudDetectionPage: React.FC = () => {;
       icon: TrendingUp,;
       title: 'Growth Optimization',;
       description: 'Optimize your business growth with data-driven strategies.',;
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];}
-    }
-  ];
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];},
+ }];
   const benefits = [;
     'Increase efficiency by up to 50%',;
     'Reduce costs by 30% with automation',;

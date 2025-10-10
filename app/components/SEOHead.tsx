@@ -21,7 +21,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData
-}) => {
+}) => {;
+
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
   const defaultStructuredData = {

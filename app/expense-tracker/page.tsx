@@ -4,7 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-const PagePage: React.FC = () => {
+const PagePage: React.FC = () => {;
+
   const features = [
     {
       icon: Brain,
@@ -28,9 +29,8 @@ const PagePage: React.FC = () => {
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
+ }];
   return (
     <React.Fragment>
       <Helmet>
@@ -109,9 +109,8 @@ const PagePage: React.FC = () => {;
       icon: TrendingUp,;
       title: 'Growth Optimization',;
       description: 'Optimize your business growth with data-driven strategies.',;
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];}
-    }
-  ];
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'];},
+ }];
   return (;
     <></>;
       <Helmet>;

@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
-const BlockchainPage: React.FC = () => {
+const BlockchainPage: React.FC = () => {;
+
   const features = [
     {
       icon: Shield,
@@ -22,9 +23,8 @@ const BlockchainPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide blockchain deployment and support for international businesses'
-    }
-  ];
+      description: 'Worldwide blockchain deployment and support for international businesses',
+ }];
   const benefits = [
     'Advanced blockchain technology integration',
     'Real-time transaction processing',

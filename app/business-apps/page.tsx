@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react';
-const BusinessAppsPage: React.FC = () => {
+const BusinessAppsPage: React.FC = () => {;
+
   const features = [
     {
       icon: Smartphone,
@@ -37,9 +38,8 @@ title: 'AI-Powered Business Apps',
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international business applications'
-    }
-  ];
+      description: 'Worldwide deployment and support for international business applications',
+ }];
   const benefits = [
 'Advanced AI technology integration',
     'Real-time processing and analytics',

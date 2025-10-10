@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react';
-const AIAccountingAssistantPage: React.FC = () => {
+const AIAccountingAssistantPage: React.FC = () => {;
+
   const features = [
     { icon: Calculator, title: 'Automated Bookkeeping', description: 'AI-powered automated bookkeeping and transaction categorization.' },
     { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and analytics with AI insights.' },

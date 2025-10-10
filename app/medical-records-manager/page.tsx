@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain } from 'lucide-react';
-const MedicalRecordsManagerPage: React.FC = () => {
+const MedicalRecordsManagerPage: React.FC = () => {;
+
   const features = [
     {
       icon: FileText,
@@ -32,9 +33,8 @@ const MedicalRecordsManagerPage: React.FC = () => {
     {
       icon: Lock,
       title: 'Advanced Security',
-      description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'
-    }
-  ];
+      description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.',
+ }];
   return (
     <React.Fragment>
       <Helmet>

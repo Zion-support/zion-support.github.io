@@ -11,9 +11,9 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
       description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance']
     },
-    {
-    }
-  ];
+    {,
+
+    }];
   return (
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our IoT platform provides everything you need to build, deploy, and scale
@@ -28,9 +28,9 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
       description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',;
       benefits: ['Continuous monitoring', 'Smart alerts', 'Predictive maintenance'];}
     },;
-    {;}
-    }
-  ];
+    {;},
+
+    }];
   return (;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
               Our IoT platform provides everything you need to build, deploy, and scale;

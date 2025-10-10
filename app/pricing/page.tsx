@@ -6,7 +6,8 @@ import { CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PricingPage: React.FC = () => {
+const PricingPage: React.FC = () => {;
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -70,9 +71,8 @@ const PricingPage: React.FC = () => {
         'Custom training'
       ],
       popular: false,
-      cta: 'Contact Sales'
-    }
-  ];
+      cta: 'Contact Sales',
+ }];
 
   const addOnServices = [
     {
@@ -103,9 +103,8 @@ const PricingPage: React.FC = () => {
     {
       name: 'Training & Support',
       price: '$100/hour',
-      description: 'Team training and ongoing technical support'
-    }
-  ];
+      description: 'Team training and ongoing technical support',
+ }];
 
   return (
     <>

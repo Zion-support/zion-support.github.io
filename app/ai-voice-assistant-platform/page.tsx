@@ -5,7 +5,8 @@ import { Mic, Brain, Globe, Zap, ArrowRight, Star, CheckSquare, Shield, Smartpho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIVoiceAssistantPlatformPage: React.FC = () => {
+const AIVoiceAssistantPlatformPage: React.FC = () => {;
+
   const features = [
     {
       icon: Mic,
@@ -29,9 +30,8 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
       icon: Zap,
       title: 'Custom Voice Training',
       description: 'Train custom voice models for your brand voice and specific use cases',
-      benefits: ['Brand voice training', 'Custom wake words', 'Domain-specific training', 'Continuous learning']
-    }
-  ];
+      benefits: ['Brand voice training', 'Custom wake words', 'Domain-specific training', 'Continuous learning'],
+ }];
 
   const useCases = [
     {
@@ -56,9 +56,8 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
       title: 'Smart Home',
       description: 'Control IoT devices and home automation',
       icon: Smartphone,
-      benefits: ['Device control', 'Routine automation', 'Energy management', 'Security monitoring']
-    }
-  ];
+      benefits: ['Device control', 'Routine automation', 'Energy management', 'Security monitoring'],
+ }];
 
   const pricingPlans = [
     {
@@ -103,9 +102,8 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
         'On-premise deployment',
         'White-label solution'
       ],
-      popular: false
-    }
-  ];
+      popular: false,
+ }];
 
   const testimonials = [
     {
@@ -127,9 +125,8 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
       role: 'Customer Success Director',
       company: 'TechCorp',
       content: 'We reduced support costs by 60% while improving response times. The AI understands context perfectly.',
-      rating: 5
-    }
-  ];
+      rating: 5,
+ }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -299,8 +296,8 @@ const AIVoiceAssistantPlatformPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">,
+ {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>

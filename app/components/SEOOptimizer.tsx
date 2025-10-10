@@ -16,7 +16,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = [],
   canonicalUrl,
   structuredData
-}) => {
+}) => {;
+
   const keywordsString = keywords.join(', ');
 
   return (

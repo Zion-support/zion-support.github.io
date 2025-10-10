@@ -178,8 +178,8 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
       if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */}
       }
     }
-    // Log the error;`;
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */}
+    // Log the error;`;,
+ logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */}
     });
     // Send to external service if critical;
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */}
@@ -273,15 +273,15 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory, number>;
     const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity, number>;
     // Initialize counters;
-    Object.values(ErrorCategory).forEach(category => {);
-      byCategory[category] = 0;);}
+    Object.values(ErrorCategory).forEach(category => {);,
+ byCategory[category] = 0;);}
     });
-    Object.values(ErrorSeverity).forEach(severity => {);
-      bySeverity[severity] = 0;);}
+    Object.values(ErrorSeverity).forEach(severity => {);,
+ bySeverity[severity] = 0;);}
     });
     // Count errors;
-    errors.forEach(error => {);
-      byCategory[error.metadata.category]++);
+    errors.forEach(error => {);,
+ byCategory[error.metadata.category]++);
       bySeverity[error.metadata.severity]++);}
     });
     return {;

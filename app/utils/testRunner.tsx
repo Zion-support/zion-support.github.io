@@ -419,9 +419,8 @@ export class TestRunner {
       await Promise.race([
         test.fn(),
         new Promise((_, reject) =>
-          setTimeout(() => reject(new Error('Test timeout')), test.timeout)
-        )
-      ]);
+          setTimeout(() => reject(new Error('Test timeout')), test.timeout),
+ )]);
       const duration = performance.now() - startTime;
       return {
         name: test.name,
@@ -1533,8 +1532,9 @@ export class TestRunner {/* TODO: Fix JSX expression */}
         duration: 0,
       })
       return { passed: true }
-    } catch (error) {}
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+    } catch (error) {};
+
+  const errorMessage = error instanceof Error ? error.message : 'Unknown error'
       this.testResults.push({`}
       this.testResults.push({`})
         name: `Integration: ${testName}`,
@@ -1597,8 +1597,9 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       branches: 80,
       functions: 90,
       lines: 85}
-    }
-    const passed = coverage.statements >= this.config.coverageThreshold
+    };
+
+  const passed = coverage.statements >= this.config.coverageThreshold
     this.testResults.push({)}
       name: 'Coverage',
       status: passed ? 'passed' : 'failed',
@@ -1623,8 +1624,9 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       branches: 80,
       functions: 90,
       lines: 85}
-    }
-    const passed = coverage.statements >= this.config.coverageThreshold;
+    };
+
+  const passed = coverage.statements >= this.config.coverageThreshold;
     this.testResults.push({)
       name: 'Coverage'),
       status: passed ? 'passed' : 'failed'),
@@ -2072,7 +2074,8 @@ export const useTestRunner = useCallback((...args) => {;
   const testRunner = TestRunner.getInstance();
   const runTest = useCallback(async (;
 // React hook for testing;}
-export const useTestRunner = useCallback((...args) => {}
+export const useTestRunner = useCallback((...args) => {};
+
   const testRunner = TestRunner.getInstance();
   const runTest = useCallback(async ();
     component: ReactElement,;
@@ -2155,8 +2158,9 @@ export const testUtils = {}
         resolve(element);
         return;}
       }
-      const observer = new MutationObserver(() => {}
-        const element = document.querySelector(selector);
+      const observer = new MutationObserver(() => {};
+
+  const element = document.querySelector(selector);
         if (element) {}
           observer.disconnect();
           resolve(element);}
@@ -2225,7 +2229,8 @@ export const useTestRunner = () => {/* TODO: Fix JSX expression */}
   }, [testRunner]);
   return {/* TODO: Fix JSX expression */}
 // Performance testing utilities
-export const measurePerformance = (fn: () => void): PerformanceMetrics => {
+export const measurePerformance = (fn: () => void): PerformanceMetrics => {;
+
   const startTime = performance.now();
   const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
   fn();

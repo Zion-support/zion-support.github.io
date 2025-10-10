@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
-const IoTPage: React.FC = () => {
+const IoTPage: React.FC = () => {;
+
   const iotServices = [
     {
       title: 'IoT Device Management Platform',
@@ -133,9 +134,8 @@ const IoTPage: React.FC = () => {
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],
       marketPrice: '$8,000-35,000/month',
       category: 'Analytics',
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
-    }
-  ];
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'],
+ }];
   const categories = [...new Set(iotServices.map(service => service.category))];
   return (
     <React.Fragment>
@@ -379,9 +379,8 @@ const IoTPage: React.FC = () => {;
       benefits: ['Gain actionable insights', 'Improve decision making', 'Optimize operations'],;
       marketPrice: '$8,000-35,000/month',;
       category: 'Analytics',;
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'];}
-    }
-  ];
+      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning'];},
+ }];
   const categories = [...new Set(iotServices.map(service => service.category))];
   return (;
     <></>;

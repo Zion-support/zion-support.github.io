@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const ServiceCardSkeletonPage: React.FC = () => {
+const ServiceCardSkeletonPage: React.FC = () => {;
+
   const features = [
     {
       icon: Brain,
@@ -22,9 +23,8 @@ const ServiceCardSkeletonPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
+      description: 'Worldwide deployment and support for international businesses',
+ }];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -57,9 +57,8 @@ const ServiceCardSkeletonPage: React.FC = () => {;
     {;
       icon: Globe,;
       title: 'Global Reach',;
-      description: 'Worldwide deployment and support for international businesses';}
-    }
-  ];
+      description: 'Worldwide deployment and support for international businesses';},
+ }];
   const benefits = [;
     'Advanced AI technology integration',;
     'Real-time processing and analytics',;

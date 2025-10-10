@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Users, MessageCircle, Calendar } from 'lucide-react';
-const CommunityPage: React.FC = () => {
+const CommunityPage: React.FC = () => {;
+
   const features = [
     {
       icon: Users,
@@ -22,9 +23,8 @@ const CommunityPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Network',
-      description: 'Connect with professionals from around the world'
-    }
-  ];
+      description: 'Connect with professionals from around the world',
+ }];
   const benefits = [
     'Access to exclusive community resources',
     'Networking opportunities with industry leaders',

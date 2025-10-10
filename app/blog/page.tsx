@@ -5,7 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Calendar, User, ArrowRight, Clock, Tag } from 'lucide-react';
 
-const BlogPage: React.FC = () => {
+const BlogPage: React.FC = () => {;
+
   const blogPosts = [
     {
       id: 1,
@@ -71,9 +72,8 @@ const BlogPage: React.FC = () => {
       readTime: '5 min read',
       category: 'Automation',
       image: '/images/blog/ai-automation-business.jpg',
-      featured: false
-    }
-  ];
+      featured: false,
+ }];
 
   const categories = [
     'All',

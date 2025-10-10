@@ -3,8 +3,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-const AiAnalyticsPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Eye } from 'lucide-react';
+const AiAnalyticsPage: React.FC = () => {;
+
   const features = [
     {
       icon: Brain,
@@ -40,9 +41,8 @@ title: 'Real-Time Dashboards',
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    }
-  ];
+      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support'],
+ }];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -79,9 +79,8 @@ title: 'Real-Time Dashboards',
     {
       title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
-      icon: '🛡️'
-    }
-  ];
+      icon: '🛡️',
+ }];
   return (
     <React.Fragment>
       <Helmet>
