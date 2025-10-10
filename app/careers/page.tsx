@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { CheckCircle, Star, Users, Heart, Award, MapPin, Clock } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -12,6 +13,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
+      description: 'Lead development of AI-powered solutions and machine learning models for enterprise clients.',
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years AI/ML experience', 'PhD in Computer Science or related field']
     },
     {
       title: 'Cloud Architect',
@@ -23,6 +26,13 @@ const CareersPage: React.FC = () => {
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
     {
+      title: 'Data Scientist',
+      department: 'Analytics',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Analyze complex datasets and build predictive models to drive business insights.',
+      requirements: ['R, Python, SQL', '3+ years data science experience', 'Statistics and ML expertise']
     }
   ];
 
@@ -84,7 +94,7 @@ const CareersPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
               {openPositions.map((position, index) => (
                 <div
                   key={index}
@@ -127,10 +137,61 @@ const CareersPage: React.FC = () => {
                     </ul>
                   </div>
 
+                  <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg hover:bg-cyan-700 transition-colors">
+                    Apply Now
+                  </button>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Benefits & Perks</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">
+              Don't See Your Dream Job?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              We're always looking for talented individuals. Send us your resume and let's discuss opportunities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                Send Resume
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn About Our Culture
+              </button>
             </div>
           </div>
         </section>
