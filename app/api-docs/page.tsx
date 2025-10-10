@@ -117,6 +117,7 @@ export default function APIDocsPage() {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             API Documentation
@@ -130,6 +131,7 @@ export default function APIDocsPage() {
 
       {/* Quick Start */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -171,6 +173,7 @@ export default function APIDocsPage() {
 
       {/* API Endpoints */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">
@@ -236,6 +239,7 @@ export default function APIDocsPage() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Get Started?

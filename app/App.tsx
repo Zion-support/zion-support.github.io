@@ -70,8 +70,7 @@ const AppLoadingSpinner = () => (
 );
 
 const App: React.FC = () => {
-  return (
-    <ErrorBoundary>
+  return <>{<ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
           <div className="App">
@@ -136,7 +135,7 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  );
+  }</>;
 };
 
 export default App;

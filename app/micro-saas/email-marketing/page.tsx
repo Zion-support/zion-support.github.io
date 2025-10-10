@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Mail, ArrowRight } from 'lucide-react';
 
 const EmailMarketingSuitePage: React.FC = () => {
-  return (
-    <>
+  return <>{<>
       <Helmet>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
         <meta name="description" content="AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation." />
@@ -13,6 +12,7 @@ const EmailMarketingSuitePage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="pt-24 pb-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto text-center"></div>
             <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
               <Mail className="w-4 h-4" />
@@ -39,6 +39,7 @@ const EmailMarketingSuitePage: React.FC = () => {
         </section>
 
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
@@ -50,7 +51,7 @@ const EmailMarketingSuitePage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  }</>;
 };
 
 export default EmailMarketingSuitePage;

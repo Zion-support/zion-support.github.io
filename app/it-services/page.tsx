@@ -32,6 +32,7 @@ const ItServicesPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               IT <span className="text-cyan-400">Services</span>
@@ -43,6 +44,7 @@ const ItServicesPage: React.FC = () => {
         </section>
 
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (

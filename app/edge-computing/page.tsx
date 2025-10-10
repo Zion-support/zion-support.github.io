@@ -122,6 +122,7 @@ const EdgeComputingPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
+        </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -149,6 +150,7 @@ const EdgeComputingPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Features</h2>
@@ -181,6 +183,7 @@ const EdgeComputingPage: React.FC = () => {
 
       {/* Services Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Edge Computing Services</h2>
@@ -203,6 +206,7 @@ const EdgeComputingPage: React.FC = () => {
 
       {/* Use Cases Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Use Cases</h2>
@@ -225,6 +229,7 @@ const EdgeComputingPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Edge Computing?</h2>
@@ -248,6 +253,7 @@ const EdgeComputingPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
           <p className="text-xl text-gray-300 mb-8">

@@ -38,9 +38,8 @@ const LoadingPage: React.FC = () => {
     'Proven track record of success'
   ];
 
-  return (
-    </div>
-  );
+  return <>{</div>
+  }</>;
 };
 
 export default LoadingPage;

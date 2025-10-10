@@ -47,6 +47,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
           </div>
         </div>
       </section>
@@ -64,6 +65,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
               </div>
             ))}
           </div>
@@ -72,6 +74,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
           </div>
         </div>
       </section>

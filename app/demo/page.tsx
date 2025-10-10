@@ -35,6 +35,7 @@ const DemoPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               See Our <span className="text-cyan-400">Solutions</span> in Action
@@ -46,6 +47,7 @@ const DemoPage: React.FC = () => {
         </section>
 
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {demos.map((demo, index) => (
@@ -75,6 +77,7 @@ const DemoPage: React.FC = () => {
         </section>
 
         <section className="py-16 px-4">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
               <h2 className="text-2xl font-semibold text-white mb-4">Ready to See More?</h2>

@@ -55,6 +55,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
+        </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
@@ -79,6 +80,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 
 {/* Features Section */}
       <section className="py-20 px-4">
+        </section>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
@@ -98,6 +100,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -124,6 +127,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 
       {/* CTA Section */}
 <section className="py-20 px-4">
+        </section>
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
               View Case Studies

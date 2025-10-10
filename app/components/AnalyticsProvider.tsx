@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect } from 'react';
-=======
-
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
@@ -82,9 +77,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackPageView,
   };
 
-  return (
-    <AnalyticsContext.Provider value={value}>
+  return <>{<AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-  );
+  }</>;
 };

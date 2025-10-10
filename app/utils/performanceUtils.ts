@@ -128,12 +128,11 @@
   }
 
   public isPerformanceGood(): boolean {
-    return (
-      this.metrics.firstContentfulPaint < 1800 &&
+    return <>{this.metrics.firstContentfulPaint < 1800 &&
       this.metrics.largestContentfulPaint < 2500 &&
       this.metrics.firstInputDelay < 100 &&
       this.metrics.cumulativeLayoutShift < 0.1
-    );
+    }</>;
   }
 
   public cleanup(): void {

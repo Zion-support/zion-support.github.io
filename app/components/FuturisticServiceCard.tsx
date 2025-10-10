@@ -15,8 +15,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Proven track record of success'
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return <>{<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>FuturisticServiceCard | Zion Tech Group</title>
         <meta name="description" content="Professional FuturisticServiceCard services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -25,6 +24,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -49,7 +49,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             </div>
           </div>
         </div>
-  );
+  }</>;
 };
 
 export default FuturisticServiceCardPage;

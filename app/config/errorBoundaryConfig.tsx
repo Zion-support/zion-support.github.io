@@ -137,8 +137,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
  * Network error fallback component
  */
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+  return <>{<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
           <svg
@@ -169,7 +168,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </div>
       </div>
     </div>
-  );
+  }</>;
 }
 
 /**

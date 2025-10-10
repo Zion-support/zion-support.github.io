@@ -139,6 +139,7 @@ const DynamicContentShowcase: React.FC = () => {
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
       {/* Hero Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Dynamic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
@@ -162,6 +163,7 @@ const DynamicContentShowcase: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -199,9 +201,9 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
@@ -278,6 +280,7 @@ const DynamicContentShowcase: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Benefits</h2>
@@ -301,6 +304,7 @@ const DynamicContentShowcase: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -317,59 +321,6 @@ const DynamicContentShowcase: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 Schedule Demo
               </button>
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the advantages that make our solutions the preferred choice for businesses worldwide.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-300">
-              Real feedback from real businesses that have transformed with our solutions.
-            </p>
-          </div>
-
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-xl text-white mb-6 italic">
-                "{testimonials[currentIndex].content}"
-              </p>
-              <div className="text-cyan-400 font-semibold">
-                {testimonials[currentIndex].name}
-              </div>
-              <div className="text-gray-300">
-                {testimonials[currentIndex].role}, {testimonials[currentIndex].company}
-              </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           </div>
         </div>

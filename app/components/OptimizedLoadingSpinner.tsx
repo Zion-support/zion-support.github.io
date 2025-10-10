@@ -68,16 +68,15 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           );
 
         case 'pulse':
-          return (
-            <div
+          return <>{<div
               className={`${baseClasses} rounded-full animate-pulse`}
               role='status'
               aria-label='Loading'
             />
-          );
+          }</>;
 
         case 'skeleton':
-          return (</div>
+          return <>{</div>
             <div className='space-y-2' role='status' aria-label='Loading'></div>
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
@@ -90,7 +89,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '50%' }}
               /></div>
-          );
+          }</>;
 
         case 'bars':
           return (
@@ -109,13 +108,12 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
 
         case 'spinner':
         default:
-          return (
-            <div
+          return <>{<div
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
               aria-label='Loading'
             />
-          );
+          }</>;
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
 

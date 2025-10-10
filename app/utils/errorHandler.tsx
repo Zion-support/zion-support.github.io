@@ -655,11 +655,10 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private scheduleRetry(error: AppError) {,
   // Check if error should be retried
   private shouldRetry(error: AppError): boolean {}
-    return (
-      error.type === ErrorType.NETWORK &&
+    return <>{error.type === ErrorType.NETWORK &&
       error.retryCount! < this.config.maxRetries &&
       error.severity !== ErrorSeverity.CRITICAL
-    );
+    }</>;
   }
   // Schedule retry
   private scheduleRetry(error: AppError) {}

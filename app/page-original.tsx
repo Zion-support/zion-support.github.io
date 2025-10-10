@@ -149,6 +149,7 @@ const HomePage: React.FC = memo(() => {
           }`}
           aria-labelledby="hero-heading"
         >
+        </section>
           <div className="max-w-6xl mx-auto"></div>
             <h1 
               id="hero-heading" 
@@ -210,6 +211,7 @@ const HomePage: React.FC = memo(() => {
         </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
+        </section>
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
           </h2>
@@ -220,7 +222,7 @@ const HomePage: React.FC = memo(() => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</article>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
@@ -235,7 +237,7 @@ const HomePage: React.FC = memo(() => {
             </Suspense>
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</article>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Revolutionary AI-powered marketing automation, ad optimization, and content generation.
@@ -250,7 +252,7 @@ const HomePage: React.FC = memo(() => {
             </Suspense>
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</article>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Intelligent automation of business processes with decision-making capabilities and exception handling.
@@ -268,7 +270,7 @@ const HomePage: React.FC = memo(() => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</article>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Healthcare</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.
@@ -283,7 +285,7 @@ const HomePage: React.FC = memo(() => {
             </Suspense>
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</article>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
@@ -298,7 +300,7 @@ const HomePage: React.FC = memo(() => {
             </Suspense>
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</article>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                   Next-generation quantum computing capabilities for complex problem solving and optimization.
@@ -320,7 +322,7 @@ const HomePage: React.FC = memo(() => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI-Powered CRM</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Intelligent customer relationship management with AI insights, automated follow-ups, and predictive analytics.
@@ -335,7 +337,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Analytics Dashboard</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Real-time business intelligence with AI-powered insights, custom dashboards, and automated reporting.
@@ -350,7 +352,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Content Studio</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Complete content creation suite with AI writing, image generation, video editing, and social media automation.
@@ -365,7 +367,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Chatbot Builder</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Create intelligent chatbots for customer support, sales, and lead generation with no coding required.
@@ -380,7 +382,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📧</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📧</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Email Marketing</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Automated email campaigns with AI optimization, personalization, and advanced analytics for maximum ROI.
@@ -395,7 +397,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📱</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📱</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Mobile App Builder</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Build native mobile apps with AI assistance, drag-and-drop interface, and instant deployment.
@@ -410,7 +412,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔍</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔍</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI SEO Optimizer</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Automated SEO analysis, keyword research, content optimization, and ranking tracking with AI insights.
@@ -425,7 +427,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Invoice Generator</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Automated invoice creation, payment tracking, and financial reporting with AI-powered insights.
@@ -440,7 +442,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎯</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎯</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Lead Scoring</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Intelligent lead scoring and qualification with AI-powered predictive analytics and automated follow-ups.
@@ -455,7 +457,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📈</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📈</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Social Media Manager</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Automated social media posting, engagement, and analytics with AI content optimization and scheduling.
@@ -470,7 +472,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🛒</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🛒</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI E-commerce Assistant</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Complete e-commerce automation with AI product recommendations, pricing optimization, and inventory management.
@@ -485,7 +487,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📝</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📝</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Document Processor</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Intelligent document processing, OCR, data extraction, and automated workflow management with AI.
@@ -500,7 +502,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎨</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎨</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Design Studio</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     AI-powered graphic design, logo creation, brand identity, and visual content generation for businesses.
@@ -515,7 +517,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔐</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔐</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Security Monitor</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Real-time security monitoring, threat detection, and automated incident response with AI intelligence.
@@ -530,7 +532,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Financial Planner</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Intelligent financial planning, budgeting, investment analysis, and automated financial reporting.
@@ -545,7 +547,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Health Tracker</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Personal health monitoring, fitness tracking, nutrition analysis, and AI-powered health insights.
@@ -560,7 +562,7 @@ const HomePage: React.FC = memo(() => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎓</div>
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎓</article>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Learning Platform</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Personalized learning paths, AI tutoring, skill assessment, and automated course creation.
@@ -582,7 +584,7 @@ const HomePage: React.FC = memo(() => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Migration</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Seamless cloud migration with AWS, Azure, and GCP. 99.9% uptime guarantee and 24/7 expert support.
@@ -595,7 +597,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cybersecurity Suite</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Comprehensive security solutions with threat detection, vulnerability assessment, and automated response.
@@ -608,7 +610,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚙️</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚙️</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Streamline development workflows with automated testing, deployment, and monitoring solutions.
@@ -621,7 +623,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Database Management</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Database design, optimization, migration, and management with AI-powered performance tuning.
@@ -634,7 +636,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Network Solutions</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Enterprise networking, VPN setup, load balancing, and network security with 24/7 monitoring.
@@ -647,7 +649,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Mobile App Development</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Native and cross-platform mobile applications with AI integration and modern UX design.
@@ -660,7 +662,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Consulting</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Strategic IT planning, technology assessment, and digital transformation consulting.
@@ -673,7 +675,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Support & Maintenance</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Comprehensive IT support, system maintenance, and troubleshooting with guaranteed response times.
@@ -686,7 +688,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🖥️</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🖥️</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">System Administration</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Complete system administration, server management, and infrastructure monitoring with 24/7 support.
@@ -699,7 +701,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Infrastructure Design</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Custom IT infrastructure design, architecture planning, and technology stack optimization.
@@ -712,7 +714,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Performance Optimization</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Application and system performance optimization with AI-powered monitoring and tuning.
@@ -725,7 +727,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Backup & Recovery</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Automated backup solutions, disaster recovery planning, and data protection services.
@@ -738,7 +740,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Project Management</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   End-to-end IT project management with agile methodologies and AI-powered project tracking.
@@ -751,7 +753,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏢</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏢</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Enterprise Solutions</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Large-scale enterprise IT solutions, ERP integration, and digital transformation services.
@@ -764,7 +766,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎓</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎓</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Training & Certification</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Comprehensive IT training programs, certification courses, and skill development workshops.
@@ -785,7 +787,7 @@ const HomePage: React.FC = memo(() => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💬</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Customer Support</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Revolutionary AI-powered customer support with chatbots, omnichannel communication, and intelligent automation.
@@ -798,7 +800,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sales Automation</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Boost sales by 300% with intelligent lead scoring, automated outreach, and CRM integration.
@@ -811,7 +813,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Workflow Automation</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Automate any business process with intelligent workflows, 90% time savings, and 500+ integrations.
@@ -824,7 +826,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Data Visualization</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Transform data into actionable insights with AI-powered visualization, interactive dashboards, and 100+ data sources.
@@ -837,7 +839,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Lead Generation</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Generate high-quality leads with AI-powered prospecting, email sequences, and automated follow-ups.
@@ -850,7 +852,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Document Processing</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Automatically extract, process, and analyze documents with AI-powered OCR and intelligent data extraction.
@@ -864,7 +866,7 @@ const HomePage: React.FC = memo(() => {
               </article>
 
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Predictive Analytics</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Advanced predictive modeling, forecasting, and trend analysis with machine learning algorithms.
@@ -878,7 +880,7 @@ const HomePage: React.FC = memo(() => {
               </article>
 
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Image Recognition</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Computer vision solutions for object detection, facial recognition, and automated image analysis.
@@ -892,7 +894,7 @@ const HomePage: React.FC = memo(() => {
               </article>
 
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗣️</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗣️</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Voice Processing</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Speech recognition, voice synthesis, and natural language processing for voice-enabled applications.
@@ -906,7 +908,7 @@ const HomePage: React.FC = memo(() => {
               </article>
 
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔮</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔮</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Recommendation Engine</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Personalized recommendation systems for e-commerce, content, and product suggestions.
@@ -920,7 +922,7 @@ const HomePage: React.FC = memo(() => {
               </article>
 
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎭</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎭</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sentiment Analysis</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Real-time sentiment analysis of social media, reviews, and customer feedback with emotion detection.
@@ -934,7 +936,7 @@ const HomePage: React.FC = memo(() => {
               </article>
 
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔬</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔬</article>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Research Assistant</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   AI-powered research tools for data analysis, literature review, and scientific discovery.
@@ -955,7 +957,7 @@ const HomePage: React.FC = memo(() => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Robotics</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Intelligent robotic solutions for manufacturing, healthcare, and service industries.
@@ -968,7 +970,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Connected devices and edge computing solutions for smart cities and industrial automation.
@@ -981,7 +983,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔗</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔗</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Blockchain & Web3</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Decentralized solutions, smart contracts, and Web3 applications for the future of business.
@@ -994,7 +996,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Business Intelligence</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Data-driven insights and predictive analytics to optimize business performance and decision-making.
@@ -1015,7 +1017,7 @@ const HomePage: React.FC = memo(() => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Streamline development workflows with automated testing, deployment, and monitoring solutions.
@@ -1028,7 +1030,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Mobile Development</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Native and cross-platform mobile applications with AI integration and modern UX design.
@@ -1041,7 +1043,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Database Services</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Database design, optimization, migration, and management with AI-powered performance tuning.
@@ -1058,6 +1060,7 @@ const HomePage: React.FC = memo(() => {
         </section>
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
+        </section>
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Micro SAAS Solutions
           </h2>
@@ -1071,7 +1074,7 @@ const HomePage: React.FC = memo(() => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📝</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Writing Assistant</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.
@@ -1084,7 +1087,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Smart Analytics</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Real-time business analytics with AI insights, automated reports, and predictive forecasting.
@@ -1097,7 +1100,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📅</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📅</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Scheduler</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Intelligent scheduling with calendar optimization, meeting coordination, and time management.
@@ -1110,7 +1113,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Expense Tracker</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   AI-powered expense management with receipt scanning, categorization, and budget insights.
@@ -1123,7 +1126,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Task Manager Pro</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Advanced task management with AI prioritization, team collaboration, and progress tracking.
@@ -1136,7 +1139,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">CRM Lite</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.
@@ -1149,7 +1152,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Email Optimizer</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.
@@ -1162,7 +1165,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Social Media Manager</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   AI-driven social media management with content creation, scheduling, and performance analytics.
@@ -1183,7 +1186,7 @@ const HomePage: React.FC = memo(() => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Design Studio</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Create stunning graphics, logos, and marketing materials with AI-powered design tools.
@@ -1196,7 +1199,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Landing Page Builder</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Build high-converting landing pages with AI optimization and A/B testing capabilities.
@@ -1209,7 +1212,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">SEO Optimizer</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   AI-powered SEO analysis and optimization with keyword research and content suggestions.
@@ -1222,7 +1225,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Ad Campaign Manager</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.
@@ -1243,7 +1246,7 @@ const HomePage: React.FC = memo(() => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💻</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Code Assistant</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   AI-powered code completion, debugging, and optimization for multiple programming languages.
@@ -1256,7 +1259,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">API Builder</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Create and manage APIs with AI assistance, documentation generation, and testing tools.
@@ -1269,7 +1272,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🐛</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🐛</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Bug Tracker Pro</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.
@@ -1282,7 +1285,7 @@ const HomePage: React.FC = memo(() => {
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📚</div>
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📚</article>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Doc Generator</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Automatically generate technical documentation, API docs, and user guides from code.
@@ -1316,6 +1319,7 @@ const HomePage: React.FC = memo(() => {
 
         {/* Contact Section */}
         <section className="mb-16" aria-labelledby="contact-heading">
+        </section>
           <div className="max-w-6xl mx-auto"></div>
             <h2 id="contact-heading" className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center neon-text">
               Ready to Transform Your Business?

@@ -48,6 +48,7 @@ const BusinessAppsPage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Business Apps
@@ -61,6 +62,7 @@ const BusinessAppsPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -85,6 +87,7 @@ const BusinessAppsPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -108,6 +111,7 @@ const BusinessAppsPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Get Started?

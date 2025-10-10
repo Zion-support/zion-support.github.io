@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { glob } = require('glob');
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
 // Function to resolve merge conflicts by keeping HEAD version
 function resolveMergeConflicts(content) {
@@ -55,44 +55,40 @@ function fixJSXIssues(content) {
   return content;
 }
 
-async function main() {
-  // Find all TypeScript/JavaScript files with merge conflicts
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'app/**/*.js',
-    'app/**/*.jsx',
-    '__tests__/**/*.tsx',
-    '__tests__/**/*.ts',
-    '__tests__/**/*.js',
-    '__tests__/**/*.jsx'
-  ];
+// Find all TypeScript/JavaScript files with merge conflicts
+const patterns = [
+  'app/**/*.tsx',
+  'app/**/*.ts',
+  'app/**/*.js',
+  'app/**/*.jsx',
+  '__tests__/**/*.tsx',
+  '__tests__/**/*.ts',
+  '__tests__/**/*.js',
+  '__tests__/**/*.jsx'
+];
 
-  let totalFiles = 0;
-  let fixedFiles = 0;
+let totalFiles = 0;
+let fixedFiles = 0;
 
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    
-    for (const file of files) {
-      totalFiles++;
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        
-        if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-          console.log(`Fixing merge conflicts in: ${file}`);
-          const resolved = resolveMergeConflicts(content);
-          const fixed = fixJSXIssues(resolved);
-          fs.writeFileSync(file, fixed, 'utf8');
-          fixedFiles++;
-        }
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
+patterns.forEach(async pattern => {
+  const files = await glob(pattern, { cwd: process.cwd() });
+  
+  files.forEach(file => {
+    totalFiles++;
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+      
+      if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+        console.log(`Fixing merge conflicts in: ${file}`);
+        const resolved = resolveMergeConflicts(content);
+        const fixed = fixJSXIssues(resolved);
+        fs.writeFileSync(file, fixed, 'utf8');
+        fixedFiles++;
       }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
     }
-  }
+  });
+});
 
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files with merge conflicts.`);
-}
-
-main().catch(console.error);
+console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files with merge conflicts.`);

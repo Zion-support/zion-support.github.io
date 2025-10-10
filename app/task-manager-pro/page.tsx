@@ -38,8 +38,7 @@ const PagePage: React.FC = () => {
     'Proven track record of success'
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return <>{<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -48,6 +47,7 @@ const PagePage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -113,7 +113,7 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
+  }</>;
 };
 
 export default PagePage;
