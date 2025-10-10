@@ -53,12 +53,7 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
-  )]
+)]
     };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default MicroSaaSPage;
 }

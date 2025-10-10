@@ -41,31 +41,19 @@
     use_cases: ['Cost reduction', 'Budget governance'],
     roi: '1035% cloud savings in 3 months',
     competitors: ['Zesty', 'CAST AI'],
-<<<<<<< HEAD
-    market_size: '$18B FinOps'
-    growth_rate: '19% CAGR';
-variant: 'quantum - holographic'
-    contact_info: contact;
-=======
-    market_size: '$18B FinOps',
+market_size: '$18B FinOps',
     growth_rate: '19% CAGR',
     variant: 'quantum - holographic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Analyzer SaaS with policy engine and exporters.',
     launch_date: '2025 - 02 - 10',
     customers: 25;
     rating: 4 && 4.6;
-<<<<<<< HEAD
-    reviews: 12},
-    id: 'db - index - advisor'
-=======
-    reviews: 12;
+reviews: 12;
   },
     id: 'db - index - advisor',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
     price: '$79',
@@ -161,18 +149,11 @@ varian,
     use_cases: ['Performance tuning', 'Incident prevention'],
     roi: '2050% p95 reduction month 1',
     competitors: ['Percona PMM', 'Datadog APM'],
-<<<<<<< HEAD
-    market_size: '$7B DB Ops'
-    growth_rate: '12% CAGR';
-variant: 'quantum'
-    contact_info: contact;
-=======
-    market_size: '$7B DB Ops',
+market_size: '$7B DB Ops',
     growth_rate: '12% CAGR',
     variant: 'quantum',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Agent + collector with secure export.',
     launch_date: '2025 - 02 - 12',
@@ -191,18 +172,11 @@ variant: 'quantum'
     useCases: ['Performance tuning', 'Incident prevention']
     roi: '2050% p95 reduction month 1',
     competitors: ['Percona PMM', 'Datadog APM']
-<<<<<<< HEAD
-    marketSize: '$7 B DB Ops'
-    growthRate: '12% CAGR';
-variant: 'quantum'
-    contactInfo: contact;
-=======
-    marketSize: '$7 B DB Ops',
+marketSize: '$7 B DB Ops',
     growthRate: '12% CAGR',
     variant: 'quantum',
     contactInfo:
         contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Agent + collector with secure export.',
     launchDate: '2025-02-12',
@@ -220,18 +194,11 @@ variant: 'quantum'
     useCases: ['Performance tuning', 'Incident prevention'],
     roi: '2050% p95 reduction month 1',
     competitors: ['Percona PMM', 'Datadog APM'],
-<<<<<<< HEAD
-    marketSize: '$7B DB Ops'
-    growthRate: '12% CAGR';
-variant: 'quantum'
-    contactInfo: contact;
-=======
-    marketSize: '$7B DB Ops',
+marketSize: '$7B DB Ops',
     growthRate: '12% CAGR',
     variant: 'quantum',
     contactInfo:
         contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: 'Agent + collector with secure export.',
     launchDate: '2025-02-12',
@@ -262,15 +229,7 @@ variant: 'quantum'
 		technology: ['OpenAI compatiblePolicy enginesEmbeddings'];
 		integrations: ['SlackPagerDuty'];
 		useCases: ['Safety testingCompliance checksRelease gating'];
-<<<<<<< HEAD
-		roi: 'Reduce incident risk by 70% in first quarter'
-		competitors: ['LakeraGuardrails'];
-		marketSize: '$3 && 3.2 B AI Safety'
-		growthRate: '35% CAGR';
-variant: 'ai-futuristic'
-		contactInfo: contact;
-=======
-		roi: 'Reduce incident risk by 70% in first quarter',
+roi: 'Reduce incident risk by 70% in first quarter',
 		competitors:
         competitors: ['LakeraGuardrails'];
 		marketSize: '$3 && 3.2 B AI Safety',
@@ -278,22 +237,12 @@ variant: 'ai-futuristic'
 		variant: 'ai-futuristic',
 		contactInfo:
         contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.',
 		launchDate: '2025-02-01',
 		customers: 40;
 		rating: 4 && 4.7;
-<<<<<<< HEAD
-		reviews: 18}
-		id: 'finops-scheduler-optimizer'
-		name: 'FinOps Scheduler Optimizer'
-		tagline: 'Rightsizing & schedules with IaC exports'
-		price: '$99'
-		period: '/month'
-		description: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.'
-=======
-		reviews: 18;
+reviews: 18;
 	}
 		id: 'finops-scheduler-optimizer',
 		name: 'FinOps Scheduler Optimizer',
@@ -301,7 +250,6 @@ variant: 'ai-futuristic'
 		price: '$99',
 		period: '/month',
 		description: 'Smart schedules and rightsizing recommendations for EC2/GKE/AKS/EKS with Terraform exports.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		features: ['Idle detectionSchedule generatorIaC exportAlerting'];
 		popular: true;
 		icon: '',
@@ -317,15 +265,7 @@ variant: 'ai-futuristic'
 		technology: ['AWS/GCP/Azure APIsTerraform'];
 		integrations: ['DatadogSlack'];
 		useCases: ['Cost reductionBudget governance'];
-<<<<<<< HEAD
-		roi: '1035% cloud savings in 3 months'
-		competitors: ['ZestyCAST AI'];
-		marketSize: '$18 B FinOps'
-		growthRate: '19% CAGR';
-variant: 'quantum-holographic'
-		contactInfo: contact;
-=======
-		roi: '1035% cloud savings in 3 months',
+roi: '1035% cloud savings in 3 months',
 		competitors:
         competitors: ['ZestyCAST AI'];
 		marketSize: '$18 B FinOps',
@@ -333,22 +273,12 @@ variant: 'quantum-holographic'
 		variant: 'quantum-holographic',
 		contactInfo:
         contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Analyzer SaaS with policy engine and exporters.',
 		launchDate: '2025-02-10',
 		customers: 25;
 		rating: 4 && 4.6;
-<<<<<<< HEAD
-		reviews: 12}
-		id: 'db-index-advisor'
-		name: 'DB Index Advisor'
-		tagline: 'AI index recommendations for Postgres/MySQL'
-		price: '$79'
-		period: '/month'
-		description: 'Collects slow queries and proposes safe index changes with before/after impact analysis.'
-=======
-		reviews: 12;
+reviews: 12;
 	}
 		id: 'db-index-advisor',
 		name: 'DB Index Advisor',
@@ -356,7 +286,6 @@ variant: 'quantum-holographic'
 		price: '$79',
 		period: '/month',
 		description: 'Collects slow queries and proposes safe index changes with before/after impact analysis.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		features: ['Slow query captureIndex suggestionsImpact simulationCapacity forecast'];
 		popular: false;
 		icon: '',
@@ -373,15 +302,7 @@ variant: 'quantum-holographic'
 		technology: ['PostgresMySQLOpenTelemetry'];
 		integrations: ['GrafanaDatadog'];
 		useCases: ['Performance tuningIncident prevention'];
-<<<<<<< HEAD
-		roi: '2050% p95 reduction month 1'
-		competitors: ['Percona PMMDatadog APM'];
-		marketSize: '$7 B DB Ops'
-		growthRate: '12% CAGR';
-variant: 'quantum'
-		contactInfo: contact;
-=======
-		roi: '2050% p95 reduction month 1',
+roi: '2050% p95 reduction month 1',
 		competitors:
         competitors: ['Percona PMMDatadog APM'];
 		marketSize: '$7 B DB Ops',
@@ -389,7 +310,6 @@ variant: 'quantum'
 		variant: 'quantum',
 		contactInfo:
         contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
 		realImplementation: true;
 		implementationDetails: 'Agent + collector with secure export.',
 		launchDate: '2025-02-12',
@@ -420,15 +340,7 @@ variant: 'quantum'
   technology: ['OpenAI compatible_policy engines_embeddings'];
   integrations: ['SlackPagerDuty'];
   use_cases: ['Safety testing_compliance checks_release gating'];
-<<<<<<< HEAD
-  roi: 'Reduce incident risk by 70% in first quarter'
-  competitors: ['LakeraGuardrails'];
-  market_size: '$3.2 B AI Safety'
-  growth_rate: '35% CAGR';
-variant: 'ai - futuristic'
-  contact_info: contact;
-=======
-  roi: 'Reduce incident risk by 70% in first quarter',
+roi: 'Reduce incident risk by 70% in first quarter',
   competitors:
         competitors: ['LakeraGuardrails'];
   market_size: '$3.2 B AI Safety',
@@ -436,22 +348,12 @@ variant: 'ai - futuristic'
   variant: 'ai - futuristic',
   contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Runs eval suites nightly and on PRs with webhooks.',
   launch_date: '2025 - 02 - 01',
   customers: 40;
   rating: 4.7;
-<<<<<<< HEAD
-  reviews: 18}
-  id: 'finops - scheduler - optimizer'
-  name: 'FinOps Scheduler Optimizer'
-  tagline: 'Rightsizing & schedules with IaC exports'
-  price: '$99'
-  period: '/month'
-  description: 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.'
-=======
-  reviews: 18;
+reviews: 18;
 }
   id: 'finops - scheduler - optimizer',
   name: 'FinOps Scheduler Optimizer',
@@ -459,7 +361,6 @@ variant: 'ai - futuristic'
   price: '$99',
   period: '/month',
   description: 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   features: ['Idle detection_schedule generatorIaC export_alerting'];
   popular: true;
   icon: '',
@@ -475,15 +376,7 @@ variant: 'ai - futuristic'
   technology: ['AWS / GCP / Azure APIsTerraform'];
   integrations: ['DatadogSlack'];
   use_cases: ['Cost reduction_budget governance'];
-<<<<<<< HEAD
-  roi: '1035% cloud savings in 3 months'
-  competitors: ['ZestyCAST AI'];
-  market_size: '$18 B FinOps'
-  growth_rate: '19% CAGR';
-variant: 'quantum - holographic'
-  contact_info: contact;
-=======
-  roi: '1035% cloud savings in 3 months',
+roi: '1035% cloud savings in 3 months',
   competitors:
         competitors: ['ZestyCAST AI'];
   market_size: '$18 B FinOps',
@@ -491,22 +384,12 @@ variant: 'quantum - holographic'
   variant: 'quantum - holographic',
   contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Analyzer SaaS with policy engine and exporters.',
   launch_date: '2025 - 02 - 10',
   customers: 25;
   rating: 4.6;
-<<<<<<< HEAD
-  reviews: 12}
-  id: 'db - index - advisor'
-  name: 'DB Index Advisor'
-  tagline: 'AI index recommendations for Postgres / MySQL'
-  price: '$79'
-  period: '/month'
-  description: 'Collects slow queries and proposes safe index changes with before / after impact analysis.'
-=======
-  reviews: 12;
+reviews: 12;
 }
   id: 'db - index - advisor',
   name: 'DB Index Advisor',
@@ -514,7 +397,6 @@ variant: 'quantum - holographic'
   price: '$79',
   period: '/month',
   description: 'Collects slow queries and proposes safe index changes with before / after impact analysis.',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   features: ['Slow query capture_index suggestions_impact simulation_capacity forecast'];
   popular: false;
   icon: '',
@@ -531,15 +413,7 @@ variant: 'quantum - holographic'
   technology: ['PostgresMySQLOpenTelemetry'];
   integrations: ['GrafanaDatadog'];
   use_cases: ['Performance tuning_incident prevention'];
-<<<<<<< HEAD
-  roi: '2050% p95 reduction month 1'
-  competitors: ['Percona PMMDatadog APM'];
-  market_size: '$7 B DB Ops'
-  growth_rate: '12% CAGR';
-variant: 'quantum'
-  contact_info: contact;
-=======
-  roi: '2050% p95 reduction month 1',
+roi: '2050% p95 reduction month 1',
   competitors:
         competitors: ['Percona PMMDatadog APM'];
   market_size: '$7 B DB Ops',
@@ -547,7 +421,6 @@ variant: 'quantum'
   variant: 'quantum',
   contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   real_implementation: true;
   implementation_details: 'Agent + collector with secure export.',
   launch_date: '2025 - 02 - 12',

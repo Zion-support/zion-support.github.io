@@ -7,24 +7,16 @@ export interface PerformanceMetric {
   name: string,
   value: number,
   rating: 'good' | 'needs-improvement' | 'poor',
-<<<<<<< HEAD
-  timestamp: number;});;)
-=======
-  timestamp: number;});]
+timestamp: number;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface WebVitals {
   FCP?: PerformanceMetric; // First Contentful Paint;
   LCP?: PerformanceMetric; // Largest Contentful Paint;
   FID?: PerformanceMetric; // First Input Delay;
   CLS?: PerformanceMetric; // Cumulative Layout Shift;
   TTFB?: PerformanceMetric; // Time to First Byte;
-<<<<<<< HEAD
-  INP?: PerformanceMetric; // Interaction to Next Paint});;)
-=======
-  INP?: PerformanceMetric; // Interaction to Next Paint});]
+INP?: PerformanceMetric; // Interaction to Next Paint});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface CustomMetric {
   name: string,
   value: number,
@@ -33,34 +25,22 @@ export interface PerformanceMetric {}
   name: string,
   value: number,
   rating: 'good' | 'needs-improvement' | 'poor',
-<<<<<<< HEAD
-  timestamp: number;});;)
-=======
-  timestamp: number;});]
+timestamp: number;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface WebVitals {}
   FCP?: PerformanceMetric; // First Contentful Paint
   LCP?: PerformanceMetric; // Largest Contentful Paint
   FID?: PerformanceMetric; // First Input Delay
   CLS?: PerformanceMetric; // Cumulative Layout Shift
   TTFB?: PerformanceMetric; // Time to First Byte
-<<<<<<< HEAD
-  INP?: PerformanceMetric; // Interaction to Next Paint});;)
-=======
-  INP?: PerformanceMetric; // Interaction to Next Paint});]
+INP?: PerformanceMetric; // Interaction to Next Paint});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export interface CustomMetric {}
   name: string,
   value: number,
   unit: 'ms' | 'bytes' | 'count' | 'percentage',
-<<<<<<< HEAD
-  timestamp: number;});;);
-=======
-  timestamp: number;});]
+timestamp: number;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 class PerformanceMonitoringService {}
   private static instance: PerformanceMonitoringService}
   private webVitals: WebVitals = {}
@@ -100,15 +80,10 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   private,
   observers: PerformanceObserver[] = [];
   private maxMetrics = 1000;
-<<<<<<< HEAD
-  private constructor() {/* TODO: Fix JSX expression */});;);
-  static getInstance(): PerformanceMonitoringService {/* TODO: Fix JSX expression */});;);
-=======
-  private constructor() {/* TODO: Fix JSX expression */});]
+private constructor() {/* TODO: Fix JSX expression */});]
     }
   static getInstance(): PerformanceMonitoringService {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return PerformanceMonitoringService.instance});
 }
   /**
@@ -116,27 +91,17 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    */
   private initializeObservers(): void {}
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}
-<<<<<<< HEAD
-      return;});;);
-=======
-      return;});]
+return;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     try {}
       // Observe paint metrics (FCP);
 const paintObserver = new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {}
           if (entry.name === 'first-contentful-paint') {}
-<<<<<<< HEAD
-            this.recordWebVital('FCP', entry.startTime);});;);
-        });;)
-});
-=======
-            this.recordWebVital('FCP', entry.startTime);});]
+this.recordWebVital('FCP', entry.startTime);});]
     }
         });]
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       paintObserver.observe({ type: 'paint', buffered: true });
       this.observers.push(paintObserver)
       // Observe LCP;
@@ -146,12 +111,8 @@ const lcpObserver = new PerformanceObserver((list) => {}
         const entries = list.getEntries();
 const lastEntry = entries[entries.length - 1]
         if (lastEntry) {}
-<<<<<<< HEAD
-          this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number });.renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number });.loadTime););
-=======
-          this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number });.renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number });.loadTime)]
+this.recordWebVital('LCP', (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number });.renderTime || (lastEntry as PerformanceEntry & { renderTime: number; loadTime: number });.loadTime)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       });
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
       this.observers.push(lcpObserver)
@@ -164,16 +125,10 @@ const clsObserver = new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {}
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean });.hadRecentInput) {}
             clsValue += (entry as PerformanceEntry & { value: number });.value;
-<<<<<<< HEAD
-            this.recordWebVital('CLS', clsValue););
-        });;)
-});
-=======
-            this.recordWebVital('CLS', clsValue)]
+this.recordWebVital('CLS', clsValue)]
     }
         });]
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       clsObserver.observe({ type: 'layout-shift', buffered: true });
       this.observers.push(clsObserver)
       // Observe FID;
@@ -201,31 +156,20 @@ const navObserver = new PerformanceObserver((list) => {}
       this.observers.push(navObserver)]
     } catch (error) {}
       logger.error('Failed to initialize performance observers', error as Error);}
-<<<<<<< HEAD
-  private initializeObservers(): void {/* TODO: Fix JSX expression */});;);
-    try {/* TODO: Fix JSX expression */});;);
-        });;)
-});;
-=======
-  private initializeObservers(): void {/* TODO: Fix JSX expression */});]
+private initializeObservers(): void {/* TODO: Fix JSX expression */});]
     }
     try {/* TODO: Fix JSX expression */});]
     }
         });]
     });;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       paintObserver.observe({/* TODO: Fix JSX expression */});
   d: true });;
       this.observers.push(paintObserver);
       // Observe LCP;
 const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   e: number });.renderTime || (lastEntry as PerformanceEntry & {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-  e: number });.loadTime););
-=======
-  e: number });.loadTime)]
+e: number });.loadTime)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       });;
       lcpObserver.observe({/* TODO: Fix JSX expression */});
   d: true });;
@@ -235,16 +179,10 @@ const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   t: boolean });.hadRecentInput) {/* TODO: Fix JSX expression */}
   e: number });.value;
-<<<<<<< HEAD
-            this.recordWebVital('CLS', clsValue););
-        });;)
-});;
-=======
-            this.recordWebVital('CLS', clsValue)]
+this.recordWebVital('CLS', clsValue)]
     }
         });]
     });;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       clsObserver.observe({/* TODO: Fix JSX expression */});
   d: true });;
       this.observers.push(clsObserver);
@@ -296,34 +234,22 @@ const metric: PerformanceMetric = {}
       name,
       value,
       rating,
-<<<<<<< HEAD
-      timestamp: Date.now();););
-=======
-      timestamp: Date.now();)]
+timestamp: Date.now();)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.webVitals[name] = metric;
     logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
     // Send to analytics;
     this.sendToAnalytics(metric)
   private recordWebVital(nam,
   e: keyof WebVitals, valu)
-<<<<<<< HEAD
-  e: number): void {/* TODO: Fix JSX expression */});;);
-=======
-  e: number): void {/* TODO: Fix JSX expression */});]
+e: number): void {/* TODO: Fix JSX expression */});]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.webVitals[name] = metric;
     logger.info(`Web)`
   Vital: ${name}`, 'PerformanceMonitoring', { value, rating });;
     // Send to analytics;
-<<<<<<< HEAD
-    this.sendToAnalytics(metric););
-=======
-    this.sendToAnalytics(metric)]
+this.sendToAnalytics(metric)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get rating for a Web Vital metric;
    */
@@ -388,44 +314,28 @@ const metric: CustomMetric = {,
       name,
       value,
       unit,
-<<<<<<< HEAD
-      timestamp: Date.now();););
-=======
-      timestamp: Date.now();)]
+timestamp: Date.now();)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.customMetrics.push(metric)
     // Maintain max metrics limit;
     if (this.customMetrics.length > this.maxMetrics) {
     // Maintain max metrics limit
     if (this.customMetrics.length > this.maxMetrics) {}
-<<<<<<< HEAD
-      this.customMetrics.shift();});;);
-=======
-      this.customMetrics.shift();});]
+this.customMetrics.shift();});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit });
   recordCustomMetric(nam,
   e: string, valu,
   e: number, uni)
-<<<<<<< HEAD
-  t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */});;);
-=======
-  t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */});]
+t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */});]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.customMetrics.push(metric);
     // Maintain max metrics limit;
     if (this.customMetrics.length > this.maxMetrics) {/* TODO: Fix JSX expression */});]
     }`
     logger.debug(`Custom)`
-<<<<<<< HEAD
-  Metric: ${name}`, 'PerformanceMonitoring', { value, unit });;);
-=======
-  Metric: ${name}`, 'PerformanceMonitoring', { value, unit });]
+Metric: ${name}`, 'PerformanceMonitoring', { value, unit });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Send metric to analytics service;
    */
@@ -442,31 +352,20 @@ const metric: CustomMetric = {,
         await fetch('/api/analytics/performance', {);
           method: 'POST'}
           headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-          body: JSON.stringify(metric);)
-});;);
-=======
-          body: JSON.stringify(metric)]
+body: JSON.stringify(metric)]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     } catch (error) {}
       logger.error('Failed to send metric to analytics', error as Error);
   private async sendToAnalytics(metri)
   c: PerformanceMetric): Promise<void></void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
           bod,
-<<<<<<< HEAD
-  y: JSON.stringify(metric);)
-});;);
-    } catch (error) {/* TODO: Fix JSX expression */});;);
-=======
-  y: JSON.stringify(metric)]
+y: JSON.stringify(metric)]
     });]
     }
     } catch (error) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Get all Web Vitals;
@@ -481,12 +380,8 @@ const metric: CustomMetric = {,
    */
   getCustomMetrics(): CustomMetric[] {}
     return [...this.customMetrics];}
-<<<<<<< HEAD
-  getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */});;);
-=======
-  getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */});]
+getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get performance score (0-100)
    */
@@ -573,12 +468,8 @@ const recommendations: string[] = []
       score,
       webVitals: this.webVitals;
       customMetrics: this.customMetrics;
-<<<<<<< HEAD
-      recommendations});;);
-=======
-      recommendations});]
+recommendations});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Measure function execution time;
@@ -613,12 +504,8 @@ const duration = performance.now() - start;`}
     if (typeof performance !== 'undefined' && 'mark' in performance) {,
   mark(name: string): void {}
     if (typeof performance !== 'undefined' && 'mark' in performance) {}
-<<<<<<< HEAD
-      performance.mark(name);});;);
-=======
-      performance.mark(name);});]
+performance.mark(name);});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Measure between two marks;
@@ -687,12 +574,8 @@ const measure = performance.getEntriesByName(name, 'measure')[0]
    * Mark a custom performance mark;
    */
   mark(nam)
-<<<<<<< HEAD
-  e: string): void {/* TODO: Fix JSX expression */});;);
-=======
-  e: string): void {/* TODO: Fix JSX expression */});]
+e: string): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Measure between two marks;
@@ -700,15 +583,10 @@ const measure = performance.getEntriesByName(name, 'measure')[0]
   measure(nam,
   e: string, startMar,
   k: string, endMar)
-<<<<<<< HEAD
-  k: string): number | null {/* TODO: Fix JSX expression */});;);
-      } catch (error) {/* TODO: Fix JSX expression */});;);
-=======
-  k: string): number | null {/* TODO: Fix JSX expression */});]
+k: string): number | null {/* TODO: Fix JSX expression */});]
     }
       } catch (error) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
     return null});
 }
@@ -728,12 +606,8 @@ const measure = performance.getEntriesByName(name, 'measure')[0]
   disconnect(): void {}
     this.observers.forEach(observer => observer.disconnect())
     this.observers = [];}
-<<<<<<< HEAD
-  disconnect(): void {/* TODO: Fix JSX expression */});;);
-=======
-  disconnect(): void {/* TODO: Fix JSX expression */});]
+disconnect(): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 export const performanceMonitoring = PerformanceMonitoringService.getInstance()
 export default PerformanceMonitoringService;
@@ -761,12 +635,8 @@ interface MetricData {}
   min: number,
   max: number,
   unit: string,
-<<<<<<< HEAD
-  rating?: 'good' | 'needs-improvement' | 'poor';});;);
-=======
-  rating?: 'good' | 'needs-improvement' | 'poor';});]
+rating?: 'good' | 'needs-improvement' | 'poor';});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const simpleMetrics = new Map<string></string>()
 export const recordMetric = useCallback((...args) => {
   // Record in our simple metrics store for testing
@@ -794,19 +664,12 @@ const existing = simpleMetrics.get(name)
       min: value,
       max: value,
       unit,
-<<<<<<< HEAD
-      rating: getRating(name, value););)
-});;);
-  // Also record in the main performance monitoring service;
-  performanceMonitoring.recordCustomMetric(name, value, unit););
-=======
-      rating: getRating(name, value);)]
+rating: getRating(name, value);)]
     });]
     }
   // Also record in the main performance monitoring service;
   performanceMonitoring.recordCustomMetric(name, value, unit)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {}
   const thresholds: Record<string></string> = {}</strin>
     'FCP': { good: 1800, poor: 3000 },
@@ -866,23 +729,15 @@ export const measureFunction = <T></T>(name: string, fn: () => T): T => {}
 const result = fn();
 const duration = performance.now() - start
   recordMetric(name, duration, MetricUnit.Milliseconds)
-<<<<<<< HEAD
-  return result;});;)
-=======
-  return result;});]
+return result;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const measureAsyncFunction = async <T></T>(name: string, fn: () => Promise<T></T>): Promise<T></T> => {}
   const start = performance.now();
 const result = await fn();
 const duration = performance.now() - start
   recordMetric(name, duration, MetricUnit.Milliseconds)
-<<<<<<< HEAD
-  return result;});;)
-=======
-  return result;});]
+return result;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const getPerformanceScore = (): number => {}
   const metrics = getMetrics();
 const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB'];

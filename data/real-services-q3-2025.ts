@@ -246,15 +246,7 @@ export const,
     technology: ['dbt_snowflake / BigQuerySegment / GA4 Python'];
     integrations: ['StripePaddleChargebeeLemon Squeezy'];
     use_cases: ['Reduce churn_price optimization_board - ready revenue KPIs'];
-<<<<<<< HEAD
-    roi: '310% ARR lift from churn reduction and pricing wins.'
-    competitors: ['ProfitWell MetricsChartMogulBaremetrics'];
-    market_size: '$30 B+ subscription economy tooling'
-    growth_rate: '30% YoY';
-variant: 'ai - futuristic'
-    customers: 24;
-=======
-    roi: '310% ARR lift from churn reduction and pricing wins.',
+roi: '310% ARR lift from churn reduction and pricing wins.',
     competitors:
         competitors: ['ProfitWell MetricsChartMogulBaremetrics'];
     market_size: '$30 B+ subscription economy tooling',
@@ -262,7 +254,6 @@ variant: 'ai - futuristic'
     variant: 'ai - futuristic',
     customers:
         customers: 24;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     rating: 4 && 4.9;
     reviews: 31;
     roi: 'Launch revenue in under 2 weeks, save 4080 hours of setup.',
@@ -664,35 +655,22 @@ varian,
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
     features: [;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
-<<<<<<< HEAD
-    contactInfo: contact}
-    targetAudience: 'SaaS startups, PLG companies, finance and growth teams'
-    trialDays: 14;
-=======
-    contactInfo: contact;
+contactInfo: contact;
   }
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays:
         trialDays: 14;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     category: 'AI & Data',
     realService: true;
     technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python']
     integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy']
     useCases: [,
     competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics']
-<<<<<<< HEAD
-    marketSize: '$30 B+ subscription economy tooling'
-    growthRate: '30% YoY';
-variant: 'ai-futuristic'
-    customers: 24;
-=======
-    marketSize: '$30 B+ subscription economy tooling',
+marketSize: '$30 B+ subscription economy tooling',
     growthRate: '30% YoY',
     variant: 'ai-futuristic',
     customers:
         customers: 24;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     rating: 4.9;
     reviews: 31;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
@@ -798,14 +776,9 @@ varian,
     rating: 4.8;
     reviews: 18;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-<<<<<<< HEAD
-    contactInfo: contact}
-    id: 'wordpress-internal-linking-automation'
-=======
-    contactInfo: contact;
+contactInfo: contact;
   }
     id: 'wordpress-internal-linking-automation',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'WordPress Internal Linking Automation',
     tagline: 'AI-guided internal links that improve SEO structure and topical authority',
     price: '$299',
@@ -892,14 +865,9 @@ varian,
     rating: 4.7;
     reviews: 22;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
-<<<<<<< HEAD
-    contactInfo: contact}
-    id: 'reviews-ugc-activation'
-=======
-    contactInfo: contact;
+contactInfo: contact;
   }
     id: 'reviews-ugc-activation',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Ecommerce Reviews & UGC Activation',
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
     price: '$999',
@@ -1044,18 +1012,11 @@ varian,
     setupTime: '12 weeks',
     category: 'AI & Data',
     realService: true;
-<<<<<<< HEAD
-    marketSize: '$30B+ subscription economy tooling'
-    growthRate: '30% YoY';
-variant: 'ai-futuristic'
-    customers: 24;
-=======
-    marketSize: '$30B+ subscription economy tooling',
+marketSize: '$30B+ subscription economy tooling',
     growthRate: '30% YoY',
     variant: 'ai-futuristic',
     customers:
         customers: 24;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     rating: 4.9;
     reviews: 31;
     popula,
@@ -1301,18 +1262,11 @@ export const,
     useCases: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs'],
     roi: '310% ARR lift from churn reduction and pricing wins.',
     competitors: ['ProfitWell MetricsChartMogul', 'Baremetrics'],
-<<<<<<< HEAD
-    marketSize: '$30B+ subscription economy tooling'
-    growthRate: '30% YoY';
-variant: 'ai-futuristic'
-    customers: 24;
-=======
-    marketSize: '$30B+ subscription economy tooling',
+marketSize: '$30B+ subscription economy tooling',
     growthRate: '30% YoY',
     variant: 'ai-futuristic',
     customers:
         customers: 24;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     rating: 4.9;
     reviews: 31;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;

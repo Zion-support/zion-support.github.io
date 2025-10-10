@@ -292,13 +292,7 @@ const useCases = [
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 export default AiAnalyticsPage;
     </React.Fragment>)
 export default AiAnalyticsPage;
-=======
-};
-
-export default AiAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1

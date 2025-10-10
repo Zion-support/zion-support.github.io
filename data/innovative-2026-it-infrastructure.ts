@@ -224,20 +224,12 @@ export const,
         'Microsoft Azure',
         'IBM Cloud',
         'Oracle Cloud'],
-<<<<<<< HEAD
-      market_size: '$397.4B market'
-      growth_rate: '280% annual growth';
-variant: 'quantum - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$397.4B market',
+market_size: '$397.4B market',
       growth_rate: '280% annual growth',
       variant: 'quantum - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -394,20 +386,12 @@ varian,
         'Google Cloud IoT Edge',
         'FogHorn',
         'ClearBlade'],
-<<<<<<< HEAD
-      market_size: '$43.4B market'
-      growth_rate: '240% annual growth';
-variant: 'edge - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$43.4B market',
+market_size: '$43.4B market',
       growth_rate: '240% annual growth',
       variant: 'edge - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -562,20 +546,12 @@ varian,
         'Fortinet',
         'Check Point',
         'Juniper Networks'],
-<<<<<<< HEAD
-      market_size: '$45.2B market'
-      growth_rate: '260% annual growth';
-variant: 'security - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$45.2B market',
+market_size: '$45.2B market',
       growth_rate: '260% annual growth',
       variant: 'security - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -731,20 +707,12 @@ varian,
         'Jenkins',
         'CircleCI',
         'Travis CI'],
-<<<<<<< HEAD
-      market_size: '$8.2B market'
-      growth_rate: '190% annual growth';
-variant: 'devops - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$8.2B market',
+market_size: '$8.2B market',
       growth_rate: '190% annual growth',
       variant: 'devops - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -898,20 +866,12 @@ varian,
         'Azure Blob',
         'Dropbox Business',
         'Box'],
-<<<<<<< HEAD
-      market_size: '$78.4B market'
-      growth_rate: '220% annual growth';
-variant: 'quantum - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$78.4B market',
+market_size: '$78.4B market',
       growth_rate: '220% annual growth',
       variant: 'quantum - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1056,13 +1016,8 @@ export const,
     technology: ['Quantum ComputingKubernetesDockerTerraformPythonGoRustAWS', 'Azure'];
     integrations: ['AWS ServicesAzure ServicesGoogle CloudKubernetesDockerTerraformAnsibleJenkins'], useCases: ['High-performance computingCryptographic applicationsMachine learning accelerationFinancial modelingDrug discoveryClimate modeling'],
     roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.', competitors: ['AWSGoogle CloudMicrosoft AzureIBM CloudOracle Cloud'],
-<<<<<<< HEAD
-    marketSize: '$397.4B market', growthRate: '280% annual growth';
-variant: 'quantum-futuristic'
-=======
-    marketSize: '$397.4B market', growthRate: '280% annual growth',
+marketSize: '$397.4B market', growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: unknown;
   ];    features: [;
       'Quantum - resistant encryption_multi - layer security_automated backup and recovery_global data distribution_compliance certifications_real - time monitoring_disaster recovery_data deduplication',

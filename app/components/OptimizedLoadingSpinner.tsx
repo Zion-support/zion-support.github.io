@@ -9,13 +9,8 @@ interface OptimizedLoadingSpinnerProps {
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
-<<<<<<< HEAD
-  fullScreen?: boolean;);
-=======
-  fullScreen?: boolean]
+fullScreen?: boolean]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',;
@@ -143,12 +138,8 @@ const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClass
             </p>
           );
         </div>
-<<<<<<< HEAD
-    ););
-=======
-    )]
+)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 );
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'

@@ -125,12 +125,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   /**
    * Stop cleanup interval;
    */
-<<<<<<< HEAD
-  stopCleanup(): void {/* TODO: Fix JSX expression */});;);
-=======
-  stopCleanup(): void {/* TODO: Fix JSX expression */});]
+stopCleanup(): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Remove expired entries;
@@ -329,12 +325,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
    * Check if key exists and is not expired;
    */
   has(ke)
-<<<<<<< HEAD
-  y: string): boolean {/* TODO: Fix JSX expression */});;);
-=======
-  y: string): boolean {/* TODO: Fix JSX expression */});]
+y: string): boolean {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Delete a cache entry;
    */
@@ -347,12 +339,8 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     } else if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage}
-<<<<<<< HEAD
-    ) {/* TODO: Fix JSX expression */});;);
-=======
-    ) {/* TODO: Fix JSX expression */});]
+) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Clear all cache entries;
@@ -389,25 +377,16 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     if (this.config.storage !== CacheStorage.Memory) {
     // Clear persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory) {}
-<<<<<<< HEAD
-      this.clearStorage(););
-=======
-      this.clearStorage()]
+this.clearStorage()]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
 
   /**
    * Get all keys in the cache;
    */
   keys(): string[] {}
-<<<<<<< HEAD
-    return Array.from(this.cache.keys()););
-=======
-    return Array.from(this.cache.keys())]
+return Array.from(this.cache.keys())]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get cache statistics;
    */
@@ -436,36 +415,23 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     if (this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
       window.sessionStorage}
-<<<<<<< HEAD
-    ) {/* TODO: Fix JSX expression */});;);
-      });;);
-=======
-    ) {/* TODO: Fix JSX expression */});]
+) {/* TODO: Fix JSX expression */});]
     }
       });]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     this.stats.entries = this.cache.size;
 
     // Save to persistent storage if needed;
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {
     // Save to persistent storage if needed
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}
-<<<<<<< HEAD
-      this.saveToStorage(););
-    return cleaned;
-    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */});
-  e: this.storage });;);
-=======
-      this.saveToStorage()]
+this.saveToStorage()]
     }
 
     return cleaned;
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */});
   e: this.storage });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get or set with function (handles both sync and async)
    */
@@ -568,15 +534,10 @@ const duration = performance.now() - start;`
           entries: Object.fromEntries(this.cache),
           stats: this.stats;
           timestamp: Date.now();;
-<<<<<<< HEAD
-        storage.setItem('cache-manager', JSON.stringify(data)););
-    } catch (error) {});;);
-=======
-        storage.setItem('cache-manager', JSON.stringify(data))]
+storage.setItem('cache-manager', JSON.stringify(data))]
     }
     } catch (error) {});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
 
   /**
@@ -598,14 +559,7 @@ const duration = performance.now() - start;`
     } catch (error) {}
    * Get cache count;
    */
-<<<<<<< HEAD
-  getStats(): {/* TODO: Fix JSX expression */});;)
-} {/* TODO: Fix JSX expression */});;);
-        });;);
-      if (window.sessionStorage) {/* TODO: Fix JSX expression */});;);
-        });;);
-=======
-  getStats(): {/* TODO: Fix JSX expression */});]
+getStats(): {/* TODO: Fix JSX expression */});]
     } {/* TODO: Fix JSX expression */});]
     }
         });]
@@ -614,7 +568,6 @@ const duration = performance.now() - start;`
     }
         });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
 
   /**
@@ -626,15 +579,10 @@ const duration = performance.now() - start;`
     try {}
       const storage = this.getStorage();
       if (storage) {}
-<<<<<<< HEAD
-        storage.removeItem('cache-manager'););
-    } catch (error) {});;);
-=======
-        storage.removeItem('cache-manager')]
+storage.removeItem('cache-manager')]
     }
     } catch (error) {});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
 
   /**

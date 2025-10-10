@@ -217,20 +217,12 @@ export const,
         'BrainChip',
         'SpiNNaker',
         'BrainScaleS'],
-<<<<<<< HEAD
-      market_size: '$12.8B market'
-      growth_rate: '380% annual growth';
-variant: 'quantum - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$12.8B market',
+market_size: '$12.8B market',
       growth_rate: '380% annual growth',
       variant: 'quantum - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -382,20 +374,12 @@ varian,
         'Twist Bioscience',
         'Illumina',
         'Pacific Biosciences'],
-<<<<<<< HEAD
-      market_size: '$8.9B market'
-      growth_rate: '520% annual growth';
-variant: 'quantum - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$8.9B market',
+market_size: '$8.9B market',
       growth_rate: '520% annual growth',
       variant: 'quantum - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -545,20 +529,12 @@ varian,
         'Xanadu',
         'Intel Silicon Photonics',
         'IBM Photonics'],
-<<<<<<< HEAD
-      market_size: '$15.6B market'
-      growth_rate: '420% annual growth';
-variant: 'quantum - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$15.6B market',
+market_size: '$15.6B market',
       growth_rate: '420% annual growth',
       variant: 'quantum - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -706,20 +682,12 @@ varian,
         'RealView',
         'Hologram USA',
         'HoloLens'],
-<<<<<<< HEAD
-      market_size: '$23.4B market'
-      growth_rate: '280% annual growth';
-variant: 'ai - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$23.4B market',
+market_size: '$23.4B market',
       growth_rate: '280% annual growth',
       variant: 'ai - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -863,20 +831,12 @@ varian,
         'Customer verification'],
       roi: 'Average customer sees 350% ROI within 4 months through improved security and user experience.',
       competitors: ['Face ID', 'Touch ID', 'Voice ID', 'Clear', 'ID.me'],
-<<<<<<< HEAD
-      market_size: '$34.8B market'
-      growth_rate: '320% annual growth';
-variant: 'ai - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$34.8B market',
+market_size: '$34.8B market',
       growth_rate: '320% annual growth',
       variant: 'ai - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1026,20 +986,12 @@ varian,
         'Toshiba Quantum',
         'NTT Quantum',
         'Chinese Quantum Network'],
-<<<<<<< HEAD
-      market_size: '$18.7B market'
-      growth_rate: '480% annual growth';
-variant: 'quantum - futuristic'
-      contact_info: unknown;
-        mobile: '+1 302 464 0950'
-=======
-      market_size: '$18.7B market',
+market_size: '$18.7B market',
       growth_rate: '480% annual growth',
       variant: 'quantum - futuristic',
       contact_info:
         contact_info: unknown;
         mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup && ziontechgroup.com'},

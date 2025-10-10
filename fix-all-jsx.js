@@ -2,29 +2,14 @@
 
 import fs from 'fs';
 
-function fixJSXSyntax(filePath) {
+function fixAllJSXIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix common JSX syntax issues
+    // Fix all self-closing div tags that should contain content
     const patterns = [
-      // Fix self-closing div tags that should be properly closed
-      {
-        regex: /<div([^>]*)><\/div>/g,
-        replacement: '<div$1></div>'
-      },
-      // Fix malformed closing tags like </di> instead of </div>
-      {
-        regex: /<\/di>/g,
-        replacement: '</div>'
-      },
-      // Fix malformed closing tags like </h> instead of </h3>
-      {
-        regex: /<\/h>/g,
-        replacement: '</h3>'
-      },
-      // Fix self-closing tags that should have content
+      // Fix self-closing div tags with content after them
       {
         regex: /<div([^>]*)><\/div>\s*([^<]+)\s*<\/div>/g,
         replacement: '<div$1>$2</div>'
@@ -58,6 +43,33 @@ function fixJSXSyntax(filePath) {
       {
         regex: /<input([^>]*)><\/input>\s*([^<]+)\s*<\/input>/g,
         replacement: '<input$1>$2</input>'
+      },
+      // Fix self-closing a tags
+      {
+        regex: /<a([^>]*)><\/a>\s*([^<]+)\s*<\/a>/g,
+        replacement: '<a$1>$2</a>'
+      },
+      // Fix self-closing span tags
+      {
+        regex: /<span([^>]*)><\/span>\s*([^<]+)\s*<\/span>/g,
+        replacement: '<span$1>$2</span>'
+      },
+      // Fix malformed closing tags
+      {
+        regex: /<\/di>/g,
+        replacement: '</div>'
+      },
+      {
+        regex: /<\/h>/g,
+        replacement: '</h3>'
+      },
+      {
+        regex: /<\/p>/g,
+        replacement: '</p>'
+      },
+      {
+        regex: /<\/b>/g,
+        replacement: '</button>'
       }
     ];
 
@@ -71,7 +83,7 @@ function fixJSXSyntax(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed JSX syntax in: ${filePath}`);
+      console.log(`Fixed JSX issues in: ${filePath}`);
       return true;
     }
     return false;
@@ -83,8 +95,8 @@ function fixJSXSyntax(filePath) {
 
 // Fix the main page file
 const filePath = '/workspace/app/page.tsx';
-if (fixJSXSyntax(filePath)) {
-  console.log('JSX syntax fixed successfully');
+if (fixAllJSXIssues(filePath)) {
+  console.log('All JSX issues fixed successfully');
 } else {
-  console.log('No JSX syntax issues found');
+  console.log('No JSX issues found');
 }

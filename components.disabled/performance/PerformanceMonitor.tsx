@@ -208,14 +208,9 @@
   f: (process.env['NODE_ENV'] = == "production") {/* TODO: Fix JSX expression */}"
   s: {"} "Content-Type": "application/json}"}," bod,
   y: JSON.stringify({} ur)
-<<<<<<< HEAD
-  l: 'window.location.hre,f)timestam,"
-  p: Date.now()}metrics})}).catch(_console.error)} ; window.addEventListener("beforeunload")sendMetrics)} setTimeout(sendMetrics)5000)} retur,"
-=======
-  l: 'window.location.hre,f)timestam,',
+l: 'window.location.hre,f)timestam,',
   p:
         p: Date.now()}metrics})}).catch(_console.error)} ; window.addEventListener("beforeunload")sendMetrics);} setTimeout(sendMetrics)5000);} retur,"
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   n: () => {"}; fmpObserver.observe({/* TODO: Fix JSX expression */}")
   s: ["paint"] })} const sendMetrics = () => {/* TODO: Fix JSX expression */}"
   p: {"} metric_," 1: "fcp",metric_,"

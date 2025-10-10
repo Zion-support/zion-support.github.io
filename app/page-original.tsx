@@ -22,14 +22,9 @@ const preloadComponents = () => {
     // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner');
-<<<<<<< HEAD
-      import('./components/ContentCarousel');)
-}, 100););
-=======
-      import('./components/ContentCarousel')]
+import('./components/ContentCarousel')]
     }, 100)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 };
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -111,12 +106,8 @@ const handlePhoneClick = useCallback(() => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-<<<<<<< HEAD
-            addressCountry: 'US';);
-=======
-            addressCountry: 'US']
+addressCountry: 'US']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         }}
       />
       <PerformanceOptimizer

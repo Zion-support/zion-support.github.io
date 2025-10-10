@@ -98,14 +98,9 @@ import React from 'react';
     implementation_details: unknown;
     customers: 3200;
     rating: 4 && 4.8;
-<<<<<<< HEAD
-    reviews: 1600},
-    id: 'smart - contract - automation'
-=======
-    reviews: 1600;
+reviews: 1600;
   },
     id: 'smart - contract - automation',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Smart Contract Automation',
     tagline: 'Automate business processes with smart contracts',
     price: '$149',
@@ -216,20 +211,12 @@ import React from 'react';
       'Voting systems'],
     roi: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.',
     competitors: ['OpenLaw', 'Clause', 'Agrello', 'Lexon', 'Monax'],
-<<<<<<< HEAD
-    market_size: '$1.2B smart contract market'
-    growth_rate: '200% annual growth';
-variant: 'quantum - blockchain'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$1.2B smart contract market',
+market_size: '$1.2B smart contract market',
     growth_rate: '200% annual growth',
     variant: 'quantum - blockchain',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -532,20 +519,12 @@ varian,
       'Later',
       'Sprout Social',
       'Agorapulse'],
-<<<<<<< HEAD
-    market_size: '$4.2B social media management market'
-    growth_rate: '180% annual growth';
-variant: 'ai - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$4.2B social media management market',
+market_size: '$4.2B social media management market',
     growth_rate: '180% annual growth',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1014,20 +993,12 @@ export interface InnovativeMicroSaas {/* TODO: Fix JSX expression */}
       'Typeform',
       'GetFeedback',
       'SurveyGizmo'],
-<<<<<<< HEAD
-    market_size: '$3.5B feedback management market'
-    growth_rate: '160% annual growth';
-variant: 'ai - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$3.5B feedback management market',
+market_size: '$3.5B feedback management market',
     growth_rate: '160% annual growth',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1182,20 +1153,12 @@ varian,
       'Later',
       'Sprout Social',
       'Agorapulse'],
-<<<<<<< HEAD
-    market_size: '$4.2B social media management market'
-    growth_rate: '180% annual growth';
-variant: 'ai - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$4.2B social media management market',
+market_size: '$4.2B social media management market',
     growth_rate: '180% annual growth',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1342,20 +1305,12 @@ varian,
       'Reporting'],
     roi: 'Average customer sees 300% ROI within 4 months through improved project efficiency and team productivity.',
     competitors: ['Asana', 'Monday.com', 'ClickUp', 'Trello', 'Basecamp'],
-<<<<<<< HEAD
-    market_size: '$5.8B project management market'
-    growth_rate: '150% annual growth';
-variant: 'ai - futuristic'
-    contact_info: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    market_size: '$5.8B project management market',
+market_size: '$5.8B project management market',
     growth_rate: '150% annual growth',
     variant: 'ai - futuristic',
     contact_info:
         contact_info: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'},
@@ -1523,14 +1478,9 @@ export const,
     customers:
         customers: 3200;
     rating: 4.8;
-<<<<<<< HEAD
-    reviews: 1600}
-    id: 'smart-contract-automation'
-=======
-    reviews: 1600;
+reviews: 1600;
   }
     id: 'smart-contract-automation',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Smart Contract Automation',
     tagline: 'Automate business processes with smart contracts',
     price: '$149',
@@ -1690,15 +1640,9 @@ export const,
       'Voting systems'],
     roi: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.',
     competitors: ['OpenLaw', 'Clause', 'Agrello', 'Lexon', 'Monax']
-<<<<<<< HEAD
-    marketSize: '$1.2 B smart contract market'
-    growthRate: '200% annual growth';
-variant: 'quantum-blockchain',
-=======
-    marketSize: '$1.2 B smart contract market',
+marketSize: '$1.2 B smart contract market',
     growthRate: '200% annual growth',
     variant: 'quantum-blockchain',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1710,14 +1654,9 @@ variant: 'quantum-blockchain',
     customers:
         customers: 1800;
     rating: 4.9;
-<<<<<<< HEAD
-    reviews: 900}
-    id: 'ai-powered-customer-feedback-analyzer'
-=======
-    reviews: 900;
+reviews: 900;
   }
     id: 'ai-powered-customer-feedback-analyzer',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'AI-Powered Customer Feedback Analyzer',
     tagline: 'Transform feedback into actionable insights',
     price: '$89',
@@ -1868,18 +1807,11 @@ varian,
       'GetFeedback'
       'SurveyGizmo'
     ]
-<<<<<<< HEAD
-    marketSize: '$3.5B feedback management market'
-    growthRate: '160% annual growth';
-variant: 'ai-futuristic'
-    contactInfo: mobile: '+1 302 464 0950'
-=======
-    marketSize: '$3.5B feedback management market',
+marketSize: '$3.5B feedback management market',
     growthRate: '160% annual growth',
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -1890,14 +1822,9 @@ variant: 'ai-futuristic'
     customers:
         customers: 2800;
     rating: 4.7;
-<<<<<<< HEAD
-    reviews: 1400}
-    id: 'automated-social-media-scheduler'
-=======
-    reviews: 1400;
+reviews: 1400;
   }
     id: 'automated-social-media-scheduler',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Automated Social Media Scheduler',
     tagline: 'AI-powered social media management',
     price: '$59',
@@ -2043,18 +1970,11 @@ varian,
       'Sprout Social'
       'Agorapulse'
     ]
-<<<<<<< HEAD
-    marketSize: '$4.2B social media management market'
-    growthRate: '180% annual growth';
-variant: 'ai-futuristic'
-    contactInfo: mobile: '+1 302 464 0950'
-=======
-    marketSize: '$4.2B social media management market',
+marketSize: '$4.2B social media management market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
@@ -2065,14 +1985,9 @@ variant: 'ai-futuristic'
     customers:
         customers: 4500;
     rating: 4.8;
-<<<<<<< HEAD
-    reviews: 2250}
-    id: 'intelligent-project-management'
-=======
-    reviews: 2250;
+reviews: 2250;
   }
     id: 'intelligent-project-management',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     name: 'Intelligent Project Management',
     tagline: 'AI-powered project planning and execution',
     price: '$129',
@@ -2206,15 +2121,9 @@ varian,
       'Reporting'],
     roi: 'Average customer sees 300% ROI within 4 months through improved project efficiency and team productivity.',
     competitors: ['Asana', 'Monday.com', 'ClickUp', 'Trello', 'Basecamp']
-<<<<<<< HEAD
-    marketSize: '$5.8 B project management market'
-    growthRate: '150% annual growth';
-variant: 'ai-futuristic',
-=======
-    marketSize: '$5.8 B project management market',
+marketSize: '$5.8 B project management market',
     growthRate: '150% annual growth',
     variant: 'ai-futuristic',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

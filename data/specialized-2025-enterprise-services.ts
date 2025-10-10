@@ -306,15 +306,7 @@ export const,
   s: [,
       'Consciousness research, AGI development, Psychology studies, AI ethics research, Cognitive modeling'
     ]
-<<<<<<< HEAD
-    roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits'
-    competitors: ['No direct competitors in consciousness simulation'];
-    marketSize: 'Emerging research market'
-    growthRate: 'Projected 500% annual growth';
-variant: 'ai-futuristic'
-    contactInfo: contact;
-=======
-    roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits',
+roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits',
     competitors:
         competitors: ['No direct competitors in consciousness simulation'];
     marketSize: 'Emerging research market',
@@ -322,7 +314,6 @@ variant: 'ai-futuristic'
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     realImplementation: true;
     implementationDetails: color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
@@ -382,15 +373,7 @@ varian,
     use_case,
   s: [,
       'Consciousness research, AGI development, Psychology studies, AI ethics research, Cognitive modeling'],
-<<<<<<< HEAD
-    roi: 'Strategic investment in cutting - edge AI research with long - term scientific and commercial benefits'
-    competitors: ['No direct competitors in consciousness simulation']
-    market_size: 'Emerging research market'
-    growth_rate: 'Projected 500% annual growth';
-variant: 'ai - futuristic'
-    contact_info: contact;
-=======
-    roi: 'Strategic investment in cutting - edge AI research with long - term scientific and commercial benefits',
+roi: 'Strategic investment in cutting - edge AI research with long - term scientific and commercial benefits',
     competitors:
         competitors: ['No direct competitors in consciousness simulation']
     market_size: 'Emerging research market',
@@ -398,7 +381,6 @@ variant: 'ai - futuristic'
     variant: 'ai - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Advanced research platform with custom AI models and collaborative research tools',
@@ -540,18 +522,11 @@ varian,
       'Financial optimization, Drug discovery, Logistics optimization, Machine learning research'],
     roi: 'Solve previously intractable problems and accelerate research by 100x',
     competitors: ['IBM Quantum, Google Quantum AI, Rigetti, D - Wave'],
-<<<<<<< HEAD
-    market_size: '$10B+ quantum computing market'
-    growth_rate: '250% YoY';
-variant: 'quantum - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$10B+ quantum computing market',
+market_size: '$10B+ quantum computing market',
     growth_rate: '250% YoY',
     variant: 'quantum - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Multi - quantum backend platform with hybrid computing capabilities',
@@ -696,18 +671,11 @@ varian,
       'Data encryption, Digital signatures, Key management, Secure communications'],
     roi: 'Future - proof security infrastructure and maintain compliance with emerging standards',
     competitors: ['NIST post - quantum candidates, PQShield, PQSecure, ISARA'],
-<<<<<<< HEAD
-    market_size: '$8B+ post - quantum cryptography market'
-    growth_rate: '300% YoY';
-variant: 'cybersecurity - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$8B+ post - quantum cryptography market',
+market_size: '$8B+ post - quantum cryptography market',
     growth_rate: '300% YoY',
     variant: 'cybersecurity - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Enterprise - grade quantum - resistant cryptography platform with migration tools',
@@ -849,18 +817,11 @@ varian,
       'Satellite operations, Constellation management, Mission planning, Data processing'],
     roi: 'Optimize satellite operations by 400% and reduce mission costs by 60%',
     competitors: ['Maxar, Planet Labs, Spire, ICEYE'],
-<<<<<<< HEAD
-    market_size: '$5B+ satellite operations market'
-    growth_rate: '400% YoY';
-variant: 'space - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$5B+ satellite operations market',
+market_size: '$5B+ satellite operations market',
     growth_rate: '400% YoY',
     variant: 'space - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Custom satellite orchestration platform with AI - powered optimization',
@@ -1002,18 +963,11 @@ varian,
       'Medical rehabilitation, Cognitive research, Assistive technology, Human augmentation'],
     roi: 'Revolutionary medical applications and breakthrough research capabilities',
     competitors: ['Neuralink, CTRL - labs, Kernel, Paradromics'],
-<<<<<<< HEAD
-    market_size: '$3B+ BCI market'
-    growth_rate: '600% YoY';
-variant: 'neural - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$3B+ BCI market',
+market_size: '$3B+ BCI market',
     growth_rate: '600% YoY',
     variant: 'neural - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Advanced BCI platform with medical - grade hardware and research tools',
@@ -1155,18 +1109,11 @@ varian,
       'Industrial automation, Smart city management, Energy optimization, Manufacturing IoT'],
     roi: 'Reduce IoT management costs by 70% and improve operational efficiency by 50%',
     competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'],
-<<<<<<< HEAD
-    market_size: '$20B+ industrial IoT market'
-    growth_rate: '180% YoY';
-variant: 'iot - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$20B+ industrial IoT market',
+market_size: '$20B+ industrial IoT market',
     growth_rate: '180% YoY',
     variant: 'iot - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Industrial - grade autonomous IoT platform with AI - powered management',
@@ -1331,18 +1278,11 @@ varian,
       'Sales forecasting, Demand prediction, Risk assessment, Performance optimization'],
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%',
     competitors: ['SAS, IBM SPSS, RapidMiner, Alteryx'],
-<<<<<<< HEAD
-    market_size: '$30B+ predictive analytics market'
-    growth_rate: '160% YoY';
-variant: 'analytics - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$30B+ predictive analytics market',
+market_size: '$30B+ predictive analytics market',
     growth_rate: '160% YoY',
     variant: 'analytics - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: unknown;
       'Enterprise - grade predictive analytics platform with custom model development',
@@ -1470,18 +1410,11 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
     use_cases: ['Financial optimization, Drug discovery, Logistics optimization, Machine learning research'];
     roi: 'Solve previously intractable problems and accelerate research by 100x',
     competitors: ['IBM Quantum, Google Quantum AI, Rigetti, D - Wave'];
-<<<<<<< HEAD
-    market_size: '$10 B+ quantum computing market'
-    growth_rate: '250% YoY';
-variant: 'quantum - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$10 B+ quantum computing market',
+market_size: '$10 B+ quantum computing market',
     growth_rate: '250% YoY',
     variant: 'quantum - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Multi - quantum backend platform with hybrid computing capabilities',
     launch_date: '2024 - 10 - 01',
@@ -1524,18 +1457,11 @@ variant: 'quantum - futuristic'
     use_cases: ['Data encryption, Digital signatures, Key management, Secure communications'];
     roi: 'Future - proof security infrastructure and maintain compliance with emerging standards',
     competitors: ['NIST post - quantum candidates, PQShield, PQSecure, ISARA'];
-<<<<<<< HEAD
-    market_size: '$8 B+ post - quantum cryptography market'
-    growth_rate: '300% YoY';
-variant: 'cybersecurity - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$8 B+ post - quantum cryptography market',
+market_size: '$8 B+ post - quantum cryptography market',
     growth_rate: '300% YoY',
     variant: 'cybersecurity - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Enterprise - grade quantum - resistant cryptography platform with migration tools',
     launch_date: '2024 - 09 - 01',
@@ -1578,18 +1504,11 @@ variant: 'cybersecurity - futuristic'
     use_cases: ['Satellite operations, Constellation management, Mission planning, Data processing'];
     roi: 'Optimize satellite operations by 400% and reduce mission costs by 60%',
     competitors: ['Maxar, Planet Labs, Spire, ICEYE'];
-<<<<<<< HEAD
-    market_size: '$5 B+ satellite operations market'
-    growth_rate: '400% YoY';
-variant: 'space - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$5 B+ satellite operations market',
+market_size: '$5 B+ satellite operations market',
     growth_rate: '400% YoY',
     variant: 'space - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Custom satellite orchestration platform with AI - powered optimization',
     launch_date: '2024 - 08 - 01',
@@ -1632,18 +1551,11 @@ variant: 'space - futuristic'
     use_cases: ['Medical rehabilitation, Cognitive research, Assistive technology, Human augmentation'];
     roi: 'Revolutionary medical applications and breakthrough research capabilities',
     competitors: ['Neuralink, CTRL - labs, Kernel, Paradromics'];
-<<<<<<< HEAD
-    market_size: '$3 B+ BCI market'
-    growth_rate: '600% YoY';
-variant: 'neural - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$3 B+ BCI market',
+market_size: '$3 B+ BCI market',
     growth_rate: '600% YoY',
     variant: 'neural - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Advanced BCI platform with medical - grade hardware and research tools',
     launch_date: '2024 - 07 - 01',
@@ -1686,18 +1598,11 @@ variant: 'neural - futuristic'
     use_cases: ['Industrial automation, Smart city management, Energy optimization, Manufacturing IoT'];
     roi: 'Reduce IoT management costs by 70% and improve operational efficiency by 50%',
     competitors: ['AWS IoT, Azure IoT, Google Cloud IoT, PTC ThingWorx'];
-<<<<<<< HEAD
-    market_size: '$20 B+ industrial IoT market'
-    growth_rate: '180% YoY';
-variant: 'iot - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$20 B+ industrial IoT market',
+market_size: '$20 B+ industrial IoT market',
     growth_rate: '180% YoY',
     variant: 'iot - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Industrial - grade autonomous IoT platform with AI - powered management',
     launch_date: '2024 - 06 - 01',
@@ -1740,18 +1645,11 @@ variant: 'iot - futuristic'
     use_cases: ['Sales forecasting, Demand prediction, Risk assessment, Performance optimization'];
     roi: 'Improve decision - making accuracy by 60% and reduce operational costs by 35%',
     competitors: ['SAS, IBM SPSS, RapidMiner, Alteryx'];
-<<<<<<< HEAD
-    market_size: '$30 B+ predictive analytics market'
-    growth_rate: '160% YoY';
-variant: 'analytics - futuristic'
-    contact_info: contact;
-=======
-    market_size: '$30 B+ predictive analytics market',
+market_size: '$30 B+ predictive analytics market',
     growth_rate: '160% YoY',
     variant: 'analytics - futuristic',
     contact_info:
         contact_info: contact;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     real_implementation: true;
     implementation_details: 'Enterprise - grade predictive analytics platform with custom model development',
     launch_date: '2024 - 05 - 01',

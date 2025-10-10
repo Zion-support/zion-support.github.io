@@ -13,16 +13,10 @@
   e: 'ephemeral'} tex,
   t: 'Project not found.' }); return}' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
-<<<<<<< HEAD
-  t: `*${data.project.name}* – statu,
-  s: ${data.project.status}\\nMilestone)`
-  s: ${JSON.stringify(data.project.milestones)}` }); return} ;' await respond({/* TODO: Fix JSX expression */}
-=======
-  t: '*${data.project.name}* – statu,
+t: '*${data.project.name}* – statu,
   s: ${data.project.status}\\nMilestone)',
   s:
         s: ${JSON.stringify(data.project.milestones)}` }); return; } ;' await respond({/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   e: 'ephemeral'} tex)
   t: helpText() })} catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
@@ -53,16 +47,10 @@
   e: 'ephemeral'} tex,
   t: 'Project not found.' }); return}' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
-<<<<<<< HEAD
-  t: `*${data.project.name}* – statu,
-  s: ${data.project.status}\\nMilestone)`
-  s: ${JSON.stringify(data.project.milestones)}` }); return} ;' await respond({/* TODO: Fix JSX expression */}
-=======
-  t: '*${data.project.name}* – statu,
+t: '*${data.project.name}* – statu,
   s: ${data.project.status}\\nMilestone)',
   s:
         s: ${JSON.stringify(data.project.milestones)}` }); return; } ;' await respond({/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   e: 'ephemeral'} tex)
   t: helpText() })} catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}

@@ -52,22 +52,13 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
         company: '',
         phone: '',
         service: '',
-<<<<<<< HEAD
-        message: '';)
-});;)
-} catch (error) {
-      setSubmitStatus('error');)
-} finally {
-      setIsSubmitting(false););
-=======
-        message: '']
+message: '']
     });]
     } catch (error) {
       setSubmitStatus('error')]
     } finally {
       setIsSubmitting(false)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }, []);
 
   return (
@@ -299,12 +290,7 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {
 
       <Footer />
     </div>
-<<<<<<< HEAD
-  );)
-=======
-  )]
+)]
     };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContactPage;
 }

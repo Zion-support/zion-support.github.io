@@ -130,17 +130,7 @@ const entries = list.getEntries();
             if ($1) { const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-<<<<<<< HEAD
-                fid: fidEntry.processingStart - fidEntry.startTime,;)
-});););
-          });;)
-});;
-        fidObserver.observe({ entryTypes: ['first-input'] });;
-        observers.push(fidObserver);)
-} catch (error) {
-        // eslint-disable-next-line no-console;);
-=======
-                fid: fidEntry.processingStart - fidEntry.startTime,]
+fid: fidEntry.processingStart - fidEntry.startTime,]
     });)]
     }
           });]
@@ -150,7 +140,6 @@ const entries = list.getEntries();
     } catch (error) {
         // eslint-disable-next-line no-console]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
 
     // Measure Cumulative Layout Shift (CLS)
@@ -173,16 +162,10 @@ const entries = list.getEntries();
 });]
     });;
         clsObserver.observe({ entryTypes: ['layout-shift'] });;
-<<<<<<< HEAD
-        observers.push(clsObserver);)
-} catch (error) {
-        // eslint-disable-next-line no-console;);
-=======
-        observers.push(clsObserver)]
+observers.push(clsObserver)]
     } catch (error) {
         // eslint-disable-next-line no-console]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
 
     // Measure Time to First Byte (TTFB)
@@ -202,19 +185,11 @@ const memory =
         ...prev,
         fcp,
         ttfb,
-<<<<<<< HEAD
-        memory,;)
-}););)
-} catch (error) {
-      // eslint-disable-next-line no-console;);
-=======
-        memory,]
+memory,]
     });)]
     } catch (error) {
       // eslint-disable-next-line no-console]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Cleanup observers
     return () => {
       observers.forEach(observer => {
@@ -252,16 +227,10 @@ const slowResources = resources.filter(
         slowResources.map((r: PerformanceResourceTiming) => ({,
   name: r.name,
           duration: r.duration,
-<<<<<<< HEAD
-          size: r.transferSize,;)
-});)
-      ););
-=======
-          size: r.transferSize,]
+size: r.transferSize,]
     });)
       )]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }, []);
 ;
 const measureCoreWebVitals = useCallback(() => {

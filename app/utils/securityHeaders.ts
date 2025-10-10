@@ -113,12 +113,8 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 }
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */});
 }
-<<<<<<< HEAD
-  return headers;);
-=======
-  return headers]
+return headers]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Get security headers in Next.js format;
  */
@@ -135,10 +131,6 @@ export function getNextSecurityHeaders()
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-}););)
-=======
 });)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default defaultSecurityHeaders;

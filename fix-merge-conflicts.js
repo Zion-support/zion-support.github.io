@@ -241,17 +241,7 @@ function findFilesWithMergeConflicts(dir) {
       }
     }
   }
-<<<<<<< HEAD
-  
-  console.log(`\nMerge conflict resolution complete!`);
-  console.log(`Files processed: ${processedCount}`);
-  console.log(`Errors encountered: ${errorCount}`);
-}
-
-// Run the script
-processFiles().catch(console.error);
-=======
-  traverse(dir);
+traverse(dir);
   return files;
 }
 // Main execution
@@ -264,4 +254,3 @@ for (const file of filesWithConflicts) {
   }
 }
 console.log(`Fixed ${fixedCount} files`);
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81

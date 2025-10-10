@@ -415,16 +415,10 @@ export const,
     customers:
         customers: 128;
     rating: 4.9;
-<<<<<<< HEAD
-    reviews: 89},
-    id: 'zero-trust-security-platform'
-    name: 'Zero Trust Security Platform'
-=======
-    reviews: 89;
+reviews: 89;
   },
     id: 'zero-trust-security-platform',
     name: 'Zero Trust Security Platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     tagline: 'Comprehensive zero-trust architecture implementation',
     price: '$599',
     period: '/month',
@@ -1111,16 +1105,10 @@ export const,
     customers:
         customers: 45;
     rating: 4.9;
-<<<<<<< HEAD
-    reviews: 34},
-    id: 'fintech-fraud-detection-ai'
-    name: 'FinTech Fraud Detection AI'
-=======
-    reviews: 34;
+reviews: 34;
   },
     id: 'fintech-fraud-detection-ai',
     name: 'FinTech Fraud Detection AI',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     tagline: 'Real-time fraud detection for financial transactions',
     price: '$599',
     period: '/month',

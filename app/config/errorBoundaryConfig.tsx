@@ -64,13 +64,8 @@ const DEFAULT_ERROR_MESSAGES = {
   notFound: 'The requested resource was not found.',
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
-<<<<<<< HEAD
-  validation: 'Validation error. Please check your input.',;);
-=======
-  validation: 'Validation error. Please check your input.',]
+validation: 'Validation error. Please check your input.',]
     };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Get error boundary configuration based on environment
  */
@@ -85,17 +80,10 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
     fallbackComponents: {,
   default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-<<<<<<< HEAD
-      notFound: NotFoundFallback,;)
-},;)
-};);
-=======
-      notFound: NotFoundFallback,]
+notFound: NotFoundFallback,]
     },]
     }]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Default error fallback component
  */;
@@ -143,13 +131,8 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ););
-=======
-  )]
+)]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Network error fallback component
  */;
@@ -186,13 +169,8 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ););
-=======
-  )]
+)]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Not found error fallback component
  */;
@@ -221,31 +199,14 @@ function NotFoundFallback(): JSX.Element {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  ););
-=======
-  )]
+)]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Get error type from error object
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
-<<<<<<< HEAD
-    return 'network';);
-  if (error.message.includes('404') || error.message.includes('not found')) {
-    return 'notFound';);
-  if (error.message.includes('timeout')) {
-    return 'timeout';);
-  if (error.message.includes('500') || error.message.includes('server')) {
-    return 'serverError';);
-  if (error.message.includes('validation')) {
-    return 'validation';);
-  return 'default';);
-=======
-    return 'network']
+return 'network']
     }
   if (error.message.includes('404') || error.message.includes('not found')) {
     return 'notFound']
@@ -261,8 +222,6 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
     }
   return 'default']
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Format error for logging
  */

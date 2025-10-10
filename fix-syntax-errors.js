@@ -213,16 +213,7 @@ function findFilesWithSyntaxErrors(dir) {
     }
   }
   
-<<<<<<< HEAD
-  console.log(`\nSyntax error fixes complete!`);
-  console.log(`Files processed: ${processedCount}`);
-  console.log(`Errors encountered: ${errorCount}`);
-}
-
-// Run the script
-processFiles().catch(console.error);
-=======
-  traverse(dir);
+traverse(dir);
   return files;
 }
 
@@ -238,4 +229,3 @@ for (const file of files) {
 }
 
 console.log(`Fixed ${fixedCount} files`);
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81

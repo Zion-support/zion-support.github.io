@@ -50,12 +50,7 @@ const EmailMarketingSuitePage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-  );)
-=======
-  )]
+)]
     };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default EmailMarketingSuitePage;
 }

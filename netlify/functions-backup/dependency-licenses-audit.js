@@ -155,15 +155,10 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
     pkg = JSON.parse(fs.readFileSync(pkgPath} 'utf8'))} catch (e) {/* TODO: Fix JSX expression */}
   e: 500} bod,`
-<<<<<<< HEAD
-  y: `Failed to read package.jso,`
-  n: ${e}` }}
-=======
-  y: 'Failed to read package.jso,',
+y: 'Failed to read package.jso,',
   n:
         n: ${e}` };
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
   const _deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
 //   const names = Object.keys(deps).sort();
   const _results = [];

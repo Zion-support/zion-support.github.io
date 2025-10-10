@@ -26,12 +26,8 @@ export interface ErrorLogEntry {}
   context?: Record<string></string>
   userAgent?: string;
   url?: string;
-<<<<<<< HEAD
-  stackTrace?: string;});;);
-=======
-  stackTrace?: string;});]
+stackTrace?: string;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 class ErrorLogger {}
   private logs: ErrorLogEntry[] = []
   private maxLogs = 1000;
@@ -133,19 +129,7 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
       [ErrorSeverity.LOW]: 'color: #4ade80',
       [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
       [ErrorSeverity.HIGH]: 'color: #fb923 c',
-<<<<<<< HEAD
-      [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'});;);
-    }] ${entry.message}`, styles[entry.severity])
-    if (entry.error) {});;);
-    if (entry.context) {});;);
-    if (entry.stackTrace) {}
-  private logToConsole(entr)
-  y: ErrorLogEntry): void {/* TODO: Fix JSX expression */});;);
-    if (entry.error) {/* TODO: Fix JSX expression */});;);
-    if (entry.context) {/* TODO: Fix JSX expression */});;);
-    if (entry.stackTrace) {/* TODO: Fix JSX expression */});;);
-=======
-      [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'});]
+[ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'});]
     }
     }] ${entry.message}`, styles[entry.severity])
     if (entry.error) {});]
@@ -162,7 +146,6 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
     }
     if (entry.stackTrace) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 });
 }
   /**
@@ -175,12 +158,8 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
       // In production, you would send to a service like Sentry, LogRocket, etc.
 
       if (!endpoint) {}
-<<<<<<< HEAD
-        return;});;);
-=======
-        return;});]
+return;});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       await fetch(endpoint, {
         method: 'POST'),
   headers: {)
@@ -203,12 +182,8 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
             ? {}
                 message: entry.error.message,
                 name: entry.error.name,
-<<<<<<< HEAD
-                stack: entry.error.stack});;);
-=======
-                stack: entry.error.stack});]
+stack: entry.error.stack});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             : undefined});
 });]
     });]
@@ -260,33 +235,21 @@ const styles: Record<ErrorSeverity></ErrorSeverity> = {
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
     return this.logs.filter(log => log.severity === severity);
   getLogsBySeverity(severit)
-<<<<<<< HEAD
-  y: ErrorSeverity): ErrorLogEntry[] {/* TODO: Fix JSX expression */});;);
-=======
-  y: ErrorSeverity): ErrorLogEntry[] {/* TODO: Fix JSX expression */});]
+y: ErrorSeverity): ErrorLogEntry[] {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Clear all logs;
    */
   clearLogs(): void {}
     this.logs = [];}
-<<<<<<< HEAD
-  clearLogs(): void {/* TODO: Fix JSX expression */});;);
-=======
-  clearLogs(): void {/* TODO: Fix JSX expression */});]
+clearLogs(): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Export logs as JSON;
    */
   exportLogs(): string {}
-<<<<<<< HEAD
-    return JSON.stringify(this.logs, null, 2);});;);
-=======
-    return JSON.stringify(this.logs, null, 2);});]
+return JSON.stringify(this.logs, null, 2);});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 // Singleton instance;
 const errorLogger = new ErrorLogger()
@@ -300,12 +263,8 @@ export const logWarning = (message: string, context?: Record<string></string>) =
 export const logInfo = (message: string, context?: Record<string></string>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
 export default errorLogger;
-<<<<<<< HEAD
-  exportLogs(): string {/* TODO: Fix JSX expression */});;);
-=======
-  exportLogs(): string {/* TODO: Fix JSX expression */});]
+exportLogs(): string {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 // Singleton instance;
 const errorLogger = new ErrorLogger();

@@ -32,12 +32,8 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-<<<<<<< HEAD
-      stats: '95% Efficiency';);
-=======
-      stats: '95% Efficiency']
+stats: '95% Efficiency']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
@@ -93,12 +89,7 @@ const EnhancedServicesShowcase: React.FC = () => {const services = [
           </a>
         </div>
     </section>
-<<<<<<< HEAD
-  );)
-=======
-  )]
+)]
     };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default EnhancedServicesShowcase;
 }

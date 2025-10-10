@@ -124,12 +124,8 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */});]
     this.metrics.set(`${componentName}_render`, renderTime);
 
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`});
-<<<<<<< HEAD
-}ms`););
-=======
 }ms`)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 });
 }
   // Track memory usage;
@@ -137,17 +133,7 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */});]
   e: string) {/* TODO: Fix JSX expression */}
   e: number } });.memory;
       if (memory) {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize););
-    });;);
-  // Get performance metrics;
-  getMetrics() {
-    return Object.fromEntries(this.metrics););
-  // Clear metrics;
-  clearMetrics() {
-    this.metrics.clear(););
-=======
-        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)]
+this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize)]
     }
     });]
     }
@@ -159,7 +145,6 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */});]
   clearMetrics() {
     this.metrics.clear()]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Monitor long tasks;
   startLongTaskMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
@@ -188,19 +173,12 @@ const observer = new PerformanceObserver((list) => {
         if (entry.duration > 50) { // Tasks longer than 50ms;
   // Get performance metrics
   getMetrics() {}
-<<<<<<< HEAD
-    return Object.fromEntries(this.metrics););
-  // Clear metrics
-  clearMetrics() {}
-    this.metrics.clear(););
-=======
-    return Object.fromEntries(this.metrics)]
+return Object.fromEntries(this.metrics)]
     }
   // Clear metrics
   clearMetrics() {}
     this.metrics.clear()]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   // Monitor long tasks
   startLongTaskMonitoring() {}
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}
@@ -257,32 +235,20 @@ const duration = performance.now() - start;
     });;
     observer.observe({/* TODO: Fix JSX expression */});
   s: ['longtask'] });;
-<<<<<<< HEAD
-    this.observers.push(observer););
-  // Cleanup observers;
-  cleanup() {/* TODO: Fix JSX expression */});;);
-}
-// React hook for performance monitoring
-=======
-    this.observers.push(observer)]
+this.observers.push(observer)]
     }
   // Cleanup observers;
   cleanup() {/* TODO: Fix JSX expression */});]
     }
 }
 // React hook for performance monitoring;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const usePerformanceMonitor = (componentNam)
   e: string) => {/* TODO: Fix JSX expression */});]
     }});
 }, [componentName, monitor]);
   return {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-      monitor.trackRender(`${componentName}_function`, duration););
-=======
-      monitor.trackRender(`${componentName}_function`, duration)]
+monitor.trackRender(`${componentName}_function`, duration)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }});
 };
 // Image lazy loading utility

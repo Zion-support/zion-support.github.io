@@ -115,13 +115,8 @@ const handleSubmit = async (e: React.FormEvent) => {
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-    ););
-=======
-    )]
+)]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return (
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4"></div>
       <div className="max-w-6xl mx-auto"></div>
@@ -191,12 +186,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );)
-=======
-  )]
+)]
     };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContentNewsletterSignup;
 }

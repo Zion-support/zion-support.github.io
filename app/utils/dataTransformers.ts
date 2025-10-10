@@ -18,15 +18,10 @@ export function deepClone<T></T>(ob)
     for (const key in obj) {/* TODO: Fix JSX expression */});
 }
     }
-<<<<<<< HEAD
-    return clonedObj;);
-  return obj;);
-=======
-    return clonedObj]
+return clonedObj]
     }
   return obj]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Deep merge two objects;
  */
@@ -39,12 +34,8 @@ export function deepMerge<T extends Record<string, unknown></T>>(targe,
 }
     });
 }
-<<<<<<< HEAD
-  return output;);
-=======
-  return output]
+return output]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Flatten a nested object;
  */
@@ -61,12 +52,8 @@ export function flattenObject(ob,
 }
     });
 }
-<<<<<<< HEAD
-  return flattened;);
-=======
-  return flattened]
+return flattened]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Unflatten a flattened object;
  */
@@ -103,16 +90,10 @@ export function pick<T extends Record<string, unknown></T>, K extends keyof T>(o
 ): Pick<T, K></T> {/* TODO: Fix JSX expression */}
   const result = {} as Pick<T, K></T>;
   keys.forEach(key => {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;)
-});;
-  return result;);
-=======
 });]
     });;
   return result]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Omit specific keys from an object;
  */
@@ -143,12 +124,8 @@ export function groupBy<T></T>(arra,
 ): Record<string, T[]></string> {/* TODO: Fix JSX expression */});
 },
     {} as Record<string></string>
-<<<<<<< HEAD
-  ););
-=======
-  )]
+)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Get unique items from an array;
  */
@@ -159,14 +136,9 @@ export function unique<T></T>(arra)
   return array.filter(item => {/* TODO: Fix JSX expression */});
 });
     seen.add(value);
-<<<<<<< HEAD
-    return true;)
-});;);
-=======
-    return true]
+return true]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Sort array by multiple keys;
  */
@@ -207,35 +179,23 @@ export function chunk<T></T>(arra,
   y: T[], siz)
   e: number): T[][] {/* TODO: Fix JSX expression */});
 }
-<<<<<<< HEAD
-  return chunks;);
-=======
-  return chunks]
+return chunks]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Zip multiple arrays together;
  */
 export function zip<T></T>(...array)
   s: T[][]): T[][] {/* TODO: Fix JSX expression */});
 }
-<<<<<<< HEAD
-  return result;);
-=======
-  return result]
+return result]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Format bytes to human readable string;
  */
 export function formatBytes(byte)
   s: number, decimals = 2): string {/* TODO: Fix JSX expression */}`
-<<<<<<< HEAD
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}`;);
-=======
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}`]
+return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}`]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Format number with separators;
  */
@@ -247,12 +207,8 @@ export function formatNumber(nu)
  */
 export function formatCurrency(amoun)
   t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});.format(amount););
-=======
 });.format(amount)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Format date;
  */

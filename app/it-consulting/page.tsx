@@ -409,12 +409,8 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-<<<<<<< HEAD
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits';);
-=======
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits']
+caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 ;
 const categories = [
@@ -641,11 +637,6 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );)
-=======
-  )]
+)]
     };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ITConsultingPage;

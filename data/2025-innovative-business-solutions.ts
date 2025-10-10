@@ -365,15 +365,9 @@ varian,
       'Revenue acceleration'],
     roi: 'Sales teams report 400% ROI with 50% improvement in conversion rates and 40% increase in revenue.',
     competitors: ['Gong', 'Chorus.ai', 'SalesLoft', 'Outreach']
-<<<<<<< HEAD
-    marketSize: '$5.2 B sales intelligence market'
-    growthRate: '30% annual growth';
-variant: 'ai-sales',
-=======
-    marketSize: '$5.2 B sales intelligence market',
+marketSize: '$5.2 B sales intelligence market',
     growthRate: '30% annual growth',
     variant: 'ai-sales',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -519,15 +513,9 @@ varian,
       'Support analytics'],
     roi: 'Customer service teams report 350% ROI with 60% reduction in support costs and 45% improvement in customer satisfaction.',
     competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout']
-<<<<<<< HEAD
-    marketSize: '$4.8 B customer service market'
-    growthRate: '22% annual growth';
-variant: 'ai-customer-service',
-=======
-    marketSize: '$4.8 B customer service market',
+marketSize: '$4.8 B customer service market',
     growthRate: '22% annual growth',
     variant: 'ai-customer-service',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -673,15 +661,9 @@ varian,
       'HR analytics'],
     roi: 'HR teams report 320% ROI with 50% improvement in recruitment efficiency and 40% increase in employee engagement.',
     competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever']
-<<<<<<< HEAD
-    marketSize: '$6.2 B HR technology market'
-    growthRate: '26% annual growth';
-variant: 'ai-hr',
-=======
-    marketSize: '$6.2 B HR technology market',
+marketSize: '$6.2 B HR technology market',
     growthRate: '26% annual growth',
     variant: 'ai-hr',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -827,15 +809,9 @@ varian,
       'Performance monitoring'],
     roi: 'Finance teams report 450% ROI with 60% improvement in financial decision-making and 50% reduction in financial risks.',
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv']
-<<<<<<< HEAD
-    marketSize: '$8.5 B financial analytics market'
-    growthRate: '32% annual growth';
-variant: 'ai-financial',
-=======
-    marketSize: '$8.5 B financial analytics market',
+marketSize: '$8.5 B financial analytics market',
     growthRate: '32% annual growth',
     variant: 'ai-financial',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -981,15 +957,9 @@ varian,
       'Team collaboration'],
     roi: 'Project teams report 350% ROI with 50% improvement in project delivery and 40% reduction in project costs.',
     competitors: ['Asana', 'Monday.com', 'ClickUp', 'Notion']
-<<<<<<< HEAD
-    marketSize: '$5.5 B project management market'
-    growthRate: '24% annual growth';
-variant: 'ai-project-management',
-=======
-    marketSize: '$5.5 B project management market',
+marketSize: '$5.5 B project management market',
     growthRate: '24% annual growth',
     variant: 'ai-project-management',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

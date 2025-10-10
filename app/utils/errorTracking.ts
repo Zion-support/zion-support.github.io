@@ -3,13 +3,8 @@
  * Advanced Error Tracking and Reporting System;
  * Provides comprehensive error tracking with categorization and analytics;
  */
-<<<<<<< HEAD
-export enum ErrorSeverity {/* TODO: Fix JSX expression */});;)
-=======
 export enum ErrorSeverity {/* TODO: Fix JSX expression */});]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export enum ErrorCategory {
   Network = 'network',
   Validation = 'validation',
@@ -80,17 +75,10 @@ class ErrorTrackingService {
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
         category: ErrorCategory.Runtime;
         severity: ErrorSeverity.High;
-<<<<<<< HEAD
-        context: { reason: event.reason });;)
-});;)
-});;);
-=======
-        context: { reason: event.reason });]
+context: { reason: event.reason });]
     });]
     });]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   trackError(error: Error),
     metadata: Partial<ErrorMetadata></ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
   ): string {;
@@ -128,12 +116,8 @@ const existingError = this.errors.get(errorId)
       // Clean up old errors if we exceed the limit;
       if ($1) { const oldestError = Array.from(this.errors.values())
           .sort((a, b) => a.firstSeen - b.firstSeen)[0]
-<<<<<<< HEAD
-        this.errors.delete(oldestError.id););
-=======
-        this.errors.delete(oldestError.id)]
+this.errors.delete(oldestError.id)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
 
     // Log the error;
@@ -150,16 +134,7 @@ const existingError = this.errors.get(errorId)
     // Report to external service (in production)
     if (process.env.NODE_ENV === 'production') {
       this.reportToExternalService(errorId).catch(err => {)
-<<<<<<< HEAD
-        logger.error('Failed to report error to external service', { error: err.message });;)
-})
-export enum ErrorCategory {/* TODO: Fix JSX expression */});;)
-export interface ErrorMetadata {/* TODO: Fix JSX expression */});;)
-export interface TrackedError {/* TODO: Fix JSX expression */});;);
-class ErrorTrackingService {/* TODO: Fix JSX expression */});;);
-  static getInstance(): ErrorTrackingService {/* TODO: Fix JSX expression */});;);
-=======
-        logger.error('Failed to report error to external service', { error: err.message });]
+logger.error('Failed to report error to external service', { error: err.message });]
     });
 export enum ErrorCategory {/* TODO: Fix JSX expression */});]
     }
@@ -171,7 +146,6 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */});]
     }
   static getInstance(): ErrorTrackingService {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return ErrorTrackingService.instance});
 }
   /**
@@ -259,13 +233,8 @@ const char = str.charCodeAt(i),
       hash = ((hash << 5) - hash) + char;
       hash = hash & hash // Convert to 32-bit integer});
 }
-<<<<<<< HEAD
-    return Math.abs(hash).toString(36););
-=======
-    return Math.abs(hash).toString(36)]
+return Math.abs(hash).toString(36)]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   addListener(listener: (error: TrackedError) => void): void {,
     this.errorListeners.push(listener);
 
@@ -343,13 +312,8 @@ const char = str.charCodeAt(i),
     return this.errors.get(id);
 
   clearErrors(): void {
-<<<<<<< HEAD
-    this.errors.clear(););
-=======
-    this.errors.clear()]
+this.errors.clear()]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   getErrorStats(): {
     total: number,
     byCategory: Record<ErrorCategory></ErrorCategory>
@@ -377,15 +341,10 @@ const bySeverity: Record<ErrorSeverity></ErrorSeverity> = {} as Record<ErrorSeve
       byCategory,
       bySeverity});
 }
-<<<<<<< HEAD
-  });;);
-// Export singleton instance
-=======
-  });]
+});]
     }
 
 // Export singleton instance;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const errorTracking = ErrorTrackingService.getInstance()
   /**
    * Report critical errors to external service;
@@ -394,47 +353,29 @@ export const errorTracking = ErrorTrackingService.getInstance()
   d: string): Promise<void></void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
           bod,
-<<<<<<< HEAD
-  y: JSON.stringify(error);)
-});;);
-    } catch (reportError) {/* TODO: Fix JSX expression */});;);
-=======
-  y: JSON.stringify(error)]
+y: JSON.stringify(error)]
     });]
     }
     } catch (reportError) {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Get all tracked errors;
    */
-<<<<<<< HEAD
-  getErrors(): TrackedError[] {/* TODO: Fix JSX expression */});;);
-=======
-  getErrors(): TrackedError[] {/* TODO: Fix JSX expression */});]
+getErrors(): TrackedError[] {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get errors by category;
    */
   getErrorsByCategory(categor)
-<<<<<<< HEAD
-  y: ErrorCategory): TrackedError[] {/* TODO: Fix JSX expression */});;);
-=======
-  y: ErrorCategory): TrackedError[] {/* TODO: Fix JSX expression */});]
+y: ErrorCategory): TrackedError[] {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get errors by severity;
    */
   getErrorsBySeverity(severit)
-<<<<<<< HEAD
-  y: ErrorSeverity): TrackedError[] {/* TODO: Fix JSX expression */});;);
-=======
-  y: ErrorSeverity): TrackedError[] {/* TODO: Fix JSX expression */});]
+y: ErrorSeverity): TrackedError[] {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get error statistics;
    */
@@ -460,12 +401,8 @@ const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 
   /**
    * Clear all errors;
    */
-<<<<<<< HEAD
-  clearErrors(): void {/* TODO: Fix JSX expression */});;);
-=======
-  clearErrors(): void {/* TODO: Fix JSX expression */});]
+clearErrors(): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Clear errors older than specified time;
    */

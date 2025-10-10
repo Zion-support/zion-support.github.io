@@ -75,22 +75,13 @@ const handleSubmit = async (e: React.FormEvent) => {
         service: '',
         budget: '',
         timeline: '',
-<<<<<<< HEAD
-        message: '';)
-});;)
-} catch (error) {
-      setSubmitStatus('error');)
-} finally {
-      setIsSubmitting(false););
-=======
-        message: '']
+message: '']
     });]
     } catch (error) {
       setSubmitStatus('error')]
     } finally {
       setIsSubmitting(false)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   };
 ;
 const services = [
@@ -128,12 +119,8 @@ const contactInfo = [
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-<<<<<<< HEAD
-      description: 'Eastern Time';);
-=======
-      description: 'Eastern Time']
+description: 'Eastern Time']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   ];
 
   return (
@@ -391,11 +378,6 @@ const contactInfo = [
       </div>
 </div>
 
-<<<<<<< HEAD
-  );)
-=======
-  )]
+)]
     };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ContactPage;

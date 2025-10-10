@@ -29,10 +29,6 @@ export function dynamic<T extends ComponentType<unknown></T>>(importFun)
     <Suspense fallback={options.loading ? options.loading() : <div></Suspense>Loading...</div>}>
       <LazyComponent></LazyComponent>
     </Suspense>
-<<<<<<< HEAD
-  );)
-=======
-  )]
+)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default dynamic;

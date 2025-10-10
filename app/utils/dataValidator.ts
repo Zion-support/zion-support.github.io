@@ -134,12 +134,8 @@ const isValid = phoneRegex.test(phone);
  */
 export function validateStringLength(valu,
   e: string, mi)
-<<<<<<< HEAD
-  n: number, max?: number): boolean {/* TODO: Fix JSX expression */});;);
-=======
-  n: number, max?: number): boolean {/* TODO: Fix JSX expression */});]
+n: number, max?: number): boolean {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   return value.length >= min});
 }
 /**
@@ -150,12 +146,8 @@ export function validateNumberRange(value: number, min: number, max: number): bo
 export function validateNumberRange(valu,
   e: number, mi,
   n: number, ma)
-<<<<<<< HEAD
-  x: number): boolean {/* TODO: Fix JSX expression */});;);
-=======
-  x: number): boolean {/* TODO: Fix JSX expression */});]
+x: number): boolean {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Validate credit card number (basic Luhn algorithm)
  */
@@ -171,12 +163,8 @@ let digit = parseInt(cleaned[i], 10);
       digit *= 2;
       if (digit > 9) digit -= 9
 export function validateCreditCard(cardNumbe)
-<<<<<<< HEAD
-  r: string): boolean {/* TODO: Fix JSX expression */});;);
-=======
-  r: string): boolean {/* TODO: Fix JSX expression */});]
+r: string): boolean {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     sum += digit;
     isEven = !isEven});
 }
@@ -204,12 +192,8 @@ export function validateDate(valu)
  * Validate date range;
  */
 export function validateDateRange(dat)
-<<<<<<< HEAD
-  e: Date, min?: Date, max?: Date): boolean {/* TODO: Fix JSX expression */});;);
-=======
-  e: Date, min?: Date, max?: Date): boolean {/* TODO: Fix JSX expression */});]
+e: Date, min?: Date, max?: Date): boolean {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Sanitize HTML to prevent XSS;
  */
@@ -221,12 +205,8 @@ export function sanitizeHTML(html: string): string {,
   clean = clean.replace(/on\w+='[^']*'/gi, '');
   return clean
 export function sanitizeHTML(htm)
-<<<<<<< HEAD
-  l: string): string {/* TODO: Fix JSX expression */});;);
-=======
-  l: string): string {/* TODO: Fix JSX expression */});]
+l: string): string {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 /**
  * Create custom validator;
  */
@@ -279,12 +259,8 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
       return true;
 function validateFieldRule(valu,
   e: unknown, rul)
-<<<<<<< HEAD
-  e: FieldRule): boolean {/* TODO: Fix JSX expression */});;);
-=======
-  e: FieldRule): boolean {/* TODO: Fix JSX expression */});]
+e: FieldRule): boolean {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 /**
  * Validate form data;
@@ -300,12 +276,8 @@ const fieldRules = rules[field] || [];
 const fieldErrors: string[] = [];
     for (const rule of fieldRules) {,
       if (!validateFieldRule(value, rule)) {
-<<<<<<< HEAD
-        fieldErrors.push(rule.message););
-=======
-        fieldErrors.push(rule.message)]
+fieldErrors.push(rule.message)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
     if (fieldErrors.length > 0) {
       errors[field] = fieldErrors;
@@ -382,12 +354,8 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */});]
   custom: <T></T>(validator: (value: T) => boolean, message: string): ValidationRule<T></T> => ({,
     validate: validator,
     message});
-<<<<<<< HEAD
-});;);
-=======
 });]
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 // Legacy class-based API for backward compatibility;
 class DataValidator {
   private static instance: DataValidator,
@@ -478,12 +446,8 @@ class DataValidator {/* TODO: Fix JSX expression */}
     return pattern.test(value);
   matchesPattern(valu,
   e: string, patter)
-<<<<<<< HEAD
-  n: RegExp): boolean {/* TODO: Fix JSX expression */});;);
-=======
-  n: RegExp): boolean {/* TODO: Fix JSX expression */});]
+n: RegExp): boolean {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   rules = ValidationRulesBuilder});
 }
 export const dataValidator = DataValidator.getInstance()
@@ -711,12 +675,8 @@ export function validateComposite(valu,
   s: Array<(va),
   l: string) => {/* TODO: Fix JSX expression */}
   d: boolean; error?: string }>): {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-  d: boolean; error?: string } {/* TODO: Fix JSX expression */});;);
-=======
-  d: boolean; error?: string } {/* TODO: Fix JSX expression */});]
+d: boolean; error?: string } {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   return {/* TODO: Fix JSX expression */}
   d: true }});

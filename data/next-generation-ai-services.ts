@@ -231,20 +231,12 @@ export const,
     useCases: ['Business process automation', 'Customer service management', 'Financial operations', 'Supply chain management', 'Marketing automation', 'HR operations'],
     roi: 'Average customer sees 800% ROI within 6 months through 24/7 operations and intelligent decision-making.',
     competitors: ['No direct competitors', 'Partial solutions: UiPath, Automation Anywhere'],
-<<<<<<< HEAD
-    marketSize: '$50B autonomous systems market'
-    growthRate: '400% annual growth';
-variant: 'ai-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$50B autonomous systems market',
+marketSize: '$50B autonomous systems market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -368,20 +360,12 @@ varian,
     useCases: ['Drug discovery', 'Financial modeling', 'Climate modeling', 'Material science', 'Cryptography', 'Optimization problems'],
     roi: 'Research institutions report 1000%+ ROI through breakthrough discoveries and accelerated research timelines.',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
-<<<<<<< HEAD
-    marketSize: '$1.5B quantum computing market'
-    growthRate: '500% annual growth';
-variant: 'quantum-advanced'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$1.5B quantum computing market',
+marketSize: '$1.5B quantum computing market',
     growthRate: '500% annual growth',
     variant: 'quantum-advanced',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -504,20 +488,12 @@ varian,
     useCases: ['Medical diagnostics', 'Assistive technology', 'Gaming and entertainment', 'Research and development', 'Rehabilitation therapy', 'Cognitive enhancement'],
     roi: 'Medical device companies report 500% ROI through accelerated development and improved patient outcomes.',
     competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'Paradromics'],
-<<<<<<< HEAD
-    marketSize: '$2.5B brain-computer interface market'
-    growthRate: '350% annual growth';
-variant: 'neural-quantum'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$2.5B brain-computer interface market',
+marketSize: '$2.5B brain-computer interface market',
     growthRate: '350% annual growth',
     variant: 'neural-quantum',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -640,20 +616,12 @@ varian,
     useCases: ['Satellite operations', 'Space mission planning', 'Earth observation', 'Space research', 'Commercial space operations', 'Defense applications'],
     roi: 'Space companies report 600% ROI through improved mission success rates and reduced operational costs.',
     competitors: ['SpaceX', 'Blue Origin', 'Traditional space agencies', 'Satellite companies'],
-<<<<<<< HEAD
-    marketSize: '$400B space economy'
-    growthRate: '250% annual growth';
-variant: 'quantum-space'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$400B space economy',
+marketSize: '$400B space economy',
     growthRate: '250% annual growth',
     variant: 'quantum-space',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -776,20 +744,12 @@ varian,
     useCases: ['Drug discovery', 'Clinical trials', 'Personalized medicine', 'Drug repurposing', 'Biomarker research', 'Regulatory compliance'],
     roi: 'Pharmaceutical companies report 800% ROI through accelerated drug development and improved success rates.',
     competitors: ['Insilico Medicine', 'BenevolentAI', 'Atomwise', 'Recursion Pharmaceuticals'],
-<<<<<<< HEAD
-    marketSize: '$50B AI drug discovery market'
-    growthRate: '400% annual growth';
-variant: 'ai-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$50B AI drug discovery market',
+marketSize: '$50B AI drug discovery market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -912,20 +872,12 @@ varian,
     useCases: ['Algorithmic trading', 'Risk management', 'Portfolio optimization', 'Market analysis', 'Quantitative research', 'Compliance reporting'],
     roi: 'Investment firms report 400% ROI through improved trading performance and risk management.',
     competitors: ['Traditional trading platforms', 'Quantitative trading firms', 'Quantum computing companies'],
-<<<<<<< HEAD
-    marketSize: '$15B algorithmic trading market'
-    growthRate: '300% annual growth';
-variant: 'quantum-advanced'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$15B algorithmic trading market',
+marketSize: '$15B algorithmic trading market',
     growthRate: '300% annual growth',
     variant: 'quantum-advanced',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -1048,20 +1000,12 @@ varian,
     useCases: ['Virtual reality games', 'Augmented reality applications', 'Virtual events', 'Educational simulations', 'Virtual real estate', 'Social platforms'],
     roi: 'Gaming companies report 500% ROI through increased user engagement and reduced development costs.',
     competitors: ['Unity', 'Unreal Engine', 'Roblox', 'Meta Platforms'],
-<<<<<<< HEAD
-    marketSize: '$800B metaverse market'
-    growthRate: '350% annual growth';
-variant: 'ai-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$800B metaverse market',
+marketSize: '$800B metaverse market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -1184,20 +1128,12 @@ varian,
     useCases: ['Passenger vehicles', 'Commercial trucks', 'Delivery vehicles', 'Public transportation', 'Logistics operations', 'Research and testing'],
     roi: 'Transportation companies report 600% ROI through reduced accidents and improved operational efficiency.',
     competitors: ['Tesla', 'Waymo', 'Cruise', 'Traditional automotive companies'],
-<<<<<<< HEAD
-    marketSize: '$100B autonomous vehicle market'
-    growthRate: '400% annual growth';
-variant: 'ai-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$100B autonomous vehicle market',
+marketSize: '$100B autonomous vehicle market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -1320,20 +1256,12 @@ varian,
     useCases: ['Government communications', 'Financial transactions', 'Healthcare data', 'Defense communications', 'Critical infrastructure', 'Research networks'],
     roi: 'Government agencies report 1000% ROI through enhanced security and reduced cyber threats.',
     competitors: ['No direct competitors', 'Traditional cybersecurity companies'],
-<<<<<<< HEAD
-    marketSize: '$150B cybersecurity market'
-    growthRate: '400% annual growth';
-variant: 'quantum-cyberpunk'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$150B cybersecurity market',
+marketSize: '$150B cybersecurity market',
     growthRate: '400% annual growth',
     variant: 'quantum-cyberpunk',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -1456,22 +1384,13 @@ varian,
     useCases: ['Predictive maintenance', 'Quality control', 'Process optimization', 'Supply chain management', 'Energy management', 'Compliance reporting'],
     roi: 'Manufacturing companies report 400% ROI through improved efficiency and reduced downtime.',
     competitors: ['Siemens', 'GE Digital', 'PTC', 'Traditional manufacturing software'],
-<<<<<<< HEAD
-    marketSize: '$200B Industry 4.0 market'
-    growthRate: '250% annual growth';
-variant: 'ai-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-=======
-    marketSize: '$200B Industry 4.0 market',
+marketSize: '$200B Industry 4.0 market',
     growthRate: '250% annual growth',
     variant: 'ai-futuristic',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
       website: 'https://ziontechgroup.com'},

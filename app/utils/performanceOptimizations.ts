@@ -217,14 +217,9 @@ export const useLazyImage = (sr)
       [src, isLoaded, isError]
     )
   )
-<<<<<<< HEAD
-  return { imageSrc, isLoaded, isError, observe });;);
-// Performance monitoring hook
-=======
-  return { imageSrc, isLoaded, isError, observe });]
+return { imageSrc, isLoaded, isError, observe });]
     }
 // Performance monitoring hook;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const usePerformanceMonitoring = useCallback((...args) => {
 return (;
 const [metrics, setMetrics] = useState<{
@@ -244,14 +239,9 @@ const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTi
       setMetrics({)
         fcp)
         lcp)
-<<<<<<< HEAD
-        ttfb: navigation?.responseStart - navigation?.requestStart});;)
-});;);
-=======
-        ttfb: navigation?.responseStart - navigation?.requestStart});]
+ttfb: navigation?.responseStart - navigation?.requestStart});]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Monitor performance after page load;
     if (document.readyState === 'complete') {
 // Performance monitoring hook
@@ -434,14 +424,9 @@ const link = document.createElement('link')
   link.rel = 'preload'
   link.href = href;
   link.as = as;
-<<<<<<< HEAD
-  document.head.appendChild(link);});;);
-// Critical resource preloading
-=======
-  document.head.appendChild(link);});]
+document.head.appendChild(link);});]
     }
 // Critical resource preloading;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const preloadCriticalResources = useCallback((...args) => {
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
@@ -455,14 +440,9 @@ export const preloadCriticalResources = useCallback((...args) => {}
   preloadResource('/images/hero-bg.webp', 'image')
   preloadResource('/images/logo.svg', 'image')
   // Preload critical CSS;
-<<<<<<< HEAD
-  preloadResource('/styles/critical.css', 'style');});;);
-// Bundle size monitoring
-=======
-  preloadResource('/styles/critical.css', 'style');});]
+preloadResource('/styles/critical.css', 'style');});]
     }
 // Bundle size monitoring;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const useBundleSizeMonitoring = useCallback((...args) => {
 return (;
 const [bundleSize, setBundleSize] = useState<{
@@ -522,14 +502,9 @@ let imageSize = 0
         totalSize)
         jsSize)
         cssSize)
-<<<<<<< HEAD
-        imageSize});;)
-});;);
-=======
-        imageSize});]
+imageSize});]
     });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // Calculate after page load;
     if (document.readyState === 'complete') {
       setBundleSize({);
@@ -572,12 +547,8 @@ export default {}
   useMemoryMonitoring,
   preloadResource,
   preloadCriticalResources,
-<<<<<<< HEAD
-  useBundleSizeMonitoring});;);
-=======
-  useBundleSizeMonitoring});]
+useBundleSizeMonitoring});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 };
 // Resource preloading utility
 export const preloadResource = (hre,

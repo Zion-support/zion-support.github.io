@@ -75,12 +75,6 @@ let error: Error | undefined;
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
  */
-<<<<<<< HEAD
-export enum LogLevel {/* TODO: Fix JSX expression */});;)
-export interface LogContext {/* TODO: Fix JSX expression */});;)
-export interface LogMetadata {/* TODO: Fix JSX expression */});;);
-class Logger {/* TODO: Fix JSX expression */});;);
-=======
 export enum LogLevel {/* TODO: Fix JSX expression */});]
     }
 export interface LogContext {/* TODO: Fix JSX expression */});]
@@ -89,26 +83,17 @@ export interface LogMetadata {/* TODO: Fix JSX expression */});]
     }
 class Logger {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Set the minimum log level;
    */
   setLogLevel(leve)
-<<<<<<< HEAD
-  l: LogLevel): void {/* TODO: Fix JSX expression */});;);
-  /**
-   * Get the current log level;
-   */
-  getLogLevel(): LogLevel {/* TODO: Fix JSX expression */});;);
-=======
-  l: LogLevel): void {/* TODO: Fix JSX expression */});]
+l: LogLevel): void {/* TODO: Fix JSX expression */});]
     }
   /**
    * Get the current log level;
    */
   getLogLevel(): LogLevel {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Log a debug message;
    */
@@ -284,35 +269,23 @@ const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata);` : '';`
   n:${context.sessionId}`);`
     if (context.requestId) parts.push(`reques)`
   t:${context.requestId}`);
-<<<<<<< HEAD
-    return parts.join(', '););
-=======
-    return parts.join(', ')]
+return parts.join(', ')]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Output to console with appropriate styling;
    */
   private outputToConsole(leve,
   l: LogLevel, messag,
   e: string, entr)
-<<<<<<< HEAD
-  y: LogMetadata): void {/* TODO: Fix JSX expression */});;);
-=======
-  y: LogMetadata): void {/* TODO: Fix JSX expression */});]
+y: LogMetadata): void {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   }
   /**
    * Get console styles for different log levels;
    */
   private getConsoleStyles(leve)
-<<<<<<< HEAD
-  l: LogLevel): string {/* TODO: Fix JSX expression */});;);
-=======
-  l: LogLevel): string {/* TODO: Fix JSX expression */});]
+l: LogLevel): string {/* TODO: Fix JSX expression */});]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     return [...this.logs]});
 }
   /**
@@ -327,18 +300,12 @@ const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata);` : '';`
     //   headers: {// 'Content-Type': 'application/json'});
     //   body: JSON.stringify(entry),
     // });.catch(err => {)
-<<<<<<< HEAD
-    //   // });;);
-  exportLogs(): string {
-    return JSON.stringify(this.logs, null, 2););
-=======
-    //   // });]
+//   // });]
     }
 
   exportLogs(): string {
     return JSON.stringify(this.logs, null, 2)]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 }
 
 // Export singleton instance
@@ -349,24 +316,15 @@ export const logger = new Logger()
     //   bod,
   y: JSON.stringify(entry)
     // });.catch(err => {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-    //   // });;);
-=======
-    //   // });]
+//   // });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Get string representation of log level;
    */
   private getLevelString(leve)
-<<<<<<< HEAD
-  l: LogLevel): string {/* TODO: Fix JSX expression */});;);
-  });;)
-=======
-  l: LogLevel): string {/* TODO: Fix JSX expression */});]
+l: LogLevel): string {/* TODO: Fix JSX expression */});]
     }
   });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export const logger = new Logger();`
 }

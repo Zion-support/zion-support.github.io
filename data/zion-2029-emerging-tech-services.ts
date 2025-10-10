@@ -194,20 +194,12 @@ export const,
     useCases: ['Satellite operations', 'Space mission planning', 'Earth observation', 'Space communications', 'Space tourism'],
     roi: 'Average customer achieves 300% ROI within 18 months through reduced operational costs and new revenue streams.',
     competitors: ['SpaceX Starlink', 'OneWeb', 'Planet Labs', 'Maxar Technologies', 'Lockheed Martin'],
-<<<<<<< HEAD
-    marketSize: '$469.8B space economy'
-    growthRate: '8.5% annual growth';
-variant: 'space-tech-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$469.8B space economy',
+marketSize: '$469.8B space economy',
     growthRate: '8.5% annual growth',
     variant: 'space-tech-futuristic',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -360,20 +352,12 @@ varian,
     useCases: ['Drug discovery', 'Agricultural biotechnology', 'Industrial biotechnology', 'Medical diagnostics', 'Biofuels production'],
     roi: 'Average customer achieves 400% ROI within 24 months through accelerated development and reduced costs.',
     competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Zymergen', 'Benchling', 'DNA Script'],
-<<<<<<< HEAD
-    marketSize: '$83.9B synthetic biology market'
-    growthRate: '26.2% annual growth';
-variant: 'biotech-synthetic-biology'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$83.9B synthetic biology market',
+marketSize: '$83.9B synthetic biology market',
     growthRate: '26.2% annual growth',
     variant: 'biotech-synthetic-biology',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -526,20 +510,12 @@ varian,
     useCases: ['Solar energy optimization', 'Wind farm management', 'Grid load balancing', 'Energy storage', 'Demand response'],
     roi: 'Average customer achieves 250% ROI within 18 months through improved energy efficiency and reduced costs.',
     competitors: ['GE Digital Energy', 'Siemens Grid Software', 'Schneider Electric', 'ABB', 'Honeywell'],
-<<<<<<< HEAD
-    marketSize: '$1.3T renewable energy market'
-    growthRate: '8.4% annual growth';
-variant: 'renewable-energy-ai'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$1.3T renewable energy market',
+marketSize: '$1.3T renewable energy market',
     growthRate: '8.4% annual growth',
     variant: 'renewable-energy-ai',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -692,20 +668,12 @@ varian,
     useCases: ['Manufacturing automation', 'Warehouse automation', 'Healthcare robotics', 'Construction automation', 'Agricultural robotics'],
     roi: 'Average customer achieves 300% ROI within 18 months through improved efficiency and reduced costs.',
     competitors: ['ABB Robotics', 'KUKA', 'FANUC', 'Yaskawa', 'Universal Robots'],
-<<<<<<< HEAD
-    marketSize: '$43.8B industrial robotics market'
-    growthRate: '12.5% annual growth';
-variant: 'robotics-automation-ai'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$43.8B industrial robotics market',
+marketSize: '$43.8B industrial robotics market',
     growthRate: '12.5% annual growth',
     variant: 'robotics-automation-ai',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -858,20 +826,12 @@ varian,
     useCases: ['Secure government communications', 'Financial transactions', 'Healthcare data protection', 'Critical infrastructure security', 'Quantum research'],
     roi: 'Average customer achieves 400% ROI within 24 months through enhanced security and new quantum capabilities.',
     competitors: ['ID Quantique', 'Toshiba Quantum', 'Quantum Xchange', 'Qrypt', 'Quantum Machines'],
-<<<<<<< HEAD
-    marketSize: '$3.9B quantum communications market'
-    growthRate: '35.2% annual growth';
-variant: 'quantum-internet-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$3.9B quantum communications market',
+marketSize: '$3.9B quantum communications market',
     growthRate: '35.2% annual growth',
     variant: 'quantum-internet-futuristic',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -1024,20 +984,12 @@ varian,
     useCases: ['Aerospace materials', 'Electronics materials', 'Healthcare materials', 'Energy materials', 'Construction materials'],
     roi: 'Average customer achieves 350% ROI within 24 months through accelerated development and new material capabilities.',
     competitors: ['Ansys Materials', 'Dassault Materials', 'Autodesk Fusion 360', 'Materialise', '3D Systems'],
-<<<<<<< HEAD
-    marketSize: '$67.8B advanced materials market'
-    growthRate: '15.3% annual growth';
-variant: 'advanced-materials-ai'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$67.8B advanced materials market',
+marketSize: '$67.8B advanced materials market',
     growthRate: '15.3% annual growth',
     variant: 'advanced-materials-ai',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -1190,20 +1142,12 @@ varian,
     useCases: ['Autonomous delivery', 'Public transportation', 'Traffic optimization', 'Parking management', 'Logistics optimization'],
     roi: 'Average customer achieves 300% ROI within 18 months through reduced costs and improved efficiency.',
     competitors: ['Waymo', 'Cruise', 'Tesla Autopilot', 'Aurora', 'Argo AI'],
-<<<<<<< HEAD
-    marketSize: '$556.7B autonomous vehicle market'
-    growthRate: '39.7% annual growth';
-variant: 'autonomous-transportation'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$556.7B autonomous vehicle market',
+marketSize: '$556.7B autonomous vehicle market',
     growthRate: '39.7% annual growth',
     variant: 'autonomous-transportation',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -1356,20 +1300,12 @@ varian,
     useCases: ['Manufacturing optimization', 'Energy system management', 'Healthcare simulation', 'Smart city planning', 'Product development'],
     roi: 'Average customer achieves 250% ROI within 18 months through improved efficiency and reduced costs.',
     competitors: ['Siemens Digital Twin', 'GE Digital Twin', 'PTC ThingWorx', 'Dassault 3DEXPERIENCE', 'Autodesk Tandem'],
-<<<<<<< HEAD
-    marketSize: '$86.1B digital twin market'
-    growthRate: '58.9% annual growth';
-variant: 'digital-twin-ai'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$86.1B digital twin market',
+marketSize: '$86.1B digital twin market',
     growthRate: '58.9% annual growth',
     variant: 'digital-twin-ai',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -1522,20 +1458,12 @@ varian,
     useCases: ['Industrial IoT', 'Smart cities', 'Healthcare monitoring', 'Autonomous vehicles', 'Retail analytics'],
     roi: 'Average customer achieves 200% ROI within 12 months through reduced latency and improved performance.',
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Cisco Edge', 'HPE Edge'],
-<<<<<<< HEAD
-    marketSize: '$43.4B edge computing market'
-    growthRate: '37.4% annual growth';
-variant: 'edge-computing-iot'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$43.4B edge computing market',
+marketSize: '$43.4B edge computing market',
     growthRate: '37.4% annual growth',
     variant: 'edge-computing-iot',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
@@ -1688,20 +1616,12 @@ varian,
     useCases: ['Virtual events', 'Virtual training', 'Virtual real estate', 'Virtual commerce', 'Virtual entertainment'],
     roi: 'Average customer achieves 300% ROI within 18 months through new virtual experiences and reduced costs.',
     competitors: ['Meta Horizon Worlds', 'Roblox', 'Decentraland', 'VRChat', 'AltspaceVR'],
-<<<<<<< HEAD
-    marketSize: '$74.2B metaverse market'
-    growthRate: '37.7% annual growth';
-variant: 'metaverse-vr-futuristic'
-    contactInfo: unknown;
-      mobile: '+1 302 464 0950'
-=======
-    marketSize: '$74.2B metaverse market',
+marketSize: '$74.2B metaverse market',
     growthRate: '37.7% annual growth',
     variant: 'metaverse-vr-futuristic',
     contactInfo:
         contactInfo: unknown;
       mobile: '+1 302 464 0950',
->>>>>>> cursor/fix-errors-and-merge-to-main-1c81
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},

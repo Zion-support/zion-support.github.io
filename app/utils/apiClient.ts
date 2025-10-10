@@ -9,13 +9,8 @@ interface RequestConfig {}
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   headers?: Record<string, string></strin>;</<<<string></strin>body</string>?: any;
   cache?: boolean;
-<<<<<<< HEAD
-  cacheTTL?: number;);
-=======
-  cacheTTL?: number]
+cacheTTL?: number]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 interface APIResponse<T = any></T> {}
   data: T,
   status: number,
@@ -35,15 +30,9 @@ class APIClient {}
     this.baseURL = baseURL;
     this.defaultHeaders = {}
       'Content-Type': 'application/json',
-<<<<<<< HEAD
-      ...defaultHeaders;)
-};);
-=======
-      ...defaultHeaders]
+...defaultHeaders]
     }]
     }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   private async makeRequest<T></T>(
     endpoint: string,
     config: RequestConfig = {}
@@ -72,12 +61,8 @@ const cacheKey = apiCache.generateKey(url, body);
     if (method === 'GET' && cache) {}
       const cachedData = apiCache.get(cacheKey);
       if (cachedData) {}
-<<<<<<< HEAD
-        return cachedData;);
-=======
-        return cachedData]
+return cachedData]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     }
 
     try {;
@@ -159,14 +144,9 @@ class ApiClient {/* TODO: Fix JSX expression */});
   g: ApiClientConfig = {}); {/* TODO: Fix JSX expression */});
 },
       cacheOption,
-<<<<<<< HEAD
-  s: config.cacheOptions;)
-};);
-=======
-  s: config.cacheOptions]
+s: config.cacheOptions]
     }]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * GET request;
    */
@@ -175,12 +155,8 @@ class ApiClient {/* TODO: Fix JSX expression */});
     confi,
   g: Omit<RequestConfig, 'url' | 'method' | 'body'></RequestConfig> = {});
   ): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * POST request;
    */
@@ -190,12 +166,8 @@ class ApiClient {/* TODO: Fix JSX expression */});
     confi,
   g: Omit<RequestConfig, 'url' | 'method'></RequestConfig> = {});
   ): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * PUT request;
    */
@@ -205,12 +177,8 @@ class ApiClient {/* TODO: Fix JSX expression */});
     confi,
   g: Omit<RequestConfig, 'url' | 'method'></RequestConfig> = {});
   ): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * DELETE request;
    */
@@ -219,12 +187,8 @@ class ApiClient {/* TODO: Fix JSX expression */});
     confi,
   g: Omit<RequestConfig, 'url' | 'method' | 'body'></RequestConfig> = {});
   ): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * PATCH request;
    */
@@ -234,12 +198,8 @@ class ApiClient {/* TODO: Fix JSX expression */});
     confi,
   g: Omit<RequestConfig, 'url' | 'method'></RequestConfig> = {});
   ): Promise<ApiResponse<T></ApiResponse>> {/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;);
-=======
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Main request method with retry logic;
    */
@@ -304,17 +264,7 @@ const contentType = response.headers.get('content-type');
 }
         // Cache successful GET requests;
         if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});;);
-        return {/* TODO: Fix JSX expression */});
-};)
-} catch (error) {/* TODO: Fix JSX expression */}`
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */});;)
-});;)
-} else {/* TODO: Fix JSX expression */});
-});;);
-=======
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});]
+cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});]
     }
         return {/* TODO: Fix JSX expression */});
 }]
@@ -324,7 +274,6 @@ const contentType = response.headers.get('content-type');
     } else {/* TODO: Fix JSX expression */});
 });]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
         }
         // Don't retry on certain errors;
         if (error instanceof ApiError && error.status < 500) {/* TODO: Fix JSX expression */});
@@ -336,12 +285,8 @@ const contentType = response.headers.get('content-type');
 }
     clearTimeout(timeoutId);
     this.abortControllers.delete(cacheKey);
-<<<<<<< HEAD
-    throw lastError || new Error('Request failed'););
-=======
-    throw lastError || new Error('Request failed')]
+throw lastError || new Error('Request failed')]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Cancel a pending request;
    */
@@ -358,26 +303,17 @@ const controller = this.abortControllers.get(cacheKey);
    */
   cancelAll(): void {/* TODO: Fix JSX expression */});
 });;
-<<<<<<< HEAD
-    this.abortControllers.clear(););
-=======
-    this.abortControllers.clear()]
+this.abortControllers.clear()]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Update default config;
    */
   setConfig(confi)
   g: Partial<ApiClientConfig></ApiClientConfig>): void {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-        ...(config.headers || {});;);
-    };);
-=======
-        ...(config.headers || {});]
+...(config.headers || {});]
     }
     }]
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
   /**
    * Set authorization header;
    */
@@ -492,17 +428,10 @@ export const apiClient = new APIClient()
 export default APIClient;
 // Create default instance;
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */});
-<<<<<<< HEAD
-});;)
-});;
-// Export both the class and default instance
-export { apiClient }
-=======
 });]
     });;
 // Export both the class and default instance;
 export { apiClient };
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 export default ApiClient;
 `
 }
