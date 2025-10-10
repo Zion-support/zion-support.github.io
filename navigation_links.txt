@@ -1,0 +1,12 @@
+/
+/about
+/ai-services
+/blog
+/contact
+/cookies
+/it-services
+/micro-saas
+/pricing
+/privacy
+/services
+/terms
