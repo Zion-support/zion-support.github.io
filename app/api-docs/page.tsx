@@ -6,10 +6,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
-const APIDocsPage: React.FC = () => {,
+const APIDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
-  const copyToClipboard = (code: string, id: string) => {,
+  const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
