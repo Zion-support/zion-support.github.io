@@ -82,6 +82,11 @@ const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 
+// Micro SAAS Services
+const AIInvoiceGeneratorPage = React.lazy(() => import('./app/ai-invoice-generator/page'));
+const AIPasswordManagerPage = React.lazy(() => import('./app/ai-password-manager/page'));
+const AIExpenseTrackerPage = React.lazy(() => import('./app/ai-expense-tracker/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -132,6 +137,11 @@ const App: React.FC = memo(() => {
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
                       <Route path="/services" element={<ServicesPage />} />
+                      
+                      {/* Micro SAAS Services */}
+                      <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                      <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
+                      <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
                     </Routes>
                   </Suspense>
                   </main>

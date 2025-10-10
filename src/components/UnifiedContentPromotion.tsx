@@ -1,38 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
+  Zap, 
   Brain, 
   Cloud, 
-  Code, 
-  Zap, 
-  ArrowRight, 
-  Star, 
-  TrendingUp, 
   Shield, 
-  Target,
+  Code, 
+  BarChart, 
+  Users, 
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Play,
   Sparkles,
+  Target,
+  TrendingUp,
+  Award,
+  Globe,
   Rocket,
   Cpu,
   Database,
-  Globe,
-  BarChart3,
-  Users,
-  CheckCircle,
-  Play,
-  Award,
-  Clock,
-  DollarSign
+  Lock,
+  MessageSquare,
+  Eye,
+  Download,
+  Send,
+  Phone,
+  Mail,
+  MapPin,
+  Clock
 } from 'lucide-react';
 
-interface UnifiedContentPromotionProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function UnifiedContentPromotion({ 
-  className = '', 
-  children 
-}: UnifiedContentPromotionProps) {
+const UnifiedContentPromotion: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -46,291 +45,480 @@ export default function UnifiedContentPromotion({
 
   const heroSlides = [
     {
-      title: "AI-Powered Enterprise Solutions",
-      subtitle: "Transform Your Business with Cutting-Edge AI Technology",
-      description: "Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains with our advanced AI solutions",
-      features: ["Machine Learning", "Quantum Computing", "Autonomous Systems", "Blockchain Integration"],
-      cta: "Explore AI Services",
+      title: "AI-Powered Micro SAAS Solutions",
+      subtitle: "Transform your business with intelligent automation",
+      description: "Discover our suite of AI-powered micro SAAS tools designed to streamline your operations and boost productivity.",
+      features: ["AI Invoice Generator", "Smart Password Manager", "Expense Tracker", "Project Management"],
+      cta: "Explore Services",
+      link: "/services",
+      gradient: "from-cyan-500 via-purple-600 to-pink-500",
+      icon: Zap
+    },
+    {
+      title: "Advanced AI Services",
+      subtitle: "Cutting-edge artificial intelligence solutions",
+      description: "Leverage the power of quantum computing, machine learning, and neural networks for unprecedented business growth.",
+      features: ["Quantum Computing", "Autonomous Systems", "Space Technology", "Climate Intelligence"],
+      cta: "View AI Services",
       link: "/ai-services",
-      bgGradient: "from-purple-900 via-blue-900 to-cyan-900"
+      gradient: "from-purple-500 via-pink-600 to-red-500",
+      icon: Brain
     },
     {
-      title: "Micro SAAS Solutions",
-      subtitle: "Powerful Tools for Modern Businesses",
-      description: "Streamline operations with our comprehensive suite of micro SAAS applications",
-      features: ["Project Management", "Analytics Dashboard", "Customer Support", "Marketing Automation"],
-      cta: "View Micro SAAS",
-      link: "/micro-saas",
-      bgGradient: "from-green-900 via-emerald-900 to-teal-900"
-    },
-    {
-      title: "IT Infrastructure & Cloud",
-      subtitle: "Scalable Technology Solutions",
-      description: "Build, deploy, and scale with our enterprise-grade IT infrastructure services",
-      features: ["Cloud Migration", "DevOps", "Cybersecurity", "Database Management"],
-      cta: "Discover IT Services",
+      title: "Enterprise IT Solutions",
+      subtitle: "Comprehensive technology infrastructure",
+      description: "Build, secure, and scale your digital infrastructure with our expert IT services and cloud solutions.",
+      features: ["Cloud Migration", "Cybersecurity", "Infrastructure Design", "24/7 Support"],
+      cta: "Learn More",
       link: "/it-services",
-      bgGradient: "from-orange-900 via-red-900 to-pink-900"
+      gradient: "from-blue-500 via-cyan-600 to-teal-500",
+      icon: Cloud
     }
   ];
 
-  const currentSlideData = heroSlides[currentSlide];
+  const microSaasServices = [
+    {
+      name: "AI Invoice Generator",
+      description: "Create professional invoices instantly with AI-powered suggestions",
+      price: "$39/mo",
+      features: ["Auto-calculations", "PDF Export", "Email Integration", "AI Suggestions"],
+      icon: "📄",
+      link: "/ai-invoice-generator",
+      popular: true
+    },
+    {
+      name: "AI Password Manager",
+      description: "Secure password management with AI-enhanced security",
+      price: "$29/mo",
+      features: ["AI Security Analysis", "Auto-generation", "Cross-device Sync", "Breach Monitoring"],
+      icon: "🔐",
+      link: "/ai-password-manager",
+      popular: true
+    },
+    {
+      name: "AI Expense Tracker",
+      description: "Smart expense tracking with AI insights and budgeting",
+      price: "$59/mo",
+      features: ["AI Categorization", "Budget Alerts", "Receipt Scanning", "Financial Insights"],
+      icon: "💳",
+      link: "/ai-expense-tracker",
+      popular: true
+    },
+    {
+      name: "AI Project Manager Pro",
+      description: "Intelligent project planning and team collaboration",
+      price: "$149/mo",
+      features: ["AI Task Assignment", "Progress Tracking", "Resource Optimization", "Risk Analysis"],
+      icon: "📊",
+      link: "/ai-project-manager",
+      popular: false
+    },
+    {
+      name: "AI Social Media Manager",
+      description: "Automated social media content creation and scheduling",
+      price: "$99/mo",
+      features: ["Content Generation", "Auto-posting", "Analytics", "Engagement Optimization"],
+      icon: "📱",
+      link: "/ai-social-media-manager",
+      popular: false
+    },
+    {
+      name: "AI Analytics Dashboard",
+      description: "AI-powered business intelligence and data visualization",
+      price: "$179/mo",
+      features: ["Real-time Analytics", "Predictive Insights", "Custom Reports", "Data Integration"],
+      icon: "📈",
+      link: "/ai-analytics-dashboard",
+      popular: false
+    }
+  ];
+
+  const aiServices = [
+    {
+      name: "AI Quantum Computing Platform",
+      description: "Revolutionary quantum solutions for complex problem solving",
+      price: "$2,999/mo",
+      icon: "⚛️",
+      link: "/ai-quantum-computing",
+      category: "Quantum"
+    },
+    {
+      name: "AI Autonomous Systems",
+      description: "Advanced autonomous technology for various industries",
+      price: "$4,999/mo",
+      icon: "🚗",
+      link: "/ai-autonomous-systems",
+      category: "Autonomous"
+    },
+    {
+      name: "AI Space Technology Pro",
+      description: "Space mission optimization and satellite management",
+      price: "$9,999/mo",
+      icon: "🚀",
+      link: "/ai-space-technology-pro",
+      category: "Space"
+    },
+    {
+      name: "AI Climate Intelligence",
+      description: "Environmental monitoring and climate prediction",
+      price: "$1,999/mo",
+      icon: "🌍",
+      link: "/ai-climate-solutions-pro",
+      category: "Climate"
+    }
+  ];
+
+  const itServices = [
+    {
+      name: "AI Infrastructure Management",
+      description: "Intelligent infrastructure optimization and monitoring",
+      price: "$2,999/mo",
+      icon: "🤖",
+      link: "/ai-infrastructure",
+      category: "Infrastructure"
+    },
+    {
+      name: "Quantum-Safe Security",
+      description: "Future-proof security solutions for quantum threats",
+      price: "$4,999/mo",
+      icon: "🔐",
+      link: "/quantum-security",
+      category: "Security"
+    },
+    {
+      name: "Edge Computing Infrastructure",
+      description: "Distributed computing for IoT and real-time applications",
+      price: "$1,999/mo",
+      icon: "📡",
+      link: "/edge-computing",
+      category: "Edge"
+    },
+    {
+      name: "Cloud Migration & Setup",
+      description: "Seamless cloud migration and infrastructure setup",
+      price: "$1,499/mo",
+      icon: "☁️",
+      link: "/cloud-migration",
+      category: "Cloud"
+    }
+  ];
 
   const stats = [
-    { number: "300%", label: "Average ROI", icon: TrendingUp },
-    { number: "70%", label: "Cost Reduction", icon: DollarSign },
-    { number: "90%", label: "Efficiency Gains", icon: Target },
-    { number: "99.9%", label: "Uptime Guarantee", icon: Shield }
-  ];
-
-  const featuredServices = [
-    {
-      title: "AI Quantum Financial Oracle",
-      description: "Revolutionary quantum-powered financial predictions with 99.7% accuracy",
-      price: "$8,500/mo",
-      features: ["Quantum Risk Analysis", "Market Prediction", "Portfolio Optimization", "Real-time Trading Signals"],
-      icon: Brain,
-      category: "Quantum Finance",
-      link: "/ai-quantum-financial-oracle",
-      popular: true,
-      trial: "30-day free trial"
-    },
-    {
-      title: "AI Neural Memory Assistant",
-      description: "Advanced AI memory system for enhanced cognitive performance and learning",
-      price: "$299/mo",
-      features: ["Memory Enhancement", "Learning Acceleration", "Cognitive Training", "Knowledge Management"],
-      icon: Brain,
-      category: "Cognitive AI",
-      link: "/ai-neural-memory-assistant",
-      popular: true,
-      trial: "14-day free trial"
-    },
-    {
-      title: "AI Holographic Workspace",
-      description: "Next-generation 3D workspace with holographic interfaces and spatial computing",
-      price: "$1,200/mo",
-      features: ["3D Workspace", "Holographic UI", "Spatial Computing", "Collaborative Environment"],
-      icon: Rocket,
-      category: "Immersive Tech",
-      link: "/ai-holographic-workspace",
-      popular: true,
-      trial: "7-day free trial"
-    },
-    {
-      title: "AI Autonomous Systems Pro",
-      description: "Self-managing systems with advanced AI decision-making and autonomous operations",
-      price: "$4,200/mo",
-      features: ["Autonomous Operations", "Self-Healing Systems", "Predictive Maintenance", "Intelligent Monitoring"],
-      icon: Settings,
-      category: "Autonomous AI",
-      link: "/ai-autonomous-systems",
-      popular: true,
-      trial: "21-day free trial"
-    },
-    {
-      title: "AI Blockchain Solutions Pro",
-      description: "Advanced blockchain integration with AI-powered smart contracts and DeFi protocols",
-      price: "$3,800/mo",
-      features: ["Smart Contracts", "DeFi Integration", "NFT Marketplace", "Cross-chain Operations"],
-      icon: Shield,
-      category: "Blockchain AI",
-      link: "/ai-blockchain-solutions",
-      popular: false,
-      trial: "14-day free trial"
-    },
-    {
-      title: "AI Energy Grid Management",
-      description: "Intelligent energy distribution and optimization for smart cities and utilities",
-      price: "$6,500/mo",
-      features: ["Grid Optimization", "Demand Forecasting", "Renewable Integration", "Load Balancing"],
-      icon: Zap,
-      category: "Energy AI",
-      link: "/ai-energy-grid-management",
-      popular: false,
-      trial: "30-day free trial"
-    }
+    { number: "500+", label: "Happy Clients", icon: Users },
+    { number: "1000+", label: "Projects Completed", icon: Target },
+    { number: "99.9%", label: "Uptime", icon: TrendingUp },
+    { number: "24/7", label: "Support", icon: Clock }
   ];
 
   return (
-    <div className={`relative min-h-screen overflow-hidden ${className}`}>
-      {/* Futuristic Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Cyber Grid Pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%2300FFFF" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-        
-        {/* Animated Circuit Lines */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent animate-pulse"></div>
-          <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/30 to-transparent animate-pulse delay-1000"></div>
-          <div className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-400/30 to-transparent animate-pulse delay-2000"></div>
-        </div>
-        
-        {/* Floating Quantum Particles */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/20 rounded-full blur-xl animate-pulse neon-glow"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-purple-400/20 rounded-full blur-xl animate-pulse delay-1000 neon-glow"></div>
-        <div className="absolute bottom-20 left-1/4 w-24 h-24 bg-blue-400/20 rounded-full blur-xl animate-pulse delay-2000 neon-glow"></div>
-        <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-pink-400/20 rounded-full blur-xl animate-pulse delay-3000 neon-glow"></div>
-        
-        {/* Additional Floating Elements */}
-        <div className="absolute top-1/3 left-1/3 w-16 h-16 bg-gradient-to-r from-cyan-400/10 to-purple-400/10 rounded-full blur-lg animate-bounce delay-500"></div>
-        <div className="absolute top-2/3 right-1/4 w-12 h-12 bg-gradient-to-r from-pink-400/10 to-blue-400/10 rounded-full blur-lg animate-bounce delay-1500"></div>
-        
-        {/* Scanning Lines Effect */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent animate-ping"></div>
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400/50 to-transparent animate-ping delay-1000"></div>
-        </div>
-      </div>
-
+    <div className="relative min-h-screen overflow-hidden">
+      {/* Animated Background */}
+      <div className="animated-bg"></div>
+      
       {/* Hero Section */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <div className={`transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text cyber-text">
-              {currentSlideData.title}
-            </h1>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light neon-pulse">
-              {currentSlideData.subtitle}
-            </p>
-            <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-              {currentSlideData.description}
+      <section className="relative z-10 pt-20 pb-16">
+        <div className="container mx-auto px-4">
+          {/* Hero Slides */}
+          <div className="relative h-[600px] mb-16">
+            {heroSlides.map((slide, index) => (
+              <div
+                key={index}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentSlide ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full">
+                  <div className={`text-reveal ${isVisible ? 'animate-fade-in' : ''}`}>
+                    <div className="flex items-center space-x-2 mb-4">
+                      <div className={`w-12 h-12 bg-gradient-to-r ${slide.gradient} rounded-lg flex items-center justify-center`}>
+                        <slide.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <span className="text-cyan-400 font-semibold text-lg">Zion Tech Group</span>
+                    </div>
+                    <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 cyber-text">
+                      {slide.title}
+                    </h1>
+                    <h2 className="text-2xl lg:text-3xl font-semibold text-gray-300 mb-4">
+                      {slide.subtitle}
+                    </h2>
+                    <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+                      {slide.description}
+                    </p>
+                    <div className="flex flex-wrap gap-3 mb-8">
+                      {slide.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-2 px-4 py-2 bg-slate-800/50 rounded-full border border-cyan-400/20">
+                          <CheckCircle className="w-4 h-4 text-cyan-400" />
+                          <span className="text-white text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Link
+                        to={slide.link}
+                        className="neon-button inline-flex items-center justify-center group"
+                      >
+                        <span>{slide.cta}</span>
+                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                      <button className="flex items-center justify-center px-8 py-4 bg-slate-800/50 border border-gray-600 rounded-lg text-white hover:border-cyan-400 transition-colors group">
+                        <Play className="w-5 h-5 mr-2" />
+                        Watch Demo
+                      </button>
+                    </div>
+                  </div>
+                  <div className="relative">
+                    <div className={`futuristic-card p-8 ${isVisible ? 'animate-slide-in-right' : ''}`}>
+                      <div className="text-center">
+                        <div className={`w-32 h-32 bg-gradient-to-r ${slide.gradient} rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse`}>
+                          <slide.icon className="w-16 h-16 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-bold text-white mb-4">{slide.title}</h3>
+                        <p className="text-gray-300 mb-6">{slide.description}</p>
+                        <div className="grid grid-cols-2 gap-4">
+                          {slide.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center space-x-2 p-3 bg-slate-800 rounded-lg">
+                              <CheckCircle className="w-4 h-4 text-green-400" />
+                              <span className="text-white text-sm">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+            
+            {/* Slide Indicators */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {heroSlides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-colors ${
+                    index === currentSlide ? 'bg-cyan-400' : 'bg-gray-600'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="futuristic-card text-center hover-lift">
+                <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SAAS Services Section */}
+      <section className="relative z-10 py-16 bg-slate-900/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4 cyber-text">
+              Micro SAAS Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Powerful, affordable AI-powered tools designed to streamline your business operations
             </p>
           </div>
 
-          {/* Features Grid */}
-          <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 transform transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            {currentSlideData.features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center justify-center mb-2">
-                  <CheckCircle className="w-5 h-5 text-cyan-400" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {microSaasServices.map((service, index) => (
+              <div key={index} className="futuristic-card hover-lift group">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-4xl">{service.icon}</div>
+                  {service.popular && (
+                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-semibold rounded-full">
+                      Popular
+                    </span>
+                  )}
                 </div>
-                <p className="text-sm text-gray-300 font-medium">{feature}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
+                <p className="text-gray-400 mb-4">{service.description}</p>
+                <div className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span className="text-gray-300 text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                  <span className="text-gray-400 text-sm">per month</span>
+                </div>
+                <Link
+                  to={service.link}
+                  className="w-full flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 rounded-lg text-white font-medium transition-all group-hover:scale-105"
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
               </div>
             ))}
           </div>
 
-          {/* CTA Buttons */}
-          <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transform transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className="text-center">
             <Link
-              to={currentSlideData.link}
-              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+              to="/micro-saas"
+              className="neon-button inline-flex items-center"
             >
-              <span className="relative z-10">{currentSlideData.cta}</span>
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-            </Link>
-            
-            <Link
-              to="/demo"
-              className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"
-            >
-              <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-              Watch Demo
+              View All Micro SAAS Solutions
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
         </div>
+      </section>
 
-        {/* Stats Section */}
-        <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 transform transition-all duration-1000 delay-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="relative mb-4">
-                <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-              </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div>
-              <div className="text-gray-400 font-medium">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Featured Services */}
-        <div className="mb-20">
+      {/* AI Services Section */}
+      <section className="relative z-10 py-16">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
-              Featured AI Solutions
+            <h2 className="text-4xl font-bold text-white mb-4 cyber-text">
+              Advanced AI Services
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover our most innovative AI-powered services that are transforming industries worldwide
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge artificial intelligence solutions for enterprise applications
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-              <div key={index} className={`group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
-                {service.popular && (
-                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full neon-glow">
-                    Popular
-                  </div>
-                )}
-                
-                <div className="relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {aiServices.map((service, index) => (
+              <div key={index} className="futuristic-card hover-lift group">
+                <div className="text-center">
+                  <div className="text-5xl mb-4">{service.icon}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">
+                    <span className="text-cyan-400 font-bold">{service.price}</span>
+                    <span className="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">
                       {service.category}
                     </span>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="space-y-2 mb-4">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-white">{service.price}</div>
-                      <div className="text-xs text-cyan-400 font-medium">{service.trial}</div>
-                    </div>
-                    
-                    <Link
-                      to={service.link}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
+                  <Link
+                    to={service.link}
+                    className="w-full flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded-lg text-white text-sm transition-colors"
+                  >
+                    Learn More
+                  </Link>
                 </div>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* Slide Indicators */}
-        <div className="flex justify-center space-x-2">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'bg-cyan-400 scale-125' 
-                  : 'bg-white/30 hover:bg-white/50'
-              }`}
-            />
-          ))}
+          <div className="text-center">
+            <Link
+              to="/ai-services"
+              className="neon-button inline-flex items-center"
+            >
+              Explore All AI Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* IT Services Section */}
+      <section className="relative z-10 py-16 bg-slate-900/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-white mb-4 cyber-text">
+              Enterprise IT Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive technology infrastructure and support services
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {itServices.map((service, index) => (
+              <div key={index} className="futuristic-card hover-lift group">
+                <div className="text-center">
+                  <div className="text-5xl mb-4">{service.icon}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{service.description}</p>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-cyan-400 font-bold">{service.price}</span>
+                    <span className="px-2 py-1 bg-slate-800 text-xs text-gray-300 rounded">
+                      {service.category}
+                    </span>
+                  </div>
+                  <Link
+                    to={service.link}
+                    className="w-full flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded-lg text-white text-sm transition-colors"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/it-services"
+              className="neon-button inline-flex items-center"
+            >
+              View All IT Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA Section */}
+      <section className="relative z-10 py-16">
+        <div className="container mx-auto px-4">
+          <div className="futuristic-card text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get in touch with our experts to discuss your specific needs and discover how our AI solutions can drive your success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="neon-button inline-flex items-center justify-center"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Contact Us
+              </Link>
+              <Link
+                to="/consultation"
+                className="flex items-center justify-center px-8 py-4 bg-slate-800/50 border border-gray-600 rounded-lg text-white hover:border-cyan-400 transition-colors"
+              >
+                <MessageSquare className="w-5 h-5 mr-2" />
+                Free Consultation
+              </Link>
+            </div>
+            <div className="mt-8 pt-8 border-t border-gray-700">
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4" />
+                  <span>+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4" />
+                  <span>kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>Middletown, DE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default UnifiedContentPromotion;
