@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Brain, Cloud, Code, Zap, ArrowRight, Database, Bot, Users, Shield, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, ShoppingCart, CreditCard, Building, Factory, Truck, Home, Heart, Stethoscope, GraduationCap, Briefcase, Calculator, Calendar, Globe, TrendingUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -106,94 +105,15 @@ const microSaasServices = [
             <ul className="space-y-2">
               {microSaasServices.slice(0, 6).map((service) => (
                 <li key={service.name}>
-<<<<<<< HEAD
-                  <Link
-                    to={service.url}
-                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
-=======
-                  <Link to={service.url}
-                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                   </Link>
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
-            <Link
-              to="/services"
-              className="text-cyan-400 hover:text-cyan-300 text-sm font-medium mt-4 inline-flex items-center"
-            >
-              View All Services
-              <ArrowRight className="w-4 h-4 ml-1" />
-=======
-            <Link to="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
-              View All Micro SAAS →
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
             </Link>
           </div>
 
           {/* AI Services */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-purple-400" />
-              AI Services
-=======
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Brain className="w-4 h-4 mr-2" />
-              AI & IT Services
-            </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-white font-medium mb-2">AI Services</h4>
-                <ul className="space-y-1">
-                  {aiServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <a href={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-white font-medium mb-2">IT Services</h4>
-                <ul className="space-y-1">
-                  {itServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <Link to={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                      >
-                        {service.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <Link to="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
-              View All Services →
-            </Link>
-          </div>
-
-          {/* Additional AI Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
-              AI Tools
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
             </h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 6).map((service) => (
@@ -253,25 +173,6 @@ const microSaasServices = [
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-<<<<<<< HEAD
-              <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Cookie Policy
-=======
-              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/contact" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Contact Us
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
               </Link>
             </div>
           </div>
