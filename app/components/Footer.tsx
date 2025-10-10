@@ -21,7 +21,15 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
         { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' }
+        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI 3D Generation Studio', href: '/ai-3d-generation' },
+        { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning' },
+        { name: 'AI Autonomous Vehicle Systems', href: '/ai-autonomous-vehicles' },
+        { name: 'AI Smart City Platform', href: '/ai-smart-cities' },
+        { name: 'AI Robotics Control System', href: '/ai-robotics' },
+        { name: 'AI Predictive Maintenance Pro', href: '/ai-predictive-maintenance' }
       ]
     },
     {
@@ -39,7 +47,16 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Infrastructure Monitoring', href: '/ai-infrastructure-monitoring' },
         { name: 'Blockchain Integration', href: '/blockchain-integration-services' },
         { name: 'AI API Management', href: '/ai-api-management' },
-        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' }
+        { name: 'Smart Contract Security', href: '/smart-contract-security-audit' },
+        { name: '5G Network Implementation', href: '/5g-implementation' },
+        { name: 'IoT Platform Development', href: '/iot-platform' },
+        { name: 'Edge Computing Solutions', href: '/edge-computing' },
+        { name: 'Healthcare IT Solutions', href: '/healthcare-it' },
+        { name: 'Financial Services IT', href: '/financial-it' },
+        { name: 'AI IT Operations (AIOps)', href: '/ai-ops' },
+        { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure' },
+        { name: 'AR/VR Development Platform', href: '/ar-vr-platform' },
+        { name: 'Digital Transformation Consulting', href: '/digital-transformation' }
       ]
     },
     {
@@ -57,7 +74,17 @@ const Footer: React.FC = memo(() => {
         { name: 'AI Smart Calendar', href: '/ai-smart-calendar' },
         { name: 'AI Content Writer', href: '/ai-content-writer' },
         { name: 'AI Video Generator', href: '/ai-video-generator' },
-        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' }
+        { name: 'AI CRM Assistant', href: '/ai-crm-assistant' },
+        { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
+        { name: 'AI Neural Memory Assistant', href: '/ai-neural-memory-assistant' },
+        { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace' },
+        { name: 'AI 3D Generation Studio', href: '/ai-3d-generation' },
+        { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning' },
+        { name: 'AI Code Security Auditor', href: '/ai-code-security-auditor' },
+        { name: 'AI Autonomous Systems Manager', href: '/ai-autonomous-systems' },
+        { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
+        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
+        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' }
       ]
     },
     {
@@ -73,7 +100,15 @@ const Footer: React.FC = memo(() => {
         { name: 'Digital Transformation', href: '/digital-transformation' },
         { name: 'Innovation Labs', href: '/innovation-labs' },
         { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'Robotics Solutions', href: '/robotics' },
+        { name: 'Quantum Computing Solutions', href: '/ai-quantum-computing' },
+        { name: 'Autonomous Vehicle Systems', href: '/ai-autonomous-vehicles' },
+        { name: 'Smart City Solutions', href: '/ai-smart-cities' },
+        { name: 'Edge Computing Platform', href: '/ai-edge-computing' },
+        { name: 'Predictive Maintenance', href: '/ai-predictive-maintenance' },
+        { name: 'Natural Language Processing', href: '/ai-nlp-platform' },
+        { name: 'Computer Vision Platform', href: '/ai-computer-vision' },
+        { name: 'Recommendation Engine', href: '/ai-recommendation-engine' }
       ]
     }
   ];
@@ -138,8 +173,9 @@ const Footer: React.FC = memo(() => {
             
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, 
-              autonomous systems, and digital transformation services. Transforming businesses 
-              with cutting-edge technology and innovative solutions.
+              autonomous systems, and digital transformation services. We specialize in 
+              cutting-edge AI technology, advanced IT infrastructure, and innovative 
+              micro SAAS solutions that transform businesses and drive growth.
             </p>
 
             {/* Contact Info */}
@@ -168,6 +204,13 @@ const Footer: React.FC = memo(() => {
                 <div>
                   <div className="font-medium">Mon - Fri: 9:00 AM - 6:00 PM EST</div>
                   <div className="text-sm text-cyan-400">24/7 Emergency Support</div>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300 group">
+                <Award className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <div>
+                  <div className="font-medium">ISO 27001 Certified</div>
+                  <div className="text-sm text-cyan-400">SOC 2 Type II Compliant</div>
                 </div>
               </div>
             </div>
